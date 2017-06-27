@@ -27,7 +27,7 @@ As you can imagine, Rangers and Ruffians requires a fair amount of nerd speak. T
 ## Stats
 Before you begin creating your character, it's vital that you understand the base stats that will affect how their journey will progress. These stats not only affect the way that your character will fare in battles, but also how they interact with the world. For a mage, intelligence will be paramount, for a rouge, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. This is a guide to each statistic and its uses.
 
-#### Stat Levels:
+### Stat Levels:
 **Disgraceful** (-3)  
 **Abysmal** (-2)  
 **Poor** (-1)  
@@ -66,12 +66,12 @@ Combat Effects: Chance that a character will get a critical hit, or that the ene
 Passive Effects: The high luck character happened to point at the exact shop the group needed to enter. Out of all the cups she could have chosen, the low luck character picked the poisoned one.  
 #### Perception
 
-### Races
+## Races
 To begin building your character, you must first know what culture they come from. A character's race represents the people that they are a part of and their inborn abilities. From Halflings to Orcs, each race has its own base stats, which will influence how they interact with the world. All races also have inborn abilities, which help them in the trials and battles that await them on their adventures! Note: make sure to think about the stat set that you want before crafting your character; do you want to focus on high intelligence and inner fire so that your character can be a powerful mage? Perhaps strength and vitality suit you better, so that you can be a tank. Or maybe you want to be a fast-moving high dexterity character. The choice is up to you! Don't be overwhelmed, however; with training and skill, any character can be specced to fit your playstyle!  
 
 #### Man:
-Description: The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.
-Natural Allegiances/Enemies: Humans get on great with dwarves, well with elves, and distrust orcs and goblins.
+The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.  
+**Natural Allegiances/Enemies:** Humans get on great with dwarves, well with elves, and distrust orcs and goblins.
 ###### Inborn Abilities:
   * Last Stand: When a human's health is below 20%, they can make two moves in a row.  
   * Strength of Men: Men begin with basic healing abilities.    
@@ -79,118 +79,119 @@ Natural Allegiances/Enemies: Humans get on great with dwarves, well with elves, 
   * Stats: Men have high Inner Fire, better than average strength, and have average dex, vitality, intelligence, charisma, and luck.  
 
 ###### Suggested Base Stats:
-  Dex: Average   
-Strength: Average  
-Vitality: Average  
-Intelligence: Average  
-Inner Fire: Good  
-Charisma: Average  
-Luck: Poor  
-Perception:  
+  * Dex: Average   
+  * Strength: Average  
+  * Vitality: Average  
+  * Intelligence: Average  
+  * Inner Fire: Good  
+  * Charisma: Average  
+  * Luck: Poor  
+  * Perception:  
 
-Dwarf:
-     Description: Stocky and willed, dwarves are the most solid of the races. Known for their skills as smiths and stone workers, Dwarves tend to be brash and to keep to their own kind.
-     Natural Allegiances/Enemies: Dwarves put up with humans, and have a distaste for elves. They hate goblins and orcs.
-     Inborn Abilities:
-          Fixit Dwarf: Given a few hours, dwarves can repair most steel made items.
-          Miner's Eye: When dealing with minerals or works made of stone, a dwarf's intelligence is treated as Masterful.
-          DarkVision: Dwarves can see well in the dark.
-     Stats: Dwarves have  high strength and vitality, average dexterity, and low charisma.
-     Suggested Base Stats:
-     Dex: Average
-     Strength: Good
-     Vitality: Good
-     Intelligence: Average
-     Inner Fire: Good
-     Charisma: Poor
-     Luck: Poor
+#### Dwarf:
+Description: Stocky and willed, dwarves are the most solid of the races. Known for their skills as smiths and stone workers, Dwarves tend to be brash and to keep to their own kind.
+Natural Allegiances/Enemies: Dwarves put up with humans, and have a distaste for elves. They hate goblins and orcs.
+###### Inborn Abilities:
+  * Fixit Dwarf: Given a few hours, dwarves can repair most steel made items.
+  * Miner's Eye: When dealing with minerals or works made of stone, a dwarf's intelligence is treated as Masterful.
+  * DarkVision: Dwarves can see well in the dark.
+  * Stats: Dwarves have  high strength and vitality, average dexterity, and low charisma.
 
-Elf:
-     Description: Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.
-     Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.
-     Inborn Abilities
-          Sleepless: Elves can go days without sleeping, allowing them to keep watch long into the night.
-          DarkVision: Elves can see well in the dark.
-          Wink Wink, Nudge Nudge: Elves can influence men and halflings with their beauty.
-          Winged feet: Elves have incredible endurance.
-     Stats: Elves have high intelligence and dexterity and low strength and inner fire.
-     Suggested Base Stats:  
-     Dex: Good
-     Strength: Poor
-     Vitality:Average
-     Intelligence: Good
-     Inner Fire: Poor
-     Charisma: Average
-     Luck: Average
+###### Suggested Base Stats:
+  * Dex: Average
+  * Strength: Good
+  * Vitality: Good
+  * Intelligence: Average
+  * Inner Fire: Good
+  * Charisma: Poor
+  * Luck: Poor
 
-Halfling:
-     Description: Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.
-     Natural Allegiances/Enemies: Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.
-     Inborn Abilities:
-          Sling: Halflings carry a sling, with which they are uncannily accurate.
-          Warm Butter: Halflings are naturally great chefs, and food that they cook restores extra health.
-          Soft Bed: Halflings recover full health from sleeping in a real bed.
-          Softfoot: Halflings are naturally good at sneaking.
-     Stats: Halflings have high dexterity, charisma, and luck, but have very low strength and inner fire.
-     Suggested Base Stats:  
-     Dex: Good
-     Strength: Abysmal
-     Vitality: Average
-     Intelligence: Good
-     Inner Fire: Poor
-     Charisma: Great
-     Luck: Great
+#### Elf:
+Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.  
+**Natural Allegiances/Enemies:** Elves tolerate humans and dwarves, and hate goblins and orcs.
+###### Inborn Abilities
+  * Sleepless: Elves can go days without sleeping, allowing them to keep watch long into the night.
+  * DarkVision: Elves can see well in the dark.
+  * Wink Wink, Nudge Nudge: Elves can influence men and halflings with their beauty.
+  * Winged feet: Elves have incredible endurance.
 
-Orc
-     Description: A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.
-     Natural Allegiances/Enemies: Orcs distrust all races save goblins, who they are close friends with.
-     Inborn Abilities:
-          Lamb to Slaughter: When hunting, Orcs have high perception.
-          Bellow: Orc can unleash a mighty bellow to intimidate their foes.
-          Still warm: Orcs can eat raw meat without penalty.
-     Stats: Orcs have high strength, vitality, and inner fire, but low intelligence, charisma, and luck.
-     Suggested Base Stats:
-     Dex: Poor
-     Strength: Good
-     Vitality: Good
-     Intelligence: Abysmal
-     Inner Fire: Good
-     Charisma: Poor
-     Luck: Poor
-     Perception: Poor
+###### Suggested Base Stats:
+  * Dex: Good
+  * Strength: Poor
+  * Vitality:Average
+  * Intelligence: Good
+  * Inner Fire: Poor
+  * Charisma: Average
+  * Luck: Average
 
-Goblin
-     Description: Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.
-     Natural Allegiances/Enemies: Goblins are close allies with orcs, but fear and hate all others.
-     Inborn Abilities:
-          Still Warm: Goblins can eat raw meat without penalty.
-          Along Came a Spider: Goblins are naturally adept at climbing.
-          Darkvision: Goblins can see in even the darkest caves.
-     Stats: Goblins have very high dexterity, decent vitality, and some intelligence.
-     Suggested Base Stats:
-     Dex: Great
-     Strength: Poor
-     Vitality: Poor
-     Intelligence: Good
-     Inner Fire: Average
-     Charisma: Poor
-     Luck: Good
+#### Halfling:
+Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.  
+**Natural Allegiances/Enemies:** Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.
+###### Inborn Abilities:
+  * Sling: Halflings carry a sling, with which they are uncannily accurate.
+  * Warm Butter: Halflings are naturally great chefs, and food that they cook restores extra health.
+  * Soft Bed: Halflings recover full health from sleeping in a real bed.
+  * Softfoot: Halflings are naturally good at sneaking.
 
-Catterwol
-     Description: Catlike bipedal beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.
-     Natural Allegiances: Catterwol keep to themselves, and hate Orc.
-     Inborn Abilities:
-          DarkVision: Catterwol can see in the dark.
-          Fisher: Catterwol are naturally good at fishing.
-          They're Retractable: Catterwol have retractable, razor sharp claws.
-          Land on your feet: Catterwol can survive long falls.
-     Stats: Catterwol have high dexterity, low inner fire, and high luck and charisma.
-     Suggested Base Stats:
-     Dex: Good
-     Strength: Average
-     Vitality:  Average
-     Intelligence:  Good
-     Inner Fire:  Average
-     Charisma:  Average
-     Luck:  Average
-     Perception:
+###### Suggested Base Stats:
+  * Dex: Good
+  * Strength: Abysmal
+  * Vitality: Average
+  * Intelligence: Good
+  * Inner Fire: Poor
+  * Charisma: Great
+  * Luck: Great
+
+#### Orc
+A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.
+**Natural Allegiances/Enemies:** Orcs distrust all races save goblins, who they are close friends with.
+###### Inborn Abilities:
+  * Lamb to Slaughter: When hunting, Orcs have high perception.
+  * Bellow: Orc can unleash a mighty bellow to intimidate their foes.
+  * Still warm: Orcs can eat raw meat without penalty.
+
+###### Suggested Base Stats:
+  * Dex: Poor
+  * Strength: Good
+  * Vitality: Good
+  * Intelligence: Abysmal
+  * Inner Fire: Good
+  * Charisma: Poor
+  * Luck: Poor
+  * Perception: Poor
+
+#### Goblin
+Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.  
+**Natural Allegiances/Enemies:** Goblins are close allies with orcs, but fear and hate all others.  
+###### Inborn Abilities:
+  * Still Warm: Goblins can eat raw meat without penalty.
+  * Along Came a Spider: Goblins are naturally adept at climbing.
+  * Darkvision: Goblins can see in even the darkest caves.
+
+###### Suggested Base Stats:
+  * Dex: Great
+  * Strength: Poor
+  * Vitality: Poor
+  * Intelligence: Good
+  * Inner Fire: Average
+  * Charisma: Poor
+  * Luck: Good
+
+#### Catterwol
+Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.
+**Natural Allegiances:** Catterwol keep to themselves, and hate Orc.
+###### Inborn Abilities:
+  * DarkVision: Catterwol can see in the dark.
+  * Fisher: Catterwol are naturally good at fishing.
+  * They're Retractable: Catterwol have retractable, razor sharp claws.
+  * Land on your feet: Catterwol can survive long falls.
+
+###### Suggested Base Stats:
+  * Dex: Good
+  * Strength: Average
+  * Vitality:  Average
+  * Intelligence:  Good
+  * Inner Fire:  Average
+  * Charisma:  Average
+  * Luck:  Average
+  * Perception:
