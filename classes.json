@@ -178,157 +178,174 @@
                              "Perception" : "2"
                             }            
         },
-
+        {
+            "names" : ["Thief"],
+            "description" : "For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.",
+            "standings" : "Thieves hat law keepers and Thief Catchers",
+            "abilities" : ["Master of Disguise", 
+                           "Lightfoot",
+                           "Nimble Fingers",
+                           "Low-Light Vision",
+                           "Mantel"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "-2",
+                             "Vitality" :  "-3",
+                             "Intelligence" : "1",
+                             "Inner_Fire" : "-1",
+                             "Charisma" : "2",
+                             "Luck" : "2",
+                             "Perception" : "2"
+                            }            
+        },
+        {
+            "names" : ["Thief-Catcher"],
+            "description" : "It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, who now hunt down their old comrades.",
+            "standings" : "Thief Catchers hate thieves, and are distrusted by lawkeepers",
+            "abilities" : ["Master of Disguise", 
+                           "Lightfoot",
+                           "Nimble Fingers",
+                           "Low-Light Vision",
+                           "Mantel",
+                           "Equipped"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "1",
+                             "Vitality" :  "-1",
+                             "Intelligence" : "1",
+                             "Inner_Fire" : "0",
+                             "Charisma" : "1",
+                             "Luck" : "1",
+                             "Perception" : "2"
+                            }            
+        },
+        {
+            "names" : ["Lordling"],
+            "description" : "A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.",
+            "standings" : "Lordlings are respected by kingsmen, but are often set upon by thieves.",
+            "abilities" : ["My Father's Coffers", 
+                           "The Family Sword",
+                           "My People",
+                           "Reach",
+                           "Mantel",
+                           "Good looks and happy smiles"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "1",
+                             "Vitality" :  "0",
+                             "Intelligence" : "1",
+                             "Inner_Fire" : "-1",
+                             "Charisma" : "3",
+                             "Luck" : "2",
+                             "Perception" : "-1"
+                            }            
+        },
+        {
+            "names" : ["Lady Fair", "Prince of the People"],
+            "description" : "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
+            "standings" : "Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands.", 
+            "abilities" : ["Swoon",
+                           "Savior of the Common Man",
+                           "Beauty Incarnate",
+                           "Feint"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "-2",
+                             "Vitality" :  "-4",
+                             "Intelligence" : "-1",
+                             "Inner_Fire" : "-1",
+                             "Charisma" : "4",
+                             "Luck" : "4",
+                             "Perception" : "0"
+                            }            
+        },
+        {
+            "names" : ["Bard"],
+            "description" : "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
+            "standings" : "Bards are loved by most, and are welcomed equally among thieves and goodfolk.", 
+            "abilities" : ["Cartwheel",
+                           "Instrumentalist",
+                           "One up the sleeve",
+                           "Little birds"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "2",
+                             "Strength" : "-1",
+                             "Vitality" :  "-2",
+                             "Intelligence" : "0",
+                             "Inner_Fire" : "1",
+                             "Charisma" : "2",
+                             "Luck" : "2",
+                             "Perception" : "2"
+                            }            
+        },
+        {
+            "names" : ["Marksman"],
+            "description" : "Excellent archers, Marksmen come from all walks of life.",
+            "standings" : "Excellent archers, Marksmen come from all walks of life.", 
+            "abilities" : ["Longshot",
+                           "Focus",
+                           "Double tap",
+                           "Keen eye",
+                           "PULL"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "-1",
+                             "Vitality" :  "-3",
+                             "Intelligence" : "0",
+                             "Inner_Fire" : "0",
+                             "Charisma" : "0",
+                             "Luck" : "1",
+                             "Perception" : "2"
+                            }            
+        },
+        {
+            "names" : ["Huntsman"],
+            "description" : "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
+            "standings" : "Huntsman are generally disliked by knights and the highborn.", 
+            "abilities" : ["Fletcher",
+                           "Every part",
+                           "Sureshot",
+                           "Size doesn't matter",
+                           "Crippling shot",
+                           "Trapper"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "1",
+                             "Strength" : "-2",
+                             "Vitality" :  "-4",
+                             "Intelligence" : "-1",
+                             "Inner_Fire" : "1",
+                             "Charisma" : "1",
+                             "Luck" : "2",
+                             "Perception" : "3"
+                            }            
+        },
+        {
+            "names" : ["Monk"],
+            "description" : "Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.",
+            "standings" : "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them.", 
+            "abilities" : ["Steady",
+                           "Hand to Hand",
+                           "Heart to Heart",
+                           "Inner eye",
+                           "Meditate"
+                          ],
+            "stats" :     {
+                             "Dexterity" : "2",
+                             "Strength" : "1",
+                             "Vitality" :  "-3",
+                             "Intelligence" : "1",
+                             "Inner_Fire" : "2",
+                             "Charisma" : "0",
+                             "Luck" : "2",
+                             "Perception" : "3"
+                            }            
+        }
     ]
 }
-
-
-   
-Thief
-     Description: For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.
-     Natural Allies/Enemies: Law keepers, Thief Catchers
-     Abilities: 
-          Master of Disguise: Thieves can easily fashion disguises to hide themselves with.
-          Lightfoot: Thieves are naturally good at sneaking. Stacks with Padfoot. 
-          Nimble Fingers: Thieves have a higher chance of not being discovered when stealing.
-          Low-Light Vision: Thieves can see in low light.
-          Mantel: Thieves are adept climbers
- 
-     Stats: Thieves have low Strength, Vitality, and inner fire, but high dexterity, charisma, and luck
-     Stat boosts:
-     Strength: Nerf    
-     Vitality: Nerf
-     Inner Fire: Nerf
-     Dexterity: Buff
-     Charisma: Buff
-     Luck: Large Buff
-
-Thief-Catcher
-     Description: It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, who now hunt down their old comrades.
-     Natural Enemies: Thieves, Distrusted by Law keepers
-     Abilities: 
-          Master of Disguise: Thief-Catchers can easily fashion disguises to hide themselves with.
-          Lightfoot: Thief-Catchers are naturally good at sneaking. Stacks with Padfoot. 
-          Nimble Fingers: Thief-Catchers have a higher chance of not being discovered when stealing.
-          Low-Light Vision: Thief-Catchers can see in low light.
-          Mantel: Thief catchers are adept climbers.
-          Equipped: Thieves begin with a sword-breaker and 100 feet of rope.
-     Stats: Thief-Catchers have low Vitality and inner fire, but high dexterity and charisma.
-     Stat boosts:
-     Vitality: Nerf
-     Inner Fire: Nerf
-     Dexterity: Buff
-     Intelligence: Buff
-     Charisma: Buff
-
-Lordling
-     Description: A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.
-     Natural Enemies: Thieves
-     Abilities:
-         Born this way: Lordlings begin with extra gold.
-         The Family Sword: Lordlings begin well equipped.
-         My People: Lordlings hold sway with town guards and villagers in their parent's territory.
-         Reach: A Lordling’s father is sure to have holdings in many of the towns and villages of the realm. 
-         Good looks and happy smiles: The presence of a lordling increases party cheer in good weather, and decreases it in bad weather.
-     Stats: Lordlings have low strength, dexterity and inner fire but higher than average intelligence, luck and charisma.
-     Stat boosts:
-     Strength: Nerf
-     Dexterity: Nerf
-     Inner fire: Nerf
-     Luck: Buff
-     Intelligence: Buff
-     Charisma: Large Buff
-
-Lady Fair/Prince of the People 
-     Description: Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm                                            beds and three square meals.
-     Natural Enemies: Thieves and brigands
-     Abilities:
-          Swoon: Once per battle, the lady fair or the prince can play dead for a turn, avoiding further injury.
-          Savior of the Common Man: Peasants and town guards everywhere love and respect the lady fair and the prince of the                          people.
-          Beauty Incarnate: The lady fair and the prince of the people can use their beauty to sway the minds of others. (+3 charisma when speaking to people attracted to their sex)
-          Feint: The lady fair and prince of the people are good at dodging and countering.
-     Stats: The Lady Fair and Prince of the People have low strength and intelligence, but have very high charisma.
-     Stat boosts:
-     Strength: Nerf
-     Intelligence: Nerf
-     Charisma: Huge Buff (+3)
-
-Peasant
-     Description: Born of wretched beginnings, the peasant knows what it is to be kicked into the dirt. For years, they have worked hard to keep themselves above water, but things haven't gotten any better. Maybe, a change is in order.
-     Natural Enemies: Raiders, Foreign Peasants
-     Abilities: 
-          Common Man: Peasants gain +2 Charisma when speaking with people of low birth. -4 for people of high birth.
-          Chosen Craft: Choose between Smith(+1 strength, -1 intelligence), Hunter (+1 dex, -1 strength, bow), Tavern Owner (+1 Charisma, -1 Strength, -1 Dex, more gold),  fletcher, or farmer.
-          Ignorant: Peasants can't be easily controlled or manipulated by intelligence based spells.
-          Breaking ground: Peasants are good at digging.
-          
-Bard
-     Description: Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.
-     Natural Enemies: Brigands.
-     Abilities:
-          Cartwheel: Showmen have high dexterity, and can naturally turn flips and cartwheels.
-          Instrumentalist: Showmen have mastery over an instrument of their choice, and begin with it.
-          One up the sleeve: Bards are masters with throwing knives, and carry many in their sleeves.
-          Little birds: a bard can gather information from the children of a town.
-
-Marksman
-     Description: Skilled at long distance archery, marksmen can be depended on to make shots others wouldn't dare take.
-     Natural Enemies: Close range combat
-     Abilities:
-          Longshot: Marksmen begin with a longbow.
-          Focus: Once every three turns, a marksman can take a shot with a huge accuracy bonus.
-          Double tap: Once per engagement, a marksman can shoot two arrows at a time.
-          Keen eye: marksmen have incredible vision.
-          PULL: If enemies are in a row and close enough, a marksman's shot will pass right through them.
-
-Dex Boost
-Intelligence Boost
-Luck Boost
-
-Huntsman:
-     Description: Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.
-     Natural Enemies: the highborn
-     Abilities:
-          Fletcher: Given the right materials, huntsmen can make their own arrows.
-          Every part: Huntsmen get more meat  and materials from butchering a kill.
-          Sureshot; Huntsmen are uncannily accurate in dense environments.
-          Size doesn't matter: Huntsmen begin with a shortbow.
-          Crippling shot: A huntsman can choose to aim for an opponent's knees with increased accuracy.
-
-Monk:
-     Description: Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.
-     Natural Enemies: Brutes.
-     Abilities:
-          Steady: Monks are masters of their body.
-          Hand to Hand: Monks are deadly with just their hands.
-          Heart to Heart: Being in the presence of monks can help put others at ease/boost morale.
-          Inner eye: Monks are more likely to detect spiritual energy.
-          Meditate: Monks can restore their health more quickly by meditating.
-          Share ability: A monk can share in the ability of another member of the party.
-
-Bender
-     Description: Masters of elemental magic, benders can bend the elements to their will.
-     Natural enemies: Mages.
-     Abilities:
-          Earth, Wind, or Fire: Benders can choose one of the four elements to have power over.
-          Inner eye: Like monks, benders are closely attached to the spiritual world.
-
-Adventurer
-     Description: The adventurer became bored with the mundane drudgery of day to day life, and is now seeking out the thrill of new and perilous experiences. While used to the comforts of home, the adventurer is ready and excited to set out on the road and see what challenges and wonders await!
-     Natural Enemies: Monsters and brigands
-     Abilities:
-          Wayfarer: Adventurers are in it for the long haul, and take longer to tire than others.
-          Literate: Adventurers are learned.
-          Historian: Adventurers have a deep knowledge of the land in which their in.
-          Trusty Shield: Adventurers begin with a kite shield.
-
-Retired Adventurer
-     Description: The retired adventurer found their thrills years ago, before being forced to retire into the cushy life of a townsperson.
-     Natural Enemies: Monsters.
-     Abilities:
-          Stiff knee: Retired adventurers sometimes limp from an old arrow wound. For some reason, this increases the morale of their party.
-          Old hand: Retired adventurers have a deep understanding of the limits of their bodies and of others.
-          Rusted Sword: A retired adventurer begins his adventure with a rusted set of armor and a sword. Causes tetanus.
-          Tricky: Retired adventures can have an increased ability to feint in battle.
-          Tavern-seer: Retired adventurers can learn almost anything in a tavern.
-          Summon old friend: once per area, an adventurer can summon an old friend.
