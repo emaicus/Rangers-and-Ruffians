@@ -5,6 +5,75 @@ import random
 import json
 import operator
 
+def racePicker():
+  with open("races.json") as data_file:    
+    races = json.load(data_file)
+  print("The current races are:")
+  names = list()
+  for race in races["standard_races"]:
+    print("\t" + race["name"])
+    list.append(race["name"])
+  myRace = verifyInput("Which one would you like?", names)
+
+def helper():
+  with open("races.json") as data_file:    
+    races = json.load(data_file)
+  playStyles = ["Tank", "Fighter", "Mage", "Support", "Ranged Fighter"]
+  playStyle = verifyInput("No worries. Do you have any ideas what sort of character you want to play?", playStyles)
+  print("Ok, so you want to be a " + playStyle)
+  if playStyle == "Tank":
+    races = sorted(races, key=lambda k: k['stats']["Strength"] + k['stats']["Vitality"])
+  elif playStyle == "Fighter":
+    races = sorted(races, key=lambda k: max(k['stats']["Dexterity"], k['stats']["Strength"])+ k['stats']["Vitality"])
+  elif playStyle == "Mage":
+    races = sorted(races, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
+  elif playStyle == "Support":
+    playStyle = verifyInput("So are you interested in being a healer, or do you want to be more active?", ("Healer", "Fighting Support"))
+    if playStyle == "healer":
+      print("Good on you! Here are some options:")
+      options = list()
+      races = sorted(races, key=lambda k: k['stats']["Intelligence"])
+      options.append(races[0])
+      print(races[0]["name"] + " Have the highest intelligence (" + races[0]["stats"]["Intelligence"] +"), this will make them very technical healers. Who are good at learning new spells.")
+      options.append(races[0])
+      races = sorted(races, key=lambda k: k['stats']["Inner_Fire"])
+      print(races[0]["name"] + " Have the highest inner fire (" + races[0]["stats"]["Inner_Fire"] +"), this will make them powerful healers who can do more with simple spells.")
+      races = sorted(races, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
+      options.append(races[0])
+      print(races[0]["name"] + " Have the best mix (Inner fire: " + races[0]["stats"]["Inner_Fire"] +", Int: "+ races[0]["stats"]["Intelligence"] + "), which will make them versatile.")
+      options.append("none")
+      myRace = verifyInput("Do any of those sound good to you?", options)
+      if myRace == "none":
+        options = list()
+        print("Hmmm... so you don't like any of those, huh?")
+        races = sorted(races, key=lambda k: (k['stats']["Intelligence"]*2) + (k['stats']["Inner Fire"]*2) + k['stats']["Vitality"])
+        options.append(races[0])
+        myRace = 
+
+
+    else:
+    races = sorted(races, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
+
+def picker():
+  answer = verifyInput("Great! So do you know which race you want to play as?", ["y", "n"])
+    if answer == "y":
+      
+    else:
+      playStyle = verifyInput("No worries. Do you have any ideas what sort of character you want to play?", playStyles)
+      print("Ok, so you want to be a " + playStyle)
+
+def character_help():
+  
+  with open("classes.json") as data_file:    
+    classes = json.load(data_file)
+
+  
+
+  print("Hi, Let's build you a character!")
+  myRace = "INVALID"
+  answer = verifyInput("Do you already know all or part of what you want, or would you like help?", ["I know", "Help"])
+  if answer == "I know":
+    
 def main():
 
   races = classes = dict()
