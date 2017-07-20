@@ -1,5 +1,5 @@
 {
-  "standard_races" : [    
+  "standard_classes" : [    
         {
             "names" : ["Barbarian", "Ruffian", "Raider"],
             "description" : "Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.",
@@ -10,14 +10,14 @@
                            "Crushing Blow"
                           ],
             "stats" :     {
-                             "Dexterity" : "0",
-                             "Strength" : "2",
-                             "Vitality" :  "1",
-                             "Intelligence" : "-2",
-                             "Inner_Fire" : "1",
-                             "Charisma" : "-1",
-                             "Luck" : "1",
-                             "Perception" : "-1"
+                             "Dexterity" : 0,
+                             "Strength" : 2,
+                             "Vitality" :  1,
+                             "Intelligence" : -2,
+                             "Inner_Fire" : 1,
+                             "Charisma" : -1,
+                             "Luck" : 1,
+                             "Perception" : -1
                             }            
         },
         {
@@ -29,14 +29,14 @@
                            "Medicine"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "0",
-                             "Vitality" :  "1",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "-1",
-                             "Charisma" : "-1",
-                             "Luck" : "0",
-                             "Perception" : "1"
+                             "Dexterity" : 1,
+                             "Strength" : 0,
+                             "Vitality" :  1,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : -1,
+                             "Charisma" : -1,
+                             "Luck" : 0,
+                             "Perception" : 1
                             }            
         },
         {
@@ -49,14 +49,14 @@
                            "Lance"
                           ],
             "stats" :     {
-                             "Dexterity" : "0",
-                             "Strength" : "1",
-                             "Vitality" :  "1",
-                             "Intelligence" : "-1",
-                             "Inner_Fire" : "-1",
-                             "Charisma" : "-1",
-                             "Luck" : "1",
-                             "Perception" : "1"
+                             "Dexterity" : 0,
+                             "Strength" : 1,
+                             "Vitality" :  1,
+                             "Intelligence" : -1,
+                             "Inner_Fire" : -1,
+                             "Charisma" : -1,
+                             "Luck" : 1,
+                             "Perception" : 1
                             }            
         },
         {
@@ -69,14 +69,14 @@
                            "Charge"
                           ],
             "stats" :     {
-                             "Dexterity" : "0",
-                             "Strength" : "1",
-                             "Vitality" :  "1",
-                             "Intelligence" : "-1",
-                             "Inner_Fire" : "1",
-                             "Charisma" : "1",
-                             "Luck" : "-1",
-                             "Perception" : "-1"
+                             "Dexterity" : 0,
+                             "Strength" : 1,
+                             "Vitality" :  1,
+                             "Intelligence" : -1,
+                             "Inner_Fire" : 1,
+                             "Charisma" : 1,
+                             "Luck" : -1,
+                             "Perception" : -1
                             }            
         },
         {
@@ -88,14 +88,14 @@
                            "Fireburst"
                           ],
             "stats" :     {
-                             "Dexterity" : "0",
-                             "Strength" : "0",
-                             "Vitality" :  "0",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "2",
-                             "Charisma" : "1",
-                             "Luck" : "-1",
-                             "Perception" : "0"
+                             "Dexterity" : 0,
+                             "Strength" : 0,
+                             "Vitality" :  0,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : 2,
+                             "Charisma" : 1,
+                             "Luck" : -1,
+                             "Perception" : 0
                             }            
         },
         {
@@ -107,14 +107,14 @@
                            "Transfigure"
                           ],
             "stats" :     {
-                             "Dexterity" : "0",
-                             "Strength" : "-2",
-                             "Vitality" :  "-3",
-                             "Intelligence" : "2",
-                             "Inner_Fire" : "1",
-                             "Charisma" : "0",
-                             "Luck" : "-1",
-                             "Perception" : "-1"
+                             "Dexterity" : 0,
+                             "Strength" : -2,
+                             "Vitality" :  -3,
+                             "Intelligence" : 2,
+                             "Inner_Fire" : 1,
+                             "Charisma" : 0,
+                             "Luck" : -1,
+                             "Perception" : -1
                             }            
         },
         {
@@ -128,14 +128,14 @@
                            "Walking Stick"
                           ],
             "stats" :     {
-                             "Dexterity" : "-1",
-                             "Strength" : "1",
-                             "Vitality" :  "-1",
-                             "Intelligence" : "2",
-                             "Inner_Fire" : "2",
-                             "Charisma" : "2",
-                             "Luck" : "1",
-                             "Perception" : "1"
+                             "Dexterity" : -1,
+                             "Strength" : 1,
+                             "Vitality" :  -1,
+                             "Intelligence" : 2,
+                             "Inner_Fire" : 2,
+                             "Charisma" : 2,
+                             "Luck" : 1,
+                             "Perception" : 1
                             }            
         },
         {
@@ -148,14 +148,14 @@
                            "Herbalist"
                           ],
             "stats" :     {
-                             "Dexterity" : "-1",
-                             "Strength" : "-1",
-                             "Vitality" :  "-4",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "2",
-                             "Charisma" : "1",
-                             "Luck" : "2",
-                             "Perception" : "2"
+                             "Dexterity" : -1,
+                             "Strength" : -1,
+                             "Vitality" :  -4,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : 2,
+                             "Charisma" : 1,
+                             "Luck" : 2,
+                             "Perception" : 2
                             }            
         },
         {
@@ -168,14 +168,14 @@
                            "Herbalist"
                           ],
             "stats" :     {
-                             "Dexterity" : "-1",
-                             "Strength" : "-1",
-                             "Vitality" :  "-4",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "2",
-                             "Charisma" : "1",
-                             "Luck" : "2",
-                             "Perception" : "2"
+                             "Dexterity" : -1,
+                             "Strength" : -1,
+                             "Vitality" :  -4,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : 2,
+                             "Charisma" : 1,
+                             "Luck" : 2,
+                             "Perception" : 2
                             }            
         },
         {
@@ -189,14 +189,14 @@
                            "Mantel"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "-2",
-                             "Vitality" :  "-3",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "-1",
-                             "Charisma" : "2",
-                             "Luck" : "2",
-                             "Perception" : "2"
+                             "Dexterity" : 1,
+                             "Strength" : -2,
+                             "Vitality" :  -3,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : -1,
+                             "Charisma" : 2,
+                             "Luck" : 2,
+                             "Perception" : 2
                             }            
         },
         {
@@ -211,14 +211,14 @@
                            "Equipped"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "1",
-                             "Vitality" :  "-1",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "0",
-                             "Charisma" : "1",
-                             "Luck" : "1",
-                             "Perception" : "2"
+                             "Dexterity" : 1,
+                             "Strength" : 1,
+                             "Vitality" :  -1,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : 0,
+                             "Charisma" : 1,
+                             "Luck" : 1,
+                             "Perception" : 2
                             }            
         },
         {
@@ -233,14 +233,14 @@
                            "Good looks and happy smiles"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "1",
-                             "Vitality" :  "0",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "-1",
-                             "Charisma" : "3",
-                             "Luck" : "2",
-                             "Perception" : "-1"
+                             "Dexterity" : 1,
+                             "Strength" : 1,
+                             "Vitality" :  0,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : -1,
+                             "Charisma" : 3,
+                             "Luck" : 2,
+                             "Perception" : -1
                             }            
         },
         {
@@ -253,14 +253,14 @@
                            "Feint"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "-2",
-                             "Vitality" :  "-4",
-                             "Intelligence" : "-1",
-                             "Inner_Fire" : "-1",
-                             "Charisma" : "4",
-                             "Luck" : "4",
-                             "Perception" : "0"
+                             "Dexterity" : 1,
+                             "Strength" : -2,
+                             "Vitality" :  -4,
+                             "Intelligence" : -1,
+                             "Inner_Fire" : -1,
+                             "Charisma" : 4,
+                             "Luck" : 4,
+                             "Perception" : 0
                             }            
         },
         {
@@ -273,14 +273,14 @@
                            "Little birds"
                           ],
             "stats" :     {
-                             "Dexterity" : "2",
-                             "Strength" : "-1",
-                             "Vitality" :  "-2",
-                             "Intelligence" : "0",
-                             "Inner_Fire" : "1",
-                             "Charisma" : "2",
-                             "Luck" : "2",
-                             "Perception" : "2"
+                             "Dexterity" : 2,
+                             "Strength" : -1,
+                             "Vitality" :  -2,
+                             "Intelligence" : 0,
+                             "Inner_Fire" : 1,
+                             "Charisma" : 2,
+                             "Luck" : 2,
+                             "Perception" : 2
                             }            
         },
         {
@@ -294,14 +294,14 @@
                            "PULL"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "-1",
-                             "Vitality" :  "-3",
-                             "Intelligence" : "0",
-                             "Inner_Fire" : "0",
-                             "Charisma" : "0",
-                             "Luck" : "1",
-                             "Perception" : "2"
+                             "Dexterity" : 1,
+                             "Strength" : -1,
+                             "Vitality" :  -3,
+                             "Intelligence" : 0,
+                             "Inner_Fire" : 0,
+                             "Charisma" : 0,
+                             "Luck" : 1,
+                             "Perception" : 2
                             }            
         },
         {
@@ -316,14 +316,14 @@
                            "Trapper"
                           ],
             "stats" :     {
-                             "Dexterity" : "1",
-                             "Strength" : "-2",
-                             "Vitality" :  "-4",
-                             "Intelligence" : "-1",
-                             "Inner_Fire" : "1",
-                             "Charisma" : "1",
-                             "Luck" : "2",
-                             "Perception" : "3"
+                             "Dexterity" : 1,
+                             "Strength" : -2,
+                             "Vitality" :  -4,
+                             "Intelligence" : -1,
+                             "Inner_Fire" : 1,
+                             "Charisma" : 1,
+                             "Luck" : 2,
+                             "Perception" : 3
                             }            
         },
         {
@@ -337,14 +337,14 @@
                            "Meditate"
                           ],
             "stats" :     {
-                             "Dexterity" : "2",
-                             "Strength" : "1",
-                             "Vitality" :  "-3",
-                             "Intelligence" : "1",
-                             "Inner_Fire" : "2",
-                             "Charisma" : "0",
-                             "Luck" : "2",
-                             "Perception" : "3"
+                             "Dexterity" : 2,
+                             "Strength" : 1,
+                             "Vitality" :  -3,
+                             "Intelligence" : 1,
+                             "Inner_Fire" : 2,
+                             "Charisma" : 0,
+                             "Luck" : 2,
+                             "Perception" : 3
                             }            
         }
     ]
