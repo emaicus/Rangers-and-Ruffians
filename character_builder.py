@@ -33,7 +33,7 @@ def main():
 
   answer = "continue"
   while answer != "quit":
-    answer = input("What do you want to know about? (stats, quit)\n")
+    answer = input("What do you want to know about? (stats, quit, summary, new character)\n")
     if answer == "stats":
       answer = input("Worst or best?\n")
       best = True
@@ -54,6 +54,26 @@ def main():
             print(arg["name"] + ": " + str(arg['stats'][stat]))
       except Exception as e:
         print("ERROR:" +  str(e))
+    elif answer == "summary":
+      print("We are goint to rank from worst to best in these categories: Tank, Mage")
+      
+      print("Sorting tanks")
+      combos = sorted(combos, key=lambda k: k['stats']["Strength"] + k['stats']["Vitality"])
+      with open("tankFile.txt", "w") as out:
+        for combo in combos:
+          out.write(combo["name"] + " Str:" + str(combo['stats']["Strength"]) + " Vit: " + str(combo['stats']["Vitality"]) + '\n')
+      
+      print("Sorting Mages")
+      combos = sorted(combos, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
+      with open("Magefile.txt", "w") as out:
+        for combo in combos:
+          out.write(combo["name"] + " Int:" + str(combo['stats']["Intelligence"]) + " IF: " + str(combo['stats']["Inner_Fire"]) + '\n')
+      
+      print("Sorting Dex")
+      combos = sorted(combos, key=lambda k: k['stats']["Dexterity"] + (k['stats']["Vitality"]/2))
+      with open("dexFile.txt", "w") as out:
+        for combo in combos:
+         out.write(combo["name"] + " Dex:" + str(combo['stats']["Dexterity"]) + " Vit: " + str(combo['stats']["Vitality"]) +'\n')
 
 
 if __name__ == '__main__':
