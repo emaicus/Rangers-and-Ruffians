@@ -1,5 +1,5 @@
 {
-  "standard_races" : [    
+  "standard_classes" : [    
         {
             "names" : ["Barbarian", "Ruffian", "Raider"],
             "description" : "Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.",
