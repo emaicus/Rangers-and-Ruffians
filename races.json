@@ -22,9 +22,9 @@
         {
           "name" : "Elf",
           "description" : "Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.",
-          "standings"   : "Natural Allegiances/Enemies:** Elves tolerate humans and dwarves, and hate goblins and orcs.",
+          "standings"   : "Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.",
           "abilities" : ["Sleepless",
-                         "DarkVision",
+                         "Dark Vision",
                          "Wink Wink, Nudge Nudge",
                          "Winged feet"
                         ],
@@ -86,7 +86,7 @@
       "abilities" : ["Sling",
                      "Still Warm",
                      "Along Came a Spider",
-                     "Darkvision"
+                     "Dark Vision"
                     ],
       "stats" :     {
                        "Dexterity" : 3,
@@ -103,7 +103,7 @@
       "name" : "Catterwol",
       "description" : "Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.",
       "standings"   : "Catterwol keep to themselves, and hate Orcs.",
-      "abilities" : ["DarkVision",
+      "abilities" : ["Dark Vision",
                      "Fisher",
                      "They're Retractable",
                      "Land on your feet"

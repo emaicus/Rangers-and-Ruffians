@@ -2,182 +2,520 @@
   "standard_abilities" : [
         {
             "names" : ["Last Stand"],
-            "description" : "",
-            "effect" : "When your health is below 20%, you can make two moves in a row.",
-            "rules" : "",
-            "type" : "passive",
-            "category" : "boss"
+            "description" : "When your health is below 20%, you can make two moves in a row.",
+            "effect" : ""
         },
         {
             "names" : ["Strength of Men"],
-            "description" : "",
-            "effect" : "You have basic healing abilities. Heal a party member for d10 health.",
-            "rules" : "Can be used once per day per party member outside of battle.",
+            "description" : "You have basic healing abilities. Heal a party member for d10 health.",
+            "effect" : ""
         },
         {
             "names" : ["Rally"],
-            "description" : "",
-            "effect" : "Once per day, You can use an aura which reinvigorates their comrades.",
-            "rules" : "Can be used once per day per party member outside of battle.",
+            "description" : "Once per day, You can use an aura which reinvigorates their comrades.",
+            "effect" : ""
         },
         {
-            "names" : ["Fixit Dwarf", "Handy"],
+            "names" : ["Fixit Dwarf"],
             "description" : "Given a few hours, you can repair most steel made items.",
-            "effect" : "",
+            "effect" : ""
         },
         {
             "names" : ["Miner's Eye"],
             "description" : "When dealing with minerals or works made of stone, your character's intelligence is treated as Masterful.",
-            "effect" : "",
+            "effect" : ""
         },
         {
-            "names" : ["DarkVision", "Dark Vision"],
+            "names" : ["Dark Vision"],
             "description" : "You can see well in the dark.",
-            "effect" : "",
+            "effect" : ""
         },
         {
             "names" : ["Sleepless"],
             "description" : "Elves can go days without sleeping, allowing them to keep watch long into the night.",
-            "effect" : "",
+            "effect" : ""
         },
         {
             "names" : ["Wink Wink, Nudge Nudge"],
             "description" : "You can influence men and halflings with their beauty.",
-            "effect" : "",
+            "effect" : ""
         },
+        {
+            "names" : ["Winged feet"],
+            "description" : "You have incredible endurance.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Sling"],
+            "description" : "Your character carries a sling, with which they are uncannily accurate.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Warm Butter"],
+            "description" : "Your is an are naturally talented chef, and food that they cook restores extra health..",
+            "effect" : ""
+        },
+        {
+            "names" : ["Soft Bed"],
+            "description" : "You recover full health from sleeping in a real bed.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Softfoot"],
+            "description" : "You are naturally good at sneaking.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Lamb to Slaughter"],
+            "description" : "When hunting, You have high perception..",
+            "effect" : ""
+        },
+        {
+            "names" : ["Bellow"],
+            "description" : "You can unleash a mighty bellow to intimidate your foes.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Still Warm"],
+            "description" : "You can eat raw meat without penalty.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Along Came a Spider"],
+            "description" : "You are naturally adept at climbing.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Fisher"],
+            "description" : "Catterwol are naturally good at fishing.",
+            "effect" : ""
+        },
+        {
+            "names" : ["They're Retractable"],
+            "description" : "You have retractable, razor sharp claws.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Land on your feet"],
+            "description" : "Catterwol can survive long falls.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Berserk"],
+            "description" : "Once per day, a you can go into a rage, increasing strength and vitality but decreasing intelligence and perception.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Intimidate"],
+            "description" : "You have a higher chance to intimidate enemies.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Throw Anything"],
+            "description" : "You can throw anything.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Crushing Blow"],
+            "description" : "You have a chance of hitting an enemy so hard it demoralizes others.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Huntsman"],
+            "description" : "You are a skilled hunter by necessity.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Mount and Blade"],
+            "description" : "You can swap your dexterity and strength stats while on horseback.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Woodsman"],
+            "description" : "You are apt at traversing the wilds.",
+            "effect" : ""
+        },
+        {
+            "names" : ["Medicine"],
+            "description" : "Given a few hours, you can usually produce herbal remedies for ailments.",
+            "effect" : ""
+        },
+        {
+            "names": "Sword and Spear",
+            "description": "You can swap your dexterity and strength stats while on horseback.",
+            "effect": ""
+        },
+        {
+            "names": "Under the Stars",
+            "description": "You have been forced to learn to sleep anywhere without penalty, and can build shelters quickly.",
+            "effect": ""
+        },
+        {
+            "names": "Lance",
+            "description": "Hit two enemies that are standing in a row.",
+            "effect": ""
+        },
+        {
+            "names": "Trained Precision",
+            "description": "Once per battle, you can attack with a guaranteed critical hit.",
+            "effect": ""
+        },
+        {
+            "names": "Kingsmen",
+            "description": "Your charisma is increased when speaking with a kingsman.",
+            "effect": ""
+        },
+        {
+            "names": "Hold the line",
+            "description": "Once per day and during battle, add 1 attack to each teammate per point of your inner fire.",
+            "effect": ""
+        },
+        {
+            "names": "Charge",
+            "description": "You can bridge the gap between yourself and a mid-distance foe.",
+            "effect": ""
+        },
+        {
+            "names": "Get Behind Me",
+            "description": "At the penalty of their next turn, you can use your shield to defend party members behind you.",
+            "effect": ""
+        },
+        {
+            "names": "Choice Stat",
+            "description": "You can choose whether to apply +1 to Dexterity or Strength.",
+            "effect": ""
+        },
+        {
+            "names": "Elemental Weapon",
+            "description": "Once per day, you can enchant a physical weapon with elemental effects.",
+            "effect": ""
+        },
+        {
+            "names": "Sword and Flame",
+            "description": "You can naturally dual wield magic and physical weapons.",
+            "effect": ""
+        },
+        {
+            "names": "Fireburst",
+            "description": "Once per day, conjure a vial of explosive liquid. d10 AOE damage",
+            "effect": ""
+        },
+        {
+            "names": "Sword and the Satchel",
+            "description": "You are gifted a never ending satchel.",
+            "effect": ""
+        },
+        {
+            "names": "Air of Mystery",
+            "description": "You are capable of impressing guards and villagers.",
+            "effect": ""
+        },
+        {
+            "names": "A Dry place to sleep",
+            "description": "You can summon a hut big enough for two.",
+            "effect": ""
+        },
+        {
+            "names": "Transfigure",
+            "description": "A few times a day, a you can turn something into something else.",
+            "effect": ""
+        },
+        {
+            "names": "Looming Presence",
+            "description": "You can use your magic to impress and intimidate creatures with lower intelligence.",
+            "effect": ""
+        },
+        {
+            "names": "The Hand of God",
+            "description": "When you are in dire trouble, your luck vastly increases.",
+            "effect": ""
+        },
+        {
+            "names": "Pointy Hatted Wanderer",
+            "description": "Nature itself often aids you in your travels. (Increased Perception in the wilds)",
+            "effect": ""
+        },
+        {
+            "names": "Walking Stick",
+            "description": "You start with a wizard's staff.",
+            "effect": ""
+        },
+        {
+            "names": "Over-heal",
+            "description": "Once per day, you can heal all party members for 120% health. Does not stack.",
+            "effect": ""
+        },
+        {
+            "names": "Shield of Men",
+            "description": "Once per battle, you can use your magic to make all enemies in an area attack you exclusively.",
+            "effect": ""
+        },
+        {
+            "names": "Purge Decay",
+            "description": "You have increased luck when fighting against the undead.",
+            "effect": ""
+        },
+        {
+            "names": "Herbalist",
+            "description": "You can create potions and draughts from items in your environment.",
+            "effect": ""
+        },
+        {
+            "names": "Master of Disguise",
+            "description": "You can easily fashion disguises to hide yourself with.",
+            "effect": ""
+        },
+        {
+            "names": "Lightfoot",
+            "description": "You are naturally good at sneaking. Stacks with Padfoot.",
+            "effect": ""
+        },
+        {
+            "names": "Nimble Fingers",
+            "description": "You have a higher chance of not being discovered when stealing.",
+            "effect": ""
+        },
+        {
+            "names": "Low-Light Vision",
+            "description": "You can see in low light.",
+            "effect": ""
+        },
+        {
+            "names": "Mantel",
+            "description": "You are an adept climber",
+            "effect": ""
+        },
+        {
+            "names": "Equipped",
+            "description": "You begin with a sword-breaker and 100 feet of rope.",
+            "effect": ""
+        },
+        {
+            "names": "My Father's Coffers",
+            "description": "You begin with extra gold.",
+            "effect": ""
+        },
+        {
+            "names": "The Family Sword",
+            "description": "You begin well equipped.",
+            "effect": ""
+        },
+        {
+            "names": "My People",
+            "description": "You hold sway with town guards and villagers in your parent's territory.",
+            "effect": ""
+        },
+        {
+            "names": "Reach",
+            "description": "A your father is sure to have holdings in many of the towns and villages of the realm.",
+            "effect": ""
+        },
+        {
+            "names": "Good looks and happy smiles",
+            "description": "Your presence increases party cheer in good weather, and decreases it in bad weather.",
+            "effect": ""
+        },
+        {
+            "names": "Swoon",
+            "description": "Once per battle, you can play dead for a turn, avoiding further injury.",
+            "effect": ""
+        },
+        {
+            "names": "Savior of the Common Man",
+            "description": "Peasants and town guards everywhere love and respect you.",
+            "effect": ""
+        },
+        {
+            "names": "Beauty Incarnate",
+            "description": "You can use their beauty to sway the minds of others. (+3 charisma when speaking to people attracted to their sex)",
+            "effect": ""
+        },
+        {
+            "names": "Feint",
+            "description": "You are good at dodging and countering.",
+            "effect": ""
+        },
+        {
+            "names": "Common Man",
+            "description": "You gain +2 Charisma when speaking with people of low birth. -4 for people of high birth.",
+            "effect": ""
+        },
+        {
+            "names": "Chosen Craft",
+            "description": "Choose between Smith(+1 strength, -1 intelligence), Hunter (+1 dex, -1 strength, bow), Tavern Owner (+1 Charisma, -1 Strength, -1 Dex, more gold),  fletcher, or farmer.",
+            "effect": ""
+        },
+        {
+            "names": "Ignorant",
+            "description": "You can't be easily controlled or manipulated by intelligence based spells.",
+            "effect": ""
+        },
+        {
+            "names": "Breaking ground",
+            "description": "You are good at digging.",
+            "effect": ""
+        },
+        {
+            "names": "Cartwheel",
+            "description": "You have high dexterity, and can naturally turn flips and cartwheels.",
+            "effect": ""
+        },
+        {
+            "names": "Instrumentalist",
+            "description": "You have mastery over an instrument of your choice, and begin with it.",
+            "effect": ""
+        },
+        {
+            "names": "One up the sleeve",
+            "description": "You are a master with throwing knives, and carry many in your sleeves.",
+            "effect": ""
+        },
+        {
+            "names": "Little birds",
+            "description": "You can gather information from the children of a town.",
+            "effect": ""
+        },
+        {
+            "names": "Longshot",
+            "description": "You begin with a longbow.",
+            "effect": ""
+        },
+        {
+            "names": "Focus",
+            "description": "Once every three turns, you can take a shot with a huge accuracy bonus.",
+            "effect": ""
+        },
+        {
+            "names": "Double tap",
+            "description": "Once per engagement, you can shoot two arrows at a time.",
+            "effect": ""
+        },
+        {
+            "names": "Keen eye",
+            "description": "You have incredible vision.",
+            "effect": ""
+        },
+        {
+            "names": "PULL",
+            "description": "If enemies are in a row and close enough, a your shot will pass right through them.",
+            "effect": ""
+        },
+        {
+            "names": "Fletcher",
+            "description": "Given the right materials, you can make their own arrows.",
+            "effect": ""
+        },
+        {
+            "names": "Every part",
+            "description": "Huntsmen get more meat  and materials from butchering a kill.",
+            "effect": ""
+        },
+        {
+            "names": "Sureshot",
+            "description": "You are uncannily accurate in dense environments.",
+            "effect": ""
+        },
+        {
+            "names": "Size doesn't matter",
+            "description": "You begin with a shortbow.",
+            "effect": ""
+        },
+        {
+            "names": "Crippling shot",
+            "description": "You can choose to aim for an opponent's knees with increased accuracy.",
+            "effect": ""
+        },
+        {
+            "names": "Trapper",
+            "description": "You are adept at setting traps.",
+            "effect": ""
+        },
+        {
+            "names": "Steady",
+            "description": "You are a master of your body.",
+            "effect": ""
+        },
+        {
+            "names": "Hand to Hand",
+            "description": "You are deadly with just their hands.",
+            "effect": ""
+        },
+        {
+            "names": "Heart to Heart",
+            "description": "Being in your presence can help put others at ease/boost morale.",
+            "effect": ""
+        },
+        {
+            "names": "Inner eye",
+            "description": "You are more likely to detect spiritual energy.",
+            "effect": ""
+        },
+        {
+            "names": "Meditate",
+            "description": "You can restore their health more quickly by meditating.",
+            "effect": ""
+        },
+        {
+            "names": "Share ability",
+            "description": "You can share in the ability of another member of the party.",
+            "effect": ""
+        },
+        {
+            "names": "Earth, Wind, or Fire",
+            "description": "You can choose one of the four elements to have power over.",
+            "effect": ""
+        },
+        {
+            "names": "Wayfarer",
+            "description": "You are in it for the long haul, and take longer to tire than others.",
+            "effect": ""
+        },
+        {
+            "names": "Literate",
+            "description": "You are learned, and know many languages and locales.",
+            "effect": ""
+        },
+        {
+            "names": "Historian",
+            "description": "You have a deep knowledge of the land in which you are in.",
+            "effect": ""
+        },
+        {
+            "names": "Trusty Shield",
+            "description": "You begin with a kite shield.",
+            "effect": ""
+        },
+        {
+            "names": "Stiff knee",
+            "description": "You sometimes limp from an old arrow wound. For some reason, this increases the morale of their party.",
+            "effect": ""
+        },
+        {
+            "names": "Old hand",
+            "description": "You have a deep understanding of the limits of your bodies and of others.",
+            "effect": ""
+        },
+        {
+            "names": "Rusted Sword",
+            "description": "You begins his adventure with a rusted set of armor and a sword. Causes tetanus.",
+            "effect": ""
+        },
+        {
+            "names": "Tricky",
+            "description": "You have an increased ability to feint in battle.",
+            "effect": ""
+        },
+        {
+            "names": "Tavern-seer",
+            "description": "You can learn almost anything in a tavern.",
+            "effect": ""
+        },
+        {
+            "names": "Summon old friend",
+            "description": "Once per area, you can summon an old friend.",
+            "effect": ""
+        }
       ]
 }
 
-* Wink Wink, Nudge Nudge: Elves can influence men and halflings with their beauty.
-* Winged feet: Elves have incredible endurance.
 
-* Sling: Halflings carry a sling, with which they are uncannily accurate.
-* Warm Butter: Halflings are naturally great chefs, and food that they cook restores extra health.
-* Soft Bed: Halflings recover full health from sleeping in a real bed.
-* Softfoot: Halflings are naturally good at sneaking.
-
-* Lamb to Slaughter: When hunting, Orcs have high perception.
-* Bellow: Orc can unleash a mighty bellow to intimidate their foes.
-* Still warm: Orcs can eat raw meat without penalty.
-
-* Still Warm: Goblins can eat raw meat without penalty.
-* Along Came a Spider: Goblins are naturally adept at climbing.
-* Darkvision: Goblins can see in even the darkest caves.
-
-* DarkVision: Catterwol can see in the dark.
-* Fisher: Catterwol are naturally good at fishing.
-* They're Retractable: Catterwol have retractable, razor sharp claws.
-* Land on your feet: Catterwol can survive long falls.
-
-
-* Berserk: Once per day, a barbarian can go into a rage, increasing all stats slightly.
-* Intimidate: Barbarians have a higher chance to intimidate enemies.
-* Throw anything: Barbarians can throw anything.
-* Crushing blow: An  Barbarians has a chance of hitting an enemy so hard it demoralizes others.
-
-* Huntsman: Rangers are skilled hunters by necessity.
-* Woodsman: Rangers are apt at traversing the wilds.
-* Medicine: Given a few hours, Rangers can usually produce herbal remedies for ailments.
-
-* Mount and Blade: Hedge Knights are naturally good riders.
-* Sword and Spear: Hedge Knights can swap their dexterity and strength stats while on horseback.
-* Under the Stars: Hedge Knights have been forced to learn to sleep anywhere without penalty, and can build shelters quickly.
-* Lance: Hit two enemies in a row.
-
-* Trained Precision: Once per battle, a knight can attack with a guaranteed critical hit.
-* Kingsmen: Knight's charisma is increased when speaking with a kingsman.
-* Hold the line: Once per day and during battle, add 1 attack to each teammate per point of the knight's inner fire.
-* Charge: Knights can bridge the gap between themselves and a mid-distance foe.
-* Get Behind Me: At the penalty of their next turn, Knights can use their shield to defend party members behind them.
-
-* _(One Time only)_ Choice stat: Battle Mages can choose whether to apply +1 to Dexterity or Strength.
-* Elemental Weapon: Once per day, a Battle Mage can enchant a physical weapon with elemental effects.
-* Sword and Flame: Battle Mages can naturally dual wield magic and physical weapons.
-* Fireburst: Once per day, conjure a vial of explosive liquid.
-
-* Sword and the Satchel: Mage's are gifted a never ending satchel.
-* Air of Mystery: Mage's are capable of impressing guards and villagers.
-* A Dry place to sleep: Mages can summon a hut big enough for two.
-* Transfigure: A few times a day, a wizard can turn something into something else.
-
-
-* Looming Presence: Wizards can use their magic to impress and intimidate creatures with lower intelligence.
-* The Hand of God: When a wizard is in dire trouble, his luck vastly increases.
-* Pointy Hatted Wanderer: Nature itself often aids a wizard in their travels. (Increased Perception in the wilds)
-* Walking Stick: Wizards start with a wizard's staff.
-
-* Over-heal: Once per day, a cleric can heal all party members for 120% health. Does not stack.
-* Shield of Men: Once per battle, Clerics can use their magic to make all enemies in an area attack them exclusively.
-* Purge Decay: Clerics have increased luck when fighting against the undead.
-* Herbalist: Clerics can create potions and draughts from items in their environment.
-
-  * Master of Disguise: Thieves can easily fashion disguises to hide themselves with.
-  * Lightfoot: Thieves are naturally good at sneaking. Stacks with Padfoot.
-  * Nimble Fingers: Thieves have a higher chance of not being discovered when stealing.
-  * Low-Light Vision: Thieves can see in low light.
-  * Mantel: Thieves are adept climbers
-
-
-* Master of Disguise: Thief-Catchers can easily fashion disguises to hide themselves with.
-* Lightfoot: Thief-Catchers are naturally good at sneaking. Stacks with Padfoot.
-* Nimble Fingers: Thief-Catchers have a higher chance of not being discovered when stealing.
-* Low-Light Vision: Thief-Catchers can see in low light.
-* Mantel: Thief catchers are adept climbers.
-* Equipped: Thieves begin with a sword-breaker and 100 feet of rope.
-
-* Born this way: Lordlings begin with extra gold.
-* The Family Sword: Lordlings begin well equipped.
-* My People: Lordlings hold sway with town guards and villagers in their parent's territory.
-* Reach: A Lordling’s father is sure to have holdings in many of the towns and villages of the realm.
-* Good looks and happy smiles: The presence of a lordling increases party cheer in good weather, and decreases it in bad weather.
-
-
-* Swoon: Once per battle, the lady fair or the prince can play dead for a turn, avoiding further injury.
-* Savior of the Common Man: Peasants and town guards everywhere love and respect the lady fair and the prince of the people.
-* Beauty Incarnate: The lady fair and the prince of the people can use their beauty to sway the minds of others. (+3 charisma when speaking to people attracted to their sex)
-* Feint: The lady fair and prince of the people are good at dodging and countering.
-
-* Common Man: Peasants gain +2 Charisma when speaking with people of low birth. -4 for people of high birth.
-* Chosen Craft: Choose between Smith(+1 strength, -1 intelligence), Hunter (+1 dex, -1 strength, bow), Tavern Owner (+1 Charisma, -1 Strength, -1 Dex, more gold),  fletcher, or farmer.
-* Ignorant: Peasants can't be easily controlled or manipulated by intelligence based spells.
-* Breaking ground: Peasants are good at digging.
-
-* Cartwheel: Showmen have high dexterity, and can naturally turn flips and cartwheels.
-* Instrumentalist: Showmen have mastery over an instrument of their choice, and begin with it.
-* One up the sleeve: Bards are masters with throwing knives, and carry many in their sleeves.
-* Little birds: a bard can gather information from the children of a town.
-
-* Longshot: Marksmen begin with a longbow.
-* Focus: Once every three turns, a marksman can take a shot with a huge accuracy bonus.
-* Double tap: Once per engagement, a marksman can shoot two arrows at a time.
-* Keen eye: marksmen have incredible vision.
-* PULL: If enemies are in a row and close enough, a marksman's shot will pass right through them.
-
-
-* Fletcher: Given the right materials, huntsmen can make their own arrows.
-* Every part: Huntsmen get more meat  and materials from butchering a kill.
-* Sureshot; Huntsmen are uncannily accurate in dense environments.
-* Size doesn't matter: Huntsmen begin with a shortbow.
-* Crippling shot: A huntsman can choose to aim for an opponent's knees with increased accuracy.
-
-* Steady: Monks are masters of their body.
-* Hand to Hand: Monks are deadly with just their hands.
-* Heart to Heart: Being in the presence of monks can help put others at ease/boost morale.
-* Inner eye: Monks are more likely to detect spiritual energy.
-* Meditate: Monks can restore their health more quickly by meditating.
-* Share ability: A monk can share in the ability of another member of the party.
-
-* Earth, Wind, or Fire: Benders can choose one of the four elements to have power over.
-* Inner eye: Like monks, benders are closely attached to the spiritual world.
-
-* Wayfarer: Adventurers are in it for the long haul, and take longer to tire than others.
-* Literate: Adventurers are learned, and know many languages and locales.
-* Historian: Adventurers have a deep knowledge of the land in which their in.
-* Trusty Shield: Adventurers begin with a kite shield.
-
-* Stiff knee: Retired adventurers sometimes limp from an old arrow wound. For some reason, this increases the morale of their party.
-* Old hand: Retired adventurers have a deep understanding of the limits of their bodies and of others.
-* Rusted Sword: A retired adventurer begins his adventure with a rusted set of armor and a sword. Causes tetanus.
-* Tricky: Retired adventures can have an increased ability to feint in battle.
-* Tavern-seer: Retired adventurers can learn almost anything in a tavern.
-* Summon old friend: once per area, an adventurer can summon an old friend.
