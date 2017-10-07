@@ -48,19 +48,18 @@ def helper():
         print("Hmmm... so you don't like any of those, huh?")
         races = sorted(races, key=lambda k: (k['stats']["Intelligence"]*2) + (k['stats']["Inner Fire"]*2) + k['stats']["Vitality"])
         options.append(races[0])
-        myRace = 
 
 
     else:
-    races = sorted(races, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
+      races = sorted(races, key=lambda k: k['stats']["Intelligence"] + k['stats']["Inner_Fire"])
 
 def picker():
   answer = verifyInput("Great! So do you know which race you want to play as?", ["y", "n"])
-    if answer == "y":
-      
-    else:
-      playStyle = verifyInput("No worries. Do you have any ideas what sort of character you want to play?", playStyles)
-      print("Ok, so you want to be a " + playStyle)
+  if answer == "y":
+    print("OHAI")
+  else:
+    playStyle = verifyInput("No worries. Do you have any ideas what sort of character you want to play?", playStyles)
+    print("Ok, so you want to be a " + playStyle)
 
 def character_help():
   
@@ -73,17 +72,46 @@ def character_help():
   myRace = "INVALID"
   answer = verifyInput("Do you already know all or part of what you want, or would you like help?", ["I know", "Help"])
   if answer == "I know":
+    print("Done")
     
+def printClass(dict, race, className):
+  try:
+    print("Dexterity: " + str(dict[race][className]["Dexterity"]))
+    print("Strength: " + str(dict[race][className]["Strength"]))
+    print("Vitality: " + str(dict[race][className]["Vitality"]))
+    print("Intelligence: " + str(dict[race][className]["Intelligence"]))
+    print("Inner_Fire: " + str(dict[race][className]["Inner_Fire"]))
+    print("Charisma: " + str(dict[race][className]["Charisma"]))
+    print("Luck: " + str(dict[race][className]["Luck"]))
+    print("Perception: " + str(dict[race][className]["Perception"]))
+  except Exception as e:
+    if not race in dict:
+      print("Race not in dict")
+    else:
+      if not className in dict[race]:
+        print("class not in dict")
+    print(e)
+    print("Invalid class and race.")
+
 def main():
 
-  races = classes = dict()
+  races = {}
+  classes = {}
   with open("races.json") as data_file:    
     races = json.load(data_file)
   with open("classes.json") as data_file:    
     classes = json.load(data_file)
   combos = list();
+  dict = {}
   for race in races["standard_races"]:
     for rangers_class in classes["standard_classes"]:
+      name = race["name"]
+      class_name = rangers_class["names"][0]
+      if not name in dict:
+        dict[name] = {}
+      if not class_name in dict[name]:
+        dict[name][class_name] = {}
+
       combo = {
         "name" : race["name"] + " " + rangers_class["names"][0],
         "stats" : {
@@ -99,10 +127,18 @@ def main():
         "abilities" : race["abilities"] + rangers_class["abilities"]
       }
       combos.append(combo)
+      dict[name][class_name]["Dexterity"] = combo["stats"]["Dexterity"]
+      dict[name][class_name]["Strength"] = combo["stats"]["Strength"]
+      dict[name][class_name]["Vitality"] = combo["stats"]["Vitality"]
+      dict[name][class_name]["Intelligence"] = combo["stats"]["Intelligence"]
+      dict[name][class_name]["Inner_Fire"] = combo["stats"]["Inner_Fire"]
+      dict[name][class_name]["Charisma"] = combo["stats"]["Charisma"]
+      dict[name][class_name]["Luck"] = combo["stats"]["Luck"]
+      dict[name][class_name]["Perception"] = combo["stats"]["Perception"]
 
   answer = "continue"
   while answer != "quit":
-    answer = input("What do you want to know about? (stats, quit, summary, new character)\n")
+    answer = input("What do you want to know about? (stats, quit, summary, quick stats, new character)\n")
     if answer == "stats":
       answer = input("Worst or best?\n")
       best = True
@@ -123,6 +159,10 @@ def main():
             print(arg["name"] + ": " + str(arg['stats'][stat]))
       except Exception as e:
         print("ERROR:" +  str(e))
+    elif answer == "quick stats":
+      race = input("What race do you want quick stats for?")
+      class_thing = input("What class do you want quick stats for?")
+      printClass(dict, race, class_thing)
     elif answer == "summary":
       print("We are goint to rank from worst to best in these categories: Tank, Mage")
       
