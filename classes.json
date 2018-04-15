@@ -1,331 +1,331 @@
 {
-  "standard_classes" : [    
-        {
-            "names" : ["Barbarian", "Ruffian", "Raider"],
-            "description" : "Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.",
-            "standings"   : "Barbarians are the enemies of law keepers.",
-            "abilities" : ["Berserk", 
-                           "Intimidate",
-                           "Throw Anything",
-                           "Crushing Blow"
-                          ],
-            "stats" :     {
-                             "Dexterity" : -1,
-                             "Strength" : 3,
-                             "Vitality" :  3,
-                             "Intelligence" : -3,
-                             "Inner_Fire" : 1,
-                             "Charisma" : -3,
-                             "Luck" : 1,
-                             "Perception" : 2
-                            }            
+    "Barbarian": {
+        "description": "Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.",
+        "abilities": [
+            "Berserk",
+            "Intimidate",
+            "Throw Anything",
+            "Crushing Blow"
+        ],
+        "stats": {
+            "Dexterity": -1,
+            "Strength": 3,
+            "Vitality": 3,
+            "Intelligence": -3,
+            "Inner_Fire": 1,
+            "Charisma": -3,
+            "Luck": 1,
+            "Perception": 2
         },
-        {
-            "names" : ["Ranger"],
-            "description" : "Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.",
-            "standings"   : "Barbarians are the enemies of law keepers.",
-            "abilities" : ["Huntsman", 
-                           "Woodsman",
-                           "Medicine"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 2,
-                             "Strength" : 1,
-                             "Vitality" :  1,
-                             "Intelligence" : -2,
-                             "Inner_Fire" : 1,
-                             "Charisma" : -2,
-                             "Luck" : 0,
-                             "Perception" : 2
-                            }            
+        "standings": "Barbarians are the enemies of law keepers."
+    },
+    "Ranger": {
+        "description": "Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.",
+        "abilities": [
+            "Huntsman",
+            "Woodsman",
+            "Medicine"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": 1,
+            "Vitality": 1,
+            "Intelligence": -2,
+            "Inner_Fire": 1,
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 2
         },
-        {
-            "names" : ["Hedge Knight"],
-            "description" : "A self proclaimed knight, hedge knight's move from region to region, seeking to find employment where they can. Hedge knights are supposed to live by a code of honor, but on the road these things tend to fall apart.",
-            "standings"   : "Hedge Knights are not fond of Knights",
-            "abilities" : ["Mount and Blade", 
-                           "Sword and Spear",
-                           "Under the Stars",
-                           "Lance"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 1,
-                             "Strength" : 2,
-                             "Vitality" :  2,
-                             "Intelligence" : -2,
-                             "Inner_Fire" : -1,
-                             "Charisma" : -1,
-                             "Luck" : 1,
-                             "Perception" : 1
-                            }            
+        "standings": "Barbarians are the enemies of law keepers."
+    },
+    "Hedge Knight": {
+        "description": "A self proclaimed knight, hedge knight's move from region to region, seeking to find employment where they can. Hedge knights are supposed to live by a code of honor, but on the road these things tend to fall apart.",
+        "abilities": [
+            "Mount and Blade",
+            "Sword and Spear",
+            "Under the Stars",
+            "Lance"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 2,
+            "Vitality": 2,
+            "Intelligence": -2,
+            "Inner_Fire": -1,
+            "Charisma": -1,
+            "Luck": 1,
+            "Perception": 1
         },
-        {
-            "names" : ["Knight"],
-            "description" : "The genuine article, knights have sworn their lives to king and country.",
-            "standings"   : "Knights are loved by kingsmen, and distrusted by hedge knights and rangers. Knights are duty bound to fight the lawless.",
-            "abilities" : ["Trained Precision", 
-                           "Kingsmen",
-                           "Hold the line",
-                           "Charge"
-                          ],
-            "stats" :     {
-                             "Dexterity" : -2,
-                             "Strength" : 3,
-                             "Vitality" :  3,
-                             "Intelligence" : -2,
-                             "Inner_Fire" : -1,
-                             "Charisma" : 1,
-                             "Luck" : 1,
-                             "Perception" : 0
-                            }            
+        "standings": "Hedge Knights are not fond of Knights"
+    },
+    "Knight": {
+        "description": "The genuine article, knights have sworn their lives to king and country.",
+        "abilities": [
+            "Trained Precision",
+            "Kingsmen",
+            "Hold the line",
+            "Charge"
+        ],
+        "stats": {
+            "Dexterity": -2,
+            "Strength": 3,
+            "Vitality": 3,
+            "Intelligence": -2,
+            "Inner_Fire": -1,
+            "Charisma": 1,
+            "Luck": 1,
+            "Perception": 0
         },
-        {
-            "names" : ["Battle Mage"],
-            "description" : "Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.",
-            "abilities" : ["Choice Stat", 
-                           "Elemental Weapon",
-                           "Sword and Flame",
-                           "Fireburst"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 0,
-                             "Strength" : 0,
-                             "Vitality" :  -1,
-                             "Intelligence" : 1,
-                             "Inner_Fire" : 2,
-                             "Charisma" : 2,
-                             "Luck" : -1,
-                             "Perception" : -1
-                            }            
+        "standings": "Knights are loved by kingsmen, and distrusted by hedge knights and rangers. Knights are duty bound to fight the lawless."
+    },
+    "Battle Mage": {
+        "description": "Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.",
+        "abilities": [
+            "Choice Stat",
+            "Elemental Weapon",
+            "Sword and Flame",
+            "Fireburst"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 0,
+            "Vitality": -1,
+            "Intelligence": 1,
+            "Inner_Fire": 2,
+            "Charisma": 2,
+            "Luck": -1,
+            "Perception": -1
         },
-        {
-            "names" : ["Mage"],
-            "description" : "A student of magic, mages are highly intelligent and are adept spellcasters.",
-            "abilities" : ["Sword and the Satchel", 
-                           "Air of Mystery",
-                           "A Dry place to sleep",
-                           "Transfigure"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 0,
-                             "Strength" : -2,
-                             "Vitality" :  -4,
-                             "Intelligence" : 3,
-                             "Inner_Fire" : 2,
-                             "Charisma" : 1,
-                             "Luck" : -1,
-                             "Perception" : -1
-                            }            
+        "standings": "Battle mages sometimes get along poorly with clerics."
+    },
+    "Mage": {
+        "description": "A student of magic, mages are highly intelligent and are adept spellcasters.",
+        "abilities": [
+            "Sword and the Satchel",
+            "Air of Mystery",
+            "A Dry place to sleep",
+            "Transfigure"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": -2,
+            "Vitality": -4,
+            "Intelligence": 3,
+            "Inner_Fire": 2,
+            "Charisma": 1,
+            "Luck": -1,
+            "Perception": -1
         },
-        {
-            "names" : ["Wizard"],
-            "description" : "Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.",
-            "standings" : "Wizards are known to be friends to all races, and get along particularly well with Halflings and Rangers.",
-            "abilities" : ["Sword and the Satchel", 
-                           "Looming Presence",
-                           "The Hand of God",
-                           "Pointy Hatted Wanderer",
-                           "Walking Stick"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 1,
-                             "Strength" : 1,
-                             "Vitality" :  -3,
-                             "Intelligence" : 2,
-                             "Inner_Fire" : 3,
-                             "Charisma" : 2,
-                             "Luck" : 1,
-                             "Perception" : 1
-                            }            
+        "standings": "Mages fear and revile anti-mages"
+    },
+    "Wizard": {
+        "description": "Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.",
+        "abilities": [
+            "Sword and the Satchel",
+            "Looming Presence",
+            "The Hand of God",
+            "Pointy Hatted Wanderer",
+            "Walking Stick"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 1,
+            "Vitality": -3,
+            "Intelligence": 2,
+            "Inner_Fire": 3,
+            "Charisma": 2,
+            "Luck": 1,
+            "Perception": 1
         },
-        {
-            "names" : ["Cleric"],
-            "description" : "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
-            "standings" : "Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church.",
-            "abilities" : ["Over-heal", 
-                           "Shield of Men",
-                           "Purge Decay",
-                           "Herbalist"
-                          ],
-            "stats" :     {
-                             "Dexterity" : -1,
-                             "Strength" : -2,
-                             "Vitality" :  -5,
-                             "Intelligence" : 3,
-                             "Inner_Fire" : 3,
-                             "Charisma" : 1,
-                             "Luck" : 2,
-                             "Perception" : 2
-                            }            
+        "standings": "Wizards are known to be friends to all races, and get along particularly well with Halflings and Rangers."
+    },
+    "Cleric": {
+        "description": "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
+        "abilities": [
+            "Over-heal",
+            "Shield of Men",
+            "Purge Decay",
+            "Herbalist"
+        ],
+        "stats": {
+            "Dexterity": -1,
+            "Strength": -2,
+            "Vitality": -5,
+            "Intelligence": 3,
+            "Inner_Fire": 3,
+            "Charisma": 1,
+            "Luck": 2,
+            "Perception": 2
         },
-        {
-            "names" : ["Thief"],
-            "description" : "For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.",
-            "standings" : "Thieves hat law keepers and Thief Catchers",
-            "abilities" : ["Master of Disguise", 
-                           "Lightfoot",
-                           "Nimble Fingers",
-                           "Low-Light Vision",
-                           "Mantel"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 3,
-                             "Strength" : -2,
-                             "Vitality" :  -4,
-                             "Intelligence" : 0,
-                             "Inner_Fire" : -1,
-                             "Charisma" : 2,
-                             "Luck" : 2,
-                             "Perception" : 3
-                            }            
+        "standings": "Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church."
+    },
+    "Thief": {
+        "description": "For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.",
+        "abilities": [
+            "Master of Disguise",
+            "Lightfoot",
+            "Nimble Fingers",
+            "Low-Light Vision",
+            "Mantel"
+        ],
+        "stats": {
+            "Dexterity": 3,
+            "Strength": -2,
+            "Vitality": -4,
+            "Intelligence": 0,
+            "Inner_Fire": -1,
+            "Charisma": 2,
+            "Luck": 2,
+            "Perception": 3
         },
-        {
-            "names" : ["Thief-Catcher"],
-            "description" : "It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, who now hunt down their old comrades.",
-            "standings" : "Thief Catchers hate thieves, and are distrusted by lawkeepers",
-            "abilities" : ["Master of Disguise", 
-                           "Lightfoot",
-                           "Nimble Fingers",
-                           "Low-Light Vision",
-                           "Mantel",
-                           "Equipped"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 2,
-                             "Strength" : 1,
-                             "Vitality" :  -2,
-                             "Intelligence" : 1,
-                             "Inner_Fire" : 0,
-                             "Charisma" : 1,
-                             "Luck" : -1,
-                             "Perception" : 2
-                            }            
+        "standings": "Thieves hat law keepers and Thief Catchers"
+    },
+    "Thief-Catcher": {
+        "description": "It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, who now hunt down their old comrades.",
+        "abilities": [
+            "Master of Disguise",
+            "Lightfoot",
+            "Nimble Fingers",
+            "Low-Light Vision",
+            "Mantel",
+            "Equipped"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": 1,
+            "Vitality": -2,
+            "Intelligence": 1,
+            "Inner_Fire": 0,
+            "Charisma": 1,
+            "Luck": -1,
+            "Perception": 2
         },
-        {
-            "names" : ["Lordling"],
-            "description" : "A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.",
-            "standings" : "Lordlings are respected by kingsmen, but are often set upon by thieves.",
-            "abilities" : ["My Father's Coffers", 
-                           "The Family Sword",
-                           "My People",
-                           "Reach",
-                           "Mantel",
-                           "Good looks and happy smiles"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 2,
-                             "Strength" : 1,
-                             "Vitality" :  -1,
-                             "Intelligence" : 1,
-                             "Inner_Fire" : -2,
-                             "Charisma" : 3,
-                             "Luck" : 2,
-                             "Perception" : -2
-                            }            
+        "standings": "Thief Catchers hate thieves, and are distrusted by lawkeepers"
+    },
+    "Lordling": {
+        "description": "A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.",
+        "abilities": [
+            "My Father's Coffers",
+            "The Family Sword",
+            "My People",
+            "Reach",
+            "Mantel",
+            "Good looks and happy smiles"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": 1,
+            "Vitality": -1,
+            "Intelligence": 1,
+            "Inner_Fire": -2,
+            "Charisma": 3,
+            "Luck": 2,
+            "Perception": -2
         },
-        {
-            "names" : ["Lady Fair", "Prince of the People"],
-            "description" : "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
-            "standings" : "Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands.", 
-            "abilities" : ["Swoon",
-                           "Savior of the Common Man",
-                           "Beauty Incarnate",
-                           "Feint"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 1,
-                             "Strength" : -4,
-                             "Vitality" :  -4,
-                             "Intelligence" : -1,
-                             "Inner_Fire" : -1,
-                             "Charisma" : 5,
-                             "Luck" : 5,
-                             "Perception" : 0
-                            }            
+        "standings": "Lordlings are respected by kingsmen, but are often set upon by thieves."
+    },
+    "Lady Fair": {
+        "description": "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
+        "abilities": [
+            "Swoon",
+            "Savior of the Common Man",
+            "Beauty Incarnate",
+            "Feint"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": -4,
+            "Vitality": -4,
+            "Intelligence": -1,
+            "Inner_Fire": -1,
+            "Charisma": 5,
+            "Luck": 5,
+            "Perception": 0
         },
-        {
-            "names" : ["Bard"],
-            "description" : "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
-            "standings" : "Bards are loved by most, and are welcomed equally among thieves and goodfolk.", 
-            "abilities" : ["Cartwheel",
-                           "Instrumentalist",
-                           "One up the sleeve",
-                           "Little birds"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 3,
-                             "Strength" : -2,
-                             "Vitality" :  -3,
-                             "Intelligence" : 0,
-                             "Inner_Fire" : 0,
-                             "Charisma" : 4,
-                             "Luck" : 3,
-                             "Perception" : 3
-                            }            
+        "standings": "Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands."
+    },
+    "Bard": {
+        "description": "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
+        "abilities": [
+            "Cartwheel",
+            "Instrumentalist",
+            "One up the sleeve",
+            "Little birds"
+        ],
+        "stats": {
+            "Dexterity": 3,
+            "Strength": -2,
+            "Vitality": -3,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
+            "Charisma": 4,
+            "Luck": 3,
+            "Perception": 3
         },
-        {
-            "names" : ["Marksman"],
-            "description" : "Excellent archers, Marksmen come from all walks of life.",
-            "standings" : "Excellent archers, Marksmen come from all walks of life.", 
-            "abilities" : ["Longshot",
-                           "Focus",
-                           "Double tap",
-                           "Keen eye",
-                           "PULL"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 3,
-                             "Strength" : -2,
-                             "Vitality" :  -3,
-                             "Intelligence" : 0,
-                             "Inner_Fire" : 0,
-                             "Charisma" : 0,
-                             "Luck" : 2,
-                             "Perception" : 4
-                            }            
+        "standings": "Bards are loved by most, and are welcomed equally among thieves and goodfolk."
+    },
+    "Marksman": {
+        "description": "Excellent archers, Marksmen come from all walks of life.",
+        "abilities": [
+            "Longshot",
+            "Focus",
+            "Double Tap",
+            "Keen Eye",
+            "PULL"
+        ],
+        "stats": {
+            "Dexterity": 3,
+            "Strength": -2,
+            "Vitality": -3,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 2,
+            "Perception": 4
         },
-        {
-            "names" : ["Huntsman"],
-            "description" : "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
-            "standings" : "Huntsman are generally disliked by knights and the highborn.", 
-            "abilities" : ["Fletcher",
-                           "Every part",
-                           "Sureshot",
-                           "Size doesn't matter",
-                           "Crippling shot",
-                           "Trapper"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 2,
-                             "Strength" : 1,
-                             "Vitality" :  -3,
-                             "Intelligence" : -1,
-                             "Inner_Fire" : 1,
-                             "Charisma" : 1,
-                             "Luck" : 0,
-                             "Perception" : 3
-                            }            
+        "standings": "Excellent archers, Marksmen come from all walks of life."
+    },
+    "Huntsman": {
+        "description": "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
+        "abilities": [
+            "Fletcher",
+            "Every part",
+            "Sureshot",
+            "Size doesn't matter",
+            "Crippling shot",
+            "Trapper"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": 1,
+            "Vitality": -3,
+            "Intelligence": -1,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 0,
+            "Perception": 3
         },
-        {
-            "names" : ["Monk"],
-            "description" : "Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.",
-            "standings" : "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them.", 
-            "abilities" : ["Steady",
-                           "Hand to Hand",
-                           "Heart to Heart",
-                           "Inner eye",
-                           "Meditate"
-                          ],
-            "stats" :     {
-                             "Dexterity" : 2,
-                             "Strength" : 2,
-                             "Vitality" :  -3,
-                             "Intelligence" : 0,
-                             "Inner_Fire" : 3,
-                             "Charisma" : 1,
-                             "Luck" : 2,
-                             "Perception" : 3
-                            }            
-        }
-    ]
+        "standings": "Huntsman are generally disliked by knights and the highborn."
+    },
+    "Monk": {
+        "description": "Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.",
+        "abilities": [
+            "Steady",
+            "Hand to Hand",
+            "Heart to Heart",
+            "Inner eye",
+            "Meditate"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": 2,
+            "Vitality": -3,
+            "Intelligence": 0,
+            "Inner_Fire": 3,
+            "Charisma": 1,
+            "Luck": 2,
+            "Perception": 3
+        },
+        "standings": "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them."
+    }
 }
