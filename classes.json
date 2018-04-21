@@ -5,7 +5,8 @@
             "Berserk",
             "Intimidate",
             "Throw Anything",
-            "Crushing Blow"
+            "Crushing Blow",
+            "Taunt"
         ],
         "stats": {
             "Dexterity": -1,
@@ -42,9 +43,9 @@
         "description": "A self proclaimed knight, hedge knight's move from region to region, seeking to find employment where they can. Hedge knights are supposed to live by a code of honor, but on the road these things tend to fall apart.",
         "abilities": [
             "Mount and Blade",
-            "Sword and Spear",
             "Under the Stars",
-            "Lance"
+            "Born in the Saddle",
+            "Steady"
         ],
         "stats": {
             "Dexterity": 1,
@@ -82,8 +83,6 @@
         "description": "Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.",
         "abilities": [
             "Choice Stat",
-            "Elemental Weapon",
-            "Sword and Flame",
             "Fireburst"
         ],
         "stats": {
@@ -101,9 +100,9 @@
     "Mage": {
         "description": "A student of magic, mages are highly intelligent and are adept spellcasters.",
         "abilities": [
-            "Sword and the Satchel",
+            "The Sword and the Satchel",
             "Air of Mystery",
-            "A Dry place to sleep",
+            "A Dry Place to Sleep",
             "Transfigure"
         ],
         "stats": {
@@ -121,10 +120,8 @@
     "Wizard": {
         "description": "Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.",
         "abilities": [
-            "Sword and the Satchel",
+            "The Sword and the Satchel",
             "Looming Presence",
-            "The Hand of God",
-            "Pointy Hatted Wanderer",
             "Walking Stick"
         ],
         "stats": {
@@ -142,10 +139,10 @@
     "Cleric": {
         "description": "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
         "abilities": [
-            "Over-heal",
-            "Shield of Men",
+            "Overheal",
+            "Taunt",
             "Purge Decay",
-            "Herbalist"
+            "Medicine"
         ],
         "stats": {
             "Dexterity": -1,
@@ -166,7 +163,8 @@
             "Lightfoot",
             "Nimble Fingers",
             "Low-Light Vision",
-            "Mantel"
+            "Mantel",
+            "A Thief's Gear"
         ],
         "stats": {
             "Dexterity": 3,
@@ -188,7 +186,7 @@
             "Nimble Fingers",
             "Low-Light Vision",
             "Mantel",
-            "Equipped"
+            "A Thief's Gear"
         ],
         "stats": {
             "Dexterity": 2,
@@ -208,9 +206,8 @@
             "My Father's Coffers",
             "The Family Sword",
             "My People",
-            "Reach",
             "Mantel",
-            "Good looks and happy smiles"
+            "Happy Smiles"
         ],
         "stats": {
             "Dexterity": 2,
@@ -228,7 +225,7 @@
         "description": "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
         "abilities": [
             "Swoon",
-            "Savior of the Common Man",
+            "My People",
             "Beauty Incarnate",
             "Feint"
         ],
@@ -248,9 +245,8 @@
         "description": "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
         "abilities": [
             "Cartwheel",
-            "Instrumentalist",
-            "One up the sleeve",
-            "Little birds"
+            "One up the Sleeve",
+            "Regular Patron"
         ],
         "stats": {
             "Dexterity": 3,
@@ -289,7 +285,7 @@
         "description": "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
         "abilities": [
             "Fletcher",
-            "Every part",
+            "Every Part",
             "Sureshot",
             "Size doesn't matter",
             "Crippling shot",
@@ -312,8 +308,7 @@
         "abilities": [
             "Steady",
             "Hand to Hand",
-            "Heart to Heart",
-            "Inner eye",
+            "Inner Eye",
             "Meditate"
         ],
         "stats": {

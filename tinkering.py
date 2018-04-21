@@ -7,17 +7,16 @@ def class_md_out(theFile, ability_dict):
   with open(theFile) as class_file:    
     data = json.load(class_file)
     outfile = open("classes.md", 'w')
-    standard_classes = data["standard_classes"]
+    standard_classes = data
     
-    for rangers_class in standard_classes:
-      name = rangers_class["names"][0]
-      description = rangers_class["description"]
-      if 'standings' in rangers_class:
-        standings = rangers_class["standings"]
+    for name, details in standard_classes.items():
+      description = details["description"]
+      if 'standings' in details:
+        standings = details["standings"]
       else:
         standings = name + "s come in so many shapes, sizes, and belief sets that there is no set standing for them."
-      abilities = rangers_class["abilities"]
-      stats = rangers_class["stats"]
+      abilities = details["abilities"]
+      stats = details["stats"]
       outfile.write("### " + name + "  \n")
       print(name) 
       outfile.write(description + "  \n")
@@ -26,30 +25,15 @@ def class_md_out(theFile, ability_dict):
       print(standings)
       outfile.write("##### Abilities: " + "  \n")
       for ability in abilities:
-        ability = getDescription(ability, ability_dict)
-        outfile.write("  * " + ability + "  \n")
-        print(ability)
+        description = ability_dict[ability]["description"]
+        outfile.write("  * {0}: {1}  \n".format(ability, description))
+        print(ability, ": ", description)
       outfile.write("\n##### Stats:  " + "  \n")
       for stat in stats:
         outfile.write("  * " +  stat + ": " + str(stats[stat]) + "  \n")
         print(stat + " " + str(stats[stat]))
       outfile.write("   \n")
     outfile.close()
-      
-def getDescription(abilityName, dict):
-  found = False
-  description = ""
-  abilities = dict['standard_abilities']
-  for item in abilities:
-    if abilityName in item["names"]:
-      found = True
-      description = item["description"]
-      break
-
-  if not found: 
-    print("Couldn't find the " + str(abilityName) + " ability.")
-    sys.exit(1)
-  return abilityName + ": " + description
 
 def main():
   if len(sys.argv) < 4:
@@ -62,13 +46,12 @@ def main():
   with open(sys.argv[1]) as data_file:
     data = json.load(data_file)
     outfile = open("races.md", 'w')
-    standard_races = data["standard_races"]
-    for race in standard_races:
-      name = race["name"]
-      description = race["description"]
-      standings = race["standings"]
-      abilities = race["abilities"]
-      stats = race["stats"]
+    standard_races = data
+    for name, details in standard_races.items():
+      description = details["description"]
+      standings = details["standings"]
+      abilities = details["abilities"]
+      stats = details["stats"]
       outfile.write("### " + name + "  \n")
       print(name)
       outfile.write(description + "  \n")
@@ -77,9 +60,9 @@ def main():
       print(standings)
       outfile.write("##### Abilities: " + "  \n")
       for ability in abilities:
-        ability = getDescription(ability, ability_dict)
-        outfile.write("  * " + ability + "  \n")
-        print(ability)
+        description = ability_dict[ability]["description"]
+        outfile.write("  * {0}: {1}  \n".format(ability, description))
+        print(ability, ": ", description)
       outfile.write("\n##### Stats:  " + "  \n")
       for stat in stats:
         outfile.write("  * " +  stat + ": " + str(stats[stat]) + "  \n")

@@ -3,85 +3,82 @@
         "description": "When your health is below 20%, you can make two moves in a row."
     },
     "Strength of Men": {
-        "description": "You have basic healing abilities. Heal a party member for d10 health."
+        "description": "You have basic healing abilities. You may take a turn to heal a party member for d10 health."
     },
     "Rally": {
-        "description": "Once per day, You can use an aura which reinvigorates their comrades."
+        "description": "Once per rest, you may use an aura which gives all of your allies a d8 inspiration dice."
     },
     "Fixit Dwarf": {
         "description": "Given a few hours, you can repair most steel made items."
     },
     "Miner's Eye": {
-        "description": "When dealing with minerals or works made of stone, your character's intelligence is treated as Masterful."
+        "description": "When dealing with minerals or works made of stone, your character's intelligence is treated as masterful."
     },
     "Dark Vision": {
         "description": "You can see well in the dark."
     },
     "Sleepless": {
-        "description": "Elves can go days without sleeping, allowing them to keep watch long into the night."
+        "description": "Elves can rest without sleeping for one day, allowing them to keep watch long into the night."
     },
     "Wink Wink, Nudge Nudge": {
-        "description": "You can influence men and halflings with their beauty."
+        "description": "Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive."
     },
     "Winged feet": {
         "description": "You have incredible endurance."
     },
     "Sling": {
-        "description": "Your character carries a sling, with which they are uncannily accurate."
+        "description": "Your character begins with a sling."
     },
     "Warm Butter": {
-        "description": "Your is an are naturally talented chef, and food that they cook restores extra health.."
+        "description": "Your are naturally talented chef. You have advantage when cooking."
     },
     "Soft Bed": {
-        "description": "You recover full health from sleeping in a real bed."
+        "description": "You recover 2d20 health from sleeping in a real bed."
     },
-    "Softfoot": {
-        "description": "You are naturally good at sneaking."
+    "Padfoot": {
+        "description": "You have advantage on stealth checks."
     },
     "Lamb to Slaughter": {
-        "description": "When hunting, You have high perception.."
+        "description": "When hunting, you have advantage on perception checks."
     },
     "Bellow": {
-        "description": "You can unleash a mighty bellow to intimidate your foes."
+        "description": "On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass their saving throw."
     },
     "Still Warm": {
         "description": "You can eat raw meat without penalty."
     },
-    "Along Came a Spider": {
-        "description": "You are naturally adept at climbing."
-    },
     "Fisher": {
-        "description": "Catterwol are naturally good at fishing."
+        "description": "You are naturally adept at fishing."
     },
     "They're Retractable": {
-        "description": "You have retractable, razor sharp claws."
+        "description": "You have retractable, razor sharp claws capable of doing d8 damage."
     },
     "Land on your feet": {
-        "description": "Catterwol can survive long falls."
+        "description": "You can fall 40 feet before taking fall damage."
     },
     "Berserk": {
-        "description": "Once per day, a you can go into a rage, increasing strength and vitality but decreasing intelligence and perception."
+        "description": "Once per day, a you can go into a rage, increasing strength your strength by one and allowing you to make two attacks, but decreasing your intelligence and perception by three."
     },
     "Intimidate": {
-        "description": "You have a higher chance to intimidate enemies."
+        "description": "You have advantage when attempting to intimidate enemies enemies."
     },
     "Throw Anything": {
-        "description": "You can throw anything."
+        "description": "You can throw anything up to five times your weight."
     },
     "Crushing Blow": {
-        "description": "You have a chance of hitting an enemy so hard it demoralizes others."
+        "description": "On a critical hit, you give all enemies disadvantage."
     },
     "Huntsman": {
-        "description": "You are a skilled hunter by necessity."
+        "description": "You have advantage when attacking wildlife."
     },
     "Mount and Blade": {
         "description": "You can swap your dexterity and strength stats while on horseback."
     },
     "Woodsman": {
-        "description": "You are apt at traversing the wilds."
+        "description": "You have perception advantage in the forest."
     },
     "Medicine": {
-        "description": "Given a few hours, you can usually produce herbal remedies for ailments."
+        "description": "If you have the ingredients, you can create potions."
     },
     "Summon Old Friend": {
         "description": "Once per area, you can summon an old friend."
@@ -90,57 +87,193 @@
         "description": "You have been forced to learn to sleep anywhere without penalty, and can build shelters quickly."
     },
     "Learned": {
-        "description": "You are learned, and know many languages and locales."
+        "description": "You are fluent in a language of your choosing."
     },
-    "Tavern-Seer": {
-        "description": "You can learn almost anything in a tavern."
+    "Regular Patron": {
+        "description": "You have advantage on charisma checks made in a tavern."
     },
     "Keen Eye": {
-        "description": "You have incredible vision."
+        "description": "You have advantage on perception checks made over long distances."
     },
     "Historian": {
-        "description": "You have a deep knowledge of the land in which you are in."
+        "description": "You have a deep knowledge of the land in which your adventure takes place. Advantage on any history checks."
     },
     "Crippling Shot": {
-        "description": "You can choose to aim for an opponent's knees with increased accuracy."
+        "description": "You can aim at an enemies knees, doing half damage but imobilizing them for a turn if they fail a check."
     },
     "Good Looks": {
-        "description": "Your presence increases party cheer in good weather, and decreases it in bad weather."
+        "description": "Due to your good looks, you have advantage on charisma checks when dealing with individuals who find your sex attractive."
+    },
+    "Happy Smiles": {
+        "description": "Your presence increases party cheer in good weather, giving them an inspiration dice. and decreases it in bad weather, giving them -1 charisma."
     },
     "Earth, Wind, or Fire": {
         "description": "You can choose one of the four elements to have power over."
     },
     "Fletcher": {
-        "description": "Given the right materials, you can make their own arrows."
+        "description": "Given the right materials, you can make three arrows per hour."
     },
     "A Dry Place to Sleep": {
         "description": "You can summon a hut big enough for two."
     },
     "PULL": {
-        "description": "If enemies are in a row and close enough, a your shot will pass right through them."
+        "description": "If enemies are in a row, your shot will pass right through them."
     },
     "Wayfarer": {
         "description": "You are in it for the long haul, and take longer to tire than others."
     },
     "Old Hand": {
-        "description": "You have a deep understanding of the limits of your bodies and of others."
+        "description": "You have a deep understanding of the limits of your body and of others. You can get a rough estimate of enemy health."
     },
     "Meditate": {
-        "description": "You can restore your health more quickly by meditating."
+        "description": "An hour of rest counts for two when you meditate."
     },
     "Nimble Fingers": {
-        "description": "You have a higher chance of not being discovered when stealing."
+        "description": "You have dexterity and stealth advantage when stealing."
     },
     "Rusted Sword": {
-        "description": "You begins his adventure with a rusted set of armor and a sword. Causes tetanus."
+        "description": "You begins your adventure with a rusted set of armor and a d10 sword."
     },
     "Breaking Ground": {
         "description": "You are good at digging."
     },
     "Inner Eye": {
-        "description": "You are more likely to detect spiritual energy."
+        "description": "You have advantage when detecting spiritual energy."
     },
     "Double Tap": {
-        "description": "Once per engagement, you can shoot two arrows at a time."
+        "description": "Every other turn, you can shoot two arrows at a time."
+    },
+    "Under the Stars" : {
+        "description":"Gain an additional d8 healing when sleeping under the stars."
+    },
+    "Born in the Saddle" : {
+        "description":"Always start with initiative when on horseback."
+    },
+    "Born in the Saddle" : {
+        "description":"Always start with initiative when on horseback."
+    },
+    "Steady" : {
+       "description": "Do not take disadvantage when being jostled about."
+    },
+     "Trained Precision" : {
+        "description":"Once every three turns, gain advantage on your attack."
+    },
+    "Kingsmen" : {
+        "description":"Gain +3 Charisma when speaking with kingsmen."
+    },
+     "Hold the line" : {
+        "description":"When any member of your party goes below one quarter health, gain advantage on all attacks used to protect them."
+    },
+     "Charge" : {
+        "description":"Use your turn to shield bash an enemy, dealing d6 damage and staggering them if they fail a check."
+    },
+     "Taunt" : {
+        "description":"You can taunt your opponents, forcing them to attack you instead of others."
+    },
+    "Taunt" : {
+        "description":"You can taunt your opponents, forcing them to attack you instead of others."
+    },
+     "Choice Stat" : {
+        "description":"At the beginning of your adventure, decide between a permanent increase of 1 dexterity or strength."
+    },
+     "Fireburst" : {
+        "description":"You can craft one d20 area of effect vial of explosive liquid per day. Takes 5 hours."
+    },
+     "Choice Stat" : {
+        "description":"At the beginning of your adventure, decide between a permanent increase of 1 dexterity or strength."
+    },
+     "The Sword and the Satchel" : {
+        "description":"You begin your adventure with a bottomless satchel."
+    },
+     "Air of Mystery" : {
+        "description":"Gain advantage on intimidation checks against gaurds and villagers."
+    },
+    "Transfigure" : {
+       "description": "Once per rest, you can turn something into something else."
+    },
+    "Looming Presence" : {
+        "description":"Gain advantage when attempting to intimidate anything of lower intelligence than yourself."
+    },
+    "The Hand of God" : {
+        "description":"Gain advantage on all roles when your health is below 20 percent."
+    },
+    "Walking Stick" : {
+        "description":"You begin your adventure with a wizard's staff. + 1 damage to all spells."
+    },
+    "Overheal" : {
+        "description":"You are capable of healing to a maximum of 120% health."
+    },
+    "Purge Decay" : {
+       "description": "Gain advantage and +2 attack when fighting the undead."
+    },
+    
+    "Master of Disguise" : {
+        "description":"You can easily fashion disguises to hide yourself with."
+    },
+    "Lightfoot" : {
+        "description":"Gain advantage on stealth checks. Stacks with padfoot."
+    },
+    "Low-Light Vision" : {
+        "description":"You can see in low light."
+    },
+     "Mantel" : {
+        "description":"You have advantage on dexterity checks when climbing."
+    },
+    "A Thief's Gear": {
+        "description":"You begin with 100 feet of rope."
+    },
+    "My Father's Coffers": {
+        "description":"Begin your journey with 1000 extra gold pieces."
+    },
+    "The Family Sword": {
+        "description":"Begin your journey with a d8 sword with a ruby on its hilt and an engraving of your family's sigil."
+    },
+    "My People": {
+        "description":"Gain advantage when speaking with gaurds and +2 charisma when speaking with citizens in your family's territory."
+    },
+     "Swoon": {
+       "description": "During battle, you can feint to avoid further damage. You may wake up after one turn."
+    },
+     "Beauty Incarnate": {
+        "description":"Gain advantage and +2 charisma when speaking to individuals who find your sex attractive."
+    },
+    "Feint": {
+        "description":"Once every three turns, you may roll a save on an enemy attack."
+    },
+    "Cartwheel": {
+        "description":"Gain advantage on acrobatics checks."
+    },
+     "One up the Sleeve": {
+        "description":"You are proficient with throwing knives."
+    },
+     "Longshot": {
+        "description":"Gain advantage on long distance checks."
+    },
+    "Focus": {
+        "description":"You spend a turn focusing before a shot to gain advantage on it. Works before battle starts."
+    },
+    "Every Part": {
+        "description":"Huntsmen get additional meat and materials from butchering a kill."
+    },
+    "Sureshot": {
+        "description":"Gain advantage on checks when firing in a dense environment."
+    },
+     "Size doesn't matter": {
+        "description":"You begin your journey with a shortbow."
+    },
+    "Crippling shot": {
+        "description":"You can aim at an opponents knees for -2 damage, making them go prone on a critical hit."
+    },
+     "Trapper": {
+        "description":"Given enough time, you can craft a trap."
+    },
+    "Trapper": {
+        "description":"Given enough time, you can craft a trap."
+    },
+    "Hand to Hand": {
+        "description":"Your hands are d8 weapons."
+    },
+    "Inner Eye": {
+        "description":"Gain advantage when checking for spiritual energy."
     }
 }
