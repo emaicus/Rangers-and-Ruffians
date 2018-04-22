@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 
 def class_md_out(theFile, ability_dict):
   if theFile == "":
@@ -26,7 +27,7 @@ def class_md_out(theFile, ability_dict):
       outfile.write("##### Abilities: " + "  \n")
       for ability in abilities:
         description = ability_dict[ability]["description"]
-        outfile.write("  * {0}: {1}  \n".format(ability, description))
+        outfile.write("  * **{0}**: {1}  \n".format(ability, description))
         print(ability, ": ", description)
       outfile.write("\n##### Stats:  " + "  \n")
       for stat in stats:
@@ -45,31 +46,40 @@ def main():
 
   with open(sys.argv[1]) as data_file:
     data = json.load(data_file)
-    outfile = open("races.md", 'w')
-    standard_races = data
-    for name, details in standard_races.items():
-      description = details["description"]
-      standings = details["standings"]
-      abilities = details["abilities"]
-      stats = details["stats"]
-      outfile.write("### " + name + "  \n")
-      print(name)
-      outfile.write(description + "  \n")
-      print(description)
-      outfile.write("**Standings:** " + standings + "  \n")
-      print(standings)
-      outfile.write("##### Abilities: " + "  \n")
-      for ability in abilities:
-        description = ability_dict[ability]["description"]
-        outfile.write("  * {0}: {1}  \n".format(ability, description))
-        print(ability, ": ", description)
-      outfile.write("\n##### Stats:  " + "  \n")
-      for stat in stats:
-        outfile.write("  * " +  stat + ": " + str(stats[stat]) + "  \n")
-        print(stat + " " + str(stats[stat]))
-      outfile.write("\n")
-  outfile.close()
-  class_md_out(sys.argv[2], ability_dict)
+    for gender in ("male", "female"):
+      outfile = open("{0}_races.md".format(gender), 'w')
+      standard_races = data
+      for name, details in standard_races.items():
+
+        lowername = name.lower()
+        #relative path for now
+        path_to_image = os.path.join("images", "race", gender, lowername + ".jpg")
+        print(path_to_image)
+        outfile.write('![{0}]({1}?raw=true "{2}") \n'.format(name, path_to_image, name))
+
+
+        description = details["description"]
+        standings = details["standings"]
+        abilities = details["abilities"]
+        stats = details["stats"]
+        outfile.write("### " + name + "  \n")
+        print(name)
+        outfile.write(description + "  \n")
+        print(description)
+        outfile.write("**Standings:** " + standings + "  \n")
+        print(standings)
+        outfile.write("##### Abilities: " + "  \n")
+        for ability in abilities:
+          description = ability_dict[ability]["description"]
+          outfile.write("  * **{0}**: {1}  \n".format(ability, description))
+          print(ability, ": ", description)
+        outfile.write("\n##### Stats:  " + "  \n")
+        for stat in stats:
+          outfile.write("  * " +  stat + ": " + str(stats[stat]) + "  \n")
+          print(stat + " " + str(stats[stat]))
+        outfile.write("\n")
+    outfile.close()
+    class_md_out(sys.argv[2], ability_dict)
 
 if __name__ == "__main__":
     main()
