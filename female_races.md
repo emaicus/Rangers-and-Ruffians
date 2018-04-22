@@ -1,4 +1,4 @@
-![Human](images\race\female\human.jpg?raw=true "Human") 
+![Human](images/race/female/human.jpg?raw=true "Human") 
 ### Human  
 The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.  
 **Standings:** Humans get on great with dwarves, well with elves, and distrust orcs and goblins.  
@@ -17,7 +17,7 @@ The most average of the races. The race of man can become good at most things, b
   * Luck: -1  
   * Perception: 1  
 
-![Elf](images\race\female\elf.jpg?raw=true "Elf") 
+![Elf](images/race/female/elf.jpg?raw=true "Elf") 
 ### Elf  
 Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.  
 **Standings:** Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.  
@@ -37,7 +37,7 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
   * Luck: 1  
   * Perception: 2  
 
-![Halfling](images\race\female\halfling.jpg?raw=true "Halfling") 
+![Halfling](images/race/female/halfling.jpg?raw=true "Halfling") 
 ### Halfling  
 Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.  
 **Standings:** Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.  
@@ -57,7 +57,7 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   * Luck: 2  
   * Perception: 2  
 
-![Orc](images\race\female\orc.jpg?raw=true "Orc") 
+![Orc](images/race/female/orc.jpg?raw=true "Orc") 
 ### Orc  
 A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.  
 **Standings:** Orcs distrust all races save goblins, who they are close friends with.  
@@ -77,7 +77,7 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
   * Luck: 0  
   * Perception: 1  
 
-![Goblin](images\race\female\goblin.jpg?raw=true "Goblin") 
+![Goblin](images/race/female/goblin.jpg?raw=true "Goblin") 
 ### Goblin  
 Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.  
 **Standings:** Goblins are close allies with orcs, but fear and hate all others.  
@@ -97,7 +97,7 @@ Small and wicked, goblins are tricksters and thieves. Known for eating their kil
   * Luck: 2  
   * Perception: 3  
 
-![Catterwol](images\race\female\catterwol.jpg?raw=true "Catterwol") 
+![Catterwol](images/race/female/catterwol.jpg?raw=true "Catterwol") 
 ### Catterwol  
 Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.  
 **Standings:** Catterwol keep to themselves, and hate Orcs.  

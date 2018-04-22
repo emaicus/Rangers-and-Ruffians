@@ -53,7 +53,7 @@ def main():
 
         lowername = name.lower()
         #relative path for now
-        path_to_image = os.path.join("images", "race", gender, lowername + ".jpg")
+        path_to_image = "images/race/{0}/{1}.jpg".format(gender, lowername)
         print(path_to_image)
         outfile.write('![{0}]({1}?raw=true "{2}") \n'.format(name, path_to_image, name))
 
