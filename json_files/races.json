@@ -11,12 +11,12 @@
         "stats": {
             "Dexterity": 0,
             "Strength": 1,
-            "Vitality": 1,
-            "Intelligence": 1,
-            "Inner_Fire": 2,
-            "Charisma": 1,
-            "Luck": -1,
-            "Perception": 0
+            "Vitality": 0,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": 0,
+            "Luck": 0,
+            "Perception": -1
         }
     },
     "Elf": {
@@ -32,12 +32,12 @@
         "stats": {
             "Dexterity": 1,
             "Strength": -1,
-            "Vitality": -2,
-            "Intelligence": 2,
-            "Inner_Fire": 1,
-            "Charisma": 0,
+            "Vitality": -1,
+            "Intelligence": 1,
+            "Inner_Fire": 0,
+            "Charisma": 1,
             "Luck": 1,
-            "Perception": 2
+            "Perception": 1
         }
     },
     "Halfling": {
@@ -54,13 +54,13 @@
         ],
         "stats": {
             "Dexterity": 1,
-            "Strength": -2,
+            "Strength": -1,
             "Vitality": -3,
             "Intelligence": 0,
-            "Inner_Fire": -1,
+            "Inner_Fire": 1,
             "Charisma": 2,
-            "Luck": 2,
-            "Perception": 3
+            "Luck": 1,
+            "Perception": 1
         }
     },
     "Orc": {
@@ -76,13 +76,13 @@
         ],
         "stats": {
             "Dexterity": -1,
-            "Strength": 2,
-            "Vitality": 2,
-            "Intelligence": -2,
-            "Inner_Fire": 2,
-            "Charisma": -1,
+            "Strength": 1,
+            "Vitality": 1,
+            "Intelligence": -1,
+            "Inner_Fire": 1,
+            "Charisma": -2,
             "Luck": 0,
-            "Perception": 1
+            "Perception": 0
         }
     },
     "Goblin": {
@@ -97,14 +97,14 @@
             "Cheap Blow"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
+            "Dexterity": 2,
+            "Strength": -1,
             "Vitality": -3,
-            "Intelligence": 2,
+            "Intelligence": 0,
             "Inner_Fire": 0,
             "Charisma": 0,
-            "Luck": 2,
-            "Perception": 3
+            "Luck": 0,
+            "Perception": 2
         }
     },
     "Catterwol": {
@@ -120,12 +120,12 @@
             "Fast Paws"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 1,
-            "Vitality": -2,
-            "Intelligence": 1,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -1,
+            "Intelligence": 0,
             "Inner_Fire": 0,
-            "Charisma": 2,
+            "Charisma": 0,
             "Luck": 1,
             "Perception": 2
         }
@@ -143,12 +143,12 @@
             "Dry Up"
         ],
         "stats": {
-            "Dexterity": 2,
+            "Dexterity": 0,
             "Strength": -1,
             "Vitality": -2,
             "Intelligence": 2,
-            "Inner_Fire": 1,
-            "Charisma": 3,
+            "Inner_Fire": 0,
+            "Charisma": 2,
             "Luck": 2,
             "Perception": 0
         }
@@ -166,14 +166,14 @@
             "Camouflage"
         ],
         "stats": {
-            "Dexterity": 1,
+            "Dexterity": 0,
             "Strength": 1,
             "Vitality": 0,
-            "Intelligence": 0,
-            "Inner_Fire": 1,
+            "Intelligence": -1,
+            "Inner_Fire": 0,
             "Charisma": -2,
             "Luck": 0,
-            "Perception": 3
+            "Perception": 0
         }
     },
     "Gnome": {
@@ -188,12 +188,12 @@
             "Resist Magic"
         ],
         "stats": {
-            "Dexterity": 1,
-            "Strength": 1,
-            "Vitality": -3,
-            "Intelligence": 2,
-            "Inner_Fire": 0,
-            "Charisma": 0,
+            "Dexterity": 0,
+            "Strength": 0,
+            "Vitality": -2,
+            "Intelligence": 1,
+            "Inner_Fire": 1,
+            "Charisma": -1,
             "Luck": 0,
             "Perception": -2
         }

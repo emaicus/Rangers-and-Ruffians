@@ -22,8 +22,8 @@ def class_md_out(theFile, ability_dict):
         standings = name + "s come in so many shapes, sizes, and belief sets that there is no set standing for them."
       abilities = details["abilities"]
       stats = details["stats"]
-      outfile.write("# " + name + "  \n\n")
-      outfile.write('![{0}]({1}?raw=true "{2}") \n'.format(name, path_to_image, name))
+      outfile.write("# " + name + "  \n")
+      outfile.write('![{0}]({1}?raw=true "{2}") \n\n'.format(name, path_to_image, name))
       print(name) 
       outfile.write(description + "  \n")
       print(description)
@@ -42,14 +42,13 @@ def class_md_out(theFile, ability_dict):
     outfile.close()
 
 def main():
-  if len(sys.argv) < 4:
-    print("ERROR: include the name of the races.json, classes.json, and abilities.json files.")
-    sys.exit(0)
-
-  with open(sys.argv[3]) as data_file:
+  ability_path = "json_files/abilities.json"
+  class_path = "json_files/classes.json"
+  race_path = "json_files/races.json"
+  with open(ability_path) as data_file:
     ability_dict = json.load(data_file)
 
-  with open(sys.argv[1]) as data_file:
+  with open(race_path) as data_file:
     data = json.load(data_file)
     for gender in ("male", "female"):
       outfile = open("{0}_races.md".format(gender), 'w')
@@ -84,7 +83,7 @@ def main():
           print(stat + " " + str(stats[stat]))
         outfile.write("\n")
     outfile.close()
-    class_md_out(sys.argv[2], ability_dict)
+    class_md_out(class_path, ability_dict)
 
 if __name__ == "__main__":
     main()

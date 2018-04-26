@@ -12,12 +12,12 @@ The most average of the races. The race of man can become good at most things, b
 ##### Stats:    
   * Dexterity: 0  
   * Strength: 1  
-  * Vitality: 1  
-  * Intelligence: 1  
-  * Inner_Fire: 2  
-  * Charisma: 1  
-  * Luck: -1  
-  * Perception: 0  
+  * Vitality: 0  
+  * Intelligence: 0  
+  * Inner_Fire: 1  
+  * Charisma: 0  
+  * Luck: 0  
+  * Perception: -1  
 
 # Elf  
 ![Elf](images/race/female/elf.jpg?raw=true "Elf") 
@@ -34,12 +34,12 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
 ##### Stats:    
   * Dexterity: 1  
   * Strength: -1  
-  * Vitality: -2  
-  * Intelligence: 2  
-  * Inner_Fire: 1  
-  * Charisma: 0  
+  * Vitality: -1  
+  * Intelligence: 1  
+  * Inner_Fire: 0  
+  * Charisma: 1  
   * Luck: 1  
-  * Perception: 2  
+  * Perception: 1  
 
 # Halfling  
 ![Halfling](images/race/female/halfling.jpg?raw=true "Halfling") 
@@ -57,13 +57,13 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
 
 ##### Stats:    
   * Dexterity: 1  
-  * Strength: -2  
+  * Strength: -1  
   * Vitality: -3  
   * Intelligence: 0  
-  * Inner_Fire: -1  
+  * Inner_Fire: 1  
   * Charisma: 2  
-  * Luck: 2  
-  * Perception: 3  
+  * Luck: 1  
+  * Perception: 1  
 
 # Orc  
 ![Orc](images/race/female/orc.jpg?raw=true "Orc") 
@@ -80,13 +80,13 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
 
 ##### Stats:    
   * Dexterity: -1  
-  * Strength: 2  
-  * Vitality: 2  
-  * Intelligence: -2  
-  * Inner_Fire: 2  
-  * Charisma: -1  
+  * Strength: 1  
+  * Vitality: 1  
+  * Intelligence: -1  
+  * Inner_Fire: 1  
+  * Charisma: -2  
   * Luck: 0  
-  * Perception: 1  
+  * Perception: 0  
 
 # Goblin  
 ![Goblin](images/race/female/goblin.jpg?raw=true "Goblin") 
@@ -102,14 +102,14 @@ Small and wicked, goblins are tricksters and thieves. Known for eating their kil
   * **Cheap Blow**: Once every three turns, your attack incapacitates an enemy.  
 
 ##### Stats:    
-  * Dexterity: 3  
-  * Strength: -2  
+  * Dexterity: 2  
+  * Strength: -1  
   * Vitality: -3  
-  * Intelligence: 2  
+  * Intelligence: 0  
   * Inner_Fire: 0  
   * Charisma: 0  
-  * Luck: 2  
-  * Perception: 3  
+  * Luck: 0  
+  * Perception: 2  
 
 # Catterwol  
 ![Catterwol](images/race/female/catterwol.jpg?raw=true "Catterwol") 
@@ -126,12 +126,12 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * **Fast Paws**: Once every 3 turns, use two actions.  
 
 ##### Stats:    
-  * Dexterity: 2  
-  * Strength: 1  
-  * Vitality: -2  
-  * Intelligence: 1  
+  * Dexterity: 1  
+  * Strength: 0  
+  * Vitality: -1  
+  * Intelligence: 0  
   * Inner_Fire: 0  
-  * Charisma: 2  
+  * Charisma: 0  
   * Luck: 1  
   * Perception: 2  
 
@@ -146,16 +146,16 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * **Water Healing**: When you rest in water, it is as if you are sleeping. When you sleep in water, it is as if you are in a bed.  
   * **Become Mist**: Once every three turns, become mist to have an attack pass right through you.  
   * **Charm**: Once every three turns, become mist to have an attack pass right through you.  
-  * **Beast Form**: Once every three turns in combat, morph to reveal the beast within. Add +2 to strength and dexterity, but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.  
+  * **Beast Form**: Once every three turns in combat, morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.  
   * **Dry Up**: If you are not submerged in water once every 3 days, you will die from asphyxiation. Pouring water on yourself/standing in the rain can grant you an extra day.  
 
 ##### Stats:    
-  * Dexterity: 2  
+  * Dexterity: 0  
   * Strength: -1  
   * Vitality: -2  
   * Intelligence: 2  
-  * Inner_Fire: 1  
-  * Charisma: 3  
+  * Inner_Fire: 0  
+  * Charisma: 2  
   * Luck: 2  
   * Perception: 0  
 
@@ -174,14 +174,14 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * **Camouflage**: If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage and +5 on stealth checks while hiding.  
 
 ##### Stats:    
-  * Dexterity: 1  
+  * Dexterity: 0  
   * Strength: 1  
   * Vitality: 0  
-  * Intelligence: 0  
-  * Inner_Fire: 1  
+  * Intelligence: -1  
+  * Inner_Fire: 0  
   * Charisma: -2  
   * Luck: 0  
-  * Perception: 3  
+  * Perception: 0  
 
 # Gnome  
 ![Gnome](images/race/female/gnome.jpg?raw=true "Gnome") 
@@ -197,12 +197,12 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * **Resist Magic**: You take -2 magic damage.  
 
 ##### Stats:    
-  * Dexterity: 1  
-  * Strength: 1  
-  * Vitality: -3  
-  * Intelligence: 2  
-  * Inner_Fire: 0  
-  * Charisma: 0  
+  * Dexterity: 0  
+  * Strength: 0  
+  * Vitality: -2  
+  * Intelligence: 1  
+  * Inner_Fire: 1  
+  * Charisma: -1  
   * Luck: 0  
   * Perception: -2  
 

@@ -9,14 +9,14 @@
             "Taunt"
         ],
         "stats": {
-            "Dexterity": -1,
-            "Strength": 3,
-            "Vitality": 3,
+            "Dexterity": -2,
+            "Strength": 2,
+            "Vitality": 2,
             "Intelligence": -3,
             "Inner_Fire": 1,
-            "Charisma": -3,
-            "Luck": 1,
-            "Perception": 2
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Barbarians are the enemies of law keepers."
     },
@@ -28,12 +28,12 @@
             "Medicine"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 1,
-            "Vitality": 1,
-            "Intelligence": -2,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": 0,
+            "Intelligence": 0,
             "Inner_Fire": 1,
-            "Charisma": -2,
+            "Charisma": 1,
             "Luck": 0,
             "Perception": 2
         },
@@ -48,13 +48,13 @@
             "Steady"
         ],
         "stats": {
-            "Dexterity": 1,
-            "Strength": 2,
-            "Vitality": 2,
-            "Intelligence": -2,
-            "Inner_Fire": -1,
-            "Charisma": -1,
-            "Luck": 1,
+            "Dexterity": 0,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": -1,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 0,
             "Perception": 1
         },
         "standings": "Hedge Knights are not fond of Knights"
@@ -69,10 +69,10 @@
         ],
         "stats": {
             "Dexterity": -2,
-            "Strength": 3,
-            "Vitality": 3,
-            "Intelligence": -2,
-            "Inner_Fire": -1,
+            "Strength": 2,
+            "Vitality": 1,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": 1,
             "Perception": 0
@@ -89,11 +89,11 @@
             "Dexterity": 0,
             "Strength": 0,
             "Vitality": -1,
-            "Intelligence": 1,
-            "Inner_Fire": 2,
-            "Charisma": 2,
-            "Luck": -1,
-            "Perception": -1
+            "Intelligence": 2,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Battle mages sometimes get along poorly with clerics."
     },
@@ -106,13 +106,13 @@
             "Transfigure"
         ],
         "stats": {
-            "Dexterity": 0,
+            "Dexterity": -1,
             "Strength": -2,
-            "Vitality": -4,
+            "Vitality": -2,
             "Intelligence": 3,
-            "Inner_Fire": 2,
-            "Charisma": 1,
-            "Luck": -1,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 0,
             "Perception": -1
         },
         "standings": "Mages fear and revile anti-mages"
@@ -125,12 +125,12 @@
             "Walking Stick"
         ],
         "stats": {
-            "Dexterity": 1,
-            "Strength": 1,
-            "Vitality": -3,
+            "Dexterity": -1,
+            "Strength": 0,
+            "Vitality": -2,
             "Intelligence": 2,
-            "Inner_Fire": 3,
-            "Charisma": 2,
+            "Inner_Fire": 1,
+            "Charisma": 1,
             "Luck": 1,
             "Perception": 1
         },
@@ -145,14 +145,14 @@
             "Medicine"
         ],
         "stats": {
-            "Dexterity": -1,
-            "Strength": -2,
-            "Vitality": -5,
+            "Dexterity": 0,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 3,
-            "Inner_Fire": 3,
+            "Inner_Fire": 1,
             "Charisma": 1,
-            "Luck": 2,
-            "Perception": 2
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church."
     },
@@ -167,14 +167,14 @@
             "A Thief's Gear"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -4,
+            "Dexterity": 2,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 0,
-            "Inner_Fire": -1,
-            "Charisma": 2,
-            "Luck": 2,
-            "Perception": 3
+            "Inner_Fire": 0,
+            "Charisma": 1,
+            "Luck": 1,
+            "Perception": 2
         },
         "standings": "Thieves hat law keepers and Thief Catchers"
     },
@@ -189,14 +189,14 @@
             "A Thief's Gear"
         ],
         "stats": {
-            "Dexterity": 2,
+            "Dexterity": 1,
             "Strength": 1,
-            "Vitality": -2,
-            "Intelligence": 1,
+            "Vitality": -1,
+            "Intelligence": 0,
             "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": -1,
-            "Perception": 2
+            "Perception": 1
         },
         "standings": "Thief Catchers hate thieves, and are distrusted by lawkeepers"
     },
@@ -210,14 +210,14 @@
             "Happy Smiles"
         ],
         "stats": {
-            "Dexterity": 2,
+            "Dexterity": 0,
             "Strength": 1,
             "Vitality": -1,
             "Intelligence": 1,
             "Inner_Fire": -2,
-            "Charisma": 3,
+            "Charisma": 2,
             "Luck": 2,
-            "Perception": -2
+            "Perception": -1
         },
         "standings": "Lordlings are respected by kingsmen, but are often set upon by thieves."
     },
@@ -231,12 +231,12 @@
         ],
         "stats": {
             "Dexterity": 1,
-            "Strength": -4,
-            "Vitality": -4,
-            "Intelligence": -1,
-            "Inner_Fire": -1,
-            "Charisma": 5,
-            "Luck": 5,
+            "Strength": -3,
+            "Vitality": -2,
+            "Intelligence": 1,
+            "Inner_Fire": 0,
+            "Charisma": 3,
+            "Luck": 2,
             "Perception": 0
         },
         "standings": "Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands."
@@ -249,14 +249,14 @@
             "Regular Patron"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -1,
             "Intelligence": 0,
             "Inner_Fire": 0,
-            "Charisma": 4,
-            "Luck": 3,
-            "Perception": 3
+            "Charisma": 2,
+            "Luck": 1,
+            "Perception": 0
         },
         "standings": "Bards are loved by most, and are welcomed equally among thieves and goodfolk."
     },
@@ -270,14 +270,14 @@
             "PULL"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 0,
             "Inner_Fire": 0,
             "Charisma": 0,
             "Luck": 2,
-            "Perception": 4
+            "Perception": 1
         },
         "standings": "Excellent archers, Marksmen come from all walks of life."
     },
@@ -292,19 +292,19 @@
             "Trapper"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 1,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -1,
             "Intelligence": -1,
-            "Inner_Fire": 1,
+            "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": 0,
-            "Perception": 3
+            "Perception": 1
         },
         "standings": "Huntsman are generally disliked by knights and the highborn."
     },
     "Monk": {
-        "description": "Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.",
+        "description": "Masters of hand to hand combat, monks use their extensive self-knowledge to overcome their foes.",
         "abilities": [
             "Steady",
             "Hand to Hand",
@@ -312,14 +312,14 @@
             "Meditate"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 2,
-            "Vitality": -3,
-            "Intelligence": 0,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -2,
+            "Intelligence": 1,
             "Inner_Fire": 3,
-            "Charisma": 1,
-            "Luck": 2,
-            "Perception": 3
+            "Charisma": 0,
+            "Luck": 0,
+            "Perception": 1
         },
         "standings": "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them."
     }

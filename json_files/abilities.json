@@ -325,7 +325,7 @@
         "description" : "Once every three turns, become mist to have an attack pass right through you."
     },
     "Beast Form" : {
-        "description" : "Once every three turns in combat, morph to reveal the beast within. Add +2 to strength and dexterity, but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle."
+        "description" : "Once every three turns in combat, morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle."
     },
     "Dry Up" : {
         "description" : "If you are not submerged in water once every 3 days, you will die from asphyxiation. Pouring water on yourself/standing in the rain can grant you an extra day."
