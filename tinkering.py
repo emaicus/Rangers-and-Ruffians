@@ -11,6 +11,10 @@ def class_md_out(theFile, ability_dict):
     standard_classes = data
     
     for name, details in standard_classes.items():
+      lowername = name.lower()
+      #relative path for now
+      lowername = lowername.replace(' ', '_')
+      path_to_image = "images/class/{0}.jpg".format(lowername)
       description = details["description"]
       if 'standings' in details:
         standings = details["standings"]
@@ -18,7 +22,8 @@ def class_md_out(theFile, ability_dict):
         standings = name + "s come in so many shapes, sizes, and belief sets that there is no set standing for them."
       abilities = details["abilities"]
       stats = details["stats"]
-      outfile.write("### " + name + "  \n")
+      outfile.write("# " + name + "  \n\n")
+      outfile.write('![{0}]({1}?raw=true "{2}") \n'.format(name, path_to_image, name))
       print(name) 
       outfile.write(description + "  \n")
       print(description)
@@ -55,14 +60,14 @@ def main():
         #relative path for now
         path_to_image = "images/race/{0}/{1}.jpg".format(gender, lowername)
         print(path_to_image)
-        outfile.write('![{0}]({1}?raw=true "{2}") \n'.format(name, path_to_image, name))
 
 
         description = details["description"]
         standings = details["standings"]
         abilities = details["abilities"]
         stats = details["stats"]
-        outfile.write("### " + name + "  \n")
+        outfile.write("# " + name + "  \n")
+        outfile.write('![{0}]({1}?raw=true "{2}") \n\n'.format(name, path_to_image, name))
         print(name)
         outfile.write(description + "  \n")
         print(description)

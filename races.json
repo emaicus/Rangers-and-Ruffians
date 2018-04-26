@@ -5,17 +5,18 @@
         "abilities": [
             "Last Stand",
             "Strength of Men",
-            "Rally"
+            "Rally",
+            "Tactics"
         ],
         "stats": {
             "Dexterity": 0,
             "Strength": 1,
             "Vitality": 1,
-            "Intelligence": -1,
+            "Intelligence": 1,
             "Inner_Fire": 2,
-            "Charisma": 0,
+            "Charisma": 1,
             "Luck": -1,
-            "Perception": 1
+            "Perception": 0
         }
     },
     "Elf": {
@@ -23,16 +24,17 @@
         "standings": "Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.",
         "abilities": [
             "Sleepless",
-            "Dark Vision",
+            "Low-Light Vision",
             "Wink Wink, Nudge Nudge",
-            "Winged feet"
+            "Winged feet",
+            "Counter"
         ],
         "stats": {
             "Dexterity": 1,
             "Strength": -1,
-            "Vitality": -1,
+            "Vitality": -2,
             "Intelligence": 2,
-            "Inner_Fire": -1,
+            "Inner_Fire": 1,
             "Charisma": 0,
             "Luck": 1,
             "Perception": 2
@@ -45,17 +47,20 @@
             "Sling",
             "Warm Butter",
             "Soft Bed",
-            "Padfoot"
+            "Padfoot",
+            "Carry a Tune",
+            "Thick Headed",
+            "Lightweight"
         ],
         "stats": {
             "Dexterity": 1,
             "Strength": -2,
-            "Vitality": -2,
-            "Intelligence": 1,
+            "Vitality": -3,
+            "Intelligence": 0,
             "Inner_Fire": -1,
             "Charisma": 2,
             "Luck": 2,
-            "Perception": 2
+            "Perception": 3
         }
     },
     "Orc": {
@@ -65,7 +70,9 @@
             "Sling",
             "Lamb to Slaughter",
             "Bellow",
-            "Still Warm"
+            "Still Warm",
+            "Strongarm",
+            "Thunderous Blow"
         ],
         "stats": {
             "Dexterity": -1,
@@ -85,7 +92,9 @@
             "Sling",
             "Still Warm",
             "Mantel",
-            "Dark Vision"
+            "Dark Vision",
+            "Seek Gold",
+            "Cheap Blow"
         ],
         "stats": {
             "Dexterity": 3,
@@ -93,7 +102,7 @@
             "Vitality": -3,
             "Intelligence": 2,
             "Inner_Fire": 0,
-            "Charisma": 1,
+            "Charisma": 0,
             "Luck": 2,
             "Perception": 3
         }
@@ -105,17 +114,88 @@
             "Dark Vision",
             "Fisher",
             "They're Retractable",
-            "Land on your feet"
+            "Land on your feet",
+            "Loose Skin",
+            "Fear of Water",
+            "Fast Paws"
         ],
         "stats": {
             "Dexterity": 2,
-            "Strength": -2,
-            "Vitality": -1,
+            "Strength": 1,
+            "Vitality": -2,
             "Intelligence": 1,
-            "Inner_Fire": -1,
+            "Inner_Fire": 0,
             "Charisma": 2,
             "Luck": 1,
             "Perception": 2
+        }
+    },
+    "Nymph": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Unbreathing",
+            "Flows Like Water",
+            "Water Healing",
+            "Become Mist",
+            "Charm",
+            "Beast Form",
+            "Dry Up"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": -1,
+            "Vitality": -2,
+            "Intelligence": 2,
+            "Inner_Fire": 1,
+            "Charisma": 3,
+            "Luck": 2,
+            "Perception": 0
+        }
+    },
+    "Lizkin": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Color Choice",
+            "Greater Choice Stat",
+            "Smokevision",
+            "Poison Bite",
+            "Shed Tail",
+            "Taste Air",
+            "Camouflage"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 3
+        }
+    },
+    "Gnome": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Tinker",
+            "Build",
+            "See and Remember",
+            "Gather",
+            "Grapple Gun",
+            "Resist Magic"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 1,
+            "Vitality": -3,
+            "Intelligence": 2,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 0,
+            "Perception": -2
         }
     }
 }

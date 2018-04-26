@@ -24,7 +24,7 @@
         "description": "Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive."
     },
     "Winged feet": {
-        "description": "You have incredible endurance."
+        "description": "You have advantage on acrobatics checks."
     },
     "Sling": {
         "description": "Your character begins with a sling."
@@ -179,9 +179,6 @@
      "Fireburst" : {
         "description":"You can craft one d20 area of effect vial of explosive liquid per day. Takes 5 hours."
     },
-     "Choice Stat" : {
-        "description":"At the beginning of your adventure, decide between a permanent increase of 1 dexterity or strength."
-    },
      "The Sword and the Satchel" : {
         "description":"You begin your adventure with a bottomless satchel."
     },
@@ -275,5 +272,104 @@
     },
     "Inner Eye": {
         "description":"Gain advantage when checking for spiritual energy."
+    },
+    "Tactics": {
+        "description":"Once every 3 turns, you can score a guaranteed critical hit."
+    },
+    "Counter": {
+        "description":"You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack)"
+    },
+    "Carry a Tune" : {
+        "description" : "You know a song which, when sung, grants a party member of your choice +1 to one stat for the day. Can be sung once per day."
+    },
+    "Thick Headed" : {
+        "description" : "Gain +3 to any checks involving an enemy breaking into your mind."
+    },
+    "Lightweight" : {
+        "description" : "Any cup of alcohol affects you like two."
+    },
+    "Strongarm" : {
+        "description" : "Gain advantage when intimidating peasants and villagers."
+    },
+    "Thunderous Blow" : {
+        "description" : "Once every three turns, roll double the dice for your attack."
+    },
+    "Seek Gold" : {
+        "description" : "You are able to smell gold."
+    },
+    "Cheap Blow" : {
+        "description" : "Once every three turns, your attack incapacitates an enemy."
+    },
+    "Loose Skin" : {
+        "description" : "You have advantage when breaking grapples."
+    },
+    "Fear of Water" : {
+        "description" : "You have disadvantage when soaked through."
+    },
+    "Fast Paws" : {
+        "description" : "Once every 3 turns, use two actions."
+    },
+    "Unbreathing" : {
+        "description" : "You only need to breath once every three days."
+    },
+    "Flows Like Water" : {
+        "description" : "You can walk on water, and swim as fast as a horse can run."
+    },
+    "Water Healing" : {
+        "description" : "When you rest in water, it is as if you are sleeping. When you sleep in water, it is as if you are in a bed."
+    },
+    "Become Mist" : {
+        "description" : "Once every three turns, become mist to have an attack pass right through you."
+    },
+    "Charm" : {
+        "description" : "Once every three turns, become mist to have an attack pass right through you."
+    },
+    "Beast Form" : {
+        "description" : "Once every three turns in combat, morph to reveal the beast within. Add +2 to strength and dexterity, but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle."
+    },
+    "Dry Up" : {
+        "description" : "If you are not submerged in water once every 3 days, you will die from asphyxiation. Pouring water on yourself/standing in the rain can grant you an extra day."
+    },
+    "Color Choice" : {
+        "description" : "At any time, you may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used."
+    },
+    "Greater Choice Stat" : {
+        "description" : "At the beginning of your adventure, you have a point to spend on a stat of your choice."
+    },
+    "Smokevision" : {
+        "description" : "Your double eyelids allows you to see well when underwater or in smoke."
+    },
+    "Poison Bite" : {
+        "description" : "Once every 3 turns, you may bite for d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn."
+    },
+    "Poison Resist" : {
+        "description" : "You are resistant to most poisons (gain advantage and +5 on any poison checks)."
+    },
+    "Shed Tail" : {
+        "description" : "You can shed your tail to escape a grapple."
+    },
+    "Taste Air" : {
+        "description" : "Gain advantage on tracking perception checks by tasting the air. Works in all environments."
+    },
+    "Camouflage" : {
+        "description" : "If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage and +5 on stealth checks while hiding."
+    },
+    "Tinker" : {
+        "description" : "Every night, you can attempt to to create a device. Once you create one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs, firebombs, and saddles. (Tinkering requires an intelligence check)"
+    },
+    "Build" : {
+        "description" : "Once you have a recipe for an item, you can build it. Forgo resting to create one item. Forgo sleeping to create two."
+    },
+    "Gather" : {
+        "description" : "You passively collect ingredients for your tinkering."
+    },
+    "See and Remember" : {
+        "description" : "Once you see something, you will probably remember it."
+    },
+    "Grapple Gun" : {
+        "description" : "You carry a retractable grappling gun."
+    },
+    "Resist Magic" : {
+        "description" : "You take -2 magic damage."
     }
 }
