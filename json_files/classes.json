@@ -6,6 +6,7 @@
             "Intimidate",
             "Throw Anything",
             "Crushing Blow",
+            "Boozehound",
             "Taunt"
         ],
         "stats": {
@@ -23,9 +24,12 @@
     "Ranger": {
         "description": "Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.",
         "abilities": [
-            "Huntsman",
-            "Woodsman",
-            "Medicine"
+            "Blessed Blade",
+            "Medicine",
+            "Shifting Cloak",
+            "Favorite Terrain",
+            "Learned",
+            "Tracking"
         ],
         "stats": {
             "Dexterity": 1,
@@ -45,7 +49,8 @@
             "Mount and Blade",
             "Under the Stars",
             "Born in the Saddle",
-            "Steady"
+            "Steady",
+            "Charge"
         ],
         "stats": {
             "Dexterity": 0,
@@ -65,7 +70,8 @@
             "Trained Precision",
             "Kingsmen",
             "Hold the line",
-            "Charge"
+            "Shield Bash",
+            "Shield of Men"
         ],
         "stats": {
             "Dexterity": -2,
@@ -101,6 +107,8 @@
         "description": "A student of magic, mages are highly intelligent and are adept spellcasters.",
         "abilities": [
             "The Sword and the Satchel",
+            "Learned",
+            "Historian",
             "Air of Mystery",
             "A Dry Place to Sleep",
             "Transfigure"
@@ -162,9 +170,9 @@
             "Master of Disguise",
             "Lightfoot",
             "Nimble Fingers",
-            "Low-Light Vision",
             "Mantel",
-            "A Thief's Gear"
+            "A Thief's Gear",
+            "High Ground"
         ],
         "stats": {
             "Dexterity": 2,
@@ -184,9 +192,9 @@
             "Master of Disguise",
             "Lightfoot",
             "Nimble Fingers",
-            "Low-Light Vision",
             "Mantel",
-            "A Thief's Gear"
+            "A Thief's Gear",
+            "High Ground"
         ],
         "stats": {
             "Dexterity": 1,
@@ -207,7 +215,11 @@
             "The Family Sword",
             "My People",
             "Mantel",
-            "Happy Smiles"
+            "Happy Smiles",
+            "Swoon",
+            "Beauty Incarnate",
+            "Lightweight",
+            "Feint"
         ],
         "stats": {
             "Dexterity": 0,
@@ -224,9 +236,14 @@
     "Lady Fair": {
         "description": "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
         "abilities": [
-            "Swoon",
+            "My Father's Coffers",
+            "The Family Sword",
             "My People",
+            "Mantel",
+            "Happy Smiles",
+            "Swoon",
             "Beauty Incarnate",
+            "Lightweight",
             "Feint"
         ],
         "stats": {
@@ -244,9 +261,13 @@
     "Bard": {
         "description": "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
         "abilities": [
+            "My Father's Oboe",
+            "The Bard's Songbook",
             "Cartwheel",
             "One up the Sleeve",
-            "Regular Patron"
+            "Regular Patron",
+            "Boozehound",
+            "Nimble Fingers"
         ],
         "stats": {
             "Dexterity": 1,
@@ -263,6 +284,8 @@
     "Marksman": {
         "description": "Excellent archers, Marksmen come from all walks of life.",
         "abilities": [
+            "Longbow",
+            "Boot Knife",
             "Longshot",
             "Focus",
             "Double Tap",
@@ -284,11 +307,13 @@
     "Huntsman": {
         "description": "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
         "abilities": [
-            "Fletcher",
-            "Every Part",
-            "Sureshot",
             "Size doesn't matter",
-            "Crippling shot",
+            "Every Part",
+            "Huntsman",
+            "Woodsman",
+            "Sureshot",
+            "Crippling Shot",
+            "Tracking",
             "Trapper"
         ],
         "stats": {
@@ -306,10 +331,11 @@
     "Monk": {
         "description": "Masters of hand to hand combat, monks use their extensive self-knowledge to overcome their foes.",
         "abilities": [
-            "Steady",
             "Hand to Hand",
+            "Steady",
             "Inner Eye",
-            "Meditate"
+            "Meditate",
+            "Share Ability"
         ],
         "stats": {
             "Dexterity": 1,
