@@ -6,6 +6,9 @@ from PIL import Image
 
 import os
 
+print("This script is not currently in use.")
+exit(1)
+
 runpath = os.getcwd()
 image_dir = os.path.join(runpath, "images")
 race_dir = os.path.join(image_dir, "races")

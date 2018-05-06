@@ -5,6 +5,10 @@ import random
 import json
 import operator
 
+##########################################
+#This script is legacy/redacted.
+##########################################
+
 def racePicker():
   with open("races.json") as data_file:    
     races = json.load(data_file)
@@ -221,4 +225,5 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
+  # main()
+  print("This script is no longer in use, and may be merged into another script/rewritten at a later date.")

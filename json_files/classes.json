@@ -5,34 +5,39 @@
             "Berserk",
             "Intimidate",
             "Throw Anything",
-            "Crushing Blow"
+            "Crushing Blow",
+            "Boozehound",
+            "Taunt"
         ],
         "stats": {
-            "Dexterity": -1,
-            "Strength": 3,
-            "Vitality": 3,
+            "Dexterity": -2,
+            "Strength": 2,
+            "Vitality": 2,
             "Intelligence": -3,
             "Inner_Fire": 1,
-            "Charisma": -3,
-            "Luck": 1,
-            "Perception": 2
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Barbarians are the enemies of law keepers."
     },
     "Ranger": {
         "description": "Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.",
         "abilities": [
-            "Huntsman",
-            "Woodsman",
-            "Medicine"
+            "Blessed Blade",
+            "Medicine",
+            "Shifting Cloak",
+            "Favorite Terrain",
+            "Learned",
+            "Tracking"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 1,
-            "Vitality": 1,
-            "Intelligence": -2,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": 0,
+            "Intelligence": 0,
             "Inner_Fire": 1,
-            "Charisma": -2,
+            "Charisma": 1,
             "Luck": 0,
             "Perception": 2
         },
@@ -42,18 +47,19 @@
         "description": "A self proclaimed knight, hedge knight's move from region to region, seeking to find employment where they can. Hedge knights are supposed to live by a code of honor, but on the road these things tend to fall apart.",
         "abilities": [
             "Mount and Blade",
-            "Sword and Spear",
             "Under the Stars",
-            "Lance"
+            "Born in the Saddle",
+            "Steady",
+            "Charge"
         ],
         "stats": {
-            "Dexterity": 1,
-            "Strength": 2,
-            "Vitality": 2,
-            "Intelligence": -2,
-            "Inner_Fire": -1,
-            "Charisma": -1,
-            "Luck": 1,
+            "Dexterity": 0,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": -1,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 0,
             "Perception": 1
         },
         "standings": "Hedge Knights are not fond of Knights"
@@ -64,14 +70,15 @@
             "Trained Precision",
             "Kingsmen",
             "Hold the line",
-            "Charge"
+            "Shield Bash",
+            "Shield of Men"
         ],
         "stats": {
             "Dexterity": -2,
-            "Strength": 3,
-            "Vitality": 3,
-            "Intelligence": -2,
-            "Inner_Fire": -1,
+            "Strength": 2,
+            "Vitality": 1,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": 1,
             "Perception": 0
@@ -82,38 +89,38 @@
         "description": "Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.",
         "abilities": [
             "Choice Stat",
-            "Elemental Weapon",
-            "Sword and Flame",
             "Fireburst"
         ],
         "stats": {
             "Dexterity": 0,
             "Strength": 0,
             "Vitality": -1,
-            "Intelligence": 1,
-            "Inner_Fire": 2,
-            "Charisma": 2,
-            "Luck": -1,
-            "Perception": -1
+            "Intelligence": 2,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Battle mages sometimes get along poorly with clerics."
     },
     "Mage": {
         "description": "A student of magic, mages are highly intelligent and are adept spellcasters.",
         "abilities": [
-            "Sword and the Satchel",
+            "The Sword and the Satchel",
+            "Learned",
+            "Historian",
             "Air of Mystery",
-            "A Dry place to sleep",
+            "A Dry Place to Sleep",
             "Transfigure"
         ],
         "stats": {
-            "Dexterity": 0,
+            "Dexterity": -1,
             "Strength": -2,
-            "Vitality": -4,
+            "Vitality": -2,
             "Intelligence": 3,
-            "Inner_Fire": 2,
-            "Charisma": 1,
-            "Luck": -1,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 0,
             "Perception": -1
         },
         "standings": "Mages fear and revile anti-mages"
@@ -121,19 +128,17 @@
     "Wizard": {
         "description": "Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.",
         "abilities": [
-            "Sword and the Satchel",
+            "The Sword and the Satchel",
             "Looming Presence",
-            "The Hand of God",
-            "Pointy Hatted Wanderer",
             "Walking Stick"
         ],
         "stats": {
-            "Dexterity": 1,
-            "Strength": 1,
-            "Vitality": -3,
+            "Dexterity": -1,
+            "Strength": 0,
+            "Vitality": -2,
             "Intelligence": 2,
-            "Inner_Fire": 3,
-            "Charisma": 2,
+            "Inner_Fire": 1,
+            "Charisma": 1,
             "Luck": 1,
             "Perception": 1
         },
@@ -142,20 +147,20 @@
     "Cleric": {
         "description": "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
         "abilities": [
-            "Over-heal",
-            "Shield of Men",
+            "Overheal",
+            "Taunt",
             "Purge Decay",
-            "Herbalist"
+            "Medicine"
         ],
         "stats": {
-            "Dexterity": -1,
-            "Strength": -2,
-            "Vitality": -5,
+            "Dexterity": 0,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 3,
-            "Inner_Fire": 3,
+            "Inner_Fire": 1,
             "Charisma": 1,
-            "Luck": 2,
-            "Perception": 2
+            "Luck": 0,
+            "Perception": 0
         },
         "standings": "Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church."
     },
@@ -165,18 +170,19 @@
             "Master of Disguise",
             "Lightfoot",
             "Nimble Fingers",
-            "Low-Light Vision",
-            "Mantel"
+            "Mantel",
+            "A Thief's Gear",
+            "High Ground"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -4,
+            "Dexterity": 2,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 0,
-            "Inner_Fire": -1,
-            "Charisma": 2,
-            "Luck": 2,
-            "Perception": 3
+            "Inner_Fire": 0,
+            "Charisma": 1,
+            "Luck": 1,
+            "Perception": 2
         },
         "standings": "Thieves hat law keepers and Thief Catchers"
     },
@@ -186,19 +192,19 @@
             "Master of Disguise",
             "Lightfoot",
             "Nimble Fingers",
-            "Low-Light Vision",
             "Mantel",
-            "Equipped"
+            "A Thief's Gear",
+            "High Ground"
         ],
         "stats": {
-            "Dexterity": 2,
+            "Dexterity": 1,
             "Strength": 1,
-            "Vitality": -2,
-            "Intelligence": 1,
+            "Vitality": -1,
+            "Intelligence": 0,
             "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": -1,
-            "Perception": 2
+            "Perception": 1
         },
         "standings": "Thief Catchers hate thieves, and are distrusted by lawkeepers"
     },
@@ -208,38 +214,46 @@
             "My Father's Coffers",
             "The Family Sword",
             "My People",
-            "Reach",
             "Mantel",
-            "Good looks and happy smiles"
+            "Happy Smiles",
+            "Swoon",
+            "Beauty Incarnate",
+            "Lightweight",
+            "Feint"
         ],
         "stats": {
-            "Dexterity": 2,
+            "Dexterity": 0,
             "Strength": 1,
             "Vitality": -1,
             "Intelligence": 1,
             "Inner_Fire": -2,
-            "Charisma": 3,
+            "Charisma": 2,
             "Luck": 2,
-            "Perception": -2
+            "Perception": -1
         },
         "standings": "Lordlings are respected by kingsmen, but are often set upon by thieves."
     },
     "Lady Fair": {
         "description": "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
         "abilities": [
+            "My Father's Coffers",
+            "The Family Sword",
+            "My People",
+            "Mantel",
+            "Happy Smiles",
             "Swoon",
-            "Savior of the Common Man",
             "Beauty Incarnate",
+            "Lightweight",
             "Feint"
         ],
         "stats": {
             "Dexterity": 1,
-            "Strength": -4,
-            "Vitality": -4,
-            "Intelligence": -1,
-            "Inner_Fire": -1,
-            "Charisma": 5,
-            "Luck": 5,
+            "Strength": -3,
+            "Vitality": -2,
+            "Intelligence": 1,
+            "Inner_Fire": 0,
+            "Charisma": 3,
+            "Luck": 2,
             "Perception": 0
         },
         "standings": "Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands."
@@ -247,26 +261,31 @@
     "Bard": {
         "description": "Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.",
         "abilities": [
+            "My Father's Oboe",
+            "The Bard's Songbook",
             "Cartwheel",
-            "Instrumentalist",
-            "One up the sleeve",
-            "Little birds"
+            "One up the Sleeve",
+            "Regular Patron",
+            "Boozehound",
+            "Nimble Fingers"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -1,
             "Intelligence": 0,
             "Inner_Fire": 0,
-            "Charisma": 4,
-            "Luck": 3,
-            "Perception": 3
+            "Charisma": 2,
+            "Luck": 1,
+            "Perception": 0
         },
         "standings": "Bards are loved by most, and are welcomed equally among thieves and goodfolk."
     },
     "Marksman": {
         "description": "Excellent archers, Marksmen come from all walks of life.",
         "abilities": [
+            "Longbow",
+            "Boot Knife",
             "Longshot",
             "Focus",
             "Double Tap",
@@ -274,57 +293,59 @@
             "PULL"
         ],
         "stats": {
-            "Dexterity": 3,
-            "Strength": -2,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -2,
             "Intelligence": 0,
             "Inner_Fire": 0,
             "Charisma": 0,
             "Luck": 2,
-            "Perception": 4
+            "Perception": 1
         },
         "standings": "Excellent archers, Marksmen come from all walks of life."
     },
     "Huntsman": {
         "description": "Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.",
         "abilities": [
-            "Fletcher",
-            "Every part",
-            "Sureshot",
             "Size doesn't matter",
-            "Crippling shot",
+            "Every Part",
+            "Huntsman",
+            "Woodsman",
+            "Sureshot",
+            "Crippling Shot",
+            "Tracking",
             "Trapper"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 1,
-            "Vitality": -3,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -1,
             "Intelligence": -1,
-            "Inner_Fire": 1,
+            "Inner_Fire": 0,
             "Charisma": 1,
             "Luck": 0,
-            "Perception": 3
+            "Perception": 1
         },
         "standings": "Huntsman are generally disliked by knights and the highborn."
     },
     "Monk": {
-        "description": "Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.",
+        "description": "Masters of hand to hand combat, monks use their extensive self-knowledge to overcome their foes.",
         "abilities": [
-            "Steady",
             "Hand to Hand",
-            "Heart to Heart",
-            "Inner eye",
-            "Meditate"
+            "Steady",
+            "Inner Eye",
+            "Meditate",
+            "Share Ability"
         ],
         "stats": {
-            "Dexterity": 2,
-            "Strength": 2,
-            "Vitality": -3,
-            "Intelligence": 0,
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -2,
+            "Intelligence": 1,
             "Inner_Fire": 3,
-            "Charisma": 1,
-            "Luck": 2,
-            "Perception": 3
+            "Charisma": 0,
+            "Luck": 0,
+            "Perception": 1
         },
         "standings": "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them."
     }
