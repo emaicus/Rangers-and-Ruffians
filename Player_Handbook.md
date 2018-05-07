@@ -1,90 +1,84 @@
-# Rangers and Ruffians Player's Handbook
-Rev. 1.2
+# Rangers and Ruffians Player's Handbook Rev 1.2
 
 ## Introduction
 ### What is Rangers and Ruffians?
 Rangers and Ruffians is a tabletop game created by Evan and Emily Maicus, Jeremy and Zachary Wood, and Nicklas Makowski. It is a game of imagination, and as such, you will get as much out of it as you put in. To play, you need only a set of polyhedral dice, a few notebooks, and a ceaselessly positive attitude.
 
 ### What do I need to play?
-In order to play Rangers And Ruffians, you will need this manual and at least one set of polyhedral dice. This manual is the Player's Handbook, which contains all of the information that a player should need to engage with the game world. First and foremost, a player must create their character. Then, they must study and understand the basic rules that govern the way the game works. With this done, they can set forth to become the best Wizard or Warrior that they can be!
+In order to play Rangers And Ruffians, you will need this manual, at least one set of polyhedral dice (the nerdy ones), and a Poohbah, the person who will run your game (see the separate Poohbah's handbook for more details or if you are interested in being your group's Poohbah). This manual is the Player's Handbook, which contains all of the information that a player should need to engage with the game world. First and foremost, a player must create their character. Then, they must study and understand the basic rules that govern the way the game works. With this done, they can set forth to become the best Ranger or Ruffian that they can be!
 
-## Glossary of Basic Terms:
-This glossary is provided to help get you acclimated to the lingo as quickly as possible, so that you can start talking like one of the cool kids.
+## Brief Rules
+While making Rangers and Ruffians we strove to craft rules that are simple to understand and easy to follow, so that you can get playing quickly and without much hassle. While some aspects of the game are deeper than others, 90% of the time, you will only need the basic rules in this section.
 
-**_Stat:_**  A stat is an attribute assigned to something in the world. For example, a character's health could be considered a stat. Their base health stat might be 40. When they are harmed by something in the game world, their current health will decrease, so that they have some fraction of their base health. When their hp hits zero, they will die, and be dead until one of their party members find a way to resurrect them.  
-**_d "number":_** In Rangers and Ruffians, dice are used to simulate randomness. As a result, less probable events require dice with more sides. As a form of shorthand, d "number" is used to refer to a die with a certain number of sides. Therefore, a d20 is a dice with 20 sides.  
-**_Check:_** Many actions within a game have some possibility of failure. A check occurs when the Game Master requests that the players roll a die to see if an action was accomplished. Therefore, if a character wants to sneak past a guard, the game master might ask them to roll a die, scale the result with their dexterity stat (discussed below) and declare them successful if they pass a threshold.  
-**_Race:_** A race is the people to which a character belongs.  
-**_Class:_** A character's role in the world. Classes come with specific stat adjustments and abilities.  
+### Stats
+In Rangers and Ruffians, every living (or undead!) entity has statistics which help determine what it is capable of. As a player, you too will have stats that affect not only how you fare in combat, but also how you in battle, but also how you interact with the world. For a Mage, intelligence will be paramount, for a Bard, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. Below, we will enumerate each of the stats, and how they function in Rangers and Ruffians.
 
-## Stats
-Before you begin creating your character, it's vital that you understand the base stats that will affect how their journey will progress. These stats not only affect the way that your character will fare in battles, but also how they interact with the world. For a mage, intelligence will be paramount, for a rouge, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. This is a guide to each statistic and its uses.
 
-The basic stats.
+**Strength:** Strength can be defined as raw power of the body. Your character enters a dungeon, and sees a friend trapped in a cell. You desperately want to get them out, so you decide to bend the bars. In this scenario, you would want very high strength. In combat, strength directly affects the amount of damage your character does with strength based weapons (see the weapons section below for more detail).
 
-Flow:
-Race and Class
+**Dexterity:** Dexterity can be defined as mobility, nimbleness, and ability with the body. You are chasing a fleeing thief across the rooftops of a city. You come up to a gap, and have to jump! In this scenario, you would want higher than average dexterity. In a combat scenario, dexterity directly affects the amount of damage your character does with dexterity based weapons (see the weapons section for more details).
 
- magic
+**Vitality:** Vitality determines how much health your character will have in Rangers and Ruffians. Health is treated as a resource, which can be depleted by taking damage, and restored by resting, drinking potions or through some other means. In Rangers and Ruffians, all player characters begin with one hundred health plus ten times their dexterity modifier. This means that, if you have +2 vitality, your character will have 120 health (for more details, see the Health, Rest, and Potions, and Healing and Death and Dying sections).
 
-Dice Stuff
- Advantage and Disadvantage
- stats
+**Intelligence:** Intelligence can be described as raw aptitude with the mind, and has special significance to magic users. In Rangers and Ruffians, magic points are treated as a resource, and are used to cast spells. All magic users start out with five magic points, and add one for each point of intelligence that they have above zero. (For more details see the Magic section).
 
-Combat
- Abilities
- Critical hits
+**Inner Fire:** Inner fire can be defined as mental fortitude or resolve. An enemy spellcaster is trying to break into your character's mind to steal secrets. In this scenario, you would want high inner fire to repel their attack. In a combat scenario, Inner Fire directly affects the amount of damage your character does with magic (see the magic section for more details).
 
- Out of Combat
-  resting
-  talking to npc's
-  gold
-  do what you want (but don't be a jerk)
-  death
+**Charisma:** Charisma determines how charming your character can be. You speak with the local innkeeper and have a feeling that he's keeping something from you. You don't think that he's a dangerous person, but rather that someone or *something* is stopping him. In this scenario, you would want high charisma, so that you can convince him to help you despite the risk.
 
-#### Dexterity:
+**Perception:** Perception determines how likely it is your character will notice things going on in the world around them. You are riding through the forest at night. Little do you know, a trio of goblins lie in ambush. In this scenario, you would want high perception.
 
-Description: Mobility; Nimbleness; ability with the body.
-Combat Effects: Dexterity allows the player to use dexterity based weapons (e.g. katana, falchion, bow and arrow, spear, throwing knives). Dex weapons scale with dexterity. (See Weapons section for more details)
-Passive Effect Examples: The high dexterity character picked the lock. The very high dex character turned a backflip. The low dex character tripped and fell down a well.
-#### Strength:
-Description: Raw power of the body.
-Combat Effects: Strength allows the player to use strength based weapons (e.g. Greatsword, Warhammer, Spiked Club, heavy things). Strength weapons scale with strength. (See Weapons section for more details)
-Passive Effect Examples: The medium strength character lifted the barrel.  The very high strength character bent the iron bars. The low strength character couldn't intimidate the guard.
-#### Vitality:
-Description: Health and resilience of the body.
-Combat Effects: Vitality directly translates into HP.
-Passive Effect Examples: The high Vitality character had great endurance. The very high vitality character was only slightly affected by the poison. The low vitality character died from the fire attack.
-#### Intelligence:
-Description: Perception; Understanding; Aptitude with the mind; Ability to think and reason.
-Combat Effects: Intelligence allows a mage to learn new spells and warriors to better assess battlefield situations.
-Passive Effects: The high intelligence character was allowed to enter the mage's sanctum. The low intelligence character couldn't fool the guard.
-#### Inner Fire:
-Description: Spirit; Resolve.
-Combat Effects: Spirit makes spells more powerful and helps warriors carry on when gravely injured.
-Effect Examples: Even though Frost was a basic spell, the fiery mage used it to kill the skeletons with ease. The low spirited warrior's attacks became weaker as he did.
-#### Charisma:
-Description: people skills.
-Combat Effects: Charisma allows a character to take enemies off guard  .
-Passive Effects: The high Charisma character talked his way out of a sticky  situation. The low Charisma character couldn't rally the troops.   
-#### Luck:
-Description: Chance; Fate  
-Combat Effects: Chance that a character will get a critical hit, or that the enemy will miss them.   
-Passive Effects: The high luck character happened to point at the exact shop the group needed to enter. Out of all the cups she could have chosen, the low luck character picked the poisoned one.  
-#### Perception
+**Luck:** When all else fails, there's always luck! Luck is a rarely used stat, which can be invoked by either the Poohbah or the player when no other stat seems to fit.
 
-## Races
+### Checks
+Now that you understand the basics of stats, its time to discuss how they apply in the world of the game. When you attempt an interesting action in Rangers and Ruffians, the Poohbah may see fit to have you perform a "check" to see whether or not you manage it. To perform this check, you roll a twenty sided dice (d20), add the relevant stat (called a modifier), and the Poohbah will determine if your roll is high enough (for details about suggested roll difficulties, see the Poohbah's handbook).
+
+At first, this may seem complicated, so let's give an example. You are currently investigating a string of murders in a small city. You've tracked the killer back to their apartments, and, after waiting for them to leave, you decide to sneak in. Unfortunately, you find that the door is locked! Because of this, you decide to pick it, and the Poohbah calls for a dexterity check (because dexterity is the most relevant stat). You roll a 3 on your twenty sided dice, and then add 2, because that is your dexterity score. Unfortunately, the Poohbah tells you that that isn't high enough, and you can't pick the lock. That's fine, though, failing can be just as fun as succeeding. Because you can't pick the lock, you decide to break down the door. This time, you roll a 14, and add your 1 strength for a total of 15. It works! There was a little more sound, and a little more evidence, but you're in!
+
+Checks like the one above are common in the world of Rangers and Ruffians, and help make the game more dynamic; things can't _always_ go your way, or the game wouldn't be as fun. This also makes it more fun when the group of people you're playing with, your party, is creates characters with different skillsets. Checks and stats help make it so that every character can approach the game differently. The only limit is your imagination!
+
+### Critical Rolls
+A critical success occurs when you role the highest possible value on a dice. Out of combat, this often means that that you will perform exceptionally well in a task. For example, your vault off of a building might turn into a stunning double backflip. A critical failure occurs when you roll the lowest possible value on a dice. This often comes with negative repercussions. For example, your attempt to sneak through a hallway might turn into you knocking over a vase and alerting the guards. A critical hit is when a critical success or failure occurs in combat, and is discussed in a later section.    
+
+### Advantage and Disadvantage
+Some characters have backgrounds (see the class and race section for more details) which cause them to be specifically good or bad at performing certain actions or at performing actions under certain conditions. In these scenarios, the character is said to have advantage or disadvantage on a check. When a character has advantage on a check, they roll two dice for the check, and take the higher. When they have disadvantage, they roll two dice and take the lower.
+
+As an example, imagine that your character's background says that they have advantage when sneaking in the rain. This means that, if your Poohbah asks you to perform a stealth check in the rain, you can roll two dice instead of one and take the higher.
+
+### General Abilities
+Your character will have special abilities as a result of their background, which can aid you in your travels. Separate from magic or combat abilities, general abilities allow you to consistently perform a feat is uncommon in others. For example, a character might have the "throw anything" ability, which allows them to throw anything up to five times their weight without a strength check.
+
+### initiative
+Initiative is a special sort of check, performed at the beginning of combat. Initiative is modified by dexterity, and determines the order in which players take action in combat. For example, imagine that you and a friend are about to fight a minotaur. When combat begins, each of you and the minotaur roll a twenty sided dice. After adding dexterity, you have a ten, your friend has a twelve, and the minotaur has a three. This means that, when combat begins, first your friend gets to act, then you, then the minotaur.
+
+### Physical Combat
+Combat in Rangers and Ruffians is turn based. Each participant gets to move and take one action per round, unless otherwise specified by a combat or weapon ability. Movement can be used to reposition yourself on the battlefield, approaching or moving away from an enemy. An action can be spent casting a spell, attacking an enemy, or using an item. A turn can be deferred to go later in the initiative order. Speaking, drawing a weapon, and other small actions can be counted as "free actions" by the Poohbah rather than counted against you.
+
+### Critical Hits
+A critical hit occurs when a player rolls the highest possible value for an eligible weapon. When this occurs, the player may roll the dice a second time and add that to the total. For example, 
+
+### Weapons
+
+### Combat Abilities
+
+### Magic
+
+### Health, Rest, and Healing
+
+### Death and Dying
+
+# Building a Character
+Building a character is your first step towards entering the world of Rangers and Ruffians! To build a character, start by looking through the list of available races and classes. Ask yourself what sort of character you want to be; do you want to be a sneaky thief? A cunning bard? A noble knight? Perhaps a brutish but charasmatic barbarian.
+
+### Race
 To begin building your character, you must first know what culture they come from. A character's race represents the people that they are a part of and their inborn abilities. From Halflings to Orcs, each race has its own base stats, which will influence how they interact with the world. All races also have inborn abilities, which help them in the trials and battles that await them on their adventures!   
-**_Note:_** Make sure to think about the stat set you want before crafting your character; do you want to focus on high intelligence and inner fire so that your character can be a powerful mage? Perhaps strength and vitality suit you better, so that you can be a tank. Or maybe you want to be a fast-moving high dexterity character. The choice is up to you! Don't be overwhelmed, however; with training and skill, any character can be specced to fit your playstyle!  
 
+### Class
+Once you have chosen your character's race, it is time to choose their background. A character's class can be viewed as its profession, and affects its stats and abilities even more than its race. Your choice of class will greatly affect how
 
-
-
-
-
-
-
-
-
-### What are the rules?
-For a game to work, you need at least two people. Otherwise, you are just imagining, which is fine, but should probably be a little more free-form. In a typical game, one individual takes on the role of Grand Poobah, the self proclaimed lord of the game's world. It is the Poobah's job to craft an interesting, engaging, and fun world for the other players to interact with. As such, they are under no pressure at all. The other players each inhabit characters within the Poohbah's world, and follow along through the story he or she is crafting without subverting and destroying every aspect of it. Or they can just stab everyone they see and eat cinnamon buns, whichever comes first.
+# Advanced Rules
+### Creating Your own Race
+### Creating your own Spells
+### Bending the Rules
+### Combat with Miniatures
+As of Revision 1.2, we have not yet developed formal rules for

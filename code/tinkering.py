@@ -11,6 +11,21 @@ def filterAbilities(abilities, ability_dict):
     filtered_abilities[ability_type].append(ability)
   return filtered_abilities
 
+def mapAbilityType(abilitiy_type):
+  if abilitiy_type == "combat":
+    return "Combat Abilities"
+  elif abilitiy_type == "advantage":
+    return "Advantages"
+  elif abilitiy_type == "starting_item":
+    return "Starting Items"
+  elif abilitiy_type == "choice":
+    return "Choices"
+  else:
+    return "General Abilities"
+
+
+  'combat', 'advantage', 'starting_item', 'choice','general'
+
 def standard_md_out(data, ability_dict, image_path, outfile_name):
   with open(outfile_name, 'w') as outfile:    
     for name, details in data.items():
@@ -37,7 +52,7 @@ def standard_md_out(data, ability_dict, image_path, outfile_name):
       for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
         if not key in abilities:
           continue
-        outfile.write("##### {0} Abilities:   \n".format(key))
+        outfile.write("##### {0}:   \n".format(mapAbilityType(key)))
         for ability in abilities[key]:
           description = ability_dict[ability]["description"]
           outfile.write("  * **{0}**: {1}  \n".format(ability, description))

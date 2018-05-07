@@ -113,7 +113,7 @@
     },
     "Learned": {
         "description": "You are fluent in a language of your choosing.",
-        "type": "starting_item"
+        "type": "choice"
     },
     "Regular Patron": {
         "description": "You have advantage on charisma checks made in a tavern.",
@@ -169,7 +169,7 @@
     },
     "Steady": {
         "description": "Do not take disadvantage when being jostled about.",
-        "type": "general"
+        "type": "advantage"
     },
     "Trained Precision": {
         "description": "Once every three turns, gain advantage on your attack.",
@@ -177,7 +177,7 @@
     },
     "Kingsmen": {
         "description": "Gain +3 Charisma when speaking with kingsmen.",
-        "type": "general"
+        "type": "advantage"
     },
     "Hold the line": {
         "description": "When any member of your party goes below one quarter health, gain advantage on all attacks used to protect them.",
@@ -269,7 +269,7 @@
     },
     "Beauty Incarnate": {
         "description": "Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.",
-        "type": "general"
+        "type": "advantage"
     },
     "Feint": {
         "description": "Once every three turns, you may roll a save on an enemy attack.",
@@ -445,7 +445,7 @@
     },
     "Shifting Cloak": {
         "description": "You begin your journey with a unique cloak, which takes on the color of your surroundings. +3 in stealth checks when standing still.",
-        "type": "general"
+        "type": "starting_item"
     },
     "Favorite Terrain": {
         "description": "At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage in all things.",
