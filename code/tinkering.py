@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import yattag
 
 def filterAbilities(abilities, ability_dict):
   filtered_abilities = dict()
@@ -49,8 +50,7 @@ def standard_md_out(data, ability_dict, image_path, outfile_name):
         print(stat + " " + str(stats[stat]))
       outfile.write("   \n")
 
-
-def main():
+def loadData():
   ability_path = "json_files/abilities.json"
   class_path = "json_files/classes.json"
   race_path = "json_files/races.json"
@@ -63,9 +63,11 @@ def main():
 
   with open(race_path) as data_file:
     race_data = json.load(data_file)
-    
   
+  return ability_dict, class_data, race_data
 
+def main():
+  ability_dict, class_data, race_data = loadData()
   standard_md_out(class_data, ability_dict, "images/class", "classes.md")
   standard_md_out(race_data, ability_dict, "images/race/female", "female_races.md")
   standard_md_out(race_data, ability_dict, "images/race/male", "male_races.md")
