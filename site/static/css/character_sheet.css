@@ -1,0 +1,52 @@
+body { 
+    background:  url('/static/images/parchement.png') repeat 0 0;
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: 1000px;
+    background:  url('/static/images/subtle_white_mini_waves_transparent.png') repeat 0 0;
+}
+
+ol.a{
+  list-style-type:upper-roman !important;
+}
+
+.character_name {
+  font-size: 30px;
+}
+
+.container-narrow {
+    margin: 0 auto;
+    max-width: 8.5in;
+    background:white;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/*CUSTON SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.tabs {
+  background-color:#f5f5f5;
+}
