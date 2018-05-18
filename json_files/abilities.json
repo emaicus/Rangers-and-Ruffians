@@ -4,11 +4,11 @@
         "type": "combat"
     },
     "Strength of Men": {
-        "description": "You have basic healing abilities. You may take a turn to heal a party member for d10 health.",
+        "description": "You have basic healing abilities. Once after each rest, you may heal a party member for 1d10 health.",
         "type": "combat"
     },
     "Rally": {
-        "description": "Once per rest, you may use an aura which gives all of your allies a d8 inspiration dice.",
+        "description": "Once per rest, you may use an aura which gives all of your allies a 1d8 inspiration dice.",
         "type": "combat"
     },
     "Fixit Dwarf": {
@@ -24,7 +24,7 @@
         "type": "general"
     },
     "Sleepless": {
-        "description": "Elves can rest without sleeping for one day, allowing them to keep watch long into the night.",
+        "description": "Elves can rest without sleeping for one day, allowing them to keep watch long into the night. Resting at night counts as sleep even if you are awake.",
         "type": "general"
     },
     "Wink Wink, Nudge Nudge": {
@@ -44,7 +44,7 @@
         "type": "advantage"
     },
     "Soft Bed": {
-        "description": "You recover 2d20 health from sleeping in a real bed.",
+        "description": "You recover 8d8 health from sleeping in a real bed.",
         "type": "general"
     },
     "Padfoot": {
@@ -56,7 +56,7 @@
         "type": "advantage"
     },
     "Bellow": {
-        "description": "On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass their saving throw.",
+        "description": "On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.",
         "type": "combat"
     },
     "Still Warm": {
@@ -68,7 +68,7 @@
         "type": "advantage"
     },
     "They're Retractable": {
-        "description": "You have retractable, razor sharp claws capable of doing d8 damage.",
+        "description": "You have retractable, razor sharp claws capable of doing 1d8 damage.",
         "type": "combat"
     },
     "Land on your feet": {
@@ -76,11 +76,11 @@
         "type": "general"
     },
     "Berserk": {
-        "description": "Once per day, a you can go into a rage, increasing strength your strength by one and allowing you to make two attacks, but decreasing your intelligence and perception by three.",
+        "description": "Once per day, a you can go into a rage, giving you +1 strength and allowing you to make two attacks, but decreasing your intelligence and perception by three. A rage lasts 1 hour or 5 turns. Coming out of a rage prematurely makes you fatigued, and gives you disadvantage on all rolls.",
         "type": "combat"
     },
     "Intimidate": {
-        "description": "You have advantage when attempting to intimidate enemies enemies.",
+        "description": "You have advantage when attempting to intimidate enemies.",
         "type": "advantage"
     },
     "Throw Anything": {
@@ -88,7 +88,7 @@
         "type": "general"
     },
     "Crushing Blow": {
-        "description": "On a critical hit, you give all enemies disadvantage.",
+        "description": "On a critical hit, you give all enemies who see disadvantage.",
         "type": "combat"
     },
     "Huntsman": {
@@ -180,7 +180,7 @@
         "type": "advantage"
     },
     "Hold the line": {
-        "description": "When any member of your party goes below one quarter health, gain advantage on all attacks used to protect them.",
+        "description": "When any member of your party is on death's door, gain advantage on all attacks and checks used to protect them.",
         "type": "combat"
     },
     "Shield Bash": {
@@ -272,7 +272,7 @@
         "type": "advantage"
     },
     "Feint": {
-        "description": "Once every three turns, you may roll a save on an enemy attack.",
+        "description": "Once every three turns, you may roll a save on an enemy attack. On success, you take no damage. On failure, you take half damage.",
         "type": "combat"
     },
     "Cartwheel": {
@@ -340,11 +340,11 @@
         "type": "combat"
     },
     "Seek Gold": {
-        "description": "You are able to smell gold.",
+        "description": "You are able to smell gold. You can perform gold detection checks.",
         "type": "general"
     },
     "Cheap Blow": {
-        "description": "Once every three turns, your attack incapacitates an enemy.",
+        "description": "Once every three turns, your attack knocks an enemy prone.",
         "type": "combat"
     },
     "Loose Skin": {
@@ -376,11 +376,11 @@
         "type": "combat"
     },
     "Charm": {
-        "description": "Once every three turns, become mist to have an attack pass right through you.",
+        "description": "You're form is so beautiful that you have advantage on charisma checks. If you have two such abilities, take advantage and +5 charisma on all checks.",
         "type": "combat"
     },
     "Beast Form": {
-        "description": "Once every three turns in combat, morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.",
+        "description": "You can morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.",
         "type": "combat"
     },
     "Dry Up": {
@@ -400,7 +400,7 @@
         "type": "general"
     },
     "Poison Bite": {
-        "description": "Once every 3 turns, you may bite for d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.",
+        "description": "Once every 3 turns, you may bite for 1d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.",
         "type": "combat"
     },
     "Poison Resist": {
@@ -416,7 +416,7 @@
         "type": "general"
     },
     "Camouflage": {
-        "description": "If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage and +5 on stealth checks while hiding.",
+        "description": "If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage on stealth checks while camouflaged.",
         "type": "general"
     },
     "Tinker": {
@@ -460,7 +460,7 @@
         "type": "general"
     },
     "Charge": {
-        "description": "Once every three turns, charge an enemy and roll a d20. Knock them over if you roll a 12 or above while on foot, a 5 or above if on horseback.",
+        "description": "Once every three turns, charge an enemy and roll a d20. Knock them prone if you roll a 12 or above while on foot, a 5 or above if on horseback.",
         "type": "combat"
     },
     "Shield of Men": {
@@ -479,10 +479,6 @@
         "description": "You are proficient and start with an instrument of your choice.",
         "type": "choice"
     },
-    "The Bard's Songbook": {
-        "description": "You start with The Bard's Songbook, and may choose two songs to have already learned from it.",
-        "type": "starting_item"
-    },
     "Longbow": {
         "description": "You begin your journey with a d6 longbow.",
         "type": "starting_item"
@@ -494,5 +490,66 @@
     "Boot Knife": {
         "description": "You carry a hidden d6 knife in your boot.",
         "type": "starting_item"
+    },
+    "Detect Magic": {
+        "description": "You are able to perform magic detection checks.",
+        "type": "general"
+    },
+    "Twin Blades": {
+        "description": "During combat, you may wield two weapons rather than one. Each turn, you may attack twice, but cannot add dexterity or strength bonuses to strikes.",
+        "type": "combat"
+    },
+    "Sword and Flame": {
+        "description": "During combat, you may use a spell and attack on the same turn, however, neither benefit from advantage or stat bonuses.",
+        "type": "combat"
+    },
+    "Commit to Memory"  : {
+        "description": "At the beginning of a day, you may commit one spell to memory of level 2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.",
+        "type": "combat"
+    },
+    "Lesser Novice Spellbook" : {
+        "description": "You are able to learn level 0-3 spells from the Novice Spellbook.",
+        "type": "general"
+    },
+    "Novice Spellbook" : {
+        "description": "You are able to learn spells from the Novice Spellbook.",
+        "type": "general"
+    },
+    "The Mage's Compendium" : {
+        "description": "You are able to learn spells from the Mage's Compendium.",
+        "type": "general"
+    },
+    "The Wizard's Addendum" : {
+        "description": "You are able to learn spells from the Wizard's Addendum.",
+        "type": "general"
+    },
+    "The Macabre Manual" : {
+        "description": "You are able to learn spells from the Macabre Manual.",
+        "type": "general"
+    },
+    "Lesser Book of Healing" : {
+        "description": "You are able to learn level 0-2 spells from the Book of Healing.",
+        "type": "general"
+    },
+    "The Book of Healing" : {
+        "description": "You are able to learn spells from the Book of Healing.",
+        "type": "general"
+    },
+    ,
+    "The Bard's Songbook": {
+        "description": "You start with The Bard's Songbook, and may choose two common songs to have already learned from it.",
+        "type": "starting_item"
+    },
+    "Pledge" : {
+        "description": "At the start of your journey, you may select a diety to pledge yourself to.",
+        "type": "general"
+    },
+    "Minor Spell Choice" : {
+        "description": "At the start of your journey, you know 2 level zero, 1 level one, and 1 level two spells.",
+        "type": "choice"
+    },
+    "Spell Choice" : {
+        "description": "At the start of your journey, you know 4 level zero, 2 level one, and 1 level two spells.",
+        "type": "choice"
     }
 }
