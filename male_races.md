@@ -6,8 +6,8 @@ The most average of the races. The race of man can become good at most things, b
 #### Abilities:   
 ##### Combat Abilities:   
   * **Last Stand**: When your health is below 20%, you can make two moves in a row.  
-  * **Strength of Men**: You have basic healing abilities. You may take a turn to heal a party member for d10 health.  
-  * **Rally**: Once per rest, you may use an aura which gives all of your allies a d8 inspiration dice.  
+  * **Strength of Men**: You have basic healing abilities. Once after each rest, you may heal a party member for 1d10 health.  
+  * **Rally**: Once per rest, you may use an aura which gives all of your allies a 1d8 inspiration dice.  
   * **Tactics**: Once every 3 turns, you can spend one turn to score a guaranteed critical hit.  
     
 
@@ -35,8 +35,9 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
   * **Winged feet**: You have advantage on acrobatics checks.  
     
 ##### General Abilities:   
-  * **Sleepless**: Elves can rest without sleeping for one day, allowing them to keep watch long into the night.  
+  * **Sleepless**: Elves can rest without sleeping for one day, allowing them to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
   * **Low-Light Vision**: You can see in low light.  
+  * **Detect Magic**: You are able to perform magic detection checks.  
     
 
 ##### Stats:    
@@ -64,7 +65,7 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   * **Sling**: Your character begins with a sling.  
     
 ##### General Abilities:   
-  * **Soft Bed**: You recover 2d20 health from sleeping in a real bed.  
+  * **Soft Bed**: You recover 8d8 health from sleeping in a real bed.  
   * **Carry a Tune**: You know a song which, when sung, grants a party member of your choice +1 to one stat for the day. Can be sung once per day.  
   * **Lightweight**: Any cup of alcohol affects you like two.  
     
@@ -86,7 +87,7 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
 **Standings:** Orcs distrust all races save goblins, who they are close friends with.  
 #### Abilities:   
 ##### Combat Abilities:   
-  * **Bellow**: On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass their saving throw.  
+  * **Bellow**: On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.  
   * **Thunderous Blow**: Once every three turns, roll double the dice for your attack.  
     
 ##### Advantages:   
@@ -113,7 +114,7 @@ Small and wicked, goblins are tricksters and thieves. Known for eating their kil
 **Standings:** Goblins are close allies with orcs, but fear and hate all others.  
 #### Abilities:   
 ##### Combat Abilities:   
-  * **Cheap Blow**: Once every three turns, your attack incapacitates an enemy.  
+  * **Cheap Blow**: Once every three turns, your attack knocks an enemy prone.  
     
 ##### Advantages:   
   * **Mantel**: You have advantage on dexterity checks when climbing.  
@@ -121,7 +122,7 @@ Small and wicked, goblins are tricksters and thieves. Known for eating their kil
 ##### General Abilities:   
   * **Still Warm**: You can eat raw meat without penalty.  
   * **Dark Vision**: You can see well in the dark.  
-  * **Seek Gold**: You are able to smell gold.  
+  * **Seek Gold**: You are able to smell gold. You can perform gold detection checks.  
     
 
 ##### Stats:    
@@ -141,7 +142,7 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
 **Standings:** Catterwol keep to themselves, and hate Orcs.  
 #### Abilities:   
 ##### Combat Abilities:   
-  * **They're Retractable**: You have retractable, razor sharp claws capable of doing d8 damage.  
+  * **They're Retractable**: You have retractable, razor sharp claws capable of doing 1d8 damage.  
   * **Fast Paws**: Once every 3 turns, use two actions.  
     
 ##### Advantages:   
@@ -172,8 +173,8 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
 #### Abilities:   
 ##### Combat Abilities:   
   * **Become Mist**: Once every three turns, become mist to have an attack pass right through you.  
-  * **Charm**: Once every three turns, become mist to have an attack pass right through you.  
-  * **Beast Form**: Once every three turns in combat, morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.  
+  * **Charm**: You're form is so beautiful that you have advantage on charisma checks. If you have two such abilities, take advantage and +5 charisma on all checks.  
+  * **Beast Form**: You can morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.  
     
 ##### General Abilities:   
   * **Unbreathing**: You only need to breath once every three days.  
@@ -200,7 +201,7 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
 **Standings:**   
 #### Abilities:   
 ##### Combat Abilities:   
-  * **Poison Bite**: Once every 3 turns, you may bite for d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.  
+  * **Poison Bite**: Once every 3 turns, you may bite for 1d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.  
     
 ##### Choices:   
   * **Color Choice**: At any time, you may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used.  
@@ -211,7 +212,7 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * **Poison Resist**: You are resistant to most poisons (gain advantage and +5 on any poison checks).  
   * **Shed Tail**: You can shed your tail to escape a grapple.  
   * **Taste Air**: Gain advantage on tracking perception checks by tasting the air. Works in all environments.  
-  * **Camouflage**: If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage and +5 on stealth checks while hiding.  
+  * **Camouflage**: If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage on stealth checks while camouflaged.  
     
 
 ##### Stats:    

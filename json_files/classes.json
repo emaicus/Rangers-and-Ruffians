@@ -29,7 +29,7 @@
             "Shifting Cloak",
             "Favorite Terrain",
             "Learned",
-            "Tracking",
+            "Tracker",
             "Twin Blades"
         ],
         "stats": {
@@ -90,7 +90,10 @@
         "description": "Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.",
         "abilities": [
             "Choice Stat",
-            "Fireburst"
+            "Fireburst", 
+            "Sword and Flame",
+            "Lesser Novice Spellbook",
+            "Minor Spell Choice"
         ],
         "stats": {
             "Dexterity": 0,
@@ -109,10 +112,11 @@
         "abilities": [
             "The Sword and the Satchel",
             "Learned",
-            "Historian",
             "Air of Mystery",
-            "A Dry Place to Sleep",
-            "Transfigure"
+            "Commit to Memory",
+            "Novice Spellbook",
+            "The Mage's Compendium",
+            "Spell Choice"
         ],
         "stats": {
             "Dexterity": -1,
@@ -131,7 +135,11 @@
         "abilities": [
             "The Sword and the Satchel",
             "Looming Presence",
-            "Walking Stick"
+            "Historian",
+            "Walking Stick",
+            "Novice Spellbook",
+            "The Wizard's Addendum",
+            "Spell Choice"
         ],
         "stats": {
             "Dexterity": -1,
@@ -148,10 +156,11 @@
     "Cleric": {
         "description": "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
         "abilities": [
-            "Overheal",
             "Taunt",
             "Purge Decay",
-            "Medicine"
+            "The Book of Healing",
+            "Pledge",
+            "Spell Choice"
         ],
         "stats": {
             "Dexterity": 0,
@@ -314,7 +323,7 @@
             "Woodsman",
             "Sureshot",
             "Crippling Shot",
-            "Tracking",
+            "Tracker",
             "Trapper"
         ],
         "stats": {
@@ -336,7 +345,8 @@
             "Steady",
             "Inner Eye",
             "Meditate",
-            "Share Ability"
+            "Share Ability",
+            "Combo"
         ],
         "stats": {
             "Dexterity": 1,
@@ -349,5 +359,54 @@
             "Perception": 1
         },
         "standings": "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them."
+    },
+    "Beastmaster": {
+        "description": "Beastmasters roam the wilds, capturing and befriending animals.",
+        "abilities": [
+            "Double Choice Stat",
+            "Tackle",
+            "Animal Magnetism",
+            "Hobble",
+            "Under the Stars",
+            "Lightfoot",
+            "Favorite Terrain",
+            "Tracker",
+            "Animal Companion"
+
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 0,
+            "Vitality": -1,
+            "Intelligence": 0,
+            "Inner_Fire": 2,
+            "Charisma": -1,
+            "Luck": 0,
+            "Perception": 2
+        },
+        "standings": "More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to."
+    },
+    "Gunslinger-Sharpshooter": {
+        "description": "Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their weapon, which is usually their primary means of income.",
+        "abilities": [
+            "This is my Weapon",
+            "Choice of Firearm",
+            "From the Hip",
+            "Upgrade",
+            "Set Up",
+            "Firestarter",
+            "Regular Patron"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 1,
+            "Vitality": -2,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": 0,
+            "Luck": 2,
+            "Perception": 3
+        },
+        "standings": "More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to."
     }
 }

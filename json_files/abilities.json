@@ -195,6 +195,50 @@
         "description": "At the beginning of your adventure, decide between a permanent increase of 1 dexterity or strength.",
         "type": "choice"
     },
+    "Double Choice Stat": {
+        "description": "At the beginning of your adventure, decide between a permanent increase of 2 dexterity or strength.",
+        "type": "choice"
+    },
+    "Tackle": {
+        "description": "You can tackle an enemy to the ground. Attempt either a dexterity or strength contested throw against an enemy, if they fail, you grapple them. You have advantage",
+        "type": "combat"
+    },
+    "Animal Magnetism": {
+        "description": "Most animals inherently understand you on some level. You can attempt to influence the actions of animals with an inner fire check.",
+        "type": "general"
+    },
+    "Hobble": {
+        "description": "You are capable of quickly tying very strong knots.",
+        "type": "general"
+    },
+    "Animal Companion": {
+        "description": "At the beginning of your journey, you may choose a small, medium, or large animal companion. See the book of known beasts for stats.",
+        "type": "choice"
+    },
+    "This is my Weapon": {
+        "description": "Your gun is the only friend you need. Make sure to give it a name.",
+        "type": "choice"
+    },
+    "Choice of Firearm": {
+        "description": "At the beginning of your journey, you may choose to start with a rifle, and therefor be a Sharpshooter, or to start with a pistol, and become a Gunslinger. Guns are very rare, so this choice is very important.",
+        "type": "choice"
+    },
+    "From the Hip": {
+        "description": "Once every turn cycle, fire a retaliation shot. If you pass a check, it hits, hurting the enemy and stopping their attack.",
+        "type": "combat"
+    },
+    "Upgrade": {
+        "description": "Firearms are very rare, to upgrade yours, you must use upgrade kits. After receiving an upgrade kit, pick an upgrade from the Gunslinger's Guide or the Sharpshooter's Reference.",
+        "type": "general"
+    },
+    "Set Up": {
+        "description": "You may take a turn to focus your shot. If you are a Sharpshooter, use a d20s rather than d10s on your next turn. If you are a gunslinger, use a d6 (or d8 if you have the hollow point upgrade)",
+        "type": "combat"
+    },
+    "Firestarter": {
+        "description": "You can use gunpowder to start fires.",
+        "type": "general"
+    },
     "Fireburst": {
         "description": "You can craft one d20 area of effect vial of explosive liquid per day. Takes 5 hours.",
         "type": "general"
@@ -300,7 +344,7 @@
         "type": "advantage"
     },
     "Size doesn't matter": {
-        "description": "You begin your journey with a shortbow.",
+        "description": "You begin your journey with a d6 shortbow.",
         "type": "starting_item"
     },
     "Crippling Shot": {
@@ -455,7 +499,7 @@
         "description": "Your weapons are blessed, and do +3 damage to goblins, skeletons, and monsters of the dark.",
         "type": "combat"
     },
-    "Tracking": {
+    "Tracker": {
         "description": "You are an expert tracker, and have advantage when looking for trails and sign of passage.",
         "type": "general"
     },
@@ -507,6 +551,10 @@
         "description": "At the beginning of a day, you may commit one spell to memory of level 2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.",
         "type": "combat"
     },
+    "Combo"  : {
+        "description": "On a critical hit with a blunt weapon or your hands, attack twice more.",
+        "type": "combat"
+    },
     "Lesser Novice Spellbook" : {
         "description": "You are able to learn level 0-3 spells from the Novice Spellbook.",
         "type": "general"
@@ -535,7 +583,6 @@
         "description": "You are able to learn spells from the Book of Healing.",
         "type": "general"
     },
-    ,
     "The Bard's Songbook": {
         "description": "You start with The Bard's Songbook, and may choose two common songs to have already learned from it.",
         "type": "starting_item"
