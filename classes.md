@@ -168,7 +168,7 @@ A student of magic, mages are highly intelligent and are adept spellcasters.
 ##### Stats:    
   * Dexterity: -1  
   * Strength: -2  
-  * Vitality: -2  
+  * Vitality: -3  
   * Intelligence: 3  
   * Inner_Fire: 0  
   * Charisma: 0  
@@ -228,7 +228,7 @@ Gentle of nature, Clerics make it their life's duty to help those less fortunate
 ##### Stats:    
   * Dexterity: 0  
   * Strength: -1  
-  * Vitality: -2  
+  * Vitality: -3  
   * Intelligence: 3  
   * Inner_Fire: 1  
   * Charisma: 1  
@@ -379,6 +379,7 @@ Showmen by nature, Bards are known for their skills at performing music, jugglin
     
 ##### Choices:   
   * **My Father's Oboe**: You are proficient and start with an instrument of your choice.  
+  * **Song Choice**: At the start of your journey, you may choose 3 common songs, or roll for 3 random songs.  
     
 
 ##### Stats:    
@@ -548,4 +549,33 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
   * Charisma: 0  
   * Luck: 2  
   * Perception: 3  
+   
+# Necromancer  
+![Necromancer](images/class/necromancer.jpg?raw=true "Necromancer") 
+
+Death is not my enemy, nor is it my ally, it is my servant. So say the Necromancers, mages who study the intricacies of the hereafter. Often fuled by macabre fasination or a god complex, Necromancy is deeply feared and considered taboo by almost all.  
+**Standings:** Necromancers are feared by most, and are actively hunted by Clerics and followers of the light.  
+#### Abilities:   
+##### Choices:   
+  * **Vegan**: At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 1 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
+  * **Spell Choice**: At the start of your journey, you know 4 level zero, 2 level one, and 1 level two spells.  
+    
+##### General Abilities:   
+  * **Soul Harvest**: You may harvest 1 soul from a sentient entity that has died within six hours.  
+  * **The Macabre Manual**: You are able to learn spells from the Macabre Manual.  
+  * **Mortal Coil**: Once every two days, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.  
+  * **Edge of Eternity**: You can consume a soul to increase a stat by 1 or to give yourself 1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal Coil to once per day for a week.  
+  * **Fear the Light**: You are considered undead, and therefore take extra damage from holy weapons.  
+  * **Eyes of the Others**: Consume a soul to give yourself darkvision and detect life for a day.  
+    
+
+##### Stats:    
+  * Dexterity: 0  
+  * Strength: 0  
+  * Vitality: -3  
+  * Intelligence: 2  
+  * Inner_Fire: 1  
+  * Charisma: -3  
+  * Luck: 0  
+  * Perception: 0  
    

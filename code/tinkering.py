@@ -1,7 +1,7 @@
 import json
 import sys
 import os
-import yattag
+from collections import OrderedDict
 
 def filterAbilities(abilities, ability_dict):
   filtered_abilities = dict()
@@ -71,13 +71,13 @@ def loadData():
   race_path = "json_files/races.json"
   
   with open(ability_path) as data_file:
-    ability_dict = json.load(data_file)
+    ability_dict = json.load(data_file, object_pairs_hook=OrderedDict)
 
   with open(class_path) as data_file:
-    class_data = json.load(data_file)
+    class_data = json.load(data_file, object_pairs_hook=OrderedDict)
 
   with open(race_path) as data_file:
-    race_data = json.load(data_file)
+    race_data = json.load(data_file, object_pairs_hook=OrderedDict)
   
   return ability_dict, class_data, race_data
 

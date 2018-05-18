@@ -121,7 +121,7 @@
         "stats": {
             "Dexterity": -1,
             "Strength": -2,
-            "Vitality": -2,
+            "Vitality": -3,
             "Intelligence": 3,
             "Inner_Fire": 0,
             "Charisma": 0,
@@ -154,7 +154,7 @@
         "standings": "Wizards are known to be friends to all races, and get along particularly well with Halflings and Rangers."
     },
     "Cleric": {
-        "description": "Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.",
+        "description": "After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. To do this, Clerics use miracles from the book of healing help their deity impose its will on the world.",
         "abilities": [
             "Taunt",
             "Purge Decay",
@@ -165,7 +165,7 @@
         "stats": {
             "Dexterity": 0,
             "Strength": -1,
-            "Vitality": -2,
+            "Vitality": -3,
             "Intelligence": 3,
             "Inner_Fire": 1,
             "Charisma": 1,
@@ -219,7 +219,7 @@
         "standings": "Thief Catchers hate thieves, and are distrusted by lawkeepers"
     },
     "Lordling": {
-        "description": "A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.",
+        "description": "A child of noble parentage, the lordling was born with a silver spoon in his mouth. Now, he is going out into the world to find adventure.",
         "abilities": [
             "My Father's Coffers",
             "The Family Sword",
@@ -244,7 +244,7 @@
         "standings": "Lordlings are respected by kingsmen, but are often set upon by thieves."
     },
     "Lady Fair": {
-        "description": "Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
+        "description": "Delicate and noble, the Lady Fair is a beacon of love and hope for their people. While used to living in the safety of her castle, she isn't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.",
         "abilities": [
             "My Father's Coffers",
             "The Family Sword",
@@ -273,6 +273,7 @@
         "abilities": [
             "My Father's Oboe",
             "The Bard's Songbook",
+            "Song Choice",
             "Cartwheel",
             "One up the Sleeve",
             "Regular Patron",
@@ -361,7 +362,7 @@
         "standings": "Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them."
     },
     "Beastmaster": {
-        "description": "Beastmasters roam the wilds, capturing and befriending animals.",
+        "description": "For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters have forgone civilization, choosing instead to roam the wilds, capturing and befriending animals.",
         "abilities": [
             "Double Choice Stat",
             "Tackle",
@@ -408,5 +409,52 @@
             "Perception": 3
         },
         "standings": "More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to."
+    },
+    "Necromancer": {
+        "description": "Death is not my enemy, nor is it my ally, it is my servant. So say the Necromancers, mages who study the intricacies of the hereafter. Often fuled by macabre fasination or a god complex, Necromancy is deeply feared and considered taboo by almost all.",
+        "abilities": [
+            "Soul Harvest",
+            "The Macabre Manual",
+            "Mortal Coil",
+            "Vegan",
+            "Edge of Eternity",
+            "Fear the Light",
+            "Eyes of the Others",
+            "Spell Choice"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 0,
+            "Vitality": -3,
+            "Intelligence": 2,
+            "Inner_Fire": 1,
+            "Charisma": -3,
+            "Luck": 0,
+            "Perception": 0
+        },
+        "standings": "Necromancers are feared by most, and are actively hunted by Clerics and followers of the light."
+    },
+    "Paladin": {
+        "description": "Soldiers of the Light, Paladins are knights who have pledged themselves do a deity. As such, Paladins are capable of performing minor miracles from the book of healing.",
+        "abilities": [
+            "Bash",
+            "Hammer of Light",
+            "Faithful Weapon",
+            "Shield of Men",
+            "Lesser Book of Healing",
+            "Pledge",
+            "Minor Spell Choice"
+        ],
+        "stats": {
+            "Dexterity": -2,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": 1,
+            "Luck": 1,
+            "Perception": 0
+        },
+        "standings": "Paladins are generally respected. They hate evil, and try to destroy it wherever they find it."
     }
 }

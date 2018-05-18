@@ -128,7 +128,7 @@
         "type": "advantage"
     },
     "Happy Smiles": {
-        "description": "Your presence increases party cheer in good weather, giving them a d8 inspiration dice. and decreases it in bad weather, giving them -1 charisma.",
+        "description": "Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.",
         "type": "general"
     },
     "A Dry Place to Sleep": {
@@ -511,6 +511,18 @@
         "description": "Once every three turns, you can throw yourself in front of a teammate, taking their damage for them.",
         "type": "combat"
     },
+    "Bash": {
+        "description": "Stun an enemy on a critical hit, causing them to miss their next turn.",
+        "type": "combat"
+    },
+    "Faithful Weapon": {
+        "description": "After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.",
+        "type": "combat"
+    },
+    "Hammer of Light": {
+        "description": "You begin your journey with a 1d6 hammer which does +2 damage to undead.",
+        "type": "combat"
+    },
     "High Ground": {
         "description": "Gain advantage on any plunging attacks.",
         "type": "advantage"
@@ -555,6 +567,30 @@
         "description": "On a critical hit with a blunt weapon or your hands, attack twice more.",
         "type": "combat"
     },
+    "Soul Harvest"  : {
+        "description": "You may harvest 1 soul from a sentient entity that has died within six hours.",
+        "type": "general"
+    },
+    "Mortal Coil"  : {
+        "description": "Once every two days, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.",
+        "type": "general"
+    },
+    "Vegan"  : {
+        "description": "At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 1 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.",
+        "type": "choice"
+    },
+    "Edge of Eternity"  : {
+        "description": "You can consume a soul to increase a stat by 1 or to give yourself 1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal Coil to once per day for a week.",
+        "type": "general"
+    },
+    "Fear the Light"  : {
+        "description": "You are considered undead, and therefore take extra damage from holy weapons.",
+        "type": "general"
+    },
+    "Eyes of the Others"  : {
+        "description": "Consume a soul to give yourself darkvision and detect life for a day.",
+        "type": "general"
+    },
     "Lesser Novice Spellbook" : {
         "description": "You are able to learn level 0-3 spells from the Novice Spellbook.",
         "type": "general"
@@ -597,6 +633,10 @@
     },
     "Spell Choice" : {
         "description": "At the start of your journey, you know 4 level zero, 2 level one, and 1 level two spells.",
+        "type": "choice"
+    },
+    "Song Choice" : {
+        "description": "At the start of your journey, you may choose 3 common songs, or roll for 3 random songs.",
         "type": "choice"
     }
 }
