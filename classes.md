@@ -210,7 +210,7 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
 # Cleric  
 ![Cleric](images/class/cleric.jpg?raw=true "Cleric") 
 
-Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.  
+After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. To do this, Clerics use miracles from the book of healing help their deity impose its will on the world.  
 **Standings:** Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church.  
 #### Abilities:   
 ##### Combat Abilities:   
@@ -296,7 +296,7 @@ It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, w
 # Lordling  
 ![Lordling](images/class/lordling.jpg?raw=true "Lordling") 
 
-A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.  
+A child of noble parentage, the lordling was born with a silver spoon in his mouth. Now, he is going out into the world to find adventure.  
 **Standings:** Lordlings are respected by kingsmen, but are often set upon by thieves.  
 #### Abilities:   
 ##### Combat Abilities:   
@@ -313,7 +313,7 @@ A child of noble parentage, the lordling was born with a silver spoon in their m
   * **The Family Sword**: Begin your journey with a d8 sword with a ruby on its hilt and an engraving of your family's sigil.  
     
 ##### General Abilities:   
-  * **Happy Smiles**: Your presence increases party cheer in good weather, giving them a d8 inspiration dice. and decreases it in bad weather, giving them -1 charisma.  
+  * **Happy Smiles**: Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
   * **Lightweight**: Any cup of alcohol affects you like two.  
     
 
@@ -330,7 +330,7 @@ A child of noble parentage, the lordling was born with a silver spoon in their m
 # Lady Fair  
 ![Lady Fair](images/class/lady_fair.jpg?raw=true "Lady Fair") 
 
-Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.  
+Delicate and noble, the Lady Fair is a beacon of love and hope for their people. While used to living in the safety of her castle, she isn't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.  
 **Standings:** Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands.  
 #### Abilities:   
 ##### Combat Abilities:   
@@ -347,7 +347,7 @@ Delicate and noble, the lady fair or prince of the people is a beacon of love an
   * **The Family Sword**: Begin your journey with a d8 sword with a ruby on its hilt and an engraving of your family's sigil.  
     
 ##### General Abilities:   
-  * **Happy Smiles**: Your presence increases party cheer in good weather, giving them a d8 inspiration dice. and decreases it in bad weather, giving them -1 charisma.  
+  * **Happy Smiles**: Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
   * **Lightweight**: Any cup of alcohol affects you like two.  
     
 
@@ -487,7 +487,7 @@ Masters of hand to hand combat, monks use their extensive self-knowledge to over
 # Beastmaster  
 ![Beastmaster](images/class/beastmaster.jpg?raw=true "Beastmaster") 
 
-Beastmasters roam the wilds, capturing and befriending animals.  
+For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters have forgone civilization, choosing instead to roam the wilds, capturing and befriending animals.  
 **Standings:** More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to.  
 #### Abilities:   
 ##### Combat Abilities:   
@@ -577,5 +577,35 @@ Death is not my enemy, nor is it my ally, it is my servant. So say the Necromanc
   * Inner_Fire: 1  
   * Charisma: -3  
   * Luck: 0  
+  * Perception: 0  
+   
+# Paladin  
+![Paladin](images/class/paladin.jpg?raw=true "Paladin") 
+
+Soldiers of the Light, Paladins are knights who have pledged themselves do a deity. As such, Paladins are capable of performing minor miracles from the book of healing.  
+**Standings:** Paladins are generally respected. They hate evil, and try to destroy it wherever they find it.  
+#### Abilities:   
+##### Combat Abilities:   
+  * **Bash**: Stun an enemy on a critical hit, causing them to miss their next turn.  
+  * **Hammer of Light**: You begin your journey with a 1d6 hammer which does +2 damage to undead.  
+  * **Faithful Weapon**: After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.  
+  * **Shield of Men**: Once every three turns, you can throw yourself in front of a teammate, taking their damage for them.  
+    
+##### Choices:   
+  * **Minor Spell Choice**: At the start of your journey, you know 2 level zero, 1 level one, and 1 level two spells.  
+    
+##### General Abilities:   
+  * **Lesser Book of Healing**: You are able to learn level 0-2 spells from the Book of Healing.  
+  * **Pledge**: At the start of your journey, you may select a diety to pledge yourself to.  
+    
+
+##### Stats:    
+  * Dexterity: -2  
+  * Strength: 1  
+  * Vitality: 0  
+  * Intelligence: 0  
+  * Inner_Fire: 1  
+  * Charisma: 1  
+  * Luck: 1  
   * Perception: 0  
    
