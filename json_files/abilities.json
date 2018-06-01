@@ -1,0 +1,642 @@
+{
+    "Last Stand": {
+        "description": "When your health is below 20%, you can make two moves in a row.",
+        "type": "combat"
+    },
+    "Strength of Men": {
+        "description": "You have basic healing abilities. Once after each rest, you may heal a party member for 1d10 health.",
+        "type": "combat"
+    },
+    "Rally": {
+        "description": "Once per rest, you may use an aura which gives all of your allies a 1d8 inspiration dice.",
+        "type": "combat"
+    },
+    "Fixit Dwarf": {
+        "description": "Given a few hours, you can repair most steel made items.",
+        "type": "general"
+    },
+    "Miner's Eye": {
+        "description": "When dealing with minerals or works made of stone, get a +7 benefit to intelligence.",
+        "type": "general"
+    },
+    "Dark Vision": {
+        "description": "You can see well in the dark.",
+        "type": "general"
+    },
+    "Sleepless": {
+        "description": "Elves can rest without sleeping for one day, allowing them to keep watch long into the night. Resting at night counts as sleep even if you are awake.",
+        "type": "general"
+    },
+    "Wink Wink, Nudge Nudge": {
+        "description": "Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.",
+        "type": "advantage"
+    },
+    "Winged feet": {
+        "description": "You have advantage on acrobatics checks.",
+        "type": "advantage"
+    },
+    "Sling": {
+        "description": "Your character begins with a sling.",
+        "type": "starting_item"
+    },
+    "Warm Butter": {
+        "description": "Your are naturally talented chef. You have advantage when cooking.",
+        "type": "advantage"
+    },
+    "Soft Bed": {
+        "description": "You recover 8d8 health from sleeping in a real bed.",
+        "type": "general"
+    },
+    "Padfoot": {
+        "description": "You have advantage on stealth checks.",
+        "type": "advantage"
+    },
+    "Lamb to the Slaughter": {
+        "description": "When hunting, you have advantage on perception checks.",
+        "type": "advantage"
+    },
+    "Bellow": {
+        "description": "On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.",
+        "type": "combat"
+    },
+    "Still Warm": {
+        "description": "You can eat raw meat without penalty.",
+        "type": "general"
+    },
+    "Fisher": {
+        "description": "You are naturally adept at fishing.",
+        "type": "advantage"
+    },
+    "They're Retractable": {
+        "description": "You have retractable, razor sharp claws capable of doing 1d8 damage.",
+        "type": "combat"
+    },
+    "Land on your feet": {
+        "description": "You can fall 40 feet before taking fall damage.",
+        "type": "general"
+    },
+    "Berserk": {
+        "description": "Once per day, a you can go into a rage, giving you +1 strength and allowing you to make two attacks, but decreasing your intelligence and perception by three. A rage lasts 1 hour or 5 turns. Coming out of a rage prematurely makes you fatigued, and gives you disadvantage on all rolls.",
+        "type": "combat"
+    },
+    "Intimidate": {
+        "description": "You have advantage when attempting to intimidate enemies.",
+        "type": "advantage"
+    },
+    "Throw Anything": {
+        "description": "You can throw anything up to five times your weight.",
+        "type": "general"
+    },
+    "Crushing Blow": {
+        "description": "On a critical hit, you give all enemies who see disadvantage.",
+        "type": "combat"
+    },
+    "Huntsman": {
+        "description": "You have advantage when attacking wildlife.",
+        "type": "advantage"
+    },
+    "Mount and Blade": {
+        "description": "You can swap your dexterity and strength stats while on horseback.",
+        "type": "combat"
+    },
+    "Woodsman": {
+        "description": "You have perception advantage in the forest.",
+        "type": "advantage"
+    },
+    "Medicine": {
+        "description": "If you have the ingredients, you can create healing draughts.",
+        "type": "general"
+    },
+    "Under the Stars": {
+        "description": "You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.",
+        "type": "general"
+    },
+    "Learned": {
+        "description": "You are fluent in a language of your choosing.",
+        "type": "choice"
+    },
+    "Regular Patron": {
+        "description": "You have advantage on charisma checks made in a tavern.",
+        "type": "advantage"
+    },
+    "Keen Eye": {
+        "description": "You have advantage on perception checks made over long distances.",
+        "type": "advantage"
+    },
+    "Historian": {
+        "description": "You have a deep knowledge of the land in which your adventure takes place. Advantage on any history checks.",
+        "type": "advantage"
+    },
+    "Happy Smiles": {
+        "description": "Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.",
+        "type": "general"
+    },
+    "A Dry Place to Sleep": {
+        "description": "You can summon a hut big enough for two. Sleeping inside counts as sleeping on a bed.",
+        "type": "general"
+    },
+    "PULL": {
+        "description": "If enemies are in a row, your shot will pass right through them.",
+        "type": "combat"
+    },
+    "Old Hand": {
+        "description": "You have a deep understanding of the limits of your body and of others. You can get a rough estimate of enemy health.",
+        "type": "combat"
+    },
+    "Meditate": {
+        "description": "A short rest counts as two when you meditate.",
+        "type": "general"
+    },
+    "Nimble Fingers": {
+        "description": "You have dexterity and stealth advantage when stealing.",
+        "type": "advantage"
+    },
+    "Rusted Sword": {
+        "description": "You begins your adventure with a rusted set of armor and a d10 sword.",
+        "type": "starting_item"
+    },
+    "Inner Eye": {
+        "description": "Gain advantage when checking for spiritual energy.",
+        "type": "advantage"
+    },
+    "Double Tap": {
+        "description": "Every other turn, you can shoot two arrows at a time.",
+        "type": "combat"
+    },
+    "Born in the Saddle": {
+        "description": "Always start with initiative when on horseback.",
+        "type": "combat"
+    },
+    "Steady": {
+        "description": "Do not take disadvantage when being jostled about.",
+        "type": "advantage"
+    },
+    "Trained Precision": {
+        "description": "Once every three turns, gain advantage on your attack.",
+        "type": "combat"
+    },
+    "Kingsmen": {
+        "description": "Gain +3 Charisma when speaking with kingsmen.",
+        "type": "advantage"
+    },
+    "Hold the line": {
+        "description": "When any member of your party is on death's door, gain advantage on all attacks and checks used to protect them.",
+        "type": "combat"
+    },
+    "Shield Bash": {
+        "description": "Use your turn to shield bash an enemy, dealing d6 damage and staggering them if they fail a check.",
+        "type": "combat"
+    },
+    "Taunt": {
+        "description": "You can taunt your opponents, forcing them to attack you instead of others.",
+        "type": "combat"
+    },
+    "Choice Stat": {
+        "description": "At the beginning of your adventure, decide between a permanent increase of 1 dexterity or strength.",
+        "type": "choice"
+    },
+    "Double Choice Stat": {
+        "description": "At the beginning of your adventure, decide between a permanent increase of 2 dexterity or strength.",
+        "type": "choice"
+    },
+    "Tackle": {
+        "description": "You can tackle an enemy to the ground. Attempt either a dexterity or strength contested throw against an enemy, if they fail, you grapple them. You have advantage",
+        "type": "combat"
+    },
+    "Animal Magnetism": {
+        "description": "Most animals inherently understand you on some level. You can attempt to influence the actions of animals with an inner fire check.",
+        "type": "general"
+    },
+    "Hobble": {
+        "description": "You are capable of quickly tying very strong knots.",
+        "type": "general"
+    },
+    "Animal Companion": {
+        "description": "At the beginning of your journey, you may choose a small, medium, or large animal companion. See the book of known beasts for stats.",
+        "type": "choice"
+    },
+    "This is my Weapon": {
+        "description": "Your gun is the only friend you need. Make sure to give it a name.",
+        "type": "choice"
+    },
+    "Choice of Firearm": {
+        "description": "At the beginning of your journey, you may choose to start with a rifle, and therefor be a Sharpshooter, or to start with a pistol, and become a Gunslinger. Guns are very rare, so this choice is very important.",
+        "type": "choice"
+    },
+    "From the Hip": {
+        "description": "Once every turn cycle, fire a retaliation shot. If you pass a check, it hits, hurting the enemy and stopping their attack.",
+        "type": "combat"
+    },
+    "Upgrade": {
+        "description": "Firearms are very rare, to upgrade yours, you must use upgrade kits. After receiving an upgrade kit, pick an upgrade from the Gunslinger's Guide or the Sharpshooter's Reference.",
+        "type": "general"
+    },
+    "Set Up": {
+        "description": "You may take a turn to focus your shot. If you are a Sharpshooter, use a d20s rather than d10s on your next turn. If you are a gunslinger, use a d6 (or d8 if you have the hollow point upgrade)",
+        "type": "combat"
+    },
+    "Firestarter": {
+        "description": "You can use gunpowder to start fires.",
+        "type": "general"
+    },
+    "Fireburst": {
+        "description": "You can craft one d20 area of effect vial of explosive liquid per day. Takes 5 hours.",
+        "type": "general"
+    },
+    "The Sword and the Satchel": {
+        "description": "You begin your adventure with a bottomless satchel.",
+        "type": "starting_item"
+    },
+    "Air of Mystery": {
+        "description": "Gain advantage on intimidation checks against gaurds and villagers.",
+        "type": "advantage"
+    },
+    "Transfigure": {
+        "description": "Once per rest, you can turn something into something else.",
+        "type": "general"
+    },
+    "Looming Presence": {
+        "description": "Gain advantage when attempting to intimidate anything of lower intelligence than yourself.",
+        "type": "advantage"
+    },
+    "The Hand of God": {
+        "description": "Gain advantage on all roles when your health is below 20 percent.",
+        "type": "advantage"
+    },
+    "Walking Stick": {
+        "description": "You begin your adventure with a wizard's staff. + 1 damage to all spells.",
+        "type": "starting_item"
+    },
+    "Overheal": {
+        "description": "You are capable of healing to a maximum of 120% health.",
+        "type": "combat"
+    },
+    "Purge Decay": {
+        "description": "Gain advantage and +2 attack when fighting the undead.",
+        "type": "combat"
+    },
+    "Master of Disguise": {
+        "description": "You can easily fashion disguises to hide yourself with.",
+        "type": "general"
+    },
+    "Lightfoot": {
+        "description": "Gain advantage on stealth checks. Stacks with padfoot.",
+        "type": "advantage"
+    },
+    "Low-Light Vision": {
+        "description": "You can see in low light.",
+        "type": "general"
+    },
+    "Mantel": {
+        "description": "You have advantage on dexterity checks when climbing.",
+        "type": "advantage"
+    },
+    "A Thief's Gear": {
+        "description": "You begin with 100 feet of rope, a lockpicking kit, a smokebomb, and a hidden dagger.",
+        "type": "starting_item"
+    },
+    "My Father's Coffers": {
+        "description": "Begin your journey with 1000 extra gold pieces.",
+        "type": "starting_item"
+    },
+    "The Family Sword": {
+        "description": "Begin your journey with a d8 sword with a ruby on its hilt and an engraving of your family's sigil.",
+        "type": "starting_item"
+    },
+    "My People": {
+        "description": "Gain advantage when speaking with gaurds and +2 charisma when speaking with citizens in your family's territory.",
+        "type": "advantage"
+    },
+    "Swoon": {
+        "description": "During battle, you can feint to avoid further damage. You may wake up after one turn.",
+        "type": "combat"
+    },
+    "Beauty Incarnate": {
+        "description": "Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.",
+        "type": "advantage"
+    },
+    "Feint": {
+        "description": "Once every three turns, you may roll a save on an enemy attack. On success, you take no damage. On failure, you take half damage.",
+        "type": "combat"
+    },
+    "Cartwheel": {
+        "description": "Gain advantage on acrobatics checks.",
+        "type": "advantage"
+    },
+    "One up the Sleeve": {
+        "description": "Gain advantage on any attacks made with throwing knives.",
+        "type": "advantage"
+    },
+    "Longshot": {
+        "description": "Gain advantage on long distance checks.",
+        "type": "advantage"
+    },
+    "Focus": {
+        "description": "You spend a turn focusing before a shot to gain advantage on it. Works before battle starts.",
+        "type": "combat"
+    },
+    "Every Part": {
+        "description": "You get additional meat and materials from butchering a kill.",
+        "type": "general"
+    },
+    "Sureshot": {
+        "description": "Gain advantage on checks when firing in a dense environment.",
+        "type": "advantage"
+    },
+    "Size doesn't matter": {
+        "description": "You begin your journey with a d6 shortbow.",
+        "type": "starting_item"
+    },
+    "Crippling Shot": {
+        "description": "You can aim at an opponents knees for -2 damage, making them go prone on a critical hit.",
+        "type": "combat"
+    },
+    "Trapper": {
+        "description": "Given enough time, you can craft a trap.",
+        "type": "general"
+    },
+    "Hand to Hand": {
+        "description": "Your hands are d8 weapons.",
+        "type": "combat"
+    },
+    "Tactics": {
+        "description": "Once every 3 turns, you can spend one turn to score a guaranteed critical hit.",
+        "type": "combat"
+    },
+    "Counter": {
+        "description": "You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack)",
+        "type": "combat"
+    },
+    "Carry a Tune": {
+        "description": "You know a song which, when sung, grants a party member of your choice +1 to one stat for the day. Can be sung once per day.",
+        "type": "general"
+    },
+    "Thick Headed": {
+        "description": "You have advantage on any checks involving an enemy breaking into your mind.",
+        "type": "advantage"
+    },
+    "Lightweight": {
+        "description": "Any cup of alcohol affects you like two.",
+        "type": "general"
+    },
+    "Thunderous Blow": {
+        "description": "Once every three turns, roll double the dice for your attack.",
+        "type": "combat"
+    },
+    "Seek Gold": {
+        "description": "You are able to smell gold. You can perform gold detection checks.",
+        "type": "general"
+    },
+    "Cheap Blow": {
+        "description": "Once every three turns, your attack knocks an enemy prone.",
+        "type": "combat"
+    },
+    "Loose Skin": {
+        "description": "You have advantage when breaking grapples.",
+        "type": "advantage"
+    },
+    "Fear of Water": {
+        "description": "You have disadvantage when soaked through.",
+        "type": "advantage"
+    },
+    "Fast Paws": {
+        "description": "Once every 3 turns, use two actions.",
+        "type": "combat"
+    },
+    "Unbreathing": {
+        "description": "You only need to breath once every three days.",
+        "type": "general"
+    },
+    "Flows Like Water": {
+        "description": "You can walk on water, and swim as fast as a horse can run.",
+        "type": "general"
+    },
+    "Water Healing": {
+        "description": "When you rest in water, it is as if you are sleeping. When you sleep in water, it is as if you are in a bed.",
+        "type": "general"
+    },
+    "Become Mist": {
+        "description": "Once every three turns, become mist to have an attack pass right through you.",
+        "type": "combat"
+    },
+    "Charm": {
+        "description": "You're form is so beautiful that you have advantage on charisma checks. If you have two such abilities, take advantage and +5 charisma on all checks.",
+        "type": "combat"
+    },
+    "Beast Form": {
+        "description": "You can morph to reveal the beast within. Add +2 to strength, dexterity, and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives advantage on intimidation when out of battle.",
+        "type": "combat"
+    },
+    "Dry Up": {
+        "description": "If you are not submerged in water once every 3 days, you will die from asphyxiation. Pouring water on yourself/standing in the rain can grant you an extra day.",
+        "type": "general"
+    },
+    "Color Choice": {
+        "description": "At any time, you may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used.",
+        "type": "choice"
+    },
+    "Greater Choice Stat": {
+        "description": "At the beginning of your adventure, you have a point to spend on a stat of your choice.",
+        "type": "choice"
+    },
+    "Smokevision": {
+        "description": "Your double eyelids allows you to see well when underwater or in smoke.",
+        "type": "general"
+    },
+    "Poison Bite": {
+        "description": "Once every 3 turns, you may bite for 1d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.",
+        "type": "combat"
+    },
+    "Poison Resist": {
+        "description": "You are resistant to most poisons (gain advantage and +5 on any poison checks).",
+        "type": "general"
+    },
+    "Shed Tail": {
+        "description": "You can shed your tail to escape a grapple.",
+        "type": "general"
+    },
+    "Taste Air": {
+        "description": "Gain advantage on tracking perception checks by tasting the air. Works in all environments.",
+        "type": "general"
+    },
+    "Camouflage": {
+        "description": "If you stay absolutely still, you can take on the color of your surroundings. Gives you advantage on stealth checks while camouflaged.",
+        "type": "general"
+    },
+    "Tinker": {
+        "description": "Every night, you can attempt to to create a device. Once you create one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs, firebombs, and saddles. (Tinkering requires an intelligence check)",
+        "type": "general"
+    },
+    "Build": {
+        "description": "Once you have a recipe for an item, you can build it. Forgo resting to create one item. Forgo sleeping to create two.",
+        "type": "general"
+    },
+    "Gather": {
+        "description": "You passively collect ingredients for your tinkering.",
+        "type": "general"
+    },
+    "See and Remember": {
+        "description": "Once you see something, you will probably remember it.",
+        "type": "general"
+    },
+    "Grapple Gun": {
+        "description": "You carry a retractable grappling gun.",
+        "type": "starting_item"
+    },
+    "Resist Magic": {
+        "description": "You take -2 magic damage.",
+        "type": "general"
+    },
+    "Shifting Cloak": {
+        "description": "You begin your journey with a unique cloak, which takes on the color of your surroundings. +3 in stealth checks when standing still.",
+        "type": "starting_item"
+    },
+    "Favorite Terrain": {
+        "description": "At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage in all things.",
+        "type": "choice"
+    },
+    "Blessed Blade": {
+        "description": "Your weapons are blessed, and do +3 damage to goblins, skeletons, and monsters of the dark.",
+        "type": "combat"
+    },
+    "Tracker": {
+        "description": "You are an expert tracker, and have advantage when looking for trails and sign of passage.",
+        "type": "general"
+    },
+    "Charge": {
+        "description": "Once every three turns, charge an enemy and roll a d20. Knock them prone if you roll a 12 or above while on foot, a 5 or above if on horseback.",
+        "type": "combat"
+    },
+    "Shield of Men": {
+        "description": "Once every three turns, you can throw yourself in front of a teammate, taking their damage for them.",
+        "type": "combat"
+    },
+    "Bash": {
+        "description": "Stun an enemy on a critical hit, causing them to miss their next turn.",
+        "type": "combat"
+    },
+    "Faithful Weapon": {
+        "description": "After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.",
+        "type": "combat"
+    },
+    "Hammer of Light": {
+        "description": "You begin your journey with a 1d6 hammer which does +2 damage to undead.",
+        "type": "combat"
+    },
+    "High Ground": {
+        "description": "Gain advantage on any plunging attacks.",
+        "type": "advantage"
+    },
+    "Boozehound": {
+        "description": "You have a very high tolerance for alchohol. Do not take disadvantage when drunk.",
+        "type": "advantage"
+    },
+    "My Father's Oboe": {
+        "description": "You are proficient and start with an instrument of your choice.",
+        "type": "choice"
+    },
+    "Longbow": {
+        "description": "You begin your journey with a d6 longbow.",
+        "type": "starting_item"
+    },
+    "Share Ability": {
+        "description": "At sunup each day, you may choose one of your party's abilities to be yours until sunup the next morning.",
+        "type": "general"
+    },
+    "Boot Knife": {
+        "description": "You carry a hidden d6 knife in your boot.",
+        "type": "starting_item"
+    },
+    "Detect Magic": {
+        "description": "You are able to perform magic detection checks.",
+        "type": "general"
+    },
+    "Twin Blades": {
+        "description": "During combat, you may wield two weapons rather than one. Each turn, you may attack twice, but cannot add dexterity or strength bonuses to strikes.",
+        "type": "combat"
+    },
+    "Sword and Flame": {
+        "description": "During combat, you may use a spell and attack on the same turn, however, neither benefit from advantage or stat bonuses.",
+        "type": "combat"
+    },
+    "Commit to Memory"  : {
+        "description": "At the beginning of a day, you may commit one spell to memory of level 2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.",
+        "type": "combat"
+    },
+    "Combo"  : {
+        "description": "On a critical hit with a blunt weapon or your hands, attack twice more.",
+        "type": "combat"
+    },
+    "Soul Harvest"  : {
+        "description": "You may harvest 1 soul from a sentient entity that has died within six hours.",
+        "type": "general"
+    },
+    "Mortal Coil"  : {
+        "description": "Once every two days, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.",
+        "type": "general"
+    },
+    "Vegan"  : {
+        "description": "At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 1 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.",
+        "type": "choice"
+    },
+    "Edge of Eternity"  : {
+        "description": "You can consume a soul to increase a stat by 1 or to give yourself 1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal Coil to once per day for a week.",
+        "type": "general"
+    },
+    "Fear the Light"  : {
+        "description": "You are considered undead, and therefore take extra damage from holy weapons.",
+        "type": "general"
+    },
+    "Eyes of the Others"  : {
+        "description": "Consume a soul to give yourself darkvision and detect life for a day.",
+        "type": "general"
+    },
+    "Lesser Novice Spellbook" : {
+        "description": "You are able to learn level 0-3 spells from the Novice Spellbook.",
+        "type": "general"
+    },
+    "Novice Spellbook" : {
+        "description": "You are able to learn spells from the Novice Spellbook.",
+        "type": "general"
+    },
+    "The Mage's Compendium" : {
+        "description": "You are able to learn spells from the Mage's Compendium.",
+        "type": "general"
+    },
+    "The Wizard's Addendum" : {
+        "description": "You are able to learn spells from the Wizard's Addendum.",
+        "type": "general"
+    },
+    "The Macabre Manual" : {
+        "description": "You are able to learn spells from the Macabre Manual.",
+        "type": "general"
+    },
+    "Lesser Book of Healing" : {
+        "description": "You are able to learn level 0-2 spells from the Book of Healing.",
+        "type": "general"
+    },
+    "The Book of Healing" : {
+        "description": "You are able to learn spells from the Book of Healing.",
+        "type": "general"
+    },
+    "The Bard's Songbook": {
+        "description": "You start with The Bard's Songbook, and may choose two common songs to have already learned from it.",
+        "type": "starting_item"
+    },
+    "Pledge" : {
+        "description": "At the start of your journey, you may select a diety to pledge yourself to.",
+        "type": "general"
+    },
+    "Minor Spell Choice" : {
+        "description": "At the start of your journey, you know 2 level zero, 1 level one, and 1 level two spells.",
+        "type": "choice"
+    },
+    "Spell Choice" : {
+        "description": "At the start of your journey, you know 4 level zero, 2 level one, and 1 level two spells.",
+        "type": "choice"
+    },
+    "Song Choice" : {
+        "description": "At the start of your journey, you may choose 3 common songs, or roll for 3 random songs.",
+        "type": "choice"
+    }
+}

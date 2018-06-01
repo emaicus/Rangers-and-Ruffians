@@ -1,462 +1,116 @@
-# Rangers and Ruffians Player's Handbook (Easy Version)
+# Rangers and Ruffians Player's Handbook Rev 1.2
 
 ## Introduction
 ### What is Rangers and Ruffians?
-Rangers and Ruffians is a tabletop game created by Evan and Emily Maicus and Jeremy and Zachary Wood. It is a game of imagination, and as such, you will get as much out of it as you put in. To play, you need only a metric ass-tonne of dice, a few notebooks, and a ceaselessly positive attitude.
-
-### What are the rules?
-For a game to work, you need at least two people. Otherwise, you are just imagining, which is fine, but should probably be a little more free-form. In a typical game, one individual takes on the role of Grand Poobah, the self proclaimed lord of the game's world. It is the Poobah's job to craft an interesting, engaging, and fun world for the other players to interact with. As such, they are under no pressure at all. The other players each inhabit characters within the Poohbah's world, and follow along through the story he or she is crafting without subverting and destroying every aspect of it. Or they can just stab everyone they see and eat cinnamon buns, whichever comes first.
+Rangers and Ruffians is a tabletop game created by Evan and Emily Maicus, Jeremy and Zachary Wood, and Nicklas Makowski. It is a game of imagination, and as such, you will get as much out of it as you put in. To play, you need only a set of polyhedral dice, a few notebooks, and a ceaselessly positive attitude.
 
 ### What do I need to play?
-This manual is the Player's Handbook (and is separate from the Poohbah's handbook). It contains all of the information that a player should need to engage with the game world. First and foremost, a player must create their character. Then, they must study and understand the (very) basic rules that govern the way the game works. With this done, they can set forth to become the best Wizard or Warrior that they can be!
+In order to play Rangers And Ruffians, you will need this manual, at least one set of polyhedral dice (the nerdy ones), and a Poohbah, the person who will run your game (see the separate Poohbah's handbook for more details or if you are interested in being your group's Poohbah). This manual is the Player's Handbook, which contains all of the information that a player should need to engage with the game world. First and foremost, a player must create their character. Then, they must study and understand the basic rules that govern the way the game works. With this done, they can set forth to become the best Ranger or Ruffian that they can be!
 
-## Glossary of Basic Terms:
-As you can imagine, Rangers and Ruffians requires a fair amount of nerd speak. This glossary is provided to help get you acclimated to the lingo as quickly as possible, so that you can start talking like one of the cool kids.
+## Brief Rules
+While making Rangers and Ruffians we strove to craft rules that are simple to understand and easy to follow, so that you can get playing quickly and without much hassle. While some aspects of the game are deeper than others, 90% of the time, you will only need the basic rules in this section.
 
-**_Nerd Speak:_**  A term made up just a moment ago to describe how nerds talk. Typically can't be understood by noobs. Now, I'm going to go spec my dex character for max dps.  
-**_Stat:_** A stat is an attribute assigned to something in the world. For example, a character's health could be considered a stat. Their base health stat might be 40. When they are harmed by something in the game world, their current health or hp, will decrease, so that they have some fraction of their base health. When their hp hits zero, they will die, and be dead until one of their party members find a way to resurrect them.  
-**_d "number":_** In Rangers and Ruffians, dice are used to simulate randomness. As a result, less probable events require dice with more sides. As a form of shorthand, d "number" is used to refer to a die with a certain number of sides. Therefore, a d20 is a dice with 20 sides.  
-**_Critical Hit_, or _“Crit”:_** When a character attacks in battle, a die is rolled to decide how effective the attack was. A critical hit occurs when an attack was especially effective, and does bonus damage to an enemy.  
-**_Critical Failure:_** When things can go well, they can also go terribly. A critical failure can be seen as the opposite of a critical hit, and often results in a player harming himself or others.  
-**_Check:_** Many actions within a game have some possibility of failure. A check occurs when the Poobah requests that the players roll a die to see if an action was accomplished. Therefore, if a character wants to sneak past a guard, the game master might ask them to roll a die, scale the result with their dexterity stat (discussed below) and declare them successful if they pass a threshold.  
-**_Perception:_** Perception is a character's ability to read details in their environment. Perception is not a base stat, but rather a byproduct of class, race, and circumstance.  
-**_Race:_** A race is the people to which a character belongs. (See Race section).  
-**_Class:_** A character's backstory up to this point. Classes come with specific stat adjustments and abilities.  
-**_Specced:_** Built to meet specifications. e.g. I specced my character to maximize strength.
+### Stats
+In Rangers and Ruffians, every living (or undead!) entity has statistics which help determine what it is capable of. As a player, you too will have stats that affect not only how you fare in combat, but also how you in battle, but also how you interact with the world. For a Mage, intelligence will be paramount, for a Bard, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. Below, we will enumerate each of the stats, and how they function in Rangers and Ruffians.
 
-## Stats
-Before you begin creating your character, it's vital that you understand the base stats that will affect how their journey will progress. These stats not only affect the way that your character will fare in battles, but also how they interact with the world. For a mage, intelligence will be paramount, for a rouge, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. This is a guide to each statistic and its uses.
 
-### Stat Levels:
-**Disgraceful** -3 to any die roll.  
-**Abysmal** -2  to any die roll.   
-**Poor** -1 to any die roll.
-**Average** No affect on any die roll.  
-**Good** +1 to any die roll.    
-**Adept** +2 to any die roll.   
-**Masterful** +3 to any die roll.   
+**Strength:** Strength can be defined as raw power of the body. You enter a dungeon, and sees a friend trapped in a cell. You desperately want to get them out, so you decide to bend the bars. In this scenario, you would want very high strength. In combat, strength directly affects the amount of damage you do with strength based weapons, as you can add your strength to any damage you do with them. (see the weapons section below for more detail).
 
-#### Dexterity:
-Description: Mobility; Nimbleness; ability with the body.
-Combat Effects: Dexterity allows the player to use dexterity based weapons (e.g. katana, falchion, bow and arrow, spear, throwing knives). Dex weapons scale with dexterity. (See Weapons section for more details)
-Passive Effect Examples: The high dexterity character picked the lock. The very high dex character turned a backflip. The low dex character tripped and fell down a well.
-#### Strength:
-Description: Raw power of the body.
-Combat Effects: Strength allows the player to use strength based weapons (e.g. Greatsword, Warhammer, Spiked Club, heavy things). Strength weapons scale with strength. (See Weapons section for more details)
-Passive Effect Examples: The medium strength character lifted the barrel.  The very high strength character bent the iron bars. The low strength character couldn't intimidate the guard.
-#### Vitality:
-Description: Health and resilience of the body.
-Combat Effects: Vitality directly translates into HP.
-Passive Effect Examples: The high Vitality character had great endurance. The very high vitality character was only slightly affected by the poison. The low vitality character died from the fire attack.
-#### Intelligence:
-Description: Perception; Understanding; Aptitude with the mind; Ability to think and reason.
-Combat Effects: Intelligence allows a mage to learn new spells and warriors to better assess battlefield situations.
-Passive Effects: The high intelligence character was allowed to enter the mage's sanctum. The low intelligence character couldn't fool the guard.
-#### Inner Fire:
-Description: Spirit; Resolve.
-Combat Effects: Spirit makes spells more powerful and helps warriors carry on when gravely injured.
-Effect Examples: Even though Frost was a basic spell, the fiery mage used it to kill the skeletons with ease. The low spirited warrior's attacks became weaker as he did.
-#### Charisma:
-Description: people skills.
-Combat Effects: Charisma allows a character to take enemies off guard  .
-Passive Effects: The high Charisma character talked his way out of a sticky  situation. The low Charisma character couldn't rally the troops.   
-#### Luck:
-Description: Chance; Fate  
-Combat Effects: Chance that a character will get a critical hit, or that the enemy will miss them.   
-Passive Effects: The high luck character happened to point at the exact shop the group needed to enter. Out of all the cups she could have chosen, the low luck character picked the poisoned one.  
-#### Perception
+**Dexterity:** Dexterity can be defined as mobility, nimbleness, and ability with the body. You are chasing a fleeing thief across the rooftops of a city. You come up to a gap, and have to jump! In this scenario, you would want higher than average dexterity. In a combat scenario, dexterity directly affects the amount of damage you do with dexterity based weapons, as you can add your dexterity to any damage you do with them. (see the weapons section for more details).
 
-## Races
+**Vitality:** Vitality determines how much health you will have in Rangers and Ruffians. Health is treated as a resource, which can be depleted by taking damage and restored by resting, drinking potions or through some other means. In Rangers and Ruffians, all player characters begin with one hundred health plus ten times their dexterity modifier. This means that, if you have +2 vitality, you will have 120 health (for more details, see the Health, Rest, and Potions, and Healing and Death and Dying sections).
+
+**Intelligence:** Intelligence can be described as raw aptitude with the mind, and has special significance to magic users. In Rangers and Ruffians, spell points are treated as a resource, and are used to cast spells. All magic users start out with five magic points plus their intelligence level. (For more details see the Magic section).
+
+**Inner Fire:** Inner fire can be defined as mental fortitude or resolve. An enemy spellcaster is trying to break into your mind to steal secrets. In this scenario, you would want high inner fire to repel their attack. In a combat scenario, Inner Fire directly affects the amount of damage you do with magic, as you can add it to the damage or healing you deal with any spell. (see the magic section for more details).
+
+**Charisma:** Charisma determines how charming your character can be. You speak with the local innkeeper and have a feeling that he's keeping something from you. You don't think that he's a dangerous person, but rather that someone or *something* is stopping him. In this scenario, you would want high charisma, so that you can convince him to help you despite the risk.
+
+**Perception:** Perception determines how likely it is your character will notice things going on in the world around them. You are riding through the forest at night. Little do you know, a trio of goblins lie in ambush. In this scenario, you would want high perception.
+
+**Luck:** When all else fails, there's always luck! Luck is a rarely used stat, which can be invoked by either the Poohbah or the player when no other stat seems to fit.
+
+### Checks
+Now that you understand the basics of stats, its time to discuss how they apply in the world of the game. When you attempt an interesting action in Rangers and Ruffians, the Poohbah may see fit to have you perform a "check" to see whether or not you manage it. To perform this check, you roll a twenty sided dice (d20), add the relevant stat (called a modifier), and the Poohbah will determine if your roll is high enough (for details about suggested roll difficulties, see the Poohbah's handbook).
+
+At first, this may seem complicated, so let's give an example. You are currently investigating a string of murders in a small city. You've tracked the killer back to their apartments, and, after waiting for them to leave, you decide to sneak in. Unfortunately, you find that the door is locked! Because of this, you decide to pick it, and the Poohbah calls for a dexterity check (because dexterity is the most relevant stat). You roll a 3 on your twenty sided dice, and then add 2, because that is your dexterity score. Unfortunately, the Poohbah tells you that that isn't high enough, and you can't pick the lock. That's fine, though, failing can be just as fun as succeeding. Because you can't pick the lock, you decide to break down the door. This time, you roll a 14, and add your 1 strength for a total of 15. It works! There was a little more sound, and a little more evidence, but you're in!
+
+Checks like the one above are common in the world of Rangers and Ruffians, and help make the game more dynamic; things can't _always_ go your way, or the game wouldn't be as fun. This also makes it more fun when the group of people you're playing with, your party, creates characters with different skillsets. Checks and stats help make it so that every character can approach the game differently.
+
+### Critical Rolls
+A critical success occurs when you role the highest possible value on a dice. Out of combat, this often means that that you will perform exceptionally well in a task. For example, your vault off of a building might turn into a stunning double backflip. A critical failure occurs when you roll the lowest possible value on a dice. This often comes with negative repercussions. For example, your attempt to sneak through a hallway might turn into you knocking over a vase and alerting the guards. A critical hit is when a critical success or failure occurs in combat, and is discussed in a later section.    
+
+### Advantage and Disadvantage
+Some characters have backgrounds (see the class and race section for more details) which cause them to be specifically good or bad at performing certain actions or at performing actions under certain conditions. In these scenarios, the character is said to have advantage or disadvantage on a check. When a character has advantage on a check, they roll two dice for the check, and take the higher. When they have disadvantage, they roll two dice and take the lower.
+
+As an example, imagine that your character's background says that they have advantage when sneaking in the rain. This means that, if your Poohbah asks you to perform a stealth check in the rain, you can roll two dice instead of one and take the higher.
+
+### General Abilities
+Your character will have special abilities as a result of their background, which can aid you in your travels. Separate from magic or combat abilities, general abilities allow you to consistently perform a feat is uncommon in others. For example, a character might have the "throw anything" ability, which allows them to throw anything up to five times their weight without a strength check.
+
+### Initiative
+Initiative is a special sort of check, performed at the beginning of combat. Initiative is modified by dexterity, and determines the order in which players take action in combat. For example, imagine that you and a friend are about to fight a minotaur. When combat begins, each of you and the minotaur roll a twenty sided die. After adding dexterity, you have a ten, your friend has a twelve, and the minotaur has a three. This means that, when combat begins, first your friend gets to act, then you, then the minotaur. Initiative is rolled only once at the start of every battle.
+
+### Physical Combat
+Combat in Rangers and Ruffians is turn based. Each participant gets to move and take one action per round, unless otherwise specified by a combat or weapon ability. Movement can be used to reposition yourself on the battlefield, approaching or moving away from an enemy. An action can be spent casting a spell, attacking an enemy, or using an item. A turn can be deferred to go later in the initiative order. Speaking, drawing a weapon, and other small actions can be counted as "free actions" by the Poohbah rather than counted against you.
+
+### Critical Hits
+A critical hit occurs when a player rolls the highest possible value for an eligible weapon. When this occurs, the player may roll the dice a second time and add that to the damage total.
+
+### Weapons
+When an minotaur is bearing down on you in the far reaches of the Underworld, your trusty sword (or spear, or pike, or bow, or flail, or sniper rifle) will be your best friend. Weapons come in two flavors, dexterity and strength. Strength weapons tend to be sturdy and large, where as dexterity weapons are more precise. The weapon you use will largely be determined by which stat you are strongest with. Weapons can also come with special abilities. This is important, as you do not "level up," or gain experience in Rangers and Ruffians. This makes the game much simpler, and means that it is the loot that you find that makes you stronger.
+
+### Combat Abilities
+As you enter the world of Rangers and Ruffians, you will find that you have a variety of abilities, some of which will be useful in combat. Most combat abilities come with some form of time limit, which it is up to you to keep track of. For many, this specifies that they can be used once every three turns. It is up to you to decide when it is the best time to use your abilities.
+
+### Health, Rest, and Healing
+As described in the vitality section, characters begin with 100 health plus or minus their vitality level. Health lost in combat can be regained by resting, using items, or receiving healing magic.
+
+#### Rest
+There are three types of rest in Rangers and Ruffians: Quick Rest, Sleep, and Sleep in a bed. A quick rest takes one hour, and returns 4d4 health to the player. A quick rest can only occur once every six hours. Sleep takes at least 6 hours, returns 4d8 health, and can be done once every twelve hours. Sleeping in a bed functions the same as sleep, but returns 6d8 health.
+
+#### Death and Dying
+Sometimes, things don't go your way. Death is not the end of your journey, and it doesn't have to ruin your Rangers and Ruffians experience. First, let's set down some rules on how and when death happens.
+
+##### Death's Door
+If your player's health hits zero, you enter a state called death's door. Once you have entered deaths door, your chances of survival are slim. If in combat, every time your turn comes up in the order, roll a d10. If You roll a 1-5, you die. If you are hurt while on death's door, you die. Otherwise, you survive another round. In order to come out of death's door, you must regain at least 1 health. You cannot act or feed yourself while on death's door.
+
+##### Reversible Death
+Sometimes, death _really_ isn't the end. This depends heavily on the world that your Poohbah has created, and whether or not certain resources are available. If your party is carrying a rare item, the _green lizard in a jar,_ it is possible to resurrect a character who has died within the past twenty four hours.
+
+##### Irreversible Death
+Sometimes, however, death is here to stay. As we previously mentioned, that doesn't have to be the end of your fun! Loosing a character can be hard and emotional, but there is more fun to be had with a brand new character! Maybe a relative of your old character bent on avenging them! Or maybe that halfling barbarian you've been joking about! Or maybe you could roll up a random character! The point is, while it can be sad to loose a character, it is definitely not the end, and certainly not something to be angry about. Instead, treat it as an opportunity to interface with the world in a whole new way!
+
+### Magic
+As discussed in the intelligence section, any magic user begins their adventure with spell points equal to their intelligence stat plus five. There are six levels of spells in Rangers and Ruffians, starting at level zero and ending at level five. The level of a spell corresponds both to how difficult it is to learn, and also to how much it costs to use. At the beginning of their journey, a magic user will get to choose a few spells from their spellbooks to know. The rest, they must learn on their journey.
+
+#### Spell Books
+There are a number of spellbooks (see spells.md), which contain all magic known to the world of Rangers and Ruffians. All spellcasters except for the necromancer can learn spells from the novice handbook, which contains many vital and widely applicable spells. Most other mages can also learn magic from an addendum specific to them, which contains class specific spells.
+
+#### Starting Spells
+Apart from the necromancer, all mages can choose 4 spells from level zero, 2 spells from level one, and 1 spell from level two to begin their journey with. All spellcasters know the spell "drain," which allows them to siphon spell points from enemies.
+
+#### Regaining Spell Points
+You can regain spell points by casting drain, using some items, and by resting. When resting, a quick rest restores 2 spell points, sleeping restores 5, and sleeping in a bed restores all used spell points.
+
+#### Necromancers
+Necromancy functions differently than other types of magic, in that it does not cost spell points. Rather, necromancy costs souls, which are harvested from fresh bodies. A necromancer begins knowing all spells in the necromancer's handbook, and with 2d4 souls to begin the game with.
+
+# Building a Character
+Building a character is your first step towards entering the world of Rangers and Ruffians! To build a character, start by looking through the list of available races and classes. Ask yourself what sort of character you want to be; do you want to be a sneaky thief? A cunning bard? A noble knight? Perhaps a roguish gunslinger? The choice is yours!
+
+### Race
 To begin building your character, you must first know what culture they come from. A character's race represents the people that they are a part of and their inborn abilities. From Halflings to Orcs, each race has its own base stats, which will influence how they interact with the world. All races also have inborn abilities, which help them in the trials and battles that await them on their adventures!   
-**_Note:_** Make sure to think about the stat set you want before crafting your character; do you want to focus on high intelligence and inner fire so that your character can be a powerful mage? Perhaps strength and vitality suit you better, so that you can be a tank. Or maybe you want to be a fast-moving high dexterity character. The choice is up to you! Don't be overwhelmed, however; with training and skill, any character can be specced to fit your playstyle!  
 
-#### Man:
-The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.  
-**Natural Allegiances/Enemies:** Humans get on great with dwarves, well with elves, and distrust orcs and goblins.
-##### Inborn Abilities:
-  * Last Stand: When a human's health is below 20%, they can make two moves in a row.  
-  * Strength of Men: Men begin with basic healing abilities.    
-  * Rally: Once per day, Men can use an aura which reinvigorates their comrades.  
-  * Stats: Men have high Inner Fire, better than average strength, and have average dex, vitality, intelligence, charisma, and luck.  
+### Class
+Once you have chosen your race, it is time to choose their background. A character's class can be viewed as its profession, and affects its stats and abilities even more than its race. Your choice of class will greatly affect how
 
-##### Suggested Base Stats:
-  * Dex: Average   
-  * Strength: Average  
-  * Vitality: Average  
-  * Intelligence: Average  
-  * Inner Fire: Good  
-  * Charisma: Average  
-  * Luck: Poor  
-  * Perception:  
+# Advanced Rules
+This section will be written in a future release, bear with us!
 
-#### Dwarf:
-Stocky and willed, dwarves are the most solid of the races. Known for their skills as smiths and stone workers, Dwarves tend to be brash and to keep to their own kind.
-Natural Allegiances/Enemies: Dwarves put up with humans, and have a distaste for elves. They hate goblins and orcs.
-##### Inborn Abilities:
-  * Fixit Dwarf: Given a few hours, dwarves can repair most steel made items.
-  * Miner's Eye: When dealing with minerals or works made of stone, a dwarf's intelligence is treated as Masterful.
-  * DarkVision: Dwarves can see well in the dark.
-  * Stats: Dwarves have  high strength and vitality, average dexterity, and low charisma.
-
-##### Suggested Base Stats:
-  * Dex: Average
-  * Strength: Good
-  * Vitality: Good
-  * Intelligence: Average
-  * Inner Fire: Good
-  * Charisma: Poor
-  * Luck: Poor
-
-#### Elf:
-Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.  
-**Natural Allegiances/Enemies:** Elves tolerate humans and dwarves, and hate goblins and orcs.
-##### Inborn Abilities
-  * Sleepless: Elves can go days without sleeping, allowing them to keep watch long into the night.
-  * DarkVision: Elves can see well in the dark.
-  * Wink Wink, Nudge Nudge: Elves can influence men and halflings with their beauty.
-  * Winged feet: Elves have incredible endurance.
-
-##### Suggested Base Stats:
-  * Dex: Good
-  * Strength: Poor
-  * Vitality:Average
-  * Intelligence: Good
-  * Inner Fire: Poor
-  * Charisma: Average
-  * Luck: Average
-
-#### Halfling:
-Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.  
-**Natural Allegiances/Enemies:** Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.
-##### Inborn Abilities:
-  * Sling: Halflings carry a sling, with which they are uncannily accurate.
-  * Warm Butter: Halflings are naturally great chefs, and food that they cook restores extra health.
-  * Soft Bed: Halflings recover full health from sleeping in a real bed.
-  * Softfoot: Halflings are naturally good at sneaking.
-
-##### Suggested Base Stats:
-  * Dex: Good
-  * Strength: Abysmal
-  * Vitality: Average
-  * Intelligence: Good
-  * Inner Fire: Poor
-  * Charisma: Great
-  * Luck: Great
-
-#### Orc
-A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.
-**Natural Allegiances/Enemies:** Orcs distrust all races save goblins, who they are close friends with.
-##### Inborn Abilities:
-  * Lamb to Slaughter: When hunting, Orcs have high perception.
-  * Bellow: Orc can unleash a mighty bellow to intimidate their foes.
-  * Still warm: Orcs can eat raw meat without penalty.
-
-##### Suggested Base Stats:
-  * Dex: Poor
-  * Strength: Good
-  * Vitality: Good
-  * Intelligence: Abysmal
-  * Inner Fire: Good
-  * Charisma: Poor
-  * Luck: Poor
-  * Perception: Poor
-
-#### Goblin
-Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.  
-**Natural Allegiances/Enemies:** Goblins are close allies with orcs, but fear and hate all others.  
-##### Inborn Abilities:
-  * Still Warm: Goblins can eat raw meat without penalty.
-  * Along Came a Spider: Goblins are naturally adept at climbing.
-  * Darkvision: Goblins can see in even the darkest caves.
-
-##### Suggested Base Stats:
-  * Dex: Great
-  * Strength: Poor
-  * Vitality: Poor
-  * Intelligence: Good
-  * Inner Fire: Average
-  * Charisma: Poor
-  * Luck: Good
-
-#### Catterwol
-Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.
-**Natural Allegiances:** Catterwol keep to themselves, and hate Orc.
-##### Inborn Abilities:
-  * DarkVision: Catterwol can see in the dark.
-  * Fisher: Catterwol are naturally good at fishing.
-  * They're Retractable: Catterwol have retractable, razor sharp claws.
-  * Land on your feet: Catterwol can survive long falls.
-
-##### Suggested Base Stats:
-  * Dex: Good
-  * Strength: Average
-  * Vitality:  Average
-  * Intelligence:  Good
-  * Inner Fire:  Average
-  * Charisma:  Average
-  * Luck:  Average
-  * Perception:
-
-## Classes
-Now that your character has a race, it is time to start fleshing out their backstory. A class represents where your character has come from, and where they are going. From the delicate Lady Fair to the brutish Brigand, all classes can be a valuable addition to a party. Each class comes with a set of natural abilities and corresponding stat changes. Pair these stat changes with the stats of the various races to fine tune the best possible ranger or ruffian!
-
-### Barbarian/Brigand/Raider:
-Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.
-**Natural Enemies:** Barbarians are the enemies of law keepers.
-####Abilities:
-  * Berserk: Once per day, a barbarian can go into a rage, increasing all stats slightly.
-  * Intimidate: Barbarians have a higher chance to intimidate enemies.
-  * Throw anything: Barbarians can throw anything.
-  * Crushing blow: An  Barbarians has a chance of hitting an enemy so hard it demoralizes others.
-#### Suggested Stat Changes:
-  * Strength: Large Buff
-  * Intelligence: Nerf
-
-### Ranger
-Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.
-**Natural Enemies:** Lawless Individuals
-#### Abilities:
-  * Huntsman: Rangers are skilled hunters by necessity.
-  * Woodsman: Rangers are apt at traversing the wilds.
-  * Medicine: Given a few hours, Rangers can usually produce herbal remedies for ailments.
-#### Suggested Stat Changes:
-  * Dexterity: Buff
-  * Vitality: Buff
-  * Intelligence: Buff
-  * Inner Fire: Nerf
-  * Charisma: Nerf
-
-### Hedge Knight
-A self proclaimed knight, hedge knight's move from region to region, seeking to find employment where they can. Hedge knights are supposed to live by a code of honor, but on the road these things tend to fall apart.
-**Natural Enemies: Knights**
-#### Abilities:
-  * Mount and Blade: Hedge Knights are naturally good riders.
-  * Sword and Spear: Hedge Knights can swap their dexterity and strength stats while on horseback.
-  * Under the Stars: Hedge Knights have been forced to learn to sleep anywhere without penalty, and can build shelters quickly.
-  * Lance: Hit two enemies in a row.  
-  
-#### Suggested Stat Changes:
-  * Strength: Buff
-  * Vitality: Buff
-  * Intelligence: Nerf
-  * Luck: Nerf
-
-### Knight
-The genuine article, knights have sworn their lives to king and country.
-**Natural Allies/Enemies:**  Knights are loved by kingsmen, and distrusted by hedge knights and rangers. Knights are duty bound to fight the lawless.
-####Abilities:
-  * Trained Precision: Once per battle, a knight can attack with a guaranteed critical hit.
-  * Kingsmen: Knight's charisma is increased when speaking with a kingsman.
-  * Hold the line: Once per day and during battle, add 1 attack to each teammate per point of the knight's inner fire.
-  * Charge: Knights can bridge the gap between themselves and a mid-distance foe.
-	* Get Behind Me: At the penalty of their next turn, Knights can use their shield to defend party members behind them.
-#### Suggested Stat Changes:
-  * Strength: Buff
-  * Vitality: Buff
-  * Inner Fire: Buff
-  * Intelligence: Nerf
-  * Dexterity: Nerf
-
-### Battle Mage
-Balanced between physical and magical attacks, battle mages have trained to be highly versatile fighters.
-**Natural Allies/Enemies:**
-####Abilities:
-  * _(One Time only)_ Choice stat: Battle Mages can choose whether to apply +1 to Dexterity or Strength.
-  * Elemental Weapon: Once per day, a Battle Mage can enchant a physical weapon with elemental effects.
-  * Sword and Flame: Battle Mages can naturally dual wield magic and physical weapons.
-  * Fireburst: Once per day, conjure a vial of explosive liquid.
-#### Suggested Stat Changes:
-  * Choice Stat (Buff Strength _OR_ Dexterity)
-  * Inner Fire: Buff
-  * Charisma: Buff
-
-### Mage
-A student of magic, mages are highly intelligent and adept at magic.
-**Natural Allies/Enemies**
-####Abilities:
-  * Sword and the Satchel: Mage's are gifted a never ending satchel.
-  * Air of Mystery: Mage's are capable of impressing guards and villagers.
-  * A Dry place to sleep: Mages can summon a hut big enough for two.
-  * Transfigure: A few times a day, a wizard can turn something into something else.
-#### Suggested Stat Changes:
-  * Strength: Nerf
-  * Dexterity: Nerf
-  * Vitality: Nerf
-  * Intelligence: Large Buff
-  * Inner Fire: Buff
-  * Charisma: Buff
-
-### Wizard
-Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.
-**Natural Allies: Rangers**
-####Abilities:
-  * Looming Presence: Wizards can use their magic to impress and intimidate creatures with lower intelligence.
-  * The Hand of God: When a wizard is in dire trouble, his luck vastly increases.
-  * Pointy Hatted Wanderer: Nature itself often aids a wizard in their travels. (Increased Perception in the wilds)
-  * Walking Stick: Wizards start with a wizard's staff.
-**_Additional Rules:_** Only one wizard should be allowed in a party.
-#### Suggested Stat Changes:
-  * Inner Fire: Buff
-  * Intelligence: Buff
-  * Charisma: Buff
-   * Luck: Buff
-
-###Cleric
-Gentle of nature, Clerics make it their life's duty to help those less fortunate. To do this, they have learned the art of powerful healing magic.
-**Natural Allies:** All those who fight for good.
-####Abilities:
-  * Over-heal: Once per day, a cleric can heal all party members for 120% health. Does not stack.
-  * Shield of Men: Once per battle, Clerics can use their magic to make all enemies in an area attack them exclusively.
-  * Purge Decay: Clerics have increased luck when fighting against the undead.
-  * Herbalist: Clerics can create potions and draughts from items in their environment.
-#### Suggested Stat Changes:
-  * Vitality: Nerf
-  * Strength: Nerf
-  * Dexterity: Nerf
-  * Intelligence: Buff
-  * Luck: Buff
-  * Inner Fire: Buff
-
-### Thief
-For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.
-**Natural Allies/Enemies:** Law keepers, Thief Catchers
-#### Abilities:
-    * Master of Disguise: Thieves can easily fashion disguises to hide themselves with.
-    * Lightfoot: Thieves are naturally good at sneaking. Stacks with Padfoot.
-    * Nimble Fingers: Thieves have a higher chance of not being discovered when stealing.
-    * Low-Light Vision: Thieves can see in low light.
-    * Mantel: Thieves are adept climbers
-#### Suggested Stat Changes:
-  * Strength: Nerf    
-  * Vitality: Nerf
-  * Inner Fire: Nerf
-  * Dexterity: Buff
-  * Charisma: Buff
-  * Luck: Large Buff
-
-### Thief-Catcher
-It takes a thief to catch a thief. Thief-Catchers are thieves turned straight, who now hunt down their old comrades.
-**Natural Enemies:** Thieves, Distrusted by Law keepers
-#### Abilities:
-  * Master of Disguise: Thief-Catchers can easily fashion disguises to hide themselves with.
-  * Lightfoot: Thief-Catchers are naturally good at sneaking. Stacks with Padfoot.
-  * Nimble Fingers: Thief-Catchers have a higher chance of not being discovered when stealing.
-  * Low-Light Vision: Thief-Catchers can see in low light.
-  * Mantel: Thief catchers are adept climbers.
-  * Equipped: Thieves begin with a sword-breaker and 100 feet of rope.
-#### Suggested Stat Changes:
-  * Vitality: Nerf
-  * Inner Fire: Nerf
-  * Dexterity: Buff
-  * Intelligence: Buff
-  * Charisma: Buff
-
-### Lordling
-A child of noble parentage, the lordling was born with a silver spoon in their mouth. Now, they are going out into the world to find adventure.
-**Natural Enemies: Thieves**
-### Abilities:
-  * Born this way: Lordlings begin with extra gold.
-  * The Family Sword: Lordlings begin well equipped.
-  * My People: Lordlings hold sway with town guards and villagers in their parent's territory.
-  * Reach: A Lordling’s father is sure to have holdings in many of the towns and villages of the realm.
-  * Good looks and happy smiles: The presence of a lordling increases party cheer in good weather, and decreases it in bad weather.
-#### Suggested Stat Changes:
-  * Strength: Nerf
-  * Dexterity: Nerf
-  * Inner fire: Nerf
-  * Luck: Buff
-  * Intelligence: Buff
-  * Charisma: Large Buff
-
-### Lady Fair/Prince of the People
-Delicate and noble, the lady fair or prince of the people is a beacon of love and hope for their people. While used to living in the safety of their castle, they aren't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.
-**Natural Enemies:** Thieves and brigands
-### Abilities:
-  * Swoon: Once per battle, the lady fair or the prince can play dead for a turn, avoiding further injury.
-  * Savior of the Common Man: Peasants and town guards everywhere love and respect the lady fair and the prince of the people.
-  * Beauty Incarnate: The lady fair and the prince of the people can use their beauty to sway the minds of others. (+3 charisma when speaking to people attracted to their sex)
-  * Feint: The lady fair and prince of the people are good at dodging and countering.
-  #### Suggested Stat Changes:
-  * Strength: Nerf
-  * Intelligence: Nerf
-  * Charisma: Huge Buff (+3)
-
-### Peasant
-Born of wretched beginnings, the peasant knows what it is to be kicked into the dirt. For years, they have worked hard to keep themselves above water, but things haven't gotten any better. Maybe, a change is in order.
-**Natural Enemies:** Raiders, Foreign Peasants
-#### Abilities:
-  * Common Man: Peasants gain +2 Charisma when speaking with people of low birth. -4 for people of high birth.
-  * Chosen Craft: Choose between Smith(+1 strength, -1 intelligence), Hunter (+1 dex, -1 strength, bow), Tavern Owner (+1 Charisma, -1 Strength, -1 Dex, more gold),  fletcher, or farmer.
-  * Ignorant: Peasants can't be easily controlled or manipulated by intelligence based spells.
-  * Breaking ground: Peasants are good at digging.
-
-### Bard
-Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.
-**Natural Enemies: Brigands.**
-#### Abilities:
-  * Cartwheel: Showmen have high dexterity, and can naturally turn flips and cartwheels.
-  * Instrumentalist: Showmen have mastery over an instrument of their choice, and begin with it.
-  * One up the sleeve: Bards are masters with throwing knives, and carry many in their sleeves.
-  * Little birds: a bard can gather information from the children of a town.
-
-### Marksman
-Skilled at long distance archery, marksmen can be depended on to make shots others wouldn't dare take.
-**Natural Enemies: Close range combat**
-### Abilities:
-  * Longshot: Marksmen begin with a longbow.
-  * Focus: Once every three turns, a marksman can take a shot with a huge accuracy bonus.
-  * Double tap: Once per engagement, a marksman can shoot two arrows at a time.
-  * Keen eye: marksmen have incredible vision.
-  * PULL: If enemies are in a row and close enough, a marksman's shot will pass right through them.
-#### Suggested Stat Changes:
-  * Dex Boost
-  * Intelligence Boost
-  * Luck Boost
-
-### Huntsman:
-Skilled archers, huntsmen prefer the woods to towns, and spend most of their time tracking game.
-**Natural Enemies:** The highborn
-#### Abilities:
-  * Fletcher: Given the right materials, huntsmen can make their own arrows.
-  * Every part: Huntsmen get more meat  and materials from butchering a kill.
-  * Sureshot; Huntsmen are uncannily accurate in dense environments.
-  * Size doesn't matter: Huntsmen begin with a shortbow.
-  * Crippling shot: A huntsman can choose to aim for an opponent's knees with increased accuracy.
-
-### Monk:
-Masters of hand to hand combat, monks have unified their body and mind into one well oiled unit.
-**Natural Enemies: Brutes.**
-#### Abilities:
-  * Steady: Monks are masters of their body.
-  * Hand to Hand: Monks are deadly with just their hands.
-  * Heart to Heart: Being in the presence of monks can help put others at ease/boost morale.
-  * Inner eye: Monks are more likely to detect spiritual energy.
-  * Meditate: Monks can restore their health more quickly by meditating.
-  * Share ability: A monk can share in the ability of another member of the party.
-
-### Bender
-Masters of elemental magic, benders can bend the elements to their will.
-**Natural enemies: Mages.**
-#### Abilities:
-  * Earth, Wind, or Fire: Benders can choose one of the four elements to have power over.
-  * Inner eye: Like monks, benders are closely attached to the spiritual world.
-
-### Adventurer
-The Adventurer became bored with the mundane drudgery of day to day life, and is now seeking out the thrill of new and perilous experiences. While used to the comforts of home, the adventurer is ready and excited to set out on the road and see what challenges and wonders await!
-**Natural Enemies:** Monsters and brigands
-#### Abilities:
-  * Wayfarer: Adventurers are in it for the long haul, and take longer to tire than others.
-  * Literate: Adventurers are learned, and know many languages and locales.  
-  * Historian: Adventurers have a deep knowledge of the land in which their in.
-  * Trusty Shield: Adventurers begin with a kite shield.
-
-### Retired Adventurer
-The retired adventurer found their thrills years ago, before being forced to retire into the cushy life of a townsperson.
-**Natural Enemies: Monsters.**
-#### Abilities:
-  * Stiff knee: Retired adventurers sometimes limp from an old arrow wound. For some reason, this increases the morale of their party.
-  * Old hand: Retired adventurers have a deep understanding of the limits of their bodies and of others.
-  * Rusted Sword: A retired adventurer begins his adventure with a rusted set of armor and a sword. Causes tetanus.
-  * Tricky: Retired adventures can have an increased ability to feint in battle.
-  * Tavern-seer: Retired adventurers can learn almost anything in a tavern.
-  * Summon old friend: once per area, an adventurer can summon an old friend.
+UPCOMING SECTIONS:
+### Creating Your own Race
+### Creating your own Spells
+### Bending the Rules
+### Combat with Miniatures
+As of Revision 1.2, we have not yet developed formal rules for

@@ -1,0 +1,201 @@
+{
+    "Human": {
+        "description": "The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.",
+        "standings": "Humans get on great with dwarves, well with elves, and distrust orcs and goblins.",
+        "abilities": [
+            "Last Stand",
+            "Strength of Men",
+            "Rally",
+            "Tactics"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": 0,
+            "Luck": -1,
+            "Perception": -1
+        }
+    },
+    "Elf": {
+        "description": "Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.",
+        "standings": "Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.",
+        "abilities": [
+            "Sleepless",
+            "Low-Light Vision",
+            "Wink Wink, Nudge Nudge",
+            "Winged feet",
+            "Counter",
+            "Detect Magic"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -1,
+            "Intelligence": 1,
+            "Inner_Fire": 0,
+            "Charisma": 1,
+            "Luck": 1,
+            "Perception": 1
+        }
+    },
+    "Halfling": {
+        "description": "Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.",
+        "standings": "Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.",
+        "abilities": [
+            "Sling",
+            "Warm Butter",
+            "Soft Bed",
+            "Padfoot",
+            "Carry a Tune",
+            "Thick Headed",
+            "Lightweight"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": -1,
+            "Vitality": -3,
+            "Intelligence": 0,
+            "Inner_Fire": 1,
+            "Charisma": 2,
+            "Luck": 1,
+            "Perception": 1
+        }
+    },
+    "Orc": {
+        "description": "A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.",
+        "standings": "Orcs distrust all races save goblins, who they are close friends with.",
+        "abilities": [
+            "Lamb to the Slaughter",
+            "Bellow",
+            "Still Warm",
+            "Thunderous Blow"
+        ],
+        "stats": {
+            "Dexterity": -1,
+            "Strength": 1,
+            "Vitality": 1,
+            "Intelligence": -1,
+            "Inner_Fire": 1,
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 0
+        }
+    },
+    "Goblin": {
+        "description": "Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.",
+        "standings": "Goblins are close allies with orcs, but fear and hate all others.",
+        "abilities": [
+            "Still Warm",
+            "Mantel",
+            "Dark Vision",
+            "Seek Gold",
+            "Cheap Blow"
+        ],
+        "stats": {
+            "Dexterity": 2,
+            "Strength": -1,
+            "Vitality": -3,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 0,
+            "Perception": 2
+        }
+    },
+    "Catterwol": {
+        "description": "Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.",
+        "standings": "Catterwol keep to themselves, and hate Orcs.",
+        "abilities": [
+            "Dark Vision",
+            "Fisher",
+            "They're Retractable",
+            "Land on your feet",
+            "Loose Skin",
+            "Fear of Water",
+            "Fast Paws"
+        ],
+        "stats": {
+            "Dexterity": 1,
+            "Strength": 0,
+            "Vitality": -1,
+            "Intelligence": 0,
+            "Inner_Fire": 0,
+            "Charisma": 0,
+            "Luck": 1,
+            "Perception": 2
+        }
+    },
+    "Nymph": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Unbreathing",
+            "Flows Like Water",
+            "Water Healing",
+            "Become Mist",
+            "Charm",
+            "Beast Form",
+            "Lightweight",
+            "Dry Up"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": -1,
+            "Vitality": -2,
+            "Intelligence": 2,
+            "Inner_Fire": 0,
+            "Charisma": 2,
+            "Luck": 2,
+            "Perception": 0
+        }
+    },
+    "Lizkin": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Color Choice",
+            "Greater Choice Stat",
+            "Smokevision",
+            "Poison Bite",
+            "Poison Resist",
+            "Shed Tail",
+            "Taste Air",
+            "Camouflage"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 1,
+            "Vitality": 0,
+            "Intelligence": -1,
+            "Inner_Fire": 0,
+            "Charisma": -2,
+            "Luck": 0,
+            "Perception": 0
+        }
+    },
+    "Gnome": {
+        "description": "",
+        "standings": "",
+        "abilities": [
+            "Tinker",
+            "Build",
+            "See and Remember",
+            "Gather",
+            "Grapple Gun",
+            "Resist Magic"
+        ],
+        "stats": {
+            "Dexterity": 0,
+            "Strength": 0,
+            "Vitality": -2,
+            "Intelligence": 1,
+            "Inner_Fire": 1,
+            "Charisma": -1,
+            "Luck": 0,
+            "Perception": -2
+        }
+    }
+}
