@@ -116,7 +116,15 @@
         "type": "choice"
     },
     "Regular Patron": {
-        "description": "You have advantage on charisma checks made in a tavern.",
+        "description": "You have +3 on charisma checks made in a tavern.",
+        "type": "advantage"
+    },
+    "Persuasive": {
+        "description": "You have advantage on persuasion checks.",
+        "type": "advantage"
+    },
+    "Conversationalist": {
+        "description": "You have advantage when teasing information out of people.",
         "type": "advantage"
     },
     "Keen Eye": {
