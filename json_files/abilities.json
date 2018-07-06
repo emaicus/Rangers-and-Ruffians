@@ -556,7 +556,7 @@
         "type": "combat"
     },
     "Sword and Flame": {
-        "description": "During combat, you may use a spell and attack on the same turn, however, neither benefit from advantage or stat bonuses.",
+        "description": "Once every three turns, you may use a spell and attack on the same turn, however, neither benefit from advantage or stat bonuses.",
         "type": "combat"
     },
     "Commit to Memory"  : {

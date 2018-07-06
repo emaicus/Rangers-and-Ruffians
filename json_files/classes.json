@@ -373,7 +373,6 @@
             "Favorite Terrain",
             "Tracker",
             "Animal Companion"
-
         ],
         "stats": {
             "Dexterity": 0,
@@ -435,7 +434,7 @@
         "standings": "Necromancers are feared by most, and are actively hunted by Clerics and followers of the light."
     },
     "Paladin": {
-        "description": "Soldiers of the Light, Paladins are knights who have pledged themselves do a deity. As such, Paladins are capable of performing minor miracles from the book of healing.",
+        "description": "Soldiers of the Light, Paladins are knights who have pledged themselves to a deity. As such, Paladins are capable of performing minor miracles from the book of healing.",
         "abilities": [
             "Bash",
             "Hammer of Light",
