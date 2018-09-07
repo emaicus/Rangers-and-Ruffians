@@ -103,8 +103,20 @@
         "description": "You have perception advantage in the forest.",
         "type": "advantage"
     },
-    "Medicine": {
-        "description": "If you have the ingredients, you can create healing draughts.",
+    "Minor Medicine": {
+        "description": "If you have the ingredients, you can create basic potions.",
+        "type": "general"
+    },
+    "Advanced Medicine": {
+        "description": "If you have the ingredients, you can create advanced potions.",
+        "type": "general"
+    },
+    "Potion Bonus": {
+        "description": "All potions work 20% better on you.",
+        "type": "general"
+    },
+    "Dominate": {
+        "description": "Once every 3 turns, you may attempt to dominate an enemy. If they fail an inner fire saving throw, they must obey you. They can attempt a saving throw every turn thereafter.",
         "type": "general"
     },
     "Under the Stars": {
@@ -169,6 +181,18 @@
     },
     "Double Tap": {
         "description": "Every other turn, you can shoot two arrows at a time.",
+        "type": "combat"
+    },
+    "Physical Double Strike": {
+        "description": "You can attack twice in one action with a physical weapon.",
+        "type": "combat"
+    },
+    "Tripple Strike": {
+        "description": "You can attack three times in a single action.",
+        "type": "combat"
+    },
+    "Double Action": {
+        "description": "You can perform two actions in a turn.",
         "type": "combat"
     },
     "Born in the Saddle": {
@@ -371,8 +395,8 @@
         "description": "Once every 3 turns, you can spend one turn to score a guaranteed critical hit.",
         "type": "combat"
     },
-    "Counter": {
-        "description": "You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack)",
+    "Counter Attack": {
+        "description": "You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack). You may only counterattack once per round.",
         "type": "combat"
     },
     "Carry a Tune": {
@@ -491,19 +515,27 @@
         "description": "You carry a retractable grappling gun.",
         "type": "starting_item"
     },
+    "Grapple Chord": {
+        "description": "You carry a spiked lasso which can be used to restrain and grapple enemies.",
+        "type": "starting_item"
+    },
     "Resist Magic": {
         "description": "You take -2 magic damage.",
         "type": "general"
     },
     "Shifting Cloak": {
-        "description": "You begin your journey with a unique cloak, which takes on the color of your surroundings. +3 in stealth checks when standing still.",
+        "description": "You possess a unique cloak, which takes on the color of your surroundings. +5 in stealth checks when standing still.",
         "type": "starting_item"
     },
     "Favorite Terrain": {
         "description": "At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage in all things.",
         "type": "choice"
     },
-    "Blessed Blade": {
+    "Favorite Enemy": {
+        "description": "You have advantage on all things when dealing with your favorite enemy.",
+        "type": "choice"
+    },
+    "Monster Slayer": {
         "description": "Your weapons are blessed, and do +3 damage to goblins, skeletons, and monsters of the dark.",
         "type": "combat"
     },

@@ -1,13 +1,14 @@
 Light Fighter:
-  - Ranger:
+  - Woodsman: #The Ranger Class
       abilities:
-        - Blessed Blade
-        - Medicine
-        - Shifting Cloak
-        - Favorite Terrain
-        - Learned
-        - Tracker
-        - Twin Blades
+        - Size doesn't matter # d6 shortbow
+        - Physical Double Strike #attack twice
+        - Crippling Shot #Can aim for knees
+        - Every Part # get additional stuff from hunting
+        - Minor Medicine # Can create basic potions
+        - Huntsman # Advantage when attacking wildlife
+        - Favorite Terrain # Advantage on a terrain of your choice
+        - Tracker #Advantage looking for trails
       description: Rangers are the vigilante law keepers of the wilds. They take it upon
         themselves to police roads, countrysides, and entire regions to keep travelers
         safe. They are naturally disliked by lawless individuals.
@@ -22,25 +23,39 @@ Light Fighter:
         Strength: 0
         Vitality: 0
       upgrades :
-        - SUPER Ranger
+        - Ranger #More 
           stats:
-            - Inner_Fire : 3
-            - Intelligence : 1
-            - Perception : 3
-            - Dexterity : 3
-            - Vitality : 1
-            - Perception: 3
+            Dexterity : 3
+            Inner_Fire : 2
+            Intelligence : 1
+            Vitality : 1
+            Strength: 2
+            Perception: 5
           abilities:
-            - Tripple Strike
-            - Favorite Enemy 
-            - Feint
-            - Hold the line
-            - Cartwheel
-        - Magic Archer 
+            - Tripple Strike #Attack 3 times in one action
+            - Learned # know another language
+            - Shifting Cloak # +5 to stealth checks when hiding
+            - Favorite Enemy # Favorite enemy (advantage)
+            - Feint # Once every three turns, dodge
+            - Hold the line # Advantage when teammate is dying
+            - Cartwheel # Dexterity advantage
+        - Monster Slayer 
           stats:
-            Intelligence: 2
-            Inner Fire : 3
-
+            Charisma: 0
+            Dexterity: 2
+            Inner_Fire: 4
+            Luck: 2
+            Perception: 5
+            Strength: 2
+            Vitality: 2
+          abilities:
+            - Monster Slayer # +5 damage to monsters
+            - Double Action # Take two actions on your turn
+            - Counter Attack
+            - Grapple Chord # Grapple enemies with an action
+            - Under the Stars # Sleep outside
+            - Potion Bonus
+            - Dominate
   - Beastmaster:
       abilities:
       - Double Choice Stat
@@ -322,28 +337,7 @@ Ranged Fighter:
             - Perception : 4
             - Vitality : 0
 
-  - Huntsman:
-      abilities:
-      - Size doesn't matter
-      - Every Part
-      - Huntsman
-      - Woodsman
-      - Sureshot
-      - Crippling Shot
-      - Tracker
-      - Trapper
-      description: Skilled archers, huntsmen prefer the woods to towns, and spend most
-        of their time tracking game.
-      standings: Huntsman are generally disliked by knights and the highborn.
-      stats:
-        Charisma: 1
-        Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: -1
-        Luck: 0
-        Perception: 1
-        Strength: 0
-        Vitality: -1
+ 
   - Marksman:
       abilities:
       - Longbow

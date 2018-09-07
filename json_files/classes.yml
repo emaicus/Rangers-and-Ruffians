@@ -3,9 +3,9 @@
   - Ranger
       - Swordmaster #Focus on damage. Gets an extra attack.
       - Magic Archer # Gains access to magic.
-  - Beastmaster
+  - Animal Tamer
     - Rider # Gets mount specific benefits.
-    - Farstrider #Focus on tracking/stealth
+    - Beastmaster #Focus on tracking/stealth
   - Lordling/Lady Fair
     - Proven
   - Monk
@@ -14,6 +14,7 @@
   - Adventurer
     - Warrior # Focus combat
     - Hero # Focus tactics
+
 - Heavy Fighter 
   - Barbarian
     - Raider # Gets dual-wielding.
@@ -23,6 +24,7 @@
     - Shieldbearer # Focus on tanking.
   - Paladin #holy magic knight
     - Holy Knight # Focus on magic
+
 - Mage
   - Wizard
   - Sorcerer
@@ -32,6 +34,7 @@
   - Druid
     - Path of the Fang
     - Path of the Stream
+
 - Ranged Fighter
   - Archer
     - Marksman
@@ -40,6 +43,7 @@
   - Rifleman
     - Sniper #Modifies gun to sniper rifle
     - Carabine #Modifies gun to repeating carabine
+
 - Utility
   - Cleric
     - Enlightened #Gains even more powerful assisting magic

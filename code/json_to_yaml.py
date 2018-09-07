@@ -6,9 +6,9 @@ import yaml
 
 
 
-with open('../json_files/classes.json') as data_file:
+with open('../json_files/abilities.json') as data_file:
     ability_dict = json.load(data_file)
 
 
-with open('tester.yml', 'w') as outfile:
+with open('new_yamls/abilities.yml', 'w') as outfile:
     yaml.dump(ability_dict, outfile, default_flow_style=False)
