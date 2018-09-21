@@ -27,9 +27,6 @@ def mapAbilityType(abilitiy_type):
   else:
     return "General Abilities"
 
-
-  'combat', 'advantage', 'starting_item', 'choice','general'
-
 def classHelper(data, ability_dict, image_path, outfile_name):
   first = True
   for class_type, details in sorted(data.items()):
@@ -88,27 +85,11 @@ def standard_md_out(data, ability_dict, image_path, outfile_name, emphasis):
         print(stat + " " + str(stats[stat]))
       outfile.write("   \n")
 
-def loadData():
-  ability_path = "yamls/abilities.yml"
-  class_path = "yamls/classes.yml"
-  race_path = "yamls/races.yml"
-  
-  with open(race_path) as data_file:
-    race_data = yaml.load(data_file)
-
-  with open(class_path) as data_file:
-    class_data = yaml.load(data_file)
-
-  with open(ability_path) as data_file:
-    ability_dict = yaml.load(data_file)
-  
-  return ability_dict, class_data, race_data
-
 def main():
   ability_dict, class_data, race_data = loadData()
-  classHelper(class_data, ability_dict, "images/class", "classes.md")
-  raceHelper(race_data, ability_dict, "images/race/female", "female_races.md")
-  raceHelper(race_data, ability_dict, "images/race/male", "male_races.md")
+  classHelper(class_data, ability_dict, "images/class", "../classes.md")
+  raceHelper(race_data, ability_dict, "images/race/female", "../female_races.md")
+  raceHelper(race_data, ability_dict, "images/race/male", "../male_races.md")
 
 if __name__ == "__main__":
     main()

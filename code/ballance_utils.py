@@ -1,12 +1,8 @@
 import json
 import sys
 import os
-
-def readInJson(json_file):
-  data = dict()
-  with open(json_file) as data_file:
-    data = json.load(data_file)
-  return data
+import yaml
+import traceback
 
 def mergeAbilities(dictionary, abilities):
   for key, values in dictionary.items():
@@ -20,25 +16,26 @@ def mergeAbilities(dictionary, abilities):
 def makeCombinations(races, classes):
   race_class_combos = dict()
   for race, race_stats in races.items():
-    for class_name, class_stats in classes.items():
-      name = "{0}_{1}".format(race, class_name)
-      race_class_stats = dict()
-      for stat, value in race_stats["stats"].items():
-        race_class_stats[stat] = value + class_stats["stats"][stat]
-      race_class_abilities = race_stats["abilities"] + class_stats["abilities"]
-      
-      race_class_combos[name] = dict()
-      race_class_combos[name]["stats"] = race_class_stats
-      race_class_combos[name]["abilities"] = race_class_abilities
+    for class_type, class_type_list in classes.items():
+      for class_name, class_stats in class_type_list.items():
+        name = "{0}_{1}".format(race, class_name)
+        race_class_stats = dict()
+        for stat, value in race_stats["stats"].items():
+          race_class_stats[stat] = value + class_stats["stats"][stat]
+        race_class_abilities = race_stats["abilities"] + class_stats["abilities"]
+        
+        race_class_combos[name] = dict()
+        race_class_combos[name]["stats"] = race_class_stats
+        race_class_combos[name]["abilities"] = race_class_abilities
   return race_class_combos
 
 def generate_all_stats(combos, races, classes, stats):
-  if not os.path.exists("dump_all"):
-    os.makedirs("dump_all")
+  if not os.path.exists("stat_output"):
+    os.makedirs("stat_output")
 
   #get the data for all classes.
-  with open("dump_all/class_data.txt", 'w') as outfile:
-    for class_name in classes:
+  with open("stat_output/class_data.txt", 'w') as outfile:
+    for class_name in combine_classes(classes):
       outfile.write("\n\nDetails for all {0}s\n".format(class_name))
       for combo_name, val in combos.items():
         if class_name in combo_name:
@@ -46,7 +43,7 @@ def generate_all_stats(combos, races, classes, stats):
           for stat, value in val["stats"].items():
             outfile.write("\t{0}: {1}\n".format(stat, value))
   #get the data for all races.
-  with open("dump_all/race.txt", 'w') as outfile:
+  with open("stat_output/race.txt", 'w') as outfile:
     for race in races:
       outfile.write("\n\nDetails for all {0}s\n".format(race))
       for combo_name, val in combos.items():
@@ -57,7 +54,7 @@ def generate_all_stats(combos, races, classes, stats):
 
   #get the data for all stats.
   for stat in stats:
-    with open("dump_all/{0}.txt".format(stat), 'w') as outfile:
+    with open("stat_output/{0}.txt".format(stat), 'w') as outfile:
       for val in sorted(combos, key=lambda k: combos[k]['stats'][stat]):
         outfile.write("{0}\n".format(val))
         for name, value in combos[val]["stats"].items():
@@ -66,7 +63,7 @@ def generate_all_stats(combos, races, classes, stats):
 
 #Generate the race by race rankings.
 def rankRaces(races, stats):
-  with open("dump_all/race_rankings.txt", 'w') as outfile:
+  with open("stat_output/race_rankings.txt", 'w') as outfile:
     for stat in stats:
       outfile.write("SORT BY: {0}\n".format(stat))
       for race_name in sorted(races, key=lambda k: races[k]['stats'][stat]):
@@ -74,40 +71,80 @@ def rankRaces(races, stats):
         outfile.write("\t{0}: {1}\n".format(race_name, stat_value))
       outfile.write("\n")
 
+def combine_classes(classes):
+  new_classes = dict()
+
+  for class_type, info in classes.items():
+    new_classes.update(info)
+  return new_classes
+
 #Generate the race by race rankings.
 def rankClasses(classes, stats):
-  with open("dump_all/class_rankings.txt", 'w') as outfile:
+  with open("stat_output/class_rankings.txt", 'w') as outfile:
+    combined_classes = combine_classes(classes)
     for stat in stats:
       outfile.write("SORT BY: {0}\n".format(stat))
-      for class_name in sorted(classes, key=lambda k: classes[k]['stats'][stat]):
-        stat_value = classes[class_name]["stats"][stat]
+      for class_name in sorted(combined_classes, key=lambda k: combined_classes[k]['stats'][stat]):
+        stat_value = combined_classes[class_name]["stats"][stat]
         outfile.write("\t{0}: {1}\n".format(class_name, stat_value))
       outfile.write("\n")
 
-def main():
-  #for now, these are the default names for these files. 
-  class_json = "json_files/classes.json"
-  race_json  = "json_files/races.json"
-  abilities_json = "json_files/abilities.json"
+def rankClassType(classes, stats):
+  with open("stat_output/class_type_rankings.txt", 'w') as outfile:
+    for class_type, info in classes.items():
+      outfile.write("{0}\n".format(class_type.upper()))
+      for stat in stats:
+        outfile.write("SORT BY: {0}\n".format(stat))
+        for class_name in sorted(info, key=lambda k: info[k]['stats'][stat]):
+          stat_value = info[class_name]["stats"][stat]
+          outfile.write("\t{0}: {1}\n".format(class_name, stat_value))
+        outfile.write("\n")
 
-  #load in each json
-  abilities = readInJson(abilities_json)
-  races = readInJson(race_json)
-  classes = readInJson(class_json)
+def loadData():
+  ability_path = "../data/abilities.yml"
+  class_path = "../data/classes.yml"
+  race_path = "../data/races.yml"
+  
+  with open(race_path) as data_file:
+    race_data = yaml.load(data_file)
+
+  with open(class_path) as data_file:
+    class_data = yaml.load(data_file)
+
+  with open(ability_path) as data_file:
+    ability_dict = yaml.load(data_file)
+  
+  return ability_dict, class_data, race_data
+
+def main():
+  try:
+    abilities, classes, races = loadData()
+  except Exception as e:
+    print("ERROR: Could not load data.")
+    traceback.print_exc()
+    sys.exit(1)
 
   #by default, races and classes only have ability names, not descriptions.
   # this merges in the descriptions.
   races = mergeAbilities(races, abilities)
   all_race_names = races.keys()
-  classes = mergeAbilities(classes, abilities)
+  for class_type, info in classes.items():
+    mergeAbilities(info, abilities)
+
   all_class_names = classes.keys()
-  all_stat_names = classes[next(iter(classes))]["stats"].keys()
+  all_stat_names = races[next(iter(races))]["stats"].keys()
   all_race_class_combos = makeCombinations(races, classes)
   # print(all_race_class_combos["Human_Barbarian"]['stats']['Strength'])
   
+  print("Generating raw combinations...")
   generate_all_stats(all_race_class_combos, all_race_names, all_class_names, all_stat_names)
+  print("Generating race rankings...")
   rankRaces(races, all_stat_names)
+  print("Generating class rankings...")
   rankClasses(classes, all_stat_names)
+  print("Ranking classes by type...")
+  rankClassType(classes, all_stat_names)
+  print("Done.")
   # for key, val in all_race_class_combos.items():
   #   if "Gnome" in key:
   #     print(key)
