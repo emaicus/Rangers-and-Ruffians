@@ -232,6 +232,7 @@ def get_all_class_names():
 def get_all_race_names():
   load_Rangers_And_Ruffians_Data()
   return list(race_data.keys())
+
 #Given question and options, asks the question and won't return until an option is chosen.
 # if boring is true, boring question is given instead.
 def answerQuestion(question, options, boring_question='', boring=False):
@@ -284,7 +285,7 @@ def removeOptions(options):
   options.append("finished")
 
   while answer != "finished":
-    answer = answerQuestion("All right, give me the name of one you want to remove", options,"Which do you want to remove?",boring)
+    answer = answerQuestion("All right, give me the name of one you want to remove", options,"Which do you want to remove?")
     options.remove(answer)
 
     if len(options) == 0:
@@ -340,6 +341,17 @@ def load_race(name):
   race = race_data[name]
   return rnr_race(name, race['abilities'], race['stats'], race['description'], race['standings'])
 
+def load_class(name):
+  r_class = find_class_info(name)
+  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'], r_class['standings'])
+
+def load_race_class_with_names(race_name, class_name):
+  pass
+
+def load_race_class_with_objects(race_obj, class_obj):
+  pass
+
+
 def find_class_info(name):
   load_Rangers_And_Ruffians_Data()
   for t in class_data.keys():
@@ -350,9 +362,7 @@ def find_class_info(name):
         return info
   return None
 
-def load_class(name):
-  r_class = find_class_info(name)
-  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'], r_class['standings'])
+
 
 
 

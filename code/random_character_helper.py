@@ -6,190 +6,10 @@ import traceback
 import random
 import argparse
 import time
+import names
 
 import rnr_utils
-
-gender_words = {
-  "male" : {
-    "<HIMSELF_HERSELF>" : "himself",
-    "<HIS_HER>" : "his",
-    "<HE_SHE>" : "he",
-    "<HIS_HER>" : "his",
-    "<SAME_GENDER_MOTHER_FATHER>" : "father",
-    "<SAME_GENDER_BROTHER_SISTER>" : "brother",
-    "<SAME_GENDER_KING_QUEEN>" : "king",
-    "<SAME_GENDER_PRIEST_PRIESTESS>" : "priest",
-    "<SAME_GENDER_LORD_LADY>" : "lord",
-    "<OPPOSITE_GENDER_MOTHER_FATHER>" : "mother",
-    "<OPPOSITE_GENDER_BROTHER_SISTER>" : "sister",
-    "<OPPOSITE_GENDER_KING_QUEEN>" : "queen",
-    "<OPPOSITE_GENDER_PRIEST_PRIESTESS>" : "priestess",
-    "<OPPOSITE_GENDER_LORD_LADY>" : "lord",
-    "<OPPOSITE_GENDER_SON_DAUGHTER>" : "daughter",
-    "<OPPOSITE_GENDER_WIFE_HUSBAND>" : "wife",
-    "<MAN_WOMAN>" : "man",
-    "<DUDE_DUDETTE>" : "dude",
-    "<HIM_HER>" : "him"
-  },
-  "female" : {
-    "<HIMSELF_HERSELF>" : "herself",
-    "<HIS_HER>" : "her",
-    "<HE_SHE>" : "she",
-    "<SAME_GENDER_MOTHER_FATHER>" : "mother",
-    "<SAME_GENDER_BROTHER_SISTER>" : "sister",
-    "<SAME_GENDER_KING_QUEEN>" : "queen",
-    "<SAME_GENDER_PRIEST_PRIESTESS>" : "priestess",
-    "<SAME_GENDER_LORD_LADY>" : "lady",
-    "<OPPOSITE_GENDER_MOTHER_FATHER>" : "father",
-    "<OPPOSITE_GENDER_BROTHER_SISTER>" : "brother",
-    "<OPPOSITE_GENDER_KING_QUEEN>" : "king",
-    "<OPPOSITE_GENDER_PRIEST_PRIESTESS>" : "priest",
-    "<OPPOSITE_GENDER_LORD_LADY>" : "lady",
-    "<OPPOSITE_GENDER_SON_DAUGHTER>" : "son",
-    "<OPPOSITE_GENDER_WIFE_HUSBAND>" : "husband",
-    "<MAN_WOMAN>" : "woman",
-    "<DUDE_DUDETTE>" : "dudette",
-    "<HIM_HER>" : "her"
-  }
-}
-weaknesses = [
-  "is afraid of the dark",
-  "is very unsure of <HIMSELF_HERSELF>",
-  "can't read or write",
-  "hears voices is <HIS_HER> head",
-  "steals anything that isn't bolted down",
-  "guards <HIS_HER> food closely",
-  "thinks that <HE_SHE> is the chosen one",
-  "smiles all the time",
-  "has a very creepy smile",
-  "is physically aroused by pain",
-  "falls in love really easily",
-  "isn't afraid to cry",
-  "holds in <HIS_HER> emotions",
-  "can't hold in <HIS_HER> emotions",
-  "likes animals more than people",
-  "isn't afraid of anything",
-  "is afraid of everything",
-  "is socially awkward",
-  "loves a good fight",
-  "is a <MAN_WOMAN> of few words",
-  "won't shut up",
-  "has heavy scarring on <HIS_HER> face",
-  "is covered in freckles",
-  "carries the scar of an old wound",
-  "is super attractive",
-  "is very naive",
-  "is relatively homely",
-  "squeaks when <HE_SHE> laughs",
-  "thinks in black and white",
-  "likes to set fires",
-  "can't swim well",
-  "doesn't take discomfort well",
-  "is always too cold",
-  "has a cold personality",
-  "gets angry easily",
-  "is infinitely levelheaded",
-  "has trouble sleeping and always has dark bags under <HIS_HER> eyes",
-  "worries about everything",
-  "suffers from depression",
-  "giggles at everything",
-  "desperately seeks approval",
-  "is very smart, but doesn't know how to talk to people",
-  "is very social around people, but is quiet and depressed when <HE_SHE> is alone",
-  "is scared of fighting, but does it anyway",
-  "doesn't like heights",
-  "thinks <HE_SHE> is a total idiot",
-  "can't ride a horse",
-  "won't stop when <HE_SHE> has <HIS_HER> mind set on something",
-  "likes to be fashionable",
-  "recently broke up with <HIS_HER> longtime lover",
-  "loves them and leaves them",
-  "takes promises deadly serious",
-  "hates the government",
-  "always follows the rules",
-  "is madly in love with a person <HE_SHE> barely met",
-  "has a hyperinflated ego",
-  "is terrified of animals",
-  "performs best when others aren't watching",
-  "will do anything for money",
-  "speaks in the third person",
-  "always believes the best of everyone",
-  "always believes the worst of everyone",
-  "is very clumsy",
-  "is afraid of death",
-  "feels woozy at the sight of blood",
-  "is a showoff",
-  "is built like a brick shithouse",
-  "only weighs about eighty pounds"
-]
-
-hometowns = [
-  "was raised in the wilds",
-  "was raised in a castle",
-  "was born in servitude",
-  "was brought up as a student in an academy",
-  "was brought up as a servant in an academy",
-  "was 37 years old when <HIS_HER> <OPPOSITE_GENDER_WIFE_HUSBAND> died",
-  "hates being away from <HIS_HER> <OPPOSITE_GENDER_WIFE_HUSBAND>",
-  "married into a cult",
-  "is the god of a small cult",
-  "lost <HIS_HER> <OPPOSITE_GENDER_SON_DAUGHTER> to disease",
-  "was stolen as a baby and raised by wizards",
-  "was brought up by wolves",
-  "was born into a circus",
-  "was born to peasants",
-  "served in the army",
-  "spent some time as a bandit",
-  "spent some time as a sailor",
-  "apprenticed to a general",
-  "owns a small shop",
-  "lost <HIS_HER> home in a raid",
-  "lost <HIS_HER> family in a fire",
-  "lost <HIS_HER> <SAME_GENDER_MOTHER_FATHER> to a dragon",
-  "has seen <HIS_HER> fair share of dungeons",
-  "grew up working in a mine",
-  "spent some time training to be a <SAME_GENDER_PRIEST_PRIESTESS>",
-  "is of royal blood, but <HIS_HER> family was usurped",
-  "is 7th in line to the throne",
-  "is next in line to the throne",
-  "adventured in <HIS_HER> youth",
-  "retired some years ago",
-  "spent <HIS_HER> youth as an adventurer",
-  "was traumatized by abusive parents",
-  "was raised by <HIS_HER> older <SAME_GENDER_BROTHER_SISTER>",
-  "was raised by <HIS_HER> older <OPPOSITE_GENDER_BROTHER_SISTER>",
-  "was raised by a blacksmith",
-  "was raised by a bandit <SAME_GENDER_KING_QUEEN>",
-  "was raised by a paladin",
-  "was raised by a <SAME_GENDER_PRIEST_PRIESTESS>",
-  "was raised by <HIS_HER> <SAME_GENDER_MOTHER_FATHER>, a <SAME_GENDER_LORD_LADY>",
-  "was raised by a blacksmith",
-  "was raised by a bandit <OPPOSITE_GENDER_KING_QUEEN>",
-  "was raised by a paladin",
-  "was raised by a <OPPOSITE_GENDER_PRIEST_PRIESTESS>",
-  "was raised by <HIS_HER> <SAME_GENDER_MOTHER_FATHER>, a <OPPOSITE_GENDER_LORD_LADY>",
-  "taught <HIMSELF_HERSELF> how to fight in the streets of a large city",
-  "had no parents, so <HE_SHE> had to bring up <HIS_HER> little <SAME_GENDER_BROTHER_SISTER> in the streets",
-  "had no parents, so <HE_SHE> had to bring up <HIS_HER> little <OPPOSITE_GENDER_BROTHER_SISTER> in the streets",
-]
-
-introductions = [
-  "What about trying",
-  "Wouldn't it be cool to be",
-  "What if you tried being",
-  "Oh shit, what if you were",
-  "Hot damn, what about playing as",
-  "Now hear me out, what if you played as",
-  "This might sound a little crazy, but what if you tried being",
-  "Hey, what about",
-  "Don't you think it would be interesting to step into the shoes of",
-  "Oh snap, what if you tried playing",
-  "Don't you think roleplay would be simple if you were",
-  "Don't you think everyone would be jealous if you played",
-  "Hey hey hey! What if you were to be",
-  "Son of a bitch! I think I've got it! What about",
-  "Gods above! It's perfect! What if you tried playing"
-]
+import rnr_descriptions
 
 weird_response = [
   "sexy ass",
@@ -209,7 +29,20 @@ manual_gender_selection = [
   and was afraid to eat pickles!\nWait, I'm getting ahead of myself again! This is all you."
 ]
 
-def random_choice(allowed_genders, allowed_races, allowed_classes, boring):
+def get_physical_description(race, gender, bearded_override, name):
+  face  = rnr_descriptions.getFace(gender, name) 
+  hair  = rnr_descriptions.getHair(gender, name, race, bearded_override)
+  eyes  = rnr_descriptions.getEyes(gender, name)
+  body  = rnr_descriptions.getBody(gender, name, race)
+ # quirk = rnr_descriptions.getQuirk(gender, name)
+
+  print(face)
+  print(hair)
+  print(eyes)
+  print(body)
+  #print(quirk)
+
+def random_choice(allowed_genders, allowed_races, allowed_classes, boring, beard_override=False):
   bad = True
   if boring:
     print("Enter yes or no.")
@@ -217,27 +50,30 @@ def random_choice(allowed_genders, allowed_races, allowed_classes, boring):
     print("Enter 'yes' for yes or literally anything else for no.") 
   while bad:
     random_gender = random.choice(allowed_genders)
-    my_gender_dict = gender_words[random_gender]
 
-    random_weakness = random.choice(weaknesses)
+    random_weakness = random.choice(rnr_descriptions.weaknesses)
+    random_weakness = rnr_descriptions.gender_word_replacement(random_weakness, random_gender)
 
-    for term in my_gender_dict.keys():
-      random_weakness = random_weakness.replace(term, my_gender_dict[term])
-
-    random_origin = random.choice(hometowns)
-
-    for term in my_gender_dict.keys():
-      random_origin = random_origin.replace(term, my_gender_dict[term])
+    random_origin = random.choice(rnr_descriptions.hometowns)
+    random_origin = rnr_descriptions.gender_word_replacement(random_origin, random_gender)
 
     random_race = random.choice(allowed_races)
     random_class = random.choice(allowed_classes)
 
     if not boring:
-      random_intro = random.choice(introductions)
+      random_intro = random.choice(rnr_descriptions.introductions)
     else:
       random_intro = "Would you like to play as"
 
-    response = input("{0} a {1} {2} {3} who {4}, and who {5}?\n".format(random_intro, random_gender, random_race,random_class, random_origin, random_weakness))
+    name = names.get_first_name(gender=random_gender)
+
+    print("Meet {0}.".format(name))
+    print("{0} is a {1} {2}".format(name, random_race, random_class))
+    get_physical_description(random_race, random_gender, beard_override, name)
+    print("{0} {1}, and {2}".format(name, random_origin, random_weakness))
+
+    response = input("do you want to play as {0}".format(name))
+    #response = input("{0} a {1} {2} {3} who {4}, and who {5}?\n".format(random_intro, random_gender, random_race,random_class, random_origin, random_weakness))
     
     if response.strip() == "yes":
       bad = False
@@ -253,9 +89,8 @@ def manual_build(allowed_genders, allowed_races, allowed_classes, boring):
     my_gender_dict = gender_words[gender]
 
     gender_response = random.choice(manual_gender_selection)
+    gender_response = gender_word_replacement(gender_response, gender)
 
-    for term in my_gender_dict.keys():
-      gender_response = gender_response.replace(term, my_gender_dict[term])
 
     print(gender_response)
     print()
@@ -279,8 +114,7 @@ def manual_backstory(gender, race, c, boring):
     satisfied = "no"
     while satisfied == "no":
       origin = random.choice(hometowns)
-      for term in my_gender_dict.keys():
-        origin = origin.replace(term, my_gender_dict[term])
+      origin = gender_word_replacement(origin, gender)
       satisfied = rnr_utils.answerQuestionFancy("Alright, what if your character {0}?".format(origin),[["Sounds perfect!", "yes"],["Nah, that ain't me!", "no"]], "How about {0}?".format(origin), boring)
   else:
     origin = input("Finish this sentence: My character is a {0} {1} {2} who ".format(gender, race, c))
@@ -291,8 +125,7 @@ def manual_backstory(gender, race, c, boring):
     satisfied = "no"
     while satisfied == "no":
       weakness = random.choice(weaknesses)
-      for term in my_gender_dict.keys():
-        weakness = weakness.replace(term, my_gender_dict[term])
+      weakness = gender_word_replacement(weakness, gender)
       satisfied = rnr_utils.answerQuestionFancy("Alright, what if your character {0}?".format(weakness),[["Sounds par for the course.", "yes"],["I don't think so.", "no"]],"How about: {0}".format(weakness),boring)
   else:
     weakness = input("Finish this sentence: My character is a {0} {1} {2} who {3} and ".format(gender, race, c, origin))
@@ -303,13 +136,23 @@ def manual_backstory(gender, race, c, boring):
 
 def main():
 
+  # data_trove = 'feature_trainer.json'
+  # all_combos = dict()
+  # exit(1)
+
+
   parser = argparse.ArgumentParser(description='This utility will help you make an awesome rangers and ruffians character!',)
-  parser.add_argument('--random', action="store_true", default=False)
-  parser.add_argument('--boring', action="store_true", default=False)
+  parser.add_argument('--random', action="store_true", default=False, help="Start off making a random character!")
+  parser.add_argument('--boring', action="store_true", default=False, help="Remove the program's soul!")
+  parser.add_argument('--generate_name', action="store_true", default=False, help="Let the program generate character names for you!")
+  parser.add_argument('--bearded', action="store_true", default=False, help="Your characters all have facial hair!")
+  parser.add_argument('--train', action="store_true", default=False, help="Train the program!")
+
   args = parser.parse_args()
   boring = args.boring
   create_random = args.random
- 
+  random_names = args.generate_name
+
   allowed_races = rnr_utils.get_all_race_names()
   allowed_classes = rnr_utils.get_all_class_names()  
   allowed_genders = ["male", "female"]
@@ -322,7 +165,7 @@ def main():
     if answer == "random":
       create_random = True
 
-  if create_random:
+  if create_random and not args.random:
     answer = rnr_utils.answerQuestion("Alright, so you want a random character, huh. Are you going to be picky about it?", ["totally random", "remove options"], "Do you want a totally random character, or do you want to remove options?", boring)
     if answer == "remove options":
       keep = rnr_utils.answerQuestionFancy("Would you like your characters to be created with a specific gender?", [["Either is fine, I ain't no sexist!", "either"], ["Nah, I want male characters!", "male"], ["Hit me up with a female character, my man!", "female"]], "Do you have a character gender preference?", boring)
@@ -334,7 +177,7 @@ def main():
         allowed_races   = rnr_utils.removeOptions(allowed_races)
       if rnr_utils.confirm("Would you like your characters to be created with a specific class?",  ["There are some classes I would rather not be!", "remove"], ["Class is an artificial construct created by the bourgeois!", "any"], boring=boring):
         allowed_classes = rnr_utils.removeOptions(allowed_classes)
-
+  os.system("clear")
   os.system("clear")
   rnr_utils.printLogo()
   if create_random:
