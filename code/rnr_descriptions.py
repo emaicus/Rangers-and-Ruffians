@@ -105,10 +105,8 @@ human_like_skin = ['Elf', "Gnome", "Halfling","Human","Dwarf"]
 #     "slightly pointed ears",  
 #   ],
 #   "male" :[
-#   #all got pulled out to beards
 #   ],
 #   "female" : [
-#    "has pierced ears",
 #     "has a long neck",
 #   ]
 # }
@@ -214,12 +212,27 @@ def gender_word_replacement(string, gender):
     string = string.replace(term, my_gender_dict[term])
   return string
 
-def marchingTrain(reverse=False):
+
+
+def marchingTrain(reverse=False, my_name=''):
   with open('TRAINING_DICTIONARY.json', 'r') as infile:
     relations = json.load(infile)
 
+  if my_name == 'Oliver':
+    print("Hello Oliver! It's good to see you!")
+    responsibilities = ['origins', 'eye_colors', 'rnr_classes']
+  elif my_name == 'Evan':
+    print("Evan coming online.")
+    responsibilities = ['ages', 'hair_colors', 'physical_descriptions']
+  else:
+    print("Oliver, if you are seeing this, tell Evan! (he forgot to configure the program to run for you)")
+    responsibilities = ['ages', 'origins', 'hair_colors', 'eye_colors', 'physical_descriptions', 'rnr_classes']
+
+
   encountered_one = False
   for left_hand_side_type, left_hand_side_dicts in sorted(relations.items(), reverse=reverse):
+    if not left_hand_side_type in responsibilities:
+      continue
     for l_dict in left_hand_side_dicts:
       left_hand_side_name = l_dict['name']
       for right_hand_side_type, right_hand_side_dicts in l_dict['items'].items():
@@ -247,7 +260,7 @@ def marchingTrain(reverse=False):
           #   sys.exit(0)
   with open('TRAINING_DICTIONARY.json', 'w') as outfile:
     json.dump(relations, outfile, indent=4)
-
+  print("YOU DID IT! All finished!")
 
 
 
@@ -382,11 +395,11 @@ def generate_training_dictionary():
     json.dump(train, outfile, indent=4)
 
 if __name__ == "__main__":
-
+ # rnr_utils.convert_json_file_to_yml_file('TRAINING_DICTIONARY.json','out.yml')
   # rnr_utils.printLogo()
   #updateDatabase('update.json')
  #initial_conversion_function()
  # generate_training_dictionary()  
-  train()
+  marchingTrain(my_name = '')
  #generate_training_dictionary()
   #train()

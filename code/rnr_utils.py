@@ -164,7 +164,7 @@ def convert_json_file_to_yml_file(input_file, output_file):
   try:
     with open(input_file) as data_file:
         d = json.load(data_file)
-    with open('output_file', 'w') as outfile:
+    with open(output_file, 'w') as outfile:
         yaml.dump(d, outfile, default_flow_style=False)
   except Exception as e:
     print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
