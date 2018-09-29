@@ -441,7 +441,7 @@ Size doesn't matter:
   description: You begin your journey with a d6 shortbow.
   type: starting_item
 Sleepless:
-  description: Elves can rest without sleeping for one day, allowing them to keep
+  description: Your can rest without sleeping for one day, allowing you to keep
     watch long into the night. Resting at night counts as sleep even if you are awake.
   type: general
 Sling:

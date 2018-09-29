@@ -213,6 +213,24 @@ def gender_word_replacement(string, gender):
   return string
 
 
+def fill_in_default(dic, left_hand_side_type, right_hand_side_type, target_rhs_name, val):
+    for l_dict in dic[left_hand_side_type]:
+      left_hand_side_name = l_dict['name']
+      #for right_hand_side_type, right_hand_side_dicts in l_dict['items'].items():
+      right_hand_side_dicts = l_dict['items'][right_hand_side_type]
+
+      for r_dict in right_hand_side_dicts:
+        if r_dict['score'] != 'MIA':
+          continue
+        right_hand_side_name = r_dict['name']
+        right_hand_side_uuid = r_dict['uid']
+
+        if right_hand_side_name != target_rhs_name:
+          continue
+        r_dict['score'] = val 
+
+        print('Setting {0} {1} {2} {3} to {4}'.format(left_hand_side_name, left_hand_side_type, right_hand_side_name, right_hand_side_type, val))
+
 
 def marchingTrain(reverse=False, my_name=''):
   with open('TRAINING_DICTIONARY.json', 'r') as infile:
@@ -236,21 +254,30 @@ def marchingTrain(reverse=False, my_name=''):
     for l_dict in left_hand_side_dicts:
       left_hand_side_name = l_dict['name']
       for right_hand_side_type, right_hand_side_dicts in l_dict['items'].items():
-        for l_dict in right_hand_side_dicts:
-          if l_dict['score'] != 'MIA':
+        for r_dict in right_hand_side_dicts:
+          if r_dict['score'] != 'MIA':
             continue
-          right_hand_side_name = l_dict['name']
+          right_hand_side_name = r_dict['name']
+          right_hand_side_uuid = r_dict['uid']
           encountered_one = True
-          answer = rnr_utils.answerQuestion('Does {0} {1} EVER match with {2} {3}?'.format(left_hand_side_name, left_hand_side_type, right_hand_side_name, right_hand_side_type), ['y','n'],'')
+          
+          answer = rnr_utils.answerQuestion("Does '{0}' {1} EVER match with '{2}' {3}?".format(left_hand_side_name, left_hand_side_type, right_hand_side_name, right_hand_side_type), ['y','n','all', 'none'],'')
           if answer == "n":
             val = 0
           elif answer == 'y':
             val = 1
+          elif answer == 'all':
+            fill_in_default(relations, left_hand_side_type, right_hand_side_type, right_hand_side_name, 1)
+            val = 1
+          elif answer == "none":
+            fill_in_default(relations, left_hand_side_type, right_hand_side_type, right_hand_side_name, 0)
+            val = 0
           else:
             print("woah, how did this happen?")
             val = 1
+
           
-          l_dict['score'] = val
+          r_dict['score'] = val
         with open('TRAINING_DICTIONARY.json', 'w') as outfile:
           json.dump(relations, outfile, indent=4)
         if encountered_one:
@@ -400,6 +427,6 @@ if __name__ == "__main__":
   #updateDatabase('update.json')
  #initial_conversion_function()
  # generate_training_dictionary()  
-  marchingTrain(my_name = '')
+  marchingTrain(my_name = 'Evan')
  #generate_training_dictionary()
   #train()

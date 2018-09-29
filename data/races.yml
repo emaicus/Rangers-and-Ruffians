@@ -186,31 +186,48 @@ Orc:
     Vitality: 3
 Dwarf:
   abilities:
-  - Bellow
+  - Fixit Dwarf
+  - Miner's Eye
+  - Stocky : You have advantage against any check that could cause you to go prone.
+  - Natural Sprinter: When running short distances, take advantage on atheletics checks.
+  - Very Dangerous over Short Distances: If you begin your turn next to an enemy, take advantage when attacking them.
+  - Stone Skin: Half any blunt damage.
+  - Boozehound
+  - Thick Headed
+  - They call me Smith: You are able to use smithies to improve weapons and equiptment (given you buy the materials).
   description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
                 Dwarves prefer low places, and are at home in buildings and caves.
-  standings: Orcs distrust all races save goblins, who they are close friends with.
+  standings: Dwarves are practical, and deal with matters of the physical realm. 
+             As such, Dwarves distrust the more magical types, like elves, and
+             enjoy the company of the more technically inclined, like Gnomes. 
   stats:
     Charisma: 0
     Dexterity: -1
     Inner_Fire: 1
     Intelligence: 0
-    Luck: 0
-    Perception: 0
+    Luck: 1
+    Perception: -1
     Strength: 1
     Vitality: 2
 Daemonspawn:
   abilities: 
-  - Bellow
-  description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
-                Dwarves prefer low places, and are at home in buildings and caves.
-  standings: Orcs distrust all races save goblins, who they are close friends with.
+  - Fix Your Eyes on Me : If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.
+  - Infernal Blood: At the cost of 5 hp, make a second action during combat.
+  - The Opener : If you attack an enemy that has not yet moved in combat, do double damage. If they fail a strength saving throw, they are knocked prone.
+  - True Sight: You are able to see invisible entities. 
+  - Darkvision
+  - Sleepless
+  - We are One : Your charisma is treated as 0 when talking with other daemonspawn.
+  description: The daemonspawn were born of an unholy union between elves and the daemons of old. When the daeomons were thrown down and destroyed, the daemonspawn remained.
+               Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and demonizes them. As such, the wise daemonspawn is always
+               vigilant and trusts no one.
+  standings: Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.
   stats:
-    Charisma: 1
+    Charisma: -4
     Dexterity: 1
-    Inner_Fire: 2
+    Inner_Fire: 3
     Intelligence: 1
-    Luck: 0
+    Luck: 1
     Perception: 0
     Strength: 0
-    Vitality: 0
+    Vitality: 1
