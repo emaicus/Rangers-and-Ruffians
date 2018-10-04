@@ -1,95 +1,34 @@
 import json
 import sys
 import os
-from collections import OrderedDict
-import yaml
-
-def filterAbilities(abilities, ability_dict):
-  filtered_abilities = dict()
-  for ability in abilities:
-    print(ability)
-    print(ability_dict[ability])
-    ability_type = ability_dict[ability]["type"]
-    if not ability_type in filtered_abilities:
-      filtered_abilities[ability_type] = list()
-    filtered_abilities[ability_type].append(ability)
-  return filtered_abilities
-
-def mapAbilityType(abilitiy_type):
-  if abilitiy_type == "combat":
-    return "Combat Abilities"
-  elif abilitiy_type == "advantage":
-    return "Advantages"
-  elif abilitiy_type == "starting_item":
-    return "Starting Items"
-  elif abilitiy_type == "choice":
-    return "Choices"
-  else:
-    return "General Abilities"
-
-def classHelper(data, ability_dict, image_path, outfile_name):
-  first = True
-  for class_type, details in sorted(data.items()):
-    if class_type == 'CUT':
-      continue
-    mode = 'w' if first else 'a'
-    first = False
-    with open(outfile_name, mode) as outfile:
-      outfile.write("# {0} \n".format(class_type.capitalize()))
-    standard_md_out(details, ability_dict, image_path, outfile_name, '##')
+import rnr_utils
 
 
-
-def raceHelper(data, ability_dict, image_path, outfile_name):
-  with open(outfile_name, 'w') as outfile:
-    pass
-  standard_md_out(data, ability_dict, image_path, outfile_name, '#')
-
-def standard_md_out(data, ability_dict, image_path, outfile_name, emphasis):
-  with open(outfile_name, 'a') as outfile:    
-    for name, details in sorted(data.items()):
-      print(name)
-      print(json.dumps(details, indent=4))
-      lowername = name.lower()
-      #relative path for now
-      lowername = lowername.replace(' ', '_')
-      path_to_image = "{0}/{1}.jpg".format(image_path, lowername)
-      description = details["description"]
-      if 'standings' in details:
-        standings = details["standings"]
-      else:
-        standings = name + "s come in so many shapes, sizes, and belief sets that there is no set standing for them."
-      abilities = details["abilities"]
-      stats = details["stats"]
-      outfile.write("{0} {1} \n".format(emphasis, name))
-      outfile.write('![{0}]({1}?raw=true "{2}") \n\n'.format(name, path_to_image, name))
-      print(name) 
-      outfile.write(description + "  \n")
-      print(description)
-      outfile.write("**Standings:** " + standings + "  \n")
-      print(standings)
-      outfile.write("#### Abilities:   \n")
-      abilities = filterAbilities(abilities, ability_dict)
-      for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
-        if not key in abilities:
-          continue
-        outfile.write("##### {0}:   \n".format(mapAbilityType(key)))
-        for ability in abilities[key]:
-          description = ability_dict[ability]["description"]
-          outfile.write("  * **{0}**: {1}  \n".format(ability, description))
-          print(ability, ": ", description)
-        outfile.write("    \n")
-      outfile.write("\n##### Stats:  " + "  \n")
-      for stat in stats:
-        outfile.write("  * " +  stat + ": " + str(stats[stat]) + "  \n")
-        print(stat + " " + str(stats[stat]))
-      outfile.write("   \n")
 
 def main():
-  ability_dict, class_data, race_data = loadData()
   classHelper(class_data, ability_dict, "images/class", "../classes.md")
   raceHelper(race_data, ability_dict, "images/race/female", "../female_races.md")
   raceHelper(race_data, ability_dict, "images/race/male", "../male_races.md")
 
+
 if __name__ == "__main__":
-    main()
+  rnr_utils.printLogo()
+
+  races = rnr_utils.load_all_race_objects()
+  rnr_classes = rnr_utils.load_all_class_objects_by_type()
+
+  with open('../classes.md', 'w') as outfile:
+    for rnr_class_type, class_list in sorted(rnr_classes.items()):
+      outfile.write('# {0}   \n'.format(rnr_class_type))
+      for rnr_class in sorted(class_list, key=lambda x: x.name):
+        outfile.write(rnr_class.markdownify("images/class"))
+        
+   
+
+  for gender in ['male', 'female']:
+    with open('../{0}_races.md'.format(gender), 'w') as outfile:
+      for race in sorted(races, key=lambda x: x.name):
+       outfile.write(race.markdownify('images/race/{0}'.format(gender)))
+
+  print()
+  print("Done!")

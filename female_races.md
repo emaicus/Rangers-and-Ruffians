@@ -1,8 +1,9 @@
-# Catterwol 
+## Catterwol 
 ![Catterwol](images/race/female/catterwol.jpg?raw=true "Catterwol") 
 
 Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful by all races. Orc sometimes kill them for their pelt.  
 **Standings:** Catterwol keep to themselves, and hate Orcs.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **They're Retractable**: You have retractable, razor sharp claws capable of doing 1d8 damage.  
@@ -28,34 +29,54 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * Strength: 0  
   * Vitality: -2  
    
-# Daemonspawn 
+## Daemonspawn 
 ![Daemonspawn](images/race/female/daemonspawn.jpg?raw=true "Daemonspawn") 
 
-A stocky, brooding people, many dwarves are natural craftsman and artisans. Dwarves prefer low places, and are at home in buildings and caves.  
-**Standings:** Orcs distrust all races save goblins, who they are close friends with.  
+The daemonspawn were born of an unholy union between elves and the daemons of old. When the daeomons were thrown down and destroyed, the daemonspawn remained. Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and demonizes them. As such, the wise daemonspawn is always vigilant and trusts no one.  
+**Standings:** Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.  
+
 #### Abilities:   
 ##### Combat Abilities:   
-  * **Bellow**: On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.  
+  * **Infernal Blood**: At the cost of 5 hp, make a second action during combat.  
+  * **The Opener**: If you attack an enemy that has not yet moved in combat, do double damage. If they fail a strength saving throw, they are knocked prone.  
+    
+##### General Abilities:   
+  * **Fix Your Eyes on Me**: If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.  
+  * **True Sight**: You are able to see invisible entities.  
+  * **Dark Vision**: You can see well in the dark.  
+  * **Sleepless**: Your can rest without sleeping for one day, allowing you to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
+  * **We are One**: Your charisma is treated as 0 when talking with other daemonspawn.  
     
 
 ##### Stats:    
-  * Charisma: 1  
+  * Charisma: -4  
   * Dexterity: 1  
-  * Inner_Fire: 2  
+  * Inner_Fire: 3  
   * Intelligence: 1  
-  * Luck: 0  
+  * Luck: 1  
   * Perception: 0  
   * Strength: 0  
-  * Vitality: 0  
+  * Vitality: 1  
    
-# Dwarf 
+## Dwarf 
 ![Dwarf](images/race/female/dwarf.jpg?raw=true "Dwarf") 
 
 A stocky, brooding people, many dwarves are natural craftsman and artisans. Dwarves prefer low places, and are at home in buildings and caves.  
-**Standings:** Orcs distrust all races save goblins, who they are close friends with.  
+**Standings:** Dwarves are practical, and deal with matters of the physical realm. As such, Dwarves distrust the more magical types, like elves, and enjoy the company of the more technically inclined, like Gnomes.  
+
 #### Abilities:   
-##### Combat Abilities:   
-  * **Bellow**: On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.  
+##### Advantages:   
+  * **Stocky**: You have advantage against any check that could cause you to go prone.  
+  * **Natural Sprinter**: When running short distances, take advantage on atheletics checks.  
+  * **Very Dangerous over Short Distances**: If you begin your turn next to an enemy, take advantage when attacking them.  
+  * **Boozehound**: You have a very high tolerance for alchohol. Do not take disadvantage when drunk.  
+  * **Thick Headed**: You have advantage on any checks involving an enemy breaking into your mind.  
+    
+##### General Abilities:   
+  * **Fixit Dwarf**: Given a few hours, you can repair most steel made items.  
+  * **Miner's Eye**: When dealing with minerals or works made of stone, get a +7 benefit to intelligence.  
+  * **Stone Skin**: You take half damage on blunt force attacks (e.g. if you are hit with a club).  
+  * **They call me Smith**: You are able to use smithies to improve weapons and equiptment (given you buy the materials).  
     
 
 ##### Stats:    
@@ -63,16 +84,17 @@ A stocky, brooding people, many dwarves are natural craftsman and artisans. Dwar
   * Dexterity: -1  
   * Inner_Fire: 1  
   * Intelligence: 0  
-  * Luck: 0  
-  * Perception: 0  
+  * Luck: 1  
+  * Perception: -1  
   * Strength: 1  
   * Vitality: 2  
    
-# Elf 
+## Elf 
 ![Elf](images/race/female/elf.jpg?raw=true "Elf") 
 
 Elves are the most magical of the races. Forest-dwellers with long lives, elves spend their days practicing magic and honing their skills.  
 **Standings:** Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and hate goblins and orcs.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Counter Attack**: You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack). You may only counterattack once per round.  
@@ -82,7 +104,7 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
   * **Winged feet**: You have advantage on acrobatics checks.  
     
 ##### General Abilities:   
-  * **Sleepless**: Elves can rest without sleeping for one day, allowing them to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
+  * **Sleepless**: Your can rest without sleeping for one day, allowing you to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
   * **Low-Light Vision**: You can see in low light.  
   * **Detect Magic**: You are able to perform magic detection checks.  
     
@@ -97,11 +119,12 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
   * Strength: -1  
   * Vitality: -1  
    
-# Gnome 
+## Gnome 
 ![Gnome](images/race/female/gnome.jpg?raw=true "Gnome") 
 
   
 **Standings:**   
+
 #### Abilities:   
 ##### Starting Items:   
   * **Grapple Gun**: You carry a retractable grappling gun.  
@@ -124,11 +147,12 @@ Elves are the most magical of the races. Forest-dwellers with long lives, elves 
   * Strength: 0  
   * Vitality: -1  
    
-# Goblin 
+## Goblin 
 ![Goblin](images/race/female/goblin.jpg?raw=true "Goblin") 
 
 Small and wicked, goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons.  
 **Standings:** Goblins are close allies with orcs, but fear and hate all others.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Cheap Blow**: Once every three turns, your attack knocks an enemy prone.  
@@ -152,11 +176,12 @@ Small and wicked, goblins are tricksters and thieves. Known for eating their kil
   * Strength: -1  
   * Vitality: -3  
    
-# Halfling 
+## Halfling 
 ![Halfling](images/race/female/halfling.jpg?raw=true "Halfling") 
 
 Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, and are hardy for their size.  
 **Standings:** Halflings get on well with Elves, Dwarves, and men, though often the other races forget they exist.  
+
 #### Abilities:   
 ##### Advantages:   
   * **Warm Butter**: Your are naturally talented chef. You have advantage when cooking.  
@@ -182,11 +207,12 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   * Strength: -1  
   * Vitality: -2  
    
-# Human 
+## Human 
 ![Human](images/race/female/human.jpg?raw=true "Human") 
 
 The most average of the races. The race of man can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.  
 **Standings:** Humans get on great with dwarves, well with elves, and distrust orcs and goblins.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Last Stand**: When your health is below 20%, you can make two moves in a row.  
@@ -205,11 +231,12 @@ The most average of the races. The race of man can become good at most things, b
   * Strength: 1  
   * Vitality: 0  
    
-# Lizkin 
+## Lizkin 
 ![Lizkin](images/race/female/lizkin.jpg?raw=true "Lizkin") 
 
   
 **Standings:**   
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Poison Bite**: Once every 3 turns, you may bite for 1d6 damage plus an additional d6 poison damage. Poison damage affects the enemy, once on the turn of the bite, and then again on the next turn.  
@@ -236,11 +263,12 @@ The most average of the races. The race of man can become good at most things, b
   * Strength: 1  
   * Vitality: 0  
    
-# Orc 
+## Orc 
 ![Orc](images/race/female/orc.jpg?raw=true "Orc") 
 
 A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.  
 **Standings:** Orcs distrust all races save goblins, who they are close friends with.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Bellow**: On your turn, you may unleash a mighty bellow. Weak flows may flee, others are disadvantaged if they don't pass an inner fire saving throw.  
@@ -263,11 +291,12 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
   * Strength: 1  
   * Vitality: 3  
    
-# Waterborn 
+## Waterborn 
 ![Waterborn](images/race/female/waterborn.jpg?raw=true "Waterborn") 
 
   
 **Standings:**   
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Become Mist**: Once every three turns, become mist to have an attack pass right through you.  

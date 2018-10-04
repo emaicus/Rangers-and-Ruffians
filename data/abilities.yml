@@ -611,3 +611,34 @@ Wink Wink, Nudge Nudge:
 Woodsman:
   description: You have perception advantage in the forest.
   type: advantage
+Stocky:
+  description: You have advantage against any check that could cause you to go prone.
+  type: advantage
+Natural Sprinter:
+  description:  When running short distances, take advantage on atheletics checks.
+  type: advantage
+Very Dangerous over Short Distances:
+  description: If you begin your turn next to an enemy, take advantage when attacking them.
+  type: advantage
+Stone Skin:
+  description: You take half damage on blunt force attacks (e.g. if you are hit with a club).
+  type: general
+They call me Smith: 
+  description: You are able to use smithies to improve weapons and equiptment (given you buy the materials).
+  type: general
+Fix Your Eyes on Me: 
+  description: If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.
+  type: general
+Infernal Blood: 
+  description: At the cost of 5 hp, make a second action during combat.
+  type: combat
+The Opener: 
+  description: If you attack an enemy that has not yet moved in combat, do double damage. If they fail a strength saving throw, they are knocked prone.
+  type: combat
+True Sight: 
+  description: You are able to see invisible entities. 
+  type: general
+We are One: 
+  description: Your charisma is treated as 0 when talking with other daemonspawn.
+  type: general
+

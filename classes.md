@@ -1,9 +1,10 @@
-# Heavy fighter 
+# Heavy Fighter   
 ## Barbarian 
 ![Barbarian](images/class/barbarian.jpg?raw=true "Barbarian") 
 
 Either by choice or by circumstance, Barbarians have chosen to spend their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent travelers, taking slaves or possessions. Known for their uncouth nature.  
 **Standings:** Barbarians are the enemies of law keepers.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Berserk**: Once per rest, a you can go into a rage, giving you +1 strength and allowing you to make two attacks, but decreasing your intelligence and perception by 3. A rage lasts 1 hour or 5 turns. Coming out of a rage prematurely makes you fatigued, and gives you disadvantage on all rolls.  
@@ -33,6 +34,7 @@ Either by choice or by circumstance, Barbarians have chosen to spend their lives
 
 The genuine article, knights have sworn their lives to king and country.  
 **Standings:** Knights are loved by kingsmen, and distrusted by hedge knights and rangers. Knights are duty bound to fight the lawless.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Trained Precision**: Once every three turns, gain advantage on your attack.  
@@ -59,6 +61,7 @@ The genuine article, knights have sworn their lives to king and country.
 
 Soldiers of the Light, Paladins are knights who have pledged themselves to a deity. As such, Paladins are capable of performing minor miracles from the book of healing.  
 **Standings:** Paladins are generally respected. They hate evil, and try to destroy it wherever they find it.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Bash**: Stun an enemy on a critical hit, causing them to miss their next turn.  
@@ -84,12 +87,13 @@ Soldiers of the Light, Paladins are knights who have pledged themselves to a dei
   * Strength: 1  
   * Vitality: 1  
    
-# Light fighter 
+# Light Fighter   
 ## Beastmaster 
 ![Beastmaster](images/class/beastmaster.jpg?raw=true "Beastmaster") 
 
 For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters have forgone civilization, choosing instead to roam the wilds, capturing and befriending animals.  
 **Standings:** More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Tackle**: You can tackle an enemy to the ground. Attempt either a dexterity or strength contested throw against an enemy, if they fail, you grapple them. You have advantage  
@@ -123,6 +127,7 @@ For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters have
 
 Delicate and noble, the Lady Fair is a beacon of love and hope for their people. While used to living in the safety of her castle, she isn't afraid to go out into the wilds, as long as the wilds have warm beds and three square meals.  
 **Standings:** Of noble birth, your character is loved by their people, but is prone to attacks by thieves and brigands.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Swoon**: During battle, you can feint to avoid further damage. You may wake up after one turn.  
@@ -157,6 +162,7 @@ Delicate and noble, the Lady Fair is a beacon of love and hope for their people.
 
 Masters of hand to hand combat, monks use their extensive self-knowledge to overcome their foes.  
 **Standings:** Monks keep to themselves, which cause some outside of their religion to attempt to take advantage of them.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Hand to Hand**: Your hands are d8 weapons.  
@@ -187,6 +193,7 @@ Masters of hand to hand combat, monks use their extensive self-knowledge to over
 
 Rangers are the vigilante law keepers of the wilds. They take it upon themselves to police roads, countrysides, and entire regions to keep travelers safe. They are naturally disliked by lawless individuals.  
 **Standings:** Barbarians are the enemies of law keepers.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Twin Blades**: During combat, you may wield two weapons rather than one. Each turn, you may attack twice. While dual wielding, your armor is decreased by 1.  
@@ -213,12 +220,13 @@ Rangers are the vigilante law keepers of the wilds. They take it upon themselves
   * Strength: 0  
   * Vitality: 0  
    
-# Mage 
+# Mage   
 ## Necromancer 
 ![Necromancer](images/class/necromancer.jpg?raw=true "Necromancer") 
 
 Death is not my enemy, nor is it my ally, it is my servant. So say the Necromancers, mages who study the intricacies of the hereafter. Often fuled by macabre fasination or a god complex, Necromancy is deeply feared and considered taboo by almost all.  
 **Standings:** Necromancers are feared by most, and are actively hunted by Clerics and followers of the light.  
+
 #### Abilities:   
 ##### Choices:   
   * **Vegan**: At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 1 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
@@ -248,6 +256,7 @@ Death is not my enemy, nor is it my ally, it is my servant. So say the Necromanc
 
 A student of magic, mages are highly intelligent and are adept spellcasters.  
 **Standings:** Mages fear and revile anti-mages  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Commit to Memory**: At the beginning of a day, you may commit one spell to memory of level 2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.  
@@ -282,6 +291,7 @@ A student of magic, mages are highly intelligent and are adept spellcasters.
 
 Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.  
 **Standings:** Wizards are known to be friends to all races, and get along particularly well with Halflings and Rangers.  
+
 #### Abilities:   
 ##### Advantages:   
   * **Looming Presence**: Gain advantage when attempting to intimidate anything of lower intelligence than yourself.  
@@ -309,12 +319,13 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   * Strength: 0  
   * Vitality: -2  
    
-# Ranged fighter 
+# Ranged Fighter   
 ## Archer 
 ![Archer](images/class/archer.jpg?raw=true "Archer") 
 
 Excellent archers, Marksmen come from all walks of life.  
 **Standings:** Excellent archers, Marksmen come from all walks of life.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Focus**: You spend a ten seconds or one turn focusing before a shot to gain advantage on it. Works before battle starts. Removes distance penalties.  
@@ -345,6 +356,7 @@ Excellent archers, Marksmen come from all walks of life.
 
 Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their weapon, which is usually their primary means of income.  
 **Standings:** More comfortable in nature than cities, Beastmasters get on best with animals, and can find people difficult to talk to.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **From the Hip**: Once every turn cycle, fire a retaliation shot. If you pass a check, it hits, hurting the enemy and stopping their attack.  
@@ -372,12 +384,13 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
   * Strength: 0  
   * Vitality: -2  
    
-# Utility 
+# Utility   
 ## Bard 
 ![Bard](images/class/bard.jpg?raw=true "Bard") 
 
 Showmen by nature, Bards are known for their skills at performing music, juggling, and distracting others from the sorrows of life.  
 **Standings:** Bards are loved by most, and are welcomed equally among thieves and goodfolk.  
+
 #### Abilities:   
 ##### Advantages:   
   * **Cartwheel**: Gain advantage on acrobatics checks.  
@@ -411,6 +424,7 @@ Showmen by nature, Bards are known for their skills at performing music, jugglin
 
 After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. To do this, Clerics use miracles from the book of healing help their deity impose its will on the world.  
 **Standings:** Clerics are friends to all those who fight for good, and get along especially well with Holy Knights, Paladins, and members of their church.  
+
 #### Abilities:   
 ##### Combat Abilities:   
   * **Taunt**: You can taunt your opponents, forcing them to attack you instead of others.  
@@ -439,6 +453,7 @@ After pledging their allegiance to their deity, Clerics have made it their duty 
 
 For one reason or another, thieves have turned to a life of crime. Their crimes, however, are nonviolent when possible; the rich don't need all that gold, anyway.  
 **Standings:** Thieves hat law keepers and Thief Catchers  
+
 #### Abilities:   
 ##### Advantages:   
   * **Lightfoot**: Gain advantage on stealth checks. Stacks with padfoot.  

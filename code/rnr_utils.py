@@ -2,17 +2,20 @@ import json
 import sys
 import os
 from collections import OrderedDict
+from collections import Counter
 import yaml
 
 ability_dict = dict()
 class_data = dict()
+class_data_by_type = dict()
 race_data = dict()
 
-class rnr_class:
-    def __init__(self, class_name, abilities, stats, description, standings):
-      self.name = class_name
+class rnr_entity:
+    def __init__(self, name, abilities, stats, description, standings):
+      self.name = name
       #come back and see to this
       self.abilities = abilities
+      self.stats = stats
       self.charisma = stats["Charisma"]
       self.dexterity = stats['Dexterity']
       self.strength = stats["Strength"]
@@ -56,109 +59,111 @@ class rnr_class:
       else:
         return None
 
-class rnr_race:
-  def __init__(self, race_name, abilities, stats, description, standings):
-    self.name = race_name
-    #come back and see to this
-    self.abilities = abilities
-    self.charisma = stats["Charisma"]
-    self.dexterity = stats['Dexterity']
-    self.strength = stats["Strength"]
-    self.inner_fire = stats['Inner_Fire']
-    self.intelligence = stats['Intelligence']
-    self.luck = stats['Luck']
-    self.perception = stats['Perception']
-    self.vitality = stats['Vitality']
-    self.description = description
-    self.standings = standings
- 
-  def pretty_print(self):
-    print(self.name)
-    print("CHR : {0}".format(self.charisma))
-    print("DEX : {0}".format(self.dexterity))
-    print("STR : {0}".format(self.strength))
-    print("INF : {0}".format(self.inner_fire))
-    print("INT : {0}".format(self.intelligence))
-    print("LCK : {0}".format(self.luck))
-    print("PER : {0}".format(self.perception))
-    print("VIT : {0}".format(self.vitality))
-  
-  def get_stat(self, stat_name):
-    stat_name = stat_name.lower()
-    if stat_name == "charisma":
-      return self.charisma
-    elif stat_name == "dexterity":
-      return self.dexterity
-    elif stat_name == "strength":
-      return self.strength
-    elif stat_name == "inner_fire":
-      return self.inner_fire
-    elif stat_name == "intelligence":
-      return self.intelligence
-    elif stat_name == "luck":
-      return self.luck
-    elif stat_name == "perception":
-      return self.perception
-    elif stat_name == "vitality":
-      return self.vitality
-    else:
-      return None
+    def base_markdownify(self, image_path, emphasis):
+      load_Rangers_And_Ruffians_Data()
 
-class rnr_character:
+      ret = ""
+      lowername = self.name.lower()
+      #relative path for now
+      lowername = lowername.replace(' ', '_')
+      path_to_image = "{0}/{1}.jpg".format(image_path, lowername)
+      description = self.description
+      standings = self.standings
+      abilities = self.abilities
+
+      ret = "{0} {1} \n".format(emphasis, self.name)
+      ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
+      ret += description + "  \n"
+      ret += "**Standings:** " + self.standings + "  \n\n"
+      ret += "#### Abilities:   \n"
+      abilities = filterAbilities(self.abilities, ability_dict)
+      for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
+        if not key in abilities:
+          continue
+        ret += "##### {0}:   \n".format(mapAbilityType(key))
+        for ability in abilities[key]:
+          description = ability_dict[ability]["description"]
+          ret += "  * **{0}**: {1}  \n".format(ability, description)
+        ret += "    \n"
+      ret += "\n##### Stats:  " + "  \n"
+      for stat in self.stats:
+        ret += "  * " +  stat + ": " + str(self.stats[stat]) + "  \n"
+      ret += "   \n"
+      return ret
+
+class rnr_class(rnr_entity):
+    def __init__(self, name, abilities, stats, description, standings):
+      super(rnr_class, self).__init__(name, abilities, stats, description, standings) 
+
+    def markdownify(self, image_path):
+      return self.base_markdownify(image_path, '##')
+
+class rnr_race(rnr_entity):
+  def __init__(self, name, abilities, stats, description, standings):
+      super(rnr_class, self).__init__(name, abilities, stats, description, standings) 
+
+  def markdownify(self, image_path):
+      return self.base_markdownify(image_path, '#')
+
+class rnr_character(rnr_entity):
   def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj):
-    self.name = character_name
+    abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
+    stats = dict(Counter(rnr_race_obj.stats)+Counter(rnr_class_obj.stats))
+    
+    super(rnr_class, self).__init__(character_name, abilities, stats, "", "") 
+    
     self.origin = character_origin
     self.weakness = character_weakness
-    self.abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
     self.race = rnr_race_obj.name
     self.rnr_class = rnr_class_obj.name
-    self.charisma = rnr_race_obj.charisma + rnr_class_obj.charisma
-    self.dexterity = rnr_race_obj.dexterity + rnr_class_obj.dexterity
-    self.strength = rnr_race_obj.strength + rnr_class_obj.strength
-    self.inner_fire = rnr_race_obj.inner_fire + rnr_class_obj.inner_fire
-    self.intelligence = rnr_race_obj.intelligence + rnr_class_obj.intelligence
-    self.luck = rnr_race_obj.luck + rnr_class_obj.luck
-    self.perception = rnr_race_obj.perception + rnr_class_obj.perception
-    self.vitality = rnr_race_obj.vitality + rnr_class_obj.vitality
-
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
-    
-  def pretty_print(self):
-    print(self.name)
-    print(self.origin)
-    print(self.weakness)
-    print(self.race)
-    print(self.rnr_class)
-    print("CHR : {0}".format(self.charisma))
-    print("DEX : {0}".format(self.dexterity))
-    print("STR : {0}".format(self.strength))
-    print("INF : {0}".format(self.inner_fire))
-    print("INT : {0}".format(self.intelligence))
-    print("LCK : {0}".format(self.luck))
-    print("PER : {0}".format(self.perception))
-    print("VIT : {0}".format(self.vitality))
 
-  def get_stat(self, stat_name):
-    stat_name = stat_name.lower()
-    if stat_name == "charisma":
-      return self.charisma
-    elif stat_name == "dexterity":
-      return self.dexterity
-    elif stat_name == "strength":
-      return self.strength
-    elif stat_name == "inner_fire":
-      return self.inner_fire
-    elif stat_name == "intelligence":
-      return self.intelligence
-    elif stat_name == "luck":
-      return self.luck
-    elif stat_name == "perception":
-      return self.perception
-    elif stat_name == "vitality":
-      return self.vitality
-    else:
-      return None
+class rnr_ability:
+  def __init__(self, name, description, type):
+    self.name = name
+    self.description = description
+    self.type = type
+   
+def markdown_all_classes(data, ability_dict, image_path, outfile_name):
+  first = True
+  for class_type, details in sorted(data.items()):
+    if class_type == 'CUT':
+      continue
+    mode = 'w' if first else 'a'
+    first = False
+    with open(outfile_name, mode) as outfile:
+      outfile.write("# {0} \n".format(class_type.capitalize()))
+    standard_md_out(details, ability_dict, image_path, outfile_name, '##')
+
+def mardown_all_races(data, ability_dict, image_path, outfile_name):
+  with open(outfile_name, 'w') as outfile:
+    pass
+  standard_md_out(data, ability_dict, image_path, outfile_name, '#')
+
+
+def filterAbilities(abilities, ability_dict):
+  filtered_abilities = dict()
+  for ability in abilities:
+    ability_type = ability_dict[ability]["type"]
+    if not ability_type in filtered_abilities:
+      filtered_abilities[ability_type] = list()
+    filtered_abilities[ability_type].append(ability)
+  return filtered_abilities
+
+def mapAbilityType(abilitiy_type):
+  if abilitiy_type == "combat":
+    return "Combat Abilities"
+  elif abilitiy_type == "advantage":
+    return "Advantages"
+  elif abilitiy_type == "starting_item":
+    return "Starting Items"
+  elif abilitiy_type == "choice":
+    return "Choices"
+  else:
+    return "General Abilities"
+
+
 
 def convert_json_file_to_yml_file(input_file, output_file):
   try:
@@ -202,7 +207,7 @@ def mergeAbilities(dictionary, abilities):
   return dictionary
 
 def load_Rangers_And_Ruffians_Data():
-  global ability_dict, race_data, class_data
+  global ability_dict, race_data, class_data, class_data_by_type
 
   if len(ability_dict.keys()) != 0:
     return
@@ -215,19 +220,20 @@ def load_Rangers_And_Ruffians_Data():
     race_data = yaml.load(data_file)
 
   with open(class_path) as data_file:
-    class_data = yaml.load(data_file)
+    class_data_by_type = yaml.load(data_file)
+
+  class_data_by_type.pop('CUT', None)
+
+  for class_type, info in class_data_by_type.items():
+    class_data.update(info)
 
   with open(ability_path) as data_file:
     ability_dict = yaml.load(data_file)
 
+
 def get_all_class_names():
   load_Rangers_And_Ruffians_Data()
-  lis = list()
-  for class_type, details in class_data.items():
-    if class_type == 'CUT':
-      continue
-    lis = lis + list(class_data[class_type].keys())
-  return lis
+  return list(class_data.keys())
 
 def get_all_race_names():
   load_Rangers_And_Ruffians_Data()
@@ -317,12 +323,21 @@ def load_all_race_objects():
 def load_all_class_objects():
   load_Rangers_And_Ruffians_Data() 
   rnr_classes = list()
-  for c_type, c_info in class_data.items():
+  for c, c_info in class_data.items():
+    #class_name, abilities, stats, description, standings
+    class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['standings'])
+    rnr_classes.append(class_obj)
+  return rnr_classes
+
+def load_all_class_objects_by_type():
+  ret = dict()
+  for c_type, c_info in class_data_by_type.items():
+    ret[c_type] = list()
     for c, info in c_info.items():
       #class_name, abilities, stats, description, standings
       class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['standings'])
-      rnr_classes.append(class_obj)
-  return rnr_classes
+      ret[c_type].append(class_obj)
+  return ret
 
 def load_all_race_class_combos():
   rnr_races = load_all_race_objects()
@@ -354,14 +369,7 @@ def load_race_class_with_objects(race_obj, class_obj):
 
 def find_class_info(name):
   load_Rangers_And_Ruffians_Data()
-  for t in class_data.keys():
-    if t == "CUT":
-      continue
-    for c, info in class_data[t].items():
-      if c == name:
-        return info
-  return None
-
+  return class_data.get(name, None)
 
 
 
