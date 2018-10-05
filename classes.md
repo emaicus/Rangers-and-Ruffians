@@ -254,42 +254,35 @@ Death is not my enemy, nor is it my ally, it is my servant. So say the Necromanc
 ## Sorcerer 
 ![Sorcerer](images/class/sorcerer.jpg?raw=true "Sorcerer") 
 
-A student of magic, mages are highly intelligent and are adept spellcasters.  
-**Standings:** Mages fear and revile anti-mages  
+Sorcer's draw their magic not from cryptic tomes or nuanced understanding, but rather through raw force of personality. To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers have no spell points, but rather must pass a charisma check ((spell_level * 2) + 5) to perform magic.  
+**Standings:** Mages and wizards are at odds over whose magic is best.  
 
 #### Abilities:   
-##### Combat Abilities:   
-  * **Commit to Memory**: At the beginning of a day, you may commit one spell to memory of level 2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.  
-    
-##### Advantages:   
-  * **Air of Mystery**: Gain advantage on intimidation checks against gaurds and villagers.  
-    
-##### Starting Items:   
-  * **The Sword and the Satchel**: You begin your adventure with a bottomless satchel.  
-    
 ##### Choices:   
-  * **Learned**: You are fluent in a language of your choosing.  
+  * **Charismatic by Birth**: Sorcerers may choose to roll for their charisma with advantage at the start of an adventure.  
   * **Spell Choice**: At the start of your journey, you know 4 level zero, 2 level one, and 1 level two spells.  
     
 ##### General Abilities:   
   * **Novice Spellbook**: You are able to learn spells from the Novice Spellbook.  
-  * **The Mage's Compendium**: You are able to learn spells from the Mage's Compendium.  
+  * **Influence**: You have "influence" points equal to your intelligence. You may spend them to increase any charisma roll by 2. They refill on a long rest.  
+  * **The Sorcerer's Scrolls**: You are able to learn spells from the Sorcerer's Scrolls.  
+  * **Spell Modifiers**: Sorcerers can use spell modifiers to change aspects of their spells. These modifiers make it more difficult to perform the spell.  
     
 
 ##### Stats:    
-  * Charisma: 0  
+  * Charisma: 3  
   * Dexterity: -1  
-  * Inner_Fire: 0  
+  * Inner_Fire: 1  
   * Intelligence: 3  
   * Luck: 0  
-  * Perception: -1  
-  * Strength: -2  
-  * Vitality: -3  
+  * Perception: 0  
+  * Strength: 0  
+  * Vitality: -1  
    
 ## Wizard 
 ![Wizard](images/class/wizard.jpg?raw=true "Wizard") 
 
-Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to.  
+Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to. To use magic, Wizards use spell points, and begin with a number of spell points equal to their intelligence. Spells cost the same amount of spell points as their level, and are reaquired upon a long rest.  
 **Standings:** Wizards are known to be friends to all races, and get along particularly well with Halflings and Rangers.  
 
 #### Abilities:   
@@ -313,11 +306,11 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   * Charisma: 1  
   * Dexterity: -1  
   * Inner_Fire: 1  
-  * Intelligence: 2  
+  * Intelligence: 3  
   * Luck: 1  
   * Perception: 1  
   * Strength: 0  
-  * Vitality: -2  
+  * Vitality: -3  
    
 # Ranged Fighter   
 ## Archer 

@@ -523,8 +523,8 @@ The Hand of God:
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
   type: general
-The Mage's Compendium:
-  description: You are able to learn spells from the Mage's Compendium.
+The Sorcerer's Scrolls:
+  description: You are able to learn spells from the Sorcerer's Scrolls.
   type: general
 The Sword and the Satchel:
   description: You begin your adventure with a bottomless satchel.
@@ -641,4 +641,12 @@ True Sight:
 We are One: 
   description: Your charisma is treated as 0 when talking with other daemonspawn.
   type: general
-
+Influence: 
+  description: You have "influence" points equal to your intelligence. You may spend them to increase any charisma roll by 2. They refill on a long rest.
+  type: general
+Charismatic by Birth: 
+  description: Sorcerers may choose to roll for their charisma with advantage at the start of an adventure.
+  type: choice
+Spell Modifiers: 
+  description: Sorcerers can use spell modifiers to change aspects of their spells. These modifiers make it more difficult to perform the spell.
+  type: general

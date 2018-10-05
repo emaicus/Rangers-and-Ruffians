@@ -28,7 +28,13 @@ if __name__ == "__main__":
   for gender in ['male', 'female']:
     with open('../{0}_races.md'.format(gender), 'w') as outfile:
       for race in sorted(races, key=lambda x: x.name):
-       outfile.write(race.markdownify('images/race/{0}'.format(gender)))
+        print (race.name)
+        if race.name == 'Daemonspawn':
+          print('skip')
+          continue
+        outfile.write(race.markdownify('images/race/{0}'.format(gender)))
+      d = rnr_utils.load_race('Daemonspawn')
+      outfile.write(d.markdownify('images/race/{0}'.format(gender)))
 
   print()
   print("Done!")

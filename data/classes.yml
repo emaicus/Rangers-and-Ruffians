@@ -194,38 +194,42 @@ Mage:
     - Spell Choice
     description: Often eccentric, wizards are known to be wayfarers and meddlers. Most
       keep to themselves, approaching others only to entwine them in schemes only they
-      know about. Wizards arrive precisely when they mean to.
+      know about. Wizards arrive precisely when they mean to. To use magic, Wizards use 
+      spell points, and begin with a number of spell points equal to their intelligence.
+      Spells cost the same amount of spell points as their level, and are reaquired upon
+      a long rest.
     standings: Wizards are known to be friends to all races, and get along particularly
       well with Halflings and Rangers.
     stats:
       Charisma: 1
       Dexterity: -1
       Inner_Fire: 1
-      Intelligence: 2
+      Intelligence: 3
       Luck: 1
       Perception: 1
       Strength: 0
-      Vitality: -2
+      Vitality: -3
   Sorcerer:
     abilities:
-    - The Sword and the Satchel
-    - Learned
-    - Air of Mystery
-    - Commit to Memory
     - Novice Spellbook
-    - The Mage's Compendium
+    - Influence
+    - The Sorcerer's Scrolls
+    - Charismatic by Birth
     - Spell Choice
-    description: A student of magic, mages are highly intelligent and are adept spellcasters.
-    standings: Mages fear and revile anti-mages
+    - Spell Modifiers
+    description: Sorcer's draw their magic not from cryptic tomes or nuanced understanding, but rather through raw force of personality.
+      To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers
+      have no spell points, but rather must pass a charisma check ((spell_level * 2) + 5) to perform magic.
+    standings: Mages and wizards are at odds over whose magic is best.
     stats:
-      Charisma: 0
+      Charisma: 3
       Dexterity: -1
-      Inner_Fire: 0
+      Inner_Fire: 1
       Intelligence: 3
       Luck: 0
-      Perception: -1
-      Strength: -2
-      Vitality: -3
+      Perception: 0
+      Strength: 0
+      Vitality: -1
 Ranged Fighter: 
   Gunslinger:
     abilities:

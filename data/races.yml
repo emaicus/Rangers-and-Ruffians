@@ -12,7 +12,7 @@ Catterwol:
     by all races. Orc sometimes kill them for their pelt.
   standings: Catterwol keep to themselves, and hate Orcs.
   stats:
-    Charisma: 0
+    Charisma: 1
     Dexterity: 1
     Inner_Fire: 0
     Intelligence: 0
@@ -218,8 +218,8 @@ Daemonspawn:
   - Dark Vision
   - Sleepless
   - We are One
-  description: The daemonspawn were born of an unholy union between elves and the daemons of old. When the daeomons were thrown down and destroyed, the daemonspawn remained.
-               Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and demonizes them. As such, the wise daemonspawn is always
+  description: The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained.
+               Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
                vigilant and trusts no one.
   standings: Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.
   stats:

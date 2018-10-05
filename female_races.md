@@ -20,7 +20,7 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
     
 
 ##### Stats:    
-  * Charisma: 0  
+  * Charisma: 1  
   * Dexterity: 1  
   * Inner_Fire: 0  
   * Intelligence: 0  
@@ -28,35 +28,6 @@ Bipedal catlike beings, Catterwol live in tribes, and are naturally known as sly
   * Perception: 2  
   * Strength: 0  
   * Vitality: -2  
-   
-## Daemonspawn 
-![Daemonspawn](images/race/female/daemonspawn.jpg?raw=true "Daemonspawn") 
-
-The daemonspawn were born of an unholy union between elves and the daemons of old. When the daeomons were thrown down and destroyed, the daemonspawn remained. Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and demonizes them. As such, the wise daemonspawn is always vigilant and trusts no one.  
-**Standings:** Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.  
-
-#### Abilities:   
-##### Combat Abilities:   
-  * **Infernal Blood**: At the cost of 5 hp, make a second action during combat.  
-  * **The Opener**: If you attack an enemy that has not yet moved in combat, do double damage. If they fail a strength saving throw, they are knocked prone.  
-    
-##### General Abilities:   
-  * **Fix Your Eyes on Me**: If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.  
-  * **True Sight**: You are able to see invisible entities.  
-  * **Dark Vision**: You can see well in the dark.  
-  * **Sleepless**: Your can rest without sleeping for one day, allowing you to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
-  * **We are One**: Your charisma is treated as 0 when talking with other daemonspawn.  
-    
-
-##### Stats:    
-  * Charisma: -4  
-  * Dexterity: 1  
-  * Inner_Fire: 3  
-  * Intelligence: 1  
-  * Luck: 1  
-  * Perception: 0  
-  * Strength: 0  
-  * Vitality: 1  
    
 ## Dwarf 
 ![Dwarf](images/race/female/dwarf.jpg?raw=true "Dwarf") 
@@ -320,4 +291,33 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
   * Perception: 0  
   * Strength: -1  
   * Vitality: -3  
+   
+# Daemonspawn 
+![Daemonspawn](images/race/female/daemonspawn.jpg?raw=true "Daemonspawn") 
+
+The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained. Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always vigilant and trusts no one.  
+**Standings:** Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.  
+
+#### Abilities:   
+##### Combat Abilities:   
+  * **Infernal Blood**: At the cost of 5 hp, make a second action during combat.  
+  * **The Opener**: If you attack an enemy that has not yet moved in combat, do double damage. If they fail a strength saving throw, they are knocked prone.  
+    
+##### General Abilities:   
+  * **Fix Your Eyes on Me**: If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.  
+  * **True Sight**: You are able to see invisible entities.  
+  * **Dark Vision**: You can see well in the dark.  
+  * **Sleepless**: Your can rest without sleeping for one day, allowing you to keep watch long into the night. Resting at night counts as sleep even if you are awake.  
+  * **We are One**: Your charisma is treated as 0 when talking with other daemonspawn.  
+    
+
+##### Stats:    
+  * Charisma: -4  
+  * Dexterity: 1  
+  * Inner_Fire: 3  
+  * Intelligence: 1  
+  * Luck: 1  
+  * Perception: 0  
+  * Strength: 0  
+  * Vitality: 1  
    

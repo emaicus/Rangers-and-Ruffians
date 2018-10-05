@@ -93,14 +93,14 @@ class rnr_entity:
 
 class rnr_class(rnr_entity):
     def __init__(self, name, abilities, stats, description, standings):
-      super(rnr_class, self).__init__(name, abilities, stats, description, standings) 
+      super().__init__(name, abilities, stats, description, standings) 
 
     def markdownify(self, image_path):
       return self.base_markdownify(image_path, '##')
 
 class rnr_race(rnr_entity):
   def __init__(self, name, abilities, stats, description, standings):
-      super(rnr_class, self).__init__(name, abilities, stats, description, standings) 
+      super().__init__(name, abilities, stats, description, standings) 
 
   def markdownify(self, image_path):
       return self.base_markdownify(image_path, '#')
@@ -110,7 +110,7 @@ class rnr_character(rnr_entity):
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
     stats = dict(Counter(rnr_race_obj.stats)+Counter(rnr_class_obj.stats))
     
-    super(rnr_class, self).__init__(character_name, abilities, stats, "", "") 
+    super().__init__(character_name, abilities, stats, "", "") 
     
     self.origin = character_origin
     self.weakness = character_weakness
