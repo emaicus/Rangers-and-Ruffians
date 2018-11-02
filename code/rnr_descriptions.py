@@ -11,6 +11,13 @@ import uuid
 
 import rnr_utils
 
+try:
+  with open("description_database.json", 'w') as infile:
+    DESCRIPTIONS_DATABASE = json.load(infile)
+except Exception as e:
+  print("ERROR: Could not locate description_database.json")
+  sys.exit(1)
+
 gender_words = {
   "male" : {
     "<HIMSELF_HERSELF>" : "himself",
@@ -111,10 +118,20 @@ human_like_skin = ['Elf', "Gnome", "Halfling","Human","Dwarf"]
 #   ]
 # }
 
-
+# def stripUUID(dictionary):
+#   ret = dict()
+#   for key, val in dictionary.items():
+#     outer = key
+    
+#     if type(val) is str:
+#       if not outer in ret:
+#         ret[outer] = dict()
+        
 
 
 def getHair(gender, name, race, bearded_override=False):
+  global DESCRIPTIONS_DATABASE
+  hair_description = DESCRIPTIONS_DATABASE['hair_descriptions']
   if name == None:
     name = "he" if gender == "male" else "she"
   if race in hairless_races:

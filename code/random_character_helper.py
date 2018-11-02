@@ -67,7 +67,7 @@ def random_choice(allowed_genders, allowed_races, allowed_classes, boring, beard
 
     name = names.get_first_name(gender=random_gender)
 
-    print("Meet {0}.".format(name))
+    print("{0}:".format(name))
     print("{0} is a {1} {2}".format(name, random_race, random_class))
     get_physical_description(random_race, random_gender, beard_override, name)
     print("{0} {1}, and {2}".format(name, random_origin, random_weakness))
@@ -177,7 +177,6 @@ def main():
         allowed_races   = rnr_utils.removeOptions(allowed_races)
       if rnr_utils.confirm("Would you like your characters to be created with a specific class?",  ["There are some classes I would rather not be!", "remove"], ["Class is an artificial construct created by the bourgeois!", "any"], boring=boring):
         allowed_classes = rnr_utils.removeOptions(allowed_classes)
-  os.system("clear")
   os.system("clear")
   rnr_utils.printLogo()
   if create_random:

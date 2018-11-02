@@ -22,8 +22,6 @@ if __name__ == "__main__":
       outfile.write('# {0}   \n'.format(rnr_class_type))
       for rnr_class in sorted(class_list, key=lambda x: x.name):
         outfile.write(rnr_class.markdownify("images/class"))
-        
-   
 
   for gender in ['male', 'female']:
     with open('../{0}_races.md'.format(gender), 'w') as outfile:
