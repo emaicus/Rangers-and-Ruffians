@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/css/materialize.min.css">
+      <link rel="stylesheet" href="/static/css/rangers.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col s12">
+               <h2> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
+            </div>
+         </div>
+
+         <div class="row">
+         {% for rnr_entity in data %}
+            <div class="col s12">
+               <div class="card hoverable">
+                  <div class="card-image waves-effect waves-block waves-light">
+                     {% if rnr_entity['rights'] != None %}
+                        <img class="activator" src = {{rnr_entity["path_to_image"] }}>
+                     {%endif%}
+                  </div>
+
+                  <div class="card-content browser-default-uls">
+                     <span class = "card-title activator grey-text text-darken-4">
+                        {{rnr_entity["name"].title()}}
+                     </span>
+                     <a href="{{next_page}}{{forwarding_param}}{{next_param}}={{rnr_entity["name"]}}"> Play</a>
+                     as 
+                     {% if rnr_entity["name"][0].lower() in ['a','e','i','o','u']%}
+                        an
+                     {% else %}
+                        a 
+                     {% endif %}                       
+                      {{rnr_entity["name"].title()}}
+                  </div>
+
+                  <div class="card-reveal grey lighten-5">
+                     <span class = "card-title grey-text text-darken-4">
+                        {{rnr_entity["name"]}}
+                     </span>
+
+                     <div class = "card-tabs">
+                        <div class = "row">
+                           <div class = "col s12">
+                              <ul class="tabs" style="width:101%">
+                                 <li class = "tab">
+                                    <a href="#{{rnr_entity['name'].lower()}}_overview"> Overview </a>
+                                 </li>
+                                 <li class="tab">
+                                    <a href="#{{rnr_entity['name'].lower()}}_abilities"> Abilities </a>
+                                 </li>
+                                 <li class="tab">
+                                    <a href="#{{rnr_entity['name'].lower()}}_stats"> Stats </a>
+                                 </li>
+                                 <li class="tab">
+                                    <a href="#{{rnr_entity['name'].lower()}}_art"> Art Info </a>
+                                 </li>
+                              </ul>                                
+                           </div>
+                        </div>
+                        <div id="{{rnr_entity['name'].lower()}}_overview" class = "col s12">
+                           <p> {{rnr_entity["description"]}} </p>
+                        </div>
+                        <div id="{{rnr_entity['name'].lower()}}_art" class = "col s12">
+                           {% if rnr_entity['rights'] != None %}
+                              <p>
+                                 Art: <a href="{{ rnr_entity['rights']['url'] }}"> {{ rnr_entity['rights']['title'] }}</a> by {{ rnr_entity['rights']['artist'] }}.
+                                      Used under <a href="{{ rnr_entity['rights']['license_url'] }}">{{ rnr_entity['rights']['license'] }} </a> If you like it, please
+                                      check out the <a href="{{ rnr_entity['rights']['url'] }}"> {{ rnr_entity['rights']['artist'] }} deviantart </a> and support them!
+                              </p>
+                           {% endif %}
+                        </div>
+                        <div id="{{rnr_entity['name'].lower()}}_abilities" class = "col s12">
+                           <p> 
+                              <ol>
+                              {% for key in ('combat', 'advantage', 'starting_item', 'choice','general') if key in rnr_entity["abilities"]%}
+                                 {% for ability in rnr_entity["abilities"][key]%}
+                                    <li> <b> {{ability[0]}}: </b> {{ability[1]}} </li>
+                                 {% endfor %}
+                              {% endfor %}
+                              </ol>
+                           </p>
+                        </div>
+                         <div id="{{rnr_entity['name'].lower()}}_stats" class = "col s12">
+                           <p> 
+                              <ol>
+                              {% for stat, val in rnr_entity["stats"].items()%}
+                                 <li> <b> {{stat}}: </b> {{val}} </li>
+                              {% endfor %}
+                              </ol>
+                           </p>
+                        </div>
+                     </div>
+                  </div>                  
+               </div>
+            </div>
+         {% endfor %}
+         </div>
+      </div>
+      <script src="/static/js/jquery-3.3.1.js"></script>
+      <script src="/static/js/bootstrap.min.js"></script>
+      <script src="/static/js/materialize.min.js"></script>
+      <script src="/static/js/rangers.js"></script>
+   </body>
+</html>
+

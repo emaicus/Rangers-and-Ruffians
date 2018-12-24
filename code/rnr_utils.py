@@ -59,6 +59,15 @@ class rnr_entity:
       else:
         return None
 
+    def serialize(self):
+      serial = dict()
+      serial["stats"] = self.stats
+      serial["name"] = self.name
+      serial["abilities"] = filterAbilities(self.abilities, ability_dict)
+      serial["description"] = self.description
+      serial["standings"] = self.standings
+      return serial
+
     def base_markdownify(self, image_path, emphasis):
       load_Rangers_And_Ruffians_Data()
 
@@ -66,15 +75,22 @@ class rnr_entity:
       lowername = self.name.lower()
       #relative path for now
       lowername = lowername.replace(' ', '_')
-      path_to_image = "{0}/{1}.jpg".format(image_path, lowername)
+      if image_path != "":
+        path_to_image = "{0}/{1}.jpg".format(image_path, lowername)
+      else:
+        path_to_image = ""
       description = self.description
       standings = self.standings
       abilities = self.abilities
 
       ret = "{0} {1} \n".format(emphasis, self.name)
-      ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
-      ret += description + "  \n"
-      ret += "**Standings:** " + self.standings + "  \n\n"
+      if path_to_image != "":
+        ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
+      if description != "":
+        ret += description + "  \n"
+      if standings != "":
+        ret += "**Standings:** " + self.standings + "  \n\n"
+      
       ret += "#### Abilities:   \n"
       abilities = filterAbilities(self.abilities, ability_dict)
       for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
@@ -108,9 +124,12 @@ class rnr_race(rnr_entity):
 class rnr_character(rnr_entity):
   def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj):
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
-    stats = dict(Counter(rnr_race_obj.stats)+Counter(rnr_class_obj.stats))
-    
-    super().__init__(character_name, abilities, stats, "", "") 
+    stats = Counter(rnr_race_obj.stats)
+    stats.update(rnr_class_obj.stats)
+    stats = dict(stats)
+    character_name = "{0}: {1} {2}".format(character_name, rnr_race_obj.name, rnr_class_obj.name)
+
+    super().__init__(character_name, abilities, stats, character_origin, character_weakness) 
     
     self.origin = character_origin
     self.weakness = character_weakness
@@ -118,6 +137,9 @@ class rnr_character(rnr_entity):
     self.rnr_class = rnr_class_obj.name
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
+
+  def markdownify(self, image_path=""):
+    return self.base_markdownify(image_path, '#')
 
 class rnr_ability:
   def __init__(self, name, description, type):

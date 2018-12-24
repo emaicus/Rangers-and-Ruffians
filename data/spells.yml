@@ -1,0 +1,3521 @@
+bard_songbook:
+  Battle Hymn:
+    cost: 2
+    critical_effects: []
+    description: Play a battle hymn which gives up to 3 nearby allies 1 additional point
+      on a stat of their choice. Lasts 1 hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: hour
+    effect_type: buff
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 3
+    target_types:
+    - ally
+  Carry on the wind:
+    cost: 0
+    critical_effects: []
+    description: Point at someone and only they hear you regardless of distance.
+    dice_num: 0
+    dice_type: 0
+    distance: 2
+    distance_unit: miles
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Courage:
+    cost: 1
+    critical_effects: []
+    description: Make your party members immune to fear and give them advantage on
+      inner fire saving throws. Lasts 3 turns in combat, or 30 minutes out of combat.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 3
+    duration_unit: turns
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Cruel Limerick:
+    cost: 1
+    critical_effects: []
+    description: Tell a cruel rhyme, imbued with magic, which gives an enemy disadvantage
+      on their next action.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Crushing Words:
+    cost: 1
+    critical_effects: []
+    description: Speak words of power, which do 1d6 damage to an enemy.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Curse:
+    cost: 2
+    critical_effects: []
+    description: Spit a curse at an enemy. The magical vitriol in your voice does
+      1d10 damage and gives the enemy disadvantage on their next move.
+    dice_num: '1'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Folk Tune:
+    cost: 1
+    critical_effects: []
+    description: Play an old country classic to gain favor with commoners present,
+      giving you advantage on charisma checks when speaking with them.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Harbinger of Doom:
+    cost: 3
+    critical_effects: []
+    description: Utter a word that hurts all that can hear it for 4d6 damage. Anyone
+      who hears makes a saving throw, and moves as far away as they can on a fail.
+    dice_num: '4'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Heroes Ballad:
+    cost: 2
+    critical_effects: []
+    description: Give an ally 1d10 inspiration dice.
+    dice_num: '1'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Lullaby:
+    cost: 2
+    critical_effects: []
+    description: Sing a song which puts enemies to sleep if they fail an inner fire
+      check. Each turn thereafter, they can attempt a saving throw. If harmed, they
+      wake up.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Mass Suggestion:
+    cost: 3
+    critical_effects: []
+    description: Cast suggestion on all people in earshot.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Ode to Country:
+    cost: 1
+    critical_effects: []
+    description: "Play a country\u2019s anthem, Gain favor with soldiers present,\
+      \ giving you advantage on charisma checks when speaking with them."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Project Image:
+    cost: 1
+    critical_effects: []
+    description: Project an image of yourself. This image can move, but cannot speak,
+      and lasts at most 1 minute.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Raucous Laughter:
+    cost: 2
+    critical_effects: []
+    description: Tell a joke so funny that anyone who hears it falls over if they
+      fail an inner fire check.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Song of Inspiration:
+    cost: 1
+    critical_effects: []
+    description: Play a tune which grants an ally a 1d6 inspiration dice.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Suggestion:
+    cost: 1
+    critical_effects: []
+    description: Whisper in a person's ear and they do what you want if they fail
+      a saving throw.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Sweet Nothings:
+    cost: 1
+    critical_effects: []
+    description: Charm an individual attracted to your sex, giving you advantage when
+      persuading them.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Vigor:
+    cost: 1
+    critical_effects: []
+    description: Allow a teammate to attack twice.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+book_of_healing:
+  Babel:
+    cost: 2
+    critical_effects: []
+    description: An entity of your choice becomes agitated and angry, but is incapable
+      of meaningful communication for 1 hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Beguile:
+    cost: 0
+    critical_effects: []
+    description: "You\u2019re holy presence shakes an enemies constitution. Select\
+      \ an enemy, they do 1d4 fewer damage on each attack for the next 3 turns."
+    dice_num: '1'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Bless Water:
+    cost: 1
+    critical_effects: []
+    description: You may bless water by touching it.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Burst of Light:
+    cost: 0
+    critical_effects: []
+    description: Fire a bolt of radiant energy at an enemy, dealing 1d6 damage.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Cleanse with Fire:
+    cost: 5
+    critical_effects: []
+    description: Tongues of white flame spiral around you, enveloping any enemies
+      near you. Evil or undead enemies take 5d20 damage, regular enemies take 5d10.
+    dice_num: '5'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Death Ward:
+    cost: 3
+    critical_effects: []
+    description: Cast a powerful ward on an ally. If they are downed in combat, they
+      immediately gain 1 hp.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Detect Evil:
+    cost: 0
+    critical_effects: []
+    description: You are able to tell if there is an evil or undead entity within
+      50 feet of you.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Detect Magic:
+    cost: 0
+    critical_effects: []
+    description: You are able to detect if magic within 30 feet of you.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Dispel Magic:
+    cost: 1
+    critical_effects: []
+    description: Undo the effects wrought by a spell.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Divine Intervention:
+    cost: 5
+    critical_effects: []
+    description: This spell cost 0 spell points. Roll 1d10. On a critical success,
+      call upon your deity and ask of them a favor. Can be attempted once per day.
+      Success can happen at most once per week.
+    dice_num: '1'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - week
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Enhance Ability:
+    cost: 1
+    critical_effects: []
+    description: "Enhance one of a party member\u2019s abilities by 1. A single teammate\
+      \ may have at most one ability enhanced at a time."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Fake Death:
+    cost: 1
+    critical_effects: []
+    description: Touch an willing entity to send them into a catatonic state that
+      is impossible to distinguish from death.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Give of Yourself:
+    cost: 0
+    critical_effects: []
+    description: Give a teammate up to 20 points of your own health per turn.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Greater Guidance:
+    cost: 1
+    critical_effects: []
+    description: Once per rest, give an ally a 1d8 inspiration dice.
+    dice_num: '1'
+    dice_type: '8'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - rest
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Greater Heal:
+    cost: 2
+    critical_effects: []
+    description: Restore 5d4 health to one teammate or yourself.
+    dice_num: '5'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Greater Ward:
+    cost: 2
+    critical_effects: []
+    description: Touch a teammate and place a ward on them. This ward adds 2 armor
+      to the touched party member the next 3 times they are successfully attacked.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: shield
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Guidance:
+    cost: 0
+    critical_effects: []
+    description: Once per rest, give an ally a 1d4 inspiration dice.
+    dice_num: '1'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - rest
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Hallowed Ground:
+    cost: 5
+    critical_effects: []
+    description: "Requires holy water, blessed by your deity, charcoal created by\
+      \ a holy flame, and at least 3 diamonds. Arrange the diamonds in a ring, spaced\
+      \ no more than 20 feet apart. Connect them with a trail of holy water, and etch\
+      \ the sigil of your deity into the rings center. After one hour of prayer, it\
+      \ becomes impossible for any entity to be injured within the ring. Lasts for\
+      \ one week. The diamonds are destroyed at the spell\u2019s end."
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Holy Orders:
+    cost: 0
+    critical_effects: []
+    description: Mark an enemy as a target for your group. Anyone who damages the
+      target regains 2 health. Anyone who kills the target regains 2d4 health. You
+      can mark at most one enemy at a time.
+    dice_num: '2'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Light:
+    cost: 1
+    critical_effects: []
+    description: Summon a light with a 10ft radius. Evil and undead entities within
+      the light take 1d6 damage every turn they are in it. Concentration.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - enemy
+  Major Guidance:
+    cost: 3
+    critical_effects: []
+    description: Once per rest, give an ally 2d10 inspiration dice.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - rest
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Major Heal:
+    cost: 3
+    critical_effects: []
+    description: Restore 8d4 health to one teammate or yourself
+    dice_num: '8'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Major Holy weapon:
+    cost: 4
+    critical_effects: []
+    description: Imbue your weapon with the spirit of righteousness. Your weapon gets
+      +6 damage for a day, and advantage against evil and undead entities..
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Major Mass Heal:
+    cost: 4
+    critical_effects: []
+    description: Restore 5d4 health to all allies in a 30ft radius.
+    dice_num: '5'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Major Ward:
+    cost: 3
+    critical_effects: []
+    description: Touch a teammate and place a ward on them. This ward adds 3 armor
+      to the touched party member the next 5 times they are successfully attacked.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: shield
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Mass Heal:
+    cost: 3
+    critical_effects: []
+    description: Restore 3d4 health to all allies in a 30ft radius.
+    dice_num: '3'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Mending:
+    cost: 0
+    critical_effects: []
+    description: You can mend small dents, dings, scratches, and tears in items.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Minor Heal:
+    cost: 1
+    critical_effects: []
+    description: Restore 2d4 damage to one teammate or yourself.
+    dice_num: '2'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Minor Holy weapon:
+    cost: 1
+    critical_effects: []
+    description: Imbue your weapon with the spirit of righteousness. Your weapon gets
+      +2 damage for a day, and advantage against evil and undead entities..
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Myrical:
+    cost: 5
+    critical_effects: []
+    description: Requires holy water, holy oil (optional), and a sacred flame. Takes
+      six hours to cast. If an individual has suffered an incurable injury or is at
+      death's door due to illness, wash them in holy water and and oil. Burn wood
+      using your sacred flame, and draw the mark of your deity on their brow. After
+      six hours of prayer, make an inner fire saving throw. If holy oil was used,
+      you have advantage. If the roll is 15 or higher, the entity is cured.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Omen:
+    cost: 1
+    critical_effects: []
+    description: Once per day, ask your diety for an omen in regards to a decision
+      you will make within the next hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - day
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Pacify:
+    cost: 1
+    critical_effects: []
+    description: If an enemy fails a saving throw, it becomes passive and calm. The
+      entity may make a saving throw every turn thereafter. This spell has no cost
+      on failure.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Purge Darkness:
+    cost: 1
+    critical_effects: []
+    description: Drive the influence of hostile magic from an entity.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Purge Decay:
+    cost: 2
+    critical_effects: []
+    description: Create an aura of positive energy with a 15 foot radius around yourself.
+      Undead or evil entities that enter the area take 2d10 damage per turn.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Purify:
+    cost: 0
+    critical_effects: []
+    description: Purify a food, drink, or potion to remove ill effects. Can remove
+      drunkenness from entities.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Radiant Light:
+    cost: 2
+    critical_effects: []
+    description: Create a beacon of holy light. Enemies who gaze  into it must make
+      a inner fire saving throw. Upon failure, they are blinded, and are knocked prone.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Sacred Flame:
+    cost: 0
+    critical_effects: []
+    description: Summon a sacred flame to your hand. Ash created by the flame is considered
+      sacred.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Sealed Promise:
+    cost: 4
+    critical_effects: []
+    description: The cost for this spell is one magic point. Requires a piece of white
+      rope and one ounce of holy water blessed by your deity. Have two individuals
+      wash their hands using the holy water, then tie their clasped hands together.
+      Any promise they make in this state must be kept, or the one who does not follow
+      through will die. If the promise becomes impossible, you may render the promise
+      invalid. If you do this in an evil manner, your deity will punish you.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Shield of Light:
+    cost: 1
+    critical_effects: []
+    description: Reaction. If you pass a check, block an enemy attack.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: reaction
+    target_number: 1
+    target_types: []
+  Spare:
+    cost: 0
+    critical_effects: []
+    description: Touch a critically injured ally to stabilize them. Allies who are
+      at death's door and are touched by you stop making death saving throws.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Speak Tongues:
+    cost: 2
+    critical_effects: []
+    description: Your deity touches your tongue to allow you to communicate its word
+      to others. You are able to speak any language for 1 hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  The Face of Good:
+    cost: 0
+    critical_effects: []
+    description: The light of your deity shines from you. You gain advantage on charisma
+      checks, and advantage on intimidation checks when attempting to intimidate evil
+      enemies.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Truth:
+    cost: 1
+    critical_effects: []
+    description: Force an enemy to speak only the truth.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Ward:
+    cost: 1
+    critical_effects: []
+    description: Touch a teammate and place a ward on them. This ward adds 1 armor
+      to the touched party member the next 3 times they are successfully attacked.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: shield
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Ward of Light:
+    cost: 2
+    critical_effects: []
+    description: Etch a glyph into the ground which makes a 20ft radius around it
+      undetectable to evil eyes.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Warmth/Cool:
+    cost: 1
+    critical_effects: []
+    description: Warm or cool an area with a 10ft radius.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+gunslinger_guide:
+  Dual wield:
+    cost: 3
+    critical_effects: []
+    description: Construct a second pistol and double your attacks every other turn.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Flash Grenade:
+    cost: 1
+    critical_effects: []
+    description: Craft a belt which crafts a flash grenade once every three turns
+      or once every hour. These grenades have a 10ft radius on explosion. If an affected
+      entity fails a dexterity saving throw, they are blinded for 1 turn, and all
+      actions they take have disadvantage.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Hollow point:
+    cost: 3
+    critical_effects: []
+    description: Your pistol now does d6 damage.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Lighter Gear:
+    cost: 1
+    critical_effects: []
+    description: You spend time crafting lighter gear for yourself, and get advantage
+      on dexterity checks.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Repeating:
+    cost: 1
+    critical_effects: []
+    description: Increase your fire rate by one shot each turn. Can be purchased multiple
+      times. Costs 1 upgrade kit the first two times, 2 afterward.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Suppressor:
+    cost: 1
+    critical_effects: []
+    description: Decrease your damage by 1, but silence your weapon. The silencer
+      is removable.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+novice_spellbook:
+  Acid Rain:
+    cost: 2
+    critical_effects: []
+    description: Rain acid down on a 20x20 foot area, doing d6 damage to all enemies
+      affected.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Acrid Mist:
+    cost: 0
+    critical_effects: []
+    description: "summon noxious green gas around an enemy\u2019s head, doing 2 turns\
+      \ of d4 damage."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Anti magic ring:
+    cost: 5
+    critical_effects: []
+    description: Create a 50 foot diameter sphere around yourself in which magic,
+      potions, and divine attacks have no effect.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Block:
+    cost: 1
+    critical_effects: []
+    description: Reaction. Block an enemy attack on saving throw.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: reaction
+    target_number: 1
+    target_types: []
+  Bubble of Vacuum:
+    cost: 3
+    critical_effects: []
+    description: "Creates a bubble with no air around an enemy\u2019s head. Stays\
+      \ until they make a saving throw."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Bubble of air:
+    cost: 1
+    critical_effects: []
+    description: Creates a bubble of breathable air around your head. Lasts 1 hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Cage:
+    cost: 4
+    critical_effects: []
+    description: A 30x30 foot area around you becomes a cage which no one can exit.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Chain Lightning:
+    cost: 3
+    critical_effects: []
+    description: Fire lighting at an enemy for a guaranteed 1d10 damage. Roll a d20,
+      and if 5 or above, chain to an enemy of your choice. Continue until you roll
+      below 5.
+    dice_num: '1'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Charm:
+    cost: 1
+    critical_effects: []
+    description: Charm an enemy if you pass a check, giving you advantage on all charisma
+      checks with them. If you fail, they become aware that you were trying to charm
+      them.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Cloak:
+    cost: 1
+    critical_effects: []
+    description: Hide yourself if you stay absolutely still.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Deep Sleep:
+    cost: 2
+    critical_effects: []
+    description: Put an enemy into a deep sleep if they fail a saving throw. Must
+      touch them. Works best if they are unaware.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Delayed Explosion:
+    cost: 4
+    critical_effects: []
+    description: Cast a glyph within 100 feet of yourself which explodes on your command.
+      Does 8d4 damage on all affected enemies.
+    dice_num: '8'
+    dice_type: '4'
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Featherfall:
+    cost: 3
+    critical_effects: []
+    description: The entity on which you cast this falls as though it is a feather.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Fireball:
+    cost: 1
+    critical_effects: []
+    description: Does 2d4 damage on all enemies within 10 feet of the point of impact.
+    dice_num: '2'
+    dice_type: '4'
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Force Push:
+    cost: 0
+    critical_effects: []
+    description: Knock an enemy backwards, doing d6 damage. Knocks down on critical
+      hit.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Freeze or unfreeze water:
+    cost: 1
+    critical_effects: []
+    description: Freeze or unfreeze up to a 40x40 foot area of water.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater Animate Object:
+    cost: 3
+    critical_effects: []
+    description: Bring an object to life to fight for you. The object has 20 health
+      and can do 1d6 damage. Concentration.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - enemy
+  Greater Block:
+    cost: 4
+    critical_effects: []
+    description: Block your entire team from taking damage for 1 turn.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Greater Bubble of air:
+    cost: 3
+    critical_effects: []
+    description: "Creates a bubble of breathable air around your party\u2019s heads.\
+      \ Lasts up to 6 hours."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater Drain:
+    cost: 2
+    critical_effects: []
+    description: Take 4 mana from an enemy and do d8 damage.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Greater Fireball:
+    cost: 3
+    critical_effects: []
+    description: Does 6d4 damage on all enemies within 20 feet of the point of impact.
+    dice_num: '6'
+    dice_type: '4'
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Greater Levitation:
+    cost: 2
+    critical_effects: []
+    description: Lift an object up to 200 pounds. Levitation works on objects up to
+      150 feet away.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater Lock/Unlock:
+    cost: 3
+    critical_effects: []
+    description: Lock a difficult lock, tie or untie a knot, or seal something with
+      magic. Lock lasts 24 hours.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater Muffle Footsteps:
+    cost: 3
+    critical_effects: []
+    description: Give your whole party advantage on stealth checks for 1 hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Ice Spear:
+    cost: 2
+    critical_effects: []
+    description: Spear an enemy with a lance of ice. 2d10 damage.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Implode:
+    cost: 4
+    critical_effects: []
+    description: Do 3d20 damage to a single target. On death, an enemy explodes, doing
+      2d10 damage to any adjacent enemies.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Lock/Unlock:
+    cost: 1
+    critical_effects: []
+    description: Lock an easy lock, tie or untie a knot, or seal something with magic.
+      Lock lasts 24 hours.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Magic alarm:
+    cost: 1
+    critical_effects: []
+    description: Create a magic alarm that triggers on a physical event of your choice.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Major ward of hearing:
+    cost: 2
+    critical_effects: []
+    description: Create an invisible ward from which you can hear. The ward disappears
+      if you move more than 5 mile from it.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Major ward of sight:
+    cost: 2
+    critical_effects: []
+    description: Create an invisible ward from which you can see. The ward disappears
+      if you move more than 5 mile from it.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Make a fire:
+    cost: 0
+    critical_effects: []
+    description: Summon a small flame to your hand. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Minor Levitation:
+    cost: 0
+    critical_effects: []
+    description: Levitate an object up to 20 pounds. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Minor Move Air:
+    cost: 0
+    critical_effects: []
+    description: Create a small gust of air, capable of pushing objects up to 20 pounds
+      away from you and slowing the advance of approaching enemies.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Minor ward of hearing:
+    cost: 1
+    critical_effects: []
+    description: Create an invisible ward from which you can hear. The ward disappears
+      if you move more than 1 mile from it.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Minor ward of sight:
+    cost: 1
+    critical_effects: []
+    description: Create an invisible ward from which you can see. The ward disappears
+      if you move more than 1 mile from it.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Muffle Footsteps:
+    cost: 0
+    critical_effects: []
+    description: Give a teammate advantage on stealth checks. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+  Pillar of flame:
+    cost: 4
+    critical_effects: []
+    description: Create a Pillar of flame with a radius of 10 feet and up to 100 feet
+      in height. The pillar does 3d10 damage to any enemies caught inside. Concentration,
+      disappears if you move more than 100 feet away.
+    dice_num: '3'
+    dice_type: '1'
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - enemy
+  Quake:
+    cost: 5
+    critical_effects: []
+    description: Create a thunderous earthquake capable of destroying a house. Enemies
+      affected must make a dexterity saving throw to avoid being knocked prone. On
+      a critical fail, enemies plummet into a fissure, dying. All enemies take 2d10
+      damage, or half that if they make their saving throw.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Quicksand:
+    cost: 1
+    critical_effects: []
+    description: Make a patch of quicksand which can trap one enemy for 2 turns. They
+      must role saves not to drown.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Rapid Ice Spear:
+    cost: 3
+    critical_effects: []
+    description: Spear up to 2 enemies with lances of ice. Deal 2d10 damage to each
+      or 4d10 damage to one.
+    dice_num: '4'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Silence:
+    cost: 1
+    critical_effects: []
+    description: Stop one entity from being able to make sound. Entity must be within
+      line of sight, and no more than 50 feet away. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Specter of sight:
+    cost: 3
+    critical_effects: []
+    description: Create an invisible specter through which you can see and hear. The
+      specter moves on your command, and lasts 24 hours.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Stone Skin:
+    cost: 2
+    critical_effects: []
+    description: Give a teammate or yourself
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Stop Time:
+    cost: 5
+    critical_effects: []
+    description: Freeze time for everyone but you for 1d6 turns or 1d20 minutes if
+      out of battle. Tapping a party.
+    dice_num: '1'
+    dice_type: '2'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Summon Water:
+    cost: 0
+    critical_effects: []
+    description: Summon water from your surroundings. Takes about 1 min per gallon.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Summon elemental weapon:
+    cost: 3
+    critical_effects: []
+    description: Summon to yourself a d12 elemental weapon with bonus 1d6 elemental
+      damage.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  'True':
+    cost: 3
+    critical_effects: []
+    description: sight
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  True Strike:
+    cost: 1
+    critical_effects: []
+    description: Give a teammate advantage on an upcoming check. Single use, lasts
+      up to one hour.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Weaken Metal:
+    cost: 2
+    critical_effects: []
+    description: Lay your hand on metal to weaken it. Works on up to a 1x1ft block
+      of metal and makes it roughly the same strength as wood.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+sharpshooter_reference:
+  Armor Penetrating Rounds:
+    cost: 1
+    critical_effects: []
+    description: Your shots now pass through up to 1 foot of stone and are unaffected
+      by armor.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: shield
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Bayonet:
+    cost: 1
+    critical_effects: []
+    description: You can rush forward to stab an enemy for 1d8 damage once every three
+      turns after you make your action.
+    dice_num: '1'
+    dice_type: '8'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  High Grain:
+    cost: 1
+    critical_effects: []
+    description: increase (increases +1, 2, etc).
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Rechamber:
+    cost: 2
+    critical_effects: []
+    description: Increase your rifle caliber to increase it to a 2d10 weapon.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Scope:
+    cost: 1
+    critical_effects: []
+    description: Craft a scope for your weapon to increase engagement range. Can look
+      through it to identify enemies at a distance. Gives you advantage on long range
+      attacks.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+  Shock Absorption:
+    cost: 1
+    critical_effects: []
+    description: "Place a shock absorber on your weapon\u2019s stock to increase accuracy.\
+      \ Increases critical hit chance by 1 before rechamber, by 2 afterwards. Can\
+      \ be purchased multiple times."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Suppressor:
+    cost: 1
+    critical_effects: []
+    description: Decrease sound created by your rifle.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+sorcerer_scrolls:
+  Conjure major illusion:
+    cost: 2
+    critical_effects: []
+    description: Create an illusory object which can move/speak if you tell it to
+      but cannot be bigger than a house. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Conjure minor  illusion:
+    cost: 1
+    critical_effects: []
+    description: Create an illusory object which cannot move and cannot be bigger
+      than a horse. You must have seen the object you are attempting to create. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Control Weather:
+    cost: 5
+    critical_effects: []
+    description: Takes 1 hour. Change the weather in a region.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Dimension Door:
+    cost: 3
+    critical_effects: []
+    description: Create a door into your own, private pocket dimension. The dimension
+      is 30x30x30 feet, and persists over time. Once you are in the pocket dimension,
+      you can always exit. For every 10 minutes you are in the pocket dimension, expend
+      an additional mana. If you run out, you are ejected from the pocket dimension.
+      Cannot be tied off.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Disarm:
+    cost: 2
+    critical_effects: []
+    description: Disarm an enemy if they fail a saving throw.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Firestorm:
+    cost: 5
+    critical_effects: []
+    description: Reaction. Fire bursts from your body, spiraling in every direction.
+      Does 3d20 damage to all entities within 25 feet of you if they fail a saving
+      throw. Stuns attacking entity. Enemies that fail a saving throw are burned,
+      and take 2d6 damage every turn until they make a saving throw.
+    dice_num: '2'
+    dice_type: '6'
+    distance: '5'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: reaction
+    target_number: 1
+    target_types:
+    - enemy
+  Fly:
+    cost: 4
+    critical_effects: []
+    description: Allow yourself or another entity to fly. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Gateway:
+    cost: 3
+    critical_effects: []
+    description: Create a door
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Grand Illusion:
+    cost: 5
+    critical_effects: []
+    description: Conjure an illusory object, which can move/speak, and think for itself.
+      Cannot be bigger than a mountain. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Greater Familiar:
+    cost: 3
+    critical_effects: []
+    description: Summon a greater familiar to aid you. The familiar is yours to command
+      until its health is zero. You can see through the eyes of a greater familiar.
+      See the Book of Known Beasts for more details.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Greater Gateway:
+    cost: 5
+    critical_effects: []
+    description: Create up to a 20x20 foot gateway from your current position to another
+      location within five  miles. The creation of a gateway makes an explosive bang.
+      Takes one full turn or five minutes to cast properly. If improperly cast, the
+      gateway lets out at an undetermined location within one mile. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Grow:
+    cost: 2
+    critical_effects: []
+    description: Grow an object or entity to a desired size. Unwilling entities can
+      attempt a saving throw every turn. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Illusory Terrain:
+    cost: 4
+    critical_effects: []
+    description: Make 100x100 yards of terrain look different.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Jet of water:
+    cost: 2
+    critical_effects: []
+    description: Call forth a powerful jet of water. The spell does 1d10 damage regularly,
+      or 2d10 damage if cast while on or near a body of water. Knocks an enemy over
+      on critical hit.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Major Familiar:
+    cost: 5
+    critical_effects: []
+    description: Summon a Major  familiar to aid you. The familiar is yours to command
+      until its health is zero. You can see through the eyes of a major  familiar.  See
+      the Book of Known Beasts for more details.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Mind Blast:
+    cost: 3
+    critical_effects: []
+    description: Fire a blast of psychic energy at an enemy. Do 1d20 damage and grapple
+      them if you roll above a 10. They can attempt a saving throw each turn at a
+      cost of 1d6 health if they fail. Concentration.
+    dice_num: '1'
+    dice_type: '6'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - enemy
+  Minor Familiar:
+    cost: 2
+    critical_effects: []
+    description: Summon a small familiar to aid you. See the book of known beasts
+      for more information.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Polymorph:
+    cost: 3
+    critical_effects: []
+    description: Transform an entity into an animal. They can attempt a saving throw
+      every turn.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Seer:
+    cost: 2
+    critical_effects: []
+    description: Wave your hand over something to understand its meaning.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Shrink:
+    cost: 2
+    critical_effects: []
+    description: Shrink an object or entity to a desired size. Unwilling entities
+      can attempt a saving throw every turn. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Strange Tongue:
+    cost: 2
+    critical_effects: []
+    description: You and your party speak in a tongue only you can understand. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Telepathic communication:
+    cost: 2
+    critical_effects: []
+    description: Create a ward on an entity to allow you to communicate with them
+      via thought. Works up to 1 half mile. Lasts 6 hours.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Tie off:
+    cost: 2
+    critical_effects: []
+    description: Make non
+    dice_num: '1'
+    dice_type: '4'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Unseen hand:
+    cost: 1
+    critical_effects: []
+    description: Conjure an unseen hand which can manipulate objects up to 50 feet
+      away.
+    dice_num: 0
+    dice_type: 0
+    distance: '0'
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+wizard_addendum:
+  Banish:
+    cost: 4
+    critical_effects: []
+    description: Banish an enemy to another dimension until it makes a saving throw.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Dominate:
+    cost: 3
+    critical_effects: []
+    description: Dominate an enemy if they fail a saving throw, causing them to fight
+      for you. Each turn or every hour, they can attempt a saving throw, but take
+      1d10 damage.
+    dice_num: '1'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Eat slugs:
+    cost: 0
+    critical_effects: []
+    description: "Fill a person\u2019s mouth with slugs. Chance to stagger them, always\
+      \ gross."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Enchanting:
+    cost: 0
+    critical_effects: []
+    description: Once per evening, you may attempt to imbue an object with one of
+      your spells. Works best if the object has at least one gemstone on it. The spell
+      may be one or more use. Duration it is left in the object is dependent on the
+      success of the enchanting.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: !!python/tuple
+    - evening
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Firecrackers:
+    cost: 0
+    critical_effects: []
+    description: Summon firecrackers to a position you can see.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater Imitate:
+    cost: 3
+    critical_effects: []
+    description: "Imitate the voice of someone or something you haven\u2019t met."
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Greater manifest will:
+    cost: 1
+    critical_effects: []
+    description: Conjure an object up to twenty pounds. Only one can be conjured at
+      a time. The item and its effects disappear when it does. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Igna Bokak:
+    cost: 3
+    critical_effects: []
+    description: A flaming bird attacks your foes. Does 1d20 damage, stays for 3 turns.
+      If out of battle, stays for 10 minutes.
+    dice_num: '1'
+    dice_type: '2'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 3
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Imitate:
+    cost: 1
+    critical_effects: []
+    description: imitate the voice of a person you have met.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Invisibility:
+    cost: 2
+    critical_effects: []
+    description: Make yourself or another entity or object completely invisible. Gives
+      advantage on stealth checks. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: advantage
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+  Invulnerability:
+    cost: 5
+    critical_effects: []
+    description: Make yourself or another entity invulnerable for 3 turns.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Major manifest will:
+    cost: 4
+    critical_effects: []
+    description: Conjure an object up to 200 pounds. Only one can be conjured at a
+      time. Disappears 5 minutes after you lose concentration on it. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Minor manifest will:
+    cost: 0
+    critical_effects: []
+    description: Conjure a small, nonliving object (no more than 1 pound). Only one
+      can be conjured at a time. Must have seen the object that you have seen. The
+      object and its effects will disappear when you stop concentrating on it. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Remove footprints:
+    cost: 1
+    critical_effects: []
+    description: Remove all footprint you and those with you have made over the past
+      6 hours.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Reverse Gravity:
+    cost: 5
+    critical_effects: []
+    description: Reverse the gravity in a space up to 1000x1000ft.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Scry:
+    cost: 2
+    critical_effects: []
+    description: Using a mirror, pool or water, or other reflective surface, conjure
+      a moving picture of a person or place that you know, which shows what is going
+      on there at the current time. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 2
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types: []
+  Storm of Swords:
+    cost: 5
+    critical_effects: []
+    description: Conjure 6 swords of pure arcane energy around yourself. Each turn
+      as a bonus action, you may hurl up to 2 of them for 2d10 damage each.
+    dice_num: '2'
+    dice_type: '1'
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: damage
+    frequency: 1
+    frequency_unit: turn
+    level: 5
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - enemy
+  Summoning Spell:
+    cost: 0
+    critical_effects: []
+    description: summon something to you. Check based on weight.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: world
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types: []
+  Teleport:
+    cost: 4
+    critical_effects: []
+    description: Instantly transport yourself and anyone touching you up to 1 mile.
+      In order to cast, you must concentrate, if concentration is broken, you end
+      up in a random location.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 4
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Throw voice:
+    cost: 0
+    critical_effects: []
+    description: Magically throw your voice up to fifty feet.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 0
+    save: 10
+    save_type: inner_fire
+    spell_type: standard
+    target_number: 1
+    target_types:
+    - ally
+    - self
+  Unburnt:
+    cost: 1
+    critical_effects: []
+    description: Allow yourself or another entity to pass through fire unharmed. Concentration.
+    dice_num: 0
+    dice_type: 0
+    distance: 0
+    distance_unit: feet
+    duration: 1
+    duration_unit: turn
+    effect_type: heal
+    frequency: 1
+    frequency_unit: turn
+    level: 1
+    save: 10
+    save_type: inner_fire
+    spell_type: concentration
+    target_number: 1
+    target_types:
+    - ally
+    - self

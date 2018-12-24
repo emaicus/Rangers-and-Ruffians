@@ -11,10 +11,31 @@ import uuid
 
 import rnr_utils
 
+
+def de_uuid(bad):
+  new_dict = dict()
+  for key, item in bad.items():
+    for key2, item2 in item.items():
+      if isinstance(item2, str):
+        if not key in new_dict:
+          new_dict[key] = list()
+        new_dict[key].append(item2)
+      else:
+        if not key in new_dict:
+          new_dict[key] = dict()
+        if not key2 in new_dict[key]:
+          new_dict[key][key2] = list()
+        for key3, item3 in item2.items():
+          new_dict[key][key2].append(item3)
+  return new_dict
+
+
 try:
-  with open("description_database.json", 'w') as infile:
-    DESCRIPTIONS_DATABASE = json.load(infile)
+  with open("description_database.json", 'r') as infile:
+    tmp_file_in = json.load(infile)
+    DESCRIPTIONS_DATABASE = de_uuid(tmp_file_in)
 except Exception as e:
+
   print("ERROR: Could not locate description_database.json")
   sys.exit(1)
 
@@ -30,6 +51,12 @@ gender_words = {
     "<SAME_GENDER_PRIEST_PRIESTESS>" : "priest",
     "<SAME_GENDER_LORD_LADY>" : "lord",
     "<OPPOSITE_GENDER_MOTHER_FATHER>" : "mother",
+    "<OPPOSITE_GENDER_MEN_WOMEN" : "women",
+    "<OPPOSITE_GENDER_MAN_WOMAN" : "woman",
+    "<OPPOSITE_GENDER_WITCH_WIZARD" : "witch",
+    "<OPPOSITE_GENDER_HE_SHE" : "she",
+    "<OPPOSITE_GENDER_BOY_GIRL>" : "girl",
+    "<OPPOSITE_GENDER_HIM_HER>" : "her",
     "<OPPOSITE_GENDER_BROTHER_SISTER>" : "sister",
     "<OPPOSITE_GENDER_KING_QUEEN>" : "queen",
     "<OPPOSITE_GENDER_PRIEST_PRIESTESS>" : "priestess",
@@ -50,6 +77,12 @@ gender_words = {
     "<SAME_GENDER_PRIEST_PRIESTESS>" : "priestess",
     "<SAME_GENDER_LORD_LADY>" : "lady",
     "<OPPOSITE_GENDER_MOTHER_FATHER>" : "father",
+    "<OPPOSITE_GENDER_MEN_WOMEN" : "men",
+    "<OPPOSITE_GENDER_MAN_WOMAN" : "man",
+    "<OPPOSITE_GENDER_WITCH_WIZARD" : "wizard",
+    "<OPPOSITE_GENDER_HE_SHE" : "he",
+    "<OPPOSITE_GENDER_BOY_GIRL>" : "boy",
+    "<OPPOSITE_GENDER_HIM_HER>" : "him",
     "<OPPOSITE_GENDER_BROTHER_SISTER>" : "brother",
     "<OPPOSITE_GENDER_KING_QUEEN>" : "king",
     "<OPPOSITE_GENDER_PRIEST_PRIESTESS>" : "priest",
@@ -81,146 +114,127 @@ introductions = [
   "Gods above! It's perfect! What if you tried playing"
 ]
 
-
 hairless_races = ["Lizkin"]
 always_bearded_races = ["Dwarf"]
 bearded_races = ["Gnome", "Halfling", "Human", "Orc", "Dwarf", "Daemonspawn"]
 human_like_skin = ['Elf', "Gnome", "Halfling","Human","Dwarf"]
 
-# #moles
-# unique_face = {
-#   "unisex" : [
-#     "has a face that goes blank when <HE'S_SHE'S> thinking",
-#     "scrunches <HIS_HER> nose when <HE_SHE> laughs",
-#     "has laugh lines",
-#     "has frown lines",
-#     "has deep crows feet",
-#     "has heavy scarring on <HIS_HER> face",
-#     "blushes"
-#     "face is always a little flush",
-#     "has a scar running down <HIS_HER> cheek",
-#     "has a scar running over <HIS_HER> left eye",
-#     "wears a single earring",
-#     "has a tattoo on <HIS_HER> face",
-#     "has dry, cracked lips"
-#     "has pierced ears",
-#     "pointed eyebrows",
-#     "bushy eyebrows",
-#     "arched eyebrows",
-#     "straight eyebrows",
-#     "plucked eyebrows",
-#     "slightly pointed ears",  
-#   ],
-#   "male" :[
-#   ],
-#   "female" : [
-#     "has a long neck",
-#   ]
-# }
-
-# def stripUUID(dictionary):
-#   ret = dict()
-#   for key, val in dictionary.items():
-#     outer = key
-    
-#     if type(val) is str:
-#       if not outer in ret:
-#         ret[outer] = dict()
-        
-
-
-def getHair(gender, name, race, bearded_override=False):
+def getHairDescription(race, male):
   global DESCRIPTIONS_DATABASE
   hair_description = DESCRIPTIONS_DATABASE['hair_descriptions']
-  if name == None:
-    name = "he" if gender == "male" else "she"
+  gender = "male" if male else "female"
+
   if race in hairless_races:
-    if not race in hairless_head_descriptions:
-      #this shouldn't happen, but we'll stumble on with an error.
-      perror("The race {0} is hairless, but has no descriptions. Tell a developer!")
-      return "{0} has a hairless head.".format(name)
-    hair_feature = random.choice(hairless_head_descriptions[race])
-    
-    #sub in gender words (TODO: make this a function)
-    return "{0} has {1}.".format(name, hair_feature) 
+    return None
   else:
     #get my hair description
     my_possible_hair_descriptions = hair_description[gender] + hair_description['unisex']
     my_hair_description = random.choice(my_possible_hair_descriptions)
-    #get my hair style
-    my_possible_hair_styles = hair_style[gender] + hair_style['unisex']
-    my_hair_style = random.choice(list(my_possible_hair_styles))
+    return my_hair_description
 
-    my_possible_hair_colors = list(hair_colors['standard'])
-    if race in fantasy_haired_races:
-      my_possible_hair_colors += list(hair_colors['fantasy'])
-    my_hair_color = random.choice(list(my_possible_hair_colors))
-
-    ret_string = "{0} has {1} {2} hair, which <HE_SHE> wears {3}".format(name,my_hair_description,my_hair_color,my_hair_style)
-
-    bearded = gender == "male" and random.choice([True, False])
-
-    if bearded_override or race in always_bearded_races or bearded:
-      my_facial_hair = random.choice(facial_hair)
-      ret_string = "{0}, and {1}".format(ret_string, my_facial_hair)
-    ret_string += '.\n'
-    return gender_word_replacement(ret_string, gender)
+def getHairlessDescription(race):
+  global DESCRIPTIONS_DATABASE
+  hairless_races = DESCRIPTIONS_DATABASE['hairless_head_descriptions']
 
 
-def getEyes(gender, name):
-  if name == None:
-    name = "he" if gender == "male" else "she"
-
-  my_eye_description = random.choice(eye_description)
-  my_eye_color = random.choice(eye_color)
-
-  ret_string = "{0} has {1}, {2} eyes.".format(name, my_eye_description, my_eye_color)
-  return gender_word_replacement(ret_string, gender)
+  if race not in hairless_races:
+    return None
+  else:
+    #get my hair description
+    return random.choice(hairless_races[race])
 
 
-def getBody(gender, name, race):
-  if name == None:
-    name = "he" if gender == "male" else "she"
+def getHairStyle(male):
+  #get my hair style
+  global DESCRIPTIONS_DATABASE
+  hair_style = DESCRIPTIONS_DATABASE['hair_styles']  
+  gender = "male" if male else "female"
+  my_possible_hair_styles = hair_style[gender] + hair_style['unisex']
+  my_hair_style = random.choice(list(my_possible_hair_styles))
+  return my_hair_style
+
+def getHairColor(male):
+  global DESCRIPTIONS_DATABASE
+  hair_colors = DESCRIPTIONS_DATABASE['hair_colors']   
+  # if race in fantasy_haired_races:
+  #   my_possible_hair_colors += list(hair_colors['fantasy'])
+  my_hair_color = random.choice(hair_colors)
+  return my_hair_color
+
+
+def getBeard(male, bearded_override=False):
+  facial_hair = DESCRIPTIONS_DATABASE["beards"]
+  bearded = (male and random.choice([True, False])) or bearded_override
+
+  my_facial_hair = None
+  if bearded:
+    my_facial_hair = random.choice(facial_hair)
+  return my_facial_hair
+
+
+def getEyeDescription():
+  global DESCRIPTIONS_DATABASE
+  eye_description = DESCRIPTIONS_DATABASE['eye_descriptions']
+  return random.choice(eye_description)
+  
+def getEyeColor():
+  global DESCRIPTIONS_DATABASE
+  eye_color = DESCRIPTIONS_DATABASE['eye_colors']
+  return random.choice(eye_color)
+
+def getBody(male):
+  global DESCRIPTIONS_DATABASE
+  physical_description = DESCRIPTIONS_DATABASE['physical_descriptions']
+  gender = "male" if male else "female"
  
-  allowed_skin_colors = []
-
   my_possible_physical_description = physical_description[gender] + physical_description['unisex']
-  my_physical_description = random.choice(my_possible_physical_description)
+  return random.choice(my_possible_physical_description)
+ 
+def getUniqueRaceDescription(race):
+  global DESCRIPTIONS_DATABASE
+  unique_races = DESCRIPTIONS_DATABASE['skin_colors']
+  if race in unique_races:
+    return random.choice(unique_races[race])
+  else:
+    return None
 
-  ret_string = "{0} {1}".format(name,my_physical_description)
+# def getQuirk(gender, name):
+#   if name == None:
+#     name = "he" if gender == "male" else "she"
 
-  if race in skin_color:
-    #flip a coin, go with race specific half the time.
-    allowed_skin_colors += skin_color[race]
-    my_skin_color = random.choice(allowed_skin_colors)
-    ret_string += " and has {0} skin".format(my_skin_color)
-
-  return gender_word_replacement(ret_string, gender)
-
-
-def getQuirk(gender, name):
-  if name == None:
-    name = "he" if gender == "male" else "she"
-
-  my_quirk = random.choice(physical_quirk[gender] + physical_quirk['unisex'])
-  ret_string = "{0} {1}.".format(name, my_quirk)
-  return gender_word_replacement(ret_string, gender)
+#   my_quirk = random.choice(physical_quirk[gender] + physical_quirk['unisex'])
+#   ret_string = "{0} {1}.".format(name, my_quirk)
+#   return gender_word_replacement(ret_string, gender)
 
 
-def getFace(gender, name):
-  if name == None:
-    name = "he" if gender == "male" else "she"
-  #my_nose = random.choice(noses[gender] + noses['unisex'])
-  #my_face_structure = random.choice(face_structure[gender] + face_structure['unisex'])
-  #my_mouth_and_cheeks = random.choice(mouth_and_cheeks[gender] + mouth_and_cheeks['unisex'])
-  # my_unique_face_feature = random.choice(unique_face[gender] + unique_face['unisex'])
-  #ret_string = "{0} has a {1} face with a {2} nose.\n<HE_SHE> {3}, and {4}".format(name, my_face_structure, my_nose, my_mouth_and_cheeks, my_unique_face_feature)
-  my_face_shape   = random.choice(face_shape[gender] + face_shape['unisex'])
-  my_face_feature = random.choice(face_feature[gender] + face_feature['unisex'])
+def getFaceShape(male):
+  global DESCRIPTIONS_DATABASE
+  face_shape = DESCRIPTIONS_DATABASE['face_shapes']
+  gender = "male" if male else "female"
+  
+  return random.choice(face_shape[gender] + face_shape['unisex'])
+  
+def getFaceFeature(male):
+  global DESCRIPTIONS_DATABASE
+  face_features = DESCRIPTIONS_DATABASE['face_features']
+  gender = "male" if male else "female"
 
-  ret_string = "{0} has a {1} face {2}".format(name, my_face_shape, my_face_feature)
+  return random.choice(face_features[gender] + face_features['unisex'])
 
-  return gender_word_replacement(ret_string, gender)
+def getOrigins(race, rnr_class):
+  global DESCRIPTIONS_DATABASE
+  origins = DESCRIPTIONS_DATABASE['origins']
+  return random.choice(origins)
+
+def getWeakness(race, rnr_class):
+  global DESCRIPTIONS_DATABASE
+  weaknesses = DESCRIPTIONS_DATABASE['weaknesses']
+  return random.choice(weaknesses)
+
+def getName(race,male):
+  gender = "male" if male else "female"
+  return names.get_first_name(gender=gender.lower())
+
 
 
 def gender_word_replacement(string, gender):
@@ -228,6 +242,79 @@ def gender_word_replacement(string, gender):
   for term in my_gender_dict.keys():
     string = string.replace(term, my_gender_dict[term])
   return string
+
+
+
+def getCharacterDescription(allowed_races=None, allowed_classes=None, allowed_genders=None):
+  if allowed_races == None:
+    allowed_races = rnr_utils.get_all_race_names()
+  if allowed_classes == None:
+    allowed_classes = rnr_utils.get_all_class_names()
+  if allowed_genders == None:
+    allowed_genders = ["male", "female"]
+
+  my_race  = random.choice(allowed_races)
+  my_class = random.choice(allowed_classes)
+  my_gender = random.choice(allowed_genders)
+  male = True if my_gender == "male" else False
+
+  my_hair_description = getHairDescription(my_race, male)
+  my_hair_style = getHairStyle(male)
+  my_hair_color = getHairColor(male)
+  my_beard = getBeard(male)
+  my_eye_description = getEyeDescription()
+  my_eye_color = getEyeColor()
+  my_physical_description = getBody(male)
+  my_face_shape = getFaceShape(male)
+  my_face_feature =  getFaceFeature(male)
+  my_name = getName(my_race,male)
+  my_origins = getOrigins(my_race, my_class)
+  my_weakness = getWeakness(my_race,my_class)
+  my_unique_race_description = getUniqueRaceDescription(my_race)
+
+  ret = "{0}, the {1} {2}\n".format(my_name, my_race, my_class) 
+  #origins
+  ret += "{0} {1}. ".format(my_name, my_origins)
+  #physical description
+  ret += "<HE_SHE> {0},".format(my_physical_description)
+  #hair
+  if my_hair_description != None:
+    if my_race != "Catterwol":
+      ret += " and has {0}, {1} hair".format(my_hair_description, my_hair_color)
+      if not male:
+        if random.choice([True,False]):
+          ret += ", which she wears {0}. ".format(my_hair_style)
+        else:
+          ret += ". "
+      elif my_beard != None:
+        ret += " and {0}. ".format(my_beard)
+      else:
+        ret += ". "
+    else:
+      style = random.choice(["short cut", "matted", "luminous", "long", "soft", "coarse"])
+      ret += " and has {0}, {1} fur.".format(style, my_hair_color)
+  else:
+    my_hairless_description = getHairlessDescription(my_race)
+    ret += " and has {0}. ".format(my_hairless_description)
+
+  ret += "<HIS_HER> eyes are {0} and {1}, and <HE_SHE> has {3}. ".format(my_eye_color, my_eye_description, my_face_shape, my_face_feature)
+
+  if my_unique_race_description != None:
+    ret += "<HE_SHE> has {0}. ".format(my_unique_race_description)
+
+  ret += "{0} {1}.".format(my_name, my_weakness)
+
+  if my_class == "Beastmaster":
+    my_animal_male = random.choice([True,False])
+    my_animal_name = getName("animal",my_animal_male)
+    animal_type = random.choice(["Wolf", "Dire Wolf", "Bear", "Hawk"])
+    ret += "\n\n{0} has a companion {1} named {2}".format(my_name, animal_type, my_animal_name)
+
+  return gender_word_replacement(ret, my_gender)
+
+
+
+
 
 
 def fill_in_default(dic, left_hand_side_type, right_hand_side_type, target_rhs_name, val):
@@ -439,11 +526,13 @@ def generate_training_dictionary():
     json.dump(train, outfile, indent=4)
 
 if __name__ == "__main__":
+  char = getCharacterDescription()
+  print(char)
  # rnr_utils.convert_json_file_to_yml_file('TRAINING_DICTIONARY.json','out.yml')
   # rnr_utils.printLogo()
   #updateDatabase('update.json')
  #initial_conversion_function()
  # generate_training_dictionary()  
-  marchingTrain(my_name = 'Evan')
+ # marchingTrain(my_name = 'Evan')
  #generate_training_dictionary()
   #train()
