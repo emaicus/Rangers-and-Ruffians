@@ -93,6 +93,29 @@ Light Fighter:
       Perception: 2
       Strength: 0
       Vitality: 0
+  Fighter:
+    abilities:
+      - Choice Stat
+      - Nimble
+      - Determination
+      - Multi-Action
+      - Second Wind
+      - Trained Attack 
+      - Resolve
+    description: Figthers are some of the best of the best. They are trained, hardened
+      combatants who pride themselves on their martial skills. Fighters are self-reliant
+      and have a skillset which is more suited to keeping themself alive than providing
+      support.
+    standings: Fighters come from all walks of life.
+    stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: 1
+      Strength: 1
+      Vitality: 2
 Heavy Fighter:
   Barbarian:
     abilities:
@@ -207,7 +230,7 @@ Mage:
       Intelligence: 3
       Luck: 1
       Perception: 1
-      Strength: 0
+      Strength: 1
       Vitality: -3
   Sorcerer:
     abilities:
@@ -230,6 +253,23 @@ Mage:
       Perception: 0
       Strength: 0
       Vitality: -1
+  Druid:
+    abilities:
+    - Novice Spellbook
+    - Druid's Guidebook
+    - Spell Choice
+    - Choice Stat
+    description: 
+    standings: 
+    stats:
+      Charisma: 0
+      Dexterity: 0
+      Inner_Fire: 2
+      Intelligence: 2
+      Luck: 0
+      Perception: 0
+      Strength: 0
+      Vitality: -2
 Ranged Fighter: 
   Gunslinger:
     abilities:
@@ -294,7 +334,7 @@ Utility:
       Charisma: 2
       Dexterity: 1
       Inner_Fire: 0
-      Intelligence: 0
+      Intelligence: 1
       Luck: 1
       Perception: 0
       Strength: -1

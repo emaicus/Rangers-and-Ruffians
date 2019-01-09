@@ -331,7 +331,7 @@ Monster Slayer:
     monsters of the dark.
   type: combat
 Mortal Coil:
-  description: Once every two days, you must consume a soul. If you do not, your body
+  description: Once every week, you must consume a soul. If you do not, your body
     begins to rot away, causing fear and horror in those who see you.
   type: general
 Mount and Blade:
@@ -650,3 +650,21 @@ Charismatic by Birth:
 Spell Modifiers: 
   description: Sorcerers can use spell modifiers to change aspects of their spells. These modifiers make it more difficult to perform the spell.
   type: general
+Nimble:
+  description: Targeted ranged attacks take disadvantage against you.
+  type: advantage
+Determination:
+  description: Once per rest, gain a d10 inspiration dice.
+  type: general
+Multi-Action:
+  description: Once every three turns, take two actions instead of one.
+  type: combat
+Second Wind:
+  description: Once per day, heal yourself for 2d10 damage.
+  type: general
+Trained Attack:
+  description: Once every three turns, re-roll an attack.
+  type: combat
+Resolve:
+  description: When your health drops below 20%, all attacks do half damage against you.
+  type: combat
