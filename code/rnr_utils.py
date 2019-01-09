@@ -11,7 +11,7 @@ class_data_by_type = dict()
 race_data = dict()
 
 class rnr_entity:
-    def __init__(self, name, abilities, stats, description, standings):
+    def __init__(self, name, abilities, stats, description):
       self.name = name
       #come back and see to this
       self.abilities = abilities
@@ -25,7 +25,6 @@ class rnr_entity:
       self.perception = stats['Perception']
       self.vitality = stats['Vitality']
       self.description = description
-      self.standings = standings
 
     def pretty_print(self):
       print(self.name)
@@ -65,7 +64,6 @@ class rnr_entity:
       serial["name"] = self.name
       serial["abilities"] = filterAbilities(self.abilities, ability_dict)
       serial["description"] = self.description
-      serial["standings"] = self.standings
       return serial
 
     def base_markdownify(self, image_path, emphasis):
@@ -80,7 +78,6 @@ class rnr_entity:
       else:
         path_to_image = ""
       description = self.description
-      standings = self.standings
       abilities = self.abilities
 
       ret = "{0} {1} \n".format(emphasis, self.name)
@@ -88,8 +85,6 @@ class rnr_entity:
         ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
       if description != "":
         ret += description + "  \n"
-      if standings != "":
-        ret += "**Standings:** " + self.standings + "  \n\n"
       
       ret += "#### Abilities:   \n"
       abilities = filterAbilities(self.abilities, ability_dict)
@@ -108,15 +103,15 @@ class rnr_entity:
       return ret
 
 class rnr_class(rnr_entity):
-    def __init__(self, name, abilities, stats, description, standings):
-      super().__init__(name, abilities, stats, description, standings) 
+    def __init__(self, name, abilities, stats, description):
+      super().__init__(name, abilities, stats, description) 
 
     def markdownify(self, image_path):
       return self.base_markdownify(image_path, '##')
 
 class rnr_race(rnr_entity):
-  def __init__(self, name, abilities, stats, description, standings):
-      super().__init__(name, abilities, stats, description, standings) 
+  def __init__(self, name, abilities, stats, description):
+      super().__init__(name, abilities, stats, description) 
 
   def markdownify(self, image_path):
       return self.base_markdownify(image_path, '#')
@@ -337,8 +332,8 @@ def load_all_race_objects():
   load_Rangers_And_Ruffians_Data()
   races = list()
   for race, info in race_data.items():
-    #class_name, abilities, stats, description, standings
-    race_obj = rnr_class(race, info['abilities'], info['stats'], info['description'], info['standings'])
+    #class_name, abilities, stats, description
+    race_obj = rnr_class(race, info['abilities'], info['stats'], info['description'])
     races.append(race_obj)
   return races
 
@@ -346,8 +341,8 @@ def load_all_class_objects():
   load_Rangers_And_Ruffians_Data() 
   rnr_classes = list()
   for c, c_info in class_data.items():
-    #class_name, abilities, stats, description, standings
-    class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['standings'])
+    #class_name, abilities, stats, description
+    class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'])
     rnr_classes.append(class_obj)
   return rnr_classes
 
@@ -356,8 +351,8 @@ def load_all_class_objects_by_type():
   for c_type, c_info in class_data_by_type.items():
     ret[c_type] = list()
     for c, info in c_info.items():
-      #class_name, abilities, stats, description, standings
-      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['standings'])
+      #class_name, abilities, stats, description
+      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'])
       ret[c_type].append(class_obj)
   return ret
 
@@ -376,11 +371,11 @@ def load_all_race_class_combos():
 def load_race(name):
   load_Rangers_And_Ruffians_Data()
   race = race_data[name]
-  return rnr_race(name, race['abilities'], race['stats'], race['description'], race['standings'])
+  return rnr_race(name, race['abilities'], race['stats'], race['description'])
 
 def load_class(name):
   r_class = find_class_info(name)
-  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'], r_class['standings'])
+  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'])
 
 def load_race_class_with_names(race_name, class_name):
   pass

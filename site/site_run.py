@@ -3,7 +3,6 @@ import flask
 import sys
 from flask import Flask,redirect, render_template
 from flask import request
-import generate_html
 import rnr_utils
 import cgi
 import names
@@ -18,6 +17,12 @@ app = Flask(__name__, static_url_path='/static')
 def index_page():
   return render_template('homepage.html')
 
+@app.route('/legal')
+def legal():
+  with open('../data/art.json','r') as art_json:
+    art = json.load(art_json)  
+  return render_template('legal.html',art=art)
+
 @app.route('/creation')
 def creation_landing_page():
 
@@ -31,6 +36,15 @@ def creation_landing_page():
   chosen_class = request.args.get('class','')
   chosen_name = request.args.get('name','')
   valid_gender = valid_race = valid_class = valid_name = False
+  tier = request.args.get('tier', 0)
+
+  try:
+    tier = int(tier)
+  except Exception as e:
+    tier = 0
+  if tier not in [0,1]:
+    tier = 1
+
 
   serial_data = list()
   page_objects = list()
@@ -48,8 +62,13 @@ def creation_landing_page():
   if chosen_race.lower() in race_names:
     valid_race = True
 
+
   if chosen_class.lower() in class_names:
     valid_class = True
+
+  magic_class = False
+  if chosen_class.lower() in ['wizard','bard','cleric','paladin']:
+    magic_class=True
 
   chosen_name = cgi.escape(chosen_name)
   if chosen_name != '':
@@ -65,11 +84,7 @@ def creation_landing_page():
     print("the name '{0}' was valid".format(chosen_name))
     character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name)
     serial = character.serialize()
-    print(json.dumps(serial, indent=4))
-    return render_template("rnr_character_sheet.html",character=serial)
-
-
-
+    return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class)
 
   if not valid_gender:
     for gender in ("male", "female"):
@@ -77,8 +92,12 @@ def creation_landing_page():
       serial["stats"] = {}
       serial["name"] = gender
       serial["abilities"] = {}
-      serial["description"] = ""
-      serial["standings"] = ""
+      serial["description"] = '''Your chosen gender can affect the way that you roleplay your character
+                                 in Rangers and Ruffians. However, it should not affect your chosen race
+                                 or class. While using the website, your chosen gender will affect the 
+                                 race and class images that are displayed.
+                              '''
+      serial["standings"] = ''
       serial["path_to_image"] = "/static/images/gender/{0}.jpg".format(gender.lower())
 
       with open('../data/art.json','r') as art_json:
@@ -115,8 +134,7 @@ def creation_landing_page():
   populated_value = "{0}{1}".format(next_char,populated_value)
   next_page = "/creation"
   
-
-  return render_template("display_page.html", data=serial_data, next_page=next_page, forwarding_param=forwarding_param, next_param = populated_value)
+  return render_template("display_page.html", data=serial_data, next_page=next_page, forwarding_param=forwarding_param, next_param = populated_value, tier=tier)
 
 @app.route('/random')
 def random_page():
@@ -131,13 +149,23 @@ def random_page():
   allowed_classes = request.args.getlist('allowed_classes',None)
   allowed_flaws = request.args.getlist('allowed_flaws', None)
 
+  tier = request.args.get('tier', 0)
+
+  try:
+    tier = int(tier)
+  except Exception as e:
+    tier = 0
+
+  if tier not in [0,1]:
+    tier = 1
+
   if len(allowed_genders) == 0 or len(allowed_races) == 0 or len(allowed_classes) == 0 or len(allowed_flaws) == 0:
     return render_template("rnr_character_form.html",rnr_classes=class_names, rnr_races=race_names)
-
 
   for gender in allowed_genders:
     if not gender in ['male', 'female']:
       allowed_genders.remove(gender)
+
   for race in allowed_races:
     if not race in race_names:
       allowed_races.remove(race)
@@ -162,6 +190,10 @@ def random_page():
   chosen_class  = random.choice(allowed_classes)
   chosen_flawed = random.choice(allowed_flaws)
 
+  magic_class = False
+  if chosen_class.lower() in ['wizard','bard','cleric','paladin']:
+    magic_class=True
+
   flawed = True if chosen_flawed == 'flawed' else False
 
   chosen_name = names.get_first_name(gender=chosen_gender.lower())
@@ -170,10 +202,23 @@ def random_page():
 
   character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name,origin=description)
   serial = character.serialize()
-  return render_template("rnr_character_sheet.html",character=serial)
+  return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class)
+
+@app.route('/spells')
+def spell_page():
+  spell_books = rnr_utils.get_all_spellbooks_with_level()
+  return render_template("spell_form.html", data=spell_books)
+
+@app.route('/print_spell_page')
+def print_spell_page():
+  spells = request.args.getlist('chosen_spells', None)
+  player_spellbook = rnr_utils.gather_spells(spells)
+  return render_template("printable_spellbook.html",data=player_spellbook)
+
 
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
+    rnr_utils.printLogo()
     port = int(os.environ.get('PORT', 5015))
     app.run(host='0.0.0.0', port=port)

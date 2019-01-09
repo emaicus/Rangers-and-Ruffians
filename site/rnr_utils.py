@@ -9,9 +9,10 @@ ability_dict = dict()
 class_data = dict()
 class_data_by_type = dict()
 race_data = dict()
+spell_books = dict()
 
 class rnr_entity:
-    def __init__(self, name, abilities, stats, description, standings):
+    def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
       self.name = name
       #come back and see to this
       self.abilities = abilities
@@ -25,7 +26,8 @@ class rnr_entity:
       self.perception = stats['Perception']
       self.vitality = stats['Vitality']
       self.description = description
-      self.standings = standings
+      self.quote = quote
+      self.quote_author = quote_author
 
     def pretty_print(self):
       print(self.name)
@@ -65,7 +67,8 @@ class rnr_entity:
       serial["name"] = self.name
       serial["abilities"] = filterAbilities(self.abilities, ability_dict)
       serial["description"] = self.description
-      serial["standings"] = self.standings
+      serial['quote'] = self.quote
+      serial['quote_author'] = self.quote_author
       return serial
 
     def base_markdownify(self, image_path, emphasis):
@@ -80,7 +83,6 @@ class rnr_entity:
       else:
         path_to_image = ""
       description = self.description
-      standings = self.standings
       abilities = self.abilities
 
       ret = "{0} {1} \n".format(emphasis, self.name)
@@ -88,8 +90,8 @@ class rnr_entity:
         ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
       if description != "":
         ret += description + "  \n"
-      if standings != "":
-        ret += "**Standings:** " + self.standings + "  \n\n"
+      # if standings != "":
+      #   ret += "**Standings:** " + self.standings + "  \n\n"
       
       ret += "#### Abilities:   \n"
       abilities = filterAbilities(self.abilities, ability_dict)
@@ -107,8 +109,8 @@ class rnr_entity:
       return ret
 
 class rnr_class(rnr_entity):
-    def __init__(self, name, abilities, stats, description, standings):
-      super().__init__(name, abilities, stats, description, standings) 
+    def __init__(self, name, abilities, stats, description, quote, quote_author):
+      super().__init__(name, abilities, stats, description, quote, quote_author) 
 
     def markdownify(self, image_path):
       return self.base_markdownify(image_path, '##')
@@ -124,8 +126,8 @@ class rnr_class(rnr_entity):
       return serial
 
 class rnr_race(rnr_entity):
-  def __init__(self, name, abilities, stats, description, standings):
-      super().__init__(name, abilities, stats, description, standings) 
+  def __init__(self, name, abilities, stats, description, quote, quote_author):
+      super().__init__(name, abilities, stats, description, quote, quote_author) 
 
   def markdownify(self, image_path):
       return self.base_markdownify(image_path, '#')
@@ -141,14 +143,13 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj):
+  def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj, character_quote='', character_quote_author=''):
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
     stats = Counter(rnr_race_obj.stats)
     stats.update(rnr_class_obj.stats)
     stats = dict(stats)
     character_name = "{0}: {1} {2}".format(character_name, rnr_race_obj.name, rnr_class_obj.name)
-
-    super().__init__(character_name, abilities, stats, character_origin, character_weakness) 
+    super().__init__(character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
     self.origin = character_origin
     self.weakness = character_weakness
@@ -252,8 +253,57 @@ def mergeAbilities(dictionary, abilities):
     dictionary[key] = values
   return dictionary
 
+def get_all_spellbooks():
+  load_Rangers_And_Ruffians_Data()
+  return spell_books
+
+def get_all_spellbooks_with_level():
+  load_Rangers_And_Ruffians_Data()
+
+  better_spellbooks = dict()
+
+  for spellbook, spells in spell_books.items():
+    if not spellbook in better_spellbooks:
+      better_spellbooks[spellbook] = dict()
+
+    for spell_name, spell_data in spells.items():
+      level = spell_data['level']
+      if not level in better_spellbooks[spellbook]:
+        better_spellbooks[spellbook][level] = dict()
+      better_spellbooks[spellbook][level][spell_name] = spell_data
+  return better_spellbooks
+
+def gather_spells(spell_data):
+  load_Rangers_And_Ruffians_Data()
+
+  player_spellbook = dict()
+
+  tmp_spells = dict()
+  for spell in spell_data:
+    print(spell)
+    print(spell.split("__"))
+    spellbook, spell_name = spell.split('__')
+    if not spellbook in tmp_spells:
+      tmp_spells[spellbook] = list()
+    tmp_spells[spellbook].append(spell_name.replace('_', ' '))
+  
+  for spellbook, spells in tmp_spells.items():
+    if not spellbook in player_spellbook:
+      player_spellbook[spellbook] = dict()
+
+    for spell in spells:
+      for k in spell_books[spellbook].keys():
+        print(k)
+      spell_data = spell_books[spellbook][spell]
+      level = spell_data['level']
+      if not level in player_spellbook[spellbook]:
+        player_spellbook[spellbook][level] = dict()
+      player_spellbook[spellbook][level][spell] = spell_data
+  return player_spellbook
+
+
 def load_Rangers_And_Ruffians_Data():
-  global ability_dict, race_data, class_data, class_data_by_type
+  global spell_books, ability_dict, race_data, class_data, class_data_by_type
 
   if len(ability_dict.keys()) != 0:
     return
@@ -261,7 +311,11 @@ def load_Rangers_And_Ruffians_Data():
   ability_path = "../data/abilities.yml"
   class_path = "../data/classes.yml"
   race_path = "../data/races.yml"
+  spell_path = "../data/spells.yml"
   
+  with open(spell_path) as data_file:
+    spell_books = yaml.load(data_file)
+
   with open(race_path) as data_file:
     race_data = yaml.load(data_file)
 
@@ -362,7 +416,7 @@ def load_all_race_objects():
   races = list()
   for race, info in race_data.items():
     #class_name, abilities, stats, description, standings
-    race_obj = rnr_race(race, info['abilities'], info['stats'], info['description'], info['standings'])
+    race_obj = rnr_race(race, info['abilities'], info['stats'], info['description'], info['quote'], info['author'])
     races.append(race_obj)
   return races
 
@@ -371,7 +425,7 @@ def load_all_class_objects():
   rnr_classes = list()
   for c, c_info in class_data.items():
     #class_name, abilities, stats, description, standings
-    class_obj = rnr_class(c, c_info['abilities'], c_info['stats'], c_info['description'], c_info['standings'])
+    class_obj = rnr_class(c, c_info['abilities'], c_info['stats'], c_info['description'],'','')
     rnr_classes.append(class_obj)
   return rnr_classes
 
@@ -381,7 +435,7 @@ def load_all_class_objects_by_type():
     ret[c_type] = list()
     for c, info in c_info.items():
       #class_name, abilities, stats, description, standings
-      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['standings'])
+      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['quote'], info['author'])
       ret[c_type].append(class_obj)
   return ret
 
@@ -396,25 +450,22 @@ def load_all_race_class_combos():
       lis.append(character)
   return lis
 
-
 def load_race(name):
   load_Rangers_And_Ruffians_Data()
   race = race_data[name]
-  return rnr_race(name, race['abilities'], race['stats'], race['description'], race['standings'])
+  return rnr_race(name, race['abilities'], race['stats'], race['description'],race['quote'],race['author'])
 
 def load_class(name):
   r_class = find_class_info(name)
-  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'], r_class['standings'])
+  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'],'','')
 
 def load_race_class_with_names(race_name, class_name, name="", origin=""):
   race_obj = load_race(race_name)
   class_obj = load_class(class_name)
   return rnr_character(name, origin, '', race_obj, class_obj)
 
-
 def load_race_class_with_objects(race_obj, class_obj, name="",origin=""):
   return rnr_character(name, origin, '', race_obj, class_obj)
-
 
 def find_class_info(name):
   load_Rangers_And_Ruffians_Data()

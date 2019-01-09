@@ -88,14 +88,14 @@
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
     "url" : "https://www.deviantart.com/anime407/art/Eilin-Planar-Jumper-729984323",
-    "title" : "Fierce Protectress"
+    "title" : "Eilin, Planar Jumper"
   },
   "sprout_female" : {
     "artist" : "Deevad",
     "license"  : "Creative Commons Attribution-Share Alike 3.0 License",
     "license_url" : "https://creativecommons.org/licenses/by-sa/3.0/us/",
     "url" : "https://www.deviantart.com/deevad/art/Kynitia-322571692",
-    "title" : "Eilin, Planar Jumper"
+    "title" : "Kynitia"
   },
   "catterwol_male" : {
     "artist" : "Noxypia",
@@ -196,11 +196,11 @@
     "title" : "Song of nature"
   },
   "beastmaster" : {
-    "artist" : "uildrim",
+    "artist" : "fredrickruntu",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/uildrim/art/Love-is-Blind-703002115",
-    "title" : "Love is Blind"
+    "url" : "https://www.deviantart.com/fredrickruntu/art/dragon-rider-461635302",
+    "title" : "dragon rider"
   },
   "gunslinger" : {
     "artist" : "SolDevia",
@@ -258,7 +258,7 @@
     "url" : "https://www.deviantart.com/surugamonkey/art/Aasimar-Monk-680761336",
     "title" : "Aasimar Monk"
   },
-  "rouge" : {
+  "rogue" : {
     "artist" : "raikoart",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
@@ -290,7 +290,21 @@
     "artist" : "jw8401",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015",
+    "url" : "https://www.deviantart.com/jw8401/art/140203-S-439637005",
     "title" : "140203 S"
+  },
+  "comingsoon_male" : {
+    "artist" : "Emily Probably",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "www.google.com",
+    "title" : "google"
+  },
+   "comingsoon_female" : {
+    "artist" : "Emily Probably",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "www.google.com",
+    "title" : "google"
   }
 }

@@ -17,13 +17,13 @@ orc = rnr_utils.load_race("Orc")
 elf = rnr_utils.load_race("Elf")
 
 #classes
-rouge = rnr_utils.load_class("Rouge")
+rogue = rnr_utils.load_class("Rogue")
 knight = rnr_utils.load_class("Knight")
 wizard = rnr_utils.load_class("Wizard")
 sorcerer = rnr_utils.load_class("Sorcerer")
 archer = rnr_utils.load_class("Archer")
 
-emily = (rnr_utils.rnr_character("Vasha", "", "", catterwol, rouge),"vasha")
+emily = (rnr_utils.rnr_character("Vasha", "", "", catterwol, rogue),"vasha")
 jeremy = (rnr_utils.rnr_character("Gillthunder", "", "", human, knight),"gillthunder")
 nick = (rnr_utils.rnr_character("Bilgolf the Purple", "", "", halfling, wizard),"bilgolf_wizard")
 nick2 = (rnr_utils.rnr_character("Bilgolf the Purple", "", "", halfling, sorcerer),"bilgolf_sorcerer")

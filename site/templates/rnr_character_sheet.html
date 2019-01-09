@@ -26,9 +26,16 @@
           </div>
           <div class="tinyspacerdiv"></div>
         {% endif %}
+
         <div class="row">
           <div class="col-3" style="width=20.333">
-            HP:  ______ / {{75 + (character["stats"]["Vitality"] * 5)}} + ______
+            HP:  ______ / 
+            {% if tier == 0%}
+              {{30 + (character["stats"]["Vitality"] * 2)}} + ______
+            {% endif %}
+            {% if tier == 1%}
+              {{75 + (character["stats"]["Vitality"] * 5)}} + ______
+            {% endif %}
           </div>
           <div class="col 2 align-self-start">
             Gold: ______
@@ -36,7 +43,15 @@
         </div>
         <div class="row">
           <div class="col-3">
-            MP: ______ / {{5 + (character["stats"]["Intelligence"])}} + ______
+            {% if magic_class == True %}
+              {% if tier == 0 %}
+                MP: ______ / {{3 + (character["stats"]["Intelligence"])}} + ______
+              {% endif %}
+              {% if tier == 1 %}
+                MP: ______ / {{5 + (character["stats"]["Intelligence"])}} + ______
+              {% endif %}
+
+            {% endif %}
           </div>
         </div>
 
@@ -80,7 +95,7 @@
        <div id="abilities">
          <p> 
             {% for key in ('combat', 'advantage', 'starting_item', 'choice','general') if key in character["abilities"]%}
-               <div class="major_title">{{key.title()}}</div>
+               <div class="major_title">{{key.replace('_',' ').title()}}</div>
                <ol>
                {% for ability in character["abilities"][key]%}
                   <li> <b class="minor_title"> {{ability[0]}}: </b> {{ability[1]}} </li>

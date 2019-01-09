@@ -320,7 +320,7 @@ Utility:
       Perception: 0
       Strength: -1
       Vitality: -3
-  Rouge:
+  Rogue:
     abilities:
       - Master of Disguise
       - Lightfoot

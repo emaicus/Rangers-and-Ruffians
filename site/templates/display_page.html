@@ -6,12 +6,13 @@
       <link rel="stylesheet" href="/static/css/bootstrap.min.css">
       <link rel="stylesheet" href="/static/css/materialize.min.css">
       <link rel="stylesheet" href="/static/css/rangers.css">
+      <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
    </head>
    <body>
       <div class="container">
          <div class="row">
             <div class="col s12">
-               <h2> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
+               <h2 style="font-family: 'Cinzel Decorative', cursive;"> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
             </div>
          </div>
 
@@ -41,7 +42,7 @@
 
                   <div class="card-reveal grey lighten-5">
                      <span class = "card-title grey-text text-darken-4">
-                        {{rnr_entity["name"]}}
+                        {{rnr_entity["name"].title()}}
                      </span>
 
                      <div class = "card-tabs">
@@ -64,6 +65,13 @@
                            </div>
                         </div>
                         <div id="{{rnr_entity['name'].lower()}}_overview" class = "col s12">
+                           {% if 'quote' in rnr_entity and rnr_entity['quote'] != ''%}
+                              <blockquote class="blockquote text-center" style="border-left: none;">
+                                <p style="font-size: 1.0rem;">{{rnr_entity['quote']}}</p>
+                                <footer class="blockquote-footer">{{rnr_entity['quote_author']}}</footer>
+                              </blockquote>
+                              <hr>
+                           {% endif %}
                            <p> {{rnr_entity["description"]}} </p>
                         </div>
                         <div id="{{rnr_entity['name'].lower()}}_art" class = "col s12">
