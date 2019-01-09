@@ -7,10 +7,18 @@ Catterwol:
     - Loose Skin
     - Fear of Water
     - Fast Paws
-  description: Bipedal catlike beings, Catterwol live in tribes, and are naturally
-    known as sly traders. Catterwol fur comes in all colors, and is deemed beautiful
-    by all races. Orc sometimes kill them for their pelt.
-  standings: Catterwol keep to themselves, and hate Orcs.
+  quote: Ah, yes, well... It was then that we stumbled upon an encampment of
+    cat-folk. They seemed a nice enough sort, so we bought some of their wares,
+    beads and knives and potions, that sort of thing. After that, we supped with them. 
+    Well, before we knew it, we were all unconcious; they drugged the food,
+    no doubt. They made off with everything; my staff, my hat, and even my
+    sandles!
+  author: Archibold, the Wizard
+  description: Catterwol are among the most lithe and dexterous of the races,
+    and are adept at passign unseen and unheard. With padded feet and strong claws
+    for climing, more than one Catterwol has turned to the life of a sneak-theif.
+    Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
+    average mages, but prefer slim, dexterity based weapons.
   stats:
     Charisma: 1
     Dexterity: 1
@@ -28,10 +36,15 @@ Elf:
     - Winged feet
     - Counter Attack
     - Detect Magic
+  quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
+    and they seldom mean what they say. They're strong mages, though, and too clever
+    for their own good. If you're dealing with elves, try to appeal to their pride,
+    but be careful about it. They can see through simple flattery.
+  author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
   description: Elves are the most magical of the races. Forest-dwellers with long
-    lives, elves spend their days practicing magic and honing their skills.
-  standings: 'Natural Allegiances/Enemies: Elves tolerate humans and dwarves, and
-    hate goblins and orcs.'
+    lives, many elves spend their days practicing magic and honing their skills. Elves
+    are naturally beautiful, and this beauty benefits them when they deal with the other
+    races. Elves make strong mages and good dexterity based fighters.
   stats:
     Charisma: 1
     Dexterity: 1
@@ -49,8 +62,12 @@ Gnome:
     - Gather
     - Grapple Gun
     - Resist Magic
-  description: ''
-  standings: ''
+  quote: Gnomes are tiny. They make things, sometimes. I can crush them.
+  author: Throgar, Barbarian and Sheriff
+  description: Tinkerers by nature, Gnomes are known to craft miraculous inventions to
+    help them deal with difficult situations. Gnomes typically stand about three feet 
+    in height, and can be recognized by their signature goggles. Gnomes are well rounded
+    and are capable of succeeding at anything they put their minds to.
   stats:
     Charisma: -1
     Dexterity: 0
@@ -67,10 +84,16 @@ Goblin:
     - Dark Vision
     - Seek Gold
     - Cheap Blow
-  description: Small and wicked, goblins are tricksters and thieves. Known for eating
+  quote: It is a rarity to find a kindly goblin, but when I have, I have found
+    them to be most agreeable companions. Mind you, their penchant for raw
+    flesh can be most off-putting... As can their little yellow eyes. Still, though, 
+    if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious
+    ally.
+  author: Tamberdoodle, Bard Extraordinare
+  description: Small and wicked, most goblins are tricksters and thieves. Known for eating
     their kills and living in the dark, goblins prefer to fight with ranged or short
-    weapons.
-  standings: Goblins are close allies with orcs, but fear and hate all others.
+    weapons. Morally good goblins are rare, and have often been outcast from their clan
+    and family. This can be very painful, as goblins are communal creatures by nature.
   stats:
     Charisma: 0
     Dexterity: 2
@@ -89,11 +112,13 @@ Halfling:
     - Carry a Tune
     - Thick Headed
     - Lightweight
+  quote: Halflings are decent enough, and fun to be around. They have potential as
+    since they can see without being seen, but I'm not sure if they're clever enough.
+  author: Vasha, Catterwol Thief
   description: Small folk, the Halflings would rather be drinking tea and eating toast
-    in their holes than adventuring. They are naturally tricksters, and are hardy
-    for their size.
-  standings: Halflings get on well with Elves, Dwarves, and men, though often the
-    other races forget they exist.
+    in their holes than adventuring. They are naturally tricksters, are hardy
+    for their size, and are adept at sqeezing into tight spots. On average, the Halflings
+    stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
   stats:
     Charisma: 2
     Dexterity: 1
@@ -109,12 +134,12 @@ Human:
   - Strength of Men
   - Rally
   - Tactics
-  description: The most average of the races. The race of man can become good at most
-    things, but it takes a concerted effort for them to become great at anything.
+  quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
+  author: Orkensheild, Orc Archer
+  description: Humans are the most average of the races. The race of men can become good 
+    at most things, but it takes a concerted effort for them to become great at anything.
     That doesn't stop them from trying, though, and it is this natural willpower that
     makes them a force to be reckoned with.
-  standings: Humans get on great with dwarves, well with elves, and distrust orcs
-    and goblins.
   stats:
     Charisma: 0
     Dexterity: 0
@@ -134,8 +159,9 @@ Lizkin:
   - Shed Tail
   - Taste Air
   - Camouflage
+  quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
+  author: Mister Li, Gnomeish Monk
   description: ''
-  standings: ''
   stats:
     Charisma: -2
     Dexterity: 0
@@ -155,8 +181,16 @@ Waterborn:
   - Beast Form
   - Lightweight
   - Dry Up
-  description: ''
-  standings: ''
+  quote: Most Waterborn I've seen have been dried up and dying. Their need
+    for water is their undoing, out here in the desert. Once they've been 
+    wetted down a bit, they perk right up. It's then that you have to watch
+    yourself; Waterborn are liable to charm you when you're not looking.
+  author: Leaf, Gnome Rogue from the Wild Desert
+  description: Alien among the other races, Waterborn hail from the depths of
+    oceans, lakes, and rivers. Waterborn come in a pleathora of colors, and have
+    ruddy, splotched skin which dries up if it isn't exposed to water regularly. 
+    Waterborn are powerful magic users, and are naturally adept at charming
+    the other races.
   stats:
     Charisma: 2
     Dexterity: 0
@@ -172,9 +206,12 @@ Orc:
   - Bellow
   - Still Warm
   - Thunderous Blow
+  quote: The full-orc is a dangerous specimen. Known to hunt and eat the other races,
+    it is difficult to domesticate them. As the saying goes, you can take the orc out
+    of the wilderness, but you can't stop him from trying to eat you.
+  author: unattributed folk wisdom
   description: A brutish and warlike race, orcs stab first and ask questions later.
     Orcs are often used to living in harsh environments, and living off the land.
-  standings: Orcs distrust all races save goblins, who they are close friends with.
   stats:
     Charisma: -2
     Dexterity: -1
@@ -195,11 +232,13 @@ Dwarf:
   - Boozehound
   - Thick Headed
   - They call me Smith 
+  quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be 
+    well placed if you want to bring one down.
+  author: Orkinshield, Orc Gunslinger
   description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
-                Dwarves prefer low places, and are at home in buildings and caves.
-  standings: Dwarves are practical, and deal with matters of the physical realm. 
-             As such, Dwarves distrust the more magical types, like elves, and
-             enjoy the company of the more technically inclined, like Gnomes. 
+                Dwarves prefer low places, and many of their strongholds can be found deep
+                within mountain ranges. Dwarves have a shrewd eye for business, and have 
+                been known to drink their adversaries under the table.
   stats:
     Charisma: 0
     Dexterity: -1
@@ -218,10 +257,13 @@ Daemonspawn:
   - Dark Vision
   - Sleepless
   - We are One
+  quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
+    to use their dark and terrible magicks as to give you a passing smile. I've never met 
+    one though; I've been careful to avoid them.
+  author: Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
   description: The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained.
                Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
                vigilant and trusts no one.
-  standings: Daemonspawn have a mutual distrust of most people, even other daemonspawn. Daemonspawn usually dislike elves.
   stats:
     Charisma: -4
     Dexterity: 1
@@ -231,3 +273,18 @@ Daemonspawn:
     Perception: 0
     Strength: 0
     Vitality: 1
+comingsoon:
+  abilities: 
+  - Fix Your Eyes on Me 
+  quote: Git 'er done!
+  author: Bill Clinton
+  description: A brand new race, developed entirely by Emily, is coming soon!
+  stats:
+    Charisma: -100
+    Dexterity: -100
+    Inner_Fire: -100
+    Intelligence: -100
+    Luck: -100
+    Perception: -100
+    Strength: -100
+    Vitality: -100

@@ -1,0 +1,40 @@
+ <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/css/rangers.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card-panel white">
+            <h1 style="font-family: 'Cinzel Decorative', cursive;"> <a href="/" style="color:black"> Rangers and Ruffians </a> </h1>
+            <hr>
+            <div>
+              <h3>Disclaimer Regarding Art Use</h3>
+              <p>
+                To the best of our knowledge, all art used by this site is utilized under Creative Commons. 
+                If you are an artist with concerns or comments, please
+                <a href="mailto:RangersAndRuffians@gmail.com?Subject=ArtUse">contact us</a>.
+              </p>
+              A complete list of works used is as follows:
+              <ul>
+              {%for use_case, work in art.items() %}
+                <li><a href="{{ work['url'] }}"> {{ work['title'] }}</a> by {{ work['artist'] }}. 
+                <a href="{{ work['license_url'] }}">License </a>
+                </li>
+              {% endfor %}
+              </ul>
+              Please support the artists by checking out their deviantart!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

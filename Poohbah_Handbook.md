@@ -4,15 +4,20 @@
 
 # Rules
 ### Performing Checks
-__The Rule:__ When a player does something that could fail, you may choose to have them make a check to find out whether or not they succeed. To make a check, a player must roll a d20 and get above a threshold These checks have variable difficulty (see table one), and can be modified by different player stats. You can skip checks that are unnecessary.
+__The Rule:__ When a player does something that could fail, you may choose to have them make a check to find out whether or not they succeed. 
+To make a check, a player must roll a d20 and get above a threshold These checks have variable difficulty (see table one),
+and can be modified by different player stats. You can skip checks that are unnecessary. If a player rolls a perfect 20, 
+it is called a __critical success__, and if a player rolls a natural 1, it is a __critical failure__.
+If a player rolls a natural critical failure, they automatically fail the check, often to humorous effect. 
+If they roll a critical success, they pass the check, often in style.
 
 |Difficulty      | Recommended Threshold |
 | :------------- | :-------------------  |
 | Easy           | 5                     |
-| Moderate       | 10                    |
-| Difficult      | 15                    |
-| Very Difficult | 17                    |
-| Epic           | 23                    |
+| Moderate       | 14                    |
+| Difficult      | 17                    |
+| Very Difficult | 21                    |
+| Epic           | 25                    |
 
 #### Recommended Modifiers
 Acrobatics, Climbing, Lockpicking, Speed, Tinkering: __Dexterity__  
@@ -23,19 +28,46 @@ Charming, Haggling: __Charisma__
 Avoiding Despair, Resisting Mental Attacks: __Inner Fire__
 Games of Chance: __Luck__    
 
-__Watch out for:__ Try to avoid making characters perform checks on meaningless things. For example, don't make a thief perform a check to see if they can mantle onto a one story building's roof. Of course they can. Even more important, please don't fall into the trap of using difficult checks to discourage players from "breaking your campaign." Always let your characters try to do things, and attempt to set checks impartially and realistically.
+__Watch out for:__ Try to avoid making characters perform checks on meaningless things. 
+For example, don't make a thief perform a check to see if they can mantle onto a one story building's roof.
+Of course they can. Even more important, please don't fall into the trap of using difficult checks to discourage players from 
+"breaking your campaign." Always let your characters try to do things, and attempt to set checks impartially and realistically.
+
+
+__Watch out for:__ Try not to overdo it on critical failure/successes. Remember that they happen on roughly 1 on 20 roles, so 
+every critical failure should not result in someone loosing a foot.
+
 
 ### Advantage and Disadvantage
-__The Rule:__ Disadvantage and advantage are granted by a number of abilities in the game. If a character has disadvantage, they can roll 2 dice for a check and take the higher. For disadvantage, they take the lower. However, you can grant a character advantage or disadvantage based on their situation. For example, if a halfling is attempting to jump across a ledge, you might give them disadvantage despite their naturally high dexterity.
+__The Rule:__ Advantage and disadvantage are granted by a number of abilities in the game.
+If a character has advantage, they can roll 2 dice for a check and take the higher. 
+For disadvantage, they take the lower. However, you can grant a character advantage or disadvantage based on their situation. 
+For example, if a halfling is attempting to jump across a ledge, you might give them disadvantage despite their naturally high dexterity.
 
-__Watch out for:__ It is important to strike a good balance when deciding what to give advantage on; if you overdo it, the players will begin to expect advantage on anything, or become discouraged if they fail too often. Also, as mentioned previously, please avoid allowing your perception of how the game _should_ go from affecting how you dole out advantage and disadvantage. Above all else, you want to avoid squashing player creativity.
+__Watch out for:__ It is important to strike a good balance when deciding what to give advantage on; if you overdo it, 
+the players will begin to expect advantage on everything, or become discouraged if they fail too often. 
+Also, as mentioned previously, please avoid allowing your perception of how the game _should_ go from affecting how you dole out 
+advantage and disadvantage. Above all else, you want to avoid squashing player creativity.
+
 ### Inspiration
-__The Rule:__ Some abilities grant character's an _inspiration dice._ This dice can be used once on a check of the character's choosing, but cannot be used to increase damage. A character can have at most one inspiration dice at a time.
+__The Rule:__ Some abilities grant character's an _inspiration dice._ 
+This dice can be rolled once and added to a check of the character's choosing, but cannot be used to increase damage. 
+A character can have at most one inspiration dice granted to them from a party member at a time.
+
 #### Team Checks
-__The Rule:__ A team check is just a check imposed on a whole party. Set the difficulty limit like you would regularly, then have everyone roll. Count a critical fail as 2 failures, and a critical success as 2 successes. If the party has more successes than failures, count the check as a success.
+__The Rule:__ A team check is just a check imposed on a whole party. 
+Set the difficulty limit like you would regularly, then have everyone roll. 
+Count a critical fail as 2 failures, and a critical success as 2 successes. 
+If the party has more successes than failures, count the check as a success.
 
 ### Combat
+Combat in Rangers and Ruffians is purely turn based. 
+
 #### Initiative
+At the start of combat, all participants (including enemies)
+roll initiative using their d20. Player turns are determined via the initiative order. On their turn, a player make 
+move and take one action. 
+
 #### Combat Abilities
 #### Character Death
 
