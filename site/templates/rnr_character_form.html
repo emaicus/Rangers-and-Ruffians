@@ -21,7 +21,7 @@
             <div class="card-content">
               <form action="random" method="GET">
                 
-                <p>What tier characters would you like to generate?</p>
+                <h5>What Tier Characters Would You Like to Generate?</h5>
                 <fieldset class="form-group left-align">
                   <label>
                     <input name="tier" value="0" type="radio">
@@ -33,10 +33,36 @@
                     <span>Tier 1</span>
                   </label>
                 </fieldset>
-
-                Which options would you like to disclude?
+                <hr>
+                <h5>Do You Want Randomly Rolled Stats?</h5>
+                <fieldset class="form-group left-align">
+                  <label>
+                    <input name="roll_stats" value="1" type="radio">
+                    <span>Yes</span>
+                  </label>
+                  <br/>
+                  <label>
+                    <input name="roll_stats" value="0" type="radio" checked>
+                    <span>No</span>
+                  </label>
+                </fieldset>
+                <hr>
+                <h5>Would You Like Quirky Characters?</h5>
                 <fieldset class="form-group">
-                  <p><b>Gender:</b></p>
+                  <div class="form-check">
+                    <label class="checkbox">
+                      <input type="radio" name="allowed_flaws" value="flawless"> <span>More Serious Characters</span>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="checkbox">
+                      <input type="radio" checked="checked" name="allowed_flaws" value="flawed"> <span>Quirky Characters</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <hr>
+                <h5>Which Genders Would You Like to Disinclude?</h5>
+                <fieldset class="form-group">
                   <div class="form-check">
                     <label class="checkbox">
                       <input type="checkbox" class="filled-in" checked="checked" name="allowed_genders" value="male"> <span>Male</span>
@@ -48,38 +74,24 @@
                     </label>
                   </div>
                 </fieldset>
-                <br/>
+                <hr>
+                <h5>Which Races Would You Like to Disinclude?</h5>
                 <fieldset class="form-group">
-                  <p><b>Flaws:</b></p>
-                  <div class="form-check">
-                    <label class="checkbox">
-                      <input type="checkbox" class="filled-in" checked="checked" name="allowed_flaws" value="flawed"> <span>Flawed Characters</span>
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="checkbox">
-                      <input type="checkbox" class="filled-in" name="allowed_flaws" value="flawless"> <span>Flawless Characters</span>
-                    </label>
-                  </div>
-                </fieldset>
-                <br/>
-                <fieldset class="form-group">
-                  <p><b>Races:</b></p>
-                  {% for allowed_class in rnr_classes %}
+                  {% for allowed_race in rnr_races %}
                   <div class="form-check">
                     <label class="checkbox-inline">
-                      <input type="checkbox" class="filled-in" checked="checked" name="allowed_classes" value={{allowed_class}}> <span>{{allowed_class.title()}}</span>
+                      <input type="checkbox" class="filled-in" checked="checked" name="allowed_races" value={{allowed_race}}> <span>{{allowed_race.title()}}</span>
                     </label>
                   </div>
                   {% endfor %}
                 </fieldset>
-                <br/>
+                <hr>
+                <h5>Which Classes Would You Like to Disinclude?</h5>
                 <fieldset class="form-group">
-                  <p><b>Classes:</b></p>
-                  {% for rnr_race in rnr_races %}
+                  {% for rnr_class in rnr_classes %}
                   <div class="form-check">
                     <label class="checkbox-inline">
-                      <input type="checkbox" class="filled-in" checked="checked" name="allowed_races" value={{rnr_race}}> <span>{{rnr_race.title()}}</span>
+                      <input type="checkbox" class="filled-in" checked="checked" name="allowed_classes" value={{rnr_class}}> <span>{{rnr_class.title()}}</span>
                     </label>
                   </div>
                   {% endfor %}

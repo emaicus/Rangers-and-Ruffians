@@ -507,6 +507,9 @@ The Bard's Songbook:
   description: You start with The Bard's Songbook, and may choose two common songs
     to have already learned from it.
   type: starting_item
+The Druid's Field Guide:
+  description: You can learn spells from the Druid's Field Guide.
+  type: starting_item
 The Book of Healing:
   description: You are able to learn spells from the Book of Healing.
   type: general

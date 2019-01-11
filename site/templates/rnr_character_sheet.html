@@ -13,7 +13,7 @@
       </style>
    </head>
    <body>
-      <div class="container">
+      <div class="container" id = printable>
         <div class="row">
           <div class="col-12">
             <div class="character_name">{{character["name"]}}</div>
@@ -103,7 +103,18 @@
                </ol>
             {% endfor %}
          </p>
+        </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <hr>
+            <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Character Sheet</a></p>
+            {% if magic_class == True %}
+            <p><a class="btn btn-primary text-white" href="spells?chosen_class={{character['class']}}&chosen_name={{chosen_name}}" role="button">Choose Your Spells</a></p>
+            {% endif %}
+          </div>
+        </div>
       </div>
       <script src="/static/js/jquery-3.3.1.js"></script>
       <script src="/static/js/bootstrap.min.js"></script>

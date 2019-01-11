@@ -1,81 +1,8 @@
-bard_songbook:
-  Level_0:
-    Carry on the wind:
-      cost: 0
-      description: Point at someone and only they hear you regardless of distance.
-  Level_1:
-    Courage:
-      cost: 1
-      description: Make your party members immune to fear and give them advantage
-        on inner fire saving throws. Lasts 3 turns in combat, or 30 minutes out of
-        combat.
-    Cruel Limerick:
-      cost: 1
-      description: Tell a cruel rhyme, imbued with magic, which gives an enemy disadvantage
-        on their next action.
-    Crushing Words:
-      cost: 1
-      description: Speak words of power, which do 1d6 damage to an enemy.
-    Folk Tune:
-      cost: 1
-      description: Play an old country classic to gain favor with commoners present,
-        giving you advantage on charisma checks when speaking with them.
-    Ode to Country:
-      cost: 1
-      description: "Play a country's anthem, Gain favor with soldiers present,\
-        \ giving you advantage on charisma checks when speaking with them."
-    Project Image:
-      cost: 1
-      description: Project an image of yourself. This image can move, but cannot speak,
-        and lasts at most 1 minute.
-    Song of Inspiration:
-      cost: 1
-      description: Play a tune which grants an ally a 1d6 inspiration dice.
-    Suggestion:
-      cost: 1
-      description: Whisper in a person's ear and they do what you want if they fail
-        a saving throw.
-    Sweet Nothings:
-      cost: 1
-      description: Charm an individual attracted to your sex, giving you advantage
-        when persuading them.
-    Vigor:
-      cost: 1
-      description: Allow a teammate to attack twice.
-  Level_2:
-    Battle Hymn:
-      cost: 2
-      description: Play a battle hymn which gives up to 3 nearby allies 1 additional
-        point on a stat of their choice. Lasts 1 hour.
-    Curse:
-      cost: 2
-      description: Spit a curse at an enemy. The magical vitriol in your voice does
-        1d10 damage and gives the enemy disadvantage on their next move.
-    Heroes Ballad:
-      cost: 2
-      description: Give an ally 1d10 inspiration dice.
-    Lullaby:
-      cost: 2
-      description: Sing a song which puts enemies to sleep if they fail an inner fire
-        check. Each turn thereafter, they can attempt a saving throw. If harmed, they
-        wake up.
-    Raucous Laughter:
-      cost: 2
-      description: Tell a joke so funny that anyone who hears it falls over if they
-        fail an inner fire check.
-  Level_3:
-    Harbinger of Doom:
-      cost: 3
-      description: Utter a word that hurts all that can hear it for 4d6 damage. Anyone
-        who hears makes a saving throw, and moves as far away as they can on a fail.
-    Mass Suggestion:
-      cost: 3
-      description: Cast suggestion on all people in earshot.
-book_of_healing:
+the_book_of_healing:
   Level_0:
     Beguile:
       cost: 0
-      description: "You\u2019re holy presence shakes an enemies constitution. Select\
+      description: "You're holy presence shakes an enemies constitution. Select\
         \ an enemy, they do 1d4 fewer damage on each attack for the next 3 turns."
     Burst of Light:
       cost: 0
@@ -263,7 +190,7 @@ book_of_healing:
         wood using your sacred flame, and draw the mark of your deity on their brow.
         After six hours of prayer, make an inner fire saving throw. If holy oil was
         used, you have advantage. If the roll is 15 or higher, the entity is cured.
-gunslinger_guide:
+the_gunslinger's_guide:
   Level_1:
     Flash Grenade:
       cost: 1
@@ -290,7 +217,7 @@ gunslinger_guide:
     Hollow point:
       cost: 3
       description: Your pistol now does d6 damage.
-novice_spellbook:
+the_novice_spellbook:
   Level_0:
     Acrid Mist:
       cost: 0
@@ -480,7 +407,7 @@ novice_spellbook:
       cost: 5
       description: Freeze time for everyone but you for 1d6 turns or 1d20 minutes
         if out of battle. Tapping a party.
-sharpshooter_reference:
+sharpshooter's_reference:
   Level_1:
     Armor Penetrating Rounds:
       cost: 1
@@ -510,9 +437,9 @@ sharpshooter_reference:
     Rechamber:
       cost: 2
       description: Increase your rifle caliber to increase it to a 2d10 weapon.
-sorcerer_scrolls:
+the_sorcerer's_scrolls:
   Level_1:
-    Conjure minor  illusion:
+    Conjure minor illusion:
       cost: 1
       description: Create an illusory object which cannot move and cannot be bigger
         than a horse. You must have seen the object you are attempting to create.
@@ -616,7 +543,7 @@ sorcerer_scrolls:
       description: Summon a Major  familiar to aid you. The familiar is yours to command
         until its health is zero. You can see through the eyes of a major  familiar.  See
         the Book of Known Beasts for more details.
-wizard_addendum:
+the_wizard's_addendum:
   Level_0:
     Eat slugs:
       cost: 0
@@ -706,3 +633,501 @@ wizard_addendum:
       cost: 5
       description: Conjure 6 swords of pure arcane energy around yourself. Each turn
         as a bonus action, you may hurl up to 2 of them for 2d10 damage each.
+the_bard's_songbook:
+  Level 0:
+    Carry on the wind:
+      description: Point at someone and only they hear you regardless of distance.
+    Cruel Limerick:
+      description: Tell a cruel rhyme, imbued with magic, which gives an enemy disadvantage
+        on their next action.
+    Folk Tune:
+      description: Play an old country classic to gain favor with commoners present,
+        giving you advantage on charisma checks when speaking with them.
+    Ode to Country:
+      description: "Play a country's anthem, Gain favor with soldiers present,\
+        \ giving you advantage on charisma checks when speaking with them."
+    Sweet Nothings:
+      description: Charm an individual attracted to your sex, giving you advantage
+        when persuading them.
+  Level 1:
+    Belch Fire:
+      description: Belch fire onto something. Does 1d6 damage.
+    Counterspell:
+      description: May be cast at a higher level. If the level of the counter spell
+        is equal to or greater than the opponent's spell, it is instantly dispelled.
+        Otherwise, the casting entity must pass an inner fire saving throw.
+    Courage:
+      description: Make your party members immune to fear and give them advantage
+        on inner fire saving throws. Lasts 3 turns in combat, or 30 minutes out of
+        combat.
+    Curse:
+      description: Spit a curse at an enemy. The magical vitriol in your voice does
+        1d10 damage and gives the enemy disadvantage on their next move.
+    Disarmor:
+      description: Remove armor from an entity for 3 turns.
+    Keen Blade:
+      description: Your blade gains an additional 1d6 damage for a battle.
+    Kiss and Tell:
+      description: kiss someone to always know where they are. Know within 5 miles
+        if the kiss is on the cheek, within 100 feet if on the mouth.
+    Liquid Luck:
+      description: Cast on an intoxicated ally (or yourself) to treat their luck as
+        5.
+    Mark Enemy:
+      description: Give teammates advantage when the attack a specific enemy. Lasts
+        1 turn.
+    Minor Trickery:
+      description: Convince an entity that it sees something that it does not. Inner
+        fire check.
+    Not So Fast:
+      description: Force an enemy to redo a roll.
+    Project Image:
+      description: Project an image of yourself. This image can move, but cannot speak,
+        and lasts at most 1 minute.
+    Song of Inspiration:
+      description: Play a tune which grants an ally a 1d8 inspiration dice.
+    Vigor:
+      description: Allow a teammate to attack twice.
+  Level 2:
+    Battle Hymn:
+      description: Play a battle hymn which gives all nearby allies 1 additional point
+        on a stat of their choice and a d6 inspiration dice. Lasts 1 hour.
+    Free Flowing Chalice:
+      description: Enchant a cup or vessel and it will flow with wine for up to 6
+        hours or 100 gallons.
+    Invisible Servant:
+      description: Summon an invisible servant to aid you in a task.
+    "Kilgore's Thunderous Shout":
+      description: 3d6 + 4 damage to an individual. Strength check or they are thrown.
+    Lullaby:
+      description: Sing a song which puts enemies to sleep if they fail an inner fire
+        check. Each turn thereafter, they can attempt a saving throw. If harmed, they
+        wake up.
+    Minor Gate:
+      description: Create a gate exactly big enough to fit yourself and one other
+        individual of your size. The gate can transport you up to 300 feet.
+    Raucous Laughter:
+      description: Tell a joke so funny that anyone who hears it falls over if they
+        fail an inner fire check.
+    Resonant armor:
+      description: add 1d4 + 2 armor to an entity for 3 turns.
+    Smokescreen:
+      description: Create a smokescreen which is impossible to see through.
+    Song of Strength:
+      description: Play a tune which gives all nearby allies an additional 1d4 strength.
+        Concentration.
+    Suggestion:
+      description: Whisper in a person's ear and they do what you want for 1 minute
+        if they fail a saving throw.
+    Sweet Dreams:
+      description: "Shape an entity's dreams. You must be within 100 feet of\
+        \ the entity. Roll a deception check against the entity (they take disadvantage)\
+        \ to see how convincing the false dream is."
+    "Tyrone's Ravenous Hunger":
+      description: Cause an entity to become ravenously hungry. If they fail an inner
+        fire check, they will attempt to eat the nearest entity to them.
+  Level 3:
+    Animal Form:
+      description: Transform yourself into an animal up to large in size.
+    Harbinger of Doom:
+      description: Utter a word that hurts all that can hear it for 4d6 damage. Anyone
+        who hears makes a saving throw, and moves as far away as they can on a fail.
+    Immovable:
+      description: Make an object immovable for 1 minute.
+    "Jerry's Race Dismorphia":
+      description: Transform yourself into another race for 1 hour.
+    Little Guardian:
+      description: Create a small familiar to aid you. The familiar has 20 health,
+        and can attack for 3d4 + 4 damage.
+    Mass Trickery:
+      description: Convince up to 20 entities that they see something they do not.
+    Matchmaker:
+      description: Point at two individuals and speak their names. If they fail an
+        inner fire check, they fall madly in love. Concentration with checks.
+    Power Shriek:
+      description: 2d4 + 6 damage to all that hear it. INF save for deafness.
+    Song of Healing:
+      description: Heal an ally for 5d6 health.
+    Unstoppable:
+      description: Make an object unstoppable for 1 minute.
+    Wholesome Homestead:
+      description: Summon a pocket dimension containing a small homestead, capable
+        of housing 6 people comfortably in two shared bedrooms. The homestead is fully
+        stocked with modest food and drink. Only individuals that you want to have
+        access to the homestead may enter it. The homestead lasts 24 hours. Nothing
+        placed in the homestead will stay, and nothing from within may be taken out.
+  Level 4:
+    Lightning Strike:
+      description: Call down a blast of lightning on an enemy. Does 5d8 + 6 damage.
+    Mass Suggestion:
+      description: Cast suggestion on all people in earshot.
+    Song of Dancing:
+      description: Play a song which is so catchy, all those who hear are forced to
+        dance if they fail an inner fire saving throw. They can save once every turn.
+    Strike Dumb:
+      description: An entity must perform an inner fire check against your charisma.
+        If they fail, their intelligence is treated as -5. They lose the ability to
+        speak, read, and otherwise communicate outside of grunts. This lasts until
+        dispelled.
+    Zone of Truth:
+      description: Create a zone in which all must speak truthfully if they fail an
+        inner fire saving throw.
+  Level 5:
+    Dominate Person:
+      description: An entity must perform an inner fire check against your charisma.
+        If they fail, they are dominated until dispelled, and must do as you command.
+    "Edmire's Grand Manor":
+      description: Summon a pocket dimension containing a huge mansion, capable of
+        housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
+        fully stocked with extravagant food and drink. The mansion is manned by 100
+        servants, which are at the beck and call of the mansions creator. Upon learning
+        this spell, the bard may design the mansion to have rooms that suit the needs
+        of their party (e.g. a holy sanctum, dungeons, training grounds, a kitchen,
+        etc.). Only individuals that you want to have access to the mansion may enter
+        it. The mansion lasts 24 hours. Nothing placed in the mansion will stay, and
+        nothing from within may be taken out.
+    Guards:
+      description: Summon 1d4 + 2 ethereal guardians to aid you. The guardians remain
+        for 12 hours. They each have 50 health, and do 3d8 + 8 damage per attack.
+    Mass Song of Healing:
+      description: Heal all allies in earshot for 5d6 health.
+    Rewrite History:
+      description: Cast on everyone in earshot you wish. If they fail an inner fire
+        saving throw, re-write up to one hour of their memory.
+    Torugar, the Many Tounged Demon:
+      description: Summon a pit, housing an ancient, many tounged god of the underworld.
+        Every turn for 5 turns, 1d6 tounges will writhe forth from the pit, and attempt
+        to grab individuals within 1000 feet. If an individual is grabbed (fails a
+        dexterity check) it sustains 4d8 + 8 damage. If the blow kills the creature,
+        it is ripped down into the pit.
+the_druid's_guidebook:
+  Level_0:
+    Cold Resistance:
+      description: Resist cold. You take 2d6 fewer damage from frozen, frost, or cold
+        attacks.
+    Fire Resistance:
+      description: Resist fire damage. You take 2d6 fewer damage from fire based attacks.
+    Forest Sense:
+      description: Perform perception checks using the natural world around you. Advantage
+        on perception checks when living natural entities can be used to aid you.
+    Grow:
+      description: Quickly grow a plant up to the size of a hedge in about 5 minutes.
+    Lightning Resistance:
+      description: Resist electricity. You take 2d6 fewer damage from lightning based
+        attacks.
+    Low Light Vision:
+      description: Give yourself low light vision for up to one hour.
+    Mend:
+      description: Instantly mend a broken item or object. You must have most of the
+        pieces and the object must not be too complicated.
+    Walk on Water:
+      description: Walk atop the water. Concentration.
+  Level_1:
+    Bark Armor:
+      description: Add 1d4 armor to an individual. The armor breaks after they take
+        3 hits.
+    Cloud of Fog:
+      description: Cast a fog on a position that is impossible to see through. The
+        fog may have a radius of up to 50 feet.
+    Commanding Presence:
+      description: Steel yourself and cast a magical aura which grants nearby allies
+        an additional 1d4 inner fire. Concentration.
+    Commune with Nature:
+      description: Speak in the language of plants or animals for up to one hour.
+    Moonlight:
+      description: Summon moonlight and attach it to an object or person. The light
+        lasts one hour past when you break concentration on it, and is bright enough
+        to allow you to see 50 feet.
+    Purify:
+      description: Remove poison from an item or person.
+    Thorned Caltrops:
+      description: Cast thorn based spikes onto the ground. Anyone moving across them
+        will move at half speed and take 1d6 damage per step. Thrown of 10 square
+        feet.
+    Transmute Weapon:
+      description: "Magically alter a weapon so that it's damage scales with\
+        \ inner fire rather than dexterity or strength. Lasts for one day."
+  Level_2:
+    Charm Animal:
+      description: Charm an animal to make it your friend. The animal must roll an
+        inner fire saving throw.
+    Control Water, Wind, or Fire:
+      description: Choose an element from Earth, Wind, or Fire. Gain some control
+        over this element. Concentration.
+    Elemental Weapon:
+      description: "Imbue a weapon with 1 battle's worth of elemental damage.\
+        \ Every blow with the weapon does an additional 2d6 elemental damage."
+    Freezing Rain:
+      description: Make terrain difficult by causing a freezing rain to fall over
+        it.
+    Scorpions:
+      description: Create a 5 cubic foot block of scorpions. Scorpion stings do 1d4
+        poison damage.
+    Shape Earth:
+      description: Move up to 15 cubic feet of earth.
+  Level_3:
+    Animal Form:
+      description: Transform yourself into an animal.
+    Forest Guardians:
+      description: Summon an animal to aid you in battle.
+    Greater Grow:
+      description: Quickly grow a plant up to the size of a tree in about 30 seconds.
+        The spell lasts for as long as you concentrate on it, allowing you to grow
+        up to 120 trees per hour. After the first hour, begin making inner fire saving
+        throws to see if you are too exhausted to continue.
+    Heart Fruit:
+      description: Grow a heart fruit, capable of healing an entity 2d6 + 4 damage.
+        Heart fruit keep for up to one day.
+    Resist an element:
+      description: Select an element. An entity of your choice takes half damage from
+        that element. Lasts 1 hour.
+    Wall of Brambles:
+      description: Create up to a 100 foot long wall of bramble bushes. Moving through
+        them requires a dexterity check, and results in 1d6 + 4 damage.
+  Level_4:
+    Ents:
+      description: Summon 2 ents to your aid. The ents have 40 health, attack twice,
+        and do 1d6+2 damage per attack. Each ent has 5 spell points, and is capable
+        of casting wall of brambles, bark armor, and thorned caltrops.
+    Resist the elements:
+      description: An entity of your choice takes half damage from all elemental attacks.
+        Lasts 12 hours.
+    Tornado:
+      description: Trap an entity of your choice in a swirling whirlwind. If the entity
+        escapes, it slams to the ground, causing fall damage.
+    Wildfire:
+      description: Create a swirling inferno of wildfire. Fills a 20x20 foot space.
+        Does 4d8 + 4 damage to all inside of it.
+  Level_5:
+    Awaken Animal:
+      description: Give an animal sentience. It is bound to you for one month, and
+        must follow you.
+    Control Weather:
+      description: Cast a ritual spell which changes the weather in a region. Further,
+        control that weather to accomplish specific tasks. Concentration. Weather
+        does not change back when concentration is broken.
+    Grow Feast:
+      description: Grow a feast. Up to 8 entities may partake of the feast. Each of
+        these entities fully heal, and gain 1d8 + 4 additional hit points for the
+        next 24 hours.
+    Winter's fury:
+      description: Call a massive blizzard. All entities within the blizzard take
+        4d10 + 4 damage per turn, and have disadvantage in all things. Lasts 3 + intelligence
+        turns.
+the_macabre_manual:
+  0 Soul Cost:
+    Ghastly Visage:
+      description: Make yourself look like a horrible monster. Gain advantage on intimidation
+        checks.
+    Minor Death Coil:
+      description: Fire a ball of pure death from your hand. Deals 1d6 damage. Heals
+        undead.
+    Night Terror:
+      description: Impose your will on a sleeping enemy by manifesting yourself in
+        their dreams.
+    Rot:
+      description: Cause an item to rot or deal 2d4 damage. Must touch the item.
+    Sense Death:
+      description: Sense nearby corpses.
+    Shadow:
+      description: Move like shadow through the darkness. Gain advantage on stealth
+        checks when in shadow.
+    Vivify:
+      description: Make something rotten or dead appear living.
+  1 Soul Cost:
+    Cripple:
+      description: Stop one enemy from moving for a turn and deal 3d6 damage.
+    Major Death Coil:
+      description: Fire a ball of pure death from your hand. Deals 2d10 damage. Heals
+        undead.
+    Minor Thrall:
+      description: Resurrect a zombie with 6 health and 1d4 damage. Works on standard
+        enemies.
+    Minor Through the eyes of the little ones:
+      description: Take control of a nearby small animal such as a rat or crow. You
+        lose control after 1 hour or after the animal moves 1 mile away.
+    Minor darkness:
+      description: Fill a 15 square foot area with pitch darkness
+    Pain:
+      description: Cause an enemy to feel incredible pain. They take 4d4 damage and
+        gain disadvantage on their next attack.
+    Painless:
+      description: "Remove someone's ability to feel pain."
+    Shadowstep:
+      description: Teleport from one shadow to another (max distance of 50 feet).
+    Siphon Blood:
+      description: "Eat the lifeforce of a wounded enemy, dealing 1d20 damage, and\
+        \ healing yourself for that amount. Can't harvest a soul from that body."
+    Trauma:
+      description: Cause an enemy to see into the unseen realm of darkness. If they
+        fail a saving throw, they collapse, unable to move. On a critical fail, their
+        mind is broken.
+  10 Soul Cost:
+    Abomination:
+      description: Knit together a monstrous abomination to fight for you. Requires
+        5 corpses. The monster has 50 health, deals 2d10 damage, and can cast spikes
+        of blood, and cripple once every 3 turns.
+    Death Inducement:
+      description: Mark the time that a person will die. Requires a piece of paper
+        made from the skin of a sentient being and one ounce of the blood of the one
+        who is to die. At the prescribed time, the entity must make an inner fire
+        saving throw. If they succeed, they take half damage. The entity takes 20d10
+        + 20 damage, which cannot be healed for 24 hours.
+    Horrors:
+      description: Summon a mass of fog with a one mile radius. Any entity within
+        the fog sees apparitions of their worst fears.
+    Partial Resurrection:
+      description: Recall the soul of a being which has died within the past 100 years.
+        Requires the carcass of a freshly dead man, and the heart of a high level
+        beast. Works on any entity killed within a month. The entity is trapped in
+        the body of the dead man, but comes back to life.
+    Resurrect:
+      description: Resurrect an entity who has died within the past 24 hours. The
+        entity will suffer from nightmares of the other side, and bear the scars of
+        their injuries. Works on entities that have been dead for less than three
+        days.
+  2 Soul Cost:
+    Major Vivify:
+      description: Make everything rotten or dead in a room appear living.
+    Murder of Crows:
+      description: ' Summon a murder of crows to attack an enemy. Does 3d10 damage
+        per turn, lasts 3 turns.'
+    Spikes of Blood:
+      description: Form any blood on the ground into spiked daggers which are hurled
+        at the enemy. More blood causes more damage max 6d6 damage.
+    Steal Senses:
+      description: "Remove an enemy's eyes, ears, and mouth. (Must cover their\
+        \ eyes, ears and mouth with your hands)."
+  3 Soul Cost:
+    Major Darkness:
+      description: Fill a 100 square foot area with pitch darkness.
+    Major Through the eyes of the little ones:
+      description: take control of a weak minded person or child. (max five at a time,
+        lose control after 1 hour or 1 mile away).
+  5 Soul Cost:
+    Antilife field:
+      description: Create a field of death around yourself with a 10 foot radius.
+        Anything that enters the field takes 1d10 damage per turn. The field wilts
+        and kills everything. Lasts up to one hour.
+    Fall:
+      description: Cast cripple on all enemies within 100 feet of yourself. Deals
+        3d10 + 10 damage.
+    Major Thrall:
+      description: Resurrect a fighter with 20 health and 1d10 damage. Works on standard
+        enemies. Also allows resurrection of larger enemies with poohbah generated
+        stats.
+    Putrid Air:
+      description: Fill a large room with noxious gas, dealing 5d10 damage per turn
+        and putting all enemies at a disadvantage. Lasts for 3 turns.
+    Sap Age:
+      description: Steal the lifeforce from someone. Every 10 seconds, you steal 1
+        year of their life. This lifeforce can be given to someone else.
+the_book_of_chi:
+  Combat Basic Techniques:
+    Catch Projectile:
+      description: "Once per turn, attempt to catch a projectile. Roll a d20, and\
+        \ reduce the projectile's damage by that amount. If reduced to zero,\
+        \ you catch the projectile."
+    Combo:
+      description: Once every three turns, multiattack.
+    Disarm:
+      description: Attack with a single punch. If the opponent fails a strength saving
+        throw, they drop their weapon.
+    Disengage:
+      description: "Enemy's take disadvantage when striking you while you are\
+        \ moving."
+    Dodge:
+      description: "Once per turn, roll a dexterity check to attempt to dodge an opponent'\
+        s attack."
+    Find Balance:
+      description: Take a turn to cleanse yourself of poison or other status effects.
+    Grapple:
+      description: You have advantage when grappling.
+    Icy Kick:
+      description: Once every three turns, add an additional 1d8 cold damage to a
+        kicking attack.
+    Leap to your feet:
+      description: Get to your feet without penalty.
+    Sharpen blade:
+      description: Before battle, hone your physical weapon to give it an additional
+        1d6 damage.
+    Strike from on High:
+      description: You do an additional 1d6 damage on any plunging attacks.
+    Stunning Blow:
+      description: Attack with a single punch. If the target fails an inner fire save,
+        they are stunned, and miss their next turn.
+    Sweep the Leg:
+      description: Attack with a single kick. If the target fails a dexterity save,
+        they are knocked prone.
+    Take a Hit:
+      description: Once every three turns, choose an attack to take half damage from.
+  General Basic Techniques:
+    Aerial Acrobatics:
+      description: You can turn flips and spin in the air. If your feet touch something
+        solid, you can spring from it.
+    Balance:
+      description: You have impeccable balance. Advantage on saving throws when you
+        could be knocked down.
+    Calligraphy:
+      description: Gain advantage on any fine motor skill dexterity checks.
+    Dexterous:
+      description: Add 1 to your dexterity.
+    Escape:
+      description: You have advantage on any checks involving breaking physical restraints.
+    Hearty:
+      description: Add 1 to your vitality.
+    Inner Eye:
+      description: Advantage when detecting evil, good, or spiritual energy.
+    Listen:
+      description: You have advantage on perception checks.
+    Mantle:
+      description: You are able to mantle across objects. Advantage on Dex checks
+        when climbing/leaping.
+    Meditate:
+      description: Gain an additional 1d6 + 2 health on any rest.
+    Meld into Shadow:
+      description: Add 10 to your stealth score when hiding in shadows.
+    Minor Heal:
+      description: Once per day, heal yourself or others for 1d6 + inner fire damage.
+    Run on water:
+      description: Get a running start to run up to 50 feet on water.
+    Silent:
+      description: You have advantage on stealth checks.
+    Strong:
+      description: Add 1 to your strength.
+    Tumble:
+      description: You take half fall damage.
+  Master Techniques:
+    Darkness:
+      description: Once per day, create a veil of darkness throughout the battlefield.
+        Lasts for 2 turns. All entities within the shadow must make perception checks
+        before attacking, and then must attack with disadvantage.
+    Flaming Fist:
+      description: Once every three turns, add an additional 2d8 fire damage to a
+        punching attack.
+    Harsh Critical:
+      description: On a critical hit, gain another action.
+    Major Heal:
+      description: Once every day, heal yourself or an ally for 4d6 + 4 + inner fire
+        health.
+    Master of Body and Soul:
+      description: Once per day, when you reach 0 health, drop to 2d20 health instead.
+    Opening Blow:
+      description: If you strike an opponent before it is able to move in combat,
+        take advantage on all attacks and add an additional 3d6 damage.
+    Redirect Attack:
+      description: Once every three turns, select an enemy attack aimed at you. Make
+        an inner fire saving throw. If you succeed, redirect the attack anywhere you
+        wish.
+    Second Action:
+      description: Take two actions on your turn.
+    Shadow Step:
+      description: Step from any point in darkness to any other point in darkness
+        within 50 feet.
+    Share Ability:
+      description: Every day, share in a teammates ability for the day.
+    Surrounded:
+      description: Strike up to 5 foes in one action if you are surrounded.
+    Thunderous Punch:
+      description: "Once every three turns, your attack may make a thunder wave, which\
+        \ effects all enemies in front of you with the punch's damage."

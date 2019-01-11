@@ -6,18 +6,21 @@
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/materialize.min.css">
     <link rel="stylesheet" href="/static/css/rangers.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col s12">
-           <h2> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
+               <h2 style="font-family: 'Cinzel Decorative', cursive;"> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
         </div>
       </div>
       <div class="row">
         <div class="card-panel white center-align">
           <div class="card-heading">
-            What is your character's name?
+            <h4>
+              What Is Your Character's Name?
+            </h4>
           </div>
           <div class="card-content">
             <form action="creation" method="GET">
@@ -26,7 +29,7 @@
               <input type="hidden" name="race" value={{race}} /> 
               <input type="hidden" name="class" value={{rnr_class}} /> 
               <br/>
-              
+              <h4>What Tier Is Your Character?</h4>
               <fieldset class="form-group left-align">
                 <label>
                   <input name="tier" value="0" type="radio">
@@ -38,7 +41,20 @@
                   <span>Tier 1</span>
                 </label>
               </fieldset>
-
+              <br/>
+              <hr>
+              <h4>Do You Want Randomly Rolled Stats?</h4>
+              <fieldset class="form-group left-align">
+                <label>
+                  <input name="roll_stats" value="1" type="radio">
+                  <span>Yes</span>
+                </label>
+                <br/>
+                <label>
+                  <input name="roll_stats" value="0" type="radio" checked>
+                  <span>No</span>
+                </label>
+              </fieldset>
               <br/>
               <input type="submit" /> 
             </form>

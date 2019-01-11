@@ -24,22 +24,21 @@
                      {% if rnr_entity['rights'] != None %}
                         <img class="activator" src = {{rnr_entity["path_to_image"] }}>
                      {%endif%}
-                  </div>
-
-                  <div class="card-content browser-default-uls">
-                     <span class = "card-title activator grey-text text-darken-4">
-                        {{rnr_entity["name"].title()}}
-                     </span>
-                     <a href="{{next_page}}{{forwarding_param}}{{next_param}}={{rnr_entity["name"]}}"> Play</a>
-                     as 
-                     {% if rnr_entity["name"][0].lower() in ['a','e','i','o','u']%}
-                        an
-                     {% else %}
-                        a 
-                     {% endif %}                       
+<!--                      <span class="card-title">{{rnr_entity["name"].title()}}</span>-->  
+                </div>
+                  <div class="card-content">
+                     <h6>
+                     <a href="{{next_page}}{{forwarding_param}}{{next_param}}={{rnr_entity["name"]}}"> 
+                     Play As 
+                        {% if rnr_entity["name"][0].lower() in ['a','e','i','o','u']%}
+                           an
+                        {% else %}
+                           a 
+                        {% endif %}                       
                       {{rnr_entity["name"].title()}}
+                     </a>
+                     </h6>
                   </div>
-
                   <div class="card-reveal grey lighten-5">
                      <span class = "card-title grey-text text-darken-4">
                         {{rnr_entity["name"].title()}}
@@ -48,7 +47,7 @@
                      <div class = "card-tabs">
                         <div class = "row">
                            <div class = "col s12">
-                              <ul class="tabs" style="width:101%">
+                              <ul class="tabs" style="width:105%">
                                  <li class = "tab">
                                     <a href="#{{rnr_entity['name'].lower()}}_overview"> Overview </a>
                                  </li>
@@ -64,7 +63,7 @@
                               </ul>                                
                            </div>
                         </div>
-                        <div id="{{rnr_entity['name'].lower()}}_overview" class = "col s12">
+                        <div id="{{rnr_entity['name'].lower()}}_overview" class = "col s12" style = "font-family: 'Angkor'">
                            {% if 'quote' in rnr_entity and rnr_entity['quote'] != ''%}
                               <blockquote class="blockquote text-center" style="border-left: none;">
                                 <p style="font-size: 1.0rem;">{{rnr_entity['quote']}}</p>
@@ -74,7 +73,7 @@
                            {% endif %}
                            <p> {{rnr_entity["description"]}} </p>
                         </div>
-                        <div id="{{rnr_entity['name'].lower()}}_art" class = "col s12">
+                        <div id="{{rnr_entity['name'].lower()}}_art" class = "col s12" style = "font-family: 'Angkor'">
                            {% if rnr_entity['rights'] != None %}
                               <p>
                                  Art: <a href="{{ rnr_entity['rights']['url'] }}"> {{ rnr_entity['rights']['title'] }}</a> by {{ rnr_entity['rights']['artist'] }}.
@@ -83,9 +82,9 @@
                               </p>
                            {% endif %}
                         </div>
-                        <div id="{{rnr_entity['name'].lower()}}_abilities" class = "col s12">
+                        <div id="{{rnr_entity['name'].lower()}}_abilities" class = "col s12" style = "font-family: 'Angkor'">
                            <p> 
-                              <ol>
+                              <ol style="list-style-type: upper-roman;">
                               {% for key in ('combat', 'advantage', 'starting_item', 'choice','general') if key in rnr_entity["abilities"]%}
                                  {% for ability in rnr_entity["abilities"][key]%}
                                     <li> <b> {{ability[0]}}: </b> {{ability[1]}} </li>
@@ -94,14 +93,27 @@
                               </ol>
                            </p>
                         </div>
-                         <div id="{{rnr_entity['name'].lower()}}_stats" class = "col s12">
-                           <p> 
-                              <ol>
-                              {% for stat, val in rnr_entity["stats"].items()%}
-                                 <li> <b> {{stat}}: </b> {{val}} </li>
+                         <div id="{{rnr_entity['name'].lower()}}_stats" class = "col s12" style = "font-family: 'Angkor'">
+                           <table style="width:100%">
+                              <tr>
+                                 <th>Stat</th>
+                                 <th>Value</th> 
+                                 {% if prev_stats != None %}
+                                 <th>Prev</th>
+                                 <th>Total</th>
+                                 {% endif %}
+                              </tr>
+                              {% for stat, val in rnr_entity["stats"].items() %}
+                              <tr>
+                                 <td>{{stat}}</td>
+                                 <td>{{val}}</td> 
+                                 {% if prev_stats != None %}
+                                 <td>{{prev_stats[stat]}}</td>
+                                 <td>{{val + prev_stats[stat]}}</td>
+                                 {% endif %}
+                              </tr>
                               {% endfor %}
-                              </ol>
-                           </p>
+                           </table>
                         </div>
                      </div>
                   </div>                  

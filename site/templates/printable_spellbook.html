@@ -13,21 +13,29 @@
       </style>
    </head>
    <body>
+      <div class="container" id=printable>
+        <div class="row">
+          <div class="col-12">
+            {% if chosen_name != None %}
+            <h2>{{chosen_name}}'s Spellbook</h2>
+            <br/>
+            {% endif %}
+            {% for level in data.keys()|sort()%}
+              <h4>{{level.replace('_',' ').title()}}</h4>
+              <ul>
+              {% for spell in data[level].keys()|sort() %}
+                <li><b>{{spell.title()}}:</b> {{data[level][spell]['description']}}</li>
+              {% endfor %}
+              </ul>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-12">
-          {%for spellbook, spells in data.items()%}
-            <h2>{{spellbook.replace('_',' ').title()}}</h2>
-            {% for level in spells.keys()|sort()%}
-              <h5>Level {{level}}</h5>
-              {% for spell, spell_info in spells[level].items()%}
-                <span><b>{{spell.title()}}:</b> {{spell_info['description']}}</span>
-                <br/>
-              {% endfor %}
-              <br/>
-            {% endfor %}
-            <br/>
-          {% endfor %}
+            <hr>
+            <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Spell Sheet</a></p>
           </div>
         </div>
       </div>

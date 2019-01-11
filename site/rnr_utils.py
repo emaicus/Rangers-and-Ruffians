@@ -4,12 +4,14 @@ import os
 from collections import OrderedDict
 from collections import Counter
 import yaml
+import random
 
 ability_dict = dict()
 class_data = dict()
 class_data_by_type = dict()
 race_data = dict()
 spell_books = dict()
+compendium_of_spells = dict()
 
 class rnr_entity:
     def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
@@ -143,11 +145,26 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj, character_quote='', character_quote_author=''):
+  def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj, character_quote='', character_quote_author='', roll_stats=False):
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
+    
     stats = Counter(rnr_race_obj.stats)
     stats.update(rnr_class_obj.stats)
     stats = dict(stats)
+    
+    if roll_stats:
+      for stat in stats.keys():
+        val = random.randint(1,6) + random.randint(1,6) - 7
+        stats[stat] = val
+      min_stat = min(stats, key=stats.get)
+      final_roll = random.randint(1,6) + random.randint(1,6) - 7
+      stats[min_stat] = final_roll if final_roll > stats[min_stat] else stats[min_stat]
+
+      max_stat = max(stats, key=stats.get)
+      final_roll = random.randint(1,6) + random.randint(1,6) - 7
+      stats[max_stat] = final_roll if final_roll < stats[max_stat] else stats[max_stat]
+
+
     character_name = "{0}: {1} {2}".format(character_name, rnr_race_obj.name, rnr_class_obj.name)
     super().__init__(character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
@@ -164,6 +181,8 @@ class rnr_character(rnr_entity):
   def serialize(self):
     serial = self.base_serialize()
     serial["origin"] = self.origin
+    serial['race'] = self.race
+    serial['class'] = self.rnr_class
     return serial
 
 class rnr_ability:
@@ -249,7 +268,6 @@ def mergeAbilities(dictionary, abilities):
     for i in range(len(values["abilities"])):
       ability = values["abilities"][i]
       values["abilities"][i] += ": " + abilities[ability]["description"]
-      # print(values[abilities][i])
     dictionary[key] = values
   return dictionary
 
@@ -257,21 +275,12 @@ def get_all_spellbooks():
   load_Rangers_And_Ruffians_Data()
   return spell_books
 
-def get_all_spellbooks_with_level():
+def find_spell_by_name(spell):
   load_Rangers_And_Ruffians_Data()
-
-  better_spellbooks = dict()
-
-  for spellbook, spells in spell_books.items():
-    if not spellbook in better_spellbooks:
-      better_spellbooks[spellbook] = dict()
-
-    for spell_name, spell_data in spells.items():
-      level = spell_data['level']
-      if not level in better_spellbooks[spellbook]:
-        better_spellbooks[spellbook][level] = dict()
-      better_spellbooks[spellbook][level][spell_name] = spell_data
-  return better_spellbooks
+  if spell in compendium_of_spells:
+    return compendium_of_spells[spell]['level'], compendium_of_spells[spell]['details']
+  else:
+    return None, None
 
 def gather_spells(spell_data):
   load_Rangers_And_Ruffians_Data()
@@ -280,30 +289,20 @@ def gather_spells(spell_data):
 
   tmp_spells = dict()
   for spell in spell_data:
-    print(spell)
-    print(spell.split("__"))
-    spellbook, spell_name = spell.split('__')
-    if not spellbook in tmp_spells:
-      tmp_spells[spellbook] = list()
-    tmp_spells[spellbook].append(spell_name.replace('_', ' '))
-  
-  for spellbook, spells in tmp_spells.items():
-    if not spellbook in player_spellbook:
-      player_spellbook[spellbook] = dict()
-
-    for spell in spells:
-      for k in spell_books[spellbook].keys():
-        print(k)
-      spell_data = spell_books[spellbook][spell]
-      level = spell_data['level']
-      if not level in player_spellbook[spellbook]:
-        player_spellbook[spellbook][level] = dict()
-      player_spellbook[spellbook][level][spell] = spell_data
+    level, data = find_spell_by_name(spell.replace('_',' '))
+    #if data is None, the spell could not be found in the spellbook.   
+    if data == None:
+      print("Could not find {0}".format(spell))
+      continue
+    #put the spell in the player's spellbook.
+    if not level in player_spellbook:
+      player_spellbook[level] = dict()
+    player_spellbook[level][spell] = data
   return player_spellbook
 
 
 def load_Rangers_And_Ruffians_Data():
-  global spell_books, ability_dict, race_data, class_data, class_data_by_type
+  global spell_books, ability_dict, race_data, class_data, class_data_by_type, spells
 
   if len(ability_dict.keys()) != 0:
     return
@@ -315,6 +314,13 @@ def load_Rangers_And_Ruffians_Data():
   
   with open(spell_path) as data_file:
     spell_books = yaml.load(data_file)
+
+  for spellbook, chapters in spell_books.items():
+    for level, spells in chapters.items():
+      for spell, details in spells.items():
+        compendium_of_spells[spell] = dict()
+        compendium_of_spells[spell]['level'] = level
+        compendium_of_spells[spell]['details'] = details
 
   with open(race_path) as data_file:
     race_data = yaml.load(data_file)
@@ -459,10 +465,10 @@ def load_class(name):
   r_class = find_class_info(name)
   return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'],'','')
 
-def load_race_class_with_names(race_name, class_name, name="", origin=""):
+def load_race_class_with_names(race_name, class_name, name="", origin="", roll_stats=False):
   race_obj = load_race(race_name)
   class_obj = load_class(class_name)
-  return rnr_character(name, origin, '', race_obj, class_obj)
+  return rnr_character(name, origin, '', race_obj, class_obj, roll_stats=roll_stats)
 
 def load_race_class_with_objects(race_obj, class_obj, name="",origin=""):
   return rnr_character(name, origin, '', race_obj, class_obj)

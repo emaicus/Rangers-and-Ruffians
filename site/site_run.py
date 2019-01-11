@@ -10,6 +10,17 @@ import random
 import rnr_descriptions
 import json
 
+magical_classes = {
+  'bard' : ["the_bard's_songbook",],
+  'cleric' : ['the_book_of_healing',],
+  'paladin' : ['the_book_of_healing',],
+  'wizard' : ['the_novice_spellbook', "the_wizard's_addendum"],
+  'sorcerer' : ['the_novice_spellbook', "the_sorcerer's_scrolls"],
+  'druid' : ['the_novice_spellbook', "the_druid's_guidebook"],
+  'necromancer' : ['the_macabre_manual',],
+  'monk' : ['the_book_of_chi',]
+}
+
 app = Flask(__name__, static_url_path='/static')
 
 # @app.route('/races')
@@ -35,16 +46,24 @@ def creation_landing_page():
   chosen_race = request.args.get('race','')
   chosen_class = request.args.get('class','')
   chosen_name = request.args.get('name','')
+  chosen_name = request.args.get('name','')
   valid_gender = valid_race = valid_class = valid_name = False
   tier = request.args.get('tier', 0)
-
+  roll_stats = request.args.get('roll_stats',0)
+  
   try:
     tier = int(tier)
   except Exception as e:
     tier = 0
   if tier not in [0,1]:
     tier = 1
-
+  
+  try:
+    roll_stats = int(roll_stats)
+  except Exception as e:
+    roll_stats = 0
+  
+  roll_stats = True if roll_stats == 1 else False
 
   serial_data = list()
   page_objects = list()
@@ -67,7 +86,7 @@ def creation_landing_page():
     valid_class = True
 
   magic_class = False
-  if chosen_class.lower() in ['wizard','bard','cleric','paladin']:
+  if chosen_class.lower() in magical_classes.keys():
     magic_class=True
 
   chosen_name = cgi.escape(chosen_name)
@@ -81,10 +100,9 @@ def creation_landing_page():
     return render_template("user_name_form.html", gender=chosen_gender.lower(), race=chosen_race.lower(), rnr_class=chosen_class.lower(), random_name=random_name.title())
 
   if valid_gender and valid_race and valid_class and valid_name:
-    print("the name '{0}' was valid".format(chosen_name))
-    character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name)
+    character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name, roll_stats=roll_stats)
     serial = character.serialize()
-    return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class)
+    return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class,chosen_name=chosen_name)
 
   if not valid_gender:
     for gender in ("male", "female"):
@@ -127,6 +145,12 @@ def creation_landing_page():
     forwarding_param = "{0}{1}class={2}".format(forwarding_param,next_char,chosen_class.lower())
     next_char = "&"
 
+  prev_stats = None
+  if valid_class:
+    prev_stats = rnr_utils.load_class(chosen_class).stats
+  if valid_race:
+    prev_stats = rnr_utils.load_race(chosen_race).stats
+
   for entity in page_objects:
     serial = entity.serialize(male)
     serial_data.append(serial)
@@ -134,7 +158,7 @@ def creation_landing_page():
   populated_value = "{0}{1}".format(next_char,populated_value)
   next_page = "/creation"
   
-  return render_template("display_page.html", data=serial_data, next_page=next_page, forwarding_param=forwarding_param, next_param = populated_value, tier=tier)
+  return render_template("display_page.html", data=serial_data, next_page=next_page, forwarding_param=forwarding_param, next_param = populated_value, tier=tier, prev_stats=prev_stats)
 
 @app.route('/random')
 def random_page():
@@ -151,13 +175,21 @@ def random_page():
 
   tier = request.args.get('tier', 0)
 
+  roll_stats = request.args.get('roll_stats',0)
+  
   try:
     tier = int(tier)
   except Exception as e:
     tier = 0
-
   if tier not in [0,1]:
     tier = 1
+  
+  try:
+    roll_stats = int(roll_stats)
+  except Exception as e:
+    roll_stats = 0
+
+  roll_stats = True if roll_stats == 1 else False
 
   if len(allowed_genders) == 0 or len(allowed_races) == 0 or len(allowed_classes) == 0 or len(allowed_flaws) == 0:
     return render_template("rnr_character_form.html",rnr_classes=class_names, rnr_races=race_names)
@@ -191,7 +223,7 @@ def random_page():
   chosen_flawed = random.choice(allowed_flaws)
 
   magic_class = False
-  if chosen_class.lower() in ['wizard','bard','cleric','paladin']:
+  if chosen_class.lower() in magical_classes.keys():
     magic_class=True
 
   flawed = True if chosen_flawed == 'flawed' else False
@@ -200,20 +232,43 @@ def random_page():
 
   description = rnr_descriptions.getCharacterDescription(chosen_name,chosen_race,chosen_class,chosen_gender,flawed=flawed)
 
-  character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name,origin=description)
+  character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name,origin=description, roll_stats=roll_stats)
   serial = character.serialize()
-  return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class)
+  return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class,chosen_name=chosen_name)
 
 @app.route('/spells')
 def spell_page():
-  spell_books = rnr_utils.get_all_spellbooks_with_level()
-  return render_template("spell_form.html", data=spell_books)
+  chosen_class = request.args.get('chosen_class','').lower()
+  chosen_name = request.args.get('chosen_name', None)
+  spell_data = dict()
+  spell_books = rnr_utils.get_all_spellbooks()
+  if chosen_class.lower() in magical_classes.keys():
+    book_list = list()
+    for book_name in magical_classes[chosen_class]:
+      print('we are appendinging {0} to {1}'.format(book_name, chosen_class))
+      book_list.append(book_name)
+    print(book_list)
+    big_book_name = ' and '.join(book_list)
+    spell_data[big_book_name] = dict()
+    for book_name in magical_classes[chosen_class]:
+      for chapter, pages in spell_books[book_name].items():
+        if not chapter in spell_data[big_book_name]:
+          spell_data[big_book_name][chapter] = dict()
+        for spell_name, spell_info in pages.items():
+          print(book_name, chapter, spell_name)
+          if not spell_name in spell_data[big_book_name][chapter]:
+            spell_data[big_book_name][chapter][spell_name] = spell_info
+  if chosen_class == 'all':
+    spell_data = spell_books
+
+  return render_template("spell_form.html", data=spell_data, chosen_name=chosen_name)
 
 @app.route('/print_spell_page')
 def print_spell_page():
   spells = request.args.getlist('chosen_spells', None)
+  chosen_name = request.args.get('chosen_name')
   player_spellbook = rnr_utils.gather_spells(spells)
-  return render_template("printable_spellbook.html",data=player_spellbook)
+  return render_template("printable_spellbook.html",data=player_spellbook,chosen_name=chosen_name)
 
 
 

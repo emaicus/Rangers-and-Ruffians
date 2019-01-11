@@ -21,17 +21,17 @@
           <div class="col s12" id={{spellbook}}>
             <div class="card-panel white">
               <div class="card-heading">
-                <h2>{{spellbook.replace('_',' ').title()}}</h2>
+                <h2>{{spellbook.replace('_',' ').title().replace("'S", "'s")}}</h2>
               </div>
               <div class="card-content">
                   <fieldset class="form-group">
                     {% for level in spells.keys()|sort()%}
-                      <h5>Level {{level}}:</h5>
-                      {% for spell, spell_info in spells[level].items()%}
+                      <h5>{{level.replace('_', ' ')}}:</h5>
+                      {% for spell in spells[level].keys()|sort()%}
                         <div class="form-check">
                           <label class="checkbox-inline">
-                            <input type="checkbox" class="filled-in" name="chosen_spells" value={{'{0}__{1}'.format(spellbook,spell.replace(' ','_'))}}> 
-                            <span><b>{{spell.title()}}:</b> {{spell_info['description']}}</span>
+                            <input type="checkbox" class="filled-in" name="chosen_spells" value={{spell.replace(' ','_')}}> 
+                            <span><b>{{spell.title()}}:</b> {{spells[level][spell]['description']}}</span>
                           </label>
                         </div>
                         <br>
@@ -42,6 +42,7 @@
             </div>
           </div>
         {% endfor %}
+        <input type="hidden" name="chosen_name" value={{chosen_name}} /> 
         <input type="submit" /> 
         </form>
       </div>

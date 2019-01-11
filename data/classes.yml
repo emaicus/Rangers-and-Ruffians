@@ -256,10 +256,12 @@ Mage:
   Druid:
     abilities:
     - Novice Spellbook
-    - Druid's Guidebook
+    - The Druid's Field Guide
     - Spell Choice
     - Choice Stat
-    description: 
+    description: Gaurdian's of nature, most druids prefer to live in tribes in the forests, mountains, prairie, tundra, or desert. Druid's are 
+      command powerful nature based magic, which they use to smite those who threaten themselves, their friends, or thier home. Druids utilize
+      intelligence based spell points to cast spells, and are a good match for players interested in playing a mage.
     standings: 
     stats:
       Charisma: 0
