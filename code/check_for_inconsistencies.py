@@ -4,23 +4,15 @@ import os
 import random
 import json
 import operator
+import rnr_utils
 
 
 #A quick script to check for inconsistent ability names.
 if __name__ == '__main__':
-
-  races = dict()
-  classes = dict()
-  abilities = dict()
-
-  with open("json_files/races.json") as data_file:    
-      races = json.load(data_file)
-
-  with open("json_files/classes.json") as data_file:    
-      classes = json.load(data_file)
-
-  with open("json_files/abilities.json") as data_file:    
-      abilities = json.load(data_file)
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  races = rnr_utils.race_data
+  classes = rnr_utils.class_data
+  abilities = rnr_utils.ability_dict
 
   print("The following abilities referenced by class or race.json cannot be found in abilities.json:")
   for key, values in races.items():

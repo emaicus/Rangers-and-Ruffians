@@ -19,11 +19,11 @@ the_book_of_healing:
       description: Give a teammate up to 20 points of your own health per turn.
     Guidance:
       cost: 0
-      description: Once per rest, give an ally a 1d4 inspiration dice.
+      description: Once per rest, give an ally a d10 inspiration dice.
     Holy Orders:
       cost: 0
       description: Mark an enemy as a target for your group. Anyone who damages the
-        target regains 2 health. Anyone who kills the target regains 2d4 health. You
+        target regains 1d6 health. Anyone who kills the target regains 2d6 health. You
         can mark at most one enemy at a time.
     Mending:
       cost: 0
@@ -54,7 +54,7 @@ the_book_of_healing:
       description: Undo the effects wrought by a spell.
     Enhance Ability:
       cost: 1
-      description: "Enhance one of a party member\u2019s abilities by 1. A single\
+      description: "Enhance one of a party member's abilities by 1. A single\
         \ teammate may have at most one ability enhanced at a time."
     Fake Death:
       cost: 1
@@ -69,7 +69,7 @@ the_book_of_healing:
         the light take 1d6 damage every turn they are in it. Concentration.
     Minor Heal:
       cost: 1
-      description: Restore 2d4 damage to one teammate or yourself.
+      description: Restore 2d6 damage to one teammate or yourself.
     Minor Holy weapon:
       cost: 1
       description: Imbue your weapon with the spirit of righteousness. Your weapon
@@ -106,7 +106,7 @@ the_book_of_healing:
         of meaningful communication for 1 hour.
     Greater Heal:
       cost: 2
-      description: Restore 5d4 health to one teammate or yourself.
+      description: Restore 5d6 health to one teammate or yourself.
     Greater Ward:
       cost: 2
       description: Touch a teammate and place a ward on them. This ward adds 2 armor
@@ -139,14 +139,14 @@ the_book_of_healing:
       description: Once per rest, give an ally 2d10 inspiration dice.
     Major Heal:
       cost: 3
-      description: Restore 8d4 health to one teammate or yourself
+      description: Restore 8d6 health to one teammate or yourself
     Major Ward:
       cost: 3
       description: Touch a teammate and place a ward on them. This ward adds 3 armor
         to the touched party member the next 5 times they are successfully attacked.
     Mass Heal:
       cost: 3
-      description: Restore 3d4 health to all allies in a 30ft radius.
+      description: Restore 3d6 health to all allies in a 30ft radius.
   Level_4:
     Major Holy weapon:
       cost: 4
@@ -154,7 +154,7 @@ the_book_of_healing:
         gets +6 damage for a day, and advantage against evil and undead entities..
     Major Mass Heal:
       cost: 4
-      description: Restore 5d4 health to all allies in a 30ft radius.
+      description: Restore 5d6 health to all allies in a 30ft radius.
     Sealed Promise:
       cost: 4
       description: The cost for this spell is one magic point. Requires a piece of
@@ -210,13 +210,7 @@ the_gunslinger's_guide:
       cost: 1
       description: Decrease your damage by 1, but silence your weapon. The silencer
         is removable.
-  Level_3:
-    Dual wield:
-      cost: 3
-      description: Construct a second pistol and double your attacks every other turn.
-    Hollow point:
-      cost: 3
-      description: Your pistol now does d6 damage.
+
 the_novice_spellbook:
   Level_0:
     Acrid Mist:
@@ -260,7 +254,7 @@ the_novice_spellbook:
       description: Hide yourself if you stay absolutely still.
     Fireball:
       cost: 1
-      description: Does 2d4 damage on all enemies within 10 feet of the point of impact.
+      description: Does 2d6 damage on all enemies within 10 feet of the point of impact.
     Freeze or unfreeze water:
       cost: 1
       description: Freeze or unfreeze up to a 40x40 foot area of water.
@@ -329,7 +323,7 @@ the_novice_spellbook:
   Level_3:
     Bubble of Vacuum:
       cost: 3
-      description: "Creates a bubble with no air around an enemy\u2019s head. Stays\
+      description: "Creates a bubble with no air around an enemy's head. Stays\
         \ until they make a saving throw."
     Chain Lightning:
       cost: 3
@@ -345,11 +339,11 @@ the_novice_spellbook:
         and can do 1d6 damage. Concentration.
     Greater Bubble of air:
       cost: 3
-      description: "Creates a bubble of breathable air around your party\u2019s heads.\
+      description: "Creates a bubble of breathable air around your party's heads.\
         \ Lasts up to 6 hours."
     Greater Fireball:
       cost: 3
-      description: Does 6d4 damage on all enemies within 20 feet of the point of impact.
+      description: Does 6d6 damage on all enemies within 20 feet of the point of impact.
     Greater Lock/Unlock:
       cost: 3
       description: Lock a difficult lock, tie or untie a knot, or seal something with
@@ -379,7 +373,7 @@ the_novice_spellbook:
     Delayed Explosion:
       cost: 4
       description: Cast a glyph within 100 feet of yourself which explodes on your
-        command. Does 8d4 damage on all affected enemies.
+        command. Does 8d6 damage to all affected enemies.
     Greater Block:
       cost: 4
       description: Block your entire team from taking damage for 1 turn.
@@ -540,14 +534,14 @@ the_sorcerer's_scrolls:
         cast, the gateway lets out at an undetermined location within one mile. Concentration.
     Major Familiar:
       cost: 5
-      description: Summon a Major  familiar to aid you. The familiar is yours to command
-        until its health is zero. You can see through the eyes of a major  familiar.  See
+      description: Summon a Dire familiar to aid you. The familiar is yours to command
+        until its health is zero. You can see through the eyes of a dire familiar. See
         the Book of Known Beasts for more details.
 the_wizard's_addendum:
   Level_0:
     Eat slugs:
       cost: 0
-      description: "Fill a person\u2019s mouth with slugs. Chance to stagger them,\
+      description: "Fill a person's mouth with slugs. Chance to stagger them,\
         \ always gross."
     Enchanting:
       cost: 0
@@ -710,7 +704,7 @@ the_bard's_songbook:
       description: Tell a joke so funny that anyone who hears it falls over if they
         fail an inner fire check.
     Resonant armor:
-      description: add 1d4 + 2 armor to an entity for 3 turns.
+      description: add 1d4 armor to an entity for 3 turns.
     Smokescreen:
       description: Create a smokescreen which is impossible to see through.
     Song of Strength:
@@ -738,14 +732,14 @@ the_bard's_songbook:
       description: Transform yourself into another race for 1 hour.
     Little Guardian:
       description: Create a small familiar to aid you. The familiar has 20 health,
-        and can attack for 3d4 + 4 damage.
+        and can attack for 2d6 + 4 damage.
     Mass Trickery:
       description: Convince up to 20 entities that they see something they do not.
     Matchmaker:
       description: Point at two individuals and speak their names. If they fail an
         inner fire check, they fall madly in love. Concentration with checks.
     Power Shriek:
-      description: 2d4 + 6 damage to all that hear it. INF save for deafness.
+      description: 2d6 damage to all that hear it. If those who hear it fail an inner fire save, they are rendered deaf, and perform all actions with disadvantage for a turn.
     Song of Healing:
       description: Heal an ally for 5d6 health.
     Unstoppable:
@@ -776,7 +770,7 @@ the_bard's_songbook:
     Dominate Person:
       description: An entity must perform an inner fire check against your charisma.
         If they fail, they are dominated until dispelled, and must do as you command.
-    "Edmire's Grand Manor":
+    Edmire's Grand Manor:
       description: Summon a pocket dimension containing a huge mansion, capable of
         housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
         fully stocked with extravagant food and drink. The mansion is manned by 100
@@ -941,7 +935,7 @@ the_macabre_manual:
       description: Fire a ball of pure death from your hand. Deals 2d10 damage. Heals
         undead.
     Minor Thrall:
-      description: Resurrect a zombie with 6 health and 1d4 damage. Works on standard
+      description: Resurrect a zombie with 6 health and 1d6 damage. Works on standard
         enemies.
     Minor Through the eyes of the little ones:
       description: Take control of a nearby small animal such as a rat or crow. You
@@ -949,7 +943,7 @@ the_macabre_manual:
     Minor darkness:
       description: Fill a 15 square foot area with pitch darkness
     Pain:
-      description: Cause an enemy to feel incredible pain. They take 4d4 damage and
+      description: Cause an enemy to feel incredible pain. They take 3d6 damage and
         gain disadvantage on their next attack.
     Painless:
       description: "Remove someone's ability to feel pain."
@@ -1131,3 +1125,14 @@ the_book_of_chi:
     Thunderous Punch:
       description: "Once every three turns, your attack may make a thunder wave, which\
         \ effects all enemies in front of you with the punch's damage."
+the_tome_of_the_ancients:
+  Level 6:
+    True Enchantment:
+      description: You are now able to make truly enchanted items. It takes days to make an enchanted object, and may involve multiple roles.
+  Level 8:
+    Teleportation Ring:
+      description: Craft a ring of teleportation. Any ring of teleportation may link to another you have created or have access to.
+  Level 10: 
+    Massive Levitation: 
+      description: Levitate anything up to the size of a mountain.
+

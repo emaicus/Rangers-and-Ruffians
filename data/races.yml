@@ -20,14 +20,14 @@ Catterwol:
     Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
     average mages, but prefer slim, dexterity based weapons.
   stats:
-    Charisma: 1
-    Dexterity: 1
+    Charisma: 0
+    Dexterity: 2
     Inner_Fire: 0
     Intelligence: 0
     Luck: 1
-    Perception: 2
+    Perception: 1
     Strength: 0
-    Vitality: -2
+    Vitality: 1
 Elf:
   abilities:
     - Sleepless
@@ -47,12 +47,12 @@ Elf:
     races. Elves make strong mages and good dexterity based fighters.
   stats:
     Charisma: 1
-    Dexterity: 1
+    Dexterity: 2
     Inner_Fire: 0
     Intelligence: 1
-    Luck: 1
+    Luck: 0
     Perception: 1
-    Strength: -1
+    Strength: 0
     Vitality: -1
 Gnome:
   abilities:
@@ -70,11 +70,11 @@ Gnome:
     and are capable of succeeding at anything they put their minds to.
   stats:
     Charisma: -1
-    Dexterity: 0
-    Inner_Fire: 1
+    Dexterity: 1
+    Inner_Fire: 2
     Intelligence: 1
     Luck: 0
-    Perception: -2
+    Perception: -1
     Strength: 0
     Vitality: -1
 Goblin:
@@ -95,14 +95,14 @@ Goblin:
     weapons. Morally good goblins are rare, and have often been outcast from their clan
     and family. This can be very painful, as goblins are communal creatures by nature.
   stats:
-    Charisma: 0
+    Charisma: -1
     Dexterity: 2
-    Inner_Fire: 0
-    Intelligence: 0
-    Luck: 0
+    Inner_Fire: -1
+    Intelligence: 1
+    Luck: 1
     Perception: 2
     Strength: -1
-    Vitality: -3
+    Vitality: -2
 Halfling:
   abilities:
     - Sling
@@ -121,19 +121,20 @@ Halfling:
     stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
   stats:
     Charisma: 2
-    Dexterity: 1
-    Inner_Fire: 1
+    Dexterity: 2
+    Inner_Fire: -1
     Intelligence: 0
     Luck: 1
-    Perception: 1
+    Perception: 0
     Strength: -1
-    Vitality: -2
+    Vitality: -1
 Human:
   abilities:
   - Last Stand
   - Strength of Men
   - Rally
   - Tactics
+  - Choice Stat
   quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
   author: Orkensheild, Orc Archer
   description: Humans are the most average of the races. The race of men can become good 
@@ -146,8 +147,8 @@ Human:
     Inner_Fire: 1
     Intelligence: 0
     Luck: -1
-    Perception: -1
-    Strength: 1
+    Perception: 0
+    Strength: 0
     Vitality: 0
 Lizkin:
   abilities:
@@ -163,14 +164,14 @@ Lizkin:
   author: Mister Li, Gnomeish Monk
   description: ''
   stats:
-    Charisma: -2
-    Dexterity: 0
+    Charisma: -1
+    Dexterity: -1
     Inner_Fire: 0
     Intelligence: -1
     Luck: 0
     Perception: 0
-    Strength: 1
-    Vitality: 0
+    Strength: -1
+    Vitality: 1
 Waterborn:
   abilities:
   - Unbreathing
@@ -193,12 +194,12 @@ Waterborn:
     the other races.
   stats:
     Charisma: 2
-    Dexterity: 0
+    Dexterity: 2
     Inner_Fire: 0
     Intelligence: 2
-    Luck: 2
+    Luck: 1
     Perception: 0
-    Strength: -1
+    Strength: -2
     Vitality: -3
 Orc:
   abilities:
@@ -213,14 +214,14 @@ Orc:
   description: A brutish and warlike race, orcs stab first and ask questions later.
     Orcs are often used to living in harsh environments, and living off the land.
   stats:
-    Charisma: -2
-    Dexterity: -1
-    Inner_Fire: 1
+    Charisma: -1
+    Dexterity: 0
+    Inner_Fire: 0
     Intelligence: -1
     Luck: 0
     Perception: 0
     Strength: 1
-    Vitality: 3
+    Vitality: 2
 Dwarf:
   abilities:
   - Fixit Dwarf
@@ -240,14 +241,14 @@ Dwarf:
                 within mountain ranges. Dwarves have a shrewd eye for business, and have 
                 been known to drink their adversaries under the table.
   stats:
-    Charisma: 0
-    Dexterity: -1
-    Inner_Fire: 1
+    Charisma: -1
+    Dexterity: -2
+    Inner_Fire: 2
     Intelligence: 0
     Luck: 1
     Perception: -1
-    Strength: 1
-    Vitality: 2
+    Strength: 2
+    Vitality: 1
 Daemonspawn:
   abilities: 
   - Fix Your Eyes on Me 
@@ -256,7 +257,6 @@ Daemonspawn:
   - True Sight
   - Dark Vision
   - Sleepless
-  - We are One
   quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
     to use their dark and terrible magicks as to give you a passing smile. I've never met 
     one though; I've been careful to avoid them.
@@ -265,26 +265,70 @@ Daemonspawn:
                Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
                vigilant and trusts no one.
   stats:
-    Charisma: -4
-    Dexterity: 1
-    Inner_Fire: 3
+    Charisma: 1
+    Dexterity: 0
+    Inner_Fire: 0
     Intelligence: 1
     Luck: 1
     Perception: 0
     Strength: 0
     Vitality: 1
-comingsoon:
+Sprout:
   abilities: 
-  - Fix Your Eyes on Me 
-  quote: Git 'er done!
-  author: Bill Clinton
-  description: A brand new race, developed entirely by Emily, is coming soon!
+  - Chlorophyll
+  - Blade of Grass
+  - Mantel
+  - Scurry
+  - Dodge
+  - Harden
+  - Small Fry
+  - Soft Landing
+  - Commune with Nature
+  - Lightweight
+  quote: And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my 
+          hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
+          dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
+  author: Harley, Elf Paladin
+  description: Sprouts are among the smallest of the races, standing at about 2 feet. As a result, they are very weak, but are 
+                fast, and good at sneaking. The wise sprout should avoid the front line of combat, and instead stay in relative hiding,
+                jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see 
+                a sprout knight attempting to make a name for themself.
   stats:
-    Charisma: -100
-    Dexterity: -100
-    Inner_Fire: -100
-    Intelligence: -100
-    Luck: -100
-    Perception: -100
-    Strength: -100
-    Vitality: -100
+    Charisma: 2
+    Dexterity: 3
+    Inner_Fire: 1
+    Intelligence: 1
+    Luck: 2
+    Perception: 2
+    Strength: -5
+    Vitality: -5
+Automaton:
+  abilities: 
+  - Power Core 
+  - Overdrive 
+  - Repair 
+  - Self Repair 
+  - True Sleeplessness 
+  - Gyroscopic Center of Mass 
+  - Armored Exterior 
+  - Piston Punch 
+  - Upgrades 
+  - Greater Choice Stat
+  quote: Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
+          The project had limited success, and was on the brink of being defunded. In a desparate attempt to keep things
+          going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
+          it is exactly that we created. Was it life, or was it some crude approximation. I know not. Nor, I think, does
+          the automaton.
+  author: Simon, Gnome Tinker
+  description: The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
+                reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is
+                to be an automaton, and the quest for meaning is a path that all such beings must walk.
+  stats:
+    Charisma: -2
+    Dexterity: -1
+    Inner_Fire: 0
+    Intelligence: -1
+    Luck: 0
+    Perception: 0
+    Strength: 0
+    Vitality: 5

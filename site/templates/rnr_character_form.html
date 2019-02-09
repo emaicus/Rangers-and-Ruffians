@@ -24,13 +24,18 @@
                 <h5>What Tier Characters Would You Like to Generate?</h5>
                 <fieldset class="form-group left-align">
                   <label>
-                    <input name="tier" value="0" type="radio">
-                    <span>Tier 0</span>
+                    <input name="tier" value="new_character" type="radio" checked>
+                    <span>New Character</span>
                   </label>
                   <br/>
                   <label>
-                    <input name="tier" value="1" type="radio" checked>
-                    <span>Tier 1</span>
+                    <input name="tier" value="heroic_character" type="radio">
+                    <span>Heroic Character</span>
+                  </label>
+                  <br/>
+                  <label>
+                    <input name="tier" value="legendary_character" type="radio">
+                    <span>Legendary Character</span>
                   </label>
                 </fieldset>
                 <hr>
@@ -61,7 +66,7 @@
                   </div>
                 </fieldset>
                 <hr>
-                <h5>Which Genders Would You Like to Disinclude?</h5>
+                <h5>Which Genders Would You Like?</h5>
                 <fieldset class="form-group">
                   <div class="form-check">
                     <label class="checkbox">
@@ -75,7 +80,7 @@
                   </div>
                 </fieldset>
                 <hr>
-                <h5>Which Races Would You Like to Disinclude?</h5>
+                <h5>Which Races Would You Like?</h5>
                 <fieldset class="form-group">
                   {% for allowed_race in rnr_races %}
                   <div class="form-check">
@@ -86,7 +91,7 @@
                   {% endfor %}
                 </fieldset>
                 <hr>
-                <h5>Which Classes Would You Like to Disinclude?</h5>
+                <h5>Which Classes Would You Like?</h5>
                 <fieldset class="form-group">
                   {% for rnr_class in rnr_classes %}
                   <div class="form-check">

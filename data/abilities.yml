@@ -2,16 +2,12 @@ A Thief's Gear:
   description: You begin with 100 feet of rope, a lockpicking kit, a smokebomb, and
     a hidden dagger.
   type: starting_item
-A Dry Place to Sleep:
-  description: You can summon a hut big enough for two. Sleeping inside counts as
-    sleeping on a bed.
-  type: general
-Advanced Medicine:
-  description: If you have the ingredients, you can create advanced potions.
-  type: general
-Air of Mystery:
-  description: Gain advantage on intimidation checks against gaurds and villagers.
-  type: advantage
+Armored:
+  description: You begin your journey with a suit of light plate. Take -2 damage on attacks while wearing it.
+  type: starting_item
+Chainmail:
+  description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
+  type: starting_item
 Animal Companion:
   description: At the beginning of your journey, you may choose a small, medium, or
     large animal companion. See the book of known beasts for stats.
@@ -24,8 +20,8 @@ Bash:
   description: Stun an enemy on a critical hit, causing them to miss their next turn.
   type: combat
 Beast Form:
-  description: You can morph to reveal the beast within. Add +2 to strength, dexterity,
-    and inner fire but take 1.5x damage. You must stay in this form for 3 turns. Gives
+  description: Once per day, you may morph to reveal the beast within. Add +2 to strength, dexterity,
+    and inner fire, and gain 4 temporary vitality. You must stay in this form for 3 turns. Gives
     advantage on intimidation when out of battle.
   type: combat
 Beauty Incarnate:
@@ -41,9 +37,10 @@ Bellow:
     others are disadvantaged if they don't pass an inner fire saving throw.
   type: combat
 Berserk:
-  description: Once per rest, a you can go into a rage, giving you +1 strength and
-    allowing you to make two attacks, but decreasing your intelligence and perception
-    by 3. A rage lasts 1 hour or 5 turns. Coming out of a rage prematurely makes
+  description: Once per rest, a you can go into a rage, giving you +1 strength and dexterity,
+    allowing you to make an extra attack each turn, and giving you a temporary + 2 to vitality,
+    but decreasing your intelligence and perception
+    by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes
     you fatigued, and gives you disadvantage on all rolls.
   type: combat
 Boot Knife:
@@ -78,7 +75,7 @@ Cartwheel:
   description: Gain advantage on acrobatics checks.
   type: advantage
 Charge:
-  description: Once every three turns, charge an enemy and roll a d20. Knock them
+  description: Once every three turns, charge an enemy and roll a d20 as an offhand action. Knock them
     prone if you roll a 12 or above while on foot, a 5 or above if on horseback.
   type: combat
 Charm:
@@ -86,7 +83,7 @@ Charm:
     If you have two such abilities, take advantage and +5 charisma on all checks.
   type: combat
 Cheap Blow:
-  description: Once every three turns, your attack knocks an enemy prone.
+  description: On a critical hit, knock an enemy prone.
   type: combat
 Choice Stat:
   description: At the beginning of your adventure, decide between a permanent increase
@@ -101,9 +98,6 @@ Color Choice:
   description: At any time, you may choose what color your scales are. Scales may
     hold only three colors at a time unless Camouflage is being used.
   type: choice
-Combo:
-  description: On a critical hit with a blunt weapon or your hands, attack again and gain one chi point.
-  type: combat
 Commit to Memory:
   description: At the beginning of a day, you may commit one spell to memory of level
     2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.
@@ -112,18 +106,17 @@ Conversationalist:
   description: You have advantage when teasing information out of people.
   type: advantage
 Counter Attack:
-  description: You have a chance to counterattack. (Roll a d10, if 9 or 10, counterattack).
-    You may only counterattack once per round.
+  description: Once per round of combat, you may strike back when an enemy attacks you. Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
 Crippling Shot:
   description: You can aim at an opponents knees for 1d4 damage, making them go prone
     on a critical hit.
   type: combat
 Crushing Blow:
-  description: On a critical hit, you give all enemies who see disadvantage.
+  description: On a critical hit, you give all enemies who see disadvantage on their next action.
   type: combat
 Dark Vision:
-  description: You can see well in the dark.
+  description: You can see even in perfect darkness.
   type: general
 Detect Magic:
   description: You are able to perform magic detection checks.
@@ -136,25 +129,18 @@ Dominate:
 Double Action:
   description: You can perform two actions in a turn.
   type: combat
-Double Choice Stat:
-  description: At the beginning of your adventure, decide between a permanent increase
-    of 2 dexterity or strength.
-  type: choice
 Double Tap:
   description: Every three turns, you can shoot two arrows at a time.
   type: combat
 Dry Up:
   description: If you are not submerged in water once every 3 days, you will die from
-    asphyxiation. Pouring water on yourself/standing in the rain can grant you an
+    asphyxiation. Pouring water on yourself or standing in the rain can grant you an
     extra day.
   type: general
 Edge of Eternity:
   description: You can consume a soul to increase a stat by 1 or to give yourself
     1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal
     Coil to once per day for a week.
-  type: general
-Every Part:
-  description: You get additional meat and materials from butchering a kill.
   type: general
 Eyes of the Others:
   description: Consume a soul to give yourself darkvision and detect life for a day.
@@ -181,13 +167,9 @@ Fear the Light:
     weapons.
   type: general
 Feint:
-  description: Once every three turns, you may roll a save on an enemy attack. On
-    success, you take no damage. On failure, you take half damage.
+  description: Once every three turns, you may roll a d20 against an enemy attack. Reduce
+    the attack by the amount rolled.
   type: combat
-Fireburst:
-  description: You can craft one d20 area of effect vial of explosive liquid per day.
-    Takes 5 hours.
-  type: general
 Firestarter:
   description: You can use gunpowder to start fires.
   type: general
@@ -211,21 +193,19 @@ From the Hip:
 Gather:
   description: You passively collect ingredients for your tinkering.
   type: general
-Grapple Chord:
-  description: You carry a spiked lasso which can be used to restrain and grapple
-    enemies.
-  type: starting_item
 Grapple Gun:
-  description: You carry a retractable grappling gun.
+  description: You carry a retractable grappling gun. The gun carries 40 feet of rope.
   type: starting_item
 Greater Choice Stat:
-  description: At the beginning of your adventure, you have a point to spend on a
-    stat of your choice.
+  description: At the beginning of your adventure, add 2 to strength or dexterity.
+  type: choice
+Greater Medicine:
+  description: You can create 2 2d20 health potions per day. Potions keep for 24 hours. If you are in on your favorite terrain, poitions restore an additional 1d10 health.
   type: choice
 Gumption:
   description: After each full night's rest, gain 3 gumption points (max 3). Spend one gumption 
-    point to do a bonus action during your turn. 
-  type: Combat
+    point to do an additional action during your turn. 
+  type: combat
 Hammer of Light:
   description: You begin your journey with a 1d6 hammer which does +2 damage to undead.
   type: combat
@@ -252,10 +232,7 @@ Hold the line:
     all attacks and checks used to protect them.
   type: combat
 Huntsman:
-  description: You have advantage when attacking wildlife.
-  type: advantage
-Inner Eye:
-  description: Gain advantage when checking for spiritual energy and mask your own spirtual energy.
+  description: You have advantage when attacking beasts.
   type: advantage
 Intimidate:
   description: You have advantage when attempting to intimidate enemies.
@@ -266,14 +243,20 @@ Keen Eye:
 Kingsmen:
   description: Gain +3 Charisma when speaking with kingsmen.
   type: advantage
+Ruffians:
+  description: Gain +3 Charisma when speaking with rough individuals, townspeople, or bandits.
+  type: advantage
 Lamb to the Slaughter:
-  description: When hunting, you have advantage on perception checks.
+  description: When tracking, you have advantage on perception checks.
   type: advantage
 Land on your feet:
   description: You can fall 40 feet before taking fall damage.
   type: general
+Colossal:
+  description: You stand 2 feet taller than the average individual of your race, and are treated as one size larger.
+  type: general
 Last Stand:
-  description: When your health is below 20%, you can make two moves in a row.
+  description: When your health is below 20%, you can take two actions on your turn.
   type: combat
 Learned:
   description: You are fluent in a language of your choosing.
@@ -283,7 +266,7 @@ Lesser Book of Healing:
   type: general
 Lesser Novice Spellbook:
   description: You are able to learn level 0-3 spells from the Novice Spellbook.
-  type: general
+  type: spellbook
 Lightfoot:
   description: Gain advantage on stealth checks. Stacks with padfoot.
   type: advantage
@@ -293,9 +276,6 @@ Lightweight:
 Longbow:
   description: You begin your journey with a d6 longbow.
   type: starting_item
-Longshot:
-  description: Gain advantage on long distance checks.
-  type: advantage
 Looming Presence:
   description: Gain advantage when attempting to intimidate anything of lower intelligence
     than yourself.
@@ -312,15 +292,12 @@ Mantel:
 Master of Disguise:
   description: You can easily fashion disguises to hide yourself with.
   type: general
-Meditate:
-  description: Gain either 1d6+2 additional healing or 1 chi point during a short rest.
-  type: general
 Miner's Eye:
   description: When dealing with minerals or works made of stone, get a +7 benefit
     to intelligence.
   type: general
 Minor Medicine:
-  description: If you have the ingredients, you can create basic potions.
+  description: If you are in the woods or in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
   type: general
 Minor Spell Choice:
   description: At the start of your journey, you know 2 level zero, 1 level one, and
@@ -352,36 +329,27 @@ Nimble Fingers:
   type: advantage
 Novice Spellbook:
   description: You are able to learn spells from the Novice Spellbook.
-  type: general
+  type: spellbook
 Old Hand:
   description: You have a deep understanding of the limits of your body and of others.
-    You can get a rough estimate of enemy health.
+    You can role a perception check as an offhand action to get an idea of an enemy's remaining health.
   type: combat
 One up the Sleeve:
   description: Gain advantage on any attacks made with throwing knives.
   type: advantage
-Overheal:
-  description: You are capable of healing to a maximum of 120% health.
-  type: combat
-PULL:
+Penetration:
   description: If enemies are in a row, your shot will pass right through them.
   type: combat
 Padfoot:
   description: You have advantage on stealth checks.
   type: advantage
-Persuasive:
-  description: You have advantage on persuasion checks.
-  type: advantage
-Physical Double Strike:
-  description: You can attack twice in one action with a physical weapon.
-  type: combat
 Pledge:
   description: At the start of your journey, you may select a diety to pledge yourself
     to.
   type: general
 Poison Bite:
   description: Once every 3 turns, you may bite for 1d6 damage plus an additional
-    d6 poison damage. Poison damage affects the enemy, once on the turn of the bite,
+    d6 poison damage. Poison damage affects the enemy twice, once on the turn of the bite,
     and then again on the next turn.
   type: combat
 Poison Resist:
@@ -404,9 +372,6 @@ Regular Patron:
 Resist Magic:
   description: You take -2 magic damage.
   type: general
-Rusted Sword:
-  description: You begins your adventure with a rusted set of armor and a d10 sword.
-  type: starting_item
 See and Remember:
   description: Once you see something, you will probably remember it.
   type: general
@@ -418,34 +383,27 @@ Set Up:
     use a d20s rather than d10s on your next turn. If you are a gunslinger, use a
     d6 (or d8 if you have the hollow point upgrade)
   type: combat
-Share Ability:
-  description: At sunup each day, you may choose one of your party's abilities to
-    be yours until sunup the next morning.
-  type: general
 Shed Tail:
   description: You can shed your tail to escape a grapple.
   type: general
 Shield Bash:
-  description: Use your turn to shield bash an enemy, dealing d6 damage and staggering
+  description: Use your turn to shield bash an enemy, dealing 1d6 damage and staggering
     them if they fail a check.
   type: combat
 Shield of Men:
-  description: Once every three turns, you can throw yourself in front of a teammate,
+  description: Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them.
   type: combat
 Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings.
     +5 in stealth checks when standing still.
   type: starting_item
-Size doesn't matter:
-  description: You begin your journey with a d6 shortbow.
-  type: starting_item
 Sleepless:
   description: Your can rest without sleeping for one day, allowing you to keep
     watch long into the night. Resting at night counts as sleep even if you are awake.
   type: general
 Sling:
-  description: Your character begins with a sling.
+  description: Your character begins their journey with a 1d6 sling.
   type: starting_item
 Smokevision:
   description: Your double eyelids allows you to see well when underwater or in smoke.
@@ -473,11 +431,8 @@ Still Warm:
   type: general
 Strength of Men:
   description: You have basic healing abilities. Once after each rest, you may heal
-    a party member for 1d10 health.
+    a party member for 1d10 + inner fire health.
   type: combat
-Sureshot:
-  description: Gain advantage on checks when firing in a dense environment.
-  type: advantage
 Swoon:
   description: During battle, you can feint to avoid further damage. You may wake
     up after one turn.
@@ -487,13 +442,13 @@ Sword and Flame:
     turn, however, neither benefit from advantage or stat bonuses.
   type: combat
 Tackle:
-  description: You can tackle an enemy to the ground. Attempt either a dexterity or
+  description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
     strength contested throw against an enemy, if they fail, you grapple them. You
     have advantage
   type: combat
 Tactics:
-  description: Once every 3 turns, you can spend one turn to score a guaranteed critical
-    hit.
+  description: Once per day, you may spend one turn to score a guaranteed critical
+    hit with any attack or spell if the attack or spell finds its mark.
   type: combat
 Taste Air:
   description: Gain advantage on tracking perception checks by tasting the air. Works
@@ -509,15 +464,15 @@ The Bard's Songbook:
   type: starting_item
 The Druid's Field Guide:
   description: You can learn spells from the Druid's Field Guide.
-  type: starting_item
+  type: spellbook
 The Book of Healing:
   description: You are able to learn spells from the Book of Healing.
-  type: general
+  type: spellbook
 The Book of Chi: 
-  description: You start with The Book of Chi, and may spend three points within it.
-  type: general
+  description: You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.
+  type: spellbook
 The Family Sword:
-  description: Begin your journey with a d8 sword with a ruby on its hilt and an engraving
+  description: Begin your journey with a 1d8 sword with a ruby on its hilt and an engraving
     of your family's sigil.
   type: starting_item
 The Hand of God:
@@ -525,18 +480,18 @@ The Hand of God:
   type: advantage
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
-  type: general
+  type: spellbook
 The Sorcerer's Scrolls:
   description: You are able to learn spells from the Sorcerer's Scrolls.
-  type: general
+  type: spellbook
 The Sword and the Satchel:
   description: You begin your adventure with a bottomless satchel.
   type: starting_item
 The Wizard's Addendum:
   description: You are able to learn spells from the Wizard's Addendum.
-  type: general
+  type: spellbook
 They're Retractable:
-  description: You have retractable, razor sharp claws capable of doing 1d8 damage.
+  description: You have retractable, razor sharp claws capable of doing 1d6 damage.
   type: combat
 Thick Headed:
   description: You have advantage on any checks involving an enemy breaking into your
@@ -546,7 +501,7 @@ This is my Weapon:
   description: Your gun is the only friend you need. Make sure to give it a name.
   type: choice
 Throw Anything:
-  description: You can throw anything up to five times your weight.
+  description: You can throw anything up to one size larger than yourself.
   type: general
 Thunderous Blow:
   description: Once every three turns, roll double the dice for your attack.
@@ -563,12 +518,6 @@ Tracker:
 Trained Precision:
   description: Once every three turns, gain advantage on your attack.
   type: combat
-Transfigure:
-  description: Once per rest, you can turn something into something else.
-  type: general
-Trapper:
-  description: Given enough time, you can craft a trap.
-  type: general
 Tripple Strike:
   description: You can attack three times in a single action.
   type: combat
@@ -611,9 +560,6 @@ Wink Wink, Nudge Nudge:
   description: Due to your beauty, you have advantage on charisma checks when dealing
     with races that find you attractive.
   type: advantage
-Woodsman:
-  description: You have perception advantage in the forest.
-  type: advantage
 Stocky:
   description: You have advantage against any check that could cause you to go prone.
   type: advantage
@@ -641,11 +587,8 @@ The Opener:
 True Sight: 
   description: You are able to see invisible entities. 
   type: general
-We are One: 
-  description: Your charisma is treated as 0 when talking with other daemonspawn.
-  type: general
 Influence: 
-  description: You have "influence" points equal to your intelligence. You may spend them to increase any charisma roll by 2. They refill on a long rest.
+  description: You have "influence" points equal to your intelligence. You may spend them to increase any charisma roll by 2. They refill after you sleep.
   type: general
 Charismatic by Birth: 
   description: Sorcerers may choose to roll for their charisma with advantage at the start of an adventure.
@@ -657,7 +600,7 @@ Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: advantage
 Determination:
-  description: Once per rest, gain a d10 inspiration dice.
+  description: Once per rest and at the start of combat, gain a d10 inspiration dice.
   type: general
 Multi-Action:
   description: Once every three turns, take two actions instead of one.
@@ -671,3 +614,244 @@ Trained Attack:
 Resolve:
   description: When your health drops below 20%, all attacks do half damage against you.
   type: combat
+Berserker: 
+  description: You take half damage while going berserk.
+  type: combat
+Savage Critical:
+  description: On a critical hit, do an additional 2d6 damage.
+  type: combat
+Line Them Up:
+  description: If you slay an enemy, gain another attack action.
+  type: combat
+Shield Up: 
+  description: Take half damage from ranged attacks if holding a sheild.
+  type: general
+Joust: 
+  description: Roll all attacks with advantage while on horseback.
+  type: combat
+Throw Caution to the Wind: 
+  description: On your turn, optionally add 1d10 to all damage you deliver, but all enemy attacks get advantage on you for a turn.
+  type: combat
+Harden: 
+  description: Once every three turns, choose to take no damage from an attack.
+  type: combat
+Stay on Your Feet: 
+  description: If you fall to zero health, make a dc14 inner fire saving throw. If you succeed, drop to 1 health instead.
+  type: combat
+Last Line of Defense: 
+  description: If any of your allies are on death's door or have died, add 2d10 to all of your attacks.
+  type: combat
+Healer: 
+  description: Add 1d6 to any healing spell.
+  type: general
+Beacon of Hope: 
+  description: All allies near you gain +1 to all saving throws.
+  type: general
+Sinner's Bane: 
+  description: Your attacks do an additional 2d6 to undead or demonic entities.
+  type: combat
+Fires of Heaven: 
+  description: When you perform a plunging attack, create an explosion dealing 3d6 damage to all entities within a 20 foot radius.
+  type: combat
+Winged Jump: 
+  description: Once every three turns, leap up to 40 feet using ethereal, angelic wings. Counts as an action.
+  type: combat
+Dire Companion: 
+  description: Your companion animal is now of Dire size. See the book of known beasts for details.
+  type: general
+Pup:
+  description: Your companion animal is small size. See the book of known beasts for details.
+  type: general
+Grown: 
+  description: Your companion animal is adult in size. See the book of known beasts for details.
+  type: general
+Leaping Strike: 
+  description: Add 1d10 damage to any attacks made while leaping.
+  type: combat
+Reduced Critical: 
+  description: You perform a critical hit if you roll one less than your dice's number of sides.
+  type: combat
+Disarming: 
+  description: Once every three turns, use an action to force an enemy to make an contested saving throw against your charisma. If they fail, the next attack made against them will be a gauranteed critical hit.
+  type: combat
+Aura of Peace: 
+  description: All allies near you take heart, and gain +1 vitality while in your presence.
+  type: general
+Rally Cry: 
+  description: Once every three turns, let out a rally cry which allows all allies to do an additional 1d6 damage on their next attack.
+  type: combat
+Fallen: 
+  description: While you are on death's door, all of your allies get a bonus action.
+  type: general
+Master: 
+  description: Instantly learn two master abilities of your choice.
+  type: choice
+Consecutive Normal Punches: 
+  description: You may take three attacks per action.
+  type: combat
+Perfect Zen: 
+  descriptioon: Once per day as an offhand action, become untouchable by physical attacks for one turn or one minute.
+  type: combat
+Aura of Calm: 
+  description: Allies near you gain +2 on all inner fire saving throws.
+  type: general
+Favorite Enemy:
+  description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
+  type: choice
+Monster Slayer:
+  description: Whenever you attack a beast classified as a monster, do an additional 2d6 damage.
+  type: combat
+Potion Bonus:
+  description: Reroll any 1s, 2s, or 3s rolled when healing. Regain an additional 2d6 health from any potion.
+  type: general
+Stare Down:
+  description: As an offhand action, stare an enemy down. Make a contested inner fire roll. If they fail, you do double damage to them this turn, and they are considered afraid of you.
+  type: combat
+Pickpocket: 
+  description: On a critical hit, steal an item from the enemy you are fighting.
+  type: combat
+Superior Mantel:
+  description: Add +5 to all climbing checks.
+  type: general
+Reflexes: 
+  description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.
+  type: general
+Soundless : 
+  description: Gain a +3 on stealth checks
+  type: general
+Party Save: 
+  description: Add +5 to one party member's stealth check.
+  type: general
+Assassinate: 
+  description: If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.
+  type: combat
+Imposter: 
+  description: Gain +5 on any checks made to imitate someone.
+  type: general
+Poison: 
+  description: Once per day, create a draught of deadly posion. If injested, the poison does 3d20 + 10 damage. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poision takes 6 continuous hours.
+  type: general
+Focus Energy: 
+  description: As an action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
+  type: general
+Transfer Essense: 
+  descriptioon: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
+Ascend: 
+  description: Once per day, you may enter the ascended state. While ascended, you gain +5 vitality, intelligence, and inner fire. Imediately gain 5 spell points. While ascended, you have access to the double-action ability, and may take flight. Furthermore, reduce the cost of all spells by 1. The ascended state lasts for 6 turns or ten minutes. When you fall out of the ascended state, you are exhausted. Immediately take 25 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
+  type: general
+Phylactery: 
+  description: You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.
+  type: general
+Reap: 
+  description: When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2.
+  type: general
+Freed from this Mortal Coil: 
+  description: You may bond your consciousness to one of your thralls, taking full control of them. If the thrall is destroyed, your soul returns to your primary body, another thrall, or to your phylactery.
+  type: general
+Cost Reduction: 
+  description: Once every third turn, cast a spell at -1 cost.
+  type: combat
+Sprits Within: 
+  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn you are embued with a spirit, make a dc 7 inner fire saving throw. If you fail, take 1d6 psychic damage. If you critically fail, the spirit escapes you. While you are embued with a spirit, all spell levels are treated as -2. You are able to take two actions per turn, and may add +1 to strength, dexterity, perception, inner fire, and luck.
+  type: combat
+Tome of the Ancients: 
+  description: You are now able to learn spells from the tome of the ancients.
+  type: spellbook
+Spell Invention: 
+  description: You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered something like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.
+  type: general
+Halo: 
+  description: A halo shines about your head. Take advantage when dealing with godfearing people, and when intimidating anyone wicked.
+  type: advantage
+Burning Bright:
+  description: At will, you can make your halo blaze with the same intensity as the light spell, dealing damage to the undead.
+  type: combat
+True Heal: 
+  description: Reroll any ones or twos rolled while healing.
+  type: general
+Aura of Advantage: 
+  description: Once every three turns, give all party members advantage on their next action.
+  type: combat 
+Angelic Wings: 
+  description: Once per day, summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.
+  type: general
+True Mastery: 
+  description: Every ranged weapon functions as a 2d12 weapon in your hands.
+  type: general
+Arrow Stab: 
+  description: You can stab an enemy with an arrow for 2d8 damage.
+  type: combat
+Strike First: 
+  description: Once per turn, when an enemy attacks you, attack them first.
+  type: combat
+Hollowpoint:
+  description: Add an extra +2 damage to each shot.
+  type: combat
+Fastest Gun: 
+  description: Add +5 to your initiative.
+  type: combat
+Power Core: 
+  description: The source of your power is housed within you. If you are destroyed in combat, you can be reborn so long as the power core survives.
+  type: general
+Overdrive:
+  description: Spend 5 health per turn (or 1 health per minute) to increase your strength and dexterity by 3.
+  type: general
+Repair: 
+  description: You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.
+  type: general
+Self Repair: 
+  description: Once every three turns during combat, you can self repair in place of a full turn.
+  type: combat
+True Sleeplessness: 
+  description: You cannot grow tired, nor can you sleep.
+  type: general
+Gyroscopic Center of Mass: 
+  description: It is difficult to knock you over. Add 5 to any check that involves knocking you prone.
+  type: advantage
+Armored Exterior: 
+  description: You naturally have an armor of 2.
+  type: general
+Piston Punch: 
+  description: Once every three turns, perform a 2d8 strength based punch on an enemy of your choice. If either dice is an 8, the enemy is knocked prone.
+  type: combat
+Upgrades: 
+  description: A tinker can craft upgrades for you.
+  type: general
+Chlorophyll: 
+  description: Every turn or once per hour, regain 1d6 health.
+  type: general
+Blade of Grass: 
+  description: Summon a 1d6 blade of woven plant fiber on command.
+  type: general
+Scurry: 
+  description: You have advantage on dexterity based athletics checks.
+  type: advantage
+Dodge:
+  description: Any time you are attacked, roll a d20 and add your dexterity. If you get above a 15, the attack misses.
+  type: combat
+Harden: 
+  description: As an offhand action, harden or unharden yourself. While hardened, gain 3 defense and loose 1 dexterity.
+  type: general
+Small Fry: 
+  description: Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown. 
+  type: general
+Soft Landing:
+  description: Reduce any falling damage by 20 feet.
+  type: general
+Commune with Nature:
+  description: You are naturally able to speak with plants and animals.
+  type: general
+
+
+
+
+# Action
+# Double Action
+# Offhand Attack
+# Twin Blades
+# Double Strike
+# Tripple Strike 
+# Twin Guns: 
+#   description: You can now use a second pistol in your offhand.
+
+# Hard to Kill: You must fail two death coin tosses to die.

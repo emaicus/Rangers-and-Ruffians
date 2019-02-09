@@ -69,7 +69,7 @@
     "url" : "https://www.deviantart.com/yunaxd/art/Instintos-Salvajes-618475423",
     "title" : "Instintos Salvajes"
   },
-  "human_female" : {
+  "OLD_human_female" : {
     "artist" : "RAPHTOR",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
@@ -279,13 +279,7 @@
     "url" : "https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811",
     "title" : "Commission: Adalia"
   },
-  "ranger" : {
-    "artist" : "NathanParkArt",
-    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
-    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/nathanparkart/art/Ranger-454217001",
-    "title" : "Ranger"
-  },
+  
   "wizard" : {
     "artist" : "ncorva",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
@@ -301,24 +295,74 @@
     "title" : "Sorca, Magus of the first Seal"
   },
   "cleric" : {
-    "artist" : "jw8401",
+    "artist" : "Zezhou",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/jw8401/art/140203-S-439637005",
-    "title" : "140203 S"
+    "url" : "https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982",
+    "title" : "Before the world ends"
   },
-  "comingsoon_male" : {
-    "artist" : "Emily Probably",
-    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
-    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "www.google.com",
-    "title" : "google"
+  "hedge_knight" : {
+    "artist" : "maxprodanov",
+    "license"  : "Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "url" : "https://www.deviantart.com/maxprodanov/art/Peasants-Revolt-717573484",
+    "title" : "Peasants' Revolt"
   },
-   "comingsoon_female" : {
-    "artist" : "Emily Probably",
+  "ranger" : {
+    "artist" : "JosephQuiArt",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "www.google.com",
-    "title" : "google"
+    "url" : "https://www.deviantart.com/josephqiuart/art/Swordman-sketch-702721751",
+    "title" : "Swordman-sketch"
+  },
+  "battle_mage" : {
+    "artist" : "Arcan-Anzas",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/arcan-anzas/art/CM-Death-Knight-Emilia-Hazeltine-671902210",
+    "title" : "CM: Death Knight Emilia Hazeltine"
+  },
+  "human_female" : {
+    "artist" : "NathanParkArt",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/nathanparkart/art/Ranger-454217001",
+    "title" : "Ranger"
+  },
+  "new" : {
+    "artist" : "Zezhou",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/zezhou/art/Knight-of-Lies-562010429",
+    "title" : "Knight of Lies"
+  },
+  "heroic" : {
+    "artist" : "RobCV",
+    "license"  : "Creative Commons Attribution-Share Alike 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-sa/3.0/",
+    "url" : "https://www.deviantart.com/robcv/art/The-guardian-Comission-737424836",
+    "title" : "The guardian-Comission"
+  },
+  "legendary" : {
+    "artist" : " maxprodanov",
+    "license"  : "Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "url" : "https://www.deviantart.com/maxprodanov/art/Archangel-742207015",
+    "title" : "Archangel"
+  },
+  "automaton_male" : {
+    "artist" : "Vagocool",
+    "license"  : "Creative Commons Attribution-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nd/3.0/",
+    "url" : "https://www.deviantart.com/vagocool/art/Rose-488273011",
+    "title" : "Rose"
+  },
+  "automaton_female" : {
+    "artist" : "Vagocool",
+    "license"  : "Creative Commons Attribution-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nd/3.0/",
+    "url" : "https://www.deviantart.com/vagocool/art/Rose-488273011",
+    "title" : "Rose"
   }
+
 }

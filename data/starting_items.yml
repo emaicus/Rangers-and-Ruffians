@@ -1,0 +1,61 @@
+standard_starting_items:
+  Torch:
+    cost: 5
+    description: "A good, old fashioned torch. Good for lighting up the darkness."
+  Flint:
+    cost: 1
+    description: A flint for firestarting.
+  Shortsword:
+    cost: 25
+    description: A 1d6 shortsword.
+  Shortbow: 
+    cost: 25
+    description: A 1d6 shortbow. Capable of firing medium distances.
+  Handaxe:
+    cost: 25
+    description: A 1d6 handaxe.
+  Greatsword:
+    cost: 35
+    description: A 1d8 greatsword. Requires a strength of 2 to weild.
+  Dungeoneering Kit:
+    cost: 35
+    description: Contains a 1d4 knife, a torch, a flint, a set of ball bearings, and 3 rations.
+  Rations:
+    cost: 2
+    description: Basic food. Restores 1d4 + 2 health.
+  Minor Health Potion:
+    cost: 50
+    description: A basic health potion. Restores 4d4 + 4 health.
+  Minor Magic Potion:
+    cost: 50
+    description: Restores 3 magic points.
+  Green Lizard in a Jar:
+    cost: 500
+    description: A rare magic item, the mystical green lizard in a jar is capable of reviving someone from death. Must be administered within 5 minutes of death. The entity comes back with 10d6 health.
+  Spellbook:
+    cost: 300
+    description: A spellbook containing a 3rd level spell.
+  Wooden Sheild:
+    cost: 10
+    description: A one handed sheild. With this shield, you may attempt to take half damage from attacks. Saving throw is 17.
+  Kite Sheild:
+    cost: 50
+    description: A small sheild. With this sheild, you take 1 fewer damage from any attack.
+  Traveling Cloak:
+    cost: 30
+    description: A cloak made for traveling. With this on, add 1 to stealth checks.
+  Leather Armor:
+    cost: 30
+    description: A set of basic leather armor. With this equipped, take 1 fewer damage from any attack.
+  Chainmail:
+    cost: 50
+    description: A set of basic chainmail. With this equipped, take 2 fewer damage from any attack. Must have a strength of 2 to wear.
+  Half Plate:
+    cost: 200
+    description: A set of plate armor. With this equipped, take 3 fewer damage from any attack. Must have a strength of 3 to wear.
+  Full Plate:
+    cost: 750
+    description: A set of full plate armor. With this equipped, take 4 fewer damage from any attack, and half damage from piercing missles. Must have a strength of 4 to wear.
+  Fine leather armor:
+    cost: 100
+    description: Finely made leather armor. With this equipped, take 2 fewer damage from any attack.

@@ -1,0 +1,151 @@
+Heavy Fighter:
+  Barbarian:
+    Berserker:
+      - Berserker: You take half damage while going berserk.
+      - Hand to Hand
+      - Savage Critical: On a critical hit, do an additional 2d6 damage.
+      - Line Them Up: If you slay an enemy, gain another attack action.
+  Hedge_Knight:
+    - Double Action
+    - Shield Up: Take half damage from ranged attacks if holding a sheild.
+    - Joust: Roll all attacks with advantage while on horseback.
+    - Throw Caution to the Wind: Add 1d10 to all damage you deliver, but all enemy attacks get advantage on you for a turn.
+    - Harden: Once every three turns, choose to take no damage from an attack.
+  Knight:
+    Hero:
+      - Taunt
+      - Stay on Your Feet: If you fall to zero health, make an inner fire saving throw. If you succeed, drop to 1 health instead.
+      - Double Action
+      - Harden: Once every three turns, choose to take no damage from an attack.
+      - Last Line of Defense: If any of your allies are on death's door or have died, add 2d10 to all of your attacks.
+  Paladin:
+    Holy Knight:
+      - Healer: Add 1d6 to any healing spell.
+      - Beacon of Hope: All allies near you gain +1 to all saving throws.
+      - Book of Healing: You have access to the full book of healing.
+      - Sinner's Bane: Your attacks do an additional 1d6 to undead or demonic entities.
+      - Fires of Heaven: Cause an explosion doing 3d6 force damage on plunging attacks.
+      - Winged Jump: Once every three turns, leap up to 40 feet using ethereal, angelic wings. Counts as an attack action. 
+
+Light Fighter:
+  Beastmaster:
+    - Dire Companion: Your companion animal is now of Dire size. See the book of known beasts for details.
+    - Twin Blades:
+    - Mantel
+    - Leaping Strike: Add 1d10 damage to any attacks made while leaping.
+  Fighter:
+    Champion:
+      - Offhand Attack
+      - Feint
+      - Stay on Your Feet: If you fall to zero health, make a dc 10 inner fire saving throw. If you succeed, drop to 1 health instead.
+      - Reduced Critical: You crit one lower than normal critical.
+  Highborn:
+    Noble:
+      - Disarming: Once every three turns, use an action to force an enemy to make an inner fire saving throw against your charisma. If they fail, the next attack made against them will be a gauranteed critical hit.
+      - Double Action
+      - Aura of Peace: All allies near you take heart, and gain +1 vitality while in your presence.
+      - Rally Cry: Once every three turns, let out a rally cry which allows all allies to do an additional 1d6 damage on their next attack.
+      - Fallen: While you are on death's door, all of your allies get a bonus action.
+  Monk:
+    - Master: Instantly learn two master abilities of your choice.
+    - Consecutive Normal Punches: You may take three attacks per action.
+    - Perfect Zen: Once per day as an offhand action, become untouchable by physical attacks for one turn.
+    - Aura of Calm: Allies near you gain +2 on all inner fire saving throws.
+  Ranger:
+    Ranger:
+      - Tripple Strike #Attack 3 times in one action
+      - Learned # know another language
+      - Favorite Enemy # Favorite enemy (advantage)
+      - Feint # Once every three turns, dodge
+      - Hold the line # Advantage when teammate is dying
+      - Greater Medicine
+      - Under the Stars # Sleep outside
+      - Counter Attack
+    Monster Hunter:
+      - Monster Slayer # +5 damage to monsters
+      - Double Action # Take two actions on your turn
+      - Counter Attack
+      - Tackle
+      - Under the Stars # Sleep outside
+      - Potion Bonus
+      - Dominate
+  Rogue:
+    Thief:
+      - Steal while fighting
+      - Double Action
+      - Superior Mantel : climb quickly
+      - Reflexes : catch arrows
+      - Soundless : Gain a +3 on stealth checks
+      - Party Save : add + 5 to one party member's stealth check
+      - Low light vision
+    Assassin:
+      - Assassinate : If an enemy is unsuspecting, do double damage.
+      - Double Attack
+      - Offhand Attack
+      - Imposter : You can cast a spell upon yourself which makes you look exactly like someone you've seen
+      - Poison : You can craft deadly posions.
+      - Soundless
+      - Persuasive
+   
+Mage:
+  Battle_Mage:
+    - Novice Spellbook
+    - Double Action
+    - Focus Energy: As an action, convert spell points into strength or dexterity. Lasts for the duration of a battle.
+    - Transfer Essense: As an action, convert health into spell points. Each spell point costs 5 health. 
+  Druid:
+    Chosen One:
+      - Ascend: Once per week, you may enter the ascended state. While ascended, you gain an additional 5 vitality, intelligence, and inner fire. Imediately gain 5 spell points. While ascended, you have access to the multi-action ability, and may take flight. Furthermore, reduce the cost of all spells by 1. The ascended state lasts for 6 turns. When you fall out of the ascended state, you are exhausted. Immediately take 25 damage, and have disadvantage in all things until you are able to sleep.
+  Necromancer:
+    Lich:
+      - Phylactery: remove your soul and put it in a box. If the box dies, you odie. If your body dies, it is regenerated at the box after a day.
+      - Reap: When you harvest a soul, roll a d20. If it's 15 or above, harvest 2.
+      - Freed from this Mortal Coil: You may bond your consciousness to one of your thralls, taking full control of them. When the thrall is destroyed, your soul returns to your primary body, another thrall, or to your phylactery.
+      - Cost Reduction: Once every third turn, cast a spell at -1 cost. 
+  Sorcerer:
+    - Sprits Within: Wrestle with a spirit, forcing it to fill you with its strength. Every turn you are embued with a spirit, make a dc 7 inner fire saving throw. If you fail, take 1d6 psychic damage. If you critically fail, the spirit escapes you. While you are embued with a spirit, all spell levels are treated as -2. You are able to take two actions per turn, and may add +1 to strength, dexterity, perception, inner fire, and luck.
+  Wizard:
+    Sage:
+      Cost Reduction: Once every 3 turns, cast a spell at -1 cost.
+      The Sixth Level: You are now able to learn level six spells from the tome of the ancients.
+      Multi-action: You may take two actions per turn.
+      Spell Invention: You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered soomething like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.
+  Bard:
+    Minstrel:
+      - Multi-action
+      - Cost Reduction: Once every 3 turns, cast a spell at -1 cost.
+  Cleric:
+    Ascended:
+      - Healer: Add 1d6 to any healing spell.
+      - Halo: A halo shines about your head. Take advantage when dealing with godfearing people, and when intimidating anyone wicked. You can make your halo blaze with the same intensity as the light spell.
+      - Burning Bright: A halo shines about your head. Take advantage when dealing with godfearing people, and when intimidating anyone wicked. You can make your halo blaze with the same intensity as the light spell.
+      - Multi-action: You may take two actions per turn.
+      - True Heal: Reroll any ones or twos rolled while healing.
+      - Aura of Advantage: Once every three turns, give all party members advantage on their next action.
+      - Angelic Wings: Once per day, summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.
+Ranged Fighter:
+  Archer:
+    Marksman:
+      Double Attack: Two attack actions.
+      True Mastery: Every bow functions as a d12 weapon in your hands.
+      Mantel
+      Steady
+      Arrow Stab: You can stab an enemy with an arrow for 1d8 damage.
+      Strike First
+  Gunslinger:
+    Sniper:
+      - Double Attack
+      - Savage Critical: On a critical hit, do an additional 2d6 damage.
+      - Line Them Up: If you slay an enemy, gain another attack action.
+      - Focus
+      - Penetration
+    Desperado:
+      - Twin Guns: You can now use a second pistol in your offhand.
+      - Hollowpoint: Add an extra +2 damage to each shot.
+      - Fastest Gun: Add +5 to your initiative.
+      - All Smiles
+
+
+
+
+      - Zero Sum Game: 

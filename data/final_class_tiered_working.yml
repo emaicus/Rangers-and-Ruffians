@@ -1,0 +1,911 @@
+Heavy Fighter:
+  Barbarian:
+    abilities:
+    - Berserk
+    - Intimidate
+    - Throw Anything
+    - Crushing Blow
+    - Boozehound
+    - Taunt
+    - Colossal
+    - Greater Choice Stat
+    description: Either by choice or by circumstance, Barbarians have chosen to spend
+      their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent
+      travelers, taking slaves or possessions. Known for their uncouth nature.
+    standings: Barbarians are the enemies of law keepers.
+    stats:
+      Charisma: -2
+      Dexterity: -1
+      Inner_Fire: 1
+      Intelligence: -3
+      Luck: 0
+      Perception: 0
+      Strength: -1
+      Vitality: 2
+    heroic:
+      abilities:
+      stats:
+        Strength: 1
+        Dexterity: 1
+        Vitality: 1
+        Perception: 1
+        Inner_Fire: 1
+        Vitality: 1
+    legendary:
+      name : Berserker
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Hedge_Knight:
+    abilities:
+    - Mount and Blade
+    - Under the Stars
+    - Steady
+    - Charge
+    - Ruffians
+    - Armored
+    description: A self proclaimed knight, hedge knight's move from region to region,
+      seeking to find employment where they can. Hedge knights are supposed to live
+      by a code of honor, but on the road these things tend to fall apart.
+    standings: Hedge Knights are not fond of Knights
+    stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 1
+      Intelligence: -1
+      Luck: -1
+      Perception: 1
+      Strength: 0
+      Vitality: 2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Inner_Fire: 1
+        Strength: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Knight:
+    abilities:
+    - Trained Precision
+    - Kingsmen
+    - Hold the line
+    - Shield Bash
+    - Shield of Men
+    - Armored
+    description: The genuine article, knights have sworn their lives to king and country.
+    standings: Knights are loved by kingsmen, and distrusted by hedge knights and
+      rangers. Knights are duty bound to fight the lawless.
+    stats:
+      Charisma: 1
+      Dexterity: -3
+      Inner_Fire: 2
+      Intelligence: 0
+      Luck: 0
+      Perception: 0
+      Strength: 1
+      Vitality: 2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Strength: 2
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Paladin:
+    abilities:
+    - Bash
+    - Hammer of Light
+    - Faithful Weapon
+    - Shield of Men
+    - Lesser Book of Healing
+    - Pledge
+    - Minor Spell Choice
+    - Chainmail
+    description: Soldiers of the Light, Paladins are knights who have pledged themselves
+      to a deity. As such, Paladins are capable of performing minor miracles from
+      the book of healing.
+    standings: Paladins are generally respected. They hate evil, and try to destroy
+      it wherever they find it.
+    stats:
+      Charisma: 1
+      Dexterity: -3
+      Inner_Fire: 1
+      Intelligence: 1
+      Luck: 1
+      Perception: 0
+      Strength: 1
+      Vitality: 2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 1
+        Strength: 2
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+Light Fighter:
+  Beastmaster:
+    abilities:
+    - Tackle
+    - Animal Magnetism
+    - Hobble
+    - Under the Stars
+    - Lightfoot
+    - Favorite Terrain
+    - Tracker
+    - Animal Companion
+    description: For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters
+      have forgone civilization, choosing instead to roam the wilds, capturing and
+      befriending animals.
+    standings: More comfortable in nature than cities, Beastmasters get on best with
+      animals, and can find people difficult to talk to.
+    stats:
+      Charisma: -2
+      Dexterity: 0
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: 2
+      Strength: 0
+      Vitality: 1
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Perception: 1
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Fighter:
+    abilities:
+    - Choice Stat
+    - Nimble
+    - Determination
+    - Multi-Action
+    - Second Wind
+    - Trained Attack
+    - Resolve
+    description: Figthers are some of the best of the best. They are trained, hardened
+      combatants who pride themselves on their martial skills. Fighters are self-reliant
+      and have a skillset which is more suited to keeping themself alive than providing
+      support.
+    standings: Fighters come from all walks of life.
+    stats:
+      Charisma: 1
+      Dexterity: 0
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: 1
+      Strength: 0
+      Vitality: 0
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 1
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Highborn:
+    abilities:
+    - My Father's Coffers
+    - The Family Sword
+    - My People
+    - Mantel
+    - Happy Smiles
+    - Swoon
+    - Beauty Incarnate
+    - Lightweight
+    - Feint
+    - Gumption
+    description: Delicate and noble, the Lady Fair is a beacon of love and hope for
+      their people. While used to living in the safety of her castle, she isn't afraid
+      to go out into the wilds, as long as the wilds have warm beds and three square
+      meals.
+    standings: Of noble birth, your character is loved by their people, but is prone
+      to attacks by thieves and brigands.
+    stats:
+      Charisma: 2
+      Dexterity: 1
+      Inner_Fire: -3
+      Intelligence: 1
+      Luck: 2
+      Perception: -1
+      Strength: -3
+      Vitality: -2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Strength: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Monk:
+    abilities:
+    - Hand to Hand
+    - The Book of Chi
+    description: Masters of hand to hand combat, monks use their extensive self-knowledge
+      to overcome their foes.
+    standings: Monks keep to themselves, which cause some outside of their religion
+      to attempt to take advantage of them.
+    stats:
+      Charisma: 0
+      Dexterity: 1
+      Inner_Fire: 2
+      Intelligence: 1
+      Luck: 0
+      Perception: 1
+      Strength: 0
+      Vitality: 0
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 2
+        Inner_Fire: 1
+        Strength: 1
+        Perception: 2
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Ranger:
+    abilities:
+    - Minor Medicine
+    - Shifting Cloak
+    - Favorite Terrain
+    - Learned
+    - Tracker
+    - Twin Blades
+    description: Rangers are the vigilante law keepers of the wilds. They take it
+      upon themselves to police roads, countrysides, and entire regions to keep travelers
+      safe. They are naturally disliked by lawless individuals.
+    standings: Barbarians are the enemies of law keepers.
+    stats:
+      Charisma: 0
+      Dexterity: 1
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: 1
+      Strength: 0
+      Vitality: 0
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Inner_Fire: 1
+        Perception: 1
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Rogue:
+    abilities:
+    - Master of Disguise
+    - Lightfoot
+    - Nimble Fingers
+    - Mantel
+    - A Thief's Gear
+    - High Ground
+    description: For one reason or another, thieves have turned to a life of crime.
+      Their crimes, however, are nonviolent when possible; the rich don't need all
+      that gold, anyway.
+    standings: Thieves hat law keepers and Thief Catchers
+    stats:
+      Charisma: 1
+      Dexterity: 2
+      Inner_Fire: 1
+      Intelligence: 1
+      Luck: 1
+      Perception: 2
+      Strength: -3
+      Vitality: -3
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Luck: 2
+        Perception: 2
+        Strength: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+Mage:
+  Battle_Mage:
+    abilities:
+    - Sword and Flame
+    - Lesser Novice Spellbook
+    - Minor Spell Choice
+    - Choice Stat
+    description: Balanced between physical and magical attacks, battle mages have
+      trained to be highly versatile fighters.
+    standings: Battle mages sometimes get along poorly with clerics.
+    stats:
+      Charisma: 1
+      Dexterity: 0
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: 0
+      Strength: 0
+      Vitality: -2
+    heroic:
+      abilities:
+      - Choice Stat
+      stats:
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Druid:
+    abilities:
+    - Novice Spellbook
+    - The Druid's Field Guide
+    - Spell Choice
+    - Greater Choice Stat
+    description: Gaurdian's of nature, most druids prefer to live in tribes in the
+      forests, mountains, prairie, tundra, or desert. Druid's are command powerful
+      nature based magic, which they use to smite those who threaten themselves, their
+      friends, or thier home. Druids utilize intelligence based spell points to cast
+      spells, and are a good match for players interested in playing a mage.
+    standings: null
+    stats:
+      Charisma: -2
+      Dexterity: -1
+      Inner_Fire: 2
+      Intelligence: 0
+      Luck: 0
+      Perception: 0
+      Strength: -1
+      Vitality: -2
+    heroic:
+      abilities:
+      - Choice Stat
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: 1
+        Strength: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Necromancer:
+    abilities:
+    - Soul Harvest
+    - The Macabre Manual
+    - Mortal Coil
+    - Vegan
+    - Edge of Eternity
+    - Fear the Light
+    - Eyes of the Others
+    - Spell Choice
+    description: Death is not my enemy, nor is it my ally, it is my servant. So say
+      the Necromancers, mages who study the intricacies of the hereafter. Often fuled
+      by macabre fasination or a god complex, Necromancy is deeply feared and considered
+      taboo by almost all.
+    standings: Necromancers are feared by most, and are actively hunted by Clerics
+      and followers of the light.
+    stats:
+      Charisma: -3
+      Dexterity: -1
+      Inner_Fire: 1
+      Intelligence: 2
+      Luck: 0
+      Perception: 0
+      Strength: 0
+      Vitality: -2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: 1
+        Vitality: 1
+        Strength: 2
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Sorcerer:
+    abilities:
+    - Novice Spellbook
+    - Influence
+    - The Sorcerer's Scrolls
+    - Charismatic by Birth
+    - Spell Choice
+    - Spell Modifiers
+    description: Sorcer's draw their magic not from cryptic tomes nor nuanced understanding,
+      but rather through raw force of personality. To perform magic, a sorcerer wrestles
+      with a spirit, natural or otherwise, and convinces them to do their bidding.
+      To this end, Sorcerers have no spell points, but rather must pass a charisma
+      check ((spell_level * 4) + 4) to perform magic.
+    standings: Mages and wizards are at odds over whose magic is best.
+    stats:
+      Charisma: 1
+      Dexterity: -1
+      Inner_Fire: 2
+      Intelligence: 1
+      Luck: 0
+      Perception: 0
+      Strength: -2
+      Vitality: -2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: 1
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Wizard:
+    abilities:
+    - The Sword and the Satchel
+    - Looming Presence
+    - Historian
+    - Walking Stick
+    - Novice Spellbook
+    - The Wizard's Addendum
+    - Spell Choice
+    description: Often eccentric, wizards are known to be wayfarers and meddlers.
+      Most keep to themselves, approaching others only to entwine them in schemes
+      only they know about. Wizards arrive precisely when they mean to. To use magic,
+      Wizards use spell points, and begin with a number of spell points equal to their
+      intelligence. Spells cost the same amount of spell points as their level, and
+      are reaquired upon a long rest.
+    standings: Wizards are known to be friends to all races, and get along particularly
+      well with Halflings and Rangers.
+    stats:
+      Charisma: 1
+      Dexterity: -2
+      Inner_Fire: 1
+      Intelligence: 3
+      Luck: 1
+      Perception: 1
+      Strength: 1
+      Vitality: -4
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Dexterity: 1
+        Inner_Fire: 1
+        Perception: 1
+        Strength: 1
+        Intelligence: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Bard:
+    abilities:
+    - My Father's Oboe
+    - The Bard's Songbook
+    - Song Choice
+    - Cartwheel
+    - One up the Sleeve
+    - Regular Patron
+    - Boozehound
+    - Nimble Fingers
+    - Slight of Hand
+    - All Smiles
+    description: Showmen by nature, Bards are known for their skills at performing
+      music, juggling, and distracting others from the sorrows of life.
+    standings: Bards are loved by most, and are welcomed equally among thieves and
+      goodfolk.
+    stats:
+      Charisma: 2
+      Dexterity: 1
+      Inner_Fire: 0
+      Intelligence: 1
+      Luck: 1
+      Perception: 0
+      Strength: -3
+      Vitality: -2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Intelligence: 1
+        Perception: 1
+        Strength: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Cleric:
+    abilities:
+    - Taunt
+    - Purge Decay
+    - The Book of Healing
+    - Pledge
+    - Spell Choice
+    description: After pledging their allegiance to their deity, Clerics have made
+      it their duty to follow their will. To do this, Clerics use miracles from the
+      book of healing help their deity impose its will on the world.
+    standings: Clerics are friends to all those who fight for good, and get along
+      especially well with Holy Knights, Paladins, and members of their church.
+    stats:
+      Charisma: 2
+      Dexterity: 0
+      Inner_Fire: 1
+      Intelligence: 2
+      Luck: 0
+      Perception: 0
+      Strength: -3
+      Vitality: -3
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Inner_Fire: 1
+        Intelligence: 2
+        Luck: 1
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+Ranged Fighter:
+  Archer:
+    abilities:
+    - Longbow
+    - Boot Knife
+    - Focus
+    - Double Tap
+    - Huntsman
+    - Crippling Shot
+    - Penetration
+    description: Excellent archers, Marksmen come from all walks of life.
+    standings: Excellent archers, Marksmen come from all walks of life.
+    stats:
+      Charisma: 0
+      Dexterity: 2
+      Inner_Fire: 0
+      Intelligence: 0
+      Luck: 1
+      Perception: 2
+      Strength: -3
+      Vitality: -3
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 1
+        Perception: 2
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Gunslinger:
+    abilities:
+    - This is my Weapon
+    - Choice of Firearm
+    - From the Hip
+    - Upgrade
+    - Set Up
+    - Firestarter
+    - Regular Patron
+    description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
+      to acquire one of the rarest weapons in the world. As such, they have a close
+      bond with their weapon, which is usually their primary means of income.
+    standings: More comfortable in nature than cities, Beastmasters get on best with
+      animals, and can find people difficult to talk to.
+    stats:
+      Charisma: 0
+      Dexterity: 0
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 2
+      Perception: 1
+      Strength: -1
+      Vitality: -3
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 1
+        Inner_Fire: 1
+        Dexterity: 1
+        Perception: 2
+        Strength: 1
+        Vitality: 1
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+CUT:
+  Adventurer:
+    abilities:
+    - Tactics
+    - Learned
+    description: null
+    standings: Barbarians are the enemies of law keepers.
+    stats:
+      Charisma: 1
+      Dexterity: 0
+      Inner_Fire: 2
+      Intelligence: 1
+      Luck: 1
+      Perception: 0
+      Strength: 1
+      Vitality: 2
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+  Thief-Catcher:
+    abilities:
+    - Master of Disguise
+    - Lightfoot
+    - Nimble Fingers
+    - Mantel
+    - A Thief's Gear
+    - High Ground
+    description: It takes a thief to catch a thief. Thief-Catchers are thieves turned
+      straight, who now hunt down their old comrades.
+    standings: Thief Catchers hate thieves, and are distrusted by lawkeepers
+    stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 0
+      Intelligence: 0
+      Luck: -1
+      Perception: 1
+      Strength: 1
+      Vitality: -1
+    heroic:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0
+    legendary:
+      abilities:
+      - generic_ability
+      stats:
+        Charisma: 0
+        Dexterity: 0
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+        Vitality: 0

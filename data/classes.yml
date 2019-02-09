@@ -22,7 +22,7 @@ Light Fighter:
       Luck: 0
       Perception: 2
       Strength: 1
-      Vitality: -1
+      Vitality: 1
   Highborn:
     abilities:
       - My Father's Coffers
@@ -53,11 +53,6 @@ Light Fighter:
   Monk:
     abilities:
       - Hand to Hand
-      - Steady
-      - Inner Eye
-      - Meditate
-      - Share Ability
-      - Combo
       - The Book of Chi
     description: Masters of hand to hand combat, monks use their extensive self-knowledge
       to overcome their foes.
@@ -71,7 +66,7 @@ Light Fighter:
       Luck: 0
       Perception: 1
       Strength: 0
-      Vitality: -2
+      Vitality: 0
   Ranger:
     abilities:
       - Minor Medicine
@@ -86,7 +81,7 @@ Light Fighter:
     standings: Barbarians are the enemies of law keepers.
     stats:
       Charisma: 1
-      Dexterity: 1
+      Dexterity: 2
       Inner_Fire: 1
       Intelligence: 0
       Luck: 0
@@ -115,7 +110,7 @@ Light Fighter:
       Luck: 0
       Perception: 1
       Strength: 1
-      Vitality: 2
+      Vitality: 0
 Heavy Fighter:
   Barbarian:
     abilities:
@@ -125,19 +120,21 @@ Heavy Fighter:
     - Crushing Blow
     - Boozehound
     - Taunt
+    - Choice Stat
+    - Colossal
     description: Either by choice or by circumstance, Barbarians have chosen to spend
       their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent
       travelers, taking slaves or possessions. Known for their uncouth nature.
     standings: Barbarians are the enemies of law keepers.
     stats:
       Charisma: -2
-      Dexterity: -2
-      Inner_Fire: 1
+      Dexterity: 1
+      Inner_Fire: 2
       Intelligence: -3
       Luck: 0
       Perception: 0
-      Strength: 2
-      Vitality: 4
+      Strength: 1
+      Vitality: 2
   Knight:
     abilities:
     - Trained Precision
@@ -145,6 +142,7 @@ Heavy Fighter:
     - Hold the line
     - Shield Bash
     - Shield of Men
+    - Armored
     description: The genuine article, knights have sworn their lives to king and country.
     standings: Knights are loved by kingsmen, and distrusted by hedge knights and rangers.
       Knights are duty bound to fight the lawless.
@@ -166,6 +164,7 @@ Heavy Fighter:
       - Lesser Book of Healing
       - Pledge
       - Minor Spell Choice
+      - Chainmail
     description: Soldiers of the Light, Paladins are knights who have pledged themselves
       to a deity. As such, Paladins are capable of performing minor miracles from the
       book of healing.
@@ -174,12 +173,33 @@ Heavy Fighter:
     stats:
       Charisma: 1
       Dexterity: -2
-      Inner_Fire: 1
+      Inner_Fire: 2
       Intelligence: 1
       Luck: 1
       Perception: 0
-      Strength: 1
-      Vitality: 1
+      Strength: 2
+      Vitality: 3
+  Hedge Knight:
+    abilities:
+      - Mount and Blade
+      - Under the Stars
+      - Born in the Saddle
+      - Steady
+      - Charge
+      - Ruffians
+    description: A self proclaimed knight, hedge knight's move from region to region,
+      seeking to find employment where they can. Hedge knights are supposed to live
+      by a code of honor, but on the road these things tend to fall apart.
+    standings: Hedge Knights are not fond of Knights
+    stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 2
+      Intelligence: -1
+      Luck: -1
+      Perception: 1
+      Strength: 2
+      Vitality: 2
 Mage:
   Necromancer:
     abilities:
@@ -198,14 +218,14 @@ Mage:
     standings: Necromancers are feared by most, and are actively hunted by Clerics and
       followers of the light.
     stats:
-      Charisma: -3
+      Charisma: -2
       Dexterity: 0
       Inner_Fire: 1
       Intelligence: 2
       Luck: 0
       Perception: 0
       Strength: 0
-      Vitality: -3
+      Vitality: -1
   Wizard:
     abilities:
     - The Sword and the Satchel
@@ -225,7 +245,7 @@ Mage:
       well with Halflings and Rangers.
     stats:
       Charisma: 1
-      Dexterity: -1
+      Dexterity: -2
       Inner_Fire: 1
       Intelligence: 3
       Luck: 1
@@ -245,14 +265,14 @@ Mage:
       have no spell points, but rather must pass a charisma check ((spell_level * 2) + 5) to perform magic.
     standings: Mages and wizards are at odds over whose magic is best.
     stats:
-      Charisma: 3
+      Charisma: 2
       Dexterity: -1
       Inner_Fire: 1
-      Intelligence: 3
+      Intelligence: 2
       Luck: 0
       Perception: 0
-      Strength: 0
-      Vitality: -1
+      Strength: -2
+      Vitality: -2
   Druid:
     abilities:
     - Novice Spellbook
@@ -264,13 +284,31 @@ Mage:
       intelligence based spell points to cast spells, and are a good match for players interested in playing a mage.
     standings: 
     stats:
-      Charisma: 0
+      Charisma: -1
       Dexterity: 0
       Inner_Fire: 2
       Intelligence: 2
       Luck: 0
       Perception: 0
       Strength: 0
+      Vitality: -2
+  Battle Mage:
+    abilities:
+    - Choice Stat
+    - Sword and Flame
+    - Lesser Novice Spellbook
+    - Minor Spell Choice
+    description: Balanced between physical and magical attacks, battle mages have trained
+      to be highly versatile fighters.
+    standings: Battle mages sometimes get along poorly with clerics.
+    stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 1
+      Intelligence: 2
+      Luck: 0
+      Perception: 0
+      Strength: 1
       Vitality: -2
 Ranged Fighter: 
   Gunslinger:
@@ -315,7 +353,7 @@ Ranged Fighter:
       Luck: 1
       Perception: 1
       Strength: -1
-      Vitality: -1
+      Vitality: -2
 Utility:
   Bard:
     abilities:
@@ -340,7 +378,7 @@ Utility:
       Luck: 1
       Perception: 0
       Strength: -1
-      Vitality: -1
+      Vitality: -2
   Cleric:
     abilities:
       - Taunt
@@ -361,7 +399,7 @@ Utility:
       Luck: 0
       Perception: 0
       Strength: -1
-      Vitality: -3
+      Vitality: -2
   Rogue:
     abilities:
       - Master of Disguise
@@ -375,55 +413,18 @@ Utility:
       gold, anyway.
     standings: Thieves hat law keepers and Thief Catchers
     stats:
-      Charisma: 1
-      Dexterity: 2
-      Inner_Fire: 0
-      Intelligence: 0
-      Luck: 1
-      Perception: 2
-      Strength: -1
-      Vitality: -2
+      Charisma: 2
+      Dexterity: 3
+      Inner_Fire: 1
+      Intelligence: 1
+      Luck: 2
+      Perception: 3
+      Strength: -2
+      Vitality: -3
 
 CUT:
-  Battle Mage:
-    abilities:
-    - Choice Stat
-    - Fireburst
-    - Sword and Flame
-    - Lesser Novice Spellbook
-    - Minor Spell Choice
-    description: Balanced between physical and magical attacks, battle mages have trained
-      to be highly versatile fighters.
-    standings: Battle mages sometimes get along poorly with clerics.
-    stats:
-      Charisma: 1
-      Dexterity: 0
-      Inner_Fire: 1
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
-      Strength: 0
-      Vitality: -1
-  Hedge Knight:
-    abilities:
-      - Mount and Blade
-      - Under the Stars
-      - Born in the Saddle
-      - Steady
-      - Charge
-    description: A self proclaimed knight, hedge knight's move from region to region,
-      seeking to find employment where they can. Hedge knights are supposed to live
-      by a code of honor, but on the road these things tend to fall apart.
-    standings: Hedge Knights are not fond of Knights
-    stats:
-      Charisma: 1
-      Dexterity: 0
-      Inner_Fire: 1
-      Intelligence: -1
-      Luck: 0
-      Perception: 1
-      Strength: 1
-      Vitality: 0
+  
+  
   Thief-Catcher:
     abilities:
     - Master of Disguise
