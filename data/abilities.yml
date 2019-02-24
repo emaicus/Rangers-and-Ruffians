@@ -47,7 +47,7 @@ Boot Knife:
   description: You carry a hidden d6 knife in your boot.
   type: starting_item
 Boozehound:
-  description: You have a very high tolerance for alchohol. Do not take disadvantage
+  description: You have a very high tolerance for alcohol. Do not take disadvantage
     when drunk.
   type: advantage
 Born in the Saddle:
@@ -126,9 +126,6 @@ Dominate:
     an inner fire saving throw, they must obey you. They can attempt a saving throw
     every turn thereafter.
   type: general
-Double Action:
-  description: You can perform two actions in a turn.
-  type: combat
 Double Tap:
   description: Every three turns, you can shoot two arrows at a time.
   type: combat
@@ -200,12 +197,8 @@ Greater Choice Stat:
   description: At the beginning of your adventure, add 2 to strength or dexterity.
   type: choice
 Greater Medicine:
-  description: You can create 2 2d20 health potions per day. Potions keep for 24 hours. If you are in on your favorite terrain, poitions restore an additional 1d10 health.
+  description: You can create 2 2d20 health potions per day. Potions keep for 24 hours. If you are in on your favorite terrain, potions restore an additional 1d10 health.
   type: choice
-Gumption:
-  description: After each full night's rest, gain 3 gumption points (max 3). Spend one gumption 
-    point to do an additional action during your turn. 
-  type: combat
 Hammer of Light:
   description: You begin your journey with a 1d6 hammer which does +2 damage to undead.
   type: combat
@@ -321,7 +314,7 @@ My Father's Oboe:
   description: You are proficient and start with an instrument of your choice.
   type: choice
 My People:
-  description: Gain advantage when speaking with gaurds and +2 charisma when speaking
+  description: Gain advantage when speaking with guards and +2 charisma when speaking
     with citizens in your family's territory.
   type: advantage
 Nimble Fingers:
@@ -344,7 +337,7 @@ Padfoot:
   description: You have advantage on stealth checks.
   type: advantage
 Pledge:
-  description: At the start of your journey, you may select a diety to pledge yourself
+  description: At the start of your journey, you may select a deity to pledge yourself
     to.
   type: general
 Poison Bite:
@@ -518,13 +511,6 @@ Tracker:
 Trained Precision:
   description: Once every three turns, gain advantage on your attack.
   type: combat
-Tripple Strike:
-  description: You can attack three times in a single action.
-  type: combat
-Twin Blades:
-  description: During combat, you may wield two weapons rather than one. Each turn,
-    you may attack twice. While dual wielding, your armor is decreased by 1.
-  type: combat
 Unbreathing:
   description: You only need to breath once every three days.
   type: general
@@ -564,7 +550,7 @@ Stocky:
   description: You have advantage against any check that could cause you to go prone.
   type: advantage
 Natural Sprinter:
-  description:  When running short distances, take advantage on atheletics checks.
+  description:  When running short distances, take advantage on athletics checks.
   type: advantage
 Very Dangerous over Short Distances:
   description: If you begin your turn next to an enemy, take advantage when attacking them.
@@ -573,7 +559,7 @@ Stone Skin:
   description: You take half damage on blunt force attacks (e.g. if you are hit with a club).
   type: general
 They call me Smith: 
-  description: You are able to use smithies to improve weapons and equiptment (given you buy the materials).
+  description: You are able to use smithies to improve weapons and equipment (given you buy the materials).
   type: general
 Fix Your Eyes on Me: 
   description: If the person you are talking with fails an inner fire saving throw, the world goes black for them except for you. Your charisma and intimidation are treated as +5 for the remainder of the conversation.
@@ -602,9 +588,6 @@ Nimble:
 Determination:
   description: Once per rest and at the start of combat, gain a d10 inspiration dice.
   type: general
-Multi-Action:
-  description: Once every three turns, take two actions instead of one.
-  type: combat
 Second Wind:
   description: Once per day, heal yourself for 2d10 damage.
   type: general
@@ -624,7 +607,7 @@ Line Them Up:
   description: If you slay an enemy, gain another attack action.
   type: combat
 Shield Up: 
-  description: Take half damage from ranged attacks if holding a sheild.
+  description: Take half damage from ranged attacks if holding a shield.
   type: general
 Joust: 
   description: Roll all attacks with advantage while on horseback.
@@ -632,7 +615,7 @@ Joust:
 Throw Caution to the Wind: 
   description: On your turn, optionally add 1d10 to all damage you deliver, but all enemy attacks get advantage on you for a turn.
   type: combat
-Harden: 
+Steel Yourself: 
   description: Once every three turns, choose to take no damage from an attack.
   type: combat
 Stay on Your Feet: 
@@ -669,10 +652,10 @@ Leaping Strike:
   description: Add 1d10 damage to any attacks made while leaping.
   type: combat
 Reduced Critical: 
-  description: You perform a critical hit if you roll one less than your dice's number of sides.
+  description: You perform a critical hit if you roll one less than your die's number of sides.
   type: combat
 Disarming: 
-  description: Once every three turns, use an action to force an enemy to make an contested saving throw against your charisma. If they fail, the next attack made against them will be a gauranteed critical hit.
+  description: Once every three turns, use an action to force an enemy to make an contested saving throw against your charisma. If they fail, the next attack made against them will be a guaranteed critical hit.
   type: combat
 Aura of Peace: 
   description: All allies near you take heart, and gain +1 vitality while in your presence.
@@ -690,7 +673,7 @@ Consecutive Normal Punches:
   description: You may take three attacks per action.
   type: combat
 Perfect Zen: 
-  descriptioon: Once per day as an offhand action, become untouchable by physical attacks for one turn or one minute.
+  description: Once per day as an offhand action, become untouchable by physical attacks for one turn or one minute.
   type: combat
 Aura of Calm: 
   description: Allies near you gain +2 on all inner fire saving throws.
@@ -702,7 +685,7 @@ Monster Slayer:
   description: Whenever you attack a beast classified as a monster, do an additional 2d6 damage.
   type: combat
 Potion Bonus:
-  description: Reroll any 1s, 2s, or 3s rolled when healing. Regain an additional 2d6 health from any potion.
+  description: Re-roll any 1s, 2s, or 3s rolled when healing. Regain an additional 2d6 health from any potion.
   type: general
 Stare Down:
   description: As an offhand action, stare an enemy down. Make a contested inner fire roll. If they fail, you do double damage to them this turn, and they are considered afraid of you.
@@ -729,15 +712,16 @@ Imposter:
   description: Gain +5 on any checks made to imitate someone.
   type: general
 Poison: 
-  description: Once per day, create a draught of deadly posion. If injested, the poison does 3d20 + 10 damage. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poision takes 6 continuous hours.
+  description: Once per day, create a draught of deadly poison. If injested, the poison does 3d20 + 10 damage. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
   type: general
-Focus Energy: 
+Focus Energy:
   description: As an action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
 Transfer Essense: 
-  descriptioon: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
+  description: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
+  type: transformation
 Ascend: 
-  description: Once per day, you may enter the ascended state. While ascended, you gain +5 vitality, intelligence, and inner fire. Imediately gain 5 spell points. While ascended, you have access to the double-action ability, and may take flight. Furthermore, reduce the cost of all spells by 1. The ascended state lasts for 6 turns or ten minutes. When you fall out of the ascended state, you are exhausted. Immediately take 25 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
+  description: Once per day, you may enter the ascended state. While ascended, you gain +5 vitality, intelligence, and inner fire. Immediately gain 5 spell points. While ascended, you have access to the double-action ability, and may take flight. Furthermore, reduce the cost of all spells by 1. The ascended state lasts for 6 turns or ten minutes. When you fall out of the ascended state, you are exhausted. Immediately take 25 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
   type: general
 Phylactery: 
   description: You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.
@@ -761,13 +745,13 @@ Spell Invention:
   description: You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered something like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.
   type: general
 Halo: 
-  description: A halo shines about your head. Take advantage when dealing with godfearing people, and when intimidating anyone wicked.
+  description: A halo shines about your head. Take advantage when dealing with god-fearing people, and when intimidating anyone wicked.
   type: advantage
 Burning Bright:
   description: At will, you can make your halo blaze with the same intensity as the light spell, dealing damage to the undead.
   type: combat
 True Heal: 
-  description: Reroll any ones or twos rolled while healing.
+  description: Re-roll any ones or twos rolled while healing.
   type: general
 Aura of Advantage: 
   description: Once every three turns, give all party members advantage on their next action.
@@ -841,14 +825,37 @@ Soft Landing:
 Commune with Nature:
   description: You are naturally able to speak with plants and animals.
   type: general
-
-
-
-
-# Action
-# Double Action
-# Offhand Attack
-# Twin Blades
+Action:
+  description: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
+  type: Action
+Second Action: 
+  description: On your turn, you may take a second action. An action may be made up of an attack, spell, ability, or any offhand action.
+  type: action
+Offhand Action: 
+  description: On your turn, you may make an offhand action. Offhand actions include using an item such as a potion.
+  type: action
+Twin Blades:
+  description: You are able to wield two weapons. You may attack with both in a single action.
+  type: action
+Offhand Attack: 
+  description: You may use an offhand action to make an attack.
+  type: action
+Double Strike:
+  description: You may attack twice in a single action.
+  type: action
+Tripple Strike:
+  description: You may attack three times in a single action.
+  type: action
+Twin Guns:
+  description: You are able to wield two firearms. You may attack with both in a single action.
+  type: action
+Multi-Action:
+  description: Once every three turns, take an extra action.
+  type: combat
+Gumption:
+  description: After each full night's rest, gain 3 gumption points (max 3). Spend one gumption 
+    point to do an additional action during your turn. 
+  type: action
 # Double Strike
 # Tripple Strike 
 # Twin Guns: 

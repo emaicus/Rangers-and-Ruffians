@@ -219,12 +219,20 @@ def validity_check():
   
   roll_stats   = True if roll_stats == 1 else False
   chosen_race  = chosen_race.lower() if chosen_race.lower() in race_names else None
-  chosen_class = chosen_class.lower() if chosen_class.lower() in class_names else None
+  tier = tier.lower() if tier.lower() in ['new_character','heroic_character','legendary_character'] else None
+
+  if tier != 'legendary_character':
+    chosen_class = chosen_class.lower() if chosen_class.lower() in class_names else None
+  else:
+    print('in here.')
+    print(rnr_utils.legendary_class_names())
+    chosen_class = chosen_class.lower() if chosen_class.lower() in rnr_utils.legendary_class_names() else None
+
+
   magic_class  = True if chosen_class != None and chosen_class.lower() in magical_classes.keys() else False
   chosen_name = cgi.escape(chosen_name)
   chosen_name = None if chosen_name.strip() == '' else chosen_name
   chosen_gender = chosen_gender.lower() if chosen_gender.lower() in ('male', 'female') else None
-  tier = tier.lower() if tier.lower() in ['new_character','heroic_character','legendary_character'] else None
 
   info['name'] = chosen_name
   info['magic_class'] = magic_class

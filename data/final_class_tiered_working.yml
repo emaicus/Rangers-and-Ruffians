@@ -1,6 +1,8 @@
 Heavy Fighter:
   Barbarian:
     abilities:
+    - Action 
+    - Offhand Action
     - Berserk
     - Intimidate
     - Throw Anything
@@ -32,20 +34,17 @@ Heavy Fighter:
         Inner_Fire: 1
         Vitality: 1
     legendary:
-      name : Berserker
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Berserker:
+        abilities:
+        - Second Action
+        - Berserker
+        - Hand to Hand
+        - Savage Critical
+        - Line Them Up
   Hedge_Knight:
     abilities:
+    - Action 
+    - Offhand Action
     - Mount and Blade
     - Under the Stars
     - Steady
@@ -67,25 +66,22 @@ Heavy Fighter:
       Vitality: 2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Dexterity: 1
         Inner_Fire: 1
         Strength: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Mounted_Champion:
+        abilities:
+        - Second Action
+        - Shield Up
+        - Joust
+        - Throw Caution to the Wind
+        - Steel Yourself
   Knight:
     abilities:
+    - Action 
+    - Offhand Action
     - Trained Precision
     - Kingsmen
     - Hold the line
@@ -106,25 +102,22 @@ Heavy Fighter:
       Vitality: 2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Dexterity: 1
         Strength: 2
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Hero:
+        abilities:
+        - Second Action
+        - Taunt
+        - Stay on Your Feet
+        - Harden
+        - Last Line of Defense
   Paladin:
     abilities:
+    - Action 
+    - Offhand Action
     - Bash
     - Hammer of Light
     - Faithful Weapon
@@ -149,27 +142,26 @@ Heavy Fighter:
       Vitality: 2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Dexterity: 1
         Inner_Fire: 1
         Intelligence: 1
         Strength: 2
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Holy_Knight:
+        abilities:
+        - Second Action
+        - Healer
+        - Beacon of Hope
+        - The Book of Healing
+        - Sinner's Bane
+        - Fires of Heaven
+        - Winged Jump
 Light Fighter:
   Beastmaster:
     abilities:
+    - Action 
+    - Offhand Action
     - Tackle
     - Animal Magnetism
     - Hobble
@@ -194,7 +186,6 @@ Light Fighter:
       Vitality: 1
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Dexterity: 1
@@ -203,19 +194,17 @@ Light Fighter:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Beastmaster:
+        abilities:
+        - Second Action
+        - Dire Companion
+        - Twin Blades
+        - Mantel
+        - Leaping Strike
   Fighter:
     abilities:
+    - Action 
+    - Offhand Action
     - Choice Stat
     - Nimble
     - Determination
@@ -239,7 +228,7 @@ Light Fighter:
       Vitality: 0
     heroic:
       abilities:
-      - generic_ability
+      - Offhand Attack
       stats:
         Dexterity: 1
         Inner_Fire: 1
@@ -247,19 +236,17 @@ Light Fighter:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Champion:
+        abilities:
+        - Second Action
+        - Offhand Attack
+        - Feint
+        - Stay on Your Feet
+        - Reduced Critical
   Highborn:
     abilities:
+    - Action 
+    - Offhand Action
     - My Father's Coffers
     - The Family Sword
     - My People
@@ -287,26 +274,23 @@ Light Fighter:
       Vitality: -2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Dexterity: 1
         Inner_Fire: 1
         Strength: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Noble:
+        abilities:
+        - Second Action
+        - Disarming
+        - Aura of Peace
+        - Rally Cry
+        - Fallen
   Monk:
     abilities:
+    - Action 
+    - Offhand Action
     - Hand to Hand
     - The Book of Chi
     description: Masters of hand to hand combat, monks use their extensive self-knowledge
@@ -324,26 +308,23 @@ Light Fighter:
       Vitality: 0
     heroic:
       abilities:
-      - generic_ability
       stats:
         Dexterity: 2
         Inner_Fire: 1
         Strength: 1
         Perception: 2
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Master:
+        abilities:
+        - Second Action
+        - Master
+        - Consecutive Normal Punches
+        - Perfect Zen
+        - Aura of Calm
   Ranger:
     abilities:
+    - Action 
+    - Offhand Action
     - Minor Medicine
     - Shifting Cloak
     - Favorite Terrain
@@ -365,7 +346,7 @@ Light Fighter:
       Vitality: 0
     heroic:
       abilities:
-      - generic_ability
+      - Offhand Attack
       stats:
         Dexterity: 1
         Inner_Fire: 1
@@ -373,19 +354,30 @@ Light Fighter:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Ranger:
+        abilities:
+        - Second Action
+        - Tripple Strike
+        - Learned
+        - Favorite Enemy
+        - Feint
+        - Hold the line
+        - Greater Medicine
+        - Under the Stars
+        - Counter Attack
+      Monster Hunter:
+        abilities:
+        - Second Action
+        - Monster Slayer
+        - Counter Attack
+        - Tackle
+        - Under the Stars
+        - Potion Bonus
+        - Dominate
   Rogue:
     abilities:
+    - Action 
+    - Offhand Action
     - Master of Disguise
     - Lightfoot
     - Nimble Fingers
@@ -407,7 +399,7 @@ Light Fighter:
       Vitality: -3
     heroic:
       abilities:
-      - generic_ability
+      - Offhand Attack
       stats:
         Charisma: 1
         Dexterity: 1
@@ -415,20 +407,30 @@ Light Fighter:
         Perception: 2
         Strength: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Thief:
+        abilities:
+        - Second Action
+        - Pickpocket
+        - Superior Mantel
+        - Reflexes
+        - Soundless
+        - Party Save
+        - Low-Light Vision
+      Assassin:
+        abilities:
+        - Second Action
+        - Assassinate
+        - Double Attack
+        - Offhand Attack
+        - Imposter
+        - Poison
+        - Soundless
+        - Persuasive
 Mage:
   Battle_Mage:
     abilities:
+    - Action 
+    - Offhand Action
     - Sword and Flame
     - Lesser Novice Spellbook
     - Minor Spell Choice
@@ -453,19 +455,16 @@ Mage:
         Intelligence: 1
         Perception: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Battle_Sage:
+        abilities:
+        - Second Action
+        - Novice Spellbook
+        - Focus Energy
+        - Transfer Essense
   Druid:
     abilities:
+    - Action 
+    - Offhand Action
     - Novice Spellbook
     - The Druid's Field Guide
     - Spell Choice
@@ -496,8 +495,11 @@ Mage:
         Perception: 1
         Strength: 1
     legendary:
-      abilities:
-      - generic_ability
+      Chosen_One:
+        abilities:
+        - Second Action
+        - Ascend
+
       stats:
         Charisma: 0
         Dexterity: 0
@@ -509,6 +511,8 @@ Mage:
         Vitality: 0
   Necromancer:
     abilities:
+    - Action 
+    - Offhand Action
     - Soul Harvest
     - The Macabre Manual
     - Mortal Coil
@@ -534,7 +538,6 @@ Mage:
       Vitality: -2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Dexterity: 1
@@ -544,19 +547,17 @@ Mage:
         Vitality: 1
         Strength: 2
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Lich:
+        abilities:
+        - Second Action
+        - Phylactery
+        - Reap
+        - Freed from this Mortal Coil
+        - Cost Reduction
   Sorcerer:
     abilities:
+    - Action 
+    - Offhand Action
     - Novice Spellbook
     - Influence
     - The Sorcerer's Scrolls
@@ -580,7 +581,6 @@ Mage:
       Vitality: -2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Dexterity: 1
@@ -590,19 +590,14 @@ Mage:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Conjurer:
+        abilities:
+        - Second Action
+        - Sprits Within
   Wizard:
     abilities:
+    - Action 
+    - Offhand Action
     - The Sword and the Satchel
     - Looming Presence
     - Historian
@@ -629,7 +624,6 @@ Mage:
       Vitality: -4
     heroic:
       abilities:
-      - generic_ability
       stats:
         Dexterity: 1
         Inner_Fire: 1
@@ -638,19 +632,16 @@ Mage:
         Intelligence: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Sage:
+        abilities:
+        - Second Action
+        - Cost Reduction
+        - Tome of the Ancients
+        - Spell Invention
   Bard:
     abilities:
+    - Action 
+    - Offhand Action
     - My Father's Oboe
     - The Bard's Songbook
     - Song Choice
@@ -676,26 +667,20 @@ Mage:
       Vitality: -2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Intelligence: 1
         Perception: 1
         Strength: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Minstrel:
+        abilities:
+        - Second Action
+        - Cost Reduction
   Cleric:
     abilities:
+    - Action 
+    - Offhand Action
     - Taunt
     - Purge Decay
     - The Book of Healing
@@ -717,7 +702,7 @@ Mage:
       Vitality: -3
     heroic:
       abilities:
-      - generic_ability
+      - Second Action
       stats:
         Charisma: 1
         Inner_Fire: 1
@@ -726,20 +711,20 @@ Mage:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Ascended:
+        abilities:
+        - Second Action
+        - Healer
+        - Halo
+        - Burning Bright
+        - True Heal
+        - Aura of Advantage
+        - Angelic Wings
 Ranged Fighter:
   Archer:
     abilities:
+    - Action 
+    - Offhand Action
     - Longbow
     - Boot Knife
     - Focus
@@ -760,7 +745,6 @@ Ranged Fighter:
       Vitality: -3
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Dexterity: 1
@@ -769,17 +753,15 @@ Ranged Fighter:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Marksman:
+        abilities:
+        - Second Action
+        - Double Strike
+        - True Mastery
+        - Mantel
+        - Steady
+        - Arrow Stab
+        - Strike First
   Gunslinger:
     abilities:
     - This is my Weapon
@@ -805,7 +787,6 @@ Ranged Fighter:
       Vitality: -3
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 1
         Inner_Fire: 1
@@ -814,20 +795,24 @@ Ranged Fighter:
         Strength: 1
         Vitality: 1
     legendary:
-      abilities:
-      - generic_ability
-      stats:
-        Charisma: 0
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 0
-        Vitality: 0
+      Sniper:
+        abilities:
+        - Second Action
+        - Double Strike
+        - Savage Critical
+        - Line Them Up
+        - Focus
+        - Penetration
+      Desperado:
+        - Twin Guns
+        - Hollowpoint
+        - Fastest Gun
+        - All Smiles
 CUT:
   Adventurer:
     abilities:
+    - Action 
+    - Offhand Action
     - Tactics
     - Learned
     description: null
@@ -843,7 +828,6 @@ CUT:
       Vitality: 2
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 0
         Dexterity: 0
@@ -855,7 +839,7 @@ CUT:
         Vitality: 0
     legendary:
       abilities:
-      - generic_ability
+      - Second Action
       stats:
         Charisma: 0
         Dexterity: 0
@@ -867,6 +851,8 @@ CUT:
         Vitality: 0
   Thief-Catcher:
     abilities:
+    - Action 
+    - Offhand Action
     - Master of Disguise
     - Lightfoot
     - Nimble Fingers
@@ -887,7 +873,6 @@ CUT:
       Vitality: -1
     heroic:
       abilities:
-      - generic_ability
       stats:
         Charisma: 0
         Dexterity: 0
@@ -899,7 +884,7 @@ CUT:
         Vitality: 0
     legendary:
       abilities:
-      - generic_ability
+      - Second Action
       stats:
         Charisma: 0
         Dexterity: 0

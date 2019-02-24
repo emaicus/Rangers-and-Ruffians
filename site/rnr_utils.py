@@ -32,7 +32,7 @@ tier_dict = {
 }
 
 class rnr_entity:
-    def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
+    def __init__(self, name, abilities, stats, description, quote='', quote_author='',standings = ''):
       self.name = name
       #come back and see to this
       self.abilities = abilities
@@ -202,19 +202,34 @@ class rnr_entity:
 class rnr_class(rnr_entity):
     def __init__(self, name, abilities, stats, description, quote, quote_author, tier_1_info, tier_2_info, tier=1):
       base_stats = dict(stats)
+
+      #temporary hack.
+      tmp = list(tier_2_info.keys())[0]
+      tier_2_info = tier_2_info[tmp]
+      #End of hack.
+
       if tier == 1 or tier == 2:
-        for stat, modifier in tier_1_info['stats'].items():
-          base_stats[stat] += modifier
-        if tier_1_info['abilities'] != None:
+        if 'stats' in tier_1_info:
+          for stat, modifier in tier_1_info['stats'].items():
+            base_stats[stat] += modifier
+        abilities_1 = tier_1_info.get('abilities', None)
+        if abilities_1 != None:
           abilities = abilities + tier_1_info['abilities']
 
       if tier == 2:
-        for stat, modifier in tier_2_info['stats'].items():
-          base_stats[stat] += modifier
-        if tier_2_info['abilities'] != None:
+        if 'stats' in tier_2_info:
+          for stat, modifier in tier_2_info['stats'].items():
+            base_stats[stat] += modifier
+        abilities_2 = tier_2_info.get('abilities', None)
+        if abilities_2 != None:
           abilities = abilities + tier_2_info['abilities']
       
       self.tier = tier 
+      self.original_name = name
+
+      if tier == 2:
+        name = tmp
+
       super().__init__(name, abilities, base_stats, description, quote, quote_author) 
 
     def markdownify(self, image_path):
@@ -222,12 +237,12 @@ class rnr_class(rnr_entity):
 
     def serialize(self, male=False):
       serial = self.base_serialize()
-      serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
+      serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.original_name.lower())
 
       with open('../data/art.json','r') as art_json:
         art = json.load(art_json)
 
-      serial['rights'] = art.get(self.name.lower(),None)
+      serial['rights'] = art.get(self.original_name.lower(),None)
       return serial
 
 class rnr_race(rnr_entity):
@@ -319,11 +334,9 @@ def mardown_all_races(data, ability_dict, image_path, outfile_name):
 def filterAbilities(abilities, ability_dict):
   filtered_abilities = dict()
   for ability in abilities:
-    print(ability)
     ability_type = ability_dict[ability]["type"]
     if not ability_type in filtered_abilities:
       filtered_abilities[ability_type] = list()
-    print(ability)
     filtered_abilities[ability_type].append([ability,ability_dict[ability]["description"]])
   return filtered_abilities
 
@@ -369,6 +382,16 @@ def printLogo():
   print(" |____|_  /____/ |__|   |__|  |__(____  /___|  /____  >")
   print("        \\/                            \\/     \\/     \\/ ")
   print()
+
+def legendary_class_names():
+  load_Rangers_And_Ruffians_Data()
+  classes = list()
+  for rnr_class, tiers in class_data.items():
+    if 'legendary' in tiers:
+      tier_2 = tiers['legendary']
+      for tier, data in tier_2.items():
+        classes.append(tier.replace('_',' ').lower())
+  return classes
 
 #Rewrite
 def mergeAbilities(dictionary, abilities):
@@ -608,7 +631,21 @@ def load_race_class_with_objects(race_obj, class_obj, name="",origin=""):
 
 def find_class_info(name):
   load_Rangers_And_Ruffians_Data()
-  return class_data.get(name, None)
+
+  found = class_data.get(name, None)
+
+  if found == None:
+    for rnr_class, data in class_data.items():
+      tier2_data = data['legendary']
+
+      for tier_2_class, legendary_class_data in tier2_data.items():
+        print('comparing {0} to {1}'.format(tier_2_class.replace('_', ' '), name))
+        if tier_2_class.replace('_', ' ') == name:
+          return data
+  else:
+    return found
+
+
 
 def load_combos_given_list(races, classes, tier=1):
   combos = list()
