@@ -6,6 +6,7 @@ import traceback
 import rnr_utils
 from operator import attrgetter
 import collections
+import csv
 
 tier_map = {
   0 : "new",
@@ -195,6 +196,26 @@ def outliers(tier=1):
       outfile.write('\t{0}\n'.format(item))
     outfile.write("\n")
 
+
+def health_csv():
+  race_names = rnr_utils.get_all_race_names()
+  class_names = rnr_utils.get_all_class_names()
+  
+  characters = list()
+  for race_name in race_names:
+    for class_name in class_names:
+      name   = '{0} {1}'.format(race_name, class_name)
+      tier_0 = rnr_utils.load_race_class_with_names(race_name, class_name, tier=0).get_health()
+      tier_1 = rnr_utils.load_race_class_with_names(race_name, class_name, tier=1).get_health()
+      tier_2 = rnr_utils.load_race_class_with_names(race_name, class_name, tier=2).get_health()
+      characters.append([name, tier_0, tier_1, tier_2])
+  
+  with open('stat_output/health.csv', 'w') as csv_file:
+    writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    
+    for line in characters:
+      writer.writerow(line)
+
 # def rankClassType(classes, stats):
 #   with open("stat_output/class_type_rankings.txt", 'w') as outfile:
 #     for class_type, info in classes.items():
@@ -223,6 +244,8 @@ def main():
     rankSpecial(tier=tier)
     print('Finding outliers for tier {0}...'.format(tier))
     outliers(tier=tier)
+  print('Generating health csv...')
+  health_csv()
   # print("Ranking classes by type...")
   # rankClassType(classes, all_stat_names)
   # print("Done.")

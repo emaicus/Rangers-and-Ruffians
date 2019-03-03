@@ -31,6 +31,12 @@ tier_dict = {
   2:"legendary"
 }
 
+tier_to_number = {
+  "new" : 0,
+  "heroic" : 1,
+  "legendary" : 2 
+}
+
 class rnr_entity:
     def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
       self.name = name
@@ -294,6 +300,12 @@ class rnr_character(rnr_entity):
     serial['health'] = self.get_health(tier=self.rnr_class_obj.tier)
     return serial
 
+  def get_health(self, tier = None):
+    if tier == None:
+      print('invoking with tier {0}'.format(tier_to_number[self.rnr_class_obj.tier]))
+      return super(rnr_character, self).get_health(tier=tier_to_number[self.rnr_class_obj.tier])
+    else:
+      return super(rnr_character, self).get_health(tier=tier)
 class rnr_ability:
   def __init__(self, name, description, type):
     self.name = name
