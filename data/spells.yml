@@ -308,7 +308,7 @@ the_novice_spellbook:
       description: Creates a bubble with no air around an enemy's head. On each turn,
         the enemy may make a saving throw against your spell power to attempt to escape from 
         the bubble. While the bubble is in place, they have disadvantage on any attacks.
-        If the bubble persists for 3 turns, the entity begins taking 2d10 damage per turn.
+        If the bubble persists for 2 turns, the entity begins taking 2d10 damage per turn.
     Chain Lightning:
       cost: 3
       description: Fire lighting at an enemy for a guaranteed 1d10 damage. Roll a
@@ -557,7 +557,7 @@ the_wizard's_addendum:
     Igna Bokak:
       cost: 3
       description: Summon a flaming bird to attack your foes. The bird does 1d20 damage, 
-        to a randomly selected enemy each turn, and has 60 hit points. It stays for 3
+        to a randomly selected enemy each turn, and has 20 hit points. It stays for 3
         turns. If out of battle, the bird stays for 10 minutes.
   Level_4:
     Banish:
@@ -608,7 +608,7 @@ the_bard's_songbook:
         when persuading them.
   Level 1:
     Belch Fire:
-      description: Belch fire onto something. Does 1d6 damage. If a creature is targetted,
+      description: Belch fire onto something for 1d6 damage. If a creature is targetted,
         they must make an inner fire saving throw against your spell power. On failure, they are
         burned, and take 1d6 damage at the start of each of their turns until they are healed.
     Counterspell:
@@ -661,9 +661,10 @@ the_bard's_songbook:
       description: Summon an invisible servant to aid you in a task. The servant cannot attack
         and has 20 hit points. Concentration.
     Kilgore's Thunderous Shout:
-      description: Unleash a mighty bellow against an enemy which does 4d8 damage.
-        The enemy must make a strength check against your spell power or they are thrown. If they are
-        of size small, they must make the check with disadvantage.
+      description: Unleash a mighty bellow against an enemy which does 2d8 damage.
+        The enemy must make a strength check against your spell power or they are thrown backward 15 feet
+        and take an additional 1d8 blunt damage. 
+        If they are of size small, they must make the check with disadvantage.
     Lullaby:
       description: Sing a song which puts all enemies that can hear it to sleep if
         they fail an inner fire check against your spell power.
@@ -718,7 +719,7 @@ the_bard's_songbook:
       description: Heal an ally for 5d6 health.
     Unstoppable:
       description: Make an object unstoppable for 1 minute.
-    Wholesome Homestead:
+    Horace's Wholesome Homestead:
       description: Summon a pocket dimension containing a small homestead, capable
         of housing 6 people comfortably in two shared bedrooms. The homestead is fully
         stocked with modest food and drink. Only individuals that you want to have
@@ -726,7 +727,7 @@ the_bard's_songbook:
         placed in the homestead will stay, and nothing from within may be taken out.
   Level 4:
     Lightning Strike:
-      description: Call down a blast of lightning on an enemy. Does 5d8 + 6 damage.
+      description: Call down a blast of lightning on an enemy. Does 5d8 damage.
     Mass Suggestion:
       description: Force all enemies in earshot to make an inner fire saving throw 
         against your spell power. If they fail, they must follow your orders for 3 
@@ -864,7 +865,7 @@ the_druid's_guidebook:
   Level_4:
     Ents:
       description: Summon 2 ents to your aid. The ents have 40 health, attack twice,
-        and do 1d6 damage per attack. Each ent has 5 spell points, and is capable
+        and do 1d8 damage per attack. Each ent has 5 spell points, and is capable
         of casting wall of brambles, bark armor, and thorned caltrops.
     Resist the elements:
       description: An entity of your choice takes half damage from all elemental attacks.
