@@ -189,26 +189,6 @@ the_book_of_healing:
         wood using your sacred flame, and draw the mark of your deity on their brow.
         After six hours of prayer, make an inner fire saving throw. If holy oil was
         used, you have advantage. If the roll is 15 or higher, the entity is cured.
-the_gunslinger's_guide:
-  Level_1:
-    Flash Grenade:
-      cost: 1
-      description: Craft a belt which crafts a flash grenade once every three turns
-        or once every hour. These grenades have a 10ft radius on explosion. If an
-        affected entity fails a dc 10 dexterity saving throw, they are blinded for 2 turns,
-        and all actions they take have disadvantage.
-    Lighter Gear:
-      cost: 1
-      description: You spend time crafting lighter gear for yourself, and get advantage
-        on dexterity checks.
-    Repeating:
-      cost: 1
-      description: Increase your fire rate by one shot each turn. Can be purchased
-        multiple times. Costs 1 upgrade kit the first two times, 2 afterward.
-    Suppressor:
-      cost: 1
-      description: Decrease your damage by 1, but silence your weapon. The silencer
-        is removable.
 the_novice_spellbook:
   Level_0:
     Acrid Mist:
@@ -402,35 +382,6 @@ the_novice_spellbook:
       description: Freeze time for everyone but you for 1d6 turns or 1d20 minutes
         if out of battle. Tapping a party member returns them to the normal flow of time.
         Attacking an entity returns it to the normal flow of time.
-sharpshooter's_reference:
-  Level_1:
-    Armor Penetrating Rounds:
-      cost: 1
-      description: Your shots now pass through up to 1 foot of stone and are unaffected
-        by armor.
-    Bayonet:
-      cost: 1
-      description: Once every 3 turns, you can rush forward to stab an enemy for 1d8 damage with your bayonet.
-    High Grain:
-      cost: 1
-      description: Add 1 to your firearm damage.
-    Scope:
-      cost: 1
-      description: Craft a scope for your weapon to increase engagement range. Can
-        look through it to identify enemies at a distance. Gives you advantage on
-        long range attacks.
-    Shock Absorption:
-      cost: 1
-      description: Place a shock absorber on your weapon's stock to increase
-        accuracy. Increases critical hit chance by 1 before rechamber, by 2 afterwards.
-        Can be purchased multiple times.
-    Suppressor:
-      cost: 1
-      description: Decrease sound created by your rifle.
-  Level_2:
-    Rechamber:
-      cost: 2
-      description: Increase your rifle caliber to increase it to a 1d20 weapon.
 the_sorcerer's_scrolls:
   Level_1:
     Conjure minor illusion:
@@ -635,10 +586,10 @@ the_wizard's_addendum:
     Storm of Swords:
       cost: 5
       description: Conjure 6 swords of pure arcane energy around yourself. Each of 
-      the swords has 20 hit points. Each turn, each remaining sword may attack 
-      for 1d6 damage. If an enemy physically attacks you, you may make a contested
-      dexterity check to command the remaining swords to parry. On a successful parry,
-      all but the parrying sword may attack the enemy as a reaction.
+        the swords has 20 hit points. Each turn, each remaining sword may attack 
+        for 1d6 damage. If an enemy physically attacks you, you may make a contested
+        dexterity check to command the remaining swords to parry. On a successful parry,
+        all but the parrying sword may attack the enemy as a reaction.
 the_bard's_songbook:
   Level 0:
     Carry on the wind:
@@ -818,7 +769,7 @@ the_bard's_songbook:
       description: Summon a pit, housing an ancient, many tounged god of the underworld.
         Every turn for 5 turns, 1d6 tounges will writhe forth from the pit, and attempt
         to grab individuals within 1000 feet. If an individual is grabbed (fails a
-        dexterity check against your spell power) it sustains 4d8 + 8 damage. 
+        dexterity check against your spell power) it sustains 4d8 damage. 
         If the blow kills the creature, it is ripped down into the pit, and is 
         irrecoverable.
 the_druid's_guidebook:
@@ -963,7 +914,7 @@ the_macabre_manual:
   1 Soul Cost:
     Cripple:
       description: Force an enemy to make an inner fire saving throw against your spell power and
-      deal 1d6 damage. On a failure, the enemy misses their next turn.
+        deal 1d6 damage. On a failure, the enemy misses their next turn.
     Major Death Coil:
       description: Fire a ball of pure death from your hand. Deals 2d6 damage. Heals
         undead.
@@ -1013,8 +964,8 @@ the_macabre_manual:
         pass, they act with disadvantage.
     Major Through the eyes of the little ones:
       description: Take control of a large animal, a weak minded person, or child.
-      You lose control after 1 hour or after the creature moves 1 mile away. For the duration,
-      your consciousness can inhabit the creature's. 
+        You lose control after 1 hour or after the creature moves 1 mile away. For the duration,
+        your consciousness can inhabit the creature. 
     Major Thrall:
       description: Resurrect a fighter with 20 health and 1d10 damage. Works on standard
         enemies. Also allows resurrection of larger enemies with poohbah generated
@@ -1030,29 +981,34 @@ the_macabre_manual:
     Putrid Air:
       description: Fill a large room with noxious gas. Force all enemies within a 
         50 foot radius to make an inner fire saving throw against your spell power.
-         dealing 5d10 damage per turn
-        and putting all enemies at a disadvantage. Lasts for 3 turns.
+        On failure, the enemy takes 3d10 and must take all actions on their next turn at
+        disadvantage. On success, the enemy takes half damage and is not at disadvantage.
+        Repeat the check every turn for three turns.
     Sap Age:
-      description: Steal the lifeforce from someone. Every 10 seconds, you steal 1
+      description: Steal the lifeforce from someone. Every 10 seconds or 1 turn in combat, you steal 1
         year of their life. This lifeforce can be given to someone else.
   10 Soul Cost:
     Abomination:
       description: Knit together a monstrous abomination to fight for you. Requires
-        5 corpses. The monster has 50 health, deals 2d10 damage, and can cast spikes
-        of blood, and cripple once every 3 turns.
+        5 corpses. The monster has 50 health, deals 1d10 blunt damage plus
+        1d10 undead damage. The abomination can cast spikes of blood or cripple once every 3 turns.
     Death Inducement:
       description: Mark the time that a person will die. Requires a piece of paper
-        made from the skin of a sentient being and one ounce of the blood of the one
-        who is to die. At the prescribed time, the entity must make an inner fire
-        saving throw. If they succeed, they take half damage. The entity takes 20d10
-        + 20 damage, which cannot be healed for 24 hours.
+        made from the skin of a sentient being, one ounce of the blood of the one
+        who is to die, and blood diamonds valuing 20,000 gold. 
+        At the prescribed time, the entity must make an inner fire
+        saving throw against your spell power. If they fail, they take take 10d20
+        damage, which cannot be healed for 24 hours. On success, they take half damage.
     Horrors:
       description: Summon a mass of fog with a one mile radius. Any entity within
-        the fog sees apparitions of their worst fears.
+        the fog sees apparitions of their worst fears. Each turn, they must make 
+        a saving throw against your spell power at disadvantage. On success, they
+        can act. On failure, they are considered afraid, and must move as far away from the
+        mist as possible. The mists are considered to be low light.
     Partial Resurrection:
       description: Recall the soul of a being which has died within the past 100 years.
         Requires the carcass of a freshly dead man, and the heart of a high level
-        beast. Works on any entity killed within a month. The entity is trapped in
+        beast. The entity is trapped in
         the body of the dead man, but comes back to life.
     Resurrect:
       description: Resurrect an entity who has died within the past 24 hours. The
@@ -1061,22 +1017,22 @@ the_macabre_manual:
 the_book_of_chi:
   Combat Basic Techniques:
     Catch Projectile:
-      description: "Once per turn, attempt to catch a projectile. Roll a d20, and\
-        \ reduce the projectile's damage by that amount. If reduced to zero,\
-        \ you catch the projectile."
+      description: Once per turn, attempt to catch a projectile. Roll a d20, and
+        reduce the projectile's damage by that amount. If reduced to zero,
+        you catch the projectile.
     Combo:
-      description: Once every three turns, multiattack.
+      description: Once every three turns, take two attacks during one of your actions.
     Disarm:
       description: Attack with a single punch. If the opponent fails a strength saving
-        throw, they drop their weapon.
+        throw against your spell power, they drop their weapon.
     Disengage:
-      description: "Enemy's take disadvantage when striking you while you are\
-        \ moving."
+      description: Enemies take disadvantage when striking you while you are moving, and may not make 
+        attacks of opportunity against you.
     Dodge:
-      description: "Once per turn, roll a dexterity check to attempt to dodge an opponent'\
-        s attack."
+      description: Once per turn, roll a contested dexterity check to attempt to dodge an opponent's
+        attack.
     Find Balance:
-      description: Take a turn to cleanse yourself of poison or other status effects.
+      description: Use a bonus action to cleanse yourself of poison or other status effects.
     Grapple:
       description: You have advantage when grappling.
     Icy Kick:
@@ -1086,9 +1042,9 @@ the_book_of_chi:
       description: Get to your feet without penalty.
     Sharpen blade:
       description: Before battle, hone your physical weapon to give it an additional
-        1d6 damage.
+        1d6 blunt or slashing damage.
     Strike from on High:
-      description: You do an additional 1d6 damage on any plunging attacks.
+      description: You do an additional 1d6 blunt damage on any plunging attack.
     Stunning Blow:
       description: Attack with a single punch. If the target fails an inner fire save,
         they are stunned, and miss their next turn.
@@ -1097,6 +1053,8 @@ the_book_of_chi:
         they are knocked prone.
     Take a Hit:
       description: Once every three turns, choose an attack to take half damage from.
+    Brawler:
+      description: Your hands are d8 weapons.
   General Basic Techniques:
     Aerial Acrobatics:
       description: You can turn flips and spin in the air. If your feet touch something
@@ -1110,19 +1068,17 @@ the_book_of_chi:
       description: Add 1 to your dexterity.
     Escape:
       description: You have advantage on any checks involving breaking physical restraints.
-    Hearty:
-      description: Add 1 to your vitality.
     Inner Eye:
-      description: Advantage when detecting evil, good, or spiritual energy.
+      description: You have advantage when detecting evil, good, or spiritual energy.
     Listen:
       description: You have advantage on perception checks.
     Mantle:
-      description: You are able to mantle across objects. Advantage on Dex checks
-        when climbing/leaping.
+      description: You are able to mantle across objects. You have advantage on dexterity checks
+        when climbing or leaping.
     Meditate:
-      description: Gain an additional 1d6 + 2 health on any rest.
+      description: Gain an additional 1d6 health from any rest.
     Meld into Shadow:
-      description: Add 10 to your stealth score when hiding in shadows.
+      description: Take advantage on stealth checks when hiding in shadows.
     Minor Heal:
       description: Once per day, heal yourself or others for 1d6 + inner fire damage.
     Run on water:
@@ -1134,23 +1090,27 @@ the_book_of_chi:
     Tumble:
       description: You take half fall damage.
   Master Techniques:
+    Fists of Steel:
+      description: Your hands are d12 weapons.
     Darkness:
-      description: Once per day, create a veil of darkness throughout the battlefield.
-        Lasts for 2 turns. All entities within the shadow must make perception checks
-        before attacking, and then must attack with disadvantage.
+      description: Once per day, create a veil of darkness with a 50 foot radius which
+        lasts for 1d4 + inner fire turns. All entities within the shadow must make perception checks
+        before attacking, and then must attack with disadvantage. You are not affected by the darkness.
     Flaming Fist:
-      description: Once every three turns, add an additional 2d8 fire damage to a
+      description: Once every three turns, add an additional 1d12 fire damage to a
         punching attack.
-    Harsh Critical:
+    Press the Advantage:
       description: On a critical hit, gain another action.
     Major Heal:
-      description: Once every day, heal yourself or an ally for 4d6 + 4 + inner fire
+      description: Once every day, heal yourself or an ally for 2d10 + inner fire
         health.
     Master of Body and Soul:
       description: Once per day, when you reach 0 health, drop to 2d20 health instead.
     Opening Blow:
       description: If you strike an opponent before it is able to move in combat,
-        take advantage on all attacks and add an additional 3d6 damage.
+        take advantage on all subsequent attacks against that foe so long as
+        you continue attacking it with each of your actions. Add an additional 1d12
+        blunt damage to the initial strike.
     Redirect Attack:
       description: Once every three turns, select an enemy attack aimed at you. Make
         an inner fire saving throw. If you succeed, redirect the attack anywhere you
@@ -1165,16 +1125,24 @@ the_book_of_chi:
     Surrounded:
       description: Strike up to 5 foes in one action if you are surrounded.
     Thunderous Punch:
-      description: "Once every three turns, your attack may make a thunder wave, which\
-        \ effects all enemies in front of you with the punch's damage."
+      description: Once every three turns, your attack may make a thunder wave, which
+        affects all enemies in front of you with the punch's damage.
+    Hearty:
+      description: Add 1 to your vitality.
+    Perfect Zen: 
+      description: Once per day as an offhand action, become untouchable by physical attacks for one turn or one minute.
+    Aura of Calm: 
+      description: Allies near you gain +2 on all inner fire saving throws.
 the_tome_of_the_ancients:
   Level 6:
     True Enchantment:
       description: You are now able to make truly enchanted items. It takes days to make an enchanted object, and may involve multiple roles.
   Level 8:
     Teleportation Circle:
-      description: Craft a circle of teleportation. Any circle of teleportation may link to another you have created or have access to.
+      description: Requires diamonds, gold, and jewels valuing 50,000 gold. Craft a circle of teleportation. 
+        Any circle of teleportation may link to another you have created or have access to.
   Level 10: 
     Massive Levitation: 
-      description: Levitate anything up to the size of a mountain.
+      description: Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. 
+        Requires 12 hours of casting time. Levitate anything up to the size of a mountain.
 

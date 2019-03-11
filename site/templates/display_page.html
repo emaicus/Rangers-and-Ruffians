@@ -96,7 +96,7 @@
                                  {% if rnr_entity["abilities"] != None %}
                                  <p> 
                                     <ol style="list-style-type: upper-roman;">
-                                    {% for key in ('combat', 'advantage', 'starting_item', 'choice','general') if key in rnr_entity["abilities"]%}
+                                    {% for key in ('combat', 'general', 'starting_item', 'choice', 'advantage', 'spellbook','rule','action') if key in rnr_entity["abilities"]%}
                                        {% for ability in rnr_entity["abilities"][key]%}
                                           <li> <b> {{ability[0]}}: </b> {{ability[1]}} </li>
                                        {% endfor %}

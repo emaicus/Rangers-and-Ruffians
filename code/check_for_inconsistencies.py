@@ -51,12 +51,13 @@ if __name__ == '__main__':
       changed = True
 
   if changed:
+    print('ERROR!')
     with open("json_files/abilities.json", 'w') as data_file:    
       json.dump(abilities, data_file, indent=4)
 
   print()
   print("The following ability types are in error:")
   for ability in abilities:
-    if not abilities[ability]["type"] in ('combat', 'general', 'starting_item', 'choice', 'advantage'):
+    if not abilities[ability]["type"] in ('combat', 'general', 'starting_item', 'choice', 'advantage', 'spellbook','rule','action'):
       print("\t{0} had type {1}".format(ability, abilities[ability]["type"]))
 

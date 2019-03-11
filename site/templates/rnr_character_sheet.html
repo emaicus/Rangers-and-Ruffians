@@ -88,7 +88,7 @@
 
        <div id="abilities">
          <p> 
-            {% for key in ('combat', 'advantage', 'starting_item', 'choice','general') if key in character["abilities"]%}
+            {% for key in ('action', 'combat', 'advantage', 'starting_item', 'spellbook', 'choice','general','rule') if key in character["abilities"]%}
                <div class="major_title">{{key.replace('_',' ').title()}}</div>
                <ol>
                {% for ability in character["abilities"][key]%}

@@ -1,7 +1,7 @@
 Catterwol:
   abilities:
     - Dark Vision
-    - Fisher
+    - Predator
     - They're Retractable
     - Land on your feet
     - Loose Skin
@@ -21,13 +21,13 @@ Catterwol:
     average mages, but prefer slim, dexterity based weapons.
   stats:
     Charisma: 0
-    Dexterity: 2
+    Dexterity: 1
     Inner_Fire: 0
     Intelligence: 0
     Luck: 1
     Perception: 1
-    Strength: 0
-    Vitality: 1
+    Strength: -1
+    Vitality: 2
 Elf:
   abilities:
     - Sleepless
@@ -47,13 +47,13 @@ Elf:
     races. Elves make strong mages and good dexterity based fighters.
   stats:
     Charisma: 1
-    Dexterity: 2
+    Dexterity: 1
     Inner_Fire: 0
     Intelligence: 1
     Luck: 0
     Perception: 1
-    Strength: 0
-    Vitality: -1
+    Strength: -1
+    Vitality: 1
 Gnome:
   abilities:
     - Tinker
@@ -76,7 +76,7 @@ Gnome:
     Luck: 0
     Perception: -1
     Strength: 0
-    Vitality: -1
+    Vitality: 1
 Goblin:
   abilities:
     - Still Warm
@@ -102,7 +102,7 @@ Goblin:
     Luck: 1
     Perception: 2
     Strength: -1
-    Vitality: -2
+    Vitality: 1
 Halfling:
   abilities:
     - Sling
@@ -127,7 +127,7 @@ Halfling:
     Luck: 1
     Perception: 0
     Strength: -1
-    Vitality: -1
+    Vitality: 1
 Human:
   abilities:
   - Last Stand
@@ -149,7 +149,7 @@ Human:
     Luck: -1
     Perception: 0
     Strength: 0
-    Vitality: 0
+    Vitality: 2
 Lizkin:
   abilities:
   - Color Choice
@@ -171,7 +171,7 @@ Lizkin:
     Luck: 0
     Perception: 0
     Strength: -1
-    Vitality: 1
+    Vitality: 2
 Waterborn:
   abilities:
   - Unbreathing
@@ -200,10 +200,10 @@ Waterborn:
     Luck: 1
     Perception: 0
     Strength: -2
-    Vitality: -3
+    Vitality: 1
 Orc:
   abilities:
-  - Lamb to the Slaughter
+  - Predator
   - Bellow
   - Still Warm
   - Thunderous Blow
@@ -224,15 +224,15 @@ Orc:
     Vitality: 2
 Dwarf:
   abilities:
-  - Fixit Dwarf
+  - Mending
   - Miner's Eye
   - Stocky
   - Natural Sprinter
-  - Very Dangerous over Short Distances
+  - Very Dangerous Over Short Distances
   - Stone Skin
   - Boozehound
   - Thick Headed
-  - They call me Smith 
+  - Forgeborn 
   quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be 
     well placed if you want to bring one down.
   author: Orkinshield, Orc Gunslinger
@@ -248,7 +248,7 @@ Dwarf:
     Luck: 1
     Perception: -1
     Strength: 2
-    Vitality: 1
+    Vitality: 2
 Daemonspawn:
   abilities: 
   - Fix Your Eyes on Me 
@@ -272,10 +272,10 @@ Daemonspawn:
     Luck: 1
     Perception: 0
     Strength: 0
-    Vitality: 1
+    Vitality: 2
 Sprout:
   abilities: 
-  - Chlorophyll
+  - Photosynthesis
   - Blade of Grass
   - Mantel
   - Scurry
@@ -301,7 +301,7 @@ Sprout:
     Luck: 2
     Perception: 2
     Strength: -5
-    Vitality: -3
+    Vitality: 0
 Automaton:
   abilities: 
   - Power Core 
@@ -313,7 +313,7 @@ Automaton:
   - Armored Exterior 
   - Piston Punch 
   - Upgrades 
-  - Greater Choice Stat
+  - Choice Stat
   quote: Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
           The project had limited success, and was on the brink of being defunded. In a desparate attempt to keep things
           going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
