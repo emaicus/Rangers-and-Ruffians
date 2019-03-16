@@ -192,299 +192,302 @@ the_book_of_healing:
 the_novice_spellbook:
   Level_0:
     Acrid Mist:
-      cost: 0
+      charisma_cost: 8
       description: Summon noxious green gas around an enemy's head, doing 2
         turns of d4 damage. If the enemy fails a saving throw against your spell power, they have
         disadvantage on their next action.
     Force Push:
-      cost: 0
-      description: Knock an enemy backwards, doing d6 damage. If you roll a critical hit, they are knocked prone.
+      charisma_cost: 8
+      description: Knock an enemy backwards, doing 1d6 damage. If you roll a critical hit, they are knocked prone.
     Summon Flame:
-      cost: 0
+      charisma_cost: 8
       description: As an offhand action, summon a flame to your hand. The flame does 1d6 damage to anyone it touches.
     Minor Levitation:
-      cost: 0
+      charisma_cost: 8
       description: Levitate an object up to 20 pounds. Concentration.
     Minor Move Air:
-      cost: 0
+      charisma_cost: 8
       description: Create a small gust of air, capable of pushing objects up to 20
         pounds away from you and slowing the advance of approaching enemies.
     Muffle Footsteps:
-      cost: 0
-      description: Give a teammate or yourself advantage on stealth checks. Concentration.
+      charisma_cost: 8
+      description: Give a teammate or yourself advantage on stealth checks. The teammate must be in line of sight. Concentration.
     Summon Water:
-      cost: 0
-      description: Summon water from your surroundings. Takes about 1 min per gallon.
+      charisma_cost: 8
+      description: Summon water from your surroundings. Takes about 1 minute per gallon.
+    Drain:
+      charisma_cost: 8
+      description: Take 1 spell points from an enemy and do 1d4 damage.
   Level_1:
     Block:
-      cost: 1
+      charisma_cost: 8
       description: Reaction. Make a contested dexterity check against an enemy that is targeting you with 
         an attack. On a success, block their attack. On failure, take half damage.
     Bubble of Air:
-      cost: 1
+      charisma_cost: 10
       description: Creates a bubble of breathable air around your head. Lasts 1 hour.
     Charm:
-      cost: 1
+      charisma_cost: 13
       description: If an entity fails an inner fire saving throw against your spell power, gain advantage on
         charisma checks with them. If you fail, they become aware that you were trying
         to charm them.
     Cloak:
-      cost: 1
+      charisma_cost: 12
       description: Make an entity that is standing absolutely still invisible. Lasts for 5 
         minutes or until the entity moves.
     Fireball:
-      cost: 1
+      charisma_cost: 12
       description: Hurl a fireball which does 2d6 damage on all enemies within 10 feet of the point of impact.
     Freeze or Unfreeze Water:
-      cost: 1
+      charisma_cost: 8
       description: Freeze or unfreeze up to a 40 square foot area of water.
     Lock or Unlock:
-      cost: 1
+      charisma_cost: 10
       description: Lock or unlock an easy lock, tie or untie a knot, or seal something with
         magic. Lock lasts 24 hours.
     Magic alarm:
-      cost: 1
+      charisma_cost: 10
       description: Create a magic alarm that triggers on a physical event of your
         choice.
     Minor ward of Hearing:
-      cost: 1
+      charisma_cost: 10
       description: Create an invisible ward through which you can hear. The ward disappears
         after one day or if you move more than 1 mile from it.
     Minor ward of Sight:
-      cost: 1
+      charisma_cost: 10
       description: Create an invisible ward through which you can see. The ward disappears
         after one day or if you move more than 1 mile from it.
     Quicksand:
-      cost: 1
+      charisma_cost: 12
       description: Summon a 10 square foot patch of quicksand. Any enemy in the quicksand must make a
         dc 14 saving throw to escape it. An entity that is stuck in the quicksand for 
         two consecutive turns begins to drown, taking 1d10 damage per turn. If an entity is 
         drowning, its saving throw increases to dc 16.
     Silence:
-      cost: 1
+      charisma_cost: 10
       description: Stop one entity from being able to make sound. Entity must be within
         line of sight, and no more than 50 feet away. Concentration.
     True Strike:
-      cost: 1
+      charisma_cost: 8
       description: Give a teammate advantage on an upcoming check or attack.
   Level_2:
     Acid Rain:
-      cost: 2
+      charisma_cost: 12
       description: Rain acid down on a 20 square foot area, doing 1d6 damage to all enemies
         affected. Concentration.
     Deep Sleep:
-      cost: 2
+      charisma_cost: 12
       description: If an enemy fails a saving throw against youor spell power,
         put them into a deep sleep. They are awakened if attacked, or if they 
         pass a dc 17 perception check.
     Greater Drain:
-      cost: 2
+      charisma_cost: 12
       description: Take 4 spell points from an enemy and do 1d8 damage.
     Greater Levitation:
-      cost: 2
+      charisma_cost: 14
       description: Lift an object up to 200 pounds. Levitation works on objects up
         to 150 feet away.
     Ice Spear:
-      cost: 2
+      charisma_cost: 14
       description: Spear an enemy with a lance of ice for 2d10 damage.
     Major Ward of Hearing:
-      cost: 2
+      charisma_cost: 12
       description: Create an invisible ward through which you can hear. The ward disappears
         if you move more than 5 mile from it.
     Major ward of sight:
-      cost: 2
+      charisma_cost: 12
       description: Create an invisible ward through which you can see. The ward disappears
         if you move more than 5 mile from it.
     Stone Skin:
-      cost: 2
+      charisma_cost: 12
       description: Harden the skin of an entity, giving it 4 armor for 5 turns or 1 hour.
     Weaken Metal:
-      cost: 2
+      charisma_cost: 10
       description: Lay your hand on metal to weaken it. Works on up to a 1 cubic foot block
         of metal and makes it roughly the same strength as wood.
   Level_3:
     Bubble of Vacuum:
-      cost: 3
+      charisma_cost: 12
       description: Creates a bubble with no air around an enemy's head. On each turn,
         the enemy may make a saving throw against your spell power to attempt to escape from 
         the bubble. While the bubble is in place, they have disadvantage on any attacks.
         If the bubble persists for 2 turns, the entity begins taking 2d10 damage per turn.
     Chain Lightning:
-      cost: 3
+      charisma_cost: 15
       description: Fire lighting at an enemy for a guaranteed 1d10 damage. Roll a
         d20, and if 5 or above, chain to an enemy of your choice. Continue until you
         roll below 5. Lightning may only strike the same entity twice in succession.
     Featherfall:
-      cost: 3
+      charisma_cost: 14
       description: The entity on which you cast this falls as though it is a feather.
     Greater Animate Object:
-      cost: 3
+      charisma_cost: 14
       description: Bring an object to life to fight for you. The object has 20 health
-        and can do 1d6 damage. Concentration.
+        and can do 1d8 damage. Concentration.
     Greater Bubble of air:
-      cost: 3
+      charisma_cost: 15
       description: Create bubbles of breathable air around up to 8 entities heads. Lasts 6 hours.
     Greater Fireball:
-      cost: 3
+      charisma_cost: 15
       description: Hurl a fireball which does 4d10 damage on all enemies within 20 feet of the point of impact.
     Greater Lock/Unlock:
-      cost: 3
+      charisma_cost: 13
       description: Lock a difficult lock, tie or untie a knot, or seal something with
         magic. Lock lasts 24 hours.
     Greater Muffle Footsteps:
-      cost: 3
+      charisma_cost: 12
       description: Give your whole party advantage on stealth checks for 1 hour.
     Rapid Ice Spear:
-      cost: 3
+      charisma_cost: 15
       description: Spear up to 2 enemies with lances of ice. Deal 2d10 damage to each
         or 4d10 damage to one.
     Specter of sight:
-      cost: 3
+      charisma_cost: 15
       description: Create an invisible specter through which you can see and hear.
         The specter moves on your command, and lasts 24 hours.
     Summon elemental weapon:
-      cost: 3
+      charisma_cost: 14
       description: Summon to yourself a 1d12 elemental weapon with bonus 1d6 elemental
         damage.
   Level_4:
     Cage:
-      cost: 4
+      charisma_cost: 16
       description: Create a 30 cubic foot magical cage around yourself which no one can exit.
     Delayed Explosion:
-      cost: 4
+      charisma_cost: 16
       description: Cast a glyph within 100 feet of yourself which explodes on your
         command. Does 2d20 damage to all affected enemies.
     Greater Block:
-      cost: 4
+      charisma_cost: 17
       description: Block your entire team from taking damage for 1 turn.
     Implode:
-      cost: 4
+      charisma_cost: 17
       description: Do 3d20 damage to a single target. On death, the enemy explodes,
         doing 2d10 damage to any adjacent enemies.
     Pillar of flame:
-      cost: 4
+      charisma_cost: 17
       description: Create a Pillar of flame with a radius of 10 feet and up to 100
         feet in height. The pillar does 3d10 damage to any enemies caught inside.
         Concentration, disappears if you move more than 100 feet away.
   Level_5:
     Anti magic ring:
-      cost: 5
+      charisma_cost: 18
       description: Create a 50 foot diameter sphere around yourself in which magic,
         potions, and divine attacks have no effect.
     Quake:
-      cost: 5
+      charisma_cost: 20
       description: Create a thunderous earthquake capable of destroying a house. Enemies
         affected must make a dexterity saving throw to avoid being knocked prone.
         On a critical fail, enemies plummet into a fissure, dying. All enemies take
         4d10 damage, or half that if they make their saving throw.
     Stop Time:
-      cost: 5
-      description: Freeze time for everyone but you for 1d6 turns or 1d20 minutes
+      charisma_cost: 18
+      description: Freeze time for everyone but you for 1d4 + Inner Fire turns or 1d20 minutes
         if out of battle. Tapping a party member returns them to the normal flow of time.
         Attacking an entity returns it to the normal flow of time.
 the_sorcerer's_scrolls:
   Level_1:
     Conjure minor illusion:
-      cost: 10
+      charisma_cost: 10
       description: Create an illusory object which cannot move and cannot be bigger
         than a horse. You must have seen the object you are attempting to create.
         Concentration.
     Unseen hand:
-      cost: 10
+      charisma_cost: 10
       description: Conjure an unseen hand which can manipulate objects up to 50 feet
         away.
   Level_2:
     Conjure major illusion:
-      cost: 14
+      charisma_cost: 14
       description: Create an illusory object which can move/speak if you tell it to
         but cannot be bigger than a house. Concentration.
     Disarm:
-      cost: 12
+      charisma_cost: 12
       description: Disarm an enemy if they fail a saving throw against your spell power.
     Grow:
-      cost: 14
+      charisma_cost: 14
       description: Grow an object or entity to a desired size. Unwilling entities
         can attempt a saving throw against your spell power each turn. Concentration.
     Jet of water:
-      cost: 12
+      charisma_cost: 12
       description: Call forth a powerful jet of water. The spell does 1d10 damage
         regularly, or 2d10 damage if cast while on or near a body of water. Knocks
         an enemy over on critical hit.
     Minor Familiar:
-      cost: 14
+      charisma_cost: 14
       description: Summon a small familiar to aid you. See the book of known beasts
         for more information.
     Seer:
-      cost: 10
+      charisma_cost: 10
       description: Wave your hand over something to understand its meaning.
     Shrink:
-      cost: 14
+      charisma_cost: 14
       description: Shrink an object or entity to a desired size. Unwilling entities
         can attempt a saving throw every turn. Concentration.
     Strange Tongue:
-      cost: 10
+      charisma_cost: 10
       description: You and your party speak in a tongue only you can understand. Concentration.
     Telepathic communication:
-      cost: 10
+      charisma_cost: 10
       description: Create a ward on an entity to allow you to communicate with them
         via thought. Works up to 1 half mile. Lasts 6 hours. Concentration.
   Level_3:
     Dimension Door:
-      cost: 15
+      charisma_cost: 15
       description: Create a door into your own, private pocket dimension. The dimension
         is 30x30x30 feet, and persists over time. Once you are in the pocket dimension,
         you can always exit. For every 10 minutes you are in the pocket dimension,
         Make a dc8 inner fire saving throw. If you fail, you are ejected from the pocket
         dimension.
     Gateway:
-      cost: 15
+      charisma_cost: 15
       description: Create a doorway from one location to another within 300 feet.
         Both ends must be in view for the spell to be cast. Concentration.
     Greater Familiar:
-      cost: 15
+      charisma_cost: 15
       description: Summon an adult sized familiar to aid you. The familiar is yours to
         command until its health is zero. You can see through the eyes of a greater
         familiar. See the Book of Known Beasts for more details.
     Mind Blast:
-      cost: 14
+      charisma_cost: 14
       description: Fire a blast of psychic energy at an enemy. Do 1d20 damage and
         grapple them if you roll above a 10. They can attempt an inner fire saving throw against your spell
         power each turn at a cost of 1d6 health if they fail. Concentration.
     Polymorph:
-      cost: 15
+      charisma_cost: 15
       description: Transform an entity into a medium or small creature of your choice if
         they fail an inner fire saving throw against your spell power. They can attempt a saving throw every turn.
   Level_4:
     Fly:
-      cost: 12
+      charisma_cost: 12
       description: Allow yourself or another entity to fly. Concentration.
     Illusory Terrain:
-      cost: 12
+      charisma_cost: 12
       description: Make 100x100 yards of terrain look any way you choose.
   Level_5:
     Control Weather:
-      cost: 20
+      charisma_cost: 20
       description: Change the weather in a region.
     Firestorm:
-      cost: 18
+      charisma_cost: 18
       description: Fire bursts from your body, spiraling in every direction.
         Does 3d20 damage to all entities within 25 feet of you if they fail a dc 10 
         dexterity saving throw. If the succeed, they take half damage. 
         Enemies that fail a saving throw are burned,
         and take 1d6 at the start of each turn until they are healed.
     Grand Illusion:
-      cost: 16
+      charisma_cost: 16
       description: Conjure an illusory object, which can move/speak, and think for
         itself. Cannot be bigger than a mountain. Concentration.
     Greater Gateway:
-      cost: 16
+      charisma_cost: 16
       description: Create up to a 20x20 foot gateway from your current position to
         another location within five  miles. The creation of a gateway makes an explosive
         bang. It takes one full turn or five minutes to cast this spell properly. If improperly
         cast, the cost of this spell is 12, and the gateway lets out at an undetermined location 
         within one mile. Concentration.
     Major Familiar:
-      cost: 18
+      charisma_cost: 18
       description: Summon a Dire familiar to aid you. The familiar is yours to command
         until its health is zero. You can see through the eyes of a dire familiar. See
         the Book of Known Beasts for more details.
@@ -619,7 +622,7 @@ the_bard's_songbook:
         they make the check with advantage.
     Courage:
       description: Make your party members immune to fear and give them advantage
-        on inner fire saving throws. Lasts for one battle, or for 1 hour when out of
+        on inner fire saving throws. Lasts for three turns, or for 1 hour when out of
         combat.
     Curse:
       description: Spit a curse at an enemy. The magical vitriol in your voice does
@@ -649,7 +652,8 @@ the_bard's_songbook:
     Song of Inspiration:
       description: Play a tune which grants an ally a 1d8 inspiration dice.
     Vigor:
-      description: Allow a teammate an extra attack action on their next turn.
+      description: Allow a teammate an extra action on their next turn and to move at double speed.
+        Lasts for 1 minute when out of battle.
   Level 2:
     Battle Hymn:
       description: Play a battle hymn which gives all nearby allies 1 additional point
@@ -1010,11 +1014,11 @@ the_macabre_manual:
       description: Recall the soul of a being which has died within the past 100 years.
         Requires the carcass of a freshly dead man, and the heart of a high level
         beast. The entity is trapped in
-        the body of the dead man, but comes back to life.
+        the body of the dead man, but comes back to life. Requires an inner fire check.
     Resurrect:
       description: Resurrect an entity who has died within the past 24 hours. The
         entity will suffer from nightmares of the other side, and bear the scars of
-        their injuries.
+        their injuries. Requires an inner fire check.
 the_book_of_chi:
   Combat Basic Techniques:
     Catch Projectile:
@@ -1146,4 +1150,75 @@ the_tome_of_the_ancients:
     Massive Levitation: 
       description: Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. 
         Requires 12 hours of casting time. Levitate anything up to the size of a mountain.
+Pantheon:
+  Lilith:
+    Hand of Lilith:
+      description: Lillith is the deity of peace, love, and healing. Those who follow her, called the Hands of Lillith, 
+        are tasked with curing injury and calming conflicts. Most towns and Cities have a House of Healing, the church
+        to Lillith. Lillith is displeased by acts of unnecessary violence, and is pleased by acts that inspire peace.
+      type: belief
+    Goddess of Healing:
+      description: Clerics and Paladins of Lilith may add 1d6 to all healing rolls. 
+      type: advantage
+  Eandar:
+    Browncloak:
+      description: Eandar is the deity of the downtrodden. The followers of Eandar, called the Browncloaks, are tasked
+        with helping the common man in whatever way they can, regardless of what laws or obstacles lie in their path.
+        Eandar encourages his followers to bend the rules when necessary, but also tasks them with avoiding harming
+        the innocent or betraying those they have entered into arrangements with. The followers of Eandar are often
+        cavalier in their relationships, and are often on the wrong side of the law. Eandar is pleased by random acts
+        of kindness and by acts that better the downtrodden, but considers it a sin to harm the innocent, place personal
+        desire above the wellbeing of others, or betray the trust of others.
+      type: belief
+    God of the Common Man:
+      description: Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.
+      type: advantage
+    Distrusted by Authorities: 
+      description: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
+      type: advantage
+  Iro:
+    Watcher: 
+      description: Iro is the deity of honor. Those bonded to him, called the watchers, are bound to seek out and end injustice
+        wherever they find it. Iro is displeased by acts of evil, and is pleased by the dispensing of justice.
+      type: belief
+    Iro's Judgement:
+      description: You may call upon Iro to judge an individual for you. It is up to you, then, to dispense justice.
+      type: rite
+Ceremonies:
+  General:
+    Marriage:
+      description: Bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
+        order, and gain advantage on all checks when the other is critically injured.
+      type: rite
+    Atonement:
+      description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
+        the entity a penance of your choice. Upon completion, they are restored to purity.
+      type: rite
+    Funeral:
+      description: Upon an individual’s death, you can perform a funeral for them. Any entity that recieved a proper funeral
+        cannot be resurrected by an evil entity.
+      type: rite
+    Birthing:
+      description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
+        by your diety until they are ten years of age. 
+      type: rite
+    Conversion:
+      description:  If an individual wishes to convert to follow your diety, you are able to perform the proper rites
+      type: rite
+    Pledge:
+      description: On your journey, an individual may pledge themselves to protect and serve you. They must have already
+        been converted to your deity. If they so choose, you must both go to a temple of your deity, or, that being
+        unavailable, craft one. To craft a temple, you must bless it with ash created from a holy flame and with holy water.
+        The one who is swearing allegiance must pledge to be always at your side, put you above themself, and share of everything
+        they have with you. You must pledge to uphold their dignity, and to ever be their ally. You then each must make
+        a small incision on your hand and mingle your blood. From that point on, you may speak with eachother telepathecially,
+        always have a vague idea of where the other is, and may split evenly the effects of any potion or food. If either of you
+        move more than one mile apart, you both want desperately to be reunited. If either of you choose to end this bond, you
+        both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
+        of 10 health.
+      type: rite
+
+
+
+
 

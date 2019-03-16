@@ -8,12 +8,6 @@ from operator import attrgetter
 import collections
 import csv
 
-tier_map = {
-  0 : "new",
-  1 : "heroic",
-  2 : "legendary"
-}
-
 def generate_combo_stats(races, classes):
   if not os.path.exists("stat_output"):
     os.makedirs("stat_output")

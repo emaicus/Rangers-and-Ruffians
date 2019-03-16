@@ -20,7 +20,7 @@ Catterwol:
     Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
     average mages, but prefer slim, dexterity based weapons.
   stats:
-    Charisma: 0
+    Charisma: 1
     Dexterity: 1
     Inner_Fire: 0
     Intelligence: 0
@@ -71,7 +71,7 @@ Gnome:
   stats:
     Charisma: -1
     Dexterity: 1
-    Inner_Fire: 2
+    Inner_Fire: 1
     Intelligence: 1
     Luck: 0
     Perception: -1
@@ -99,7 +99,7 @@ Goblin:
     Dexterity: 2
     Inner_Fire: -1
     Intelligence: 1
-    Luck: 1
+    Luck: 0
     Perception: 2
     Strength: -1
     Vitality: 1
@@ -121,11 +121,11 @@ Halfling:
     stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
   stats:
     Charisma: 2
-    Dexterity: 2
+    Dexterity: 1
     Inner_Fire: -1
     Intelligence: 0
     Luck: 1
-    Perception: 0
+    Perception: -1
     Strength: -1
     Vitality: 1
 Human:
@@ -146,7 +146,7 @@ Human:
     Dexterity: 0
     Inner_Fire: 1
     Intelligence: 0
-    Luck: -1
+    Luck: 0
     Perception: 0
     Strength: 0
     Vitality: 2
@@ -195,18 +195,19 @@ Waterborn:
   stats:
     Charisma: 2
     Dexterity: 2
-    Inner_Fire: 0
+    Inner_Fire: -1
     Intelligence: 2
     Luck: 1
     Perception: 0
     Strength: -2
-    Vitality: 1
+    Vitality: 0
 Orc:
   abilities:
   - Predator
   - Bellow
   - Still Warm
   - Thunderous Blow
+  - Vengeful Death
   quote: The full-orc is a dangerous specimen. Known to hunt and eat the other races,
     it is difficult to domesticate them. As the saying goes, you can take the orc out
     of the wilderness, but you can't stop him from trying to eat you.
@@ -216,7 +217,7 @@ Orc:
   stats:
     Charisma: -1
     Dexterity: 0
-    Inner_Fire: 0
+    Inner_Fire: 1
     Intelligence: -1
     Luck: 0
     Perception: 0
@@ -247,7 +248,7 @@ Dwarf:
     Intelligence: 0
     Luck: 1
     Perception: -1
-    Strength: 2
+    Strength: 1
     Vitality: 2
 Daemonspawn:
   abilities: 
@@ -267,8 +268,8 @@ Daemonspawn:
   stats:
     Charisma: 1
     Dexterity: 0
-    Inner_Fire: 0
-    Intelligence: 1
+    Inner_Fire: 1
+    Intelligence: 0
     Luck: 1
     Perception: 0
     Strength: 0
@@ -294,12 +295,12 @@ Sprout:
                 jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see 
                 a sprout knight attempting to make a name for themself.
   stats:
-    Charisma: 2
-    Dexterity: 3
+    Charisma: 1
+    Dexterity: 2
     Inner_Fire: 1
     Intelligence: 1
     Luck: 2
-    Perception: 2
+    Perception: 1
     Strength: -5
     Vitality: 0
 Automaton:
@@ -313,7 +314,7 @@ Automaton:
   - Armored Exterior 
   - Piston Punch 
   - Upgrades 
-  - Choice Stat
+  - Choice of Model
   quote: Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
           The project had limited success, and was on the brink of being defunded. In a desparate attempt to keep things
           going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
@@ -325,10 +326,16 @@ Automaton:
                 to be an automaton, and the quest for meaning is a path that all such beings must walk.
   stats:
     Charisma: -2
-    Dexterity: -1
+    Dexterity: 0
     Inner_Fire: 0
     Intelligence: -1
     Luck: 0
     Perception: 0
     Strength: 0
     Vitality: 3
+
+# -2: Absolutely abysmal
+# -1: Bad 
+#  0: Average
+#  1: Good 
+#  2: Amazing

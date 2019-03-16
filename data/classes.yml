@@ -1,468 +1,1992 @@
-Light Fighter:
-  Beastmaster:
-    abilities:
-      - Tackle
-      - Animal Magnetism
-      - Hobble
-      - Under the Stars
-      - Lightfoot
-      - Favorite Terrain
-      - Tracker
-      - Animal Companion
-    description: For the Beastmaster 'Animal Person' is an understatement. Most Beastmasters
-      have forgone civilization, choosing instead to roam the wilds, capturing and befriending
-      animals.
-    standings: More comfortable in nature than cities, Beastmasters get on best with
-      animals, and can find people difficult to talk to.
-    stats:
-      Charisma: -1
-      Dexterity: 1
-      Inner_Fire: 2
-      Intelligence: 0
-      Luck: 0
-      Perception: 2
-      Strength: 1
-      Vitality: 1
-  Highborn:
-    abilities:
-      - My Father's Coffers
-      - The Family Sword
-      - My People
-      - Mantel
-      - Happy Smiles
-      - Swoon
-      - Beauty Incarnate
-      - Lightweight
-      - Feint
-      - Gumption
-    description: Delicate and noble, the Lady Fair is a beacon of love and hope for
-      their people. While used to living in the safety of her castle, she isn't afraid
-      to go out into the wilds, as long as the wilds have warm beds and three square
-      meals.
-    standings: Of noble birth, your character is loved by their people, but is prone
-      to attacks by thieves and brigands.
-    stats:
-      Charisma: 2
-      Dexterity: 1
-      Inner_Fire: -1
-      Intelligence: 1
-      Luck: 2
-      Perception: -1
-      Strength: -2
-      Vitality: -2
-  Monk:
-    abilities:
-      - Hand to Hand
-      - The Book of Chi
-    description: Masters of hand to hand combat, monks use their extensive self-knowledge
-      to overcome their foes.
-    standings: Monks keep to themselves, which cause some outside of their religion
-      to attempt to take advantage of them.
-    stats:
-      Charisma: 0
-      Dexterity: 1
-      Inner_Fire: 3
-      Intelligence: 1
-      Luck: 0
-      Perception: 1
-      Strength: 0
-      Vitality: 0
-  Ranger:
-    abilities:
-      - Minor Medicine
-      - Shifting Cloak
-      - Favorite Terrain
-      - Learned
-      - Tracker
-      - Twin Blades
-    description: Rangers are the vigilante law keepers of the wilds. They take it upon
-      themselves to police roads, countrysides, and entire regions to keep travelers
-      safe. They are naturally disliked by lawless individuals.
-    standings: Barbarians are the enemies of law keepers.
-    stats:
-      Charisma: 1
-      Dexterity: 2
-      Inner_Fire: 1
-      Intelligence: 0
-      Luck: 0
-      Perception: 2
-      Strength: 0
-      Vitality: 0
-  Fighter:
-    abilities:
-      - Choice Stat
-      - Nimble
-      - Determination
-      - Multi-Action
-      - Second Wind
-      - Trained Attack 
-      - Resolve
-    description: Figthers are some of the best of the best. They are trained, hardened
-      combatants who pride themselves on their martial skills. Fighters are self-reliant
-      and have a skillset which is more suited to keeping themself alive than providing
-      support.
-    standings: Fighters come from all walks of life.
-    stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: 1
-      Intelligence: 0
-      Luck: 0
-      Perception: 1
-      Strength: 1
-      Vitality: 0
 Heavy Fighter:
-  Barbarian:
-    abilities:
-    - Berserk
-    - Intimidate
-    - Throw Anything
-    - Crushing Blow
-    - Boozehound
-    - Taunt
-    - Choice Stat
-    - Colossal
-    description: Either by choice or by circumstance, Barbarians have chosen to spend
-      their lives in the harsh wilderness. Oftentimes, Barbarians prey upon innocent
-      travelers, taking slaves or possessions. Known for their uncouth nature.
-    standings: Barbarians are the enemies of law keepers.
-    stats:
-      Charisma: -2
-      Dexterity: 1
-      Inner_Fire: 2
-      Intelligence: -3
-      Luck: 0
-      Perception: 0
-      Strength: 1
-      Vitality: 2
   Knight:
-    abilities:
-    - Trained Precision
-    - Kingsmen
-    - Hold the line
-    - Shield Bash
-    - Shield of Men
-    - Armored
-    description: The genuine article, knights have sworn their lives to king and country.
-    standings: Knights are loved by kingsmen, and distrusted by hedge knights and rangers.
-      Knights are duty bound to fight the lawless.
-    stats:
-      Charisma: 1
-      Dexterity: -2
-      Inner_Fire: 2
+    description: Knights are heavy, armored fighters who should place themselves between
+      their party and harm's way. The ideal knight is a bastion of good, a defender of the
+      innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able 
+      to protect their allies. When building your knight, consider how they got where they are,
+      and where they are going next. Are they already annointed as a knight, or are they still
+      aspiring to knighthood? Do they follow the code of chivalry, or consider it to be a guideline?
+      How will being a knight affect the way that you interact with your party?
+    standings: Knights are loved by kingsmen, and distrusted by hedge knights and
+      rangers. Knights are duty bound to fight the lawless.
+    base_stats:
+      Charisma: 0
+      Dexterity: -3
+      Inner_Fire: 1
       Intelligence: 0
       Luck: 0
       Perception: 0
-      Strength: 2
+      Strength: 1
       Vitality: 3
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Armored
+    levels:
+      level_0:
+        abilities:
+        - Trained Precision
+      level_1:
+        stats:
+          Strength : 1
+        abilities:
+        - Shield Bash
+      level_2:
+        stats:
+          Inner_Fire: 1
+          Perception: 1
+        abilities:
+        - Kingsmen
+        - Taunt
+      level_3:
+        stats:
+          Charisma: 1
+        abilities:
+        - Shield of Men
+      level_4:
+        stats:
+          Dexterity: 1
+          Luck: 1
+        abilities:
+        - Hold the Line
+      level_5:
+        stats:
+          Vitality: 1
+          Strength: 1
+        abilities:
+        - Offhand Attack
+        - Multiclass Option
+      level_6:
+        stats:
+          Charisma: 1
+          Inner_Fire: 1
+        abilities:
+        - Steel Yourself
+      level_7:
+        stats:
+          Dexterity: 1
+          Intelligence: 1
+        abilities:
+        - Second Action
+        - Shield Up
+      level_8:
+        stats:
+          Perception: 1
+        abilities:
+        - Last Line of Defense
+      level_9:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Stay on Your Feet
+      level_10:
+        abilities:
+        - Reduced Critical
   Paladin:
-    abilities:
-      - Bash
-      - Hammer of Light
-      - Faithful Weapon
-      - Shield of Men
-      - Lesser Book of Healing
-      - Pledge
-      - Minor Spell Choice
-      - Chainmail
-    description: Soldiers of the Light, Paladins are knights who have pledged themselves
-      to a deity. As such, Paladins are capable of performing minor miracles from the
-      book of healing.
+    description: Palidins are Soldiers of the Light, and are adept both at hand
+      to hand combat and basic healing magic. Paladins are devoted to their deity,
+      and aim to bring their influence into the world. Paladins are especially good
+      at taking out evil entities, and are known for their Faithful Weapon ability,
+      which lets them summon their weapon back to their hand after throwing it. 
+      When you are creating your Paladin, consider what their relationship is like 
+      with their deity. Do they pray to them often? How did their path lead them 
+      to devoting themself to a deity? What were they like before committing to being a 
+      paladin? How do they react to people who are not of the faith? How will being 
+      a paladin affect the way they interact with their party?
     standings: Paladins are generally respected. They hate evil, and try to destroy
       it wherever they find it.
-    stats:
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Lesser Book of Healing
+    - Pledge
+    - Minor Spell Choice
+    - Chainmail
+    base_stats:
+      Charisma: 0
+      Dexterity: -4
+      Inner_Fire: 0
+      Intelligence: 0
+      Luck: 0
+      Perception: -1
+      Strength: 1
+      Vitality: 2
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Spell Power
+        - Hammer of Light
+        - Faithful Weapon
+        - Level Zero Spell
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Charisma: 1
+        abilities:
+        - Level One Spell
+      level_2:
+        stats:
+          Intelligence: 1
+        abilities:
+        - Bash
+        - Level Zero Spell
+      level_3:
+        stats:
+          Inner_Fire: 1
+          Luck: 1
+        abilities:
+        - Minor Offhand Spell
+        - Level Two Spell
+      level_4:
+        stats:
+          Strength: 1
+          Dexterity: 1
+        abilities:
+        - Level Zero Spell
+        - Shield of Men
+      level_5:
+        stats:
+          Inner_Fire: 1
+          Perception: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats:
+          Luck: 1
+          Intelligence: 1
+          Strength: 1
+        abilities:
+        - Sinner's Bane
+        - Level Two Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Perception: 1
+        abilities:
+        - Second Action
+        - The Book of Healing
+        - Level Four Spell
+      level_8:
+        stats:
+          Dexterity: 1
+        abilities:
+        - Beacon of Hope
+        - Level Three Spell
+      level_9:
+        stats:
+          Inner_Fire: 1
+          Intelligence: 1
+        abilities:
+        - Winged Jump
+        - Level Four Spell
+      level_10:
+        stats:
+          Perception: 1
+          Luck: 1
+        abilities:
+        - Fires of Heaven
+        - Level Five Spell
+        - Level Three Spell
+  Barbarian:
+    description: Barbarians are hearty, and can dole out a lot of damage, making them
+      great tanks for a party of adventurers. They are marked by their berserk ability,
+      which allows them to fly into a battle frenzy, gaining extra attacks and health.
+      Barbarians cannot use magic, and are much better up close than at a distance.
+      They are known for their rugged ways, and usually prefer wide open spaces to cities.
+      To build your Barbarian, spend some time thinking about where they came from.
+      Where is their tribe? Did they leave it? If they did, why? How do the people of the 
+      world feel about barbarians? How will being a barbarian affect the way that you 
+      interact with your party?
+    standings: Barbarians are the enemies of law keepers.
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Colossal
+    - Boozehound
+    base_stats:
+      Charisma: -3
+      Dexterity: -1
+      Inner_Fire: 0
+      Intelligence: -4
+      Luck: 0
+      Perception: -2
+      Strength: 0
+      Vitality: 3
+    levels:
+      level_0:
+        abilities:
+        - Greater Choice Stat
+        - Berserk
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Perception: 1
+        abilities:
+        - Taunt
+        - Hand to Hand
+      level_2:
+        abilities:
+        - Crushing Blow
+      level_3:
+        stats:
+          Perception: 1
+        abilities:
+        - Choice Stat
+        - Intimidate
+      level_4:
+        stats:
+          Luck: 1
+          Perception: 1
+        abilities:
+        - Furious Blows
+      level_5:
+        abilities:
+        - Multiclass Option
+        - Always Angry
+        - Throw Anything
+        stats: 
+          Vitality: 1
+      level_6:
+        stats:
+          Perception: 1
+        abilities:
+        - Blind Rage
+      level_7:
+        abilities:
+        - Controlled Rage
+        - Line Them Up
+        - Choice Stat
+      level_8:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Savage Critical
+      level_9:
+        stats:
+          Perception: 1
+        abilities:
+        - Offhand Attack
+      level_10:
+        abilities:
+        - Berserker
+        - Reduced Critical
+  Hedge_Knight:
+    description: Hedge knights are mounted fighters who are adept at fighting from horseback.
+      A hedge knight is a knight that hasn't made it yet. Hedge knights
+      aren't supported by a major house, and instead many try to earn their glory by fighting
+      in tournaments or as sellswords. Most hedge knights spend their lives on the road, 
+      with only a few possessions to their name, which they hold dear. Hedge knights are
+      excellent riders, and are skilled at mounted combat. To build your hedge knight, 
+      spend some time to think about how they got where they are. How did they end up
+      becoming a hedge knight? What is their goal? What are their ideals, and how
+      were they affected by their current circumstances? How will being a hedge knight
+      affect how you interact with your party?
+    standings: Hedge Knights are not fond of Knights
+    base_stats:
+      Charisma: -3
+      Dexterity: 1
+      Inner_Fire: 0
+      Intelligence: -1
+      Luck: -2
+      Perception: 0
+      Strength: 0
+      Vitality: 2
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Mounted Warrior
+    - Armored
+    levels:
+      level_0:
+        abilities:
+        - Born in the Saddle
+        - Ruffians
+      level_1:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Charge
+      level_2:
+        abilities:
+        - Under the Stars
+        stats:
+          Perception: 1
+      level_3:
+        abilities:
+        - Steady
+        stats:
+          Strength: 1
+      level_4:
+        stats:
+          Dexterity: 1
+          Inner_Fire: 1
+        abilities:
+        - Reduced Critical
+      level_5:
+        abilities:
+        - Multiclass Option
+        - Steel Yourself
+        stats:
+          Vitality: 1
+          Charisma: 1
+      level_6:
+        abilities:
+        - Joust
+        - Shield Up
+        stats:
+          Perception: 1
+      level_7:
+        abilities:
+        - Second Action
+        stats:
+          Dexterity: 1
+          Inner_Fire: 1
+      level_8:
+        abilities:
+        - Throw Caution to the Wind
+        stats: 
+          Strength: 1
+          Charisma: 1
+      level_9:
+        abilities:
+        - Reduced Critical
+        stats:
+          Perception: 1
+      level_10:
+        abilities:
+        - The Hand of God
+        stats: 
+          Luck: 1
+Light Fighter:
+  Rogue:
+    description: Sneaktheives and criminals, rogues have often fallen in with bad company.
+      Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick
+      their way into most anything. Rogues are very weak, however, and will have better 
+      luck running away than fighting if caught. When they have to fight, Rogues often pick 
+      daggers or shortswords, and strike from on high or from in the shadows, letting their more
+      armored friends soak up the damage. As you design your rogue, consider how they turned to 
+      a life of crime. Do they have a moral code? Who do they tend to target, and why? Do their
+      crimes involve hurting people? Theivery? Information gathering? How did they get so good
+      at what they do? How will being a rogue affect how you interact with your party? Remember,
+      just because you are a rogue doesn't mean you can't have friends!
+    standings: Thieves hate law keepers and Thief Catchers
+    base_stats:
+      Charisma: 0
+      Dexterity: 1
+      Inner_Fire: -3
+      Intelligence: 0
+      Luck: 1
+      Perception: 0
+      Strength: -3
+      Vitality: 0
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - A Thief's Gear
+    levels:
+      level_0:
+        abilities:
+          - Lightfoot
+          - Nimble Fingers
+          - Mantel
+      level_1:
+        stats:
+          Dexterity: 1
+          Perception: 1
+      level_2:
+        stats:
+          Perception: 1
+          Luck: 1
+        abilities:
+        - Master of Disguise
+      level_3:
+        stats:
+          Charisma: 1
+          Intelligence: 1
+        abilities:
+        - High Ground
+      level_4:
+        stats:
+          Dexterity: 1
+        abilities:
+        - Offhand Attack  
+      level_5:
+        stats:
+          Vitality: 1
+          Charisma: 1
+          Perception: 1
+        abilities:
+          - Multiclass Option
+          - Thief or Assassin
+        subclass_thief_abilities:
+        - Low-Light Vision
+        - Soundless
+        subclass_assassin_abilities:
+        - Imposter
+      level_6:
+        stats:
+          Inner_Fire: 1
+        subclass_thief_abilities:
+        - Reflexes
+        subclass_assassin_abilities:
+        - Poison
+      level_7:
+        stats:
+          Perception: 1
+          Inner_Fire: 1
+        subclass_thief_abilities:
+        - Second Action
+        subclass_assassin_abilities:
+        - Double Strike
+      level_8:
+        stats:
+          Dexterity: 1
+          Intelligence: 1
+        subclass_thief_abilities:
+        - Reflexes
+        - Superior Mantel
+        subclass_assassin_abilities:
+        - Reduced Critical
+        - Line Them Up
+      level_9:
+        stats:
+          Inner_Fire: 1
+        subclass_thief_abilities:
+        - Party Save
+        subclass_assassin_abilities:
+        - Savage Critical
+      level_10:
+        stats:
+          Luck: 1
+        subclass_thief_abilities:
+        - Pickpocket
+        subclass_assassin_abilities:
+        - Assassinate
+        - Reduced Critical
+  Fighter:
+    description: Fighters are powerful strength or dexterity based warriors. Unlike the knight,
+      fighters are unarmored, and have a skillset more suited to keeping themselves alive and 
+      bringing down enemies than providing support. When building your fighter, consider whether
+      they specialize in strength or dexterity based weapons. How did they learn to fight, and
+      why are they good at it? Do they like fighting? What are their goals? How will being a fighter
+      affect the way that you interact with your party?
+    standings: Fighters come from all walks of life.
+    base_stats:
       Charisma: 1
-      Dexterity: -2
-      Inner_Fire: 2
+      Dexterity: 0
+      Inner_Fire: -2
+      Intelligence: 0
+      Luck: 0
+      Perception: 1
+      Strength: 0
+      Vitality: 1
+    base_abilities:
+      - Weapon Proficiency
+      - Action 
+      - Offhand Action
+    levels:
+      level_0:
+        abilities:
+        - Trained Attack
+        - Choice Stat
+      level_1:
+        stats:
+          Charisma: 1
+        abilities:
+        - Determination
+        - Minor Second Wind
+      level_2:
+        stats:
+          Intelligence : 1
+        abilities:
+        - Resolve
+      level_3:
+        stats:
+          Luck: 1
+        abilities:
+        - Choice Stat
+        - Nimble
+        - Offhand Attack
+      level_4:
+        stats: 
+          Inner_Fire: 1
+        abilities:
+        - Reduced Critical
+      level_5:
+        stats:
+          Vitality: 1
+          Inner_Fire: 1
+        abilities:
+        - Multiclass Option
+        - Multi-Action
+        - Major Second Wind
+      level_6:
+        stats:
+          Luck: 1
+        abilities:
+        - Reduced Critical
+      level_7:
+        stats:
+          Inner_Fire: 1
+          Strength: 1
+          Dexterity: 1
+      level_8:
+        stats: 
+          Perception: 1
+          Charisma : 1
+        abilities:
+        - Feint
+      level_9:
+        stats:
+          Luck : 1
+          Inner_Fire: 1
+        abilities:
+        - Stay on Your Feet
+      level_10:
+        stats:
+          Intelligence: 1
+        abilities: 
+        - Reduced Critical
+  Highborn:
+    description: Highborns were born into a noble house and have connections and
+      money as a result. They are well trained fighters, and have the charisma
+      necessary to rally people to their side. While the typical highborn is 
+      not as hardened as a knight or fighter, they are able to call upon their gumption 
+      for spurts of incredible heroism. As you create your highborn, consider why they 
+      are embarking on their adventure. Are they out to prove themself? Or perhaps
+      they are idealistic and want adventure? Are they brave? Do they know what they
+      are getting themselves into? Where are their parents, and what is their relationship
+      with them? How will being a highborn affect how you interact with others and your party?
+    standings: Of noble birth, your character is loved by their people, but is prone
+      to attacks by thieves and brigands.
+    base_stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: -3
       Intelligence: 1
       Luck: 1
-      Perception: 0
-      Strength: 2
-      Vitality: 3
-  Hedge Knight:
-    abilities:
-      - Mount and Blade
-      - Under the Stars
-      - Born in the Saddle
-      - Steady
-      - Charge
-      - Ruffians
-    description: A self proclaimed knight, hedge knight's move from region to region,
-      seeking to find employment where they can. Hedge knights are supposed to live
-      by a code of honor, but on the road these things tend to fall apart.
-    standings: Hedge Knights are not fond of Knights
-    stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: 2
-      Intelligence: -1
-      Luck: -1
-      Perception: 1
-      Strength: 2
-      Vitality: 2
-Mage:
-  Necromancer:
-    abilities:
-    - Soul Harvest
-    - The Macabre Manual
-    - Mortal Coil
-    - Vegan
-    - Edge of Eternity
-    - Fear the Light
-    - Eyes of the Others
-    - Spell Choice
-    description: Death is not my enemy, nor is it my ally, it is my servant. So say
-      the Necromancers, mages who study the intricacies of the hereafter. Often fuled
-      by macabre fasination or a god complex, Necromancy is deeply feared and considered
-      taboo by almost all.
-    standings: Necromancers are feared by most, and are actively hunted by Clerics and
-      followers of the light.
-    stats:
-      Charisma: -2
-      Dexterity: 0
-      Inner_Fire: 1
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
-      Strength: 0
-      Vitality: -1
-  Wizard:
-    abilities:
-    - The Sword and the Satchel
-    - Looming Presence
-    - Historian
-    - Walking Stick
-    - Novice Spellbook
-    - The Wizard's Addendum
-    - Spell Choice
-    description: Often eccentric, wizards are known to be wayfarers and meddlers. Most
-      keep to themselves, approaching others only to entwine them in schemes only they
-      know about. Wizards arrive precisely when they mean to. To use magic, Wizards use 
-      spell points, and begin with a number of spell points equal to their intelligence.
-      Spells cost the same amount of spell points as their level, and are reaquired upon
-      a long rest.
-    standings: Wizards are known to be friends to all races, and get along particularly
-      well with Halflings and Rangers.
-    stats:
-      Charisma: 1
-      Dexterity: -2
-      Inner_Fire: 1
-      Intelligence: 3
-      Luck: 1
-      Perception: 1
-      Strength: 1
-      Vitality: -3
-  Sorcerer:
-    abilities:
-    - Novice Spellbook
-    - Influence
-    - The Sorcerer's Scrolls
-    - Charismatic by Birth
-    - Spell Choice
-    - Spell Modifiers
-    description: Sorcer's draw their magic not from cryptic tomes or nuanced understanding, but rather through raw force of personality.
-      To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers
-      have no spell points, but rather must pass a charisma check ((spell_level * 2) + 5) to perform magic.
-    standings: Mages and wizards are at odds over whose magic is best.
-    stats:
-      Charisma: 2
-      Dexterity: -1
-      Inner_Fire: 1
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
-      Strength: -2
-      Vitality: -2
-  Druid:
-    abilities:
-    - Novice Spellbook
-    - The Druid's Field Guide
-    - Spell Choice
-    - Choice Stat
-    description: Gaurdian's of nature, most druids prefer to live in tribes in the forests, mountains, prairie, tundra, or desert. Druid's are 
-      command powerful nature based magic, which they use to smite those who threaten themselves, their friends, or thier home. Druids utilize
-      intelligence based spell points to cast spells, and are a good match for players interested in playing a mage.
-    standings: 
-    stats:
-      Charisma: -1
-      Dexterity: 0
-      Inner_Fire: 2
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
-      Strength: 0
-      Vitality: -2
-  Battle Mage:
-    abilities:
-    - Choice Stat
-    - Sword and Flame
-    - Lesser Novice Spellbook
-    - Minor Spell Choice
-    description: Balanced between physical and magical attacks, battle mages have trained
-      to be highly versatile fighters.
-    standings: Battle mages sometimes get along poorly with clerics.
-    stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: 1
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
-      Strength: 1
-      Vitality: -2
-Ranged Fighter: 
-  Gunslinger:
-    abilities:
-    - This is my Weapon
-    - Choice of Firearm
-    - From the Hip
-    - Upgrade
-    - Set Up
-    - Firestarter
-    - Regular Patron
-    description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
-      to acquire one of the rarest weapons in the world. As such, they have a close
-      bond with their weapon, which is usually their primary means of income.
+      Perception: -2
+      Strength: -3
+      Vitality: 0
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - My Father's Coffers
+    - The Family Sword
+    - Lightweight
+    levels:
+      level_0:
+        abilities:
+        - My People
+        - Happy Smiles
+        - Beauty Incarnate
+      level_1:
+        stats:
+          Charisma: 1
+        abilities:
+        - Swoon
+      level_2:
+        stats:
+          Perception: 1
+          Luck: 1 
+        abilities:
+        - Gumption
+      level_3:
+        stats:
+          Luck: 1
+          Charisma: 1
+        abilities: 
+        - Mantel
+      level_4:
+        stats: 
+          Vitality: 1
+          Dexterity: 1
+          Intelligence: 1
+          Perception: 1
+        abilities: 
+        - Disarming
+      level_5:
+        stats:
+          Luck: 1
+          Inner_Fire: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Additional Resolve
+      level_6:
+        stats:
+          Intelligence: 1
+          Perception: 1
+        abilities:
+        - Feeling Lucky
+      level_7:
+        stats:
+          Charisma: 1
+          Inner_Fire: 1
+        abilities:
+        - Second Action
+      level_8:
+        stats:
+          Dexterity: 1
+          Inner_Fire: 1
+        abilities:
+        - Fallen
+        - Additional Resolve
+      level_9:
+        stats:
+          Intelligence: 1
+        abilities: 
+        - Rally Cry
+      level_10:
+        stats:
+          Strength: 1
+          Charisma: 1
+        abilities:
+        - Aura of Peace
+        - Additional Resolve
+  Beastmaster:
+    description: For the Beastmaster 'Animal Person' is an understatement. 
+      Beastmaster's begin their adventure with a loyal  
+      animal companion, which they can select from the Book of Known Beasts. This can include
+      a wolf, a bear, and eagle, or even a dragon! Most Beastmasters
+      have forgone civilization, choosing instead to roam the wilds, capturing and
+      befriending animals. They are quick, dexterity based fighters, and are good at 
+      tackling and hobbling enemies and leading their party through the wilds. 
+      When building your beastmaster, consider what their lifestyle is. Do they live in the
+      wilds, and if so, why? How often do they speak with other people? How did they meet their
+      animal companion? Why did their animal companion stay with them? How will being a beastmaster
+      affect how you interact with your party?
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
-    stats:
+    base_stats:
+      Charisma: -3
+      Dexterity: 0
+      Inner_Fire: -2
+      Intelligence: -2
+      Luck: 0
+      Perception: 0
+      Strength: 1
+      Vitality: 1
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    levels:
+      level_0:
+        abilities:
+        - Animal Companion
+        - Animal Magnetism
+        - Favorite Terrain
+        - Pup
+      level_1:
+        stats:
+          Perception: 1
+        abilities:
+        - Tackle
+        - Hobble
+      level_2:
+        stats:
+          Dexterity: 1
+          Strength: 1
+        abilities:
+        - Lightfoot
+        - Field Healing
+      level_3:
+        stats:
+          Perception: 1
+          Charisma: 1
+        abilities:
+        - Under the Stars
+        - Huntsman
+      level_4:
+        stats:
+          Inner_Fire: 1
+          Luck: 1
+        abilities:
+        - Tracker
+        - Coordinated Strike
+      level_5:
+        stats:
+          Vitality: 1
+          Dexterity: 1
+        abilities:
+        - Multiclass Option
+        - Grown
+      level_6:
+        stats:
+          Strength: 1
+          Luck: 1
+          Vitality: 1
+        abilities:
+        - Mantel
+      level_7:
+        stats:
+          Perception: 1
+        abilities:
+        - Second Action
+      level_8:
+        stats: 
+          Charisma: 1
+        abilities:
+        - Dire Companion
+      level_9:
+        stats:
+          Perception: 1
+        abilities:
+        - Leaping Strike
+      level_10:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Feint
+        - Offhand Attack
+  Ranger:
+    description: Rangers are the vigilante law keepers and monster hunters of the wilds. 
+      Rangers are powerful dexterity based
+      fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds,
+      and are able to easily traverse their favorite terrain, as well as to prepare simple medicines in times
+      of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved,
+      as it is understood that they are the thin line that stands between many villages and an onslaught of
+      monsters. As you create your ranger, consider how they ended up a ranger? How did they become so 
+      adept at navigating the wilderness? Do they feel the need to protect villagers? What kinds of monsters
+      have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact
+      with your party? 
+    standings: Barbarians are the enemies of law keepers.
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Shifting Cloak
+    base_stats:
+      Charisma: -2
+      Dexterity: 1
+      Inner_Fire: 1
+      Intelligence: 1
+      Luck: 0
+      Perception: 0
+      Strength: -1
+      Vitality: 1
+    levels:
+      level_0:
+        abilities:
+        - Minor Medicine
+        - Learned
+      level_1:
+        abilities:
+        - Favorite Terrain
+        stats:
+          Perception: 1
+      level_2:
+        abilities:
+        - Counter Attack
+        stats: 
+          Intelligence: 1
+      level_3:
+        abilities:
+        - Tracker
+        - Twin Blades
+        stats: 
+          Vitality: 1
+          Charisma: 1
+          Perception: 1
+      level_4:
+        abilities:
+        - Under the Stars
+        stats: 
+          Dexterity: 1
+          Inner_Fire: 1
+          Strength: 1
+      level_5:
+        stats:
+          Perception: 1
+          Luck: 1
+          Intelligence: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Twin Blade Parry
+        - Far-Strider or Monster Hunter
+        subclass_far-strider_abilities:
+        - Favorite Enemy
+        subclass_monster-hunter_abilities:
+        - Monster Slayer
+      level_6:
+        subclass_far-strider_abilities:
+        - Greater Medicine
+        subclass_monster-hunter_abilities:
+        - Tackle
+        - Hobble
+        stats: 
+          Luck: 1
+          Perception: 1
+      level_7:
+        stats:
+          Dexterity: 1
+          Strength: 1
+        subclass_far-strider_abilities:
+        - Hold the Line
+        subclass_monster-hunter_abilities:
+        - Dominate
+      level_8:
+        stats:
+          Charisma: 1
+        abilities: 
+        - Offhand Attack
+      level_9:
+        stats:
+          Strength: 1
+        subclass_far-strider_abilities:
+        - Stay on Your Feet
+        subclass_monster-hunter_abilities:
+        - Steel Yourself
+      level_10:
+        stats:
+          Perception: 1
+          Intelligence: 1
+  Monk:
+    description: Monks are masters of hand to hand combat, who use their extensive
+      control of their bodies to overcome their foes. Monks are able to learn abilities from 
+      scrolls, which they may find scattered throughout the world. Monks have dedicated themself
+      to the art of understanding the natural and spiritual world, and are often levelheaded and
+      intelligent. As you create your monk, consider what their goals are. How did they become 
+      a monk, and what are they hoping to gain by doing so? How do they react in stressful situations?
+      How do they interact with other people? Are they quiet and reserved? Confident and sure of themself?
+      How will being a monk affect the way you interact with your party?
+    standings: Monks keep to themselves, which cause some outside of their religion
+      to attempt to take advantage of them.
+    base_stats:
       Charisma: 0
       Dexterity: 1
       Inner_Fire: 1
       Intelligence: 0
-      Luck: 2
-      Perception: 3
-      Strength: 0
-      Vitality: -2
-  Archer:
-    abilities:
-      - Longbow
-      - Boot Knife
-      - Focus
-      - Double Tap
-      - Huntsman
-      - Crippling Shot
-      - PULL
-    description: Excellent archers, Marksmen come from all walks of life.
-    standings: Excellent archers, Marksmen come from all walks of life.
-    stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: 0
-      Luck: 1
-      Perception: 1
-      Strength: -1
-      Vitality: -2
-Utility:
-  Bard:
-    abilities:
-      - My Father's Oboe
-      - The Bard's Songbook
-      - Song Choice
-      - Cartwheel
-      - One up the Sleeve
-      - Regular Patron
-      - Boozehound
-      - Nimble Fingers
-      - Slight of Hand
-      - All Smiles
-    description: Showmen by nature, Bards are known for their skills at performing music,
-      juggling, and distracting others from the sorrows of life.
-    standings: Bards are loved by most, and are welcomed equally among thieves and goodfolk.
-    stats:
-      Charisma: 2
-      Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: 1
-      Luck: 1
-      Perception: 0
-      Strength: -1
-      Vitality: -2
-  Cleric:
-    abilities:
-      - Taunt
-      - Purge Decay
-      - The Book of Healing
-      - Pledge
-      - Spell Choice
-    description: After pledging their allegiance to their deity, Clerics have made it
-      their duty to follow their will. To do this, Clerics use miracles from the book
-      of healing help their deity impose its will on the world.
-    standings: Clerics are friends to all those who fight for good, and get along especially
-      well with Holy Knights, Paladins, and members of their church.
-    stats:
-      Charisma: 1
-      Dexterity: 0
-      Inner_Fire: 1
-      Intelligence: 3
       Luck: 0
+      Perception: 1
+      Strength: 0
+      Vitality: 0
+    base_abilities:
+    - Weapon Proficiency
+    - Action 
+    - Offhand Action
+    - Second Action
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Spell Power
+        - Hand to Hand
+        - The Book of Chi
+      level_1:
+        stats:
+          Perception: 1
+        abilities:
+        - Fighting Technique
+        - Fighting Technique
+      level_2:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Fighting Technique
+      level_3: 
+        stats:
+          Luck: 1
+          Dexterity: 1
+          Vitality: 1
+        abilities:
+        - Fighting Technique
+      level_4:
+        stats:
+          Inner_Fire: 1
+        abilities:
+          - Fighting Technique
+      level_5:
+        stats:
+          Strength: 1
+          Perception: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Master Fighting Technique
+        - Fighting Technique
+      level_6:
+        stats:
+          Luck: 1
+        abilities: 
+        - Master Fighting Technique
+      level_7:
+        stats:
+          Inner_Fire: 1
+          Perception: 1
+        abilities: 
+          - Master Fighting Technique
+          - Fighting Technique
+      level_8:
+        stats:
+          Inner_Fire: 1
+          Dexterity: 1
+        abilities:
+          - Master Fighting Technique
+          - Fighting Technique
+      level_9:
+        abilities:
+          - Consecutive Normal Punches
+          - Fighting Technique
+      level_10:
+        abilities:
+          - Master Fighting Technique
+          - Fighting Technique
+Mage:
+  Wizard:
+    description: Often eccentric, wizards are known to be wayfarers and meddlers.
+      Most keep to themselves, approaching others only to entwine them in schemes
+      only they know about. Wizards arrive precisely when they mean to. To use magic,
+      Wizards use spell points, and begin with a number of spell points equal to their
+      intelligence. Spells cost the same amount of spell points as their level, and
+      are reaquired upon a long rest. Wizards have the least health of any class, but also 
+      have more spell points than any other class. As you create your wizard, consider what
+      their past is. How old are they? What kind of family did they come from? How long have
+      they been a wizard? Are they mysterious? Are they competent? How do they interact with
+      others? Who taught them magic? How will being a wizard affect how you interact with your
+      other party members?
+    standings: Wizards are known to be friends to all races, and get along particularly
+      well with Halflings and Rangers.
+    base_stats:
+      Charisma: 1
+      Dexterity: -3
+      Inner_Fire: 0
+      Intelligence: 2
+      Luck: -1
       Perception: 0
-      Strength: -1
-      Vitality: -2
-  Rogue:
-    abilities:
-      - Master of Disguise
-      - Lightfoot
-      - Nimble Fingers
-      - Mantel
-      - A Thief's Gear
-      - High Ground
-    description: For one reason or another, thieves have turned to a life of crime.
-      Their crimes, however, are nonviolent when possible; the rich don't need all that
-      gold, anyway.
-    standings: Thieves hat law keepers and Thief Catchers
-    stats:
-      Charisma: 2
-      Dexterity: 3
+      Strength: -4
+      Vitality: 0
+    base_abilities:
+      - Not Proficient With Weapons
+      - Action
+      - Spell Power
+      - Offhand Action
+      - Historian
+      - The Sword and the Satchel
+      - Walking Stick
+      - Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Novice Spellbook
+        - The Wizard's Addendum
+        - Level Zero Spell
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Intelligence: 1
+        abilities:
+        - Level One Spell
+      level_2:
+        stats:
+          Intelligence: 1
+          Dexterity: 1
+          Luck: 1
+        abilities:
+        - Minor Offhand Spell
+        - Looming Presence
+        - Level One Spell
+      level_3:
+        stats:
+          Inner_Fire: 1
+          Charisma: 1
+        abilities:
+        - Level Two Spell
+      level_4:
+        stats:
+          Perception: 1
+        abilities:
+        - Level Two Spell
+      level_5:
+        stats:
+          Intelligence: 2
+          Strength: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option 
+        - Greater Offhand Spell
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats:
+          Inner_Fire: 1
+          Luck : 1
+        abilities:
+        - Level Three Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Intelligence: 1
+          Perception: 1
+        abilities:
+        - Major Offhand Spell
+        - Level Four Spell
+        - Level One Spell
+      level_8:
+        stats: 
+          Inner_Fire: 1
+        abilities: 
+        - Commit to Memory
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Intelligence: 1
+        abilities: 
+        - Spell Invention
+        - Level Five Spell
+        - Level Three Spell
+      level_10:
+        stats:
+          Intelligence: 1
+        abilities:
+        - Tome of the Ancients
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell    
+  Battle_Mage:
+    description: Battle Mage's are adept at both physical and magical combat. They
+      are able to learn basic spells, which they use to help hone their swordcraft by
+      enchanting their blade to do additional damage. Battle Mage's are heartier than
+      other magic users, and can hold their own on the front line with the other fighters.
+      As you build your battle mage, consider why they chose to focus on physical battle 
+      instead of just the arcane arts. Who trained them to use magic? What are their goals
+      and aspirations? How will being a magic user change the way that you interact with your
+      party?
+    base_stats:
+      Charisma: 0
+      Dexterity: -2
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: -2
+      Strength: 1
+      Vitality: 1
+    base_abilities:
+    - Action 
+    - Offhand Action
+    - Minor Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Weapon Proficiency
+        - Spell Power
+        - Lesser Novice Spellbook
+        - Level Zero Spell
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Dexterity: 1
+        abilities:
+        - Embue Weapon
+        - Level Zero Spell
+      level_2:
+        stats:
+          Intelligence: 1
+          Strength: 1
+        abilities:
+        - Sword and Flame
+        - Level One Spell
+      level_3:
+        stats:
+          Charisma: 1
+          Perception: 1
+        abilities:
+        - Minor Offhand Spell
+        - Trained Attack
+        - Level One Spell
+      level_4:
+        stats:
+          Inner_Fire: 1
+          Intelligence: 1
+        abilities:
+          - Level Two Spell
+          - Greater Embue Weapon
+      level_5:
+        stats:
+          Luck: 1
+          Dexterity: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Level Two Spell
+        - Focus Energy
+        - Mage Sheild
+      level_6:
+        stats:
+          Perception: 1
+          Strength: 1
+        abilities:
+        - Transfer Essense
+        - Level One Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Charisma: 1
+          Intelligence: 1
+        abilities:
+        - Major Offhand Spell
+        - Offhand Attack
+        - Level Three Spell
+      level_8:
+        stats:
+          Perception: 1
+          Inner_Fire: 1
+        abilities:
+        - Major Embue Weapon
+        - Level Three Spell
+      level_9:
+        stats:
+          Intelligence: 1
+          Dexterity: 1
+        abilities:
+        - Novice Spellbook
+        - Level Four Spell
+        - Greater Mage Sheild
+      level_10:
+        stats:
+          Intelligence: 1
+        abilities:
+        - Level Four Spell
+  Druid:
+    description: Gaurdians of nature, most druids prefer to live in tribes in the
+      forests, mountains, prairie, tundra, or desert. Druid's command powerful
+      nature based magic, which they use to smite those who threaten them, their
+      friends, or their home. Druids utilize intelligence based spell points to cast
+      spells, and are a good match for players interested in playing a mage. As you build
+      your druid, consider where they came from. Why are they so attached to nature? How
+      does their attachment to the natural world change how they think? How do they react
+      to large towns and cities? What do they wear, and how do they speak? How do they feel
+      about other types of magic? Why are they on their adventure? How do they feel about 
+      eating meat? What are their values? What do they think the place of people is in the 
+      world? How will being a druid change the way you interact with your party?
+    base_stats:
+      Charisma: -4
+      Dexterity: -1
       Inner_Fire: 1
       Intelligence: 1
-      Luck: 2
-      Perception: 3
-      Strength: -2
-      Vitality: -3
-
-CUT:
-  
-  
-  Thief-Catcher:
-    abilities:
-    - Master of Disguise
-    - Lightfoot
-    - Nimble Fingers
-    - Mantel
-    - A Thief's Gear
-    - High Ground
-    description: It takes a thief to catch a thief. Thief-Catchers are thieves turned
-      straight, who now hunt down their old comrades.
-    standings: Thief Catchers hate thieves, and are distrusted by lawkeepers
-    stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: 0
-      Luck: -1
+      Luck: 0
       Perception: 1
-      Strength: 1
-      Vitality: -1
-  Adventurer:
-    abilities:
-      - Tactics
-      - Learned
-    description: 
-    standings: Barbarians are the enemies of law keepers.
-    stats:
+      Strength: -1
+      Vitality: 0
+    base_abilities:
+    - Action 
+    - Offhand Action
+    - Spell Choice
+    - Greater Choice Stat
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Spell Power
+        - Novice Spellbook
+        - The Druid's Field Guide
+        - Level Zero Spell
+      level_1:
+        stats:
+          Dexterity: 1
+          Intelligence: 1
+        abilities:
+        - Level One Spell
+      level_2:
+        stats:
+          Strength: 1
+          Inner_Fire: 1
+        abilities:
+        - Level One Spell
+      level_3:
+        stats:
+          Dexterity: 1
+          Luck: 1
+          Perception: 1
+        abilities:
+        - Minor Offhand Spell
+        - Level Two Spell
+      level_4:
+        stats:
+          Strength: 1
+          Perception: 1
+          Inner_Fire: 1
+          Vitality: 1
+        abilities:
+        - Level Two Spell
+      level_5:
+        stats:
+          Dexterity: 1
+          Charisma: 1
+          Intelligence: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats: 
+          Strength: 1
+        abilities:
+        - Level Three Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Intelligence: 1
+        abilities: 
+        - Offhand Attack
+        - Major Offhand Spell
+        - Level Four Spell
+        - Level One Spell
+      level_8:
+        stats: 
+          Inner_Fire: 1
+          Dexterity: 1
+        abilities:
+        - Ascend 
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Perception: 1
+        abilities:
+        - Level Five Spell
+        - Level Three Spell
+      level_10:
+        stats:
+          Charisma: 1
+        abilities:
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell
+  Sorcerer:
+    description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
+      but rather through raw force of personality. To perform magic, a sorcerer wrestles
+      with a spirit, natural or otherwise, and convinces them to do their bidding.
+      To this end, Sorcerers have no spell points, but rather must pass a charisma
+      check to perform magic. As you create your sorcerer, consider how they learned 
+      magic. Who did they learn it from? How did they first wrestle a spirit to aid them?
+      When they cast a spell, do they always use the same spirit, or different spirits?
+      Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer
+      change the way that you interact with the world and your party?
+    base_stats:
+      Charisma: 1
+      Dexterity: -3
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: -2
+      Strength: -1
+      Vitality: 0
+    base_abilities:
+    - Not Proficient With Weapons
+    - Action 
+    - Offhand Action
+    - Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Charisma Based Spellcaster
+        - Inner Fire Based Spellcaster
+        - Spell Power
+        - Novice Spellbook
+        - The Sorcerer's Scrolls
+        - Level Zero Spell
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Luck: 1
+        abilities:
+        - Level One Spell
+      level_2:
+        stats:
+          Charisma: 1
+          Perception: 1
+        abilities:
+        - Level One Spell
+        - Spell Modification
+      level_3:
+        stats:
+          Strength: 1
+        abilities:
+        - Minor Offhand Spell
+        - Level Two Spell
+        - Influence
+      level_4:
+        stats:
+          Luck: 1
+          Dexterity: 1
+          Vitality: 1
+        abilities:
+        - Level Two Spell
+      level_5:
+        stats:
+          Strength: 1
+          Charisma: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Level Three Spell
+        - Level One Spell
+        - Additional Influence Point
+      level_6:
+        stats:
+          Inner_Fire: 1
+          Intelligence: 1
+        abilities:
+        - Level Three Spell
+        - Level Zero Spell
+        - Prepare Spell
+      level_7:
+        stats:
+          Luck: 1
+          Strength: 1
+        abilities:
+        - Major Offhand Spell
+        - Level Four Spell
+        - Level One Spell
+        - Additional Influence Point
+      level_8:
+        stats:
+          Charisma: 1
+        abilities: 
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Strength: 1
+          Perception: 1
+        abilities: 
+        - Level Five Spell
+        - Level Three Spell
+        - Spirits Within
+      level_10:
+        stats:
+          Inner_Fire: 1
+        abilities:
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell  
+  Necromancer:
+    description: Death is not my enemy, nor is it my ally, it is my servant. So say
+      Necromancers, mages who study the intricacies of death, and what follows after. Often fuled
+      by macabre fasination or a god complex, Necromancy is deeply feared and considered
+      taboo by almost everyone. Clerics and Paladins, in particular, may despise or hunt necromacers.
+      At the beginning of their journey, necromancers may choose to be vegan, promising only to eat
+      the souls of evil individuals. As you create your necromancer, consider their values. How did they
+      end up studying such horrible magics? Was it out of necessity? Curiosity? What are they hoping to
+      accomplish? How do they rationalize what they do? Do they have any ticks or quirks? How will being
+      a necromancer affect how you interact with your party?
+    standings: Necromancers are feared by most, and are actively hunted by Clerics
+      and followers of the light.
+    base_stats:
+      Charisma: -4
+      Dexterity: -1
+      Inner_Fire: 1
+      Intelligence: 1
+      Luck: -4
+      Perception: 0
+      Strength: -1
+      Vitality: 0
+    base_abilities:
+    - Not Proficient With Weapons
+    - Action 
+    - Offhand Action
+    - Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Spell Power
+        - Soul Based Magic
+        - Mortal Coil
+        - Vegan
+        - The Macabre Manual
+        - Level Zero Spell
+      level_1:
+        stats:
+          Intelligence: 1
+          Dexterity: 1
+        abilities:
+        - Soul Harvest
+        - Level One Spell
+      level_2:
+        stats:
+          Inner_Fire: 1
+          Perception: 1
+        abilities:
+        - Edge of Eternity
+        - Level One Spell
+      level_3:
+        stats:
+          Charisma: 1
+          Strength: 1
+        abilities:
+        - Minor Offhand Spell
+        - Fear the Light
+        - Level Two Spell
+      level_4:
+        stats:
+          Dexterity: 1
+          Luck: 1
+        abilities:
+        - Eyes of the Others
+        - Level Two Spell
+      level_5:
+        stats: 
+          Strength: 1
+          Perception: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Reap
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats:
+          Inner_Fire: 1
+          Luck: 1
+        abilities:
+        - Level Three Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Strength: 1
+          Intelligence: 1
+        abilities:
+        - Major Offhand Spell
+        - Level Four Spell
+        - Level One Spell
+      level_8:
+        stats: 
+          Dexterity: 1
+          Inner_Fire: 1
+        abilities:
+        - Phylactery
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Charisma: 1
+          Perception: 1
+        abilities: 
+        - Freed from this Mortal Coil
+        - Level Five Spell
+        - Level Three Spell
+      level_10:
+        stats:
+          Strength: 1
+          Inner_Fire: 1
+        abilities:
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell          
+  Cleric:
+    description: After pledging their allegiance to their deity, Clerics have made
+      it their duty to follow their will. Clerics are weak, and do not fight with physical
+      magic. However, they are powerful spellcasters who are adept at healing, and who can 
+      make a huge difference in combat. Clerics try to embody the ideals of their deity,
+      paying them homage and working to enact their will in the world. As you design your 
+      cleric, ask yourself how they chose this path. When and how did their deity reach out to 
+      them? How did they make their pledge? Under what circumstances? How often do they 
+      pray to their deity? How do they react to people who don't believe? What do they 
+      believe in? What is their moral code, and how does that interact with that of
+      their deity? How will being a cleric affect the way that you interact with your party? 
+    standings: Clerics are friends to all those who fight for good, and get along
+      especially well with Holy Knights, Paladins, and members of their church.
+    base_stats:
       Charisma: 1
       Dexterity: 0
-      Inner_Fire: 2
+      Inner_Fire: 0
       Intelligence: 1
       Luck: 1
       Perception: 0
-      Strength: 1
-      Vitality: 2
+      Strength: -5
+      Vitality: 0
+    base_abilities:
+    - Not Proficient With Weapons
+    - Action 
+    - Offhand Action
+    - Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Spell Power
+        - Purge Decay
+        - The Book of Healing
+        - Pledge
+        - Level Zero Spell
+      level_1:
+        stats:
+          Charisma: 1
+          Intelligence: 1
+        abilities:
+        - Level One Spell
+      level_2:
+        stats:
+          Luck: 1
+          Inner_Fire: 1
+        abilities:
+        - Last Ditch Prayer
+        - Level One Spell
+      level_3:
+        stats: 
+          Dexterity: 1
+          Perception: 1
+        abilities:
+        - Minor Offhand Spell
+        - Taunt
+        - Level Two Spell
+      level_4:
+        stats:
+          Intelligence: 1
+          Luck: 1
+        abilities:
+        - Level Two Spell
+      level_5:
+        stats:
+          Strength: 1
+          Inner_Fire: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Feint
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats: 
+          Dexterity: 1
+        abilities:
+        - Level Three Spell
+        - Level Zero Spell
+      level_7:
+        stats:
+          Inner_Fire: 1
+          Luck: 1
+        abilities: 
+        - Major Offhand Spell
+        - Halo
+        - Level Four Spell
+        - Level One Spell
+      level_8:
+        stats:
+          Intelligence: 1
+          Perception: 1
+        abilities: 
+        - Burning Bright
+        - True Heal
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Inner_Fire: 1
+        abilities: 
+        - Aura of Advantage
+        - Level Five Spell
+        - Level Three Spell
+      level_10:
+        stats:
+          Charisma: 1
+        abilities:
+        - Angelic Wings
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell  
+  Bard:
+    description: Showmen by nature, Bards are known for their skills at performing
+      and distracting others from the sorrows of life. Bards are usually at least a little
+      bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based
+      weapons such a shortswords or knives. Bards are powerful spellcasters, and are excellent
+      at providing support to their party and at making enemies weaker. As you prepare your bard,
+      consider how they chose this way of life. How did they learn magic? How do they perform? Do they
+      play music? Dance? Tell stories? How did they learn to fight? Who did they learn to fight from?
+      How old are they? How many places have they been? Where do they perform? Why do they perform 
+      there? How will being a bard change the way you interact with your party?
+    standings: Bards are loved by most, and are welcomed equally among thieves and
+      gentlefolk.
+    base_stats:
+      Charisma: 1
+      Dexterity: 1
+      Inner_Fire: 0
+      Intelligence: 1
+      Luck: 1
+      Perception: 0
+      Strength: -3
+      Vitality: 1
+    base_abilities:
+    - Action 
+    - Offhand Action
+    - Spell Choice
+    levels:
+      level_0:
+        abilities:
+        - Level Zero Spell
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Weapon Proficiency
+        - Spell Power
+        - My Father's Oboe
+        - The Bard's Songbook
+        - Boozehound
+        - Regular Patron
+      level_1:
+        stats:
+          Charisma: 1
+          Inner_Fire: 1
+        abilities:
+        - Minor Restful Melody
+        - One up the Sleeve
+        - Level One Spell
+      level_2:
+        stats:
+          Dexterity: 1
+          Luck: 1
+        abilities:
+        - Spell Coin
+        - Slight of Hand
+        - Level One Spell
+      level_3:
+        stats:
+          Perception: 1
+          Intelligence: 1
+        abilities:
+        - Cartwheel
+        - Level Two Spell
+      level_4:
+        stats:
+          Charisma: 1
+        abilities:
+        - Nimble Fingers
+        - Level Two Spell
+      level_5:
+        stats: 
+          Strength: 1
+          Inner_Fire: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Additional Spell Coin
+        - Greater Restful Melody
+        - Level Three Spell
+        - Level One Spell
+      level_6:
+        stats:
+          Luck: 1
+        abilities:
+        - Greater Embue Weapon
+        - Level Three Spell
+        - Level Zero Spell
+      level_7:
+        stats: 
+          Charisma: 1
+          Perception: 1
+          Intelligence: 1
+        abilities: 
+        - Greater Spell Coin
+        - Double Strike
+        - Level Four Spell
+        - Level One Spell
+      level_8:
+        stats:
+          Dexterity: 1
+          Inner_Fire: 1
+        abilities:
+        - Major Restful Melody
+        - Level Four Spell
+        - Level Two Spell
+      level_9:
+        stats:
+          Strength: 1
+        abilities:
+        - Additional Spell Coin
+        - Level Five Spell
+        - Level Three Spell
+      level_10:
+        stats:
+          Luck: 1
+          Charisma: 1
+        abilities:
+        - Major Spell Coin
+        - Level Five Spell
+        - Level Zero Spell
+        - Level One Spell  
+Ranged Fighter:
+  Archer:
+    description: Some of the best marksmen in the world, archers are naturals with
+      ranged weapons. They are often attached to their bow, and carry it with them 
+      everywhere. Archers come from all walks of life; some compete in tournaments,
+      others are hunters and farmer's sons. Still others have served in the military.
+      Archers should stay off of the front line, instead picking off foes from a distance.
+      As you design your archer, ask yourself where they came from. How did they get
+      so good at archery? Who trained them? How have they used their talent? What kind
+      of person are they? What ideals do they have? What are their goals? How will being
+      an archer affect how you interact with the rest of your party?
+    standings: Excellent archers, Marksmen come from all walks of life.
+    base_stats:
+      Charisma: 0
+      Dexterity: 1
+      Inner_Fire: -2
+      Intelligence: 0
+      Luck: 1
+      Perception: 1
+      Strength: -3
+      Vitality: 1
+    base_abilities:
+    - Not Proficient With Weapons
+    - Action 
+    - Offhand Action
+    - Longbow
+    - Boot Knife
+    levels:
+      level_0:
+        abilities:
+        - Focus
+        - Huntsman
+      level_1:
+        stats:
+          Perception: 1
+        abilities:
+        - Arrow Stab
+      level_2:
+        stats:
+          Charisma: 1
+        abilities:
+        - Crippling Shot
+      level_3:
+        stats:
+          Intelligence: 1
+          Dexterity: 1
+        abilities:
+        - Mantel
+        - Steady
+      level_4:
+        stats: 
+          Luck: 1
+          Inner_Fire: 1
+        abilities:
+        - Offhand Attack
+      level_5:
+        stats:
+          Perception: 1
+          Charisma: 1
+          Strength: 1
+          Vitality: 1
+        abilities:
+        - Multiclass Option
+        - Penetration
+        - Reflexes
+      level_6:
+        stats: 
+          Dexterity: 1
+        abilities:
+        - True Mastery
+      level_7:
+        stats:
+          Charisma: 1
+        abilities:
+        - Second Action
+      level_8:
+        stats:
+          Perception: 1
+        abilities:
+        - Volley
+      level_9:
+        stats:
+          Luck: 1
+        abilities:
+        - Strike First
+      level_10:
+        stats:
+          Perception: 1
+          Intelligence: 1
+        abilities:
+        - Uncanny Perception
+  Gunslinger:
+    description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
+      to acquire one of the rarest weapons in the world. As such, they have a close
+      bond with their gun, which is usually their primary means of income. At the beginning
+      of their adventure, a gunsling may choose to start with either a rifle or a pistol, a
+      decision that determines engagement range and their upgrade path. As you create your 
+      gunslinger, ask yourself how they acquired their firearm. Who made it? Were they trained?
+      Ask your Poohbah how common firearms are. How have they used their firearm? What kind of
+      person are they? What are their goals? How will being a gunslinger affect the way that you 
+      interact with other partymembers.
+    standings: More comfortable in nature than cities, Beastmasters get on best with
+      animals, and can find people difficult to talk to.
+    base_stats:
+      Charisma: 0
+      Dexterity: 0
+      Inner_Fire: -2
+      Intelligence: -1
+      Luck: 1
+      Perception: 0
+      Strength: -2
+      Vitality: 0
+    base_abilities:
+    - Not Proficient With Weapons
+    - Proficient With Firearms
+    - This is my Weapon
+    levels:
+      level_0:
+        abilities:
+        - Gunslinger or Marksman
+        - Focus
+        - Regular Patron
+        subclass_gunslinger_abilities:
+        - Pistol 
+        subclass_marksman_abilities:
+        - Rifle
+      level_1:
+        stats:
+          Charisma: 1
+          Perception: 1
+        subclass_gunslinger_abilities: 
+        - Flash Grenade
+        subclass_marksman_abilities:
+        - Bayonet
+      level_2:
+        stats:
+          Luck: 1
+          Dexterity: 1
+        abilities:
+        - From the Hip
+        - High Grain
+      level_3:
+        stats:
+          Vitality: 1
+          Inner_Fire: 1
+          Intelligence: 1
+        subclass_gunslinger_abilities: 
+        - Fastest Gun
+        subclass_marksman_abilities:
+        - Reduced Critical
+        - Scope
+      level_4:
+        stats:
+          Strength: 1
+        abilities:
+        - Rechamber
+        - Suppressor
+        subclass_gunslinger_abilities:
+        - Lighter Gear
+      level_5:
+        abilities:
+        - Multiclass Option
+        stats: 
+          Vitality: 1
+          Charisma: 1
+          Dexterity: 1
+        subclass_gunslinger_abilities: 
+        - Twin Guns
+        subclass_marksman_abilities:
+        - Line Them Up
+        - Offhand Attack
+      level_6:
+        stats:
+          Luck: 1
+          Intelligence: 1
+        abilities:
+        - High Grain
+        subclass_gunslinger_abilities:
+        - Feeling Lucky
+        subclass_marksman_abilities:
+        - Reduced Critical
+        - Savage Critical
+      level_7:
+        stats:
+          Perception: 1
+          Inner_Fire: 1
+        subclass_gunslinger_abilities:
+        - Second Action
+        subclass_marksman_abilities:
+        - Rechamber
+      level_8:
+        stats: 
+          Strength: 1
+        subclass_gunslinger_abilities:
+        - Hollowpoint
+        subclass_marksman_abilities:
+        - Armor Penetrating Rounds
+        - High Grain
+      level_9:
+        stats: 
+          Intelligence: 1
+        abilities:
+        - Harrying Shot
+      level_10:
+        stats: 
+          Luck: 1
+        subclass_gunslinger_abilities:
+        - Volley
+        subclass_marksman_abilities:
+        - Rechamber
+        - Reduced Critical
 
 
 
-
-
-
+#MAGE spell cadence
+# level_0:
+#   abilities:
+#   - Level Zero Spell
+# level_1:
+#   abilities:
+#   - Level One Spell
+# level_2:
+#   abilities:
+#   - Level One Spell
+# level_3:
+#   abilities:
+#   - Level Two Spell
+# level_4:
+#   abilities:
+#   - Level Two Spell
+# level_5:
+#   abilities: 
+#   - Level Three Spell
+#   - Level One Spell
+# level_6:
+#   abilities:
+#   - Level Three Spell
+#   - Level Zero Spell
+# level_7:
+#   abilities: 
+#   - Second Action
+#   - Level Four Spell
+#   - Level One Spell
+# level_8:
+#   abilities: 
+#   - Level Four Spell
+#   - Level Two Spell
+# level_9:
+#   abilities: 
+#   - Level Five Spell
+#   - Level Three Spell
+# level_10:
+#   abilities:
+#   - Level Five Spell
+#   - Level Zero Spell
+#   - Level One Spell  

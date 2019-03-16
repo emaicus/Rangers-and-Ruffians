@@ -674,7 +674,7 @@ Mage:
     - The Sorcerer's Scrolls
     - Charismatic by Birth
     - Spell Choice
-    - Spell Modifiers
+    - Prepare Spell
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
       but rather through raw force of personality. To perform magic, a sorcerer wrestles
       with a spirit, natural or otherwise, and convinces them to do their bidding.
@@ -766,7 +766,6 @@ Mage:
     abilities:
     - Learning Spells
     - Inner Fire Based Spellcaster
-    - Not Proficient With Weapons
     - Weapon Proficiency
     - Spell Power
     - Action 
