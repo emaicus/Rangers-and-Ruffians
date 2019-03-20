@@ -27,7 +27,7 @@ Catterwol:
     Luck: 1
     Perception: 1
     Strength: -1
-    Vitality: 2
+    Vitality: 3
 Elf:
   abilities:
     - Sleepless
@@ -53,7 +53,7 @@ Elf:
     Luck: 0
     Perception: 1
     Strength: -1
-    Vitality: 1
+    Vitality: 3
 Gnome:
   abilities:
     - Tinker
@@ -76,7 +76,7 @@ Gnome:
     Luck: 0
     Perception: -1
     Strength: 0
-    Vitality: 1
+    Vitality: 2
 Goblin:
   abilities:
     - Still Warm
@@ -149,7 +149,7 @@ Human:
     Luck: 0
     Perception: 0
     Strength: 0
-    Vitality: 2
+    Vitality: 3
 Lizkin:
   abilities:
   - Color Choice
@@ -171,7 +171,7 @@ Lizkin:
     Luck: 0
     Perception: 0
     Strength: -1
-    Vitality: 2
+    Vitality: 4
 Waterborn:
   abilities:
   - Unbreathing
@@ -200,7 +200,7 @@ Waterborn:
     Luck: 1
     Perception: 0
     Strength: -2
-    Vitality: 0
+    Vitality: 1
 Orc:
   abilities:
   - Predator
@@ -222,7 +222,7 @@ Orc:
     Luck: 0
     Perception: 0
     Strength: 1
-    Vitality: 2
+    Vitality: 4
 Dwarf:
   abilities:
   - Mending
@@ -249,7 +249,7 @@ Dwarf:
     Luck: 1
     Perception: -1
     Strength: 1
-    Vitality: 2
+    Vitality: 4
 Daemonspawn:
   abilities: 
   - Fix Your Eyes on Me 
@@ -273,7 +273,7 @@ Daemonspawn:
     Luck: 1
     Perception: 0
     Strength: 0
-    Vitality: 2
+    Vitality: 3
 Sprout:
   abilities: 
   - Photosynthesis
@@ -332,10 +332,4 @@ Automaton:
     Luck: 0
     Perception: 0
     Strength: 0
-    Vitality: 3
-
-# -2: Absolutely abysmal
-# -1: Bad 
-#  0: Average
-#  1: Good 
-#  2: Amazing
+    Vitality: 5

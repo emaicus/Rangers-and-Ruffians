@@ -31,11 +31,10 @@ def de_uuid(bad):
 
 
 try:
-  with open("../code/description_database.json", 'r') as infile:
+  with open("../data/description_database.json", 'r') as infile:
     tmp_file_in = json.load(infile)
     DESCRIPTIONS_DATABASE = de_uuid(tmp_file_in)
 except Exception as e:
-
   print("ERROR: Could not locate description_database.json")
   sys.exit(1)
 

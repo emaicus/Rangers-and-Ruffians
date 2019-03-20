@@ -17,7 +17,7 @@ Heavy Fighter:
       Luck: 0
       Perception: 0
       Strength: 1
-      Vitality: 3
+      Vitality: 5
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -52,7 +52,6 @@ Heavy Fighter:
         - Hold the Line
       level_5:
         stats:
-          Vitality: 1
           Strength: 1
         abilities:
         - Offhand Attack
@@ -112,7 +111,7 @@ Heavy Fighter:
       Luck: 0
       Perception: -1
       Strength: 1
-      Vitality: 2
+      Vitality: 4
     levels:
       level_0:
         abilities:
@@ -152,7 +151,6 @@ Heavy Fighter:
         stats:
           Inner_Fire: 1
           Perception: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -220,7 +218,7 @@ Heavy Fighter:
       Luck: 0
       Perception: -2
       Strength: 0
-      Vitality: 3
+      Vitality: 5
     levels:
       level_0:
         abilities:
@@ -253,8 +251,6 @@ Heavy Fighter:
         - Multiclass Option
         - Always Angry
         - Throw Anything
-        stats: 
-          Vitality: 1
       level_6:
         stats:
           Perception: 1
@@ -299,7 +295,7 @@ Heavy Fighter:
       Luck: -2
       Perception: 0
       Strength: 0
-      Vitality: 2
+      Vitality: 4
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -337,7 +333,6 @@ Heavy Fighter:
         - Multiclass Option
         - Steel Yourself
         stats:
-          Vitality: 1
           Charisma: 1
       level_6:
         abilities:
@@ -388,7 +383,7 @@ Light Fighter:
       Luck: 1
       Perception: 0
       Strength: -3
-      Vitality: 0
+      Vitality: 1
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -423,7 +418,6 @@ Light Fighter:
         - Offhand Attack  
       level_5:
         stats:
-          Vitality: 1
           Charisma: 1
           Perception: 1
         abilities:
@@ -490,7 +484,7 @@ Light Fighter:
       Luck: 0
       Perception: 1
       Strength: 0
-      Vitality: 1
+      Vitality: 3
     base_abilities:
       - Weapon Proficiency
       - Action 
@@ -525,7 +519,6 @@ Light Fighter:
         - Reduced Critical
       level_5:
         stats:
-          Vitality: 1
           Inner_Fire: 1
         abilities:
         - Multiclass Option
@@ -578,7 +571,7 @@ Light Fighter:
       Luck: 1
       Perception: -2
       Strength: -3
-      Vitality: 0
+      Vitality: 1
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -611,7 +604,6 @@ Light Fighter:
         - Mantel
       level_4:
         stats: 
-          Vitality: 1
           Dexterity: 1
           Intelligence: 1
           Perception: 1
@@ -678,7 +670,7 @@ Light Fighter:
       Luck: 0
       Perception: 0
       Strength: 1
-      Vitality: 1
+      Vitality: 3
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -719,7 +711,6 @@ Light Fighter:
         - Coordinated Strike
       level_5:
         stats:
-          Vitality: 1
           Dexterity: 1
         abilities:
         - Multiclass Option
@@ -728,7 +719,6 @@ Light Fighter:
         stats:
           Strength: 1
           Luck: 1
-          Vitality: 1
         abilities:
         - Mantel
       level_7:
@@ -777,7 +767,7 @@ Light Fighter:
       Luck: 0
       Perception: 0
       Strength: -1
-      Vitality: 1
+      Vitality: 3
     levels:
       level_0:
         abilities:
@@ -798,7 +788,6 @@ Light Fighter:
         - Tracker
         - Twin Blades
         stats: 
-          Vitality: 1
           Charisma: 1
           Perception: 1
       level_4:
@@ -874,7 +863,7 @@ Light Fighter:
       Luck: 0
       Perception: 1
       Strength: 0
-      Vitality: 0
+      Vitality: 2
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -902,7 +891,6 @@ Light Fighter:
         stats:
           Luck: 1
           Dexterity: 1
-          Vitality: 1
         abilities:
         - Fighting Technique
       level_4:
@@ -914,7 +902,6 @@ Light Fighter:
         stats:
           Strength: 1
           Perception: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Master Fighting Technique
@@ -969,7 +956,7 @@ Mage:
       Luck: -1
       Perception: 0
       Strength: -4
-      Vitality: 0
+      Vitality: 1
     base_abilities:
       - Not Proficient With Weapons
       - Action
@@ -1017,7 +1004,6 @@ Mage:
         stats:
           Intelligence: 2
           Strength: 1
-          Vitality: 1
         abilities:
         - Multiclass Option 
         - Greater Offhand Spell
@@ -1077,7 +1063,7 @@ Mage:
       Luck: 0
       Perception: -2
       Strength: 1
-      Vitality: 1
+      Vitality: 3
     base_abilities:
     - Action 
     - Offhand Action
@@ -1124,7 +1110,6 @@ Mage:
         stats:
           Luck: 1
           Dexterity: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -1187,7 +1172,7 @@ Mage:
       Luck: 0
       Perception: 1
       Strength: -1
-      Vitality: 0
+      Vitality: 2
     base_abilities:
     - Action 
     - Offhand Action
@@ -1227,7 +1212,6 @@ Mage:
           Strength: 1
           Perception: 1
           Inner_Fire: 1
-          Vitality: 1
         abilities:
         - Level Two Spell
       level_5:
@@ -1235,7 +1219,6 @@ Mage:
           Dexterity: 1
           Charisma: 1
           Intelligence: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -1294,7 +1277,7 @@ Mage:
       Luck: 0
       Perception: -2
       Strength: -1
-      Vitality: 0
+      Vitality: 2
     base_abilities:
     - Not Proficient With Weapons
     - Action 
@@ -1334,14 +1317,12 @@ Mage:
         stats:
           Luck: 1
           Dexterity: 1
-          Vitality: 1
         abilities:
         - Level Two Spell
       level_5:
         stats:
           Strength: 1
           Charisma: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -1406,7 +1387,7 @@ Mage:
       Luck: -4
       Perception: 0
       Strength: -1
-      Vitality: 0
+      Vitality: 1
     base_abilities:
     - Not Proficient With Weapons
     - Action 
@@ -1456,7 +1437,6 @@ Mage:
         stats: 
           Strength: 1
           Perception: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -1523,7 +1503,7 @@ Mage:
       Luck: 1
       Perception: 0
       Strength: -5
-      Vitality: 0
+      Vitality: 1
     base_abilities:
     - Not Proficient With Weapons
     - Action 
@@ -1570,7 +1550,6 @@ Mage:
         stats:
           Strength: 1
           Inner_Fire: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Greater Offhand Spell
@@ -1636,7 +1615,7 @@ Mage:
       Luck: 1
       Perception: 0
       Strength: -3
-      Vitality: 1
+      Vitality: 2
     base_abilities:
     - Action 
     - Offhand Action
@@ -1686,7 +1665,6 @@ Mage:
         stats: 
           Strength: 1
           Inner_Fire: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Additional Spell Coin
@@ -1754,7 +1732,7 @@ Ranged Fighter:
       Luck: 1
       Perception: 1
       Strength: -3
-      Vitality: 1
+      Vitality: 2
     base_abilities:
     - Not Proficient With Weapons
     - Action 
@@ -1794,7 +1772,6 @@ Ranged Fighter:
           Perception: 1
           Charisma: 1
           Strength: 1
-          Vitality: 1
         abilities:
         - Multiclass Option
         - Penetration
@@ -1845,7 +1822,7 @@ Ranged Fighter:
       Luck: 1
       Perception: 0
       Strength: -2
-      Vitality: 0
+      Vitality: 2
     base_abilities:
     - Not Proficient With Weapons
     - Proficient With Firearms
@@ -1877,7 +1854,6 @@ Ranged Fighter:
         - High Grain
       level_3:
         stats:
-          Vitality: 1
           Inner_Fire: 1
           Intelligence: 1
         subclass_gunslinger_abilities: 
@@ -1897,7 +1873,6 @@ Ranged Fighter:
         abilities:
         - Multiclass Option
         stats: 
-          Vitality: 1
           Charisma: 1
           Dexterity: 1
         subclass_gunslinger_abilities: 

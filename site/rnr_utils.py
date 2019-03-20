@@ -6,6 +6,8 @@ from collections import Counter
 import yaml
 import random
 import math
+import traceback
+import copy
 
 ability_dict = dict()
 class_data = dict()
@@ -25,14 +27,8 @@ casting_classes = {
   'battle mage' : ['the_novice_spellbook',] 
 }
 
-tier_dict = {
-  0:"new",
-  1:"heroic",
-  2:"legendary"
-}
-
 class rnr_entity:
-    def __init__(self, name, abilities, stats, description, quote='', quote_author='',standings = ''):
+    def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
       self.name = name
       #come back and see to this
       self.abilities = abilities
@@ -60,18 +56,18 @@ class rnr_entity:
       print("per: {0}".format(self.perception))
       print("vit: {0}".format(self.vitality))
 
-    def get_stat(self, stat_name,tier=1):
+    def get_stat(self, stat_name):
       stat_name = stat_name.lower()
       if stat_name == "charisma":
-        return self.charisma if tier != 0 else math.ceil(self.charisma /2)
+        return self.charisma
       elif stat_name == "dexterity":
-        return self.dexterity if tier != 0 else math.ceil(self.dexterity /2)
+        return self.dexterity
       elif stat_name == "strength":
-        return self.strength if tier != 0 else math.ceil(self.strength /2)
+        return self.strength
       elif stat_name == "inner_fire":
-        return self.inner_fire if tier != 0 else math.ceil(self.inner_fire /2)
+        return self.inner_fire 
       elif stat_name == "intelligence":
-        return self.intelligence if tier != 0 else math.ceil(self.intelligence /2) 
+        return self.intelligence
       elif stat_name == "luck":
         return self.luck
       elif stat_name == "perception":
@@ -82,79 +78,52 @@ class rnr_entity:
         print('Asked for bad stat {0}'.format(stat_name))
         return None
 
-    def set_stat(self, stat_name, val):
-      stat_name = stat_name.lower()
-      if stat_name == "charisma":
-        self.charisma = val
-        self.stats['charisma'] = val
-      elif stat_name == "dexterity":
-        self.dexterity = val
-        self.stats['dexterity'] = val
-      elif stat_name == "strength":
-        self.strength = val
-        self.stats['strength'] = val
-      elif stat_name == "inner_fire":
-        self.inner_fire = val
-        self.stats['inner_fire'] = val
-      elif stat_name == "intelligence":
-        self.intelligence = val
-        self.stats['intelligence'] = val
-      elif stat_name == "luck":
-        self.luck = val
-        self.stats['luck'] = val
-      elif stat_name == "perception":
-        self.perception = val
-        self.stats['perception'] = val
-      elif stat_name == "vitality":
-        self.vitality = val
-        self.stats['vitality'] = val
-
     def base_serialize(self):
       serial = dict()
       serial["stats"] = self.stats
       serial["name"] = self.name
-      serial["abilities"] = filterAbilities(self.abilities, ability_dict)
+      serial["abilities"] = filterAbilities(self.abilities)
       serial["description"] = self.description
       serial['quote'] = self.quote
       serial['quote_author'] = self.quote_author
       return serial
 
-    def base_markdownify(self, image_path, emphasis):
-      load_Rangers_And_Ruffians_Data()
+    # def base_markdownify(self, image_path, emphasis):
+    #   load_Rangers_And_Ruffians_Data()
 
-      ret = ""
-      lowername = self.name.lower()
-      #relative path for now
-      lowername = lowername.replace(' ', '_')
-      if image_path != "":
-        path_to_image = "{0}/{1}.jpg".format(image_path.replace(' ', '_'), lowername)
-      else:
-        path_to_image = ""
-      description = self.description
-      abilities = self.abilities
+    #   ret = ""
+    #   lowername = self.name.lower()
+    #   #relative path for now
+    #   lowername = lowername.replace(' ', '_')
+    #   if image_path != "":
+    #     path_to_image = "{0}/{1}.jpg".format(image_path.replace(' ', '_'), lowername)
+    #   else:
+    #     path_to_image = ""
+    #   description = self.description
+    #   abilities = self.abilities
 
-      ret = "{0} {1} \n".format(emphasis, self.name)
-      if path_to_image != "":
-        ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
-      if description != "":
-        ret += description + "  \n"
-      # if standings != "":
-      #   ret += "**Standings:** " + self.standings + "  \n\n"
+    #   ret = "{0} {1} \n".format(emphasis, self.name)
+    #   if path_to_image != "":
+    #     ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
+    #   if description != "":
+    #     ret += description + "  \n"
+    #   # if standings != "":
+    #   #   ret += "**Standings:** " + self.standings + "  \n\n"
       
-      ret += "#### Abilities:   \n"
-      abilities = filterAbilities(self.abilities, ability_dict)
-      for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
-        if not key in abilities:
-          continue
-        ret += "##### {0}:   \n".format(mapAbilityType(key))
-        for ability in abilities[key]:
-          ret += "  * **{0}**: {1}  \n".format(ability[0], ability[1])
-        ret += "    \n"
-      ret += "\n##### Stats:  " + "  \n"
-      for stat in self.stats:
-        ret += "  * " +  stat + ": " + str(self.stats[stat]) + "  \n"
-      ret += "   \n"
-      return ret
+    #   ret += "#### Abilities:   \n"
+    #   abilities = filterAbilities(self.abilities, ability_dict)
+    #   for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
+    #     if not key in abilities:
+    #       continue
+    #     ret += "##### {0}:   \n".format(mapAbilityType(key))
+    #     for ability in abilities[key]:
+    #       ret += "  * **{0}**: {1}  \n".format(ability[0], ability[1])
+    #     ret += "    \n"
+    #   ret += "\n##### Stats:  " + "  \n"
+    #   for stat in self.stats:
+    #     ret += "  * " +  stat + ": " + str(self.stats[stat]) + "  \n"
+    #   ret += "   \n"
+    #   return ret
 
     def __str__(self):
       ret_lis = [self.name,
@@ -170,16 +139,6 @@ class rnr_entity:
       ret = '\n'.join(ret_lis)
       return ret
 
-    def get_health(self, tier=1):
-      if tier==0:
-        return 30 + self.vitality * 2
-      elif tier==1:
-        return 75 + self.vitality * 5
-      elif tier==2:
-        return 120 + self.vitality * 10
-      else:
-        return 75 + self.vitality * 5
-
     def tabbed_string(self, prefix='\t',tier=1):
       double_prefix = prefix+'\t'
       ret_lis = [
@@ -192,65 +151,77 @@ class rnr_entity:
       double_prefix+"lck : {0}".format(self.get_stat('luck',tier=tier)),
       double_prefix+"per : {0}".format(self.get_stat('perception',tier=tier)),
       double_prefix+"vit : {0}".format(self.get_stat('vitality',tier=tier)),
-      double_prefix+"tier 0 health: {0}".format(self.get_health(tier=0)),      
-      double_prefix+"tier 1 health: {0}".format(self.get_health(tier=1)),
-      double_prefix+"tier 2 health: {0}".format(self.get_health(tier=2)),     
+      double_prefix+"tier 0 health: {0}".format(self.get_health()),      
+      double_prefix+"tier 1 health: {0}".format(self.get_health()),
+      double_prefix+"tier 2 health: {0}".format(self.get_health()),     
       '' ]
       ret = '\n'.join(ret_lis)
       return ret
 
 class rnr_class(rnr_entity):
-    def __init__(self, name, abilities, stats, description, quote, quote_author, tier_1_info, tier_2_info, tier=1):
-      base_stats = dict(stats)
+    def __init__(self, name, level=0, subclass=""):
 
-      #temporary hack.
-      tmp = list(tier_2_info.keys())[0]
-      tier_2_info = tier_2_info[tmp]
-      #End of hack.
+      class_data = get_rnr_class_data_with_name(name)
+      if class_data == None:
+        raise Exception('ERROR: Could not load class {0}'.format(name))
+      stats = class_data['base_stats']
+      abilities = class_data['base_abilities']
 
-      if tier == 1 or tier == 2:
-        if 'stats' in tier_1_info:
-          for stat, modifier in tier_1_info['stats'].items():
-            base_stats[stat] += modifier
-        abilities_1 = tier_1_info.get('abilities', None)
-        if abilities_1 != None:
-          abilities = abilities + tier_1_info['abilities']
-
-      if tier == 2:
-        if 'stats' in tier_2_info:
-          for stat, modifier in tier_2_info['stats'].items():
-            base_stats[stat] += modifier
-        abilities_2 = tier_2_info.get('abilities', None)
-        if abilities_2 != None:
-          abilities = abilities + tier_2_info['abilities']
+      for step in range(0,level+1):
+        level_string = 'level_{0}'.format(step)
+        if not level_string in class_data['levels']:
+          print('ERROR: could not load level {0} in class {1}'.format(step, name))
+          continue
+        level_details = class_data['levels'][level_string]
+        
+        level_stats = level_details.get('stats', {})
+        stats = combine_stats(stats, level_stats)
+        abilities = abilities + level_details.get('abilities', [])
+        if 'subclass_{0}_abilities'.format(subclass) in level_details:
+          abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
       
-      self.tier = tier 
-      self.original_name = name
+      self.level = level
+      super().__init__(name, abilities, stats, class_data['description'], '', '')
 
-      if tier == 2:
-        name = tmp
-
-      super().__init__(name, abilities, base_stats, description, quote, quote_author) 
+    def get_health(self):
+      summed_level = sum(range(self.level+1))
+      modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
+      return 20 + summed_level + modifier
 
     def markdownify(self, image_path):
       return self.base_markdownify(image_path, '##')
 
     def serialize(self, male=False):
-      serial = self.base_serialize()
-      serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.original_name.lower())
+      serial = dict(self.base_serialize())
+      serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
 
       with open('../data/art.json','r') as art_json:
         art = json.load(art_json)
 
-      serial['rights'] = art.get(self.original_name.lower(),None)
+      serial['rights'] = art.get(self.name.lower(),None)
+
+      all_data = get_rnr_class_data_with_name(self.name)
+      serial['levels'] = all_data['levels']
+
+      for level in serial['levels'].keys():
+        if not 'abilities' in serial['levels'][level]:
+          serial['levels'][level]['abilities'] = list()
+          continue
+        serial['levels'][level]['abilities'] = filterAbilities(serial['levels'][level]['abilities'])
       return serial
 
 class rnr_race(rnr_entity):
-  def __init__(self, name, abilities, stats, description, quote, quote_author):
-      super().__init__(name, abilities, stats, description, quote, quote_author) 
+  def __init__(self, name):
+    race_data = get_rnr_race_data_with_name(name)
+
+    if race_data == None:
+      raise Exception('ERROR: Could not load race {0}'.format(name))
+
+    super().__init__(name, race_data['abilities'], race_data['stats'], 
+                      race_data['description'], race_data['quote'], race_data['author'])
 
   def markdownify(self, image_path):
-      return self.base_markdownify(image_path, '#')
+    return self.base_markdownify(image_path, '#')
 
   def serialize(self, male=False):
     serial = self.base_serialize()
@@ -263,33 +234,18 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, character_origin, character_weakness, rnr_race_obj, rnr_class_obj, character_quote='', character_quote_author='', roll_stats=False):
+  def __init__(self, character_name, race_name, class_name, level, subclass = '', character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
+    rnr_race_obj = rnr_race(race_name)
+    rnr_class_obj = rnr_class(class_name, level, subclass)
+    
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
-    
-    new_stats = dict()
+    stats = combine_stats(rnr_class_obj.stats, rnr_race_obj.stats)
 
-    for key, value in rnr_race_obj.stats.items():
-      new_stats[key] = value + rnr_class_obj.stats[key]
-
-    stats = new_stats
-    
-    if roll_stats:
-      for stat in stats.keys():
-        val = random.randint(1,6) + random.randint(1,6) - 7
-        stats[stat] = val
-      min_stat = min(stats, key=stats.get)
-      final_roll = random.randint(1,6) + random.randint(1,6) - 7
-      stats[min_stat] = final_roll if final_roll > stats[min_stat] else stats[min_stat]
-
-      max_stat = max(stats, key=stats.get)
-      final_roll = random.randint(1,6) + random.randint(1,6) - 7
-      stats[max_stat] = final_roll if final_roll < stats[max_stat] else stats[max_stat]
-
+    final_character_name = "{0} {1}".format(rnr_race_obj.name, rnr_class_obj.name)
     if character_name.strip() != '':
-      character_name = "{0}: {1} {2}".format(character_name, rnr_race_obj.name, rnr_class_obj.name)
-    else:
-      character_name = "{0} {1}".format(rnr_race_obj.name, rnr_class_obj.name)
-    super().__init__(character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
+      final_character_name = "{0}: {1}".format(character_name, final_character_name)
+      
+    super().__init__(final_character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
     self.origin = character_origin
     self.weakness = character_weakness
@@ -297,6 +253,8 @@ class rnr_character(rnr_entity):
     self.rnr_class = rnr_class_obj.name
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
+    self.level = level
+    self.subclass = subclass
 
   def markdownify(self, image_path=""):
     return self.base_markdownify(image_path, '#')
@@ -306,60 +264,42 @@ class rnr_character(rnr_entity):
     serial["origin"] = self.origin
     serial['race'] = self.race
     serial['class'] = self.rnr_class
-    serial['health'] = self.get_health(tier=self.rnr_class_obj.tier)
+    serial['health'] = self.get_health()
     return serial
 
+  def get_health(self):
+    summed_level = sum(range(self.level+1))
+    modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
+    return 20 + summed_level + modifier
+
 class rnr_ability:
-  def __init__(self, name, description, type):
+  def __init__(self, name, description, ability_type):
     self.name = name
     self.description = description
-    self.type = type
-   
-def markdown_all_classes(data, ability_dict, image_path, outfile_name):
-  first = True
-  for class_type, details in sorted(data.items()):
-    if class_type == 'CUT':
-      continue
-    mode = 'w' if first else 'a'
-    first = False
-    with open(outfile_name, mode) as outfile:
-      outfile.write("# {0} \n".format(class_type.capitalize()))
-    standard_md_out(details, ability_dict, image_path, outfile_name, '##')
+    self.type = ability_type
 
-def mardown_all_races(data, ability_dict, image_path, outfile_name):
-  with open(outfile_name, 'w') as outfile:
-    pass
-  standard_md_out(data, ability_dict, image_path, outfile_name, '#')
 
-def filterAbilities(abilities, ability_dict):
-  filtered_abilities = dict()
-  for ability in abilities:
-    ability_type = ability_dict[ability]["type"]
-    if not ability_type in filtered_abilities:
-      filtered_abilities[ability_type] = list()
-    filtered_abilities[ability_type].append([ability,ability_dict[ability]["description"]])
-  return filtered_abilities
+####################################################################################
+#
+# MARKDOWN AND FILE OUTPUT
+#
+####################################################################################
 
-def mapAbilityType(abilitiy_type):
-  if abilitiy_type == "combat":
-    return "Combat Abilities"
-  elif abilitiy_type == "advantage":
-    return "Advantages"
-  elif abilitiy_type == "starting_item":
-    return "Starting Items"
-  elif abilitiy_type == "choice":
-    return "Choices"
-  else:
-    return "General Abilities"
+# def markdown_all_classes(data, ability_dict, image_path, outfile_name):
+#   first = True
+#   for class_type, details in sorted(data.items()):
+#     if class_type == 'CUT':
+#       continue
+#     mode = 'w' if first else 'a'
+#     first = False
+#     with open(outfile_name, mode) as outfile:
+#       outfile.write("# {0} \n".format(class_type.capitalize()))
+#     standard_md_out(details, ability_dict, image_path, outfile_name, '##')
 
-def convert_json_file_to_yml_file(input_file, output_file):
-  try:
-    with open(input_file) as data_file:
-        d = json.load(data_file)
-    with open(output_file, 'w') as outfile:
-        yaml.dump(d, outfile, default_flow_style=False)
-  except Exception as e:
-    print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+# def mardown_all_races(data, ability_dict, image_path, outfile_name):
+#   with open(outfile_name, 'w') as outfile:
+#     pass
+#   standard_md_out(data, ability_dict, image_path, outfile_name, '#')
 
 def printLogo():
   print()
@@ -383,54 +323,11 @@ def printLogo():
   print("        \\/                            \\/     \\/     \\/ ")
   print()
 
-def legendary_class_names():
-  load_Rangers_And_Ruffians_Data()
-  classes = list()
-  for rnr_class, tiers in class_data.items():
-    if 'legendary' in tiers:
-      tier_2 = tiers['legendary']
-      for tier, data in tier_2.items():
-        classes.append(tier.replace('_',' ').lower())
-  return classes
-
-#Rewrite
-def mergeAbilities(dictionary, abilities):
-  for key, values in dictionary.items():
-    for i in range(len(values["abilities"])):
-      ability = values["abilities"][i]
-      values["abilities"][i] += ": " + abilities[ability]["description"]
-    dictionary[key] = values
-  return dictionary
-
-def get_all_spellbooks():
-  load_Rangers_And_Ruffians_Data()
-  return spell_books
-
-def find_spell_by_name(spell):
-  load_Rangers_And_Ruffians_Data()
-  if spell in compendium_of_spells:
-    return compendium_of_spells[spell]['level'], compendium_of_spells[spell]['details']
-  else:
-    return None, None
-
-def gather_spells(spell_data):
-  load_Rangers_And_Ruffians_Data()
-
-  player_spellbook = dict()
-
-  tmp_spells = dict()
-  for spell in spell_data:
-    level, data = find_spell_by_name(spell.replace('_',' '))
-    #if data is None, the spell could not be found in the spellbook.   
-    if data == None:
-      print("Could not find {0}".format(spell))
-      continue
-    #put the spell in the player's spellbook.
-    if not level in player_spellbook:
-      player_spellbook[level] = dict()
-    player_spellbook[level][spell] = data
-  return player_spellbook
-
+####################################################################################
+#
+# DATA WRANGLING
+#
+####################################################################################
 
 def load_Rangers_And_Ruffians_Data():
   global spell_books, ability_dict, race_data, class_data, class_data_by_type, spells
@@ -439,7 +336,7 @@ def load_Rangers_And_Ruffians_Data():
     return
 
   ability_path = "../data/abilities.yml"
-  class_path = "../data/final_class_tiered_working.yml"
+  class_path = "../data/classes.yml"
   race_path = "../data/races.yml"
   spell_path = "../data/spells.yml"
   
@@ -467,6 +364,98 @@ def load_Rangers_And_Ruffians_Data():
   with open(ability_path) as data_file:
     ability_dict = yaml.load(data_file)
 
+def filterAbilities(abilities):
+  global ability_dict
+  filtered_abilities = dict()
+  for ability in abilities:
+    ability_type = ability_dict[ability]["type"]
+    if not ability_type in filtered_abilities:
+      filtered_abilities[ability_type] = list()
+    filtered_abilities[ability_type].append([ability,ability_dict[ability]["description"]])
+  return filtered_abilities
+
+def mapAbilityType(abilitiy_type):
+  if abilitiy_type == "combat":
+    return "Combat Abilities"
+  elif abilitiy_type == "advantage":
+    return "Advantages"
+  elif abilitiy_type == "starting_item":
+    return "Starting Items"
+  elif abilitiy_type == "choice":
+    return "Choices"
+  elif abilitiy_type == 'rule':
+    return "Rule"
+  elif abilitiy_type == 'spellbook':
+    return "Spellbook"
+  elif abilitiy_type == 'action':
+    return "Action" 
+  else:
+    return "General Abilities"
+
+def combine_stats(stat_1, stat_2):
+  new_stats = dict()
+  for key, value in stat_1.items():
+    new_stats[key] = value
+    if key in stat_2.keys():
+      new_stats[key] += stat_2[key]
+  return new_stats
+
+def convert_json_file_to_yml_file(input_file, output_file):
+  try:
+    with open(input_file) as data_file:
+        d = json.load(data_file)
+    with open(output_file, 'w') as outfile:
+        yaml.dump(d, outfile, default_flow_style=False)
+  except Exception as e:
+    print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+
+def mergeAbilities(dictionary, abilities):
+  for key, values in dictionary.items():
+    for i in range(len(values["abilities"])):
+      ability = values["abilities"][i]
+      values["abilities"][i] += ": " + abilities[ability]["description"]
+    dictionary[key] = values
+  return dictionary
+
+def get_all_spellbooks():
+  load_Rangers_And_Ruffians_Data()
+  return spell_books
+
+def find_spell_by_name(spell):
+  load_Rangers_And_Ruffians_Data()
+  if spell in compendium_of_spells:
+    return compendium_of_spells[spell]['level'], compendium_of_spells[spell]['details']
+  return None, None
+
+def gather_spells(spell_data):
+  load_Rangers_And_Ruffians_Data()
+
+  player_spellbook = dict()
+
+  tmp_spells = dict()
+  for spell in spell_data:
+    level, data = find_spell_by_name(spell.replace('_',' '))
+    #if data is None, the spell could not be found in the spellbook.   
+    if data == None:
+      print("Could not find {0}".format(spell))
+      continue
+    #put the spell in the player's spellbook.
+    if not level in player_spellbook:
+      player_spellbook[level] = dict()
+    player_spellbook[level][spell] = data
+  return player_spellbook
+
+def get_rnr_class_data_with_name(name):
+  load_Rangers_And_Ruffians_Data()
+  if name.title() in class_data:
+    return copy.deepcopy(class_data[name.title()])
+  return None
+
+def get_rnr_race_data_with_name(name):
+  load_Rangers_And_Ruffians_Data()
+  if name.title() in race_data:
+    return copy.deepcopy(race_data[name.title()])
+  return None
 
 def get_all_class_names():
   load_Rangers_And_Ruffians_Data()
@@ -479,6 +468,23 @@ def get_all_race_names():
 def get_all_stat_names():
   return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception','Vitality']
 
+#returns a set of all subclass options a class has by a level
+def subclasses_at_level(class_name, target_level):
+  class_data = get_rnr_class_data_with_name(class_name)
+  subclass_names = set()
+  for level in range(0,target_level+1):
+    level_string = 'level_{0}'.format(level)
+    level_details = class_data['levels'][level_string]
+    for key in level_details.keys():
+      if 'subclass' in key:
+        subclass_names.add(key.split('_')[1])
+  return subclass_names
+
+####################################################################################
+#
+# CLI Functions
+#
+####################################################################################
 
 #Given question and options, asks the question and won't return until an option is chosen.
 # if boring is true, boring question is given instead.
@@ -552,107 +558,68 @@ def removeOptions(options):
       answer = finished
   return options
 
-def load_all_race_objects(inflate_choice_stats=False):
-  load_Rangers_And_Ruffians_Data()
+####################################################################################
+#
+# OBJECT LOADING FUNCTIONS
+#
+####################################################################################
+
+def load_all_race_objects():
   races = list()
-  for race, info in race_data.items():
-    #class_name, abilities, stats, description, standings
-    if inflate_choice_stats and ('Choice Stat' in info['abilities'] or 'Greater Choice Stat' in info['abilities']):
-      mod = 1 if 'Choice Stat' in info['abilities'] else 2
-      for stat in ['Strength', 'Dexterity']:
-        info['stats'][stat] += mod
-        race_obj = rnr_race('{0} {1}'.format(stat, race), info['abilities'], info['stats'], info['description'], info['quote'], info['author'])
-        races.append(race_obj)
-        info['stats'][stat] -= mod
-    else:
-      race_obj = rnr_race(race, info['abilities'], info['stats'], info['description'], info['quote'], info['author'])
-      races.append(race_obj)
+  race_names = get_all_race_names()
+  for name in race_names:
+    try:
+      new_race = rnr_race(name)
+    except: 
+      continue
+    races.append(new_race)
   return races
 
-def load_all_class_objects(inflate_choice_stats=False,tier=1):
-  load_Rangers_And_Ruffians_Data() 
+#TODO doesn't take subclass into account.
+def load_all_class_objects(level=0):
   rnr_classes = list()
-  for c, info in class_data.items():
-    #class_name, abilities, stats, description, standings
-    if inflate_choice_stats and ('Choice Stat' in info['abilities'] or 'Greater Choice Stat' in info['abilities']):
-      mod = 1 if 'Choice Stat' in info['abilities'] else 2
-      for stat in ['Strength', 'Dexterity']:
-        info['stats'][stat] += mod
-        class_obj = rnr_class('{0} {1}'.format(stat, c), info['abilities'], info['stats'], info['description'], '','',info['heroic'],info['legendary'],tier=tier)
-        rnr_classes.append(class_obj)
-        info['stats'][stat] -= mod
-    else:
-      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], '','',info['heroic'],info['legendary'],tier=tier)
-      rnr_classes.append(class_obj)
+  class_names = get_all_class_names()
+  for class_name in class_names:
+    try:
+      new_class = rnr_class(class_name, level)
+    except: 
+      continue
+    rnr_classes.append(new_class)
   return rnr_classes
 
-def load_all_class_objects_by_type(tier=1):
+def load_all_class_objects_by_type(level=0):
   ret = dict()
   for c_type, c_info in class_data_by_type.items():
     ret[c_type] = list()
-    for c, info in c_info.items():
-      #class_name, abilities, stats, description, standings
-      class_obj = rnr_class(c, info['abilities'], info['stats'], info['description'], info['quote'], info['author'],info['heroic'],info['legendary'],tier=tier)
-      ret[c_type].append(class_obj)
+    for name in c_info.keys():
+      try:
+        new_class = rnr_class(name, level)
+      except: 
+        continue
+      ret[c_type].append(new_class)
   return ret
 
-def load_all_race_class_combos(inflate_choice_stats=False,tier=1):
-  rnr_races = load_all_race_objects(inflate_choice_stats=inflate_choice_stats)
-  rnr_classes = load_all_class_objects(inflate_choice_stats=inflate_choice_stats,tier=tier)
+def load_all_characters(level=0):
+  rnr_races = get_all_race_names()
+  rnr_classes = get_all_class_names()
 
   lis = list()
-  for race in rnr_races:
-    for r_class in rnr_classes:
-      character = rnr_character('', '', '', race, r_class)
+  for race_name in rnr_races:
+    for class_name in rnr_classes:
+      character = rnr_character('', race_name, class_name, level)
       lis.append(character)
   return lis
 
-def load_race(name):
-  name = name.title()
-  load_Rangers_And_Ruffians_Data()
-  race = race_data[name]
-  return rnr_race(name, race['abilities'], race['stats'], race['description'],race['quote'],race['author'])
-
-def load_class(name,tier=1):
-  name = name.title()
-  r_class = find_class_info(name)
-  return rnr_class(name, r_class['abilities'], r_class['stats'], r_class['description'],'','',r_class['heroic'], r_class['legendary'],tier=tier)
-
-def load_race_class_with_names(race_name, class_name, name="", origin="", roll_stats=False, tier=1):
-  race_name = race_name.title()
-  class_name = class_name.title()
-  race_obj = load_race(race_name)
-  class_obj = load_class(class_name,tier=tier)
-
-  return rnr_character(name, origin, '', race_obj, class_obj, roll_stats=roll_stats)
-
-def load_race_class_with_objects(race_obj, class_obj, name="",origin=""):
-  return rnr_character(name, origin, '', race_obj, class_obj)
-
-def find_class_info(name):
-  load_Rangers_And_Ruffians_Data()
-
-  found = class_data.get(name, None)
-
-  if found == None:
-    for rnr_class, data in class_data.items():
-      tier2_data = data['legendary']
-
-      for tier_2_class, legendary_class_data in tier2_data.items():
-        print('comparing {0} to {1}'.format(tier_2_class.replace('_', ' '), name))
-        if tier_2_class.replace('_', ' ') == name:
-          return data
-  else:
-    return found
-
-
-
-def load_combos_given_list(races, classes, tier=1):
-  combos = list()
+def load_combos_given_list(races, classes, level):
+  characters = list()
   for race in races:
     for rnr_class in classes:
-      combos.append(load_race_class_with_names(race,rnr_class,tier=tier))
-  return combos
+      try:
+        character = rnr_character('', race_name, class_name, level)
+      except:
+        continue
+      characters.append(character)
+  return characters
 
 
 

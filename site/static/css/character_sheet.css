@@ -23,3 +23,18 @@ div.tinyspacerdiv{
 div.major_title{
   font-size:24px;
 }
+
+div.greater_title{
+  font-size:16px;
+}
+
+div.minor_title{
+  font-size:14px;
+}
+
+@media print  
+{
+    div{
+        page-break-inside: avoid;
+    }
+}

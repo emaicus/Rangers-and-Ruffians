@@ -38,13 +38,7 @@
         <div class="row">
           <div class="col-3">
             {% if magic_class == True %}
-              {% if tier == 0 %}
-                MP: ______ / {{3 + (character["stats"]["Intelligence"])}} + ______
-              {% endif %}
-              {% if tier == 1 %}
                 MP: ______ / {{5 + (character["stats"]["Intelligence"])}} + ______
-              {% endif %}
-
             {% endif %}
           </div>
         </div>
@@ -104,6 +98,7 @@
           <div class="col-12">
             <hr>
             <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Character Sheet</a></p>
+            <p><a class="btn btn-primary text-white" href="level_up?chosen_class={{character['class']}}" role="button">View Your Level Up Sheet</a></p>
             {% if magic_class == True %}
             <p><a class="btn btn-primary text-white" href="spells?chosen_class={{character['class']}}&chosen_name={{chosen_name}}" role="button">Choose Your Spells</a></p>
             {% endif %}

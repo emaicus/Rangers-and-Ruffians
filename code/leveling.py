@@ -6,7 +6,6 @@ from operator import attrgetter
 import rnr_utils
 
 def print_header(level, name, health, file_stream):
-  print(level, name,health)
   file_stream.write('\n')
   file_stream.write('Level {0} {1}:\n'.format(level,name))
   file_stream.write('HP: {0}\n'.format(health))
@@ -44,8 +43,7 @@ def process_classes():
           subclasses.add('')
                 
         for subclass in subclasses:
-          print(subclass)
-          rnr_class_object = rnr_utils.rnr_character('', 'automaton', name, level,subclass=subclass)
+          rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
           print_header(level, name, rnr_class_object.get_health(), outfile)
           print_stats(rnr_class_object.stats, outfile)
           print_abilities(subclass, rnr_class_object.abilities, outfile)
@@ -182,12 +180,11 @@ def process_classes():
 
 def main():
   store_data = dict()
-  #process_classes()
+  process_classes()
   rnr_utils.load_Rangers_And_Ruffians_Data()
   combat = list()
   for key, value in rnr_utils.ability_dict.items():
     if value['type'].lower() == 'combat':
-      print(key)
       combat.append(key)
   print('there are {0} combat abilities'.format(len(combat)))
   #level_stats(store_data)

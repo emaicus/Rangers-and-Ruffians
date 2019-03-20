@@ -6,6 +6,7 @@ from collections import Counter
 import yaml
 import random
 import math
+import traceback
 
 ability_dict = dict()
 class_data = dict()
@@ -149,9 +150,9 @@ class rnr_entity:
       double_prefix+"lck : {0}".format(self.get_stat('luck',tier=tier)),
       double_prefix+"per : {0}".format(self.get_stat('perception',tier=tier)),
       double_prefix+"vit : {0}".format(self.get_stat('vitality',tier=tier)),
-      double_prefix+"tier 0 health: {0}".format(self.get_health(tier=0)),      
-      double_prefix+"tier 1 health: {0}".format(self.get_health(tier=1)),
-      double_prefix+"tier 2 health: {0}".format(self.get_health(tier=2)),     
+      double_prefix+"tier 0 health: {0}".format(self.get_health()),      
+      double_prefix+"tier 1 health: {0}".format(self.get_health()),
+      double_prefix+"tier 2 health: {0}".format(self.get_health()),     
       '' ]
       ret = '\n'.join(ret_lis)
       return ret
@@ -184,7 +185,7 @@ class rnr_class(rnr_entity):
 
     def get_health(self):
       summed_level = sum(range(self.level+1))
-      modifier = self.vitality * self.level * 2 if self.level > 0 else self.vitality
+      modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
       return 20 + summed_level + modifier
 
     def markdownify(self, image_path):
@@ -259,7 +260,7 @@ class rnr_character(rnr_entity):
 
   def get_health(self):
     summed_level = sum(range(self.level+1))
-    modifier = self.vitality * self.level * 2 if self.level > 0 else self.vitality
+    modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
     return 20 + summed_level + modifier
 
 class rnr_ability:
@@ -566,7 +567,7 @@ def load_all_class_objects(level=0):
   class_names = get_all_class_names()
   for class_name in class_names:
     try:
-      new_class = rnr_class(name, level)
+      new_class = rnr_class(class_name, level)
     except: 
       continue
     rnr_classes.append(new_class)
