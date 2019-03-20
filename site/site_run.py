@@ -19,7 +19,7 @@ magical_classes = {
   'druid' : ['the_novice_spellbook', "the_druid's_guidebook"],
   'necromancer' : ['the_macabre_manual',],
   'monk' : ['the_book_of_chi',],
-  'battle mage' : ['the_novice_spellbook',] 
+  'battle_mage' : ['the_novice_spellbook',] 
 }
 
 app = Flask(__name__, static_url_path='/static')
@@ -76,13 +76,13 @@ def creation_landing_page():
     return render_template("user_name_form.html", gender=info['gender'], race=info['race'], rnr_class=info['class'], random_name=random_name.title())
   elif next_to_populate == 'gender':
     serial_data = populate_gender()
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None)
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
   elif next_to_populate == 'class':
     serial_data = populate_class(info)
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats)
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
   elif next_to_populate == 'race':
     serial_data = populate_race(info)
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='race',prev_stats=prev_stats)
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='race',prev_stats=prev_stats,display_class=False)
   else:
     character = rnr_utils.rnr_character(info['name'],info['race'],info['class'],0)
     serial = character.serialize()
@@ -278,7 +278,6 @@ def level_up_page():
     return render_template('homepage.html')
   
   serial_data = r_class.serialize()
-
   return render_template("level_up_page.html",data=serial_data, class_name=rnr_class_name)
 
 

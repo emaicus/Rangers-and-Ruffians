@@ -113,7 +113,7 @@ Charm:
   description: As an action, you may cast a charm spell on an entity. If the
     entity fails an inner fire saving throw against your spell power, they cannot
     attack you until you attack them or they succeed a dc 15 inner fire saving throw.
-  type: advantage
+  type: combat
 Cheap Blow:
   description: On a critical hit, knock an enemy prone.
   type: combat
@@ -137,7 +137,7 @@ Crippling Shot:
     on a critical hit.
   type: combat
 Crushing Blow:
-  description: On a critical hit, you give all enemies who see disadvantage on their next action.
+  description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on their next action.
   type: combat
 Dark Vision:
   description: You can see even in perfect darkness.
@@ -175,7 +175,8 @@ Fast Paws:
   type: combat
 Favorite Terrain:
   description: At the beginning of your journey, pick a favorite terrain. Whenever
-    you are on it, you have advantage on any check related to the terrain.
+    you are on it, you have advantage on any check related to the terrain, and may take
+    advantage on an action every third turn during combat.
   type: choice
 Fear of Water:
   description: You have disadvantage when soaked through.
@@ -280,7 +281,7 @@ Happy Smiles:
   type: general
 High Ground:
   description: Gain advantage on any plunging attacks.
-  type: advantage
+  type: combat
 Historian:
   description: You have a deep knowledge of the land in which your adventure takes
     place. You gave advantage on any history or geography checks.
@@ -296,7 +297,7 @@ Hold the Line:
   type: combat
 Huntsman:
   description: You have advantage when attacking beasts.
-  type: advantage
+  type: combat
 Intimidate:
   description: You have advantage when attempting to intimidate enemies.
   type: advantage
@@ -339,7 +340,7 @@ Looming Presence:
   type: advantage
 Loose Skin:
   description: You have advantage when breaking grapples.
-  type: advantage
+  type: combat
 Low-Light Vision:
   description: You can see in low light.
   type: general
@@ -438,7 +439,7 @@ Rally:
     1d8 inspiration dice.
   type: combat
 Regular Patron:
-  description: You may add 1d8 to charisma checks made in a tavern.
+  description: You may add 1d6 to charisma checks made in a tavern.
   type: advantage
 Resist Magic:
   description: You may make any rolls against an enemy's spell power with advantage. You take 1d6 fewer damage from any spell.
@@ -540,7 +541,7 @@ The Family Sword:
   type: starting_item
 The Hand of God:
   description: Gain advantage on all roles when your health is below 20 percent.
-  type: advantage
+  type: combat
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
   type: spellbook
@@ -613,13 +614,13 @@ Wink Wink, Nudge Nudge:
   type: advantage
 Stocky:
   description: You have advantage against any check that could cause you to go prone.
-  type: advantage
+  type: combat
 Natural Sprinter:
   description:  When running short distances, take advantage on athletics checks.
   type: advantage
 Very Dangerous Over Short Distances:
   description: If you begin your turn next to an enemy, take advantage when attacking them.
-  type: advantage
+  type: combat
 Stone Skin:
   description: You take half damage on blunt force attacks (e.g. if you are hit with a club).
   type: general
@@ -650,7 +651,7 @@ Additional Influence Point:
   type: general
 Nimble:
   description: Targeted ranged attacks take disadvantage against you.
-  type: advantage
+  type: combat
 Determination:
   description: Once per rest and at the start of combat, gain a d10 inspiration dice.
   type: general
@@ -873,7 +874,7 @@ True Sleeplessness:
   type: general
 Gyroscopic Center of Mass: 
   description: It is difficult to knock you over. Add 5 to any check that involves knocking you prone.
-  type: advantage
+  type: combat
 Armored Exterior: 
   description: You naturally have an armor of 2.
   type: general

@@ -1,0 +1,403 @@
+Armor Penetrating Rounds:
+  description: Your shots now pass through up to 1 foot of stone and are unaffected
+    by armor.
+  type: combat
+Assassinate:
+  description: If an enemy is unsuspecting, do double damage. An enemy is unsuspecting
+    if they don't know you are present.
+  type: combat
+Aura of Advantage:
+  description: Once every three turns, give all party members advantage on their next
+    action.
+  type: combat
+Bash:
+  description: Stun an enemy on a critical hit, causing them to miss their next turn.
+  type: combat
+Beast Form:
+  description: Once per day as an action, you may morph to reveal the beast within. Add +1 to strength,
+    dexterity, and inner fire, and gain 1 temporary vitality. You stay in this form
+    for 3 turns. Gives advantage on intimidation checks.
+  type: combat
+Become Mist:
+  description: Once every three turns, become mist to have an attack pass right through
+    you as a reaction.
+  type: combat
+Bellow:
+  description: On your turn, you may unleash a mighty bellow. Weak flows may flee,
+    others are disadvantaged if they don't pass an inner fire saving throw.
+  type: combat
+Berserk:
+  description: Once per rest, you can go into a rage, giving you +1 strength and dexterity,
+    and giving you a temporary + 2 to inner fire, but decreasing your intelligence
+    and perception by 3. A rage lasts for 1 hour. Coming out of a rage prematurely
+    makes you fatigued, and gives you disadvantage on all rolls until you next sleep.
+  type: combat
+Berserker:
+  description: You take half damage from physical attacks while raging.
+  type: combat
+Blind Rage:
+  description: You make all spell saving throws with advantage while going berserk.
+  type: combat
+Burning Bright:
+  description: At will, you can make your halo blaze with the same intensity as the
+    light spell, dealing damage 1d6 damage to the undead.
+  type: combat
+Charge:
+  description: Once every three turns as an offhand action, charge an enemy of up
+    to one size larger than yourself and roll a d20. Knock them prone if you roll
+    a 14 or above while on foot, a 10 or above if on horseback.
+  type: combat
+Charm:
+  description: As an action, you may cast a charm spell on an entity. If the entity
+    fails an inner fire saving throw against your spell power, they cannot attack
+    you until you attack them or they succeed a dc 15 inner fire saving throw.
+  type: combat
+Cheap Blow:
+  description: On a critical hit, knock an enemy prone.
+  type: combat
+Commit to Memory:
+  description: At the beginning of a day, you may commit one spell to memory of level
+    2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.
+  type: combat
+Consecutive Normal Punches:
+  description: You may take three attacks per action.
+  type: combat
+Controlled Rage:
+  description: Coming out of a rage no longer gives you any negative effects.
+  type: combat
+Coordinated Strike:
+  description: If you and your animal companion are both attacking the same entity,
+    you both gain advantage on your attacks.
+  type: combat
+Cost Reduction:
+  description: Once every third turn, cast a spell at -1 cost.
+  type: combat
+Counter Attack:
+  description: Once per round of combat, you may strike back when an enemy attacks
+    you. Role a d20 and add your dexterity. If greater than 15, you land the blow.
+  type: combat
+Crippling Shot:
+  description: You can aim at an opponents knees for 1d4 damage, making them go prone
+    on a critical hit.
+  type: combat
+Crushing Blow:
+  description: On a critical hit, you give all enemies who see, including the attacked
+    enemy, disadvantage on their next action.
+  type: combat
+Disarming:
+  description: Once every turn as a reaction, force an enemy that attacks you to make
+    an contested saving throw against your charisma. If they fail, their attack must
+    be made with disadvantage.
+  type: combat
+Dodge:
+  description: Any time you are attacked, roll a d20 and add your dexterity. If you
+    get above a 15, the attack misses.
+  type: combat
+Double Tap:
+  description: Every three turns, you can shoot two arrows at a time.
+  type: combat
+Embue Weapon:
+  description: As an offhand action, add 1d6 elemental damage to your weapon at the
+    cost of 1 spell point. Lasts 1d4 turns.
+  type: combat
+Entangling Attack:
+  description: Once every three turns, you may make an entangling attack against an
+    enemy using minor magic. The enemy must make an inner fire saving throw against
+    your spell power. On a failure, the entity is ensnared, and cannot move. It may
+    attempt a dc 15 saving throw to escape every turn thereafter. All attacks against
+    an ensnared enemy have advantage.
+  type: combat
+Faithful Weapon:
+  description: After throwing your weapon, you can return it to yourself. You do not
+    take disadvantage when throwing hammers or maces.
+  type: combat
+Fast Paws:
+  description: Once every 3 turns, use two actions.
+  type: combat
+Fastest Gun:
+  description: Add 1d10 to your initiative.
+  type: combat
+Feeling Lucky:
+  description: Once every three turns, add your luck to an attack.
+  type: combat
+Feint:
+  description: Once every three turns, you may roll a d20 against an enemy attack.
+    Reduce the attack by the amount rolled.
+  type: combat
+Fires of Heaven:
+  description: When you perform a plunging attack, create an explosion dealing 2d10
+    damage to all entities within a 20 foot radius.
+  type: combat
+Flash Grenade:
+  description: Once per day, craft a flash grenade (max 3). These grenades have a
+    10ft radius on explosion. If an entity that sees the explosion a dc 10 dexterity
+    saving throw, they are blinded for 2 turns, and all actions they take have disadvantage.
+  type: combat
+Focus:
+  description: Once every three turns, focus before a shot to gain advantage on it.
+    Removes distance penalties.
+  type: combat
+From the Hip:
+  description: Once per combat round, fire a retaliation shot when you are attacked.
+    Roll a d20 and add your dexterity. If you get more than a 12, it hits, hurting
+    the enemy and stopping their attack.
+  type: combat
+Furious Blows:
+  description: When going berserk, you can make two attacks in a single action.
+  type: combat
+Greater Embue Weapon:
+  description: As an offhand action, add 1d8 elemental damage to your weapon at the
+    cost of 1 spell points. Lasts 1d4 turns.
+  type: combat
+Greater Mage Sheild:
+  description: As a reaction, spend 4 spell points to stop an enemies attack entirely,
+    regardless of target.
+  type: combat
+Gyroscopic Center of Mass:
+  description: It is difficult to knock you over. Add 5 to any check that involves
+    knocking you prone.
+  type: combat
+Hammer of Light:
+  description: Any weapon that you wield does an additonal 1d6 light damage to undead.
+  type: combat
+Hand to Hand:
+  description: Your hands are d6 weapons.
+  type: combat
+Harrying Shot:
+  description: On a critical hit, the attacked entity must make their next move with
+    disadvantage.
+  type: combat
+High Grain:
+  description: Add 1 to your firearm damage.
+  type: combat
+High Ground:
+  description: Gain advantage on any plunging attacks.
+  type: combat
+Hold the Line:
+  description: When any member of your party is on death's door, gain advantage on
+    all attacks and checks used to protect them.
+  type: combat
+Hollowpoint:
+  description: Your shots do 1d4 additional damage to unarmored targets.
+  type: combat
+Huntsman:
+  description: You have advantage when attacking beasts.
+  type: combat
+Infernal Blood:
+  description: At the cost of 5 hp, make a second action during combat.
+  type: combat
+Joust:
+  description: Add an extra damage dice to an attack if it is performed with a running
+    start.
+  type: combat
+Last Ditch Prayer:
+  description: Once every three turns in battle and once per day out of battle, say
+    a fervent Prayer to your deity, and add your luck to a roll.
+  type: combat
+Last Line of Defense:
+  description: If any of your allies are on death's door or have died during this
+    encounter, add an extra damage dice to all of your attacks.
+  type: combat
+Last Stand:
+  description: When your health is below 20%, you can take an extra action on your
+    turn.
+  type: combat
+Leaping Strike:
+  description: Add 1d10 damage to any attacks made while leaping.
+  type: combat
+Line Them Up:
+  description: If you slay an enemy, gain another attack action.
+  type: combat
+Loose Skin:
+  description: You have advantage when breaking grapples.
+  type: combat
+Mage Sheild:
+  description: As a reaction, spend 1 spell point to take half damage from an attack.
+  type: combat
+Major Embue Weapon:
+  description: As an offhand action, add 1d12 elemental damage to your weapon at the
+    cost of 1 spell points. Lasts 1d4 turns.
+  type: combat
+Monster Slayer:
+  description: Whenever you attack a beast classified as a monster, do an additional
+    1d10 damage on any attack.
+  type: combat
+Multi-Action:
+  description: Once every three turns, take an extra action.
+  type: combat
+Nimble:
+  description: Targeted ranged attacks take disadvantage against you.
+  type: combat
+Old Hand:
+  description: You have a deep understanding of the limits of your body and of others.
+    You can role a perception check as an offhand action to get an idea of an enemy's
+    remaining health.
+  type: combat
+One up the Sleeve:
+  description: Once every three turns, make an attack with a throwing knife as a bonus
+    action.
+  type: combat
+Penetration:
+  description: If enemies are in a row, your shot will pass right through them, hitting
+    multiple.
+  type: combat
+Pickpocket:
+  description: Whenever you attack, roll a d20 and add your dexterity. If the result
+    is greater than a 20, steal an item the enemy is holding.
+  type: combat
+Pistol:
+  description: You begin your adventure with a 1d6 pistol.
+  type: combat
+Piston Punch:
+  description: Once every three turns, you may perform a 1d8 strength based punch
+    on an enemy of your choice. On a critical hit, the enemy is knocked prone.
+  type: combat
+Poison Bite:
+  description: Once every 3 turns, you may make a bite attack for 1d6 damage. If your
+    enemey fails a dc10 inner fire saving throw, they are poisoned and take an additional
+    1d6 damage at the start of each turn until they pass a dc14 inner fire saving
+    throw.
+  type: combat
+Purge Decay:
+  description: Gain advantage and an additional 1d6 damage when fighting the undead.
+  type: combat
+Rally:
+  description: Once per rest, you may use an aura which gives all of your allies a
+    1d8 inspiration dice.
+  type: combat
+Rally Cry:
+  description: Once every three turns, let out a rally cry which allows all allies
+    to do an additional 1d6 damage on their next attack.
+  type: combat
+Rechamber:
+  description: Increase the damage dice of your rifle by one size.
+  type: combat
+Reduced Critical:
+  description: You perform a critical hit if you roll one less than your die's number
+    of sides.
+  type: combat
+Resolve:
+  description: When your health drops below 20%, all attacks do half damage against
+    you.
+  type: combat
+Rifle:
+  description: You begin your adventure with a 1d8 rifle.
+  type: combat
+Savage Critical:
+  description: On a critical hit, do an additional dice of damage.
+  type: combat
+Scope:
+  description: Craft a scope for your weapon to increase engagement range. Can look
+    through it to identify enemies at a distance. You do not take disadvantage on
+    attacks made up to 200 yards.
+  type: combat
+Self Repair:
+  description: Once every three turns during combat, you can self repair in place
+    of a full turn.
+  type: combat
+Shield Bash:
+  description: Use your turn to shield bash an enemy, dealing 1d6 damage and staggering
+    them if they fail a contested strength check on which you have advantage.
+  type: combat
+Shield of Men:
+  description: Once per round of combat, you can throw yourself in front of a teammate,
+    taking their damage for them. Any damage you recieve as a result is halved.
+  type: combat
+Shock Absorption:
+  description: Place a shock absorber on your weapon's stock to increase accuracy.
+  type: combat
+Sinner's Bane:
+  description: Your attacks do an additional 1d10 damage to undead or demonic entities.
+  type: combat
+Spirits Within:
+  description: Wrestle with a spirit, forcing it to fill you with its strength. Every
+    turn that you are embued with a spirit, make a dc 7 inner fire saving throw. If
+    you fail, take 1d6 psychic damage. If you critically fail, the spirit escapes
+    you. While you are embued with a spirit, you have advantage on all charisma checks.
+    You are also able to take an extra actions each turn, and may add +1 to strength,
+    dexterity, perception, inner fire, and luck.
+  type: combat
+Stay on Your Feet:
+  description: If you fall to zero health, make a dc14 inner fire saving throw. If
+    you succeed, drop to 1 health instead.
+  type: combat
+Steel Yourself:
+  description: Once every three turns, choose to take half damage from an attack.
+  type: combat
+Stocky:
+  description: You have advantage against any check that could cause you to go prone.
+  type: combat
+Strength of Men:
+  description: You have basic healing abilities. Once per rest, you may heal a party
+    member for 1d10 + inner fire health.
+  type: combat
+Strike First:
+  description: Once per turn, when an enemy attacks you, attack them first.
+  type: combat
+Swoon:
+  description: During battle, you can faint to avoid further damage. You may wake
+    up after one turn.
+  type: combat
+Sword and Flame:
+  description: Once every three turns, you may use a spell and attack in the same
+    action.
+  type: combat
+Tackle:
+  description: You can tackle an enemy up to one size larger than you to the ground.
+    Attempt either a dexterity or strength contested throw against the enemy, on which
+    you have advantage. If they fail, you grapple them.
+  type: combat
+Tactics:
+  description: Once per day, you may declare before an attack that you wish to double
+    it's damage.
+  type: combat
+Taunt:
+  description: You can taunt your opponents, forcing them to attack you instead of
+    others.
+  type: combat
+The Hand of God:
+  description: Gain advantage on all roles when your health is below 20 percent.
+  type: combat
+The Opener:
+  description: If you attack an enemy that has not yet moved in combat, do double
+    damage. If they fail a contested strength saving throw, they are knocked prone.
+  type: combat
+They're Retractable:
+  description: You have retractable, razor sharp claws capable of doing 1d6 damage.
+  type: combat
+Throw Caution to the Wind:
+  description: On your turn, optionally add an extra damage dice to all of your attacks,
+    but all enemy attacks get advantage on you for a turn.
+  type: combat
+Thunderous Blow:
+  description: Once every three turns, roll double the dice for your attack.
+  type: combat
+Trained Attack:
+  description: Three times per day, re-roll an attack.
+  type: combat
+Trained Precision:
+  description: Once every three turns, gain advantage on your attack.
+  type: combat
+Transfer Essense:
+  description: As an action, convert health into spell points or vice versa. One spell
+    point is equal to 5 health.
+  type: combat
+Twin Blade Parry:
+  description: Once per round of combat, you may strike back when an enemy attacks
+    you. Role a d20 and add your dexterity. If greater than 15, you land the blow.
+  type: combat
+Vengeful Death:
+  description: When you are reduced to zero hit points, you may make one last retaliatory
+    action. Works at most once per sleep in a bed.
+  type: combat
+Very Dangerous Over Short Distances:
+  description: If you begin your turn next to an enemy, take advantage when attacking
+    them.
+  type: combat
+Volley:
+  description: Once per rest, attack every enemy you can see in a single action.
+  type: combat
+Winged Jump:
+  description: Once every three turns, leap up to 40 feet using ethereal, angelic
+    wings. Counts as an action.
+  type: combat
