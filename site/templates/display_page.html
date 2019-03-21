@@ -82,6 +82,10 @@
                                  {%if rnr_entity['description'] != None %}
                                  <p> {{rnr_entity["description"]}} </p>
                                  {%endif%}
+                                 {% if display_class %}
+                                    <br/>
+                                    <a href="level_up?chosen_class={{rnr_entity['name']}}">View Level Up Sheet</a>
+                                 {% endif %}
                               </div>
                               <div id="{{rnr_entity['name'].lower()}}_art" class = "col s12" style = "font-family: 'Angkor'">
                                  {% if rnr_entity['rights'] != None %}
@@ -104,7 +108,9 @@
                                     </ol>
                                  </p>
                                  {% endif %}
-                                 <a href="level_up?chosen_class={{rnr_entity['name']}}">View Level Up Sheet</a>
+                                 {% if display_class %}
+                                    <a href="level_up?chosen_class={{rnr_entity['name']}}">View Level Up Sheet</a>
+                                 {% endif %}
                               </div>
                               <div id="{{rnr_entity['name'].lower()}}_stats" class = "col s12" style = "font-family: 'Angkor'">
                                  {%if rnr_entity['stats'] != None%}
@@ -128,7 +134,9 @@
                                     </tr>
                                     {% endfor %}
                                  </table>
-                                 <a href="level_up?chosen_class={{rnr_entity['name']}}">View Level Up Sheet</a>
+                                 {% if display_class %}
+                                    <a href="level_up?chosen_class={{rnr_entity['name']}}">View Level Up Sheet</a>
+                                 {% endif %}
                                  {%endif%}
                               </div>
                            </div>

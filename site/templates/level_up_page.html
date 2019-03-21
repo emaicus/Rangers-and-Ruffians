@@ -20,7 +20,7 @@
             <h2>{{class_name}} Level Up Sheet</h2>
             {% endif %}
             {% for level in range(0,11) %}
-              <div id={{'level_'+level|string}}>
+              <div id={{"level_"+level|string}}>
                 Level {{level}}
                 <ul>
                 {% if 'stats' in data['levels']['level_'+level|string] %}
@@ -40,6 +40,18 @@
                   {% endfor %}
                   </ul>
                 {% endif %}
+                {% for key in data['levels']['level_'+level|string].keys() %}
+                  {% if 'subclass' in key %}
+                    <li>{{key.split('_')[1].title()}} Abilities</li>
+                    <ul>
+                      {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
+                        {% for ability_name, ability_description in ability_set %}
+                          <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
+                        {% endfor %}
+                      {% endfor %}
+                    </ul> 
+                  {% endif %}
+                {% endfor %}
                 </ul>
               </div>
             {% endfor %}

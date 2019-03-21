@@ -523,17 +523,18 @@ Light Fighter:
         abilities:
         - Multiclass Option
         - Multi-Action
-        - Major Second Wind
       level_6:
         stats:
           Luck: 1
         abilities:
-        - Reduced Critical
+        - Major Second Wind
       level_7:
         stats:
           Inner_Fire: 1
           Strength: 1
           Dexterity: 1
+        abilities:
+        - Reduced Critical
       level_8:
         stats: 
           Perception: 1
@@ -780,13 +781,13 @@ Light Fighter:
           Perception: 1
       level_2:
         abilities:
-        - Counter Attack
+        - Twin Blades
         stats: 
           Intelligence: 1
       level_3:
         abilities:
         - Tracker
-        - Twin Blades
+        - Twin Blade Parry
         stats: 
           Charisma: 1
           Perception: 1
@@ -805,7 +806,6 @@ Light Fighter:
           Vitality: 1
         abilities:
         - Multiclass Option
-        - Twin Blade Parry
         - Far-Strider or Monster Hunter
         subclass_far-strider_abilities:
         - Favorite Enemy

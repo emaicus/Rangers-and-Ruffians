@@ -205,9 +205,13 @@ class rnr_class(rnr_entity):
 
       for level in serial['levels'].keys():
         if not 'abilities' in serial['levels'][level]:
-          serial['levels'][level]['abilities'] = list()
-          continue
-        serial['levels'][level]['abilities'] = filterAbilities(serial['levels'][level]['abilities'])
+          serial['levels'][level]['abilities'] = dict()
+        else:
+          serial['levels'][level]['abilities'] = filterAbilities(serial['levels'][level]['abilities'])
+        for key in serial['levels'][level].keys():
+          print(key)
+          if 'subclass' in key:
+            serial['levels'][level][key] = filterAbilities(serial['levels'][level][key])
       return serial
 
 class rnr_race(rnr_entity):
@@ -262,8 +266,8 @@ class rnr_character(rnr_entity):
   def serialize(self):
     serial = self.base_serialize()
     serial["origin"] = self.origin
-    serial['race'] = self.race
-    serial['class'] = self.rnr_class
+    serial['race'] = self.race.lower()
+    serial['class'] = self.rnr_class.lower()
     serial['health'] = self.get_health()
     return serial
 

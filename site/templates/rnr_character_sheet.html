@@ -16,7 +16,7 @@
       <div class="container" id = printable>
         <div class="row">
           <div class="col-12">
-            <div class="character_name">{{character["name"]}}</div>
+            <div class="character_name">{{character["name"].replace('_', ' ').title()}}</div>
           </div>
         </div>
         <div class="tinyspacerdiv"></div>
@@ -28,17 +28,26 @@
         {% endif %}
 
         <div class="row">
-          <div class="col-3" style="width=20.333">
+          <div class="col-2" style="width=20.333">
             HP:  ______ / {{character["health"]}}
           </div>
           <div class="col 2 align-self-start">
-            Gold: ______
+            Gold: ______&nbsp;&nbsp;Silver: ______&nbsp;&nbsp;Slag: ______
           </div>
         </div>
         <div class="row">
           <div class="col-3">
-            {% if magic_class == True %}
+            {% if magic_class == True and character["class"].lower() not in ["necromancer","monk","sorcerer"] %}
                 MP: ______ / {{5 + (character["stats"]["Intelligence"])}} + ______
+            {% endif %}
+            {% if character["class"].lower() == "necromancer" %}
+                Souls: ______
+            {% endif %}
+            {% if character["class"].lower() == "sorcerer" %}
+                Influence: ______ / ______
+            {% endif %}
+            {% if character["class"].lower() == "highborn" %}
+                Gumption: ______ / ______
             {% endif %}
           </div>
         </div>
@@ -82,7 +91,7 @@
 
        <div id="abilities">
          <p> 
-            {% for key in ('action', 'combat', 'advantage', 'starting_item', 'spellbook', 'choice','general','rule') if key in character["abilities"]%}
+            {% for key in ('rule', 'action', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'combat') if key in character["abilities"]%}
                <div class="major_title">{{key.replace('_',' ').title()}}</div>
                <ol>
                {% for ability in character["abilities"][key]%}
