@@ -193,12 +193,18 @@ class rnr_class(rnr_entity):
 
     def serialize(self, male=False):
       serial = dict(self.base_serialize())
-      serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
+      gender_string = 'male' if male else 'female'
+      if os.path.exists('static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
+        serial["path_to_image"] = '/static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())
+        art_request = '{0}_{1}'.format(gender_string, self.name.lower())
+      else:
+        serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
+        art_request = self.name.lower()
 
       with open('../data/art.json','r') as art_json:
         art = json.load(art_json)
 
-      serial['rights'] = art.get(self.name.lower(),None)
+      serial['rights'] = art.get(art_request,None)
 
       all_data = get_rnr_class_data_with_name(self.name)
       serial['levels'] = all_data['levels']
