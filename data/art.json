@@ -28,11 +28,11 @@
     "title" : "Jazera"
   },
   "dwarf_female" : {
-    "artist" : "F-Fornitani",
+    "artist" : "Patriartis",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/f-fornitani/art/Female-Dwarf-Warrior-661739681",
-    "title" : "Female Dwarf Warrior"
+    "url" : "https://www.deviantart.com/patriartis/art/Flaming-Swords-722419104",
+    "title" : "Flaming Swords"
   },
   "waterborn_female" : {
     "artist" : "Junica-Hots",
@@ -55,6 +55,13 @@
     "url" : "https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597",
     "title" : "Rinn"
   },
+  "high_elf_female" : {
+    "artist" : "Selenada",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/selenada/art/Elf-Girl-459931558",
+    "title" : "Elf Girl"
+  },
   "goblin_female" : {
     "artist" : "Patriartis",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
@@ -63,11 +70,11 @@
     "title" : "Run Through the Jungle"
   },
   "halfling_female" : {
-    "artist" : "YunaXD",
-    "license"  : "Creative Commons Attribution-No Derivative Works 3.0 License.",
-    "license_url" : "https://creativecommons.org/licenses/by-nd/3.0/",
-    "url" : "https://www.deviantart.com/yunaxd/art/Instintos-Salvajes-618475423",
-    "title" : "Instintos Salvajes"
+    "artist" : "NathanParkArt",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/nathanparkart/art/On-a-Quest-721516754",
+    "title" : "On a Quest"
   },
   "OLD_human_female" : {
     "artist" : "RAPHTOR",
@@ -96,6 +103,13 @@
     "license_url" : "https://creativecommons.org/licenses/by-sa/3.0/us/",
     "url" : "https://www.deviantart.com/deevad/art/Kynitia-322571692",
     "title" : "Kynitia"
+  },
+  "sprout_male" : {
+    "artist" : "OctoProbz",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/octoprobz/art/Sage-784012254",
+    "title" : "Sage"
   },
   "catterwol_male" : {
     "artist" : "Noxypia",
@@ -181,7 +195,14 @@
     "url" : "https://www.deviantart.com/johnnymorrow/art/Bounty-Hunter-618263949",
     "title" : "Bounty Hunter"
   },
-    "fighter" : {
+  "female_archer" : {
+    "artist" : "RobCV",
+    "license"  : "Creative Commons Attribution-Share Alike 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-sa/3.0/" ,
+    "url" : "https://www.deviantart.com/robcv/art/Archer-Comission-786575653",
+    "title" : "Archer-Comission"
+  },
+    "knight" : {
     "artist" : "fredrickruntu",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
@@ -216,12 +237,33 @@
     "url" : "https://www.deviantart.com/fredrickruntu/art/dragon-rider-461635302",
     "title" : "dragon rider"
   },
-  "gunslinger" : {
-    "artist" : "SolDevia",
+  "female_beastmaster" : {
+    "artist" : "Junowski",
+    "license"  : "Creative Commons Attribution 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by/3.0/",
+    "url" : "https://www.deviantart.com/junowski/art/Friendship-is-magic-787103260",
+    "title" : "Friendship is magic"
+  },
+  "male_cleric" : {
+    "artist" : "140203 S",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "url" : "https://www.deviantart.com/soldevia/art/Spellslinger-609290699",
-    "title" : "Spellslinger"
+    "url" : "https://www.deviantart.com/jw8401/art/140203-S-439637005",
+    "title" : "140203 S"
+  },
+  "fighter" : {
+    "artist" : "hifarry",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359",
+    "title" : "RHOSLYN - The Lost Princess"
+  },
+  "male_fighter" : {
+    "artist" : "NathanParkArt",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/nathanparkart/art/just-burnin-stuff-447985112",
+    "title" : "just burnin stuff"
   },
   "gunslinger" : {
     "artist" : "SolDevia",
@@ -229,6 +271,13 @@
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
     "url" : "https://www.deviantart.com/soldevia/art/Spellslinger-609290699",
     "title" : "Spellslinger"
+  },
+  "female_gunslinger" : {
+    "artist" : " MarcelaFreire",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398",
+    "title" : "Commission: Lauryn"
   },
   "highborn" : {
     "artist" : "maxprodanov",
@@ -244,7 +293,14 @@
     "url" : "https://www.deviantart.com/maxprodanov/art/Before-I-leave-749261058",
     "title" : "Before I leave"
   },
-  "knight" : {
+  "female_highborn" : {
+    "artist" : "MarcelaFreire",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/marcelafreire/art/Commission-Selena-Rosewood-785212777",
+    "title" : "Commission: Selena Rosewood"
+  },
+  "OLD_knight" : {
     "artist" : "takaya",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
@@ -272,6 +328,13 @@
     "url" : "https://www.deviantart.com/surugamonkey/art/Aasimar-Monk-680761336",
     "title" : "Aasimar Monk"
   },
+  "female_monk" : {
+    "artist" : "SimonPape",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/simonpape/art/The-Protectress-658162040",
+    "title" : "The Protectress"
+  },
   "rogue" : {
     "artist" : "raikoart",
     "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
@@ -293,6 +356,13 @@
     "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
     "url" : "https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015",
     "title" : "Sorca, Magus of the first Seal"
+  },
+  "female_sorcerer" : {
+    "artist" : "Patriartis",
+    "license"  : "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.",
+    "license_url" : "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "url" : "https://www.deviantart.com/patriartis/art/Playing-with-Fire-647239859",
+    "title" : "Playing with Fire"
   },
   "cleric" : {
     "artist" : "Zezhou",
