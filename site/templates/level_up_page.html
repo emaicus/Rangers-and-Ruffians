@@ -31,7 +31,7 @@
                   </li>
                 {% endif %}
                 {% if 'abilities' in data['levels']['level_'+level|string] %}
-                  <li>Abilities:</li>
+                  <li><b>Abilities:</b></li>
                   <ul>
                   {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
                     {% for ability_name, ability_description in ability_set %}
@@ -42,7 +42,7 @@
                 {% endif %}
                 {% for key in data['levels']['level_'+level|string].keys() %}
                   {% if 'subclass' in key %}
-                    <li>{{key.split('_')[1].title()}} Abilities</li>
+                    <li><b>{{key.split('_')[1].title()}} Abilities</b></li>
                     <ul>
                       {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
                         {% for ability_name, ability_description in ability_set %}
@@ -62,7 +62,7 @@
         <div class="row">
           <div class="col-12">
             <hr>
-            <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Spell Sheet</a></p>
+            <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Level Up Sheet</a></p>
           </div>
         </div>
       </div>
