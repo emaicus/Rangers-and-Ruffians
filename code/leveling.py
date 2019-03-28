@@ -48,7 +48,23 @@ def process_classes():
           print_stats(rnr_class_object.stats, outfile)
           print_abilities(subclass, rnr_class_object.abilities, outfile)
 
-    
+def level_details(level=0):
+  class_names = rnr_utils.get_all_class_names()
+  if not os.path.exists('level_output'):
+    os.mkdir('level_output')
+  
+  with open(os.path.join('level_output','level_{0}.txt'.format(level)), 'w') as outfile:
+    for name in class_names:
+      subclasses = rnr_utils.subclasses_at_level(name, level)
+
+      if len(subclasses) == 0:
+        subclasses.add('')
+              
+      for subclass in subclasses:
+        rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
+        print_header(level, name, rnr_class_object.get_health(), outfile)
+        print_stats(rnr_class_object.stats, outfile)
+        print_abilities(subclass, rnr_class_object.abilities, outfile)   
 
 # def level_stats(data):
 #   print("Getting level stats")
@@ -182,13 +198,57 @@ def main():
   store_data = dict()
   process_classes()
   rnr_utils.load_Rangers_And_Ruffians_Data()
-  combat = list()
+
+  all_races = rnr_utils.load_all_race_objects()
+  all_classes = rnr_utils.load_all_class_objects_by_type()
+
+  #rnr_utils.printLogo()
+  print('RANGERS AND RUFFIANS STAT TRACKER')
+  print('R&R CONSISTS OF:')
+  print('{0} Races'.format(len(all_races)))
+  print('{0} Classes consisting of:'.format(len(rnr_utils.load_all_class_objects())))
+
+  total = 0
+  for class_type, classes in all_classes.items():
+    total+= len(classes)
+    print('\t{0} {1} classes'.format(len(classes), class_type))
+  print()
+
+  ability_counts = {}
+  total = 0
   for key, value in rnr_utils.ability_dict.items():
-    if value['type'].lower() == 'combat':
-      combat.append(key)
-  print('there are {0} combat abilities'.format(len(combat)))
+    ability_type = value['type']
+    if not ability_type in ability_counts:
+      ability_counts[ability_type] = list()
+    ability_counts[ability_type].append(key)
+    total+=1
+
+  print('{0} Abilities consisting of:'.format(total))
+
+  for key, lis in ability_counts.items():
+    total+=len(lis)
+    print('\t{0} {1} abilities'.format(len(lis), key))
+  print()
+
+  total = 0
+  all_spellbooks = rnr_utils.get_all_spellbooks()
+  spell_counts = {}
+  for spell_book, levels in all_spellbooks.items():
+    spell_counts[spell_book] = list()
+    for level, spell_list in levels.items():
+      for spell in spell_list:
+        spell_counts[spell_book].append(spell)
+        total+=1
+  
+  print('{0} spells split across:'.format(total))
+  for spell_book, lis in spell_counts.items():
+    num_spells = len(lis)
+    print('\t{0} spells in {1}'.format(num_spells, spell_book))
+
   #level_stats(store_data)
   #balance_report()
+  level_details(0)
+  level_details(10)
   print('All done!')
 
 if __name__ == '__main__':

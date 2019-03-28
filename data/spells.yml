@@ -1150,73 +1150,7 @@ the_tome_of_the_ancients:
     Massive Levitation: 
       description: Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. 
         Requires 12 hours of casting time. Levitate anything up to the size of a mountain.
-Pantheon:
-  Lilith:
-    Hand of Lilith:
-      description: Lillith is the deity of peace, love, and healing. Those who follow her, called the Hands of Lillith, 
-        are tasked with curing injury and calming conflicts. Most towns and Cities have a House of Healing, the church
-        to Lillith. Lillith is displeased by acts of unnecessary violence, and is pleased by acts that inspire peace.
-      type: belief
-    Goddess of Healing:
-      description: Clerics and Paladins of Lilith may add 1d6 to all healing rolls. 
-      type: advantage
-  Eandar:
-    Browncloak:
-      description: Eandar is the deity of the downtrodden. The followers of Eandar, called the Browncloaks, are tasked
-        with helping the common man in whatever way they can, regardless of what laws or obstacles lie in their path.
-        Eandar encourages his followers to bend the rules when necessary, but also tasks them with avoiding harming
-        the innocent or betraying those they have entered into arrangements with. The followers of Eandar are often
-        cavalier in their relationships, and are often on the wrong side of the law. Eandar is pleased by random acts
-        of kindness and by acts that better the downtrodden, but considers it a sin to harm the innocent, place personal
-        desire above the wellbeing of others, or betray the trust of others.
-      type: belief
-    God of the Common Man:
-      description: Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.
-      type: advantage
-    Distrusted by Authorities: 
-      description: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
-      type: advantage
-  Iro:
-    Watcher: 
-      description: Iro is the deity of honor. Those bonded to him, called the watchers, are bound to seek out and end injustice
-        wherever they find it. Iro is displeased by acts of evil, and is pleased by the dispensing of justice.
-      type: belief
-    Iro's Judgement:
-      description: You may call upon Iro to judge an individual for you. It is up to you, then, to dispense justice.
-      type: rite
-Ceremonies:
-  General:
-    Marriage:
-      description: Bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
-        order, and gain advantage on all checks when the other is critically injured.
-      type: rite
-    Atonement:
-      description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
-        the entity a penance of your choice. Upon completion, they are restored to purity.
-      type: rite
-    Funeral:
-      description: Upon an individual’s death, you can perform a funeral for them. Any entity that recieved a proper funeral
-        cannot be resurrected by an evil entity.
-      type: rite
-    Birthing:
-      description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
-        by your diety until they are ten years of age. 
-      type: rite
-    Conversion:
-      description:  If an individual wishes to convert to follow your diety, you are able to perform the proper rites
-      type: rite
-    Pledge:
-      description: On your journey, an individual may pledge themselves to protect and serve you. They must have already
-        been converted to your deity. If they so choose, you must both go to a temple of your deity, or, that being
-        unavailable, craft one. To craft a temple, you must bless it with ash created from a holy flame and with holy water.
-        The one who is swearing allegiance must pledge to be always at your side, put you above themself, and share of everything
-        they have with you. You must pledge to uphold their dignity, and to ever be their ally. You then each must make
-        a small incision on your hand and mingle your blood. From that point on, you may speak with eachother telepathecially,
-        always have a vague idea of where the other is, and may split evenly the effects of any potion or food. If either of you
-        move more than one mile apart, you both want desperately to be reunited. If either of you choose to end this bond, you
-        both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
-        of 10 health.
-      type: rite
+
 
 
 
