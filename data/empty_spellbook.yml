@@ -1,0 +1,589 @@
+the_bard's_songbook:
+  Level 0: 
+    Forge Writing:
+      cost: 0
+      description: Magically forge the handwriting of anyone you have talked to.
+    Trick up Your Sleeve:
+      cost: 0
+      description: Summon up to forty feet of tied together cloths from your sleeve.
+    Control Shadows:
+      cost: 0
+      description: Influence the movement of shadows within thirty yards of yourself.
+    Throw Voice:
+      cost: 0
+      description: Magically throw your voice up to fifty feet.
+    Hypnotize:
+      cost: 0
+      description: Requires the use of a swinging trinket. Force someone to
+        make an inner fire saving throw against your spell power. On failure,
+        you may influence their actions for up to sixty seconds.
+    Conceal Weapon:
+      cost: 0
+      description: Magically conceal up to three weapons on your person.
+    Steal Voice:
+      cost: 0
+      description: Force an entity to make an inner fire saving throw against your
+        spell power. On failure, they loose their voice. They may attempt another saving
+        throw at disadvantage every turn or once every minute thereafter.
+  Level 1: 
+    Song of Haste:
+      cost: 1
+      description: Play a song which invigorates an ally, allowing them to take an extra action on their turn.  
+    Dazzling Lights:
+      cost: 1
+      description: Summon seven dazzling lights to dance about you. You may magically
+        them anywhere within twenty feet of yourself. The lights follow you for up to
+        one hour. Concentration.
+    Liar's Tounge:
+      cost: 1
+      description: Force someone to make an inner fire saving throw against your spell
+        power. If they fail, they believe the next thing that you tell them. They
+        may re-evaluate their beliefs when provided with proof of thier fallacy.
+    Fatigue:
+      cost: 1
+      description: Force someone to make an inner fire saving throw against your spell
+        power. If you succeed, they become exhausted, and take disadvantage on all relavant checks.
+    Blocking Hand:
+      cost: 1
+      description: Reaction. Roll a contested dexterity check against an attacking enemy. If you
+        succeed, reduce the damage they deal to you by your spell power.
+    Curse of Crying:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        If you succeed, they recieve a curse which causes them to weep constantly. The curse
+        does not leave until dispelled.
+    Cacophony:
+      cost: 1
+      description: Choose up to five objects that you can see. Those objects make a horrible
+        ruccus until you stop concentrating on them.
+    Disguise:
+      cost: 1
+      description: Magically change yourself so that you look like a generic person from the
+        region you are in.
+    Song of Slow Healing:
+      cost: 1
+      description: Play a song that heals an entity for 1d4 health each turn for 5 turns.
+    Song of Slow:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your 
+        spell power. If they fail, they are pushed back 1d4 spots in the initiative order.
+    Create Sound:
+      cost: 1
+      description: Create any sound that you have heard before.
+    Gnomish Dream:
+      cost: 1
+      description: Gain line of sight on a sleeping entity. Impart upon them any dream that
+        you wish, so long as the characters are all gnomes. 
+  Level 2: 
+    Wall of Sound:
+      cost: 2
+      description: Create a wall up to 40 feet long and 100 feet wide of pure
+        sonic energy. Any entity that attempts to pass through it must make
+        an inner fire saving throw against your spell power or be thrown 
+        back and take 2d10 damage.
+    Sleepwalking Suggestion:
+      cost: 2
+      description: Gain line of sight on a sleeping entity. Whisper up to a 14 word order. The
+        entity must make a disadvantaged inner fire saving throw against your spell power.
+        On failure, the entity will attempt to carry out your order while sleepwalking.
+    Magic Steed:
+      cost: 2
+      description: Summon a steed made of pure magical energy. The stallion has
+        20 health, and may be desummoned on command.
+    All the Little Creatures:
+      cost: 2
+      description: Summon 1d20 squirrels to fight for you. Each squirrel has 1 hp and
+        is capable of doing 1 damage per turn. Squirrels move together in combat.
+    Forget:
+      cost: 2
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        On faiure, the entity forgets 1d20 minutes of your choosing.
+    Greater Conceal Weapons:
+      cost: 2
+      description: Magically conceal up to three weapons on the person of up to seven individuals.
+    Marionette:
+      cost: 2
+      description: Force an enemy to make an inner fire saving throw against your spell power. 
+        On failure, you may control them as though the are a puppet and you hold their strings.
+        The entity may attempt an inner fire saving throw each turn thereafter to break your control.
+  Level 3: 
+    Ecstasy:
+      cost: 3
+      description: Force an enemy to make an inner fire saving throw against your spell power.
+        On faiure, they fall into a fit of overwhelming pleasure, and miss their turn.
+        They may repeat the saving throw on their own turn every turn after the first. 
+    Curse of the Lowlife: 
+      cost: 3
+      description: Force an enemy to make an inner fire saving throw against your spell power.
+        On failure, they are cursed so that everyone they have ever met begins to forgets
+        all positive memories associated with them. Within a week, everyone will remember only 
+        the negative aspects of the individual. The curse takes effect as soon as the individual
+        leaves someone's presence, and lasts until dispelled.
+    Prison of Ice:
+      cost: 3
+      description: Force an enemy to make a dexterity saving throw against your spell power.
+        On failure, they are surrounded by ten foot tall walls of ice, lined with sharpened
+        icicles. 
+    Song of Rage:
+      cost: 3
+      description: Play a song which sends one of your teammates into a rage. See the barbarian's
+        'Berserk' ability for details on the affects. 
+    Conjure Carriage:
+      cost: 3
+      description: Summon a carriage capable of seating four individuals, with a seat for two 
+        drivers. The carriage comes with two magical steeds, which may not be detatched, and
+        with an optional ethereal driver.
+    Song of Aging:
+      cost: 3
+      description: Force an enemy to make an inner fire saving throw against your spell power.
+        On failure, the enemy begins aging at a rate of 10 years per turn. You may continue
+        this spell as an offhand action each turn. The aging lasts until it is dispelled.
+  Level 4: 
+    Get Me Out of Here:
+      cost: 3
+      description: Teleport to a random place in the world that is at least 5 miles from 
+        your current position.
+    Ash Storm:
+      cost: 4
+      description: Summon a massive storm of ash 100 yards in diameter. All entities within
+        are considered to be in low visibility. Any entity within the ash storm must make
+        an inner fire saving throw against your spell power each turn to avoid choking on ash.
+    Summon Ronin: 
+      cost: 3
+      description: Summon knight of your level to fight for you. Lasts for one hour.
+  Level 5: 
+    Winged Magic Steed:
+      cost: 2
+      description: Summon a steed made of pure magical energy. The stallion has
+        20 health, and may be desummoned on command.
+    Manifest Will:
+      cost: 4
+      description: Say two words. The thing that you ask for appears.
+the_book_of_chi:
+  Combat Basic Techniques: 
+  General Basic Techniques: 
+  Master Techniques: 
+the_book_of_healing:
+  Level_0: 
+    Lighten Object:
+      cost: 0
+      description: Decrease the weight of an object by half.
+    Heavy Object:
+      cost: 0
+      description: Double the weight of an object.
+  Level_1:
+    Giant's Strength:
+      cost: 1
+      description: Grant a teammate one additional strength. Lasts 1+inner fire hours.
+    Monkey's Dexterity
+      cost: 1
+      description: Grant a teammate one additional dexterity. Lasts 1+inner fire hours.
+    Hound's Resolve:
+      cost: 1
+      description: Grant a teammate one additional inner fire. Lasts 1+inner fire hours.
+    Strong Lungs:
+      cost: 1
+      description: Grant a teammate or yourself strong lungs, rendering them immune to airborn 
+        toxins and smoke.
+    Waterbreathing:
+      cost: 1
+      description: Grant a teammate or yourself the ability to breath underwater. Lasts 1+inner fire hours.
+    Hold Weapon:
+      cost: 1
+      description: Concentration. Bind an enemy's weapon to their body. The enemy may attempt a 
+        strength check against your spell power to remove it.
+    Line in the Sand:
+      cost: 1
+      description: Draw a line in the sand. If an enemy crosses, you and a chosen ally have advantage
+        when attacking them.
+    Bulk Up:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        On failure, the entity gains 100 pounds.
+    Slow Heal:
+      cost: 1
+      description: Cast a healing spell upon an ally that restores 1d4 health to them per turn.
+        Lasts 2 + inner fire turns.
+    Delayed Heal:
+      cost: 1
+      description: Cast a healing spell on a teammate which does not take affect until you trigger
+        it as a bonus action. At that time, they are healed for 1d6 health. 
+    Slow:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your 
+        spell power. If they fail, they are pushed back 1d4 spots in the initiative order.
+    Haste:
+      cost: 1
+      description: Cast a spell which invigorates an ally, allowing them to take 
+        an extra action on their turn.   
+    Heighten Emotions:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        On failure, the affected entity's emotions are amplified to the extreme. This may cause
+        them to act recklessly or to take actions with disadvantage.
+    Augment Allied Attack: 
+      cost: 1
+      description: Reaction. When one of your ally's attacks, you may add 1d4+your inner fire 
+        to their damage.
+    Forget Ability:
+      cost: 1
+      description: Concentration. Force an entity to make an inner fire saving throw against your spell power.
+        On failure, you may force the entity to forget one of it's combat or physical abilities. The 
+        entity may repeat the check with disadvantage every turn thereafter.
+    Share Sense:
+      cost: 1
+      description: Concentration. Touch a teammate. For the duration of the spell, you are able to share 
+        their senses.
+  Level_2: 
+    Detect Life:
+      cost: 1
+      description: Make a check to see if you can detect life nearby. You may also check to see whether
+        you can detect a particular entity or entity type nearby.
+    Chains of Light:
+      cost: 2
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        On failure, the entity 
+    Wall of Light: 
+      cost: 2
+      description: Create a wall up to 40 feet high and 100 feet long of solid light.
+    Blind:
+      cost: 2
+      description: Force an enemy to make an inner fire saving throw against your spell power. 
+        On failure, the entity is struck blind, and must make all checks with disadvantage unless
+        it has darkvision or equivalent. The spell lasts until it is dispelled.
+    Remove Curse:
+      cost: 2
+      description: Remove a curse or dispell a negative enchantment on an individual. Requires
+        an inner fire check, and may be repeated daily.
+  Level_3: 
+    Mass Strong Lungs:
+      cost: 3
+      description: Grant a teammate or yourself strong lungs, rendering them immune to airborn 
+        toxins and smoke.
+  Level_4: 
+    Hold Your Weapons:
+      cost: 3
+      description: Concentration. Bind an up to 10 enemies' weapons to their body. Each enemy may attempt a 
+        strength check against your spell power to remove it.
+  Level_5: 
+    Holy Avatar:
+      cost: 3
+      description: Summon a radiant projection of yourself within 15 feet of an ally, regardless of where 
+        they are in the world. The projection has your stats, and you may share its senses. The projection
+        may attack, cast spells, and perform any of your abilities, but can not be healed. You may not
+        act in any way while controlling the projection, and loose track of your surroundings.
+    Battle Angel:
+      cost: 4
+      description: Summon a holy great weapon of your choice to your hand, and a shield to your other.
+        The sword does 1d20 damage plus 1d10 radiant damage, and the sheild allows you to perform the 
+        sheild bash ability as a bonus action. While you are in the battle angel state, you may perform
+        spells at -1 cost, have +3 strength, and have 50 hit points. 
+        When the 50 hit points drop to zero, you fall out of the battle angel state, and gain your 
+        previous hit points.
+the_druid's_guidebook:
+  Level_0: 
+    Claws:
+      cost: 0
+      description: Grow claws from your fingers capable of dealing 1d6 damage. 
+    Catseye:
+      cost: 0
+      description: Change your eyes to those of a cat, giving yourself low
+        light vision for one hour.
+    Crown of Fireflies:
+      cost: 0 
+      description: Summon a crown of fireflies to dance around your head, casting candlelight 
+        around you. You may command the fireflies up to a distance of 100 feet.
+    Spider Web:
+      cost: 0
+      description: Create incredibly sticky spiderweb, capable of holding a person. You are
+        able to create it at the rate of one cubic foot per five minute span.
+    Echolocate:
+      cost: 0
+      description: Let out an inaudible sonic pulse, which gives you a picture of a room, 
+        even if it is completely dark.
+  Level_1: 
+    Twisting Vine:
+      cost: 1
+      description: Force an enemy to make a dexterity saving throw against your spell power.
+        On failure, the enemy takes 1d8 damage, and is restrained by a tangling vine. 
+    Tailwind:
+      cost: 1
+      description: Summon a tailwind or current behind you.
+    Poison Jet
+      cost: 1
+      description: Hit an enemy with a blast of liquid poison, dealing 1d6 damage. Further,
+        force them to make an inner fire saving throw against your spell power. On failure,
+        they are poisoned, and take an additional 1d4 damage each turn for 3 turns.
+    Become Flame:
+      cost: 1
+      description: Become wreathed in fire for 1d20 seconds or two turns. During that time, anything
+        that you touch sets aflame, and takes 1d4 damage. Your belongings disappear and are undamaged.
+    Fool the Senses: 
+      cost: 1
+      description: Force an enemy to make an inner fire saving throw against your spell power.
+        On failure, convince them that they see, hear, or smell something that they do not.
+  Level_2: 
+    Thieves Curse:
+      cost: 1
+      description: Force an entity to make an inner fire saving throw against your spell power.
+        On failure, they are cursed so that they have an irresistable urge to steal something
+        once per hour. They then forget their acts of thievery, and stow the stolen goods 
+        in their quarters or a private place. The curse remains until it is dispelled.
+    Wall of ice:
+      cost: 2
+      description: Create a wall up to 40 feet high and 100 feet long of solid ice.
+    Hurl Boulder:
+      cost: 2
+      description: Hurl a boulder at an enemy. They may make an inner fire saving throw against
+        your spell power. On failure, they take 2d8 damage, on success, they take 1d8.
+    Spores:
+      cost: 2
+      description: Release poison spores into a 30 foot radius. Anyone who inhales them must take 1d6 damage
+        and make an inner fire saving throw against your spell power. On failure, they are poisoned, and
+        take an additional 1d6 damage each turn for 3 turns. 
+    Snowblind:
+      cost: 2
+      description: Summon a localized snowstorm with a 300 yard radius. The snows are incredibly heavy, 
+        and are considered low light.
+    Geyser:
+      cost: 2
+      description: Create a geyser which fires 40 
+    Remove Curse:
+      cost: 2
+      description: Remove a curse or dispell a negative enchantment on an individual. Requires
+        an inner fire check, and may be repeated daily.
+  Level_3: 
+    Hurricane Force Winds:
+      cost: 3
+      description: Summon hurricane force winds with up to a 30 foot verticle diameter. 
+        Any entity that passes through the winds must make a strength check against your spell
+        power to make any headway, and then must move at half speed. Creatures of size large or
+        greater may make the check with advantage.
+  Level_4: 
+    Criminals: 
+      cost: 4
+      description: Cast a mass curse on up to 100 people that you can see. All individuals 
+        who fail an inner fire saving throw against your spell power are gripped with the 
+        irresistable urge to steal anything that isn't boarded down. Lasts 1d12 hours.
+    Thunder Cloud: 
+      cost: 4
+      description: Create a thunder cloud which lasts for 3 turns. Each turn, the thundercloud
+        may summon a two lightning strikes which deal 2d10 damage to an entity of your choice.
+    Wings:
+      cost: 3
+      description: Summon an eagles wings to your back, giving you the ability to fly for 1d6 hours.
+  Level_5: 
+    Volcano:
+      cost: 5
+      description: Call forth a volcano with a caldera with a 10 foot radius at a point
+        within 50 feet of yourself. Lava bubbles
+        forth, spewing onto the battlefield. All standing where the volcano appears must
+        make a dexterity saving throw against your spell power. On a failure, they
+        are partially submerged in lava, and take 4d8 fire damage. On a critical failure,
+        they are fully submerged, and take 10d10 damage. Each turn, the volcano spews
+        lava. All creatures on the battlefield must make a dexterity check against your
+        spell power. On failure they take 4d8 fire damage. The volcano lasts until it is dispelled.
+    Tsunami: 
+      cost: 4
+      description: Summon a massive tidalwave to crash down on the battlefield originating
+        from the focus point for your magic. The tidalwave does 4d10 damage to all enemeies 
+        in a cone in front of you. All affected entities must make a strength saving throw
+        against your spell power, or be swept away by the tsunami. Large or greater entities
+        may make the check with advantage. Entities that are swept away move until they hit
+        something solid or have moved 50 feet. When they stop, they take 2d8 damage. After the
+        tsunami has swept across the battlefield, the battlefield has 2 feet of water on it,
+        and all movement must be taken at half speed. 
+    Fix Season:
+      cost: 7
+      description: Find the highest point in a region. Atop this point, create a pilar of rock, at least
+        ten feet tall and with a three foot radius. Spend some time carving symbols significant to you
+        into the stones. Affix crystals valuing 250 gold to the top of the spire, and channel your
+        energy into it. After 1 hour, the crystals begin to glow, and an area of up to 50 miles
+        will be stuck in the season of your choice.
+    Starfall: 
+      cost: 4
+      description: Spend one full round of combat focusing on brining down a massive meteor. 
+        If you are attacked, make a concentration check. On failure, you loose control of the spell
+        at no spell point penalty. On success, call down a meteor which strikes all enemies in a 
+        10 foot radius for 10d10 damage.
+the_macabre_manual:
+  0 Soul Cost: 
+    Vampiric Touch:
+      cost: 0
+      description: Touch an enemy and deal 1d6 damage. Increase your health by the damage dealt.
+    Sentient Shadows:
+      cost: 0
+      description: 
+    Drain inner fire
+    Isolate - remove magical connection to others
+  1 Soul Cost: 
+    Disease - infect someone with a contagious disease
+    Blast of screaming ghosts
+    Choke
+    Skeleton 
+    Save me - force the nearest entity to jump in front of a blow for you.
+    Sentry skull
+    Vampiric blade
+    Bloodlust
+    Blisters
+    Haunt: Summons a spirit to follow and haunt someone.
+  2 Soul Cost: 
+    Constrict 
+    Wall of Bone:
+      cost: 2
+      description: Create a wall up to 40 feet high and 100 feet long of solid light.
+  3 Soul Cost:
+    Hungry shadows
+    Death Beam
+    Possess
+  5 Soul Cost: 
+  10 Soul Cost:
+    Curse area with eternal night 
+the_novice_spellbook:
+  Level_0: 
+    - Ruin writing
+    - Disappearing writing
+    - Rapid fire snowball
+    - Magnify voice
+    - Rip/tear fabric
+    - Frozen Touch - Freeze things by touching them.
+    - Noodles
+    - Scourge (clean something)
+    - Transcribe Memory: Instantly render a sketch of a scene you remember
+    - Flare
+    - Candlelight
+    - Sticky (makes something sticky)
+    - Liver of Steel (drink without effect)
+  Level_1: 
+    Become a slime
+    Curse of Bedwetting
+    Increase gravity
+    Bounce (make something bouncy)
+    Corrode - you have to corrode
+    Mellon head
+    Electrified
+    Charge forward
+    Hide - Hide something or someone up to the size of a horse in a pocket dimension. Must be willing.
+    Weakness
+    Mark - mark something so that you always know what it is. Must be in sight, but can be far away. Use to mark fleeing thief.
+    Glacial Blast - Low level damge spell.
+    Lasso
+    Fog cloud
+    Tiny Elemental
+    Jelly Arms
+    Heat Air
+    Mirror Image
+    Falcon Punch!
+    Harden arms
+    Jet of Water
+    Lightning Touch
+    Rapid Fire Snowballs of Fury
+    Terrible Smell
+    Slackjaw (make a person’s jaw go slack)
+    Paint - Instantly paint up to a 100x100 area any way you desire. Roll checks to see how well it comes out.
+    High Speed Projectile: fling something from your hands at high speed.
+    Beam of heat
+    Frozen air blast
+    Create pit
+    Displacement
+    Restrain
+  Level_2: 
+    Become Ephemeral
+    Dragons breath
+    Platform
+    Turn into frog
+    Hail of Blades: Blades manifest in the air around you and all fire at a target of your choice.
+    Flamethrower
+    Magic chains
+    Rainbows: Fire rainbow beams from your fingers or mouth.
+    Energy Shots: 1d6 energy shots targeting up to as many creatures.
+    Longband Telepathic Message: Send 14 words to an individual you know, regardless of distance.
+    Wall of Stone:
+      cost: 2
+      description: Create a wall up to 40 feet high and 100 feet long of solid stone.
+    Magnets
+    Summon Cannon
+  Level_3: 
+    Curse of Insanity
+    Shrink person
+    Flash fry
+    Geyser of air
+    Loathing - compel an entity to avoid another
+    Clone - Split a person in two. They have one pool of hp, but can all attack.
+    Duplicate Object
+    Tenmu’s Terrible Tentacles (let you walk, let you grab)
+    Summon Bleck (A bleck is a little gooey creature. After twenty seconds, a bleck splits into two blecks).
+    Manifest Bear - Summon a bear
+    Trade bodies
+    Siege blast
+    Vortex
+  Level_4:
+    Nothing but Unicorns
+    Interplanar teleport
+    Summon Cannons
+    Biting winds
+    Chains of Fire
+    Wall of Steel:
+      cost: 2
+      description: Create a wall up to 40 feet high and 100 feet long of steel swords, spears, and axes
+        fused together.
+    Release the hounds
+    Purest self - object becomes archetypal version
+    Deadman’s contingency
+    Mass increase gravity
+    I know Malkizar (convince everyone who saw an event that there was another person there named Malkizar, who did something).
+    Tri-beam: fires at random beam of heat, frost, death, weakness
+    Flaming Flowers: Summon a 100 square foot field of flowers made of pure flame. BONUS: summon a single flower for zero cost.
+  Level_5: 
+    Fire and Fury
+    Taboo a word
+    Explosion!  “Darkness blacker than black and darker than dark, I beseech thee, combine with my deep crimson. The time of awakening cometh. Justice, fallen upon the infallible boundary, appear now as an intangible distortions! I desire for my torrent of power a destructive force: a destructive force without equal! Return all creation to cinders, and come from the abyss! Explosion!”
+the_sorcerer's_scrolls:
+  Level_0:
+    Tickle
+    Manifest thoughts as hologram
+  Level_1: 
+    Invisible slashing blade (offhand)
+    Disarm
+    Dangle upside down
+  Level_2: 
+    See through familiar
+    Hear through familiar
+    Enter Mind: Break into someone’s mind to learn things.
+  Level_3: 
+    Faithful hound
+    House cat
+    Fuse into Familiar
+  Level_4: 
+    Smash people together with telekinesis
+    Revenant armor that comes to life when you are down
+    Teleport to familiar
+  Level_5: 
+    Black hole
+the_tome_of_the_ancients:
+  Level 6: 
+  Level 8: 
+  Level 10: 
+the_wizard's_addendum:
+  Level_0: 
+  Level_1: 
+    Catch soul - catch a soul in a gem
+  Level_2: 
+    Become statue
+    Suppress magic item
+    Rain of arrows
+  Level_3: 
+    Iron body
+    Create tear in space time
+    Wall of Fire: 
+      cost: 3
+      description: Create a wall up to 40 feet high and 100 feet long of fire. Any entity that
+        moves through the flames takes 2d20 damage.
+    Door step - in one out another
+    Octahedral Barrier: A cagelike barrier swirls about you
+  Level_4: 
+    All weapons come to life for you
+    Disenchant
+  Level_5: 
+    Create Homunculus
+    Summon tiny star

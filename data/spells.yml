@@ -404,9 +404,9 @@ the_sorcerer's_scrolls:
     Disarm:
       charisma_cost: 12
       description: Disarm an enemy if they fail a saving throw against your spell power.
-    Grow:
+    Enlarge:
       charisma_cost: 14
-      description: Grow an object or entity to a desired size. Unwilling entities
+      description: Grow an object or entity to up to double its size. Unwilling entities
         can attempt a saving throw against your spell power each turn. Concentration.
     Jet of water:
       charisma_cost: 12
@@ -517,9 +517,6 @@ the_wizard's_addendum:
     Summoning Spell:
       cost: 0
       description: Summon an object of up to 20 pounds to you.
-    Throw Voice:
-      cost: 0
-      description: Magically throw your voice up to fifty feet.
   Level_1:
     Greater Manifest Will:
       cost: 1
@@ -787,13 +784,11 @@ the_druid's_guidebook:
     Forest Sense:
       description: Perform perception checks using the natural world around you. Take advantage
         on perception checks made using living natural entities to aid you.
-    Grow:
+    Control Plant Growth:
       description: Quickly grow a plant up to the size of a hedge in about 5 minutes or 1 turn in combat.
     Lightning Resistance:
       description: Resist electricity. You take 1d4 fewer damage from lightning based
         attacks.
-    Low Light Vision:
-      description: Give yourself low light vision for up to one hour.
     Mend:
       description: Instantly mend a broken item or object. You must have most of the
         pieces and the object must not be too complicated.
@@ -852,7 +847,7 @@ the_druid's_guidebook:
       description: Transform yourself into an adult sized animal. See the book of known beasts for more details.
     Forest Guardians:
       description: Summon an adult animal to aid you in battle.
-    Greater Grow:
+    Greater Control Plant Growth:
       description: Quickly grow a plant up to the size of a tree in about 30 seconds.
         The spell lasts for as long as you concentrate on it, allowing you to grow
         up to 120 trees per hour. After the first hour, begin making inner fire saving
@@ -865,12 +860,14 @@ the_druid's_guidebook:
         that element. Lasts 1 hour.
     Wall of Brambles:
       description: Create up to a 100 foot long wall of bramble bushes. Moving through
-        them requires a dexterity check, and results in 1d6 damage.
+        them requires 3 dexterity checks against your spell power, each of which results in
+        1d10 damage on failure. If a check is failed, the entity is stuck in the brambles
+        until its next turn.
   Level_4:
     Ents:
       description: Summon 2 ents to your aid. The ents have 40 health, attack twice,
         and do 1d8 damage per attack. Each ent has 5 spell points, and is capable
-        of casting wall of brambles, bark armor, and thorned caltrops.
+        of casting twisting vine, bark armor, and thorned caltrops.
     Resist the elements:
       description: An entity of your choice takes half damage from all elemental attacks.
         Lasts 12 hours.
@@ -895,7 +892,8 @@ the_druid's_guidebook:
         next 24 hours.
     Winter's Fury:
       description: Call a massive blizzard. All entities within the blizzard take
-        4d10 damage per turn, and have disadvantage in all things. Concentration.
+        4d6 damage per turn, have disadvantage in all things, and are considered
+        to be low light. Concentration.
 the_macabre_manual:
   0 Soul Cost:
     Ghastly Visage:
@@ -909,7 +907,7 @@ the_macabre_manual:
         their dreams.
     Rot:
       description: Cause an item to rot or deal 2d4 damage. Must touch the item.
-    Sense Death:
+    Detect Death:
       description: Sense nearby corpses.
     Shadow:
       description: Move like shadow through the darkness. Gain advantage on stealth
