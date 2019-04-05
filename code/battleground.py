@@ -29,6 +29,9 @@ class status:
     self.damage = damage
     self.stat_modification = dict(stat_modification)
 
+class combat_ability:
+  def __init__(self,)
+
 
 def load_combatants():
   teams = dict()

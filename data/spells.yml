@@ -48,7 +48,7 @@ the_book_of_healing:
       cost: 1
       description: You may bless water by touching it.
     Fake Death:
-      cost: 1
+      cost: 0
       description: Touch an willing entity to send them into a catatonic state that
         is impossible to distinguish from death.
   Level_1: 
@@ -167,7 +167,7 @@ the_book_of_healing:
     Cleanse with Fire:
       cost: 5
       description: Tongues of white flame spiral around you, enveloping any enemies
-        near you. Evil or undead enemies take 5d20 damage, other enemies take 5d10.
+        within a twenty foot radius. Evil or undead enemies take 5d20 damage, other enemies take 5d10.
     Divine Intervention:
       cost: 0
       description: This spell cost 0 spell points. Roll 1d10. On a critical success,
@@ -188,7 +188,7 @@ the_book_of_healing:
         died, wash them in holy water and and oil. Burn
         wood using your sacred flame, and draw the mark of your deity on their brow.
         After six hours of prayer, make an inner fire saving throw. If holy oil was
-        used, you have advantage. If the roll is 15 or higher, the entity is cured.
+        used, you have advantage. If the roll is 15 or higher, the entity is resurrected.
 the_novice_spellbook:
   Level_0:
     Acrid Mist:
@@ -367,7 +367,7 @@ the_novice_spellbook:
     Pillar of flame:
       charisma_cost: 17
       description: Create a Pillar of flame with a radius of 10 feet and up to 100
-        feet in height. The pillar does 3d10 damage to any enemies caught inside.
+        feet in height. The pillar does 4d10 damage to any enemies caught inside.
         Concentration, disappears if you move more than 100 feet away.
   Level_5:
     Anti magic ring:
@@ -591,7 +591,7 @@ the_wizard's_addendum:
         dexterity check to command the remaining swords to parry. On a successful parry,
         all but the parrying sword may attack the enemy as a reaction.
 the_bard's_songbook:
-  Level 0:
+  Level_0:
     Carry on the wind:
       description: Point at someone and they hear you regardless of distance.
     Cruel Limerick:
@@ -606,7 +606,7 @@ the_bard's_songbook:
     Sweet Nothings:
       description: Charm an individual attracted to your sex, giving you advantage
         when persuading them.
-  Level 1:
+  Level_1:
     Belch Fire:
       description: Belch fire onto something for 1d6 damage. If a creature is targetted,
         they must make an inner fire saving throw against your spell power. On failure, they are
@@ -651,7 +651,7 @@ the_bard's_songbook:
     Vigor:
       description: Allow a teammate an extra action on their next turn and to move at double speed.
         Lasts for 1 minute when out of battle.
-  Level 2:
+  Level_2:
     Battle Hymn:
       description: Play a battle hymn which gives all nearby allies 1 additional point
         on a stat of their choice and a d6 inspiration dice. Lasts 1 hour.
@@ -694,7 +694,7 @@ the_bard's_songbook:
     Tyrone's Ravenous Hunger:
       description: Cause an entity to become ravenously hungry. If they fail an inner
         fire saving throw against your spell power, they will attempt to eat the nearest entity to them.
-  Level 3:
+  Level_3:
     Animal Form:
       description: Transform yourself into an animal up to large in size. See the book of known beasts for more details.
     Harbinger of Doom:
@@ -726,7 +726,7 @@ the_bard's_songbook:
         stocked with modest food and drink. Only individuals that you want to have
         access to the homestead may enter it. The homestead lasts 24 hours. Nothing
         placed in the homestead will stay, and nothing from within may be taken out.
-  Level 4:
+  Level_4:
     Lightning Strike:
       description: Call down a blast of lightning on an enemy. Does 5d8 damage.
     Mass Suggestion:
@@ -745,7 +745,7 @@ the_bard's_songbook:
         dispelled.
     Zone of Truth:
       description: Create a zone with a 15 foot radius in which all must speak truthfully.
-  Level 5:
+  Level_5:
     Dominate Person:
       description: An entity must perform an inner fire check against your spell power.
         If they fail, they are dominated until dispelled, and must do as you command.
@@ -895,7 +895,7 @@ the_druid's_guidebook:
         4d6 damage per turn, have disadvantage in all things, and are considered
         to be low light. Concentration.
 the_macabre_manual:
-  0 Soul Cost:
+  Level_0:
     Ghastly Visage:
       description: Make yourself look like a horrible monster. Gain advantage on intimidation
         checks.
@@ -914,16 +914,13 @@ the_macabre_manual:
         checks when in shadow.
     Vivify:
       description: Make something rotten or dead appear living.
-  1 Soul Cost:
+  Level_1:
     Cripple:
       description: Force an enemy to make an inner fire saving throw against your spell power and
         deal 1d6 damage. On a failure, the enemy misses their next turn.
     Major Death Coil:
       description: Fire a ball of pure death from your hand. Deals 2d6 damage. Heals
         undead.
-    Minor Thrall:
-      description: Resurrect a zombie with 6 health and 1d6 damage. Works on standard
-        enemies.
     Minor Through the Eyes of the Little Ones:
       description: Take control of a nearby small animal such as a rat or crow. You
         lose control after 1 hour or after the animal moves 1 mile away. For the duration,
@@ -948,7 +945,10 @@ the_macabre_manual:
       description: Cause an enemy to see into the unseen realm of darkness. If they
         fail an inner fire saving throw against your spell power, they collapse, 
         unable to move. On a critical fail, their mind is broken until they are healed.
-  2 Soul Cost:
+  Level_2:
+    Zombie:
+      description: Raise a zombie minion from a fallen entity. The zombie has 8 health, does 1d6 damage,
+        and lasts at most seven days.
     Major Vivify:
       description: Make everything rotten or dead in a room appear living.
     Murder of Crows:
@@ -960,7 +960,7 @@ the_macabre_manual:
     Steal Senses:
       description: Remove an enemy's eyes, ears, or mouth. (Must cover their
         eyes, ears and mouth with your hands).
-  3 Soul Cost:
+  Level_3:
     Major Darkness:
       description: Fill a 100 square foot area with pitch darkness. Entities within the darkness must
         roll a perception check against your spell power to act effectively on their turn. If they
@@ -969,14 +969,14 @@ the_macabre_manual:
       description: Take control of a large animal, a weak minded person, or child.
         You lose control after 1 hour or after the creature moves 1 mile away. For the duration,
         your consciousness can inhabit the creature. 
-    Major Thrall:
-      description: Resurrect a fighter with 20 health and 1d10 damage. Works on standard
-        enemies. Also allows resurrection of larger enemies with poohbah generated
-        stats.
-  5 Soul Cost:
+    Ghoul:
+      description: Raise a ghoul from a fallen entity. The ghoul has 20 health and may attack 
+        twice for 1d10 damage per attack. Ghouls last for up to one month. Also Allows resurrection 
+        of larger enemies with Game Master generated stats.
+  Level_4:
     Antilife field:
       description: Create a field of death around yourself with a 10 foot radius.
-        Anything that enters the field takes 1d10 damage per turn. The field wilts
+        Anything living that enters the field takes 4d10 damage per turn. The field wilts
         and kills everything. Lasts for one hour or until desummoned.
     Fall:
       description: Force all enemies within a 100 foot radius to make an inner fire saving throw against your spell power.
@@ -990,7 +990,7 @@ the_macabre_manual:
     Sap Age:
       description: Steal the lifeforce from someone. Every 10 seconds or 1 turn in combat, you steal 1
         year of their life. This lifeforce can be given to someone else.
-  10 Soul Cost:
+  Level_5:
     Abomination:
       description: Knit together a monstrous abomination to fight for you. Requires
         5 corpses. The monster has 50 health, deals 1d10 blunt damage plus
@@ -1137,14 +1137,14 @@ the_book_of_chi:
     Aura of Calm: 
       description: Allies near you gain +2 on all inner fire saving throws.
 the_tome_of_the_ancients:
-  Level 6:
+  Level_6:
     True Enchantment:
       description: You are now able to make truly enchanted items. It takes days to make an enchanted object, and may involve multiple roles.
-  Level 8:
+  Level_8:
     Teleportation Circle:
       description: Requires diamonds, gold, and jewels valuing 50,000 gold. Craft a circle of teleportation. 
         Any circle of teleportation may link to another you have created or have access to.
-  Level 10: 
+  Level_10: 
     Massive Levitation: 
       description: Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. 
         Requires 12 hours of casting time. Levitate anything up to the size of a mountain.

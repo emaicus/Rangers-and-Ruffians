@@ -88,42 +88,56 @@ class rnr_entity:
       serial['quote_author'] = self.quote_author
       return serial
 
-    # def base_markdownify(self, image_path, emphasis):
-    #   load_Rangers_And_Ruffians_Data()
+    def base_markdownify(self, image_path, custom_chunk="",handbook=None):
+      load_Rangers_And_Ruffians_Data()
 
-    #   ret = ""
-    #   lowername = self.name.lower()
-    #   #relative path for now
-    #   lowername = lowername.replace(' ', '_')
-    #   if image_path != "":
-    #     path_to_image = "{0}/{1}.jpg".format(image_path.replace(' ', '_'), lowername)
-    #   else:
-    #     path_to_image = ""
-    #   description = self.description
-    #   abilities = self.abilities
+      ret = ""
+      lowername = self.name.lower().replace(' ', '_')
+      description = self.description
+      abilities = self.abilities
 
-    #   ret = "{0} {1} \n".format(emphasis, self.name)
-    #   if path_to_image != "":
-    #     ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, path_to_image, self.name)
-    #   if description != "":
-    #     ret += description + "  \n"
-    #   # if standings != "":
-    #   #   ret += "**Standings:** " + self.standings + "  \n\n"
+      ret = "# {0} \n".format(self.name.replace('_',' '))
+      ret += '<div></div>\n<div></div>\n\n'
       
-    #   ret += "#### Abilities:   \n"
-    #   abilities = filterAbilities(self.abilities, ability_dict)
-    #   for key in ('combat', 'advantage', 'starting_item', 'choice','general'):
-    #     if not key in abilities:
-    #       continue
-    #     ret += "##### {0}:   \n".format(mapAbilityType(key))
-    #     for ability in abilities[key]:
-    #       ret += "  * **{0}**: {1}  \n".format(ability[0], ability[1])
-    #     ret += "    \n"
-    #   ret += "\n##### Stats:  " + "  \n"
-    #   for stat in self.stats:
-    #     ret += "  * " +  stat + ": " + str(self.stats[stat]) + "  \n"
-    #   ret += "   \n"
-    #   return ret
+      if image_path != "":
+        ret += "<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2/site/static/images/{0}?raw=true' style='width:350px' />\n\n".format(image_path)
+        #ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, image_path, self.name)
+     
+      if custom_chunk != "":
+        ret += custom_chunk  
+      if not handbook is None:
+        for section in handbook["sections"]:
+          ret += '### {0}\n'.format(section["title"])
+          for subsection in section["subsections"]:
+            if 'title' in subsection and subsection["title"] != '':
+              ret += '#### {0}\n'.format(subsection["title"])
+            ret += subsection["text"]
+            ret += '\n\n'
+
+
+      ret += '___\n'
+      ret += '>## {0}\n'.format(self.name.replace('_',' '))
+      ret += '> <div></div>\n'
+      ret += '>\n'
+      ret += '>*{0}*\n'.format(description)
+      ret += '>___\n'
+      ret += '>|VIT|STR|DEX|INT|INF|CHR|PER|LUK|\n'
+      ret += '>|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n'
+      ret += '|{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|\n'.format(self.vitality,self.strength, self.dexterity, self.intelligence, self.inner_fire, self.charisma, self.perception, self.luck)
+      ret += '>___\n'
+      ret += '>#### Abilities:\n'
+      abilities = filterAbilities(self.abilities)
+      for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'combat'):
+        if not key in abilities:
+          continue
+        ret += ">##### {0}:   \n".format(mapAbilityType(key))
+        for ability in abilities[key]:
+          ret += "> * ***{0}:*** {1}  \n".format(ability[0], ability[1])
+        ret +='> <div></div>\n>\n'
+      #ret += '```\n```\n'
+
+      ret += "\\page\n"
+      return ret
 
     def __str__(self):
       ret_lis = [self.name,
@@ -166,7 +180,7 @@ class rnr_class(rnr_entity):
         raise Exception('ERROR: Could not load class {0}'.format(name))
       stats = class_data['base_stats']
       abilities = class_data['base_abilities']
-
+      self.handbook = class_data.get('handbook', None)
       for step in range(0,level+1):
         level_string = 'level_{0}'.format(step)
         if not level_string in class_data['levels']:
@@ -188,8 +202,56 @@ class rnr_class(rnr_entity):
       modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
       return 20 + summed_level + modifier
 
-    def markdownify(self, image_path):
-      return self.base_markdownify(image_path, '##')
+    def markdownify(self, male=False):
+      gender_string = 'male' if male else 'female'
+      if os.path.exists('../site/static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
+        image_path = 'class/{0}/{1}.jpg'.format(gender_string,self.name.lower())
+      else:
+        image_path = 'class/{0}.jpg'.format(self.name.lower())
+
+      return self.base_markdownify(image_path, handbook=self.handbook) + self.markdownify_level_sheet()
+
+    def markdownify_level_sheet(self):
+      ret = ""
+      all_data = get_rnr_class_data_with_name(self.name)
+      level_data = all_data['levels']
+      for i in range(0,11):
+        level = 'level_{0}'.format(i)
+        ret += '### {0}\n\n'.format(level.replace('_',' '))
+        ret += "<div style='margin-top:10px'></div>\n\n"
+        if 'stats' in level_data[level]:
+          ret += '#### Stats Bonuses\n  '
+          ret += '* '
+          for stat,val in level_data[level]['stats'].items():
+            ret+= '**{0}:** {1} '.format(stat.replace('_',' ').title(), val)
+          ret += '\n\n  \n'
+        if 'abilities' in level_data[level]:
+          ret += '#### New Abilities\n'
+          ret += "<div style='margin-top:10px'></div>\n\n"
+          level_abilities = filterAbilities(level_data[level]['abilities'])
+          for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
+            if not key in level_abilities:
+              continue
+            ret += "##### {0}:   \n".format(mapAbilityType(key))
+            for ability in level_abilities[key]:
+              ret += "* ***{0}:*** {1}  \n".format(ability[0], ability[1])
+            ret +='\n\n'
+        for key in level_data[level].keys():
+          if 'subclass' in key:
+            ret += '#### {0} Abilities\n'.format(key.split('_')[1].title())
+            ret += "<div style='margin-top:10px'></div>\n\n"
+            sub_ability = filterAbilities(level_data[level][key])
+            for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
+              if not key in sub_ability:
+                continue
+              ret += "##### {0}:   \n".format(mapAbilityType(key))
+              for ability in sub_ability[key]:
+                ret += "* ***{0}:*** {1}  \n".format(ability[0], ability[1])
+              ret +='\n\n'
+        #ret += '```\n```\n'
+
+      ret += "\\page\n"
+      return ret
 
     def serialize(self, male=False):
       serial = dict(self.base_serialize())
@@ -226,12 +288,18 @@ class rnr_race(rnr_entity):
 
     if race_data == None:
       raise Exception('ERROR: Could not load race {0}'.format(name))
-
+    self.quote = race_data['quote']
+    self.quote_author = race_data['author']
+    self.handbook = race_data.get('handbook', None)
     super().__init__(name, race_data['abilities'], race_data['stats'], 
                       race_data['description'], race_data['quote'], race_data['author'])
 
-  def markdownify(self, image_path):
-    return self.base_markdownify(image_path, '#')
+  def markdownify(self,male=False):
+    custom_chunk = '>{0}\n>\n>—{1}\n\n'.format(self.quote, self.quote_author)
+
+
+    gender = "male" if male else "female"
+    return self.base_markdownify("race/{0}/{1}.jpg".format(gender, self.name.replace(' ','_').lower()), custom_chunk=custom_chunk,handbook=self.handbook)
 
   def serialize(self, male=False):
     serial = self.base_serialize()
@@ -266,8 +334,9 @@ class rnr_character(rnr_entity):
     self.level = level
     self.subclass = subclass
 
-  def markdownify(self, image_path=""):
-    return self.base_markdownify(image_path, '#')
+  def markdownify(self):
+    ret += self.base_markdownify()
+    return ret
 
   def serialize(self):
     serial = self.base_serialize()
@@ -348,13 +417,15 @@ def load_Rangers_And_Ruffians_Data():
   ability_path = "../data/abilities.yml"
   class_path = "../data/classes.yml"
   race_path = "../data/races.yml"
-  spell_path = "../data/spells.yml"
+  spell_path = "../data/merged_spells.yml"
   
   with open(spell_path) as data_file:
     spell_books = yaml.load(data_file)
 
   for spellbook, chapters in spell_books.items():
     for level, spells in chapters.items():
+      if spells == None:
+        continue
       for spell, details in spells.items():
         compendium_of_spells[spell] = dict()
         compendium_of_spells[spell]['level'] = level
@@ -581,6 +652,7 @@ def load_all_race_objects():
     try:
       new_race = rnr_race(name)
     except: 
+      traceback.print_exc()
       continue
     races.append(new_race)
   return races

@@ -158,41 +158,42 @@ def level_details(level=0):
 #     races.append(rnr_entity(race_name, stats, abilities))
 #   return races
 
-# def balance_report():
-#   print("Generating Balance Report")
+def balance_report():
+  print("Generating Balance Report")
 
-#   all_classes = load_classes_no_type()
-#   all_races = load_all_races()
-#   all_abilities = load_all_abilities()
+  class_objects = rnr_utils.load_all_class_objects(10)
+  race_objects = rnr_utils.load_all_race_objects()
+  all_abilities = rnr_utils.ability_dict
+  all_ability_names = set(all_abilities.keys())
 
-#   all_ability_names = set(all_abilities.keys())
-#   class_objects = list()
-#   race_objects = load_race_objects(all_races)
 
-#   with open(os.path.join('level_output','balance_report.txt'), 'w') as outfile:
-#     outfile.write('THE STATE OF THE GAME\n')
-    
-#     #Create all level 10 classes.
-#     for class_name, class_data in all_classes.items():
-#       class_objects = class_objects + make_class_at_level(class_name, class_data, 10)
+  # with open(os.path.join('level_output','balance_report.txt'), 'w') as outfile:
+  #   outfile.write('THE STATE OF THE GAME\n')
 
-#     all_used_abilities = set()
-#     for class_object in class_objects:
-#       all_used_abilities.update(class_object.abilities)
+  all_used_abilities = set()
+  for class_object in class_objects:
+    all_used_abilities.update(class_object.abilities)
 
-#     for race_object in race_objects:
-#       all_used_abilities.update(race_object.abilities)
+  for race_object in race_objects:
+    all_used_abilities.update(race_object.abilities)
 
-#     outfile.write('\nThe following abilities are unused:\n')
-#     for ability in all_ability_names:
-#       if not ability in all_used_abilities:
-#         outfile.write('\t{0}\n'.format(ability))
+  print('The following abilities are unused:')
+  for ability in all_ability_names:
+    if not ability in all_used_abilities:
+      print('\t{0}'.format(ability))
 
-#     outfile.write('\nThe following abilities have no entry in abilities.yml:\n')
-#     for ability in all_used_abilities:
-#       if not ability in all_ability_names:
-#         outfile.write('\t{0}\n'.format(ability))
+  print('The following abilities have no entry in abilities.yml:')
+  for ability in all_used_abilities:
+    if not ability in all_ability_names:
+      print('\t{0}'.format(ability))
 
+def evaluate(num, target):
+  if num < target:
+    return 'FAIL'
+  elif num >= target*2:
+    return 'VICTORY!'
+  else:
+    return 'GOOD'
 
 def main():
   store_data = dict()
@@ -201,6 +202,8 @@ def main():
 
   all_races = rnr_utils.load_all_race_objects()
   all_classes = rnr_utils.load_all_class_objects_by_type()
+
+  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
 
   #rnr_utils.printLogo()
   print('RANGERS AND RUFFIANS STAT TRACKER')
@@ -229,27 +232,29 @@ def main():
     total+=len(lis)
     print('\t{0} {1} abilities'.format(len(lis), key))
   print()
-
+  
   total = 0
   all_spellbooks = rnr_utils.get_all_spellbooks()
   spell_counts = {}
   for spell_book, levels in all_spellbooks.items():
-    spell_counts[spell_book] = list()
+    print(spell_book)
     for level, spell_list in levels.items():
-      for spell in spell_list:
-        spell_counts[spell_book].append(spell)
-        total+=1
-  
-  print('{0} spells split across:'.format(total))
-  for spell_book, lis in spell_counts.items():
-    num_spells = len(lis)
-    print('\t{0} spells in {1}'.format(num_spells, spell_book))
+      num = len(spell_list)
+      total += num
+      if level in target_spell_counts:
+        print('\t{0} / {1} {2} spells: {3}'.format(num, target_spell_counts[level], level, evaluate(num, target_spell_counts[level])))
+    print()
+  print('TOTAL SPELLS: {0}'.format(total))
+  # print('{0} spells split across:'.format(total))
+  # for spell_book, lis in spell_counts.items():
+  #   num_spells = len(lis)
+  #   print('\t{0} spells in {1}'.format(num_spells, spell_book))
 
   #level_stats(store_data)
-  #balance_report()
+  balance_report()
   level_details(0)
   level_details(10)
   print('All done!')
-
+#309 + 210 519
 if __name__ == '__main__':
   main()

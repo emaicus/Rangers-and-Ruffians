@@ -19,6 +19,37 @@ Catterwol:
     for climing, more than one Catterwol has turned to the life of a sneak-theif.
     Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
     average mages, but prefer slim, dexterity based weapons.
+  handbook:
+    sections: 
+      - title: Silent and Dexterous
+        subsections:
+          - title: ""
+            text: Stalking on padded feet, the Catterwol Rouge makes her way carefully across
+              the rooves of the city of Linth. Her target is simple, information and nothing more.
+              Unfortunately, the information that she needs is buried inside of a chest locked
+              in the room of Lord Edmire himself. Far below, her party waits with baited breath, 
+              as she hops from roof to roof, and then slips into Edmire's quarters. *Roll a 
+              Stealth Check!*
+      - title: Perceptive
+        subsections:
+          - title: ""
+            text: Needlelike teeth show in a sharp smile as the Catterwol Bard steps forward.
+              "Hold on, surely we can work something out?" Isak, the kingpin of the city's thieves'
+              guild, scoffs. "Not this time." From the corner of his eye, the Bard just notices two shadowy
+              figures slip into view. His smile grows, and with a flash, he whips around and 
+              slings a throwing knife at one of the figures. *Roll for initiative!*
+      - title: Tribal
+        subsections:
+          - title: ""
+            text: Cattterwol tend to live in loose, nomadic tribes. As a general rule, they are 
+              deeply distrustful of outsiders, and are known to act in their own self-interest
+              more often than not. 
+      - title: Building a Cattwol Character
+        subsections: 
+          - title: ""
+            text: When building your Catterwol, consider how they came to belong to your party. Remember
+              that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
+              their family now? What members of the party is your character close to?
   stats:
     Charisma: 1
     Dexterity: 1
@@ -77,6 +108,32 @@ Gnome:
     Perception: -1
     Strength: 0
     Vitality: 2
+  handbook:
+    sections: 
+      - title: Tinker
+        subsections:
+          - title: ""
+            text: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
+              is coming along quite well, better than expected, actually. Not far away, the
+              rest of her party snores as they sleep. She should be sleeping as well, tomorrow
+              is the big day. But then, that's why she needs a spring loaded spear-thrower
+              in the first place. For a moment, she considers lying down, but then pulls her
+              goggles over her eyes. Hopefully, her party was sleeping heavily. With a grin,
+              she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
+      # - title: Magic Resistant
+      #   subsections:
+      #     - title: ""
+      #       text: 
+      - title: 
+        subsections:
+          - title: Eccentric
+            text: Most consider gnomes to be eccentric at best, and obtuse at worse.
+      # - title: Building a Cattwol Character
+      #   subsections: 
+      #     - title: ""
+      #       text: When building your Catterwol, consider how they came to belong to your party. Remember
+      #         that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
+      #         their family now? What members of the party is your character close to?
 Goblin:
   abilities:
     - Still Warm
@@ -144,9 +201,9 @@ Human:
   stats:
     Charisma: 0
     Dexterity: 0
-    Inner_Fire: 1
+    Inner_Fire: 2
     Intelligence: 0
-    Luck: 0
+    Luck: 1
     Perception: 0
     Strength: 0
     Vitality: 3
@@ -318,7 +375,7 @@ Automaton:
   quote: Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
           The project had limited success, and was on the brink of being defunded. In a desparate attempt to keep things
           going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
-          it is exactly that we created. Was it life, or was it some crude approximation. I know not. Nor, I think, does
+          it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does
           the automaton.
   author: Simon, Gnome Tinker
   description: The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
