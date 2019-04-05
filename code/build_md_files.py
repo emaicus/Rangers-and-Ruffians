@@ -31,5 +31,6 @@ if __name__ == "__main__":
       outfile.write(race.markdownify())
     for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
       outfile.write(rnr_class.markdownify())
+    outfile.write(rnr_utils.markdown_spellbooks())
   print()
   print("Done!")

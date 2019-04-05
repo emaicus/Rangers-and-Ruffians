@@ -220,7 +220,7 @@ class rnr_class(rnr_entity):
         ret += '### {0}\n\n'.format(level.replace('_',' '))
         ret += "<div style='margin-top:10px'></div>\n\n"
         if 'stats' in level_data[level]:
-          ret += '#### Stats Bonuses\n  '
+          ret += '#### Stats Bonuses  \n'
           ret += '* '
           for stat,val in level_data[level]['stats'].items():
             ret+= '**{0}:** {1} '.format(stat.replace('_',' ').title(), val)
@@ -401,6 +401,25 @@ def printLogo():
   print(" |____|_  /____/ |__|   |__|  |__(____  /___|  /____  >")
   print("        \\/                            \\/     \\/     \\/ ")
   print()
+
+def markdown_spellbooks():
+  ret = '# Spells  \n'
+  spellbooks = get_all_spellbooks()
+  for spellbook, chapters in spellbooks.items():
+    ret += '## {0}  \n'.format(spellbook.replace('_',' '))
+    for chapter, spell_list in chapters.items():
+      ret += '### {0}  \n'.format(chapter.replace('_',' '))
+      for spell, spell_data in spell_list.items():
+        if not 'charisma_cost' in spell_data:
+          if 'cost' in spell_data:
+            ret += '* **{0}:** (Cost: {1}) {2}  \n'.format(spell.replace('_',' '), spell_data['cost'], spell_data['description'])
+          else:
+            ret += '* **{0}:** {1}  \n'.format(spell, spell_data['description'])
+        else:
+          ret += '* **{0}:** (Cost: {1}, Charisma Cost: {2}) {3}  \n'.format(spell, spell_data['cost'],spell_data['charisma_cost'], spell_data['description'])
+    ret += "\\page\n"
+  return ret
+
 
 ####################################################################################
 #
