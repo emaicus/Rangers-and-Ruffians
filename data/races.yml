@@ -59,11 +59,11 @@ Catterwol:
     Perception: 1
     Strength: -1
     Vitality: 3
-Elf:
+Wood Elf:
   abilities:
     - Sleepless
     - Low-Light Vision
-    - Wink Wink, Nudge Nudge
+    #- Wink Wink, Nudge Nudge
     - Winged feet
     - Counter Attack
     - Detect Magic
@@ -79,11 +79,65 @@ Elf:
   stats:
     Charisma: 1
     Dexterity: 1
-    Inner_Fire: 0
+    Inner_Fire: 1
     Intelligence: 1
     Luck: 0
-    Perception: 1
+    Perception: 2
     Strength: -1
+    Vitality: 2
+High Elf:
+  abilities:
+    - Sleepless
+    - Low-Light Vision
+    - Wink Wink, Nudge Nudge
+    # - Winged feet
+    #- Counter Attack
+    - Detect Magic
+  quote: High Elves can be slippery folk. It seems to me that rarely say what they mean, 
+    and they seldom mean what they say. They're strong mages, though, and too clever
+    for their own good. If you're dealing with elves, try to appeal to their pride,
+    but be careful about it. They can see through simple flattery.
+  author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
+  description: High elves are among the most magical of the races. Reclusive by nature,
+    high elves often confine themselves to gleaming costal cities. When a high elf does
+    venture out into the world at large, it is often in a diplomatic capacity. 
+    High elves are as charming aas they are naturally beautiful, and commonly feel as though
+    it is their duty to maintain ballance in the world. High elves make 
+    good mages.
+  stats:
+    Charisma: 3
+    Dexterity: 0
+    Inner_Fire: 1
+    Intelligence: 3
+    Luck: 1
+    Perception: 0
+    Strength: -1
+    Vitality: 1
+Deep Elf:
+  abilities:
+    - Sleepless
+    - Dark Vision
+    - Winged feet
+    - Counter Attack
+    - Detect Magic
+    - Born in Darkness
+  quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
+    and they seldom mean what they say. They're strong mages, though, and too clever
+    for their own good. If you're dealing with elves, try to appeal to their pride,
+    but be careful about it. They can see through simple flattery.
+  author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
+  description: Elves are the most magical of the races. Forest-dwellers with long
+    lives, many elves spend their days practicing magic and honing their skills. Elves
+    are naturally beautiful, and this beauty benefits them when they deal with the other
+    races. Elves make strong mages and good dexterity based fighters.
+  stats:
+    Charisma: -2
+    Dexterity: 1
+    Inner_Fire: 2
+    Intelligence: 1
+    Luck: -1
+    Perception: 1
+    Strength: 1
     Vitality: 3
 Gnome:
   abilities:
@@ -191,7 +245,6 @@ Human:
   - Strength of Men
   - Rally
   - Tactics
-  - Choice Stat
   quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
   author: Orkensheild, Orc Archer
   description: Humans are the most average of the races. The race of men can become good 
@@ -205,12 +258,11 @@ Human:
     Intelligence: 0
     Luck: 1
     Perception: 0
-    Strength: 0
+    Strength: 1
     Vitality: 3
 Lizkin:
   abilities:
   - Color Choice
-  - Greater Choice Stat
   - Smokevision
   - Poison Bite
   - Poison Resist
@@ -227,7 +279,7 @@ Lizkin:
     Intelligence: -1
     Luck: 0
     Perception: 0
-    Strength: -1
+    Strength: 1
     Vitality: 4
 Waterborn:
   abilities:
@@ -252,7 +304,7 @@ Waterborn:
   stats:
     Charisma: 2
     Dexterity: 2
-    Inner_Fire: -1
+    Inner_Fire: 0
     Intelligence: 2
     Luck: 1
     Perception: 0
@@ -325,11 +377,11 @@ Daemonspawn:
   stats:
     Charisma: 1
     Dexterity: 0
-    Inner_Fire: 1
+    Inner_Fire: 2
     Intelligence: 0
     Luck: 1
     Perception: 0
-    Strength: 0
+    Strength: 1
     Vitality: 3
 Sprout:
   abilities: 

@@ -185,6 +185,11 @@ Fear the Light:
   description: You are considered undead, and therefore take extra damage from holy
     weapons.
   type: general
+Born in Darkness:
+  description: You are incredibly light sensitive, and take 1d6 damage per hour spent 
+    with your skin exposed to bright light or to the sun. As a result, you must wear 
+    protective garments durning the day.
+  type: general
 Feint:
   description: Once every three turns, you may roll a d20 against an enemy attack. Reduce
     the attack by the amount rolled.

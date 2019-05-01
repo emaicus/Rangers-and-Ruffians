@@ -16,7 +16,7 @@ def generate_combo_stats(races, classes):
   with open("stat_output/class_combos.txt", 'w') as outfile:
     for rnr_class in classes:
       outfile.write("Details for all {0}s\n".format(rnr_class))
-      combos = rnr_utils.load_combos_given_list(races, [rnr_class,])
+      combos = rnr_utils.load_combos_given_list(races, [rnr_class,], 1)
 
       for combo in combos:
         outfile.write(combo.tabbed_string())
@@ -26,13 +26,13 @@ def generate_combo_stats(races, classes):
   with open("stat_output/race_combos.txt", 'w') as outfile:
     for rnr_race in races:
       outfile.write("Details for all {0}s\n".format(rnr_race))
-      combos = rnr_utils.load_combos_given_list([rnr_race,],classes)
+      combos = rnr_utils.load_combos_given_list([rnr_race,],classes, 1)
       
       for combo in combos:
         outfile.write(combo.tabbed_string())
       outfile.write('\n')
 
-  all_combos = rnr_utils.load_all_race_class_combos(inflate_choice_stats=True)
+  all_combos = rnr_utils.load_all_race_class_combos(inflate_choice_stats=True, level=1)
   #get the data for all stats.
   with open("stat_output/all_combos.txt", 'w') as outfile:
     for stat in rnr_utils.get_all_stat_names():
@@ -44,7 +44,7 @@ def generate_combo_stats(races, classes):
 
 #Generate the race by race rankings.
 def rankRaces():
-  races = rnr_utils.load_all_race_objects(inflate_choice_stats=True)
+  races = rnr_utils.load_all_race_objects()
   with open("stat_output/race_rankings.txt", 'w') as outfile:
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
@@ -55,7 +55,7 @@ def rankRaces():
 
 #Generate the race by race rankings.
 def rankClasses():
-  classes = rnr_utils.load_all_class_objects(inflate_choice_stats=True)
+  classes = rnr_utils.load_all_class_objects(level=0)
   with open("stat_output/class_rankings.txt", 'w') as outfile:
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
@@ -227,19 +227,19 @@ def main():
   races = rnr_utils.get_all_race_names()
   classes = rnr_utils.get_all_class_names()
 
-  print("Generating raw combinations...")
-  generate_combo_stats(races, classes)
-  print("Generating race rankings...")
+  # print("Generating raw combinations...")
+  # generate_combo_stats(races, classes)
+  # print("Generating race rankings...")
   rankRaces()
-  print("Generating class rankings...")
+  # print("Generating class rankings...")
   rankClasses()
-  for tier in [0,1]:
-    print('Ranking by type for tier {0}...'.format(tier))
-    rankSpecial(tier=tier)
-    print('Finding outliers for tier {0}...'.format(tier))
-    outliers(tier=tier)
-  print('Generating health csv...')
-  health_csv()
+  # for tier in [0,1]:
+  #   print('Ranking by type for tier {0}...'.format(tier))
+  #   rankSpecial(tier=tier)
+  #   print('Finding outliers for tier {0}...'.format(tier))
+  #   outliers(tier=tier)
+  # print('Generating health csv...')
+  # health_csv()
   # print("Ranking classes by type...")
   # rankClassType(classes, all_stat_names)
   # print("Done.")

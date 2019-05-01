@@ -919,6 +919,7 @@ Light Fighter:
           Inner_Fire: 1
           Perception: 1
         abilities: 
+          - Second Action
           - Master Fighting Technique
           - Fighting Technique
       level_8:

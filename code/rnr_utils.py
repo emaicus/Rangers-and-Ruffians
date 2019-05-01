@@ -165,10 +165,7 @@ class rnr_entity:
       double_prefix+"lck : {0}".format(self.get_stat('luck',tier=tier)),
       double_prefix+"per : {0}".format(self.get_stat('perception',tier=tier)),
       double_prefix+"vit : {0}".format(self.get_stat('vitality',tier=tier)),
-      double_prefix+"tier 0 health: {0}".format(self.get_health()),      
-      double_prefix+"tier 1 health: {0}".format(self.get_health()),
-      double_prefix+"tier 2 health: {0}".format(self.get_health()),     
-      '' ]
+      double_prefix+"health: {0}".format(self.get_health())]
       ret = '\n'.join(ret_lis)
       return ret
 
@@ -199,8 +196,8 @@ class rnr_class(rnr_entity):
 
     def get_health(self):
       summed_level = sum(range(self.level+1))
-      modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
-      return 20 + summed_level + modifier
+      modifier = self.vitality * (self.level + 1)
+      return 15 + summed_level + modifier
 
     def markdownify(self, male=False):
       gender_string = 'male' if male else 'female'
