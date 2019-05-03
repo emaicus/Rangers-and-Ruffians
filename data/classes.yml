@@ -44,6 +44,7 @@ Heavy Fighter:
           Charisma: 1
         abilities:
         - Shield of Men
+        - Shield Up
       level_4:
         stats:
           Dexterity: 1
@@ -55,20 +56,20 @@ Heavy Fighter:
           Strength: 1
         abilities:
         - Offhand Attack
+        - Steel Yourself
         - Multiclass Option
       level_6:
         stats:
           Charisma: 1
           Inner_Fire: 1
         abilities:
-        - Steel Yourself
+        - Cleave
       level_7:
         stats:
           Dexterity: 1
           Intelligence: 1
         abilities:
         - Second Action
-        - Shield Up
       level_8:
         stats:
           Perception: 1
@@ -82,6 +83,7 @@ Heavy Fighter:
       level_10:
         abilities:
         - Reduced Critical
+        - Sword of Honor
   Paladin:
     description: Palidins are Soldiers of the Light, and are adept both at hand
       to hand combat and basic healing magic. Paladins are devoted to their deity,
@@ -115,6 +117,7 @@ Heavy Fighter:
     levels:
       level_0:
         abilities:
+        - The Book of Healing
         - Learning Spells
         - Inner Fire Based Spellcaster
         - Spell Power
@@ -127,6 +130,7 @@ Heavy Fighter:
           Inner_Fire: 1
           Charisma: 1
         abilities:
+        - Link Lifeforce
         - Level One Spells
         - Learn Spells
       level_2:
@@ -155,8 +159,9 @@ Heavy Fighter:
           Inner_Fire: 1
           Perception: 1
         abilities:
-        - Multiclass Option
+        - Offhand Attack
         - Greater Offhand Spell
+        - Multiclass Option
         - Learn Spells
       level_6:
         stats:
@@ -171,14 +176,14 @@ Heavy Fighter:
         stats:
           Perception: 1
         abilities:
+        - Beacon of Hope
         - Second Action
-        - The Book of Healing
         - Learn Spells
       level_8:
         stats:
           Dexterity: 1
         abilities:
-        - Beacon of Hope
+        - Last Line of Defense
         - Level Four Spells
         - Learn Spells
       level_9:
@@ -252,6 +257,7 @@ Heavy Fighter:
       level_5:
         abilities:
         - Multiclass Option
+        - Warmaster
         - Always Angry
         - Throw Anything
       level_6:
@@ -259,112 +265,115 @@ Heavy Fighter:
           Perception: 1
         abilities:
         - Blind Rage
+        - Line Them Up
       level_7:
         abilities:
-        - Controlled Rage
-        - Line Them Up
+        - Throw Caution to the Wind
+        - Savage Critical
         - Choice Stat
       level_8:
         stats:
           Inner_Fire: 1
         abilities:
-        - Savage Critical
+        - Controlled Rage
+        - Berserker
       level_9:
         stats:
           Perception: 1
         abilities:
         - Offhand Attack
+        - Reduced Critical
       level_10:
         abilities:
-        - Berserker
-        - Reduced Critical
-  Hedge_Knight:
-    description: Hedge knights are mounted fighters who are adept at fighting from horseback.
-      A hedge knight is a knight that hasn't made it yet. Hedge knights
-      aren't supported by a major house, and instead many try to earn their glory by fighting
-      in tournaments or as sellswords. Most hedge knights spend their lives on the road, 
-      with only a few possessions to their name, which they hold dear. Hedge knights are
-      excellent riders, and are skilled at mounted combat. To build your hedge knight, 
-      spend some time to think about how they got where they are. How did they end up
-      becoming a hedge knight? What is their goal? What are their ideals, and how
-      were they affected by their current circumstances? How will being a hedge knight
-      affect how you interact with your party?
-    standings: Hedge Knights are not fond of Knights
-    base_stats:
-      Charisma: -3
-      Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: -1
-      Luck: -2
-      Perception: 0
-      Strength: 0
-      Vitality: 4
-    base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
-    - Mounted Warrior
-    - Armored
-    levels:
-      level_0:
-        abilities:
-        - Born in the Saddle
-        - Ruffians
-      level_1:
-        stats:
-          Inner_Fire: 1
-        abilities:
-        - Charge
-      level_2:
-        abilities:
-        - Under the Stars
-        stats:
-          Perception: 1
-      level_3:
-        abilities:
-        - Steady
-        stats:
-          Strength: 1
-      level_4:
-        stats:
-          Dexterity: 1
-          Inner_Fire: 1
-        abilities:
-        - Reduced Critical
-      level_5:
-        abilities:
-        - Multiclass Option
-        - Steel Yourself
-        stats:
-          Charisma: 1
-      level_6:
-        abilities:
-        - Joust
-        - Shield Up
-        stats:
-          Perception: 1
-      level_7:
-        abilities:
-        - Second Action
-        stats:
-          Dexterity: 1
-          Inner_Fire: 1
-      level_8:
-        abilities:
-        - Throw Caution to the Wind
-        stats: 
-          Strength: 1
-          Charisma: 1
-      level_9:
-        abilities:
-        - Reduced Critical
-        stats:
-          Perception: 1
-      level_10:
-        abilities:
-        - The Hand of God
-        stats: 
-          Luck: 1
+        - Glory
+        - Spirit of Rage
+  # Hedge_Knight:
+  #   description: Hedge knights are mounted fighters who are adept at fighting from horseback.
+  #     A hedge knight is a knight that hasn't made it yet. Hedge knights
+  #     aren't supported by a major house, and instead many try to earn their glory by fighting
+  #     in tournaments or as sellswords. Most hedge knights spend their lives on the road, 
+  #     with only a few possessions to their name, which they hold dear. Hedge knights are
+  #     excellent riders, and are skilled at mounted combat. To build your hedge knight, 
+  #     spend some time to think about how they got where they are. How did they end up
+  #     becoming a hedge knight? What is their goal? What are their ideals, and how
+  #     were they affected by their current circumstances? How will being a hedge knight
+  #     affect how you interact with your party?
+  #   standings: Hedge Knights are not fond of Knights
+  #   base_stats:
+  #     Charisma: -3
+  #     Dexterity: 1
+  #     Inner_Fire: 0
+  #     Intelligence: -1
+  #     Luck: -2
+  #     Perception: 0
+  #     Strength: 0
+  #     Vitality: 4
+  #   base_abilities:
+  #   - Weapon Proficiency
+  #   - Action 
+  #   - Offhand Action
+  #   - Mounted Warrior
+  #   - Armored
+  #   levels:
+  #     level_0:
+  #       abilities:
+  #       - Born in the Saddle
+  #       - Ruffians
+  #     level_1:
+  #       stats:
+  #         Inner_Fire: 1
+  #       abilities:
+  #       - Charge
+  #     level_2:
+  #       abilities:
+  #       - Under the Stars
+  #       stats:
+  #         Perception: 1
+  #     level_3:
+  #       abilities:
+  #       - Steady
+  #       stats:
+  #         Strength: 1
+  #     level_4:
+  #       stats:
+  #         Dexterity: 1
+  #         Inner_Fire: 1
+  #       abilities:
+  #       - Reduced Critical
+  #     level_5:
+  #       abilities:
+  #       - Multiclass Option
+  #       - Steel Yourself
+  #       stats:
+  #         Charisma: 1
+  #     level_6:
+  #       abilities:
+  #       - Joust
+  #       - Shield Up
+  #       stats:
+  #         Perception: 1
+  #     level_7:
+  #       abilities:
+  #       - Second Action
+  #       stats:
+  #         Dexterity: 1
+  #         Inner_Fire: 1
+  #     level_8:
+  #       abilities:
+  #       - Throw Caution to the Wind
+  #       stats: 
+  #         Strength: 1
+  #         Charisma: 1
+  #     level_9:
+  #       abilities:
+  #       - Reduced Critical
+  #       stats:
+  #         Perception: 1
+  #     level_10:
+  #       abilities:
+  #       - The Hand of God
+  #       stats: 
+  #         Luck: 1
 Light Fighter:
   Rogue:
     description: Sneaktheives and criminals, rogues have often fallen in with bad company.
@@ -397,11 +406,12 @@ Light Fighter:
         abilities:
           - Lightfoot
           - Nimble Fingers
-          - Mantel
       level_1:
         stats:
           Dexterity: 1
           Perception: 1
+        abilities: 
+          - Mantel
       level_2:
         stats:
           Perception: 1
@@ -427,31 +437,36 @@ Light Fighter:
           - Multiclass Option
           - Thief or Assassin
         subclass_thief_abilities:
-        - Low-Light Vision
-        - Soundless
+        - Lucky Actions
+        - Pickpocket
+        - Trap Expert
         subclass_assassin_abilities:
         - Imposter
+        - Assassinate
       level_6:
         stats:
           Inner_Fire: 1
         subclass_thief_abilities:
-        - Reflexes
+        - Soundless
+        - Flee
         subclass_assassin_abilities:
         - Poison
+        - Minor Blink
       level_7:
         stats:
           Perception: 1
           Inner_Fire: 1
         subclass_thief_abilities:
-        - Second Action
+        - Feint
         subclass_assassin_abilities:
         - Double Strike
+        - Dark Vision
       level_8:
         stats:
           Dexterity: 1
           Intelligence: 1
         subclass_thief_abilities:
-        - Reflexes
+        - Strike From the Shadows
         - Superior Mantel
         subclass_assassin_abilities:
         - Reduced Critical
@@ -467,10 +482,10 @@ Light Fighter:
         stats:
           Luck: 1
         subclass_thief_abilities:
-        - Pickpocket
+        - Spider Climb
         subclass_assassin_abilities:
-        - Assassinate
         - Reduced Critical
+        - All-consuming Shadow
   Fighter:
     description: Fighters are powerful strength or dexterity based warriors. Unlike the knight,
       fighters are unarmored, and have a skillset more suited to keeping themselves alive and 
@@ -538,6 +553,7 @@ Light Fighter:
           Dexterity: 1
         abilities:
         - Reduced Critical
+        - Find Center
       level_8:
         stats: 
           Perception: 1
@@ -555,6 +571,7 @@ Light Fighter:
           Intelligence: 1
         abilities: 
         - Reduced Critical
+        - Whirlwind of Blades
   Highborn:
     description: Highborns were born into a noble house and have connections and
       money as a result. They are well trained fighters, and have the charisma
@@ -632,6 +649,7 @@ Light Fighter:
           Charisma: 1
           Inner_Fire: 1
         abilities:
+        - Forced Focus
         - Second Action
       level_8:
         stats:
@@ -698,26 +716,29 @@ Light Fighter:
           Strength: 1
         abilities:
         - Lightfoot
-        - Field Healing
+        - Huntsman
+        - Leaping Strike
       level_3:
         stats:
           Perception: 1
           Charisma: 1
         abilities:
-        - Under the Stars
-        - Huntsman
+        - Dog Pile
+        - Field Healing
+        - Offhand Attack
       level_4:
         stats:
           Inner_Fire: 1
           Luck: 1
         abilities:
         - Tracker
-        - Coordinated Strike
+        - Coordinated Attack
       level_5:
         stats:
           Dexterity: 1
         abilities:
         - Multiclass Option
+        - Closest Friend
         - Grown
       level_6:
         stats:
@@ -725,27 +746,29 @@ Light Fighter:
           Luck: 1
         abilities:
         - Mantel
+        - Wild Sight
       level_7:
         stats:
           Perception: 1
         abilities:
         - Second Action
+        - Inseperable
       level_8:
         stats: 
           Charisma: 1
         abilities:
         - Dire Companion
+        - Poision Strike
       level_9:
         stats:
           Perception: 1
         abilities:
-        - Leaping Strike
+        - Dominate
       level_10:
         stats:
           Inner_Fire: 1
         abilities:
-        - Feint
-        - Offhand Attack
+        - Beast Form
   Ranger:
     description: Rangers are the vigilante law keepers and monster hunters of the wilds. 
       Rangers are powerful dexterity based
@@ -780,22 +803,26 @@ Light Fighter:
       level_1:
         abilities:
         - Favorite Terrain
+        - Finesse Strike
         stats:
           Perception: 1
       level_2:
         abilities:
         - Twin Blades
+        - Camouflage
         stats: 
           Intelligence: 1
       level_3:
         abilities:
         - Tracker
         - Twin Blade Parry
+        - Ward of Tracking
         stats: 
           Charisma: 1
           Perception: 1
       level_4:
         abilities:
+        - Entangling Attack
         - Under the Stars
         stats: 
           Dexterity: 1
@@ -809,41 +836,39 @@ Light Fighter:
           Vitality: 1
         abilities:
         - Multiclass Option
-        - Far-Strider or Monster Hunter
-        subclass_far-strider_abilities:
-        - Favorite Enemy
-        subclass_monster-hunter_abilities:
         - Monster Slayer
+        - Spell of Darkvision
       level_6:
-        subclass_far-strider_abilities:
-        - Greater Medicine
-        subclass_monster-hunter_abilities:
-        - Tackle
-        - Hobble
         stats: 
           Luck: 1
           Perception: 1
+        abilities:
+        - Greater Medicine
+        - Cartwheel
       level_7:
         stats:
           Dexterity: 1
           Strength: 1
-        subclass_far-strider_abilities:
-        - Hold the Line
-        subclass_monster-hunter_abilities:
-        - Dominate
+        abilities:
+        - Disarming Blow
+        - Disengage
       level_8:
         stats:
           Charisma: 1
         abilities: 
         - Offhand Attack
+        - Flame Strike
       level_9:
         stats:
           Strength: 1
-        subclass_far-strider_abilities:
-        - Stay on Your Feet
-        subclass_monster-hunter_abilities:
-        - Steel Yourself
+        abilities:
+        - Expert Tracker
+        - Fire and Ice
       level_10:
+        abilities:
+        - Assassinate
+        - Trap Expert
+        - Soundless
         stats:
           Perception: 1
           Intelligence: 1
@@ -914,12 +939,12 @@ Light Fighter:
           Luck: 1
         abilities: 
         - Master Fighting Technique
+        - Fighting Technique
       level_7:
         stats:
           Inner_Fire: 1
           Perception: 1
         abilities: 
-          - Second Action
           - Master Fighting Technique
           - Fighting Technique
       level_8:
@@ -931,10 +956,12 @@ Light Fighter:
           - Fighting Technique
       level_9:
         abilities:
-          - Consecutive Normal Punches
+          - Legendary Fighting Technique
+          - Master Fighting Technique
           - Fighting Technique
       level_10:
         abilities:
+          - Legendary Fighting Technique
           - Master Fighting Technique
           - Fighting Technique
 Mage:
@@ -1093,7 +1120,7 @@ Mage:
           Intelligence: 1
           Strength: 1
         abilities:
-        - Sword and Flame
+        - Sword and Spell
         - Level One Spells
         - Learn Spells
       level_3:
@@ -1109,6 +1136,7 @@ Mage:
           Inner_Fire: 1
           Intelligence: 1
         abilities:
+          - Offhand Attack
           - Greater Embue Weapon
           - Level Two Spells
           - Learn Spells
@@ -1136,7 +1164,6 @@ Mage:
           Intelligence: 1
         abilities:
         - Major Offhand Spell
-        - Offhand Attack
         - Learn Spells
       level_8:
         stats:
@@ -1157,6 +1184,7 @@ Mage:
         stats:
           Intelligence: 1
         abilities:
+        - One With Magic
         - Level Five Spells
         - Learn Spells
   Druid:
@@ -1242,8 +1270,8 @@ Mage:
       level_7:
         stats:
           Intelligence: 1
-        abilities: 
-        - Offhand Attack
+        abilities:
+        - Ascend 
         - Major Offhand Spell
         - Level Four Spells
         - Learn Spells
@@ -1252,12 +1280,13 @@ Mage:
           Inner_Fire: 1
           Dexterity: 1
         abilities:
-        - Ascend 
+        - Power of Ascension
         - Learn Spells
       level_9:
         stats:
           Perception: 1
         abilities:
+        - Ascended Action
         - Level Five Spells
         - Learn Spells
       level_10:
@@ -1265,6 +1294,7 @@ Mage:
           Charisma: 1
         abilities:
         - Learn Spells
+        - True Ascension
   Sorcerer:
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
       but rather through raw force of personality. To perform magic, a sorcerer wrestles
@@ -1371,6 +1401,7 @@ Mage:
         stats:
           Inner_Fire: 1
         abilities:
+        - Light and Shadow
         - Learn Spells 
   Necromancer:
     description: Death is not my enemy, nor is it my ally, it is my servant. So say
@@ -1490,6 +1521,7 @@ Mage:
           Strength: 1
           Inner_Fire: 1
         abilities:
+        - Army of the Damned
         - Larger Soul Jar
         - Learn Spells         
   Cleric:
@@ -1718,6 +1750,7 @@ Mage:
           Luck: 1
           Charisma: 1
         abilities:
+        - Multi-Action
         - Major Spell Coin
         - Learn Spells  
 Ranged Fighter:
@@ -1735,7 +1768,7 @@ Ranged Fighter:
     base_stats:
       Charisma: 0
       Dexterity: 1
-      Inner_Fire: -2
+      Inner_Fire: 0
       Intelligence: 0
       Luck: 1
       Perception: 1
@@ -1750,6 +1783,7 @@ Ranged Fighter:
     levels:
       level_0:
         abilities:
+        - Fletcher
         - Focus
         - Huntsman
       level_1:
@@ -1761,55 +1795,72 @@ Ranged Fighter:
         stats:
           Charisma: 1
         abilities:
+        - Mantel
         - Crippling Shot
       level_3:
         stats:
           Intelligence: 1
           Dexterity: 1
         abilities:
-        - Mantel
+        - Advanced Fletcher
+        - Magic Quiver
+        - Fire and Ice Arrows
+        - Smoke Arrow
         - Steady
       level_4:
         stats: 
           Luck: 1
           Inner_Fire: 1
         abilities:
-        - Offhand Attack
+        - Rope Arrows
+        - Net Arrows
+        - Dual Shot
       level_5:
         stats:
           Perception: 1
           Charisma: 1
           Strength: 1
         abilities:
-        - Multiclass Option
-        - Penetration
+        - Greater Magic Quiver
+        - Shadow and Light Arrows
+        - Offhand Attack
         - Reflexes
+        - Multiclass Option
       level_6:
         stats: 
           Dexterity: 1
+          Inner_Fire: 1
         abilities:
+        - Explosive Arrows
+        - Vampiric Arrow
         - True Mastery
       level_7:
         stats:
           Charisma: 1
         abilities:
+        - Major Magic Quiver
+        - Blink Arrows
         - Second Action
       level_8:
         stats:
           Perception: 1
+          Inner_Fire: 1
         abilities:
-        - Volley
+        - Uncanny Perception
+        - Shock Arrow
+        - Anti-Gravity Arrows
       level_9:
         stats:
           Luck: 1
         abilities:
-        - Strike First
+        - Volley
       level_10:
         stats:
           Perception: 1
           Intelligence: 1
         abilities:
-        - Uncanny Perception
+        - Firestorm Arrow
+        - Legendary Magic Quiver
   Gunslinger:
     description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
       to acquire one of the rarest weapons in the world. As such, they have a close
@@ -1865,7 +1916,7 @@ Ranged Fighter:
           Inner_Fire: 1
           Intelligence: 1
         subclass_gunslinger_abilities: 
-        - Fastest Gun
+        - Quickdraw
         subclass_marksman_abilities:
         - Reduced Critical
         - Scope
@@ -1904,6 +1955,7 @@ Ranged Fighter:
           Perception: 1
           Inner_Fire: 1
         subclass_gunslinger_abilities:
+        - Fastest Gun
         - Second Action
         subclass_marksman_abilities:
         - Rechamber
@@ -1912,6 +1964,7 @@ Ranged Fighter:
           Strength: 1
         subclass_gunslinger_abilities:
         - Hollowpoint
+        - Strike First
         subclass_marksman_abilities:
         - Armor Penetrating Rounds
         - High Grain

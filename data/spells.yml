@@ -1118,8 +1118,6 @@ the_book_of_chi:
       description: Once every three turns, select an enemy attack aimed at you. Make
         an inner fire saving throw. If you succeed, redirect the attack anywhere you
         wish.
-    Second Action:
-      description: Take two actions on your turn.
     Shadow Step:
       description: Step from any point in darkness to any other point in darkness
         within 50 feet.

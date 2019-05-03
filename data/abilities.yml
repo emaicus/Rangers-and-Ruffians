@@ -26,16 +26,16 @@ Greater Embue Weapon:
   description: As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 spell points. Lasts 1d4 turns.
   type: combat
 Major Embue Weapon:
-  description: As an offhand action, add 1d12 elemental damage to your weapon at the cost of 1 spell points. Lasts 1d4 turns.
+  description: As an offhand action, add 1d12 elemental damage to your weapons at the cost of 1 spell points. Lasts 1d4 turns.
   type: combat
-Mage Sheild:
+Mage Shield:
   description: As a reaction, spend 1 spell point to take half damage from an attack.
   type: combat
-Greater Mage Sheild:
-  description: As a reaction, spend 4 spell points to stop an enemies attack entirely, regardless of target.
+Greater Mage Shield:
+  description: As a reaction, spend 3 spell points to stop an enemies attack entirely, regardless of target.
   type: combat
 Bash:
-  description: Stun an enemy on a critical hit, causing them to miss their next turn.
+  description: Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.
   type: combat
 Beast Form:
   description: Once per day, you may morph to reveal the beast within. Add +1 to strength, dexterity,
@@ -64,8 +64,11 @@ Berserk:
 Berserker: 
   description: You take half damage from physical attacks while raging.
   type: combat
+Warmaster: 
+  description: Raging now gives you an additional +1 strength and inner fire.
+  type: combat
 Controlled Rage:
-  description: Coming out of a rage no longer gives you any negative effects.
+  description: Coming out of a rage no longer gives you any negative effects and no longer has a time limit.
   type: combat
 Always Angry:
   description: You may now enter a rage once per battle.
@@ -104,6 +107,99 @@ Carry a Tune:
 Cartwheel:
   description: Gain advantage on acrobatics checks.
   type: advantage
+Disarming Blow:
+  description: On a critical hit, force an enemy to drop something they are holding.
+  type: combat
+Flame Strike:
+  description: Once every three turns, add 1d10 fire damage to an attack.
+  type: combat
+Ward of Tracking:
+  description: Lay your hand on an opponent. For the next forty-eight hours, you 
+    know their position within 100 feet.
+  type: general
+Fletcher:
+  description: You know how to craft your own arrows, and always seem to have some on hand.
+  type: general
+Advanced Fletcher: 
+  description: You have learned how to craft advanced arrows. You are able to craft at most 5
+    advanced arrows per day. Note that most arrows have a limit on how many can be carried, and
+    how many you can make per day. Arrows must be made over a long rest.
+  type: general
+Magic Quiver: 
+  description: You are able to carry up to 5 magic arrows that you have crafted at a time.
+  type: general
+Greater Magic Quiver: 
+  description: You are able to carry up to 10 magic arrows that you have crafted at a time.
+  type: general
+Major Magic Quiver: 
+  description: You are able to carry up to 15 magic arrows that you have crafted at a time.
+  type: general
+Legendary Magic Quiver: 
+  description: You are able to carry as many magic arrows as you want at a time.
+  type: general
+Fire and Ice Arrows:
+  description: You have mastered the art of crafting fire and ice arrows, and can craft at most 2 per day.
+    Fire arrows do an additional 1d6 fire damage and deal 1d6 burn damage to enemies that fail a saving 
+    throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to 
+    move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
+  type: general
+Shadow and Light Arrows:
+  description: You have mastered the art of crafting shadow and light arrows, and can craft at most 2 per day.
+    Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against 
+    your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch
+    darkness. Light arrows deal an additional 1d6 light damage, and deal another
+    1d12 damage to the undead.
+  type: general
+Rope Arrows: 
+  description: You have mastered the art of crafting rope arrows using minor magic, and can craft
+    2 per day. As soon as a rope arrow hits its target, a rope instantly appears connecting the target
+    to your hand. This can be used to climb, or to grapple opponents. To grapple an opponent, you must
+    make a contested strength check.
+  type: general
+Explosive Arrows:
+  description: After much experimentation, you have finally mastered the art of crafting
+    explosive arrows, and can craft 1 per day. Explosive arrows do 2d10 damage to all enemies
+    in a twenty foot radius.
+  type: general
+Blink Arrows:
+  description: After learning more about magic, you have learned how to create blink arrows,
+    and can craft 1 per day. Blink arrows instantly teleport you to the position that they hit.
+  type: general
+Net Arrows:
+  description: You can now craft at most 2 net arrows per day. When a net arrow
+    hits its target, they must make an inner fire saving throw against your spell power.
+    On failure, they are instantly wrapped in a net, and are considered restrained.
+    Each turn, they may make a strength saving throw against your spell power to attempt
+    to break out of the net.
+  type: general
+Anti-Gravity Arrows:
+  description: You can now craft at most 2 Anti-Gravity arrows per day. When an Anti-Gravity
+    arrow hits its target, they must make an inner fire saving throw against your spell power.
+    On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows
+    last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.
+  type: general
+Smoke Arrow: 
+  description: You can now craft at most 2 smoke arrows per day. When a smoke arrow hits the ground, 
+    it creates a smokescreen with a 30 foot radius.
+  type: general
+Shock Arrow: 
+  description: You can now craft at most 2 shock arrows per day. When a shock arrow hits an enemy, 
+    it deals 2d8 shock damage to them and any other entities within 30 feet. If an affected entity is
+    wearing metal armor or is made of or standing in water, they take an extra 2d8 damage. All affected 
+    entities must make an inner fire saving throw against your spell power. On failure, they are knocked prone.
+  type: general
+Vampiric Arrow: 
+  description: You can now craft at most 2 vampiric arrows per day. Vampiric arrows
+    do an additional 2d6 damage to an entity. You regain half of the damage done by 
+    a vampiric arrow to your health.
+  type: general
+Firestorm Arrow: 
+  description: You can now craft at most 1 firestorm arrow per day. A firestorm 
+    arrow does nothing for one turn or one minute after it strikes something. Then,
+    it explodes into a massive pillar of flame with a twenty foot radius. All enttities
+    caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3
+    turns. 
+  type: general
 Charge:
   description: Once every three turns as an offhand action, charge an enemy 
     of up to one size larger than yourself and roll a d20. Knock them
@@ -136,11 +232,17 @@ Crippling Shot:
   description: You can aim at an opponents knees for 1d4 damage, making them go prone
     on a critical hit.
   type: combat
+Dual Shot:
+  description: Once every three turns, fire two arrows at the same target in a single attack.
+  type: combat
 Crushing Blow:
-  description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on their next action.
+  description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on the first action of their next action.
   type: combat
 Dark Vision:
   description: You can see even in perfect darkness.
+  type: general
+All-consuming Shadow:
+  description: Fill a 100 foot radius with pitch darkness as an offhand action. This may be done once per rest.
   type: general
 Detect Magic:
   description: You are able to perform magic detection checks.
@@ -162,6 +264,10 @@ Edge of Eternity:
   description: You can consume a soul to increase a stat by 1 or to give yourself a temporary increase of
     1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal
     Coil to once per day for three days.
+  type: general
+Army of the Damned:
+  description: Once per day as an action, resurrect every entity within 100 feet as zombies
+    at the cost of 5 souls.
   type: general
 Eyes of the Others:
   description: Consume a soul to give yourself darkvision and detect life for a day.
@@ -190,6 +296,11 @@ Born in Darkness:
     with your skin exposed to bright light or to the sun. As a result, you must wear 
     protective garments durning the day.
   type: general
+Inherent Magic:
+  description: You are magical by nature, and begin your journey knowing two level zero spells 
+    of your choice from the novice spellbook. At levels 3, 5, 7, and 9, you learn an additional
+    level zero spell.
+  type: general
 Feint:
   description: Once every three turns, you may roll a d20 against an enemy attack. Reduce
     the attack by the amount rolled.
@@ -207,7 +318,7 @@ Feeling Lucky:
   description: Once every three turns, add your luck to an attack.
   type: combat
 Last Ditch Prayer:
-  description: Once every three turns in battle and once per day out of battle, say a fervent Prayer
+  description: Once every three turns in battle and once every day out of battle, say a fervent prayer
     to your deity, and add your luck to a roll.
   type: combat
 Harrying Shot:
@@ -237,7 +348,7 @@ Shock Absorption:
     accuracy.
   type: combat
 Rechamber:
-  description: Increase the damage dice of your rifle by one size.
+  description: Add 1d6 to your rifle damage.
   type: combat
 Pistol:
   description: You begin your adventure with a 1d6 pistol.
@@ -300,6 +411,10 @@ Hold the Line:
   description: When any member of your party is on death's door, gain advantage on
     all attacks and checks used to protect them.
   type: combat
+Disengage:
+  description: Enemies take disadvantage when striking you while you are moving,
+    and may not make attacks of opportunity against you.
+  type: combat
 Huntsman:
   description: You have advantage when attacking beasts.
   type: combat
@@ -318,6 +433,12 @@ Land on your feet:
 Colossal:
   description: You stand 2 feet taller than the average individual of your race, and are treated as one size larger.
   type: general
+Spider Climb:
+  description: You are able to climb on walls as though you are a spider.
+  type: general
+Find Center:
+  description: Once per battle, take advantage in all things for one turn.
+  type: combat
 Last Stand:
   description: When your health is below 20%, you can take an extra action on your turn.
   type: combat
@@ -353,15 +474,45 @@ Miner's Eye:
   description: When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.
   type: general
 Field Healing:
-  description: Using your knowledge of natural healing, youo are able to heal a teammate for 1d10 health once per day.
+  description: Using your knowledge of natural healing, you are able to heal a teammate for 1d10 health once per day as an offhand action.
   type: general
-Coordinated Strike:
+Coordinated Attack:
   description: If you and your animal companion are both attacking the same entity, you both gain advantage on your attacks.
   type: combat
+Closest Friend:
+  description: Gain advantage in all things if your animal companion is on deaths door or has died in the current battle.
+    Similarly, if you are at death's door or have died, your animal companion takes advantage in all things.
+  type: combat
+Inseperable:
+  description: Once per day, instantly teleport from your current position to a spot within five feet of your animal companion.
+    The same can be done by your animal companion. Counts as an offhand action.
+  type: general
+Dog Pile:
+  description: Any sleep taken while with your animal companion counts as sleep in a bed.
+  type: general
+Wild Sight:
+  description: You are able to see through the eyes of your animal companion.
+  type: general
+Poison Strike:
+  description: Once per turn on one of your attacks, force an enemy to make an inner fire saving throw
+    against your spell power. On failure, they are poisoned, and take 1d12 damage each turn for two turns.
+  type: combat
+Beast Form:
+  description: Once every day, transform yourself into a dire creature of your choosing. For one hour, 
+    you may transform back and forth as an action. While in your beast form,
+    you have the physical stats of the chosen creature. If your health falls to zero, you are instantly transformed back
+    into your normal form, with the health that you had prior to using beast shape.
+  type: general
+Finesse Strike:
+  description: Once every three turns, add 1d6 damage to an attack of your choosing. If the affected entity fails an 
+    inner fire saving throw against your spell power, it suffers 1d6 bleeding damage at the start of its next turn. 
+    At level 5, increase bleeding damage to 2d6. At level eight, increase it to 4d6.
+  type: combat
 Entangling Attack:
-  description: Once every three turns, you may make an entangling attack against an enemy using minor magic. The enemy must make an inner
-    fire saving throw against your spell power. On a failure, the entity is ensnared, and cannot move. It may attempt a dc 15 saving throw
-    to escape every turn thereafter. All attacks against an ensnared enemy have advantage.
+  description: Once every three turns, you may attempt to entangle an enemy during one of your attacks using minor magic. 
+    The enemy must make an inner fire saving throw against your spell power. On a failure, the entity is ensnared, 
+    and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and
+    all attacks made against it have advantage.
   type: combat
 Minor Medicine:
   description: If you are in the woods or in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
@@ -373,6 +524,9 @@ Monster Slayer:
   description: Your weapons are blessed, and do an additional 1d6 damage to goblins, skeletons, and
     monsters of the dark.
   type: combat
+Spell of Darkvision:
+  description: Once per rest, you may use minor magic to give yourself darkvision.
+  type: general
 Mortal Coil:
   description: Once every week, you must consume a soul. If you do not, your body
     begins to rot away, causing fear and horror in those who see you.
@@ -453,11 +607,13 @@ Shed Tail:
   description: You can shed your tail to escape a grapple.
   type: general
 Shield Bash:
-  description: Use your turn to shield bash an enemy, dealing 1d6 damage and staggering
-    them if they fail a contested strength check on which you have advantage.
+  description: Use an action to shield bash an enemy, dealing 1d6 damage and staggering
+    them if they fail a contested strength check. A staggered enemy looses one of its actions.
+    At level 3, damage increases to 1d8. At level 6, damage increases to 1d10. At level 8, 
+    damage increases to 1d12.
   type: combat
 Shield of Men:
-  description: Once per round of combat, you can throw yourself in front of a teammate,
+  description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them. Any damage you recieve as a result is halved.
   type: combat
 Shifting Cloak:
@@ -479,7 +635,7 @@ Soft Bed:
   type: general
 Soul Based Magic:
   description: To fuel your magic, you use the concentrated essense of life, which you 
-    are able to harvest from the dead. These "souls" are stored within you until they
+    are able to harvest from the dead. These "souls" are stored in your soul jar until they
     are expended on a spell or by an ability. At that time, they escape to the hereafter.
   type: general
 Soul Harvest:
@@ -488,7 +644,7 @@ Soul Harvest:
     twenty four hours.
 Soul Jar:
   description: You have a soul jar, which produces 1d6 souls each day at midnight, the jar
-    can produce 2 souls at maximum, and can not produce more until those have been spent.
+    can produce 2 souls at maximum. Your soul jar is capable of holding 20 souls at maximum.
   type: starting_item
 Larger Soul Jar:
   description: Your soul jar can produce at maximum 1 more soul per day.
@@ -507,11 +663,11 @@ Strength of Men:
     a party member for 1d10 + inner fire health.
   type: combat
 Swoon:
-  description: During battle, you can faint to avoid further damage. You may wake
+  description: During battle, you can faint as a reaction or offhand actioon to avoid further damage. You may wake
     up after one turn.
   type: combat
-Sword and Flame:
-  description: Once every three turns, you may use a spell and attack in the same action.
+Sword and Spell:
+  description: Once every three turns, combine a spell and a physical attack into one attack action.
   type: combat
 Tackle:
   description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
@@ -582,8 +738,11 @@ Tinker:
     firebombs, and saddles. (Tinkering requires an intelligence check)
   type: general
 Tracker:
-  description: You are an expert tracker, and have advantage when looking for trails
+  description: You are an excellent tracker, and have advantage when looking for trails
     and sign of passage.
+  type: general
+Expert Tracker:
+  description: Add 1d6 to any checks made to track an individual.
   type: general
 Trained Precision:
   description: Once every three turns, gain advantage on your attack.
@@ -659,7 +818,7 @@ Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: combat
 Determination:
-  description: Once per rest and at the start of combat, gain a d10 inspiration dice.
+  description: Once per rest and gain a d10 inspiration dice as an offhand action.
   type: general
 Minor Second Wind:
   description: Once per day, heal yourself for 1d10 damage as an offhand action.
@@ -672,6 +831,13 @@ Trained Attack:
   type: combat
 Resolve:
   description: When your health drops below 20%, all attacks do half damage against you.
+  type: combat
+Whirlwind of Blades:
+  description: Once per day, make an additional 3 actions on your turn.
+  type: combat
+Fire and Ice:
+  description: Once per day, embue one of your blades with fire and the other with ice. Each do an additional
+    1d6 damage for the duration of a battle.
   type: combat
 Savage Critical:
   description: On a critical hit, do an additional dice of damage.
@@ -690,6 +856,23 @@ Throw Caution to the Wind:
   type: combat
 Steel Yourself: 
   description: Once every three turns, choose to take half damage from an attack.
+  type: combat
+Cleave: 
+  description: Add 1d6 to any physical attacks you make.
+  type: combat
+Link Lifeforce: 
+  description: As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you.
+  type: combat
+Spirit of Rage: 
+  description: Once per day, double one of your turns.
+  type: combat
+Glory: 
+  description: When your health falls below 10%, double all damage you deal.
+  type: combat
+Sword of Honor: 
+  description: Once per day, embue your blade with radiant light. The light lasts for 5 turns, and causes
+    your blade to deal an additional 2d6 damage. While your blade is embued with light, you take advantage
+    on all spell saving throws, and cannot be frightened.
   type: combat
 Stay on Your Feet: 
   description: If you fall to zero health, make a dc14 inner fire saving throw. If you succeed, drop to 1 health instead.
@@ -719,7 +902,8 @@ Grown:
   description: Your companion animal is adult in size. See the book of known beasts for details.
   type: general
 Leaping Strike: 
-  description: Add 1d10 damage to any attacks made while leaping.
+  description: Once every three turns, leap forward to attack an enemy, dealing 1d6 additional damage.
+    At level five, damage increases to 2d6. At level eight, it increases to 3d6. 
   type: combat
 Reduced Critical: 
   description: You perform a critical hit if you roll one less than your die's number of sides.
@@ -732,7 +916,7 @@ Aura of Peace:
   description: All allies near you take heart, and gain +1 vitality while in your presence.
   type: general
 Rally Cry: 
-  description: Once every three turns, let out a rally cry which allows all allies to do an additional 1d6 damage on their next attack.
+  description: Once every three turns, let out a rally cry as an offhand action which allows all allies to do an additional 1d6 damage on their next attack.
   type: combat
 Fallen: 
   description: While you are on death's door, all of your allies get a bonus action.
@@ -760,8 +944,25 @@ Reflexes:
   description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
     If reduced to zero, you catch the projectile.
   type: general
+Strike From the Shadows: 
+  description: Do an additional 1d10 damage on an attacks made from hiding.
+  type: general
+Minor Blink: 
+  description: Three times per rest, teleport to a position you can see within 100 feet.
+  type: general
+Flee: 
+  description: You may use an offhand action to flee without provoking attacks.
+  type: general
+Lucky Actions: 
+  description: You have a number of luck tokens equivalent to your luck stat. You may use
+    these tokens to make an additional action on your turn, or to re-roll any dice. 
+    These tokens refill on a long rest.
+  type: general
 Soundless : 
-  description: Gain an additional 1d6 on stealth checks
+  description: Gain an additional 1d6 on stealth checks.
+  type: general
+Trap Expert : 
+  description: Gain advantage when looking for, disarming, or creating traps.
   type: general
 Party Save: 
   description: Add 1d10 to one party member's stealth check.
@@ -781,9 +982,27 @@ Focus Energy:
 Transfer Essense: 
   description: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
   type: combat
-Ascend: 
-  description: Once per day, you may enter the ascended state. While ascended, you gain 5 inner fire and intelligence, and immediately gain 5 spell points. Once per turn while ascended, you may take an extra action when it is not your turn, and may take flight as an offhand action. Furthermore, reduce the cost of all spells by 1. The ascended state lasts for 6 turns or ten minutes. When you fall out of the ascended state, you are exhausted. Immediately take 25 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
+One With Magic: 
+  description: Once per day, fuse yourself with the essense of magic. The power nearly destroys you, dropping you instantly
+    to one health. However, you are able to cast any three spells, free of charge.
   type: general
+Ascend: 
+  description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 spell points. 
+    While ascended, you may take flight as an offhand action. The ascended state lasts for 3
+    turns or five minutes. When you fall out of the ascended state, you are exhausted. Immediately take 4d10 damage, and have disadvantage
+    in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
+  type: general
+Power of Ascension:
+  description: While in the ascended state, gain 5 inner fire, strength, and dexterity.
+  type: general
+Ascended Action:
+  description: Once per turn while ascended, you may take an extra action when it is not your turn.
+  type: combat
+True Ascension:
+  description: Ascension no longer has a time limit. While ascended, you make all perception checks and 
+    inner fire saving throws with advantage. You may enter and leave the ascended state as often as you want.
+    When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are exhausted.
+  type: combat
 Phylactery: 
   description: You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.
   type: general
@@ -820,9 +1039,13 @@ Major Spell Coin:
   type: general
 Spirits Within: 
   description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are embued with a spirit, 
-    make a dc 7 inner fire saving throw. If you fail, take 1d6 psychic damage. If you critically fail, the spirit escapes you. 
+    make a dc 10 inner fire saving throw. If you fail, take 1d6 psychic damage. If you critically fail, the spirit escapes you. 
     While you are embued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, 
     and may add +1 to strength, dexterity, perception, inner fire, and luck.
+  type: combat
+Light and Shadow: 
+  description: While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability,
+    and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
   type: combat
 Tome of the Ancients: 
   description: You are now able to learn spells from the tome of the ancients.
@@ -858,7 +1081,10 @@ Strike First:
   description: Once per turn, when an enemy attacks you, attack them first.
   type: combat
 Hollowpoint:
-  description: Your shots do 1d4 additional damage to unarmored targets.
+  description: Your shots do 1d6 additional damage to unarmored targets.
+  type: combat
+Quickdraw:
+  description: add 1d6 to your initiative.
   type: combat
 Fastest Gun: 
   description: Add 1d10 to your initiative.
@@ -959,6 +1185,9 @@ Gumption:
   description: After each full night's rest, gain 3 gumption points (max 3). Spend one gumption 
     point to do an additional action during your turn.
   type: action
+Forced Focus:
+  description: You may now spend one gumption to redo a roll.
+  type: action
 Additional Resolve:
   description: Your max gumption increases by 1. 
   type: action
@@ -1032,7 +1261,7 @@ Multiclass Option:
   type: rule
 Vengeful Death:
   description: When you are reduced to zero hit points, you may make one last retaliatory action.
-    Works at most once per sleep in a bed.
+    If you take the retaliatory action, you must make your death coin flips with disadvantage.
   type: combat
 Far-Strider or Monster Hunter:
   description: You may choose to subclass into a Far-Strider or a Monster Hunter. Far-Striders aim

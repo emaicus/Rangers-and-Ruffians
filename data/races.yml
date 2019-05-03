@@ -63,10 +63,9 @@ Wood Elf:
   abilities:
     - Sleepless
     - Low-Light Vision
-    #- Wink Wink, Nudge Nudge
     - Winged feet
     - Counter Attack
-    - Detect Magic
+    - Tracker
   quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
     and they seldom mean what they say. They're strong mages, though, and too clever
     for their own good. If you're dealing with elves, try to appeal to their pride,
@@ -81,7 +80,7 @@ Wood Elf:
     Dexterity: 1
     Inner_Fire: 1
     Intelligence: 1
-    Luck: 0
+    Luck: 1
     Perception: 2
     Strength: -1
     Vitality: 2
@@ -90,8 +89,7 @@ High Elf:
     - Sleepless
     - Low-Light Vision
     - Wink Wink, Nudge Nudge
-    # - Winged feet
-    #- Counter Attack
+    - Inherent Magic
     - Detect Magic
   quote: High Elves can be slippery folk. It seems to me that rarely say what they mean, 
     and they seldom mean what they say. They're strong mages, though, and too clever
@@ -109,7 +107,7 @@ High Elf:
     Dexterity: 0
     Inner_Fire: 1
     Intelligence: 3
-    Luck: 1
+    Luck: 2
     Perception: 0
     Strength: -1
     Vitality: 1
@@ -119,7 +117,6 @@ Deep Elf:
     - Dark Vision
     - Winged feet
     - Counter Attack
-    - Detect Magic
     - Born in Darkness
   quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
     and they seldom mean what they say. They're strong mages, though, and too clever
@@ -137,7 +134,7 @@ Deep Elf:
     Intelligence: 1
     Luck: -1
     Perception: 1
-    Strength: 1
+    Strength: 0
     Vitality: 3
 Gnome:
   abilities:
@@ -363,7 +360,6 @@ Daemonspawn:
   abilities: 
   - Fix Your Eyes on Me 
   - Infernal Blood
-  - The Opener
   - True Sight
   - Dark Vision
   - Sleepless

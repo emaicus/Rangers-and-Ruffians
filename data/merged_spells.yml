@@ -519,7 +519,7 @@ the_book_of_chi:
       description: Once per day as an offhand action, become untouchable by physical
         attacks for one turn or one minute.
     Press the Advantage:
-      description: On a critical hit, gain another action.
+      description: On a critical hit, gain another attack.
     Redirect Attack:
       description: Once every three turns, select an enemy attack aimed at you. Make
         a contested dexterity check. If you succeed, redirect the attack anywhere you
@@ -537,6 +537,37 @@ the_book_of_chi:
       description: Once every three turns, your attack may make a thunder wave, which
         affects all enemies in front of you with the punch's damage. This ability can
         be stacked on top of any other punching attack.
+  Legendary Techniques:
+    Consecutive Normal Punches: 
+      description: Once every three turns, spend an offhand action to take four attacks during each
+        of your actions.
+      type: combat
+    Pressure Points: 
+      description: Once every three turns when you attack an enemy, force them to make a saving throw against your spell power.
+        On failure, they fall instantly limp. On each consecutive turn, they may repeat the saving throw at
+        disadvantage.
+      type: combat
+    Consuming Blow: 
+      description: Once every three turns when you attack an enemy, force them to make an inner fire saving throw against your spell
+        power. On failure, shadows fly forth from you at the point of contact, tearing at the flesh of your opponent. The opponent takes
+        4d10 damage as a result.
+      type: combat
+    Ultimate Punch: 
+      description: As an action, channel the energy of your ancestors into a perfectly tuned punch. With a thunderclap, unleash a blow
+        capable of destroying buildings with its shockwave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities 
+        within a 100 foot cone in front of you.
+      type: combat
+    Perfect Control:
+      description: Add 1 to your vitality, strength, and dexterity.
+      type: general
+    Perfect Understanding:
+      description: Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.
+      type: general
+    Everywhere and Nowhere:
+      description: Insead of taking movement during combat, instantly teleport from one location to another within
+        thirty feet of you. Once every three turns, if you do not attack on your turn, you may choose to be ethereal until
+        your next turn, and therefore to be immune to physical damage. 
+      type: general
 the_book_of_healing:
   Level_0:
     Beguile:
@@ -821,7 +852,7 @@ the_book_of_healing:
     Battle Angel:
       cost: 4
       description: Summon a holy great weapon of your choice to your hand, and a shield
-        to your other. The sword does 1d20 damage plus 1d10 radiant damage, and the
+        to your other. The weapon does 1d20 damage plus 1d10 radiant damage, and the
         sheild allows you to perform the sheild bash ability as a bonus action. While
         you are in the battle angel state, you may perform spells at -1 cost, have
         +3 strength, and have 50 hit points. When the 50 hit points drop to zero,
@@ -934,7 +965,7 @@ the_druid's_guidebook:
         an additional 1d4 inner fire. Concentration.
     Commune with Nature:
       cost: 1
-      description: Speak in the language of plants or animals for up to one hour.
+      description: Speak in the language of plants or animals for 3d20 minutes.
     Fool the Senses:
       cost: 1
       description: Force an enemy to make an inner fire saving throw against your
@@ -1025,7 +1056,7 @@ the_druid's_guidebook:
         them must take 1d6 damage and make an inner fire saving throw against your
         spell power. On failure, they are poisoned, and take an additional 1d6 damage
         each turn for 3 turns.
-    Thieves Curse:
+    Thieve's Curse:
       cost: 1
       description: Force an entity to make an inner fire saving throw against your
         spell power. On failure, they are cursed so that they have an irresistable
@@ -1050,7 +1081,7 @@ the_druid's_guidebook:
         up to 120 trees per hour. After the first hour, begin making inner fire saving
         throws to see if you are too exhausted to continue.
     Heart Fruit:
-      cost: 3
+      cost: 2
       description: Grow a heart fruit, capable of healing an entity 2d6 damage. Heart
         fruit keep for up to one day.
     Hurricane Force Winds:
@@ -1097,8 +1128,8 @@ the_druid's_guidebook:
         escape. If the entity escapes, it slams to the ground, causing fall damage.
     Wildfire:
       cost: 4
-      description: Create a swirling inferno of wildfire. Fills a 20x20 foot space.
-        Does 4d8 damage to all inside of it. Concentration.
+      description: Create a swirling inferno of fire. Fills a 20x20 foot space.
+        The flames do 4d8 damage to all inside of them. Concentration.
     Wings:
       cost: 3
       description: Summon an eagles wings to your back, giving you the ability to
@@ -1106,7 +1137,7 @@ the_druid's_guidebook:
   Level_5:
     Awaken Animal:
       cost: 5
-      description: Give an animal sentience. It is bound to you for one month, and
+      description: Give an animal sentience. If you wish, is bound to you for one month, and
         must follow you. Regardless of type, the animal immediately gains the ability
         to speak the common tounge.
     Bountiful Harvest:
@@ -1332,7 +1363,7 @@ the_macabre_manual:
       cost: 3
       description: Raise a ghoul from a fallen entity. The ghoul has 20 health and
         may attack twice for 1d10 damage per attack. Ghouls last for up to one month.
-        Also Allows resurrection of larger enemies with Game Master generated stats.
+        Also allows resurrection of larger enemies with Poohbah generated stats.
     Hungry Shadows:
       cost: 3
       description: Concentration. Summon a pack of 3 shadowy hounds which attempt
@@ -1354,13 +1385,20 @@ the_macabre_manual:
         control of its actions. Once every hour, or when you do or are about to do
         something that significantly distresses the entity, it can repeat it's saving
         throw at disadvantage.
-    "Tenmu\u2019s Terrible Tentacles":
+    Tenmu's Terrible Tentacles:
       cost: 3
       description: Concentration. Sprout shadowy tentacles from your back. The tentacles
         are able to lift you up to seven feet from the ground, and allow you to climb
         like a spider. Each turn you may make a tentacle attack for 1d10 + inner fire
         damage as an offhand attack.
   Level_4:
+    Death Knight: 
+      cost: 4
+      description: Resurrect a greater ghoul to aid you. The death knight has 40 health, 
+        and may attack twice for 1d10 damage. Death Knights last for one month, and may
+        throw themselves in front of you as a reaction. If a death knight reaches
+        zero health, it may make a saving throw. If it rolls 5 or higher, it does not die,
+        but returns to 1 health.
     Antilife field:
       cost: 4
       description: Create a field of death around yourself with a 10 foot radius.
@@ -1387,8 +1425,14 @@ the_macabre_manual:
     Abomination:
       cost: 5
       description: Knit together a monstrous abomination to fight for you. Requires
-        5 corpses. The monster has 50 health, deals 1d10 blunt damage plus 1d10 undead
-        damage. The abomination can cast spikes of blood or cripple once every 3 turns.
+        5 corpses. The monster has 60 health, and may attack three times for 
+        1d10 blunt damage plus 1d10 dark damage. The abomination can cast spikes of
+        blood or cripple once every 3 turns. Abominations last for one month. If a
+        abomination reaches zero health, it may make a saving throw. If it rolls 5 or
+        higher, it does not die, but returns to 1 health. If the abomination dies, 
+        it releases a putrid cloud. Any entity in the putrid cloud must make
+        an inner fire saving throw against your spell power. The entity takes
+        3d10 damage on failure, or half as much on success.
     Death Inducement:
       cost: 5
       description: Mark the time that a person will die. Requires a piece of paper
