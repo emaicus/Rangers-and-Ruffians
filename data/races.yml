@@ -109,7 +109,7 @@ High Elf:
     Intelligence: 3
     Luck: 2
     Perception: 0
-    Strength: -1
+    Strength: -2
     Vitality: 1
 Deep Elf:
   abilities:
@@ -152,12 +152,12 @@ Gnome:
     and are capable of succeeding at anything they put their minds to.
   stats:
     Charisma: -1
-    Dexterity: 1
+    Dexterity: 0
     Inner_Fire: 1
     Intelligence: 1
     Luck: 0
     Perception: -1
-    Strength: 0
+    Strength: 1
     Vitality: 2
   handbook:
     sections: 
@@ -235,7 +235,7 @@ Halfling:
     Luck: 1
     Perception: -1
     Strength: -1
-    Vitality: 1
+    Vitality: 2
 Human:
   abilities:
   - Last Stand
@@ -300,7 +300,7 @@ Waterborn:
     the other races.
   stats:
     Charisma: 2
-    Dexterity: 2
+    Dexterity: 1
     Inner_Fire: 0
     Intelligence: 2
     Luck: 1

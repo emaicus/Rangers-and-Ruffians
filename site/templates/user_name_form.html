@@ -23,12 +23,27 @@
             </h4>
           </div>
           <div class="card-content">
-            <form action="creation" method="GET">
+            <form action="creation" method="GET" id="name_form">
               <input type="text" name="name" placeholder={{random_name}} value={{random_name}}>
               <input type="hidden" name="gender" value={{gender}} /> 
               <input type="hidden" name="race" value={{race}} /> 
               <input type="hidden" name="class" value={{rnr_class}} /> 
               <input type="hidden" name="tier" value={{tier}} /> 
+
+              <select name="level" form="name_form">
+                <option value="" disabled selected> What Level Is Your Character?</option>
+                <option value="0">Level 0</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+                <option value="6">Level 6</option>
+                <option value="7">Level 7</option>
+                <option value="8">Level 8</option>
+                <option value="9">Level 9</option>
+                <option value="10">Level 10</option>
+              </select>
              <!--  <br/>
               <h4>Do You Want Randomly Rolled Stats?</h4>
               <fieldset class="form-group left-align">

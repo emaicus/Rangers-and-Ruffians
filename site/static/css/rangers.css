@@ -2,6 +2,12 @@ body {
     background:  url('/static/images/subtle_white_mini_waves.png') repeat 0 0;
 }
 
+.dropdown-content {
+   max-height: 150px !important;
+   overflow-y: auto !important;
+   backface-visibility: hidden !important;
+}
+
 .container-narrow {
     margin: 0 auto;
     max-width: 1000px;

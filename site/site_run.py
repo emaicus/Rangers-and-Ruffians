@@ -3,12 +3,14 @@ import flask
 import sys
 from flask import Flask,redirect, render_template
 from flask import request
-import rnr_utils
 import cgi
 import names
 import random
-import rnr_descriptions
 import json
+sys.path.append(os.path.abspath('../code'))
+import rnr_utils
+import rnr_descriptions
+
 
 magical_classes = {
   'bard' : ["the_bard's_songbook",],
@@ -22,72 +24,9 @@ magical_classes = {
   'battle_mage' : ['the_novice_spellbook',] 
 }
 
-app = Flask(__name__, static_url_path='/static')
-
-# @app.route('/races')
-@app.route('/')
-def index_page():
-  return render_template('homepage.html')
-
-@app.route('/legal')
-def legal():
-  with open('../data/art.json','r') as art_json:
-    art = json.load(art_json)  
-  return render_template('legal.html',art=art)
-
-def generate_redirect_string(param_map):
-  ret = '?'
-  for key in ['gender','race','class','name']:
-    if param_map[key] != None:
-      ret = '{0}{1}={2}&'.format(ret,key,param_map[key])
-  #fist char is a ?, then & everything
-  print('forwarding param {0}'.format(ret))
-  return ret
-
-#Order of operations: gender, race, class, name
-def find_first_invalid_value(params):
-  for key in ['gender','race','class','name']:
-    if params[key] == None:
-      return key
-  return None
-
-@app.route('/creation')
-def creation_landing_page():
-  print('hit the creation landing page.')
-
-  page_objects = None
-  populated_value = ""
-  forwarding_param = ""
-  serial_data = list()
-  
-  info = validity_check()
-  next_to_populate = find_first_invalid_value(info)
-  redirect_string = generate_redirect_string(info)
-
-  prev_stats = None
-  if info['class'] != None:
-    prev_stats = rnr_utils.rnr_class(info['class']).stats
-  if info['race'] != None:
-    prev_stats = rnr_utils.rnr_race(info['race']).stats
-
-  if next_to_populate == 'name':
-    print("The name {0} was invalid".format(info['name']))
-    random_name = names.get_first_name(gender=info['gender'])
-    return render_template("user_name_form.html", gender=info['gender'], race=info['race'], rnr_class=info['class'], random_name=random_name.title())
-  elif next_to_populate == 'gender':
-    serial_data = populate_gender()
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
-  elif next_to_populate == 'class':
-    serial_data = populate_class(info)
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
-  elif next_to_populate == 'race':
-    serial_data = populate_race(info)
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='race',prev_stats=prev_stats,display_class=False)
-  else:
-    character = rnr_utils.rnr_character(info['name'],info['race'],info['class'],0)
-    serial = character.serialize()
-    return render_template("rnr_character_sheet.html",character=serial,magic_class=info['magic_class'],chosen_name=info['name'])
-
+'''
+Helper functions
+'''
 def populate_race(info):
   page_objects = rnr_utils.load_all_race_objects()
   serial_data = list()
@@ -131,13 +70,14 @@ def validity_check():
   class_names = [x.lower() for x in class_names]
   race_names = rnr_utils.get_all_race_names()
   race_names = [x.lower() for x in race_names]
-
+  valid_levels = ['0','1','2','3','4','5','6','7','8','9','10']
   info = dict()
   chosen_gender = request.args.get('gender','')
   chosen_race = request.args.get('race','')
   chosen_class = request.args.get('class','')
   chosen_name = request.args.get('name','')
   roll_stats = request.args.get('roll_stats',0)
+  level = request.args.get('level', '')
 
   try:
     roll_stats = int(roll_stats)
@@ -152,6 +92,7 @@ def validity_check():
   chosen_name = cgi.escape(chosen_name)
   chosen_name = None if chosen_name.strip() == '' else chosen_name
   chosen_gender = chosen_gender.lower() if chosen_gender.lower() in ('male', 'female') else None
+  chosen_level = int(level) if level in valid_levels else None
 
   info['name'] = chosen_name
   info['magic_class'] = magic_class
@@ -159,10 +100,83 @@ def validity_check():
   info['race'] = chosen_race
   info['roll_stats'] = roll_stats
   info['gender'] = chosen_gender
+  info['level'] = chosen_level
 
   return info
 
+def generate_redirect_string(param_map):
+  ret = '?'
+  for key in ['gender','race','class','name']:
+    if param_map[key] != None:
+      ret = '{0}{1}={2}&'.format(ret,key,param_map[key])
+  #fist char is a ?, then & everything
+  print('forwarding param {0}'.format(ret))
+  return ret
 
+#Order of operations: gender, race, class, name
+def find_first_invalid_value(params):
+  for key in ['gender','race','class','name', 'level']:
+    if params[key] == None:
+      return key
+  return None
+
+
+'''
+Flask app
+'''
+
+app = Flask(__name__, static_url_path='/static')
+
+# @app.route('/races')
+@app.route('/')
+def index_page():
+  return render_template('homepage.html')
+
+@app.route('/legal')
+def legal():
+  with open('../data/art.json','r') as art_json:
+    art = json.load(art_json)  
+  return render_template('legal.html',art=art)
+
+@app.route('/creation')
+def creation_landing_page():
+  print('hit the creation landing page.')
+  info = {'gender' : 'female'}
+  serial_data = populate_race(info)
+  return render_template("new_display_page.html", data=serial_data)
+
+  page_objects = None
+  populated_value = ""
+  forwarding_param = ""
+  serial_data = list()
+  
+  info = validity_check()
+  next_to_populate = find_first_invalid_value(info)
+  redirect_string = generate_redirect_string(info)
+
+  prev_stats = None
+  if info['class'] != None:
+    prev_stats = rnr_utils.rnr_class(info['class']).stats
+  if info['race'] != None:
+    prev_stats = rnr_utils.rnr_race(info['race']).stats
+
+  if next_to_populate == 'name' or next_to_populate == 'level':
+    print("The name {0} was invalid".format(info['name']))
+    random_name = names.get_first_name(gender=info['gender'])
+    return render_template("user_name_form.html", gender=info['gender'], race=info['race'], rnr_class=info['class'], random_name=random_name.title())
+  elif next_to_populate == 'gender':
+    serial_data = populate_gender()
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
+  elif next_to_populate == 'class':
+    serial_data = populate_class(info)
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
+  elif next_to_populate == 'race':
+    serial_data = populate_race(info)
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='race',prev_stats=prev_stats,display_class=False)
+  else:
+    character = rnr_utils.rnr_character(info['name'],info['race'],info['class'],info['level'])
+    serial = character.serialize()
+    return render_template("rnr_character_sheet.html",character=serial,magic_class=info['magic_class'],chosen_name=info['name'])
 
 @app.route('/random')
 def random_page():
@@ -279,7 +293,6 @@ def level_up_page():
   
   serial_data = r_class.serialize()
   return render_template("level_up_page.html",data=serial_data, class_name=rnr_class_name)
-
 
 
 if __name__ == '__main__':

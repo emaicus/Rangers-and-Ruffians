@@ -9,12 +9,12 @@ import math
 import traceback
 import copy
 
-ability_dict = dict()
-class_data = dict()
-class_data_by_type = dict()
-race_data = dict()
-spell_books = dict()
-compendium_of_spells = dict()
+GLOBAL_ABILITY_DICT = dict()
+GLOBAL_CLASS_DATA = dict()
+GLOBAL_CLASS_DATA_BY_TYPE = dict()
+GLOBAL_RACE_DATA = dict()
+GLOBAL_SPELL_BOOKS = dict()
+GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 
 casting_classes = {
   'bard' : ["the_bard's_songbook",],
@@ -425,9 +425,8 @@ def markdown_spellbooks():
 ####################################################################################
 
 def load_Rangers_And_Ruffians_Data():
-  global spell_books, ability_dict, race_data, class_data, class_data_by_type, spells
-
-  if len(ability_dict.keys()) != 0:
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS
+  if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
   ability_path = "../data/abilities.yml"
@@ -436,39 +435,39 @@ def load_Rangers_And_Ruffians_Data():
   spell_path = "../data/merged_spells.yml"
   
   with open(spell_path) as data_file:
-    spell_books = yaml.load(data_file)
+    GLOBAL_SPELL_BOOKS = yaml.load(data_file)
 
-  for spellbook, chapters in spell_books.items():
+  for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
     for level, spells in chapters.items():
       if spells == None:
         continue
       for spell, details in spells.items():
-        compendium_of_spells[spell] = dict()
-        compendium_of_spells[spell]['level'] = level
-        compendium_of_spells[spell]['details'] = details
+        GLOBAL_COMPENDIUM_OF_SPELLS[spell] = dict()
+        GLOBAL_COMPENDIUM_OF_SPELLS[spell]['level'] = level
+        GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'] = details
 
   with open(race_path) as data_file:
-    race_data = yaml.load(data_file)
+    GLOBAL_RACE_DATA = yaml.load(data_file)
 
   with open(class_path) as data_file:
-    class_data_by_type = yaml.load(data_file)
+    GLOBAL_CLASS_DATA_BY_TYPE = yaml.load(data_file)
 
-  class_data_by_type.pop('CUT', None)
+  GLOBAL_CLASS_DATA_BY_TYPE.pop('CUT', None)
 
-  for class_type, info in class_data_by_type.items():
-    class_data.update(info)
+  for class_type, info in GLOBAL_CLASS_DATA_BY_TYPE.items():
+    GLOBAL_CLASS_DATA.update(info)
 
   with open(ability_path) as data_file:
-    ability_dict = yaml.load(data_file)
+    GLOBAL_ABILITY_DICT = yaml.load(data_file)
 
 def filterAbilities(abilities):
-  global ability_dict
+  global GLOBAL_ABILITY_DICT
   filtered_abilities = dict()
   for ability in abilities:
-    ability_type = ability_dict[ability]["type"]
+    ability_type = GLOBAL_ABILITY_DICT[ability]["type"]
     if not ability_type in filtered_abilities:
       filtered_abilities[ability_type] = list()
-    filtered_abilities[ability_type].append([ability,ability_dict[ability]["description"]])
+    filtered_abilities[ability_type].append([ability,GLOBAL_ABILITY_DICT[ability]["description"]])
   return filtered_abilities
 
 def mapAbilityType(abilitiy_type):
@@ -515,13 +514,15 @@ def mergeAbilities(dictionary, abilities):
   return dictionary
 
 def get_all_spellbooks():
+  global GLOBAL_SPELL_BOOKS
   load_Rangers_And_Ruffians_Data()
-  return spell_books
+  return copy.deepcopy(GLOBAL_SPELL_BOOKS)
 
 def find_spell_by_name(spell):
+  global GLOBAL_COMPENDIUM_OF_SPELLS
   load_Rangers_And_Ruffians_Data()
-  if spell in compendium_of_spells:
-    return compendium_of_spells[spell]['level'], compendium_of_spells[spell]['details']
+  if spell in GLOBAL_COMPENDIUM_OF_SPELLS:
+    return copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['level']), copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'])
   return None, None
 
 def gather_spells(spell_data):
@@ -543,27 +544,51 @@ def gather_spells(spell_data):
   return player_spellbook
 
 def get_rnr_class_data_with_name(name):
+  global GLOBAL_CLASS_DATA
+
   load_Rangers_And_Ruffians_Data()
-  if name.title() in class_data:
-    return copy.deepcopy(class_data[name.title()])
+  if name.title() in GLOBAL_CLASS_DATA:
+    return copy.deepcopy(GLOBAL_CLASS_DATA[name.title()])
   return None
 
 def get_rnr_race_data_with_name(name):
+  global GLOBAL_RACE_DATA
+
   load_Rangers_And_Ruffians_Data()
-  if name.title() in race_data:
-    return copy.deepcopy(race_data[name.title()])
+  if name.title() in GLOBAL_RACE_DATA:
+    return copy.deepcopy(GLOBAL_RACE_DATA[name.title()])
   return None
 
 def get_all_class_names():
+  global GLOBAL_CLASS_DATA
+
   load_Rangers_And_Ruffians_Data()
-  return list(class_data.keys())
+  return list(GLOBAL_CLASS_DATA.keys())
 
 def get_all_race_names():
+  global GLOBAL_RACE_DATA
+
   load_Rangers_And_Ruffians_Data()
-  return list(race_data.keys())
+  return list(GLOBAL_RACE_DATA.keys())
 
 def get_all_stat_names():
   return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception','Vitality']
+
+def get_all_rnr_abilities():
+  global GLOBAL_ABILITY_DICT
+  return copy.deepcopy(GLOBAL_ABILITY_DICT)
+
+def get_rnr_class_data():
+  global GLOBAL_CLASS_DATA
+  return copy.deepcopy(GLOBAL_CLASS_DATA)
+
+def get_rnr_class_data_by_type():
+  global GLOBAL_CLASS_DATA_BY_TYPE
+  return copy.deepcopy(GLOBAL_CLASS_DATA_BY_TYPE)
+
+def get_rnr_race_data():
+  global GLOBAL_RACE_DATA
+  return copy.deepcopy(GLOBAL_RACE_DATA)
 
 #returns a set of all subclass options a class has by a level
 def subclasses_at_level(class_name, target_level):
@@ -686,8 +711,9 @@ def load_all_class_objects(level=0):
   return rnr_classes
 
 def load_all_class_objects_by_type(level=0):
+  global GLOBAL_CLASS_DATA_BY_TYPE
   ret = dict()
-  for c_type, c_info in class_data_by_type.items():
+  for c_type, c_info in GLOBAL_CLASS_DATA_BY_TYPE.items():
     ret[c_type] = list()
     for name in c_info.keys():
       try:

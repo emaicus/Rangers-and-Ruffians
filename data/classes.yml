@@ -246,6 +246,7 @@ Heavy Fighter:
         stats:
           Perception: 1
         abilities:
+        - Ruffians
         - Choice Stat
         - Intimidate
       level_4:
@@ -404,20 +405,21 @@ Light Fighter:
     levels:
       level_0:
         abilities:
-          - Lightfoot
-          - Nimble Fingers
+        - Lightfoot
+        - Nimble Fingers
       level_1:
         stats:
           Dexterity: 1
           Perception: 1
         abilities: 
-          - Mantel
+        - Mantel
       level_2:
         stats:
           Perception: 1
           Luck: 1
         abilities:
         - Master of Disguise
+        - Ruffians
       level_3:
         stats:
           Charisma: 1
@@ -758,7 +760,7 @@ Light Fighter:
           Charisma: 1
         abilities:
         - Dire Companion
-        - Poision Strike
+        - Poison Strike
       level_9:
         stats:
           Perception: 1
@@ -1048,6 +1050,7 @@ Mage:
           Inner_Fire: 1
           Luck : 1
         abilities:
+        - Cost Reduction
         - Learn Spells
       level_7:
         stats:
@@ -1148,7 +1151,7 @@ Mage:
         - Multiclass Option
         - Greater Offhand Spell
         - Focus Energy
-        - Mage Sheild
+        - Mage Shield
         - Learn Spells
       level_6:
         stats:
@@ -1178,7 +1181,7 @@ Mage:
           Intelligence: 1
           Dexterity: 1
         abilities:
-        - Greater Mage Sheild
+        - Greater Mage Shield
         - Learn Spells
       level_10:
         stats:

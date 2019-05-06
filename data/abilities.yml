@@ -1,20 +1,25 @@
 A Thief's Gear:
   description: You begin with 100 feet of rope, a lockpicking kit, a smokebomb, and
-    a hidden dagger.
+    a hidden 1d6 dagger.
+  brief: 100 feet of rope, lockpick, smokebomb, 1d6 dagger.
   type: starting_item
 Armored:
   description: You begin your journey with a suit of light plate. Take -2 damage on attacks while wearing it.
   type: starting_item
+  brief: Light plate, -2 damage.
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
+  brief: Chainmail, -1 damage.
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
   type: choice
+  brief: +2 to Strength or Dex, -2 to the other.
 Animal Companion:
-  description: At the beginning of your journey, you may choose a small, medium, or
-    large animal companion. See the book of known beasts for stats.
+  description: At the beginning of your journey, you may choose a an animal companion. 
+    See the book of known beasts for stats.
   type: choice
+  brief: You have an animal companion selected from the book of known beasts.
 Animal Magnetism:
   description: Most animals inherently understand you on some level. You can attempt
     to influence the actions of animals with an inner fire check.
@@ -252,9 +257,6 @@ Dominate:
     an inner fire saving throw, they must obey you. They can attempt a saving throw
     every turn thereafter.
   type: general
-Double Tap:
-  description: Every three turns, you can shoot two arrows at a time.
-  type: combat
 Dry Up:
   description: If you are not submerged in water once every 3 days, you will die from
     asphyxiation. Pouring water on yourself or standing in the rain can grant you an
@@ -701,9 +703,6 @@ The Family Sword:
   description: Begin your journey with a 1d8 sword with a ruby on its hilt and an engraving
     of your family's sigil.
   type: starting_item
-The Hand of God:
-  description: Gain advantage on all roles when your health is below 20 percent.
-  type: combat
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
   type: spellbook
@@ -921,9 +920,6 @@ Rally Cry:
 Fallen: 
   description: While you are on death's door, all of your allies get a bonus action.
   type: general
-Consecutive Normal Punches: 
-  description: You may take three attacks per action.
-  type: combat
 Favorite Enemy:
   description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
   type: choice
@@ -1250,10 +1246,13 @@ Learn Spells:
   description: You may learn one spell of each spell level that you have access to. Spells must be learned from one of your spellbooks.
   type: choice
 Fighting Technique:
-  description: You may learn a new fighting technique.
+  description: You may learn a new fighting technique from the book of chi.
   type: choice
 Master Fighting Technique:
-  description: You may learn a new master fighting technique.
+  description: You may learn a new master fighting technique from the book of chi.
+  type: choice
+Legendary Fighting Technique:
+  description: You may learn a new legendary fighting technique from the book of chi.
   type: choice
 Multiclass Option:
   description: From this point forward, when you level up, you may choose to take a level in 
