@@ -212,8 +212,8 @@ def get_health(level, vit):
 #tuples contain race, class, level.
 def load_character_team(tuples):
   team = list()
-  for race, rnr_class, level, attack_function in tuples:
-    character = rnr_utils.rnr_character('', race, rnr_class, level)
+  for race, subrace, rnr_class, level, attack_function in tuples:
+    character = rnr_utils.rnr_character('', race, subrace, rnr_class, level)
     attacks = ATTACKS['mage'][level] if rnr_class in rnr_utils.casting_classes else ATTACKS['fighter'][level]
     team.append(rnr_entity_to_combatant(character, attacks, attack_function))
   return team
@@ -365,7 +365,7 @@ def the_goblin_test(fuzz_factor):
       victory_dict[level][goblin_count] = 0
       for fuzz in range(fuzz_factor):
         teams = dict()
-        teams['hetzer_company'] = load_character_team( [ ('elf','paladin',level), ('human', 'knight', level), ('orc', 'archer', level), ('gnome', 'monk', level), ('catterwol', 'rogue', level), ('human','ranger',level) ])
+        teams['hetzer_company'] = load_character_team( [ ('elf','wood elf','paladin',level), ('human', 'human', 'knight', level), ('orc', 'orc','archer', level), ('gnome', 'gnome','monk', level), ('catterwol', 'catterwol', 'rogue', level), ('human','human','ranger',level) ])
         teams['goblin_horde']   = load_horde(goblin_count, 'goblin', 10, {'dexterity' : 2}, ["1d6",], False) 
         print_combatants(teams,silent=True)
         victor = battle(teams,silent=True)
@@ -386,38 +386,38 @@ def get_best_stat(caster, stats):
 
 def load_hetzer_company(level, attack_function=random_attack):
   return 'Hetzer Company', load_character_team( 
-    [ ('elf','paladin',level, attack_function), 
-      ('human', 'knight', level, attack_function), 
-      ('orc', 'archer', level, attack_function), 
-      ('halfling', 'sorcerer', level, attack_function), 
-      ('catterwol', 'rogue', level, attack_function), 
-      ('human','ranger',level, attack_function) ]
+    [ ('elf','wood elf','paladin',level, attack_function), 
+      ('human', 'human','knight', level, attack_function), 
+      ('orc', 'orc','archer', level, attack_function), 
+      ('halfling', 'halfling','sorcerer', level, attack_function), 
+      ('catterwol', 'catterwol','rogue', level, attack_function), 
+      ('human', 'human','ranger',level, attack_function) ]
   )
 
 def load_archibold(level, attack_function=random_attack):
-  return 'Archibold, The Wizard', load_character_team( [ ('human','wizard',level, attack_function) ] )
+  return 'Archibold, The Wizard', load_character_team( [ ('human','human','wizard',level, attack_function) ] )
 
 def load_gillthunder(level, attack_function=random_attack):
-  return 'Gillthunder', load_character_team( [ ('human','knight',level, attack_function) ] )
+  return 'Gillthunder', load_character_team( [ ('human','human','knight',level, attack_function) ] )
 
 def load_race_class(level,race,rnr_class,attack_function=random_attack):
   return '{0} {1}'.format(race.title(), rnr_class.title()), load_character_team( [race,rnr_class,level,attack_function] )
 
 def load_lich_busters(level,  attack_function=random_attack):
   return 'Lich Busters', load_character_team( 
-    [('sprout','druid',level, attack_function), 
-      ('elf', 'battle_mage', level, attack_function), 
-      ('human', 'paladin', level, attack_function) ]
+    [('sprout','sprout','druid',level, attack_function), 
+      ('elf', 'deep elf','battle_mage', level, attack_function), 
+      ('human', 'human', 'paladin', level, attack_function) ]
   )
 
 def load_abyss(level,  attack_function=random_attack):
   return "Archi B's Posse", load_character_team( 
-    [('human','wizard',level, attack_function), 
-    ('orc', 'gunslinger', level, attack_function), 
-    ('gnome', 'monk', level, attack_function), 
-    ('lizkin', 'necromancer', level, attack_function), 
-    ('elf', 'paladin', level, attack_function), 
-    ('human', 'cleric', level, attack_function)]
+    [('human','human','wizard',level, attack_function), 
+    ('orc', 'orc', 'gunslinger', level, attack_function), 
+    ('gnome', 'gnome', 'monk', level, attack_function), 
+    ('lizkin', 'lizkin', 'necromancer', level, attack_function), 
+    ('elf', 'wood elf', 'paladin', level, attack_function), 
+    ('human', 'human', 'cleric', level, attack_function)]
   )
 
 def generate_boss(name, count, health, stats, caster, attacks):

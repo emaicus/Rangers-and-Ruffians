@@ -105,6 +105,7 @@ Heavy Fighter:
     - Pledge
     - Minor Spell Choice
     - Chainmail
+    - Learn Spells
     base_stats:
       Charisma: 0
       Dexterity: -4
@@ -124,7 +125,6 @@ Heavy Fighter:
         - Hammer of Light
         - Faithful Weapon
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Inner_Fire: 1
@@ -132,20 +132,17 @@ Heavy Fighter:
         abilities:
         - Link Lifeforce
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Intelligence: 1
         abilities:
         - Bash
-        - Learn Spells
       level_3:
         stats:
           Inner_Fire: 1
           Luck: 1
         abilities:
         - Minor Offhand Spell
-        - Learn Spells
       level_4:
         stats:
           Strength: 1
@@ -153,7 +150,6 @@ Heavy Fighter:
         abilities:
         - Shield of Men
         - Level Two Spells
-        - Learn Spells
       level_5:
         stats:
           Inner_Fire: 1
@@ -162,7 +158,6 @@ Heavy Fighter:
         - Offhand Attack
         - Greater Offhand Spell
         - Multiclass Option
-        - Learn Spells
       level_6:
         stats:
           Luck: 1
@@ -171,28 +166,24 @@ Heavy Fighter:
         abilities:
         - Sinner's Bane
         - Level Three Spells
-        - Learn Spells
       level_7:
         stats:
           Perception: 1
         abilities:
         - Beacon of Hope
         - Second Action
-        - Learn Spells
       level_8:
         stats:
           Dexterity: 1
         abilities:
         - Last Line of Defense
         - Level Four Spells
-        - Learn Spells
       level_9:
         stats:
           Inner_Fire: 1
           Intelligence: 1
         abilities:
         - Winged Jump
-        - Learn Spells
       level_10:
         stats:
           Perception: 1
@@ -200,7 +191,6 @@ Heavy Fighter:
         abilities:
         - Fires of Heaven
         - Level Five Spells
-        - Learn Spells
   Barbarian:
     description: Barbarians are hearty, and can dole out a lot of damage, making them
       great tanks for a party of adventurers. They are marked by their berserk ability,
@@ -899,6 +889,7 @@ Light Fighter:
     - Action 
     - Offhand Action
     - Second Action
+    - Starting Fighting Techniques
     levels:
       level_0:
         abilities:
@@ -906,66 +897,45 @@ Light Fighter:
         - Spell Power
         - Hand to Hand
         - The Book of Chi
+        - Fighting Techniques
+        - Learn Fighting Techniques
       level_1:
         stats:
           Perception: 1
-        abilities:
-        - Fighting Technique
-        - Fighting Technique
       level_2:
         stats:
           Inner_Fire: 1
-        abilities:
-        - Fighting Technique
       level_3: 
         stats:
           Luck: 1
           Dexterity: 1
-        abilities:
-        - Fighting Technique
       level_4:
         stats:
           Inner_Fire: 1
-        abilities:
-          - Fighting Technique
       level_5:
         stats:
           Strength: 1
           Perception: 1
         abilities:
         - Multiclass Option
-        - Master Fighting Technique
-        - Fighting Technique
+        - Master Fighting Techniques
       level_6:
         stats:
           Luck: 1
-        abilities: 
-        - Master Fighting Technique
-        - Fighting Technique
       level_7:
         stats:
           Inner_Fire: 1
           Perception: 1
-        abilities: 
-          - Master Fighting Technique
-          - Fighting Technique
       level_8:
         stats:
           Inner_Fire: 1
           Dexterity: 1
-        abilities:
-          - Master Fighting Technique
-          - Fighting Technique
       level_9:
         abilities:
-          - Legendary Fighting Technique
-          - Master Fighting Technique
-          - Fighting Technique
+          - Legendary Fighting Techniques
       level_10:
-        abilities:
-          - Legendary Fighting Technique
-          - Master Fighting Technique
-          - Fighting Technique
+        stats:
+          Inner_Fire: 1
 Mage:
   Wizard:
     description: Often eccentric, wizards are known to be wayfarers and meddlers.
@@ -999,6 +969,7 @@ Mage:
       - The Sword and the Satchel
       - Walking Stick
       - Spell Choice
+      - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1007,14 +978,12 @@ Mage:
         - Novice Spellbook
         - The Wizard's Addendum
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Inner_Fire: 1
           Intelligence: 1
         abilities:
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Intelligence: 1
@@ -1023,19 +992,15 @@ Mage:
         abilities:
         - Minor Offhand Spell
         - Looming Presence
-        - Learn Spells
       level_3:
         stats:
           Inner_Fire: 1
           Charisma: 1
         abilities:
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Perception: 1
-        abilities:
-        - Learn Spells
       level_5:
         stats:
           Intelligence: 2
@@ -1044,14 +1009,12 @@ Mage:
         - Multiclass Option 
         - Greater Offhand Spell
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats:
           Inner_Fire: 1
           Luck : 1
         abilities:
         - Cost Reduction
-        - Learn Spells
       level_7:
         stats:
           Intelligence: 1
@@ -1059,26 +1022,22 @@ Mage:
         abilities:
         - Major Offhand Spell
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats: 
           Inner_Fire: 1
         abilities: 
         - Commit to Memory
-        - Learn Spells
       level_9:
         stats:
           Intelligence: 1
         abilities: 
         - Spell Invention
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Intelligence: 1
         abilities:
         - Tome of the Ancients
-        - Learn Spells  
   Battle_Mage:
     description: Battle Mage's are adept at both physical and magical combat. They
       are able to learn basic spells, which they use to help hone their swordcraft by
@@ -1101,6 +1060,7 @@ Mage:
     - Action 
     - Offhand Action
     - Minor Spell Choice
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1110,14 +1070,12 @@ Mage:
         - Spell Power
         - Novice Spellbook
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Inner_Fire: 1
           Dexterity: 1
         abilities:
         - Embue Weapon
-        - Learn Spells
       level_2:
         stats:
           Intelligence: 1
@@ -1125,7 +1083,6 @@ Mage:
         abilities:
         - Sword and Spell
         - Level One Spells
-        - Learn Spells
       level_3:
         stats:
           Charisma: 1
@@ -1133,7 +1090,6 @@ Mage:
         abilities:
         - Minor Offhand Spell
         - Trained Attack
-        - Learn Spells
       level_4:
         stats:
           Inner_Fire: 1
@@ -1142,7 +1098,6 @@ Mage:
           - Offhand Attack
           - Greater Embue Weapon
           - Level Two Spells
-          - Learn Spells
       level_5:
         stats:
           Luck: 1
@@ -1152,7 +1107,6 @@ Mage:
         - Greater Offhand Spell
         - Focus Energy
         - Mage Shield
-        - Learn Spells
       level_6:
         stats:
           Perception: 1
@@ -1160,14 +1114,12 @@ Mage:
         abilities:
         - Transfer Essense
         - Level Three Spells
-        - Learn Spells
       level_7:
         stats:
           Charisma: 1
           Intelligence: 1
         abilities:
         - Major Offhand Spell
-        - Learn Spells
       level_8:
         stats:
           Perception: 1
@@ -1175,21 +1127,18 @@ Mage:
         abilities:
         - Major Embue Weapon
         - Level Four Spells
-        - Learn Spells
       level_9:
         stats:
           Intelligence: 1
           Dexterity: 1
         abilities:
         - Greater Mage Shield
-        - Learn Spells
       level_10:
         stats:
           Intelligence: 1
         abilities:
         - One With Magic
         - Level Five Spells
-        - Learn Spells
   Druid:
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful
@@ -1216,6 +1165,7 @@ Mage:
     - Offhand Action
     - Spell Choice
     - Greater Choice Stat
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1225,20 +1175,16 @@ Mage:
         - Novice Spellbook
         - The Druid's Field Guide
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Dexterity: 1
           Intelligence: 1
         abilities:
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Strength: 1
           Inner_Fire: 1
-        abilities:
-        - Learn Spells
       level_3:
         stats:
           Dexterity: 1
@@ -1247,14 +1193,11 @@ Mage:
         abilities:
         - Minor Offhand Spell
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Strength: 1
           Perception: 1
           Inner_Fire: 1
-        abilities:
-        - Learn Spells
       level_5:
         stats:
           Dexterity: 1
@@ -1264,12 +1207,9 @@ Mage:
         - Multiclass Option
         - Greater Offhand Spell
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats: 
           Strength: 1
-        abilities:
-        - Learn Spells
       level_7:
         stats:
           Intelligence: 1
@@ -1277,26 +1217,22 @@ Mage:
         - Ascend 
         - Major Offhand Spell
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats: 
           Inner_Fire: 1
           Dexterity: 1
         abilities:
         - Power of Ascension
-        - Learn Spells
       level_9:
         stats:
           Perception: 1
         abilities:
         - Ascended Action
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Charisma: 1
         abilities:
-        - Learn Spells
         - True Ascension
   Sorcerer:
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
@@ -1322,6 +1258,7 @@ Mage:
     - Action 
     - Offhand Action
     - Spell Choice
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1332,35 +1269,30 @@ Mage:
         - Novice Spellbook
         - The Sorcerer's Scrolls
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Inner_Fire: 1
           Luck: 1
         abilities:
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Charisma: 1
           Perception: 1
         abilities:
         - Spell Modification
-        - Learn Spells
       level_3:
         stats:
           Strength: 1
         abilities:
         - Influence
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Luck: 1
           Dexterity: 1
         abilities:
         - Minor Offhand Spell
-        - Learn Spells
       level_5:
         stats:
           Strength: 1
@@ -1370,14 +1302,12 @@ Mage:
         - Greater Offhand Spell
         - Additional Influence Point
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats:
           Inner_Fire: 1
           Intelligence: 1
         abilities:
         - Prepare Spell
-        - Learn Spells
       level_7:
         stats:
           Luck: 1
@@ -1386,12 +1316,9 @@ Mage:
         - Major Offhand Spell
         - Additional Influence Point
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats:
           Charisma: 1
-        abilities: 
-        - Learn Spells
       level_9:
         stats:
           Strength: 1
@@ -1399,13 +1326,11 @@ Mage:
         abilities: 
         - Spirits Within
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Inner_Fire: 1
         abilities:
         - Light and Shadow
-        - Learn Spells 
   Necromancer:
     description: Death is not my enemy, nor is it my ally, it is my servant. So say
       Necromancers, mages who study the intricacies of death, and what follows after. Often fuled
@@ -1432,6 +1357,7 @@ Mage:
     - Action 
     - Offhand Action
     - Spell Choice
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1445,14 +1371,12 @@ Mage:
         - Vegan
         - The Macabre Manual
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Intelligence: 1
           Dexterity: 1
         abilities:
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Inner_Fire: 1
@@ -1460,7 +1384,6 @@ Mage:
         abilities:
         - Larger Soul Jar
         - Edge of Eternity
-        - Learn Spells
       level_3:
         stats:
           Charisma: 1
@@ -1469,7 +1392,6 @@ Mage:
         - Minor Offhand Spell
         - Fear the Light
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Dexterity: 1
@@ -1477,7 +1399,6 @@ Mage:
         abilities:
         - Larger Soul Jar
         - Eyes of the Others
-        - Learn Spells
       level_5:
         stats: 
           Strength: 1
@@ -1487,13 +1408,10 @@ Mage:
         - Greater Offhand Spell
         - Reap
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats:
           Inner_Fire: 1
           Luck: 1
-        abilities:
-        - Learn Spells
       level_7:
         stats:
           Strength: 1
@@ -1502,14 +1420,12 @@ Mage:
         - Larger Soul Jar
         - Major Offhand Spell
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats: 
           Dexterity: 1
           Inner_Fire: 1
         abilities:
         - Phylactery
-        - Learn Spells
       level_9:
         stats:
           Charisma: 1
@@ -1518,7 +1434,6 @@ Mage:
         - Larger Soul Jar
         - Freed from this Mortal Coil
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Strength: 1
@@ -1526,7 +1441,6 @@ Mage:
         abilities:
         - Army of the Damned
         - Larger Soul Jar
-        - Learn Spells         
   Cleric:
     description: After pledging their allegiance to their deity, Clerics have made
       it their duty to follow their will. Clerics are weak, and do not fight with physical
@@ -1554,6 +1468,7 @@ Mage:
     - Action 
     - Offhand Action
     - Spell Choice
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1564,21 +1479,18 @@ Mage:
         - The Book of Healing
         - Pledge
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Charisma: 1
           Intelligence: 1
         abilities:
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Luck: 1
           Inner_Fire: 1
         abilities:
         - Last Ditch Prayer
-        - Learn Spells
       level_3:
         stats: 
           Dexterity: 1
@@ -1587,13 +1499,10 @@ Mage:
         - Minor Offhand Spell
         - Taunt
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Intelligence: 1
           Luck: 1
-        abilities:
-        - Learn Spells
       level_5:
         stats:
           Strength: 1
@@ -1603,12 +1512,9 @@ Mage:
         - Greater Offhand Spell
         - Feint
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats: 
           Dexterity: 1
-        abilities:
-        - Learn Spells
       level_7:
         stats:
           Inner_Fire: 1
@@ -1617,7 +1523,6 @@ Mage:
         - Major Offhand Spell
         - Halo
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats:
           Intelligence: 1
@@ -1625,20 +1530,17 @@ Mage:
         abilities: 
         - Burning Bright
         - True Heal
-        - Learn Spells
       level_9:
         stats:
           Inner_Fire: 1
         abilities: 
         - Aura of Advantage
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Charisma: 1
         abilities:
         - Angelic Wings
-        - Learn Spells 
   Bard:
     description: Showmen by nature, Bards are known for their skills at performing
       and distracting others from the sorrows of life. Bards are usually at least a little
@@ -1664,6 +1566,7 @@ Mage:
     - Action 
     - Offhand Action
     - Spell Choice
+    - Learn Spells
     levels:
       level_0:
         abilities:
@@ -1676,7 +1579,6 @@ Mage:
         - Boozehound
         - Regular Patron
         - Level Zero Spells
-        - Learn Spells
       level_1:
         stats:
           Charisma: 1
@@ -1685,7 +1587,6 @@ Mage:
         - Minor Restful Melody
         - One up the Sleeve
         - Level One Spells
-        - Learn Spells
       level_2:
         stats:
           Dexterity: 1
@@ -1693,7 +1594,6 @@ Mage:
         abilities:
         - Spell Coin
         - Slight of Hand
-        - Learn Spells
       level_3:
         stats:
           Perception: 1
@@ -1701,13 +1601,11 @@ Mage:
         abilities:
         - Cartwheel
         - Level Two Spells
-        - Learn Spells
       level_4:
         stats:
           Charisma: 1
         abilities:
         - Nimble Fingers
-        - Learn Spells
       level_5:
         stats: 
           Strength: 1
@@ -1717,13 +1615,11 @@ Mage:
         - Additional Spell Coin
         - Greater Restful Melody
         - Level Three Spells
-        - Learn Spells
       level_6:
         stats:
           Luck: 1
         abilities:
         - Greater Embue Weapon
-        - Learn Spells
       level_7:
         stats: 
           Charisma: 1
@@ -1733,21 +1629,18 @@ Mage:
         - Greater Spell Coin
         - Double Strike
         - Level Four Spells
-        - Learn Spells
       level_8:
         stats:
           Dexterity: 1
           Inner_Fire: 1
         abilities:
         - Major Restful Melody
-        - Learn Spells
       level_9:
         stats:
           Strength: 1
         abilities:
         - Additional Spell Coin
         - Level Five Spells
-        - Learn Spells
       level_10:
         stats:
           Luck: 1
@@ -1755,7 +1648,6 @@ Mage:
         abilities:
         - Multi-Action
         - Major Spell Coin
-        - Learn Spells  
 Ranged Fighter:
   Archer:
     description: Some of the best marksmen in the world, archers are naturals with

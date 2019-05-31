@@ -114,10 +114,10 @@ introductions = [
   "Gods above! It's perfect! What if you tried playing"
 ]
 
-hairless_races = ["lizkin"]
+hairless_races = ["lizkin", "heavy_metal"]
 always_bearded_races = ["dwarf"]
 bearded_races = ["gnome", "halfling", "human", "orc", "dwarf", "daemonspawn"]
-human_like_skin = ['elf', "gnome", "halfling","human","dwarf"]
+human_like_skin = ['wood_elf', "gnome", "halfling","human","dwarf", "high_elf"]
 
 def getHairDescription(race, male):
   global DESCRIPTIONS_DATABASE
@@ -143,7 +143,6 @@ def getHairlessDescription(race):
     #get my hair description
     return random.choice(hairless_races[race])
 
-
 def getHairStyle(male):
   #get my hair style
   global DESCRIPTIONS_DATABASE
@@ -161,7 +160,6 @@ def getHairColor(male):
   my_hair_color = random.choice(hair_colors)
   return my_hair_color
 
-
 def getBeard(male, bearded_override=False):
   facial_hair = DESCRIPTIONS_DATABASE["beards"]
   bearded = (male and random.choice([True, False])) or bearded_override
@@ -171,10 +169,9 @@ def getBeard(male, bearded_override=False):
     my_facial_hair = random.choice(facial_hair)
   return my_facial_hair
 
-
 def getEyeDescription():
   global DESCRIPTIONS_DATABASE
-  eye_description = DESCRIPTIONS_DATABASE['eye_descriptions']
+  eye_description = DESCRIPTIONS_DATABASE['eye_descriptions']['universal'] + hair_description.get(race, [])
   return random.choice(eye_description)
   
 def getEyeColor():
@@ -194,7 +191,7 @@ def getUniqueRaceDescription(race):
   global DESCRIPTIONS_DATABASE
   unique_races = DESCRIPTIONS_DATABASE['skin_colors']
   if race.lower() in unique_races:
-    return random.choice(unique_races[race])
+    return random.choice(unique_races[race.lower()])
   else:
     return None
 

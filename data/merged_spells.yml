@@ -627,8 +627,8 @@ the_book_of_healing:
         someone, and an additional 1d6 damage to corrupted entities or the undead.
     Spare:
       cost: 0
-      description: As an offhand action, touch a critically injured ally to stabilize
-        them. Allies who are at death's door and are touched by you gain advantage
+      description: As an offhand action, stabilize a critically injured ally within 30 feet.
+        Allies who are at death's door and are stabilized by you gain advantage
         on their death coin flips.
     The Face of Good:
       cost: 0

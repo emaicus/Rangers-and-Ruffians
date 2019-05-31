@@ -8,6 +8,8 @@ import random
 import math
 import traceback
 import copy
+import re
+from collections import OrderedDict 
 
 GLOBAL_ABILITY_DICT = dict()
 GLOBAL_CLASS_DATA = dict()
@@ -16,7 +18,7 @@ GLOBAL_RACE_DATA = dict()
 GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 
-casting_classes = {
+magical_classes = {
   'bard' : ["the_bard's_songbook",],
   'cleric' : ['the_book_of_healing',],
   'paladin' : ['the_book_of_healing',],
@@ -24,7 +26,8 @@ casting_classes = {
   'sorcerer' : ['the_novice_spellbook', "the_sorcerer's_scrolls"],
   'druid' : ['the_novice_spellbook', "the_druid's_guidebook"],
   'necromancer' : ['the_macabre_manual',],
-  'battle mage' : ['the_novice_spellbook',] 
+  'monk' : ['the_book_of_chi',],
+  'battle_mage' : ['the_novice_spellbook',] 
 }
 
 class rnr_entity:
@@ -78,11 +81,11 @@ class rnr_entity:
         print('Asked for bad stat {0}'.format(stat_name))
         return None
 
-    def base_serialize(self):
+    def base_serialize(self, verbose=False):
       serial = dict()
       serial["stats"] = self.stats
-      serial["name"] = self.name
-      serial["abilities"] = filterAbilities(self.abilities)
+      serial["name"] = self.name.replace(' ', '_')
+      serial["abilities"] = filterAbilities(self.abilities, verbose)
       serial["description"] = self.description
       serial['quote'] = self.quote
       serial['quote_author'] = self.quote_author
@@ -177,6 +180,10 @@ class rnr_class(rnr_entity):
         raise Exception('ERROR: Could not load class {0}'.format(name))
       stats = class_data['base_stats']
       abilities = class_data['base_abilities']
+
+      spell_learning_dict = OrderedDict()
+      self.spells_known = None
+
       self.handbook = class_data.get('handbook', None)
       for step in range(0,level+1):
         level_string = 'level_{0}'.format(step)
@@ -190,8 +197,32 @@ class rnr_class(rnr_entity):
         abilities = abilities + level_details.get('abilities', [])
         if 'subclass_{0}_abilities'.format(subclass) in level_details:
           abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
-      
+
+        for ability in abilities:
+          if bool(re.search('Level .* Spells', ability)) or ability in ["Fighting Techniques", "Master Fighting Techniques", "Legendary Fighting Techniques"]:
+            if not ability in spell_learning_dict:
+              spell_learning_dict[ability] = 0
+
+        for key in spell_learning_dict.keys():
+          spell_learning_dict[key] += 1
+
+      if len(spell_learning_dict.keys()) > 0:
+        spells_string = "As a level {0} {1}, you know ".format(level, name)
+        length = len(spell_learning_dict.keys())
+        i = 0
+        for key, val in spell_learning_dict.items():
+          i+=1
+          if i == 1:
+            spells_string = '{0} {1} {2}'.format(spells_string, val, key.lower())
+          elif i == length:
+            spells_string = '{0}, and {1} {2}.'.format(spells_string, val, key.lower())
+          else:
+            spells_string = '{0}, {1} {2}'.format(spells_string, val, key.lower())
+
+        self.spells_known = ("Spells Known", spells_string)
+
       self.level = level
+      self.subclass = subclass if subclass != "" else None
       super().__init__(name, abilities, stats, class_data['description'], '', '')
 
     def get_health(self):
@@ -250,8 +281,8 @@ class rnr_class(rnr_entity):
       ret += "\\page\n"
       return ret
 
-    def serialize(self, male=False):
-      serial = dict(self.base_serialize())
+    def serialize(self, male=False, verbose=False):
+      serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
       if os.path.exists('static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
         serial["path_to_image"] = '/static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())
@@ -269,48 +300,59 @@ class rnr_class(rnr_entity):
       serial['levels'] = all_data['levels']
 
       for level in serial['levels'].keys():
-        if not 'abilities' in serial['levels'][level]:
+        if not 'abilities' in serial['levels'][level] or serial['levels'][level]['abilities'] is None:
           serial['levels'][level]['abilities'] = dict()
         else:
           serial['levels'][level]['abilities'] = filterAbilities(serial['levels'][level]['abilities'])
         for key in serial['levels'][level].keys():
-          print(key)
           if 'subclass' in key:
             serial['levels'][level][key] = filterAbilities(serial['levels'][level][key])
       return serial
 
 class rnr_race(rnr_entity):
-  def __init__(self, name):
-    race_data = get_rnr_race_data_with_name(name)
+  def __init__(self, name, subrace):
+    race_data = get_rnr_subrace_data(name, subrace)
 
     if race_data == None:
-      raise Exception('ERROR: Could not load race {0}'.format(name))
+      raise Exception('ERROR: Could not load race {0} {1}'.format(name, subrace))
     self.quote = race_data['quote']
     self.quote_author = race_data['author']
     self.handbook = race_data.get('handbook', None)
-    super().__init__(name, race_data['abilities'], race_data['stats'], 
+    super().__init__(subrace, race_data['abilities'], race_data['stats'], 
                       race_data['description'], race_data['quote'], race_data['author'])
+    self.race_name = name
+    self.subrace_name = subrace
 
   def markdownify(self,male=False):
     custom_chunk = '>{0}\n>\n>—{1}\n\n'.format(self.quote, self.quote_author)
 
 
     gender = "male" if male else "female"
-    return self.base_markdownify("race/{0}/{1}.jpg".format(gender, self.name.replace(' ','_').lower()), custom_chunk=custom_chunk,handbook=self.handbook)
+    return self.base_markdownify("race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower()), custom_chunk=custom_chunk,handbook=self.handbook)
 
-  def serialize(self, male=False):
-    serial = self.base_serialize()
+  def serialize(self, male=False, verbose=False):
+    serial = self.base_serialize(verbose)
     gender = "male" if male else "female"
-    serial["path_to_image"] = "/static/images/race/{0}/{1}.jpg".format(gender, self.name.replace(' ','_').lower())
+
+    #Fall back to race image if no subrace image exists.
+    if os.path.exists("/static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())):
+      img_name = self.subrace_name.replace(' ','_').lower()
+    else:
+      img_name = self.race_name.replace(' ','_').lower()
+
+    serial["path_to_image"] = "/static/images/race/{0}/{1}.jpg".format(gender, img_name)
+    
+
     with open('../data/art.json','r') as art_json:
         art = json.load(art_json)
 
-    serial['rights'] = art.get('{1}_{0}'.format(gender, self.name.lower()), None)
+    serial['rights'] = art.get('{1}_{0}'.format(gender, self.name.lower().replace(' ', '_')), None)
+
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, race_name, class_name, level, subclass = '', character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
-    rnr_race_obj = rnr_race(race_name)
+  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = '', character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
+    rnr_race_obj = rnr_race(race_name, subrace)
     rnr_class_obj = rnr_class(class_name, level, subclass)
     
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
@@ -322,31 +364,40 @@ class rnr_character(rnr_entity):
       
     super().__init__(final_character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
+    self.gender = 'male' if male==True else 'female'
     self.origin = character_origin
     self.weakness = character_weakness
-    self.race = rnr_race_obj.name
-    self.rnr_class = rnr_class_obj.name
+    self.race = rnr_race_obj.race_name.replace(' ', '_')
+    self.subrace = rnr_race_obj.subrace_name.replace(' ', '_')
+    self.rnr_class = rnr_class_obj.name.replace(' ', '_')
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
     self.level = level
-    self.subclass = subclass
+    self.subclass = subclass.replace(' ', '_')
+    self.character_name = character_name.replace(' ', '_')
 
   def markdownify(self):
     ret += self.base_markdownify()
     return ret
 
-  def serialize(self):
-    serial = self.base_serialize()
+  def serialize(self, verbose=False):
+    serial = self.base_serialize(verbose)
     serial["origin"] = self.origin
     serial['race'] = self.race.lower()
     serial['class'] = self.rnr_class.lower()
     serial['health'] = self.get_health()
+    serial['subrace'] = self.subrace
+    serial['character_name'] = self.character_name
+    serial['subclass'] = self.rnr_class_obj.subclass
+    serial['gender'] = self.gender
+    if not self.rnr_class_obj.spells_known is None:
+      serial["abilities"]["choice"].append(self.rnr_class_obj.spells_known)
     return serial
 
   def get_health(self):
     summed_level = sum(range(self.level+1))
     modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
-    return 20 + summed_level + modifier
+    return 15 + summed_level + modifier
 
 class rnr_ability:
   def __init__(self, name, description, ability_type):
@@ -360,22 +411,6 @@ class rnr_ability:
 # MARKDOWN AND FILE OUTPUT
 #
 ####################################################################################
-
-# def markdown_all_classes(data, ability_dict, image_path, outfile_name):
-#   first = True
-#   for class_type, details in sorted(data.items()):
-#     if class_type == 'CUT':
-#       continue
-#     mode = 'w' if first else 'a'
-#     first = False
-#     with open(outfile_name, mode) as outfile:
-#       outfile.write("# {0} \n".format(class_type.capitalize()))
-#     standard_md_out(details, ability_dict, image_path, outfile_name, '##')
-
-# def mardown_all_races(data, ability_dict, image_path, outfile_name):
-#   with open(outfile_name, 'w') as outfile:
-#     pass
-#   standard_md_out(data, ability_dict, image_path, outfile_name, '#')
 
 def printLogo():
   print()
@@ -460,14 +495,15 @@ def load_Rangers_And_Ruffians_Data():
   with open(ability_path) as data_file:
     GLOBAL_ABILITY_DICT = yaml.load(data_file)
 
-def filterAbilities(abilities):
+def filterAbilities(abilities, verbose=False):
+  filt = "description" if verbose else "brief"
   global GLOBAL_ABILITY_DICT
   filtered_abilities = dict()
   for ability in abilities:
     ability_type = GLOBAL_ABILITY_DICT[ability]["type"]
     if not ability_type in filtered_abilities:
       filtered_abilities[ability_type] = list()
-    filtered_abilities[ability_type].append([ability,GLOBAL_ABILITY_DICT[ability]["description"]])
+    filtered_abilities[ability_type].append([ability,GLOBAL_ABILITY_DICT[ability][filt]])
   return filtered_abilities
 
 def mapAbilityType(abilitiy_type):
@@ -551,7 +587,7 @@ def get_rnr_class_data_with_name(name):
     return copy.deepcopy(GLOBAL_CLASS_DATA[name.title()])
   return None
 
-def get_rnr_race_data_with_name(name):
+def get_rnr_race_data(name):
   global GLOBAL_RACE_DATA
 
   load_Rangers_And_Ruffians_Data()
@@ -559,17 +595,61 @@ def get_rnr_race_data_with_name(name):
     return copy.deepcopy(GLOBAL_RACE_DATA[name.title()])
   return None
 
-def get_all_class_names():
-  global GLOBAL_CLASS_DATA
-
-  load_Rangers_And_Ruffians_Data()
-  return list(GLOBAL_CLASS_DATA.keys())
-
-def get_all_race_names():
+def get_race_given_subrace(subrace):
   global GLOBAL_RACE_DATA
 
   load_Rangers_And_Ruffians_Data()
-  return list(GLOBAL_RACE_DATA.keys())
+  for race, data in GLOBAL_RACE_DATA.items():
+    if subrace.replace('_',' ').title() in data['subraces'].keys():
+      return race
+  return None
+
+def get_subraces_for_race(race):
+  global GLOBAL_RACE_DATA
+
+  load_Rangers_And_Ruffians_Data()
+  if race in GLOBAL_RACE_DATA:
+    return list(GLOBAL_RACE_DATA[race].keys())
+  return None
+
+def get_rnr_subrace_data(name, subrace):
+  global GLOBAL_RACE_DATA
+
+  load_Rangers_And_Ruffians_Data()
+  if name.replace('_',' ').title() in GLOBAL_RACE_DATA:
+    if subrace.replace('_',' ').title() in GLOBAL_RACE_DATA[name.replace('_',' ').title()]['subraces']:
+      return copy.deepcopy(GLOBAL_RACE_DATA[name.replace('_',' ').title()]['subraces'][subrace.replace('_',' ').title()])
+  return None
+
+def get_all_class_names(underscore=True):
+  global GLOBAL_CLASS_DATA
+  underscore_char = '_' if underscore else ' '
+
+  load_Rangers_And_Ruffians_Data()
+  class_names = list(GLOBAL_CLASS_DATA.keys())
+  class_names = [c.replace(' ', underscore_char) for c in class_names]
+  return class_names
+
+def get_all_race_names(underscore=True):
+  global GLOBAL_RACE_DATA
+  load_Rangers_And_Ruffians_Data()
+  underscore_char = '_' if underscore else ' '
+  race_names = list()
+  for race in GLOBAL_RACE_DATA.keys():
+    for subrace in GLOBAL_RACE_DATA[race]['subraces']:
+      race_names.append((race.replace(' ', underscore_char), subrace.replace(' ', underscore_char)))
+  return race_names
+
+def get_all_subrace_names(underscore=True):
+  load_Rangers_And_Ruffians_Data()
+  global GLOBAL_RACE_DATA
+  underscore_char = '_' if underscore else ' '
+
+  subrace_names = list()
+  for race in GLOBAL_RACE_DATA.keys():
+    for subrace in GLOBAL_RACE_DATA[race]['subraces']:
+      subrace_names.append(subrace.replace(' ', underscore_char))
+  return subrace_names
 
 def get_all_stat_names():
   return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception','Vitality']
@@ -578,7 +658,7 @@ def get_all_rnr_abilities():
   global GLOBAL_ABILITY_DICT
   return copy.deepcopy(GLOBAL_ABILITY_DICT)
 
-def get_rnr_class_data():
+def get_rnr_class_dict():
   global GLOBAL_CLASS_DATA
   return copy.deepcopy(GLOBAL_CLASS_DATA)
 
@@ -586,7 +666,7 @@ def get_rnr_class_data_by_type():
   global GLOBAL_CLASS_DATA_BY_TYPE
   return copy.deepcopy(GLOBAL_CLASS_DATA_BY_TYPE)
 
-def get_rnr_race_data():
+def get_rnr_race_dict():
   global GLOBAL_RACE_DATA
   return copy.deepcopy(GLOBAL_RACE_DATA)
 
@@ -687,15 +767,17 @@ def removeOptions(options):
 ####################################################################################
 
 def load_all_race_objects():
+  global GLOBAL_RACE_DATA
   races = list()
-  race_names = get_all_race_names()
-  for name in race_names:
-    try:
-      new_race = rnr_race(name)
-    except: 
-      traceback.print_exc()
-      continue
-    races.append(new_race)
+  for race, data in GLOBAL_RACE_DATA.items():
+    if 'subraces' in data:
+      for subrace in data['subraces'].keys():
+        try:
+          new_race = rnr_race(race, subrace)
+        except: 
+          traceback.print_exc()
+          continue
+        races.append(new_race)
   return races
 
 #TODO doesn't take subclass into account.
@@ -728,18 +810,21 @@ def load_all_characters(level=0):
   rnr_classes = get_all_class_names()
 
   lis = list()
-  for race_name in rnr_races:
+  for race_name, subrace_name in rnr_races:
     for class_name in rnr_classes:
-      character = rnr_character('', race_name, class_name, level)
+      character = rnr_character('', race_name, subrace_name, class_name, level)
       lis.append(character)
   return lis
 
+'''
+Races should be a list of tuples of the form (race, subrace)
+'''
 def load_combos_given_list(races, classes, level):
   characters = list()
-  for race in races:
+  for race, subrace in races:
     for rnr_class in classes:
       try:
-        character = rnr_character('', race_name, class_name, level)
+        character = rnr_character('', race_name, subrace, class_name, level)
       except:
         continue
       characters.append(character)

@@ -1,6 +1,6 @@
 import yaml
 
-with open('spells.yml') as data_file:
+with open('merged_spells.yml') as data_file:
   spell_books = yaml.load(data_file)
 
 empty_spellbooks = dict()

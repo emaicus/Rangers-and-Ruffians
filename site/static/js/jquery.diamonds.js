@@ -18,6 +18,7 @@
             diamondWrap : $('<div class="diamonds"></div>'),
             overrideCss : '.diamonds-{{guid}} .diamond-box-wrap { width: {{size}}px; height: {{size}}px; } .diamonds-{{guid}} .diamond-box { border-width: {{gap}}px }',
             debugEnabled : false,
+            same_even_odd : false,
             debugEvent : function(event, data) { console.debug("Event: " + event, data); },
             debugMethod : function(method, args) { console.debug("Method: " + method, args)}
         };
@@ -171,8 +172,9 @@
         $("> *", element).detach();
     };
     
-    Diamonds.prototype._groupIntoRows = function(items, maxDiamondsPerRow, hideIncompleteRow) {
+    Diamonds.prototype._groupIntoRows = function(items, maxDiamondsPerRow, hideIncompleteRow, same_even_odd) {
         // Max number of diamonds per row
+        console.log(this.options.minDiamondsPerRow, maxDiamondsPerRow);
         maxDiamondsPerRow = Math.max(this.options.minDiamondsPerRow, 0 + maxDiamondsPerRow);
 
         // Draw rows
@@ -180,7 +182,12 @@
         for(var i = 0; i < items.length; i++) {
             var item = items[i];
             // Append or create new row?
-            var max = rows.length % 2 === 0 ? maxDiamondsPerRow - 1 : maxDiamondsPerRow;
+            var max = -1;
+            if(same_even_odd == false){
+                max = rows.length % 2 === 0 ? maxDiamondsPerRow - 1 : maxDiamondsPerRow;
+            }else{
+                max = maxDiamondsPerRow;
+            }
             if(!rows.hasOwnProperty(rows.length - 1) || rows[rows.length - 1].length == max) {
                 rows.push(new Array());
             }
@@ -200,6 +207,7 @@
     Diamonds.prototype._renderHtml = function(rows) {
         var wrap = this.options.diamondWrap.clone();
         wrap.addClass("diamonds-" + this.guid);
+        //every other row
         for(var i = 0; i < rows.length; i += 2) {
             var row = this.options.rowWrap.clone();
             var upper = this.options.rowUpperWrap.clone();
@@ -232,7 +240,8 @@
         
         var rows = this._groupIntoRows(this.itemElements,
             Math.floor(width / this.options.size),
-            this.options.hideIncompleteRow);
+            this.options.hideIncompleteRow,
+            this.options.same_even_odd);
         
         var html = this._renderHtml(rows);
 

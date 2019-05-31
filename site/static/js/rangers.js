@@ -2,7 +2,7 @@
   // var instance = M.Tabs.init(el, options);
 
 $(document).ready(function(){
-    $('select').formSelect();
+     $('select').formSelect();
   });
 
 $(document).ready(function(){
@@ -40,4 +40,12 @@ function printdiv(divName) {
   window.print();
 
   document.body.innerHTML = originalContents;
+}
+
+function ajaxLoadDiv(requested_element, divName) {
+  $("#"+divName).load("/ajax_load_content", {"entity_to_load" : requested_element});
+
+  // var html = $.get("/ajax_load_content", {"entity_to_load" : requested_element});
+  // console.log(html);
+  // 
 }
