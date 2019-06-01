@@ -100,12 +100,13 @@ def spell_stats():
   can_learn_mask = {}
   for num in range(11):
     level_string = 'level_{0}'.format(num)
-    for ability in wizard['levels'][level_string]['abilities']:
-      if 'Level' in ability and 'Spells' in ability:
-        split = ability.split(' ')
-        key = '{0} {1}'.format(split[0],split[1])
-        if not key in can_learn_mask:
-          can_learn_mask[key] = True
+    if 'abilities' in wizard['levels'][level_string]:
+      for ability in wizard['levels'][level_string]['abilities']:
+        if 'Level' in ability and 'Spells' in ability:
+          split = ability.split(' ')
+          key = '{0} {1}'.format(split[0],split[1])
+          if not key in can_learn_mask:
+            can_learn_mask[key] = True
     for key, val in can_learn_mask.items():
       if val == True:
         if not key in level_dict:
@@ -131,13 +132,13 @@ def get_all_race_abilities_used():
   return abilities
 
 def get_all_class_abilities_used():
-  rnr_classes = rnr_utils.get_rnr_class_data()
+  rnr_classes = rnr_utils.get_rnr_class_dict()
   abilities = list()
   for rnr_class, info in rnr_classes.items():
     abilities += info['base_abilities']
     for level, stats in info['levels'].items():
       for key, value in stats.items():
-        if 'abilities' in key:
+        if 'abilities' in key and not stats[key] is None:
           abilities += value
   return abilities 
 
@@ -194,7 +195,7 @@ def print_abilities(subclass, abilities, file_stream):
 def process_classes():
   class_names = rnr_utils.get_all_class_names()
   if not os.path.exists(STAT_OUTPUT):
-    os.makedir(STAT_OUTPUT)
+    os.mkdir(STAT_OUTPUT)
   if not os.path.exists(os.path.join(STAT_OUTPUT, 'level_output')):
     os.mkdir(os.path.join(STAT_OUTPUT, 'level_output'))
 
@@ -295,6 +296,16 @@ def game_stats():
     print()
   print('TOTAL SPELLS: {0}'.format(total))
 
+def check_brief_abilities():
+  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+    if not 'brief' in ability_info:
+      print('ERROR: No brief in {0}'.format(ability_name))
+  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+    if len(ability_info['brief']) > 120:
+      print("WARNING: {0}'s brief is {1} characters long".format(ability_name, len(ability_info['brief'])))
+    if len(ability_info['brief']) > len(ability_info['description']):
+      print("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
+
 if __name__ == '__main__':
   print('GENERATING SPELL STATS:')
   spell_stats()
@@ -316,5 +327,7 @@ if __name__ == '__main__':
   rank_races() 
   print("GENERATING CLASS RANKINGS")
   rank_classes()
+  print()
+  check_brief_abilities()
   print()
   print("FINISHED!")

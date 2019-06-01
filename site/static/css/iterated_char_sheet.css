@@ -1,0 +1,316 @@
+body
+{
+  margin:0;
+  padding: 0;
+  background:  url('/static/images/subtle_white_mini_waves.png') repeat 0 0;
+  -webkit-print-color-adjust: exact !important;
+}
+
+.printRegion 
+{
+  width: 8.5in;
+  height: 13.3in;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.logo 
+{
+  width: 8.5in;
+  margin: 0 auto;
+  font-size: 48px;
+  padding-bottom: 10px;
+}
+
+.buttonRegion{
+  width: 8.5in;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background: #fff;
+}
+
+.greyInventorySection
+{
+  background-color: #E8E8E8 !important;
+}
+
+span.characterName
+{
+  font-family: 'Angkor';
+  font-size: 64px;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+p.diamondStat
+{
+  font-size: 12px;
+  margin-bottom: 0px;
+  transform: rotate(-45deg) translate(-28px, 0px);
+  text-decoration: underline;
+}
+
+p.diamondStat:after {
+  content: "\00a0\00a0\00a0";
+}
+
+p.boxSubtitle
+{
+  font-family: 'Angkor';
+  font-size: 26px;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+p.ability
+{
+  margin-bottom: 8px;
+  line-height: 1.0;
+}
+
+p.spaceForAbility
+{
+  margin-bottom:14px;
+}
+
+
+span.title
+{
+
+  font-family: 'Angkor';
+  font-size: 20px;
+}
+
+span.subtitle
+{
+  font-family: 'Angkor';
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+span.normalText
+{
+  
+  font-family: 'Angkor';
+  font-size: 12px;
+}
+
+span.circleText
+{
+  transform: translate(-1px, -5px);
+  font-weight: bold;
+  font-size: 10px;
+}
+
+figcaption.caption
+{
+  color:grey;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Angkor';
+  text-align: center;
+}
+
+div.diamondWrapper
+{
+  width : 330px;
+  height: 140px;
+  margin-top: 15px;
+}
+
+div.boxDiv
+{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  padding-right : 9px;
+}
+
+div.characterDetails
+{
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 10px;
+  padding-bottom: 0px;
+}
+
+.splitBoxDiv
+{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-left : 5px;
+  margin-top: 10px;
+  background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+}
+
+div.combatItems
+{
+  margin-top: 4px;
+}
+
+div.combatAbilities
+{
+  margin-top: 10px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+  padding-left: 5px;
+  padding-right: 4px;
+  border-bottom: 1px solid black;
+}
+
+div.combatAbilitiesRemainder
+{
+  margin-top: 0px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+
+  padding-left: 5px;
+  padding-right: 4px;
+  margin-left: 0px;
+  margin-right:0px;
+}
+
+.diamond-grid
+{
+}
+
+.diamond-box {
+  border: 2px solid black !important;
+}
+
+.diamond-row-lower .diamond-box {
+  margin-top: 70.644660941%;
+}
+
+.item
+{
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  /*transition: 0s;
+  opacity: .75;*/
+}
+
+.square_wrapper
+{
+
+}
+
+div.squareWrapper
+{
+  margin: 20px auto;
+}
+
+div.square
+{
+  width: 80px;
+  height: 80px;
+  display: inline-block; /* could be float */
+  border: 2px solid black;
+  margin: 2px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/*.item:hover
+{
+  opacity: 1;
+}*/
+
+.item img
+{
+  positon: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-5%) scale(1);
+  width: 100%;
+}
+
+@media (max-width: 767px)
+{
+  .diamond-grid
+  {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.statCircle {
+    background-color:#fff;
+    border:2px solid black;    
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    text-align: center;
+}
+
+.octagonWrap {
+    width:60px;
+    height:60px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.octagon {
+    text-align:center;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    border: 2px solid black;
+}
+.octagon:before {
+    position: absolute;
+    /* There needs to be a negative value here to cancel
+     * out the width of the border. It's currently -3px,
+     * but if the border were 5px, then it'd be -5px.
+     */
+    top: -2px; right: -2px; bottom: -2px; left: -2px;
+    transform: rotate(45deg);
+    content: '';
+    border: 2px solid black;
+}
+
+.octagonInner{
+  transform: rotate(-45deg) translate(-15px, -3px);
+  font-weight: bold;
+  font-size: 10px;
+}
+
+@media print 
+{
+  @page 
+  {
+     size: 8.5in 11in;  /* width height */
+  }
+}
+
+div.icon
+{
+  display:table;
+  margin-left: auto;
+  margin-right: auto;
+  width:73px;
+  height:73px
+
+}
+
+img.icon
+{
+  width:70px;
+  height:70px
+}
+
+.fancyNumber
+{
+  font-size: 12px;
+}
+
+.underline
+{
+  font-size: 12px;
+}
