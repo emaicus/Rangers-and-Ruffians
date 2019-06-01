@@ -238,11 +238,11 @@ Game stats. call game_stats()
 
 def evaluate(num, target):
   if num < target:
-    return 'FAIL'
+    return 'FAIL! (-{0})'.format((target*2)-num)
   elif num >= target*2:
-    return 'VICTORY!'
+    return 'VICTORY! (+{0})'.format(num-(target*2))
   else:
-    return 'GOOD'
+    return 'PASS! (-{0})'.format((target*2)-num)
 
 def game_stats():
   store_data = dict()
