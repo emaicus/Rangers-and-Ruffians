@@ -172,6 +172,11 @@ div.combatAbilitiesRemainder
   margin-right:0px;
 }
 
+div.iconDiv
+{
+  float: right;
+}
+
 .diamond-grid
 {
 }

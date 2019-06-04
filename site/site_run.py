@@ -130,6 +130,46 @@ def legal():
     art = json.load(art_json)  
   return render_template('legal.html',art=art)
 
+def which_icons(rnr_race, rnr_class):
+  icons = list()
+
+  #Everyone has health
+  icons.append(('hearts.svg', 'Health'))
+
+  #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
+  if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
+    icons.append(('ink-swirl.svg', 'Spell Points'))
+
+  #Clerics and Paladins get special spell points.
+  if rnr_class in ['cleric', 'paladin']:
+    icons.append(('prayer.svg', 'Spell Points'))
+
+  #Sorcerers have influence points
+  if rnr_class == 'sorcerer':
+    icons.append(('magic-swirl.svg', 'Influence'))
+  
+  #necromancers have souls
+  if rnr_class == 'necromancer':
+    icons.append(('tombstone.svg', 'Souls'))
+  
+  #highborn have gumption
+  if rnr_class == 'highborn':
+    icons.append(('swords-power.svg', 'Gumption'))
+
+  #archers have magic arrows
+  if rnr_class == 'archer':
+    icons.append(('quiver.svg', 'Magic Quiver'))
+
+  #Bards have spell coins
+  if rnr_class == 'bard':
+    icons.append(('swap-bag.svg', 'Spell Coins'))
+
+  #Everyone has spell power, armor, and magic armor.
+  icons.append(('fire-spell-cast.svg', 'Spell Power'))
+  icons.append(('shield.svg', 'Armor'))
+  icons.append(('bolt-shield.svg', 'Mage Armor'))
+  return icons
+
 @app.route('/creation')
 def creation_landing_page():
   #return render_template("iterated_display_page.html")
@@ -157,6 +197,7 @@ def creation_landing_page():
   if next_to_populate == 'name' or next_to_populate == 'level':
     print("The name {0} was invalid".format(info['name']))
     random_name = names.get_first_name(gender=info['gender'])
+    print(rnr_utils.get_all_class_names())
     return render_template("user_name_form.html", chosen_gender=info['gender'], chosen_subrace=info['subrace'], chosen_rnr_class=info['class'], all_genders=['male','female'], all_races=rnr_utils.get_all_race_names(), all_rnr_classes=rnr_utils.get_all_class_names(), random_name=random_name.title())
   elif next_to_populate == 'gender':
     serial_data = populate_gender()
@@ -173,7 +214,7 @@ def creation_landing_page():
     male=True if info['gender'].lower() == 'male' else False
     character = rnr_utils.rnr_character(info['name'],race,subrace,info['class'],info['level'], male=male)
     serial = character.serialize()
-    return render_template("iterated_char_sheet.html",character=serial,magic_class=info['magic_class'])
+    return render_template("iterated_char_sheet.html",character=serial,icons=which_icons(info['subrace'], info['class']))
 
 @app.route('/ajax_load_content', methods=['POST',])
 def ajax_load_content():

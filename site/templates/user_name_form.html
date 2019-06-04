@@ -35,10 +35,9 @@
                   {% endif %}
                 {% endfor %}
               </select>
-
               <select name="subrace" form="name_form">
                 {% for race in all_races %}
-                  {% if race == chosen_race %}
+                  {% if race[1].lower() == chosen_subrace %}
                     <option value={{race[1]}} selected>{{race[1].replace('_', ' ').title()}}</option>
                   {% else %}
                     <option value={{race[1]}}>{{race[1].replace('_', ' ').title()}}</option>
@@ -48,7 +47,7 @@
 
               <select name="class" form="name_form">
                 {% for rnr_class in all_rnr_classes %}
-                  {% if rnr_class == chosen_rnr_class %}
+                  {% if rnr_class.lower() == chosen_rnr_class %}
                     <option value="{{rnr_class}}" selected>{{rnr_class.replace('_', ' ').title()}}</option>
                   {% else %}
                     <option value="{{rnr_class}}">{{rnr_class.replace('_', ' ').title()}}</option>

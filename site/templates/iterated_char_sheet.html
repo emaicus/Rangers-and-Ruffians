@@ -22,195 +22,184 @@
           </div>
         </div>
       </div>
-      <div class=printRegion>
+      <div class="printRegion">
         <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
-          <div class="booboobadingding" id = printable>
-          <div id="characterDetails" class="characterDetails">
-            <div class="row" style="height:90px;">
-              <div class="col-5">
-                <span class="characterName"> {{ character["character_name"].replace('_', ' ').title() }}</span><br/>
-              </div>
-              <div class="col-7">
-                <figure style="display: inline-block">
-                  <img src="/static/images/icons/hearts.svg" class="icon">
-                  <figcaption class="caption">Health</figcaption>
-                </figure>
-                <figure style="display: inline-block">
-                  <img src="/static/images/icons/ink-swirl.svg" class="icon">
-                  <figcaption class="caption">Spell Points</figcaption>
-                </figure>
-                <figure style="display: inline-block">
-                  <img src="/static/images/icons/fire-spell-cast.svg" class="icon">
-                  <figcaption class="caption">Spell Power</figcaption>
-                </figure>
-                <figure style="display: inline-block">
-                  <img src="/static/images/icons/shield.svg" class="icon">
-                  <figcaption class="caption">Armor</figcaption>
-                </figure>
-                <figure style="display: inline-block">
-                  <img src="/static/images/icons/bolt-shield.svg" class="icon">
-                  <figcaption class="caption">Mage Armor</figcaption>
-                </figure>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-3">
-                <p>
-                  {% if character["subrace"] != None %}
-                    <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
-                  {% else %}
-                    <span class="subtitle">Race:</span><span class="normalText"> __________ </span>
-                  {% endif %}
-                  {% if character["class"] != None %}
-                    <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
-                  {% else %}
-                    <span class="subtitle">Class:</span><span class="normalText"> __________ </span>
-                  {% endif %}  
-                  {% if character["subclass"] != None %}
-                    <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
-                  {% else %}
-                    <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span>
-                  {% endif %}
-                </p>
-              </div>
-              <div class=col-3>
-                <p>
-                  <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
-                  <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].title() }}</span><br/>
-                  <span class="subtitle">Height:</span><span class="normalText"> __________</span>
-                </p>
-              </div>
-              <div class="col-3">
-                <p>
-                  <span class="subtitle">Hair:</span><span class="normalText"> __________ </span><br/>
-                  <span class="subtitle">Skin:</span><span class="normalText"> __________ </span><br/>
-                  <span class="subtitle">Eyes:</span><span class="normalText"> __________ </span>
-                </p>
-              </div>
-              <div class="col-3">
-                <p>
-                  <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
-                  <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
-                  <span class="subtitle">EXP:</span><span class="normalText"> __________ </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row h-100">
-            <div class="col-6">
-              <div class="h-100 d-flex flex-column">
-                <div class=squareWrapper>
-                  <div class=square>
-                    <span class="squareContent">STR</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">INT</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">PER</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">VIT</span>
-                  </div>
-                  <br/>
-                  <div class=square>
-                    <span class="squareContent">DEX</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">INF</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">CHA</span>
-                  </div>
-                  <div class=square>
-                    <span class="squareContent">LUK</span>
+          <div id = "printable">
+            <div id="characterDetails" class="characterDetails">
+              <div class="row" style="height:90px;">
+                <div class="col-5">
+                  <span class="characterName"> {{ character["character_name"].replace('_', ' ').title() }}</span><br/>
+                </div>
+                <div class="col-7">
+                  <div id="iconDiv" class="iconDiv">
+                  {% for img, caption in icons %}
+                  <figure style="display: inline-block">
+                    <img src="/static/images/icons/{{img}}" class="icon">
+                    <figcaption class="caption">{{caption}}</figcaption>
+                  </figure>
+                  {% endfor %}
                   </div>
                 </div>
-                <div class="boxDiv" id="combatDiv">
-                  <div id="combatItemsHeading">
-                    <p class="boxSubtitle">Combat Items:</p>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <p>
+                    {% if character["subrace"] != None %}
+                      <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
+                    {% else %}
+                      <span class="subtitle">Race:</span><span class="normalText"> __________ </span>
+                    {% endif %}
+                    {% if character["class"] != None %}
+                      <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
+                    {% else %}
+                      <span class="subtitle">Class:</span><span class="normalText"> __________ </span>
+                    {% endif %}  
+                    {% if character["subclass"] != None %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
+                    {% else %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span>
+                    {% endif %}
+                  </p>
+                </div>
+                <div class=col-3>
+                  <p>
+                    <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
+                    <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].title() }}</span><br/>
+                    <span class="subtitle">Height:</span><span class="normalText"> __________</span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Hair:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Skin:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Eyes:</span><span class="normalText"> __________ </span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">EXP:</span><span class="normalText"> __________ </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row h-100">
+              <div class="col-6">
+                <div class="h-100 d-flex flex-column">
+                  <div class=squareWrapper>
+                    <div class=square>
+                      <span class="squareContent">STR</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">INT</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">PER</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">VIT</span>
+                    </div>
+                    <br/>
+                    <div class=square>
+                      <span class="squareContent">DEX</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">INF</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">CHA</span>
+                    </div>
+                    <div class=square>
+                      <span class="squareContent">LUK</span>
+                    </div>
                   </div>
-                  <div class=combatItems>
-                    <div class="row">
-                      <div class="col-6">
-                        <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
-                        <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
+                  <div class="boxDiv" id="combatDiv">
+                    <div id="combatItemsHeading">
+                      <p class="boxSubtitle">Combat Items:</p>
+                    </div>
+                    <div class=combatItems>
+                      <div class="row">
+                        <div class="col-6">
+                          <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
+                          <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
+                        </div>
+                        <div class="col-6">
+                          <p><span class="fancyNumber">3.</span><span class="underline">_________________</span></p>
+                          <p><span class="fancyNumber">4.</span><span class="underline">_________________</span></p>
+                        </div>
                       </div>
-                      <div class="col-6">
-                        <p><span class="fancyNumber">3.</span><span class="underline">_________________</span></p>
-                        <p><span class="fancyNumber">4.</span><span class="underline">_________________</span></p>
+                      <div class="row">
+                        <div class="col-12">
+                          <p class="boxSubtitle">Inventory:</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
+                          <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
+                          <p><span class="fancyNumber">3.</span><span class="underline">___________________</span></p>
+                        </div>
+                        <div class="col-6">
+                          <p><span class="fancyNumber">5.</span><span class="underline">_________________</span></p>
+                          <p><span class="fancyNumber">6.</span><span class="underline">_________________</span></p>
+                          <p><span class="fancyNumber">7.</span><span class="underline">________________</span></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
+                        </div>
+                        <div class="col-6">
+                          <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <p class="boxSubtitle">Inventory:</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
-                        <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
-                        <p><span class="fancyNumber">3.</span><span class="underline">___________________</span></p>
-                      </div>
-                      <div class="col-6">
-                        <p><span class="fancyNumber">5.</span><span class="underline">_________________</span></p>
-                        <p><span class="fancyNumber">6.</span><span class="underline">_________________</span></p>
-                        <p><span class="fancyNumber">7.</span><span class="underline">________________</span></p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
-                      </div>
-                      <div class="col-6">
-                        <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
-                      </div>
+                  </div>
+                  <div id="combatAbilities" class="combatAbilities" style="height:518px">
+                    <p class="boxSubtitle">Combat Abilities:</p>
+                    <div id="combatAbilityList">
+                      {% for ability, description in character["abilities"]["combat"] %}
+                        <p class="ability">
+                          <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                        </p>
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
-                <div id="combatAbilities" class="combatAbilities" style="height:518px">
-                  <p class="boxSubtitle">Combat Abilities:</p>
-                  <div id="combatAbilityList">
-                    {% for ability, description in character["abilities"]["combat"] %}
+              </div>
+              <div class="col-6">
+                <div id="generalAbilities" class="combatAbilities" style="height:750px">
+                  <p class="boxSubtitle">Abilities:</p>
+                  <div id="generalAbilityList">
+                    {% for ability, description in character["abilities"]["general"] %}
                       <p class="ability">
-                        <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                        <span class="normalText"><strong>{{ability}}:</strong> </span><span class="normalText">{{description}}</span>
                       </p>
                     {% endfor %}
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div id="generalAbilities" class="combatAbilities" style="height:750px">
-                <p class="boxSubtitle">Abilities:</p>
-                <div id="generalAbilityList">
-                  {% for ability, description in character["abilities"]["general"] %}
-                    <p class="ability">
-                      <span class="normalText"><strong>{{ability}}:</strong> </span><span class="normalText">{{description}}</span>
-                    </p>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="splitBoxDiv" id="advantagesAndDisadvantages" style="height:300px">
-                <div class="row">
-                  <div class="col-6">
-                    <p class="boxSubtitle">Advantages:</p>
-                    <div id="advantages">
-                      {% for ability, description in character["abilities"]["advantage"] %}
-                        <p class="ability">
-                          <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
-                        </p>
-                      {% endfor %}
+                <div class="splitBoxDiv" id="advantagesAndDisadvantages" style="height:300px">
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="boxSubtitle">Advantages:</p>
+                      <div id="advantages">
+                        {% for ability, description in character["abilities"]["advantage"] %}
+                          <p class="ability">
+                            <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                          </p>
+                        {% endfor %}
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6">
-                    <p class="boxSubtitle">Disadvantages:</p>
-                    <div id="disadvantages">
-                      {% for ability, description in character["abilities"]["disadvantage"] %}
-                        <p class="ability">
-                          <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
-                        </p>
-                      {% endfor %}
+                    <div class="col-6">
+                      <p class="boxSubtitle">Disadvantages:</p>
+                      <div id="disadvantages">
+                        {% for ability, description in character["abilities"]["disadvantage"] %}
+                          <p class="ability">
+                            <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                          </p>
+                        {% endfor %}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,7 +207,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="buttonRegion">
         <div class="container">
