@@ -228,7 +228,7 @@ class rnr_class(rnr_entity):
     def get_health(self):
       summed_level = sum(range(self.level+1))
       modifier = self.vitality * (self.level + 1)
-      return 15 + summed_level + modifier
+      return 10 + summed_level + modifier
 
     def markdownify(self, male=False):
       gender_string = 'male' if male else 'female'
@@ -396,8 +396,8 @@ class rnr_character(rnr_entity):
 
   def get_health(self):
     summed_level = sum(range(self.level+1))
-    modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
-    return 15 + summed_level + modifier
+    modifier = self.vitality * (self.level + 1)
+    return 10 + summed_level + modifier
 
 class rnr_ability:
   def __init__(self, name, description, ability_type):
