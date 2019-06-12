@@ -520,7 +520,7 @@ def load_Rangers_And_Ruffians_Data():
   spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
   
   with open(spell_path) as data_file:
-    GLOBAL_SPELL_BOOKS = json.load(data_file)
+    GLOBAL_SPELL_BOOKS = json.load(spell_path)
 
   for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
     for level, spells in chapters.items():
