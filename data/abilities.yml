@@ -1460,7 +1460,7 @@ Photosynthesis:
 Blade of Grass: 
   description: Summon a 1d6 blade of woven plant fiber on command.
   type: general
-  brief: You can summon a 1d6 blade.
+  brief: You can summon a 1d6 grass blade.
 Scurry: 
   description: You have advantage on dexterity based athletics checks.
   type: advantage
@@ -1552,7 +1552,7 @@ Forced Focus:
 Additional Resolve:
   description: Your max gumption increases by 1. 
   type: action
-  brief:  Your max gumption increases by 1.
+  brief:  Gain one gumption.
 Spell Power:
   description: If a spell states that an enemy must make a saving throw, it must beat 10 + (2 * your inner fire).
   type: rule

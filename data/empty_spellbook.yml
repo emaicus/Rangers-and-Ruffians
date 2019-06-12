@@ -18,7 +18,7 @@ the_bard's_songbook:
   Level_1:
     Neutralize Poison:
       cost: 1
-      description: Roll 1d20 and add your inner fire. If the result is above 10, decrease the potency of
+      description: Roll 1d20 and add your inner fire. If the result is greater than 10, decrease the potency of
         a poison by half. If it is above 15, fully neutralize the poison. Works on poisoned individuals.
     Animate Object: 
       description: Concentration. Bring an object to life. Objects may attack for 1d4 damage, and have 4 health. 
