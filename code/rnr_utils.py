@@ -12,6 +12,9 @@ import re
 from collections import OrderedDict 
 import time
 from shutil import copyfile
+from tqdm import tqdm
+from tqdm import trange
+
 
 
 CODE_DIRECTORY = os.path.dirname(__file__)
@@ -480,26 +483,32 @@ def INSTALL_RANGERS_AND_RUFFIANS():
     print("ERROR! COULD NOT FIND THE DATA DIRECTORY {0}".format(DATA_DIRECTORY))
     sys.exit(1)
 
+  # A little clunky, but it allows the pretty progress bar
+  reinstall = list()
   modified = False
   for filename in os.listdir(DATA_DIRECTORY):
     source = os.path.join(DATA_DIRECTORY, filename)
-    json_filename = '{0}.json'.format(filename.split('.')[0])
-    destination = os.path.join(INSTALL_DIRECTORY, json_filename)
     if not '.yml' in filename:
       continue
     mod_time = os.path.getmtime(source)
     if not filename in timestamps:  
-      print('No record of {0}. Installing'.format(filename))
-      convert_yaml_file_to_json_file(source, destination)
+      reinstall.append((filename, 'installing {0}'.format(filename)))
       timestamps[filename] = mod_time
       modified = True
     elif mod_time != timestamps[filename]:
-      print('{0} has been updated. Installing most recent version'.format(filename))
-      convert_yaml_file_to_json_file(source, destination)
+      reinstall.append((filename, 'updating {0}'.format(filename)))
       timestamps[filename] = mod_time
       modified = True
-  
+
   if modified:
+    pbar = tqdm(reinstall)
+    for filename, description in pbar:
+      pbar.set_description(description)
+      source = os.path.join(DATA_DIRECTORY, filename)
+      json_filename = '{0}.json'.format(filename.split('.')[0])
+      destination = os.path.join(INSTALL_DIRECTORY, json_filename)
+      convert_yaml_file_to_json_file(source, destination)
+  
     with open(timestamp_json_path, 'w') as outfile:
       json.dump(timestamps, outfile)
 
@@ -520,7 +529,7 @@ def load_Rangers_And_Ruffians_Data():
   spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
   
   with open(spell_path) as data_file:
-    GLOBAL_SPELL_BOOKS = json.load(spell_path)
+    GLOBAL_SPELL_BOOKS = json.load(data_file)
 
   for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
     for level, spells in chapters.items():
@@ -583,7 +592,7 @@ def abbreviate_stat(stat, upper=False):
   return ret.upper() if upper else ret
 
 def standard_stat_order():
-  return ['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck']
+  return set(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck'])
 
 def mapAbilityType(abilitiy_type):
   if abilitiy_type == "combat":
@@ -618,7 +627,8 @@ def convert_json_file_to_yml_file(input_file, output_file):
     with open(output_file, 'w') as outfile:
       yaml.dump(d, outfile, default_flow_style=False)
   except Exception as e:
-    print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+    pass
+    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
 
 def convert_yaml_file_to_json_file(input_file, output_file):
   try:
@@ -627,7 +637,8 @@ def convert_yaml_file_to_json_file(input_file, output_file):
     with open(output_file, 'w') as outfile:
       json.dump(d, outfile)
   except Exception as e:
-    print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+    pass
+    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
 
 def mergeAbilities(dictionary, abilities):
   for key, values in dictionary.items():
