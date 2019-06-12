@@ -511,6 +511,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
   
     with open(timestamp_json_path, 'w') as outfile:
       json.dump(timestamps, outfile)
+    pbar.close()
 
 
 def load_Rangers_And_Ruffians_Data():
