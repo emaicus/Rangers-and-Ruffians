@@ -261,7 +261,7 @@ Charge:
     prone if you roll a 14 or above while on foot, a 10 or above if on horseback.
   type: combat
   brief: Once every 3 turns as an offhand, charge an enemy up to 1 size larger than you.
-    If you roll above a 14 on foot or 10 on horsebaack, knock them prone.
+    If you roll above a 14 on foot or 10 on horseback, knock them prone.
 Charm:
   description: As an action, you may cast a charm spell on an entity. If the
     entity fails an inner fire saving throw against your spell power, they cannot
@@ -408,7 +408,7 @@ Last Ditch Prayer:
   description: Once every three turns in battle and once every day out of battle, say a fervent prayer
     to your deity, and add your luck to a roll.
   type: combat
-  brief: Once every three turns in battle or once per daay out, add your luck to a roll.
+  brief: Once every three turns in battle or once per day out, add your luck to a roll.
 Harrying Shot:
   description: On a critical hit, the attacked entity must make their next move with disadvantage.
   type: combat
@@ -493,7 +493,7 @@ Greater Medicine:
   brief: You can create 2 2d20 health potions per day. Potions keep for 24 hours. If you are on your favorite
     terrain, potions restore an extra 1d10.
 Hammer of Light:
-  description: Any weapon that you wield does an additonal 1d6 light damage to undead.
+  description: Any weapon that you wield does an additional 1d6 light damage to undead.
   type: combat
   brief: You do +1d6 damage to undead.
 Hand to Hand:
@@ -739,7 +739,7 @@ Poison Bite:
   description: Once every 3 turns, you may make a bite attack for 1d6 damage. If your enemy fails a dc10 inner fire saving throw, they are
     poisoned and take an additional 1d6 damage at the start of each turn until they pass a dc14 inner fire saving throw.
   type: combat
-  brief: Once every 3 turns, make a 1d6 bite. If the enemy fails a dc10 INF saave, they are posioned and take 1d6 damage
+  brief: Once every 3 turns, make a 1d6 bite. If the enemy fails a dc10 INF save, they are posioned and take 1d6 damage
     each turn until they make a dc14 save.
 Poison Resist:
   description: You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.
@@ -784,7 +784,7 @@ Shield Bash:
     At level 3, damage increases to 1d8. At level 6, damage increases to 1d10. At level 8, 
     damage increases to 1d12.
   type: combat
-  brief: Do 1d6 damage and cause an enemy to loose aan action if they fail a contested STR check.
+  brief: Do 1d6 damage and cause an enemy to loose an action if they fail a contested STR check.
     Increases to 1d8 damage at level 3, 1d10 at level 6, and 1d12 at level 8.
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
@@ -854,7 +854,7 @@ Strength of Men:
   type: combat
   brief: You may heal someone 1d10 + INF once per rest.
 Swoon:
-  description: During battle, you can faint as a reaction or offhand actioon to avoid further damage. You may wake
+  description: During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake
     up after one turn.
   type: combat
   brief: Reaction. Faint to avoid further damage for 1 turn.
@@ -976,7 +976,7 @@ Vegan:
     on Mortal Coil to once per month.
   type: choice
   brief: At the start of your journey, you may choose to be a vegan. At the cost of
-    -1 VIT and STR, gain +2 CHR. As a vegan, you can't haarvest souls from the innocent, but
+    -1 VIT and STR, gain +2 CHR. As a vegan, you can't harvest souls from the innocent, but
     limit Mortal Coil to once per month.
 Walking Stick:
   description: You begin your adventure with a wizard's staff which gives you 1d4 additional damage to all spells.
@@ -1135,7 +1135,7 @@ Sword of Honor:
 Stay on Your Feet: 
   description: If you fall to zero health, make a dc14 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
-  brief: If your health hits zero, make aa dc14 INF save. On success, drop to 1 health instead.
+  brief: If your health hits zero, make a dc14 INF save. On success, drop to 1 health instead.
 Last Line of Defense: 
   description: If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.
   type: combat
@@ -1304,7 +1304,7 @@ Phylactery:
     your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.
   type: general
   brief: You may remove your soul and put it in a phylactery. If it is destroyed, you are destroyed. If your body dies
-    and you have a thrall, you may posess the thrall. Your body is regenerated at the phylactery aftter 1 day.
+    and you have a thrall, you may posess the thrall. Your body is regenerated at the phylactery after 1 day.
 Reap: 
   description: When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2.
   type: general
@@ -1325,7 +1325,7 @@ Minor Restful Melody:
 Greater Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 2d8 of healing.
   type: general
-  brief: Grant your party 2d8 extraa healing when resting.
+  brief: Grant your party 2d8 extra healing when resting.
 Major Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 3d8 of healing.
   type: general
@@ -1354,7 +1354,7 @@ Spirits Within:
     and may add +1 to strength, dexterity, perception, inner fire, and luck.
   type: combat
   brief: Embue yourself with a spirit. Every turn, make a dc10 INF save, and take 2d6 psychic damage. On a crit failure, the spirit
-    escapes. Aadd +1 to STR, DEX, PER, INF, and LUK.
+    escapes. Add +1 to STR, DEX, PER, INF, and LUK.
 Light and Shadow: 
   description: While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability,
     and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
@@ -1507,7 +1507,7 @@ Twin Blade Parry:
   description: Once per round of combat, you may strike back when an enemy attacks you. 
     Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
-  brief: Reaction. Once per round, roll 1d20 when aattacked. If greater than 15, strike back.
+  brief: Reaction. Once per round, roll 1d20 when attacked. If greater than 15, strike back.
 Offhand Attack: 
   description: You may use an offhand action to make an attack.
   type: action

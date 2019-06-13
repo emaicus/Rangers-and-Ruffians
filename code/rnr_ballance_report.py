@@ -59,7 +59,7 @@ def vitality_chart(data_packet):
   if not os.path.exists(STAT_OUTPUT):
     os.mkdir(STAT_OUTPUT)
   with open(os.path.join(STAT_OUTPUT, 'vitality_chart.txt'), 'w') as outfile:
-    outfile.write('NOTE: Vitality is computed using a function housed in rnr_ballance_reports which is decoupled from rnr_utils\n')
+    outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rnr_utils\n')
     outfile.write('{0:4}'.format('vit'))
     for i in range(11):
       outfile.write('{0:4}'.format(i))
@@ -144,11 +144,11 @@ def get_all_class_abilities_used():
 
 def ability_check():
   rnr_utils.load_Rangers_And_Ruffians_Data()
-  race_class_abilites = set(get_all_race_abilities_used() + get_all_class_abilities_used())
+  race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
   all_abilities = set(rnr_utils.get_all_rnr_abilities().keys())
 
   print()
-  non_existent = race_class_abilites - all_abilities
+  non_existent = race_class_abilities - all_abilities
   if len(non_existent) > 0:
     print("The following abilities don't exist:")
     for ability in non_existent:
@@ -158,7 +158,7 @@ def ability_check():
 
   print()
 
-  unused = all_abilities - race_class_abilites
+  unused = all_abilities - race_class_abilities
   if len(unused) > 0:
     print("The following abilities aren't used:")
     for ability in unused:

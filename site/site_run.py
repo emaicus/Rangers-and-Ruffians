@@ -11,6 +11,8 @@ sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
 
+app = Flask(__name__, static_url_path='/static')
+
 '''
 Helper functions
 '''
@@ -117,7 +119,6 @@ def find_first_invalid_value(params):
 Flask app
 '''
 
-app = Flask(__name__, static_url_path='/static')
 
 # @app.route('/races')
 @app.route('/')
@@ -355,8 +356,12 @@ def level_up_page():
 
 
 if __name__ == '__main__':
-    # Bind to PORT if defined, otherwise default to 5000.
-    rnr_utils.printLogo()
-    rnr_utils.load_Rangers_And_Ruffians_Data()
-    port = int(os.environ.get('PORT', 5015))
+  # Bind to PORT if defined, otherwise default to 5000.
+  rnr_utils.printLogo()
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  port = int(os.environ.get('PORT', 5015))
+  if len(sys.argv) > 1 and sys.argv[1] == '--public':
+    app.run()
+  else:
     app.run(host='0.0.0.0', port=port)
+
