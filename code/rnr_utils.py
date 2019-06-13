@@ -481,30 +481,30 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
   # A little clunky, but it allows the pretty progress bar
   reinstall = list()
-  modified = False
   for filename in os.listdir(DATA_DIRECTORY):
     source = os.path.join(DATA_DIRECTORY, filename)
     if not '.yml' in filename:
       continue
     mod_time = os.path.getmtime(source)
     if not filename in timestamps:  
-      reinstall.append((filename, 'installing {0}'.format(filename)))
-      timestamps[filename] = mod_time
-      modified = True
+      reinstall.append((filename, 'installing {0}'.format(filename), mod_time))
     elif mod_time != timestamps[filename]:
-      reinstall.append((filename, 'updating {0}'.format(filename)))
-      timestamps[filename] = mod_time
-      modified = True
+      reinstall.append((filename, 'updating {0}'.format(filename), mod_time))
 
-  if modified:
+  if len(reinstall) > 0:
     pbar = tqdm(reinstall)
-    for filename, description in pbar:
+    for filename, description, mod_time in pbar:
       pbar.set_description(description)
       source = os.path.join(DATA_DIRECTORY, filename)
       json_filename = '{0}.json'.format(filename.split('.')[0])
       destination = os.path.join(INSTALL_DIRECTORY, json_filename)
-      convert_yaml_file_to_json_file(source, destination)
-  
+      try:
+        convert_yaml_file_to_json_file(source, destination)
+      except Exception as e:
+        print(e)
+        continue
+      timestamps[filename] = mod_time
+
     with open(timestamp_json_path, 'w') as outfile:
       json.dump(timestamps, outfile)
     pbar.close()
@@ -632,8 +632,7 @@ def convert_json_file_to_yml_file(input_file, output_file):
     with open(output_file, 'w') as outfile:
       yaml.dump(d, outfile, default_flow_style=False)
   except Exception as e:
-    pass
-    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+    raise Exception("ERROR: could not save {0} to {1} as a yml file\n{2}".format(input_file, output_file,traceback.format_exc()))
 
 def convert_yaml_file_to_json_file(input_file, output_file):
   try:
@@ -642,8 +641,7 @@ def convert_yaml_file_to_json_file(input_file, output_file):
     with open(output_file, 'w') as outfile:
       json.dump(d, outfile)
   except Exception as e:
-    pass
-    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+    raise Exception("ERROR: could not save {0} to {1} as a yml file\n{2}".format(input_file, output_file,traceback.format_exc()))
 
 def mergeAbilities(dictionary, abilities):
   for key, values in dictionary.items():
