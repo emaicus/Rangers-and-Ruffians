@@ -193,7 +193,7 @@ def creation_landing_page():
   if info['subrace'] != None:
     subrace = info['subrace'].replace('_', ' ')
     race = rnr_utils.get_race_given_subrace(subrace)
-    prev_stats = rnr_utils.rnr_race(race, subrace).stats
+    prev_stats = rnr_utils.rnr_race.basic_constructor(race, subrace).stats
 
   if next_to_populate == 'name' or next_to_populate == 'level':
     print("The name {0} was invalid".format(info['name']))
@@ -230,7 +230,7 @@ def ajax_load_content():
     serial = rnr_utils.rnr_class(entity_to_load, level=10, subclass="").serialize()
     return render_template('display_class.html', data=serial)
   elif entity_to_load in subrace_names:
-    serial = rnr_utils.rnr_race(rnr_utils.get_race_given_subrace(entity_to_load), entity_to_load).serialize()
+    serial = rnr_utils.rnr_race.basic_constructor(rnr_utils.get_race_given_subrace(entity_to_load), entity_to_load).serialize()
     return render_template('display_subrace.html', data=serial)
   else:
     return render_template('display_error.html', entity_name=entity_to_load)
@@ -356,12 +356,9 @@ def level_up_page():
 
 
 if __name__ == '__main__':
-  # Bind to PORT if defined, otherwise default to 5000.
-  rnr_utils.printLogo()
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  port = int(os.environ.get('PORT', 5015))
-  if len(sys.argv) > 1 and sys.argv[1] == '--public':
-    app.run()
-  else:
+    # Bind to PORT if defined, otherwise default to 5000.
+    rnr_utils.printLogo()
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    port = int(os.environ.get('PORT', 9000))
     app.run(host='0.0.0.0', port=port)
 

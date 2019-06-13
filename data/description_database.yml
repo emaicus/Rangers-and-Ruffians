@@ -1,0 +1,745 @@
+ages:
+- young adult
+- adult
+- old
+- child
+beards:
+- a short, well kempt beard
+- a scraggly beard
+- a beard that is long enough that he can tuck it under his belt
+- a goatee
+- a fu manchu
+- a soul patch
+- a glistening, curled moustache
+- long sideburns
+- a stubbly beard
+- a greying beard
+- long whiskers
+- five o'clock shadow
+- a peach-fuzz mustache
+- mutton chops
+- a cleanshaven face
+eye_colors:
+- golden
+- black
+- smoky
+- blue
+- electric blue
+- light blue
+- amber
+- chestnut brown
+- brown
+- grey
+- slate colored
+- green
+- sea green
+- hazel
+- violet
+- different colored
+- red
+eye_descriptions:
+- tired
+- cold
+- piercing
+- mesmerizing
+- sad
+- sorrowful
+- haunted
+- gentle
+- twinkling
+- lively
+- dancing
+- bright
+- expressive
+- sleepy
+- soft
+- wide set
+- large
+- squinty
+- sharp
+- sunken
+- heavy-lidded
+- bright
+- sparkling
+- dull
+- flecked
+- hard
+face_features:
+  female:
+  - full lips
+  - rosebud lips
+  - a cute nose
+  male: []
+  unisex:
+  - straight, white teeth
+  - crooked teeth
+  - a gap between <HIS_HER> teeth
+  - a bit of an overbite
+  - a bit of an underbite
+  - an unsettling smile
+  - a warm smile
+  - a bemused smile
+  - pointed eyeteeth
+  - a quick, devilish grin
+  - a wolfish grin
+  - angular cheekbones
+  - sharp cheekbones
+  - hollow cheeks
+  - a square jaw
+  - gaunt cheeks
+  - a coy smile
+  - a deep frown
+  - a short nose
+  - a snubbed nose
+  - a long nose
+  - a turned up nose
+  - a thin nose
+  - a pointed nose
+  - a flat nose
+  - a large nose
+  - a sharp nose
+  - a bulbous nose
+  - a broken nose
+  - a hawklike nose
+  - a broad nose
+face_shapes:
+  female:
+  - heart-shaped
+  male:
+  - boyish
+  - handsome
+  - stoic
+  unisex:
+  - square
+  - round
+  - oval
+  - long
+  - narrow
+  - craggy
+  - sculpted
+  - soft
+  - asymmetric
+  - baby
+  - chiseled
+  - craggy
+  - full
+  - furrowed
+  - weather-worn
+  - calm
+  - irregular
+  - weary
+  - careworn
+  - placid
+hair_colors:
+- jet black
+- iron colored
+- salt and pepper
+- earthy brown
+- pearl colored
+- sky blue
+- white
+- bright pink
+- sooty black
+- raven
+- dark brown
+- cobalt colored
+- mossy green
+- fuchsia
+- tawny
+- honey blond
+- honey colored
+- brass colored
+- strawberry blond
+- ginger
+- sunbleached
+- sandy
+- smoky grey
+- rust colored
+- flaxen
+- chocolate brown
+- chestnut
+- steel blue
+- violet
+- ashen
+- auburn
+- fiery
+- ocean blue
+- mousy
+- pale blond
+- golden
+- sunkissed
+- lavender
+hair_descriptions:
+  female:
+  - luminous
+  - lustrous
+  - wavy
+  male: []
+  unisex:
+  - curly
+  - wild
+  - untamed
+  - straight
+  - silky
+  - soft
+  - spiky
+  - neatly-combed
+  - thick
+  - lustrous
+  - bushy
+  - coarse
+  - glossy
+  - tangled
+  - tousled
+  - windblown
+  - frazzled
+hair_styles:
+  female:
+  - braided
+  - in a ponytail
+  - in a bun
+  - in a messy bun
+  - in a twist
+  - in ringlets
+  - with long bangs
+  - loose
+  - in a bob cut
+  male:
+  - in a man bun
+  unisex:
+  - short cut
+  - long
+  - at shoulder length
+hairless_head_descriptions:
+  lizkin:
+  - a dewlap, which puffs out when <HE_SHE> feels threatened
+  - frills which cover <HIS_HER> ear holes
+  - a spiky 'beard' of scales on <HIS_HER> throat
+  - small spiked horns on <HIS_HER> head
+  - long spines atop <HIS_HER> head
+origins:
+- was raised in the wilds
+- was raised as a test subject in a magical academy. During this time <HE_SHE> was
+  confined to a magically sealed bubble, and could not see the outdoors. After being
+  released, <HE_SHE> has little idea about how the world works, and is highly susceptible
+  to plague and disease
+- was raised by <HIS_HER> drunken father after <HIS_HER> mother died. <HIS_HER> father
+  was a harsh man, who beat <HIM_HER> often. As a result, <HE_SHE> doesn't respect
+  authority figures
+- lost <HIS_HER> family to a zombie uprising caused by a wayward necromancer. <HE_SHE>
+  barely escaped after watching <HIS_HER> <OPPOSITE_GENDER_MOTHER_FATHER> be devoured.
+  To this day <HE_SHE> panics when <HE_SHE> sees the undead
+- was raised in a castle
+- was born in servitude
+- was brought up as a student in an academy
+- was brought up as a servant in an academy
+- was 37 years old when <HIS_HER> <OPPOSITE_GENDER_WIFE_HUSBAND> died
+- hates being away from <HIS_HER> <OPPOSITE_GENDER_WIFE_HUSBAND>
+- married into a cult
+- is the god of a small cult
+- lost <HIS_HER> <OPPOSITE_GENDER_SON_DAUGHTER> to disease
+- was stolen as a baby and raised by wizards
+- was brought up by wolves
+- was born into a circus
+- was born to peasants
+- served in the army
+- spent some time as a bandit
+- spent some time as a sailor
+- apprenticed to a general
+- owns a small shop
+- lost <HIS_HER> home in a raid
+- lost <HIS_HER> family in a fire
+- lost <HIS_HER> <SAME_GENDER_MOTHER_FATHER> to a dragon
+- has seen <HIS_HER> fair share of dungeons
+- grew up working in a mine
+- spent some time training to be a <SAME_GENDER_PRIEST_PRIESTESS>
+- is of royal blood, but <HIS_HER> family was usurped
+- is 7th in line to the throne
+- is next in line to the throne
+- adventured in <HIS_HER> youth
+- retired some years ago
+- spent <HIS_HER> youth as an adventurer
+- was traumatized by abusive parents
+- was raised by <HIS_HER> older <SAME_GENDER_BROTHER_SISTER>
+- was raised by <HIS_HER> older <OPPOSITE_GENDER_BROTHER_SISTER>
+- was raised by a blacksmith
+- was raised by a bandit <SAME_GENDER_KING_QUEEN>
+- was raised by a paladin
+- was raised by a <SAME_GENDER_PRIEST_PRIESTESS>
+- was raised by <HIS_HER> <SAME_GENDER_MOTHER_FATHER>, a <SAME_GENDER_LORD_LADY>
+- was raised by a bandit <OPPOSITE_GENDER_KING_QUEEN>
+- was raised by a <OPPOSITE_GENDER_PRIEST_PRIESTESS>
+- was raised by <HIS_HER> <SAME_GENDER_MOTHER_FATHER>, a <OPPOSITE_GENDER_LORD_LADY>
+- taught <HIMSELF_HERSELF> how to fight in the streets of a large city
+- had no parents, so <HE_SHE> had to bring up <HIS_HER> little <SAME_GENDER_BROTHER_SISTER>
+  in the streets
+- had no parents, so <HE_SHE> had to bring up <HIS_HER> little <OPPOSITE_GENDER_BROTHER_SISTER>
+  in the streets
+- was raised in a brothel
+- was raised by a traveling comedy troupe
+- was the product of a magical ritual gone wrong
+- was born in the flames of a magical ritual
+- ran away from home at a young age and joined a group of trackers
+- was a washout at the royal archer academy
+- apprenticed to the finest enchanter in the realm
+- failed basic academy education and wandered the realm as a frustrated poet
+- completed a great work of history on extinct cultures at academy
+- completed a great work assessing the properties and lineages of all noble houses
+- trained as an herbalist with a village apothecary
+- was raised within the safety of the town walls
+- was the lone survivor of a bandit raid on <HIS_HER> hometown
+- trained as a surveyor for the mining guild
+- was raised by wood elves before heading out on <HIS_HER> own
+- was anointed as the chosen one at birth, and was prophesied to bring peace to the
+  world
+- was vilified as a harbinger of the end times at birth -- but no one really believes
+  that, right?
+- survived the plague that destroyed <HIS_HER> village, but is now badly scarred
+- was born to absentee parents that <HE_SHE> hasn't seen since <HE_SHE> was six
+- was ruined by a scandal that destroyed <HIS_HER> reputation at court
+- was born into a dynasty built on the blood, sweat, and tears of peasants
+- made <HIS_HER> fortune speculating on risky ventures, and used the wealth to finance
+  adventuring
+- was blessed by the the goddess Lillith with good fortune after an arduous quest
+- was shipwrecked at a young age and was raised in a foreign land
+- was shipwrecked and spent years on a small island before building a raft and sailing
+  back to civilization
+- once at a whole cow in one sitting
+- was tattooed with protective runes by wildfolk after rescuing the chief's <OPPOSITE_GENDER_SON_DAUGHTER>
+- became obsessed with a local hero and started a fanclub dedicated to replicating
+  their exploits
+- has a crazy ex-<OPPOSITE_GENDER_BOYFRIEND_GIRLFRIEND> who has been following <HIM_HER>
+  for years.
+- has a fanclub who follows <HIM_HER> at a distance.
+- is a self stylized hardboiled detective
+- was born of the union of a fair maiden and a demon lord from the 7th level of the
+  underworld
+- is possibly a vampire
+- was the junior member of a mercenary company until most of its leadership was lost
+  during a long campaign
+- was committed to an asylum after a dungeon crawl went awry
+- is a local hero in several countryside villages
+- is a veteran of several wars of conquest
+- valiantly defended <HIS_HER> homeland when the neighboring kingdom invaded
+- won honors at the kingdom's grand tourney
+- inherited <HIS_HER> family farm
+- is the adopted child of the local magistrate
+- apprenticed with the town ranger
+- worked acquiring magic tomes for the mages guild
+- grew up at a woodcutting mill
+- was raised in a monastery
+- once was a dungeon boss
+- sacrificed <HIS_HER> <OPPOSITE_GENDER_SON_DAUGHTER> to an insane god, but then regretted
+  it.
+- sacrificed <HIS_HER> <OPPOSITE_GENDER_SON_DAUGHTER> to an insane god, and is still
+  waiting for the reward
+- trained as a tailor in <HIS_HER> youth
+- received questionable training in deciphering runes and ciphers from a mad wizard
+- received expert training in deciphering runes and ciphers from a renown scholar
+- secretly learned swordsmanship and archery while <HIS_HER> parents thought <HE_SHE>
+  was at academy
+- is a lifelong member of the trolls and giants conservation society
+- is a lifelong member of the trolls and giants extermination lodge
+- was raised in an orc village after being found in a basket by the river
+- was raised in a dwarf hunting lodge after being found alone in the woods
+- trained as a paladin before casting aside the sacraments and heading out on <HIS_HER>
+  own
+- by all accounts lived a boring and respectable life until a wizard showed up at
+  <HIS_HER> doorstep
+- worked as a gardener until <HE_SHE> heard the call to adventure
+- is recognized for brewing the finest tea in all the northern realms
+- invented a portable still, and somehow manages to concoct a brew during dungeon
+  crawls
+- goes by many names to protect <HIS_HER> identity from the thieves guild
+- inherited a family battle axe but has no idea how to properly wield it
+- inherited a family battle axe and sharpens it daily, waiting to avenge <HIS_HER>
+  parents with it
+- inherited a family battle axe, but lost it during an expedition to the frost giant
+  tombs and is still searching for it
+- inherited a ring with a strange insignia and a mysterious key when <HIS_HER> grandfather
+  died
+- learned alchemy from a young age and has a penchant for explosions
+- trained as a member of the queen's mounted ranger corp and proudly displays <HIS_HER>
+  pins on <HIS_HER> collar
+- has connections to the thieves guild in several towns
+- appeared in this land through a now closed portal and has no memory of <HIS_HER>
+  previous life
+- carries a note written in blood that promises help when the time comes
+- spent several years trapped inside a stone golem
+- broke out of the royal dungeons using a sharpened bone and dirty rags and now has
+  a price on <HIS_HER> head
+- has a small box that cannot be opened except by solving a riddle that is entirely
+  illegible
+physical_descriptions:
+  female:
+  - has a flat chest
+  - is curvy
+  - has wide hips
+  - is petite
+  - is tiny
+  - has an hourglass figure
+  - is leggy
+  - has a slender figure
+  - has a flat stomach
+  male:
+  - has a bit of a belly
+  - is barrel chested
+  - has broad shoulders
+  unisex:
+  - is built like a brick shithouse
+  - only weighs about eighty pounds
+  - is thin and lanky
+  - has strong arms
+  - is made of muscle
+  - has a slim, fit frame
+  - has an average build
+  - is brawny
+  - has a gangly frame
+  - is heavy-set
+  - has a paunchy stomach
+  - has a slight build
+  - has a statuesque frame
+  - has a taut body
+  - has a willowy frame
+  - is short
+  - has a lean frame
+  - is thin and bony
+  - still has <HIS_HER> baby fat
+  - is stout
+  - is average height
+  - is compact
+  - is emaciated
+  - is stocky
+  - has an athletic physique
+  - is fit
+  - has a toned body
+rnr_classes:
+- Beastmaster
+- Highborn
+- Monk
+- Ranger
+- Barbarian
+- Knight
+- Paladin
+- Necromancer
+- Wizard
+- Sorcerer
+- Gunslinger
+- Archer
+- Bard
+- Cleric
+- Rogue
+rnr_races:
+- Catterwol
+- Elf
+- Gnome
+- Goblin
+- Halfling
+- Human
+- Lizkin
+- Waterborn
+- Orc
+- Dwarf
+- Daemonspawn
+skin_colors:
+  daemonspawn:
+  - fiery red skin
+  - dark crimson skin
+  - ember red skin
+  - brick red skin
+  - yellowish skin
+  - slate grey skin
+  - dark black skin
+  - cobalt skin
+  - thin, twisted horns
+  - sharp, pointed teeth
+  - thick, gnarled horns
+  - glowing tatoos
+  - bright-colored horns
+  - short horns which barely poke out of <HIS_HER> hair
+  elf:
+  - pointed ears
+  goblin:
+  - olive green skin
+  - tar black skin
+  - forest green skin
+  - ruddy green skin
+  - emerald skin
+  - dark grey skin
+  halfling:
+  - knobby knees
+  - hairy feet
+  lizkin:
+  - emerald scales
+  - golden scales
+  - bright blue scales
+  - dark grey scales
+  - deep brown scales
+  - dull white scales
+  - fiery red scales
+  - sandy tan scales
+  - dull orange scales
+  - brick red scales
+  - slate grey scales
+  orc:
+  - dull grey skin
+  - stone grey skin
+  - moss green skin
+  - dark green skin
+  - pale green skin
+  - ruddy green skin
+  waterborn:
+  - river grey skin
+  - ocean blue skin
+  - seaweed green skin
+  - vibrant aquamarine skin
+  - sky blue skin
+weaknesses:
+- has a congenital heart issue which has caused <HIM_HER> to always be shorter and
+  weaker than other people. Despite this, <HE_SHE> tries to rise to the occasion,
+  even <HE_SHE> is often short of breath
+- failed out of <HIS_HER> education. This has left deep scars to <HIS_HER> ego, even
+  if <HE_SHE> tries to hide it. When faced with riddles or intelligent individuals,
+  <HE_SHE> often freezes, or tries to make <HIMSELF_HERSELF> look smarter by babbling.
+- has lived a relatively sheltered life, given <HIS_HER> circumstances. Because of
+  this <HE_SHE> can be afraid of the unknown, and of trying new experiences
+- was lusted after by a pervy old <OPPOSITE_GENDER_WITCH_WIZARD>. After much time
+  <HE_SHE> was able to slay the <OPPOSITE_GENDER_WITCH_WIZARD>, but <HE_SHE> still
+  has an evil doppelganger that is hunting <HIM_HER>
+- once tried to pull one over on a catterwol gypsy, but was caught. Now, whenever
+  <HE_SHE> tries to tell a lie, <HIS_HER> body tries to rebel against <HIM_HER>
+- mouthed off to an archmage. To teach <HIM_HER> a lesson, the old codger cast a powerful
+  spell on <HIM_HER>. Now, every time <HE_SHE> has an itch that won't go away, is
+  red-green colorblind, sneezes during the full moon, and can't help but sing when
+  its raining
+- has rampant narcolepsy, which kicks in when <HE_SHE> is stressed out. This causes
+  an unfortunate feedback loop, as <HE_SHE> finds <HIS_HER> narcolepsy stressful to
+  think about
+- is allergic to cats. Being in the vicinity of cat dander causes <HIM_HER> to sneeze.
+  After some time <HIS_HER> eyes swell shut
+- is very superstitious. As a result <HE_SHE> prays many Gods to hedge <HIS_HER> bets,
+  and carries many lucky tokens and totems. <HE_SHE> will do most anything to avoid
+  incurring bad luck
+- has a shameful secret hobby, that <HE_SHE> absolutely refuses to tell anyone about.
+  While the hobby itself is shameful, the secrecy is what tends to push people away
+  from <HIM_HER>
+- defers to authority figures almost without question. This can lead <HIM_HER> into
+  trouble, as <HE_SHE> respects those above <HIM_HER> to the point of turning a blind
+  eye to their flaws
+- was born colorblind. Due to this <HE_SHE> often accidentally wears clothing with
+  a garish assortment of conflicting colors
+- has low self-esteem, but desperately wants to be the best that <HE_SHE> can be.
+  As a result, any criticism can send <HIM_HER> into tears
+- is a bit of a hothead, and thinks that <HE_SHE> knows better that everyone else.
+  For this reason <HE_SHE> takes criticism very poorly
+- is clumsy, and isn't very aware of <HIS_HER> own body. As a result, <HE_SHE> can't
+  hide to save <HIS_HER> life
+- has a deep sense of honor which pervades everything <HE_SHE> does. <HE_SHE> is the
+  type of person who will lay down their coat on the road so that a lady can tread
+  on it, and who helps the elderly across the street. <HE_SHE> won't fight a foe dishonorably
+- has a very bad sense of depth perception. This makes it difficult for <HIM_HER>
+  to do most things, from lifting a spoon to <HIS_HER> mouth to jumping over fallen
+  logs. <HE_SHE> can't hit the broadside of a barn
+- is hard of hearing after being in close proximity to an explosion. To this day <HE_SHE>
+  hears a faint ringing in her left ear. <HE_SHE> sometimes carries an ear-horn to
+  help
+- was never allowed to touch money when <HE_SHE> was younger, and therefore has no
+  respect for it. <HE_SHE> rarely saves money, is quick to give it away, and has no
+  idea how to barter
+- has an imaginary friend, that has been with <HIM_HER> since <HE_SHE> was young.
+  However, the imaginary friend answers back, sometimes providing insight into the
+  world around <HIM_HER>. Because of this, <HE_SHE> can often be seen muttering to
+  <HIMSELF_HERSELF>
+- has a deep respect for nature and the spirits and sanctity of the natural world.
+  Because of this, <HE_SHE> flies into an uncontrollable rage when nature is defiled
+- is very bashful around <OPPOSITE_GENDER_MEN_WOMEN>, and often freezes up when speaking
+  with them. Sometimes, the <OPPOSITE_GENDER_MEN_WOMEN> find this cute, but <HE_SHE>
+  can't easily follow up on it
+- accidentally came into contact with a powerful magical object. There was a flash
+  of crimson light, and <HE_SHE> was thrown backwards forty feet. Upon coming to,
+  <HE_SHE> found that a glowing seal in the shape of a three-eyed skull had been burned
+  onto the palm of <HIS_HER> right hand. Ever since, <HE_SHE> has been prone to fits
+  of delusion and mania
+- was challenged to a game of wits by a deranged wizard in the tavern of an unnamed
+  town. To this day, <HE_SHE> can't remember if <HE_SHE> won or lost, or his middle
+  name, for that matter
+- loves to bargain shop. <HE_SHE> has been known to buy objects that <HE_SHE> doesn't
+  need, just because they are on sale
+- had a grandfather who was a powerful wizard. One night, when <HE_SHE> was very young,
+  this grandfather came to <HIM_HER> in a dream. <HIS_HER> grandfather told <HIM_HER>
+  that he had been murdered, but that he would be with <HIM_HER> always. To this day,
+  <HE_SHE> still hears the voice of her grandfather in <HIS_HER> head on occasion
+- was told from birth that <HE_SHE> was the chosen one, and <HE_SHE> believes it.
+  As a result, <HE_SHE> can be rather insufferable, and unironically feels that the
+  world should bend to suit <HIS_HER> every whim
+- takes everything literally. Because of this,<HE_SHE> doesn't understand most humor,
+  and can become offended at flippant comments
+- is deathly afraid of the dark. <HE_SHE> would rather be in grave danger in the light,
+  than safe in the darkness
+- did not have a very supportive family growing up, and was often chastised for even
+  the smallest mistakes. As a result <HE_SHE> is very unsure of <HIMSELF_HERSELF>,
+  and rarely speaks up, for fear of being incorrect
+- was never taught to read or write. <HE_SHE> finds this embarrassing, and tries to
+  hide it, even going so far as to fake literacy
+- has itchy fingers, and has been known to steal anything that isn't bolted down.
+  This has gotten <HIM_HER> in trouble with the law more than once, but that's part
+  of the fun.
+- spent most of <HIS_HER> life without enough to eat. Because of this <HE_SHE> guards
+  <HIS_HER> food closely
+- is a simple sort of <GUY_GIRL>, and doesn't think too hard about anything. Because
+  of this, <HE_SHE> is usually pretty happy, and can be seen wearing a pleasant smile
+- is a genuinely kind and caring person, to the point of being a little bit naive.
+  <HE_SHE> is almost always smiling
+- is a closeted masochist. <HE_SHE> is physically aroused by pain, but tries not to
+  let on. For this reason <HE_SHE> is often at the forefront of fights, and must practice
+  self-control to avoid throwing <HIMSELF_HERSELF> to the feet of people who abuse
+  <HIM_HER>
+- is a hopeless romantic, and find something attractive about most anyone. For this
+  reason <HE_SHE> falls in love really easily, though <HE_SHE> is often disappointed
+- wears <HIS_HER> emotions on <HIS_HER> sleeve, and is forthright and honest. <HE_SHE>
+  isn't afraid to cry, and prefers it when others are open too
+- holds in <HIS_HER> emotions and lets them fester for weeks or months at a time.
+  This eventually results in a sudden, violent outburst
+- can't hold in <HIS_HER> emotions. This makes <HIM_HER> easy to trust, but also easy
+  to read and manipulate
+- is always adopting small animals, and keeps a few around at all times. <HE_SHE>
+  likes <HIS_HER> animals more than most people, and takes great offense to those
+  who would do them harm
+- was born without fear. As a child, <HIS_HER> elders tried to curb <HIS_HER> reckless
+  sense of adventure, but instead only stoked it. <HE_SHE> can be found on the frontline,
+  eyes flashing and a smile fixed on <HIS_HER> face
+- is incredibly skittish, and is afraid of almost everything. <HE_SHE> does not want
+  to be left alone, hates the dark, and shies away from animals. <HE_SHE> keeps a
+  secret object close to <HIMSELF_HERSELF> for security
+- is a bit of an airhead. <HE_SHE> once asked how long it takes a deer to become a
+  moose, and believed until just recently that Lizkin were baby dragons. Luckily,
+  <HE_SHE> has a good personality
+- is always ready to brawl. A fighter at heart <HE_SHE> can punch someone in the head
+  on one day, and then sit down for drinks the next. If they can still stand, that
+  is
+- believes in the value of the spoken word. <HE_SHE> says only what <HE_SHE> means,
+  and sees frivolous speech as a sacrilege
+- talks all the time. Like, ALL the time. And, like, that's a good thing, because
+  <HE_SHE> has a lot of super interesting insights. Like, for example, did you know
+  that Orc Tusks are sometimes traded by Catterwol? Isn't that random? Like, you have
+  to wonder who started that. One day, they were just walking along, and they thought
+  to themselves, huh, I wonder if Orc tusks would make a good aphrodisiac. Actually,
+  I guess that makes sense if you think about it. Orcs are pretty big, if you get
+  what I'm saying. Probably, their tusks would be pretty powerful. How much are those,
+  do you wonder?
+- is incredibly naive. Because of this <HE_SHE> is constantly being taken advantage
+  of. This has made <HIS_HER> life difficult, as <HE_SHE> can't help but believe any
+  snake-oil salesman <HE_SHE> comes across.
+- squeaks when <HE_SHE> laughs. This isn't a little squeak, mind you, it's more like
+  a full bodied snort, but somehow also like a puppy yipping. <HE_SHE> has been picked
+  on about it for long enough that <HE_SHE> is now very self-conscious.
+- can see things only in black and white. Things are either good, or bad; evil, or
+  kind; helpful, or useless. Because of this <HE_SHE> doesn't have many friends, because
+  most people aren't very useful.
+- is deeply fascinated by fire. <HE_SHE> can spend hours transfixed by the flame.
+  Sometimes <HE_SHE> thinks that <HE_SHE> sees images in the blossoms of fire. Sometimes
+  a face, sometimes a distant, familiar land. Sometimes, the flames talk to <HIM_HER>.
+  And <HE_SHE> always trusts them
+- can't swim. When <HE_SHE> was very little, <HIS_HER> <SAME_GENDER_BROTHER_SISTER>
+  fell into a river and hit their head. By the time <HE_SHE> was able to get help,
+  <HIS_HER> <SAME_GENDER_BROTHER_SISTER> was gone. Because of this <HE_SHE> has a
+  deep fear of the water
+- enjoys the finer things. Given a chance, <HE_SHE> will always spring for the most
+  expensive option, even if it only means a marginal improvement. <HE_SHE> also HATES
+  discomfort, and will do whatever <HE_SHE> can to avoid it. <HE_SHE> wouldn't be
+  caught dead sleeping under the stars, or outdoors at all, if <HE_SHE> could help
+  it
+- has a heart of ice. Literally. As a result of an enchantment cast on <HIM_HER> when
+  <HE_SHE> was young, <HIS_HER> heart has been replaced by a pulsing orb of frozen
+  power. As a result, <HE_SHE> falters in the heat, and thrives in the chill of winter.
+  <HE_SHE> is self-conscious about <HIS_HER> heart, and doesn't share its existence
+  easily, as <HE_SHE> believes that it makes <HIM_HER> a freak
+- is deeply afraid to reach out and connect with anyone. Since <HIS_HER> birth, everyone
+  <HE_SHE> has ever loved has either left <HIM_HER> or died. Because of this <HE_SHE>
+  decided that it's better to go it alone, and not to connect with anyone. Because
+  of this <HE_SHE> comes off as cold and distant
+- is prone to fits of violent anger if <HE_SHE> doesn't get <HIS_HER> way. This causes
+  many problems for <HIM_HER>, and has pushed away many of the people who have ever
+  been close to <HIM_HER>. <HE_SHE> can't stay in one place for long.
+- is infinitely levelheaded. This can be of huge benefit when things are going sideways,
+  as <HE_SHE> keeps perspective through it all. However, it also makes some people
+  uneasy, as <HE_SHE> doesn't seem to react much to anything
+- has trouble sleeping and always has dark bags under <HIS_HER> eyes. Sometimes, this
+  trouble manifests itself as narcolepsy, which causes <HIM_HER> to pass out at the
+  worst times
+- is a classic worrywart. <HE_SHE> obsesses over the small things, and always checks
+  and double checks everything. This can be paralyzing if others don't help <HIM_HER>
+  move forward
+- carries the weight of the world on <HIS_HER> shoulders. Because of this, <HE_SHE>
+  is very depressive, and is often moping. To <HIM_HER> the problems of the world
+  are never far away, and sneak in in the spaces when <HE_SHE> allows <HIMSELF_HERSELF>
+  time to think.
+- giggles at everything. Most of the time, this is just a sweet quirk, and the people
+  around <HIM_HER> find it infectious. Sometimes, however, it is a real detriment,
+  as <HE_SHE> has been known to giggle when nervous, including when trying to lie
+  or sneak around.
+- desperately seeks the approval of others. <HE_SHE> puts the opinions of others above
+  <HIS_HER> own, and will change <HIMSELF_HERSELF> to make others happy. Despite
+- is very intelligent, and approaches most everything in a clear, methodical manner.
+  The world doesn't always work the way its supposed to, though, which <HE_SHE> finds
+  enormously stressful. <HE_SHE> she has trouble speaking with people of lesser intelligence
+- is very social when <HE_SHE> is around other people, and is often the light of any
+  adventuring party. When <HE_SHE> is alone, however, <HE_SHE> is quiet and depressed,
+  and is weighed down by <HIS_HER> worries
+- has to constantly push through <HIS_HER> cowardice. Whenever the fighting starts
+  <HE_SHE> is gripped by terror. <HE_SHE> must steel <HIMSELF_HERSELF> to push forward
+  and go on the attack
+- is deathly afraid of heights. The fear began when <HE_SHE> climbed into a loft when
+  <HE_SHE> was younger. <HE_SHE> was stuck for over an hour, frozen and looking down
+  in terror. Now, <HE_SHE> actively tries to avoid anything higher than a horse's
+  saddle
+- is convinced that <HE_SHE> is a total idiot. Because of this, <HE_SHE> will often
+  present ideas as a joke, even if <HE_SHE> thinks that they are good. <HE_SHE> is
+  intimidated by talking with people that <HE_SHE> thinks are smarter than <HIMSELF_HERSELF>
+- never learned how to ride a horse. As a child <HE_SHE> heard a story of a relative
+  who had been thrown from a mustang and killed. Now, <HE_SHE> is afraid of all horses,
+  and tries to avoid them when possible
+- is characterized by almost manic determination. <HE_SHE> will never stop when <HE_SHE>
+  has <HIS_HER> mind set on something, and will follow through on even the most impossible
+  task. Once, <HE_SHE> was sent to the temple of Lilith for healing after deciding
+  that <HE_SHE> catch a thrown knife by the blade
+- likes to be fashionable. <HE_SHE> is always up to date on the latest styles and
+  fashions. <HE_SHE> spends at least an hour every day (even when traveling) making
+  <HIMSELF_HERSELF> up, and hates it when people see <HIM_HER> otherwise. <HE_SHE>
+  has been known to overspend on fashion
+- recently broke up with the <OPPOSITE_GENDER_MAN_WOMAN> that <HE_SHE> has been seeing
+  since <HE_SHE> was a youth after <OPPOSITE_GENDER_HE_SHE> cheated on <HIM_HER>.
+  Because of this, <HE_SHE> has become bitter and disillusioned with <OPPOSITE_GENDER_MEN_WOMEN>
+- loves them and leaves them. <HE_SHE> has had a string of dozens of short but fiery
+  relationships which often end in scandal. <HE_SHE> loves the thrill of the chase,
+  but once <HE_SHE> has bagged <HIS_HER> quarry, it is time to move on to other things.
+- has a deep distrust of the government. <HE_SHE> has done <HIS_HER> best to remain
+  off the grid, avoiding taxes and the census. As of right now, <HE_SHE> goes under
+  a pseudonym, and lives in a tent down by the river
+- always follows the rules to the letter. <HE_SHE> feels honor bound to turn in <HIS_HER>
+  friends if they break the law in a heinous manner. Examples of heinous crimes include
+  jaywalking, cutting in line, and talking too loud in the library
+- is madly in love with a person <HE_SHE> barely met. A weeks ago, <HE_SHE> stumbled
+  into the <OPPOSITE_GENDER_MAN_WOMAN> of <HIS_HER> dreams while in a local tavern.
+  <HE_SHE> doesn't know anything about <OPPOSITE_GENDER_HIM_HER>, but thinks about
+  <OPPOSITE_GENDER_HIM_HER> incessantly. <HE_SHE> is gonna marry that <OPPOSITE_GENDER_BOY_GIRL>
+  one day!
+- has a hyperinflated ego. <HE_SHE> thinks that <HE_SHE> is the best there ever was,
+  and expects special treatment because of it. <HE_SHE> looks down on lesser people
+- has been terrified of animals since <HE_SHE> was very young. Be it mice, horses,
+  or even dogs and cats, <HE_SHE> is likely to shriek and run the other way when <HE_SHE>
+  sees them
+- is very shy, and performs best when others aren't watching. <HE_SHE> loves the indoors,
+  and often coups <HIMSELF_HERSELF> up in <HIS_HER> small bedroom. <HE_SHE> will only
+  come out for friends, and otherwise prefers to speak through the door
+- will do anything for money. Anything
+- speaks in the third person, much to the chagrin of every person <HE_SHE> has ever
+  met
+- always believes the best of everyone
+- always believes the worst of everyone
+- feels woozy at the sight of blood, be it <HIS_HER> own, or that of <HIS_HER> friends
+  or enemies. This can make combat difficult, and <HE_SHE> has been known to squeeze
+  <HIS_HER> eyes shut when facing critically wounded foes
+- is a showoff, and will do things the more complicated way when possible, so that
+  <HE_SHE> looks cooler. <HE_SHE> cares very much about <HIS_HER> image, and about
+  impressing as many people as possible

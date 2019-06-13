@@ -10,6 +10,17 @@ import traceback
 import copy
 import re
 from collections import OrderedDict 
+import time
+from shutil import copyfile
+from tqdm import tqdm
+from tqdm import trange
+
+
+
+CODE_DIRECTORY = os.path.dirname(__file__)
+BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
+INSTALL_DIRECTORY = os.path.join(BASE_DIRECTORY, 'INSTALLED_DATA')
+DATA_DIRECTORY = os.path.join(BASE_DIRECTORY, 'data')
 
 GLOBAL_ABILITY_DICT = dict()
 GLOBAL_CLASS_DATA = dict()
@@ -143,34 +154,22 @@ class rnr_entity:
       return ret
 
     def __str__(self):
-      ret_lis = [self.name,
-      "chr : {0}".format(self.charisma), 
-      "dex : {0}".format(self.dexterity),
-      "str : {0}".format(self.strength),
-      "inf : {0}".format(self.inner_fire),
-      "int : {0}".format(self.intelligence),
-      "lck : {0}".format(self.luck),
-      "per : {0}".format(self.perception),
-      "vit : {0}".format(self.vitality),
-      '' ]
-      ret = '\n'.join(ret_lis)
-      return ret
+      ret_list = []
+      for stat in standard_stat_order():
+        line = '{0} : {1}'.format(abbreviate_stat(stat), self.get_stat(stat))
+        ret_list.append(line)
+      ret_list.append('')
+      return '\n'.join(ret_list)
 
-    def tabbed_string(self, prefix='\t',tier=1):
+    def tabbed_string(self, prefix='\t'):
       double_prefix = prefix+'\t'
-      ret_lis = [
-      prefix+self.name,
-      double_prefix+"chr : {0}".format(self.get_stat('charisma',tier=tier)), 
-      double_prefix+"dex : {0}".format(self.get_stat('dexterity',tier=tier)),
-      double_prefix+"str : {0}".format(self.get_stat('strength',tier=tier)),
-      double_prefix+"inf : {0}".format(self.get_stat('inner_fire',tier=tier)),
-      double_prefix+"int : {0}".format(self.get_stat('intelligence',tier=tier)),
-      double_prefix+"lck : {0}".format(self.get_stat('luck',tier=tier)),
-      double_prefix+"per : {0}".format(self.get_stat('perception',tier=tier)),
-      double_prefix+"vit : {0}".format(self.get_stat('vitality',tier=tier)),
-      double_prefix+"health: {0}".format(self.get_health())]
-      ret = '\n'.join(ret_lis)
-      return ret
+      ret_list = list()
+      ret_list.append('{0}{1}'.format(prefix, self.name))
+      for stat in standard_stat_order():
+        line = '{0}{1} : {2}'.format(double_prefix, abbreviate_stat(stat), self.get_stat(stat))
+        ret_list.append(line)
+      ret_list.append('')
+      return '\n'.join(ret_list)
 
 class rnr_class(rnr_entity):
     def __init__(self, name, level=0, subclass=""):
@@ -228,7 +227,7 @@ class rnr_class(rnr_entity):
     def get_health(self):
       summed_level = sum(range(self.level+1))
       modifier = self.vitality * (self.level + 1)
-      return 15 + summed_level + modifier
+      return 10 + summed_level + modifier
 
     def markdownify(self, male=False):
       gender_string = 'male' if male else 'female'
@@ -310,18 +309,25 @@ class rnr_class(rnr_entity):
       return serial
 
 class rnr_race(rnr_entity):
-  def __init__(self, name, subrace):
+  #Base constructor
+  def __init__(self, name, subrace, abilities, stats, description, quote, quote_author, handbook):
+    self.race_name = name
+    self.subrace_name = subrace
+    self.quote = quote
+    self.quote_author = quote_author
+    self.handbook = handbook
+    super().__init__(name, abilities, stats, description, quote, quote_author)
+    
+  #simple constructor
+  @classmethod
+  def basic_constructor(cls, name, subrace):
     race_data = get_rnr_subrace_data(name, subrace)
 
     if race_data == None:
       raise Exception('ERROR: Could not load race {0} {1}'.format(name, subrace))
-    self.quote = race_data['quote']
-    self.quote_author = race_data['author']
-    self.handbook = race_data.get('handbook', None)
-    super().__init__(subrace, race_data['abilities'], race_data['stats'], 
-                      race_data['description'], race_data['quote'], race_data['author'])
-    self.race_name = name
-    self.subrace_name = subrace
+    return cls(name, subrace, race_data['abilities'], race_data['stats'], race_data['description'],
+               race_data['quote'], race_data['author'], race_data.get('handbook', None))
+
 
   def markdownify(self,male=False):
     custom_chunk = '>{0}\n>\n>—{1}\n\n'.format(self.quote, self.quote_author)
@@ -352,7 +358,7 @@ class rnr_race(rnr_entity):
 
 class rnr_character(rnr_entity):
   def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = '', character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
-    rnr_race_obj = rnr_race(race_name, subrace)
+    rnr_race_obj = rnr_race.basic_constructor(race_name, subrace)
     rnr_class_obj = rnr_class(class_name, level, subclass)
     
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
@@ -396,8 +402,8 @@ class rnr_character(rnr_entity):
 
   def get_health(self):
     summed_level = sum(range(self.level+1))
-    modifier = self.vitality * self.level if self.level > 0 else self.vitality // 2
-    return 15 + summed_level + modifier
+    modifier = self.vitality * (self.level + 1)
+    return 10 + summed_level + modifier
 
 class rnr_ability:
   def __init__(self, name, description, ability_type):
@@ -459,18 +465,72 @@ def markdown_spellbooks():
 #
 ####################################################################################
 
+#called by load_rangers_and_ruffians_data to install rangers to this directory.
+def INSTALL_RANGERS_AND_RUFFIANS():
+  if not os.path.exists(INSTALL_DIRECTORY):
+    os.mkdir(INSTALL_DIRECTORY)
+
+  timestamp_json_path = os.path.join(INSTALL_DIRECTORY, 'timestamps.json')
+  
+  try:
+    with open(timestamp_json_path, 'r') as infile:
+      timestamps = json.load(infile)
+  except:
+    print('Timestamp json did not exist. Creating one.')
+    timestamps = dict()
+
+  if not os.path.exists(DATA_DIRECTORY):
+    print("ERROR! COULD NOT FIND THE DATA DIRECTORY {0}".format(DATA_DIRECTORY))
+    sys.exit(1)
+
+  # A little clunky, but it allows the pretty progress bar
+  reinstall = list()
+  modified = False
+  for filename in os.listdir(DATA_DIRECTORY):
+    source = os.path.join(DATA_DIRECTORY, filename)
+    if not '.yml' in filename:
+      continue
+    mod_time = os.path.getmtime(source)
+    if not filename in timestamps:  
+      reinstall.append((filename, 'installing {0}'.format(filename)))
+      timestamps[filename] = mod_time
+      modified = True
+    elif mod_time != timestamps[filename]:
+      reinstall.append((filename, 'updating {0}'.format(filename)))
+      timestamps[filename] = mod_time
+      modified = True
+
+  if modified:
+    pbar = tqdm(reinstall)
+    for filename, description in pbar:
+      pbar.set_description(description)
+      source = os.path.join(DATA_DIRECTORY, filename)
+      json_filename = '{0}.json'.format(filename.split('.')[0])
+      destination = os.path.join(INSTALL_DIRECTORY, json_filename)
+      convert_yaml_file_to_json_file(source, destination)
+  
+    with open(timestamp_json_path, 'w') as outfile:
+      json.dump(timestamps, outfile)
+    pbar.close()
+
+
 def load_Rangers_And_Ruffians_Data():
   global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
-  ability_path = "../data/abilities.yml"
-  class_path = "../data/classes.yml"
-  race_path = "../data/races.yml"
-  spell_path = "../data/merged_spells.yml"
+  start = time.time()
+
+  INSTALL_RANGERS_AND_RUFFIANS()
+
+
+  ability_path = os.path.join(INSTALL_DIRECTORY, 'abilities.json')
+  class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
+  race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
+  spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
   
   with open(spell_path) as data_file:
-    GLOBAL_SPELL_BOOKS = yaml.load(data_file)
+    GLOBAL_SPELL_BOOKS = json.load(data_file)
 
   for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
     for level, spells in chapters.items():
@@ -482,10 +542,10 @@ def load_Rangers_And_Ruffians_Data():
         GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'] = details
 
   with open(race_path) as data_file:
-    GLOBAL_RACE_DATA = yaml.load(data_file)
+    GLOBAL_RACE_DATA = json.load(data_file)
 
   with open(class_path) as data_file:
-    GLOBAL_CLASS_DATA_BY_TYPE = yaml.load(data_file)
+    GLOBAL_CLASS_DATA_BY_TYPE = json.load(data_file)
 
   GLOBAL_CLASS_DATA_BY_TYPE.pop('CUT', None)
 
@@ -493,7 +553,10 @@ def load_Rangers_And_Ruffians_Data():
     GLOBAL_CLASS_DATA.update(info)
 
   with open(ability_path) as data_file:
-    GLOBAL_ABILITY_DICT = yaml.load(data_file)
+    GLOBAL_ABILITY_DICT = json.load(data_file)
+
+  finish = time.time()
+  #print('LOAD TIME: {0}(s)'.format(finish - start))
 
 def filterAbilities(abilities, verbose=False):
   filt = "description" if verbose else "brief"
@@ -505,6 +568,32 @@ def filterAbilities(abilities, verbose=False):
       filtered_abilities[ability_type] = list()
     filtered_abilities[ability_type].append([ability,GLOBAL_ABILITY_DICT[ability][filt]])
   return filtered_abilities
+
+def abbreviate_stat(stat, upper=False):
+  stat = stat.lower()
+  if stat == 'dexterity':
+    ret = 'dex'
+  elif stat == 'strength':
+    ret = 'str'
+  elif stat == 'intelligence':
+    ret = 'int'
+  elif stat == 'inner fire' or stat == 'inner_fire':
+    ret = 'inf'
+  elif stat == 'vitality':
+    ret = 'vit'
+  elif stat == 'perception':
+    ret = 'per'
+  elif stat == 'charisma':
+    ret = 'chr'
+  elif stat == 'luck':
+    ret = 'luk'
+  else:
+    print('ERROR: BAD STAT {0}'.format(stat))
+    return None
+  return ret.upper() if upper else ret
+
+def standard_stat_order():
+  return set(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck'])
 
 def mapAbilityType(abilitiy_type):
   if abilitiy_type == "combat":
@@ -535,11 +624,22 @@ def combine_stats(stat_1, stat_2):
 def convert_json_file_to_yml_file(input_file, output_file):
   try:
     with open(input_file) as data_file:
-        d = json.load(data_file)
+      d = json.load(data_file)
     with open(output_file, 'w') as outfile:
-        yaml.dump(d, outfile, default_flow_style=False)
+      yaml.dump(d, outfile, default_flow_style=False)
   except Exception as e:
-    print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+    pass
+    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
+
+def convert_yaml_file_to_json_file(input_file, output_file):
+  try:
+    with open(input_file) as data_file:
+      d = yaml.load(data_file)
+    with open(output_file, 'w') as outfile:
+      json.dump(d, outfile)
+  except Exception as e:
+    pass
+    #print("ERROR: could not save {0} to {1} as a yml file".format(input_file, output_file))
 
 def mergeAbilities(dictionary, abilities):
   for key, values in dictionary.items():
@@ -773,7 +873,7 @@ def load_all_race_objects():
     if 'subraces' in data:
       for subrace in data['subraces'].keys():
         try:
-          new_race = rnr_race(race, subrace)
+          new_race = rnr_race.basic_constructor(race, subrace)
         except: 
           traceback.print_exc()
           continue
