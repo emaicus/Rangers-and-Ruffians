@@ -7,10 +7,19 @@ Armored:
   description: You begin your journey with a suit of light plate. Take -2 damage on attacks while wearing it.
   type: starting_item
   brief: +2 armor when worn.
+Bull Rush:
+  description: Once every three turns, rush an opponent of up to one size larger than you and grapple onto them. The entity must make an 
+    dexterity save against your spell power, or take disadvantage in all things while you grapple them. 
+  type: combat
+  brief: Once every 3 turns, grapple an opponent up to one size larger than you. If they fail a dex save against your spell power, they gain disadvantage.
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
+Courageous Blow:
+  description: Once every 3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, tripple it.
+  type: starting_item
+  brief: Once every 3 turns, add your INF to an attack. At level 5, double this. At level 8, tripple it.
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
   type: choice
@@ -134,10 +143,11 @@ Camouflage:
   type: general
   brief: You have stealth advantage when still.
 Carry a Tune:
-  description: You know a song which, when sung, grants a party member of your choice
-    +1 to one stat for the day. Can be sung once per day.
+  description: You know a song which, when sung, grants all members of your party
+   +1 to a stat of your choice. Concentration, costs an offhand action to sing.
+   Can be used once per rest.
   type: general
-  brief: Once per day, give a teammate +1 to a stat for the day.
+  brief: Once per rest, sing a song which gives teammates +1 to a stat. Concentration, offhand.
 Cartwheel:
   description: Gain advantage on acrobatics checks.
   type: advantage
@@ -983,9 +993,9 @@ Walking Stick:
   type: starting_item
   brief: You have a wizards staff that adds 1d4 to spell damage.
 Warm Butter:
-  description: Your are naturally talented chef. You have advantage when cooking.
-  type: advantage
-  brief: You have advantage when cooking.
+  description: Your are naturally talented chef. Any food that you cook heals 1d6 health.
+  type: general
+  brief: You can cook food that heals 1d6 health.
 Water Healing:
   description: When you rest in water, it is as if you are sleeping. When you sleep
     in water, it is as if you are in a bed.

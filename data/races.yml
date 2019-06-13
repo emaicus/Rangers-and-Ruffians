@@ -221,15 +221,38 @@ Goblin:
         Vitality: 1
 Halfling:
   subraces:
-    Halfling:
+    Fleetfoot:
+      abilities:
+        - Sling
+        - Padfoot
+        - Carry a Tune
+        - Lightweight
+        - Nimble
+        - Bull Rush
+      quote: Halflings are decent enough, and fun to be around. They have potential as
+        since they can see without being seen, but I'm not sure if they're clever enough.
+      author: Vasha, Catterwol Thief
+      description: Small folk, the Halflings would rather be drinking tea and eating toast
+        in their holes than adventuring. They are naturally tricksters, are hardy
+        for their size, and are adept at sqeezing into tight spots. On average, the Halflings
+        stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
+      stats:
+        Charisma: 1
+        Dexterity: 2
+        Inner_Fire: 0
+        Intelligence: 1
+        Luck: 1
+        Perception: 2
+        Strength: -2
+        Vitality: 1
+    Plentitudinous:
       abilities:
         - Sling
         - Warm Butter
         - Soft Bed
-        - Padfoot
         - Carry a Tune
         - Thick Headed
-        - Lightweight
+        - Courageous Blow
       quote: Halflings are decent enough, and fun to be around. They have potential as
         since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
@@ -239,12 +262,12 @@ Halfling:
         stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
       stats:
         Charisma: 2
-        Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: 1
-        Luck: 1
-        Perception: 1
-        Strength: -2
+        Dexterity: -1
+        Inner_Fire: 2
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 1
         Vitality: 2
 Human:
   subraces:

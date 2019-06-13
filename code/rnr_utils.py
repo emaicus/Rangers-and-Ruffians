@@ -2,19 +2,12 @@ import json
 import sys
 import os
 from collections import OrderedDict
-from collections import Counter
 import yaml
-import random
-import math
 import traceback
 import copy
 import re
-from collections import OrderedDict 
 import time
-from shutil import copyfile
 from tqdm import tqdm
-
-
 
 CODE_DIRECTORY = os.path.dirname(__file__)
 BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
@@ -31,16 +24,17 @@ GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 
 magical_classes = {
-  'bard' : ["the_bard's_songbook",],
-  'cleric' : ['the_book_of_healing',],
-  'paladin' : ['the_book_of_healing',],
-  'wizard' : ['the_novice_spellbook', "the_wizard's_addendum"],
-  'sorcerer' : ['the_novice_spellbook', "the_sorcerer's_scrolls"],
-  'druid' : ['the_novice_spellbook', "the_druid's_guidebook"],
-  'necromancer' : ['the_macabre_manual',],
-  'monk' : ['the_book_of_chi',],
-  'battle_mage' : ['the_novice_spellbook',] 
+    'bard': ["the_bard's_songbook", ],
+    'cleric': ['the_book_of_healing', ],
+    'paladin': ['the_book_of_healing', ],
+    'wizard': ['the_novice_spellbook', "the_wizard's_addendum"],
+    'sorcerer': ['the_novice_spellbook', "the_sorcerer's_scrolls"],
+    'druid': ['the_novice_spellbook', "the_druid's_guidebook"],
+    'necromancer': ['the_macabre_manual', ],
+    'monk': ['the_book_of_chi', ],
+    'battle_mage': ['the_novice_spellbook', ]
 }
+
 
 class rnr_entity:
     def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
