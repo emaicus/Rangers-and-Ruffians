@@ -28,6 +28,12 @@ automaton_male:
   license_url: https://creativecommons.org/licenses/by-nd/3.0/
   title: Rose
   url: https://www.deviantart.com/vagocool/art/Rose-488273011
+deep_elf_female:
+  artist: Jeleynai
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Fydriel Silentbloon [C]
+  url: https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624
 barbarian:
   artist: O-Melanor
   license: Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.
@@ -100,18 +106,30 @@ dwarf_male:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: The Hunter
   url: https://www.deviantart.com/ortsmor/art/The-Hunter-590846159
-elf_female:
+wood_elf_female:
   artist: Jeleynai
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Rinn
   url: https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597
-elf_male:
+wood_elf_male:
   artist: LorennTyr
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Elf
   url: https://www.deviantart.com/lorenntyr/art/Elf-765375097
+high_elf_male:
+  artist: Zeilyan
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Thranduil
+  url: https://www.deviantart.com/zeilyan/art/Thranduil-505098917?ref=weheartit
+deep_elf_male:
+  artist: 000Fesbra000
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Drow 3 - Forgotten Realms
+  url: https://www.deviantart.com/000fesbra000/art/Drow-3-Forgotten-Realms-624340575
 female:
   artist: NathanParkArt
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
@@ -190,12 +208,18 @@ gunslinger:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Spellslinger
   url: https://www.deviantart.com/soldevia/art/Spellslinger-609290699
-halfling_female:
+OLD_halfling_female:
   artist: NathanParkArt
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: On a Quest
   url: https://www.deviantart.com/nathanparkart/art/On-a-Quest-721516754
+halfling_female:
+  artist: Junica-Hots
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Houma
+  url: https://www.deviantart.com/junica-hots/art/Houma-743629249
 halfling_male:
   artist: HAmatsu
   license: Creative Commons Attribution-No Derivative Works 3.0 License.
@@ -358,12 +382,18 @@ waterborn_female:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Dark Elf
   url: https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603
-waterborn_male:
+OLD_waterborn_male:
   artist: OkenKrow
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: WoW - By the Frozen Steel
   url: https://www.deviantart.com/okenkrow/art/WoW-By-the-Frozen-Steel-763958085
+waterborn_male:
+  artist:  MarcelaFreire
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Commission: Areo Evenbloom
+  url: https://www.deviantart.com/marcelafreire/art/Commission-Areo-Evenbloom-767630238
 wizard:
   artist: ncorva
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.

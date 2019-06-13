@@ -13,7 +13,6 @@ from collections import OrderedDict
 import time
 from shutil import copyfile
 from tqdm import tqdm
-from tqdm import trange
 
 
 
@@ -22,6 +21,8 @@ BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
 INSTALL_DIRECTORY = os.path.join(BASE_DIRECTORY, 'INSTALLED_DATA')
 DATA_DIRECTORY = os.path.join(BASE_DIRECTORY, 'data')
 
+GLOBAL_ART_DICTIONARY = dict()
+GLOBAL_DESCRIPTIONS_DATABASE = dict()
 GLOBAL_ABILITY_DICT = dict()
 GLOBAL_CLASS_DATA = dict()
 GLOBAL_CLASS_DATA_BY_TYPE = dict()
@@ -290,10 +291,7 @@ class rnr_class(rnr_entity):
         serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
         art_request = self.name.lower()
 
-      with open('../data/art.json','r') as art_json:
-        art = json.load(art_json)
-
-      serial['rights'] = art.get(art_request,None)
+      serial['rights'] = GLOBAL_ART_DICTIONARY.get(art_request,None)
 
       all_data = get_rnr_class_data_with_name(self.name)
       serial['levels'] = all_data['levels']
@@ -316,7 +314,7 @@ class rnr_race(rnr_entity):
     self.quote = quote
     self.quote_author = quote_author
     self.handbook = handbook
-    super().__init__(name, abilities, stats, description, quote, quote_author)
+    super().__init__(subrace, abilities, stats, description, quote, quote_author)
     
   #simple constructor
   @classmethod
@@ -341,18 +339,16 @@ class rnr_race(rnr_entity):
     gender = "male" if male else "female"
 
     #Fall back to race image if no subrace image exists.
-    if os.path.exists("/static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())):
+    if os.path.exists("static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())):
       img_name = self.subrace_name.replace(' ','_').lower()
     else:
+      print('could not find {0}'.format("static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())))
       img_name = self.race_name.replace(' ','_').lower()
 
-    serial["path_to_image"] = "/static/images/race/{0}/{1}.jpg".format(gender, img_name)
-    
+    serial["path_to_image"] = "static/images/race/{0}/{1}.jpg".format(gender, img_name)
+    print('path to image is {0}'.format(serial['path_to_image']))
 
-    with open('../data/art.json','r') as art_json:
-        art = json.load(art_json)
-
-    serial['rights'] = art.get('{1}_{0}'.format(gender, self.name.lower().replace(' ', '_')), None)
+    serial['rights'] = GLOBAL_ART_DICTIONARY.get('{1}_{0}'.format(gender, img_name), None)
 
     return serial
 
@@ -515,7 +511,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -528,7 +524,9 @@ def load_Rangers_And_Ruffians_Data():
   class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
   race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
   spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
-  
+  description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
+  art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
+
   with open(spell_path) as data_file:
     GLOBAL_SPELL_BOOKS = json.load(data_file)
 
@@ -554,6 +552,12 @@ def load_Rangers_And_Ruffians_Data():
 
   with open(ability_path) as data_file:
     GLOBAL_ABILITY_DICT = json.load(data_file)
+
+  with open(description_path) as data_file:
+    GLOBAL_DESCRIPTIONS_DATABASE = json.load(data_file)
+
+  with open(art_path) as data_file:
+    GLOBAL_ART_DICTIONARY = json.load(data_file)
 
   finish = time.time()
   #print('LOAD TIME: {0}(s)'.format(finish - start))

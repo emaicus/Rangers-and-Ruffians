@@ -7,6 +7,7 @@ import rnr_utils
 from operator import attrgetter
 import collections
 import csv
+import rnr_descriptions
 
 STAT_OUTPUT = 'reports'
 
@@ -306,6 +307,20 @@ def check_brief_abilities():
     if len(ability_info['brief']) > len(ability_info['description']):
       print("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
 
+def check_descriptions():
+  for gender in ['male', 'female']:
+    for outer, inner in rnr_utils.GLOBAL_DESCRIPTIONS_DATABASE.items():
+      if isinstance(inner, str):
+        tmp = rnr_descriptions.gender_word_replacement(inner, gender)
+        if '<' in tmp or '>' in tmp:
+          print('ERROR: {0}'.format(tmp))
+      else:
+        for inner_inner in inner:
+          tmp = rnr_descriptions.gender_word_replacement(inner_inner, gender)
+          if '<' in tmp or '>' in tmp:
+            print('ERROR: {0}'.format(tmp))
+
+
 if __name__ == '__main__':
   print('GENERATING SPELL STATS:')
   spell_stats()
@@ -328,6 +343,11 @@ if __name__ == '__main__':
   print("GENERATING CLASS RANKINGS")
   rank_classes()
   print()
+  print("CHECKING ABILITY DESCRIPTION LENGTHS")
+  print()
   check_brief_abilities()
+  print()
+  print('CHECKING DESCRIPTIONS')
+  check_descriptions()
   print()
   print("FINISHED!")

@@ -743,3 +743,90 @@ weaknesses:
 - is a showoff, and will do things the more complicated way when possible, so that
   <HE_SHE> looks cooler. <HE_SHE> cares very much about <HIS_HER> image, and about
   impressing as many people as possible
+introductions:
+- What about trying
+- Wouldn't it be cool to be
+- What if you tried being
+- Oh shit, what if you were
+- Hot damn, what about playing as
+- Now hear me out, what if you played as
+- This might sound a little crazy, but what if you tried being
+- Hey, what about
+- Don't you think it would be interesting to step into the shoes of
+- Oh snap, what if you tried playing
+- Don't you think roleplay would be simple if you were
+- Don't you think everyone would be jealous if you played
+- Hey hey hey! What if you were to be
+- Son of a bitch! I think I've got it! What about
+- Gods above! It's perfect! What if you tried playing
+replacements:
+  female:
+    <DUDE_DUDETTE>: dudette
+    <HE_SHE>: she
+    <HIMSELF_HERSELF>: herself
+    <HIM_HER>: her
+    <HIS_HER>: her
+    <MAN_WOMAN>: woman
+    <OPPOSITE_GENDER_BOYFRIEND_GIRLFRIEND>: boyfriend
+    <OPPOSITE_GENDER_BOY_GIRL>: boy
+    <OPPOSITE_GENDER_BROTHER_SISTER>: brother
+    <OPPOSITE_GENDER_HE_SHE>: he
+    <OPPOSITE_GENDER_GUY_GIRL>: guy
+    <GUY_GIRL>: girl
+    <OPPOSITE_GENDER_HIM_HER>: him
+    <OPPOSITE_GENDER_KING_QUEEN>: king
+    <OPPOSITE_GENDER_LORD_LADY>: lady
+    <OPPOSITE_GENDER_MAN_WOMAN>: man
+    <OPPOSITE_GENDER_MEN_WOMEN>: men
+    <OPPOSITE_GENDER_MOTHER_FATHER>: father
+    <OPPOSITE_GENDER_PRIEST_PRIESTESS>: priest
+    <OPPOSITE_GENDER_SON_DAUGHTER>: son
+    <OPPOSITE_GENDER_WIFE_HUSBAND>: husband
+    <OPPOSITE_GENDER_WITCH_WIZARD>: wizard
+    <SAME_GENDER_BROTHER_SISTER>: sister
+    <SAME_GENDER_KING_QUEEN>: queen
+    <SAME_GENDER_LORD_LADY>: lady
+    <SAME_GENDER_MOTHER_FATHER>: mother
+    <SAME_GENDER_PRIEST_PRIESTESS>: priestess
+  male:
+    <DUDE_DUDETTE>: dude
+    <HE_SHE>: he
+    <HIMSELF_HERSELF>: himself
+    <HIM_HER>: him
+    <HIS_HER>: his
+    <MAN_WOMAN>: man
+    <OPPOSITE_GENDER_BOYFRIEND_GIRLFRIEND>: girlfriend
+    <OPPOSITE_GENDER_BOY_GIRL>: girl
+    <OPPOSITE_GENDER_BROTHER_SISTER>: sister
+    <OPPOSITE_GENDER_HE_SHE>: she
+    <OPPOSITE_GENDER_GUY_GIRL>: girl
+    <GUY_GIRL>: guy
+    <OPPOSITE_GENDER_HIM_HER>: her
+    <OPPOSITE_GENDER_KING_QUEEN>: queen
+    <OPPOSITE_GENDER_LORD_LADY>: lord
+    <OPPOSITE_GENDER_MAN_WOMAN>: woman
+    <OPPOSITE_GENDER_MEN_WOMEN>: women
+    <OPPOSITE_GENDER_MOTHER_FATHER>: mother
+    <OPPOSITE_GENDER_PRIEST_PRIESTESS>: priestess
+    <OPPOSITE_GENDER_SON_DAUGHTER>: daughter
+    <OPPOSITE_GENDER_WIFE_HUSBAND>: wife
+    <OPPOSITE_GENDER_WITCH_WIZARD>: witch
+    <SAME_GENDER_BROTHER_SISTER>: brother
+    <SAME_GENDER_KING_QUEEN>: king
+    <SAME_GENDER_LORD_LADY>: lord
+    <SAME_GENDER_MOTHER_FATHER>: father
+    <SAME_GENDER_PRIEST_PRIESTESS>: priest
+hairless_races:
+- lizkin
+- heavy metal
+- automaton
+always_bearded:
+- dwarf
+bearded_races: 
+- gnome
+- halfling
+- human
+- orc
+- dwarf
+- daemonspawn
+

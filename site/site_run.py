@@ -46,10 +46,7 @@ def populate_gender():
                             '''
     serial["path_to_image"] = "/static/images/gender/{0}.jpg".format(gender.lower())
 
-    with open('../data/art.json','r') as art_json:
-      art = json.load(art_json)
-
-    serial['rights'] = art.get(gender.lower(), None)
+    serial['rights'] = rnr_utils.GLOBAL_ART_DICTIONARY.get(gender.lower(), None)
 
     serial_data.append(serial)
   return serial_data
@@ -127,9 +124,7 @@ def index_page():
 
 @app.route('/legal')
 def legal():
-  with open('../data/art.json','r') as art_json:
-    art = json.load(art_json)  
-  return render_template('legal.html',art=art)
+  return render_template('legal.html',art=rnr_utils.GLOBAL_ART_DICTIONARY)
 
 def which_icons(rnr_race, rnr_class):
   icons = list()
