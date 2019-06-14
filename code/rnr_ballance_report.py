@@ -298,12 +298,14 @@ def game_stats():
   print('TOTAL SPELLS: {0}'.format(total))
 
 def check_brief_abilities():
+  target_length = 80
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     if not 'brief' in ability_info:
       print('ERROR: No brief in {0}'.format(ability_name))
-  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
-    if len(ability_info['brief']) > 120:
-      print("WARNING: {0}'s brief is {1} characters long".format(ability_name, len(ability_info['brief'])))
+    if ability_info['type'] == "rule" or ability_info['type'] == 'choice':
+      continue
+    if len(ability_info['brief']) > target_length:
+      print("WARNING: {0}'s brief is {1} characters too long ({2} characters long)".format(ability_name, len(ability_info['brief']) - target_length, len(ability_info['brief']) ))
     if len(ability_info['brief']) > len(ability_info['description']):
       print("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
 

@@ -11,15 +11,15 @@ Bull Rush:
   description: Once every three turns, rush an opponent of up to one size larger than you and grapple onto them. The entity must make an 
     dexterity save against your spell power, or take disadvantage in all things while you grapple them. 
   type: combat
-  brief: Once every 3 turns, grapple an opponent up to one size larger than you. If they fail a dex save against your spell power, they gain disadvantage.
+  brief: 1/3 turns, grapple an enemy. If they fail a dex save, they get disadvantage.
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
 Courageous Blow:
-  description: Once every 3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, tripple it.
+  description: 1/3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, tripple it.
   type: starting_item
-  brief: Once every 3 turns, add your INF to an attack. At level 5, double this. At level 8, tripple it.
+  brief: 1/3 turns, add your INF to an attack. At level 5, double this. At level 8, tripple it.
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
   type: choice
@@ -63,7 +63,7 @@ Beast Form:
     and inner fire, and gain your level in temporary hit points. You stay in this form for 3 turns. Gives
     advantage on intimidation checks.
   type: combat
-  brief: Once per day for 3 turns, add +1 to STR, DEX, and INF, gain your level in temp hp,
+  brief: 1/day for 3 turns, add +1 to STR, DEX, and INF, gain your level in temp hp,
     and get advantage on intimidation.
 Beauty Incarnate:
   description: Gain advantage and +2 charisma when speaking to individuals who find
@@ -74,7 +74,7 @@ Become Mist:
   description: Once every three turns, become mist to have an attack pass right through
     you as a reaction.
   type: combat
-  brief: Reaction. Once every three turns, have an attack pass through you.
+  brief: Reaction. 1/3 turns, have an attack pass through you.
 Bellow:
   description: On your turn, you may unleash a mighty bellow. Weak flows may flee,
     others are disadvantaged if they don't pass an inner fire saving throw.
@@ -88,8 +88,8 @@ Berserk:
     by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
   type: combat
-  brief: Once per rest, gain +1 STR and DEX, +2 INF, -3 INT and PER. Lasts one hour. If ended
-    early, gain disadvantage until you sleep.
+  brief: 1/rest, gain +1 STR, DEX, +2 INF, -3 INT, PER. Lasts 2 hour. If ended
+    early, you are exhausted.
 Berserker: 
   description: You take half damage from physical attacks while going berserk.
   type: combat
@@ -147,7 +147,7 @@ Carry a Tune:
    +1 to a stat of your choice. Concentration, costs an offhand action to sing.
    Can be used once per rest.
   type: general
-  brief: Once per rest, sing a song which gives teammates +1 to a stat. Concentration, offhand.
+  brief: 1/rest, sing a song which gives teammates +1 to a stat. Concentration, offhand.
 Cartwheel:
   description: Gain advantage on acrobatics checks.
   type: advantage
@@ -159,7 +159,7 @@ Disarming Blow:
 Flame Strike:
   description: Once every three turns, add 1d10 fire damage to an attack.
   type: combat
-  brief: Once every 3 turns, add 1d10 fire damage to an attack.
+  brief: 1/3 turns, add 1d10 fire damage to an attack.
 Ward of Tracking:
   description: Lay your hand on an opponent. For the next forty-eight hours, you 
     know their position within 100 feet.
@@ -267,18 +267,18 @@ Firestorm Arrow:
   brief: You can craft firestorm arrows. For info, see long description.
 Charge:
   description: Once every three turns as an offhand action, charge an enemy 
-    of up to one size larger than yourself and roll a d20. Knock them
-    prone if you roll a 14 or above while on foot, a 10 or above if on horseback.
+    of up to one size larger than yourself and roll a d20. If they fail a dexterity save
+    against your spellpower, they are knocked prone. They must roll with disadvantage
+    if you are larger than them, and advantage if you are smaller.
   type: combat
-  brief: Once every 3 turns as an offhand, charge an enemy up to 1 size larger than you.
-    If you roll above a 14 on foot or 10 on horseback, knock them prone.
+  brief: Offhand. Every 3 turns, charge. If enemy fails a DEX SP save, knocked prone.
+    Disadv/adv based on size.
 Charm:
   description: As an action, you may cast a charm spell on an entity. If the
     entity fails an inner fire saving throw against your spell power, they cannot
-    attack you until you attack them or they succeed a dc 15 inner fire saving throw.
+    attack you until you attack them or they succeed.
   type: combat
-  brief: As an action, magically charm an enemy. If they fail an INF save against your
-    spell power, they cannot attack you until they succeed a dc 15 INF save.
+  brief: Action. If enemy fails an INF SP save, they cannot attack you. Lasts until success or you attack them.
 Cheap Blow:
   description: On a critical hit, knock an enemy prone.
   type: combat
@@ -296,11 +296,11 @@ Commit to Memory:
   description: At the beginning of a day, you may commit one spell to memory of level
     2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.
   type: combat
-  brief: Once per day at the beginning, declare a level 2 or greater spell to have -1 cost.
+  brief: 1/day at the beginning, declare a level 2 or greater spell to have -1 cost.
 Counter Attack:
   description: Once per round of combat, you may strike back when an enemy attacks you. Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
-  brief: Once per round, role a d20 when an enemy attacks. If at least 15, counterattack.
+  brief: 1/round, role a d20 when an enemy attacks. If at least 15, counterattack.
 Crippling Shot:
   description: You can aim at an opponents knees for 1d4 damage, making them go prone
     on a critical hit.
@@ -309,7 +309,7 @@ Crippling Shot:
 Dual Shot:
   description: Once every three turns, fire two arrows at the same target in a single attack.
   type: combat
-  brief: Once every 3 turns, fire 2 arrows in a single attack.
+  brief: 1/3 turns, fire 2 arrows in a single attack.
 Crushing Blow:
   description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on the first action of their next action.
   type: combat
@@ -321,7 +321,7 @@ Dark Vision:
 All-consuming Shadow:
   description: Fill a 100 foot radius with pitch darkness as an offhand action. This may be done once per rest.
   type: general
-  brief: Once per rest as an offhand, fill a 100 ft. radius with darkness.
+  brief: 1/rest as an offhand, fill a 100 ft. radius with darkness.
 Detect Magic:
   description: You are able to perform magic detection checks.
   type: general
@@ -331,8 +331,7 @@ Dominate:
     an inner fire saving throw, they must obey you. They can attempt a saving throw
     every turn thereafter.
   type: general
-  brief: Once every 3 turns, attempt to dominate an enemy. If they fail an INF save against your SP,
-    they must obey you. They can repeat the save each turn.
+  brief: 1/3 turns. If enemy fails an INF SP save, they must obey you. Repeat the save each turn or until you attack.
 Dry Up:
   description: If you are not submerged in water once every 3 days, you will die from
     asphyxiation. Pouring water on yourself or standing in the rain can grant you an
@@ -344,13 +343,12 @@ Edge of Eternity:
     1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal
     Coil to once per day for three days.
   type: general
-  brief: You can consume a soul to add +1 to a stat or gain 1d10 health. If you consume more than 3
-    in a day, decrease the limit on Mortal Coil to once per day for 3 days.
+  brief: Consume a soul. +1 to a stat or gain heal 1d10. If you consume 4 in a day, Mortal Coil becomes once per day for 3 days.
 Army of the Damned:
   description: Once per day as an action, resurrect every entity within 100 feet as zombies
     at the cost of 5 souls.
   type: general
-  brief: Once per day, resurrect every entity within 100 feet as a zombie for 5 souls.
+  brief: 1/day, resurrect every entity within 100 feet as a zombie for 5 souls.
 Eyes of the Others:
   description: Consume a soul to give yourself darkvision and detect life for a day.
   type: general
@@ -363,7 +361,7 @@ Faithful Weapon:
 Fast Paws:
   description: Once every 3 turns, use two actions.
   type: combat
-  brief: Once every 3 turns, use two actions.
+  brief: 1/3 tirms, use two actions.
 Favorite Terrain:
   description: At the beginning of your journey, pick a favorite terrain. Whenever
     you are on it, you have advantage on any check related to the terrain, and may take
@@ -404,8 +402,7 @@ Flash Grenade:
     a dc 10 dexterity saving throw, they are blinded for 2 turns,
     and all actions they take have disadvantage.
   type: combat
-  brief: Once per day, craft a flash grenade with a 10 ft. radius. Anyone who sees it must make
-    a dc10 DEX save, or be blinded for 2 turns.
+  brief: 1/day, craft a flash grenade (max 3). 10 ft. radius. Enemies make a dc10 DEX save, or be blinded for 2 turns.
 Lighter Gear:
   description: You spend time crafting lighter gear for yourself and gain +2 on dexterity checks.
   type: general
@@ -413,12 +410,12 @@ Lighter Gear:
 Feeling Lucky:
   description: Once every three turns, add your luck to an attack.
   type: combat
-  brief: Once every three turns, add your luck to an attack.
+  brief: 1/3 turns, add your luck to an attack.
 Last Ditch Prayer:
   description: Once every three turns in battle and once every day out of battle, say a fervent prayer
     to your deity, and add your luck to a roll.
   type: combat
-  brief: Once every three turns in battle or once per day out, add your luck to a roll.
+  brief: 1/3 turns in battle or 1/day out, add your luck to a roll.
 Harrying Shot:
   description: On a critical hit, the attacked entity must make their next move with disadvantage.
   type: combat
@@ -479,12 +476,12 @@ Flows Like Water:
 Focus:
   description: Once every three turns, focus before a shot to gain advantage on it. Removes distance penalties.
   type: combat
-  brief: Once every three turns, gain advantage on a shot. Negates distance checks.
+  brief: 1/3 turns, gain advantage on a shot. Negates distance checks.
 From the Hip:
-  description: Once per combat round, fire a retaliation shot when you are attacked. Roll a d20 and add your dexterity. If you get more than a 12,
+  description: Once per combat round, fire a retaliation shot when you are attacked. Roll a contested dexterity saving throw against the enemy. On success,
     it hits, hurting the enemy and stopping their attack.
   type: combat
-  brief: Once per round, fire a retaliation shot. Roll 1d20 and add DEX. If greater than 12, you harm the enemy and stop its attack.
+  brief: Reaction. 1/round, roll a contested Dex save. On success, counterattack and stop enemy attack.
 Gather:
   description: You passively collect ingredients for your tinkering.
   type: general
@@ -515,7 +512,7 @@ Happy Smiles:
     d8 inspiration dice once per day. It also decreases it in bad weather, giving
     them -1 charisma.
   type: general
-  brief: Once per day in good weather, give your party a 1d8 INSP dice. In bad weather, give them -1 CHR.
+  brief: 1/day in good weather, give your party a 1d8 INSP dice. In bad weather, give them -1 CHR.
 High Ground:
   description: Gain advantage on any plunging attacks.
   type: combat
@@ -527,11 +524,10 @@ Historian:
   brief: You have advantage on history or geography checks.
 Hobble:
   description: You are capable of quickly tying very strong knots without a check. If you have an entity grappled,
-    you may hobble them with an action. Hobbled entities may attempt a dc 15  strength saving throw each turn to
+    you may hobble them with an action. Hobbled entities may attempt a strength saving throw against your spell power each turn to
     attempt to escape. Hobbled entities make all movements with disadvantage, and cannot attack with a handheld weapon.
   type: general
-  brief: You tie strong knots. Tie up grappled enemies if they fail a dc15 STR check. Grappled enemies can't attack with 
-    handheld weapons, and make all moves with disadvantage. 
+  brief: Tie up grappled enemies. Each turn, they make a STR SP save to escape.
 Hold the Line:
   description: When any member of your party is on death's door, gain advantage on
     all attacks and checks used to protect them.
@@ -588,7 +584,7 @@ Lightfoot:
 Lightweight:
   description: Any cup of alcohol affects you like two.
   type: general
-  brief: A drink affects you like 2.
+  brief: A drink of alcohol affects you like 2.
 Longbow:
   description: You begin your journey with a d6 longbow.
   type: starting_item
@@ -621,7 +617,7 @@ Miner's Eye:
 Field Healing:
   description: Using your knowledge of natural healing, you are able to heal a teammate for 1d10 health once per day as an offhand action.
   type: general
-  brief: Once per day, heal someone 1d10 as an offhand.
+  brief: 1/day, heal someone 1d10 as an offhand.
 Coordinated Attack:
   description: If you and your animal companion are both attacking the same entity, you both gain advantage on your attacks.
   type: combat
@@ -635,7 +631,7 @@ Inseperable:
   description: Once per day, instantly teleport from your current position to a spot within five feet of your animal companion.
     The same can be done by your animal companion. Counts as an offhand action.
   type: general
-  brief: Once per day as an offhand, teleport yourself to your animal or vice versa.
+  brief: Offhand. 1/day. Teleport yourself to your animal or vice versa.
 Dog Pile:
   description: Any sleep taken while with your animal companion counts as sleep in a bed.
   type: general
@@ -648,30 +644,27 @@ Poison Strike:
   description: Once per turn on one of your attacks, force an enemy to make an inner fire saving throw
     against your spell power. On failure, they are poisoned, and take 1d12 damage each turn for two turns.
   type: combat
-  brief: Once per turn, force an enemy to make an INF save against your spell power. On failure, do 1d12 poison
-    damage for 2 turns.
+  brief: 1/turn. force an enemy to make an INF SP save. On failure, do 1d12 poison damage for 2 turns.
 Beast Form:
   description: Once every day, transform yourself into a dire creature of your choosing. For one hour, 
     you may transform back and forth as an action. While in your beast form,
     you have the physical stats of the chosen creature. If your health falls to zero, you are instantly transformed back
     into your normal form, with the health that you had prior to using beast shape.
   type: general
-  brief: Once per day, transform into a dire creature. For one hour, you can transform back and forth.
+  brief: 1/day, transform into a dire creature. For one hour, you can transform back and forth.
 Finesse Strike:
   description: Once every three turns, add 1d6 damage to an attack of your choosing. If the affected entity fails an 
     inner fire saving throw against your spell power, it suffers 1d6 bleeding damage at the start of its next turn. 
     At level 5, increase bleeding damage to 2d6. At level eight, increase it to 4d6.
   type: combat
-  brief: Once every 3 turns, add 1d6 damage to an attack. If the enemy fails an INF save against your spell power,
-    it takes 1d6 bleeding damage at the start of its next turn. Increases to 2d6 at level 5, 4d6 at level 8.
+  brief: 1/3 turns, add 1d6 to an attack. If enemy fails SP save, it takes 1d6 damage next turn. 2d6 at LV5, 4d6 LV 8.
 Entangling Attack:
   description: Once every three turns, you may attempt to entangle an enemy during one of your attacks using minor magic. 
     The enemy must make an inner fire saving throw against your spell power. On a failure, the entity is ensnared, 
     and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and
     all attacks made against it have advantage.
   type: combat
-  brief: Once every three turns, force an entity to make an INF save against your spell power. On failure, it is ensnared, and
-    must repeat the check each turn.
+  brief: 1/3 turns, force an entity to make an INF SP save. On failure, it is ensnared. Repeat check each turn.
 Minor Medicine:
   description: If you are in the woods or in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
   type: general
@@ -683,12 +676,12 @@ Minor Spell Choice:
 Spell of Darkvision:
   description: Once per rest, you may use minor magic to give yourself darkvision for one hour.
   type: general
-  brief: Once per rest, gain darkvision for 1 hour.
+  brief: 1/rest, gain darkvision for 1 hour.
 Mortal Coil:
   description: Once every week, you must consume a soul. If you do not, your body
     begins to rot away, causing fear and horror in those who see you.
   type: general
-  brief: Once every week, consume a soul to avoid rotting.
+  brief: 1/week, consume a soul to avoid rotting.
 Born in the Saddle:
   description: You have advantage on all dexteriy checks made while on horseback, and on any checks made to control or guide your animal.
   type: advantage
@@ -731,7 +724,7 @@ Uncanny Perception:
 One up the Sleeve:
   description: Once every three turns, make an attack with a throwing knife as an offhand action.
   type: combat
-  brief: Once every 3 turns, throw a knife as an offhand.
+  brief: 1/3 turns, throw a knife as an offhand.
 Penetration:
   description: If enemies are in a row, your shot will pass right through them, hitting multiple.
   type: combat
@@ -749,8 +742,7 @@ Poison Bite:
   description: Once every 3 turns, you may make a bite attack for 1d6 damage. If your enemy fails a dc10 inner fire saving throw, they are
     poisoned and take an additional 1d6 damage at the start of each turn until they pass a dc14 inner fire saving throw.
   type: combat
-  brief: Once every 3 turns, make a 1d6 bite. If the enemy fails a dc10 INF save, they are posioned and take 1d6 damage
-    each turn until they make a dc14 save.
+  brief: 1/3 turns, make a 1d6 bite. If the enemy fails a SP save, they are posioned. 1d6 damage each turn until save.
 Poison Resist:
   description: You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.
   type: general
@@ -767,7 +759,7 @@ Rally:
   description: Once per rest, you may use an aura which gives all of your allies a
     1d8 inspiration dice.
   type: combat
-  brief: Once per rest, give all allies a 1d8 insp dice.
+  brief: 1/rest, give all allies a 1d8 insp dice.
 Regular Patron:
   description: You may add 1d6 to charisma checks made in a tavern.
   type: advantage
@@ -785,22 +777,21 @@ Seek Gold:
   type: general
   brief: You can check for nearby gold.
 Shed Tail:
-  description: You can shed your tail to escape a grapple.
+  description: Once per day, you can shed your tail to escape a grapple.
   type: general
-  brief: Shed your tail to escape a grapple.
+  brief: 1/day. Shed your tail to escape a grapple.
 Shield Bash:
   description: Use an action to shield bash an enemy, dealing 1d6 damage and staggering
     them if they fail a contested strength check. A staggered enemy looses one of its actions.
     At level 3, damage increases to 1d8. At level 6, damage increases to 1d10. At level 8, 
     damage increases to 1d12.
   type: combat
-  brief: Do 1d6 damage and cause an enemy to loose an action if they fail a contested STR check.
-    Increases to 1d8 damage at level 3, 1d10 at level 6, and 1d12 at level 8.
+  brief: Do 1d6 damage. Enemy looses an action if they fail a contested STR check. 1d8 damage at LV3, 1d10 LV6, 1d12 LV8.
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them. Any damage you recieve as a result is halved.
   type: combat
-  brief: Reaction. Once per round, take a teammates damage for them. Damage is halved.
+  brief: Reaction. 1/round, take a teammates damage for them. Damage is halved.
 Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
     1d10 bonus to stealth checks made while standing still.
@@ -871,18 +862,17 @@ Swoon:
 Sword and Spell:
   description: Once every three turns, combine a spell and a physical attack into one attack action.
   type: combat
-  brief: Once every three turns, combine a spell and a physical attack in one attack action.
+  brief: 1/3 turns, combine a spell and a physical attack in one attack action.
 Tackle:
   description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
     strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.
   type: combat
-  brief: Tackle an enemy up to one size larger than you. Attempt a DEX or STTR contested throw on which you have advantage.
-    If they fail, you grapple them.
+  brief: Tackle an enemy 1 size larger. DEX or STR contested throw. Grapple them on fail. You have advantage.
 Tactics:
   description: Once per day, you may declare before an attack that you wish to double
     it's damage.
   type: combat
-  brief: Once per day, declare before an attack that you wish to double its damage.
+  brief: 1/day, declare before an attack that you wish to double its damage.
 Taste Air:
   description: Gain advantage on tracking perception checks by tasting the air. Works
     in all environments.
@@ -950,13 +940,13 @@ Throw Anything:
 Thunderous Blow:
   description: Once every three turns, roll double the dice for your attack.
   type: combat
-  brief: Once every 3 turns, roll double the dice for your attack.
+  brief: 1/3 turns, roll double the dice for your attack.
 Tinker:
   description: Every night, you can attempt to to create a device. Once you create
     one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs,
     firebombs, and saddles. (Tinkering requires an intelligence check)
   type: general
-  brief: Every knight, you can attempt to invent a recipe. You begin with recipes for smoke bombs, firebombs, and saddles.
+  brief: 1/night, you can attempt to invent a recipe. You begin with recipes for smoke bombs, firebombs, and saddles.
 Tracker:
   description: You are an excellent tracker, and have advantage when looking for trails
     and sign of passage.
@@ -969,7 +959,7 @@ Expert Tracker:
 Trained Precision:
   description: Once every three turns, gain advantage on your attack.
   type: combat
-  brief: Once every 3 turns, gain advantage on your attack.
+  brief: 1/3 turns, gain advantage on your attack.
 Unbreathing:
   description: You only need to breathe once every three days.
   type: general
@@ -1053,10 +1043,9 @@ True Sight:
   brief: You can see invisible entities.
 Influence: 
   description: You have 2 influence points which you may spend to increase any charisma roll by 2.
-    Influence points refill after you sleep. You may spend up to two influence points on a single roll.
+    Influence points refill after you sleep.
   type: general
-  brief: You have 2 influence points. Spend them to add +2 to a CHA role. They refil when you sleep. 
-    You can spend up to 2 on a roll.
+  brief: You have 2 influence points. Use to add +2 to a CHA role. They refill when you sleep. 
 Additional Influence Point: 
   description: You gain an additional influence point.
   type: general
@@ -1068,19 +1057,19 @@ Nimble:
 Determination:
   description: Once per rest and gain a d10 inspiration dice as an offhand.
   type: general
-  brief: Once per rest, give yourself 1d10 INSP as an offhand action.
+  brief: 1/rest, give yourself 1d10 INSP as an offhand action.
 Minor Second Wind:
   description: Once per day, heal yourself for 1d10 damage as an offhand action.
   type: general
-  brief: Once per day, heal yourself for 1d10 damage as an offhand.
+  brief: 1/day, heal yourself for 1d10 damage as an offhand.
 Major Second Wind:
   description: Twice per day, heal yourself for 1d12 damage as an offhand action.
   type: general
-  brief: Twice per day, heal yourself for 1d12 damage as an offhand.
+  brief: 2/day, heal yourself for 1d12 damage as an offhand.
 Trained Attack:
   description: Three times per day, re-roll an attack.
   type: combat
-  brief: Three times per day, re-roll an attack.
+  brief: 3/day, re-roll an attack.
 Resolve:
   description: When your health drops below 20%, all attacks do half damage against you.
   type: combat
@@ -1088,12 +1077,12 @@ Resolve:
 Whirlwind of Blades:
   description: Once per day, make an additional 3 attacks on your turn.
   type: combat
-  brief: Once per day, make an additional 3 attacks on your turn.
+  brief: 1/day, make an additional 3 attacks on your turn.
 Fire and Ice:
   description: Once per day, embue one of your blades with fire and the other with ice. Each do an additional
     1d6 damage for the duration of a battle.
   type: combat
-  brief: Once per day, embue one of your weapons with fire and the other with ice. Both do +1d6 damage for 1 battle.
+  brief: 1/day, embue one of your weapons with fire and the other with ice. Both do +1d6 damage for 1 battle.
 Savage Critical:
   description: On a critical hit, do an additional dice of damage.
   type: combat
@@ -1117,7 +1106,7 @@ Throw Caution to the Wind:
 Steel Yourself: 
   description: Once every three turns, choose to take half damage from an attack.
   type: combat
-  brief: Once every 3 turns, choose to take half damage from an attack.
+  brief: 1/3 turns, choose to take half damage from an attack.
 Cleave: 
   description: Add 1d6 to any physical attacks you make.
   type: combat
@@ -1130,7 +1119,7 @@ Link Lifeforce:
 Spirit of Rage: 
   description: Once per day, double one of your turns.
   type: combat
-  brief: Once per day, double one of your turns.
+  brief: 1/day, double one of your turns.
 Glory: 
   description: When your health falls below 10%, double all damage you deal.
   type: combat
@@ -1140,8 +1129,7 @@ Sword of Honor:
     your blade to deal an additional 2d6 damage. While your blade is embued with light, you take advantage
     on all spell saving throws, and cannot be frightened.
   type: combat
-  brief: Once per day for 5 turns, add 2d6 damage to your attacks, gain advantage on 
-    spell saving throws and become immune to fear.
+  brief: 1/day. Lasts 5 turns. +2d6 damage to attacks, gain advantage on SP saves. Immune to fear.
 Stay on Your Feet: 
   description: If you fall to zero health, make a dc14 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
@@ -1165,7 +1153,7 @@ Fires of Heaven:
 Winged Jump: 
   description: Once every three turns, leap up to 40 feet using ethereal, angelic wings. Counts as an action.
   type: combat
-  brief: Once every 3 turns, leap 40 feet using angelic wings as an action.
+  brief: 1/3 turns, leap 40 feet using angelic wings as an action.
 Dire Companion: 
   description: Your companion animal is now of Dire size. See the book of known beasts for details.
   type: rule
@@ -1182,7 +1170,7 @@ Leaping Strike:
   description: Once every three turns, leap forward to attack an enemy, dealing 1d6 additional damage.
     At level five, damage increases to 2d6. At level eight, it increases to 3d6. 
   type: combat
-  brief: Once every 3 turns, leap forward to deal +1d6 damage. At level 5 this increases to 2d6. At 8, its 3d6. 
+  brief: 1/3 turns, leap forward to deal +1d6 damage. At level 5 this increases to 2d6. At 8, its 3d6. 
 Reduced Critical: 
   description: You perform a critical hit if you roll one less than your die's number of sides.
   type: combat
@@ -1191,8 +1179,7 @@ Disarming:
   description: Once every turn as a reaction, force an enemy that attacks you to make an inner fire
                saving throw against your charisma. If they fail, their attack must be made with disadvantage.
   type: combat
-  brief: Reaction. Once every three turns, force an enemy to make a INF save against your CHA. On failure, 
-    thier attack is made with disadvantage.
+  brief: Reaction. 1/3 turns, force an enemy to make a INF save against your CHA. On failure, attack disadvantaged.
 Aura of Peace: 
   description: All allies near you take heart, and gain +1 vitality while in your presence.
   type: general
@@ -1200,7 +1187,7 @@ Aura of Peace:
 Rally Cry: 
   description: Once every three turns, let out a rally cry as an offhand action which allows all allies to do an additional 1d6 damage on their next attack.
   type: combat
-  brief: Once every 3 turns as an offhand, allow all allies to do +1d6 damage on their next attack.
+  brief: Offhand. 1/3 turns, allow all allies to do +1d6 damage on their next attack.
 Fallen: 
   description: While you are on death's door, all of your allies get a bonus action.
   type: general
@@ -1226,7 +1213,7 @@ Reflexes:
   description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
     If reduced to zero, you catch the projectile.
   type: general
-  brief: Reaction. Once per turn, reduce a projectile's damage by 1d20. If reduced to zero, catch it.
+  brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to zero, catch it.
 Strike From the Shadows: 
   description: Do an additional 1d10 damage on an attacks made from hiding.
   type: general
@@ -1234,18 +1221,17 @@ Strike From the Shadows:
 Minor Blink: 
   description: Three times per rest, teleport to a position you can see within 100 feet.
   type: general
-  brief: Three times per rest, teleport to a position you can see within 100 feet.
+  brief: 3/rest, teleport to a position you can see within 100 feet.
 Flee: 
   description: You may use an offhand action to flee without provoking attacks.
   type: general
-  brief: You may use an offhand action to flee without being attacked.
+  brief: Offhand. Flee without being attacked.
 Lucky Actions: 
   description: You have a number of luck tokens equivalent to your luck stat. You may use
     these tokens to make an additional action on your turn, or to re-roll any dice. 
     These tokens refill on a long rest.
   type: general
-  brief: You have a number of luck tokens equal to your luck. You may spend these to take
-    an extra action on your turn or to re-roll a dice. Luck tokens refil on a long rest.
+  brief: You have luck tokens equal to your LCK. Use them gain an extra action or re-roll a dice. Refill on a long rest.
 Soundless : 
   description: Gain an additional 1d6 on stealth checks.
   type: general
@@ -1255,9 +1241,9 @@ Trap Expert :
   type: general
   brief: Gain advantage on anything trap related.
 Party Save: 
-  description: Add 1d10 to one party member's stealth check.
+  description: Once per rest, add 1d10 to one party member's stealth check.
   type: general
-  brief: Add 1d10 to one entity's stealth check.
+  brief: 1/rest, add 1d10 to one entity's stealth check.
 Assassinate: 
   description: If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.
   type: combat
@@ -1267,10 +1253,9 @@ Imposter:
   type: general
   brief: Gain +1d6 on imitation checks.
 Poison: 
-  description: Once per day, create a draught of deadly poison. If injested, the poison does 3d20 + 10 damage if consumed. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
+  description: Once per day, create a draught of deadly poison. If injested, the poison does 3d20 damage if consumed. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
   type: general
-  brief: Once per day, craft posion. 3d20 + 10 damage if consued. 1d10 extra damage on a blade for one combat.
-    Poison lasts 24 hours.
+  brief: 1/day, craft posion. 3d20 damage if consued. 1d10 extra damage on a blade for one combat. Poison lasts 24 hours.
 Focus Energy:
   description: As an action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
@@ -1283,16 +1268,14 @@ One With Magic:
   description: Once per day, fuse yourself with the essense of magic. The power nearly destroys you, dropping you instantly
     to one health. However, you are able to cast any three spells, free of charge.
   type: general
-  brief: Once per day, drop to 1 health, but cast three spells free of charge.
+  brief: 1/day, drop to 1 health, but cast three spells free of charge.
 Ascend: 
   description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 spell points. 
     While ascended, you may take flight as an offhand action. The ascended state lasts for 3
     turns or five minutes. When you fall out of the ascended state, you are exhausted. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
   type: general
-  brief: Once per day, ascend. Gain 5 spell points and take flight as an offhand. Lasts 3 turns or 5 minutes. When you fall out,
-    take 4d10 damage and become exhausted. If you are killed in the ascended state, you can't be resurrected.
-    exhausted
+  brief: 1/day. 3 turns/5 min. +5 spell points. Offhand flight. After, exhausted, 4d10 damage. Ascended death is permanent.
 Power of Ascension:
   description: While in the ascended state, gain 5 inner fire, strength, and dexterity.
   type: general
@@ -1327,7 +1310,7 @@ Freed from this Mortal Coil:
 Cost Reduction: 
   description: Once every third turn, cast a spell at -1 cost.
   type: combat
-  brief: Once every third turn, cast a spell at -1 cost.
+  brief: 1/3 turns, cast a spell at -1 cost.
 Minor Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 1d8 of healing.
   type: general
@@ -1393,11 +1376,11 @@ True Heal:
 Aura of Advantage: 
   description: Once every three turns, give all party members advantage on their next action.
   type: combat 
-  brief: Once every 3 turns, give all party members advantage on their next action.
+  brief: 1/3 turns, give all party members advantage on their next action.
 Angelic Wings: 
   description: Once per day, summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.
   type: general
-  brief: Once per day, summon angelic wings, and take flight.
+  brief: 1/day, summon angelic wings, and take flight.
 True Mastery: 
   description: Every ranged weapon functions as at least a d12 weapon in your hands.
   type: general
@@ -1405,7 +1388,7 @@ True Mastery:
 Volley: 
   description: Once per rest, attack every enemy you can see in a single action.
   type: combat
-  brief: Once per rest, attack all enemies you can see in one action.
+  brief: 1/rest, attack all enemies you can see in one action.
 Arrow Stab: 
   description: You can stab an enemy with an arrow for 1d6 damage.
   type: combat
@@ -1442,7 +1425,7 @@ Repair:
 Self Repair: 
   description: Once every three turns during combat, you can self repair in place of a full turn.
   type: combat
-  brief: Once every 3 turns in combat, self repair in place of a full turn.
+  brief: 1/3 turns in combat, self repair in place of a full turn.
 True Sleeplessness: 
   description: You cannot grow tired, nor can you sleep.
   type: general
@@ -1458,7 +1441,7 @@ Armored Exterior:
 Piston Punch: 
   description: Once every three turns, you may perform a 1d8 strength based punch on an enemy of your choice. On a critical hit, the enemy is knocked prone.
   type: combat
-  brief: Once every 3 turns, make a 1d8 punch. On crit, knock the enemy prone.
+  brief: 1/3 turns, make a 1d8 punch. On crit, knock the enemy prone.
 Upgrades: 
   description: A tinker can craft upgrades for you.
   type: rule
@@ -1466,7 +1449,7 @@ Upgrades:
 Photosynthesis: 
   description: Every turn or once per hour, regain 1d4 health.
   type: general
-  brief: Every turn or once per hour, regain 1d4 health.
+  brief: 1/turn or 1/hour, regain 1d4 health.
 Blade of Grass: 
   description: Summon a 1d6 blade of woven plant fiber on command.
   type: general
@@ -1517,7 +1500,7 @@ Twin Blade Parry:
   description: Once per round of combat, you may strike back when an enemy attacks you. 
     Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
-  brief: Reaction. Once per round, roll 1d20 when attacked. If greater than 15, strike back.
+  brief: Reaction. 1/round, roll 1d20 when attacked. If greater than 15, strike back.
 Offhand Attack: 
   description: You may use an offhand action to make an attack.
   type: action

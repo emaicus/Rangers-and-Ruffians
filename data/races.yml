@@ -158,12 +158,12 @@ Gnome:
         and are capable of succeeding at anything they put their minds to.
       stats:
         Charisma: -1
-        Dexterity: 0
+        Dexterity: 1
         Inner_Fire: 1
         Intelligence: 1
         Luck: 0
-        Perception: -1
-        Strength: 1
+        Perception: 0
+        Strength: -1
         Vitality: 2
       handbook:
         sections: 
@@ -240,12 +240,12 @@ Halfling:
         Charisma: 1
         Dexterity: 2
         Inner_Fire: 0
-        Intelligence: 1
+        Intelligence: 2
         Luck: 1
         Perception: 2
         Strength: -2
         Vitality: 1
-    Plentitudinous:
+    Hardfoot:
       abilities:
         - Sling
         - Warm Butter
@@ -264,9 +264,9 @@ Halfling:
         Charisma: 2
         Dexterity: -1
         Inner_Fire: 2
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
+        Intelligence: -1
+        Luck: 1
+        Perception: -1
         Strength: 1
         Vitality: 2
 Human:
@@ -428,16 +428,16 @@ Sprout:
   subraces:
     Sprout:
       abilities: 
-      - Photosynthesis
-      - Blade of Grass
-      - Mantel
-      - Scurry
-      - Dodge
-      - Harden
-      - Small Fry
-      - Soft Landing
-      - Commune with Nature
-      - Lightweight
+        - Photosynthesis
+        - Blade of Grass
+        - Mantel
+        - Scurry
+        - Dodge
+        - Harden
+        - Small Fry
+        - Soft Landing
+        - Commune with Nature
+        - Lightweight
       quote: And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my 
               hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
               dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
@@ -452,7 +452,7 @@ Sprout:
         Inner_Fire: 1
         Intelligence: 1
         Luck: 2
-        Perception: 1
+        Perception: 2
         Strength: -5
         Vitality: 0
 Automaton:
