@@ -1086,7 +1086,7 @@ the_druid's_guidebook:
         fruit keep for up to one day.
     Hurricane Force Winds:
       cost: 3
-      description: Summon hurricane force winds with up to a 30 foot verticle diameter.
+      description: Summon hurricane force winds with up to a 30 foot vertical diameter.
         Any entity that passes through the winds must make a strength check against
         your spell power to make any headway, and then must move at half speed. Creatures
         of size large or greater may make the check with advantage.
@@ -1650,7 +1650,7 @@ the_novice_spellbook:
       description: Force an enemy to make an inner fire saving throw against your
         spell power. On failure, the enemy recieves a curse which causes them to wet
         the bed each night. The curse cannot be removed unless dispelled.
-    Elecrified:
+    Electrified:
       charisma_cost: 10
       cost: 1
       description: Electrify an object or entity. Any entity who touches or attacks

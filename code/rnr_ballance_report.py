@@ -8,6 +8,8 @@ from operator import attrgetter
 import collections
 import csv
 import rnr_descriptions
+from spellchecker import SpellChecker
+import inquirer
 
 STAT_OUTPUT = 'reports'
 
@@ -299,15 +301,20 @@ def game_stats():
 
 def check_brief_abilities():
   target_length = 80
+  num_warnings = 0
+  num_errors = 0
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     if not 'brief' in ability_info:
       print('ERROR: No brief in {0}'.format(ability_name))
-    if ability_info['type'] == "rule" or ability_info['type'] == 'choice':
+    if ability_info['type'] in ['rule', 'choice', 'starting_item', 'action']:
       continue
     if len(ability_info['brief']) > target_length:
+      num_warnings+=1
       print("WARNING: {0}'s brief is {1} characters too long ({2} characters long)".format(ability_name, len(ability_info['brief']) - target_length, len(ability_info['brief']) ))
     if len(ability_info['brief']) > len(ability_info['description']):
       print("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
+      num_errors+=1
+  print("\n{0} Warnings\n{1} Errors".format(num_warnings, num_errors))
 
 def check_descriptions():
   for gender in ['male', 'female']:
@@ -321,6 +328,69 @@ def check_descriptions():
           tmp = rnr_descriptions.gender_word_replacement(inner_inner, gender)
           if '<' in tmp or '>' in tmp:
             print('ERROR: {0}'.format(tmp))
+
+def is_word_unknown(word, spell, new_words):
+  return True if len(spell.unknown([word,])) == 1 and word not in new_words else False
+
+def fix_spelling_errors(words, spell, rnr_dictionary, corrections):
+  errors = 0
+  for w in words:
+    word = w.replace('.', '')
+    word = word.replace(',', '')
+    word = word.replace('!', '')
+    word = word.replace('?', '')
+    if is_word_unknown(word, spell, rnr_dictionary) and not word in corrections:
+      correction = inquirer.prompt([inquirer.Text('correction', message='What is the proper spelling of {0} ({1})?'.format(word, spell.correction(word))),])['correction']
+      if correction == '' or correction == 'word':
+        rnr_dictionary.append(word)
+      else:
+        corrections[word] = correction   
+    elif word in corrections:
+      errors += 1
+  return errors
+
+def spell_check():
+  spell = SpellChecker()
+  rnr_dictionary = list()
+  corrections = dict()
+  ability_errors = 0
+  spell_errors = 0
+
+  if os.path.exists('rnr_dictionary.json'):
+    with open('rnr_dictionary.json', 'r') as infile:
+      data = json.load(infile)
+      rnr_dictionary = data['rnr_words']
+      corrections = data['corrections']
+
+  ##############################################
+  # ABILITIES
+  ###############################################
+  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+    title_words = ability_name.split(' ')
+    ability_errors += fix_spelling_errors(title_words, spell, rnr_dictionary, corrections)
+
+    words = ability_info['description'].split(' ') + ability_info['brief'].split(' ')
+    ability_errors += fix_spelling_errors(words, spell, rnr_dictionary, corrections)
+
+  ##############################################
+  # Spells
+  ###############################################
+  for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
+    title_words = spell_name.split(' ')
+    spell_errors += fix_spelling_errors(title_words, spell, rnr_dictionary, corrections)
+
+    words = spell_info['details']['description'].split(' ')
+    spell_errors += fix_spelling_errors(words, spell, rnr_dictionary, corrections)
+
+  output_json = {'corrections' : corrections, 'rnr_words' : rnr_dictionary}
+  with open('rnr_dictionary.json', 'w') as outfile:
+    json.dump(output_json, outfile, indent=4)
+
+  if ability_errors > 0:
+    print('ERROR: {0} spelling errors in abilities.yml'.format(ability_errors))
+  if spell_errors > 0:
+    print('ERROR: {0} spelling errors in spells.yml'.format(spell_errors))
+  
 
 
 if __name__ == '__main__':
@@ -351,5 +421,8 @@ if __name__ == '__main__':
   print()
   print('CHECKING DESCRIPTIONS')
   check_descriptions()
+  print()
+  print('RUNNING CUSTOM SPELL CHECK')
+  spell_check()
   print()
   print("FINISHED!")

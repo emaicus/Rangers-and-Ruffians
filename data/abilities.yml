@@ -19,7 +19,7 @@ Chainmail:
 Courageous Blow:
   description: 1/3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, tripple it.
   type: starting_item
-  brief: 1/3 turns, add your INF to an attack. At level 5, double this. At level 8, tripple it.
+  brief: 1/3 turns, add INF to an attack. At LV 5, double this. At LV 8, tripple it.
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
   type: choice
@@ -63,8 +63,7 @@ Beast Form:
     and inner fire, and gain your level in temporary hit points. You stay in this form for 3 turns. Gives
     advantage on intimidation checks.
   type: combat
-  brief: 1/day for 3 turns, add +1 to STR, DEX, and INF, gain your level in temp hp,
-    and get advantage on intimidation.
+  brief: 1/day for 3 turns, add +1 to STR, DEX, VIT and INF. Advantage on intimidation.
 Beauty Incarnate:
   description: Gain advantage and +2 charisma when speaking to individuals who find
     your sex attractive.
@@ -79,8 +78,7 @@ Bellow:
   description: On your turn, you may unleash a mighty bellow. Weak flows may flee,
     others are disadvantaged if they don't pass an inner fire saving throw.
   type: combat
-  brief: Force all in earshot to make an INF saving throw against your SP. On failure, they
-    flee or are disadvantaged.
+  brief: Force all in earshot to make an SP Save. Frightened on failure.
 Berserk:
   description: Once per rest, you can go into a rage, giving you +1 strength and dexterity,
     and giving you a temporary + 2 to inner fire,
@@ -88,8 +86,7 @@ Berserk:
     by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
   type: combat
-  brief: 1/rest, gain +1 STR, DEX, +2 INF, -3 INT, PER. Lasts 2 hour. If ended
-    early, you are exhausted.
+  brief: 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER. Lasts 2 hours. Fatigue if ended early.
 Berserker: 
   description: You take half damage from physical attacks while going berserk.
   type: combat
@@ -130,7 +127,7 @@ Born in the Saddle:
 Build:
   description: Once you have a recipe for an item, you can build it. You can attempt to 
     build one item per rest, or two per sleep.
-  type: general
+  type: rule
   brief: If you have a recipe for an item, you can build it. You can attempt to make 1 per rest,
     2 per sleep.
 Slight of Hand:
@@ -197,7 +194,7 @@ Fire and Ice Arrows:
     throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to 
     move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
   type: general
-  brief: You can craft fire and ice arrows. For info, see long description.
+  brief: "Fire: +1d6. SP save or 1d6 next turn. Ice: +1d8. SP save or 1d4 back in init."
 Shadow and Light Arrows:
   description: You have mastered the art of crafting shadow and light arrows, and can craft at most 2 per day.
     Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against 
@@ -205,20 +202,20 @@ Shadow and Light Arrows:
     darkness. Light arrows deal an additional 1d6 light damage, and deal another
     1d12 damage to the undead.
   type: general
-  brief: You can craft shadow and light arrows. For info, see long description.
+  brief: "Shadow: +1d6. SP save or 1d4 turns blind. 10ft dark. Light: +1d6 +1d12 undead."
 Rope Arrows: 
   description: You have mastered the art of crafting rope arrows using minor magic, and can craft
     2 per day. As soon as a rope arrow hits its target, a rope instantly appears connecting the target
     to your hand. This can be used to climb, or to grapple opponents. To grapple an opponent, you must
     make a contested strength check.
   type: general
-  brief: You can craft rope arrows. For info, see long description.
+  brief: When a rope arrow hits, a rope springs from it to you. STR check to grapple.
 Explosive Arrows:
   description: After much experimentation, you have finally mastered the art of crafting
     explosive arrows, and can craft 1 per day. Explosive arrows do 2d10 damage to all enemies
     in a twenty foot radius.
   type: general
-  brief: You can craft explosive arrows. For info, see long description.
+  brief: 2d10 explosion with a 20 foot radius.
 Blink Arrows:
   description: After learning more about magic, you have learned how to create blink arrows,
     and can craft 1 per day. Blink arrows instantly teleport you to the position that they hit.
@@ -231,32 +228,32 @@ Net Arrows:
     Each turn, they may make a strength saving throw against your spell power to attempt
     to break out of the net.
   type: general
-  brief: You can craft net arrows. For info, see long description.
+  brief: SP save or grappled. Each turn, STR SP save.
 Anti-Gravity Arrows:
   description: You can now craft at most 2 Anti-Gravity arrows per day. When an Anti-Gravity
     arrow hits its target, they must make an inner fire saving throw against your spell power.
     On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows
     last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.
   type: general
-  brief: You can craft anti-gravity arrows. For info, see long description.
+  brief: SP save or gravity is reversed for them. Lasts 1 min, 1d4 turns, or till save.
 Smoke Arrow: 
   description: You can now craft at most 2 smoke arrows per day. When a smoke arrow hits the ground, 
     it creates a smokescreen with a 30 foot radius.
   type: general
-  brief: You can craft smoke arrows. For info, see long description.
+  brief: 30 ft radius smokescreen.
 Shock Arrow: 
   description: You can now craft at most 2 shock arrows per day. When a shock arrow hits an enemy, 
     it deals 2d8 shock damage to them and any other entities within 30 feet. If an affected entity is
     wearing metal armor or is made of or standing in water, they take an extra 2d8 damage. All affected 
     entities must make an inner fire saving throw against your spell power. On failure, they are knocked prone.
   type: general
-  brief: You can craft shock arrows. For info, see long description.
+  brief: +2d8 dmg with 30 ft rad. Armor +2d8 dmg. All make SP save or are prone.
 Vampiric Arrow: 
   description: You can now craft at most 2 vampiric arrows per day. Vampiric arrows
     do an additional 2d6 damage to an entity. You regain half of the damage done by 
     a vampiric arrow to your health.
   type: general
-  brief: You can craft vampiric arrows. For info, see long description.
+  brief: +2d6 dmg. Regain half as health.
 Firestorm Arrow: 
   description: You can now craft at most 1 firestorm arrow per day. A firestorm 
     arrow does nothing for one turn or one minute after it strikes something. Then,
@@ -264,27 +261,26 @@ Firestorm Arrow:
     caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3
     turns. 
   type: general
-  brief: You can craft firestorm arrows. For info, see long description.
+  brief: Craft 1/day. After 2 turns, 20 ft. rad. pillar of flame for 3 turns. 4d10 dmg.
 Charge:
   description: Once every three turns as an offhand action, charge an enemy 
     of up to one size larger than yourself and roll a d20. If they fail a dexterity save
     against your spellpower, they are knocked prone. They must roll with disadvantage
     if you are larger than them, and advantage if you are smaller.
   type: combat
-  brief: Offhand. Every 3 turns, charge. If enemy fails a DEX SP save, knocked prone.
-    Disadv/adv based on size.
+  brief: Offhand. 1/3 turns, charge. If enemy fails a DEX SP save, prone. Adv size-based.
 Charm:
   description: As an action, you may cast a charm spell on an entity. If the
     entity fails an inner fire saving throw against your spell power, they cannot
     attack you until you attack them or they succeed.
   type: combat
-  brief: Action. If enemy fails an INF SP save, they cannot attack you. Lasts until success or you attack them.
+  brief: If enemy fails a SP save, they cannot attack you until success or you attack.
 Cheap Blow:
   description: On a critical hit, knock an enemy prone.
   type: combat
   brief: On a crit, knock an enemy prone.
 Choice Stat:
-  description: Decide between a permanent increase of 1 dexterity, inner fire,or strength.
+  description: Decide between a permanent increase of 1 dexterity, inner fire, or strength.
   type: choice
   brief: Add +1 to DEX, STR, or INF.
 Color Choice:
@@ -313,7 +309,7 @@ Dual Shot:
 Crushing Blow:
   description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on the first action of their next action.
   type: combat
-  brief: On a crit, all enemies who see have disadvantage on the first action of their next turn.
+  brief: On crit, enemies who see have disadv on the first action of their next turn.
 Dark Vision:
   description: You can see even in perfect darkness.
   type: general
@@ -331,7 +327,7 @@ Dominate:
     an inner fire saving throw, they must obey you. They can attempt a saving throw
     every turn thereafter.
   type: general
-  brief: 1/3 turns. If enemy fails an INF SP save, they must obey you. Repeat the save each turn or until you attack.
+  brief: 1/3 turns. If enemy fails SP save, they must obey until they save or you attack.
 Dry Up:
   description: If you are not submerged in water once every 3 days, you will die from
     asphyxiation. Pouring water on yourself or standing in the rain can grant you an
@@ -343,7 +339,7 @@ Edge of Eternity:
     1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal
     Coil to once per day for three days.
   type: general
-  brief: Consume a soul. +1 to a stat or gain heal 1d10. If you consume 4 in a day, Mortal Coil becomes once per day for 3 days.
+  brief: Eat a soul. +1 to stat or d10 heal. If 4/day eaten, Mortal Coil 1/day 3 days.
 Army of the Damned:
   description: Once per day as an action, resurrect every entity within 100 feet as zombies
     at the cost of 5 souls.
@@ -384,13 +380,6 @@ Born in Darkness:
     protective garments durning the day.
   type: disadvantage
   brief: You take 1d6 damage per hour when in sunlight unless shaded.
-Inherent Magic:
-  description: You are magical by nature, and begin your journey knowing 1 level zero spell 
-    of your choice from the novice spellbook. At levels 1, 3, 5, 7, and 9, you learn an additional
-    level zero spell.
-  type: general
-  brief: You begin your journey with a level zero spell from the novice spellbook. You learn 
-    another on odd levels.
 Feint:
   description: Once every three turns, you may roll a d20 against an enemy attack. Reduce
     the attack by the amount rolled.
@@ -399,10 +388,10 @@ Feint:
 Flash Grenade:
   description: Once per day, craft a flash grenade (max 3). 
     These grenades have a 10ft radius on explosion. If an entity that sees the explosion
-    a dc 10 dexterity saving throw, they are blinded for 2 turns,
+    a D10 dexterity saving throw, they are blinded for 2 turns,
     and all actions they take have disadvantage.
   type: combat
-  brief: 1/day, craft a flash grenade (max 3). 10 ft. radius. Enemies make a dc10 DEX save, or be blinded for 2 turns.
+  brief: 1/day, craft flash grenade (max 3). 10 ft. rad. DEX SP save, or blinded 2 turns.
 Lighter Gear:
   description: You spend time crafting lighter gear for yourself and gain +2 on dexterity checks.
   type: general
@@ -481,7 +470,7 @@ From the Hip:
   description: Once per combat round, fire a retaliation shot when you are attacked. Roll a contested dexterity saving throw against the enemy. On success,
     it hits, hurting the enemy and stopping their attack.
   type: combat
-  brief: Reaction. 1/round, roll a contested Dex save. On success, counterattack and stop enemy attack.
+  brief: Reaction. 1/round. Contested DEX save. Success, counter and stop enemy attack.
 Gather:
   description: You passively collect ingredients for your tinkering.
   type: general
@@ -512,7 +501,7 @@ Happy Smiles:
     d8 inspiration dice once per day. It also decreases it in bad weather, giving
     them -1 charisma.
   type: general
-  brief: 1/day in good weather, give your party a 1d8 INSP dice. In bad weather, give them -1 CHR.
+  brief: 1/day in good weather, give party a 1d8 INSP dice. In bad weather, -1 CHR.
 High Ground:
   description: Gain advantage on any plunging attacks.
   type: combat
@@ -644,31 +633,31 @@ Poison Strike:
   description: Once per turn on one of your attacks, force an enemy to make an inner fire saving throw
     against your spell power. On failure, they are poisoned, and take 1d12 damage each turn for two turns.
   type: combat
-  brief: 1/turn. force an enemy to make an INF SP save. On failure, do 1d12 poison damage for 2 turns.
+  brief: 1/turn. Force enemy to make SP save. On failure, 1d12 poison damage for 2 turns.
 Beast Form:
   description: Once every day, transform yourself into a dire creature of your choosing. For one hour, 
     you may transform back and forth as an action. While in your beast form,
     you have the physical stats of the chosen creature. If your health falls to zero, you are instantly transformed back
     into your normal form, with the health that you had prior to using beast shape.
   type: general
-  brief: 1/day, transform into a dire creature. For one hour, you can transform back and forth.
+  brief: 1/day, transform back and forth into a dire creature for one hour.
 Finesse Strike:
   description: Once every three turns, add 1d6 damage to an attack of your choosing. If the affected entity fails an 
     inner fire saving throw against your spell power, it suffers 1d6 bleeding damage at the start of its next turn. 
     At level 5, increase bleeding damage to 2d6. At level eight, increase it to 4d6.
   type: combat
-  brief: 1/3 turns, add 1d6 to an attack. If enemy fails SP save, it takes 1d6 damage next turn. 2d6 at LV5, 4d6 LV 8.
+  brief: 1/3 turns +d6 attack. Enemy SP save. On fail 1d6 next turn. 2d6 at LV5, 4d6 LV8.
 Entangling Attack:
   description: Once every three turns, you may attempt to entangle an enemy during one of your attacks using minor magic. 
     The enemy must make an inner fire saving throw against your spell power. On a failure, the entity is ensnared, 
     and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and
     all attacks made against it have advantage.
   type: combat
-  brief: 1/3 turns, force an entity to make an INF SP save. On failure, it is ensnared. Repeat check each turn.
+  brief: 1/3 turns, Force enemy SP save. On fail, ensnared. Repeat check each turn.
 Minor Medicine:
-  description: If you are in the woods or in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
+  description: If you are in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
   type: general
-  brief: If you are in the woods or your favorite terrain, create 1 1d20 health potion per day. Potions keep for 24 hours.
+  brief: If in favorite terrain, create 1 1d20 health potion per day. Lasts 24 hours.
 Minor Spell Choice:
   description: At the start of your journey, you know 1 extra level zero spells.
   type: choice
@@ -739,14 +728,14 @@ Pledge:
   type: choice
   brief: Pledge yourself to a diety.
 Poison Bite:
-  description: Once every 3 turns, you may make a bite attack for 1d6 damage. If your enemy fails a dc10 inner fire saving throw, they are
-    poisoned and take an additional 1d6 damage at the start of each turn until they pass a dc14 inner fire saving throw.
+  description: Once every 3 turns, you may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are
+    poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw.
   type: combat
-  brief: 1/3 turns, make a 1d6 bite. If the enemy fails a SP save, they are posioned. 1d6 damage each turn until save.
+  brief: 1/3 turns, 1d6 bite. If enemy fails SP save, 1d6 damage/turn until save.
 Poison Resist:
   description: You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.
   type: general
-  brief: You are resistent to poison. You have advantage on posion related checks, and take half damage at worst.
+  brief: You are resistent to poison. Advantage on posion checks, half damage at worst.
 Potion Bonus:
   description: Add 1d10 health to any potion you drink.
   type: general
@@ -786,7 +775,7 @@ Shield Bash:
     At level 3, damage increases to 1d8. At level 6, damage increases to 1d10. At level 8, 
     damage increases to 1d12.
   type: combat
-  brief: Do 1d6 damage. Enemy looses an action if they fail a contested STR check. 1d8 damage at LV3, 1d10 LV6, 1d12 LV8.
+  brief: "Contested STR check. Fail: loose action. d6 damage LV0 d8 LV3, d10 LV6, d12 LV8."
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them. Any damage you recieve as a result is halved.
@@ -866,8 +855,8 @@ Sword and Spell:
 Tackle:
   description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
     strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.
-  type: combat
-  brief: Tackle an enemy 1 size larger. DEX or STR contested throw. Grapple them on fail. You have advantage.
+  type: advantage
+  brief: Advantage when grappling. Choose STR or DEX contested save.
 Tactics:
   description: Once per day, you may declare before an attack that you wish to double
     it's damage.
@@ -946,7 +935,7 @@ Tinker:
     one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs,
     firebombs, and saddles. (Tinkering requires an intelligence check)
   type: general
-  brief: 1/night, you can attempt to invent a recipe. You begin with recipes for smoke bombs, firebombs, and saddles.
+  brief: 1/night, attempt to invent a recipe. Begin with smoke bomb, firebomb, saddle.
 Tracker:
   description: You are an excellent tracker, and have advantage when looking for trails
     and sign of passage.
@@ -1025,8 +1014,7 @@ Fix Your Eyes on Me:
     your spell power, the world goes black for them except for you. 
     Make charisma and intimidation checks with advantage for the remainder of the conversation.
   type: general
-  brief: Force someone to make an INF save against your spell power. If they fail, you have advantage
-    on CHA.
+  brief: "Force SP save. Fail: you have advantage on CHA."
 Infernal Blood: 
   description: At the cost of 10 hp, make a second action during combat.
   type: combat
@@ -1035,8 +1023,7 @@ The Opener:
   description: If you attack an enemy that has not yet moved in combat, do double damage. 
     If they fail a contested strength saving throw, they are knocked prone.
   type: combat
-  brief: If you attack an enemy that hasn't moved yet, do double damage. If they fail a contested
-    STR check, knock them prone.
+  brief: "Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone."
 True Sight: 
   description: You are able to see invisible entities. 
   type: general
@@ -1045,7 +1032,7 @@ Influence:
   description: You have 2 influence points which you may spend to increase any charisma roll by 2.
     Influence points refill after you sleep.
   type: general
-  brief: You have 2 influence points. Use to add +2 to a CHA role. They refill when you sleep. 
+  brief: You have 2 influence points. Use to add +2 to a CHA role. Refill when you sleep. 
 Additional Influence Point: 
   description: You gain an additional influence point.
   type: general
@@ -1082,7 +1069,7 @@ Fire and Ice:
   description: Once per day, embue one of your blades with fire and the other with ice. Each do an additional
     1d6 damage for the duration of a battle.
   type: combat
-  brief: 1/day, embue one of your weapons with fire and the other with ice. Both do +1d6 damage for 1 battle.
+  brief: 1/day, embue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
 Savage Critical:
   description: On a critical hit, do an additional dice of damage.
   type: combat
@@ -1102,7 +1089,7 @@ Joust:
 Throw Caution to the Wind: 
   description: On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.
   type: combat
-  brief: Add an extra damage dice to all of your attacks for a turn, but all enemy attacks get advantage on you.
+  brief: +1 damage dice to all attacks for a turn, but enemy attacks get advantage.
 Steel Yourself: 
   description: Once every three turns, choose to take half damage from an attack.
   type: combat
@@ -1115,7 +1102,7 @@ Link Lifeforce:
   description: As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you.
     Remove the link as an offhand action.
   type: combat
-  brief: As an action. Link your lifeforce to that of another and take its damage for it. Offhand to remove.
+  brief: Offhand. Link lifeforce to another and take its damage. Offhand to remove.
 Spirit of Rage: 
   description: Once per day, double one of your turns.
   type: combat
@@ -1129,15 +1116,15 @@ Sword of Honor:
     your blade to deal an additional 2d6 damage. While your blade is embued with light, you take advantage
     on all spell saving throws, and cannot be frightened.
   type: combat
-  brief: 1/day. Lasts 5 turns. +2d6 damage to attacks, gain advantage on SP saves. Immune to fear.
+  brief: 1/day. Lasts 5 turns. +2d6 damage, gain advantage on SP saves. Immune to fear.
 Stay on Your Feet: 
-  description: If you fall to zero health, make a dc14 inner fire saving throw. If you succeed, drop to 1 health instead.
+  description: If you fall to zero health, make a D14 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
-  brief: If your health hits zero, make a dc14 INF save. On success, drop to 1 health instead.
+  brief: If your health hits 0, make a D14 INF save. On success, drop to 1 hp instead.
 Last Line of Defense: 
   description: If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.
   type: combat
-  brief: If your allies are on death's door or have died, add an extra dice to all attacks.
+  brief: If your allies are on death's door or have died, +1 dmg dice to all attacks.
 Beacon of Hope: 
   description: All allies within 100 feet of you gain +1 to all saving throws.
   type: general
@@ -1170,7 +1157,7 @@ Leaping Strike:
   description: Once every three turns, leap forward to attack an enemy, dealing 1d6 additional damage.
     At level five, damage increases to 2d6. At level eight, it increases to 3d6. 
   type: combat
-  brief: 1/3 turns, leap forward to deal +1d6 damage. At level 5 this increases to 2d6. At 8, its 3d6. 
+  brief: 1/3 turns, leap forward to deal extra damage. LV0 1d6, LV5 2d6, LV8 3d6. 
 Reduced Critical: 
   description: You perform a critical hit if you roll one less than your die's number of sides.
   type: combat
@@ -1179,7 +1166,7 @@ Disarming:
   description: Once every turn as a reaction, force an enemy that attacks you to make an inner fire
                saving throw against your charisma. If they fail, their attack must be made with disadvantage.
   type: combat
-  brief: Reaction. 1/3 turns, force an enemy to make a INF save against your CHA. On failure, attack disadvantaged.
+  brief: "Reaction. 1/3 turns, force enemy to make INF save VS CHA. Fail: attack disadv."
 Aura of Peace: 
   description: All allies near you take heart, and gain +1 vitality while in your presence.
   type: general
@@ -1213,7 +1200,7 @@ Reflexes:
   description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
     If reduced to zero, you catch the projectile.
   type: general
-  brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to zero, catch it.
+  brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to 0, catch.
 Strike From the Shadows: 
   description: Do an additional 1d10 damage on an attacks made from hiding.
   type: general
@@ -1231,7 +1218,7 @@ Lucky Actions:
     these tokens to make an additional action on your turn, or to re-roll any dice. 
     These tokens refill on a long rest.
   type: general
-  brief: You have luck tokens equal to your LCK. Use them gain an extra action or re-roll a dice. Refill on a long rest.
+  brief: Luck tokens equal to LCK. Spend for extra action or re-roll. Refill on sleep.
 Soundless : 
   description: Gain an additional 1d6 on stealth checks.
   type: general
@@ -1253,13 +1240,13 @@ Imposter:
   type: general
   brief: Gain +1d6 on imitation checks.
 Poison: 
-  description: Once per day, create a draught of deadly poison. If injested, the poison does 3d20 damage if consumed. If placed on a blade, the blade does an additional 1d10 damage throughout one combat encounter. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
+  description: Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
   type: general
-  brief: 1/day, craft posion. 3d20 damage if consued. 1d10 extra damage on a blade for one combat. Poison lasts 24 hours.
+  brief: 1/day, spend 6 hrs crafting posion. 3d20 dmg eaten. 1d10 on blade. Lasts 24 hrs.
 Focus Energy:
-  description: As an action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
+  description: As an offhand action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
-  brief: As an action. Convert 1 spell point into +1 STR or DEX. Lasts one battle or 1 hour.
+  brief: Offhand. Convert 1 spell point into +1 STR or DEX. Lasts 1 battle or 1 hr.
 Transfer Essense: 
   description: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
   type: combat
@@ -1272,10 +1259,10 @@ One With Magic:
 Ascend: 
   description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 spell points. 
     While ascended, you may take flight as an offhand action. The ascended state lasts for 3
-    turns or five minutes. When you fall out of the ascended state, you are exhausted. Immediately take 4d10 damage, and have disadvantage
+    turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
   type: general
-  brief: 1/day. 3 turns/5 min. +5 spell points. Offhand flight. After, exhausted, 4d10 damage. Ascended death is permanent.
+  brief: 1/day 3 turns. +5 sp pts. Offhand flight. Fatigued & 4d10 dmg after. Permadeath.
 Power of Ascension:
   description: While in the ascended state, gain 5 inner fire, strength, and dexterity.
   type: general
@@ -1287,17 +1274,14 @@ Ascended Action:
 True Ascension:
   description: Ascension no longer has a time limit. While ascended, you make all perception checks and 
     inner fire saving throws with advantage. You may enter and leave the ascended state as often as you want.
-    When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are exhausted.
+    When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are fatigued.
   type: combat
-  brief: Ascension no longer has a time limit. While ascended, gain advantage on PER and INF checks and saves.
-    You may leave and enter the ascended state as often as you want. When you leave the ascended state, make a 
-    1d10 INF save, and become exhausted on failure.
+  brief: "Ascended: No use limit, adv on PER/INF. Over, D10 INF save. Fail: fatigued."
 Phylactery: 
   description: You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, 
     your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.
   type: general
-  brief: You may remove your soul and put it in a phylactery. If it is destroyed, you are destroyed. If your body dies
-    and you have a thrall, you may posess the thrall. Your body is regenerated at the phylactery after 1 day.
+  brief: Bind soul to phylactery. If body dies, possess thrall or resurrect tomorrow.
 Reap: 
   description: When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2.
   type: general
@@ -1327,7 +1311,7 @@ Spell Coin:
   description: You have one spell coin, which may store a spell of up to first level. Any person who rubs the coin may cast
     the spell as an offhand action. Each day, you may resummon the coin to yourself, and may put a spell into it free of cost.
   type: general
-  brief: You have a spell coin, which may store up to a first level spell. Each day, put a spell in, free of cost.
+  brief: You have 1 spell coin. Stores up to LV1 spell. 1/day, put a spell in for free.
 Additional Spell Coin:
   description: You have an additional spell coin.
   type: general
@@ -1342,17 +1326,16 @@ Major Spell Coin:
   brief: You can store level 3 spells in your spell coins.
 Spirits Within: 
   description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are embued with a spirit, 
-    make a dc 10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
+    make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
     While you are embued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, 
-    and may add +1 to strength, dexterity, perception, inner fire, and luck.
+    and may add +1 to strength, dexterity, perception, and inner fire.
   type: combat
-  brief: Embue yourself with a spirit. Every turn, make a dc10 INF save, and take 2d6 psychic damage. On a crit failure, the spirit
-    escapes. Add +1 to STR, DEX, PER, INF, and LUK.
+  brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. +1 STR DEX PER INF.
 Light and Shadow: 
   description: While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability,
     and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
   type: combat
-  brief: While you possess a spirit, add 1d10 damage to your attacks. Gain darkvision and advantage on INF saves.
+  brief: While you possess a spirit, +1d10 dmg, darkvision and adv on INF saves.
 Tome of the Ancients: 
   description: You are now able to learn spells from the tome of the ancients.
   type: spellbook
@@ -1364,11 +1347,11 @@ Spell Invention:
 Halo: 
   description: A halo shines about your head. Take advantage when dealing with god-fearing people, and when intimidating anyone wicked.
   type: advantage
-  brief: You have a blazing halo. Gain advantage when dealing with god-fearing people, or intimidating the wicked.
+  brief: You have a blazing halo. Adv with god-fearing people, or intimidating wicked.
 Burning Bright:
   description: At will, you can make your halo blaze with the same intensity as the light spell, dealing damage 1d6 damage to the undead.
   type: combat
-  brief: At will, make your halo blaze with the intensity of the light spell, dealing 1d6 damage to undead.
+  brief: At will, your halo blazes like the light spell, 1d6 damage to undead.
 True Heal: 
   description: Re-roll any ones or twos rolled while healing.
   type: general
@@ -1419,7 +1402,7 @@ Overdrive:
   brief: Spend 5 health per turn (1 health per minute). Gain +3 STR and DEX.
 Repair: 
   description: You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.
-  type: general
+  type: rule
   brief: You cannot heal using potions or rest. Rather, you must repair. Self-repair counts as rest. Repair with help as sleep.
     Repair with expert as sleep in a bed.
 Self Repair: 
@@ -1462,8 +1445,7 @@ Dodge:
   description: Any time you are attacked, roll a d20 and add your dexterity. 
     If you get above a 15, the attack misses.
   type: combat
-  brief: Reaction. When you are attacked. Roll 1d20 and add your dex. 
-    If 17 or above, the attack misses.
+  brief: "Reaction. When attacked. Roll D17 dex check. Success: attack misses."
 Harden: 
   description: As an offhand action, harden or unharden yourself. While hardened, gain 2 defense and loose 2 dexterity.
   type: general
@@ -1555,7 +1537,7 @@ Weapon Proficiency:
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
   type: rule
   brief: When you attack with a strength based weapon, add STR to your attack. When you attack
-    with a dexterity based wealon, add DEX.
+    with a dexterity based weapon, add DEX.
 Not Proficient With Weapons:
   description: Take disadvantage when attacking with physical weapons. 
   type: disadvantage
@@ -1631,7 +1613,7 @@ Starting Fighting Techniques:
   brief: You know 2 standard fighting techniques.
 Learn Fighting Techniques: 
   description: Each time you level up, learn one fighting technique from each fightning technique level you have access to.
-  type: general
+  type: rule
   brief: Each time you level up, learn 1 fighting technique from each level you have access to.
 Fighting Techniques:
   description: You may learn a new fighting technique from the book of chi.
@@ -1654,8 +1636,7 @@ Vengeful Death:
   description: When you are reduced to zero hit points, you may make one last retaliatory action.
     If you take the retaliatory action, you must make your death coin flips with disadvantage.
   type: combat
-  brief: When you fall to 0 hp, you may make one last attack. If you do, you have disadvantage on
-    your death coin tosses.
+  brief: When you hit 0 hp, choose to make an attack. If you do, disadv on death coin.
 Far-Strider or Monster Hunter:
   description: You may choose to subclass into a Far-Strider or a Monster Hunter. Far-Striders aim
     to become more resilient warriors, with a focus on staying alive. Monster Hunters refine the art
