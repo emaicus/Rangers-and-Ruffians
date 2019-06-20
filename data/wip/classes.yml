@@ -9,14 +9,13 @@ Heavy Fighter:
       How will being a knight affect the way that you interact with your party?
     standings: Knights are loved by kingsmen, and distrusted by hedge knights and
       rangers. Knights are duty bound to fight the lawless.
-    health_die_sides: 8 
     base_stats:
-      Charisma: -1
+      Charisma: 0
       Dexterity: -3
       Inner_Fire: 1
-      Intelligence: -2
+      Intelligence: 0
       Luck: 0
-      Perception: -1
+      Perception: 0
       Strength: 1
       Vitality: 5
     base_abilities:
@@ -29,6 +28,8 @@ Heavy Fighter:
         abilities:
         - Trained Precision
       level_1:
+        stats:
+          Strength : 1
         abilities:
         - Shield Bash
       level_2:
@@ -40,7 +41,7 @@ Heavy Fighter:
         - Taunt
       level_3:
         stats:
-          Dexterity: 2
+          Charisma: 1
         abilities:
         - Shield of Men
         - Shield Up
@@ -96,7 +97,6 @@ Heavy Fighter:
       a paladin affect the way they interact with their party?
     standings: Paladins are generally respected. They hate evil, and try to destroy
       it wherever they find it.
-    health_die_sides: 8 
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -202,7 +202,6 @@ Heavy Fighter:
       world feel about barbarians? How will being a barbarian affect the way that you 
       interact with your party?
     standings: Barbarians are the enemies of law keepers.
-    health_die_sides: 8 
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -379,7 +378,6 @@ Light Fighter:
       at what they do? How will being a rogue affect how you interact with your party? Remember,
       just because you are a rogue doesn't mean you can't have friends!
     standings: Thieves hate law keepers and Thief Catchers
-    health_die_sides: 4 
     base_stats:
       Charisma: 0
       Dexterity: 1
@@ -488,7 +486,6 @@ Light Fighter:
       why are they good at it? Do they like fighting? What are their goals? How will being a fighter
       affect the way that you interact with your party?
     standings: Fighters come from all walks of life.
-    health_die_sides: 6 
     base_stats:
       Charisma: 1
       Dexterity: 0
@@ -579,7 +576,6 @@ Light Fighter:
       with them? How will being a highborn affect how you interact with others and your party?
     standings: Of noble birth, your character is loved by their people, but is prone
       to attacks by thieves and brigands.
-    health_die_sides: 6 
     base_stats:
       Charisma: 1
       Dexterity: 1
@@ -680,7 +676,6 @@ Light Fighter:
       affect how you interact with your party?
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
-    health_die_sides: 8 
     base_stats:
       Charisma: -3
       Dexterity: 0
@@ -778,7 +773,6 @@ Light Fighter:
       have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact
       with your party? 
     standings: Barbarians are the enemies of law keepers.
-    health_die_sides: 8 
     base_abilities:
     - Weapon Proficiency
     - Action 
@@ -881,7 +875,6 @@ Light Fighter:
       How will being a monk affect the way you interact with your party?
     standings: Monks keep to themselves, which cause some outside of their religion
       to attempt to take advantage of them.
-    health_die_sides: 6 
     base_stats:
       Charisma: 0
       Dexterity: 1
@@ -958,7 +951,6 @@ Mage:
       other party members?
     standings: Wizards are known to be friends to all races, and get along particularly
       well with Halflings and Rangers.
-    health_die_sides: 4 
     base_stats:
       Charisma: 1
       Dexterity: -3
@@ -1046,107 +1038,107 @@ Mage:
           Intelligence: 1
         abilities:
         - Tome of the Ancients
-  # Battle_Mage:
-  #   description: Battle Mage's are adept at both physical and magical combat. They
-  #     are able to learn basic spells, which they use to help hone their swordcraft by
-  #     enchanting their blade to do additional damage. Battle Mage's are heartier than
-  #     other magic users, and can hold their own on the front line with the other fighters.
-  #     As you build your battle mage, consider why they chose to focus on physical battle 
-  #     instead of just the arcane arts. Who trained them to use magic? What are their goals
-  #     and aspirations? How will being a magic user change the way that you interact with your
-  #     party?
-  #   base_stats:
-  #     Charisma: 0
-  #     Dexterity: -2
-  #     Inner_Fire: 1
-  #     Intelligence: 0
-  #     Luck: 0
-  #     Perception: -2
-  #     Strength: 1
-  #     Vitality: 3
-  #   base_abilities:
-  #   - Action 
-  #   - Offhand Action
-  #   - Minor Spell Choice
-  #   - Learn Spells
-  #   levels:
-  #     level_0:
-  #       abilities:
-  #       - Learning Spells
-  #       - Inner Fire Based Spellcaster
-  #       - Weapon Proficiency
-  #       - Spell Power
-  #       - Novice Spellbook
-  #       - Level Zero Spells
-  #     level_1:
-  #       stats:
-  #         Inner_Fire: 1
-  #         Dexterity: 1
-  #       abilities:
-  #       - Embue Weapon
-  #     level_2:
-  #       stats:
-  #         Intelligence: 1
-  #         Strength: 1
-  #       abilities:
-  #       - Sword and Spell
-  #       - Level One Spells
-  #     level_3:
-  #       stats:
-  #         Charisma: 1
-  #         Perception: 1
-  #       abilities:
-  #       - Minor Offhand Spell
-  #       - Trained Attack
-  #     level_4:
-  #       stats:
-  #         Inner_Fire: 1
-  #         Intelligence: 1
-  #       abilities:
-  #         - Offhand Attack
-  #         - Greater Embue Weapon
-  #         - Level Two Spells
-  #     level_5:
-  #       stats:
-  #         Luck: 1
-  #         Dexterity: 1
-  #       abilities:
-  #       - Multiclass Option
-  #       - Greater Offhand Spell
-  #       - Focus Energy
-  #       - Mage Shield
-  #     level_6:
-  #       stats:
-  #         Perception: 1
-  #         Strength: 1
-  #       abilities:
-  #       - Transfer Essense
-  #       - Level Three Spells
-  #     level_7:
-  #       stats:
-  #         Charisma: 1
-  #         Intelligence: 1
-  #       abilities:
-  #       - Major Offhand Spell
-  #     level_8:
-  #       stats:
-  #         Perception: 1
-  #         Inner_Fire: 1
-  #       abilities:
-  #       - Major Embue Weapon
-  #       - Level Four Spells
-  #     level_9:
-  #       stats:
-  #         Intelligence: 1
-  #         Dexterity: 1
-  #       abilities:
-  #       - Greater Mage Shield
-  #     level_10:
-  #       stats:
-  #         Intelligence: 1
-  #       abilities:
-  #       - One With Magic
-  #       - Level Five Spells
+  Battle_Mage:
+    description: Battle Mage's are adept at both physical and magical combat. They
+      are able to learn basic spells, which they use to help hone their swordcraft by
+      enchanting their blade to do additional damage. Battle Mage's are heartier than
+      other magic users, and can hold their own on the front line with the other fighters.
+      As you build your battle mage, consider why they chose to focus on physical battle 
+      instead of just the arcane arts. Who trained them to use magic? What are their goals
+      and aspirations? How will being a magic user change the way that you interact with your
+      party?
+    base_stats:
+      Charisma: 0
+      Dexterity: -2
+      Inner_Fire: 1
+      Intelligence: 0
+      Luck: 0
+      Perception: -2
+      Strength: 1
+      Vitality: 3
+    base_abilities:
+    - Action 
+    - Offhand Action
+    - Minor Spell Choice
+    - Learn Spells
+    levels:
+      level_0:
+        abilities:
+        - Learning Spells
+        - Inner Fire Based Spellcaster
+        - Weapon Proficiency
+        - Spell Power
+        - Novice Spellbook
+        - Level Zero Spells
+      level_1:
+        stats:
+          Inner_Fire: 1
+          Dexterity: 1
+        abilities:
+        - Embue Weapon
+      level_2:
+        stats:
+          Intelligence: 1
+          Strength: 1
+        abilities:
+        - Sword and Spell
+        - Level One Spells
+      level_3:
+        stats:
+          Charisma: 1
+          Perception: 1
+        abilities:
+        - Minor Offhand Spell
+        - Trained Attack
+      level_4:
+        stats:
+          Inner_Fire: 1
+          Intelligence: 1
+        abilities:
+          - Offhand Attack
+          - Greater Embue Weapon
+          - Level Two Spells
+      level_5:
+        stats:
+          Luck: 1
+          Dexterity: 1
+        abilities:
+        - Multiclass Option
+        - Greater Offhand Spell
+        - Focus Energy
+        - Mage Shield
+      level_6:
+        stats:
+          Perception: 1
+          Strength: 1
+        abilities:
+        - Transfer Essense
+        - Level Three Spells
+      level_7:
+        stats:
+          Charisma: 1
+          Intelligence: 1
+        abilities:
+        - Major Offhand Spell
+      level_8:
+        stats:
+          Perception: 1
+          Inner_Fire: 1
+        abilities:
+        - Major Embue Weapon
+        - Level Four Spells
+      level_9:
+        stats:
+          Intelligence: 1
+          Dexterity: 1
+        abilities:
+        - Greater Mage Shield
+      level_10:
+        stats:
+          Intelligence: 1
+        abilities:
+        - One With Magic
+        - Level Five Spells
   Druid:
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful
@@ -1159,7 +1151,6 @@ Mage:
       about other types of magic? Why are they on their adventure? How do they feel about 
       eating meat? What are their values? What do they think the place of people is in the 
       world? How will being a druid change the way you interact with your party?
-    health_die_sides: 4 
     base_stats:
       Charisma: -4
       Dexterity: -1
@@ -1253,7 +1244,6 @@ Mage:
       When they cast a spell, do they always use the same spirit, or different spirits?
       Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer
       change the way that you interact with the world and your party?
-    health_die_sides: 4 
     base_stats:
       Charisma: 1
       Dexterity: -3
@@ -1353,7 +1343,6 @@ Mage:
       a necromancer affect how you interact with your party?
     standings: Necromancers are feared by most, and are actively hunted by Clerics
       and followers of the light.
-    health_die_sides: 4 
     base_stats:
       Charisma: -4
       Dexterity: -1
@@ -1465,7 +1454,6 @@ Mage:
       their deity? How will being a cleric affect the way that you interact with your party? 
     standings: Clerics are friends to all those who fight for good, and get along
       especially well with Holy Knights, Paladins, and members of their church.
-    health_die_sides: 4 
     base_stats:
       Charisma: 1
       Dexterity: 0
@@ -1563,7 +1551,6 @@ Mage:
       play music? Dance? Tell stories? How did they learn to fight? Who did they learn to fight from?
       How old are they? How many places have they been? Where do they perform? Why do they perform 
       there? How will being a bard change the way you interact with your party?
-    health_die_sides: 6 
     standings: Bards are loved by most, and are welcomed equally among thieves and
       gentlefolk.
     base_stats:
@@ -1672,7 +1659,6 @@ Ranged Fighter:
       so good at archery? Who trained them? How have they used their talent? What kind
       of person are they? What ideals do they have? What are their goals? How will being
       an archer affect how you interact with the rest of your party?
-    health_die_sides: 6 
     standings: Excellent archers, Marksmen come from all walks of life.
     base_stats:
       Charisma: 0
@@ -1782,7 +1768,6 @@ Ranged Fighter:
       interact with other partymembers.
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
-    health_die_sides: 6 
     base_stats:
       Charisma: 0
       Dexterity: 0

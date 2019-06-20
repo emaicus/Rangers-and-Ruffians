@@ -516,7 +516,7 @@ def load_Rangers_And_Ruffians_Data():
 
 
   ability_path = os.path.join(INSTALL_DIRECTORY, 'abilities.json')
-  class_path = os.path.join(INSTALL_DIRECTORY, 'pt_buy_classes.json')
+  class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
   race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
   spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
