@@ -1214,11 +1214,10 @@ Flee:
   type: general
   brief: Offhand. Flee without being attacked.
 Lucky Actions: 
-  description: You have a number of luck tokens equivalent to your luck stat. You may use
-    these tokens to make an additional action on your turn, or to re-roll any dice. 
+  description: You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. 
     These tokens refill on a long rest.
   type: general
-  brief: Luck tokens equal to LCK. Spend for extra action or re-roll. Refill on sleep.
+  brief: Luck tokens can be used for an extra action.
 Soundless : 
   description: Gain an additional 1d6 on stealth checks.
   type: general

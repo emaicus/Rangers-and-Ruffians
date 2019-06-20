@@ -8,6 +8,7 @@ import copy
 import re
 import time
 from tqdm import tqdm
+import random
 
 CODE_DIRECTORY = os.path.dirname(__file__)
 BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
@@ -515,7 +516,7 @@ def load_Rangers_And_Ruffians_Data():
 
 
   ability_path = os.path.join(INSTALL_DIRECTORY, 'abilities.json')
-  class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
+  class_path = os.path.join(INSTALL_DIRECTORY, 'pt_buy_classes.json')
   race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
   spell_path = os.path.join(INSTALL_DIRECTORY, 'merged_spells.json')
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
@@ -591,7 +592,20 @@ def abbreviate_stat(stat, upper=False):
   return ret.upper() if upper else ret
 
 def standard_stat_order():
-  return set(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck'])
+  return list(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck'])
+
+def roll_dice(number=1,sides=6,advantage=False,disadvantage=False):
+  total = 0
+  for roll in range(number):
+    first_roll = random.randint(1, sides)
+    second_roll = random.randint(1,sides)
+    if advantage and not disadvantage:
+      total += max(first_roll, second_roll)
+    elif disadvantage and not advantage:
+      total += min(first_roll, second_roll)
+    else:
+      total += first_roll
+  return total
 
 def mapAbilityType(abilitiy_type):
   if abilitiy_type == "combat":

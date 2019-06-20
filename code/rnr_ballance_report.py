@@ -51,44 +51,57 @@ def rank_classes():
           outfile.write("        {0}: {1}\n".format(rnr_class.name, rnr_class.get_stat(stat)))
       outfile.write('\n')
 
+def get_effective_vitality(vit):
+  if vit <= 3:
+    return vit
+  else:
+    real_vit = 3
+    vit = vit-3
+    return real_vit + (vit//2)
+
 '''
 Health binning and vitality chart. Call vitality_chart()
 '''
-def quick_health(level, vitality):
-  extra = vitality // 2 if level == 0 else level*vitality
-  return 15 + sum(range(level+1)) + extra
+def quick_health(level, vitality, tier):
+  tiers = {'light' : 4, 'medium' : 6, 'heavy' : 8}
+  bonus = rnr_utils.roll_dice(sides=tiers[tier])
+
+  summed_level = sum(range(level+1))
+  modifier = get_effective_vitality(vitality) * (level + 1)
+  return 10 + summed_level + modifier + (bonus*level)
 
 def vitality_chart(data_packet):
   if not os.path.exists(STAT_OUTPUT):
     os.mkdir(STAT_OUTPUT)
-  with open(os.path.join(STAT_OUTPUT, 'vitality_chart.txt'), 'w') as outfile:
+  with open(os.path.join(STAT_OUTPUT, 'vitality_chart4.txt'), 'w') as outfile:
     outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rnr_utils\n')
     outfile.write('{0:4}'.format('vit'))
-    for i in range(11):
-      outfile.write('{0:4}'.format(i))
-    outfile.write('\n')
-
-    for vitality in range(0,11):
-      outfile.write('{0:4}'.format(vitality))
-      for level in range(0,11):
-        outfile.write('{0:4}'.format(quick_health(level, vitality)))
+    for tier in ['light', 'medium', 'heavy']:
+      for i in range(11):
+        outfile.write('{0:4}'.format(i))
       outfile.write('\n')
 
-    health_dict = dict()
-    outfile.write('\n')
-
-    for data in data_packet:
-      for i in range(0,6):
-        health_dict[i] = list()
-      for obj in data:
-        health_dict[obj.vitality].append(obj.name)
-      for i in range(0,6):
-        outfile.write('{0}: '.format(i))
-        lis = health_dict[i]
-        for name in lis:
-          outfile.write(name + ', ')
+      for vitality in range(0,11):
+        outfile.write('{0:4}'.format(vitality))
+        for level in range(0,11):
+          outfile.write('{0:4}'.format(quick_health(level, vitality, tier)))
         outfile.write('\n')
+
+      health_dict = dict()
       outfile.write('\n')
+
+      for data in data_packet:
+        for i in range(0,6):
+          health_dict[i] = list()
+        for obj in data:
+          health_dict[obj.vitality].append(obj.name)
+        for i in range(0,6):
+          outfile.write('{0}: '.format(i))
+          lis = health_dict[i]
+          for name in lis:
+            outfile.write(name + ', ')
+          outfile.write('\n')
+        outfile.write('\n')
 
 '''
 Spell output function. Call spell_stats()

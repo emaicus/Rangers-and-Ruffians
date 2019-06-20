@@ -1,0 +1,63 @@
+@import(https://fonts.googleapis.com/css?family=Cinzel+Decorative);
+@import(https://fonts.googleapis.com/css?family=Angkor);
+
+body
+{
+  margin:0;
+  padding: 0;
+  background:  url('/static/images/subtle_white_mini_waves.png') repeat 0 0;
+  -webkit-print-color-adjust: exact !important;
+}
+
+.main_region 
+{
+  background-color: white;
+}
+
+p.name{
+  font-family: "Angkor script=all rev=3";
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-decoration: underline;
+  line-height: 1;
+}
+
+p.description{
+  font-size : 16pt;
+  font-family: "Angkor script=all rev=3";
+  line-height: 1.4em
+}
+
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width:768px){
+  .container{
+    width: 750px;
+  }
+  img.rnr_image{
+    width: 384px;
+  }
+}
+
+@media (min-width:992px){
+  .container{
+    width: 970px;
+  }
+  img.rnr_image{
+    width:496px;
+  }
+}
+
+@media (min-width:1200px){
+  .container{
+    width: 772px;
+  }
+  img.rnr_image{
+    width:600px;
+  }
+}

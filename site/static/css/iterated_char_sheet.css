@@ -9,8 +9,9 @@ body
 .printRegion 
 {
   width: 8.5in;
-  height: 13.3in;
+  height: 13in;
   margin: 0 auto;
+  padding:0px;
   background: #fff;
 }
 
@@ -318,4 +319,23 @@ img.icon
 .underline
 {
   font-size: 12px;
+}
+
+@media print {
+    /* print styles go here */
+    .logo {
+        display:none;
+    }
+    .buttonRegion{
+      display:none;
+    }
+
+    .printRegion 
+    {
+      width: 100%;
+      height: 11in;
+      margin: 0px;
+      padding:0px;
+      background: #fff;
+    }
 }

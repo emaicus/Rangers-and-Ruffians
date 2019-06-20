@@ -200,7 +200,7 @@ def creation_landing_page():
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
   elif next_to_populate == 'class':
     serial_data = populate_class(info)
-    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
+    return render_template("class_page.html", data=serial_data, stat_order=rnr_utils.standard_stat_order(), next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
   elif next_to_populate == 'subrace':
     serial_data = populate_race(info)
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='subrace',prev_stats=prev_stats,display_class=False)
@@ -210,7 +210,7 @@ def creation_landing_page():
     male=True if info['gender'].lower() == 'male' else False
     character = rnr_utils.rnr_character(info['name'],race,subrace,info['class'],info['level'], male=male)
     serial = character.serialize()
-    return render_template("iterated_char_sheet.html",character=serial,icons=which_icons(info['subrace'], info['class']))
+    return render_template("character_sheet.html",character=serial,icons=which_icons(info['subrace'], info['class']))
 
 @app.route('/ajax_load_content', methods=['POST',])
 def ajax_load_content():
@@ -348,7 +348,6 @@ def level_up_page():
   
   serial_data = r_class.serialize()
   return render_template("level_up_page.html",data=serial_data, class_name=rnr_class_name)
-
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
