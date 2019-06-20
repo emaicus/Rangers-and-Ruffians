@@ -934,7 +934,7 @@ def load_combos_given_list(races, classes, level):
   for race, subrace in races:
     for rnr_class in classes:
       try:
-        character = rnr_character('', race_name, subrace, class_name, level)
+        character = rnr_character('', race, subrace, rnr_class, level)
       except:
         continue
       characters.append(character)

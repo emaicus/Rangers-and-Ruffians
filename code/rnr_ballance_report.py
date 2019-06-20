@@ -36,20 +36,38 @@ def rank_classes():
     os.mkdir(STAT_OUTPUT)
   with open(os.path.join(STAT_OUTPUT, 'class_rankings.txt'), 'w') as outfile:
 
-    level_one  = rnr_utils.load_all_class_objects(level=1)
+    level_zero  = rnr_utils.load_all_class_objects(level=0)
     level_five = rnr_utils.load_all_class_objects(level=5)
     level_ten  = rnr_utils.load_all_class_objects(level=10)
     
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
-      level_one.sort(key = attrgetter(stat.lower()), reverse = True)
+      level_zero.sort(key = attrgetter(stat.lower()), reverse = True)
       level_five.sort(key = attrgetter(stat.lower()), reverse = True)
       level_ten.sort(key = attrgetter(stat.lower()), reverse = True)
-      for level_classes, level_str in ((level_one,'1'),(level_five,'5'),(level_ten,'10')):
+      for level_classes, level_str in ((level_zero,'0'),(level_five,'5'),(level_ten,'10')):
         outfile.write('    LEVEL {0}:\n'.format(level_str))
         for rnr_class in level_classes:
           outfile.write("        {0}: {1}\n".format(rnr_class.name, rnr_class.get_stat(stat)))
       outfile.write('\n')
+
+#load_combos_given_list
+def rank_characters():
+  #rank race vs all classes.
+  rnr_classes = rnr_utils.get_all_class_names(underscore=False)
+  rnr_races = rnr_utils.get_all_race_names(underscore=False)
+  with open(os.path.join(STAT_OUTPUT, 'character_rankings.txt'), 'w') as outfile:
+    for r_class in rnr_classes:
+      outfile.write('{0}:\n'.format(r_class))
+      for stat in rnr_utils.get_all_stat_names():
+        outfile.write('  {0}:\n'.format(stat))
+        characters = rnr_utils.load_combos_given_list(rnr_races, [r_class,], level=0)
+        characters.sort(key = attrgetter(stat.lower()), reverse = True)
+        for c in characters:
+          outfile.write("    {0}: {1}\n".format(c.name, c.get_stat(stat)))
+        outfile.write('\n')
+      outfile.write('\n')
+
 
 def get_effective_vitality(vit):
   if vit <= 3:
@@ -427,6 +445,8 @@ if __name__ == '__main__':
   rank_races() 
   print("GENERATING CLASS RANKINGS")
   rank_classes()
+  print("GENERATING CHARACTER RANKINGS")
+  rank_characters()
   print()
   print("CHECKING ABILITY DESCRIPTION LENGTHS")
   print()

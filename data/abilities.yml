@@ -1033,22 +1033,18 @@ True Sight:
   type: general
   brief: You can see invisible entities.
 Influence: 
-  description: You have 2 influence points which you may spend to increase any charisma roll by 2.
-    Influence points refill after you sleep.
+  description: You may use spell points to increase any charisma roll by 2.
   type: general
-  brief: You have 2 influence points. Use to add +2 to a CHA role. Refill when you sleep. 
-Additional Influence Point: 
-  description: You gain an additional influence point.
-  type: general
-  brief: Gain 1 extra influence point.
+  brief: You can use spell points to add +2 to a CHA role. 
 Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: combat
   brief: Targeted ranged attacks have disadvantage against you.
 Determination:
-  description: Once per rest and gain a d10 inspiration dice as an offhand.
+  description: Gain a d10 inspiration dice as an offhand.
   type: general
-  brief: 1/rest, give yourself 1d10 INSP as an offhand action.
+  brief: Gain a 1d10 INSP as an offhand action.
+  cost: 1
 Minor Second Wind:
   description: Heal yourself for 1d6 damage as an offhand action.
   type: general
@@ -1533,18 +1529,13 @@ Multi-Action:
   brief: Take an extra action.
   cost: 2
 Gumption:
-  description: After each full night's rest, gain 3 gumption points (max 3). Spend one gumption 
-    point to do an additional action during your turn.
+  description: You have gumption points equal to your spell points. Spend one to perform an additional action during your turn.
   type: action
-  brief:  After a full night's rest, gain 3 gumption points (max 3). Spend each to gain an additional action.
+  brief:  You have gumption equal to your SP. Spend one to perform an additional action.
 Forced Focus:
   description: You may now spend one to add 1d10 to a roll.
   type: action
   brief: You can use gumption to add 1d10 to a roll.
-Additional Resolve:
-  description: Your max gumption increases by 1. 
-  type: action
-  brief:  Gain one gumption.
 Spell Power:
   description: If a spell states that an enemy must make a saving throw, it must beat 10 + (2 * your inner fire).
   type: rule
