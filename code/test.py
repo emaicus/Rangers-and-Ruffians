@@ -14,7 +14,6 @@ def choice_mod(d):
   elif 'Greater Choice Stat' in d:
     s += 2
   elif 'Choice of Model' in d:
-    print('FOUND CHOICE OF MODEL!!!!!!!!!!!')
     s += 2
   return s
 

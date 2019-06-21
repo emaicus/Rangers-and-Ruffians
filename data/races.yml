@@ -55,12 +55,12 @@ Catterwol:
       stats:
         Charisma: 1
         Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
+        Inner_Fire: 0
+        Intelligence: -1
         Luck: 0
         Perception: 1
-        Strength: -1
-        Vitality: 3
+        Strength: 0
+        Vitality: 2
 Elf:
   subraces:
     Wood Elf:
@@ -82,12 +82,12 @@ Elf:
       stats:
         Charisma: 1
         Dexterity: 1
-        Inner_Fire: -1
+        Inner_Fire: 0
         Intelligence: 0
         Luck: 0
         Perception: 2
         Strength: -1
-        Vitality: 2
+        Vitality: 1
     High Elf:
       abilities:
         - Sleepless
@@ -284,14 +284,14 @@ Human:
         That doesn't stop them from trying, though, and it is this natural willpower that
         makes them a force to be reckoned with.
       stats:
-        Charisma: 0
+        Charisma: 1
         Dexterity: 0
         Inner_Fire: 1
         Intelligence: 0
         Luck: 0
         Perception: -1
         Strength: 1
-        Vitality: 3
+        Vitality: 2
 Lizkin:
   subraces:
     Lizkin:
@@ -421,9 +421,9 @@ Daemonspawn:
         Inner_Fire: 1
         Intelligence: 0
         Luck: 0
-        Perception: -1
+        Perception: 0
         Strength: 1
-        Vitality: 3
+        Vitality: 2
 Sprout:
   subraces:
     Sprout:
@@ -480,9 +480,9 @@ Automaton:
       stats:
         Charisma: -1
         Dexterity: 1
-        Inner_Fire: 0
+        Inner_Fire: -1
         Intelligence: -1
         Luck: 0
         Perception: 0
         Strength: 2
-        Vitality: 3
+        Vitality: 4

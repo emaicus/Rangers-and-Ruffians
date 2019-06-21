@@ -150,9 +150,9 @@ class rnr_entity:
       return ret
 
     def __str__(self):
-      ret_list = []
+      ret_list = ['{0}'.format(self.name),]
       for stat in standard_stat_order():
-        line = '{0} : {1}'.format(abbreviate_stat(stat), self.get_stat(stat))
+        line = '  {0} : {1}'.format(abbreviate_stat(stat), self.get_stat(stat))
         ret_list.append(line)
       ret_list.append('')
       return '\n'.join(ret_list)

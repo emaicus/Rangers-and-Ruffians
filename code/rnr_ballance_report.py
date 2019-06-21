@@ -45,7 +45,7 @@ def rank_classes():
       level_zero.sort(key = attrgetter(stat.lower()), reverse = True)
       level_five.sort(key = attrgetter(stat.lower()), reverse = True)
       level_ten.sort(key = attrgetter(stat.lower()), reverse = True)
-      for level_classes, level_str in ((level_zero,'0'),(level_five,'5'),(level_ten,'10')):
+      for level_classes, level_str in ((level_zero,'0'),):#(level_five,'5'),(level_ten,'10')):
         outfile.write('    LEVEL {0}:\n'.format(level_str))
         for rnr_class in level_classes:
           outfile.write("        {0}: {1}\n".format(rnr_class.name, rnr_class.get_stat(stat)))
@@ -67,7 +67,24 @@ def rank_characters():
           outfile.write("    {0}: {1}\n".format(c.name, c.get_stat(stat)))
         outfile.write('\n')
       outfile.write('\n')
+    outfile.write('NOW, IT GETS REAL!\n')
+    characters = rnr_utils.load_all_characters(level=0)
+    for stat in rnr_utils.get_all_stat_names():
+      characters.sort(key = attrgetter(stat.lower()), reverse = True)
+      outfile.write('{}\n'.format(stat))
+      for c in characters:
+        outfile.write("  {0}: {1}\n".format(c.name, c.get_stat(stat))) 
+      outfile.write('\n')
+    outfile.write('\n')
 
+#load_combos_given_list
+def dump_characters():
+  #rank race vs all classes.
+  with open(os.path.join(STAT_OUTPUT, 'all_characters.txt'), 'w') as outfile:
+    characters = rnr_utils.load_all_characters()
+    for c in characters:
+      outfile.write('{0}\n'.format(c))
+    outfile.write('\n')
 
 def get_effective_vitality(vit):
   if vit <= 3:
@@ -82,11 +99,11 @@ Health binning and vitality chart. Call vitality_chart()
 '''
 def quick_health(level, vitality, tier):
   tiers = {'light' : 4, 'medium' : 6, 'heavy' : 8}
-  bonus = rnr_utils.roll_dice(sides=tiers[tier])
+  bonus = tiers[tier]//2 #rnr_utils.roll_dice(sides=tiers[tier])
 
   summed_level = sum(range(level+1))
   modifier = get_effective_vitality(vitality) * (level + 1)
-  return 10 + summed_level + modifier + (bonus*level)
+  return 10 + summed_level + modifier + (bonus*(level + 1))
 
 def vitality_chart(data_packet):
   if not os.path.exists(STAT_OUTPUT):
@@ -447,6 +464,8 @@ if __name__ == '__main__':
   rank_classes()
   print("GENERATING CHARACTER RANKINGS")
   rank_characters()
+  print("WRITING OUT ALL CHARACTERS FOR REVIEW")
+  dump_characters()
   print()
   print("CHECKING ABILITY DESCRIPTION LENGTHS")
   print()
@@ -459,3 +478,9 @@ if __name__ == '__main__':
   spell_check()
   print()
   print("FINISHED!")
+
+  working_on = 'Knight'
+  for level in range(11):
+    c = rnr_utils.rnr_class(working_on, level)
+    print('Level {0} {1}'.format(level, c))
+    print()
