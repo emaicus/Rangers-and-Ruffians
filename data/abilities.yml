@@ -489,9 +489,9 @@ Hammer of Light:
   description: Any weapon that you wield does an additional 1d6 light damage to undead.
   type: combat
   brief: You do +1d6 damage to undead.
-Hand to Hand:
+Hand to Hand Combat:
   description: Your hands are 1d6 weapons.
-  type: combat
+  type: skill
   brief: Your hands are 1d6 weapons.
 Happy Smiles:
   description: Your presence increases party cheer in good weather, giving them a
@@ -1540,24 +1540,20 @@ Spell Power:
   description: If a spell states that an enemy must make a saving throw, it must beat 10 + (2 * your inner fire).
   type: rule
   brief:  Your spell power is 10 + (2 x INF)
-Weapon Proficiency:
+Meelee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
-  type: rule
+  type: skill
   brief: When you attack with a strength based weapon, add STR to your attack. When you attack
     with a dexterity based weapon, add DEX.
-Not Proficient With Weapons:
-  description: Take disadvantage when attacking with physical weapons. 
-  type: disadvantage
-  brief: You have disadvantage with physical weapons.
 Proficient With Firearms:
   description: You are able to use firearms without disadvantage.
-  type: rule
+  type: skill
   brief:  You don't take disadvantage when using firearms.
-Inner Fire Based Spellcaster:
-  description: You may add your inner fire stat to the summed resulting effect of any spell.
-  type: rule
-  brief: You may add INF to the damage of a spell.
+Ranged Weapon Proficiency:
+  description: You are able to use bows, throwing weapons, and simple projectile weapons without disadvantage.
+  type: skill
+  brief:  You can use bows and throwing weapons without disadvantage.
 Charisma Based Spellcaster:
   description: To succeed at casting spells, you must convince your familiar to perform it for you.
     To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.

@@ -25,7 +25,8 @@ def find_ability_costs(abilities):
       cost = ab.get('cost', 0)
   return cost
 
-if __name__ == '__main__':
+
+def old_func():
   actual_offset = dict()
   rnr_utils.printLogo()
   rnr_utils.load_Rangers_And_Ruffians_Data()
@@ -116,3 +117,66 @@ if __name__ == '__main__':
     avg += val[1]
   print(avg / len(r_off_neutral))
   print()
+
+def nothing(l, m):
+  return l 
+
+def best_two(number, sides):
+  val_1 = rnr_utils.roll_dice(number=1, sides=sides)
+  val_2 = rnr_utils.roll_dice(number=1, sides=sides)
+  val_3 = rnr_utils.roll_dice(number=1, sides=sides)
+  if val_1 < val_2:
+    bigger = val_2
+    smaller = val_1
+  else:
+    smaller = val_2
+    bigger = val_1
+  if val_3 < smaller:
+    second = smaller
+  else:
+    second = val_3
+  return bigger+second
+
+def replace_one(l, m):
+  new_val = rnr_utils.roll_dice(m[0],m[1])
+  l.sort()
+  l[0] = -7 + new_val if l[0] < -7 + new_val else l[0]
+  return l
+
+def advantage(number, sides):
+  return rnr_utils.roll_dice(number=number, sides=sides, advantage=True)
+
+if __name__ == '__main__':
+  for method in [(3,6,'best_two'),(2,6,'replace_one'),(1,12,'advantage'),
+                 (1,12,'replace_one'),(1,12,'straight'),(2,6,'straight'),
+                 (3,4,'straight'), (3,4,'replace_one')]:
+    avg = 0
+    best = -1000
+    worst = 1000
+    iters = 100000
+    for i in range(iters):
+      if method[2] == 'best_two':
+        func = best_two
+        post_process = nothing
+      elif method[2] == 'replace_one':
+        func = rnr_utils.roll_dice
+        post_process = replace_one
+      elif method[2] == 'advantage':
+        func = advantage
+        post_process = nothing
+      else:
+        func = rnr_utils.roll_dice
+        post_process = nothing
+      tmp = list()
+      for stat in ['STR', 'DEX', 'PER', 'CHA', 'INF', 'INT']:
+        tmp.append(-7 + func(method[0], method[1]))
+      for stat in ['VIT', 'LUK']:
+        tmp.append(-1 + rnr_utils.roll_dice(1,4))
+      tmp = post_process(tmp, method)
+      tot = sum(tmp)
+      if tot > best:
+        best = tot
+      if tot < worst:
+        worst = tot
+      avg += tot
+    print('Over {0} iterations, the average for {1}d{2} {3} was {4}. The best was {5} and the worst was {6}'.format(iters, method[0],method[1],method[2], avg/iters, best, worst))

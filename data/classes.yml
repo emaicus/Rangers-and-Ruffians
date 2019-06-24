@@ -20,13 +20,11 @@ Heavy Fighter:
       Luck: 0
       Vitality: 2
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
     - Armored
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
         - Trained Precision
       level_1:
         stats:
@@ -102,14 +100,8 @@ Heavy Fighter:
       it wherever they find it.
     health_die_sides: 8 
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
-    - The Book of Healing
-    - Pledge
     - Minor Spell Choice
     - Chainmail
-    - Learn Spells
     base_stats:
       Charisma: 0
       Dexterity: -4
@@ -119,13 +111,14 @@ Heavy Fighter:
       Strength: 1
       Luck: 0
       Vitality: 2
-
     levels:
       level_0:
         abilities:
         - The Book of Healing
+        - Melee Weapon Proficiency
+        - Pledge
         - Learning Spells
-        - Inner Fire Based Spellcaster
+        - Learn Spells
         - Spell Power
         - Hammer of Light
         - Faithful Weapon
@@ -209,9 +202,6 @@ Heavy Fighter:
     standings: Barbarians are the enemies of law keepers.
     health_die_sides: 8 
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
     - Colossal
     - Boozehound
     base_stats:
@@ -223,10 +213,10 @@ Heavy Fighter:
       Strength: 2
       Luck: 0
       Vitality: 5
-
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
         - Berserk
       level_1:
         stats:
@@ -306,13 +296,12 @@ Light Fighter:
       Luck: 1
       Vitality: 0
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
     - A Thief's Gear
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
+        - Ranged Weapon Proficiency
         - Lightfoot
         - Nimble Fingers
       level_1:
@@ -414,14 +403,12 @@ Light Fighter:
       Intelligence: -2
       Luck: 0
       Vitality: 1
-    base_abilities:
-      - Weapon Proficiency
-      - Action 
-      - Offhand Action
     levels:
       level_0:
         abilities:
         - Trained Attack
+        - Ranged Weapon Proficiency
+        - Melee Weapon Proficiency
       level_1:
         stats:
           Charisma: 1
@@ -504,15 +491,13 @@ Light Fighter:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
     - My Father's Coffers
     - The Family Sword
     - Lightweight
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
         - My People
         - Happy Smiles
         - Beauty Incarnate
@@ -601,13 +586,10 @@ Light Fighter:
       Intelligence: -3
       Luck: 0
       Vitality: 1
-    base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
         - Animal Companion
         - Animal Magnetism
         - Favorite Terrain
@@ -691,7 +673,6 @@ Light Fighter:
     standings: Barbarians are the enemies of law keepers.
     health_die_sides: 8 
     base_abilities:
-    - Weapon Proficiency
     - Action 
     - Offhand Action
     - Shifting Cloak
@@ -707,6 +688,8 @@ Light Fighter:
     levels:
       level_0:
         abilities:
+        - Melee Weapon Proficiency
+        - Ranged Weapon Proficiency
         - Minor Medicine
         - Learned
       level_1:
@@ -803,17 +786,12 @@ Light Fighter:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Weapon Proficiency
-    - Action 
-    - Offhand Action
-    - Second Action
     - Starting Fighting Techniques
     levels:
       level_0:
         abilities:
-        - Learning Spells
-        - Spell Power
-        - Hand to Hand
+        - Melee Weapon Proficiency
+        - Hand to Hand Combat
         - The Book of Chi
         - Fighting Techniques
         - Learn Fighting Techniques
@@ -880,20 +858,15 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-      - Not Proficient With Weapons
-      - Action
-      - Spell Power
-      - Offhand Action
       - Historian
       - The Sword and the Satchel
       - Walking Stick
-      - Spell Choice
-      - Learn Spells
     levels:
       level_0:
         abilities:
+        - Spell Choice
+        - Learn Spells
         - Learning Spells
-        - Inner Fire Based Spellcaster
         - Novice Spellbook
         - The Wizard's Addendum
         - Level Zero Spells
@@ -980,15 +953,13 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Action 
-    - Offhand Action
     - Spell Choice
-    - Learn Spells
     levels:
       level_0:
         abilities:
         - Learning Spells
-        - Inner Fire Based Spellcaster
+        - Learn Spells
+        - Meelee Weapon Proficiency
         - Spell Power
         - Novice Spellbook
         - The Druid's Field Guide
@@ -1073,17 +1044,13 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Not Proficient With Weapons
-    - Action 
-    - Offhand Action
     - Spell Choice
-    - Learn Spells
     levels:
       level_0:
         abilities:
         - Learning Spells
+        - Learn Spells
         - Charisma Based Spellcaster
-        - Inner Fire Based Spellcaster
         - Spell Power
         - Novice Spellbook
         - The Sorcerer's Scrolls
@@ -1171,18 +1138,14 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Not Proficient With Weapons
-    - Action 
-    - Offhand Action
     - Spell Choice
-    - Learn Spells
     levels:
       level_0:
         abilities:
         - Soul Jar
+        - Learn Spells
         - Soul Harvest
         - Learning Spells
-        - Inner Fire Based Spellcaster
         - Spell Power
         - Soul Based Magic
         - Mortal Coil
@@ -1283,16 +1246,12 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Not Proficient With Weapons
-    - Action 
-    - Offhand Action
     - Spell Choice
-    - Learn Spells
     levels:
       level_0:
         abilities:
         - Learning Spells
-        - Inner Fire Based Spellcaster
+        - Learn Spells
         - Spell Power
         - Purge Decay
         - The Book of Healing
@@ -1383,16 +1342,13 @@ Mage:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Action 
-    - Offhand Action
     - Spell Choice
-    - Learn Spells
     levels:
       level_0:
         abilities:
         - Learning Spells
-        - Inner Fire Based Spellcaster
-        - Weapon Proficiency
+        - Learn Spells
+        - Melee Weapon Proficiency
         - Spell Power
         - My Father's Oboe
         - The Bard's Songbook
@@ -1491,14 +1447,12 @@ Ranged Fighter:
       Luck: 0
       Vitality: 0
     base_abilities:
-    - Not Proficient With Weapons
-    - Action 
-    - Offhand Action
     - Longbow
     - Boot Knife
     levels:
       level_0:
         abilities:
+        - Ranged Weapon Proficiency
         - Fletcher
         - Focus
         - Huntsman
@@ -1594,13 +1548,11 @@ Ranged Fighter:
       Intelligence: -3
       Luck: 0
       Vitality: 0
-    base_abilities:
-    - Not Proficient With Weapons
-    - Proficient With Firearms
-    - This is my Weapon
     levels:
       level_0:
         abilities:
+        - Proficient With Firearms
+        - This is my Weapon
         - Gunslinger or Marksman
         - Focus
         - Regular Patron
@@ -1722,7 +1674,6 @@ Ranged Fighter:
   #     level_0:
   #       abilities:
   #       - Learning Spells
-  #       - Inner Fire Based Spellcaster
   #       - Weapon Proficiency
   #       - Spell Power
   #       - Novice Spellbook
@@ -1860,7 +1811,7 @@ Ranged Fighter:
   #     Strength: 0
   #     Vitality: 4
   #   base_abilities:
-  #   - Weapon Proficiency
+  #   - Meelee Weapon Proficiency
   #   - Action 
   #   - Offhand Action
   #   - Mounted Warrior
