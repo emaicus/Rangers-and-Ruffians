@@ -20,69 +20,70 @@
       </div>
     </div>
     <div class="printRegion">
-      <div class="container-fluid h-100" style="height:11in;padding-left:0px;padding-right: 0px;">
-        <div id="characterDetails" class="characterDetails">
-          <div class="row" style="height:90px;">
-            <div class="col-5">
-              <span class="characterName"> {{ character["character_name"].replace('_', ' ').title() }}</span><br/>
-            </div>
-            <div class="col-7">
-              <div id="iconDiv" class="iconDiv">
-              {% for img, caption in icons %}
-              <figure style="display: inline-block">
-                <img src="/static/images/icons/{{img}}" class="icon">
-                <figcaption class="caption">{{caption}}</figcaption>
-              </figure>
-              {% endfor %}
+      <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
+        <div class="row h-100">
+          <div class="col-12">
+            <div id="characterDetails" class="characterDetails">
+              <div class="row" style="height:90px;">
+                <div class="col-5">
+                  <span class="characterName"> {{ character["character_name"].replace('_', ' ').title() }}</span><br/>
+                </div>
+                <div class="col-7">
+                  <div id="iconDiv" class="iconDiv">
+                  {% for img, caption in icons %}
+                  <figure style="display: inline-block">
+                    <img src="/static/images/icons/{{img}}" class="icon">
+                    <figcaption class="caption">{{caption}}</figcaption>
+                  </figure>
+                  {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <p>
+                    {% if character["subrace"] != None %}
+                      <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
+                    {% else %}
+                      <span class="subtitle">Race:</span><span class="normalText"> __________ </span>
+                    {% endif %}
+                    {% if character["class"] != None %}
+                      <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
+                    {% else %}
+                      <span class="subtitle">Class:</span><span class="normalText"> __________ </span>
+                    {% endif %}  
+                    {% if character["subclass"] != None %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
+                    {% else %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span>
+                    {% endif %}
+                  </p>
+                </div>
+                <div class=col-3>
+                  <p>
+                    <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
+                    <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].title() }}</span><br/>
+                    <span class="subtitle">Height:</span><span class="normalText"> __________</span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Hair:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Skin:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Eyes:</span><span class="normalText"> __________ </span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">EXP:</span><span class="normalText"> __________ </span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-3">
-              <p>
-                {% if character["subrace"] != None %}
-                  <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
-                {% else %}
-                  <span class="subtitle">Race:</span><span class="normalText"> __________ </span>
-                {% endif %}
-                {% if character["class"] != None %}
-                  <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
-                {% else %}
-                  <span class="subtitle">Class:</span><span class="normalText"> __________ </span>
-                {% endif %}  
-                {% if character["subclass"] != None %}
-                  <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
-                {% else %}
-                  <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span>
-                {% endif %}
-              </p>
-            </div>
-            <div class=col-3>
-              <p>
-                <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
-                <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].title() }}</span><br/>
-                <span class="subtitle">Height:</span><span class="normalText"> __________</span>
-              </p>
-            </div>
-            <div class="col-3">
-              <p>
-                <span class="subtitle">Hair:</span><span class="normalText"> __________ </span><br/>
-                <span class="subtitle">Skin:</span><span class="normalText"> __________ </span><br/>
-                <span class="subtitle">Eyes:</span><span class="normalText"> __________ </span>
-              </p>
-            </div>
-            <div class="col-3">
-              <p>
-                <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
-                <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
-                <span class="subtitle">EXP:</span><span class="normalText"> __________ </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row h-100">
           <div class="col-6">
-            <div class="h-100 d-flex flex-column">
               <div class=squareWrapper>
                 <div class=square>
                   <span class="squareContent">STR</span>
@@ -152,7 +153,7 @@
                   </div>
                 </div>
               </div>
-              <div id="combatAbilities" class="combatAbilities" style="height:518px">
+              <div id="combatAbilities" class="combatAbilities">
                 <p class="boxSubtitle">Combat Abilities:</p>
                 <div id="combatAbilityList">
                   {% for ability, description in character["abilities"]["combat"] %}
@@ -162,10 +163,9 @@
                   {% endfor %}
                 </div>
               </div>
-            </div>
           </div>
           <div class="col-6">
-            <div id="generalAbilities" class="combatAbilities" style="height:750px">
+            <div id="generalAbilities" class="generalAbilities">
               <p class="boxSubtitle">Abilities:</p>
               <div id="generalAbilityList">
                 {% for ability, description in character["abilities"]["general"] %}
@@ -175,7 +175,7 @@
                 {% endfor %}
               </div>
             </div>
-            <div class="splitBoxDiv" id="advantagesAndDisadvantages" style="height:300px">
+            <div class="splitBoxDiv" id="advantagesAndDisadvantages">
               <div class="row">
                 <div class="col-6">
                   <p class="boxSubtitle">Advantages:</p>
@@ -208,7 +208,13 @@
         <div class="row">
           <div class="col-12">
             <hr>
-
+            {% if character['origin'] != None%}
+              <h2>Backstory</h2>
+              <p>
+                {{character['origin']}}
+              </p>
+              <hr>
+            {% endif %}
             <h2>Stats</h2>
             <strong>Copy these stats to your character sheet before you leave this page.</strong>
             <div id="computed_stats">

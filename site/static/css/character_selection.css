@@ -14,7 +14,7 @@ body
   background-color: white;
 }
 
-p.name{
+a.name{
   font-family: "Angkor script=all rev=3";
   font-size: 48px;
   margin-bottom: 40px;

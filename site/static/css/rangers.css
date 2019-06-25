@@ -18,17 +18,6 @@ body {
     margin: 30px 0;
 }
 
-.card {
-   width:350px;
-   height:500px;
-   .card-image{
-    max-height:100%; // Also this should be 100%.
-     height:300px; // corresponds to box height
-    img{height:300px;} // corresponds to image height
-    } 
-    overflow-x: hidden;
-}
-
 ol.a{
   list-style-type:upper-roman !important;
 }
@@ -81,3 +70,30 @@ ol.a{
     background-color:#ccdfff;
     color:#afcbf7;
 } /*Color of underline*/
+
+/*
+@media (min-width:768px){
+  .card {
+    width:350px;
+    height:500px;
+    .card-image{
+      max-height:100%; // Also this should be 100%.
+      height:300px; // corresponds to box height
+      img{height:300px;} // corresponds to image height
+    } 
+    overflow-x: hidden;
+  }
+}
+*/
+
+@media (min-width:1200px){
+  .card {
+    height:500px;
+    .card-image{
+      max-height:100%; // Also this should be 100%.
+      height:90%; // corresponds to box height
+      img{height:500px;} // corresponds to image height
+    } 
+    overflow-x: hidden;
+  }
+}

@@ -48,7 +48,7 @@ def old_func():
         if stat_val > most_positive[0]:
           most_positive = (stat_val, stat, class_name)
 
-    off_neutral = sum_vals(class_details['base_stats']) + choice_mod(class_details['base_abilities'])
+    off_neutral = sum_vals(class_details['base_stats']) + choice_mod(class_details.get('base_abilities', list()))
     off_neutral_list.append(('{0:12} {1:2d}'.format(class_name+':', off_neutral), off_neutral))
 
     cost = find_ability_costs(class_details.get('base_abilities', list()))

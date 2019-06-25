@@ -1540,7 +1540,7 @@ Spell Power:
   description: If a spell states that an enemy must make a saving throw, it must beat 10 + (2 * your inner fire).
   type: rule
   brief:  Your spell power is 10 + (2 x INF)
-Meelee Weapon Proficiency:
+Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
   type: skill

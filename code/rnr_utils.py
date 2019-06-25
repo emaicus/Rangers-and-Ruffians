@@ -174,7 +174,7 @@ class rnr_class(rnr_entity):
       if class_data == None:
         raise Exception('ERROR: Could not load class {0}'.format(name))
       stats = class_data['base_stats']
-      abilities = class_data['base_abilities']
+      abilities = class_data.get('base_abilities', list())
 
       spell_learning_dict = OrderedDict()
       self.spells_known = None
@@ -387,6 +387,7 @@ class rnr_character(rnr_entity):
     serial['character_name'] = self.character_name
     serial['subclass'] = self.rnr_class_obj.subclass
     serial['gender'] = self.gender
+    serial['origin'] = self.origin
     if not self.rnr_class_obj.spells_known is None:
       serial["abilities"]["choice"].append(self.rnr_class_obj.spells_known)
     return serial

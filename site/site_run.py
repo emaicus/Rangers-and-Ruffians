@@ -132,13 +132,14 @@ def which_icons(rnr_race, rnr_class):
   #Everyone has health
   icons.append(('hearts.svg', 'Health'))
 
-  #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
-  if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
-    icons.append(('ink-swirl.svg', 'Spell Points'))
+  # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
+  # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
 
   #Clerics and Paladins get special spell points.
   if rnr_class in ['cleric', 'paladin']:
     icons.append(('prayer.svg', 'Spell Points'))
+  else:
+    icons.append(('ink-swirl.svg', 'Spell Points'))
 
   #Sorcerers have influence points
   if rnr_class == 'sorcerer':
@@ -200,7 +201,7 @@ def creation_landing_page():
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
   elif next_to_populate == 'class':
     serial_data = populate_class(info)
-    return render_template("class_page.html", data=serial_data, stat_order=rnr_utils.standard_stat_order(), next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
+    return render_template("display_page.html", data=serial_data, stat_order=rnr_utils.standard_stat_order(), next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
   elif next_to_populate == 'subrace':
     serial_data = populate_race(info)
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='subrace',prev_stats=prev_stats,display_class=False)
@@ -297,7 +298,7 @@ def random_page():
 
   character = rnr_utils.rnr_character(chosen_name, chosen_race_parent, chosen_race, chosen_class, 0,male=male,character_origin=description)
   serial = character.serialize()
-  return render_template("new_character_sheet.html",character=serial,magic_class=magic_class)
+  return render_template("character_sheet.html",character=serial,icons=which_icons(chosen_race_parent, chosen_race))
 
 @app.route('/spells')
 def spell_page():
@@ -354,5 +355,10 @@ if __name__ == '__main__':
     rnr_utils.printLogo()
     rnr_utils.load_Rangers_And_Ruffians_Data()
     port = int(os.environ.get('PORT', 9000))
-    app.run(host='0.0.0.0', port=port)
+    if len(sys.argv) > 1 and sys.argv[1] == '--public':
+      print("Don't forget to run the following command '{0}'".format('sudo ufw allow {0}/tcp'.format(port)))
+      print("Run ifconfig to find the correct local network inet address.")
+      app.run(host='0.0.0.0', port=port)
+    else:
+      app.run(port=port)
 

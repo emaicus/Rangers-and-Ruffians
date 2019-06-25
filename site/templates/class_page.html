@@ -16,9 +16,9 @@
             <div class="col s12">
                {% for rnr_entity in data %}
                   <div class="name_box">
-                     <p class="name">
+                     <a class="name" href="{{next_page}}{{forwarding_param}}{{next_param}}={{rnr_entity['name']}}">
                         Play as a {{rnr_entity['name']}}
-                     </p>
+                     </a>
                   </div>
                   <!-- {% if rnr_entity['rights'] %}
                      <img class="rnr_image" src={{rnr_entity["path_to_image"]}} >

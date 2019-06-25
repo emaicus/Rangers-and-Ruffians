@@ -193,7 +193,7 @@ def get_all_class_abilities_used():
   rnr_classes = rnr_utils.get_rnr_class_dict()
   abilities = list()
   for rnr_class, info in rnr_classes.items():
-    abilities += info['base_abilities']
+    abilities += info.get('base_abilities', list())
     for level, stats in info['levels'].items():
       for key, value in stats.items():
         if 'abilities' in key and not stats[key] is None:

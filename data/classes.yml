@@ -224,7 +224,7 @@ Heavy Fighter:
           Perception: 1
         abilities:
         - Taunt
-        - Hand to Hand
+        - Hand to Hand Combat
       level_2:
         abilities:
         - Crushing Blow
@@ -959,7 +959,7 @@ Mage:
         abilities:
         - Learning Spells
         - Learn Spells
-        - Meelee Weapon Proficiency
+        - Melee Weapon Proficiency
         - Spell Power
         - Novice Spellbook
         - The Druid's Field Guide
@@ -1811,7 +1811,7 @@ Ranged Fighter:
   #     Strength: 0
   #     Vitality: 4
   #   base_abilities:
-  #   - Meelee Weapon Proficiency
+  #   - Melee Weapon Proficiency
   #   - Action 
   #   - Offhand Action
   #   - Mounted Warrior
