@@ -1,12 +1,15 @@
 Heavy Fighter:
   Knight:
+    tag_line: Shield of the Party
     description: Knights are heavy, armored fighters who should place themselves between
       their party and harm's way. The ideal knight is a bastion of good, a defender of the
       innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able 
-      to protect their allies. When building your knight, consider how they got where they are,
-      and where they are going next. Are they already annointed as a knight, or are they still
-      aspiring to knighthood? Do they follow the code of chivalry, or consider it to be a guideline?
-      How will being a knight affect the way that you interact with your party?
+      to protect their allies. 
+    questions: 
+      - How did your character get where they are, and where they are going next?
+      - Are they already annointed as a knight, or are they still aspiring to knighthood?
+      - Do they follow the code of chivalry, or consider it to be a guideline?
+      - How will being a knight affect the way that you interact with your party?
     standings: Knights are loved by kingsmen, and distrusted by hedge knights and
       rangers. Knights are duty bound to fight the lawless.
     health_die_sides: 8 
@@ -86,16 +89,19 @@ Heavy Fighter:
         - Reduced Critical
         - Sword of Honor
   Paladin:
+    tag_line: Soldier of Light
     description: Palidins are Soldiers of the Light, and are adept both at hand
       to hand combat and basic healing magic. Paladins are devoted to their deity,
       and aim to bring their influence into the world. Paladins are especially good
       at taking out evil entities, and are known for their Faithful Weapon ability,
       which lets them summon their weapon to their hand after throwing it. 
-      When you are creating your Paladin, consider what their relationship is like 
-      with their deity. Do they pray to them often? How did their path lead them 
-      to devoting themself to a deity? What were they like before committing to being a 
-      paladin? How do they react to people who are not of the faith? How will being 
-      a paladin affect the way they interact with their party?
+    questions:
+      - What deity does your character worship?
+      - What their relationship is like with their deity? Do they pray to them often? 
+      - How did their path lead them to devoting themself to a deity?
+      - What were they like before committing to being a paladin? 
+      - How do they react to people who are not of the faith? 
+      - How will being a paladin affect the way they interact with their party?
     standings: Paladins are generally respected. They hate evil, and try to destroy
       it wherever they find it.
     health_die_sides: 8 
@@ -190,15 +196,17 @@ Heavy Fighter:
         - Fires of Heaven
         - Level Five Spells
   Barbarian:
+    tag_line: Heavy Hitter
     description: Barbarians are hearty, and can dole out a lot of damage, making them
       great tanks for a party of adventurers. They are marked by their berserk ability,
       which allows them to fly into a battle frenzy, gaining extra attacks and health.
       Barbarians cannot use magic, and are much better up close than at a distance.
       They are known for their rugged ways, and usually prefer wide open spaces to cities.
-      To build your Barbarian, spend some time thinking about where they came from.
-      Where is their tribe? Did they leave it? If they did, why? How do the people of the 
-      world feel about barbarians? How will being a barbarian affect the way that you 
-      interact with your party?
+    questions: 
+      - Where did your character come from?
+      - Where is their tribe? Did they leave it? 
+      - If they did, why? How do the people of the world feel about barbarians? 
+      - How will being a barbarian affect the way that you interact with your party?
     standings: Barbarians are the enemies of law keepers.
     health_die_sides: 8 
     base_abilities:
@@ -274,25 +282,29 @@ Heavy Fighter:
         - Spirit of Rage
 Light Fighter:
   Rogue:
+    tag_line: Sneak-thief 
     description: Sneaktheives and criminals, rogues have often fallen in with bad company.
       Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick
       their way into most anything. Rogues are very weak, however, and will have better 
       luck running away than fighting if caught. When they have to fight, Rogues often pick 
       daggers or shortswords, and strike from on high or from in the shadows, letting their more
-      armored friends soak up the damage. As you design your rogue, consider how they turned to 
-      a life of crime. Do they have a moral code? Who do they tend to target, and why? Do their
-      crimes involve hurting people? Theivery? Information gathering? How did they get so good
-      at what they do? How will being a rogue affect how you interact with your party? Remember,
-      just because you are a rogue doesn't mean you can't have friends!
+      armored friends soak up the damage. 
+    questions: 
+      - Does your character have a moral code? 
+      - Who do they tend to target, and why? 
+      - Do their crimes involve hurting people? Theivery? Information gathering? 
+      - How did they get so good at what they do? 
+      - How will being a rogue affect how you interact with your party? 
+      - Remember, just because you are a rogue doesn't mean you can't have friends!
     standings: Thieves hate law keepers and Thief Catchers
     health_die_sides: 4 
     base_stats:
       Charisma: 0
       Dexterity: 2
-      Inner_Fire: 0
-      Perception: 1
+      Inner_Fire: -2
+      Perception: 0
       Strength: -4
-      Intelligence: -3
+      Intelligence: -1
       Luck: 1
       Vitality: 0
     base_abilities:
@@ -386,21 +398,25 @@ Light Fighter:
         - Reduced Critical
         - All-consuming Shadow
   Fighter:
+    tag_line: Front-line combatant
     description: Fighters are powerful strength or dexterity based warriors. Unlike the knight,
       fighters are unarmored, and have a skillset more suited to keeping themselves alive and 
-      bringing down enemies than providing support. When building your fighter, consider whether
-      they specialize in strength or dexterity based weapons. How did they learn to fight, and
-      why are they good at it? Do they like fighting? What are their goals? How will being a fighter
-      affect the way that you interact with your party?
+      bringing down enemies than providing support. 
+    questions: 
+      - Does your character specialize in strength or dexterity based weapons?
+      - How did they learn to fight, and why are they good at it?
+      - Do they like fighting? 
+      - What are their goals? 
+      - How will being a fighter affect the way that you interact with your party?
     standings: Fighters come from all walks of life.
     health_die_sides: 6 
     base_stats:
-      Charisma: -2
+      Charisma: 1
       Dexterity: 1
-      Inner_Fire: -1
+      Inner_Fire: -2
       Perception: 0
-      Strength: 0
-      Intelligence: -2
+      Strength: -1
+      Intelligence: -3
       Luck: 0
       Vitality: 1
     levels:
@@ -469,26 +485,30 @@ Light Fighter:
         - Reduced Critical
         - Whirlwind of Blades
   Highborn:
+    tag_line: Noble Adventurer
     description: Highborns were born into a noble house and have connections and
       money as a result. They are well trained fighters, and have the charisma
       necessary to rally people to their side. While the typical highborn is 
       not as hardened as a knight or fighter, they are able to call upon their gumption 
-      for spurts of incredible heroism. As you create your highborn, consider why they 
-      are embarking on their adventure. Are they out to prove themself? Or perhaps
-      they are idealistic and want adventure? Are they brave? Do they know what they
-      are getting themselves into? Where are their parents, and what is their relationship
-      with them? How will being a highborn affect how you interact with others and your party?
+      for spurts of incredible heroism. 
+    questions: 
+      - Why is your character embarking on their adventure? Are they out to prove themself? Or perhaps
+      they are idealistic and want adventure? 
+      - Are they brave? 
+      - Do they know what they are getting themselves into? 
+      - Where are your character's parents, and what is their relationship with them? 
+      - How will being a highborn affect how you interact with others and your party?
     standings: Of noble birth, your character is loved by their people, but is prone
       to attacks by thieves and brigands.
     health_die_sides: 6 
     base_stats:
       Charisma: 3
       Dexterity: 1
-      Inner_Fire: -1
+      Inner_Fire: -2
       Perception: -3
       Strength: -3
       Intelligence: 0
-      Luck: 0
+      Luck: 1
       Vitality: 0
     base_abilities:
     - My Father's Coffers
@@ -563,6 +583,7 @@ Light Fighter:
         abilities:
         - Aura of Peace
   Beastmaster:
+    tag_line: Companion Fighter
     description: For the Beastmaster 'Animal Person' is an understatement. 
       Beastmaster's begin their adventure with a loyal  
       animal companion, which they can select from the Book of Known Beasts. This can include
@@ -570,10 +591,12 @@ Light Fighter:
       have forgone civilization, choosing instead to roam the wilds, capturing and
       befriending animals. They are quick, dexterity based fighters, and are good at 
       tackling and hobbling enemies and leading their party through the wilds. 
-      When building your beastmaster, consider what their lifestyle is. Do they live in the
-      wilds, and if so, why? How often do they speak with other people? How did they meet their
-      animal companion? Why did their animal companion stay with them? How will being a beastmaster
-      affect how you interact with your party?
+    questions: 
+      - Does your character live in the wilds, and if so, why? 
+      - How often do they speak with other people? 
+      - How did they meet their animal companion? 
+      - Why did their animal companion stay with them? 
+      - How will being a beastmaster affect how you interact with your party?
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
     health_die_sides: 8 
@@ -660,6 +683,7 @@ Light Fighter:
         abilities:
         - Beast Form
   Ranger:
+    tag_line: Duel Wielding Tracker
     description: Rangers are the vigilante law keepers and monster hunters of the wilds. 
       Rangers are powerful dexterity based
       fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds,
@@ -765,6 +789,7 @@ Light Fighter:
           Perception: 1
           Intelligence: 1
   Monk:
+    tag_line: Brawler/Martial Artist
     description: Monks are masters of hand to hand combat, who use their extensive
       control of their bodies to overcome their foes. Monks are able to learn abilities from 
       scrolls, which they may find scattered throughout the world. Monks have dedicated themself
@@ -834,6 +859,7 @@ Light Fighter:
           Inner_Fire: 1
 Mage:
   Wizard:
+    tag_line: Pointy Hatted Mage
     description: Often eccentric, wizards are known to be wayfarers and meddlers.
       Most keep to themselves, approaching others only to entwine them in schemes
       only they know about. Wizards arrive precisely when they mean to. To use magic,
@@ -849,10 +875,10 @@ Mage:
       well with Halflings and Rangers.
     health_die_sides: 4 
     base_stats:
-      Charisma: 0
-      Dexterity: -2
-      Inner_Fire: 1
-      Perception: -1
+      Charisma: 1
+      Dexterity: -3
+      Inner_Fire: 2
+      Perception: -2
       Strength: -3
       Intelligence: 2
       Luck: 0
@@ -931,6 +957,7 @@ Mage:
         abilities:
         - Tome of the Ancients
   Druid:
+    tag_line: Naturalistic Spellcaster
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful
       nature based magic, which they use to smite those who threaten them, their
@@ -1024,6 +1051,7 @@ Mage:
         abilities:
         - True Ascension
   Sorcerer:
+    tag_line: Charismatic Spirit Wrangler
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
       but rather through raw force of personality. To perform magic, a sorcerer wrestles
       with a spirit, natural or otherwise, and convinces them to do their bidding.
@@ -1116,6 +1144,7 @@ Mage:
         abilities:
         - Light and Shadow
   Necromancer:
+    tag_line: Death Mage
     description: Death is not my enemy, nor is it my ally, it is my servant. So say
       Necromancers, mages who study the intricacies of death, and what follows after. Often fuled
       by macabre fasination or a god complex, Necromancy is deeply feared and considered
@@ -1133,9 +1162,9 @@ Mage:
       Dexterity: -1
       Inner_Fire: 3
       Perception: -2
-      Strength: 0
-      Intelligence: 0
-      Luck: 0
+      Strength: 1
+      Intelligence: -2
+      Luck: 1
       Vitality: 0
     base_abilities:
     - Spell Choice
@@ -1223,6 +1252,7 @@ Mage:
         - Army of the Damned
         - Larger Soul Jar
   Cleric:
+    tag_line: Healer
     description: After pledging their allegiance to their deity, Clerics have made
       it their duty to follow their will. Clerics are weak, and do not fight with physical
       magic. However, they are powerful spellcasters who are adept at healing, and who can 
@@ -1239,11 +1269,11 @@ Mage:
     base_stats:
       Charisma: 1
       Dexterity: -1
-      Inner_Fire: 1
-      Perception: -2
-      Strength: -3
-      Intelligence: 1
-      Luck: 0
+      Inner_Fire: 2
+      Perception: -3
+      Strength: -5
+      Intelligence: 2
+      Luck: 1
       Vitality: 0
     base_abilities:
     - Spell Choice
@@ -1320,6 +1350,7 @@ Mage:
         abilities:
         - Angelic Wings
   Bard:
+    tag_line: Entertaining Spellcaster
     description: Showmen by nature, Bards are known for their skills at performing
       and distracting others from the sorrows of life. Bards are usually at least a little
       bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based
@@ -1335,11 +1366,11 @@ Mage:
     base_stats:
       Charisma: 2
       Dexterity: 1
-      Inner_Fire: 0
-      Perception: -2
-      Strength: -4
-      Intelligence: 0
-      Luck: 0
+      Inner_Fire: -1
+      Perception: 0
+      Strength: -5
+      Intelligence: -1
+      Luck: 1
       Vitality: 0
     base_abilities:
     - Spell Choice
@@ -1426,15 +1457,21 @@ Mage:
         - Major Spell Coin
 Ranged Fighter:
   Archer:
+    tag_line: Bow and Arrow Expert
     description: Some of the best marksmen in the world, archers are naturals with
       ranged weapons. They are often attached to their bow, and carry it with them 
       everywhere. Archers come from all walks of life; some compete in tournaments,
       others are hunters and farmer's sons. Still others have served in the military.
       Archers should stay off of the front line, instead picking off foes from a distance.
-      As you design your archer, ask yourself where they came from. How did they get
-      so good at archery? Who trained them? How have they used their talent? What kind
-      of person are they? What ideals do they have? What are their goals? How will being
-      an archer affect how you interact with the rest of your party?
+    questions: 
+      - Where did your character come from?
+      - How did they get so good at archery? 
+      - Who trained them? 
+      - How have they used their talent? 
+      - What kind of person are they? 
+      - What ideals do they have? 
+      - What are their goals? 
+      - How will being an archer affect how you interact with the rest of your party?
     health_die_sides: 6 
     standings: Excellent archers, Marksmen come from all walks of life.
     base_stats:
@@ -1527,25 +1564,31 @@ Ranged Fighter:
         abilities:
         - Firestorm Arrow
   Gunslinger:
+    tag_line: Firearm Expert
     description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
       to acquire one of the rarest weapons in the world. As such, they have a close
       bond with their gun, which is usually their primary means of income. At the beginning
       of their adventure, a gunsling may choose to start with either a rifle or a pistol, a
-      decision that determines engagement range and their upgrade path. As you create your 
-      gunslinger, ask yourself how they acquired their firearm. Who made it? Were they trained?
-      Ask your Poohbah how common firearms are. How have they used their firearm? What kind of
-      person are they? What are their goals? How will being a gunslinger affect the way that you 
-      interact with other partymembers.
+      decision that determines engagement range and their upgrade path. 
+      questions: 
+        - How did they acquired their firearm?
+        - Who made it? 
+        - Was your character trained?
+        - Ask your Poohbah how common firearms are. 
+        - How have they used their firearm? 
+        - What kind of is your character? 
+        - What are their goals? 
+        - How will being a gunslinger affect the way that you interact with other party members.
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
     health_die_sides: 6 
     base_stats:
-      Charisma: 0
-      Dexterity: 0
+      Charisma: 1
+      Dexterity: 1
       Inner_Fire: 0
       Perception: 1
-      Strength: -1
-      Intelligence: -3
+      Strength: -2
+      Intelligence: -4
       Luck: 0
       Vitality: 0
     levels:
