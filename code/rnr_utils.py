@@ -190,7 +190,7 @@ class rnr_class(rnr_entity):
         level_stats = level_details.get('stats', {})
         stats = combine_stats(stats, level_stats)
         abilities = abilities + level_details.get('abilities', [])
-        if 'subclass_{0}_abilities'.format(subclass) in level_details:
+        if not subclass is None and 'subclass_{0}_abilities'.format(subclass) in level_details:
           abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
 
         for ability in abilities:
@@ -348,7 +348,7 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = '', character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
+  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = None, character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
     rnr_race_obj = rnr_race.basic_constructor(race_name, subrace)
     rnr_class_obj = rnr_class(class_name, level, subclass)
     
@@ -370,7 +370,7 @@ class rnr_character(rnr_entity):
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
     self.level = level
-    self.subclass = subclass.replace(' ', '_')
+    self.subclass = subclass.replace(' ', '_') if not subclass is None else ''
     self.character_name = character_name.replace(' ', '_')
 
   def markdownify(self):
@@ -725,6 +725,8 @@ def get_subraces_for_race(race):
 
 def get_rnr_subrace_data(name, subrace):
   global GLOBAL_RACE_DATA
+  if subrace == None:
+    return None
 
   load_Rangers_And_Ruffians_Data()
   if name.replace('_',' ').title() in GLOBAL_RACE_DATA:

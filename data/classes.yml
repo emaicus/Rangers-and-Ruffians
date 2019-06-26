@@ -493,7 +493,7 @@ Light Fighter:
       for spurts of incredible heroism. 
     questions: 
       - Why is your character embarking on their adventure? Are they out to prove themself? Or perhaps
-      they are idealistic and want adventure? 
+        they are idealistic and want adventure? 
       - Are they brave? 
       - Do they know what they are getting themselves into? 
       - Where are your character's parents, and what is their relationship with them? 
@@ -1570,15 +1570,15 @@ Ranged Fighter:
       bond with their gun, which is usually their primary means of income. At the beginning
       of their adventure, a gunsling may choose to start with either a rifle or a pistol, a
       decision that determines engagement range and their upgrade path. 
-      questions: 
-        - How did they acquired their firearm?
-        - Who made it? 
-        - Was your character trained?
-        - Ask your Poohbah how common firearms are. 
-        - How have they used their firearm? 
-        - What kind of is your character? 
-        - What are their goals? 
-        - How will being a gunslinger affect the way that you interact with other party members.
+    questions: 
+      - How did they acquired their firearm?
+      - Who made it? 
+      - Was your character trained?
+      - Ask your Poohbah how common firearms are. 
+      - How have they used their firearm? 
+      - What kind of is your character? 
+      - What are their goals? 
+      - How will being a gunslinger affect the way that you interact with other party members.
     standings: More comfortable in nature than cities, Beastmasters get on best with
       animals, and can find people difficult to talk to.
     health_die_sides: 6 
