@@ -5,3 +5,4 @@ latex_files/
 INSTALLED_DATA/
 **/__pycache__/
 code/reports
+tests/log.txt

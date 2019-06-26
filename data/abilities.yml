@@ -182,7 +182,7 @@ Fire and Ice Arrows:
     throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to 
     move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
   type: general
-  brief: "Fire: +1d6. SP save or 1d6 next turn. Ice: +1d8. SP save or 1d4 back in init."
+  brief: "Fire: +1d6. SP save or 1d6 next turn. Ice: +1d8. SP save or 1d4 back in initiative."
   cost: 1
 Shadow and Light Arrows:
   description: You have mastered the art of crafting shadow and light arrows, and can craft at most 2 per day.

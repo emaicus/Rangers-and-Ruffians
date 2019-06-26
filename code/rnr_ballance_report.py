@@ -10,6 +10,8 @@ import csv
 import rnr_descriptions
 from spellchecker import SpellChecker
 import inquirer
+import contractions
+import string 
 
 STAT_OUTPUT = 'reports'
 
@@ -200,23 +202,30 @@ def get_all_class_abilities_used():
           abilities += value
   return abilities 
 
-def ability_check():
-  rnr_utils.load_Rangers_And_Ruffians_Data()
+def get_non_existent_abilities():
   race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
   all_abilities = set(rnr_utils.get_all_rnr_abilities().keys())
+  return race_class_abilities - all_abilities
 
+def get_unused_abilities():
+  race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
+  all_abilities = set(rnr_utils.get_all_rnr_abilities().keys())
+  return all_abilities - race_class_abilities
+
+def ability_check():
+  rnr_utils.load_Rangers_And_Ruffians_Data()
   print()
-  non_existent = race_class_abilities - all_abilities
+
+  non_existent = get_non_existent_abilities()
   if len(non_existent) > 0:
     print("The following abilities don't exist:")
     for ability in non_existent:
       print('    {0}'.format(ability))
   else:
     print("All abilities referenced by classes exist.")
-
   print()
 
-  unused = all_abilities - race_class_abilities
+  unused = get_unused_abilities()
   if len(unused) > 0:
     print("The following abilities aren't used:")
     for ability in unused:
@@ -224,9 +233,6 @@ def ability_check():
   else:
     print("All abilities are used.")
   print()
-'''
-Leveling details. Call process_classes(), level_details(level=0)
-'''
 
 def print_header(level, name, health, file_stream):
   file_stream.write('\n')
@@ -234,8 +240,7 @@ def print_header(level, name, health, file_stream):
   file_stream.write('HP: {0}\n'.format(health))
   file_stream.write('\n')
 
-def print_stats(stats, file_stream):
- 
+def print_stats(stats, file_stream): 
   file_stream.write("Stats:\n")
   for stat, value in stats.items():
     file_stream.write("    {0} {1}\n".format(stat, value))
@@ -354,62 +359,128 @@ def game_stats():
     print()
   print('TOTAL SPELLS: {0}'.format(total))
 
-def check_brief_abilities():
+def evaluate_spells_for_failures(print_errors=True):
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  all_spellbooks = rnr_utils.get_all_spellbooks()
+  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  offenders = list()
+  for spell_book, levels in all_spellbooks.items():
+    for level, spell_list in levels.items():
+      num = len(spell_list)
+      if level in target_spell_counts:
+        if evaluate(num, target_spell_counts[level]) == "FAIL!":
+          offenders.append('{0} {2} needs {1}'.format(spell_book, target_spell_counts['level'] - num, level))
+  if print_errors:
+    for error in offenders:
+      print(error)
+  return offenders
+
+def evaluate_spells_for_doubling(print_errors=True):
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  all_spellbooks = rnr_utils.get_all_spellbooks()
+  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  offenders = list()
+  for spell_book, levels in all_spellbooks.items():
+    for level, spell_list in levels.items():
+      num = len(spell_list)
+      if level in target_spell_counts:
+        if "VICTORY!" not in evaluate(num, target_spell_counts[level]):
+          offenders.append('{0} {2} needs {1}'.format(spell_book, (target_spell_counts[level]*2) - num, level))
+  if print_errors:
+    for error in offenders:
+      print(error)
+  return offenders
+
+def check_brief_abilities(print_errors=True):
   target_length = 80
-  num_warnings = 0
-  num_errors = 0
+  errors = list()
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     if not 'brief' in ability_info:
-      print('ERROR: No brief in {0}'.format(ability_name))
+      errors.append('ERROR: No brief in {0}'.format(ability_name))
     if ability_info['type'] in ['rule', 'choice', 'starting_item', 'action']:
       continue
     if len(ability_info['brief']) > target_length:
-      num_warnings+=1
-      print("WARNING: {0}'s brief is {1} characters too long ({2} characters long)".format(ability_name, len(ability_info['brief']) - target_length, len(ability_info['brief']) ))
+      errors.append("ERROR: {0}'s brief is {1} characters too long ({2} characters long)".format(ability_name, len(ability_info['brief']) - target_length, len(ability_info['brief']) ))
     if len(ability_info['brief']) > len(ability_info['description']):
-      print("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
-      num_errors+=1
-  print("\n{0} Warnings\n{1} Errors".format(num_warnings, num_errors))
+      success = False
+      errors.append("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
+  if print_errors:
+    for error in errors:
+      print(error)
+  return errors
 
-def check_descriptions():
+def check_descriptions(print_errors=True):
+  errors = list()
   for gender in ['male', 'female']:
     for outer, inner in rnr_utils.GLOBAL_DESCRIPTIONS_DATABASE.items():
       if isinstance(inner, str):
         tmp = rnr_descriptions.gender_word_replacement(inner, gender)
         if '<' in tmp or '>' in tmp:
-          print('ERROR: {0}'.format(tmp))
+          errors.append('ERROR: {0}'.format(tmp))
       else:
         for inner_inner in inner:
           tmp = rnr_descriptions.gender_word_replacement(inner_inner, gender)
           if '<' in tmp or '>' in tmp:
-            print('ERROR: {0}'.format(tmp))
+            errors.append('ERROR: {0}'.format(tmp))
+  if print_errors:
+    for error in errors:
+      print(error)
+  return errors
 
 def is_word_unknown(word, spell, new_words):
   return True if len(spell.unknown([word,])) == 1 and word not in new_words else False
 
+def process_word(word):
+  words = contractions.fix(word).split()
+  ret = list()
+  for word in words:
+    if word.endswith("'s"):
+      word = word[:-2]
+    translator = str.maketrans('', '', string.punctuation.replace('-', ''))
+    word = word.translate(translator)
+    ret.append(word)
+  return ret
+
 def fix_spelling_errors(words, spell, rnr_dictionary, corrections):
-  errors = 0
-  for w in words:
-    word = w.replace('.', '')
-    word = word.replace(',', '')
-    word = word.replace('!', '')
-    word = word.replace('?', '')
-    if is_word_unknown(word, spell, rnr_dictionary) and not word in corrections:
-      correction = inquirer.prompt([inquirer.Text('correction', message='What is the proper spelling of {0} ({1})?'.format(word, spell.correction(word))),])['correction']
-      if correction == '' or correction == 'word':
-        rnr_dictionary.append(word)
-      else:
-        corrections[word] = correction   
-    elif word in corrections:
-      errors += 1
+  errors = set()
+  for word in words:
+    w = process_word(word)
+    for element in w:
+      if element == '':
+        continue
+      if is_word_unknown(element, spell, rnr_dictionary) and not element in corrections:
+        correction = inquirer.prompt([inquirer.Text('correction', message='What is the proper spelling of {0} ({1})?'.format(word, spell.correction(word))),])['correction']
+        if correction == '' or correction == element:
+          rnr_dictionary.append(element)
+        else:
+          corrections[element] = correction   
+      elif element in corrections:
+        errors.add(element)
   return errors
 
-def spell_check():
+def just_find_typos(words, spell, rnr_dictionary, corrections):
+  errors = set()
+  for word in words:
+    w = process_word(word)
+    for element in w:
+      if element == '':
+        continue
+      if is_word_unknown(element, spell, rnr_dictionary):
+        errors.add(element)
+  return errors
+
+def spell_check(fix_errors=True, print_errors=True):
+
+  if fix_errors == True:
+    spell_check_function = fix_spelling_errors
+  else:
+    spell_check_function = just_find_typos
+
   spell = SpellChecker()
   rnr_dictionary = list()
   corrections = dict()
-  ability_errors = 0
-  spell_errors = 0
+  ability_errors = set()
+  spell_errors = set()
 
   if os.path.exists('rnr_dictionary.json'):
     with open('rnr_dictionary.json', 'r') as infile:
@@ -422,29 +493,39 @@ def spell_check():
   ###############################################
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     title_words = ability_name.split(' ')
-    ability_errors += fix_spelling_errors(title_words, spell, rnr_dictionary, corrections)
+    ability_errors.update(spell_check_function(title_words, spell, rnr_dictionary, corrections))
 
     words = ability_info['description'].split(' ') + ability_info['brief'].split(' ')
-    ability_errors += fix_spelling_errors(words, spell, rnr_dictionary, corrections)
+    ability_errors.update(spell_check_function(words, spell, rnr_dictionary, corrections))
 
   ##############################################
   # Spells
   ###############################################
   for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
     title_words = spell_name.split(' ')
-    spell_errors += fix_spelling_errors(title_words, spell, rnr_dictionary, corrections)
+    spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, corrections))
 
     words = spell_info['details']['description'].split(' ')
-    spell_errors += fix_spelling_errors(words, spell, rnr_dictionary, corrections)
+    spell_errors.update(spell_check_function(words, spell, rnr_dictionary, corrections))
 
-  output_json = {'corrections' : corrections, 'rnr_words' : rnr_dictionary}
-  with open('rnr_dictionary.json', 'w') as outfile:
-    json.dump(output_json, outfile, indent=4)
+  if fix_errors:
+    output_json = {'corrections' : corrections, 'rnr_words' : rnr_dictionary}
+    with open('rnr_dictionary.json', 'w') as outfile:
+      json.dump(output_json, outfile, indent=4)
 
-  if ability_errors > 0:
-    print('ERROR: {0} spelling errors in abilities.yml'.format(ability_errors))
-  if spell_errors > 0:
-    print('ERROR: {0} spelling errors in spells.yml'.format(spell_errors))
+  all_errors = dict()
+  if len(spell_errors) > 0:
+    all_errors["spellbooks"] = list(spell_errors)
+  if len(ability_errors) > 0:
+    all_errors["abilities"] = list(ability_errors)  
+  
+  if print_errors:
+    for file, errors in all_errors.items():
+      print("The following values are misspelled in {0}".format(file))
+      for error in errors:
+        print("  {0}".format(error))
+  
+  return all_errors
   
 
 

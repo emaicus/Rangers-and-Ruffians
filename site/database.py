@@ -52,6 +52,32 @@ def create_rnr_tables(conn):
     );
     """
   )
+
+  # curr.execute(
+  #   """
+  #   CREATE TABLE IF NOT EXISTS stats
+  #   (
+  #     s_campaign_name VARCHAR(50) NOT NULL,
+  #     s_user_id integer NOT NULL,
+  #     s_character_name VARCHAR(50) NOT NULL,
+  #     strength smallint NOT NULL,
+  #     dexterity smallint NOT NULL,
+  #     intelligence smallint NOT NULL,
+  #     inner_fire smallint NOT NULL,
+  #     perception smallint NOT NULL,
+  #     charisma smallint NOT NULL,
+  #     vitality smallint NOT NULL,
+  #     luck smallint NOT NULL,
+  #     PRIMARY KEY(s_campaign_name, s_user_id, s_character_name),
+  #     CONSTRAINT s_user_id_user_id FOREIGN KEY (s_user_id)
+  #       REFERENCES users(user_id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+  #     CONSTRAINT s_campaign_name_campaign_name FOREIGN KEY (s_campaign_name)
+  #       REFERENCES campaigns(campaign_name) ON UPDATE NO ACTION ON DELETE NO ACTION
+  #     CONSTRAINT s_character_name_character_name FOREIGN KEY (s_character_name)
+  #       REFERENCES characters(character_name) ON UPDATE NO ACTION ON DELETE NO ACTION
+  #   )
+  #   """
+  #)
   # close communication with the PostgreSQL database server
   cur.close()
   # commit the changes
