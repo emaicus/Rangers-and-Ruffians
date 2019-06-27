@@ -61,7 +61,7 @@ Heavy Fighter:
         abilities:
         - Offhand Attack
         - Steel Yourself
-        - Multiclass Option
+        - Multi-class Option
       level_6:
         stats:
           Charisma: 1
@@ -161,7 +161,7 @@ Heavy Fighter:
         abilities:
         - Offhand Attack
         - Greater Offhand Spell
-        - Multiclass Option
+        - Multi-class Option
       level_6:
         stats:
           Luck: 1
@@ -250,7 +250,7 @@ Heavy Fighter:
         - Furious Blows
       level_5:
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Warmaster
         - Always Angry
         - Throw Anything
@@ -301,7 +301,7 @@ Light Fighter:
     base_stats:
       Charisma: 0
       Dexterity: 2
-      Inner_Fire: -2
+      Inner_Fire: -1
       Perception: 0
       Strength: -4
       Intelligence: -1
@@ -345,7 +345,7 @@ Light Fighter:
           Charisma: 1
           Perception: 1
         abilities:
-          - Multiclass Option
+          - Multi-class Option
           - Thief or Assassin
         subclass_thief_abilities:
         - Lucky Actions
@@ -451,7 +451,7 @@ Light Fighter:
         stats:
           Inner_Fire: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Multi-Action
       level_6:
         stats:
@@ -551,7 +551,7 @@ Light Fighter:
           Inner_Fire: 1
           Vitality: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
       level_6:
         stats:
           Intelligence: 1
@@ -650,7 +650,7 @@ Light Fighter:
         stats:
           Dexterity: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Closest Friend
         - Grown
       level_6:
@@ -665,7 +665,7 @@ Light Fighter:
           Perception: 1
         abilities:
         - Second Action
-        - Inseperable
+        - Inseparable
       level_8:
         stats: 
           Charisma: 1
@@ -751,7 +751,7 @@ Light Fighter:
           Intelligence: 1
           Vitality: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Monster Slayer
         - Spell of Darkvision
       level_6:
@@ -838,7 +838,7 @@ Light Fighter:
           Strength: 1
           Perception: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Master Fighting Techniques
       level_6:
         stats:
@@ -924,7 +924,7 @@ Mage:
           Intelligence: 2
           Strength: 1
         abilities:
-        - Multiclass Option 
+        - Multi-class Option 
         - Greater Offhand Spell
         - Level Three Spells
       level_6:
@@ -1020,7 +1020,7 @@ Mage:
           Charisma: 1
           Intelligence: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Greater Offhand Spell
         - Level Three Spells
       level_6:
@@ -1112,7 +1112,7 @@ Mage:
           Strength: 1
           Charisma: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Greater Offhand Spell
         - Level Three Spells
       level_6:
@@ -1214,7 +1214,7 @@ Mage:
           Strength: 1
           Perception: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Greater Offhand Spell
         - Reap
         - Level Three Spells
@@ -1316,7 +1316,7 @@ Mage:
           Strength: 1
           Inner_Fire: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Greater Offhand Spell
         - Feint
         - Level Three Spells
@@ -1418,7 +1418,7 @@ Mage:
           Strength: 1
           Inner_Fire: 1
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         - Additional Spell Coin
         - Greater Restful Melody
         - Level Three Spells
@@ -1426,7 +1426,7 @@ Mage:
         stats:
           Luck: 1
         abilities:
-        - Greater Embue Weapon
+        - Greater Imbue Weapon
       level_7:
         stats: 
           Charisma: 1
@@ -1529,7 +1529,7 @@ Ranged Fighter:
         - Shadow and Light Arrows
         - Offhand Attack
         - Reflexes
-        - Multiclass Option
+        - Multi-class Option
       level_6:
         stats: 
           Dexterity: 1
@@ -1631,13 +1631,13 @@ Ranged Fighter:
         stats:
           Strength: 1
         abilities:
-        - Rechamber
+        - Re-chamber
         - Suppressor
         subclass_gunslinger_abilities:
         - Lighter Gear
       level_5:
         abilities:
-        - Multiclass Option
+        - Multi-class Option
         stats: 
           Charisma: 1
           Dexterity: 1
@@ -1665,7 +1665,7 @@ Ranged Fighter:
         - Fastest Gun
         - Second Action
         subclass_marksman_abilities:
-        - Rechamber
+        - Re-chamber
       level_8:
         stats: 
           Strength: 1
@@ -1686,7 +1686,7 @@ Ranged Fighter:
         subclass_gunslinger_abilities:
         - Volley
         subclass_marksman_abilities:
-        - Rechamber
+        - Re-chamber
         - Reduced Critical
 
 
@@ -1726,7 +1726,7 @@ Ranged Fighter:
   #         Inner_Fire: 1
   #         Dexterity: 1
   #       abilities:
-  #       - Embue Weapon
+  #       - Imbue Weapon
   #     level_2:
   #       stats:
   #         Intelligence: 1
@@ -1747,14 +1747,14 @@ Ranged Fighter:
   #         Intelligence: 1
   #       abilities:
   #         - Offhand Attack
-  #         - Greater Embue Weapon
+  #         - Greater Imbue Weapon
   #         - Level Two Spells
   #     level_5:
   #       stats:
   #         Luck: 1
   #         Dexterity: 1
   #       abilities:
-  #       - Multiclass Option
+  #       - Multi-class Option
   #       - Greater Offhand Spell
   #       - Focus Energy
   #       - Mage Shield
@@ -1763,7 +1763,7 @@ Ranged Fighter:
   #         Perception: 1
   #         Strength: 1
   #       abilities:
-  #       - Transfer Essense
+  #       - Transfer Essence
   #       - Level Three Spells
   #     level_7:
   #       stats:
@@ -1776,7 +1776,7 @@ Ranged Fighter:
   #         Perception: 1
   #         Inner_Fire: 1
   #       abilities:
-  #       - Major Embue Weapon
+  #       - Major Imbue Weapon
   #       - Level Four Spells
   #     level_9:
   #       stats:
@@ -1887,7 +1887,7 @@ Ranged Fighter:
   #       - Reduced Critical
   #     level_5:
   #       abilities:
-  #       - Multiclass Option
+  #       - Multi-class Option
   #       - Steel Yourself
   #       stats:
   #         Charisma: 1

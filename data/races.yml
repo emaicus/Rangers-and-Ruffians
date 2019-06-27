@@ -486,3 +486,42 @@ Automaton:
         Perception: 0
         Strength: 2
         Vitality: 4
+Hissling:
+  subraces:
+    Hissling:
+      abilities: 
+        - Small Fry
+        - All Tuckered Out
+        - Chomp Chomp
+        - Back Seat Driver
+        - Dig Dig Dig
+        - And this Part Goes Here...
+        - I'm a Red One!
+      quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, 
+        things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't
+        have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend
+        a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there.
+        Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows.
+        So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw?
+        An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks.
+        All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder
+        approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken
+        speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
+        if they're still down there."
+      author: Gillthunder, Human Knight
+      description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hisslings try their very best to be ferocious.
+        While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is 
+        often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature
+        and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing
+        of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years,
+        and can reproduce just a few years after.
+        "
+      stats:
+        Charisma: -1
+        Dexterity: 3
+        Inner_Fire: 1
+        Intelligence: 0
+        Luck: 1
+        Perception: 3
+        Strength: -3
+        Vitality: 0

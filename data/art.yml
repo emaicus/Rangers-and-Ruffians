@@ -208,7 +208,7 @@ gunslinger:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Spellslinger
   url: https://www.deviantart.com/soldevia/art/Spellslinger-609290699
-OLD_halfling_female:
+fleetfoot_female:
   artist: NathanParkArt
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
@@ -400,3 +400,15 @@ wizard:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: Spellcaster
   url: https://www.deviantart.com/ncorva/art/Spellcaster-768564631
+hissling_male:
+  artist: Kronteisdrawing
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Kobold Sketch
+  url: https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664
+hissling_female:
+  artist: Kronteisdrawing
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: Kobold Sketch
+  url: https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664

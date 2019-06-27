@@ -1,7 +1,7 @@
 A Thief's Gear:
-  description: You begin with 100 feet of rope, a lockpicking kit, a smokebomb, and
+  description: You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and
     a hidden 1d6 dagger.
-  brief: You have 100 feet of rope, a lockpick, a smokebomb, a 1d6 dagger.
+  brief: You have 100 feet of rope, a lockpick, a smoke-bomb, a 1d6 dagger.
   type: starting_item
 Armored:
   description: You begin your journey with a suit of light plate. Take -2 damage on attacks while wearing it.
@@ -11,16 +11,16 @@ Bull Rush:
   description: Spend 1 spell point to burst forward 15 feet, doing 1d6 damage to everyone you hit and causing
     them to fall prone if they fail a spell power saving throw.
   type: combat
-  brief: Burst foward 15 feet. 1d6 damage to anyone you hit. SP save or fall prone.
+  brief: Burst forward 15 feet. 1d6 damage to anyone you hit. SP save or fall prone.
   cost: 1
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
 Courageous Blow:
-  description: 1/3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, tripple it.
+  description: 1/3 turns, add your Inner Fire to an attack. At level 5, double this. At level 8, triple it.
   type: starting_item
-  brief: 1/3 turns, add INF to an attack. At LV 5, double this. At LV 8, tripple it.
+  brief: 1/3 turns, add INF to an attack. At LV 5, double this. At LV 8, triple it.
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
   type: choice
@@ -35,17 +35,17 @@ Animal Magnetism:
     to persuade the actions of animals.
   type: general
   brief: You may attempt CHR checks to manipulate animals.
-Embue Weapon:
+Imbue Weapon:
   description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 spell point. Lasts 1d4 turns.
   type: combat
   brief: For 1 spell point, add 1d6 elemental damage to your weapon for 1d4 turns.
   cost: 1
-Greater Embue Weapon:
+Greater Imbue Weapon:
   description: As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 spell points. Lasts 1d4 turns.
   type: combat
   brief: For 1 spell point, add 1d8 elemental damage to your weapon for 1d4 turns.
   cost: 1
-Major Embue Weapon:
+Major Imbue Weapon:
   description: As an offhand action, add 1d12 elemental damage to your weapons at the cost of 1 spell points. Lasts 1d4 turns.
   type: combat
   brief: For 1 spell point, add 1d12 elemental damage to your weapon for 1d4 turns.
@@ -170,7 +170,7 @@ Ward of Tracking:
   description: Costs one spell point. Lay your hand on an opponent. For the next forty-eight hours, you 
     know their position within 100 feet.
   type: general
-  brief: If you touch someone, you know thier position within 100 feet for 48 hours.
+  brief: If you touch someone, you know their position within 100 feet for 48 hours.
   cost: 1
 Fletcher:
   description: You know how to craft your own arrows, and always seem to have some on hand.
@@ -182,7 +182,7 @@ Fire and Ice Arrows:
     throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to 
     move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
   type: general
-  brief: "Fire: +1d6. SP save or 1d6 next turn. Ice: +1d8. SP save or 1d4 back in initiative."
+  brief: "Fire: +d6. SP save or d6 next turn. Ice: +d8. SP save or d4 back in initiative."
   cost: 1
 Shadow and Light Arrows:
   description: You have mastered the art of crafting shadow and light arrows, and can craft at most 2 per day.
@@ -255,7 +255,7 @@ Vampiric Arrow:
 Firestorm Arrow: 
   description: You can now craft at most 1 firestorm arrow per day. A firestorm 
     arrow does nothing for one turn or one minute after it strikes something. Then,
-    it explodes into a massive pillar of flame with a twenty foot radius. All enttities
+    it explodes into a massive pillar of flame with a twenty foot radius. All entities
     caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3
     turns. 
   type: general
@@ -373,7 +373,7 @@ Fear the Light:
 Born in Darkness:
   description: You are incredibly light sensitive, and take 1d6 damage per hour spent 
     with your skin exposed to bright light or to the sun. As a result, you must wear 
-    protective garments durning the day.
+    protective garments during the day.
   type: disadvantage
   brief: You take 1d6 damage per hour when in sunlight unless shaded.
 Feint:
@@ -435,7 +435,7 @@ Shock Absorption:
     accuracy.
   type: combat
   brief: Advantage on long distance checks.
-Rechamber:
+Re-chamber:
   description: Add 1d6 to your rifle damage.
   type: combat
   brief: Add 1d6 to rifle damage.
@@ -613,7 +613,7 @@ Closest Friend:
     Similarly, if you are at death's door or have died, your animal companion takes advantage in all things.
   type: combat
   brief: Gain advantage in all things if your animal is on deaths door and vice versa.
-Inseperable:
+Inseparable:
   description: Once per day, instantly teleport from your current position to a spot within five feet of your animal companion.
     The same can be done by your animal companion. Counts as an offhand action.
   type: general
@@ -674,7 +674,7 @@ Mortal Coil:
   type: general
   brief: 1/week, consume a soul to avoid rotting.
 Born in the Saddle:
-  description: You have advantage on all dexteriy checks made while on horseback, and on any checks made to control or guide your animal.
+  description: You have advantage on all dexterity checks made while on horseback, and on any checks made to control or guide your animal.
   type: advantage
   brief: You have advantage on dexterity and animal handling when on horseback.
 Mounted Warrior:
@@ -693,7 +693,7 @@ My People:
   description: Gain advantage when speaking with guards and +2 charisma when speaking
     with citizens in your family's territory.
   type: advantage
-  brief: Gain advantage on CHR with gaurds and +2 CHR when in your domain.
+  brief: Gain advantage on CHR with guards and +2 CHR when in your domain.
 Nimble Fingers:
   description: You advantage on dexterity and stealth checks made while stealing.
   type: advantage
@@ -706,7 +706,7 @@ Old Hand:
   description: You have a deep understanding of the limits of your body and of others.
     You can role a perception check as an offhand action to get an idea of an enemy's remaining health.
   type: combat
-  brief: You can attempt to percieve enemy stats.
+  brief: You can attempt to perceive enemy stats.
 Uncanny Perception:
   description: You have uncanny perception, which allows you to sense your way in total darkness,
     and gives you advantage on all perception checks.
@@ -729,7 +729,7 @@ Pledge:
   description: At the start of your journey, you may select a deity to pledge yourself
     to.
   type: choice
-  brief: Pledge yourself to a diety.
+  brief: Pledge yourself to a deity.
 Poison Bite:
   description: You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are
     poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw.
@@ -738,7 +738,7 @@ Poison Bite:
 Poison Resist:
   description: You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.
   type: general
-  brief: You are resistent to poison. Advantage on posion checks, half damage at worst.
+  brief: You are resistant to poison. Advantage on poison checks, half damage at worst.
 Potion Bonus:
   description: Add 1d10 health to any potion you drink.
   type: general
@@ -781,7 +781,7 @@ Shield Bash:
   brief: "Contested STR check. Fail: loose action. d6 damage LV0 d8 LV3, d10 LV6, d12 LV8."
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
-    taking their damage for them. Any damage you recieve as a result is halved.
+    taking their damage for them. Any damage you receive as a result is halved.
   type: combat
   brief: Reaction. 1/round, take a teammates damage for them. Damage is halved.
 Shifting Cloak:
@@ -808,11 +808,11 @@ Soft Bed:
   type: general
   brief: You recover 2d8 additional health when sleeping in a bed.
 Soul Based Magic:
-  description: To fuel your magic, you use the concentrated essense of life, which you 
+  description: To fuel your magic, you use the concentrated essence of life, which you 
     are able to harvest from the dead. These "souls" are stored in your soul jar until they
     are expended on a spell or by an ability. At that time, they escape to the hereafter.
   type: rule
-  brief: To fule your magic you use souls which are stored in your soul jar. When they 
+  brief: To fuel your magic you use souls which are stored in your soul jar. When they 
     are used, souls escape to the hereafter.
 Soul Harvest:
   type: rule
@@ -881,7 +881,7 @@ The Bard's Songbook:
 The Druid's Field Guide:
   description: You can learn spells from the Druid's Field Guide.
   type: spellbook
-  brief: You have access to the Druid's Field Guiide.
+  brief: You have access to the Druid's Field Guide.
 The Book of Healing:
   description: You are able to learn spells from the Book of Healing.
   type: spellbook
@@ -1000,7 +1000,7 @@ Stocky:
 Natural Sprinter:
   description:  When running short distances, take advantage on athletics checks.
   type: advantage
-  brief: When running short distances, gain advantage on atheletics.
+  brief: When running short distances, gain advantage on athletics.
 Very Dangerous Over Short Distances:
   description: If you begin your turn next to an enemy, take advantage when attacking them.
   type: advantage
@@ -1070,10 +1070,10 @@ Whirlwind of Blades:
   brief: Make an additional 3 attacks on your turn.
   cost: 3
 Fire and Ice:
-  description: Embue one of your blades with fire and the other with ice. Each do an additional
+  description: Imbue one of your blades with fire and the other with ice. Each do an additional
     1d6 damage for the duration of a battle.
   type: combat
-  brief: Embue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
+  brief: Imbue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
   cost: 2
 Savage Critical:
   description: On a critical hit, do an additional dice of damage.
@@ -1118,8 +1118,8 @@ Glory:
   type: combat
   brief: When your health falls below 10% double your damage.
 Sword of Honor: 
-  description: Embue your blade with radiant light. The light lasts for 5 turns, and causes
-    your blade to deal an additional 2d6 damage. While your blade is embued with light, you take advantage
+  description: Imbue your blade with radiant light. The light lasts for 5 turns, and causes
+    your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage
     on all spell saving throws, and cannot be frightened.
   type: combat
   brief: Lasts 5 turns. +2d6 damage, gain advantage on SP saves. Immune to fear.
@@ -1153,7 +1153,7 @@ Winged Jump:
 Dire Companion: 
   description: Your companion animal is now of Dire size. See the book of known beasts for details.
   type: rule
-  brief: Your companioon is dire in size.
+  brief: Your companion is dire in size.
 Pup:
   description: Your companion animal is small size. See the book of known beasts for details.
   type: rule
@@ -1252,17 +1252,17 @@ Imposter:
 Poison: 
   description: Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
   type: general
-  brief: 1/day, spend 6 hrs crafting posion. 3d20 dmg eaten. 1d10 on blade. Lasts 24 hrs.
+  brief: 1/day, spend 6 hrs crafting poison. 3d20 dmg eaten. 1d10 on blade. Lasts 24 hrs.
 Focus Energy:
   description: As an offhand action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
   brief: Offhand. Convert 1 spell point into +1 STR or DEX. Lasts 1 battle or 1 hr.
-Transfer Essense: 
+Transfer Essence: 
   description: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
   type: combat
   brief: As an action, convert 5 health to 1 spell point or vice versa.
 One With Magic: 
-  description: Once per day, fuse yourself with the essense of magic. The power nearly destroys you, dropping you instantly
+  description: Once per day, fuse yourself with the essence of magic. The power nearly destroys you, dropping you instantly
     to one health. However, you are able to cast any three spells, free of charge.
   type: general
   brief: 1/day, drop to 1 health, but cast three spells free of charge.
@@ -1319,7 +1319,7 @@ Major Restful Melody:
   brief: Grant your party 3d8 extra healing when resting.
 Spell Coin:
   description: You have one spell coin, which may store a spell of up to first level. Any person who rubs the coin may cast
-    the spell as an offhand action. Each day, you may resummon the coin to yourself, and may put a spell into it free of cost.
+    the spell as an offhand action. Each day, you may re-summon the coin to yourself, and may put a spell into it free of cost.
   type: general
   brief: You have 1 spell coin. Stores up to LV1 spell. 1/day, put a spell in for free.
 Additional Spell Coin:
@@ -1335,9 +1335,9 @@ Major Spell Coin:
   type: general
   brief: You can store level 3 spells in your spell coins.
 Spirits Within: 
-  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are embued with a spirit, 
+  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, 
     make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
-    While you are embued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, 
+    While you are imbued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, 
     and may add +1 to strength, dexterity, perception, and inner fire.
   type: combat
   brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. +1 STR DEX PER INF.
@@ -1461,7 +1461,7 @@ Dodge:
 Harden: 
   description: As an offhand action, harden or unharden yourself. While hardened, gain 2 defense and loose 2 dexterity.
   type: general
-  brief: As an offhand action, harden or unarded. Gain +2 defense  -2 dexterity.
+  brief: As an offhand action, harden or unharden. Gain +2 defense  -2 dexterity.
 Small Fry: 
   description: Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown. 
   type: general
@@ -1474,6 +1474,30 @@ Commune with Nature:
   description: You are naturally able to speak with plants and animals.
   type: general
   brief: You can naturally speak to plants and animals.
+All Tuckered Out: 
+  description: "You must sleep once every six hours, or suffer exhaustion."
+  type: general
+  brief: You have to sleep every six hours or be exhausted.
+Chomp Chomp:
+  description: You can make a 1d6 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
+  type: combat
+  brief: 1d6 bite. Contested dex check to make you let go.
+Back Seat Driver:
+  description: Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.
+  type: combat
+  brief: You don't give allies disadv when you ride them. Attack advantage while riding.
+Dig Dig Dig:
+  description: You are able to quickly burrow through earth.
+  type: combat
+  brief: You are good at tunneling.
+And this Part Goes Here...:
+  description: Once per rest, attempt to craft something using junk you've picked up.
+  type: general
+  brief: 1/rest, craft something from junk.
+I'm a Red One!:
+  description: "At the start of your journey, pick a color from the following list. Shades of red: half fire damage. Shades of yellow: half electric damage. Shades of blue: half ice damage. Shades of Green: half plant based damage. Shades of Brown: half earth damage."
+  type: choice
+  brief: "At the start of your journey, pick a color from the following list. Shades of red: half fire damage. Shades of yellow: half electric damage. Shades of blue: half ice damage. Shades of Green: half plant based damage. Shades of Brown: half earth damage."
 Action:
   description: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
   type: action
@@ -1515,7 +1539,7 @@ Double Strike:
   description: You may attack twice in a single action.
   type: action
   brief:  You may attack twice as an action.
-Tripple Strike:
+Triple Strike:
   description: You may attack three times in a single action.
   type: action
   brief:  You may attack three times as an action.
@@ -1544,8 +1568,7 @@ Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
   type: skill
-  brief: When you attack with a strength based weapon, add STR to your attack. When you attack
-    with a dexterity based weapon, add DEX.
+  brief: You are able to use hand to hand weapons without disadvantage.
 Proficient With Firearms:
   description: You are able to use firearms without disadvantage.
   type: skill
@@ -1604,7 +1627,7 @@ Level Four Spells:
   type: general
   brief: You can learn level 4 spells.
 Level Five Spells:
-  description: You have achieved the highest form of sorcery, and are a mage to be reconed with. You can now learn level five spells from any of your spellbooks.
+  description: You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn level five spells from any of your spellbooks.
   type: general
   brief: You can learn level 5 spells.
 Learn Spells:
@@ -1616,7 +1639,7 @@ Starting Fighting Techniques:
   type: choice
   brief: You know 2 standard fighting techniques.
 Learn Fighting Techniques: 
-  description: Each time you level up, learn one fighting technique from each fightning technique level you have access to.
+  description: Each time you level up, learn one fighting technique from each fighting technique level you have access to.
   type: rule
   brief: Each time you level up, learn 1 fighting technique from each level you have access to.
 Fighting Techniques:
@@ -1631,7 +1654,7 @@ Legendary Fighting Techniques:
   description: You may learn a new legendary fighting technique from the book of chi.
   type: general
   brief: You can learn legendary fighting techniques.
-Multiclass Option:
+Multi-class Option:
   description: From this point forward, when you level up, you may choose to take a level in 
     a class other than your own.
   type: rule

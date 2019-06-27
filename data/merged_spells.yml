@@ -26,7 +26,7 @@ the_bard's_songbook:
       description: Requires the use of a swinging trinket. Force someone to make an
         inner fire saving throw against your spell power. On failure, you may influence
         their actions for up to sixty seconds. The entity may attempt an additional saving
-        throw if asked to do anything that causes themself or those they 
+        throw if asked to do anything that causes themselves or those they 
         love physical harm.
     Ode to Country:
       cost: 0
@@ -41,7 +41,7 @@ the_bard's_songbook:
     Sweet Nothings:
       cost: 0
       description: Force an individual attracted to your sex to make an inner fire saving throw
-        against your spell power. On failure, they find you to be irresistably attractive,
+        against your spell power. On failure, they find you to be irresistibly attractive,
         and you gain advantage when persuading them.
     Throw Voice:
       cost: 0
@@ -63,7 +63,7 @@ the_bard's_songbook:
     Cacophony:
       cost: 1
       description: Choose up to five objects that you can see. Those objects make
-        a horrible ruccus until you stop concentrating on them.
+        a horrible ruckus until you stop concentrating on them.
     Counter Magic:
       cost: 1
       description: Reaction. May be cast at a higher level. If the level of the counter
@@ -88,7 +88,7 @@ the_bard's_songbook:
     Curse of Crying:
       cost: 1
       description: Force an entity to make an inner fire saving throw against your
-        spell power. On failure, they recieve a curse which causes them to weep
+        spell power. On failure, they receive a curse which causes them to weep
         constantly. The curse does not leave until dispelled.
     Dazzling Lights:
       cost: 1
@@ -108,7 +108,7 @@ the_bard's_songbook:
       cost: 1
       description: Force someone to make an inner fire saving throw against your spell
         power. If you succeed, they become exhausted, and take disadvantage on all
-        relavant checks.
+        relevant checks.
     Gnomish Dream:
       cost: 1
       description: Gain line of sight on a sleeping entity. Impart upon them any dream
@@ -123,11 +123,11 @@ the_bard's_songbook:
         kiss is on the hand, within 5 miles
         if the kiss is on the cheek or forehead, within 100 feet if on the mouth. Lasts for 1
         week.
-    Liar's Tounge:
+    Liar's Tongue:
       cost: 1
       description: Force someone to make an inner fire saving throw against your spell
         power. If they fail, they believe the next thing that you tell them. They
-        may re-evaluate their beliefs when provided with proof of thier fallacy.
+        may re-evaluate their beliefs when provided with proof of their fallacy.
     Liquid Luck:
       cost: 1
       description: Cast on an intoxicated entity to give them 1d10 additional luck.
@@ -181,7 +181,7 @@ the_bard's_songbook:
     Forget:
       cost: 2
       description: Force an entity to make an inner fire saving throw against your
-        spell power. On faiure, the entity forgets 1d10 minutes of your choosing.
+        spell power. On failure, the entity forgets 1d10 minutes of your choosing.
     Free Flowing Chalice:
       cost: 2
       description: Enchant a cup or vessel and it will flow with wine for up to 6
@@ -208,7 +208,7 @@ the_bard's_songbook:
     Magic Steed:
       cost: 2
       description: Summon a steed made of pure magical energy. The stallion has 20
-        health, and may be desummoned on command.
+        health, and may be de-summoned on command.
     Marionette:
       cost: 2
       description: Force an enemy to make an inner fire saving throw against your
@@ -264,7 +264,7 @@ the_bard's_songbook:
       cost: 3
       description: Summon a carriage capable of seating four individuals, with a seat
         for two drivers. The carriage comes with two magical steeds, which may not
-        be detatched, and with an optional ethereal driver.
+        be detached, and with an optional ethereal driver.
     Curse of the Lowlife:
       cost: 3
       description: Force an enemy to make an inner fire saving throw against your
@@ -276,7 +276,7 @@ the_bard's_songbook:
     Ecstasy:
       cost: 3
       description: Force an enemy to make an inner fire saving throw against your
-        spell power. On faiure, they fall into a fit of overwhelming pleasure, and
+        spell power. On failure, they fall into a fit of overwhelming pleasure, and
         miss their turn. They may repeat the saving throw on their own turn every
         turn after the first.
     Harbinger of Doom:
@@ -294,7 +294,7 @@ the_bard's_songbook:
     Immovable:
       cost: 3
       description: Make an object immovable for 1 minute.
-    Jerry's Race Dismorphia:
+    Jerry's Race Dysmorphia:
       cost: 3
       description: Transform yourself into another race for 1 hour. You gain the race's
         stats and abilities, and loose those of your own race.
@@ -404,17 +404,17 @@ the_bard's_songbook:
       cost: 5
       description: Cast on everyone in earshot you wish. If they fail an inner fire
         saving throw against your inner fire, re-write up to one hour of their memory.
-    Torugar, the Many Tounged Demon:
+    Torugar, the Many Tongued Demon:
       cost: 5
-      description: Summon a pit, housing an ancient, many tounged god of the underworld.
-        Every turn for 5 turns, 1d6 tounges will writhe forth from the pit, and attempt
+      description: Summon a pit, housing an ancient, many tongued god of the underworld.
+        Every turn for 5 turns, 1d6 tongues will writhe forth from the pit, and attempt
         to grab individuals within 1000 feet. If an individual is grabbed (fails a
         dexterity check against your spell power) it sustains 4d8 damage. If the blow
         kills the creature, it is ripped down into the pit, and is irrecoverable.
     Winged Magic Steed:
       cost: 2
       description: Summon a steed made of pure magical energy. The stallion has 20
-        health, and may be desummoned on command.
+        health, and may be de-summoned on command.
 the_book_of_chi:
   Combat Basic Techniques:
     Brawler:
@@ -501,7 +501,7 @@ the_book_of_chi:
     Fists of Steel:
       description: Your bare hands are d12 weapons.
     Flaming Fist:
-      description: Once every three turns, add an additional 1d12 fire damage to a
+      description: Once every three turns, add an additional d12 fire damage to a
         punching attack.
     Hearty:
       description: Add 1 to your vitality.
@@ -513,7 +513,7 @@ the_book_of_chi:
     Opening Blow:
       description: If you strike an opponent before it is able to move in combat,
         take advantage on all subsequent attacks against that foe so long as you continue
-        attacking it with each of your actions. Add an additional 1d12 blunt damage
+        attacking it with each of your actions. Add an additional d12 blunt damage
         to the initial strike.
     Perfect Zen:
       description: Once per day as an offhand action, become untouchable by physical
@@ -554,7 +554,7 @@ the_book_of_chi:
       type: combat
     Ultimate Punch: 
       description: As an action, channel the energy of your ancestors into a perfectly tuned punch. With a thunderclap, unleash a blow
-        capable of destroying buildings with its shockwave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities 
+        capable of destroying buildings with its shock-wave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities 
         within a 100 foot cone in front of you.
       type: combat
     Perfect Control:
@@ -564,7 +564,7 @@ the_book_of_chi:
       description: Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.
       type: general
     Everywhere and Nowhere:
-      description: Insead of taking movement during combat, instantly teleport from one location to another within
+      description: Instead of taking movement during combat, instantly teleport from one location to another within
         thirty feet of you. Once every three turns, if you do not attack on your turn, you may choose to be ethereal until
         your next turn, and therefore to be immune to physical damage. 
       type: general
@@ -656,7 +656,7 @@ the_book_of_healing:
         disadvantage every turn thereafter.
     Giant's Strength:
       cost: 1
-      description: Grant a teammate one additional strength. Lasts 1+inner fire hours.
+      description: Grant a teammate one additional strength. Lasts 1 + inner fire hours.
     Greater Guidance:
       cost: 1
       description: Give an ally a 1d8 inspiration dice.
@@ -700,7 +700,7 @@ the_book_of_healing:
       description: Grant a teammate one additional dexterity. Lasts 1+inner fire hours.
     Omen:
       cost: 1
-      description: Once per day, ask your diety for an omen in regards to a decision
+      description: Once per day, ask your deity for an omen in regards to a decision
         you will make.
     Pacify:
       cost: 1
@@ -728,7 +728,7 @@ the_book_of_healing:
     Strong Lungs:
       cost: 1
       description: Grant a teammate or yourself strong lungs, rendering them immune
-        to airborn toxins and smoke.
+        to airborne toxins and smoke.
     Truth:
       cost: 1
       description: If an entity fails a saving throw against your spell power, force
@@ -740,7 +740,7 @@ the_book_of_healing:
     Warmth/Cool:
       cost: 1
       description: Warm or cool an area with a 10ft radius.
-    Waterbreathing:
+    Water Breathing:
       cost: 1
       description: Grant a teammate or yourself the ability to breath underwater.
         Lasts 1+inner fire hours.
@@ -759,7 +759,7 @@ the_book_of_healing:
     Chains of Light:
       cost: 2
       description: Force an entity to make an inner fire saving throw against your
-        spell power. On failure, the entity is restrained by chains of burining light
+        spell power. On failure, the entity is restrained by chains of burning light
         which wrap about its limbs and suspend it. The entity may not move on it's turn,
         but may attempt strength saving throws against your spell power with any of its
         actions. If the entity is corrupt or undead, it takes 1d10 damage each turn while
@@ -788,7 +788,7 @@ the_book_of_healing:
         The beacon stays at your side for 1 battle or 1 hour unless dispelled.
     Remove Curse:
       cost: 2
-      description: Remove a curse or dispell a negative enchantment on an individual.
+      description: Remove a curse or dispel a negative enchantment on an individual.
         Requires an inner fire check, and may be repeated daily.
     Speak Tongues:
       cost: 2
@@ -825,7 +825,7 @@ the_book_of_healing:
     Mass Strong Lungs:
       cost: 3
       description: Grant a teammate or yourself strong lungs, rendering them immune
-        to airborn toxins and smoke.
+        to airborne toxins and smoke.
   Level_4:
     Hold Your Weapons:
       cost: 3
@@ -853,7 +853,7 @@ the_book_of_healing:
       cost: 4
       description: Summon a holy great weapon of your choice to your hand, and a shield
         to your other. The weapon does 1d20 damage plus 1d10 radiant damage, and the
-        sheild allows you to perform the sheild bash ability as a bonus action. While
+        shield allows you to perform the shield bash ability as a bonus action. While
         you are in the battle angel state, you may perform spells at -1 cost, have
         +3 strength, and have 50 hit points. When the 50 hit points drop to zero,
         you fall out of the battle angel state, and gain your previous hit points.
@@ -1036,7 +1036,7 @@ the_druid's_guidebook:
         they take 1d8.
     Remove Curse:
       cost: 2
-      description: Remove a curse or dispell a negative enchantment on an individual.
+      description: Remove a curse or dispel a negative enchantment on an individual.
         Requires an inner fire check, and may be repeated daily.
     Scorpions:
       cost: 2
@@ -1059,7 +1059,7 @@ the_druid's_guidebook:
     Thieve's Curse:
       cost: 1
       description: Force an entity to make an inner fire saving throw against your
-        spell power. On failure, they are cursed so that they have an irresistable
+        spell power. On failure, they are cursed so that they have an irresistible
         urge to steal something once per hour. They then forget their acts of thievery,
         and stow the stolen goods in their quarters or a private place. The curse
         remains until it is dispelled.
@@ -1105,12 +1105,12 @@ the_druid's_guidebook:
       cost: 4
       description: Cast a mass curse on up to 100 people that you can see. All individuals
         who fail an inner fire saving throw against your spell power are gripped with
-        the irresistable urge to steal anything that isn't boarded down. Lasts 1d12
+        the irresistible urge to steal anything that isn't boarded down. Lasts 1d12
         hours.
-    Ents:
+    Plant Golems:
       cost: 4
-      description: Summon 2 ents to your aid. The ents have 40 health, attack twice,
-        and do 1d8 damage per attack. Each ent has 5 spell points, and is capable
+      description: Summon 2 plant golems to your aid. The golems have 40 health, attack twice,
+        and do 1d8 damage per attack. Each golems has 5 spell points, and is capable
         of casting twisting vine, bark armor, and thorned caltrops.
     Resist the elements:
       cost: 4
@@ -1139,7 +1139,7 @@ the_druid's_guidebook:
       cost: 5
       description: Give an animal sentience. If you wish, is bound to you for one month, and
         must follow you. Regardless of type, the animal immediately gains the ability
-        to speak the common tounge.
+        to speak the common tongue.
     Bountiful Harvest:
       cost: 5
       description: Grow a feast. Up to 8 entities may partake of the feast. Each of
@@ -1152,7 +1152,7 @@ the_druid's_guidebook:
         does not change back when concentration is broken.
     Fix Season:
       cost: 7
-      description: Find the highest point in a region. Atop this point, create a pilar
+      description: Find the highest point in a region. Atop this point, create a pillar
         of rock, at least ten feet tall and with a three foot radius. Spend some time
         carving symbols significant to you into the stones. Affix crystals valuing
         250 gold to the top of the spire, and channel your energy into it. After 1
@@ -1160,15 +1160,15 @@ the_druid's_guidebook:
         in the season of your choice.
     Starfall:
       cost: 4
-      description: Spend one full round of combat focusing on brining down a massive
+      description: Spend one full round of combat focusing on bringing down a massive
         meteor. If you are attacked, make a concentration check. On failure, you loose
         control of the spell at no spell point penalty. On success, call down a meteor
         which strikes all enemies in a 10 foot radius for 10d10 damage.
     Tsunami:
       cost: 4
-      description: Summon a massive tidalwave to crash down on the battlefield originating
-        from the focus point for your magic. The tidalwave does 4d10 damage to all
-        enemeies in a cone in front of you. All affected entities must make a strength
+      description: Summon a massive tidal wave to crash down on the battlefield originating
+        from the focus point for your magic. The tidal wave does 4d10 damage to all
+        enemies in a cone in front of you. All affected entities must make a strength
         saving throw against your spell power, or be swept away by the tsunami. Large
         or greater entities may make the check with advantage. Entities that are swept
         away move until they hit something solid or have moved 50 feet. When they
@@ -1298,13 +1298,13 @@ the_macabre_manual:
       description: Take the skull of a fallen entity and infuse it with the power
         of a soul to link yourself to it. From this point on, you may see through
         the eyes of the skull.
-    Shadowstep:
+    Shadow-step:
       cost: 1
       description: Teleport from one shadow to another over a maximum distance of
         50 feet.
     Siphon:
       cost: 1
-      description: Eat the lifeforce of a wounded enemy, dealing 1d8 damage, and
+      description: Eat the life-force of a wounded enemy, dealing 1d8 damage, and
         healing yourself for that amount. An enemy may only be siphoned once, and
         You cannot harvest a soul from an entity that you have siphoned.
     Skeleton:
@@ -1399,11 +1399,11 @@ the_macabre_manual:
         throw themselves in front of you as a reaction. If a death knight reaches
         zero health, it may make a saving throw. If it rolls 5 or higher, it does not die,
         but returns to 1 health.
-    Antilife field:
+    Anti-life field:
       cost: 4
       description: Create a field of death around yourself with a 10 foot radius.
         Anything living that enters the field takes 4d10 damage per turn. The field
-        wilts and kills everything. Lasts for one hour or until desummoned.
+        wilts and kills everything. Lasts for one hour or until de-summoned.
     Fall:
       cost: 4
       description: Force all enemies within a 100 foot radius to make an inner fire
@@ -1418,8 +1418,8 @@ the_macabre_manual:
         Repeat the check every turn for three turns.
     Sap Age:
       cost: 4
-      description: Steal the lifeforce from someone. Every 10 seconds or 1 turn in
-        combat, you steal 1 year of their life. This lifeforce can be given to someone
+      description: Steal the life-force from someone. Every 10 seconds or 1 turn in
+        combat, you steal 1 year of their life. This life force can be given to someone
         else.
   Level_5:
     Abomination:
@@ -1462,7 +1462,7 @@ the_macabre_manual:
     Unending Darkness:
       cost: 7
       description: Go to a blacksmith and ask them to craft for you a lockbox of obsidian,
-        which contains room for an object weighing rougly a pound. While it is being
+        which contains room for an object weighing roughly a pound. While it is being
         crafted, gather the heart of a high level beast, blood diamonds valued at
         10,000 gold, and a soul gem containing the soul of something freshly killed.
         Combine the gems, diamonds, and heart to craft a beating heart of darkness.
@@ -1481,7 +1481,7 @@ the_novice_spellbook:
       charisma_cost: 8
       cost: 0
       description: Concentration. Summon a dim candlelight that floats near to you,
-        and obeys your subconcious commands. The candlelight can move up to forty
+        and obeys your subconscious commands. The candlelight can move up to forty
         feet away from you before it is dispelled.
     Cold Hands:
       charisma_cost: 8
@@ -1501,7 +1501,7 @@ the_novice_spellbook:
       cost: 0
       description: Fire a colored flare from the source of your magic. The flare reaches
         up to 100 feet, and casts light equivalent to daylight. The flare does 1d4
-        damage to anything that it strikes, and is capable of setting fire to flamable
+        damage to anything that it strikes, and is capable of setting fire to flammable
         materials.
     Force Push:
       charisma_cost: 8
@@ -1572,7 +1572,7 @@ the_novice_spellbook:
     Transcribe Memory:
       charisma_cost: 8
       cost: 0
-      description: Given a piece of parchement or paper, instantly render a sketch
+      description: Given a piece of parchment or paper, instantly render a sketch
         of a scene that you witnessed.
   Level_1:
     Bare Knuckle Punch:
@@ -1604,7 +1604,7 @@ the_novice_spellbook:
     Blot:
       charisma_cost: 10
       cost: 1
-      description: Instantly destroy the text within any parchement or book your are
+      description: Instantly destroy the text within any parchment or book your are
         holding.
     Bounce:
       charisma_cost: 12
@@ -1648,7 +1648,7 @@ the_novice_spellbook:
       charisma_cost: 10
       cost: 1
       description: Force an enemy to make an inner fire saving throw against your
-        spell power. On failure, the enemy recieves a curse which causes them to wet
+        spell power. On failure, the enemy receives a curse which causes them to wet
         the bed each night. The curse cannot be removed unless dispelled.
     Electrified:
       charisma_cost: 10
@@ -1716,7 +1716,7 @@ the_novice_spellbook:
     Lasso:
       charisma_cost: 10
       cost: 1
-      description: Summon a 20 foot laso of glowing magic, which attempts to restrain
+      description: Summon a 20 foot lasso of glowing magic, which attempts to restrain
         an entity of your choice. The targeted entity must make a dexterity saving
         throw against your spell power, and is restrained on failure. As an offhand
         action, you may tug a lassoed entity to you if it is of your size or smaller.
@@ -1745,12 +1745,12 @@ the_novice_spellbook:
         reinforced, your strength is treated as +1. A retractable blade of magic can
         extend from either of your wrists, parallel to your arms. Attacks made with
         this blade do 1d8 damage.
-    Mellon Headed Wanderer:
+    Melon Headed Wanderer:
       charisma_cost: 12
       cost: 1
       description: Concentration. Force an entity to make an inner fire saving throw
         against your spell power. On failure, the entity's head is replaced with a
-        mellon. While an entity's head is a mellon, it makes all actions with disadvantage,
+        melon. While an entity's head is a melon, it makes all actions with disadvantage,
         and is considered blind. The entity may repeat the saving throw each turn
         as an action.
     Minor Ward of Hearing:
@@ -1778,7 +1778,7 @@ the_novice_spellbook:
       charisma_cost: 12
       cost: 1
       description: Summon a 10 square foot patch of quicksand. Any enemy in the quicksand
-        must make a dc 14 saving throw to escape it. An entity that is stuck in the
+        must make a D14 saving throw to escape it. An entity that is stuck in the
         quicksand for two consecutive turns begins to drown, taking 1d10 damage per
         turn. If an entity is drowning, its saving throw increases to 16.
     Silence:
@@ -1806,12 +1806,12 @@ the_novice_spellbook:
         spell power at the start of each turn. On failure, they must make all moves
         on that turn with disadvantage. On critical failure, they vomit and take 1d4
         damage.
-    Tiny Elemental:
+    Tiny Golem:
       charisma_cost: 12
       cost: 1
-      description: Summon forth a one foot tall fire, water, or lightning elemental.
-        The elemental lasts for one hour, has 10 health, and can attack for 1d6 damage.
-        You have command of the elemental's actions.
+      description: Summon forth a one foot tall fire, water, or lightning golem.
+        The golem lasts for one hour, has 10 health, and can attack for 1d6 damage.
+        You have command of the golem's actions.
     Weakness:
       charisma_cost: 10
       cost: 1
@@ -1835,7 +1835,7 @@ the_novice_spellbook:
     Deep Sleep:
       charisma_cost: 12
       cost: 2
-      description: If an enemy fails a saving throw against youor spell power, put
+      description: If an enemy fails a saving throw against your spell power, put
         them into a deep sleep. They are awakened if attacked, or if they pass a dc
         17 perception check.
     Dragons Breath:
@@ -1852,7 +1852,7 @@ the_novice_spellbook:
       charisma_cost: 12
       cost: 2
       description: With a pop and a hiss, a torrent of frozen air sprays forth from
-        the origin of your magic. This artic blast hits all entities in a 10 foot
+        the origin of your magic. This arctic blast hits all entities in a 10 foot
         cone before you, dealing 3d6 frost damage.
     Greater Drain:
       charisma_cost: 12
@@ -1871,7 +1871,7 @@ the_novice_spellbook:
     Hail of Blades:
       charisma_cost: 14
       cost: 2
-      description: In a rythmic spiral, eight daggers appear in a halo about you.
+      description: In a rhythmic spiral, eight daggers appear in a halo about you.
         As one, they hurtle forth dealing 2d8 damage split across as many as eight
         entities.
     Ice Spear:
@@ -1881,7 +1881,7 @@ the_novice_spellbook:
     Longband Telepathic Message:
       charisma_cost: 14
       cost: 2
-      description: Concentrate on an entity that you have met. You are able to telpathically
+      description: Concentrate on an entity that you have met. You are able to telepathically
         send them a message of up to 14 words, regardless of distance.
     Magic Chains:
       charisma_cost: 14
@@ -1913,7 +1913,7 @@ the_novice_spellbook:
       charisma_cost: 14
       cost: 2
       description: Lay your hands on something or someone so that you always know
-        what it is. This spell lasts for 1d6 days, or until the affected entity dispells
+        what it is. This spell lasts for 1d6 days, or until the affected entity dispels
         it.
     Platform:
       charisma_cost: 12
@@ -1926,7 +1926,7 @@ the_novice_spellbook:
         fingertips or mouth, As the light moves further from you, it separates into
         bands of color, a rainbow! Any entity struck by the rainbow takes 2d6 damage,
         and must make an inner fire saving throw against your spell power. On failure,
-        the entity instantly begins vomitting rainbows, and makes all moves with disadvantage
+        the entity instantly begins vomiting rainbows, and makes all moves with disadvantage
         on it's next turn.
     Stone Skin:
       charisma_cost: 12
@@ -1937,7 +1937,7 @@ the_novice_spellbook:
       charisma_cost: 14
       cost: 2
       description: Point at an enemy. A cannon appears at your side in a burst of
-        blackish smoke, and fires a single round, dealing 3d8 seige damage. If the
+        blackish smoke, and fires a single round, dealing 3d8 siege damage. If the
         entity is large or smaller, it must make a strength saving throw against your
         spell power. On failure, it is pushed backwards 1d20 feet.
     Turn into Frog:
@@ -2099,7 +2099,7 @@ the_novice_spellbook:
       charisma_cost: 16
       cost: 4
       description: Concentration. Wind howls and whips as you utter an incantation.
-        Driving winds that cut like razers push enemies away from you, dealing 2d10
+        Driving winds that cut like razors push enemies away from you, dealing 2d10
         damage per turn to any entity within a forty foot cone in front of you. Affected
         entities must make an strength saving throw against your spell power to move
         in the wind. On success, they move at half their normal speed. Gigantic and
@@ -2114,7 +2114,7 @@ the_novice_spellbook:
       charisma_cost: 16
       cost: 4
       description: Concentration. Force an entity to make a dexterity saving throw
-        against your spell power. On failure, firey chains large enough to restrain
+        against your spell power. On failure, fiery chains large enough to restrain
         them burst into existence, grappling them. Each turn, the affected entity
         may make a strength saving throw against your spell power in an attempt to
         break out. Each turn an entity is tethered, it takes 2d10 fire damage.
@@ -2153,13 +2153,13 @@ the_novice_spellbook:
       cost: 4
       description: Do 3d20 damage to a single target. On death, the enemy explodes,
         doing 2d10 damage to any adjacent enemies.
-    Interplanar Teleport:
+    Inter-Realm Teleport:
       charisma_cost: 16
       cost: 4
       description: Gather up to eight willing entities, and link arms. With a thunderous
-        blast, you are torn through the veil of the planar alignment, and are transported
-        to a plane of of which you know. On a critical failure, you are transported
-        to a random plane.
+        blast, you are torn through the veil of the realms' alignment, and are transported
+        to a realm of of which you know. On a critical failure, you are transported
+        to a random realm.
     Mass Increase Gravity:
       charisma_cost: 16
       cost: 4
@@ -2308,7 +2308,7 @@ the_sorcerer's_scrolls:
       charisma_cost: 12
       cost: 2
       description: Force an entity to make an inner fire saving throw against your
-        spell power. On failure, you may break into othe entities mind, viewing their
+        spell power. On failure, you may break into other entities mind, viewing their
         memories.
     Jet of water:
       charisma_cost: 12
@@ -2351,7 +2351,7 @@ the_sorcerer's_scrolls:
       description: Create a door into your own, private pocket dimension. The dimension
         is 30x30x30 feet, and persists over time. Once you are in the pocket dimension,
         you can always exit. For every 10 minutes you are in the pocket dimension,
-        Make a dc8 inner fire saving throw. If you fail, you are ejected from the
+        Make a D8 inner fire saving throw. If you fail, you are ejected from the
         pocket dimension.
     Faithful Hound:
       charisma_cost: 14
@@ -2362,7 +2362,7 @@ the_sorcerer's_scrolls:
     Fuse into Familiar:
       charisma_cost: 14
       cost: 3
-      description: Become one with your familar. Lasts for up to 10 minutes, before
+      description: Become one with your familiar. Lasts for up to 10 minutes, before
         you reappear where your familiar stands.
     Gateway:
       charisma_cost: 15
@@ -2537,8 +2537,8 @@ the_wizard's_addendum:
     Rain of Arrows:
       charisma_cost: 12
       cost: 2
-      description: With a chorus of twangs, a flight of arrows streak past and arround
-        you, targetting all entities within a 20 foot radius of your choosing and
+      description: With a chorus of twangs, a flight of arrows streak past and around
+        you, targeting all entities within a 20 foot radius of your choosing and
         dealing 2d10 damage.
     Scry:
       cost: 2
@@ -2550,11 +2550,11 @@ the_wizard's_addendum:
       description: Harden to become a statue. While you are a statue, you take one
         quarter damage from any attacks. On your next turn, you may revert from being
         a statue at the cost of your movement.
-    Supress Item:
+    Suppress Item:
       charisma_cost: 12
       cost: 2
       description: Concentration. Make a check against a magic item's spell power.
-        On success, supress the magic item's power.
+        On success, suppress the magic item's power.
   Level_3:
     Dominate:
       cost: 3

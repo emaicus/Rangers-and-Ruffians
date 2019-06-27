@@ -12,6 +12,7 @@ from spellchecker import SpellChecker
 import inquirer
 import contractions
 import string 
+import re
 
 STAT_OUTPUT = 'reports'
 
@@ -428,12 +429,17 @@ def check_descriptions(print_errors=True):
   return errors
 
 def is_word_unknown(word, spell, new_words):
-  return True if len(spell.unknown([word,])) == 1 and word not in new_words else False
+  if len(spell.unknown([word,])) == 1 and word not in new_words:
+    return True  
+  else:
+    return False
 
 def process_word(word):
   words = contractions.fix(word).split()
   ret = list()
   for word in words:
+    if re.findall("\\d*d\\d+", word) or re.findall("\\d+x\\d+x?\\d*", word):
+      continue
     if word.endswith("'s"):
       word = word[:-2]
     translator = str.maketrans('', '', string.punctuation.replace('-', ''))
@@ -441,25 +447,22 @@ def process_word(word):
     ret.append(word)
   return ret
 
-def fix_spelling_errors(words, spell, rnr_dictionary, corrections):
-  errors = set()
+def fix_spelling_errors(words, spell, rnr_dictionary, errors):
   for word in words:
     w = process_word(word)
     for element in w:
       if element == '':
         continue
-      if is_word_unknown(element, spell, rnr_dictionary) and not element in corrections:
-        correction = inquirer.prompt([inquirer.Text('correction', message='What is the proper spelling of {0} ({1})?'.format(word, spell.correction(word))),])['correction']
-        if correction == '' or correction == element:
+      if is_word_unknown(element, spell, rnr_dictionary) and not element in errors:
+        correct = inquirer.prompt([inquirer.Confirm('correct', message='Is {0} properly spelled?'.format(word)),])['correct']
+        print(correct)
+        if correct == True:
           rnr_dictionary.append(element)
         else:
-          corrections[element] = correction   
-      elif element in corrections:
-        errors.add(element)
+          errors.add(element)   
   return errors
 
-def just_find_typos(words, spell, rnr_dictionary, corrections):
-  errors = set()
+def just_find_typos(words, spell, rnr_dictionary, errors):
   for word in words:
     w = process_word(word)
     for element in w:
@@ -478,38 +481,37 @@ def spell_check(fix_errors=True, print_errors=True):
 
   spell = SpellChecker()
   rnr_dictionary = list()
-  corrections = dict()
   ability_errors = set()
   spell_errors = set()
 
-  if os.path.exists('rnr_dictionary.json'):
-    with open('rnr_dictionary.json', 'r') as infile:
+  dictionary_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'rnr_dictionary.json')
+  if os.path.exists(dictionary_path):
+    with open(dictionary_path, 'r') as infile:
       data = json.load(infile)
       rnr_dictionary = data['rnr_words']
-      corrections = data['corrections']
 
   ##############################################
   # ABILITIES
   ###############################################
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     title_words = ability_name.split(' ')
-    ability_errors.update(spell_check_function(title_words, spell, rnr_dictionary, corrections))
+    spell_check_function(title_words, spell, rnr_dictionary, ability_errors)
 
     words = ability_info['description'].split(' ') + ability_info['brief'].split(' ')
-    ability_errors.update(spell_check_function(words, spell, rnr_dictionary, corrections))
+    spell_check_function(words, spell, rnr_dictionary, ability_errors)
 
   ##############################################
   # Spells
   ###############################################
   for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
     title_words = spell_name.split(' ')
-    spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, corrections))
+    spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, spell_errors))
 
-    words = spell_info['details']['description'].split(' ')
-    spell_errors.update(spell_check_function(words, spell, rnr_dictionary, corrections))
+    spell_info['details']['description'].split(' ')
+    spell_check_function(words, spell, rnr_dictionary, spell_errors)
 
   if fix_errors:
-    output_json = {'corrections' : corrections, 'rnr_words' : rnr_dictionary}
+    output_json = {'rnr_words' : rnr_dictionary}
     with open('rnr_dictionary.json', 'w') as outfile:
       json.dump(output_json, outfile, indent=4)
 
@@ -518,7 +520,8 @@ def spell_check(fix_errors=True, print_errors=True):
     all_errors["spellbooks"] = list(spell_errors)
   if len(ability_errors) > 0:
     all_errors["abilities"] = list(ability_errors)  
-  
+
+
   if print_errors:
     for file, errors in all_errors.items():
       print("The following values are misspelled in {0}".format(file))
