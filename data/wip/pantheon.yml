@@ -1,19 +1,18 @@
-Pantheon
-          Lawful       Neutral                 Chaotic
+# Pantheon
+#           Lawful       Neutral                 Chaotic
 
-Good      Iro, Ronar   Anora,                  Yilena, Eandar, Love
+# Good      Iro, Ronar   Anora,                  Yilena, Eandar, Love
 
-Neutral                Death, Knowledge        Sea, Trickster
+# Neutral                Death, Knowledge        Sea, Trickster
 
-Evil      Melekar      Undeath                 Void Father, The Pale Lady    
+# Evil      Melekar      Undeath                 Void Father, The Pale Lady    
 
-Male Deities: Iro, Eandar, Ronar, Melekar, The Void Father, 
-Female Deities: Lillith, The Pale Lady, Yilena, Hesh, Eris
-Agender Deities:
-Undecided: Love, Death, Knowledge, Undeath
+# Male Deities: Iro, Eandar, Ronar, Melekar, The Void Father, 
+# Female Deities: Lillith, The Pale Lady, Yilena, Hesh, Eris
+# Agender Deities:
+# Undecided: Love, Death, Knowledge, Undeath
 
-Winter, Summer, Spring, Autumn
-Trickster
+# Winter, Summer, Spring, Autumn
 The Shaper:
   evil: false
   description: Before the time of the gods, there was nothing. The shaper, a diety above all others, 
@@ -25,7 +24,7 @@ Iro:
     Shaper. Iro commands a legion of angels who aid him in policing the High Realm, where the gods reside.
     Iro was the leader of the Gods of Light during the First War, fighting against Melikar and his demons.
     When the Gods of Light were loosing the First war, Iro briefly arranged a marriage with Hesh. Knowing that together
-    they could sire a weapon of incredible power, they had a daughter, Juliet. By harnessing Juliet's incredible power,
+    they could sire a weapon of incredible power, they had a daughter, Julia. By harnessing Julia's incredible power,
     the Gods of Light were able to throw back the Gods of Darkness. After the war was won, Iro turned upon many of the
     other gods, who he percieved to have desecrated creation by altering it to create the mortals. In his anger, sealed away 
     the mortals in the Mortal Realm. From that
@@ -36,10 +35,19 @@ Iro:
     those bonded to Iro are called the watchers, and are bound to seek out and end injustice
     wherever they find it. Iro is a harsh but good diety, with a deep belief in the sanctity of order and law.
     Iro is displeased by acts of evil, and is pleased by the dispensing of justice.
-  abilities: 
-    Iro's Judgement:
-      description: You may call upon Iro to judge an individual for you. It is up to you, then, to dispense justice.
-      type: rite
+  abilities:
+    Level_0:
+      Lawbringer:
+        description: Followers of Iro have advantage when speaking with lawmen.
+        type: advantage
+    Level_5:  
+      Iro's Judgement:
+        description: As an action, call on Iro to judge an individual. If he judges them impure, take advantage in all attacks against them.
+        type: combat
+    Level_10:
+      Fortify:
+        description: At the cost of one spell point, add 1d6 armor to yourself or another for one day.
+        type: combat
 Aunora: 
   evil: false
   description: Aunora, the Dawnmaiden, is the goddess of peace, love, and healing. In her initial form, Aunora bore
@@ -53,16 +61,16 @@ Aunora:
   abilities:
     Level_0:
       Minor Goddess of Healing:
-        description: Clerics and Paladins of Lilith may add 1d4 to all healing rolls. 
+        description: Clerics and Paladins of Aunora may add 1d4 to all healing rolls. 
         type: advantage
     Level_5:
       Level_0:
       Minor Goddess of Healing:
-        description: Clerics and Paladins of Lilith may add 1d6 to all healing rolls. 
+        description: Clerics and Paladins of Aunora may add 1d6 to all healing rolls. 
         type: advantage
     Level_10:
       Major Goddess of Healing:
-        description: Clerics and Paladins of Lilith may add 1d12 to all healing rolls. 
+        description: Clerics and Paladins of Aunora may add 1d12 to all healing rolls. 
         type: advantage
 Eandar:
   evil: false
@@ -79,27 +87,35 @@ Eandar:
     of kindness and by acts that better the downtrodden, but considers it a sin to harm the innocent, place personal
     desire above the wellbeing of others, or betray the trust of others.
   abilities:
-    God of the Common Man:
-      description: Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.
-      type: advantage
-    Distrusted by Authorities: 
-      description: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
-      type: advantage
+    Level_0:
+      God of the Common Man:
+        description: Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.
+        type: advantage
+      Distrusted by Authorities: 
+        description: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
+        type: disadvantage
+    Level_5:
+      Give of Yourself:
+        description: You are able to give a party member a portion of your hit points. Any hp you give is doubled.
+        type: general
+    Level_10:
+      Champion of Goodness:
+        description: 
 Death:
-Juliet:
+Julia:
   evil: false
-  description: The goddess of fun and tomfoolery, Juliet is known as the goddess of trickery. Born to
-    Iro and Hesh as a weapon during the First War, Juliet is a being of incredible, worldbending power. 
-    Born fully grown but with the understanding of a child, Juliet was immediately used to lay low the armies
-    of Melekar and the Dark Gods. It was only after the carnage was finished that Juliet came to understand the
+  description: The goddess of fun and tomfoolery, Julia is known as the goddess of trickery. Born to
+    Iro and Hesh as a weapon during the First War, Julia is a being of incredible, worldbending power. 
+    Born fully grown but with the understanding of a child, Julia was immediately used to lay low the armies
+    of Melekar and the Dark Gods. It was only after the carnage was finished that Julia came to understand the
     cost of what she had done in terms of loss of life and the destruction of creation. Broken by this knowledge,
-    Juliet fled from her Father's castle in the High Realm. It was while in exile that she met Eandar, who had
-    run afowl of her her father. Eandar tried to impress upon Juliet what little he could about his worldview,
-    and his quest for goodness, no matter the cost. In the end, Juliet left hin after a violent argument in which she
-    barely restrained herslef from destroying him. Over the millenia, Juliet has barely changed, and her worldview has
+    Julia fled from her Father's castle in the High Realm. It was while in exile that she met Eandar, who had
+    run afowl of her her father. Eandar tried to impress upon Julia what little he could about his worldview,
+    and his quest for goodness, no matter the cost. In the end, Julia left hin after a violent argument in which she
+    barely restrained herslef from destroying him. Over the millenia, Julia has barely changed, and her worldview has
     become such that she values fun and games above most anything else. To her, a good joke is the highest form of virtue,
-    as it takes ones mind from their suffering. It was Juliet who created the Deck of Wonderous Doom, and gave it to 
-    one of her followers. Juliet is commonly worshipped by entertainers, as she has been known to bless performances.
+    as it takes ones mind from their suffering. It was Julia who created the Deck of Wonderous Doom, and gave it to 
+    one of her followers. Julia is commonly worshipped by entertainers, as she has been known to bless performances.
     She is also woshipped by those who have given up on the world, however, as she offers a reprieve from earthly suffering.
 Illillael:
   evil: true
@@ -131,7 +147,7 @@ Hesh:
     When enraged, Hesh has grown into a massive titan, taller than the highest mountain, and has also been
     known to take the form of a great sea-serpent with scales of gold, miles long and with a maw that
     could swallow a ship. During the First War, Hesh was summoned by Raghnal to wed Iro.
-    Hesh consented out of necessity, and gave birth to a daughter, Juliet. Hesh is wild and untamable, however,
+    Hesh consented out of necessity, and gave birth to a daughter, Julia. Hesh is wild and untamable, however,
     and she then went against Iro's explicit orders and created the waterborn in her image. In his rage,
     Iro cast her down into the Mortal Realm before sealing it for all of eternity. Nae'anala is neither good nor evil,
     and is largely uninterested in the happenings of the world of men. She does,

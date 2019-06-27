@@ -1040,6 +1040,10 @@ Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: combat
   brief: Targeted ranged attacks have disadvantage against you.
+Nimble flight:
+  description: Targeted ranged attacks take disadvantage against you while you are flying.
+  type: combat
+  brief: Targeted ranged attacks have disadvantage against you while flying.
 Determination:
   description: Gain a d10 inspiration dice as an offhand.
   type: general
@@ -1197,10 +1201,9 @@ Monster Slayer:
   type: combat
   brief: Do +1d10 damage to monsters.
 Pickpocket: 
-  description: Whenever you attack, roll a d20 and add your dexterity. If the result is greater than a 20,
-    steal an item the enemy is holding.
+  description: If you land a critical hit, steal an item the enemy is holding.
   type: combat
-  brief: Whenever you attack, roll 1d20 and add Dex. If greater than 20, steal something.
+  brief: On a crit, steal something.
 Superior Mantel:
   description: Add 1d6 to all climbing checks.
   type: general

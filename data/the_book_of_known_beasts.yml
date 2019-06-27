@@ -1,24 +1,103 @@
-wolf:
-  small:
-  adult:
-  dire:
-dog:
-  small:
-  adult:
-  dire:
+canine:
+  health_dice: 1d4
+  base_stats:
+    Charisma: -3
+    Dexterity: 1
+    Inner_Fire: -2
+    Intelligence: -3
+    Perception: 3
+    Strength: 1
+    Luck: 0
+    Vitality: 1
+  base_abilities:
+    Loyal:
+      description: You have advantage on saves that could cause you to change loyalty.
+      type: advantage
+      brief: Adv on loyalty changing SP saves
+    Bite: You can perform a 1d6 bite attack. On a critical hit, grapple the enemy.
+  Levels:
+    Level_2:
+      abilities:
+        Tear: If you latch onto a target and continue to tear at them, do an additional 1d4 damage per attack.
+    Level_5:
+      abilities:
+        Pack Tactics: Advantage on attacks if adjacent to a teammate.
+        Second Action
+    Level_7:
+      Dire: Your attack damage dice double and you grow one size.
 hawk:
-  small:
-  adult:
-  dire:
+  health_dice: 1d4
+  base_stats:
+    Charisma: -3
+    Dexterity: 2
+    Inner_Fire: -3
+    Intelligence: 0
+    Perception: 3
+    Strength: -3
+    Luck: 0
+    Vitality: 0
+  base_abilities:
+    Eagle Eyed:
+      description: You have advantage on perception checks while flying.
+      type: advantage
+      brief: Adv on loyalty changing SP saves
+    - Nimble Flight
+    Divebomb: You can make a 1d6 divebomb attack.
+  Levels:
+    Level_2:
+      abilities:
+        Pickpocket
+    Level_5:
+      abilities:
+        Harry: If you attack an enemy, they must make a SP save or the next attack takes advantage.
+        Second action
+    Level_7:
+      Dire
 dragon:
-  small:
-  adult:
-  dire:
+  health_dice: 1d6
+  base_stats:
+    Charisma: 0
+    Dexterity: -2
+    Inner_Fire: 1
+    Intelligence: -2
+    Perception: -2
+    Strength: -3
+    Luck: 0
+    Vitality: 2
+  base_abilities:
+    Claw: You can make a 1d4 claw attack.
+    Color Choice: Your color determines your elemental type and immunities.
+  Levels:
+    Level_1: 
+      abilities:
+        Bite
+    Level_2:
+      abilities:
+        Minor Breath: Make a 1d6 breath attack. On crit, status effect.
+    Level_3:
+      abilities:
+        Glide: You can glide when falling.
+    Level_4:
+      abilities:
+        Flight
+        Divebomb
+    Level_5:
+      abilities:
+        Drake: You can now make 2 claw and 1 bite attack per action and grow one size. Your health dice is now 2d12. Your divebomb now does 2d12. You now have 1 armor.
+    Level_6:
+      abilities:
+        Greater Breath Attack: Only on recharge. 4d6 damage in a 30 foot cone. Roll 1d6. On crit, status effect.
+    Level_7:
+      abilities:
+        Frightful Roar: SP save from all or frightened.
+    Level_8:
+      Second Action
+    Level_9:
+      Dragon: Your claw attack increases to 1d8. Your bite increases to 1d12. Your divebomb now does 6d12 damage if the enemy fails a contested dex check.
+      Tail Attack: 3d12 damage. At most one per action. Contested strength save or thrown 2d20 feet.
+      Armored Scales: You now have 6 armor.
+    Level_10:
+      abilities:
+        Major Breath Attack: Only on recharge. 10d10 damage in a 90 foot cone. Contested dex save to take half damage. Roll 1d6. On crit, status effect.
 bear:
-  small:
-  adult:
-  dire:
-eagle:
-  small:
-  adult:
-  dire:
+big_cat:
