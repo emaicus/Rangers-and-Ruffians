@@ -1485,10 +1485,14 @@ Chomp Chomp:
   description: You can make a 1d6 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
   type: combat
   brief: 1d6 bite. Contested dex check to make you let go.
-Back Seat Driver:
+Riding High:
   description: Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.
   type: combat
   brief: You don't give allies disadv when you ride them. Attack advantage while riding.
+Tossed Around:
+  description: You take half damage from blunt attacks, but are tossed 5 feet backward.
+  type: general
+  brief: Half damage from blunt attacks, but are tossed 5 feet back.
 Dig Dig Dig:
   description: You are able to quickly burrow through earth.
   type: combat

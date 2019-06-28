@@ -42,27 +42,31 @@
               <div class="row">
                 <div class="col-3">
                   <p>
-                    {% if character["subrace"] != None %}
+                    {% if character["subrace"] !=  None %}
                       <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
                     {% else %}
-                      <span class="subtitle">Race:</span><span class="normalText"> __________ </span>
+                      <span class="subtitle">Race:</span><span class="normalText"> __________ </span><br/>
                     {% endif %}
-                    {% if character["class"] != None %}
+                    {% if character["class"] !=  None %}
                       <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
                     {% else %}
-                      <span class="subtitle">Class:</span><span class="normalText"> __________ </span>
+                      <span class="subtitle">Class:</span><span class="normalText"> __________ </span><br/>
                     {% endif %}  
-                    {% if character["subclass"] != None %}
+                    {% if character["subclass"] !=  None %}
                       <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
                     {% else %}
-                      <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span>
+                      <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span><br/>
                     {% endif %}
                   </p>
                 </div>
                 <div class=col-3>
                   <p>
                     <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
-                    <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].title() }}</span><br/>
+                    {% if character["subclass"] !=  None %}
+                      <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].replace('_',' ').title() }} </span>
+                    {% else %}
+                      <span class="subtitle">Gender:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}
                     <span class="subtitle">Height:</span><span class="normalText"> __________</span>
                   </p>
                 </div>
@@ -203,12 +207,13 @@
         </div>
       </div>
     </div>
+    {% if character["subrace"] != None %}
     <div class="buttonRegion">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <hr>
-            {% if character['origin'] != None%}
+            {% if character['origin'] != None and character['origin'] != '' %}
               <h2>Backstory</h2>
               <p>
                 {{character['origin']}}
@@ -310,7 +315,8 @@
           </div>
         </div>
       </div>
-    </div>   
+    </div> 
+    {% endif %}  
     <script src="/static/js/jquery-3.3.1.js"></script>  
   </body>
 </html>

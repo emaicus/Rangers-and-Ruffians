@@ -153,9 +153,9 @@ def which_icons(rnr_race, rnr_class):
   if rnr_class == 'highborn':
     icons.append(('swords-power.svg', 'Gumption'))
 
-  #archers have magic arrows
-  if rnr_class == 'archer':
-    icons.append(('quiver.svg', 'Magic Quiver'))
+  # #archers have magic arrows
+  # if rnr_class == 'archer':
+  #   icons.append(('quiver.svg', 'Magic Quiver'))
 
   #Bards have spell coins
   if rnr_class == 'bard':
@@ -326,6 +326,18 @@ def spell_page():
     spell_data = spell_books
 
   return render_template("spell_form.html", data=spell_data, chosen_name=chosen_name)
+
+@app.route('/blank_character_sheet')
+def blank_character_sheet():
+  serial = {
+    'subrace' : None,
+    'character_name' : '', 
+    'class' : None, 
+    'subclass' : None, 
+    'gender' : None, 
+    'abilities': {'general' : [], 'advantage' : [], 'disadvantage' : [], 'combat' : []}
+    }
+  return render_template("character_sheet.html",character=serial,icons=which_icons("human", "fighter"))
 
 @app.route('/print_spell_page')
 def print_spell_page():

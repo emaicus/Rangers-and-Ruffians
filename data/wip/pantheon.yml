@@ -24,7 +24,7 @@ Iro:
     Shaper. Iro commands a legion of angels who aid him in policing the High Realm, where the gods reside.
     Iro was the leader of the Gods of Light during the First War, fighting against Melikar and his demons.
     When the Gods of Light were loosing the First war, Iro briefly arranged a marriage with Hesh. Knowing that together
-    they could sire a weapon of incredible power, they had a daughter, Julia. By harnessing Julia's incredible power,
+    they could sire a weapon of incredible power, they had a daughter, Juliet. By harnessing Juliet's incredible power,
     the Gods of Light were able to throw back the Gods of Darkness. After the war was won, Iro turned upon many of the
     other gods, who he percieved to have desecrated creation by altering it to create the mortals. In his anger, sealed away 
     the mortals in the Mortal Realm. From that
@@ -101,21 +101,21 @@ Eandar:
     Level_10:
       Champion of Goodness:
         description: 
-Death:
-Julia:
+#Death:
+Juliet:
   evil: false
-  description: The goddess of fun and tomfoolery, Julia is known as the goddess of trickery. Born to
-    Iro and Hesh as a weapon during the First War, Julia is a being of incredible, worldbending power. 
-    Born fully grown but with the understanding of a child, Julia was immediately used to lay low the armies
-    of Melekar and the Dark Gods. It was only after the carnage was finished that Julia came to understand the
+  description: The goddess of fun and tomfoolery, Juliet is known as the goddess of trickery. Born to
+    Iro and Hesh as a weapon during the First War, Juliet is a being of incredible, worldbending power. 
+    Born fully grown but with the understanding of a child, Juliet was immediately used to lay low the armies
+    of Melekar and the Dark Gods. It was only after the carnage was finished that Juliet came to understand the
     cost of what she had done in terms of loss of life and the destruction of creation. Broken by this knowledge,
-    Julia fled from her Father's castle in the High Realm. It was while in exile that she met Eandar, who had
-    run afowl of her her father. Eandar tried to impress upon Julia what little he could about his worldview,
-    and his quest for goodness, no matter the cost. In the end, Julia left hin after a violent argument in which she
-    barely restrained herslef from destroying him. Over the millenia, Julia has barely changed, and her worldview has
+    Juliet fled from her Father's castle in the High Realm. It was while in exile that she met Eandar, who had
+    run afowl of her her father. Eandar tried to impress upon Juliet what little he could about his worldview,
+    and his quest for goodness, no matter the cost. In the end, Juliet left hin after a violent argument in which she
+    barely restrained herslef from destroying him. Over the millenia, Juliet has barely changed, and her worldview has
     become such that she values fun and games above most anything else. To her, a good joke is the highest form of virtue,
-    as it takes ones mind from their suffering. It was Julia who created the Deck of Wonderous Doom, and gave it to 
-    one of her followers. Julia is commonly worshipped by entertainers, as she has been known to bless performances.
+    as it takes ones mind from their suffering. It was Juliet who created the Deck of Wonderous Doom, and gave it to 
+    one of her followers. Juliet is commonly worshipped by entertainers, as she has been known to bless performances.
     She is also woshipped by those who have given up on the world, however, as she offers a reprieve from earthly suffering.
 Illillael:
   evil: true
@@ -147,7 +147,7 @@ Hesh:
     When enraged, Hesh has grown into a massive titan, taller than the highest mountain, and has also been
     known to take the form of a great sea-serpent with scales of gold, miles long and with a maw that
     could swallow a ship. During the First War, Hesh was summoned by Raghnal to wed Iro.
-    Hesh consented out of necessity, and gave birth to a daughter, Julia. Hesh is wild and untamable, however,
+    Hesh consented out of necessity, and gave birth to a daughter, Juliet. Hesh is wild and untamable, however,
     and she then went against Iro's explicit orders and created the waterborn in her image. In his rage,
     Iro cast her down into the Mortal Realm before sealing it for all of eternity. Nae'anala is neither good nor evil,
     and is largely uninterested in the happenings of the world of men. She does,
@@ -210,7 +210,7 @@ The Void Father:
     Champion: 
       Shepard of Darkness: You have advantage on any charisma or intimidation checks used to break someone's spirit.
       Lamb to the Slaughter: If an entity's spirit has been broken, have them make an inner fire saving throw against your
-        spell power. On failure, the any moves that they make must inflict self harm.
+        spell power. On failure, any moves that they make must inflict self harm.
 Elvira: 
   evil: true
   description: Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty. She believes that things should be destroyed
@@ -252,36 +252,36 @@ Naris:
       Beacon of Growth: Where you trod, green grass grows, and nature itself makes way for your passing. As a result, you 
         have advantage on checks made when moving through difficult natural terrain.
       Ceremony of Fertility: You are able to bless newlyweds and those seeking children to increase their fertility.
-Ceremonies:
-  General:
-    Marriage:
-      description: Bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
-        order, and gain advantage on all checks when the other is critically injured.
-      type: rite
-    Atonement:
-      description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
-        the entity a penance of your choice. Upon completion, they are restored to purity.
-      type: rite
-    Funeral:
-      description: Upon an individual’s death, you can perform a funeral for them. Any entity that recieved a proper funeral
-        cannot be resurrected by an evil entity.
-      type: rite
-    Birthing:
-      description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
-        by your diety until they are ten years of age. 
-      type: rite
-    Conversion:
-      description:  If an individual wishes to convert to follow your diety, you are able to perform the proper rites
-      type: rite
-    Pledge:
-      description: On your journey, an individual may pledge themselves to protect and serve you. They must have already
-        been converted to your deity. If they so choose, you must both go to a temple of your deity, or, that being
-        unavailable, craft one. To craft a temple, you must bless it with ash created from a holy flame and with holy water.
-        The one who is swearing allegiance must pledge to be always at your side, put you above themself, and share of everything
-        they have with you. You must pledge to uphold their dignity, and to ever be their ally. You then each must make
-        a small incision on your hand and mingle your blood. From that point on, you may speak with eachother telepathecially,
-        always have a vague idea of where the other is, and may split evenly the effects of any potion or food. If either of you
-        move more than one mile apart, you both want desperately to be reunited. If either of you choose to end this bond, you
-        both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
-        of 10 health.
-      type: rite
+# Ceremonies:
+#   General:
+#     Marriage:
+#       description: Bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
+#         order, and gain advantage on all checks when the other is critically injured.
+#       type: rite
+#     Atonement:
+#       description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
+#         the entity a penance of your choice. Upon completion, they are restored to purity.
+#       type: rite
+#     Funeral:
+#       description: Upon an individual’s death, you can perform a funeral for them. Any entity that recieved a proper funeral
+#         cannot be resurrected by an evil entity.
+#       type: rite
+#     Birthing:
+#       description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
+#         by your diety until they are ten years of age. 
+#       type: rite
+#     Conversion:
+#       description:  If an individual wishes to convert to follow your diety, you are able to perform the proper rites
+#       type: rite
+#     Pledge:
+#       description: On your journey, an individual may pledge themselves to protect and serve you. They must have already
+#         been converted to your deity. If they so choose, you must both go to a temple of your deity, or, that being
+#         unavailable, craft one. To craft a temple, you must bless it with ash created from a holy flame and with holy water.
+#         The one who is swearing allegiance must pledge to be always at your side, put you above themself, and share of everything
+#         they have with you. You must pledge to uphold their dignity, and to ever be their ally. You then each must make
+#         a small incision on your hand and mingle your blood. From that point on, you may speak with eachother telepathecially,
+#         always have a vague idea of where the other is, and may split evenly the effects of any potion or food. If either of you
+#         move more than one mile apart, you both want desperately to be reunited. If either of you choose to end this bond, you
+#         both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
+#         of 10 health.
+#       type: rite
