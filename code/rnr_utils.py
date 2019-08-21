@@ -24,17 +24,11 @@ GLOBAL_RACE_DATA = dict()
 GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 
-magical_classes = {
-    'bard': ["the_bard's_songbook", ],
-    'cleric': ['the_book_of_healing', ],
-    'paladin': ['the_book_of_healing', ],
-    'wizard': ['the_novice_spellbook', "the_wizard's_addendum"],
-    'sorcerer': ['the_novice_spellbook', "the_sorcerer's_scrolls"],
-    'druid': ['the_novice_spellbook', "the_druid's_guidebook"],
-    'necromancer': ['the_macabre_manual', ],
-    'monk': ['the_book_of_chi', ],
-    'battle_mage': ['the_novice_spellbook', ]
-}
+GLOBAL_MAGIC_CLASSES = dict()
+
+GLOBAL_INITIAL_SPELL_ABILITIES = dict()
+
+GLOBAL_SPELL_LEVEL_ABILITIES = dict()
 
 
 class rnr_entity:
@@ -50,10 +44,13 @@ class rnr_entity:
       self.intelligence = stats['Intelligence']
       self.luck = stats['Luck']
       self.perception = stats['Perception']
-      self.vitality = stats['Vitality']
       self.description = description
       self.quote = quote
       self.quote_author = quote_author
+
+      self.effective_stats = dict()
+      for key in self.stats.keys():
+        self.effective_stats[key] = self.get_effective_stat(key)
 
     def pretty_print(self):
       print(self.name)
@@ -64,7 +61,6 @@ class rnr_entity:
       print("int: {0}".format(self.intelligence))
       print("luc: {0}".format(self.luck))
       print("per: {0}".format(self.perception))
-      print("vit: {0}".format(self.vitality))
 
     def get_stat(self, stat_name):
       stat_name = stat_name.lower()
@@ -82,15 +78,28 @@ class rnr_entity:
         return self.luck
       elif stat_name == "perception":
         return self.perception
-      elif stat_name == "vitality":
-        return self.vitality
       else:
         print('Asked for bad stat {0}'.format(stat_name))
         return None
 
+    def get_effective_stat(self, stat_name):
+      stat = self.get_stat(stat_name)
+      if stat == None:
+        return None
+      # Remember if we should negate the stat at the end
+      neg = True if stat < 0 else False
+      # Absolute value to simplify code and help with rounding
+      stat = abs(stat)
+      # The first 3 in either direction count, then it takes 2
+      neg_three = stat - 3
+      val = stat if stat <= 3 else 3 + neg_three // 2
+      # Add the negation back in
+      return -val if neg else val 
+
     def base_serialize(self, verbose=False):
       serial = dict()
       serial["stats"] = self.stats
+      serial["effective_stats"] = self.effective_stats
       serial["name"] = self.name.replace(' ', '_')
       serial["abilities"] = filterAbilities(self.abilities, verbose)
       serial["description"] = self.description
@@ -131,9 +140,9 @@ class rnr_entity:
       ret += '>\n'
       ret += '>*{0}*\n'.format(description)
       ret += '>___\n'
-      ret += '>|VIT|STR|DEX|INT|INF|CHR|PER|LUK|\n'
+      ret += '>|STR|DEX|INT|INF|CHR|PER|LUK|\n'
       ret += '>|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n'
-      ret += '|{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|\n'.format(self.vitality,self.strength, self.dexterity, self.intelligence, self.inner_fire, self.charisma, self.perception, self.luck)
+      ret += '|{0}|{1}|{2}|{3}|{4}|{5}|{6}|\n'.format(self.strength, self.dexterity, self.intelligence, self.inner_fire, self.charisma, self.perception, self.luck)
       ret += '>___\n'
       ret += '>#### Abilities:\n'
       abilities = filterAbilities(self.abilities)
@@ -174,56 +183,26 @@ class rnr_class(rnr_entity):
       if class_data == None:
         raise Exception('ERROR: Could not load class {0}'.format(name))
       stats = class_data['base_stats']
-      abilities = class_data.get('base_abilities', list())
-
-      spell_learning_dict = OrderedDict()
-      self.spells_known = None
-
+      self.health_die_pieces = class_data['health_die_pieces']
       self.handbook = class_data.get('handbook', None)
+
+      # Gather up the abilities for all levels we've earned
+      abilities = class_data.get('base_abilities', list())
       for step in range(0,level+1):
         level_string = 'level_{0}'.format(step)
         if not level_string in class_data['levels']:
-          print('ERROR: could not load level {0} in class {1}'.format(step, name))
           continue
         level_details = class_data['levels'][level_string]
         
-        level_stats = level_details.get('stats', {})
-        stats = combine_stats(stats, level_stats)
         abilities = abilities + level_details.get('abilities', [])
         if not subclass is None and 'subclass_{0}_abilities'.format(subclass) in level_details:
           abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
 
-        for ability in abilities:
-          if bool(re.search('Level .* Spells', ability)) or ability in ["Fighting Techniques", "Master Fighting Techniques", "Legendary Fighting Techniques"]:
-            if not ability in spell_learning_dict:
-              spell_learning_dict[ability] = 0
-
-        for key in spell_learning_dict.keys():
-          spell_learning_dict[key] += 1
-
-      if len(spell_learning_dict.keys()) > 0:
-        spells_string = "As a level {0} {1}, you know ".format(level, name)
-        length = len(spell_learning_dict.keys())
-        i = 0
-        for key, val in spell_learning_dict.items():
-          i+=1
-          if i == 1:
-            spells_string = '{0} {1} {2}'.format(spells_string, val, key.lower())
-          elif i == length:
-            spells_string = '{0}, and {1} {2}.'.format(spells_string, val, key.lower())
-          else:
-            spells_string = '{0}, {1} {2}'.format(spells_string, val, key.lower())
-
-        self.spells_known = ("Spells Known", spells_string)
-
       self.level = level
       self.subclass = subclass if subclass != "" else None
       super().__init__(name, abilities, stats, class_data['description'], '', '')
+      self.spells_known = self.get_spell_counts()
 
-    def get_health(self):
-      summed_level = sum(range(self.level+1))
-      modifier = self.vitality * (self.level + 1)
-      return 10 + summed_level + modifier
 
     def markdownify(self, male=False):
       gender_string = 'male' if male else 'female'
@@ -290,6 +269,7 @@ class rnr_class(rnr_entity):
 
       all_data = get_rnr_class_data_with_name(self.name)
       serial['levels'] = all_data['levels']
+      serial['health_die_pieces'] = self.health_die_pieces
 
       for level in serial['levels'].keys():
         if not 'abilities' in serial['levels'][level] or serial['levels'][level]['abilities'] is None:
@@ -301,14 +281,66 @@ class rnr_class(rnr_entity):
             serial['levels'][level][key] = filterAbilities(serial['levels'][level][key])
       return serial
 
+    def get_spell_counts(self):
+      global GLOBAL_SPELL_LEVEL_ABILITIES, GLOBAL_INITIAL_SPELL_ABILITIES
+
+      class_data = get_rnr_class_data_with_name(self.name)
+      if class_data == None:
+        raise Exception('ERROR: Could not load class {0}'.format(self.name))
+      abilities = class_data.get('base_abilities', list())
+
+      spell_counts = OrderedDict()
+      one_timers = set()
+
+      for step in range(0,self.level+1):
+        level_string = 'level_{0}'.format(step)
+        if not level_string in class_data['levels']:
+          print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
+          continue
+        level_details = class_data['levels'][level_string]
+        
+        abilities = abilities + level_details.get('abilities', [])
+        if not self.subclass is None and 'subclass_{0}_abilities'.format(self.subclass) in level_details:
+          abilities = abilities + level_details['subclass_{0}_abilities'.format(self.subclass)]
+
+        for ability in abilities:
+          if ability in GLOBAL_SPELL_LEVEL_ABILITIES:
+            if not GLOBAL_SPELL_LEVEL_ABILITIES[ability] in spell_counts:
+              spell_counts[GLOBAL_SPELL_LEVEL_ABILITIES[ability]] = 0
+          elif ability in GLOBAL_INITIAL_SPELL_ABILITIES and ability not in one_timers:
+            one_timers.add(ability)
+            for key, val in GLOBAL_INITIAL_SPELL_ABILITIES[ability].items():
+              if not key in spell_counts:
+                spell_counts[key] = 0
+              spell_counts[key] += val
+
+        for key in spell_counts.keys():
+          spell_counts[key] += 1
+      return spell_counts
+
+    def get_spellbook_string(self):
+      s = 'As a level {0} {1} you known'.format(self.level, self.name)
+      i = 0
+      for key, val in self.spells_known.items():
+        if i != 0:
+          if i != len(self.spells_known.keys()) -1:
+            s += ','
+          else:
+            s += ', and'
+        s = '{0} {1} {2}'.format(s, val, get_formal_spell_level_name(key))
+        i += 1
+      return s + '.'
+
 class rnr_race(rnr_entity):
   #Base constructor
-  def __init__(self, name, subrace, abilities, stats, description, quote, quote_author, handbook):
+  def __init__(self, name, subrace, abilities, stats, description, quote, quote_author, handbook, health_die_pieces):
     self.race_name = name
     self.subrace_name = subrace
     self.quote = quote
     self.quote_author = quote_author
     self.handbook = handbook
+    self.health_die_pieces =  health_die_pieces
+
     super().__init__(subrace, abilities, stats, description, quote, quote_author)
     
   #simple constructor
@@ -319,7 +351,7 @@ class rnr_race(rnr_entity):
     if race_data == None:
       raise Exception('ERROR: Could not load race {0} {1}'.format(name, subrace))
     return cls(name, subrace, race_data['abilities'], race_data['stats'], race_data['description'],
-               race_data['quote'], race_data['author'], race_data.get('handbook', None))
+               race_data['quote'], race_data['author'], race_data.get('handbook', None), race_data['health_die_pieces'])
 
 
   def markdownify(self,male=False):
@@ -342,7 +374,7 @@ class rnr_race(rnr_entity):
 
     serial["path_to_image"] = "static/images/race/{0}/{1}.jpg".format(gender, img_name)
     print('path to image is {0}'.format(serial['path_to_image']))
-
+    serial['health_die_pieces'] = self.health_die_pieces
     serial['rights'] = GLOBAL_ART_DICTIONARY.get('{1}_{0}'.format(gender, img_name), None)
 
     return serial
@@ -359,6 +391,8 @@ class rnr_character(rnr_entity):
     if character_name.strip() != '':
       final_character_name = "{0}: {1}".format(character_name, final_character_name)
       
+    self.health_dice = rnr_race_obj.health_die_pieces + rnr_class_obj.health_die_pieces
+
     super().__init__(final_character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
     self.gender = 'male' if male==True else 'female'
@@ -383,19 +417,27 @@ class rnr_character(rnr_entity):
     serial['race'] = self.race.lower()
     serial['class'] = self.rnr_class.lower()
     serial['health'] = self.get_health()
+    serial['health_dice'] = self.health_dice
     serial['subrace'] = self.subrace
     serial['character_name'] = self.character_name
     serial['subclass'] = self.rnr_class_obj.subclass
     serial['gender'] = self.gender
     serial['origin'] = self.origin
-    if not self.rnr_class_obj.spells_known is None:
-      serial["abilities"]["choice"].append(self.rnr_class_obj.spells_known)
+    serial['level'] = self.level
+    # if not self.rnr_class_obj.spells_known is None and not len(self.rnr_class_obj.spells_known) == 0:
+    #   if "choice" not in serial["abilities"]:
+    #     serial["abilities"]["choice"] = list()
+    #   spellstr = self.rnr_class_obj.get_spellbook_string()
+    #   print("HERE")
+    #   print(spellstr)
+    #   serial["abilities"]["choice"].append(spellstr)
     return serial
 
   def get_health(self):
     summed_level = sum(range(self.level+1))
-    modifier = self.vitality * (self.level + 1)
-    return 10 + summed_level + modifier
+    base = self.health_dice * 2
+    bonus = (self.health_dice // 2) * self.level
+    return base + summed_level + bonus
 
 class rnr_ability:
   def __init__(self, name, description, ability_type):
@@ -497,8 +539,8 @@ def INSTALL_RANGERS_AND_RUFFIANS():
       try:
         convert_yaml_file_to_json_file(source, destination)
       except Exception as e:
-        print(e)
-        continue
+        print("ERROR: Could not install {0} to {1}".format(source, destination))
+        raise
       timestamps[filename] = mod_time
 
     with open(timestamp_json_path, 'w') as outfile:
@@ -507,14 +549,17 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_LEVEL_ABILITIES
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
   start = time.time()
 
-  INSTALL_RANGERS_AND_RUFFIANS()
-
+  try:
+    INSTALL_RANGERS_AND_RUFFIANS()
+  except Exception as e:
+    print("Critical Error while loading Rangers and Ruffians Data. Aborting")
+    sys.exit(1)
 
   ability_path = os.path.join(INSTALL_DIRECTORY, 'abilities.json')
   class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
@@ -555,8 +600,45 @@ def load_Rangers_And_Ruffians_Data():
   with open(art_path) as data_file:
     GLOBAL_ART_DICTIONARY = json.load(data_file)
 
+  GLOBAL_MAGIC_CLASSES = {
+    'bard': ["the_bard's_songbook", ],
+    'cleric': ['the_book_of_healing', ],
+    'paladin': ['the_book_of_healing', ],
+    'wizard': ['the_novice_spellbook', "the_wizard's_addendum"],
+    'sorcerer': ['the_novice_spellbook', "the_sorcerer's_scrolls"],
+    'druid': ['the_novice_spellbook', "the_druid's_guidebook"],
+    'necromancer': ['the_macabre_manual', ],
+    'monk': ['the_book_of_chi', ],
+    'battle_mage': ['the_novice_spellbook', ]
+  }
+
+  GLOBAL_INITIAL_SPELL_ABILITIES = {
+    'Minor Spell Choice' : { 'Level_0': 1},
+    'Spell Choice' : {'Level_0': 2},
+    'Starting Fighting Techniques' : {'Basic_Techniques' : 2}
+  }
+
+  GLOBAL_SPELL_LEVEL_ABILITIES   = {
+    'Level Zero Spells'   : 'Level_0', 
+    'Level One Spells'    : 'Level_1',
+    'Level Two Spells'    : 'Level_2', 
+    'Level Three Spells'  : 'Level_3',
+    'Level Four Spells'   : 'Level_4',
+    'Level Five Spells'   : 'Level_5',
+    'Fighting Techniques' : 'Basic_Techniques',
+    'Master Fighting Techniques' : 'Master_Techniques',
+    'Legendary Fighting Techniques' : 'Legendary Techniques'
+  }
+
   finish = time.time()
   #print('LOAD TIME: {0}(s)'.format(finish - start))
+
+def get_formal_spell_level_name(programatic_name):
+  global GLOBAL_SPELL_LEVEL_ABILITIES
+  for key, val in GLOBAL_SPELL_LEVEL_ABILITIES.items():
+    if val == programatic_name:
+      return key
+  return None
 
 def filterAbilities(abilities, verbose=False):
   filt = "description" if verbose else "brief"
@@ -579,8 +661,6 @@ def abbreviate_stat(stat, upper=False):
     ret = 'int'
   elif stat == 'inner fire' or stat == 'inner_fire':
     ret = 'inf'
-  elif stat == 'vitality':
-    ret = 'vit'
   elif stat == 'perception':
     ret = 'per'
   elif stat == 'charisma':
@@ -593,7 +673,7 @@ def abbreviate_stat(stat, upper=False):
   return ret.upper() if upper else ret
 
 def standard_stat_order():
-  return list(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Vitality', 'Luck'])
+  return list(['Strength', 'Dexterity', 'Intelligence', 'Inner_Fire', 'Charisma', 'Perception', 'Luck'])
 
 def roll_dice(number=1,sides=6,advantage=False,disadvantage=False):
   total = 0
@@ -690,6 +770,52 @@ def gather_spells(spell_data):
     player_spellbook[level][spell] = data
   return player_spellbook
 
+# If rnr_class is provided, return a spellbook for that class
+def join_spellbooks(rnr_class=None):
+  spell_books = get_all_spellbooks()
+  if not rnr_class is None:
+    if not rnr_class.lower() in GLOBAL_MAGIC_CLASSES.keys():
+      return None
+
+  book_list = list()
+
+  if rnr_class is None:
+    for key, val in GLOBAL_MAGIC_CLASSES.items():
+      for book in val:
+        if not book in book_list:
+          book_list.append(book)
+    big_book_name = "All Spells"
+  else:
+    for book_name in GLOBAL_MAGIC_CLASSES[rnr_class]:
+      book_list.append(book_name)
+    big_book_name = ' and '.join(book_list)
+
+  spell_data = dict()
+  spell_data = dict()
+  for book_name in book_list:
+    for chapter, pages in spell_books[book_name].items():
+      if not chapter in spell_data:
+        spell_data[chapter] = dict()
+      for spell_name, spell_info in pages.items():
+        if not spell_name in spell_data[chapter]:
+          spell_data[chapter][spell_name] = spell_info
+  return (big_book_name, spell_data)
+
+def get_random_spellbook(rnr_class, counts):
+  if rnr_class is None or rnr_class not in GLOBAL_MAGIC_CLASSES:
+    return dict()
+
+  _, possible_spells = join_spellbooks(rnr_class)
+  random_spellbook = dict()
+  for key, val in counts.items():
+    random_spellbook[key] = dict()
+    for s in random.sample(list(possible_spells[key].keys()), val):
+      random_spellbook[key][s] = possible_spells[key][s]
+  return random_spellbook
+
+
+
+
 def get_rnr_class_data_with_name(name):
   global GLOBAL_CLASS_DATA
 
@@ -765,7 +891,7 @@ def get_all_subrace_names(underscore=True):
   return subrace_names
 
 def get_all_stat_names():
-  return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception','Vitality']
+  return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception']
 
 def get_all_rnr_abilities():
   global GLOBAL_ABILITY_DICT
@@ -900,7 +1026,8 @@ def load_all_class_objects(level=0):
   for class_name in class_names:
     try:
       new_class = rnr_class(class_name, level)
-    except: 
+    except:
+      traceback.print_exc()
       continue
     rnr_classes.append(new_class)
   return rnr_classes

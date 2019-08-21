@@ -89,64 +89,89 @@ def dump_characters():
       outfile.write('{0}\n'.format(c))
     outfile.write('\n')
 
-def get_effective_vitality(vit):
-  if vit <= 3:
-    return vit
-  else:
-    real_vit = 3
-    vit = vit-3
-    return real_vit + (vit//2)
+# def get_effective_vitality(vit):
+#   if vit <= 3:
+#     return vit
+#   else:
+#     real_vit = 3
+#     vit = vit-3
+#     return real_vit + (vit//2)
 
 '''
 Health binning and vitality chart. Call vitality_chart()
 '''
-def quick_health(level, vitality, tier, mode):
-  tiers = {'light' : 4, 'medium' : 6, 'heavy' : 8}
+def quick_health(old_health, new_level, health_dice, mode):
   if mode == 'max':
-    bonus = tiers[tier]
+    bonus = health_dice
   elif mode == 'avg':
-    bonus = tiers[tier] // 2
-  else:
+    bonus = health_dice // 2
+  elif mode == 'min':
     bonus = 1
+  elif mode == 'rand':
+    bonus = rnr_utils.roll_dice(sides=health_dice)
+  elif mode == 'adv':
+    bonus = rnr_utils.roll_dice(sides=health_dice, advantage=True)
+  elif mode == 'round to half':
+    bonus = max(rnr_utils.roll_dice(sides=health_dice), health_dice//2)
 
+  if new_level == 0:
+    bonus = health_dice
 
-  summed_level = sum(range(level+1))
-  modifier = get_effective_vitality(vitality) * (level + 1)
-  return 10 + summed_level + modifier + (bonus*(level + 1))
+  return old_health + bonus + new_level
 
 def vitality_chart(data_packet):
   if not os.path.exists(STAT_OUTPUT):
     os.mkdir(STAT_OUTPUT)
-  for mode in ['max', 'min', 'avg']:
-    with open(os.path.join(STAT_OUTPUT, 'vitality_chart_{0}.txt'.format(mode)), 'w') as outfile:
-      outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rnr_utils\n')
-      outfile.write('{0:4}'.format('vit'))
-      for tier in ['light', 'medium', 'heavy']:
-        for i in range(11):
-          outfile.write('{0:4}'.format(i))
+  with open(os.path.join(STAT_OUTPUT, 'vitality_chart.txt'), 'w') as outfile:
+    outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rnr_utils.\nHEALTH COMPUTATIONS COULD BE INACCURATE\n')
+    outfile.write('\n')
+    for mode in ['max', 'min', 'avg', 'rand', 'adv', 'round to half']:
+      outfile.write('\n')
+      outfile.write('{0}\n'.format(mode.upper()))
+      
+      outfile.write('{0:<4}'.format('DIE'))
+      for i in range(0,11):
+        s = 'LV{0}'.format(i)
+        outfile.write('{0:<5}'.format(s))
+      outfile.write('\n')
+
+      for health_die in [4, 6, 8, 10, 12]:
+        outfile.write('{0:<4}'.format(health_die))
+        health = health_die
+        for level in range(0,11):
+          health = quick_health(health, level, health_die, mode)
+          outfile.write('{0:<5}'.format(health))
         outfile.write('\n')
 
-        for vitality in range(0,11):
-          outfile.write('{0:4}'.format(vitality))
-          for level in range(0,11):
-            outfile.write('{0:4}'.format(quick_health(level, vitality, tier, mode)))
-          outfile.write('\n')
 
-        health_dict = dict()
+        # for data in data_packet:
+        #   for i in range(0,6):
+        #     health_dict[i] = list()
+        #   for obj in data:
+        #     health_dict[obj.vitality].append(obj.name)
+        #   for i in range(0,6):
+        #     outfile.write('{0}: '.format(i))
+        #     lis = health_dict[i]
+        #     for name in lis:
+        #       outfile.write(name + ', ')
+        #     outfile.write('\n')
+        #   outfile.write('\n')
+
+    outfile.write('\n')
+    all_characters = rnr_utils.load_all_characters()
+    health_dice_dict = dict()
+    for c in all_characters:
+      h_d = c.health_dice
+      if not h_d in health_dice_dict:
+        health_dice_dict[h_d] = list()
+      health_dice_dict[h_d].append(c)
+    for i in range(20):
+      if i in health_dice_dict:
+        outfile.write('{0}: '.format(i))
+        for item in health_dice_dict[i]:
+          outfile.write('{0}, '.format(item.name))
         outfile.write('\n')
 
-        for data in data_packet:
-          for i in range(0,6):
-            health_dict[i] = list()
-          for obj in data:
-            health_dict[obj.vitality].append(obj.name)
-          for i in range(0,6):
-            outfile.write('{0}: '.format(i))
-            lis = health_dict[i]
-            for name in lis:
-              outfile.write(name + ', ')
-            outfile.write('\n')
-          outfile.write('\n')
 
 '''
 Spell output function. Call spell_stats()
@@ -235,10 +260,9 @@ def ability_check():
     print("All abilities are used.")
   print()
 
-def print_header(level, name, health, file_stream):
+def print_header(level, name, file_stream):
   file_stream.write('\n')
   file_stream.write('Level {0} {1}:\n'.format(level,name))
-  file_stream.write('HP: {0}\n'.format(health))
   file_stream.write('\n')
 
 def print_stats(stats, file_stream): 
@@ -273,7 +297,7 @@ def process_classes():
                 
         for subclass in subclasses:
           rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
-          print_header(level, name, rnr_class_object.get_health(), outfile)
+          print_header(level, name, outfile)
           print_stats(rnr_class_object.stats, outfile)
           print_abilities(subclass, rnr_class_object.abilities, outfile)
 
@@ -293,7 +317,7 @@ def level_details(level=0):
               
       for subclass in subclasses:
         rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
-        print_header(level, name, rnr_class_object.get_health(), outfile)
+        print_header(level, name, outfile)
         print_stats(rnr_class_object.stats, outfile)
         print_abilities(subclass, rnr_class_object.abilities, outfile)   
 
@@ -381,12 +405,16 @@ def evaluate_spells_for_doubling(print_errors=True):
   all_spellbooks = rnr_utils.get_all_spellbooks()
   target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
   offenders = list()
+  running_total = 0
   for spell_book, levels in all_spellbooks.items():
     for level, spell_list in levels.items():
       num = len(spell_list)
       if level in target_spell_counts:
         if "VICTORY!" not in evaluate(num, target_spell_counts[level]):
           offenders.append('{0} {2} needs {1}'.format(spell_book, (target_spell_counts[level]*2) - num, level))
+          running_total += (target_spell_counts[level]*2) - num
+  if running_total > 0:
+    offenders.append("We need {0} total spells".format(running_total))
   if print_errors:
     for error in offenders:
       print(error)

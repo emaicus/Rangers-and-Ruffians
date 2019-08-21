@@ -19,7 +19,7 @@
             {% if class_name != None %}
             <h2>{{class_name}} Level Up Sheet</h2>
             {% endif %}
-            {% for level in range(0,11) %}
+            {% for level in range(0,11) if 'level_{0}'.format(level) in data['levels'] %}
               <div id={{"level_"+level|string}}>
                 Level {{level}}
                 <ul>

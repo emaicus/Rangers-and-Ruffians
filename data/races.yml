@@ -21,6 +21,7 @@ Catterwol:
         for climing, more than one Catterwol has turned to the life of a sneak-theif.
         Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
         average mages, but prefer slim, dexterity based weapons.
+      health_die_pieces: 4
       handbook:
         sections: 
           - title: Silent and Dexterous
@@ -60,10 +61,10 @@ Catterwol:
         Luck: 0
         Perception: 1
         Strength: 0
-        Vitality: 2
 Elf:
   subraces:
     Wood Elf:
+      health_die_pieces: 4
       abilities:
         - Sleepless
         - Low-Light Vision
@@ -87,8 +88,8 @@ Elf:
         Luck: 0
         Perception: 2
         Strength: -1
-        Vitality: 1
     High Elf:
+      health_die_pieces: 2
       abilities:
         - Sleepless
         - Low-Light Vision
@@ -104,7 +105,7 @@ Elf:
         high elves often confine themselves to gleaming costal cities. When a high elf does
         venture out into the world at large, it is often in a diplomatic capacity. 
         High elves are as charming aas they are naturally beautiful, and commonly feel as though
-        it is their duty to maintain ballance in the world. High elves make 
+        it is their duty to maintain balance in the world. High elves make 
         good mages.
       stats:
         Charisma: 2
@@ -114,8 +115,8 @@ Elf:
         Luck: 0
         Perception: 0
         Strength: -1
-        Vitality: 1
     Deep Elf:
+      health_die_pieces: 4
       abilities:
         - Sleepless
         - Dark Vision
@@ -139,10 +140,10 @@ Elf:
         Luck: 0
         Perception: 1
         Strength: 1
-        Vitality: 2
 Gnome:
   subraces:
     Gnome:
+      health_die_pieces: 2
       abilities:
         - Tinker
         - Build
@@ -164,7 +165,6 @@ Gnome:
         Luck: 0
         Perception: 0
         Strength: 0
-        Vitality: 2
       handbook:
         sections: 
           - title: Tinker
@@ -194,6 +194,7 @@ Gnome:
 Goblin:
   subraces:
     Goblin:
+      health_die_pieces: 2
       abilities:
         - Still Warm
         - Mantel
@@ -218,10 +219,10 @@ Goblin:
         Luck: 1
         Perception: 2
         Strength: -1
-        Vitality: 1
 Halfling:
   subraces:
-    Fleetfoot:
+    Fleetfoot Halfling:
+      health_die_pieces: 2
       abilities:
         - Sling
         - Padfoot
@@ -244,8 +245,8 @@ Halfling:
         Luck: 1
         Perception: 1
         Strength: -2
-        Vitality: 1
-    Hardfoot:
+    Hardfoot Halfling:
+      health_die_pieces: 2
       abilities:
         - Sling
         - Warm Butter
@@ -268,10 +269,10 @@ Halfling:
         Luck: 0
         Perception: 0
         Strength: 1
-        Vitality: 2
 Human:
   subraces:
     Human:
+      health_die_pieces: 4
       abilities:
       - Last Stand
       - Strength of Men
@@ -291,10 +292,10 @@ Human:
         Luck: 0
         Perception: -1
         Strength: 1
-        Vitality: 2
 Lizkin:
   subraces:
     Lizkin:
+      health_die_pieces: 4
       abilities:
       - Color Choice
       - Smokevision
@@ -314,10 +315,10 @@ Lizkin:
         Luck: 0
         Perception: 1
         Strength: 1
-        Vitality: 3
 Waterborn:
   subraces:
     Waterborn:
+      health_die_pieces: 2
       abilities:
       - Unbreathing
       - Flows Like Water
@@ -345,10 +346,10 @@ Waterborn:
         Luck: 1
         Perception: 0
         Strength: -2
-        Vitality: 1
 Orc:
   subraces:
     Orc:
+      health_die_pieces: 4
       abilities:
       - Predator
       - Bellow
@@ -369,10 +370,10 @@ Orc:
         Luck: 0
         Perception: 1
         Strength: 1
-        Vitality: 3
 Dwarf:
   subraces:
     Dwarf:
+      health_die_pieces: 4
       abilities:
       - Mending
       - Miner's Eye
@@ -398,10 +399,10 @@ Dwarf:
         Luck: 0
         Perception: 0
         Strength: 1
-        Vitality: 3
 Daemonspawn:
   subraces:
     Daemonspawn:
+      health_die_pieces: 4
       abilities: 
       - Fix Your Eyes on Me 
       - Infernal Blood
@@ -423,10 +424,10 @@ Daemonspawn:
         Luck: 0
         Perception: 0
         Strength: 1
-        Vitality: 2
 Sprout:
   subraces:
     Sprout:
+      health_die_pieces: 2
       abilities: 
         - Photosynthesis
         - Blade of Grass
@@ -454,10 +455,10 @@ Sprout:
         Luck: 2
         Perception: 2
         Strength: -3
-        Vitality: 0
 Automaton:
   subraces:
-    Heavy Metal:
+    Heavy Metal Automaton:
+      health_die_pieces: 6
       abilities: 
       - Power Core 
       - Overdrive 
@@ -485,10 +486,10 @@ Automaton:
         Luck: 0
         Perception: 0
         Strength: 2
-        Vitality: 4
 Hissling:
   subraces:
     Hissling:
+      health_die_pieces: 2
       abilities: 
         - Small Fry
         - All Tuckered Out
@@ -525,4 +526,3 @@ Hissling:
         Luck: 1
         Perception: 3
         Strength: -3
-        Vitality: 0

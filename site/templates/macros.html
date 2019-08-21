@@ -1,0 +1,24 @@
+{% macro render_spellbook(character_name, rnr_class, spells) -%}
+  {% if character_name != None %}
+    <span class="characterName"> {{ character_name.replace('_', ' ').title() }}'s Spellbook</span><br>
+    <br/>
+  {% else %}
+    <br/>
+    <br/>
+  {% endif %}
+  {% for level in spells.keys()|sort()%}
+    <h4>{{level.replace('_',' ').title()}}</h4>
+    <ul>
+    {% for spell in spells[level].keys()|sort() %}
+      <li><b>{{spell.replace('_',' ').title()}}: 
+      (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
+      <!-- {%- if rnr_class == "sorcerer" %}
+        (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
+      {% else %}
+        (Cost: {{ spell["cost"] }})
+      {% endif -%}</b> -->
+      {{spells[level][spell]['description']}}</li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+{%- endmacro %}

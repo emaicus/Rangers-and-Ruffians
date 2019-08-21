@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
-import rnr_ballance_report
+import balance_report
 
 def log_output(test, errors):
   log_path = 'log.txt'
@@ -29,42 +29,42 @@ class rnrTests(unittest.TestCase):
 
   def test_ability_existence(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.get_non_existent_abilities()
+    errors = balance_report.get_non_existent_abilities()
     if len(errors)  > 0:
       log_output("Ability Existence", errors)
     self.assertEqual(len(errors), 0 )
 
   def test_spell_count_number(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.evaluate_spells_for_failures(print_errors=False)
+    errors = balance_report.evaluate_spells_for_failures(print_errors=False)
     if len(errors) > 0:
       log_output("Spell Counts", errors)
     self.assertEqual(len(errors),0)
 
   def test_spell_count_doubling(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.evaluate_spells_for_doubling(print_errors=False)
+    errors = balance_report.evaluate_spells_for_doubling(print_errors=False)
     if len(errors) > 0:
       log_output("Spell Doubling", errors)
     self.assertEqual(len(errors),0)
 
   def test_description_lengths(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.check_brief_abilities(print_errors=False)
+    errors = balance_report.check_brief_abilities(print_errors=False)
     if len(errors) > 0:
       log_output("Description Lengths", errors)
     self.assertEqual(len(errors),0)
 
   def test_descriptions_for_unescaped_characters(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.check_descriptions(print_errors=False)
+    errors = balance_report.check_descriptions(print_errors=False)
     if len(errors) > 0:
       log_output("Descriptions", errors)
     self.assertEqual(len(errors),0)
 
   def test_for_spelling_errors(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = rnr_ballance_report.spell_check(fix_errors=False, print_errors=False)
+    errors = balance_report.spell_check(fix_errors=False, print_errors=False)
     if len(errors.keys()) > 0:
       all_error_list = list()
       for file, errs in errors.items():
@@ -86,7 +86,7 @@ class rnrTests(unittest.TestCase):
     
     self.assertEqual(len(errors), 0)
 
-  def test_race_ballance(self):
+  def test_race_balance(self):
     all_races = rnr_utils.load_all_race_objects()
     errors = list()
     for r in all_races:

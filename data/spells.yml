@@ -285,6 +285,7 @@ the_bard's_songbook:
         who hears must make an inner fire saving throw against your spell power and
         moves as far away as possible on failure.
     Horace's Wholesome Homestead:
+      charisma_cost: 10
       cost: 3
       description: Summon a pocket dimension containing a small homestead, capable
         of housing 6 people comfortably in two shared bedrooms. The homestead is fully
@@ -416,7 +417,7 @@ the_bard's_songbook:
       description: Summon a steed made of pure magical energy. The stallion has 20
         health, and may be de-summoned on command.
 the_book_of_chi:
-  Combat Basic Techniques:
+  Basic_Techniques:
     Brawler:
       description: Your hands are d8 weapons.
     Catch Projectile:
@@ -455,7 +456,6 @@ the_book_of_chi:
     Sweep the Leg:
       description: Attack with a single kick. If the target fails a dexterity save,
         they are knocked prone.
-  General Basic Techniques:
     Aerial Acrobatics:
       description: You can turn flips and spin in the air. If your feet touch something
         solid, you can spring from it.
@@ -489,7 +489,7 @@ the_book_of_chi:
       description: Add 1 to your strength.
     Tumble:
       description: You take half fall damage.
-  Master Techniques:
+  Master_Techniques:
     Aura of Calm:
       description: Allies near you gain +2 on all inner fire saving throws and
         checks against an enemy's spell power.
@@ -635,6 +635,9 @@ the_book_of_healing:
       description: Once per rest, the light of your deity shines from you. For five minutes, you gain advantage on
         charisma checks, and advantage on intimidation checks when attempting to intimidate
         evil enemies.
+    Minor Heal:
+      cost: 1
+      description: Restore 2d4 health to one ally or yourself.
   Level_1:
     Augment Allied Attack:
       cost: 1
@@ -688,9 +691,6 @@ the_book_of_healing:
     Minor Dispel Magic:
       cost: 1
       description: Undo the effects wrought by up to a 2nd level spell.
-    Minor Heal:
-      cost: 1
-      description: Restore 2d4 health to one ally or yourself.
     Minor Holy weapon:
       cost: 1
       description: Imbue your weapon with the spirit of righteousness. Your weapon
@@ -2400,7 +2400,7 @@ the_sorcerer's_scrolls:
       cost: 4
       description: Instantly teleport to your familiar.
     Fly:
-      charisma_cost: 12
+      charisma_cost: 14
       cost: 4
       description: Allow yourself or another entity to fly. Concentration.
     Illusory Terrain:

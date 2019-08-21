@@ -83,58 +83,13 @@
                   <p>
                     <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
                     <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
-                    <span class="subtitle">Health Dice:</span><span class="normalText"> __________ </span><br/>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-6">
-            <div class="boxDiv" style="margin-top:10px;">
-              <p class="boxSubtitle">Stats:</p>
-              {% for stat in ['STR', 'DEX', 'INT', 'INF', 'PER', 'CHA', 'LUK'] %}
-              <div class="circleDiv">
-                <div class="statDiv">
-                  <p class="statText">
-                    <span class="statName"> 
-                      {{stat}}:
-                    </span>
-                  {% if stat != 'LUK' %}
-                    <span class="plusMinus">+&nbsp;&nbsp;-</span>
-                  {% endif %}
-                  </p>
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                &nbsp;&nbsp;________
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-              <!-- <div class=squareWrapper>
+              <div class=squareWrapper>
                 <div class=square>
                   <span class="squareContent">STR</span>
                 </div>
@@ -202,7 +157,7 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <div id="combatAbilities" class="combatAbilities">
                 <p class="boxSubtitle">Combat Abilities:</p>
                 <div id="combatAbilityList">
