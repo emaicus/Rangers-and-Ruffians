@@ -1,0 +1,412 @@
+{% import 'macros.html' as macros %}
+
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/css/diamonds.css">
+      <link rel="stylesheet" href="/static/css/iterated_char_sheet.css">
+      <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="logo">
+      <div class="container" id ="logo">
+        <div class="row">
+          <div class="col s12">
+                 <a href="/" style="color:black; font-family: 'Cinzel Decorative', cursive;"> Rangers and Ruffians </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="printRegion">
+      <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
+        <div class="row h-100">
+          <div class="col-12">
+            <div id="characterDetails" class="characterDetails">
+              <div class="row" style="height:90px;">
+                <div class="col-5">
+                  <span class="characterName"> {{ character["character_name"].replace('_', ' ').title() }}</span><br/>
+                </div>
+                <div class="col-7">
+                  <div id="iconDiv" class="iconDiv">
+                  {% for img, caption in icons %}
+                  <figure style="display: inline-block">
+                    <img src="/static/images/icons/{{img}}" class="icon">
+                    <figcaption class="caption">{{caption}}</figcaption>
+                  </figure>
+                  {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3">
+                  <p>
+                    {% if character["subrace"] !=  None %}
+                      <span class="subtitle">Race:</span><span class="normalText"> {{ character["subrace"].replace('_',' ').title() }}</span><br/>
+                    {% else %}
+                      <span class="subtitle">Race:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}
+                    {% if character["class"] !=  None %}
+                      <span class="subtitle">Class:</span><span class="normalText"> {{ character["class"].replace('_',' ').title() }} </span><br/>
+                    {% else %}
+                      <span class="subtitle">Class:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}  
+                    {% if character["subclass"] !=  None %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> {{ character["subclass"].replace('_',' ').title() }} </span>
+                    {% else %}
+                      <span class="subtitle">Subclass:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}
+                  </p>
+                </div>
+                <div class=col-3>
+                  <p>
+                    <span class="subtitle">Age:</span><span class="normalText"> __________</span><br/>
+                    {% if character["subclass"] !=  None %}
+                      <span class="subtitle">Gender:</span><span class="normalText"> {{ character["gender"].replace('_',' ').title() }} </span>
+                    {% else %}
+                      <span class="subtitle">Gender:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}
+                    <span class="subtitle">Height:</span><span class="normalText"> __________</span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Hair:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Skin:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Eyes:</span><span class="normalText"> __________ </span>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <p>
+                    <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
+                    {% if visualStats == True %}
+                    <span class="subtitle">Health Dice:</span><span class="normalText"> __________ </span><br/>
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            {% if visualStats == True %}
+            <div class="boxDiv" style="margin-top:10px;">
+              <p class="boxSubtitle">Stats:</p>
+              {% for stat in ['STR', 'DEX', 'INT', 'INF', 'PER', 'CHA', 'LUK'] %}
+              <div class="circleDiv">
+                <div class="statDiv">
+                  <p class="statText">
+                    <span class="statName"> 
+                      {{stat}}:
+                    </span>
+                  {% if stat != 'LUK' %}
+                    <span class="plusMinus">+&nbsp;&nbsp;-</span>
+                  {% endif %}
+                  </p>
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
+                </div>
+                <div class="singleCircle">
+                &nbsp;&nbsp;________
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            {% else %}
+            <div class=squareWrapper>
+                <div class=square>
+                  <span class="squareContent">STR</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">INT</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">PER</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">LUK</span>
+                </div>
+                <br/>
+                <div class=square>
+                  <span class="squareContent">DEX</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">INF</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">CHA</span>
+                </div>
+                <div class=square>
+                  <span class="squareContent">HD</span>
+                </div>
+              </div>
+              <!-- <div class="boxDiv" id="combatDiv">
+                <div id="combatItemsHeading">
+                  <p class="boxSubtitle">Combat Items:</p>
+                </div>
+                <div class=combatItems>
+                  <div class="row">
+                    <div class="col-6">
+                      <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
+                      <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
+                    </div>
+                    <div class="col-6">
+                      <p><span class="fancyNumber">3.</span><span class="underline">_________________</span></p>
+                      <p><span class="fancyNumber">4.</span><span class="underline">_________________</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="boxSubtitle">Inventory:</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <p><span class="fancyNumber">1.</span><span class="underline">___________________</span></p>
+                      <p><span class="fancyNumber">2.</span><span class="underline">___________________</span></p>
+                      <p><span class="fancyNumber">3.</span><span class="underline">___________________</span></p>
+                    </div>
+                    <div class="col-6">
+                      <p><span class="fancyNumber">5.</span><span class="underline">_________________</span></p>
+                      <p><span class="fancyNumber">6.</span><span class="underline">_________________</span></p>
+                      <p><span class="fancyNumber">7.</span><span class="underline">________________</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
+                    </div>
+                    <div class="col-6">
+                      <p><span id="fancyStar">*.</span><span class="underline">_________________</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              {% endif %}
+              <div id="combatAbilities" 
+                {% if visualStats == True %}
+                  class="combatAbilitiesVisualStats">
+                {% else %}
+                  class="combatAbilities">
+                {% endif%}
+
+                <p class="boxSubtitle">Combat Abilities:</p>
+                <div id="combatAbilityList">
+                  {% for ability, description in character["abilities"]["combat"] %}
+                    <p class="ability">
+                      <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                    </p>
+                  {% endfor %}
+                </div>
+              </div>
+          </div>
+          <div class="col-6">
+            <div id="generalAbilities" class="generalAbilities">
+              <p class="boxSubtitle">Abilities:</p>
+              <div id="generalAbilityList">
+                {% for ability, description in character["abilities"]["general"] %}
+                  <p class="ability">
+                    <span class="normalText"><strong>{{ability}}:</strong> </span><span class="normalText">{{description}}</span>
+                  </p>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="splitBoxDiv" id="advantagesAndDisadvantages">
+              <div class="row">
+                <div class="col-6">
+                  <p class="boxSubtitle">Advantages:</p>
+                  <div id="advantages">
+                    {% for ability, description in character["abilities"]["advantage"] %}
+                      <p class="ability">
+                        <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                      </p>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="col-6">
+                  <p class="boxSubtitle">Disadvantages:</p>
+                  <div id="disadvantages">
+                    {% for ability, description in character["abilities"]["disadvantage"] %}
+                      <p class="ability">
+                        <span class="subtitle">{{ability}}: </span><span class="normalText">{{description}}</span>
+                      </p>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if spells != None %}
+    <div class="printRegion">
+      <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
+        <div class="row h-100">
+          <div class="col-12">
+            {{ macros.render_spellbook( character["character_name"], character["class"], spells ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if class_data %}
+    <div class="printRegion">
+      <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
+        <div class="row h-100">
+          <div class="col-12">
+            {{ macros.render_level_up_page(character["class"].title(), class_data) }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if character["subrace"] != None %}
+    <div class="buttonRegion">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <hr>
+            {% if character['origin'] != None and character['origin'] != '' %}
+              <h2>Backstory</h2>
+              <p>
+                {{character['origin']}}
+              </p>
+              <hr>
+            {% endif %}
+            <h2>Stats</h2>
+            <strong>Copy these stats to your character sheet before you leave this page.</strong>
+            <div id="computed_stats">
+              <p>
+              <strong>Health:</strong> {{ character["health"] }}
+              <br/>
+              <strong>Spell Points:</strong> {{ 5 + character["effective_stats"]["Intelligence"] }}
+              <br/>
+              <strong>Spell Power:</strong> {{ 10 + ( character["effective_stats"]["Inner_Fire"] * 2 ) }}
+              </p>
+            </div>
+            <div id="base_stats">
+              <strong>Your Character's Base Stats Were</strong>
+              <p>
+                <strong>STR</strong>: {{ character["stats"]["Strength"] }}
+                <br/>
+                <strong>INT</strong>: {{ character["stats"]["Intelligence"] }}
+                <br/>
+                <strong>PER</strong>: {{ character["stats"]["Perception"] }}
+                <br/>
+                <strong>LUK</strong>: {{ character["stats"]["Luck"] }}
+                <br/>
+                <strong>DEX</strong>: {{ character["stats"]["Dexterity"] }}
+                <br/>
+                <strong>INF</strong>: {{ character["stats"]["Inner_Fire"] }}
+                <br/>
+                <strong>CHA</strong>: {{ character["stats"]["Charisma"] }}
+                <br/>
+                <strong>HD</strong>: d{{ character["health_dice"] }}
+              </p>
+              {% if character['level'] > 0 %}
+                <p>
+                You have leveled up {{character['level']}} times, so you have {{character['level'] * 2 }} stat points to spend.
+                </p>
+              {% endif %}
+            </div>
+            <br/>
+            <h4>Abilities</h4>
+            <br/>
+            {% if "choice" in character["abilities"] %}
+              {% if character["abilities"]["choice"] | length %}
+                <strong>Please make the following choices:</strong>
+                <ol>
+                {% for ability in character["abilities"]["choice"] %}
+                  <li><strong>{{ability[0]}}: </strong>{{ability[1]}}</li>
+                {% endfor %}
+                </ol>
+                <br/>
+              {% endif %}
+            {% endif %}
+            
+            {% if "starting_item" in character["abilities"] %}
+              {% if character["abilities"]["starting_item"] |length %}
+                <strong>Please add the following starting items to your inventory:</strong>
+                <ol>
+                {% for ability in character["abilities"]["starting_item"] %}
+                  <li><strong>{{ability[0]}}: </strong>{{ability[1]}}</li>
+                {% endfor %}
+                </ol>
+                <br/>
+              {% endif %}
+            {% endif %}
+
+            {% if "spellbook" in character["abilities"] %}
+              {% if character["abilities"]["spellbook"] |length %}
+                <strong>Please note that you have access to the following spellbooks:</strong>
+                <ol>
+                {% for ability in character["abilities"]["spellbook"] %}
+                  <li><strong>{{ability[0]}}: </strong>{{ability[1]}}</li>
+                {% endfor %}
+                </ol>
+                <br/>
+              {% endif %}
+            {% endif %}
+
+            {% if "action" in character["abilities"] %}
+              {% if character["abilities"]["action"] |length %}
+                <strong>Please note that your character can make the following actions during combat:</strong>
+                <ol>
+                {% for ability in character["abilities"]["action"] %}
+                  <li><strong>{{ability[0]}}: </strong>{{ability[1]}}</li>
+                {% endfor %}
+                </ol>
+                <br/>
+              {% endif %}
+            {% endif %}
+
+            {% if "rule" in character["abilities"] %}
+              {% if character["abilities"]["rule"] |length %}
+                <strong>Please note that the following rules affect your character:</strong>
+                <ol>
+                {% for ability in character["abilities"]["rule"] %}
+                  <li><strong>{{ability[0]}}: </strong>{{ability[1]}}</li>
+                {% endfor %}
+                </ol>
+                <br/>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div> 
+    {% endif %}  
+    <script src="/static/js/jquery-3.3.1.js"></script>  
+  </body>
+</html>
+
+
+
+<!-- Alegreya SC ; Alice -->
+
+<!-- Autour One (Spellbook titles?) Balthazar (spells) -->
+
+<!-- Dawning of a New Day (notetaking font) -->

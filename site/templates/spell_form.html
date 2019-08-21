@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="row">
-        <form action="print_spell_page" method="GET">
+        <form action={{next_page}} method="POST">
         {%for spellbook, spells in data.items()%}
           <div class="col s12" id={{spellbook}}>
             <div class="card-panel white">
@@ -30,7 +30,7 @@
                       {% for spell in spells[level].keys()|sort()%}
                         <div class="form-check">
                           <label class="checkbox-inline">
-                            <input type="checkbox" class="filled-in" name="chosen_spells" value={{spell.replace(' ','_')}}> 
+                            <input type="checkbox" class="filled-in" name="spells" value={{spell.replace(' ','_')}}> 
                             <span><b>{{spell.title()}}:</b> {{spells[level][spell]['description']}}</span>
                           </label>
                         </div>
@@ -42,7 +42,12 @@
             </div>
           </div>
         {% endfor %}
-        <input type="hidden" name="chosen_name" value={{chosen_name}} /> 
+        <input type="hidden" name="class" value={{rnr_class}} /> 
+        <input type="hidden" name="name" value={{name}} /> 
+        <input type="hidden" name="race" value={{race}} /> 
+        <input type="hidden" name="subrace" value={{subrace}} /> 
+        <input type="hidden" name="level" value={{level}} /> 
+        <input type="hidden" name="gender" value={{gender}} /> 
         <input type="submit" /> 
         </form>
       </div>

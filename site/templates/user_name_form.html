@@ -23,26 +23,52 @@
             </h4>
           </div>
           <div class="card-content">
-            <form action="creation" method="GET">
-              <input type="text" name="name" placeholder={{random_name}} value={{random_name}}>
-              <input type="hidden" name="gender" value={{gender}} /> 
-              <input type="hidden" name="race" value={{race}} /> 
-              <input type="hidden" name="class" value={{rnr_class}} /> 
-              <br/>
-              <h4>What Tier Is Your Character?</h4>
-              <fieldset class="form-group left-align">
-                <label>
-                  <input name="tier" value="0" type="radio">
-                  <span>Tier 0</span>
-                </label>
-                <br/>
-                <label>
-                  <input name="tier" value="1" type="radio" checked>
-                  <span>Tier 1</span>
-                </label>
-              </fieldset>
-              <br/>
-              <hr>
+            <form action="creation" method="GET" id="name_form">
+              <input type="text" name="name" placeholder={{random_name}} value={{random_name}} />
+
+              <select name="gender" form="name_form">
+                {% for gender in all_genders %}
+                  {% if gender == chosen_gender %}
+                    <option value={{gender}} selected>{{gender.replace('_', ' ').title()}}</option>
+                  {% else %}
+                    <option value="{{gender}}">{{gender.replace('_', ' ').title()}}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+              <select name="subrace" form="name_form">
+                {% for race in all_races %}
+                  {% if race[1].lower() == chosen_subrace %}
+                    <option value={{race[1]}} selected>{{race[1].replace('_', ' ').title()}}</option>
+                  {% else %}
+                    <option value={{race[1]}}>{{race[1].replace('_', ' ').title()}}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              <select name="class" form="name_form">
+                {% for rnr_class in all_rnr_classes %}
+                  {% if rnr_class.lower() == chosen_rnr_class %}
+                    <option value="{{rnr_class}}" selected>{{rnr_class.replace('_', ' ').title()}}</option>
+                  {% else %}
+                    <option value="{{rnr_class}}">{{rnr_class.replace('_', ' ').title()}}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              <select name="level" form="name_form">
+                <option value="0" selected>Level 0</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+                <option value="6">Level 6</option>
+                <option value="7">Level 7</option>
+                <option value="8">Level 8</option>
+                <option value="9">Level 9</option>
+                <option value="10">Level 10</option>
+              </select>
+             <!--  <br/>
               <h4>Do You Want Randomly Rolled Stats?</h4>
               <fieldset class="form-group left-align">
                 <label>
@@ -55,7 +81,7 @@
                   <span>No</span>
                 </label>
               </fieldset>
-              <br/>
+              <br/> -->
               <input type="submit" /> 
             </form>
           </div>

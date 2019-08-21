@@ -1,0 +1,8 @@
+Charisma: -4
+Dexterity: 0
+Inner_Fire: 1
+Perception: -1
+Strength: -2
+Intelligence: 2
+Luck: 0
+Vitality: 1

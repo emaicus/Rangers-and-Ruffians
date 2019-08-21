@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="/static/css/diamonds.css">
+      <link rel="stylesheet" href="/static/css/new_display_page.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col s12">
+               <h2 style="font-family: 'Cinzel Decorative', cursive;"> <a href="/" style="color:black"> Rangers and Ruffians </a> </h2>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col s12">
+               <div class="diamond-grid">
+                  {% for rnr_entity in data %}
+                     <div class="item">
+                        <img src = {{rnr_entity["path_to_image"] }}>
+                     </div>
+                  {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="/static/js/jquery-3.3.1.js"></script>
+      <script src="/static/js/bootstrap.min.js"></script>
+      <script src="/static/js/jquery.diamonds.js"></script>
+      <script type="text/javascript">
+         $(".diamond-grid").diamonds({
+             hideIncompleteRow : false, // Hide last row if there are not enough items to fill it completely.
+             autoRedraw : true, // Auto redraw diamonds when it detects resizing.
+             itemSelector : ".item" // the css selector to use to select diamonds-items.
+         });
+         </script>
+   </body>
+</html>
+

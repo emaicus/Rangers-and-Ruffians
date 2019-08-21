@@ -2,3 +2,7 @@ stat_output/
 images/DONT_CHECK_IN/
 data/deprecated
 latex_files/
+INSTALLED_DATA/
+**/__pycache__/
+code/reports
+tests/log.txt

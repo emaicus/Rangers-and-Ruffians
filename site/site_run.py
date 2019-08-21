@@ -3,193 +3,155 @@ import flask
 import sys
 from flask import Flask,redirect, render_template
 from flask import request
-import rnr_utils
 import cgi
 import names
 import random
-import rnr_descriptions
 import json
-
-magical_classes = {
-  'bard' : ["the_bard's_songbook",],
-  'cleric' : ['the_book_of_healing',],
-  'paladin' : ['the_book_of_healing',],
-  'wizard' : ['the_novice_spellbook', "the_wizard's_addendum"],
-  'sorcerer' : ['the_novice_spellbook', "the_sorcerer's_scrolls"],
-  'druid' : ['the_novice_spellbook', "the_druid's_guidebook"],
-  'necromancer' : ['the_macabre_manual',],
-  'monk' : ['the_book_of_chi',]
-}
+import site_utils
+sys.path.append(os.path.abspath('../code'))
+import rnr_utils
+import rnr_descriptions
 
 app = Flask(__name__, static_url_path='/static')
 
-# @app.route('/races')
 @app.route('/')
 def index_page():
+  print('hit index page')
   return render_template('homepage.html')
 
 @app.route('/legal')
 def legal():
-  with open('../data/art.json','r') as art_json:
-    art = json.load(art_json)  
-  return render_template('legal.html',art=art)
+  print('hit legal')
+  return render_template('legal.html',art=rnr_utils.GLOBAL_ART_DICTIONARY)
 
 @app.route('/creation')
 def creation_landing_page():
-
-  class_names = rnr_utils.get_all_class_names()
-  class_names = [x.lower() for x in class_names]
-  race_names = rnr_utils.get_all_race_names()
-  race_names = [x.lower() for x in race_names]
-
-  chosen_gender = request.args.get('gender','')
-  chosen_race = request.args.get('race','')
-  chosen_class = request.args.get('class','')
-  chosen_name = request.args.get('name','')
-  chosen_name = request.args.get('name','')
-  valid_gender = valid_race = valid_class = valid_name = False
-  tier = request.args.get('tier', 0)
-  roll_stats = request.args.get('roll_stats',0)
-  
-  try:
-    tier = int(tier)
-  except Exception as e:
-    tier = 0
-  if tier not in [0,1]:
-    tier = 1
-  
-  try:
-    roll_stats = int(roll_stats)
-  except Exception as e:
-    roll_stats = 0
-  
-  roll_stats = True if roll_stats == 1 else False
-
-  serial_data = list()
-  page_objects = list()
+  print('Hit creation landing page')
+  page_objects = None
   populated_value = ""
   forwarding_param = ""
-  male = False
-
-  next_char = "?"
-
-  # TODO load gender pictures.
-  if chosen_gender.lower() in ('male', 'female'):
-    valid_gender = True
-    male = True if chosen_gender.lower() == 'male' else False
-
-  if chosen_race.lower() in race_names:
-    valid_race = True
-
-
-  if chosen_class.lower() in class_names:
-    valid_class = True
-
-  magic_class = False
-  if chosen_class.lower() in magical_classes.keys():
-    magic_class=True
-
-  chosen_name = cgi.escape(chosen_name)
-  if chosen_name != '':
-    valid_name = True
-
-
-  if valid_gender and valid_race and valid_class and valid_name == False:
-    print("The name {0} was invalid".format(chosen_name))
-    random_name = names.get_first_name(gender=chosen_gender.lower())
-    return render_template("user_name_form.html", gender=chosen_gender.lower(), race=chosen_race.lower(), rnr_class=chosen_class.lower(), random_name=random_name.title())
-
-  if valid_gender and valid_race and valid_class and valid_name:
-    character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name, roll_stats=roll_stats)
-    serial = character.serialize()
-    return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class,chosen_name=chosen_name)
-
-  if not valid_gender:
-    for gender in ("male", "female"):
-      serial = dict()
-      serial["stats"] = {}
-      serial["name"] = gender
-      serial["abilities"] = {}
-      serial["description"] = '''Your chosen gender can affect the way that you roleplay your character
-                                 in Rangers and Ruffians. However, it should not affect your chosen race
-                                 or class. While using the website, your chosen gender will affect the 
-                                 race and class images that are displayed.
-                              '''
-      serial["standings"] = ''
-      serial["path_to_image"] = "/static/images/gender/{0}.jpg".format(gender.lower())
-
-      with open('../data/art.json','r') as art_json:
-        art = json.load(art_json)
-
-      serial['rights'] = art.get(gender.lower(), None)
-
-      serial_data.append(serial)
-    populated_value = "gender"
-  else:
-    forwarding_param = "{0}{1}gender={2}".format(forwarding_param,next_char,chosen_gender.lower())
-    next_char = "&"
-
-  if not valid_race:
-    if valid_gender:
-      page_objects = rnr_utils.load_all_race_objects()
-      populated_value = "race"
-  else:
-    forwarding_param = "{0}{1}race={2}".format(forwarding_param,next_char,chosen_race.lower())
-    next_char = "&"
+  serial_data = list()
   
-  if not valid_class:
-    if valid_race and valid_gender:
-      page_objects = rnr_utils.load_all_class_objects()
-      populated_value = "class"
-  else:
-    forwarding_param = "{0}{1}class={2}".format(forwarding_param,next_char,chosen_class.lower())
-    next_char = "&"
+  info = site_utils.validity_check()
+  next_to_populate = site_utils.find_next_page(info)
+  redirect_string = site_utils.generate_redirect_string(info)
 
   prev_stats = None
-  if valid_class:
-    prev_stats = rnr_utils.load_class(chosen_class).stats
-  if valid_race:
-    prev_stats = rnr_utils.load_race(chosen_race).stats
+  if info['class'] != None:
+    prev_stats = rnr_utils.rnr_class(info['class']).stats
+  if info['subrace'] != None:
+    subrace = info['subrace'].replace('_', ' ')
+    race = rnr_utils.get_race_given_subrace(subrace)
+    prev_stats = rnr_utils.rnr_race.basic_constructor(race, subrace).stats
 
-  for entity in page_objects:
-    serial = entity.serialize(male)
-    serial_data.append(serial)
+  if next_to_populate == 'name' or next_to_populate == 'level':
+    random_name = names.get_first_name(gender=info['gender'])
+    print('Going to username form')
+    return render_template("user_name_form.html", chosen_gender=info['gender'], chosen_subrace=info['subrace'], chosen_rnr_class=info['class'], all_genders=['male','female'], all_races=rnr_utils.get_all_race_names(), all_rnr_classes=rnr_utils.get_all_class_names(), random_name=random_name.title())
+  elif next_to_populate == 'gender':
+    serial_data = site_utils.populate_gender()
+    print('Going to gender page')
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
+  elif next_to_populate == 'class':
+    serial_data = site_utils.populate_class(info)
+    print('Going to class page')
+    return render_template("display_page.html", data=serial_data, stat_order=rnr_utils.standard_stat_order(), next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
+  elif next_to_populate == 'subrace':
+    serial_data = site_utils.populate_race(info)
+    print('Going to race page')
+    return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='subrace',prev_stats=prev_stats,display_class=False)
+  else:
+    name = info['name']
+    subrace = info['subrace']
+    race = rnr_utils.get_race_given_subrace(subrace.replace('_', ' '))
+    print(subrace, race)
+    rnr_class = info['class']
+    level = info['level']
+    gender = info['gender']
+    # If we need to hit the spells form
+    if rnr_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+      print('Going to spell page helper')
+      return spell_page_helper('creation/character_sheet', rnr_class, name, race, subrace, level, gender )
+    else:
+      male=True if gender.lower() == 'male' else False
+      character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
+      serial = character.serialize()
+      serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
+      print('Going to character sheet')
+      return render_template("character_sheet.html",character=serial, icons=site_utils.which_icons(rnr_class, rnr_class), spells=None, class_data=serial_class)
 
-  populated_value = "{0}{1}".format(next_char,populated_value)
-  next_page = "/creation"
-  
-  return render_template("display_page.html", data=serial_data, next_page=next_page, forwarding_param=forwarding_param, next_param = populated_value, tier=tier, prev_stats=prev_stats)
+@app.route('/creation/character_sheet', methods=['POST',])
+def character_sheet_helper():
+  print('hit char_sheet helper')
+  info = site_utils.validity_check()
+  next_page = site_utils.find_next_page(info)
+
+  # Route back if something goes wrong
+  if next_page is not None:
+    return creation_landing_page()
+  # if next_page is not None:
+  #   if next_page == 'deity':
+  #     #render the deity page
+  #     pass
+  #   else:
+  #     creation_landing_page()
+  # else:
+  name = info['name']
+  subrace = info['subrace'].replace('_', ' ')
+  race = rnr_utils.get_race_given_subrace(subrace)
+  rnr_class = info['class']
+  level = info['level']
+  gender = info['gender']
+  spells = info['spells']
+  print(spells)
+  player_spellbook = rnr_utils.gather_spells(spells)
+  print(json.dumps(player_spellbook, indent=4))
+  male=True if gender.lower() == 'male' else False
+  character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
+  serial = character.serialize()
+  serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(rnr_class, rnr_class), spells=player_spellbook, class_data=serial_class)
+
+@app.route('/ajax_load_content', methods=['POST',])
+def ajax_load_content():
+  print('hit ajax_load_content')
+  class_names = rnr_utils.get_all_class_names()
+  class_names = [x.lower() for x in class_names]
+  subrace_names = rnr_utils.get_all_subrace_names()
+  subrace_names = [x.lower() for x in subrace_names]
+
+  entity_to_load = request.form.get('entity_to_load','NO ENTITY SPECIFIED').lower()
+
+  if entity_to_load in class_names:
+    serial = rnr_utils.rnr_class(entity_to_load, level=10, subclass="").serialize()
+    return render_template('display_class.html', data=serial)
+  elif entity_to_load in subrace_names:
+    serial = rnr_utils.rnr_race.basic_constructor(rnr_utils.get_race_given_subrace(entity_to_load), entity_to_load).serialize()
+    return render_template('display_subrace.html', data=serial)
+  else:
+    return render_template('display_error.html', entity_name=entity_to_load)
 
 @app.route('/random')
 def random_page():
+  print('hit random')
 
   class_names = rnr_utils.get_all_class_names()
   class_names = [x.lower() for x in class_names]
-  race_names = rnr_utils.get_all_race_names()
+  race_names = rnr_utils.get_all_subrace_names()
   race_names = [x.lower() for x in race_names]
 
   allowed_genders = request.args.getlist('allowed_genders',None)
   allowed_races = request.args.getlist('allowed_races',None)
   allowed_classes = request.args.getlist('allowed_classes',None)
   allowed_flaws = request.args.getlist('allowed_flaws', None)
-
-  tier = request.args.get('tier', 0)
-
-  roll_stats = request.args.get('roll_stats',0)
+  #roll_stats = request.args.get('roll_stats',0)
   
-  try:
-    tier = int(tier)
-  except Exception as e:
-    tier = 0
-  if tier not in [0,1]:
-    tier = 1
-  
-  try:
-    roll_stats = int(roll_stats)
-  except Exception as e:
-    roll_stats = 0
+  # try:
+  #   roll_stats = int(roll_stats)
+  # except Exception as e:
+  #   roll_stats = 0
 
-  roll_stats = True if roll_stats == 1 else False
+  # roll_stats = True if roll_stats == 1 else False
 
   if len(allowed_genders) == 0 or len(allowed_races) == 0 or len(allowed_classes) == 0 or len(allowed_flaws) == 0:
     return render_template("rnr_character_form.html",rnr_classes=class_names, rnr_races=race_names)
@@ -221,59 +183,95 @@ def random_page():
   chosen_race   = random.choice(allowed_races)
   chosen_class  = random.choice(allowed_classes)
   chosen_flawed = random.choice(allowed_flaws)
-
-  magic_class = False
-  if chosen_class.lower() in magical_classes.keys():
-    magic_class=True
+  spellbook = None
 
   flawed = True if chosen_flawed == 'flawed' else False
 
   chosen_name = names.get_first_name(gender=chosen_gender.lower())
 
-  description = rnr_descriptions.getCharacterDescription(chosen_name,chosen_race,chosen_class,chosen_gender,flawed=flawed)
+  chosen_race_parent = rnr_utils.get_race_given_subrace(chosen_race)
+  description = rnr_descriptions.getCharacterDescription(chosen_name,chosen_race_parent,chosen_class,chosen_gender,flawed=flawed)
+  
+  male=True if chosen_gender.lower() == 'male' else False
 
-  character = rnr_utils.load_race_class_with_names(chosen_race.title(), chosen_class.title(), name=chosen_name,origin=description, roll_stats=roll_stats)
+  character = rnr_utils.rnr_character(chosen_name, chosen_race_parent, chosen_race, chosen_class, level=3,male=male,character_origin=description)
   serial = character.serialize()
-  return render_template("rnr_character_sheet.html",character=serial,tier=tier,magic_class=magic_class,chosen_name=chosen_name)
+
+  serial_class = rnr_utils.rnr_class(chosen_class).serialize()
+
+
+  spellbook = None
+  if chosen_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+    spellbook = rnr_utils.get_random_spellbook(chosen_class, character.rnr_class_obj.get_spell_counts())
+
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(chosen_race_parent, chosen_race), spells=spellbook, class_data=serial_class)
+
+@app.route('/blank_character_sheet')
+def blank_character_sheet():
+  print('hit blank')
+  serial = {
+    'subrace' : None,
+    'character_name' : '', 
+    'class' : None, 
+    'subclass' : None, 
+    'gender' : None, 
+    'abilities': {'general' : [], 'advantage' : [], 'disadvantage' : [], 'combat' : []}
+    }
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons("human", "fighter"), spells=None, class_data=None)
 
 @app.route('/spells')
 def spell_page():
-  chosen_class = request.args.get('chosen_class','').lower()
-  chosen_name = request.args.get('chosen_name', None)
-  spell_data = dict()
-  spell_books = rnr_utils.get_all_spellbooks()
-  if chosen_class.lower() in magical_classes.keys():
-    book_list = list()
-    for book_name in magical_classes[chosen_class]:
-      print('we are appendinging {0} to {1}'.format(book_name, chosen_class))
-      book_list.append(book_name)
-    print(book_list)
-    big_book_name = ' and '.join(book_list)
-    spell_data[big_book_name] = dict()
-    for book_name in magical_classes[chosen_class]:
-      for chapter, pages in spell_books[book_name].items():
-        if not chapter in spell_data[big_book_name]:
-          spell_data[big_book_name][chapter] = dict()
-        for spell_name, spell_info in pages.items():
-          print(book_name, chapter, spell_name)
-          if not spell_name in spell_data[big_book_name][chapter]:
-            spell_data[big_book_name][chapter][spell_name] = spell_info
-  if chosen_class == 'all':
-    spell_data = spell_books
+  print('hit spells')
+  rnr_class = request.args.get('chosen_class','').lower()
+  return spell_page_helper('spells/print_spell_page', rnr_class)
 
-  return render_template("spell_form.html", data=spell_data, chosen_name=chosen_name)
+def spell_page_helper(next_page, rnr_class, name=None, race=None, subrace=None, level=None, gender=None ):
+  print('hit spell helper')
+  if rnr_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+    spellbook_name, data = rnr_utils.join_spellbooks(rnr_class)
+    spell_data = dict()
+    spell_data[spellbook_name] = data
+  elif rnr_class == 'all':
+    spell_data = rnr_utils.get_all_spellbooks()
+  else:
+    spell_data = dict()
 
-@app.route('/print_spell_page')
+  return render_template("spell_form.html", data=spell_data, rnr_class=rnr_class, next_page=next_page, name=name, race=race, subrace=subrace, level=level, gender=gender)
+
+
+@app.route('/spells/print_spell_page', methods=['POST',])
 def print_spell_page():
-  spells = request.args.getlist('chosen_spells', None)
-  chosen_name = request.args.get('chosen_name')
-  player_spellbook = rnr_utils.gather_spells(spells)
-  return render_template("printable_spellbook.html",data=player_spellbook,chosen_name=chosen_name)
+  print('hit print spell_page')
+  spells = request.form.getlist('spells', None)
+  spellbook = rnr_utils.gather_spells(spells)
+  return render_template("spellbook.html", spellbook = spellbook, name = 'Bilgolf', rnr_class = None)
 
-
+@app.route('/level_up')
+def level_up_page():
+  print('hit level up')
+  rnr_class_name = request.args.get('chosen_class','').title()
+  if not rnr_class_name in rnr_utils.get_all_class_names():
+    print('could not find {0} in classes.'.format(rnr_class_name))
+    return render_template('homepage.html')
+  
+  try:
+    r_class = rnr_utils.rnr_class(rnr_class_name)
+  except:
+    print('could not load class {0}'.format(rnr_class_name))
+    return render_template('homepage.html')
+  
+  serial_data = r_class.serialize()
+  return render_template("level_up_page.html",data=serial_data, class_name=rnr_class_name)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     rnr_utils.printLogo()
-    port = int(os.environ.get('PORT', 5015))
-    app.run(host='0.0.0.0', port=port)
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    port = int(os.environ.get('PORT', 9000))
+    if len(sys.argv) > 1 and sys.argv[1] == '--public':
+      print("Don't forget to run the following command '{0}'".format('sudo ufw allow {0}/tcp'.format(port)))
+      print("Run ifconfig to find the correct local network inet address.")
+      app.run(host='0.0.0.0', port=port, threaded=True)
+    else:
+      app.run(port=port)
+

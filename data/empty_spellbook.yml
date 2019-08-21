@@ -1,0 +1,122 @@
+the_bard's_songbook:
+  Level_0: 
+    Animate Rope:
+      cost: 0
+      description: As an action, animate a piece of rope within 30 feet of you. The rope is able to suspend 
+        up to one large entity.
+    Fascinate Animal:
+      cost: 0
+      description: Force an animal to make an inner fire saving throw against your spell power. On failure,
+        it is mesmerized by you, and obey's your commands.
+    Fabulous:
+      cost: 0
+      description: Shoot a torrent of glitter from your sleeves, up to one pound per minute.
+    Minor Illusion: 
+      cost: 0
+      description: Produce a minor illusion. Examples include a false face in a mirror, a fake bowl of fruit,
+        or an enlarged coin pouch.
+  Level_1:
+    Neutralize Poison:
+      cost: 1
+      description: Roll 1d20 and add your inner fire. If the result is greater than 10, decrease the potency of
+        a poison by half. If it is above 15, fully neutralize the poison. Works on poisoned individuals.
+    Animate Object: 
+      description: Concentration. Bring an object to life. Objects may attack for 1d4 damage, and have 4 health. 
+  Level_2:
+    Shatter Glass:
+      cost: 2
+      description: Produce a note at the exact frequency to either shatter all glass within 60 feet or
+        to shatter a specific piece of glass within 100 feet.
+  Level_3:
+    Calming Song:
+      cost: 3
+      description: Force all angry or upset entities within 30 feet of you to make an inner fire saving 
+        throw against your spell power. On failure, they are no longer capable of being upset.
+  Level_4:
+    Detect Thoughts:
+      cost: 2
+      description: Force an entity to make an inner fire saving throw against your spell power. On failure,
+        you are able to read their thoughts for 1d6 minutes.
+    Hallucinatory Terrain:
+      cost: 4
+      description: Create hallucinatory terrain over 300 square yards.
+  Level_5:
+    Resonance:
+      cost: 5
+      description: Create a note which deals 5d20 damage per turn to a structure of your choice.
+the_book_of_chi:
+  Combat Basic Techniques:
+  General Basic Techniques:
+  Legendary Techniques:
+  Master Techniques:
+the_book_of_healing:
+  Level_0:
+  Level_1:
+    Purify Food and Drink:
+      cost: 1
+      description: Cause a meal to become edible, regardless of rot or poison.
+    Hide Life:
+      cost: 1
+      description: Concentration. Hide all traces of an entity within 30 feet of you from the world.
+  Level_2:
+    Ward of Returning:
+      cost: 2
+      description: Cast a ward on an ally which allows them to instantly teleport to you.
+        The ward lasts 1 hour, and can be used once.
+    Stunning Ward:
+      cost: 2
+      description: Requires 1 minute or 1 turn to cast. Create 1d4 landmines on the 
+        ground. These deal 1d12 damage when stepped on, and provoke a spell saving throw.
+        On failure, the affected entity is stunned, and looses an action on its next turn.
+  Level_3:
+    Safehaven:
+      cost: 3
+      description: Reaction. Hide yourself or another in a pocket dimension for 1 turn.
+  Level_4:
+    Eternal Flame:
+      cost: 2
+      description: Create an eternal flame, which can be extinguished only by magical means.
+        Fire created by the eternal flame is eternal for 20 minutes.
+    Fortify:
+      cost: 3
+      description: Grant all allies within 30 feet of you +1 to a stat of your choice.
+  Level_5:
+the_druid's_guidebook:
+  Level_0:
+  Level_1:
+  Level_2:
+  Level_3:
+  Level_4:
+  Level_5:
+the_macabre_manual:
+  Level_0:
+  Level_1:
+  Level_2:
+  Level_3:
+  Level_4:
+  Level_5:
+the_novice_spellbook:
+  Level_0:
+  Level_1:
+  Level_2:
+  Level_3:
+  Level_4:
+  Level_5:
+the_sorcerer's_scrolls:
+  Level_0:
+  Level_1:
+  Level_2:
+  Level_3:
+  Level_4:
+  Level_5:
+the_tome_of_the_ancients:
+  Level_10:
+  Level_6:
+  Level_8:
+the_wizard's_addendum:
+  Level_0:
+  Level_1:
+  Level_2:
+  Level_3:
+  Level_4:
+  Level_5:
