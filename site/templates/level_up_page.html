@@ -1,3 +1,5 @@
+{% import 'macros.html' as macros %}
+
 <!doctype html>
 <html>
    <head>
@@ -13,62 +15,6 @@
       </style>
    </head>
    <body>
-      <div class="container" id=printable>
-        <div class="row">
-          <div class="col-12">
-            {% if class_name != None %}
-            <h2>{{class_name}} Level Up Sheet</h2>
-            {% endif %}
-            {% for level in range(0,11) if 'level_{0}'.format(level) in data['levels'] %}
-              <div id={{"level_"+level|string}}>
-                Level {{level}}
-                <ul>
-                {% if 'stats' in data['levels']['level_'+level|string] %}
-                  <li><b>Stats:</b>&nbsp;
-                  {% for key, value in data['levels']['level_'+level|string]['stats'].items() %}
-                    {{key.replace('_',' ').title()}}: {{value}}&nbsp; 
-                  {% endfor %}
-                  </li>
-                {% endif %}
-                {% if 'abilities' in data['levels']['level_'+level|string] %}
-                  <li><b>Abilities:</b></li>
-                  <ul>
-                  {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
-                    {% for ability_name, ability_description in ability_set %}
-                      <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
-                    {% endfor %}
-                  {% endfor %}
-                  </ul>
-                {% endif %}
-                {% for key in data['levels']['level_'+level|string].keys() %}
-                  {% if 'subclass' in key %}
-                    <li><b>{{key.split('_')[1].title()}} Abilities</b></li>
-                    <ul>
-                      {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
-                        {% for ability_name, ability_description in ability_set %}
-                          <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
-                        {% endfor %}
-                      {% endfor %}
-                    </ul> 
-                  {% endif %}
-                {% endfor %}
-                </ul>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <hr>
-            <p><a class="btn btn-primary text-white" onClick="printdiv('printable');" role="button">Print Your Level Up Sheet</a></p>
-          </div>
-        </div>
-      </div>
-      <script src="/static/js/jquery-3.3.1.js"></script>
-      <script src="/static/js/bootstrap.min.js"></script>
-      <script src="/static/js/materialize.min.js"></script>
-      <script src="/static/js/rangers.js"></script>
+      {{ macros.render_level_up_page( class_name, data ) }}
    </body>
 </html>

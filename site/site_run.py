@@ -76,8 +76,9 @@ def creation_landing_page():
       male=True if gender.lower() == 'male' else False
       character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
       serial = character.serialize()
+      serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
       print('Going to character sheet')
-      return render_template("character_sheet.html",character=serial, icons=site_utils.which_icons(rnr_class, rnr_class), spells=None)
+      return render_template("character_sheet.html",character=serial, icons=site_utils.which_icons(rnr_class, rnr_class), spells=None, class_data=serial_class)
 
 @app.route('/creation/character_sheet', methods=['POST',])
 def character_sheet_helper():
@@ -108,7 +109,8 @@ def character_sheet_helper():
   male=True if gender.lower() == 'male' else False
   character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
   serial = character.serialize()
-  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(rnr_class, rnr_class), spells=player_spellbook)
+  serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(rnr_class, rnr_class), spells=player_spellbook, class_data=serial_class)
 
 @app.route('/ajax_load_content', methods=['POST',])
 def ajax_load_content():
@@ -195,11 +197,14 @@ def random_page():
   character = rnr_utils.rnr_character(chosen_name, chosen_race_parent, chosen_race, chosen_class, level=3,male=male,character_origin=description)
   serial = character.serialize()
 
+  serial_class = rnr_utils.rnr_class(chosen_class).serialize()
+
+
   spellbook = None
   if chosen_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
     spellbook = rnr_utils.get_random_spellbook(chosen_class, character.rnr_class_obj.get_spell_counts())
 
-  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(chosen_race_parent, chosen_race), spells=spellbook)
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(chosen_race_parent, chosen_race), spells=spellbook, class_data=serial_class)
 
 @app.route('/blank_character_sheet')
 def blank_character_sheet():
@@ -212,7 +217,7 @@ def blank_character_sheet():
     'gender' : None, 
     'abilities': {'general' : [], 'advantage' : [], 'disadvantage' : [], 'combat' : []}
     }
-  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons("human", "fighter"), spells=None)
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons("human", "fighter"), spells=None, class_data=None)
 
 @app.route('/spells')
 def spell_page():
