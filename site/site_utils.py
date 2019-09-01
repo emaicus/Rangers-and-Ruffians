@@ -76,7 +76,7 @@ def verify_gender(gender):
   return gender.lower() if gender.lower() in ['male', 'female'] else None
 
 def verify_level(level):
-  valid_levels = ['0','1','2','3','4','5','6','7','8','9','10']
+  valid_levels = [str(x) for x in range(16)]
   return int(level) if level in valid_levels else None
 
 def is_magic_class(rnr_class):

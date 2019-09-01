@@ -327,11 +327,11 @@ Game stats. call game_stats()
 
 def evaluate(num, target):
   if num < target:
-    return 'FAIL! (-{0})'.format((target*2)-num)
+    return 'FAIL!'.format((target*2)-num)
   elif num >= target*2:
-    return 'VICTORY! (+{0})'.format(num-(target*2))
+    return 'VICTORY!'.format(num-(target*2))
   else:
-    return 'PASS! (-{0})'.format((target*2)-num)
+    return 'PASS!'.format((target*2)-num)
 
 def game_stats():
   store_data = dict()
@@ -387,14 +387,15 @@ def game_stats():
 def evaluate_spells_for_failures(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  # Get new spell level at levels 0, 1, 5, 8, 11, 14
+  target_spell_counts = {'Level_0':16,'Level_1':15,'Level_2':10,'Level_3':8,'Level_4':5,'Level_5':2}
   offenders = list()
   for spell_book, levels in all_spellbooks.items():
     for level, spell_list in levels.items():
       num = len(spell_list)
       if level in target_spell_counts:
         if evaluate(num, target_spell_counts[level]) == "FAIL!":
-          offenders.append('{0} {2} needs {1}'.format(spell_book, target_spell_counts['level'] - num, level))
+          offenders.append('{0} {2} needs {1}'.format(spell_book, target_spell_counts[level] - num, level))
   if print_errors:
     for error in offenders:
       print(error)
@@ -403,7 +404,7 @@ def evaluate_spells_for_failures(print_errors=True):
 def evaluate_spells_for_doubling(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  target_spell_counts = {'Level_0':16,'Level_1':15,'Level_2':10,'Level_3':8,'Level_4':5,'Level_5':2}
   offenders = list()
   running_total = 0
   for spell_book, levels in all_spellbooks.items():

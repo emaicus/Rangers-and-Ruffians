@@ -2,7 +2,7 @@ Catterwol:
   subraces:
     Catterwol:
       abilities:
-        - Dark Vision
+        - Low-Light Vision
         - Predator
         - They're Retractable
         - Land on your feet
@@ -68,7 +68,7 @@ Elf:
       abilities:
         - Sleepless
         - Low-Light Vision
-        - Winged feet
+        - Winged Feet
         - Counter Attack
         - Tracker
       quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
@@ -83,7 +83,7 @@ Elf:
       stats:
         Charisma: 1
         Dexterity: 1
-        Inner_Fire: 0
+        Inner_Fire: -1
         Intelligence: 0
         Luck: 0
         Perception: 2
@@ -104,7 +104,7 @@ Elf:
       description: High elves are among the most magical of the races. Reclusive by nature,
         high elves often confine themselves to gleaming costal cities. When a high elf does
         venture out into the world at large, it is often in a diplomatic capacity. 
-        High elves are as charming aas they are naturally beautiful, and commonly feel as though
+        High elves are as charming as they are naturally beautiful, and commonly feel as though
         it is their duty to maintain balance in the world. High elves make 
         good mages.
       stats:
@@ -120,7 +120,7 @@ Elf:
       abilities:
         - Sleepless
         - Dark Vision
-        - Winged feet
+        - Winged Feet
         - Counter Attack
         - Born in Darkness
       quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
@@ -160,7 +160,7 @@ Gnome:
       stats:
         Charisma: -1
         Dexterity: 1
-        Inner_Fire: 1
+        Inner_Fire: 2
         Intelligence: 1
         Luck: 0
         Perception: 0
@@ -229,7 +229,6 @@ Halfling:
         - Carry a Tune
         - Lightweight
         - Nimble
-        - Bull Rush
       quote: Halflings are decent enough, and fun to be around. They have potential as
         since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
@@ -266,7 +265,7 @@ Halfling:
         Dexterity: 0
         Inner_Fire: 1
         Intelligence: -1
-        Luck: 0
+        Luck: 1
         Perception: 0
         Strength: 1
 Human:
@@ -277,7 +276,7 @@ Human:
       - Last Stand
       - Strength of Men
       - Rally
-      - Tactics
+      - Adaptable
       quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
       author: Orkensheild, Orc Archer
       description: Humans are the most average of the races. The race of men can become good 
@@ -303,7 +302,6 @@ Lizkin:
       - Poison Resist
       - Shed Tail
       - Taste Air
-      - Camouflage
       quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
       author: Mister Li, Gnomeish Monk
       description: ''
@@ -311,7 +309,7 @@ Lizkin:
         Charisma: -1
         Dexterity: 1
         Inner_Fire: 0
-        Intelligence: -1
+        Intelligence: 0
         Luck: 0
         Perception: 1
         Strength: 1
@@ -320,14 +318,11 @@ Waterborn:
     Waterborn:
       health_die_pieces: 2
       abilities:
-      - Unbreathing
+      - Water Breathing
       - Flows Like Water
       - Water Healing
       - Become Mist
       - Charm
-      - Beast Form
-      - Lightweight
-      - Dry Up
       quote: Most Waterborn I've seen have been dried up and dying. Their need
         for water is their undoing, out here in the desert. Once they've been 
         wetted down a bit, they perk right up. It's then that you have to watch
@@ -363,7 +358,7 @@ Orc:
       description: A brutish and warlike race, orcs stab first and ask questions later.
         Orcs are often used to living in harsh environments, and living off the land.
       stats:
-        Charisma: -2
+        Charisma: -1
         Dexterity: 0
         Inner_Fire: 2
         Intelligence: -1
@@ -375,12 +370,8 @@ Dwarf:
     Dwarf:
       health_die_pieces: 4
       abilities:
-      - Mending
-      - Miner's Eye
       - Stocky
-      - Natural Sprinter
       - Very Dangerous Over Short Distances
-      - Stone Skin
       - Boozehound
       - Thick Headed
       - Forgeborn 
@@ -394,7 +385,7 @@ Dwarf:
       stats:
         Charisma: 0
         Dexterity: -1
-        Inner_Fire: 1
+        Inner_Fire: 2
         Intelligence: 0
         Luck: 0
         Perception: 0
@@ -404,11 +395,10 @@ Daemonspawn:
     Daemonspawn:
       health_die_pieces: 4
       abilities: 
-      - Fix Your Eyes on Me 
-      - Infernal Blood
-      - True Sight
+      - Sacrificial Rite
       - Dark Vision
       - Sleepless
+      - Fire Resistance
       quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
         to use their dark and terrible magicks as to give you a passing smile. I've never met 
         one though; I've been careful to avoid them.
@@ -430,11 +420,8 @@ Sprout:
       health_die_pieces: 2
       abilities: 
         - Photosynthesis
-        - Blade of Grass
-        - Mantel
         - Scurry
         - Dodge
-        - Harden
         - Small Fry
         - Soft Landing
         - Commune with Nature
@@ -453,7 +440,7 @@ Sprout:
         Inner_Fire: -1
         Intelligence: 1
         Luck: 2
-        Perception: 2
+        Perception: 1
         Strength: -3
 Automaton:
   subraces:
@@ -484,7 +471,7 @@ Automaton:
         Inner_Fire: -1
         Intelligence: -1
         Luck: 0
-        Perception: 0
+        Perception: 1
         Strength: 2
 Hissling:
   subraces:
@@ -496,7 +483,6 @@ Hissling:
         - Chomp Chomp
         - Riding High
         - Dig Dig Dig
-        - And this Part Goes Here...
         - I'm a Red One!
         - Tossed Around
       quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, 
@@ -520,9 +506,9 @@ Hissling:
         "
       stats:
         Charisma: -1
-        Dexterity: 3
+        Dexterity: 2
         Inner_Fire: 1
         Intelligence: 0
         Luck: 1
-        Perception: 3
-        Strength: -3
+        Perception: 2
+        Strength: -2

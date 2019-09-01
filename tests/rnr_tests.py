@@ -41,13 +41,6 @@ class rnrTests(unittest.TestCase):
       log_output("Spell Counts", errors)
     self.assertEqual(len(errors),0)
 
-  def test_spell_count_doubling(self):
-    rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = balance_report.evaluate_spells_for_doubling(print_errors=False)
-    if len(errors) > 0:
-      log_output("Spell Doubling", errors)
-    self.assertEqual(len(errors),0)
-
   def test_description_lengths(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
     errors = balance_report.check_brief_abilities(print_errors=False)
@@ -91,8 +84,13 @@ class rnrTests(unittest.TestCase):
     errors = list()
     for r in all_races:
       val = sum(list(r.stats.values()))
-      if val != 4:
+      hp = r.health_die_pieces - 2
+      val += hp // 2
+      if val != 3:
         errors.append("{0}'s stats sum to {1}".format(r.name, val))
+
+    if len(errors) > 0:
+      log_output("Class Balance", errors)
 
     self.assertEqual(len(errors), 0)
 

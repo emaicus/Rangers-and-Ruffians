@@ -299,13 +299,19 @@
             <h2>Stats</h2>
             <strong>Copy these stats to your character sheet before you leave this page.</strong>
             <div id="computed_stats">
-              <p>
-              <strong>Health:</strong> {{ character["health"] }}
+              <strong>Spell Points:</strong> {{ 2 + character["effective_stats"]["Intelligence"] }}
               <br/>
-              <strong>Spell Points:</strong> {{ 5 + character["effective_stats"]["Intelligence"] }}
-              <br/>
-              <strong>Spell Power:</strong> {{ 10 + ( character["effective_stats"]["Inner_Fire"] * 2 ) }}
-              </p>
+              <strong>Spell Power:</strong> {{ 8 + ( character["effective_stats"]["Inner_Fire"] * 2 ) }}
+              {% if character['level'] > 0 %}
+                <p>
+                You have leveled up {{ character['level'] }} times, so you have {{ character['level'] * 2 }} stat points to spend.
+                <br/>
+                Your health is {{ character["health_dice"] + 4}} + {{ character['level'] }}d{{ character["health_dice"] }} + {{ character['level'] }}d4.
+                </p>
+              {% else %}
+                Your health is { character["health_dice"] + 4}}.
+              {% endif %}
+
             </div>
             <div id="base_stats">
               <strong>Your Character's Base Stats Were</strong>
@@ -326,11 +332,6 @@
                 <br/>
                 <strong>HD</strong>: d{{ character["health_dice"] }}
               </p>
-              {% if character['level'] > 0 %}
-                <p>
-                You have leveled up {{character['level']}} times, so you have {{character['level'] * 2 }} stat points to spend.
-                </p>
-              {% endif %}
             </div>
             <br/>
             <h4>Abilities</h4>

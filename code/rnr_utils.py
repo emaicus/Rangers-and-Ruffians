@@ -256,6 +256,7 @@ class rnr_class(rnr_entity):
       return ret
 
     def serialize(self, male=False, verbose=False):
+      print(self.name)
       serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
       if os.path.exists('static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
@@ -434,10 +435,10 @@ class rnr_character(rnr_entity):
     return serial
 
   def get_health(self):
-    summed_level = sum(range(self.level+1))
-    base = self.health_dice * 2
-    bonus = (self.health_dice // 2) * self.level
-    return base + summed_level + bonus
+    base = self.health_dice
+    health_dice_rolls = (self.health_dice // 2)* self.level
+    bonus_dice_rolls  = 2 * self.level
+    return base + health_dice_rolls + bonus_dice_rolls
 
 class rnr_ability:
   def __init__(self, name, description, ability_type):

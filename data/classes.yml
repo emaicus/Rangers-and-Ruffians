@@ -3,6 +3,7 @@ Heavy Fighter:
     base_abilities:
     - Colossal
     - Boozehound
+    - Ruffians
     base_stats:
       Charisma: -4
       Dexterity: 2
@@ -32,37 +33,45 @@ Heavy Fighter:
         - Crushing Blow
       level_3:
         abilities:
-        - Ruffians
-        - Intimidate
+        - Line Them Up
       level_4:
         abilities:
-        - Furious Blows
+        - Intimidate
       level_5:
         abilities:
-        - Multi-class Option
-        - Warmaster
-        - Always Angry
-        - Throw Anything
+        - Furious Blows
       level_6:
         abilities:
         - Blind Rage
-        - Line Them Up
+        - Throw Anything
       level_7:
         abilities:
-        - Throw Caution to the Wind
-        - Savage Critical
+        - Always Angry
       level_8:
         abilities:
-        - Controlled Rage
-        - Berserker
+        - Throw Caution to the Wind
       level_9:
         abilities:
-        - Offhand Attack
-        - Reduced Critical
+        - Berserker
       level_10:
         abilities:
-        - Glory
+        - Offhand Attack
+      level_11:
+        abilities:
+        - Savage Critical
+      level_12:
+        abilities:
+        - Warmaster
+        - Reduced Critical
+      level_13:
+        abilities:
+        - Controlled Rage
+      level_14:
+        abilities: 
         - Spirit of Rage
+      level_15:
+        abilities: 
+        - Glory
     questions:
     - Where did your character come from?
     - Where is their tribe? Did they leave it?
@@ -100,31 +109,42 @@ Heavy Fighter:
         - Taunt
       level_3:
         abilities:
-        - Shield of Men
         - Shield Up
       level_4:
         abilities:
-        - Hold the Line
+        - Shield of Men
       level_5:
         abilities:
         - Offhand Attack
-        - Steel Yourself
-        - Multi-class Option
       level_6:
         abilities:
-        - Cleave
+        - Ready Stance
       level_7:
         abilities:
-        - Second Action
+        - Steel Yourself
       level_8:
         abilities:
-        - Last Line of Defense
+        - Hold the Line
       level_9:
         abilities:
-        - Stay on Your Feet
+        - Cleave
       level_10:
         abilities:
+        - Second Action
+      level_11:
+        abilities: 
+        - Stalwart Defender
+      level_12:
+        abilities:
+        - Stay on Your Feet
+      level_13:
+        abilities:
+        - Last Line of Defense
+      level_14:
+        abilities:
         - Reduced Critical
+      level_15:
+        abilities: 
         - Sword of Honor
     questions:
     - How did your character get where they are, and where they are going next?
@@ -160,47 +180,55 @@ Heavy Fighter:
         - Pledge
         - Learning Spells
         - Learn Spells
-        - Spell Power
-        - Hammer of Light
-        - Faithful Weapon
         - Level Zero Spells
       level_1:
         abilities:
-        - Link Lifeforce
-        - Level One Spells
+        - Hammer of Light
+        - Bash
       level_2:
         abilities:
-        - Bash
+        - Level One Spells
+        - Link Lifeforce
       level_3:
         abilities:
-        - Minor Offhand Spell
+        - Faithful Weapon
       level_4:
         abilities:
+        - Minor Offhand Spell
         - Shield of Men
-        - Level Two Spells
       level_5:
         abilities:
         - Offhand Attack
-        - Greater Offhand Spell
-        - Multi-class Option
       level_6:
         abilities:
+        - Level Two Spells
         - Sinner's Bane
-        - Level Three Spells
       level_7:
         abilities:
-        - Beacon of Hope
-        - Second Action
+        - Greater Offhand Spell
       level_8:
         abilities:
-        - Last Line of Defense
-        - Level Four Spells
+        - Beacon of Hope
       level_9:
         abilities:
-        - Winged Jump
+        - Level Three Spells
       level_10:
         abilities:
+        - Second Action
+      level_11:
+        abilities:
+        - Last Line of Defense
+      level_12:
+        abilities:
+        - Level Four Spells
+      level_13:
+        abilities:
+        - Winged Jump
+      level_14:
+        abilities:
         - Fires of Heaven
+      level_15:
+        abilities:
         - Level Five Spells
     questions:
     - What deity does your character worship?
@@ -244,39 +272,48 @@ Light Fighter:
         - Hobble
       level_2:
         abilities:
-        - Lightfoot
-        - Huntsman
         - Leaping Strike
       level_3:
         abilities:
+        - Huntsman
         - Dog Pile
         - Field Healing
-        - Offhand Attack
       level_4:
         abilities:
-        - Tracker
-        - Coordinated Attack
+        - Lightfoot
       level_5:
         abilities:
-        - Multi-class Option
-        - Closest Friend
+        - Tracker
+        - Offhand Attack
         - Grown
       level_6:
         abilities:
-        - Mantel
-        - Wild Sight
+        - Closest Friend
       level_7:
         abilities:
-        - Second Action
-        - Inseparable
+        - Mantel
       level_8:
         abilities:
-        - Dire Companion
-        - Poison Strike
+        - Coordinated Attack
       level_9:
         abilities:
-        - Dominate
+        - Wild Sight
       level_10:
+        abilities:
+        - Second Action
+      level_11:
+        abilities:
+        - Inseparable
+      level_12:
+        abilities:
+        - Dire Companion
+      level_13:
+        abilities:
+        - Poison Strike
+      level_14:
+        abilities:
+        - Dominate
+      level_15:
         abilities:
         - Beast Form
     questions:
@@ -310,37 +347,47 @@ Light Fighter:
       level_1:
         abilities:
         - Determination
-        - Minor Second Wind
       level_2:
         abilities:
-        - Resolve
+        - Minor Second Wind
       level_3:
         abilities:
-        - Nimble
-        - Offhand Attack
+        - Resolve
       level_4:
         abilities:
-        - Reduced Critical
+        - Nimble
       level_5:
         abilities:
-        - Multi-class Option
-        - Multi-Action
+        - Offhand Attack
       level_6:
         abilities:
-        - Major Second Wind
+        - Reduced Critical
       level_7:
         abilities:
-        - Reduced Critical
-        - Find Center
+        - Multi-Action
       level_8:
         abilities:
-        - Feint
+        - Major Second Wind
       level_9:
         abilities:
-        - Stay on Your Feet
+        - Reduced Critical
       level_10:
         abilities:
+        - Second Action
+      level_11:
+        abilities:
+        - Find Center
+      level_12:
+        abilities:
+        - Feint
+      level_13:
+        abilities:
+        - Stay on Your Feet
+      level_14:
+        abilities:
         - Reduced Critical
+      level_15:
+        abilities:
         - Whirlwind of Blades
     questions:
     - Does your character specialize in strength or dexterity based weapons?
@@ -355,6 +402,7 @@ Light Fighter:
     - My Father's Coffers
     - The Family Sword
     - Lightweight
+    - Beauty Incarnate
     base_stats:
       Charisma: 3
       Dexterity: 1
@@ -375,7 +423,6 @@ Light Fighter:
         - Melee Weapon Proficiency
         - My People
         - Happy Smiles
-        - Beauty Incarnate
       level_1:
         abilities:
         - Swoon
@@ -390,23 +437,37 @@ Light Fighter:
         - Disarming
       level_5:
         abilities:
-        - Multi-class Option
+        - Offhand Attack
       level_6:
         abilities:
         - Feeling Lucky
       level_7:
         abilities:
         - Forced Focus
-        - Second Action
       level_8:
         abilities:
-        - Fallen
+        - Side by Side
       level_9:
         abilities:
-        - Rally Cry
+        - Fallen
       level_10:
         abilities:
+        - Second Action
+      level_11:
+        abilities:
+        - Reduced Critical
+      level_12:
+        abilities:
+        - Lionhearted
+      level_13:
+        abilities:
+        - Rally Cry
+      level_14:
+        abilities:
         - Aura of Peace
+      level_15:
+        abilities:
+        - Strike First
     questions:
     - Why is your character embarking on their adventure? Are they out to prove themself?
       Or perhaps they are idealistic and want adventure?
@@ -446,11 +507,10 @@ Light Fighter:
         - The Book of Chi
         - Fighting Techniques
         - Learn Fighting Techniques
-      level_5:
+      level_10:
         abilities:
-        - Multi-class Option
         - Master Fighting Techniques
-      level_9:
+      level_14:
         abilities:
         - Legendary Fighting Techniques
     standings: Monks keep to themselves, which cause some outside of their religion
@@ -499,7 +559,6 @@ Light Fighter:
       level_3:
         abilities:
         - Tracker
-        - Twin Blade Parry
         - Ward of Tracking
       level_4:
         abilities:
@@ -507,8 +566,7 @@ Light Fighter:
         - Under the Stars
       level_5:
         abilities:
-        - Multi-class Option
-        - Monster Slayer
+        - Twin Blade Parry
         - Spell of Darkvision
       level_6:
         abilities:
@@ -517,20 +575,31 @@ Light Fighter:
       level_7:
         abilities:
         - Disarming Blow
-        - Disengage
       level_8:
         abilities:
-        - Offhand Attack
-        - Flame Strike
+        - Monster Slayer
+        - Disengage
       level_9:
         abilities:
-        - Expert Tracker
-        - Fire and Ice
+        - Flame Strike
       level_10:
         abilities:
-        - Assassinate
-        - Trap Expert
+        - Offhand Attack
+      level_11:
+        abilities:
+        - Party Save
+      level_12:
+        abilities:
+        - Expert Tracker
+      level_13:
+        abilities:
         - Soundless
+      level_14:
+        abilities:
+        - Fire and Ice
+      level_15:
+        abilities:
+        - Assassinate
     standings: Barbarians are the enemies of law keepers.
     tag_line: Duel Wielding Tracker
   Rogue:
@@ -573,43 +642,58 @@ Light Fighter:
         - Offhand Attack
       level_5:
         abilities:
-        - Multi-class Option
         - Thief or Assassin
         subclass_assassin_abilities:
-        - Imposter
         - Assassinate
         subclass_thief_abilities:
-        - Lucky Actions
         - Pickpocket
-        - Trap Expert
       level_6:
         subclass_assassin_abilities:
-        - Poison
-        - Minor Blink
+        - Imposter
         subclass_thief_abilities:
         - Soundless
-        - Flee
       level_7:
         subclass_assassin_abilities:
-        - Double Strike
-        - Dark Vision
+        - Poison
         subclass_thief_abilities:
-        - Feint
+        - Soft Landing
       level_8:
         subclass_assassin_abilities:
+        - Dark Vision
+        subclass_thief_abilities:
+        - Trap Expert
+      level_9:
+        subclass_assassin_abilities:
+        - Minor Blink
+        subclass_thief_abilities:
+        - Flee
+      level_10:
+        subclass_assassin_abilities:
+        - Double Strike
+        subclass_thief_abilities:
+        - Lucky Actions
+      level_11:
+        subclass_assassin_abilities:
         - Reduced Critical
-        - Line Them Up
         subclass_thief_abilities:
         - Strike From the Shadows
+      level_12:
+        subclass_assassin_abilities:
+        - Line Them Up
+        subclass_thief_abilities:
         - Superior Mantel
-      level_9:
+      level_13:
         subclass_assassin_abilities:
         - Savage Critical
         subclass_thief_abilities:
         - Party Save
-      level_10:
+      level_14:
         subclass_assassin_abilities:
         - Reduced Critical
+        subclass_thief_abilities:
+        - Feint
+      level_15:
+        subclass_assassin_abilities:
         - All-consuming Shadow
         subclass_thief_abilities:
         - Spider Climb
@@ -626,6 +710,7 @@ Mage:
   Bard:
     base_abilities:
     - Spell Choice
+    - Boozehound
     base_stats:
       Charisma: 2
       Dexterity: 1
@@ -655,52 +740,58 @@ Mage:
         - Spell Power
         - My Father's Oboe
         - The Bard's Songbook
-        - Boozehound
         - Regular Patron
         - Level Zero Spells
       level_1:
         abilities:
-        - Minor Restful Melody
-        - One up the Sleeve
         - Level One Spells
       level_2:
         abilities:
-        - Spell Coin
+        - Minor Restful Melody
+        - One up the Sleeve
         - Slight of Hand
+        - Cartwheel
       level_3:
         abilities:
-        - Cartwheel
-        - Level Two Spells
+        - Spell Coin
       level_4:
         abilities:
         - Nimble Fingers
       level_5:
         abilities:
-        - Multi-class Option
-        - Additional Spell Coin
-        - Greater Restful Melody
-        - Level Three Spells
+        - Level Two Spells
       level_6:
         abilities:
-        - Greater Imbue Weapon
+        - Imbue Weapon
       level_7:
         abilities:
-        - Greater Spell Coin
-        - Double Strike
-        - Level Four Spells
+        - Additional Spell Coin
+        - Greater Restful Melody
       level_8:
         abilities:
-        - Major Restful Melody
+        - Level Three Spells
+        - Greater Imbue Weapon
       level_9:
         abilities:
-        - Additional Spell Coin
-        - Level Five Spells
+        - Greater Spell Coin
       level_10:
         abilities:
-        - Multi-Action
+        - Double Strike
+      level_11:
+        abilities:
+        - Level Four Spells
+      level_12:
+        abilities:
+        - Additional Spell Coin
+      level_13:
+        abilities:
+        - Major Restful Melody
+      level_14:
+        abilities:
+        - Level Five Spells
+      level_15:
+        abilities:
         - Major Spell Coin
-    standings: Bards are loved by most, and are welcomed equally among thieves and
-      gentlefolk.
     tag_line: Entertaining Spellcaster
   Cleric:
     base_abilities:
@@ -731,12 +822,12 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Spell Power
-        - Purge Decay
         - The Book of Healing
         - Pledge
         - Level Zero Spells
       level_1:
         abilities:
+        - Purge Decay
         - Level One Spells
       level_2:
         abilities:
@@ -744,30 +835,37 @@ Mage:
       level_3:
         abilities:
         - Minor Offhand Spell
-        - Level Two Spells
-        - Taunt
       level_4:
         abilities:
-          - Feint
+        - Taunt
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Level Three Spells
+        - Level Two Spells
       level_7:
+        abilities:
+        - Feint
+        - Greater Offhand Spell
+      level_8:
+        abilities:
+        - Level Three Spells
+      level_10:
+        abilities:
+        - Level Four Spells
+      level_11:
+        abilities:
+        - True Heal
+      level_12:
         abilities:
         - Major Offhand Spell
         - Halo
-        - Level Four Spells
-      level_8:
-        abilities:
         - Burning Bright
-        - True Heal
-      level_9:
+      level_13:
         abilities:
         - Aura of Advantage
+      level_14:
+        abilities:
         - Level Five Spells
-      level_10:
+      level_15:
         abilities:
         - Angelic Wings
     standings: Clerics are friends to all those who fight for good, and get along
@@ -810,30 +908,37 @@ Mage:
       level_1:
         abilities:
         - Level One Spells
-      level_10:
-        abilities:
-        - True Ascension
       level_3:
         abilities:
         - Minor Offhand Spell
-        - Level Two Spells
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Level Three Spells
+        - Level Two Spells
       level_7:
         abilities:
-        - Ascend
-        - Major Offhand Spell
-        - Level Four Spells
+        - Greater Offhand Spell
       level_8:
         abilities:
+        - Level Three Spells
+      level_10:
+        abilities:
+        - Ascend
+      level_11:
+        abilities:
+        - Level Four Spells
+      level_12:
+        abilities:
+        - True Ascension
+        - Major Offhand Spell
+      level_13:
+        abilities:
         - Power of Ascension
-      level_9:
+      level_14:
+        abilities:
+        - Level Five Spells
+      level_15:
         abilities:
         - Ascended Action
-        - Level Five Spells
     tag_line: Naturalistic Spellcaster
   Necromancer:
     base_abilities:
@@ -875,42 +980,50 @@ Mage:
         - Level One Spells
       level_2:
         abilities:
-        - Larger Soul Jar
         - Edge of Eternity
       level_3:
         abilities:
         - Minor Offhand Spell
         - Fear the Light
-        - Level Two Spells
       level_4:
         abilities:
-        - Larger Soul Jar
         - Eyes of the Others
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Reap
-        - Level Three Spells
+        - Level Two Spells
       level_6:
         abilities:
-        - Major Offhand Spell
+        - Larger Soul Jar
       level_7:
         abilities:
-        - Larger Soul Jar
-        - Level Four Spells
+        - Greater Offhand Spell
       level_8:
         abilities:
-        - Phylactery
+        - Level Three Spells
       level_9:
         abilities:
         - Larger Soul Jar
-        - Freed from this Mortal Coil
-        - Level Five Spells
       level_10:
         abilities:
-        - Army of the Damned
+        - Reap
+      level_11:
+        abilities:
+        - Level Four Spells
+      level_12:
+        abilities:
+        - Major Offhand Spell
         - Larger Soul Jar
+        - Phylactery
+      level_13:
+        abilities:
+        - Freed from this Mortal Coil
+      level_14:
+        abilities:
+        - Level Five Spells
+        - Larger Soul Jar
+      level_15:
+        abilities:
+        - Army of the Damned
     standings: Necromancers are feared by most, and are actively hunted by Clerics
       and followers of the light.
     tag_line: Death Mage
@@ -954,27 +1067,32 @@ Mage:
         - Spell Modification
       level_3:
         abilities:
-        - Level Two Spells
+        - Minor Offhand Spell
       level_4:
         abilities:
-        - Minor Offhand Spell
+        - Prepare Spell
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Level Three Spells
-      level_6:
-        abilities:
-        - Prepare Spell
+        - Level Two Spells
       level_7:
         abilities:
-        - Major Offhand Spell
-        - Level Four Spells
-      level_9:
+        - Greater Offhand Spell
+      level_8:
+        abilities:
+        - Level Three Spells
+      level_10:
         abilities:
         - Spirits Within
+      level_11:
+        abilities:
+        - Level Four Spells
+      level_12:
+        abilities:
+        - Major Offhand Spell
+      level_14:
+        abilities:
         - Level Five Spells
-      level_10:
+      level_15:
         abilities:
         - Light and Shadow
     tag_line: Charismatic Spirit Wrangler
@@ -1017,31 +1135,37 @@ Mage:
         - Level One Spells
       level_2:
         abilities:
-        - Minor Offhand Spell
         - Looming Presence
       level_3:
+        abilities:
+        - Minor Offhand Spell
+      level_4:
         abilities:
         - Level Two Spells
       level_5:
         abilities:
-        - Multi-class Option
         - Greater Offhand Spell
-        - Level Three Spells
       level_6:
         abilities:
-        - Cost Reduction
       level_7:
         abilities:
-        - Major Offhand Spell
-        - Level Four Spells
+        - Level Three Spells
       level_8:
         abilities:
         - Commit to Memory
       level_9:
         abilities:
-        - Spell Invention
-        - Level Five Spells
+        - Major Offhand Spell
       level_10:
+        abilities:
+        - Level Four Spells
+      level_12:
+        abilities:
+        - Spell Invention
+      level_13:
+        abilities:
+        - Level Five Spells
+      level_15:
         abilities:
         - Tome of the Ancients
     standings: Wizards are known to be friends to all races, and get along particularly
@@ -1082,38 +1206,48 @@ Ranged Fighter:
         - Crippling Shot
       level_3:
         abilities:
+        - Dual Shot
         - Fire and Ice Arrows
-        - Smoke Arrow
-        - Steady
       level_4:
         abilities:
         - Rope Arrows
-        - Net Arrows
-        - Dual Shot
       level_5:
         abilities:
-        - Shadow and Light Arrows
+        - Net Arrows
+        - Smoke Arrow
         - Offhand Attack
-        - Reflexes
-        - Multi-class Option
       level_6:
         abilities:
-        - Explosive Arrows
-        - Vampiric Arrow
-        - True Mastery
+        - Shadow and Light Arrows
       level_7:
         abilities:
-        - Blink Arrows
-        - Second Action
+        - Reflexes
+        - Steady
       level_8:
+        abilities:
+        - Explosive Arrows
+      level_9:
+        abilities:
+        - Vampiric Arrow
+      level_10:
+        abilities:
+        - Expert Fletcher
+        - True Mastery
+        - Second Action
+      level_11:
+        abilities:
+        - Blink Arrows
+      level_12:
         abilities:
         - Uncanny Perception
         - Shock Arrow
+      level_13:
+        abilities:
         - Anti-Gravity Arrows
-      level_9:
+      level_14:
         abilities:
         - Volley
-      level_10:
+      level_15:
         abilities:
         - Firestorm Arrow
     questions:
@@ -1159,60 +1293,70 @@ Ranged Fighter:
         - Flash Grenade
         subclass_marksman_abilities:
         - Bayonet
+        - Bull Rush
       level_2:
         abilities:
-        - From the Hip
         - High Grain
       level_3:
-        subclass_gunslinger_abilities:
-        - Quickdraw
-        subclass_marksman_abilities:
-        - Reduced Critical
-        - Scope
-      level_4:
         abilities:
-        - Re-chamber
+        - From the Hip
+      level_4:
+        subclass_marksman_abilities:
+        - Scope
         - Suppressor
         subclass_gunslinger_abilities:
         - Lighter Gear
       level_5:
-        abilities:
-        - Multi-class Option
         subclass_gunslinger_abilities:
         - Twin Guns
         subclass_marksman_abilities:
-        - Line Them Up
         - Offhand Attack
+        - Reduced Critical
       level_6:
+        subclass_gunslinger_abilities:
+        - Quickdraw
         abilities:
         - High Grain
+      level_7:
+        abilities:
+        - Line Them Up
+      level_8:
         subclass_gunslinger_abilities:
         - Feeling Lucky
         subclass_marksman_abilities:
-        - Reduced Critical
         - Savage Critical
-      level_7:
+      level_9:
         subclass_gunslinger_abilities:
         - Fastest Gun
+        subclass_marksman_abilities:
+        - Reduced Critical
+      level_10:
+        subclass_gunslinger_abilities:
         - Second Action
         subclass_marksman_abilities:
-        - Re-chamber
-      level_8:
+        - Armor Penetrating Rounds
+      level_11:
         subclass_gunslinger_abilities:
         - Hollowpoint
+        subclass_marksman_abilities:
+        - Re-chamber
+      level_12:
+        subclass_gunslinger_abilities:
         - Strike First
         subclass_marksman_abilities:
-        - Armor Penetrating Rounds
         - High Grain
-      level_9:
+      level_13:
         abilities:
         - Harrying Shot
-      level_10:
+      level_14:
+        abilities:
+        - Reduced Critical
+      level_15:
         subclass_gunslinger_abilities:
         - Volley
         subclass_marksman_abilities:
         - Re-chamber
-        - Reduced Critical
+        - Assassinate
     questions:
     - How did they acquired their firearm?
     - Who made it?
