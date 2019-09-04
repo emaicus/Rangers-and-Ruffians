@@ -299,9 +299,9 @@
             <h2>Stats</h2>
             <strong>Copy these stats to your character sheet before you leave this page.</strong>
             <div id="computed_stats">
-              <strong>Spell Points:</strong> {{ 2 + character["effective_stats"]["Intelligence"] }}
+              <strong>Spell Points:</strong> {{ 5 + character["effective_stats"]["Intelligence"] }}
               <br/>
-              <strong>Spell Power:</strong> {{ 8 + ( character["effective_stats"]["Inner_Fire"] * 2 ) }}
+              <strong>Spell Power:</strong> {{ 10 + ( character["effective_stats"]["Inner_Fire"] ) }}
               {% if character['level'] > 0 %}
                 <p>
                 You have leveled up {{ character['level'] }} times, so you have {{ character['level'] * 2 }} stat points to spend.

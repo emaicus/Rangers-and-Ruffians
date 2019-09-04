@@ -1723,4 +1723,24 @@ Thief or Assassin:
     react. On subsequent level-ups, you will gain unique abilities based on your choice.
   type: choice
   brief: You can subclass into a Thief or an Assassin.
-# Hard to Kill: You must fail two death coin tosses to die.
+Peck:
+  description: As an offhand action, peck an enemy, dealing 1d6 damage. On a critical hit, blind them until they succeed a SP save.
+  type: choice
+  brief: Offhand. 1d6 damage. On crit, blind until SP save.
+  cost: 1
+High Jump:
+  description: "Flap your vestigial wings to jump twice your height directly upward."
+  type: general
+  brief: "Flap your wings to jump upward 2x your height."
+Coast:
+  description: "Use your wings to coast from great heights."
+  type: general
+  brief: "Use your wings to avoid fall damage."
+Carrion:
+  description: "You can eat raw and rotten meat without penalty."
+  type: general
+  brief: "Eat raw/rotten food without penalty."
+Mimic:
+  description: "You can mimic any voice you've heard."
+  type: general
+  brief: "Mimic any voice you've heard."

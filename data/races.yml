@@ -512,3 +512,25 @@ Hissling:
         Luck: 1
         Perception: 2
         Strength: -2
+Kragraven:
+  subraces:
+    Kragraven:
+      health_die_pieces: 4
+      abilities: 
+        - Peck
+        - High Jump
+        - Coast
+        - Carrion
+        - Mimic
+      quote: "I don't trust them, those bird-men that live to the west. Don't trust them one bit."
+      author: Old Man Mcuffit, Racist Old Man
+      description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive, 
+                    taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
+      stats:
+        Charisma: 0
+        Dexterity: 1
+        Inner_Fire: -1
+        Intelligence: 0
+        Luck: 1
+        Perception: 1
+        Strength: 0
