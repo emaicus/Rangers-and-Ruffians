@@ -83,59 +83,13 @@
                   <p>
                     <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
                     <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
-                    {% if visualStats == True %}
-                    <span class="subtitle">Health Dice:</span><span class="normalText"> __________ </span><br/>
-                    {% endif %}
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-6">
-            {% if visualStats == True %}
-            <div class="boxDiv" style="margin-top:10px;">
-              <p class="boxSubtitle">Stats:</p>
-              {% for stat in ['STR', 'DEX', 'INT', 'INF', 'PER', 'CHA', 'LUK'] %}
-              <div class="circleDiv">
-                <div class="statDiv">
-                  <p class="statText">
-                    <span class="statName"> 
-                      {{stat}}:
-                    </span>
-                  {% if stat != 'LUK' %}
-                    <span class="plusMinus">+&nbsp;&nbsp;-</span>
-                  {% endif %}
-                  </p>
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                  <img src="/static/images/icons/circle-halved.svg" class="tinyicon">
-                </div>
-                <div class="singleCircle">
-                &nbsp;&nbsp;________
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-            {% else %}
-            <div class=squareWrapper>
+              <div class=squareWrapper>
                 <div class=square>
                   <span class="squareContent">STR</span>
                 </div>
@@ -162,7 +116,7 @@
                   <span class="squareContent">HD</span>
                 </div>
               </div>
-              <!-- <div class="boxDiv" id="combatDiv">
+              <div class="boxDiv" id="combatDiv">
                 <div id="combatItemsHeading">
                   <p class="boxSubtitle">Combat Items:</p>
                 </div>
@@ -203,15 +157,8 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
-              {% endif %}
-              <div id="combatAbilities" 
-                {% if visualStats == True %}
-                  class="combatAbilitiesVisualStats">
-                {% else %}
-                  class="combatAbilities">
-                {% endif%}
-
+              </div>
+              <div id="combatAbilities" class="combatAbilities">
                 <p class="boxSubtitle">Combat Abilities:</p>
                 <div id="combatAbilityList">
                   {% for ability, description in character["abilities"]["combat"] %}
@@ -267,17 +214,6 @@
         <div class="row h-100">
           <div class="col-12">
             {{ macros.render_spellbook( character["character_name"], character["class"], spells ) }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-    {% if class_data %}
-    <div class="printRegion">
-      <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
-        <div class="row h-100">
-          <div class="col-12">
-            {{ macros.render_level_up_page(character["class"].title(), class_data) }}
           </div>
         </div>
       </div>

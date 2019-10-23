@@ -71,6 +71,7 @@ face_features:
   - a cute nose
   male: []
   unisex:
+  - a button nose
   - straight, white teeth
   - crooked teeth
   - a gap between <HIS_HER> teeth
@@ -82,6 +83,10 @@ face_features:
   - pointed eyeteeth
   - a quick, devilish grin
   - a wolfish grin
+  - a devilish grin
+  - a stern mouth
+  - a crooked mouth
+  - a hard chin 
   - angular cheekbones
   - sharp cheekbones
   - hollow cheeks

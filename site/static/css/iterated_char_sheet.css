@@ -6,12 +6,28 @@ body
   -webkit-print-color-adjust: exact !important;
 }
 
+.statSection{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.circleDiv {
+  display: flex;
+  margin-top: 7px;
+}
+
+/* Create three equal columns that sits next to each other */
+.singleCircle {
+  padding-left: 5px;
+}
+
 .printRegion 
 {
-  width: 8.5in;
+  width: 10in;
   margin: 0 auto;
   padding:0px;
   background: #fff;
+  margin-top:30px;
 }
 
 .logo 
@@ -57,15 +73,15 @@ p.diamondStat:after {
 p.boxSubtitle
 {
   font-family: 'Angkor';
-  font-size: 26px;
+  font-size: 34px;
   margin-bottom: 0px;
   text-decoration: underline;
 }
 
 p.ability
 {
-  margin-bottom: 8px;
-  line-height: 1.0;
+  margin-bottom: 5px;
+/*  line-height: 1.0;*/
 }
 
 p.spaceForAbility
@@ -84,8 +100,35 @@ span.title
 span.subtitle
 {
   font-family: 'Angkor';
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.statDiv {
+  padding-left: 5px;
+  margin-top: 2px;
+}
+
+p.statText
+{
+  width:90px;
+  margin-bottom: 0px;
+
+}
+
+span.statName
+{
+  font-family: 'Angkor';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+span.plusMinus
+{
+  font-family: 'Angkor';
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 
@@ -93,7 +136,7 @@ span.normalText
 {
   
   font-family: 'Angkor';
-  font-size: 12px;
+  font-size: 16px;
 }
 
 span.circleText
@@ -106,7 +149,7 @@ span.circleText
 figcaption.caption
 {
   color:grey;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   font-family: 'Angkor';
   text-align: center;
@@ -138,7 +181,7 @@ div.characterDetails
 
 .splitBoxDiv
 {
-  height:2.75in;
+  height:3.4in;
   border: 2px solid black;
   border-radius: 15px;
   padding-left : 5px;
@@ -153,7 +196,18 @@ div.combatItems
 
 div.combatAbilities
 {
-  height: 5.10in;
+  height: 9.4in;
+  margin-top: 10px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+  padding-left: 5px;
+  padding-right: 4px;
+  border-bottom: 1px solid black;
+}
+
+div.combatAbilitiesVisualStats
+{
+  height: 7.8in;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -308,7 +362,13 @@ div.icon
 img.icon
 {
   width:70px;
-  height:70px
+  height:70px;
+}
+
+img.tinyicon
+{
+  width: 22px;
+  height: 22px; 
 }
 
 .fancyNumber
@@ -339,7 +399,8 @@ img.icon
 
     .printRegion 
     {
-      page-break-inside: avoid;
+      break-inside: avoid;
+      break-after: always;
       width: 100%;
       height: 11in;
       margin: 0px;

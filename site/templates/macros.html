@@ -1,0 +1,72 @@
+{% macro render_spellbook(character_name, rnr_class, spells) -%}
+  {% if character_name != None %}
+    <span class="characterName"> {{ character_name.replace('_', ' ').title() }}'s Spellbook</span><br>
+    <br/>
+  {% else %}
+    <br/>
+    <br/>
+  {% endif %}
+  {% for level in spells.keys()|sort()%}
+    <h4>{{level.replace('_',' ').title()}}</h4>
+    <ul>
+    {% for spell in spells[level].keys()|sort() %}
+      <li><b>{{spell.replace('_',' ').title()}}: 
+      (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
+      <!-- {%- if rnr_class == "sorcerer" %}
+        (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
+      {% else %}
+        (Cost: {{ spell["cost"] }})
+      {% endif -%}</b> -->
+      {{spells[level][spell]['description']}}</li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+{%- endmacro %}
+
+{% macro render_level_up_page(class_name, data) %}
+  <div class="container" id=printable>
+    <div class="row">
+      <div class="col-12">
+        {% if class_name != None %}
+        <h2>{{class_name}} Level Up Sheet</h2>
+        {% endif %}
+        {% for level in range(0,11) if 'level_{0}'.format(level) in data['levels'] %}
+          <div id={{"level_"+level|string}}>
+            Level {{level}}
+            <ul>
+            {% if 'stats' in data['levels']['level_'+level|string] %}
+              <li><b>Stats:</b>&nbsp;
+              {% for key, value in data['levels']['level_'+level|string]['stats'].items() %}
+                {{key.replace('_',' ').title()}}: {{value}}&nbsp; 
+              {% endfor %}
+              </li>
+            {% endif %}
+            {% if 'abilities' in data['levels']['level_'+level|string] %}
+              <li><b>Abilities:</b></li>
+              <ul>
+              {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
+                {% for ability_name, ability_description in ability_set %}
+                  <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
+                {% endfor %}
+              {% endfor %}
+              </ul>
+            {% endif %}
+            {% for key in data['levels']['level_'+level|string].keys() %}
+              {% if 'subclass' in key %}
+                <li><b>{{key.split('_')[1].title()}} Abilities</b></li>
+                <ul>
+                  {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
+                    {% for ability_name, ability_description in ability_set %}
+                      <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
+                    {% endfor %}
+                  {% endfor %}
+                </ul> 
+              {% endif %}
+            {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{%- endmacro %}

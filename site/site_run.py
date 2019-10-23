@@ -7,181 +7,34 @@ import cgi
 import names
 import random
 import json
+import site_utils
 sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
 
 app = Flask(__name__, static_url_path='/static')
 
-'''
-Helper functions
-'''
-def populate_race(info):
-  page_objects = rnr_utils.load_all_race_objects()
-  serial_data = list()
-  for entity in page_objects:
-    male = True if info['gender'] == 'male' else False
-    serial_data.append(entity.serialize(male))
-  return serial_data
-
-def populate_class(info):
-  page_objects = rnr_utils.load_all_class_objects()
-  serial_data = list()
-  for entity in page_objects:
-    male = True if info['gender'] == 'male' else False
-    serial_data.append(entity.serialize(male))
-  return serial_data
-
-def populate_gender():
-  serial_data = list()
-  for gender in ("male", "female"):
-    serial = dict()
-    serial["stats"] = None
-    serial["name"] = gender
-    serial["abilities"] = None
-    serial["description"] = '''Your chosen gender can affect the way that you roleplay your character
-                               in Rangers and Ruffians. However, it should not affect your chosen race
-                               or class. While using the website, your chosen gender will affect the 
-                               race and class images that are displayed.
-                            '''
-    serial["path_to_image"] = "/static/images/gender/{0}.jpg".format(gender.lower())
-
-    serial['rights'] = rnr_utils.GLOBAL_ART_DICTIONARY.get(gender.lower(), None)
-
-    serial_data.append(serial)
-  return serial_data
-
-def validity_check():
-  print(json.dumps(request.args, indent=4))
-  class_names = rnr_utils.get_all_class_names()
-  class_names = [x.lower() for x in class_names]
-  subrace_names = rnr_utils.get_all_subrace_names()
-  subrace_names = [x.lower() for x in subrace_names]
-  valid_levels = ['0','1','2','3','4','5','6','7','8','9','10']
-  info = dict()
-  chosen_gender = request.args.get('gender','')
-  chosen_subrace = request.args.get('subrace','')
-  chosen_class = request.args.get('class','')
-  chosen_name = request.args.get('name','')
-  roll_stats = request.args.get('roll_stats',0)
-  level = request.args.get('level', '')
-
-  try:
-    roll_stats = int(roll_stats)
-  except Exception as e:
-    roll_stats = 0
-  
-  roll_stats   = True if roll_stats == 1 else False
-  
-  print(subrace_names)
-  print(chosen_subrace)
-  chosen_subrace  = chosen_subrace.lower() if chosen_subrace.lower() in subrace_names else None
-
-  chosen_class = chosen_class.lower() if chosen_class.lower() in class_names else None
-  magic_class  = True if chosen_class != None and chosen_class.lower() in rnr_utils.magical_classes.keys() else False
-  chosen_name = cgi.escape(chosen_name)
-  chosen_name = None if chosen_name.strip() == '' else chosen_name
-  chosen_gender = chosen_gender.lower() if chosen_gender.lower() in ('male', 'female') else None
-  chosen_level = int(level) if level in valid_levels else None
-
-  info['name'] = chosen_name
-  info['magic_class'] = magic_class
-  info['class'] = chosen_class
-  info['subrace'] = chosen_subrace
-  info['roll_stats'] = roll_stats
-  info['gender'] = chosen_gender
-  info['level'] = chosen_level
-
-  return info
-
-def generate_redirect_string(param_map):
-  ret = '?'
-  for key in ['gender','subrace','class','name']:
-    if param_map[key] != None:
-      ret = '{0}{1}={2}&'.format(ret,key,param_map[key])
-  #fist char is a ?, then & everything
-  print('forwarding param {0}'.format(ret))
-  return ret
-
-#Order of operations: gender, race, class, name
-def find_first_invalid_value(params):
-  for key in ['gender','subrace','class','name', 'level']:
-    if params[key] == None:
-      print('returning {0}'.format(key))
-      return key
-  return None
-
-
-'''
-Flask app
-'''
-
-
-# @app.route('/races')
 @app.route('/')
 def index_page():
+  print('hit index page')
   return render_template('homepage.html')
 
 @app.route('/legal')
 def legal():
+  print('hit legal')
   return render_template('legal.html',art=rnr_utils.GLOBAL_ART_DICTIONARY)
-
-def which_icons(rnr_race, rnr_class):
-  icons = list()
-
-  #Everyone has health
-  icons.append(('hearts.svg', 'Health'))
-
-  # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
-  # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
-
-  #Clerics and Paladins get special spell points.
-  if rnr_class in ['cleric', 'paladin']:
-    icons.append(('prayer.svg', 'Spell Points'))
-  else:
-    icons.append(('ink-swirl.svg', 'Spell Points'))
-
-  #Sorcerers have influence points
-  if rnr_class == 'sorcerer':
-    icons.append(('magic-swirl.svg', 'Influence'))
-  
-  #necromancers have souls
-  if rnr_class == 'necromancer':
-    icons.append(('tombstone.svg', 'Souls'))
-  
-  #highborn have gumption
-  if rnr_class == 'highborn':
-    icons.append(('swords-power.svg', 'Gumption'))
-
-  # #archers have magic arrows
-  # if rnr_class == 'archer':
-  #   icons.append(('quiver.svg', 'Magic Quiver'))
-
-  #Bards have spell coins
-  if rnr_class == 'bard':
-    icons.append(('swap-bag.svg', 'Spell Coins'))
-
-  #Everyone has spell power, armor, and magic armor.
-  icons.append(('fire-spell-cast.svg', 'Spell Power'))
-  icons.append(('shield.svg', 'Armor'))
-  icons.append(('bolt-shield.svg', 'Mage Armor'))
-  return icons
 
 @app.route('/creation')
 def creation_landing_page():
-  #return render_template("iterated_display_page.html")
-  # info = {'gender' : 'female'}
-  # serial_data = populate_race(info)
-  # return render_template("new_display_page.html", data=serial_data)
-
+  print('Hit creation landing page')
   page_objects = None
   populated_value = ""
   forwarding_param = ""
   serial_data = list()
   
-  info = validity_check()
-  next_to_populate = find_first_invalid_value(info)
-  redirect_string = generate_redirect_string(info)
+  info = site_utils.validity_check()
+  next_to_populate = site_utils.find_next_page(info)
+  redirect_string = site_utils.generate_redirect_string(info)
 
   prev_stats = None
   if info['class'] != None:
@@ -192,29 +45,76 @@ def creation_landing_page():
     prev_stats = rnr_utils.rnr_race.basic_constructor(race, subrace).stats
 
   if next_to_populate == 'name' or next_to_populate == 'level':
-    print("The name {0} was invalid".format(info['name']))
     random_name = names.get_first_name(gender=info['gender'])
-    print(rnr_utils.get_all_class_names())
+    print('Going to username form')
     return render_template("user_name_form.html", chosen_gender=info['gender'], chosen_subrace=info['subrace'], chosen_rnr_class=info['class'], all_genders=['male','female'], all_races=rnr_utils.get_all_race_names(), all_rnr_classes=rnr_utils.get_all_class_names(), random_name=random_name.title())
   elif next_to_populate == 'gender':
-    serial_data = populate_gender()
+    serial_data = site_utils.populate_gender()
+    print('Going to gender page')
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='gender',prev_stats=None,display_class=False)
   elif next_to_populate == 'class':
-    serial_data = populate_class(info)
+    serial_data = site_utils.populate_class(info)
+    print('Going to class page')
     return render_template("display_page.html", data=serial_data, stat_order=rnr_utils.standard_stat_order(), next_page='/creation', forwarding_param=redirect_string, next_param='class',prev_stats=prev_stats,display_class=True)
   elif next_to_populate == 'subrace':
-    serial_data = populate_race(info)
+    serial_data = site_utils.populate_race(info)
+    print('Going to race page')
     return render_template("display_page.html", data=serial_data, next_page='/creation', forwarding_param=redirect_string, next_param='subrace',prev_stats=prev_stats,display_class=False)
   else:
-    subrace = info['subrace'].replace('_', ' ')
-    race = rnr_utils.get_race_given_subrace(subrace)
-    male=True if info['gender'].lower() == 'male' else False
-    character = rnr_utils.rnr_character(info['name'],race,subrace,info['class'],info['level'], male=male)
-    serial = character.serialize()
-    return render_template("character_sheet.html",character=serial,icons=which_icons(info['subrace'], info['class']))
+    name = info['name']
+    subrace = info['subrace']
+    race = rnr_utils.get_race_given_subrace(subrace.replace('_', ' '))
+    print(subrace, race)
+    rnr_class = info['class']
+    level = info['level']
+    gender = info['gender']
+    # If we need to hit the spells form
+    if rnr_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+      print('Going to spell page helper')
+      return spell_page_helper('creation/character_sheet', rnr_class, name, race, subrace, level, gender )
+    else:
+      male=True if gender.lower() == 'male' else False
+      character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
+      serial = character.serialize()
+      serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
+      print('Going to character sheet')
+      return render_template("character_sheet.html",character=serial, icons=site_utils.which_icons(rnr_class, rnr_class), spells=None, class_data=serial_class)
+
+@app.route('/creation/character_sheet', methods=['POST',])
+def character_sheet_helper():
+  print('hit char_sheet helper')
+  info = site_utils.validity_check()
+  next_page = site_utils.find_next_page(info)
+
+  # Route back if something goes wrong
+  if next_page is not None:
+    return creation_landing_page()
+  # if next_page is not None:
+  #   if next_page == 'deity':
+  #     #render the deity page
+  #     pass
+  #   else:
+  #     creation_landing_page()
+  # else:
+  name = info['name']
+  subrace = info['subrace'].replace('_', ' ')
+  race = rnr_utils.get_race_given_subrace(subrace)
+  rnr_class = info['class']
+  level = info['level']
+  gender = info['gender']
+  spells = info['spells']
+  print(spells)
+  player_spellbook = rnr_utils.gather_spells(spells)
+  print(json.dumps(player_spellbook, indent=4))
+  male=True if gender.lower() == 'male' else False
+  character = rnr_utils.rnr_character(name,race,subrace,rnr_class,level)
+  serial = character.serialize()
+  serial_class = rnr_utils.rnr_class(rnr_class.lower()).serialize()
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(rnr_class, rnr_class), spells=player_spellbook, class_data=serial_class)
 
 @app.route('/ajax_load_content', methods=['POST',])
 def ajax_load_content():
+  print('hit ajax_load_content')
   class_names = rnr_utils.get_all_class_names()
   class_names = [x.lower() for x in class_names]
   subrace_names = rnr_utils.get_all_subrace_names()
@@ -233,6 +133,7 @@ def ajax_load_content():
 
 @app.route('/random')
 def random_page():
+  print('hit random')
 
   class_names = rnr_utils.get_all_class_names()
   class_names = [x.lower() for x in class_names]
@@ -282,10 +183,7 @@ def random_page():
   chosen_race   = random.choice(allowed_races)
   chosen_class  = random.choice(allowed_classes)
   chosen_flawed = random.choice(allowed_flaws)
-
-  magic_class = False
-  if chosen_class.lower() in rnr_utils.magical_classes.keys():
-    magic_class=True
+  spellbook = None
 
   flawed = True if chosen_flawed == 'flawed' else False
 
@@ -296,39 +194,21 @@ def random_page():
   
   male=True if chosen_gender.lower() == 'male' else False
 
-  character = rnr_utils.rnr_character(chosen_name, chosen_race_parent, chosen_race, chosen_class, 0,male=male,character_origin=description)
+  character = rnr_utils.rnr_character(chosen_name, chosen_race_parent, chosen_race, chosen_class, level=3,male=male,character_origin=description)
   serial = character.serialize()
-  return render_template("character_sheet.html",character=serial,icons=which_icons(chosen_race_parent, chosen_race))
 
-@app.route('/spells')
-def spell_page():
-  chosen_class = request.args.get('chosen_class','').lower()
-  chosen_name = request.args.get('chosen_name', None)
-  spell_data = dict()
-  spell_books = rnr_utils.get_all_spellbooks()
-  if chosen_class.lower() in rnr_utils.magical_classes.keys():
-    book_list = list()
-    for book_name in rnr_utils.magical_classes[chosen_class]:
-      print('we are appendinging {0} to {1}'.format(book_name, chosen_class))
-      book_list.append(book_name)
-    print(book_list)
-    big_book_name = ' and '.join(book_list)
-    spell_data[big_book_name] = dict()
-    for book_name in rnr_utils.magical_classes[chosen_class]:
-      for chapter, pages in spell_books[book_name].items():
-        if not chapter in spell_data[big_book_name]:
-          spell_data[big_book_name][chapter] = dict()
-        for spell_name, spell_info in pages.items():
-          print(book_name, chapter, spell_name)
-          if not spell_name in spell_data[big_book_name][chapter]:
-            spell_data[big_book_name][chapter][spell_name] = spell_info
-  if chosen_class == 'all':
-    spell_data = spell_books
+  serial_class = rnr_utils.rnr_class(chosen_class).serialize()
 
-  return render_template("spell_form.html", data=spell_data, chosen_name=chosen_name)
+
+  spellbook = None
+  if chosen_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+    spellbook = rnr_utils.get_random_spellbook(chosen_class, character.rnr_class_obj.get_spell_counts())
+
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons(chosen_race_parent, chosen_race), spells=spellbook, class_data=serial_class)
 
 @app.route('/blank_character_sheet')
 def blank_character_sheet():
+  print('hit blank')
   serial = {
     'subrace' : None,
     'character_name' : '', 
@@ -337,17 +217,38 @@ def blank_character_sheet():
     'gender' : None, 
     'abilities': {'general' : [], 'advantage' : [], 'disadvantage' : [], 'combat' : []}
     }
-  return render_template("character_sheet.html",character=serial,icons=which_icons("human", "fighter"))
+  return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons("human", "fighter"), spells=None, class_data=None)
 
-@app.route('/print_spell_page')
+@app.route('/spells')
+def spell_page():
+  print('hit spells')
+  rnr_class = request.args.get('chosen_class','').lower()
+  return spell_page_helper('spells/print_spell_page', rnr_class)
+
+def spell_page_helper(next_page, rnr_class, name=None, race=None, subrace=None, level=None, gender=None ):
+  print('hit spell helper')
+  if rnr_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+    spellbook_name, data = rnr_utils.join_spellbooks(rnr_class)
+    spell_data = dict()
+    spell_data[spellbook_name] = data
+  elif rnr_class == 'all':
+    spell_data = rnr_utils.get_all_spellbooks()
+  else:
+    spell_data = dict()
+
+  return render_template("spell_form.html", data=spell_data, rnr_class=rnr_class, next_page=next_page, name=name, race=race, subrace=subrace, level=level, gender=gender)
+
+
+@app.route('/spells/print_spell_page', methods=['POST',])
 def print_spell_page():
-  spells = request.args.getlist('chosen_spells', None)
-  chosen_name = request.args.get('chosen_name')
-  player_spellbook = rnr_utils.gather_spells(spells)
-  return render_template("printable_spellbook.html",data=player_spellbook,chosen_name=chosen_name)
+  print('hit print spell_page')
+  spells = request.form.getlist('spells', None)
+  spellbook = rnr_utils.gather_spells(spells)
+  return render_template("spellbook.html", spellbook = spellbook, name = 'Bilgolf', rnr_class = None)
 
 @app.route('/level_up')
 def level_up_page():
+  print('hit level up')
   rnr_class_name = request.args.get('chosen_class','').title()
   if not rnr_class_name in rnr_utils.get_all_class_names():
     print('could not find {0} in classes.'.format(rnr_class_name))
@@ -370,7 +271,7 @@ if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == '--public':
       print("Don't forget to run the following command '{0}'".format('sudo ufw allow {0}/tcp'.format(port)))
       print("Run ifconfig to find the correct local network inet address.")
-      app.run(host='0.0.0.0', port=port)
+      app.run(host='0.0.0.0', port=port, threaded=True)
     else:
       app.run(port=port)
 

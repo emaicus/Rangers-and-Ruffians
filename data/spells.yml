@@ -285,6 +285,7 @@ the_bard's_songbook:
         who hears must make an inner fire saving throw against your spell power and
         moves as far away as possible on failure.
     Horace's Wholesome Homestead:
+      charisma_cost: 10
       cost: 3
       description: Summon a pocket dimension containing a small homestead, capable
         of housing 6 people comfortably in two shared bedrooms. The homestead is fully
@@ -416,7 +417,7 @@ the_bard's_songbook:
       description: Summon a steed made of pure magical energy. The stallion has 20
         health, and may be de-summoned on command.
 the_book_of_chi:
-  Combat Basic Techniques:
+  Basic_Techniques:
     Brawler:
       description: Your hands are d6 weapons.
     Catch Projectile:
@@ -460,8 +461,6 @@ the_book_of_chi:
     Sweep the Leg:
       description: Attack with a single kick. If the target fails a dexterity save,
         they are knocked prone.
-      cost: 1
-  General Basic Techniques:
     Aerial Acrobatics:
       description: You can turn flips and spin in the air. If your feet touch something
         solid, you can spring from it.
@@ -492,7 +491,7 @@ the_book_of_chi:
       description: You have advantage on stealth checks.
     Tumble:
       description: You take half fall damage.
-  Master Techniques:
+  Master_Techniques:
     Aura of Calm:
       description: Allies near you gain +1 on all inner fire saving throws and
         checks against an enemy's spell power.
@@ -2415,7 +2414,7 @@ the_sorcerer's_scrolls:
       cost: 4
       description: Instantly teleport to your familiar.
     Fly:
-      charisma_cost: 12
+      charisma_cost: 14
       cost: 4
       description: Allow yourself or another entity to fly. Concentration.
     Illusory Terrain:
