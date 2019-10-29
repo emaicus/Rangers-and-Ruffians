@@ -737,7 +737,6 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Melee Weapon Proficiency
-        - Spell Power
         - My Father's Oboe
         - The Bard's Songbook
         - Regular Patron
@@ -821,7 +820,6 @@ Mage:
         abilities:
         - Learning Spells
         - Learn Spells
-        - Spell Power
         - The Book of Healing
         - Pledge
         - Level Zero Spells
@@ -901,7 +899,6 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Melee Weapon Proficiency
-        - Spell Power
         - Novice Spellbook
         - The Druid's Field Guide
         - Level Zero Spells
@@ -969,7 +966,6 @@ Mage:
         - Learn Spells
         - Soul Harvest
         - Learning Spells
-        - Spell Power
         - Soul Based Magic
         - Mortal Coil
         - Vegan
@@ -1054,7 +1050,6 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Charisma Based Spellcaster
-        - Spell Power
         - Novice Spellbook
         - The Sorcerer's Scrolls
         - Level Zero Spells
@@ -1145,8 +1140,6 @@ Mage:
       level_5:
         abilities:
         - Greater Offhand Spell
-      level_6:
-        abilities:
       level_7:
         abilities:
         - Level Three Spells

@@ -37,9 +37,9 @@ Animal Magnetism:
   type: general
   brief: You may attempt CHR checks to manipulate animals.
 Imbue Weapon:
-  description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 spell point. Lasts 1d4 turns.
+  description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 spell point. Lasts 1 battle or 1 hour.
   type: combat
-  brief: For 1 spell point, add 1d6 elemental damage to your weapon for 1d4 turns.
+  brief: 1 SP. Add 1d6 elemental damage to your weapon for 1 battle/1hr.
   cost: 1
 Inherent Magic:
   description: You are able to cast level zero spells naturally, and begin with 1 extra level zero spell from any spellbook.
@@ -610,6 +610,10 @@ Forgeborn:
   description: When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.
   type: advantage
   brief: Gain advantage when appraising or mending stone or steel.
+Incombustible:
+  description: You take half damage from heat and fire.
+  type: general
+  brief: You take half damage from heat and fire.
 Field Healing:
   description: Using your knowledge of natural healing, you are able to heal a teammate for 1d6 health as an offhand action. Spend additional spell points to heal more.
   type: general
@@ -879,6 +883,10 @@ Adaptable:
     of the day.
   type: general
   brief: Gain advantage on subsequent saves for 1 day after a failure.
+Skilled:
+  description: Begin your journey with one extra skill.
+  type: choice
+  brief: Begin with an extra skill.
 Tactics:
   description: Declare before an attack that you wish to double it's damage.
   type: combat
@@ -1034,10 +1042,6 @@ Sacrificial Rite:
   description: At the cost of 10 hp, make a second action during combat.
   type: combat
   brief: At the cost of 10 hp, make an extra action.
-Fire Resistance:
-  description: You have resistance to fire, and take half damage.
-  type: general
-  brief: You take half damage from fire.
 Ready Stance:
   description: As an offhand action, take up a stance that grants you 1d6 armor until your next turn.
   type: general
@@ -1601,10 +1605,6 @@ Forced Focus:
   description: You may now spend one gumption to add 1d10 to a roll.
   type: action
   brief: You can use gumption to add 1d10 to a roll.
-Spell Power:
-  description: If a spell states that an enemy must make a saving throw, it must beat 10 + (2 * your inner fire).
-  type: rule
-  brief:  Your spell power is 10 + (2 x INF)
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
@@ -1634,9 +1634,9 @@ Spell Modification:
     Increase difficulty by 4  to add an additional effect dice to the spell (e.g. making a spell that does 1d10 damage do 2d10)
     or to tie off a spell, making it last 1d20 minutes after casting even if it is a concentration spell.
 Prepare Spell:
-  description: Spend a turn or 5 minutes prepping a spell to decrease its cost by 2. This can be done a maximum of 3 times on a single spell.
+  description: Spend an offhand action or 1 minute prepping a spell to decrease its cost by 2.
   type: action
-  brief: Spend 1 action or 5 minutes prepping a spell to decrease its cost by 2. This can be done a max of 3 times on a spell.
+  brief: Spend an offhand action or 1 min. prepping a spell to decrease its cost by 2.
 Learning Spells:
   description: New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or
     a maximum spell level. Spellbooks with a maximum spell level contain one spell of your choice from the spellbooks that

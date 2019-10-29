@@ -2,7 +2,7 @@ Catterwol:
   subraces:
     Catterwol:
       abilities:
-        - Low-Light Vision
+        - Dark Vision
         - Predator
         - They're Retractable
         - Land on your feet
@@ -229,6 +229,7 @@ Halfling:
         - Carry a Tune
         - Lightweight
         - Nimble
+        - Nimble Fingers
       quote: Halflings are decent enough, and fun to be around. They have potential as
         since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
@@ -263,10 +264,10 @@ Halfling:
       stats:
         Charisma: 1
         Dexterity: 0
-        Inner_Fire: 1
+        Inner_Fire: 2
         Intelligence: -1
         Luck: 1
-        Perception: 0
+        Perception: -1
         Strength: 1
 Human:
   subraces:
@@ -277,6 +278,7 @@ Human:
       - Strength of Men
       - Rally
       - Adaptable
+      - Skilled
       quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
       author: Orkensheild, Orc Archer
       description: Humans are the most average of the races. The race of men can become good 
@@ -374,7 +376,8 @@ Dwarf:
       - Very Dangerous Over Short Distances
       - Boozehound
       - Thick Headed
-      - Forgeborn 
+      - Forgeborn
+      - Incombustible
       quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be 
         well placed if you want to bring one down.
       author: Orkinshield, Orc Gunslinger
@@ -396,9 +399,9 @@ Daemonspawn:
       health_die_pieces: 4
       abilities: 
       - Sacrificial Rite
-      - Dark Vision
+      - True Sight
       - Sleepless
-      - Fire Resistance
+      - Incombustible
       quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
         to use their dark and terrible magicks as to give you a passing smile. I've never met 
         one though; I've been careful to avoid them.
@@ -426,6 +429,7 @@ Sprout:
         - Soft Landing
         - Commune with Nature
         - Lightweight
+        - Blade of Grass
       quote: And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my 
               hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
               dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
@@ -444,7 +448,7 @@ Sprout:
         Strength: -3
 Automaton:
   subraces:
-    Heavy Metal Automaton:
+    Automaton:
       health_die_pieces: 6
       abilities: 
       - Power Core 

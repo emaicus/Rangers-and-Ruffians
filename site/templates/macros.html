@@ -11,12 +11,16 @@
     <ul>
     {% for spell in spells[level].keys()|sort() %}
       <li><b>{{spell.replace('_',' ').title()}}: 
-      (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
-      <!-- {%- if rnr_class == "sorcerer" %}
-        (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
+      {% if character_name == None %}
+        (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
       {% else %}
-        (Cost: {{ spell["cost"] }})
-      {% endif -%}</b> -->
+        {%- if rnr_class == "sorcerer" %}
+          (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
+        {% else %}
+          (Cost: {{ spells[level][spell]["cost"] }})
+        {% endif -%}
+      {% endif %}
+      </b>
       {{spells[level][spell]['description']}}</li>
     {% endfor %}
     </ul>
@@ -24,7 +28,7 @@
 {%- endmacro %}
 
 {% macro render_level_up_page(class_name, data) %}
-  <div class="container" id=printable>
+  <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
     <div class="row">
       <div class="col-12">
         {% if class_name != None %}
@@ -36,8 +40,15 @@
             {% if 'abilities' in data['levels']['level_'+level|string] %}
               <ul>
               {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
-                {% for ability_name, ability_description in ability_set %}
-                  <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
+                {% for ability_name, ability_info in ability_set.items() %}
+                  <li> 
+                    <b> {{ability_name.replace('_',' ').title()}}: 
+                      {% if ability_info["cost"] != None %}
+                        (Cost {{ ability_info['cost'] }})
+                      {% endif %}
+                    </b> 
+                    {{ability_info['description']}} 
+                  </li>
                 {% endfor %}
               {% endfor %}
               </ul>
@@ -47,8 +58,15 @@
                 <b>{{key.split('_')[1].title()}} Abilities</b>
                 <ul>
                   {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
-                    {% for ability_name, ability_description in ability_set %}
-                      <li> <b> {{ability_name.replace('_',' ').title()}}: </b> {{ability_description}} </li>
+                    {% for ability_name, ability_info in ability_set.items() %}
+                      <li> 
+                        <b> {{ability_name.replace('_',' ').title()}}: 
+                          {% if ability_info["cost"] != None %}
+                            (Cost {{ ability_info['cost'] }})
+                          {% endif %}
+                        </b> 
+                        {{ability_info["description"]}} 
+                      </li>
                     {% endfor %}
                   {% endfor %}
                 </ul> 

@@ -8,6 +8,7 @@ import names
 import random
 import json
 import site_utils
+import traceback
 sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
@@ -215,7 +216,7 @@ def blank_character_sheet():
     'class' : None, 
     'subclass' : None, 
     'gender' : None, 
-    'abilities': {'general' : [], 'advantage' : [], 'disadvantage' : [], 'combat' : []}
+    'abilities': {'general' : dict(), 'advantage' : dict(), 'disadvantage' : dict(), 'combat' : dict()}
     }
   return render_template("character_sheet.html",character=serial,icons=site_utils.which_icons("human", "fighter"), spells=None, class_data=None)
 
@@ -246,9 +247,55 @@ def print_spell_page():
   spellbook = rnr_utils.gather_spells(spells)
   return render_template("spellbook.html", spellbook = spellbook, name = 'Bilgolf', rnr_class = None)
 
+@app.route('/print_class_info')
+def render_print_info_form():
+  class_names = rnr_utils.get_all_class_names()
+  class_names = [x.lower() for x in class_names]
+  return render_template("print_info_form.html", all_rnr_classes=class_names)
+
+
+@app.route('/print_class_info/print_info', methods=['POST',])
+def print_info_page():
+  print(json.dumps(request.form, indent=4))
+  classes = request.form.getlist('allowed_classes', None)
+  information = request.form.getlist('info', None)
+
+  serial = dict()
+  all_class_names = rnr_utils.get_all_class_names()
+  print(information)
+
+  for rnr_class in classes:
+    if rnr_class.title() not in all_class_names:
+      print(f'Bad class name {rnr_class}')
+      continue
+
+    serial[rnr_class] = dict()
+    serial[rnr_class]['spell_books'] = None
+    serial[rnr_class]['level_up_data'] = None
+ 
+    # First, let's handle spellbooks
+    if 'spell_books' in information:
+      if rnr_class.lower() in rnr_utils.GLOBAL_MAGIC_CLASSES.keys():
+        spellbook_name, data = rnr_utils.join_spellbooks(rnr_class)
+        serial[rnr_class]['spell_books'] = data
+
+    # Now let's do level up sheets
+    if 'level_up_data' in information:
+      level_up_data = None
+      try:
+        r_class = rnr_utils.rnr_class(rnr_class)
+        level_up_data = r_class.serialize()
+      except:
+        traceback.print_exc()
+        print('could not load class {0}'.format(rnr_class))
+      serial[rnr_class]['level_up_data'] = level_up_data
+      print(json.dumps(level_up_data, indent=4))
+
+  return render_template("print_class_info.html", data = serial, to_print=information)
+
+
 @app.route('/level_up')
 def level_up_page():
-  print('hit level up')
   rnr_class_name = request.args.get('chosen_class','').title()
   if not rnr_class_name in rnr_utils.get_all_class_names():
     print('could not find {0} in classes.'.format(rnr_class_name))
@@ -269,9 +316,9 @@ if __name__ == '__main__':
     rnr_utils.load_Rangers_And_Ruffians_Data()
     port = int(os.environ.get('PORT', 9000))
     if len(sys.argv) > 1 and sys.argv[1] == '--public':
-      print("Don't forget to run the following command '{0}'".format('sudo ufw allow {0}/tcp'.format(port)))
+      print(f"Don't forget to run the following command 'sudo ufw allow {port}/tcp'")
       print("Run ifconfig to find the correct local network inet address.")
-      app.run(host='0.0.0.0', port=port, threaded=True)
+      app.run(host='0.0.0.0', port=port, threaded=False, processes=10)
     else:
       app.run(port=port)
 
