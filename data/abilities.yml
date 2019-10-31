@@ -1164,7 +1164,7 @@ Beacon of Hope:
   type: general
   brief: Passive. All allies within 100 feet gain +1 to all saving throws.
 Sinner's Bane: 
-  description: Do an additional 1d6 damage to unead or demonic entities. Stacks with hammer of light.
+  description: Do an additional 1d6 damage to undead or demonic entities. Stacks with hammer of light.
   type: combat
   brief: Do 1d6 additional damage to undead or demonic enemies. Stacks w/ hammer of light.
 Fires of Heaven: 
@@ -1634,9 +1634,9 @@ Spell Modification:
     Increase difficulty by 4  to add an additional effect dice to the spell (e.g. making a spell that does 1d10 damage do 2d10)
     or to tie off a spell, making it last 1d20 minutes after casting even if it is a concentration spell.
 Prepare Spell:
-  description: Spend an offhand action or 1 minute prepping a spell to decrease its cost by 2.
+  description: At the start of each day, choose a spell to have 2 less difficulty.
   type: action
-  brief: Spend an offhand action or 1 min. prepping a spell to decrease its cost by 2.
+  brief: At the start of the day, choose a spell to cost 2 less.
 Learning Spells:
   description: New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or
     a maximum spell level. Spellbooks with a maximum spell level contain one spell of your choice from the spellbooks that
@@ -1739,7 +1739,7 @@ Coast:
 Carrion:
   description: "You can eat raw and rotten meat without penalty."
   type: general
-  brief: "Eat raw/rotten food without penalty."
+  brief: "Eat raw or rotten food without penalty."
 Mimic:
   description: "You can mimic any voice you've heard."
   type: general

@@ -628,7 +628,7 @@ the_book_of_healing:
         someone, and an additional 1d6 damage to corrupted entities or the undead.
     Spare:
       cost: 0
-      description: Touch an ally that is on death's door to stabilize them. Stabilized entities immediately
+      description: Offhand. Touch an ally that is on death's door to stabilize them. Stabilized entities immediately
         return to 0 health. The are still unconcious, but no longer need to make death coin flips.
     The Face of Good:
       cost: 0
@@ -641,7 +641,7 @@ the_book_of_healing:
   Level_1:
     Augment Allied Attack:
       cost: 1
-      description: Reaction. When one of your allies attacks, you may add 1d4+your
+      description: Reaction. When one of your allies attacks, you may add 1d6+your
         inner fire to their damage.
     Bulk Up:
       cost: 1
@@ -650,7 +650,7 @@ the_book_of_healing:
     Delayed Heal:
       cost: 1
       description: Cast a healing spell on a teammate which does not take effect until
-        you trigger it as a bonus action. At that time, they are healed for 1d6 health.
+        you trigger it as a reaction or bonus action. At that time, they are healed for 1d6 health.
     Forget Ability:
       cost: 1
       description: Concentration. Force an entity to make an inner fire saving throw
@@ -802,7 +802,19 @@ the_book_of_healing:
       cost: 2
       description: Etch a glyph into the ground which makes a 20ft radius around it
         undetectable to evil eyes.
+    Greater Mending:
+      cost: 2
+      description: Instantly repair up to a moderately sized or broken object such as a wagon wheel or broken sword.
+    Greater Purify:
+      cost: 2
+      description: Purify all food, drink, or potions in a 100 foot area to remove ill effects. 
+        Greater purify can be used to remove drunkenness from entities, to render poison innocuous,
+        or to make spoiled food fresh again.
   Level_3:
+    Greater Delayed Heal:
+      cost: 2
+      description: Cast a healing spell on a teammate which does not take effect until
+        you trigger it as a reaction or bonus action. At that time, they are healed for 2d8 health.
     Death Ward:
       cost: 1
       description: Cast a powerful ward on an ally. If they are downed in combat,
@@ -828,18 +840,22 @@ the_book_of_healing:
       description: Grant a teammate or yourself strong lungs, rendering them immune
         to airborne toxins and smoke.
   Level_4:
+    Major Mending:
+      cost: 3
+      description: Spend 1 minute to repair everything you choose within a 1000 foot radius. This 
+        can include large objects such as castle walls, fallen pillars, and destroyed property.
     Hold Your Weapons:
       cost: 3
       description: Concentration. Bind an up to 10 enemies' weapons to their body.
         Each enemy may attempt a strength check against your spell power to remove
         it.
     Major Holy weapon:
-      cost: 4
-      description: Imbue your weapon with the spirit of righteousness. Your weapon
+      cost: 3
+      description: Imbue a weapon with the spirit of righteousness. Your weapon
         gets +6 damage for a day, and advantage against evil and undead entities.
     Major Mass Heal:
-      cost: 4
-      description: Restore 4d10 health to all allies in a 30ft radius.
+      cost: 3
+      description: Restore 5d10 health to all allies in a 30ft radius.
     Sealed Promise:
       cost: 1
       description: The cost for this spell is one spell point. Requires a piece of
@@ -853,7 +869,7 @@ the_book_of_healing:
     Battle Angel:
       cost: 3
       description: Summon a holy great weapon of your choice to your hand, and a shield
-        to your other. The weapon does 1d20 damage plus 1d10 radiant damage, and the
+        to your other. The weapon does 1d20 damage plus 3d10 radiant damage, and the
         shield allows you to perform the shield bash ability as a bonus action. While
         you are in the battle angel state, you may perform spells at -1 cost, have
         +3 strength, and have 50 hit points. When the 50 hit points drop to zero,
@@ -1547,7 +1563,7 @@ the_novice_spellbook:
       description: Fire a jet of noodles from the source of your magic. The noodles
         are steaming hot, and do 1d6 damage to whoever they hit. You can generate
         ten pounds of noodles per hour.
-    Rapid Fire Snowballs of Fury:
+    Rapid-Fire Snowballs of Fury:
       charisma_cost: 8
       cost: 0
       description: Roll 1d6. Fire that many snowballs at up to as many targets. Each
@@ -2265,6 +2281,12 @@ the_sorcerer's_scrolls:
       cost: 0
       description: Manifest your thoughts as a hologram standing one foot tall on
         your palm.
+    Summon Familiar:
+      charisma_cost: 8
+      cost: 0
+      description: Summon a small familiar with 5 health. The familiar obeys your
+        every command and can attack for 1d4 damage. If a familiar dies, it cannot be resummoned until the next
+        day.
     Tickle:
       charisma_cost: 8
       cost: 0
@@ -2272,7 +2294,7 @@ the_sorcerer's_scrolls:
         in combat, the entity must make an inner fire saving throw against your
         spell power, or be forced to move at disadvantage.
   Level_1:
-    Conjure minor illusion:
+    Conjure Minor Illusion:
       charisma_cost: 10
       cost: 1
       description: Create an illusory object which cannot move and cannot be bigger
@@ -2302,6 +2324,11 @@ the_sorcerer's_scrolls:
       cost: 1
       description: Conjure an unseen hand which can manipulate objects up to 50 feet
         away.
+    Through My Familiar's Eyes:
+      charisma_cost: 12
+      cost: 2
+      description: View the world through your familiar's eyes. Increase the difficulty
+        by 2 to hear through your familiar's ears.
   Level_2:
     Conjure major illusion:
       charisma_cost: 14
@@ -2353,13 +2380,14 @@ the_sorcerer's_scrolls:
       cost: 2
       description: Create a ward on an entity to allow you to communicate with them
         via thought. Works up to 1 half mile. Lasts 6 hours. Concentration.
-    Through My Familiar's Eyes:
-      charisma_cost: 12
-      cost: 2
-      description: View the world through your familiar's eyes. Increase the difficulty
-        by 2 to hear through your familiar's ears.
+    Summon Greater Familiar:
+      charisma_cost: 8
+      cost: 0
+      description: Summon a moderately sized familiar with 20 health. The familiar obeys your
+        every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next
+        day.
   Level_3:
-    Dimension Door:
+    Pocket Dimension:
       charisma_cost: 15
       cost: 3
       description: Create a door into your own, private pocket dimension. The dimension
@@ -2367,34 +2395,16 @@ the_sorcerer's_scrolls:
         you can always exit. For every 10 minutes you are in the pocket dimension,
         Make a D8 inner fire saving throw. If you fail, you are ejected from the
         pocket dimension.
-    Faithful Hound:
-      charisma_cost: 14
-      cost: 3
-      description: Summon forth an ethereal adult hound to aid you. For statistics
-        view the book of known beasts. The hound remains loyally at your side until
-        you rest or summon another entity.
     Fuse into Familiar:
       charisma_cost: 14
       cost: 3
-      description: Become one with your familiar. Lasts for up to 10 minutes, before
+      description: Touch your familiar to fuse with it. Lasts for up to 10 minutes, before
         you reappear where your familiar stands.
     Gateway:
       charisma_cost: 15
       cost: 3
       description: Create a doorway from one location to another within 300 feet.
         Both ends must be in view for the spell to be cast. Concentration.
-    Greater Familiar:
-      charisma_cost: 15
-      cost: 3
-      description: Summon an adult sized familiar to aid you. The familiar is yours
-        to command until its health is zero. You can see through the eyes of a greater
-        familiar. See the Book of Known Beasts for more details.
-    House Cat:
-      charisma_cost: 14
-      cost: 3
-      description: Summon an adult wildcat to aid you. For statistics view the book
-        of known beasts. The wildcat remains indifferently at your side until you
-        rest or summon another entity.
     Mind Blast:
       charisma_cost: 14
       cost: 3
@@ -2468,12 +2478,12 @@ the_sorcerer's_scrolls:
         bang. It takes one full turn or five minutes to cast this spell properly.
         If improperly cast, the cost of this spell is 12, and the gateway lets out
         at an undetermined location within one mile. Concentration.
-    Major Familiar:
-      charisma_cost: 18
-      cost: 5
-      description: Summon a Dire familiar to aid you. The familiar is yours to command
-        until its health is zero. You can see through the eyes of a dire familiar.
-        See the Book of Known Beasts for more details.
+    Summon Major Familiar:
+      charisma_cost: 8
+      cost: 0
+      description: Summon a large familiar with 40 health. The familiar obeys your
+        every command, and can make 2 attacks for 2d10 damage. If a familiar dies, it cannot be
+        resummoned until the next day.
 the_tome_of_the_ancients:
   Level_10:
     Massive Levitation:

@@ -752,42 +752,42 @@ Mage:
         - Cartwheel
       level_3:
         abilities:
+        - Nimble Fingers
         - Spell Coin
       level_4:
         abilities:
-        - Nimble Fingers
+        - Level Two Spells
       level_5:
         abilities:
-        - Level Two Spells
+        - Additional Spell Coin
       level_6:
         abilities:
         - Imbue Weapon
       level_7:
         abilities:
-        - Additional Spell Coin
+        - Level Three Spells
         - Greater Restful Melody
       level_8:
         abilities:
-        - Level Three Spells
         - Greater Imbue Weapon
       level_9:
         abilities:
         - Greater Spell Coin
       level_10:
         abilities:
-        - Double Strike
+        - Level Four Spells
       level_11:
         abilities:
-        - Level Four Spells
+        - Double Strike
       level_12:
         abilities:
         - Additional Spell Coin
       level_13:
         abilities:
-        - Major Restful Melody
+        - Level Five Spells
       level_14:
         abilities:
-        - Level Five Spells
+        - Major Restful Melody
       level_15:
         abilities:
         - Major Spell Coin
@@ -836,15 +836,13 @@ Mage:
       level_4:
         abilities:
         - Taunt
-      level_5:
-        abilities:
         - Level Two Spells
+      level_6:
+        abilities:
+        - Greater Offhand Spell
       level_7:
         abilities:
         - Feint
-        - Greater Offhand Spell
-      level_8:
-        abilities:
         - Level Three Spells
       level_10:
         abilities:
@@ -859,10 +857,10 @@ Mage:
         - Burning Bright
       level_13:
         abilities:
-        - Aura of Advantage
+        - Level Five Spells
       level_14:
         abilities:
-        - Level Five Spells
+        - Aura of Advantage
       level_15:
         abilities:
         - Angelic Wings
@@ -908,31 +906,31 @@ Mage:
       level_3:
         abilities:
         - Minor Offhand Spell
-      level_5:
+      level_4:
         abilities:
         - Level Two Spells
-      level_7:
+      level_6:
         abilities:
         - Greater Offhand Spell
-      level_8:
+      level_7:
         abilities:
         - Level Three Spells
       level_10:
         abilities:
-        - Ascend
+        - Level Four Spells
       level_11:
         abilities:
-        - Level Four Spells
+        - Ascend
       level_12:
         abilities:
         - True Ascension
         - Major Offhand Spell
       level_13:
         abilities:
-        - Power of Ascension
+        - Level Five Spells
       level_14:
         abilities:
-        - Level Five Spells
+        - Power of Ascension
       level_15:
         abilities:
         - Ascended Action
@@ -983,26 +981,24 @@ Mage:
         - Fear the Light
       level_4:
         abilities:
-        - Eyes of the Others
+        - Level Two Spells
       level_5:
         abilities:
-        - Level Two Spells
+        - Eyes of the Others
       level_6:
         abilities:
         - Larger Soul Jar
+        - Greater Offhand Spell
       level_7:
         abilities:
-        - Greater Offhand Spell
+        - Level Three Spells
       level_8:
         abilities:
-        - Level Three Spells
+        - Reap
       level_9:
         abilities:
         - Larger Soul Jar
       level_10:
-        abilities:
-        - Reap
-      level_11:
         abilities:
         - Level Four Spells
       level_12:
@@ -1065,26 +1061,26 @@ Mage:
         - Minor Offhand Spell
       level_4:
         abilities:
-        - Prepare Spell
+        - Level Two Spells
       level_5:
         abilities:
-        - Level Two Spells
-      level_7:
+        - Prepare Spell
+      level_6:
         abilities:
         - Greater Offhand Spell
-      level_8:
+      level_7:
         abilities:
         - Level Three Spells
-      level_10:
+      level_9:
         abilities:
         - Spirits Within
-      level_11:
+      level_10:
         abilities:
         - Level Four Spells
       level_12:
         abilities:
         - Major Offhand Spell
-      level_14:
+      level_13:
         abilities:
         - Level Five Spells
       level_15:

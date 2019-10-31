@@ -14,7 +14,7 @@
       {% if character_name == None %}
         (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
       {% else %}
-        {%- if rnr_class == "sorcerer" %}
+        {%- if rnr_class.lower() == "sorcerer" %}
           (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
         {% else %}
           (Cost: {{ spells[level][spell]["cost"] }})
