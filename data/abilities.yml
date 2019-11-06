@@ -95,7 +95,6 @@ Bellow:
   cost: 1
 Berserk:
   description: Once per rest, you can go into a rage, giving you +1 strength and dexterity,
-    and giving you a temporary + 2 to inner fire,
     but decreasing your intelligence and perception
     by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
@@ -490,9 +489,9 @@ Greater Medicine:
   type: general
   brief: You can create 2 1d10 health potions per day. Last 24 hours.
 Hammer of Light:
-  description: Any weapon that you wield does an additional 1d6 light damage to undead.
+  description: Any weapon that you wield does an additional dice of damage to undead.
   type: combat
-  brief: You do +1d6 damage to undead.
+  brief: You do an additional dice of damage to undead.
 Hand to Hand Combat:
   description: Your hands are 1d6 weapons.
   type: skill
@@ -799,9 +798,9 @@ Shield Bash:
   brief: "Contested STR check. Fail: loose action. d6 damage LV0 d8 LV4, d10 LV8, d12 LV12."
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
-    taking their damage for them. Any damage you receive as a result is halved.
+    taking their damage for them. Any damage you receive as a result is halved. Works up to 30 feet.
   type: combat
-  brief: Reaction. 1/round, take a teammates damage for them. Damage is halved.
+  brief: Reaction. 1/round, take a teammates damage for them. Damage is halved. 30ft rad.
 Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
     1d10 bonus to stealth checks made while standing still.
@@ -898,9 +897,9 @@ Taste Air:
   type: general
   brief: Gain advantage on PER checks made by tasting the air.
 Taunt:
-  description: You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others.
+  description: You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.
   type: combat
-  brief: SP save. On failure, force all within 30ft. to attack only you.
+  brief: SP save. On failure, force all within 30ft. to attack only you. Repeat each turn.
   cost: 1
 The Bard's Songbook:
   description: You can learn spells from the Bard's Songbook.
@@ -977,9 +976,9 @@ Expert Tracker:
   type: general
   brief: Add 1d6 to checks made when tracking.
 Trained Precision:
-  description: Gain +1d6 damage on your attack.
+  description: Gain an additional damage dice on your attack.
   type: combat
-  brief: Gain +1d6 damage on your attack.
+  brief: Add a damage dice to your attack.
   cost: 1
 Water Breathing:
   description: You only need to breathe once every three days. If you do not go underwater to breath, you will suffocate.
@@ -1078,9 +1077,9 @@ Minor Second Wind:
   brief: Heal yourself for 1d6 damage as an offhand.
   cost: 1
 Major Second Wind:
-  description: Heal yourself for 1d20 damage as an offhand action.
+  description: Heal yourself for 2d10 damage as an offhand action.
   type: general
-  brief: Heal yourself for 1d20 damage as an offhand.
+  brief: Heal yourself for 2d10 damage as an offhand.
   cost: 1
 Trained Attack:
   description: Re-roll an attack after you make it.
@@ -1101,7 +1100,7 @@ Fire and Ice:
     1d6 damage for the duration of a battle.
   type: combat
   brief: Imbue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
-  cost: 1
+  cost: 2
 Savage Critical:
   description: On a critical hit, do an additional dice of damage.
   type: combat
@@ -1111,9 +1110,9 @@ Line Them Up:
   type: combat
   brief: If you slay an enemy, gain another attack.
 Shield Up: 
-  description: Take half damage from ranged attacks if holding a shield.
+  description: Take half damage from non-magic piercing or blunt force ranged attacks if holding a shield.
   type: general
-  brief: Take half damage from ranged attacks if holding a shield.
+  brief: Take half damage from non-magic ranged attacks if holding a shield.
 Joust: 
   description: Add an extra damage dice to an attack if it is performed with a running start.
   type: combat
@@ -1213,16 +1212,16 @@ Disarming:
                saving throw against your charisma. If they fail, their attack must be made with disadvantage.
   type: combat
   brief: "Reaction. Force enemy to make INF save VS CHA. Fail: attack disadv."
-  cost: 1
+  cost: 0
 Aura of Peace: 
   description: Passive. All allies near you take heart, and gain 10 health while in your presence.
   type: general
   brief: Passive. All allies gain 10 health when in your presence.
 Rally Cry: 
-  description: Let out a rally cry as an offhand action which allows all allies to do an additional 1d6 damage on their next attack.
+  description: Let out a rally cry as an offhand action which allows all allies to do an additional dice of damage on their next attack.
   type: combat
-  brief: Offhand. Allow all allies to do +1d6 damage on their next attack.
-  cost: 2
+  brief: Offhand. Allow all allies to do an additional dice of damage on their next attack.
+  cost: 1
 Stalwart Defender:
   description: Grant all allies within 30 feet of you +1 armor.
   type: combat
@@ -1236,9 +1235,9 @@ Favorite Enemy:
   type: choice
   brief: Declare a favorite class of enemy. Gain advantage whenever attacking them.
 Monster Slayer:
-  description: Whenever you attack a beast classified as a monster, do an additional 1d6 damage on any attack.
+  description: Whenever you attack a beast classified as a monster, do an additional dice of damage on the attack.
   type: combat
-  brief: Do +1d6 damage to monsters.
+  brief: Do an additional dice of damage to monsters.
 Pickpocket: 
   description: If you land a critical hit, steal an item the enemy is holding.
   type: combat
@@ -1253,9 +1252,9 @@ Reflexes:
   type: general
   brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to 0, catch.
 Strike From the Shadows: 
-  description: Do an additional 1d10 damage on an attacks made from hiding.
+  description: Do an additional dice of damage on an attacks made from hiding.
   type: general
-  brief: Do +1d10 damage on attacks made from hiding.
+  brief: Do an additional dice of damage on attacks made from hiding.
 Minor Blink: 
   description: Teleport to a position you can see within 100 feet.
   type: general
@@ -1310,11 +1309,15 @@ One With Magic:
   brief: 1/day, drop to 1 health, but cast three spells free of charge.
 Ascend: 
   description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 spell points. 
-    While ascended, you may take flight as an offhand action. The ascended state lasts for 3
+    he ascended state lasts for 3
     turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
   type: general
-  brief: 1/day 3 turns. +5 sp pts. Offhand flight. Fatigued & 4d10 dmg after. Permadeath.
+  brief: 1/day 3 turns. +5 sp pts. Fatigued & 4d10 dmg after. Permadeath.
+Ascended Flight:
+  description: While in the Ascended state, you may take flight as an offhand action.
+  type: general
+  brief: Offhand flight in the ascended state.
 Power of Ascension:
   description: While in the ascended state, gain 5 inner fire, strength, and dexterity.
   type: general
@@ -1382,6 +1385,10 @@ Spirits Within:
     and may add +1 to strength, dexterity, perception, and inner fire.
   type: combat
   brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. ADV CHA, +1 STR DEX PER INF.
+Spiritual Movement:
+  description: While you contain a spirit, you may instantly teleport between patches of darkness as an offhand action or once per ten minutes out of combat.
+  type: general
+  brief: Offhand teleport to darkness. 1/10 mins out of combat.
 Light and Shadow: 
   description: While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability,
     and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
@@ -1438,9 +1445,9 @@ Hollowpoint:
   type: combat
   brief: Deal +1d6 damage to unarmored enemies.
 Quickdraw:
-  description: Add 1d6 to your initiative.
+  description: Add 1d4 to your initiative.
   type: combat
-  brief: Add 1d6 to your initiative.
+  brief: Add 1d4 to your initiative.
 Fastest Gun: 
   description: Add 1d10 to your initiative.
   type: combat
@@ -1540,9 +1547,9 @@ And this Part Goes Here...:
   type: general
   brief: 1/rest, craft something from junk.
 I'm a Red One!:
-  description: "At the start of your journey, choose your color"
+  description: "At the start of your journey, choose your color. This choice affects elemental resistances."
   type: choice
-  brief: choose your color at the start of your journey.
+  brief: Choose your color at the start of your journey. Affects elemental resistances.
 Action:
   description: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
   type: action
@@ -1561,9 +1568,8 @@ Twin Blades:
   brief: You can attack twice in a single action.
 Twin Blade Parry: 
   description: Once per round of combat, you may strike back when an enemy attacks you. 
-    Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
-  brief: Reaction. 1/round, roll 1d20 when attacked. If greater than 15, strike back.
+  brief: Reaction. Strike back when attacked.
 Offhand Attack: 
   description: You may use an offhand action to make an attack.
   type: action
@@ -1598,13 +1604,13 @@ Multi-Action:
   brief: Take an extra action.
   cost: 2
 Gumption:
-  description: You have gumption points equal to your spell points. Spend one to perform an additional action during your turn.
+  description: You have gumption points equal to your spell points. Spend one to add 1d10 to a check.
   type: action
-  brief:  You have gumption equal to your SP. Spend one to perform an additional action.
-Forced Focus:
-  description: You may now spend one gumption to add 1d10 to a roll.
+  brief:  You have gumption equal to your SP. Spend one to add 1d10 to a check.
+Spurred to Movement:
+  description: You may now spend a point of gumption to perform an action on your turn.
   type: action
-  brief: You can use gumption to add 1d10 to a roll.
+  brief: You can use a gumption to perform an action.
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
@@ -1744,3 +1750,7 @@ Mimic:
   description: "You can mimic any voice you've heard."
   type: general
   brief: "Mimic any voice you've heard."
+Stat Increase:
+  description: You gain two stat points to add to a stat or stats of your choosing.
+  brief: You gain two stat points to add to a stat or stats of your choosing.
+  type: choice

@@ -216,18 +216,20 @@
 
                 <p class="boxSubtitle">Combat Abilities:</p>
                 <div id="combatAbilityList">
-                  {% for ability, ability_info in character["abilities"]["combat"].items() %}
-                    <p class="ability">
-                      <span class="subtitle">{{ability}}: 
-                        {% if ability_info["cost"] != None %}
-                          (Cost {{ ability_info['cost'] }})
-                        {% endif %}
-                      </span>
-                      <span class="normalText">
-                        {{ability_info['description']}}
-                      </span>
-                    </p>
-                  {% endfor %}
+                  {% if "combat" in character["abilities"] %}
+                    {% for ability, ability_info in character["abilities"]["combat"].items() %}
+                      <p class="ability">
+                        <span class="subtitle">{{ability}}: 
+                          {% if ability_info["cost"] != None %}
+                            (Cost {{ ability_info['cost'] }})
+                          {% endif %}
+                        </span>
+                        <span class="normalText">
+                          {{ability_info['description']}}
+                        </span>
+                      </p>
+                    {% endfor %}
+                  {% endif %}
                 </div>
               </div>
           </div>

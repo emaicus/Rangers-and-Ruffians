@@ -46,15 +46,19 @@ class rnr_entity:
       for key in self.stats.keys():
         self.effective_stats[key] = self.get_effective_stat(key)
 
-    def pretty_print(self):
-      print(self.name)
-      print("chr: {0}".format(self.get_stat('Charisma')))
-      print("dex: {0}".format(self.get_stat('Dexterity')))
-      print("str: {0}".format(self.get_stat('Strength')))
-      print("inf: {0}".format(self.get_stat('Inner_Fire')))
-      print("int: {0}".format(self.get_stat('Intelligence')))
-      print("luc: {0}".format(self.get_stat('Luck')))
-      print("per: {0}".format(self.get_stat('Perception')))
+    def pretty_print(self, print_it=True):
+      s = ''
+      s += self.name + '\n'
+      s += f"{'Charisma:':20}{self.get_stat('Charisma'):3}\n"
+      s += f"{'Dexterity:':20}{self.get_stat('Dexterity'):3}\n"
+      s += f"{'Strength:':20}{self.get_stat('Strength'):3}\n"
+      s += f"{'Inner Fire:':20}{self.get_stat('Inner_Fire'):3}\n"
+      s += f"{'Intelligence:':20}{self.get_stat('Intelligence'):3}\n"
+      s += f"{'Luck:':20}{self.get_stat('Luck'):3}\n"
+      s += f"{'Perception:':20}{self.get_stat('Perception'):3}\n"
+      if print_it:
+        print(s)
+      return s
 
     def get_stat(self, stat_name):
       stat_name = stat_name.lower().replace(' ', '_')
@@ -153,12 +157,7 @@ class rnr_entity:
       return ret
 
     def __str__(self):
-      ret_list = ['{0}'.format(self.name),]
-      for stat in standard_stat_order():
-        line = '  {0} : {1}'.format(abbreviate_stat(stat), self.get_stat(stat))
-        ret_list.append(line)
-      ret_list.append('')
-      return '\n'.join(ret_list)
+      return self.pretty_print(print_it=False)
 
     def tabbed_string(self, prefix='\t'):
       double_prefix = prefix+'\t'
@@ -290,7 +289,7 @@ class rnr_class(rnr_entity):
       for step in range(0,self.level+1):
         level_string = 'level_{0}'.format(step)
         if not level_string in class_data['levels']:
-          print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
+          # print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
           continue
         level_details = class_data['levels'][level_string]
         
@@ -917,6 +916,8 @@ def subclasses_at_level(class_name, target_level):
   subclass_names = set()
   for level in range(0,target_level+1):
     level_string = 'level_{0}'.format(level)
+    if not level_string in class_data['levels']:
+      continue
     level_details = class_data['levels'][level_string]
     for key in level_details.keys():
       if 'subclass' in key:
