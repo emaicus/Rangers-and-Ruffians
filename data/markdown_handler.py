@@ -106,10 +106,12 @@ class markdown_handler:
 
       if len(self.ordering) == 0:
         for key in keys:
-          toc_buffer += f'[{key}](#{key.replace(" ", "-").lower()})  \n'
+          indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
+          toc_buffer += f"{indent}[{key}](#{key.replace(' ', '-').replace(':','').lower()})  \n"
       else:
         for key in self.ordering:
-          toc_buffer += f'[{key}](#{key.replace(" ", "-").lower()})  \n'
+          indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
+          toc_buffer += f"{indent}[{key}](#{key.replace(' ', '-').replace(':','').lower()})  \n"
 
 
       if self.file is None:

@@ -554,7 +554,7 @@ def dice_info():
 def potions():
   global BUFFER
 
-  BUFFER.start_heading('Quick Potion Reference',4)
+  BUFFER.start_heading('Potion Reference',4)
   BUFFER.chart_title(['Potion Name', 'Potion Effect'])
   
   fighter = generate_fighter_health()
@@ -639,9 +639,9 @@ def main():
   dice_info()
   potions()
   BUFFER.start_heading("Quick Start",2)
-  BUFFER.start_heading("Quick Player Understanding",3)
-  BUFFER.start_heading("Quick Monsters",3)
-  BUFFER.start_heading("Quick Roll Difficulty",3)
+  BUFFER.start_heading("Understanding Your Players",3)
+  BUFFER.start_heading("Monster Templates",3)
+  BUFFER.start_heading("Roll Difficulty",3)
 
   BUFFER.start_heading("Advanced Understanding",2)
   BUFFER.start_heading("Deeper Dice Roll Probability",3)
@@ -659,20 +659,18 @@ def main():
   
   BUFFER.order_next('Quick Start')
   
-  BUFFER.order_next('Quick Player Understanding')
-  
+  BUFFER.order_next('Understanding Your Players')
   BUFFER.order_next('Recommended Weapon Handouts')
-  #BUFFER.order_next('Quick Potions')
   BUFFER.order_next('Player Survivability')
-  BUFFER.order_next('Quick Potion Reference')
+  BUFFER.order_next('Potion Reference')
   BUFFER.order_next('Potion Availability by Level')
 
-  BUFFER.order_next('Quick Monsters')
+  BUFFER.order_next('Monster Templates')
   BUFFER.order_next('Example Light Monster Templates')
   BUFFER.order_next('Example Heavy Monster Templates')
   BUFFER.order_next('Example Boss Templates')
 
-  BUFFER.order_next('Quick Roll Difficulty')
+  BUFFER.order_next('Roll Difficulty')
   BUFFER.order_next('Difficulty Comparison')
 
   BUFFER.order_next('Advanced Understanding')
