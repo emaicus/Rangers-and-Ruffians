@@ -6,11 +6,11 @@ Heavy Fighter:
     - Ruffians
     base_stats:
       Charisma: -2
-      Dexterity: -1
-      Inner_Fire: 0
+      Dexterity: 1
+      Inner_Fire: -1
       Intelligence: -3
       Luck: 0
-      Perception: 1
+      Perception: 0
       Strength: 2
     description: Barbarians are hearty, and can dole out a lot of damage, making them
       great tanks for a party of adventurers. They are marked by their berserk ability,
@@ -25,10 +25,11 @@ Heavy Fighter:
         - Melee Weapon Proficiency
         - Berserk
         - Intimidate
+        - Taunt
       level_1:
         abilities:
-        - Taunt
         - Throw Anything
+        - Throw Caution to the Wind
       level_2:
         abilities:
         - Stat Increase
@@ -42,6 +43,7 @@ Heavy Fighter:
       level_5:
         abilities:
         - Blind Rage
+        - Savage Critical
       level_6:
         abilities:
         - Stat Increase
@@ -55,13 +57,11 @@ Heavy Fighter:
       level_9:
         abilities:
         - Berserker
-        - Throw Caution to the Wind
       level_10:
         abilities:
         - Stat Increase
       level_11:
         abilities:
-        - Savage Critical
         - Warmaster
       level_12:
         abilities:
@@ -107,19 +107,20 @@ Heavy Fighter:
         - Shield Bash
       level_1:
         abilities:
-        - Trained Precision
+        - Shield of Men
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
         - Shield Up
+        - Taunt
       level_4:
         abilities:
         - Stat Increase
       level_5:
         abilities:
-        - Shield of Men
+        - Trained Precision
       level_6:
         abilities:
         - Stat Increase
@@ -139,7 +140,6 @@ Heavy Fighter:
         - Stat Increase
       level_11:
         abilities:
-        - Taunt
         - Stalwart Defender
       level_12:
         abilities:
@@ -588,8 +588,8 @@ Light Fighter:
         - Camouflage
       level_1:
         abilities:
+        - Entangling Attack
         - Favorite Terrain
-        - Finesse Strike
       level_2:
         abilities:
         - Stat Increase
@@ -602,7 +602,7 @@ Light Fighter:
         - Stat Increase
       level_5:
         abilities:
-        - Entangling Attack
+        - Finesse Strike
         - Twin Blades
       level_6:
         abilities:
@@ -684,7 +684,6 @@ Light Fighter:
         abilities:
         - Thief or Assassin
         subclass_assassin_abilities:
-        - Assassinate
         - Imposter
         subclass_thief_abilities:
         - Soft Landing
@@ -823,7 +822,7 @@ Mage:
         - Level Four Spells
       level_11:
         abilities:
-        - Double Strike
+        - Major Restful Melody
       level_12:
         abilities:
         - Stat Increase
@@ -831,7 +830,6 @@ Mage:
         abilities:
         - Additional Spell Coin
         - Level Five Spells
-        - Major Restful Melody
       level_14:
         abilities:
         - Stat Increase
@@ -1341,7 +1339,6 @@ Ranged Fighter:
       level_10:
         abilities:
         - Stat Increase
-        - Expert Fletcher
         - True Mastery
       level_11:
         abilities:
@@ -1353,6 +1350,7 @@ Ranged Fighter:
         - Shock Arrow
       level_13:
         abilities:
+        - Expert Fletcher
         - Anti-Gravity Arrows
         - Volley
       level_14:

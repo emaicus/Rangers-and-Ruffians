@@ -381,7 +381,7 @@ the_bard's_songbook:
       description: An entity must perform an inner fire check against your spell power.
         If they fail, they are dominated until dispelled, and must do as you command.
     Edmire's Grand Manor:
-      cost: 5
+      cost: 2
       description: Summon a pocket dimension containing a huge mansion, capable of
         housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
         fully stocked with extravagant food and drink. The mansion is manned by 100
@@ -1139,7 +1139,7 @@ the_druid's_guidebook:
     Plant Golems:
       cost: 4
       description: Summon 2 plant golems to your aid. The golems have 40 health, attack twice,
-        and do 1d8 damage per attack. Each golems has 5 spell points, and is capable
+        and do 1d8 damage per attack. Each golem has 5 spell points, and is capable
         of casting twisting vine, bark armor, and thorned caltrops.
     Resist the elements:
       cost: 4
@@ -2480,7 +2480,7 @@ the_sorcerer's_scrolls:
         at an undetermined location within one mile. Concentration.
     Summon Major Familiar:
       charisma_cost: 8
-      cost: 0
+      cost: 1
       description: Summon a large familiar with 40 health. The familiar obeys your
         every command, and can make 2 attacks for 2d10 damage. If a familiar dies, it cannot be
         resummoned until the next day.
@@ -2634,13 +2634,13 @@ the_wizard's_addendum:
         If concentration is broken, you are immediately teleported to a random location.
   Level_5:
     Invulnerability:
-      cost: 5
+      cost: 3
       description: Make yourself or another entity invulnerable for 3 turns.
     Reverse Gravity:
-      cost: 5
+      cost: 3
       description: Reverse the gravity in a space up to 1000 square feet.
     Storm of Swords:
-      cost: 5
+      cost: 3
       description: Conjure 6 swords of pure arcane energy around yourself. Each of
         the swords has 20 hit points. Each turn, each remaining sword may attack for
         1d6 damage. If an enemy physically attacks you, you may make a contested dexterity

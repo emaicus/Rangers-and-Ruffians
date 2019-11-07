@@ -531,7 +531,7 @@ Huntsman:
   type: combat
   brief: You have advantage when attacking beasts.
 Intimidate:
-  description: You have advantage when attempting to intimidate enemies.
+  description: "You have advantage on intimidation checks."
   type: advantage
   brief:  You have advantage on intimidation.
 Kingsmen:
@@ -657,9 +657,8 @@ Beast Form:
   brief: Transform back and forth into a dire creature for one hour.
   cost: 2
 Finesse Strike:
-  description: Add 1d6 damage to an attack of your choosing. If the affected entity fails an 
-    inner fire saving throw against your spell power, it suffers 1d6 bleeding damage at the start of its next turn. 
-    At level 5, increase bleeding damage to 2d6. At level ten, increase it to 4d6.
+  description: Add an additional dice of damage to an attack of your choosing. If the affected entity fails an 
+    inner fire saving throw against your spell power, it suffers an additional dice of bleeding damage at the start of its next turn. 
   type: combat
   brief: +1d6 attack. Enemy SP save. On fail 1d6 next turn. 2d6 at LV5, 4d6 LV10.
   cost: 1
