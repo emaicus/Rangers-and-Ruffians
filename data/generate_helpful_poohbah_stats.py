@@ -190,6 +190,32 @@ def survivability(title, num_players=1, num_rounds_to_simulate=5, num_games=100,
         armor_survivability.append(avg_rounds)
       print_markdown_chart_row([level, health] + armor_survivability)
   clear_markdown_buffer()
+  return stats
+
+def make_dice(target):
+  dice = [2,4,6,8,10,12]
+
+  # From low to high, see how many dice it takes.
+  dmg = 0
+  mult = 1
+
+  while dmg < target:
+    for die in dice:
+      dmg = (mult * (die / 2))
+      if dmg >= target:
+        return mult, die, 0
+      elif dmg + 1 >= target:
+        return mult, die, 1
+      elif dmg + 2 >= target and die not in [2, 4]:
+        return mult, die, 2
+      elif dmg + 3 >= target and die not in [2,4,6]:
+        return mult, die, 3
+      elif target > 25 and dmg + 4 >= target and die not in [2,4,6]:
+        return mult, die, 4
+      elif target > 25 and dmg + 5 >= target and die not in [2,4,6]:
+        return mult, die, 5
+    mult += 1
+  return mult, die
 
 
 def main():
@@ -217,13 +243,18 @@ def main():
   ##########################################
 
   print_markdown_heading('Average Player Health Values', 2)
-
+  health_data = dict()
   running_health = dict(health)
   print_markdown_chart_title(["Level", sprout_wizard[0], human_fighter[0], automaton_barbarian[0] ])
   for level in range(15 + 1):
 
     health_vals = list()
     for character, health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
+
+      if not character in health_data:
+        health_data[character] = dict()
+      health_data[character][level] = running_health[character]
+
       health_vals.append(running_health[character])
       running_health[character] += (health_dice // 2) + 2
     print_markdown_chart_row([level,] + health_vals)
@@ -315,76 +346,136 @@ def main():
   #
   ##########################################
 
-  survivability('Boss Survivability', num_players=3, num_rounds_to_simulate=5, num_games=1000, max_armor_bonus=5)
-  survivability('Monster Survivability', num_players=1, num_rounds_to_simulate=5, num_games=1000, max_armor_bonus=5)
+  boss_stats = survivability('Boss Survivability', num_players=3, num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5)
+  monster_stats = survivability('Monster Survivability', num_players=1, num_rounds_to_simulate=5, num_games=10, max_armor_bonus=5)
 
-  # print_markdown_heading('Theoretical Boss Survivability', 2)
-  # print_markdown_line('Assuming 1 Monster V 4 Player Combat')
-  # print_markdown_line('We make the assumption that, per turn, 1 of the players is unable to hit the boss.')
-  # clear_markdown_buffer()
-
-  # rounds_survived = [ 1, 2, 3, 4, 5 ]
-  # rounds_survived_strings = [f'{x-1} Rounds Survived' for x in rounds_survived]
-
-  # print_markdown_chart_title(['Player Level',] + rounds_survived_strings)
-  # dat = dict()
-  # for level in range(15+1):
-  #   dat[level] = dict()
-  #   # Compute Damage
-  #   dmg = 0
-  #   for die in dmg_steps[level]:
-  #     attack = (die / 2) + stat_steps[level]
-  #     dmg +=  attack + .25 * attack
-    
-  #   survive_health = list()
-  #   team_dmg = dmg * 3
-    
-  #   for rounds in rounds_survived:
-  #     # Attack damage + an extra 25% per round
-  #     s_health = (team_dmg + (.01 * team_dmg)) * rounds
-  #     survive_health.append( math.ceil(s_health) )
-  #     dat[level][rounds] = math.ceil(s_health)
-  #   print_markdown_chart_row([level,] + survive_health)
-  # clear_markdown_buffer()
+  ##########################################
+  #
+  # Player Survivability
+  #
+  ##########################################
 
 
-  # stats = dict()
-  # games_played = 1000
-  # armor_bonus = [0,1,2,3,4,5]
-  # armor_bonus_str = [f'Rounds Survived with {x} Armor' for x in armor_bonus]
+  rounds = [1,2,3,4,5,6]
+  round_strs = [f'{x} Hits' for x in rounds ]
+
+  print_markdown_heading("Character Survivability",2)
+  print_markdown_chart_title(['Level', 'Character Health'] + round_strs )
+
+  # For every level
+  rnr_class = health_data['Human Fighter']
+  for level in range(15 + 1):
+    char_health = rnr_class[level]
+    round_list = list()
+    for num_rounds in rounds:
+      # Add 10% to the characters health so that our attack is a little overpowered.
+      num,dice,mod = make_dice(char_health / num_rounds)
+      atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
+      round_list.append(atk)
+    print_markdown_chart_row([level, char_health] + round_list)
+
+  clear_markdown_buffer()
+
+  print_markdown_heading("Example Boss Templates by Level",2)
+  print_markdown_line('All bosses are built to survive 3 rounds of focused combat and to KO a player in 3 hits.')
+  print_markdown_line('It is understood that most bosses should have a number of monster minions.')
+  print_markdown_line('Bosses should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
+
+  print_markdown_chart_title(['Party Level', 'Boss Health', 'Boss Armor', 'Boss Damage'])
+
+  for level in range(15 + 1):
+    stats = boss_stats[level]
+    nearest_val = 1000000
+    nearest_health = -1
+    nearest_armor = -1
+    for health, armor_vals in stats.items():
+      for armor, survivability_list in armor_vals.items():
+
+        if level < 4 and armor > 3:
+          continue
+        if level < 7 and armor > 4:
+          continue
+
+        avg_survivability = sum(survivability_list) / len(survivability_list)
+        if abs(avg_survivability - 3) <  nearest_val:
+          nearest_val = abs(avg_survivability - 3)
+          nearest_health = health
+          nearest_armor = armor
+    char_health = rnr_class[level]
+    num, dice, mod = make_dice(char_health / 3)
+    atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
+    print_markdown_chart_row([level, nearest_health, nearest_armor, atk])
+
   
-  # for level, round_data in dat.items():
+  print_markdown_heading("Example Light Monster Templates by Level",2)
+  print_markdown_line('All light monsters are built to survive 2 hits from a player and to KO a player in 4 hits.')
+  print_markdown_line('It is understood that multiple light monsters should be deployed together against a party.')
+  print_markdown_line('All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
+  print_markdown_line('To fight a party of 4, about 6 light monsters should be deployed to challenge them.')
+  print_markdown_line('Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.')
 
-  #   stats[level] = dict()
-  #   for rounds_to_survive, required_health in round_data.items():
-  #     stats[level][required_health] = dict()
-  #     for armor in armor_bonus:
-  #       stats[level][required_health][armor] = list()
-  #       for i in range(games_played):
+  print_markdown_chart_title(['Party Level', 'Monster Health', 'Monster Armor', 'Monster Damage'])
 
-  #         rounds_survived = run_game(3, dmg_steps[int(level)], stat_steps[int(level)], required_health, armor, chatty= False)
-  #         stats[level][required_health][armor].append(rounds_survived)
+  for level in range(15 + 1):
+    stats = monster_stats[level]
+    nearest_val = 1000000
+    nearest_health = -1
+    nearest_armor = -1
+    for health, armor_vals in stats.items():
+      for armor, survivability_list in armor_vals.items():
+        
+        if level < 2 and armor > 2:
+          continue
+        if level < 4 and armor > 3:
+          continue
+        if level < 7 and armor > 4:
+          continue
 
-  # print_markdown_heading(f'Simulated Average Rounds Survived by Monsters Over {games_played} Games', 2)
+        avg_survivability = sum(survivability_list) / len(survivability_list)
+        if abs(avg_survivability - 2) <  nearest_val:
+          nearest_val = abs(avg_survivability - 2)
+          nearest_health = health
+          nearest_armor = armor
+    char_health = rnr_class[level]
+    num, dice, mod = make_dice(char_health / 4)
+    atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
+    print_markdown_chart_row([level, nearest_health, nearest_armor, atk])
 
 
+  print_markdown_heading("Example Heavy Monster Templates by Level",2)
+  print_markdown_line('All heavy monsters are built to survive 4 hits from a player and to KO a player in 3 hits.')
+  print_markdown_line('It is wise to pair heavy and heavy monsters together as a group.')
+  print_markdown_line('All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
+  print_markdown_line('Treat a single heavy monster as 2 heavy monsters, and 1/3 of a boss.')
+  print_markdown_line('To fight a party of 4, about 3 heavy monsters should be deployed to challenge them.')
 
-  # print_markdown_chart_title(['Party Level', 'Monster Health'] + armor_bonus_str)
-  # for level, round_data in stats.items():
-  #   for health, armor_info in round_data.items():
-  #     armor_survivability = list()
-  #     for armor in armor_bonus:
-  #       rounds_survived = armor_info[armor]
-  #       avg_rounds = sum(rounds_survived) / len(rounds_survived)
-  #       armor_survivability.append(avg_rounds)
-  #     print_markdown_chart_row([level, health] + armor_survivability)
-  # clear_markdown_buffer()
+  print_markdown_chart_title(['Party Level', 'Monster Health', 'Monster Armor', 'Monster Damage'])
 
-  ##########################################
-  #
-  # Monster Survivability
-  #
-  ##########################################
+  for level in range(15 + 1):
+    stats = monster_stats[level]
+    nearest_val = 1000000
+    nearest_health = -1
+    nearest_armor = -1
+    for health, armor_vals in stats.items():
+      for armor, survivability_list in armor_vals.items():
+
+        if level < 2 and armor > 2:
+          continue
+        if level < 4 and armor > 3:
+          continue
+        if level < 7 and armor > 4:
+          continue
+
+        avg_survivability = sum(survivability_list) / len(survivability_list)
+        if abs(avg_survivability - 4) <  nearest_val:
+          nearest_val = abs(avg_survivability - 4)
+          nearest_health = health
+          nearest_armor = armor
+    char_health = rnr_class[level]
+    num, dice, mod = make_dice(char_health / 3)
+    atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
+    print_markdown_chart_row([level, nearest_health, nearest_armor, atk])
+
 
 
 
