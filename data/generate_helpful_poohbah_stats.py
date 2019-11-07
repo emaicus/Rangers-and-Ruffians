@@ -380,6 +380,7 @@ def main():
   print_markdown_line('All bosses are built to survive 3 rounds of focused combat and to KO a player in 3 hits.')
   print_markdown_line('It is understood that most bosses should have a number of monster minions.')
   print_markdown_line('Bosses should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
+  clear_markdown_buffer()
 
   print_markdown_chart_title(['Party Level', 'Boss Health', 'Boss Armor', 'Boss Damage'])
 
@@ -413,6 +414,7 @@ def main():
   print_markdown_line('All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
   print_markdown_line('To fight a party of 4, about 6 light monsters should be deployed to challenge them.')
   print_markdown_line('Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.')
+  clear_markdown_buffer()
 
   print_markdown_chart_title(['Party Level', 'Monster Health', 'Monster Armor', 'Monster Damage'])
 
@@ -448,7 +450,7 @@ def main():
   print_markdown_line('All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
   print_markdown_line('Treat a single heavy monster as 2 heavy monsters, and 1/3 of a boss.')
   print_markdown_line('To fight a party of 4, about 3 heavy monsters should be deployed to challenge them.')
-
+  clear_markdown_buffer()
   print_markdown_chart_title(['Party Level', 'Monster Health', 'Monster Armor', 'Monster Damage'])
 
   for level in range(15 + 1):
