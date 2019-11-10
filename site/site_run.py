@@ -11,6 +11,10 @@ import site_utils
 sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
+import urllib
+
+
+SAVE_CHARACTER_DIR = 'SAVE_DATA'
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -263,6 +267,34 @@ def level_up_page():
   serial_data = r_class.serialize()
   return render_template("level_up_page.html",data=serial_data, class_name=rnr_class_name)
 
+@app.route('/save_character', methods=['GET',])
+def ajax_save_character():
+  char_data = request.args.get('char_data',dict())
+  spell_data = request.args.get('spell_data',dict())
+
+  new_char_data = urllib.parse.unquote(char_data)
+  new_spell_data = urllib.parse.unquote(spell_data)
+
+  char_data_dict =  json.loads(new_char_data)
+  spell_data_dict = json.loads(new_spell_data)
+
+  save_data = {'character_data' : char_data_dict, 'spell_data' : spell_data_dict}
+
+  rand_name = 'apples.json'
+
+  with open(os.path.join(SAVE_CHARACTER_DIR, rand_name), 'w') as outfile:
+    json.dump(save_data, outfile, indent=4)
+
+
+  
+  # print(json.dumps(char_data_dict, indent=4))
+  # print(json.dumps(spell_data_dict, indent=4))
+
+  # print('MADE IT!')
+  # print(json.dumps(char_data, indent=4))
+  # print(json.dumps(spell_data, indent=4))
+  return 'OK'
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     rnr_utils.printLogo()
@@ -271,7 +303,7 @@ if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == '--public':
       print("Don't forget to run the following command '{0}'".format('sudo ufw allow {0}/tcp'.format(port)))
       print("Run ifconfig to find the correct local network inet address.")
-      app.run(host='0.0.0.0', port=port, threaded=True)
+      app.run(host='0.0.0.0', port=port, processes=4)#threaded=True)
     else:
       app.run(port=port)
 
