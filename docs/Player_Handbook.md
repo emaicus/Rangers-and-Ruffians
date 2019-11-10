@@ -1,11 +1,71 @@
-# Rangers and Ruffians Player's Handbook Rev 1.2
+# Rangers and Ruffians Rulebook _Version 2.1.0_
+
+## Versioning and the Changelog
+The Version Number used by Rangers and Ruffians is broken into
+3 parts, each of which is separated by a period. The greatest (leftmost)
+digit represents a massive refactor to the core systems of the game
+which requires an entirely new ruleset to be adopted. This version was first
+incremented when the character leveling system was added to Rangers and Ruffians.
+
+The second digit represents the introduction of a new subsystem to the
+rules of the game which is not significant enough so as to impact the
+broader ruleset. This number was first incremented in Rangers and Ruffians
+2.1.0, when ```Skills``` were added to the game which could be learned
+when leveling up as an alternative to a Stat increase. 
+
+The final, and least significant digit represents a balance change
+which does not change any existing systems within the game. These
+are usually binned together into one large incremental update.
+For example, if a set of spells were deemed to be underpowered and
+there power was slightly increased, the the third version digit
+would be incremented.
+
+The majority of revisions made to Rangers and Ruffians after the 
+transition to version 2.0.0 are recorded in the ```changelog.md``` file
+found in the ```docs``` folder of the Rangers and Ruffians repository.
+For details about what changed between two versions of the game,
+please consult that documentation.
 
 ## Introduction
-### What is Rangers and Ruffians?
-Rangers and Ruffians is a tabletop game created by Evan and Emily Maicus, Jeremy and Zachary Wood, and Nicklas Makowski. It is a game of imagination, and as such, you will get as much out of it as you put in. To play, you need only a set of polyhedral dice, a few notebooks, and a ceaselessly positive attitude.
 
-### What do I need to play?
-In order to play Rangers And Ruffians, you will need this manual, at least one set of polyhedral dice (the nerdy ones), and a Poohbah, the person who will run your game (see the separate Poohbah's handbook for more details or if you are interested in being your group's Poohbah). This manual is the Player's Handbook, which contains all of the information that a player should need to engage with the game world. First and foremost, a player must create their character. Then, they must study and understand the basic rules that govern the way the game works. With this done, they can set forth to become the best Ranger or Ruffian that they can be!
+### What is Rangers and Ruffians?
+Rangers and Ruffians (also called just "Rangers" or "RnR")  
+is a tabletop roleplaying game (RPG) created for and by a group of
+nerdy friends. It can be dramatic, epic, and meaningful. 
+It can also be silly and funny. We think that it is usually pretty fun.  
+
+Once upon a time, Rangers and Ruffians was built from the
+ground up to be as easy to jump into as possible, especially
+for brand new players. The initial rule-set included in 
+what is now called Rangers And Ruffians 1.0.0 was so
+bare-bones that it didn't include numbers for the player to
+reference. As the game grew, and the core rules were expanded
+upon, some numbers became necessary. New ideas, like character
+leveling and specialized skills crept in. These ideas have
+greatly enriched the RnR experience, but have also slowly
+added to the complexity of the game. With the introduction
+of RnR 2.1.0, we look to formalize the rules of the game,
+and to re-evaluate them through the lens of our initial vision:
+that tabletop RPGs are for _everyone,_ and not just for people
+who like to crunch numbers and watch fantasy television movies and
+shows on the weekend. We have found that other (far more popular)
+tabletop RPGs are difficult for an outsider to join without
+the help of a friend who is "in the know," and even then that
+their rulesets can be obtuse and difficult to parse.
+We hope that our iteration on the awesome genre that is the
+tabletop RPG is deep and rich enough to serve as an engine
+for epic, fun adventures, while still being simple enough 
+so that you and your friends can play for the first time
+this weekend.
+
+## What do you need to play?
+
+In order to play Rangers and Ruffians, you need the following:
+
+1. At least one set of polyhedral dice (the nerdy ones).
+2. One player who has read these rules, and who will [run the story of your game](#poohbah). 
+3. A printed or digital version of this manual and the Poohbah's Handbook,
+   which contain all of the rules necessary 
 
 ## Brief Rules
 While making Rangers and Ruffians we strove to craft rules that are simple to understand and easy to follow, so that you can get playing quickly and without much hassle. While some aspects of the game are deeper than others, 90% of the time, you will only need the basic rules in this section.

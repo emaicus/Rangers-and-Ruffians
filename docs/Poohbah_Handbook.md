@@ -13,11 +13,11 @@ If they roll a critical success, they pass the check, often in style.
 
 |Difficulty      | Recommended Threshold |
 | :------------- | :-------------------  |
-| Easy           | 5                     |
+| Easy           | 10                    |
 | Moderate       | 14                    |
-| Difficult      | 17                    |
-| Very Difficult | 21                    |
-| Epic           | 25                    |
+| Difficult      | 18                    |
+| Very Difficult | 22                    |
+| Epic           | 24                    |
 
 #### Recommended Modifiers
 Acrobatics, Climbing, Lockpicking, Speed, Tinkering: __Dexterity__  
