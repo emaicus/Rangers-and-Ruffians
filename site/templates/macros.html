@@ -32,8 +32,8 @@
         {% endif %}
         {% for level in range(0,100) if 'level_{0}'.format(level) in data['levels'] %}
           <div id={{"level_"+level|string}}>
-            Level {{level}}
             {% if 'abilities' in data['levels']['level_'+level|string] %}
+              Level {{level}}
               <ul>
               {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
                 {% for ability_name, ability_description in ability_set %}

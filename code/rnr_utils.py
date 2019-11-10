@@ -649,7 +649,11 @@ def filterAbilities(abilities, verbose=False):
     ability_type = GLOBAL_ABILITY_DICT[ability]["type"]
     if not ability_type in filtered_abilities:
       filtered_abilities[ability_type] = list()
-    filtered_abilities[ability_type].append([ability,GLOBAL_ABILITY_DICT[ability][filt]])
+    if 'cost' in GLOBAL_ABILITY_DICT[ability]:
+      desc = f'Cost {GLOBAL_ABILITY_DICT[ability]["cost"]}, {GLOBAL_ABILITY_DICT[ability][filt]}'
+    else:
+      desc = GLOBAL_ABILITY_DICT[ability][filt]
+    filtered_abilities[ability_type].append([ability, desc])
   return filtered_abilities
 
 def abbreviate_stat(stat, upper=False):
