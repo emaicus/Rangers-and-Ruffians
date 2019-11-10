@@ -21,6 +21,7 @@ GLOBAL_ABILITY_DICT = dict()
 GLOBAL_CLASS_DATA = dict()
 GLOBAL_CLASS_DATA_BY_TYPE = dict()
 GLOBAL_RACE_DATA = dict()
+GLOBAL_SKILL_DATA = dict()
 GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 
@@ -37,13 +38,6 @@ class rnr_entity:
       #come back and see to this
       self.abilities = abilities
       self.stats = dict(stats)
-      self.charisma = stats["Charisma"]
-      self.dexterity = stats['Dexterity']
-      self.strength = stats["Strength"]
-      self.inner_fire = stats['Inner_Fire']
-      self.intelligence = stats['Intelligence']
-      self.luck = stats['Luck']
-      self.perception = stats['Perception']
       self.description = description
       self.quote = quote
       self.quote_author = quote_author
@@ -52,32 +46,36 @@ class rnr_entity:
       for key in self.stats.keys():
         self.effective_stats[key] = self.get_effective_stat(key)
 
-    def pretty_print(self):
-      print(self.name)
-      print("chr: {0}".format(self.charisma))
-      print("dex: {0}".format(self.dexterity))
-      print("str: {0}".format(self.strength))
-      print("inf: {0}".format(self.inner_fire))
-      print("int: {0}".format(self.intelligence))
-      print("luc: {0}".format(self.luck))
-      print("per: {0}".format(self.perception))
+    def pretty_print(self, print_it=True):
+      s = ''
+      s += self.name + '\n'
+      s += f"{'Charisma:':20}{self.get_stat('Charisma'):3}\n"
+      s += f"{'Dexterity:':20}{self.get_stat('Dexterity'):3}\n"
+      s += f"{'Strength:':20}{self.get_stat('Strength'):3}\n"
+      s += f"{'Inner Fire:':20}{self.get_stat('Inner_Fire'):3}\n"
+      s += f"{'Intelligence:':20}{self.get_stat('Intelligence'):3}\n"
+      s += f"{'Luck:':20}{self.get_stat('Luck'):3}\n"
+      s += f"{'Perception:':20}{self.get_stat('Perception'):3}\n"
+      if print_it:
+        print(s)
+      return s
 
     def get_stat(self, stat_name):
-      stat_name = stat_name.lower()
+      stat_name = stat_name.lower().replace(' ', '_')
       if stat_name == "charisma":
-        return self.charisma
+        return self.stats['Charisma']
       elif stat_name == "dexterity":
-        return self.dexterity
+        return self.stats['Dexterity']
       elif stat_name == "strength":
-        return self.strength
+        return self.stats['Strength']
       elif stat_name == "inner_fire":
-        return self.inner_fire 
+        return self.stats['Inner_Fire']
       elif stat_name == "intelligence":
-        return self.intelligence
+        return self.stats['Intelligence']
       elif stat_name == "luck":
-        return self.luck
+        return self.stats['Luck']
       elif stat_name == "perception":
-        return self.perception
+        return self.stats['Perception']
       else:
         print('Asked for bad stat {0}'.format(stat_name))
         return None
@@ -142,7 +140,7 @@ class rnr_entity:
       ret += '>___\n'
       ret += '>|STR|DEX|INT|INF|CHR|PER|LUK|\n'
       ret += '>|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n'
-      ret += '|{0}|{1}|{2}|{3}|{4}|{5}|{6}|\n'.format(self.strength, self.dexterity, self.intelligence, self.inner_fire, self.charisma, self.perception, self.luck)
+      ret += '|{0}|{1}|{2}|{3}|{4}|{5}|{6}|\n'.format(self.get_stat('strength'), self.get_stat('dexterity'), self.get_stat('intelligence'), self.get_stat('inner_fire'), self.get_stat('charisma'), self.get_stat('perception'), self.get_stat('luck'))
       ret += '>___\n'
       ret += '>#### Abilities:\n'
       abilities = filterAbilities(self.abilities)
@@ -159,12 +157,7 @@ class rnr_entity:
       return ret
 
     def __str__(self):
-      ret_list = ['{0}'.format(self.name),]
-      for stat in standard_stat_order():
-        line = '  {0} : {1}'.format(abbreviate_stat(stat), self.get_stat(stat))
-        ret_list.append(line)
-      ret_list.append('')
-      return '\n'.join(ret_list)
+      return self.pretty_print(print_it=False)
 
     def tabbed_string(self, prefix='\t'):
       double_prefix = prefix+'\t'
@@ -194,7 +187,7 @@ class rnr_class(rnr_entity):
           continue
         level_details = class_data['levels'][level_string]
         
-        abilities = abilities + level_details.get('abilities', [])
+        abilities = abilities + level_details.get('abilities', list())
         if not subclass is None and 'subclass_{0}_abilities'.format(subclass) in level_details:
           abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
 
@@ -296,7 +289,7 @@ class rnr_class(rnr_entity):
       for step in range(0,self.level+1):
         level_string = 'level_{0}'.format(step)
         if not level_string in class_data['levels']:
-          print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
+          # print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
           continue
         level_details = class_data['levels'][level_string]
         
@@ -381,7 +374,7 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = None, character_origin='', character_weakness='',  character_quote='', character_quote_author=''):
+  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = None, character_origin='', character_weakness='',  character_quote='', character_quote_author='', skills=dict()):
     rnr_race_obj = rnr_race.basic_constructor(race_name, subrace)
     rnr_class_obj = rnr_class(class_name, level, subclass)
     
@@ -396,6 +389,7 @@ class rnr_character(rnr_entity):
 
     super().__init__(final_character_name, abilities, stats, character_origin, character_quote, character_quote_author, character_weakness) 
     
+    self.skills = skills
     self.gender = 'male' if male==True else 'female'
     self.origin = character_origin
     self.weakness = character_weakness
@@ -550,7 +544,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_LEVEL_ABILITIES
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_LEVEL_ABILITIES
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -566,11 +560,15 @@ def load_Rangers_And_Ruffians_Data():
   class_path = os.path.join(INSTALL_DIRECTORY, 'classes.json')
   race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
   spell_path = os.path.join(INSTALL_DIRECTORY, 'spells.json')
+  skill_path = os.path.join(INSTALL_DIRECTORY, 'skills.json')
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
   art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
 
   with open(spell_path) as data_file:
     GLOBAL_SPELL_BOOKS = json.load(data_file)
+
+  with open(skill_path, 'r') as data_file:
+    GLOBAL_SKILL_DATA = json.load(data_file)
 
   for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
     for level, spells in chapters.items():
@@ -648,12 +646,10 @@ def filterAbilities(abilities, verbose=False):
   for ability in abilities:
     ability_type = GLOBAL_ABILITY_DICT[ability]["type"]
     if not ability_type in filtered_abilities:
-      filtered_abilities[ability_type] = list()
-    if 'cost' in GLOBAL_ABILITY_DICT[ability]:
-      desc = f'Cost {GLOBAL_ABILITY_DICT[ability]["cost"]}, {GLOBAL_ABILITY_DICT[ability][filt]}'
-    else:
-      desc = GLOBAL_ABILITY_DICT[ability][filt]
-    filtered_abilities[ability_type].append([ability, desc])
+      filtered_abilities[ability_type] = dict()
+    filtered_abilities[ability_type][ability] = dict()
+    filtered_abilities[ability_type][ability]['description'] = GLOBAL_ABILITY_DICT[ability][filt]
+    filtered_abilities[ability_type][ability]['cost'] = GLOBAL_ABILITY_DICT[ability]['cost'] if 'cost' in GLOBAL_ABILITY_DICT[ability] else None
   return filtered_abilities
 
 def abbreviate_stat(stat, upper=False):
@@ -920,11 +916,37 @@ def subclasses_at_level(class_name, target_level):
   subclass_names = set()
   for level in range(0,target_level+1):
     level_string = 'level_{0}'.format(level)
+    if not level_string in class_data['levels']:
+      continue
     level_details = class_data['levels'][level_string]
     for key in level_details.keys():
       if 'subclass' in key:
         subclass_names.add(key.split('_')[1])
   return subclass_names
+
+def get_possible_skills(character):
+  global GLOBAL_SKILL_DATA
+  ret = dict()
+  for name, info in GLOBAL_SKILL_DATA.items():
+    if not 'requirements' in info:
+      ret[name] = GLOBAL_SKILL_DATA[name]
+    else:
+      bad_requirement = False
+      if 'stats' in info['requirements']:
+        for stat, value in info['requirements']['stats'].items():
+          if character.get_effective_stat(stat.lower()) < value:
+            print(f"{name}: Bad requirment, {stat} is too low {character.get_stat(stat.lower())} < {value}")
+            bad_requirement = True
+            break
+      if not bad_requirement and 'skills' in info['requirements']:
+        for skill in info['requirements']['skills']:
+          if not skill in character.skills:
+            print(f"{name}: Bad requirement, didn't have {skill}")
+            bad_requirement = True
+            break
+      if not bad_requirement:
+        ret[name] = GLOBAL_SKILL_DATA[name]
+  return ret
 
 ####################################################################################
 #

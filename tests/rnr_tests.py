@@ -70,9 +70,20 @@ class rnrTests(unittest.TestCase):
     all_classes = rnr_utils.load_all_class_objects(level=0)
     errors = list()
     for c in all_classes:
-      val = sum(list(c.stats.values()))
-      if val != -3:
-        errors.append("{0}'s stats sum to {1}".format(c.name, val))
+      hp = (c.health_die_pieces - 2) // 2
+      if hp != 2 - c.get_stat('luck'):
+        errors.append(f'{c.name} has {hp} health die pieces and {c.get_stat("luck")} luck.')
+
+      necessary_set = set([2,1,0,-1,-2,-3])
+      
+      for key, val in c.stats.items():
+        if key.lower() == 'luck':
+          continue
+        if val in necessary_set:
+          necessary_set.remove(val)
+        else:
+          errors.append(f'{c.name} has duplicate or bad stats! Could not find {val}')
+          break
     
     if len(errors) > 0:
       log_output("Class Balance", errors)
@@ -83,14 +94,18 @@ class rnrTests(unittest.TestCase):
     all_races = rnr_utils.load_all_race_objects()
     errors = list()
     for r in all_races:
-      val = sum(list(r.stats.values()))
-      hp = r.health_die_pieces - 2
-      val += hp // 2
-      if val != 3:
-        errors.append("{0}'s stats sum to {1}".format(r.name, val))
+      hp = (r.health_die_pieces - 2) // 2
+      if hp != 2 - r.get_stat('luck'):
+        errors.append(f'{r.name} has {hp} health die pieces and {r.get_stat("luck")} luck.')
+
+
+      stat_sum = sum(list(r.stats.values())) - r.get_stat('luck')
+
+      if stat_sum != 0:
+        errors.append("{0}'s stats sum to {1}".format(r.name, stat_sum))
 
     if len(errors) > 0:
-      log_output("Class Balance", errors)
+      log_output("Race Balance", errors)
 
     self.assertEqual(len(errors), 0)
 

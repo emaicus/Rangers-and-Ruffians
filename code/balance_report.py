@@ -28,7 +28,8 @@ def rank_races():
   with open(os.path.join(STAT_OUTPUT, 'race_rankings.txt'), 'w') as outfile:
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
-      races.sort(key = attrgetter(stat.lower()), reverse = True)
+      #races.sort(key = attrgetter(stat.lower()), reverse = True)
+      races.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       for race in races:
         outfile.write("    {0}: {1}\n".format(race.name, race.get_stat(stat)))
       outfile.write("\n")
@@ -42,12 +43,15 @@ def rank_classes():
     level_zero  = rnr_utils.load_all_class_objects(level=0)
     level_five = rnr_utils.load_all_class_objects(level=5)
     level_ten  = rnr_utils.load_all_class_objects(level=10)
+    level_fifteen  = rnr_utils.load_all_class_objects(level=15)
+
     
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
-      level_zero.sort(key = attrgetter(stat.lower()), reverse = True)
-      level_five.sort(key = attrgetter(stat.lower()), reverse = True)
-      level_ten.sort(key = attrgetter(stat.lower()), reverse = True)
+      level_zero.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_five.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_ten.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_fifteen.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       for level_classes, level_str in ((level_zero,'0'),):#(level_five,'5'),(level_ten,'10')):
         outfile.write('    LEVEL {0}:\n'.format(level_str))
         for rnr_class in level_classes:
@@ -65,7 +69,7 @@ def rank_characters():
       for stat in rnr_utils.get_all_stat_names():
         outfile.write('  {0}:\n'.format(stat))
         characters = rnr_utils.load_combos_given_list(rnr_races, [r_class,], level=0)
-        characters.sort(key = attrgetter(stat.lower()), reverse = True)
+        characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
         for c in characters:
           outfile.write("    {0}: {1}\n".format(c.name, c.get_stat(stat)))
         outfile.write('\n')
@@ -73,7 +77,7 @@ def rank_characters():
     outfile.write('NOW, IT GETS REAL!\n')
     characters = rnr_utils.load_all_characters(level=0)
     for stat in rnr_utils.get_all_stat_names():
-      characters.sort(key = attrgetter(stat.lower()), reverse = True)
+      characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       outfile.write('{}\n'.format(stat))
       for c in characters:
         outfile.write("  {0}: {1}\n".format(c.name, c.get_stat(stat))) 
@@ -130,7 +134,7 @@ def vitality_chart(data_packet):
       outfile.write('{0}\n'.format(mode.upper()))
       
       outfile.write('{0:<4}'.format('DIE'))
-      for i in range(0,11):
+      for i in range(0,16):
         s = 'LV{0}'.format(i)
         outfile.write('{0:<5}'.format(s))
       outfile.write('\n')
@@ -138,7 +142,7 @@ def vitality_chart(data_packet):
       for health_die in [4, 6, 8, 10, 12]:
         outfile.write('{0:<4}'.format(health_die))
         health = health_die
-        for level in range(0,11):
+        for level in range(0,16):
           health = quick_health(health, level, health_die, mode)
           outfile.write('{0:<5}'.format(health))
         outfile.write('\n')
@@ -184,8 +188,10 @@ def spell_stats():
   print('-----------------------------------------')
   level_dict = {'Level Zero' : 2}
   can_learn_mask = {}
-  for num in range(11):
+  for num in range(16):
     level_string = 'level_{0}'.format(num)
+    if not level_string in wizard['levels']:
+      continue
     if 'abilities' in wizard['levels'][level_string]:
       for ability in wizard['levels'][level_string]['abilities']:
         if 'Level' in ability and 'Spells' in ability:
@@ -289,7 +295,7 @@ def process_classes():
 
   for name in class_names:
     with open(os.path.join(STAT_OUTPUT, 'level_output','{0}.txt'.format(name)), 'w') as outfile:
-      for level in range(0,11):
+      for level in range(0,16):
         subclasses = rnr_utils.subclasses_at_level(name, level)
 
         if len(subclasses) == 0:

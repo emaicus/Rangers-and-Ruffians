@@ -61,13 +61,13 @@ Nimble Navigator:
     stats:
       Dexterity: 3
 En Garde:
-  description: "Once per turn when attacked, decrease the attack damage by your dexterity"
+  description: "Reaction. When attacked, decrease the attack damage by your dexterity"
   type: general
   requirements:
     stats:
       Dexterity: 1
 Shrug it Off:
-  description: "Once per turn when attacked, decrease the attack damage by your strength"
+  description: "Reaction. Decrease the attack damage by your strength"
   type: general
   requirements:
     stats:
@@ -120,14 +120,14 @@ Insomniac:
     stats:
       Inner Fire: 2
 Battle Mage:
-  description: "Gain advantage on concentration checks."
+  description: "Gain advantage on concentration checks. Re-roll 1's made on attack spells."
   type: combat
 Ventriloquist:
   description: "You can throw your voice without a skill check."
   type: general
   requirements:
     Charisma: 1
-Fight in the Shadows:
+Fight from the Shadows:
   description: "You are able to attempt to hide as an offhand action."
   type: combat
   requirements:
@@ -137,10 +137,10 @@ Phallanx:
   description: "When you are adjacent to an ally, enemy attacks are at disadvantage."
   type: combat
 Medic:
-  description: "You can stabilize a teammate as an action."
+  description: "You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 SP."
   type: combat
 Greater Medic:
-  description: "You are able to heal a teammate for 1d6 health 2 times per day."
+  description: "You are able to heal a teammate for 2d6 health for 1SP."
   type: general
   requirements:
     stats:
@@ -149,7 +149,7 @@ Greater Medic:
     skills:
       - Medic
 Functioning Alcoholic:
-  description: "Do not take disadvantage when intoxicated."
+  description: "When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks."
   type: general
   requirements:
     stats:
@@ -172,7 +172,7 @@ Empowered Spells:
       Intelligence: 3
       Inner Fire: 3
 Two Handed Weapon Master:
-  description: "Carry a two handed weapons with one hand."
+  description: "Carry two handed weapons with one hand."
   type: combat
   requirements:
     stats:
