@@ -1,3 +1,4 @@
+ * [Rangers and Ruffians Rulebook _Version 2.1.0_](#rangers-and-ruffians-rulebook-_version-2.1.0_)  
    * [Versioning and the Changelog](#versioning-and-the-changelog)  
    * [Introduction](#introduction)  
      * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians?)  
@@ -52,8 +53,6 @@
    * [Building a Character](#building-a-character)  
      * [Health Dice Pieces](#health-dice-pieces)  
    * [Races](#races)  
-   * [Classes](#classes)  
-   * [Races](#races)  
      * [Automaton](#automaton)  
      * [Catterwol](#catterwol)  
      * [Daemonspawn](#daemonspawn)  
@@ -90,6 +89,9 @@
      * [Rogue](#rogue)  
      * [Sorcerer](#sorcerer)  
      * [Wizard](#wizard)  
+
+  
+# Rangers and Ruffians Rulebook _Version 2.1.0_
 
   
 ## Versioning and the Changelog
@@ -808,13 +810,6 @@ Races and Classes each have ```Health Dice Pieces```. When building a character,
 you add these pieces together to get your total health dice. For example,   
 if you race has ```2``` health dice pieces, and your class has ```4```,   
 your health dice would be ```6```.   
-  
-
-  
-## Races
-
-  
-## Classes
 
   
 ## Races

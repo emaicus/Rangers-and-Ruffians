@@ -15,6 +15,8 @@ if __name__ == "__main__":
     sys.exit(1)
 
   md = markdown_handler.markdown_handler('Rangers and Ruffians Rulebook _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  md.order_next('Rangers and Ruffians Rulebook _Version 2.1.0_')
+
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
 
 

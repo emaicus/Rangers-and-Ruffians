@@ -610,7 +610,3 @@ Races and Classes each have ```Health Dice Pieces```. When building a character,
 you add these pieces together to get your total health dice. For example,
 if you race has ```2``` health dice pieces, and your class has ```4```,
 your health dice would be ```6```.
-
-## Races
-
-## Classes
