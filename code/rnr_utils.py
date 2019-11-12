@@ -108,52 +108,52 @@ class rnr_entity:
     def base_markdownify(self, image_path, custom_chunk="",handbook=None):
       load_Rangers_And_Ruffians_Data()
 
-      ret = ""
+      ret = []
       lowername = self.name.lower().replace(' ', '_')
       description = self.description
       abilities = self.abilities
 
-      ret = "### {0} \n".format(self.name.replace('_',' '))
-      ret += '<div></div>\n<div></div>\n\n'
+      ret.append("### {0} \n".format(self.name.replace('_',' ')))
+      ret.append('<div></div>\n<div></div>\n\n')
       
       if image_path != "":
-        ret += f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n"
+        ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
         #ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, image_path, self.name)
      
       if custom_chunk != "":
-        ret += custom_chunk  
+        ret.append(custom_chunk ) 
       if not handbook is None:
         for section in handbook["sections"]:
-          ret += f'__{section["title"]}__  \n'
+          ret.append(f'__{section["title"]}__  \n')
           for subsection in section["subsections"]:
             if 'title' in subsection and subsection["title"] != '':
-              ret += f'__{subsection["title"]}__  \n'
-            ret += subsection["text"]
-            ret += '\n\n'
+              ret.append(f'__{subsection["title"]}__  \n')
+            ret.append(subsection["text"])
+            ret.append('\n\n')
 
 
-      ret += f"\n"
-      ret += f"{description}\n"
-      ret += f"\n"
-      ret += f"|STR|DEX|INT|INF|CHR|PER|LUK|HD|\n"
-      ret += f"|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n"
-      ret += f"|{self.get_stat('strength')}|{self.get_stat('dexterity')}|{self.get_stat('intelligence')}|{self.get_stat('inner_fire')}|{self.get_stat('charisma')}|{self.get_stat('perception')}|{self.get_stat('luck')}|{self.health_die_pieces}|\n"
-      ret += f"\n"
-      ret += f"__{self.name.replace('_',' ').title()} Abilities:__ \n"
+      ret.append(f"\n")
+      ret.append(f"{description}\n")
+      ret.append(f"\n")
+      ret.append(f"|STR|DEX|INT|INF|CHR|PER|LUK|HD|  \n")
+      ret.append(f"|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  \n")
+      ret.append(f"|{self.get_stat('strength')}|{self.get_stat('dexterity')}|{self.get_stat('intelligence')}|{self.get_stat('inner_fire')}|{self.get_stat('charisma')}|{self.get_stat('perception')}|{self.get_stat('luck')}|{self.health_die_pieces}|  \n")
+      ret.append(f"\n")
+      ret.append(f"__{self.name.replace('_',' ').title()} Abilities:__ \n")
       abilities = filterAbilities(self.abilities, verbose=True)
       for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'combat'):
         if not key in abilities:
           continue
-        ret += f"* __{mapAbilityType(key)}:__   \n"
+        ret.append(f"* __{mapAbilityType(key)}:__   \n")
         for ability, info in abilities[key].items():
           if 'cost' in info and info['cost'] is not None:
-            ret += f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n"
+            ret.append(f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
           else:
-            ret += f"  * __{ability}:__ {info['description']}  \n"
+            ret.append(f"  * __{ability}:__ {info['description']}  \n")
 
         #ret +='> <div></div>\n>\n'
 
-      ret += '  \n'
+      ret.append('  \n')
 
       #ret += "\\page\n"
       return ret
@@ -207,53 +207,45 @@ class rnr_class(rnr_entity):
         image_path = 'class/{0}.jpg'.format(self.name.lower())
 
       ret = self.base_markdownify(image_path, handbook=self.handbook) + self.markdownify_level_sheet()
-      ret += f"  \n___\n"
+      ret.append(f"  \n___\n")
       return ret
 
     def markdownify_level_sheet(self):
-      ret = ""
+      ret = []
       all_data = get_rnr_class_data_with_name(self.name)
       level_data = all_data['levels']
       for i in range(0,100):
         level = f'level_{i}'
         if not level in level_data:
           continue
-        ret += f"__{level.title().replace('_',' ')} {self.name.replace('_', ' ').title()}__\n\n"
-        # ret += "<div style='margin-top:10px'></div>\n\n"
-        # if 'stats' in level_data[level]:
-        #   ret += '#### Stats Bonuses  \n'
-        #   ret += '* '
-        #   for stat,val in level_data[level]['stats'].items():
-        #     ret+= '**{0}:** {1} '.format(stat.replace('_',' ').title(), val)
-        #   ret += '\n\n  \n'
+        ret.append( f"__{level.title().replace('_',' ')} {self.name.replace('_', ' ').title()}__\n\n")
+
         if 'abilities' in level_data[level]:
-          # ret += '#### New Abilities\n'
-          # ret += "<div style='margin-top:10px'></div>\n\n"
           level_abilities = filterAbilities(level_data[level]['abilities'], verbose=True)
           for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
             if not key in level_abilities:
               continue
-            ret += "* __{0}:__   \n".format(mapAbilityType(key))
+            ret.append( "* __{0}:__   \n".format(mapAbilityType(key)))
             for ability, info in level_abilities[key].items():
               if 'cost' in info and info['cost'] is not None:
-                ret += f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n"
+                ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
               else:
-                ret += f"  * __{ability}:__ {info['description']}  \n"
-            ret +='\n\n'
+                ret.append( f"  * __{ability}:__ {info['description']}  \n")
+            ret.append('\n\n')
         for key in level_data[level].keys():
           if 'subclass' in key:
-            ret += '__{0} Abilities__  \n'.format(key.split('_')[1].title())
+            ret.append( '__{0} Abilities__  \n'.format(key.split('_')[1].title()))
             sub_ability = filterAbilities(level_data[level][key], verbose=True)
             for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
               if not key in sub_ability:
                 continue
-              ret += "* {0}:   \n".format(mapAbilityType(key))
+              ret.append( "* {0}:   \n".format(mapAbilityType(key)))
               for ability, info in sub_ability[key].items():
                 if 'cost' in info and info['cost'] is not None:
-                  ret += f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n"
+                  ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
                 else:
-                  ret += f"  * __{ability}:__ {info['description']}  \n"
-              ret +='\n\n'
+                  ret.append( f"  * __{ability}:__ {info['description']}  \n")
+              ret.append('\n\n')
         #ret += '```\n```\n'
 
       #ret += "\\page\n"
@@ -374,7 +366,7 @@ class rnr_race(rnr_entity):
 
     gender = "male" if male else "female"
     ret = self.base_markdownify("race/{0}/{1}.jpg".format(gender, img_name), custom_chunk=custom_chunk,handbook=self.handbook)
-    ret += f"  \n___\n"
+    ret.append(f"  \n___\n")
     return ret
 
   def serialize(self, male=False, verbose=False):
@@ -425,8 +417,7 @@ class rnr_character(rnr_entity):
     self.character_name = character_name.replace(' ', '_')
 
   def markdownify(self):
-    ret += self.base_markdownify()
-    return ret
+    return self.base_markdownify()
 
   def serialize(self, verbose=False):
     serial = self.base_serialize(verbose)

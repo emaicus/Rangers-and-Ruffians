@@ -24,16 +24,16 @@ if __name__ == "__main__":
   rnr_classes = rnr_utils.load_all_class_objects()
 
 
-  race_str = "## Races  \n"
+  race_lines = ["## Races  \n",]
   for race in sorted(races, key=lambda x: x.name):
-    race_str += race.markdownify()
+    race_lines += race.markdownify()
 
-  class_str = '## Classes  \n'
+  class_lines = ['## Classes  \n',]
   for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
-    class_str += rnr_class.markdownify()
+    class_lines += rnr_class.markdownify()
 
-  md.slurp_markdown_lines(race_str.split('\n'))
-  md.slurp_markdown_lines(class_str.split('\n'))
+  md.slurp_markdown_lines(race_lines)
+  md.slurp_markdown_lines(class_lines)
   
 
 
@@ -41,6 +41,6 @@ if __name__ == "__main__":
   #print()
 
 
-  md.write_toc()
+  md.write_toc(max_to_include=3)
   md.write_buffer()
   print("Done!")

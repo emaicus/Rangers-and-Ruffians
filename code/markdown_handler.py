@@ -35,7 +35,7 @@ class markdown_handler:
       self.BUFFER[self.current_heading]['content'] += '  \n'
 
     def line(self, line):
-      self.BUFFER[self.current_heading]['content'] += f'{line} '
+      self.BUFFER[self.current_heading]['content'] += f'{line}'
 
     def paragraph(self, line):
       self.line(line)
@@ -100,18 +100,21 @@ class markdown_handler:
         print(f"ERROR: the following elements remained in the buffer. {left}")
         sys.exit(1)
 
-    def write_toc(self):
+    def write_toc(self, max_to_include=1000):
       keys = list(self.BUFFER.keys())
       toc_buffer = ''
 
       if len(self.ordering) == 0:
-        for key in keys:
-          indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
-          toc_buffer += f"{indent}[{key}](#{key.replace(' ', '-').replace(':','').lower()})  \n"
-      else:
-        for key in self.ordering:
-          indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
-          toc_buffer += f"{indent}[{key}](#{key.replace(' ', '-').replace(':','').lower()})  \n"
+        it = keys
+      else: 
+        it = self.ordering
+
+      for key in it:
+        if self.BUFFER[key]['level'] > max_to_include:
+          continue
+        indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
+        toc_buffer += f"{indent}[{key}](#{key.replace(' ', '-').replace(':','').lower()})  \n"
+      
 
 
       if self.file is None:
@@ -122,8 +125,9 @@ class markdown_handler:
 
     def slurp_markdown_lines(self, lines):
       for line in lines:
-        line = line.rstrip()
+        # line = line.rstrip()
         if len(line.strip()) == 0:
+          self.add_whitespace()
           self.add_whitespace()
         elif line.strip()[0] == '#':
           parts = line.split()
@@ -132,7 +136,7 @@ class markdown_handler:
           self.start_heading(heading, level)
           self.order_next(heading)
         else:
-          self.paragraph(line)
+          self.line(line)
 
 
     def slurp_markdown_file(self, file):

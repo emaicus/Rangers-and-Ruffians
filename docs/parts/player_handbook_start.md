@@ -219,13 +219,14 @@ to turn a villager into a frog, the villager must make a spell saving
 throw. See the [Spell Power](#spell-power) section for details about
 this saving throw.
 
-## Stats
+## Stats and Abilities
 Characters in RnR are made up of __Stats__ and __Abilities__. __Stats__ attempt
 to capture the physical, mental, and social prowess of a character. A relevant stat
 is almost always added to the result of a check. The seven stats in Rangers and
 Ruffians are as follows:
 
-### Strength
+### Core Stats
+#### Strength
 __Strength__ is defined as raw power of the body. Strength influences the way that
 you play the game in three ways:
 1. __Strength is added to strength checks.__ You enter a dungeon, and see
@@ -237,7 +238,7 @@ you play the game in three ways:
 3. __Strength affects the type of armor you can wear.__ The stronger you are, the heavier
   the armor that you can wear.
 
-### Dexterity
+#### Dexterity
 __Dexterity__ is defined as mobility, nimbleness, and ability with the body.
 Dexterity affects the way that you play the game in two ways:
 1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
@@ -247,7 +248,7 @@ Dexterity affects the way that you play the game in two ways:
   is added to the amount of damage you do with dexterity based weapons, such as spears,
   daggers, and falchions.
 
-### Intelligence
+#### Intelligence
 __Intelligence__ is defined as raw aptitude with the mind. Intelligence affects the
 way that you play the game in two key ways.
 1. __Intelligence is added to intelligence checks.__
@@ -256,7 +257,7 @@ way that you play the game in two key ways.
   that the more action points you have, the more abilities you can use or spells you can cast. Action
   points are further detailed in the [Action Points](#action-points) section.
 
-### Inner Fire
+#### Inner Fire
 __Inner Fire__ is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
 that you play the game in three ways.
 1. __Inner Fire is added to magical attacks.__ If your character is a mage who attacks with magic,
@@ -269,7 +270,7 @@ that you play the game in three ways.
   is directly influenced by your inner fire. This is further detailed in the
   [__Spell Power__](#spell-power) section.
 
-### Charisma
+#### Charisma
 __Charisma__ is defined as force of personality, or how charming your character can be. Charisma can
 affect the way you play the game in two ways:
 1. __Charisma is added to charisma checks.__ You speak with the local innkeeper and have a feeling that
@@ -279,7 +280,7 @@ affect the way you play the game in two ways:
 2. __(Conditional) If you are playing a Sorcerer, Charisma determines whether or not your spells succeed or
   fail.__ Further detailed in the [Sorcerer](#sorcerer) section.
 
-### Perception
+#### Perception
 __Perception__ determines how likely it is your character will notice things going on in the world around them.
 It affects the way you play the game in two ways:
 1. __Perception is added to perception checks.__ You are riding through the forest at night. Little do you know,
@@ -288,7 +289,7 @@ It affects the way you play the game in two ways:
   Perception is added to such checks, so that characters who are better at reading a situation tend to go first.
   Initiative is further detailed in the [Initiative](#initiative) section.
 
-### Luck
+#### Luck
 When all else fails, there's always luck! Luck is a special stat, and is the only stat that cannot go negative.
 Each day, a player gets __Luck Tokens__ equal to their luck. When a roll doesn't go your way, you may spend
 one luck token to re-roll it. See the section on [Resting](#resting) for information about
