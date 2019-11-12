@@ -122,7 +122,7 @@ class markdown_handler:
 
     def slurp_markdown_lines(self, lines):
       for line in lines:
-        line = line.strip()
+        line = line.rstrip()
         if len(line.strip()) == 0:
           self.add_whitespace()
         elif line.strip()[0] == '#':
