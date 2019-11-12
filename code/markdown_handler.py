@@ -64,7 +64,7 @@ class markdown_handler:
       
       md_heading = f""
 
-      section = f"  \n{'#' * self.BUFFER[heading]['level']} {heading}\n {self.BUFFER[heading]['content']}"
+      section = f"  \n{'#' * self.BUFFER[heading]['level']} {heading}\n{self.BUFFER[heading]['content']}"
 
       if self.file is None:
         print(section)
@@ -119,3 +119,26 @@ class markdown_handler:
       else:
         with open(self.file, 'a') as append_file:
           append_file.write(f'{toc_buffer}\n')
+
+    def slurp_markdown_lines(self, lines):
+      for line in lines:
+        line = line.strip()
+        if len(line.strip()) == 0:
+          self.add_whitespace()
+        elif line.strip()[0] == '#':
+          parts = line.split()
+          level = len(parts[0])
+          heading = ' '.join(parts[1:])
+          self.start_heading(heading, level)
+          self.order_next(heading)
+        else:
+          self.paragraph(line)
+
+
+    def slurp_markdown_file(self, file):
+      with open(file, 'r') as infile:
+        lines = infile.readlines()
+
+      self.slurp_markdown_lines(lines)
+
+      

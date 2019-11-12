@@ -1,5 +1,3 @@
-# Rangers and Ruffians Rulebook _Version 2.1.0_
-
 ## Versioning and the Changelog
 The Version Number used by Rangers and Ruffians is broken into
 3 parts, each of which is separated by a period. The greatest (leftmost)
@@ -11,7 +9,7 @@ The second digit represents the introduction of a new subsystem to the
 rules of the game which is not significant enough so as to impact the
 broader ruleset. This number was first incremented in Rangers and Ruffians
 2.1.0, when ```Skills``` were added to the game which could be learned
-when leveling up as an alternative to a Stat increase. 
+when leveling up as an alternative to a Stat increase.
 
 The final, and least significant digit represents a balance change
 which does not change any existing systems within the game. These
@@ -20,7 +18,7 @@ For example, if a set of spells were deemed to be underpowered and
 there power was slightly increased, the the third version digit
 would be incremented.
 
-The majority of revisions made to Rangers and Ruffians after the 
+The majority of revisions made to Rangers and Ruffians after the
 transition to version 2.0.0 are recorded in the ```changelog.md``` file
 found in the ```docs``` folder of the Rangers and Ruffians repository.
 For details about what changed between two versions of the game,
@@ -31,12 +29,12 @@ please consult that documentation.
 ### What is Rangers and Ruffians?
 Rangers and Ruffians (also called just "Rangers" or "RnR")  
 is a tabletop roleplaying game (RPG) created for and by a group of
-nerdy friends. It can be dramatic, epic, and meaningful. 
+nerdy friends. It can be dramatic, epic, and meaningful.
 It can also be silly and funny. We think that it is usually pretty fun.  
 
 Once upon a time, Rangers and Ruffians was built from the
 ground up to be as easy to jump into as possible, especially
-for brand new players. The initial rule-set included in 
+for brand new players. The initial rule-set included in
 what is now called Rangers And Ruffians 1.0.0 was so
 bare-bones that it didn't include numbers for the player to
 reference. As the game grew, and the core rules were expanded
@@ -54,7 +52,7 @@ the help of a friend who is "in the know," and even then that
 their rulesets can be obtuse and difficult to parse.
 We hope that our iteration on the awesome genre that is the
 tabletop RPG is deep and rich enough to serve as an engine
-for epic, fun adventures, while still being simple enough 
+for epic, fun adventures, while still being simple enough
 so that you and your friends can play for the first time
 this weekend.
 
@@ -63,7 +61,7 @@ this weekend.
 In order to play Rangers and Ruffians, you need the following:
 
 1. At least one set of polyhedral dice (the nerdy ones).
-2. One player who has read these rules, and who will [run the story of your game](#being-the-grand-poohbah). 
+2. One player who has read these rules, and who will [run the story of your game](#being-the-grand-poohbah).
 3. A printed or digital version of this manual and the Poohbah's Handbook,
    which contain all of the rules necessary to embark upon your adventure!
 
@@ -92,17 +90,17 @@ Poohbah (grinning): Roll for it.
 Player 2: I got an 18!
 Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.
 Player 2 (nodding): Damn right it is.
-``` 
+```
 
 In the above interaction, there are a few things to note. Twice, the Poohbah called for rolls.
 If Player 1 had rolled higher, the lock would have been picked. The difficulty of this lock was
 set by the Poohbah before the roll was called for. This failure gave Player 2, or "Urtag the
 Strong," the chance to jump in and do something. There is no inherent turn order in this scenario,
-so it is up to the Poohbah to choose who goes first. 
+so it is up to the Poohbah to choose who goes first.
 
 On the topic of Player 2, it is important to make certain that your party likes the idea of
 having a "kill first, ask questions later" character in their party. Hijinks are incredibly fun,
-and are the font from which most of the life of a tabletop RPG flows, but remember not to be a jerk. 
+and are the font from which most of the life of a tabletop RPG flows, but remember not to be a jerk.
 
 
 ## Being the Grand Poohbah
@@ -145,17 +143,19 @@ The process of making a __check__ is simple:
 3. If the Poohbah thinks that they could reasonably succeed or fail,
    they call for a check, and assign that check a target difficulty.
 
-It is left entirely to the Poohbah's discretion for which actions a __check__
+It is left entirely to the Poohbah's discretion for which actions a check
 should or should not be called for. For example, if a player is playing
 a Rogue (a dexterous, sneaky character) and they say that they want to
 climb a small wall, the Poohbah may not ask for a check, as it is reasonable
 to say that the player could easily perform that action without failure.
-If player playing a heavily armored Hardfoot Halfling (a short, stocky race) 
-asked to climb the same wall, the Poohbah may call for a check.
+If a player playing a heavily armored Hardfoot Halfling (a short, stocky race)
+asked to climb the same wall, the Poohbah may call for a check. Similarly,
+if the wall was slick with rain, even the Rogue may have to make a check
+due to the increased difficulty of the task at hand.
 
 There are a total of seven dice that are used in RnR, all of which can
 be purchased online as a set or at your local hobby shop. These dice are
-the ```d4```, ```d6```, ```d8```, ```d10```, ```d12```, ```d20``` and
+the ```d4```, ```d6```, ```d8```, ```d10```, ```d12```, ```d20```, and
 the ```percentile``` die (a ```d10``` with two digits on each side).
 We name dice with ```d``` and then the number of sides on the die.
 Therefore, a ```d4``` has 4 sides, a ```d6``` is the 6 sided die with
@@ -167,43 +167,52 @@ a __check__ is made.
 When multiple dice of a type must be rolled, a number is put before the ```d```.
 Therefore ```2d6``` means that 2 six sided die must be rolled, and their value
 summed. ```4d8``` means that 4 eight sided die must be rolled and their
-total summed. 
+total summed.
 
 Sometimes, a __modifier__ is applied to a roll. This is added as a ```+```
 or ```-``` at the end of a roll. For example ```1d6 + 2``` calls for
 1 six sided die to be rolled, and then 2 added to the result.
 
 In some cases, it is necessary to roll a ```d100```. Since we
-don't actually have a 100 sided die, we instead roll a percentile
+don't actually have a 100 sided die, we instead roll a ```percentile```
 and a ```d10```. When we do this, the ```percentile``` represents the tens
-place, and the ```d10``` the ones place. The maximum roll, then, is
-a zero (where we roll a zero on both the ```d10``` and the ```percentile```)
-and the maximum roll is a 99 (where we roll a 9 on both dice).
+place, and the ```d10``` the ones place. The minimum roll, then, is
+a ```0``` (where we roll a zero on both the ```d10``` and the ```percentile```)
+and the maximum roll is a ```99``` (where we roll a ```90``` on the ```percentile```
+and a ```9``` on the ```d10```).
 If we rolled a ```60``` on the ```percentile```, and a ```4``` on the ```d10```,
-we would say that we rolled a 64.
+we would say that we rolled a ```64```.
 
 ### Advantage and Disadvantage
 When a character is especially good or bad at something in Rangers and Ruffians,
 they may have __Advantage__ or __Disadvantage__ at that thing. For example, the
 sneaky Rogue mentioned earlier earlier is good at hiding, so it has advantage.
 This means that, when the rogue tries to hide, they get to roll a ```d20``` twice,
-and keep the higher roll. So if the rogue rolled a 10 followed by a ```15```,
-they would keep the ten. __Disadvantage__ is similar, but the player keeps the
+and keep the higher roll. So if the rogue rolled a ```10``` followed by a ```15```,
+they would keep the ```15```. __Disadvantage__ is similar, but the player keeps the
 _worse_ of the two rolls. So in the case above, if the rogue had disadvantage,
-they would keep the 10.
+they would keep the ```10```. When you build your character, you advantages and
+disadvantages will be explicitly listed out for you. However, your Poohbah
+may sometimes call for a role with advantage or disadvantage even though
+the rules of the game do not explicitly give you advantage or disadvantage
+in that scenario. There is no concept of "double advantage" or "double disadvantage"
+in Rangers and Ruffians. If you are performing a task and are gaining advantage
+from multiple abilities, you still only role twice. If you have advantage and
+disadvantage at the same time, they cancel out.
 
 
 ### Inspiration Dice
-Sometimes, an ability or spell cast on a player will give them an __Inspiration Dice__. 
-An Inspiration Dice is a dice which can be added to a check of the players 
+Sometimes, an ability or spell cast on a player will give them an __Inspiration Dice__.
+An Inspiration Dice is a dice which can be added to a check of the players
 choosing. Once an inspiration dice is spent, it disappears, and cannot be used
 again. So if a player had a ```d4``` inspiration dice and was asked to make
 a stealth check, they could choose to roll ```1d4``` and add the result
-to their check.
+to their check. You must declare your intent to use an inspiration dice _before_
+your Poohbah says if you succeed or fail at a check.
 
 ### Saving Throws
 Saving throws are special checks that are made when something bad is happening
-to an entity (a player, npc, or enemey) in RnR. The most important of these is the 
+to an entity (a player, npc, or enemey) in RnR. The most important of these is the
 __Spell Saving Throw.__ A spell saving throw occurs when someone tries to cast
 a spell on someone else. For example, if a character is a wizard, and tries
 to turn a villager into a frog, the villager must make a spell saving
@@ -221,7 +230,7 @@ __Strength__ is defined as raw power of the body. Strength influences the way th
 you play the game in three ways:
 1. __Strength is added to strength checks.__ You enter a dungeon, and see
   a friend trapped in a cell. You desperately want to get them out, so you decide
-  to bend the bars. In this scenario, you add your strength to a ```d20``` roll. 
+  to bend the bars. In this scenario, you add your strength to a ```d20``` roll.
 2. __Strength affects strength weapon damage.__ In combat, your strength is added to
   the amount of damage you do with strength based weapons such as warhammers, great-axes,
   and clubs.
@@ -232,16 +241,16 @@ you play the game in three ways:
 __Dexterity__ is defined as mobility, nimbleness, and ability with the body.
 Dexterity affects the way that you play the game in two ways:
 1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
-  the rooftops of a city. You come up to a gap, and have to jump! In this scenario, 
-  you would add your dexterity to a ```d20``` roll. 
-2. __Dexterity affects your dexterity weapon damage.__ In a combat scenario, dexterity 
+  the rooftops of a city. You come up to a gap, and have to jump! In this scenario,
+  you would add your dexterity to a ```d20``` roll.
+2. __Dexterity affects your dexterity weapon damage.__ In a combat scenario, dexterity
   is added to the amount of damage you do with dexterity based weapons, such as spears,
   daggers, and falchions.
 
-### Intelligence 
+### Intelligence
 __Intelligence__ is defined as raw aptitude with the mind. Intelligence affects the
 way that you play the game in two key ways.
-1. __Intelligence is added to intelligence checks.__ 
+1. __Intelligence is added to intelligence checks.__
 2. __Intelligence affects your number of action points.__ In Rangers and Ruffians, action points
   are treated as a resource which is used to perform special abilities or to cast spells. This means
   that the more action points you have, the more abilities you can use or spells you can cast. Action
@@ -257,11 +266,11 @@ that you play the game in three ways.
   that you are less likely to be affected by enemy spells.
 3. __Inner Fire determines how likely your spells are to affect an enemy.__ If one of your spells imposes
   a  [__Spell Saving Throws__](#spell-saving-throws) on an enemy, the target that the enemy is trying to beat
-  is directly influenced by your inner fire. This is further detailed in the 
+  is directly influenced by your inner fire. This is further detailed in the
   [__Spell Power__](#spell-power) section.
 
 ### Charisma
-__Charisma__ is defined as force of personality, or how charming your character can be. Charisma can 
+__Charisma__ is defined as force of personality, or how charming your character can be. Charisma can
 affect the way you play the game in two ways:
 1. __Charisma is added to charisma checks.__ You speak with the local innkeeper and have a feeling that
   he's keeping something from you. You don't think that he's a dangerous person, but rather that someone
@@ -270,7 +279,7 @@ affect the way you play the game in two ways:
 2. __(Conditional) If you are playing a Sorcerer, Charisma determines whether or not your spells succeed or
   fail.__ Further detailed in the [Sorcerer](#sorcerer) section.
 
-### Perception 
+### Perception
 __Perception__ determines how likely it is your character will notice things going on in the world around them.
 It affects the way you play the game in two ways:
 1. __Perception is added to perception checks.__ You are riding through the forest at night. Little do you know,
@@ -282,27 +291,29 @@ It affects the way you play the game in two ways:
 ### Luck
 When all else fails, there's always luck! Luck is a special stat, and is the only stat that cannot go negative.
 Each day, a player gets __Luck Tokens__ equal to their luck. When a roll doesn't go your way, you may spend
-one luck token to re-roll it.
+one luck token to re-roll it. See the section on [Resting](#resting) for information about
+how to get luck tokens back.
 
 ### Stat Values
-Stats in Rangers and Ruffians range between ```-5``` and ```+5```. However, usually they are between
-```-3``` and ```3```. When a character is at very low levels, their stats tend to be relatively low.
+Stats in Rangers and Ruffians range between ```-5``` and ```+5```. However, usually they are
+between ```-3``` and ```3```. When a character is at very low levels, their stats tend to be relatively low.
 As they grow and get stronger, their stats increase. For more details about increasing stats, see the
 [Leveling Up](#leveling-up) section.
 
 ### Diminishing Returns: The Most Confusing Rule in Rangers and Ruffians
-Thus far, we have treated stats as increasing linearly (e.g. if you dexterity is 3, you add 3 to a roll). 
+Thus far, we have treated stats as increasing linearly (e.g. if you dexterity is 3, you add 3 to a roll).
 In fact, for the balancing of leveling up in Rangers and Ruffians
 to work, this is not always true. Instead, the rule is as follows.
 1. If your value for a stat is between -3 and 3, that is the value that you add to a roll.
 2. If your value for a stat is less than -3 or greater than 3, we treat things a little bit differently.
   1. The first 3 in either direction are worth 1 full point.
   2. After that, further values are worth .5 points.
-  3. So, if a character's Dexterity is 5, they would add 4 to a check.
+  3. Half points are rounded towards zero.
+  4. So, if a character's Dexterity is 5, they would add 4 to a check.
 
 Let's unpack this idea with a table:
 
-| Stat Value     | What is added to a roll |
+| Stat Value     | What is added to a check |
 | -------------- |---------------|
 | -7             | -5 |
 | -6             | -4 |
@@ -322,7 +333,7 @@ Let's unpack this idea with a table:
 
 Note how for the core of the table (-3 to 3) the stats behave linearly.
 
-| Stat Value     | What is added to a roll |
+| Stat Value     | What is added to a check |
 | -------------- |---------------|
 | -3             | -3 |
 | -2             | -2 |
@@ -347,16 +358,16 @@ After that, we begin adding half points. However, half points don't make any sen
 
 #### Why are Diminishing Returns Important?
 __Diminishing Returns__ are very important to [Leveling Up](#leveling-up) in Rangers and Ruffians
-in two ways.
+in two ways:
 
 1. __They provide a buffer against values getting to high.__ Because players can increase whatever
    stat they want when leveling up, a buffer is needed to avoid stat values getting out of hand.
 2. __They encourage stat diversification upon level up.__ Diminishing returns incentivize players
-   to spend level up stat points on Stats that they wouldn't ordinarily take, promoting well rounded characters.
+   to spend stat points on stats that they wouldn't ordinarily take, promoting well rounded characters.
 
 
-### Bonus Stat: Health Dice
-Every character in Rangers and Ruffians has a __Health Dice.__ When a character levels up (detailed in the
+### Bonus Stat: Health Die
+Every character in Rangers and Ruffians has a __Health Die.__ When a character levels up (detailed in the
 section [Leveling Up](#leveling-up)), they roll their health dice, and ```1d4``` and add the numbers rolled
 to their maximum health.
 
@@ -369,13 +380,13 @@ to perform.
 ### Action Points
 __Action Points__ can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
 A characters total number of Action Points is equal to ```5 + their Intelligence```. So if a characters
-intelligence is ```-3```, they have ```2``` Action Points. If their intelligence is ```2```, they have
-```7``` Action Points. Spent Action Points are restored after resting. See the [Rest](#rest)
+intelligence is ```-3```, they have ```2``` Action Points. If their intelligence is ```2```, they have ```7```
+Action Points. Spent Action Points are restored after resting. See the [Resting](#resting)
 section for more details.
 
 ### Spell Power
 A character's __Spell Power__ determines how likely it is that an enemy will succumb to the affects
-of their abilities or spells. A character's Spell Power is defined to be ```12 +_their Inner Fire```.
+of their abilities or spells. A character's Spell Power is defined to be ```12 + their Inner Fire```.
 So if a character has ```3``` Inner Fire, their Spell Power is ```15.``` This means that, if our wizard
 tried to turn someone into a frog, that entity would have to succeed a saving throw with a target
 of ```15``` (our wizard's spell power).
@@ -389,11 +400,19 @@ a trio of skeletons bursts through a nearby door. You're under attack!
 You know that combat has officially begun when your Poohbah asks you to roll Initiative.
 __Initiative__ is a special sort of check, performed at the beginning of combat which
 determines the order in which players and enemies are to take action on each round.
-A __round__ is defined as one complete run through initiative order. 
+A __round__ is defined as one complete run through initiative order.
 Initiative is modified by perception, and does not change one it is rolled. Your Poohbah
 may choose to either keep enemy initiatives a secret, or to display them for all to see.
 We actually recommend having a player keep track of initiative for all players and enemies.
 That way, there is one less thing for the Poohbah to have to handle.
+
+As an example, let's say that we have 2 players and 1 enemy goblin. Each player and
+the goblin roll initiative. Let's say the first player rolls a ```10``` and has
+a perception of ```0```. There initiative value for this combat is ```10```. The second
+player rolls a ```14``` and has ```2``` perception, so their initiative is ```16```.
+Finally, the goblin rolls a ```15``` but has a perception of ```-3```, so its initiative
+is ```12```. So, in this combat, player 2 would go first (as ```16``` is highest),
+then the goblin with ```12```, then player 1 with ```10``` initiative.
 
 
 ### Your Turn
@@ -405,12 +424,12 @@ an attack, lifting a heavy object, or feeding a potion to an ally.
 #### Offhand Actions
 On your turn you may also take an offhand action. An offhand action is defined as doing something
 that can be done quickly without removing your full attention from combat. This includes leaping
-across a ledge, drinking a potion yourself, or opening an unlocked door. It does _not_ include 
+across a ledge, drinking a potion yourself, or opening an unlocked door. It does _not_ include
 making an attack.
 
 #### Movement
 On each turn, you are able to make 15 feet of movement. This movement can be decomposed however
-you wish. For example, you might drink a potion as an offhand action. Walk 5 feet forward, lift
+you wish. For example, you might drink a potion as an offhand action, walk 5 feet forward, lift
 a cauldron as an action, and then walk ten 10 feet to the right.
 
 #### Free Actions
@@ -422,23 +441,24 @@ Poohbah's discretion what counts as a Free Action.
 You are able to spend your action moving an additional 15 feet.
 
 ### Attacking
-Attacks nearly always hit in Rangers and Ruffians. Therefore, to make an sword attack against an
+Attacks nearly always hit in Rangers and Ruffians. Therefore, to make a sword attack against an
 adjacent enemy, there are two steps.
 
-1. Roll the attack. If you in possession of a ```1d6 +1``` sword, this means rolling ```1d6```. Let's say we rolled a 3.
-2. Add any relevant modifiers. Our sword was ```+1```, so we will add 1. Let's say we had 2 strength,
+1. Roll the attack. If you are in possession of a ```1d6 +1``` sword, this means rolling ```1d6```. Let's say we rolled a 3.
+2. Add any relevant modifiers. Our sword was ```+1```, so we will add ```1```. Let's say we have ```2``` strength,
    so we will also add that. So our total is ```3 (our roll) + 1 (our weapon's modifier) + 2 (our strength) = 6```.
 3. Deduct the enemy's armor (if they have any). Let's say our enemy had 1 armor. That means that we actually did ```6 - 1 = 5``` damage.
 
 ### Critical Hits
-A critical hit occurs when a player rolls the highest possible value for an eligible weapon. 
+A critical hit occurs when a player rolls the highest possible value for an eligible weapon.
 When this occurs, the player may roll the dice a second time and add that to the damage total.
-So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy with
-```0``` armor. It might play out like this:
+So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy
+with ```0``` armor. It might play out like this:
 1. We roll an ```8``` on our ```d8``` spear, a critical hit!
-2. We roll again. Another 8! But there is no such thing as a "double critical", so that's the end of our rolling.
+2. We roll again. Another ```8```! But there is no such thing as a "double critical", so
+  that's the end of our rolling.
 3. We total our rolls and add our modifiers ```8 (first roll) + 8 (a lucky critical hit roll) + 0 (our weapons modifier) + 2 (our dexterity)```.
-4. Deduct our enemy's armor ```18 - 0 = 18```. We did a massive 18 damage!
+4. Deduct our enemy's armor ```18 - 0 = 18```. We did a massive ```18``` damage!
 
 ### Weapons
 Weapons have 3 parts in RnR:
@@ -446,22 +466,23 @@ Weapons have 3 parts in RnR:
 2. Their modifier.
 3. Their effect.
 
-A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's affect might be
-that it returns to a players hand after it is thrown.
+A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's affect
+might be that it returns to a players hand after it is thrown.
 
-Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's affect might be
-that it does an extra ```1d6``` damage to the undead.
+Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's affect
+might be that it does an extra ```1d6``` damage to the undead.
 
-A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's affect might
-be that, if an enemy is stabbed with it, they must make a saving throw against the wielder's [Spell Power](#spell-power)
-or be struck blind.
+A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's affect
+might be that, if an enemy is stabbed with it, they must make a saving throw against the
+wielder's [Spell Power](#spell-power) or be struck blind.
 
 
 ### Combat Abilities
-As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers and Ruffians
-that make the various [Races](#races) and [Classes](#classes) unique. Many of these abilities
-are specific to combat. For example, a character might be able to spend one of their [Action Points](#action-points)
-to add an additional dice of damage to an attack. This means that, if they have a ```1d6 + 1``` weapon, they can spend
+As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers
+and Ruffians that make the various [Races](#races) and [Classes](#classes) unique.
+Many of these abilities are specific to combat. For example, a character might be able
+to spend one of their [Action Points](#action-points) to add an additional dice of damage
+to an attack. This means that, if they have a ```1d6 + 1``` weapon, they can spend
 an action point to add an extra ```1d6``` damage to their attack.
 
 ### Hitting Zero Health
@@ -469,48 +490,51 @@ If an enemy hits zero health, it is understood to have died. If a player hits ze
 everything is not over quite yet. When a player hits zero health, the following happens:
 
 1. Any remaining damage forces the player into negative health. This means that,
-   if a player has 3 health remaining, and is attacked for 5 damage, they now have ```-2``` health.
-   At this point, the player is said to be __On Death's Door.__
-2. When the player's turn arrives, they must make a __Death Coin Flip.__ The player must flip a coin,
-   and on failure, their character dies.
-3. To save the character before death occurs, the other players must heal them to above zero health.
-4. If a player is healed enough to bring them back to positive health, they begin playing again,
-   and need not make further death coin flips.
+   if a player has ```3``` health remaining, and is attacked for ```5``` damage,
+   they now have ```-2```  health. At this point, the player is said to be
+   __On Death's Door.__
+2. When the player's turn arrives, they must make a __Death Coin Flip.__ The player must
+   flip a coin, and on failure, their character dies.
+3. To save the character before death occurs, the other players must heal them to above zero
+   health.
+4. If a player is healed enough to bring them back to positive health, they begin playing
+   again, and need not make further death coin flips.
 
-#### Death and Dying
-Sometimes, things don't go your way. Death is not the end of your journey, and it doesn't have to ruin
-your Rangers and Ruffians experience. First, let's set down some rules on how and when death happens.
+#### Reversible Death
+Sometimes, death _really_ isn't the end. This depends heavily on the world that your Poohbah
+has created, and whether or not certain resources are available. If your party is carrying a
+rare item, the ___green lizard in a jar,___ it is possible to resurrect a character who has
+died within the past twenty four hours. Similarly, if another player is a high level
+__Cleric__ or __Paladin,__ or if the party knows a high level Cleric or Paladin, it is
+possible that they may be able to cast the __Resurrect__ spell. Or, in dire cases, a
+__Necromancer__ may come to a dead character's aid. Although, some fates may be worse than
+dying...
 
-##### Reversible Death
-Sometimes, death _really_ isn't the end. This depends heavily on the world that your Poohbah has created,
-and whether or not certain resources are available. If your party is carrying a rare item, the ___green lizard in a jar,___ 
-it is possible to resurrect a character who has died within the past twenty four hours. Similarly, if another
-player is a high level __Cleric__ or __Paladin,__ or if the party knows a high level Cleric or Paladin,
-it is possible that they may be able to cast the __Resurrect__ spell. Or, in dire cases, a __Necromancer__
-may come to a dead character's aid. Although, some fates may be worse than dying...
-
-##### Irreversible Death
-Sometimes, however, death is here to stay. As we previously mentioned, that doesn't have to be the
-end of your fun! Losing a character can be hard and emotional, but there is more fun to be had
-with a brand new character! Maybe a relative of your old character is bent on avenging them!
-Or maybe that halfling barbarian you've been joking about! Or maybe you could roll up a random
-character! The point is, while it can be sad to lose a character, it is definitely not the end,
-and certainly not something to be angry about. Instead, treat it as an opportunity to interface
-with the world in a whole new way!
+#### Irreversible Death
+Sometimes, however, death is here to stay. It is important to remember that the death of a
+character doesn't have to be the end of your fun! Losing a character can be hard and
+emotional, but there is more fun to be had with a brand new character! Maybe a relative of
+your old character is bent on avenging them! Or maybe that halfling barbarian you've been
+joking about! Or maybe you could roll up a random character! The point is, while it can be
+sad to lose a character, it is definitely not the end, and certainly not something to be
+angry about. Instead, treat it as an opportunity to interface with the world in a whole new
+way!
 
 
 ## Health, Rest, and Healing
-Character's begin with an amount of health equal to the maximum roll of their health die + ```1d4.``` 
-Health lost in combat can be regained by resting, using items, or receiving healing magic.
+Character's begin with an amount of health equal to the maximum roll of their
+health die + ```1d4.``` Health lost in combat can be regained by resting, using items,
+or receiving healing magic.
 
 ### Rest
-There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__, and __Sleep in a bed.__ 
+There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__, and
+__Sleep in a bed.__
 
-| Rest Type      | Required Time | Health Restored | Action Points Restored |  
-| -------------- |---------------| --------------- | ---------------------- |
-| Quick Rest     | 1 hour        | 20%             | 2                      |
-| Sleep          | 8 hours       | 50%             | 5                      |
-| Sleep in a bed | 8 hours       | 75%             | All                    |
+| Rest Type      | Required Time | Health Restored | Action Points Restored | Luck Tokens Restored | Frequency       |
+| -------------- |---------------| --------------- | ---------------------- | ---------------------| --------------- |
+| Quick Rest     | 1 hour        | 20%             | 2                      |  0                   | 3 times per day |
+| Sleep          | 8 hours       | 50%             | 5                      | All                  | Once per day    |
+| Sleep in a bed | 8 hours       | 75%             | All                    | All                  | Once per day    |
 
 
 ## Magic
@@ -530,12 +554,12 @@ Mages can learn new spells in two ways. First, a mage passively learns new spell
 during your game. A spell book may contain a specific spell hand selected by the Poohbah.
 If the spell is of a higher level than you could normally learn, you may learn it, but
 you do not learn spells of that level upon leveling up. If the spell book does not contain
-a specific spell, you may use it to learn any one spell of up to the max spell level that you 
+a specific spell, you may use it to learn any one spell of up to the max spell level that you
 are able to learn.
 
 ## Leveling Up
 There are 16 levels in Rangers and Ruffians, ranging from ```Level 0``` to ```Level 15.``` These
-Levels neatly fit into 3, 5 level arcs. 
+Levels neatly fit into 3, 5 level arcs.
 
 | Level Range    | Arc           |
 | -------------- |---------------|
@@ -543,9 +567,10 @@ Levels neatly fit into 3, 5 level arcs.
 | 6 - 10         | Hero. You begin to make real change in the land that you are in.             |
 | 11 - 15        | Hero of Legend. You begin fighting ancient evils. The fate of the world may be in your hands. |
 
-### New Health
-Every time that you level up, you get to roll your health die + ```1d4``` and add add the result to your
-maximum health. For example, if your maximum health is ```26``` and your health die is ```1d8``` the following might occur:
+### Increasing Your Maximum Health
+Every time that you level up, you get to roll your health die + ```1d4``` and add add the
+result to your maximum health. For example, if your maximum health is ```26``` and your
+health die is ```1d8``` the following might occur:
 1. You roll a ```3``` on your health die.
 2. You roll a ```2``` on your 1d4.
 3. Your new maximum health is ```26 (your old max health) + 3 (your health die roll) + 2 (your d4 roll) = 31```.
@@ -558,7 +583,7 @@ you to perform all new actions or granting you new advantages.
 ### Even Levels: New Stats
 When you reach an even level, you get ```2``` __Stat Points__ to spend. You can spend these to increase your stats.
 Review the [Effective Stats](#effective-stats) section for details on how this works.
-Alternatively instead of increasing your stats, you are able to instead take a new [Skill](#skills). See the 
+Alternatively instead of increasing your stats, you are able to instead take a new [Skill](#skills). See the
 [Skills](#skills) section for more details.
 
 
@@ -569,7 +594,7 @@ This means that if you know level 0, 1, and 2 spells, you get to learn 3 spells:
 
 ## Building a Character
 Now that you understand (or at least glanced at) the rules of Rangers and Ruffians, you can now get started building
-your character. In terms of gameplay, a character is made up of two major components: a __Race__ and a __Class.__ 
+your character. In terms of gameplay, a character is made up of two major components: a __Race__ and a __Class.__
 A Race represents the racial background that your character comes from. Your choice of race grants you base
 abilities and stats, and can greatly affect the way that you interact with the world. If you choose to play a
 tiny _Sprout_, you might ride atop the shoulders of the another player's _Orc_ character.
@@ -582,8 +607,8 @@ When you level up in Rangers and Ruffians, it is your class that grants you new 
 
 ### Health Dice Pieces
 Races and Classes each have ```Health Dice Pieces```. When building a character,
-you add these pieces together to get your total health dice. For example, 
-if you race has ```2``` health dice pieces, and your class has ```4```, 
+you add these pieces together to get your total health dice. For example,
+if you race has ```2``` health dice pieces, and your class has ```4```,
 your health dice would be ```6```.
 
 ## Races
