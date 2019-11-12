@@ -47,7 +47,7 @@ added to the complexity of the game. With the introduction
 of RnR 2.1.0, we look to formalize the rules of the game,
 and to re-evaluate them through the lens of our initial vision:
 that tabletop RPGs are for _everyone,_ and not just for people
-who like to crunch numbers and watch fantasy television movies and
+who like to crunch numbers and watch fantasy movies and
 shows on the weekend. We have found that other (far more popular)
 tabletop RPGs are difficult for an outsider to join without
 the help of a friend who is "in the know," and even then that
@@ -58,119 +58,534 @@ for epic, fun adventures, while still being simple enough
 so that you and your friends can play for the first time
 this weekend.
 
-## What do you need to play?
+### What do you need to play?
 
 In order to play Rangers and Ruffians, you need the following:
 
 1. At least one set of polyhedral dice (the nerdy ones).
-2. One player who has read these rules, and who will [run the story of your game](#poohbah). 
+2. One player who has read these rules, and who will [run the story of your game](#being-the-grand-poohbah). 
 3. A printed or digital version of this manual and the Poohbah's Handbook,
-   which contain all of the rules necessary 
+   which contain all of the rules necessary to embark upon your adventure!
 
-## Brief Rules
-While making Rangers and Ruffians we strove to craft rules that are simple to understand and easy to follow, so that you can get playing quickly and without much hassle. While some aspects of the game are deeper than others, 90% of the time, you will only need the basic rules in this section.
+### How does the game work?
+The core idea of a tabletop roleplaying game is relatively simple; a group of
+players come together and weave a shared tale of adventure. To give these
+adventures structure, most tabletop RPGs have two classes of participant,
+one or more "players" and a single "storyteller". Each "player" takes control
+of one ingame avatar, while the imagination of the storyteller drives everything
+else in the world. Many games call the storyteller a "Game Master" (GM) or "Dungeon Master"
+(DM). We chose to give this role a title which we feel is more befitting of the importance
+of its station, the __Grand Poohbah.__ In Rangers and Ruffians (and many other tabletop
+roleplaying games) __dice__ are used to determine the outcome of player actions within
+the game world. It is the Poohbah’s job, then, to call for and interpret dice rolls.
 
-### Stats
-In Rangers and Ruffians, every living (or undead!) entity has statistics which help determine what it is capable of. As a player, you too will have stats that affect not only how you fare in combat, but also how you in battle, but also how you interact with the world. For a Mage, intelligence will be paramount, for a Bard, charisma is just as important. Players who want to sneak rather than fight will want to focus on dexterity. Below, we will enumerate each of the stats, and how they function in Rangers and Ruffians.
+A realistic ingame interaction might look something like this:
+```
+Poohbah: The door before you stands locked. The corridors of the castle are quiet, save for the steady dripping of water from the ceilings.
+Player 1: I’ll attempt to pick the lock.
+Poohbah: Alright, roll for it.
+Player 1: 8, and my dexterity is 2, so that’s an 11.
+Poohbah: You spend a moment trying to pick the lock, but it doesn’t seem to want to budge.
+Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!
+Player 1: Urtag! You’re going to wake the whole castle!
+Poohbah (grinning): Roll for it.
+Player 2: I got an 18!
+Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.
+Player 2 (nodding): Damn right it is.
+``` 
+
+In the above interaction, there are a few things to note. Twice, the Poohbah called for rolls.
+If Player 1 had rolled higher, the lock would have been picked. The difficulty of this lock was
+set by the Poohbah before the roll was called for. This failure gave Player 2, or "Urtag the
+Strong," the chance to jump in and do something. There is no inherent turn order in this scenario,
+so it is up to the Poohbah to choose who goes first. 
+
+On the topic of Player 2, it is important to make certain that your party likes the idea of
+having a "kill first, ask questions later" character in their party. Hijinks are incredibly fun,
+and are the font from which most of the life of a tabletop RPG flows, but remember not to be a jerk. 
 
 
-**Strength:** Strength can be defined as raw power of the body. You enter a dungeon, and sees a friend trapped in a cell. You desperately want to get them out, so you decide to bend the bars. In this scenario, you would want very high strength. In combat, strength directly affects the amount of damage you do with strength based weapons, as you can add your strength to any damage you do with them. (see the weapons section below for more detail).
+## Being the Grand Poohbah
+Regardless of the tabletop RPG being played, the Game Master (or Grand Poohbah)
+is the unsung hero. It is up to the Poohbah to present the game's world,
+arbitrate player interactions, and to interpret the game's rules. Despite
+(and because of) this, being the Grand Poohbah can be an enormously satisfying
+experience. To be a Grand Poohbah and run Rangers and Ruffians, you will need
+three things in addition to those presented above in the ```What do you need to play?```
+section:
 
-**Dexterity:** Dexterity can be defined as mobility, nimbleness, and ability with the body. You are chasing a fleeing thief across the rooftops of a city. You come up to a gap, and have to jump! In this scenario, you would want higher than average dexterity. In a combat scenario, dexterity directly affects the amount of damage you do with dexterity based weapons, as you can add your dexterity to any damage you do with them. (see the weapons section for more details).
+1. To read the rules presented in this document, so that you can make informed decisions
+   and help your players learn the game.
+2. To read the ```Poohbah's Handbook```, a companion to this document which provides
+   additional insight into the rules, help with encounter building, and much, much more!
+3. To remember the most important rule of being a Game Master or Poohbah in _any_ tabletop RPG:
+```
+If the players are having fun, you are doing a good job.
+```
 
-**Vitality:** Vitality determines how much health you will have in Rangers and Ruffians. Health is treated as a resource, which can be depleted by taking damage and restored by resting, drinking potions or through some other means. In Rangers and Ruffians, all player characters begin with one hundred health plus ten times their dexterity modifier. This means that, if you have +2 vitality, you will have 120 health (for more details, see the Health, Rest, and Potions, and Healing and Death and Dying sections).
+## Participating as a Player
+Participating as a player in Rangers and Ruffians is a bit easier than being the
+Poohbah. However, that doesn't mean that you shouldn't take it seriously. The
+Poohbah may present the world, but only _you_ can engage with it! Before we get
+into the intricacies of the rules of Rangers and Ruffians, please remember the
+following rules, which are integral to _all_ tabletop RPGs:
 
-**Intelligence:** Intelligence can be described as raw aptitude with the mind, and has special significance to magic users. In Rangers and Ruffians, spell points are treated as a resource, and are used to cast spells. All magic users start out with five magic points plus their intelligence level. (For more details see the Magic section).
+1. It is the Poohbah's job to present the world. It is my job to engage with it.
+2. Tabletop RPGs are cooperative. This means that all players should have a chance to shine.
+3. Treat your fellow players and the Poohbah the way that you want to be treated.
 
-**Inner Fire:** Inner fire can be defined as mental fortitude or resolve. An enemy spellcaster is trying to break into your mind to steal secrets. In this scenario, you would want high inner fire to repel their attack. In a combat scenario, Inner Fire directly affects the amount of damage you do with magic, as you can add it to the damage or healing you deal with any spell. (see the magic section for more details).
 
-**Charisma:** Charisma determines how charming your character can be. You speak with the local innkeeper and have a feeling that he's keeping something from you. You don't think that he's a dangerous person, but rather that someone or *something* is stopping him. In this scenario, you would want high charisma, so that you can convince him to help you despite the risk.
+## Dice and Rolling
+As mentioned above in the section [How does the Game Work?](#how-does-the-game-work)
+Rangers and Ruffians uses dice to determine whether or not an action succeeds.
+The process of making a __check__ is simple:
 
-**Perception:** Perception determines how likely it is your character will notice things going on in the world around them. You are riding through the forest at night. Little do you know, a trio of goblins lie in ambush. In this scenario, you would want high perception.
+1. The Poohbah presents a situation his or her players.
+2. One of the players declares that they would like to do something.
+3. If the Poohbah thinks that they could reasonably succeed or fail,
+   they call for a check, and assign that check a target difficulty.
 
-**Luck:** When all else fails, there's always luck! Luck is a rarely used stat, which can be invoked by either the Poohbah or the player when no other stat seems to fit.
+It is left entirely to the Poohbah's discretion for which actions a __check__
+should or should not be called for. For example, if a player is playing
+a Rogue (a dexterous, sneaky character) and they say that they want to
+climb a small wall, the Poohbah may not ask for a check, as it is reasonable
+to say that the player could easily perform that action without failure.
+If player playing a heavily armored Hardfoot Halfling (a short, stocky race) 
+asked to climb the same wall, the Poohbah may call for a check.
 
-### Checks
-Now that you understand the basics of stats, its time to discuss how they apply in the world of the game. When you attempt an interesting action in Rangers and Ruffians, the Poohbah may see fit to have you perform a "check" to see whether or not you manage it. To perform this check, you roll a twenty sided dice (d20), add the relevant stat (called a modifier), and the Poohbah will determine if your roll is high enough (for details about suggested roll difficulties, see the Poohbah's handbook).
+There are a total of seven dice that are used in RnR, all of which can
+be purchased online as a set or at your local hobby shop. These dice are
+the ```d4```, ```d6```, ```d8```, ```d10```, ```d12```, ```d20``` and
+the ```percentile``` die (a ```d10``` with two digits on each side).
+We name dice with ```d``` and then the number of sides on the die.
+Therefore, a ```d4``` has 4 sides, a ```d6``` is the 6 sided die with
+which you are most familiar, a ```d8``` has 8 sides, and so on and so forth.
 
-At first, this may seem complicated, so let's give an example. You are currently investigating a string of murders in a small city. You've tracked the killer back to their apartments, and, after waiting for them to leave, you decide to sneak in. Unfortunately, you find that the door is locked! Because of this, you decide to pick it, and the Poohbah calls for a dexterity check (because dexterity is the most relevant stat). You roll a 3 on your twenty sided dice, and then add 2, because that is your dexterity score. Unfortunately, the Poohbah tells you that that isn't high enough, and you can't pick the lock. That's fine, though, failing can be just as fun as succeeding. Because you can't pick the lock, you decide to break down the door. This time, you roll a 14, and add your 1 strength for a total of 15. It works! There was a little more sound, and a little more evidence, but you're in!
+The most important dice in our toolbox is the ```d20```, which is rolled whenever
+a __check__ is made.
 
-Checks like the one above are common in the world of Rangers and Ruffians, and help make the game more dynamic; things can't _always_ go your way, or the game wouldn't be as fun. This also makes it more fun when the group of people you're playing with, your party, creates characters with different skillsets. Checks and stats help make it so that every character can approach the game differently.
+When multiple dice of a type must be rolled, a number is put before the ```d```.
+Therefore ```2d6``` means that 2 six sided die must be rolled, and their value
+summed. ```4d8``` means that 4 eight sided die must be rolled and their
+total summed. 
 
-### Critical Rolls
-A critical success occurs when you role the highest possible value on a dice. Out of combat, this often means that that you will perform exceptionally well in a task. For example, your vault off of a building might turn into a stunning double backflip. A critical failure occurs when you roll the lowest possible value on a dice. This often comes with negative repercussions. For example, your attempt to sneak through a hallway might turn into you knocking over a vase and alerting the guards. A critical hit is when a critical success or failure occurs in combat, and is discussed in a later section.    
+Sometimes, a __modifier__ is applied to a roll. This is added as a ```+```
+or ```-``` at the end of a roll. For example ```1d6 + 2``` calls for
+1 six sided die to be rolled, and then 2 added to the result.
+
+In some cases, it is necessary to roll a ```d100```. Since we
+don't actually have a 100 sided die, we instead roll a percentile
+and a ```d10```. When we do this, the ```percentile``` represents the tens
+place, and the ```d10``` the ones place. The maximum roll, then, is
+a zero (where we roll a zero on both the ```d10``` and the ```percentile```)
+and the maximum roll is a 99 (where we roll a 9 on both dice).
+If we rolled a ```60``` on the ```percentile```, and a ```4``` on the ```d10```,
+we would say that we rolled a 64.
 
 ### Advantage and Disadvantage
-Some characters have backgrounds (see the class and race section for more details) which cause them to be specifically good or bad at performing certain actions or at performing actions under certain conditions. In these scenarios, the character is said to have advantage or disadvantage on a check. When a character has advantage on a check, they roll two dice for the check, and take the higher. When they have disadvantage, they roll two dice and take the lower.
+When a character is especially good or bad at something in Rangers and Ruffians,
+they may have __Advantage__ or __Disadvantage__ at that thing. For example, the
+sneaky Rogue mentioned earlier earlier is good at hiding, so it has advantage.
+This means that, when the rogue tries to hide, they get to roll a ```d20``` twice,
+and keep the higher roll. So if the rogue rolled a 10 followed by a ```15```,
+they would keep the ten. __Disadvantage__ is similar, but the player keeps the
+_worse_ of the two rolls. So in the case above, if the rogue had disadvantage,
+they would keep the 10.
 
-As an example, imagine that your character's background says that they have advantage when sneaking in the rain. This means that, if your Poohbah asks you to perform a stealth check in the rain, you can roll two dice instead of one and take the higher.
 
-### General Abilities
-Your character will have special abilities as a result of their background, which can aid you in your travels. Separate from magic or combat abilities, general abilities allow you to consistently perform a feat is uncommon in others. For example, a character might have the "throw anything" ability, which allows them to throw anything up to five times their weight without a strength check.
+### Inspiration Dice
+Sometimes, an ability or spell cast on a player will give them an __Inspiration Dice__. 
+An Inspiration Dice is a dice which can be added to a check of the players 
+choosing. Once an inspiration dice is spent, it disappears, and cannot be used
+again. So if a player had a ```d4``` inspiration dice and was asked to make
+a stealth check, they could choose to roll ```1d4``` and add the result
+to their check.
+
+### Saving Throws
+Saving throws are special checks that are made when something bad is happening
+to an entity (a player, npc, or enemey) in RnR. The most important of these is the 
+__Spell Saving Throw.__ A spell saving throw occurs when someone tries to cast
+a spell on someone else. For example, if a character is a wizard, and tries
+to turn a villager into a frog, the villager must make a spell saving
+throw. See the [Spell Power](#spell-power) section for details about
+this saving throw.
+
+## Stats
+Characters in RnR are made up of __Stats__ and __Abilities__. __Stats__ attempt
+to capture the physical, mental, and social prowess of a character. A relevant stat
+is almost always added to the result of a check. The seven stats in Rangers and
+Ruffians are as follows:
+
+### Strength
+__Strength__ is defined as raw power of the body. Strength influences the way that
+you play the game in three ways:
+1. __Strength is added to strength checks.__ You enter a dungeon, and see
+  a friend trapped in a cell. You desperately want to get them out, so you decide
+  to bend the bars. In this scenario, you add your strength to a ```d20``` roll. 
+2. __Strength affects strength weapon damage.__ In combat, your strength is added to
+  the amount of damage you do with strength based weapons such as warhammers, great-axes,
+  and clubs.
+3. __Strength affects the type of armor you can wear.__ The stronger you are, the heavier
+  the armor that you can wear.
+
+### Dexterity
+__Dexterity__ is defined as mobility, nimbleness, and ability with the body.
+Dexterity affects the way that you play the game in two ways:
+1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
+  the rooftops of a city. You come up to a gap, and have to jump! In this scenario, 
+  you would add your dexterity to a ```d20``` roll. 
+2. __Dexterity affects your dexterity weapon damage.__ In a combat scenario, dexterity 
+  is added to the amount of damage you do with dexterity based weapons, such as spears,
+  daggers, and falchions.
+
+### Intelligence 
+__Intelligence__ is defined as raw aptitude with the mind. Intelligence affects the
+way that you play the game in two key ways.
+1. __Intelligence is added to intelligence checks.__ 
+2. __Intelligence affects your number of action points.__ In Rangers and Ruffians, action points
+  are treated as a resource which is used to perform special abilities or to cast spells. This means
+  that the more action points you have, the more abilities you can use or spells you can cast. Action
+  points are further detailed in the [Action Points](#action-points) section.
+
+### Inner Fire
+__Inner Fire__ is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
+that you play the game in three ways.
+1. __Inner Fire is added to magical attacks.__ If your character is a mage who attacks with magic,
+   Inner Fire is added to any damage that you deal.
+2. __Inner Fire affects how susceptible your character is to spells.__ Inner Fire is added to most
+  [__Spell Saving Throws__](#spell-saving-throws) in the game. This means that having a higher Inner Fire means
+  that you are less likely to be affected by enemy spells.
+3. __Inner Fire determines how likely your spells are to affect an enemy.__ If one of your spells imposes
+  a  [__Spell Saving Throws__](#spell-saving-throws) on an enemy, the target that the enemy is trying to beat
+  is directly influenced by your inner fire. This is further detailed in the 
+  [__Spell Power__](#spell-power) section.
+
+### Charisma
+__Charisma__ is defined as force of personality, or how charming your character can be. Charisma can 
+affect the way you play the game in two ways:
+1. __Charisma is added to charisma checks.__ You speak with the local innkeeper and have a feeling that
+  he's keeping something from you. You don't think that he's a dangerous person, but rather that someone
+  or *something* is stopping him. In this scenario, you would want high charisma, so that you can convince
+  him to help you despite the risk.
+2. __(Conditional) If you are playing a Sorcerer, Charisma determines whether or not your spells succeed or
+  fail.__ Further detailed in the [Sorcerer](#sorcerer) section.
+
+### Perception 
+__Perception__ determines how likely it is your character will notice things going on in the world around them.
+It affects the way you play the game in two ways:
+1. __Perception is added to perception checks.__ You are riding through the forest at night. Little do you know,
+   a trio of goblins lie in ambush. In this scenario, you would want high perception.
+2. __Perception is added to combat initiative.__ When in combat, __Initiative__ is rolled to determine turn order.
+  Perception is added to such checks, so that characters who are better at reading a situation tend to go first.
+  Initiative is further detailed in the [Initiative](#initiative) section.
+
+### Luck
+When all else fails, there's always luck! Luck is a special stat, and is the only stat that cannot go negative.
+Each day, a player gets __Luck Tokens__ equal to their luck. When a roll doesn't go your way, you may spend
+one luck token to re-roll it.
+
+### Stat Values
+Stats in Rangers and Ruffians range between ```-5``` and ```+5```. However, usually they are between
+```-3``` and ```3```. When a character is at very low levels, their stats tend to be relatively low.
+As they grow and get stronger, their stats increase. For more details about increasing stats, see the
+[Leveling Up](#leveling-up) section.
+
+### Diminishing Returns: The Most Confusing Rule in Rangers and Ruffians
+Thus far, we have treated stats as increasing linearly (e.g. if you dexterity is 3, you add 3 to a roll). 
+In fact, for the balancing of leveling up in Rangers and Ruffians
+to work, this is not always true. Instead, the rule is as follows.
+1. If your value for a stat is between -3 and 3, that is the value that you add to a roll.
+2. If your value for a stat is less than -3 or greater than 3, we treat things a little bit differently.
+  1. The first 3 in either direction are worth 1 full point.
+  2. After that, further values are worth .5 points.
+  3. So, if a character's Dexterity is 5, they would add 4 to a check.
+
+Let's unpack this idea with a table:
+
+| Stat Value     | What is added to a roll |
+| -------------- |---------------|
+| -7             | -5 |
+| -6             | -4 |
+| -5             | -4 |
+| -4             | -3 |
+| -3             | -3 |
+| -2             | -2 |
+| -1             | -1 |
+|  0             |  0 |
+|  1             |  1 |
+|  2             |  2 |
+|  3             |  3 |
+|  4             |  3 |
+|  5             |  4 |
+|  6             |  4 |
+|  7             |  5 |
+
+Note how for the core of the table (-3 to 3) the stats behave linearly.
+
+| Stat Value     | What is added to a roll |
+| -------------- |---------------|
+| -3             | -3 |
+| -2             | -2 |
+| -1             | -1 |
+|  0             |  0 |
+|  1             |  1 |
+|  2             |  2 |
+|  3             |  3 |
+
+After that, we begin adding half points. However, half points don't make any sense, so we round down:
+
+| Stat Value     |  Half Point |Rounds To |
+| -------------- |---------------| --------------- |
+|  0             |  0   | 0 |
+|  1             |  1   | 1 |
+|  2             |  2   | 2 |
+|  3             |  3   | 3 |
+|  4             |  3.5 | 3 |
+|  5             |  4   | 4 |
+|  6             |  4.5 | 4 |
+|  7             |  5   | 5 |
+
+#### Why are Diminishing Returns Important?
+__Diminishing Returns__ are very important to [Leveling Up](#leveling-up) in Rangers and Ruffians
+in two ways.
+
+1. __They provide a buffer against values getting to high.__ Because players can increase whatever
+   stat they want when leveling up, a buffer is needed to avoid stat values getting out of hand.
+2. __They encourage stat diversification upon level up.__ Diminishing returns incentivize players
+   to spend level up stat points on Stats that they wouldn't ordinarily take, promoting well rounded characters.
+
+
+### Bonus Stat: Health Dice
+Every character in Rangers and Ruffians has a __Health Dice.__ When a character levels up (detailed in the
+section [Leveling Up](#leveling-up)), they roll their health dice, and ```1d4``` and add the numbers rolled
+to their maximum health.
+
+### Abilities
+Abilities are special things that a character is capable of. Abilities include special
+[advantages and disadvantages](#advantage-and-disadvantage), as well as special attacks
+that can be made in combat. Some abilities cost one or more [Action Points](#action-points)
+to perform.
+
+### Action Points
+__Action Points__ can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
+A characters total number of Action Points is equal to ```5 + their Intelligence```. So if a characters
+intelligence is ```-3```, they have ```2``` Action Points. If their intelligence is ```2```, they have
+```7``` Action Points. Spent Action Points are restored after resting. See the [Rest](#rest)
+section for more details.
+
+### Spell Power
+A character's __Spell Power__ determines how likely it is that an enemy will succumb to the affects
+of their abilities or spells. A character's Spell Power is defined to be ```12 +_their Inner Fire```.
+So if a character has ```3``` Inner Fire, their Spell Power is ```15.``` This means that, if our wizard
+tried to turn someone into a frog, that entity would have to succeed a saving throw with a target
+of ```15``` (our wizard's spell power).
+
+
+## Combat
+Your party of adventurers is slowly making its way through the corridors of a dungeon when suddenly
+a trio of skeletons bursts through a nearby door. You're under attack!
 
 ### Initiative
-Initiative is a special sort of check, performed at the beginning of combat. Initiative is modified by dexterity, and determines the order in which players take action in combat. For example, imagine that you and a friend are about to fight a minotaur. When combat begins, each of you and the minotaur roll a twenty sided die. After adding dexterity, you have a ten, your friend has a twelve, and the minotaur has a three. This means that, when combat begins, first your friend gets to act, then you, then the minotaur. Initiative is rolled only once at the start of every battle.
+You know that combat has officially begun when your Poohbah asks you to roll Initiative.
+__Initiative__ is a special sort of check, performed at the beginning of combat which
+determines the order in which players and enemies are to take action on each round.
+A __round__ is defined as one complete run through initiative order. 
+Initiative is modified by perception, and does not change one it is rolled. Your Poohbah
+may choose to either keep enemy initiatives a secret, or to display them for all to see.
+We actually recommend having a player keep track of initiative for all players and enemies.
+That way, there is one less thing for the Poohbah to have to handle.
 
-### Physical Combat
-Combat in Rangers and Ruffians is turn based. Each participant gets to move and take one action per round, unless otherwise specified by a combat or weapon ability. Movement can be used to reposition yourself on the battlefield, approaching or moving away from an enemy. An action can be spent casting a spell, attacking an enemy, or using an item. A turn can be deferred to go later in the initiative order. Speaking, drawing a weapon, and other small actions can be counted as "free actions" by the Poohbah rather than counted against you.
+
+### Your Turn
+#### Actions
+On your turn you are able to take one __Action.__ An action is defined as doing something
+that takes your full attention for a few seconds. This can include casting a spell, making
+an attack, lifting a heavy object, or feeding a potion to an ally.
+
+#### Offhand Actions
+On your turn you may also take an offhand action. An offhand action is defined as doing something
+that can be done quickly without removing your full attention from combat. This includes leaping
+across a ledge, drinking a potion yourself, or opening an unlocked door. It does _not_ include 
+making an attack.
+
+#### Movement
+On each turn, you are able to make 15 feet of movement. This movement can be decomposed however
+you wish. For example, you might drink a potion as an offhand action. Walk 5 feet forward, lift
+a cauldron as an action, and then walk ten 10 feet to the right.
+
+#### Free Actions
+It costs neither an action nor an offhand action to perform very simple actions such as shouting
+out to your allies, pointing at something, or sheathing or unsheathing a blade. It is up to your
+Poohbah's discretion what counts as a Free Action.
+
+#### The Dash Action
+You are able to spend your action moving an additional 15 feet.
+
+### Attacking
+Attacks nearly always hit in Rangers and Ruffians. Therefore, to make an sword attack against an
+adjacent enemy, there are two steps.
+
+1. Roll the attack. If you in possession of a ```1d6 +1``` sword, this means rolling ```1d6```. Let's say we rolled a 3.
+2. Add any relevant modifiers. Our sword was ```+1```, so we will add 1. Let's say we had 2 strength,
+   so we will also add that. So our total is ```3 (our roll) + 1 (our weapon's modifier) + 2 (our strength) = 6```.
+3. Deduct the enemy's armor (if they have any). Let's say our enemy had 1 armor. That means that we actually did ```6 - 1 = 5``` damage.
 
 ### Critical Hits
-A critical hit occurs when a player rolls the highest possible value for an eligible weapon. When this occurs, the player may roll the dice a second time and add that to the damage total.
+A critical hit occurs when a player rolls the highest possible value for an eligible weapon. 
+When this occurs, the player may roll the dice a second time and add that to the damage total.
+So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy with
+```0``` armor. It might play out like this:
+1. We roll an ```8``` on our ```d8``` spear, a critical hit!
+2. We roll again. Another 8! But there is no such thing as a "double critical", so that's the end of our rolling.
+3. We total our rolls and add our modifiers ```8 (first roll) + 8 (a lucky critical hit roll) + 0 (our weapons modifier) + 2 (our dexterity)```.
+4. Deduct our enemy's armor ```18 - 0 = 18```. We did a massive 18 damage!
 
 ### Weapons
-When an minotaur is bearing down on you in the far reaches of the Underworld, your trusty sword (or spear, or pike, or bow, or flail, or sniper rifle) will be your best friend. Weapons come in two flavors, dexterity and strength. Strength weapons tend to be sturdy and large, where as dexterity weapons are more precise. The weapon you use will largely be determined by which stat you are strongest with. Weapons can also come with special abilities. This is important, as you do not "level up," or gain experience in Rangers and Ruffians. This makes the game much simpler, and means that it is the loot that you find that makes you stronger.
+Weapons have 3 parts in RnR:
+1. Their primary die.
+2. Their modifier.
+3. Their effect.
+
+A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's affect might be
+that it returns to a players hand after it is thrown.
+
+Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's affect might be
+that it does an extra ```1d6``` damage to the undead.
+
+A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's affect might
+be that, if an enemy is stabbed with it, they must make a saving throw against the wielder's [Spell Power](#spell-power)
+or be struck blind.
+
 
 ### Combat Abilities
-As you enter the world of Rangers and Ruffians, you will find that you have a variety of abilities, some of which will be useful in combat. Most combat abilities come with some form of time limit, which it is up to you to keep track of. For many, this specifies that they can be used once every three turns. It is up to you to decide when it is the best time to use your abilities.
+As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers and Ruffians
+that make the various [Races](#races) and [Classes](#classes) unique. Many of these abilities
+are specific to combat. For example, a character might be able to spend one of their [Action Points](#action-points)
+to add an additional dice of damage to an attack. This means that, if they have a ```1d6 + 1``` weapon, they can spend
+an action point to add an extra ```1d6``` damage to their attack.
 
-### Health, Rest, and Healing
-As described in the vitality section, characters begin with 100 health plus or minus their vitality level. Health lost in combat can be regained by resting, using items, or receiving healing magic.
+### Hitting Zero Health
+If an enemy hits zero health, it is understood to have died. If a player hits zero health,
+everything is not over quite yet. When a player hits zero health, the following happens:
 
-#### Rest
-There are three types of rest in Rangers and Ruffians: Quick Rest, Sleep, and Sleep in a bed. A quick rest takes one hour, and returns 4d4 health to the player. A quick rest can only occur once every six hours. Sleep takes at least 6 hours, returns 4d8 health, and can be done once every twelve hours. Sleeping in a bed functions the same as sleep, but returns 6d8 health.
+1. Any remaining damage forces the player into negative health. This means that,
+   if a player has 3 health remaining, and is attacked for 5 damage, they now have ```-2``` health.
+   At this point, the player is said to be __On Death's Door.__
+2. When the player's turn arrives, they must make a __Death Coin Flip.__ The player must flip a coin,
+   and on failure, their character dies.
+3. To save the character before death occurs, the other players must heal them to above zero health.
+4. If a player is healed enough to bring them back to positive health, they begin playing again,
+   and need not make further death coin flips.
 
 #### Death and Dying
-Sometimes, things don't go your way. Death is not the end of your journey, and it doesn't have to ruin your Rangers and Ruffians experience. First, let's set down some rules on how and when death happens.
-
-##### Death's Door
-If your player's health hits zero, you enter a state called death's door. Once you have entered deaths door, your chances of survival are slim. If in combat, every time your turn comes up in the order, roll a d10. If You roll a 1-5, you die. If you are hurt while on death's door, you die. Otherwise, you survive another round. In order to come out of death's door, you must regain at least 1 health. You cannot act or feed yourself while on death's door.
+Sometimes, things don't go your way. Death is not the end of your journey, and it doesn't have to ruin
+your Rangers and Ruffians experience. First, let's set down some rules on how and when death happens.
 
 ##### Reversible Death
-Sometimes, death _really_ isn't the end. This depends heavily on the world that your Poohbah has created, and whether or not certain resources are available. If your party is carrying a rare item, the _green lizard in a jar,_ it is possible to resurrect a character who has died within the past twenty four hours.
+Sometimes, death _really_ isn't the end. This depends heavily on the world that your Poohbah has created,
+and whether or not certain resources are available. If your party is carrying a rare item, the ___green lizard in a jar,___ 
+it is possible to resurrect a character who has died within the past twenty four hours. Similarly, if another
+player is a high level __Cleric__ or __Paladin,__ or if the party knows a high level Cleric or Paladin,
+it is possible that they may be able to cast the __Resurrect__ spell. Or, in dire cases, a __Necromancer__
+may come to a dead character's aid. Although, some fates may be worse than dying...
 
 ##### Irreversible Death
-Sometimes, however, death is here to stay. As we previously mentioned, that doesn't have to be the end of your fun! Loosing a character can be hard and emotional, but there is more fun to be had with a brand new character! Maybe a relative of your old character bent on avenging them! Or maybe that halfling barbarian you've been joking about! Or maybe you could roll up a random character! The point is, while it can be sad to loose a character, it is definitely not the end, and certainly not something to be angry about. Instead, treat it as an opportunity to interface with the world in a whole new way!
+Sometimes, however, death is here to stay. As we previously mentioned, that doesn't have to be the
+end of your fun! Losing a character can be hard and emotional, but there is more fun to be had
+with a brand new character! Maybe a relative of your old character is bent on avenging them!
+Or maybe that halfling barbarian you've been joking about! Or maybe you could roll up a random
+character! The point is, while it can be sad to lose a character, it is definitely not the end,
+and certainly not something to be angry about. Instead, treat it as an opportunity to interface
+with the world in a whole new way!
 
-### Magic
-As discussed in the intelligence section, any magic user begins their adventure with spell points equal to their intelligence stat plus five. There are six levels of spells in Rangers and Ruffians, starting at level zero and ending at level five. The level of a spell corresponds both to how difficult it is to learn, and also to how much it costs to use. At the beginning of their journey, a magic user will get to choose a few spells from their spellbooks to know. The rest, they must learn on their journey.
 
-#### Spell Books
-There are a number of spellbooks (see spells.md), which contain all magic known to the world of Rangers and Ruffians. All spellcasters except for the necromancer can learn spells from the novice handbook, which contains many vital and widely applicable spells. Most other mages can also learn magic from an addendum specific to them, which contains class specific spells.
+## Health, Rest, and Healing
+Character's begin with an amount of health equal to the maximum roll of their health die + ```1d4.``` 
+Health lost in combat can be regained by resting, using items, or receiving healing magic.
 
-#### Starting Spells
-Apart from the necromancer, all mages can choose 4 spells from level zero, 2 spells from level one, and 1 spell from level two to begin their journey with. All spellcasters know the spell "drain," which allows them to siphon spell points from enemies.
+### Rest
+There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__, and __Sleep in a bed.__ 
 
-#### Regaining Spell Points
-You can regain spell points by casting drain, using some items, and by resting. When resting, a quick rest restores 2 spell points, sleeping restores 5, and sleeping in a bed restores all used spell points.
+| Rest Type      | Required Time | Health Restored | Action Points Restored |  
+| -------------- |---------------| --------------- | ---------------------- |
+| Quick Rest     | 1 hour        | 20%             | 2                      |
+| Sleep          | 8 hours       | 50%             | 5                      |
+| Sleep in a bed | 8 hours       | 75%             | All                    |
 
-#### Necromancers
-Necromancy functions differently than other types of magic, in that it does not cost spell points. Rather, necromancy costs souls, which are harvested from fresh bodies. A necromancer begins knowing all spells in the necromancer's handbook, and with 2d4 souls to begin the game with.
 
-# Building a Character
-Building a character is your first step towards entering the world of Rangers and Ruffians! To build a character, start by looking through the list of available races and classes. Ask yourself what sort of character you want to be; do you want to be a sneaky thief? A cunning bard? A noble knight? Perhaps a roguish gunslinger? The choice is yours!
+## Magic
+As mentioned in the [Action Points](#action-points) section, a mage may spend action points
+to cast spells. This section details the different levels of spells, as well as how learning
+new spells works.
 
-### Race
-To begin building your character, you must first know what culture they come from. A character's race represents the people that they are a part of and their inborn abilities. From Halflings to Orcs, each race has its own base stats, which will influence how they interact with the world. All races also have inborn abilities, which help them in the trials and battles that await them on their adventures!   
+### Spell Levels
+There are 6 spell levels in Rangers and Ruffians, ranging from ```Level 0``` to ```Level 5```.
+In general, lower level spells cost fewer action points to use than higher level spells.
+Access to new spell levels is treated as an ability, which is gained at certain levels upon
+[Leveling Up](#leveling-up).
 
-### Class
-Once you have chosen your race, it is time to choose their background. A character's class can be viewed as its profession, and affects its stats and abilities even more than its race. Your choice of class will greatly affect how
+### Learning new Spells
+Mages can learn new spells in two ways. First, a mage passively learns new spells upon
+[Leveling Up](#leveling-up). Second, your Poohbah may present you with a spell book as
+during your game. A spell book may contain a specific spell hand selected by the Poohbah.
+If the spell is of a higher level than you could normally learn, you may learn it, but
+you do not learn spells of that level upon leveling up. If the spell book does not contain
+a specific spell, you may use it to learn any one spell of up to the max spell level that you 
+are able to learn.
 
-# Advanced Rules
-This section will be written in a future release, bear with us!
+## Leveling Up
+There are 16 levels in Rangers and Ruffians, ranging from ```Level 0``` to ```Level 15.``` These
+Levels neatly fit into 3, 5 level arcs. 
 
-UPCOMING SECTIONS:
-### Creating Your own Race
-### Creating your own Spells
-### Bending the Rules
-### Combat with Miniatures
-As of Revision 1.2, we have not yet developed formal rules for
+| Level Range    | Arc           |
+| -------------- |---------------|
+| 0 - 5          | Burgeoning adventurer. You are small, and the world is a large, scary place. |
+| 6 - 10         | Hero. You begin to make real change in the land that you are in.             |
+| 11 - 15        | Hero of Legend. You begin fighting ancient evils. The fate of the world may be in your hands. |
+
+### New Health
+Every time that you level up, you get to roll your health die + ```1d4``` and add add the result to your
+maximum health. For example, if your maximum health is ```26``` and your health die is ```1d8``` the following might occur:
+1. You roll a ```3``` on your health die.
+2. You roll a ```2``` on your 1d4.
+3. Your new maximum health is ```26 (your old max health) + 3 (your health die roll) + 2 (your d4 roll) = 31```.
+
+### Odd Levels: New Abilities
+When you level up, you get better at being your class. That is to say, you are a better _Rouge_ or _Knight_
+or _Gunslinger_ or _Bard_ than you were before. When you reach an odd level, you receive new abilities, allowing
+you to perform all new actions or granting you new advantages.
+
+### Even Levels: New Stats
+When you reach an even level, you get ```2``` __Stat Points__ to spend. You can spend these to increase your stats.
+Review the [Effective Stats](#effective-stats) section for details on how this works.
+Alternatively instead of increasing your stats, you are able to instead take a new [Skill](#skills). See the 
+[Skills](#skills) section for more details.
+
+
+### New Spells
+If you are a magic user, you are able to learn 1 new spell of _every_ spell level that you know each time you level up.
+This means that if you know level 0, 1, and 2 spells, you get to learn 3 spells: 1 level 0 spell, 1 level 1 spell, and 1 level 2 spell.
+
+
+## Building a Character
+Now that you understand (or at least glanced at) the rules of Rangers and Ruffians, you can now get started building
+your character. In terms of gameplay, a character is made up of two major components: a __Race__ and a __Class.__ 
+A Race represents the racial background that your character comes from. Your choice of race grants you base
+abilities and stats, and can greatly affect the way that you interact with the world. If you choose to play a
+tiny _Sprout_, you might ride atop the shoulders of the another player's _Orc_ character.
+
+__Class,__ meanwhile, affects your role within your adventuring party. A _Rouge_ might spend their time
+scouting, skulking, and sneaking. A _Highborn_ might use their high Charisma to barter for goods or
+get information out of an important non-player character. A _Knight_ will spend their time in combat
+shielding and soaking up damage for their more-squishy counterparts.
+When you level up in Rangers and Ruffians, it is your class that grants you new abilities.
+
+### Health Dice Pieces
+Races and Classes each have ```Health Dice Pieces```. When building a character,
+you add these pieces together to get your total health dice. For example, 
+if you race has ```2``` health dice pieces, and your class has ```4```, 
+your health dice would be ```6```.
+
+## Races
+
+## Classes

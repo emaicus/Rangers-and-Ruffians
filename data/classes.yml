@@ -339,12 +339,12 @@ Light Fighter:
     tag_line: Companion Fighter
   Fighter:
     base_stats:
-      Charisma: 0
+      Charisma: -1
       Dexterity: 2
-      Inner_Fire: -1
+      Inner_Fire: -3
       Intelligence: -2
       Luck: 1
-      Perception: -3
+      Perception: 0
       Strength: 1
     description: Fighters are powerful strength or dexterity based warriors. Unlike
       the knight, fighters are unarmored, and have a skillset more suited to keeping
@@ -424,8 +424,8 @@ Light Fighter:
       Inner_Fire: -3
       Intelligence: 0
       Luck: 1
-      Perception: -2
-      Strength: -1
+      Perception: -1
+      Strength: -2
     description: Highborns were born into a noble house and have connections and money
       as a result. They are well trained fighters, and have the charisma necessary
       to rally people to their side. While the typical highborn is not as hardened
@@ -502,12 +502,12 @@ Light Fighter:
     - Starting Fighting Techniques
     base_stats:
       Charisma: -3
-      Dexterity: 2
-      Inner_Fire: 1
+      Dexterity: 1
+      Inner_Fire: 0
       Intelligence: -2
       Luck: 1
-      Perception: -1
-      Strength: 0
+      Perception: 2
+      Strength: -1
     description: Monks are masters of hand to hand combat, who use their extensive
       control of their bodies to overcome their foes. Monks are able to learn abilities
       from scrolls, which they may find scattered throughout the world. Monks have
@@ -560,11 +560,11 @@ Light Fighter:
     - Under the Stars
     base_stats:
       Charisma: 0
-      Dexterity: 2
+      Dexterity: 1
       Inner_Fire: -1
       Intelligence: -3
       Luck: 1
-      Perception: 1
+      Perception: 2
       Strength: -2
     description: Rangers are the vigilante law keepers and monster hunters of the
       wilds. Rangers are powerful dexterity based fighters, and are known for their
@@ -842,11 +842,11 @@ Mage:
     - Spell Choice
     base_stats:
       Charisma: 1
-      Dexterity: -1
+      Dexterity: -2
       Inner_Fire: 0
       Intelligence: 2
       Luck: 2
-      Perception: -2
+      Perception: -1
       Strength: -3
     description: After pledging their allegiance to their deity, Clerics have made
       it their duty to follow their will. Clerics are weak, and do not fight with
@@ -933,10 +933,10 @@ Mage:
       Charisma: -3
       Dexterity: -1
       Inner_Fire: 2
-      Intelligence: 1
+      Intelligence: 0
       Luck: 1
-      Perception: -2
-      Strength: 0
+      Perception: 1
+      Strength: -2
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful nature
       based magic, which they use to smite those who threaten them, their friends,

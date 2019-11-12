@@ -130,3 +130,15 @@ Only if you want them to.
 ### One of my players is upset
 ### How long should my campaign be?
 ### One of my players can't make it today's session, what do I do?.
+
+
+
+# Advanced Rules
+This section will be written in a future release, bear with us!
+
+UPCOMING SECTIONS:
+### Creating Your own Race
+### Creating your own Spells
+### Bending the Rules
+### Combat with Miniatures
+As of Revision 1.2, we have not yet developed formal rules for

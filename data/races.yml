@@ -443,11 +443,11 @@ Sprout:
                     a sprout knight attempting to make a name for themself.
       stats:
         Charisma: 0
-        Dexterity: 2
+        Dexterity: 1
         Inner_Fire: 0
         Intelligence: 0
         Luck: 2
-        Perception: 0
+        Perception: 1
         Strength: -2
 Automaton:
   subraces:
