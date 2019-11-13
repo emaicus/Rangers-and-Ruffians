@@ -78,19 +78,18 @@ roleplaying games) __dice__ are used to determine the outcome of player actions 
 the game world. It is the Poohbah’s job, then, to call for and interpret dice rolls.
 
 A realistic ingame interaction might look something like this:
-```
-Poohbah: The door before you stands locked. The corridors of the castle are quiet, save for the steady dripping of water from the ceilings.
-Player 1: I’ll attempt to pick the lock.
+
+>Poohbah: The door before you stands locked. The corridors of the castle are quiet, save for the steady dripping of water from the ceilings.  
+Player 1: I’ll attempt to pick the lock.  
 Poohbah: Alright, roll for it.
-Player 1: 8, and my dexterity is 2, so that’s an 11.
-Poohbah: You spend a moment trying to pick the lock, but it doesn’t seem to want to budge.
-Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!
-Player 1: Urtag! You’re going to wake the whole castle!
-Poohbah (grinning): Roll for it.
-Player 2: I got an 18!
-Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.
-Player 2 (nodding): Damn right it is.
-```
+Player 1: 8, and my dexterity is 2, so that’s an 11.  
+Poohbah: You spend a moment trying to pick the lock, but it doesn’t seem to want to budge.  
+Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!  
+Player 1: Urtag! You’re going to wake the whole castle!  
+Poohbah (grinning): Roll for it.  
+Player 2: I got an 18!  
+Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.  
+Player 2 (nodding): Damn right it is.  
 
 In the above interaction, there are a few things to note. Twice, the Poohbah called for rolls.
 If Player 1 had rolled higher, the lock would have been picked. The difficulty of this lock was
@@ -117,9 +116,8 @@ section:
 2. To read the ```Poohbah's Handbook```, a companion to this document which provides
    additional insight into the rules, help with encounter building, and much, much more!
 3. To remember the most important rule of being a Game Master or Poohbah in _any_ tabletop RPG:
-```
-If the players are having fun, you are doing a good job.
-```
+
+>If the players are having fun, you are doing a good job.
 
 ## Participating as a Player
 Participating as a player in Rangers and Ruffians is a bit easier than being the
@@ -227,7 +225,7 @@ Ruffians are as follows:
 
 ### Core Stats
 #### Strength
-__Strength__ is defined as raw power of the body. Strength influences the way that
+__Strength__ (STR) is defined as raw power of the body. Strength influences the way that
 you play the game in three ways:
 1. __Strength is added to strength checks.__ You enter a dungeon, and see
   a friend trapped in a cell. You desperately want to get them out, so you decide
@@ -239,7 +237,7 @@ you play the game in three ways:
   the armor that you can wear.
 
 #### Dexterity
-__Dexterity__ is defined as mobility, nimbleness, and ability with the body.
+__Dexterity__ (DEX) is defined as mobility, nimbleness, and ability with the body.
 Dexterity affects the way that you play the game in two ways:
 1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
   the rooftops of a city. You come up to a gap, and have to jump! In this scenario,
@@ -249,7 +247,7 @@ Dexterity affects the way that you play the game in two ways:
   daggers, and falchions.
 
 #### Intelligence
-__Intelligence__ is defined as raw aptitude with the mind. Intelligence affects the
+__Intelligence__ (INT) is defined as raw aptitude with the mind. Intelligence affects the
 way that you play the game in two key ways.
 1. __Intelligence is added to intelligence checks.__
 2. __Intelligence affects your number of action points.__ In Rangers and Ruffians, action points
@@ -258,7 +256,7 @@ way that you play the game in two key ways.
   points are further detailed in the [Action Points](#action-points) section.
 
 #### Inner Fire
-__Inner Fire__ is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
+__Inner Fire__ (INF) is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
 that you play the game in three ways.
 1. __Inner Fire is added to magical attacks.__ If your character is a mage who attacks with magic,
    Inner Fire is added to any damage that you deal.
@@ -271,7 +269,7 @@ that you play the game in three ways.
   [__Spell Power__](#spell-power) section.
 
 #### Charisma
-__Charisma__ is defined as force of personality, or how charming your character can be. Charisma can
+__Charisma__ (CHA) is defined as force of personality, or how charming your character can be. Charisma can
 affect the way you play the game in two ways:
 1. __Charisma is added to charisma checks.__ You speak with the local innkeeper and have a feeling that
   he's keeping something from you. You don't think that he's a dangerous person, but rather that someone
@@ -281,7 +279,7 @@ affect the way you play the game in two ways:
   fail.__ Further detailed in the [Sorcerer](#sorcerer) section.
 
 #### Perception
-__Perception__ determines how likely it is your character will notice things going on in the world around them.
+__Perception__ (PER) determines how likely it is your character will notice things going on in the world around them.
 It affects the way you play the game in two ways:
 1. __Perception is added to perception checks.__ You are riding through the forest at night. Little do you know,
    a trio of goblins lie in ambush. In this scenario, you would want high perception.
@@ -290,7 +288,7 @@ It affects the way you play the game in two ways:
   Initiative is further detailed in the [Initiative](#initiative) section.
 
 #### Luck
-When all else fails, there's always luck! Luck is a special stat, and is the only stat that cannot go negative.
+When all else fails, there's always __luck__ (LUK)! Luck is a special stat, and is the only stat that cannot go negative.
 Each day, a player gets __Luck Tokens__ equal to their luck. When a roll doesn't go your way, you may spend
 one luck token to re-roll it. See the section on [Resting](#resting) for information about
 how to get luck tokens back.
@@ -368,7 +366,7 @@ in two ways:
 
 
 ### Bonus Stat: Health Die
-Every character in Rangers and Ruffians has a __Health Die.__ When a character levels up (detailed in the
+Every character in Rangers and Ruffians has a __Health Die__ (HD). When a character levels up (detailed in the
 section [Leveling Up](#leveling-up)), they roll their health dice, and ```1d4``` and add the numbers rolled
 to their maximum health.
 
@@ -379,14 +377,14 @@ that can be made in combat. Some abilities cost one or more [Action Points](#act
 to perform.
 
 ### Action Points
-__Action Points__ can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
+__Action Points__ (AP) can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
 A characters total number of Action Points is equal to ```5 + their Intelligence```. So if a characters
 intelligence is ```-3```, they have ```2``` Action Points. If their intelligence is ```2```, they have ```7```
 Action Points. Spent Action Points are restored after resting. See the [Resting](#resting)
 section for more details.
 
 ### Spell Power
-A character's __Spell Power__ determines how likely it is that an enemy will succumb to the affects
+A character's __Spell Power__ (SP) determines how likely it is that an enemy will succumb to the affects
 of their abilities or spells. A character's Spell Power is defined to be ```12 + their Inner Fire```.
 So if a character has ```3``` Inner Fire, their Spell Power is ```15.``` This means that, if our wizard
 tried to turn someone into a frog, that entity would have to succeed a saving throw with a target
@@ -602,9 +600,57 @@ tiny _Sprout_, you might ride atop the shoulders of the another player's _Orc_ c
 
 __Class,__ meanwhile, affects your role within your adventuring party. A _Rouge_ might spend their time
 scouting, skulking, and sneaking. A _Highborn_ might use their high Charisma to barter for goods or
-get information out of an important non-player character. A _Knight_ will spend their time in combat
+get information out of an important non-player character. A _Barbarian_ will spend their time in combat
 shielding and soaking up damage for their more-squishy counterparts.
 When you level up in Rangers and Ruffians, it is your class that grants you new abilities.
+
+### Personality and Background
+It is important to remember that a character can be much, _much_ more than just a sack of stats an abilities.
+As a player, it is up to you to breathe life into your character, and make them into a living, breathing
+part of the world that your Poohbah is weaving. To this end, consider the following:
+1. Where did my character come from? Do they have family? Friends?
+2. What does my character want? Where are they going? What motivates them?
+3. Why would my character be interested in going on an adventure?
+4. What are a few of my characters virtues? What about vices?
+5. How did my character end up being the class that they are?
+6. How does my character interact with others? How do they speak? What are they're mannerisms?
+
+As you come up with a backstory for your character remember the following:
+Try to keep things vague but evocative, so that your Poohbah can easily weave them into their world.
+Consider the following quick backstory: 
+> "Elizabeth is from the town of Lindhearth. Some years ago she 
+was visited by an aged wizard, who warned her of a great trial approaching in her future. Ever since that
+day, she has been preparing for an evil that may never come." 
+
+While quite basic, let's examine what the above backstory does well.
+1. While it introduces a town, ```Lindhearth```, the town is not rigidly defined, and is simple for a Poohbah to add to their campaign setting.
+  As a bonus, wouldn't it be cool if the Poohbah included Lindhearth in their campaign! Maybe some of your friends or family could make an appearance,
+  or maybe even the mysterious wizard!
+2. While you have been warned of a "great trial," the nature of that trial is left entirely up to the Poohbah. That means that it can easily 
+  be tied into the adventure. This is awesome, as it can easily fit into any story that the Poohbah might want to tell. Just like that, you
+  are personally invested in the adventure!
+3. It provides a basis for you to start further fleshing out Elizabeth's character. How has she been preparing? Has she been learning magic?
+  Practicing her skill with the sword? Praying to her deity? How has this training affected her personality? Is her adventuring career part
+  of these preparations?
+
+Let's make a second backstory.
+> "Richard spent his entire childhood in the Lost Library. Only, it wasn't called the 'Lost' Library, but the Holy Library.
+   He had made friends with the old Clerics and Paladins that kept their noses in books all day, and had even gotten them to
+   teach him some of their divine magics. His favorite of them was an old greybeard named Scanderbeg. All of this changed
+   when a Gold Dragon descended on the Library, tearing through the roof and killing many of those within. With the help of
+   Scanderbeg, Richard had fled, helpless, with no home and nowhere to go, displaced and a refugee."
+
+Again, this backstory introduces a location, the Lost Library, which can easily be integrated into a Poohbah's campaign. This
+backstory also introduces a villain, an evil ```Gold Dragon.``` Perhaps this fits perfectly into the Poohbah's plans, but maybe it doesn't.
+Perhaps the Poohbah is planning on running an ```undead``` heavy campaign, in which a ```Lich``` is the main villain. Together, the player and
+the Poohbah can tailor Richards backstory, so that instead, it reads:
+
+> "All of this changed the army of the dead arrived, swarming throughout the City of Linth and leaving a path of carnage in their wake. 
+   With the help of the holy magics he had learned from Scanderbeg, Richard fled, but not before laying eyes on ___him.___ The face of death itself. Hozius the
+   Defiler. As Richard watched, Hozius raised his hands, and all of those who had been dead rose up to join his army."
+
+Now the backstory fits the Poohbah's campaign, and it's maybe even cooler than it was before! This is the benefit of talking things through with
+your Poohbah before the game begins, and why it is a great idea to come up with vague and evocative character concepts to run past them.
 
 ### Health Dice Pieces
 Races and Classes each have ```Health Dice Pieces```. When building a character,

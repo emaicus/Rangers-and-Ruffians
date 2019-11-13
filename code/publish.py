@@ -17,22 +17,24 @@ if __name__ == "__main__":
   md = markdown_handler.markdown_handler('Rangers and Ruffians Rulebook _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
   md.order_next('Rangers and Ruffians Rulebook _Version 2.1.0_')
 
-  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
-
-
   races = rnr_utils.load_all_race_objects()
   rnr_classes = rnr_utils.load_all_class_objects()
 
 
-  race_lines = ["## Races  \n",]
+  race_lines = []
   for race in sorted(races, key=lambda x: x.name):
     race_lines += race.markdownify()
 
-  class_lines = ['## Classes  \n',]
+  class_lines = []
   for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
     class_lines += rnr_class.markdownify()
 
+
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
   md.slurp_markdown_lines(race_lines)
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
   md.slurp_markdown_lines(class_lines)
   
 

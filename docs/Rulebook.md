@@ -37,7 +37,12 @@
      * [Even Levels: New Stats](#even-levels-new-stats)  
      * [New Spells](#new-spells)  
    * [Building a Character](#building-a-character)  
+     * [Personality and Background](#personality-and-background)  
      * [Health Dice Pieces](#health-dice-pieces)  
+   * [How do I Compute my Character's Stats?](#how-do-i-compute-my-character's-stats?)  
+     * [Method 1 (Easiest) Use Pre-generated Stats:](#method-1-(easiest)-use-pre-generated-stats)  
+     * [Method 2 (Easy) Standard Array:](#method-2-(easy)-standard-array)  
+     * [Method 3 (High Risk, High Reward) Roll:](#method-3-(high-risk,-high-reward)-roll)  
    * [Races](#races)  
      * [Automaton](#automaton)  
      * [Catterwol](#catterwol)  
@@ -179,19 +184,19 @@ the game world. It is the Poohbah’s job, then, to call for and interpret dice 
   
   
 A realistic ingame interaction might look something like this:
-```
-Poohbah: The door before you stands locked. The corridors of the castle are quiet, save for the steady dripping of water from the ceilings.
-Player 1: I’ll attempt to pick the lock.
+  
+  
+>Poohbah: The door before you stands locked. The corridors of the castle are quiet, save for the steady dripping of water from the ceilings.  
+Player 1: I’ll attempt to pick the lock.  
 Poohbah: Alright, roll for it.
-Player 1: 8, and my dexterity is 2, so that’s an 11.
-Poohbah: You spend a moment trying to pick the lock, but it doesn’t seem to want to budge.
-Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!
-Player 1: Urtag! You’re going to wake the whole castle!
-Poohbah (grinning): Roll for it.
-Player 2: I got an 18!
-Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.
-Player 2 (nodding): Damn right it is.
-```
+Player 1: 8, and my dexterity is 2, so that’s an 11.  
+Poohbah: You spend a moment trying to pick the lock, but it doesn’t seem to want to budge.  
+Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!  
+Player 1: Urtag! You’re going to wake the whole castle!  
+Poohbah (grinning): Roll for it.  
+Player 2: I got an 18!  
+Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.  
+Player 2 (nodding): Damn right it is.  
   
   
 In the above interaction, there are a few things to note. Twice, the Poohbah called for rolls.
@@ -225,9 +230,9 @@ section:
 2. To read the ```Poohbah's Handbook```, a companion to this document which provides
    additional insight into the rules, help with encounter building, and much, much more!
 3. To remember the most important rule of being a Game Master or Poohbah in _any_ tabletop RPG:
-```
-If the players are having fun, you are doing a good job.
-```
+  
+  
+>If the players are having fun, you are doing a good job.
   
   
 
@@ -368,7 +373,7 @@ Ruffians are as follows:
 
   
 #### Strength
-__Strength__ is defined as raw power of the body. Strength influences the way that
+__Strength__ (STR) is defined as raw power of the body. Strength influences the way that
 you play the game in three ways:
 1. __Strength is added to strength checks.__ You enter a dungeon, and see
   a friend trapped in a cell. You desperately want to get them out, so you decide
@@ -383,7 +388,7 @@ you play the game in three ways:
 
   
 #### Dexterity
-__Dexterity__ is defined as mobility, nimbleness, and ability with the body.
+__Dexterity__ (DEX) is defined as mobility, nimbleness, and ability with the body.
 Dexterity affects the way that you play the game in two ways:
 1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
   the rooftops of a city. You come up to a gap, and have to jump! In this scenario,
@@ -396,7 +401,7 @@ Dexterity affects the way that you play the game in two ways:
 
   
 #### Intelligence
-__Intelligence__ is defined as raw aptitude with the mind. Intelligence affects the
+__Intelligence__ (INT) is defined as raw aptitude with the mind. Intelligence affects the
 way that you play the game in two key ways.
 1. __Intelligence is added to intelligence checks.__
 2. __Intelligence affects your number of action points.__ In Rangers and Ruffians, action points
@@ -408,7 +413,7 @@ way that you play the game in two key ways.
 
   
 #### Inner Fire
-__Inner Fire__ is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
+__Inner Fire__ (INF) is defined as mental fortitude, resolve, and strength of will. Inner Fire affects the way
 that you play the game in three ways.
 1. __Inner Fire is added to magical attacks.__ If your character is a mage who attacks with magic,
    Inner Fire is added to any damage that you deal.
@@ -424,7 +429,7 @@ that you play the game in three ways.
 
   
 #### Charisma
-__Charisma__ is defined as force of personality, or how charming your character can be. Charisma can
+__Charisma__ (CHA) is defined as force of personality, or how charming your character can be. Charisma can
 affect the way you play the game in two ways:
 1. __Charisma is added to charisma checks.__ You speak with the local innkeeper and have a feeling that
   he's keeping something from you. You don't think that he's a dangerous person, but rather that someone
@@ -437,7 +442,7 @@ affect the way you play the game in two ways:
 
   
 #### Perception
-__Perception__ determines how likely it is your character will notice things going on in the world around them.
+__Perception__ (PER) determines how likely it is your character will notice things going on in the world around them.
 It affects the way you play the game in two ways:
 1. __Perception is added to perception checks.__ You are riding through the forest at night. Little do you know,
    a trio of goblins lie in ambush. In this scenario, you would want high perception.
@@ -449,7 +454,7 @@ It affects the way you play the game in two ways:
 
   
 #### Luck
-When all else fails, there's always luck! Luck is a special stat, and is the only stat that cannot go negative.
+When all else fails, there's always __luck__ (LUK)! Luck is a special stat, and is the only stat that cannot go negative.
 Each day, a player gets __Luck Tokens__ equal to their luck. When a roll doesn't go your way, you may spend
 one luck token to re-roll it. See the section on [Resting](#resting) for information about
 how to get luck tokens back.
@@ -547,7 +552,7 @@ in two ways:
 
   
 ### Bonus Stat: Health Die
-Every character in Rangers and Ruffians has a __Health Die.__ When a character levels up (detailed in the
+Every character in Rangers and Ruffians has a __Health Die__ (HD). When a character levels up (detailed in the
 section [Leveling Up](#leveling-up)), they roll their health dice, and ```1d4``` and add the numbers rolled
 to their maximum health.
   
@@ -564,7 +569,7 @@ to perform.
 
   
 ### Action Points
-__Action Points__ can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
+__Action Points__ (AP) can be spent to perform special abilities and to cast spells in Rangers and Ruffians.
 A characters total number of Action Points is equal to ```5 + their Intelligence```. So if a characters
 intelligence is ```-3```, they have ```2``` Action Points. If their intelligence is ```2```, they have ```7```
 Action Points. Spent Action Points are restored after resting. See the [Resting](#resting)
@@ -574,7 +579,7 @@ section for more details.
 
   
 ### Spell Power
-A character's __Spell Power__ determines how likely it is that an enemy will succumb to the affects
+A character's __Spell Power__ (SP) determines how likely it is that an enemy will succumb to the affects
 of their abilities or spells. A character's Spell Power is defined to be ```12 + their Inner Fire```.
 So if a character has ```3``` Inner Fire, their Spell Power is ```15.``` This means that, if our wizard
 tried to turn someone into a frog, that entity would have to succeed a saving throw with a target
@@ -883,9 +888,66 @@ tiny _Sprout_, you might ride atop the shoulders of the another player's _Orc_ c
   
 __Class,__ meanwhile, affects your role within your adventuring party. A _Rouge_ might spend their time
 scouting, skulking, and sneaking. A _Highborn_ might use their high Charisma to barter for goods or
-get information out of an important non-player character. A _Knight_ will spend their time in combat
+get information out of an important non-player character. A _Barbarian_ will spend their time in combat
 shielding and soaking up damage for their more-squishy counterparts.
 When you level up in Rangers and Ruffians, it is your class that grants you new abilities.
+  
+  
+
+  
+### Personality and Background
+It is important to remember that a character can be much, _much_ more than just a sack of stats an abilities.
+As a player, it is up to you to breathe life into your character, and make them into a living, breathing
+part of the world that your Poohbah is weaving. To this end, consider the following:
+1. Where did my character come from? Do they have family? Friends?
+2. What does my character want? Where are they going? What motivates them?
+3. Why would my character be interested in going on an adventure?
+4. What are a few of my characters virtues? What about vices?
+5. How did my character end up being the class that they are?
+6. How does my character interact with others? How do they speak? What are they're mannerisms?
+  
+  
+As you come up with a backstory for your character remember the following:
+Try to keep things vague but evocative, so that your Poohbah can easily weave them into their world.
+Consider the following quick backstory: 
+> "Elizabeth is from the town of Lindhearth. Some years ago she 
+was visited by an aged wizard, who warned her of a great trial approaching in her future. Ever since that
+day, she has been preparing for an evil that may never come." 
+  
+  
+While quite basic, let's examine what the above backstory does well.
+1. While it introduces a town, ```Lindhearth```, the town is not rigidly defined, and is simple for a Poohbah to add to their campaign setting.
+  As a bonus, wouldn't it be cool if the Poohbah included Lindhearth in their campaign! Maybe some of your friends or family could make an appearance,
+  or maybe even the mysterious wizard!
+2. While you have been warned of a "great trial," the nature of that trial is left entirely up to the Poohbah. That means that it can easily 
+  be tied into the adventure. This is awesome, as it can easily fit into any story that the Poohbah might want to tell. Just like that, you
+  are personally invested in the adventure!
+3. It provides a basis for you to start further fleshing out Elizabeth's character. How has she been preparing? Has she been learning magic?
+  Practicing her skill with the sword? Praying to her deity? How has this training affected her personality? Is her adventuring career part
+  of these preparations?
+  
+  
+Let's make a second backstory.
+> "Richard spent his entire childhood in the Lost Library. Only, it wasn't called the 'Lost' Library, but the Holy Library.
+   He had made friends with the old Clerics and Paladins that kept their noses in books all day, and had even gotten them to
+   teach him some of their divine magics. His favorite of them was an old greybeard named Scanderbeg. All of this changed
+   when a Gold Dragon descended on the Library, tearing through the roof and killing many of those within. With the help of
+   Scanderbeg, Richard had fled, helpless, with no home and nowhere to go, displaced and a refugee."
+  
+  
+Again, this backstory introduces a location, the Lost Library, which can easily be integrated into a Poohbah's campaign. This
+backstory also introduces a villain, an evil ```Gold Dragon.``` Perhaps this fits perfectly into the Poohbah's plans, but maybe it doesn't.
+Perhaps the Poohbah is planning on running an ```undead``` heavy campaign, in which a ```Lich``` is the main villain. Together, the player and
+the Poohbah can tailor Richards backstory, so that instead, it reads:
+  
+  
+> "All of this changed the army of the dead arrived, swarming throughout the City of Linth and leaving a path of carnage in their wake. 
+   With the help of the holy magics he had learned from Scanderbeg, Richard fled, but not before laying eyes on ___him.___ The face of death itself. Hozius the
+   Defiler. As Richard watched, Hozius raised his hands, and all of those who had been dead rose up to join his army."
+  
+  
+Now the backstory fits the Poohbah's campaign, and it's maybe even cooler than it was before! This is the benefit of talking things through with
+your Poohbah before the game begins, and why it is a great idea to come up with vague and evocative character concepts to run past them.
   
   
 
@@ -897,8 +959,191 @@ if you race has ```2``` health dice pieces, and your class has ```4```,
 your health dice would be ```6```.
 
   
-## Races
+## How do I Compute my Character's Stats?
+There are three ways that you can compute your characters starting stats in Rangers and Ruffians.
+All three of them are very easy to do, but if this is your first time playing, method zero is
+recommended.
+  
+  
 
+  
+### Method 1 (Easiest) Use Pre-generated Stats:
+Every Race and Class in Rangers and Ruffians comes with recommended stats.
+Therefore, the simplest method of creating a character is to just use those!
+  
+  
+Let us have an imaginary race with the following stats:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  0  | -1  | -1  |  1  |  1  |  0  |  1  |  4  |
+  
+  
+And an imaginary Class with the following stats:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  |  2  | -1  | -2  | -3  |  0  |  1  |  4  |
+  
+  
+Then in this method, we would just sum them up!
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  |  1  | -2  | -1  | -2  |  0  |  2  |  8  |
+  
+  
+  
+  
+
+  
+### Method 2 (Easy) Standard Array:
+The second method allows us for a little bit more customization
+by letting us _switch around our class stats_.
+In rangers and Ruffians, every class has a standard array of stat values,
+that is to say, each class has one stat with each of the following values,
+not including its ```Health Dice``` and ```Luck```: ```2```, ```1```, ```0```, 
+```-1```, ```-2```, and ```-3```.
+  
+  
+Let's recall the stats from our imaginary class above:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  |  2  | -1  | -2  | -3  |  0  |  1  |  4  |
+  
+  
+Under this method, we can switch them around a bit.
+Let's say that we didn't like that we have ```-3``` charisma, and are fine with having low perception.
+Under this method, we can switch those values!
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  |  2  | -1  | -2  | 0   |  -3  |  1 | 4   |
+  
+  
+Let's also switch our Strength and Dexterity.
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  2  |  1  | -1  | -2  | 0   |  -3  |  1 | 4   |
+  
+  
+Now that we're happy with our class stats, we can add in our race stats, which were:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  0  | -1  | -1  |  1  |  1  |  0  |  1  |  4  |
+  
+  
+So our final stats are:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  2  | 0   | -2  |  -1 |  1  |  -3 |  2  |  8  |
+  
+  
+
+  
+### Method 3 (High Risk, High Reward) Roll:
+The final way that we can generate our stats is by rolling them randomly!
+This method of stat creation can result in very strong or very weak characters, which leads
+to a very fun sense of risk and reward. Remember that, if you roll poorly it's not the end of the world.
+It can be hilarious to have a mage who is very bad at charisma, or a surprisingly intelligent Barbarian.
+  
+  
+__Remember:__ Stats should always be rolled at the table with people watching. That way, there can be no doubt
+when you roll 4 consecutive 18s!
+  
+  
+To role your own stats, perform the following steps:
+1. For each of your stats except for ```Health Dice``` and ```Luck,``` roll ```4d6``` and drop the lowest ```d6```. 
+2. Take that number, and apply it to the chart below to get your stat.
+3. After you are finished add your race stat modifiers to the result to get your final stats.
+4. __Variant Option:__ Rather than rolling for each stat, just roll six times, and then apply the results to whatever stat you want. 
+   If you are using this method of rolling, make sure to get Poohbah approval first. 
+  
+  
+| Your Roll  | Value  | What is added to a Roll  | 
+|------------|-------|-----------------|
+|      3     |   -5  |        -4       |
+|      4     |   -4  |        -3       |
+|      5     |   -3  |        -3       |
+|      6     |   -2  |        -2       |
+|      7     |   -2  |        -2       |
+|      8     |   -1  |        -1       |
+|      9     |   -1  |        -1       |
+|     10     |    0  |         0       |
+|     11     |    0  |         0       |
+|     12     |    1  |         1       |
+|     13     |    1  |         1       |
+|     14     |    2  |         2       |
+|     15     |    2  |         2       |
+|     16     |    3  |         3       |
+|     17     |    4  |         3       |
+|     18     |    5  |         4       |
+  
+  
+Let's go through an example.
+1. For each of your stats you roll 4d6 and drop the lowest dice. For the first roll, you roll a ```5```, a ```5```, a ```1``` and a ```3```, so you drop the 1. 
+2. Your total for the first stat is ```5 + 5 + 3 = 13```, which the table tells us is a ```+1``` You record that for strength.
+3. After rolling a few more times, you end up with a ```7```, a ```17```, a ```9```, a ```9```, and a ```16```. 
+4. You look up those numbers on the table above, and find that you have the following class stat block:
+  
+  
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  | -2  |  4  |  -1 |  -1 |  3  |  1  |  4  |
+  
+  
+Then, we can add our race stats:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  0  | -1  | -1  |  1  |  1  |  0  |  1  |  4  |
+  
+  
+To get a final stat block of:
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK | HD  |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  | -3  |  3  |  0  |  0  |  3  |  2  |  8  |
+  
+  
+Let's compare that to our stat block from method one:
+  
+  
+  
+  
+| STR | DEX | INT | INF | CHA | PER | LUK |  HD |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|  1  |  1  | -2  | -1  | -2  |  0  |  2  |  8  |
+  
+  
+It looks like we have  better ```Dexterity``` and ```Perception.```
+However, our ```Intelligence``` and ```Charisma``` are worse.
+Depending on what our class was built for, this could be good or bad.
+The fun is in the rolling!
+
+  
+## Races
+Your racial background in Rangers and Ruffians can greatly impact the way that you interact with the world.
+Will you play a short but hearty _Hardfoot Halfling?_ The incredibly  tiny _Sprout?_ A metalic _Automaton?_ Perhaps you
+brutish _Orc_ or a lithe, erudite _High Elf._ Or, you could stick to the basics and play a _Human._ Races provide
+you with minor stat increases and a handful of starting abilities. Any race should easily be able to be paired with any
+class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
 <div></div>
@@ -1563,7 +1808,14 @@ ___
 
   
 ## Classes
-
+Choosing your class in Rangers and Ruffians is perhaps the most important choice that you will make.
+While your race determines what you look like, your class determines what your role will be in your
+adventuring party. Will you play a high charisma _Bard_, or a heavily armored _Knight?_ Perhaps a
+_Gunslinger_ or an _Archer?_ Is magic more your style? Then perhaps you will play as a priestly _Cleric_,
+an intelligent _Wizard_ or a naturalistic _Druid._ Perhaps you want an animal companion ever at your side.
+In that case, the wild _Beastmaster_ may be right up your alley. While there are many choices at your fingertips,
+we have worked hard to make sure that all of them are very fun, so no matter what you pick, you're certain
+to have a good time!
   
 ### Archer
 <div></div>
