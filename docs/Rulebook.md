@@ -21,6 +21,7 @@
    * [Combat](#combat)  
      * [Initiative](#initiative)  
      * [Your Turn](#your-turn)  
+     * [The Enemy Turn](#the-enemy-turn)  
      * [Attacking](#attacking)  
      * [Critical Hits](#critical-hits)  
      * [Weapons](#weapons)  
@@ -650,10 +651,28 @@ making an attack.
   
 
   
+#### Reaction
+Some abilities in Rangers and Ruffians are listed as __Reactions.__ As it's name implies,
+a reaction is done in response to something. This can include either an allied or enemy action,
+or some other event or change in battle conditions. When a triggering event occurs, you are
+able to take a reaction. You may take up to one reaction per turn.
+  
+  
+
+  
 #### Movement
 On each turn, you are able to make 15 feet of movement. This movement can be decomposed however
 you wish. For example, you might drink a potion as an offhand action, walk 5 feet forward, lift
 a cauldron as an action, and then walk ten 10 feet to the right.
+  
+  
+
+  
+#### Exposed Attacks
+If you move past an enemy or break melee (move away from) an enemy you leave yourself exposed,
+allowing the enemy to get a free attack against you. Similarly, if an enemy moves away from
+or runs past you, you may make an attack against them. An entity can make only one such free attack
+per turn.
   
   
 
@@ -668,6 +687,52 @@ Poohbah's discretion what counts as a Free Action.
   
 #### The Dash Action
 You are able to spend your action moving an additional 15 feet.
+  
+  
+
+  
+### The Enemy Turn
+Enemies and Monsters in Rangers and Ruffians can do all of the same things that you can,
+including taking Actions, using Offhand Actions, Moving, taking Free Actions, and Dashing.
+However, in some cases, __Villains,__ the high level monsters and their generals,
+can perform extra, more advanced actions. If these
+extra actions strike fear in your heart, good! You should not fight a villain lightly!
+  
+  
+
+  
+#### Villain Actions
+High level enemies in Rangers and Ruffians are able to take ```Villain Actions```.
+These actions allow them to do something (usually take an action) out of turn.
+Each turn, a villain gets a number of villain actions specified by the Poohbah (usually
+on the order of between 1 and 3). Villain Actions are usually reserved for high ranking
+"boss monsters" in a campaign. You would not expect to see a town guard taking villain actions.
+  
+  
+
+  
+#### Sanctuary Actions
+If you fight a high level villain on their own terms, things are likely to go in their favor.
+If you attack a villain in their Sanctuary, one (but maybe more) special event may happen
+at the start of each turn. For example, if you fight a dragon in its den, the thunderous
+crashes of your combat may cause stalactites to fall from the ceiling!
+  
+  
+
+  
+#### Conditional Actions
+At the start of each of its turns, a Villain may take a special conditional action.
+Conditional actions are not generally attacks, but rather events that may turn the tide of
+a battle. For example, an ```Orc General``` may order all of it's allies to move at once. A
+heavily damaged ```Frost Worm``` may writhe, causing its frozen blood to shower over the battlefield,
+damaging everyone and making the floor slick with ice!
+  
+  
+Some example conditions that may trigger a conditional action include:
+1. A Villain reaches a Hit Point Threshold, for example, one quarter health.
+2. A certain turn is reached. For example, on the first turn, the ```Orc General``` may order all
+  of its allies to move. On the second, it may order all of them to attack a single target, etc.
+3. An event occurs. For example, a Character slays a ```Dire Wolf's``` pup.
   
   
 
