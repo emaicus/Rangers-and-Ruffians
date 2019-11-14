@@ -113,7 +113,7 @@ class markdown_handler:
         if self.BUFFER[key]['level'] > max_to_include:
           continue
         indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
-        bad_chars = [':', '(', ')', '.', '!', '?', '&']
+        bad_chars = [':', '(', ')', '.', '!', '?', '&', '_', ',',"'", '"']
         good_key = key.replace(' ', '-').lower()
         for c in bad_chars:
           good_key = good_key.replace(c,'')
