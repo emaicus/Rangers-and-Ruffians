@@ -42,11 +42,11 @@ Advanced Magic:
     skills:
       - Basic Magic
 Fast Draw:
-  description: "You may add 1d6 to your initiative roll."
+  description: "You may add your dexterity rather than your perception to an initiative roll."
   type: general
   requirements:
     stats:
-      Perception: 3
+      Dexterity: 0
 Tinker:
   description: "You may attempt to make items and contraptions during rests."
   type: general
@@ -61,13 +61,13 @@ Nimble Navigator:
     stats:
       Dexterity: 3
 En Garde:
-  description: "Reaction. When attacked, decrease the attack damage by your dexterity"
+  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your dexterity."
   type: general
   requirements:
     stats:
       Dexterity: 1
 Shrug it Off:
-  description: "Reaction. Decrease the attack damage by your strength"
+  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your strength."
   type: general
   requirements:
     stats:

@@ -1,9 +1,9 @@
- * [Rangers and Ruffians Rulebook _Version 2.1.0_](#rangers-and-ruffians-rulebook-_version-2.1.0_)  
+ * [Rangers and Ruffians Rulebook _Version 2.1.0_](#rangers-and-ruffians-rulebook-_version-210_)  
    * [Versioning and the Changelog](#versioning-and-the-changelog)  
    * [Introduction](#introduction)  
-     * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians?)  
-     * [What do you need to play?](#what-do-you-need-to-play?)  
-     * [How does the game work?](#how-does-the-game-work?)  
+     * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
+     * [What do you need to play?](#what-do-you-need-to-play)  
+     * [How does the game work?](#how-does-the-game-work)  
    * [Being the Grand Poohbah](#being-the-grand-poohbah)  
    * [Participating as a Player](#participating-as-a-player)  
    * [Dice and Rolling](#dice-and-rolling)  
@@ -33,15 +33,15 @@
      * [Spell Tiers](#spell-tiers)  
      * [Learning new Spells](#learning-new-spells)  
    * [Leveling Up](#leveling-up)  
-     * [When do I Level Up?](#when-do-i-level-up?)  
-     * [What Happens when I Level Up?](#what-happens-when-i-level-up?)  
+     * [When do I Level Up?](#when-do-i-level-up)  
+     * [What Happens when I Level Up?](#what-happens-when-i-level-up)  
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
      * [Health Dice Pieces](#health-dice-pieces)  
-   * [How do I Compute my Character's Stats?](#how-do-i-compute-my-character's-stats?)  
-     * [Method 1 (Easiest) Use Pre-generated Stats:](#method-1-(easiest)-use-pre-generated-stats)  
-     * [Method 2 (Easy) Standard Array:](#method-2-(easy)-standard-array)  
-     * [Method 3 (High Risk, High Reward) Roll:](#method-3-(high-risk,-high-reward)-roll)  
+   * [How do I Compute my Character's Stats?](#how-do-i-compute-my-character's-stats)  
+     * [Method 1 (Easiest) Use Pre-generated Stats:](#method-1-easiest-use-pre-generated-stats)  
+     * [Method 2 (Easy) Standard Array:](#method-2-easy-standard-array)  
+     * [Method 3 (High Risk, High Reward) Roll:](#method-3-high-risk,-high-reward-roll)  
    * [Races](#races)  
      * [Automaton](#automaton)  
      * [Catterwol](#catterwol)  
@@ -694,7 +694,7 @@ You are able to spend your action moving an additional 15 feet.
 ### The Enemy Turn
 Enemies and Monsters in Rangers and Ruffians can do all of the same things that you can,
 including taking Actions, using Offhand Actions, Moving, taking Free Actions, and Dashing.
-However, in some cases, __Villains,__ the high level monsters and their generals,
+However, in some cases, __Villains,__ high level monsters and their generals,
 can perform extra, more advanced actions. If these
 extra actions strike fear in your heart, good! You should not fight a villain lightly!
   
@@ -703,9 +703,9 @@ extra actions strike fear in your heart, good! You should not fight a villain li
   
 #### Villain Actions
 High level enemies in Rangers and Ruffians are able to take ```Villain Actions```.
-These actions allow them to do something (usually take an action) out of turn.
+These actions allow them to do something out of turn.
 Each turn, a villain gets a number of villain actions specified by the Poohbah (usually
-on the order of between 1 and 3). Villain Actions are usually reserved for high ranking
+on the order of between 1 and 3). Villain Actions are often reserved for high ranking
 "boss monsters" in a campaign. You would not expect to see a town guard taking villain actions.
   
   
@@ -4701,15 +4701,15 @@ the required skill or skills first.
 * __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Fast Draw:__ You may add 1d6 to your initiative roll.  
-  * Stat Requirements: _Perception: 3_  
+* __Fast Draw:__ You may add your dexterity rather than your perception to an initiative roll.  
+  * Stat Requirements: _Dexterity: 0_  
 * __Tinker:__ You may attempt to make items and contraptions during rests.  
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
 * __Nimble Navigator:__ Don't take penalty from difficult terrain. Stand up for free after being knocked prone.  
   * Stat Requirements: _Dexterity: 3_  
-* __En Garde:__ Reaction. When attacked, decrease the attack damage by your dexterity  
+* __En Garde:__ Reaction. Once per turn, when attacked, decrease the attack damage by your dexterity.  
   * Stat Requirements: _Dexterity: 1_  
-* __Shrug it Off:__ Reaction. Decrease the attack damage by your strength  
+* __Shrug it Off:__ Reaction. Once per turn, when attacked, decrease the attack damage by your strength.  
   * Stat Requirements: _Strength: 1_  
 * __Leader:__ Give all allies a 1d6 inspiration dice at the start of each battle.  
   * Stat Requirements: _Inner Fire: 3, Charisma: 3_  

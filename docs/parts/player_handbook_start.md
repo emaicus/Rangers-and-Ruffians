@@ -454,15 +454,15 @@ You are able to spend your action moving an additional 15 feet.
 ### The Enemy Turn
 Enemies and Monsters in Rangers and Ruffians can do all of the same things that you can,
 including taking Actions, using Offhand Actions, Moving, taking Free Actions, and Dashing.
-However, in some cases, __Villains,__ the high level monsters and their generals,
+However, in some cases, __Villains,__ high level monsters and their generals,
 can perform extra, more advanced actions. If these
 extra actions strike fear in your heart, good! You should not fight a villain lightly!
 
 #### Villain Actions
 High level enemies in Rangers and Ruffians are able to take ```Villain Actions```.
-These actions allow them to do something (usually take an action) out of turn.
+These actions allow them to do something out of turn.
 Each turn, a villain gets a number of villain actions specified by the Poohbah (usually
-on the order of between 1 and 3). Villain Actions are usually reserved for high ranking
+on the order of between 1 and 3). Villain Actions are often reserved for high ranking
 "boss monsters" in a campaign. You would not expect to see a town guard taking villain actions.
 
 #### Sanctuary Actions
