@@ -1,5 +1,5 @@
 the_bard's_songbook:
-  Level_0:
+  Tier_0:
     Carry on the wind:
       cost: 0
       description: Point at someone and they hear you regardless of distance.
@@ -53,7 +53,7 @@ the_bard's_songbook:
       cost: 0
       description: Create a harsh noise which either damages one enemy for 1d6 damage, or everyone
         who can hear for 1d4.
-  Level_1:
+  Tier_1:
     Belch Fire:
       cost: 1
       description: Belch fire onto something for 1d6 damage. If a creature is targeted,
@@ -70,11 +70,12 @@ the_bard's_songbook:
         a horrible ruckus until you stop concentrating on them.
     Counter Magic:
       cost: 1
-      description: Reaction. May be cast at a higher level. If the level of the counter
+      description: Reaction. May be cast at a higher tier for an additional cost equal
+        to the tier increase. If the tier of the counter
         spell is equal to or greater than the opponent's spell, the opponent's spell
         is instantly dispelled. Otherwise, the casting entity must succeed in an inner
         fire saving throw against your spell power. If the difference between
-        your counterspell's level and the enemy's spell's level is greater than 1,
+        your counterspell's tier and the enemy's spell's tier is greater than 1,
         they make the check with advantage.
     Courage:
       cost: 1
@@ -168,7 +169,7 @@ the_bard's_songbook:
       cost: 1
       description: Play a song that heals an entity for 1d4 health each turn for 2
         turns.
-  Level_2:
+  Tier_2:
     All the Little Creatures:
       cost: 2
       description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
@@ -255,7 +256,7 @@ the_bard's_songbook:
       description: Create a wall up to 40 feet long and 100 feet wide of pure sonic
         energy. Any entity that attempts to pass through it must make an inner fire
         saving throw against your spell power or be thrown back and take 2d10 damage.
-  Level_3:
+  Tier_3:
     Animal Form:
       cost: 3
       description: Transform yourself into an animal up to large in size. See the
@@ -338,7 +339,7 @@ the_bard's_songbook:
     Unstoppable:
       cost: 3
       description: Make an object unstoppable for 1 minute.
-  Level_4:
+  Tier_4:
     Ash Storm:
       cost: 4
       description: Summon a massive storm of ash 100 yards in diameter. All entities
@@ -375,7 +376,7 @@ the_bard's_songbook:
     Zone of Truth:
       cost: 4
       description: Create a zone with a 15 foot radius in which all must speak truthfully.
-  Level_5:
+  Tier_5:
     Dominate Person:
       cost: 5
       description: An entity must perform an inner fire check against your spell power.
@@ -571,7 +572,7 @@ the_book_of_chi:
       type: general
       cost: 1
 the_book_of_healing:
-  Level_0:
+  Tier_0:
     Beguile:
       cost: 0
       description: Your holy presence shakes an enemy's constitution. Force
@@ -638,7 +639,7 @@ the_book_of_healing:
     Minor Heal:
       cost: 1
       description: Restore 2d4 health to one ally or yourself.
-  Level_1:
+  Tier_1:
     Augment Allied Attack:
       cost: 1
       description: Reaction. When one of your allies attacks, you may add 1d6+your
@@ -690,7 +691,7 @@ the_book_of_healing:
         ally have advantage when attacking them.
     Minor Dispel Magic:
       cost: 1
-      description: Undo the effects wrought by up to a 2nd level spell.
+      description: Undo the effects wrought by up to a 2nd tier spell.
     Minor Holy weapon:
       cost: 1
       description: Imbue your weapon with the spirit of righteousness. Your weapon
@@ -745,7 +746,7 @@ the_book_of_healing:
       cost: 1
       description: Grant a teammate or yourself the ability to breathe underwater.
         Lasts 1+inner fire hours.
-  Level_2:
+  Tier_2:
     Babel:
       cost: 1
       description: If an enemy of your choice fails a saving throw against your spell
@@ -810,7 +811,7 @@ the_book_of_healing:
       description: Purify all food, drink, or potions in a 100 foot area to remove ill effects. 
         Greater purify can be used to remove drunkenness from entities, to render poison innocuous,
         or to make spoiled food fresh again.
-  Level_3:
+  Tier_3:
     Greater Delayed Heal:
       cost: 2
       description: Cast a healing spell on a teammate which does not take effect until
@@ -821,7 +822,7 @@ the_book_of_healing:
         they immediately return to 1d20 hp.
     Greater Dispel Magic:
       cost: 3
-      description: Undo the effects wrought by up to a 4th level spell.
+      description: Undo the effects wrought by up to a 4th tier spell.
     Major Guidance:
       cost: 1
       description: Give an ally a 1d12 inspiration dice.
@@ -839,7 +840,7 @@ the_book_of_healing:
       cost: 3
       description: Grant a teammate or yourself strong lungs, rendering them immune
         to airborne toxins and smoke.
-  Level_4:
+  Tier_4:
     Major Mending:
       cost: 3
       description: Spend 1 minute to repair everything you choose within a 1000 foot radius. This 
@@ -858,14 +859,14 @@ the_book_of_healing:
       description: Restore 5d10 health to all allies in a 30ft radius.
     Sealed Promise:
       cost: 1
-      description: The cost for this spell is one spell point. Requires a piece of
+      description: The cost for this spell is one action point. Requires a piece of
         white rope and one ounce of holy water blessed by your deity. Have two individuals
         wash their hands using the holy water, then tie their clasped hands together.
         Any promise they make in this state must be kept, or the one who does not
         follow through will die. If the promise becomes impossible, you may render
         the promise invalid. If you do this in an evil manner, your deity will punish
         you.
-  Level_5:
+  Tier_5:
     Battle Angel:
       cost: 3
       description: Summon a holy great weapon of your choice to your hand, and a shield
@@ -908,7 +909,7 @@ the_book_of_healing:
         make an inner fire saving throw. If holy oil was used, you have advantage.
         If the roll is 15 or higher, the entity is resurrected.
 the_druid's_guidebook:
-  Level_0:
+  Tier_0:
     Catseye:
       cost: 0
       description: Change your eyes to those of a cat, giving yourself low light vision
@@ -969,7 +970,7 @@ the_druid's_guidebook:
     Hurl Stone:
       cost: 1
       description: Magically hurl a stone at an enemy for 1d6 damage.
-  Level_1:
+  Tier_1:
     Bark Armor:
       cost: 1
       description: Add 1d4 armor to an individual. The armor breaks after they take
@@ -1031,7 +1032,7 @@ the_druid's_guidebook:
       cost: 1
       description: Hurl forth a jet of an element of your choice, dealing 1d8 damage.
         On a critical hit, the enemy is affected by the element.
-  Level_2:
+  Tier_2:
     Charm Animal:
       cost: 2
       description: Charm an animal or beast to make it your friend. The animal must
@@ -1095,7 +1096,7 @@ the_druid's_guidebook:
     Wall of ice:
       cost: 2
       description: Create a wall up to 40 feet high and 100 feet long of solid ice.
-  Level_3:
+  Tier_3:
     Animal Form:
       cost: 3
       description: Transform yourself into an adult sized animal. See the book of
@@ -1129,7 +1130,7 @@ the_druid's_guidebook:
         them requires 3 dexterity checks against your spell power, each of which results
         in 1d10 damage on failure. If a check is failed, the entity is stuck in the
         brambles until its next turn.
-  Level_4:
+  Tier_4:
     Criminals:
       cost: 4
       description: Cast a mass curse on up to 100 people that you can see. All individuals
@@ -1139,7 +1140,7 @@ the_druid's_guidebook:
     Plant Golems:
       cost: 4
       description: Summon 2 plant golems to your aid. The golems have 40 health, attack twice,
-        and do 1d8 damage per attack. Each golem has 5 spell points, and is capable
+        and do 1d8 damage per attack. Each golem has 5 action points, and is capable
         of casting twisting vine, bark armor, and thorned caltrops.
     Resist the elements:
       cost: 4
@@ -1163,7 +1164,7 @@ the_druid's_guidebook:
       cost: 3
       description: Summon an eagles wings to your back, giving you the ability to
         fly for 1d6 hours.
-  Level_5:
+  Tier_5:
     Awaken Animal:
       cost: 5
       description: Give an animal sentience. If you wish, is bound to you for one month, and
@@ -1191,7 +1192,7 @@ the_druid's_guidebook:
       cost: 4
       description: Spend one full round of combat focusing on bringing down a massive
         meteor. If you are attacked, make a concentration check. On failure, you loose
-        control of the spell at no spell point penalty. On success, call down a meteor
+        control of the spell at no action point penalty. On success, call down a meteor
         which strikes all enemies in a 10 foot radius for 10d10 damage.
     Tsunami:
       cost: 4
@@ -1220,7 +1221,7 @@ the_druid's_guidebook:
         4d6 damage per turn, have disadvantage in all things, and are considered to
         be low light. Concentration.
 the_macabre_manual:
-  Level_0:
+  Tier_0:
     Detect Death:
       cost: 0
       description: You may make perception checks to detect nearby corpses.
@@ -1269,7 +1270,7 @@ the_macabre_manual:
     Vivify:
       cost: 0
       description: Make something rotten or dead appear living.
-  Level_1:
+  Tier_1:
     Bloodlust:
       cost: 1
       description: Cast a spell of an ally which sends them into a frenzy. Their intelligence
@@ -1349,7 +1350,7 @@ the_macabre_manual:
       cost: 1
       description: Enchant any blade so that it does an additional 1d4 damage. You
         heal an amount equivalent to this damage. This spell lasts for 3 turns or one hour.
-  Level_2:
+  Tier_2:
     Constricting Shadow:
       cost: 2
       description: Summon forth a dozen shadowy hands which deal 1d8 damage and attempt to
@@ -1379,7 +1380,7 @@ the_macabre_manual:
       cost: 2
       description: Raise a zombie minion from a fallen entity. The zombie has 8 health,
         does 1d6 damage, and lasts at most seven days.
-  Level_3:
+  Tier_3:
     Trauma:
       cost: 3
       description: Cause an enemy to see into the unseen realm of darkness. If they
@@ -1420,7 +1421,7 @@ the_macabre_manual:
         are able to lift you up to seven feet from the ground, and allow you to climb
         like a spider. Each turn you may make a tentacle attack for 1d10 + inner fire
         damage as an offhand attack.
-  Level_4:
+  Tier_4:
     Death Knight: 
       cost: 4
       description: Resurrect a greater ghoul to aid you. The death knight has 40 health, 
@@ -1450,7 +1451,7 @@ the_macabre_manual:
       description: Steal the life-force from someone. Every 10 seconds or 1 turn in
         combat, you steal 1 year of their life. This life force can be given to someone
         else.
-  Level_5:
+  Tier_5:
     Abomination:
       cost: 5
       description: Knit together a monstrous abomination to fight for you. Requires
@@ -1499,7 +1500,7 @@ the_macabre_manual:
         all land within 40 miles of the heart's position will be trapped in eternal
         night.
 the_novice_spellbook:
-  Level_0:
+  Tier_0:
     Acrid Mist:
       charisma_cost: 8
       cost: 0
@@ -1520,7 +1521,7 @@ the_novice_spellbook:
     Drain:
       charisma_cost: 8
       cost: 0
-      description: Take 1 spell points from an enemy and do 1d4 damage.
+      description: Take 1 action points from an enemy and do 1d4 damage.
     Ephemeral Text:
       charisma_cost: 8
       cost: 0
@@ -1603,7 +1604,7 @@ the_novice_spellbook:
       cost: 0
       description: Given a piece of parchment or paper, instantly render a sketch
         of a scene that you witnessed.
-  Level_1:
+  Tier_1:
     Bare Knuckle Punch:
       charisma_cost: 12
       cost: 1
@@ -1849,7 +1850,7 @@ the_novice_spellbook:
         spell power. On failure, the entity is sapped of 1d4 strength and must make
         all strength checks with disadvantage. The entity can attempt a saving throw
         each turn
-  Level_2:
+  Tier_2:
     Acid Rain:
       charisma_cost: 12
       cost: 2
@@ -1887,7 +1888,7 @@ the_novice_spellbook:
     Greater Drain:
       charisma_cost: 12
       cost: 2
-      description: Take 4 spell points from an enemy and do 1d8 damage.
+      description: Take 4 action points from an enemy and do 1d8 damage.
     Greater Levitation:
       charisma_cost: 14
       cost: 2
@@ -1985,7 +1986,7 @@ the_novice_spellbook:
       cost: 2
       description: Lay your hand on metal to weaken it. Works on up to a 1 cubic foot
         block of metal and makes it roughly the same strength as wood.
-  Level_3:
+  Tier_3:
     Bubble of Vacuum:
       charisma_cost: 12
       cost: 3
@@ -2124,7 +2125,7 @@ the_novice_spellbook:
       description: With a rush, wind or water of your choice twists into a rushing
         vortex. Entities within thirty feet must make a dexterity saving throw against
         your spell power or be pulled in and restrained.
-  Level_4:
+  Tier_4:
     Biting winds:
       charisma_cost: 16
       cost: 4
@@ -2166,7 +2167,7 @@ the_novice_spellbook:
         in a space up to 100 square feet around you. These flowers do not harm your
         allies, but deal 1d6 damage for every 10 feet that an enemy moves through
         them. As a bonus, you are always able to summon a single flaming flower as
-        a level zero spell.
+        a tier zero spell.
     Greater Block:
       charisma_cost: 17
       cost: 4
@@ -2235,7 +2236,7 @@ the_novice_spellbook:
       cost: 3
       description: Create a wall up to 40 feet high and 100 feet long of steel swords,
         spears, and axes fused together.
-  Level_5:
+  Tier_5:
     Anti magic ring:
       charisma_cost: 18
       cost: 5
@@ -2275,7 +2276,7 @@ the_novice_spellbook:
         they do, they instantly take 4d10 psychic damage. You may ban at most one
         word or phrase at a time.
 the_sorcerer's_scrolls:
-  Level_0:
+  Tier_0:
     Hologram:
       charisma_cost: 8
       cost: 0
@@ -2293,7 +2294,7 @@ the_sorcerer's_scrolls:
       description: Utilize your magic to tickle an entity within 30 feet of you. If
         in combat, the entity must make an inner fire saving throw against your
         spell power, or be forced to move at disadvantage.
-  Level_1:
+  Tier_1:
     Conjure Minor Illusion:
       charisma_cost: 10
       cost: 1
@@ -2329,7 +2330,7 @@ the_sorcerer's_scrolls:
       cost: 2
       description: View the world through your familiar's eyes. Increase the difficulty
         by 2 to hear through your familiar's ears.
-  Level_2:
+  Tier_2:
     Conjure major illusion:
       charisma_cost: 14
       cost: 2
@@ -2386,7 +2387,7 @@ the_sorcerer's_scrolls:
       description: Summon a moderately sized familiar with 20 health. The familiar obeys your
         every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next
         day.
-  Level_3:
+  Tier_3:
     Pocket Dimension:
       charisma_cost: 15
       cost: 3
@@ -2418,7 +2419,7 @@ the_sorcerer's_scrolls:
       description: Transform an entity into a medium or small creature of your choice
         if they fail an inner fire saving throw against your spell power. They can
         attempt a saving throw every turn.
-  Level_4:
+  Tier_4:
     Blink to Familiar:
       charisma_cost: 16
       cost: 4
@@ -2443,7 +2444,7 @@ the_sorcerer's_scrolls:
       description: Infuse your armor with life, so that when you hit zero hit points,
         it can move on its own. In this state, your armor has 8 hit points, and access
         to anything on your person.
-  Level_5:
+  Tier_5:
     Black Hole:
       charisma_cost: 18
       cost: 5
@@ -2485,25 +2486,23 @@ the_sorcerer's_scrolls:
         every command, and can make 2 attacks for 2d10 damage. If a familiar dies, it cannot be
         resummoned until the next day.
 the_tome_of_the_ancients:
-  Level_10:
+  Tier_6:
     Massive Levitation:
       cost: 10
       description: Requires gemstones worth 200,000 gold and at least five master
         spellcasters to assist you. Requires 12 hours of casting time. Levitate anything
         up to the size of a mountain.
-  Level_6:
     True Enchantment:
       cost: 6
       description: You are now able to make truly enchanted items. It takes days to
         make an enchanted object, and may involve multiple roles.
-  Level_8:
     Teleportation Circle:
       cost: 8
       description: Requires diamonds, gold, and jewels valuing 50,000 gold. Craft
         a circle of teleportation. Any circle of teleportation may link to another
         you have created or have access to.
 the_wizard's_addendum:
-  Level_0:
+  Tier_0:
     Eat slugs:
       cost: 0
       description: Fill a person's mouth with slugs. If they fail an inner fire saving
@@ -2528,7 +2527,7 @@ the_wizard's_addendum:
     Summoning Spell:
       cost: 0
       description: Summon an object of up to 20 pounds to you.
-  Level_1:
+  Tier_1:
     Catch Soul:
       charisma_cost: 10
       cost: 1
@@ -2553,7 +2552,7 @@ the_wizard's_addendum:
       description: Allow yourself or another entity to pass through fire unharmed.
         Concentration. Can be used as a reaction. To use as a reaction, you must succeed
         in a contested dexterity check.
-  Level_2:
+  Tier_2:
     Invisibility:
       cost: 2
       description: Make yourself or another entity or object completely invisible.
@@ -2579,7 +2578,7 @@ the_wizard's_addendum:
       cost: 2
       description: Concentration. Make a check against a magic item's spell power.
         On success, suppress the magic item's power.
-  Level_3:
+  Tier_3:
     Dominate:
       cost: 3
       description: Dominate an enemy if they fail a contested saving throw against
@@ -2609,7 +2608,7 @@ the_wizard's_addendum:
       cost: 3
       description: Create a wall up to 40 feet high and 100 feet long of fire. Any
         entity that moves through the flames takes 2d20 damage.
-  Level_4:
+  Tier_4:
     Banish:
       cost: 4
       description: If the target fails an inner fire saving throw against your spell
@@ -2632,7 +2631,7 @@ the_wizard's_addendum:
       description: Instantly transport yourself and anyone touching you up to 1 mile.
         In order to cast, you must concentrate for one minute or one round of combat.
         If concentration is broken, you are immediately teleported to a random location.
-  Level_5:
+  Tier_5:
     Invulnerability:
       cost: 3
       description: Make yourself or another entity invulnerable for 3 turns.

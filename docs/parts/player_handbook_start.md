@@ -538,35 +538,49 @@ __Sleep in a bed.__
 
 ## Magic
 As mentioned in the [Action Points](#action-points) section, a mage may spend action points
-to cast spells. This section details the different levels of spells, as well as how learning
+to cast spells. This section details the different tiers of spells, as well as how learning
 new spells works.
 
-### Spell Levels
-There are 6 spell levels in Rangers and Ruffians, ranging from ```Level 0``` to ```Level 5```.
-In general, lower level spells cost fewer action points to use than higher level spells.
-Access to new spell levels is treated as an ability, which is gained at certain levels upon
+### Spell Tiers
+There are 6 spell tiers in Rangers and Ruffians, ranging from ```Tier 0``` to ```Tier 5```.
+In general, lower tier spells cost fewer action points to use than higher tier spells.
+Access to new spell tiers is treated as an ability, which is gained at certain levels upon
 [Leveling Up](#leveling-up).
 
 ### Learning new Spells
 Mages can learn new spells in two ways. First, a mage passively learns new spells upon
 [Leveling Up](#leveling-up). Second, your Poohbah may present you with a spell book as
 during your game. A spell book may contain a specific spell hand selected by the Poohbah.
-If the spell is of a higher level than you could normally learn, you may learn it, but
-you do not learn spells of that level upon leveling up. If the spell book does not contain
-a specific spell, you may use it to learn any one spell of up to the max spell level that you
+If the spell is of a higher tier than you could normally learn, you may learn it, but
+you do not learn spells of that tier upon leveling up. If the spell book does not contain
+a specific spell, you may use it to learn any one spell of up to the max spell tier that you
 are able to learn.
 
 ## Leveling Up
+As your character gains experience, they grow stronger. This process is called __Leveling Up.__
 There are 16 levels in Rangers and Ruffians, ranging from ```Level 0``` to ```Level 15.``` These
 Levels neatly fit into 3, 5 level arcs.
 
 | Level Range    | Arc           |
 | -------------- |---------------|
-| 0 - 5          | Burgeoning adventurer. You are small, and the world is a large, scary place. |
+| 0 - 5          | Burgeoning adventurer. You are small, and the world is a large, scary place. You must struggle to become the hero of a local area. |
 | 6 - 10         | Hero. You begin to make real change in the land that you are in.             |
 | 11 - 15        | Hero of Legend. You begin fighting ancient evils. The fate of the world may be in your hands. |
 
-### Increasing Your Maximum Health
+### When do I Level Up?
+Rangers and Ruffians recommends a system of __Milestone Leveling.__ This means that it is left up to the
+Poohbah's discretion when a party should level up. However, as a general guideline, you should expect to level
+up every 1-2 sessions for a short adventure, every 3-4 sessions for a moderate length adventure, and
+less frequently for a long adventure. Generally, leveling up happens after a major story event occurs.
+Such events could include:
+1. Victory in a major combat encounter.
+2. Success in a stealthy infiltration.
+3. Snatching an artifact from a villain's lair.
+4. Saving an kidnapped noble.
+
+### What Happens when I Level Up?
+
+#### Increasing Your Maximum Health
 Every time that you level up, you get to roll your health die + ```1d4``` and add add the
 result to your maximum health. For example, if your maximum health is ```26``` and your
 health die is ```1d8``` the following might occur:
@@ -574,21 +588,21 @@ health die is ```1d8``` the following might occur:
 2. You roll a ```2``` on your 1d4.
 3. Your new maximum health is ```26 (your old max health) + 3 (your health die roll) + 2 (your d4 roll) = 31```.
 
-### Odd Levels: New Abilities
+#### Odd Levels: New Abilities
 When you level up, you get better at being your class. That is to say, you are a better _Rouge_ or _Knight_
 or _Gunslinger_ or _Bard_ than you were before. When you reach an odd level, you receive new abilities, allowing
 you to perform all new actions or granting you new advantages.
 
-### Even Levels: New Stats
+#### Even Levels: New Stats
 When you reach an even level, you get ```2``` __Stat Points__ to spend. You can spend these to increase your stats.
 Review the [Effective Stats](#effective-stats) section for details on how this works.
 Alternatively instead of increasing your stats, you are able to instead take a new [Skill](#skills). See the
 [Skills](#skills) section for more details.
 
 
-### New Spells
-If you are a magic user, you are able to learn 1 new spell of _every_ spell level that you know each time you level up.
-This means that if you know level 0, 1, and 2 spells, you get to learn 3 spells: 1 level 0 spell, 1 level 1 spell, and 1 level 2 spell.
+#### New Spells
+If you are a magic user, you are able to learn 1 new spell of _every_ spell tier that you know each time you level up.
+This means that if you know tier 0, 1, and 2 spells, you get to learn 3 spells: 1 spell each of tier 0, 1, and 2.
 
 
 ## Building a Character

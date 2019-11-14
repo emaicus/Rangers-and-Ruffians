@@ -385,7 +385,7 @@ def average_damage_output(crit=False):
 
   if not crit:
     BUFFER.start_heading('Average Expected Damage Output Per Round', 4)
-    BUFFER.paragraph('Spell Points (SP) tend to grant an additional dice of damage.')
+    BUFFER.paragraph('Action Points (AP) tend to grant an additional dice of damage.')
     BUFFER.paragraph('For magic users, please recall that many of their spells deal area of effect damage, or else apply a status effect to an enemy.')
   else:
     BUFFER.start_heading('Average Critical Hit Damage Output', 4)

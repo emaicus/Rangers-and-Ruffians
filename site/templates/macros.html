@@ -6,22 +6,22 @@
     <br/>
     <br/>
   {% endif %}
-  {% for level in spells.keys()|sort()%}
-    <h4>{{level.replace('_',' ').title()}}</h4>
+  {% for tier in spells.keys()|sort()%}
+    <h4>{{tier.replace('_',' ').title()}}</h4>
     <ul>
-    {% for spell in spells[level].keys()|sort() %}
+    {% for spell in spells[tier].keys()|sort() %}
       <li><b>{{spell.replace('_',' ').title()}}: 
       {% if character_name == None %}
-        (Difficulty: {{ spells[level][spell]["charisma_cost"] }})</b>
+        (Difficulty: {{ spells[tier][spell]["charisma_cost"] }})</b>
       {% else %}
         {%- if rnr_class.lower() == "sorcerer" %}
-          (Difficulty: {{ spells[level][spell]["charisma_cost"] }})
+          (Difficulty: {{ spells[tier][spell]["charisma_cost"] }})
         {% else %}
-          (Cost: {{ spells[level][spell]["cost"] }})
+          (Cost: {{ spells[tier][spell]["cost"] }})
         {% endif -%}
       {% endif %}
       </b>
-      {{spells[level][spell]['description']}}</li>
+      {{spells[tier][spell]['description']}}</li>
     {% endfor %}
     </ul>
   {% endfor %}

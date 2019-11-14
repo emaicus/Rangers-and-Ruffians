@@ -25,13 +25,13 @@
               </div>
               <div class="card-content">
                   <fieldset class="form-group">
-                    {% for level in spells.keys()|sort()%}
-                      <h5>{{level.replace('_', ' ')}}:</h5>
-                      {% for spell in spells[level].keys()|sort()%}
+                    {% for tier in spells.keys()|sort()%}
+                      <h5>{{tier.replace('_', ' ')}}:</h5>
+                      {% for spell in spells[tier].keys()|sort()%}
                         <div class="form-check">
                           <label class="checkbox-inline">
                             <input type="checkbox" class="filled-in" name="spells" value={{spell.replace(' ','_')}}> 
-                            <span><b>{{spell.title()}}:</b> {{spells[level][spell]['description']}}</span>
+                            <span><b>{{spell.title()}}:</b> {{spells[tier][spell]['description']}}</span>
                           </label>
                         </div>
                         <br>

@@ -8,7 +8,7 @@ Armored:
   type: starting_item
   brief: +2 armor when worn.
 Bull Rush:
-  description: Spend 1 spell point to burst forward 15 feet, doing 1d6 damage to everyone you hit and causing
+  description: Spend 1 action point to burst forward 15 feet, doing 1d6 damage to everyone you hit and causing
     them to fall prone if they fail a spell power saving throw.
   type: combat
   brief: Burst forward 15 feet. 1d6 damage to anyone you hit. SP save or fall prone.
@@ -18,9 +18,9 @@ Chainmail:
   type: starting_item
   brief: +1 armor when worn.
 Courageous Blow:
-  description: Add your Inner Fire to an attack. At level 5, double this. At level 8, triple it.
+  description: Add your Inner Fire to an attack.
   type: starting_item
-  brief: Add INF to an attack. At LV 5, double this. At LV 10, triple it.
+  brief: Add INF to an attack.
   cost: 1
 Choice of Model:
   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
@@ -37,40 +37,40 @@ Animal Magnetism:
   type: general
   brief: You may attempt CHR checks to manipulate animals.
 Imbue Weapon:
-  description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 spell point. Lasts 1 battle or 1 hour.
+  description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 action point. Lasts 1 battle or 1 hour.
   type: combat
   brief: 1 SP. Add 1d6 elemental damage to your weapon for 1 battle/1hr.
   cost: 1
 Inherent Magic:
-  description: You are able to cast level zero spells naturally, and begin with 1 extra level zero spell from any spellbook.
+  description: You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.
   type: general
-  brief: You can cast level zero spells, and start with an extra one from any spellbook.
+  brief: You can cast tier zero spells, and start 2 extra from any spellbook.
 Greater Imbue Weapon:
-  description: As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 spell points. Lasts 1d4 turns.
+  description: As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 action points. Lasts 1d4 turns.
   type: combat
-  brief: For 1 spell point, add 1d8 elemental damage to your weapon for 1d4 turns.
+  brief: For 1 action point, add 1d8 elemental damage to your weapon for 1d4 turns.
   cost: 1
 Major Imbue Weapon:
-  description: As an offhand action, add 1d12 elemental damage to your weapons at the cost of 1 spell points. Lasts 1d4 turns.
+  description: As an offhand action, add 1d12 elemental damage to your weapons at the cost of 1 action points. Lasts 1d4 turns.
   type: combat
-  brief: For 1 spell point, add 1d12 elemental damage to your weapon for 1d4 turns.
+  brief: For 1 action point, add 1d12 elemental damage to your weapon for 1d4 turns.
   cost: 1
 Mage Shield:
-  description: As a reaction, spend 1 spell point to take half damage from an attack.
+  description: As a reaction, spend 1 action point to take half damage from an attack.
   type: combat
-  brief: Reaction. For 1 spell point, take have damage from an attack.
+  brief: Reaction. For 1 action point, take have damage from an attack.
   cost: 1
 Greater Mage Shield:
-  description: As a reaction, spend 3 spell points to stop an enemies attack entirely.
+  description: As a reaction, spend 3 action points to stop an enemies attack entirely.
   type: combat
-  brief: Reaction. For 3 spell points, stop an enemy's attack.
+  brief: Reaction. For 3 action points, stop an enemy's attack.
   cost: 1
 Bash:
   description: Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.
   type: combat
   brief: Stun an enemy on a critical hit. 
 # Beast Form:
-#   description: Spend 1 spell point to reveal the beast within. Add +1 to strength, dexterity,
+#   description: Spend 1 action point to reveal the beast within. Add +1 to strength, dexterity,
 #     and inner fire, and gain your level in temporary hit points. You stay in this form for 3 turns. Gives
 #     advantage on intimidation checks.
 #   type: combat
@@ -82,13 +82,13 @@ Beauty Incarnate:
   type: advantage
   brief: Gain advantage and +2 CHR when speaking with people that find you attractive.
 Become Mist:
-  description: Spend one spell point to become mist to have an attack pass right through
+  description: Spend one action point to become mist to have an attack pass right through
     you as a reaction.
   type: combat
   brief: Reaction. Become mist to have an attack pass through you.
   cost: 1
 Bellow:
-  description: On your turn, spend one spell point to unleash a mighty bellow. 
+  description: On your turn, spend one action point to unleash a mighty bellow. 
     All who hear must make an Spell Power save of be frightened.
   type: combat
   brief: Force all in earshot to make an SP Save. Frightened on failure.
@@ -161,12 +161,12 @@ Disarming Blow:
   type: combat
   brief: On a critical hit, force an enemy to drop something.
 Flame Strike:
-  description: Spend one spell point to add 1d10 fire damage to an attack.
+  description: Spend one action point to add 1d10 fire damage to an attack.
   type: combat
   brief: Add 1d10 fire damage to an attack.
   cost: 1
 Ward of Tracking:
-  description: Costs one spell point. Lay your hand on an opponent. For the next forty-eight hours, you 
+  description: Costs one action point. Lay your hand on an opponent. For the next forty-eight hours, you 
     know their position within 100 feet.
   type: general
   brief: If you touch someone, you know their position within 100 feet for 48 hours.
@@ -176,7 +176,7 @@ Fletcher:
   type: general
   brief: You craft your own normal arrows.
 Expert Fletcher:
-  description: All arrows now cost 1 spell point less.
+  description: All arrows now cost 1 action point less.
   type: general
   brief: Arrows cost 1 less SP.
 Fire and Ice Arrows:
@@ -287,10 +287,10 @@ Color Choice:
   brief: Costs 1 SP. Change scales' color. Advantage on stealth checks.
   cost: 1
 Commit to Memory:
-  description: At the beginning of a day, you may commit one spell to memory of level
-    2 or greater. For the remainder of the day, that spell costs 1 fewer spell points.
+  description: At the beginning of a day, you may commit one spell to memory of tier
+    2 or greater. For the remainder of the day, that spell costs 1 fewer action points.
   type: combat
-  brief: 1/day at the beginning, declare a level 2 or greater spell to have -1 cost.
+  brief: 1/day at the beginning, declare a tier 2 or greater spell to have -1 cost.
 Counter Attack:
   description: Once per round of combat, you may strike back when an enemy attacks you. Role a d20 and add your dexterity. If greater than 15, you land the blow.
   type: combat
@@ -614,7 +614,7 @@ Incombustible:
   type: general
   brief: You take half damage from heat and fire.
 Field Healing:
-  description: Using your knowledge of natural healing, you are able to heal a teammate for 1d6 health as an offhand action. Spend additional spell points to heal more.
+  description: Using your knowledge of natural healing, you are able to heal a teammate for 1d6 health as an offhand action. Spend additional action points to heal more.
   type: general
   brief: Scales. Heal someone 1d6 as an offhand.
   cost: 1
@@ -675,9 +675,9 @@ Minor Medicine:
   type: general
   brief: If in favorite terrain, create 1 1d20 health potion per day. Lasts 24 hours.
 Minor Spell Choice:
-  description: At the start of your journey, you know 1 extra level zero spells.
+  description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
-  brief: You know an extra level 0 spell.
+  brief: You know an extra tier 0 spell.
 Spell of Darkvision:
   description: You may use minor magic to give yourself darkvision for one hour.
   type: general
@@ -846,9 +846,9 @@ Larger Soul Jar:
   type: rule
   brief: Your soul jar can produce at maximum 1 more soul per day.
 Spell Choice:
-  description: At the start of your journey, you know 2 extra level zero spells.
+  description: At the start of your journey, you know 2 extra tier zero spells.
   type: choice
-  brief: You know 2 extra level 0 spells.
+  brief: You know 2 extra tier 0 spells.
 Steady:
   description: Do not take disadvantage when being jostled about.
   type: advantage
@@ -1054,9 +1054,9 @@ True Sight:
   type: general
   brief: You can see invisible entities.
 Influence: 
-  description: You may use spell points to increase any charisma roll by 2.
+  description: You may use action points to increase any charisma roll by 2.
   type: general
-  brief: You can use spell points to add +2 to a CHA role. 
+  brief: You can use action points to add +2 to a CHA role. 
 Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: combat
@@ -1294,20 +1294,20 @@ Poison:
   type: general
   brief: 1/day, spend 6 hrs crafting poison. 3d20 dmg eaten. 1d10 on blade. Lasts 24 hrs.
 Focus Energy:
-  description: As an offhand action, convert spell points into strength or dexterity. 1 spell point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
+  description: As an offhand action, convert action points into strength or dexterity. 1 action point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
-  brief: Offhand. Convert 1 spell point into +1 STR or DEX. Lasts 1 battle or 1 hr.
+  brief: Offhand. Convert 1 action point into +1 STR or DEX. Lasts 1 battle or 1 hr.
 Transfer Essence: 
-  description: As an action, convert health into spell points or vice versa. One spell point is equal to 5 health.
+  description: As an action, convert health into action points or vice versa. One action point is equal to 5 health.
   type: combat
-  brief: As an action, convert 5 health to 1 spell point or vice versa.
+  brief: As an action, convert 5 health to 1 action point or vice versa.
 One With Magic: 
   description: Once per day, fuse yourself with the essence of magic. The power nearly destroys you, dropping you instantly
     to one health. However, you are able to cast any three spells, free of charge.
   type: general
   brief: 1/day, drop to 1 health, but cast three spells free of charge.
 Ascend: 
-  description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 spell points. 
+  description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. 
     he ascended state lasts for 3
     turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
@@ -1361,7 +1361,7 @@ Major Restful Melody:
   brief: Grant your party 3d8 extra healing when resting.
   cost: 1
 Spell Coin:
-  description: You have one spell coin, which may store a spell of up to first level. Any person who rubs the coin may cast
+  description: You have one spell coin, which may store a spell of up to tier one. Any person who rubs the coin may cast
     the spell as an offhand action. Each day, you may re-summon the coin to yourself, and may put a spell into it free of cost.
   type: general
   brief: You have 1 spell coin. Stores up to LV1 spell. 1/day, put a spell in for free.
@@ -1370,13 +1370,13 @@ Additional Spell Coin:
   type: general
   brief: You have an additional spell coin.
 Greater Spell Coin:
-  description: You have learned the art of storing second level spells in your spell coins.
+  description: You have learned the art of storing second tier spells in your spell coins.
   type: general
-  brief: You can store level 2 spells in your spell coins.
+  brief: You can store tier 2 spells in your spell coins.
 Major Spell Coin:
-  description: You have learned the art of storing third level spells in your spell coins.
+  description: You have learned the art of storing third tier spells in your spell coins.
   type: general
-  brief: You can store level 3 spells in your spell coins.
+  brief: You can store tier 3 spells in your spell coins.
 Spirits Within: 
   description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, 
     make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
@@ -1574,17 +1574,17 @@ Offhand Attack:
   type: action
   brief: You may attack as an offhand.
 Minor Offhand Spell: 
-  description: You may cast a level zero spell as an offhand action.
+  description: You may cast a tier zero spell as an offhand action.
   type: action
-  brief: You may cast a level 0 spell as an offhand.
+  brief: You may cast a tier 0 spell as an offhand.
 Greater Offhand Spell: 
-  description: You may cast a level one spell as an offhand action.
+  description: You may cast a tier one spell as an offhand action.
   type: action
-  brief: You may cast a level 1 spell as an offhand.
+  brief: You may cast a tier 1 spell as an offhand.
 Major Offhand Spell: 
-  description: You may cast a level two spell as an offhand action.
+  description: You may cast a tier two spell as an offhand action.
   type: action
-  brief:  You may cast a level 2 spell as an offhand.
+  brief:  You may cast a tier 2 spell as an offhand.
 Double Strike:
   description: You may attack twice in a single action.
   type: action
@@ -1603,7 +1603,7 @@ Multi-Action:
   brief: Take an extra action.
   cost: 2
 Gumption:
-  description: You have gumption points equal to your spell points. Spend one to add 1d10 to a check.
+  description: You have gumption points equal to your action points. Spend one to add 1d10 to a check.
   type: action
   brief:  You have gumption equal to your SP. Spend one to add 1d10 to a check.
 Spurred to Movement:
@@ -1644,50 +1644,50 @@ Prepare Spell:
   brief: At the start of the day, choose a spell to cost 2 less.
 Learning Spells:
   description: New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or
-    a maximum spell level. Spellbooks with a maximum spell level contain one spell of your choice from the spellbooks that
-    you can learn from with a level up to the spellbook's maximum spell level.
+    a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that
+    you can learn from with a tier up to the spellbook's maximum spell tier.
   type: rule
   brief: You can learn new spells from spellbooks or when you level up.
 Falling Damage:
   description: After a 20 foot fall, you take 1d6 damage for every 10 feet.
   type: rule
   brief: After a 20 foot fall, take 1d6 damage for every 10 feet.
-Level Zero Spells:
-  description: You have achieved a basic knowledge of the arcane, and may now learn level zero spells from any of your spellbooks.
+Tier Zero Spells:
+  description: You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.
   type: general
-  brief: You can learn level 0 spells.
-Level One Spells:
-  description: Your powers are growing. You may now learn level one spells from any of your spellbooks.
+  brief: You can learn tier 0 spells.
+Tier One Spells:
+  description: Your powers are growing. You may now learn tier one spells from any of your spellbooks.
   type: general
-  brief: You can learn level 1 spells.
-Level Two Spells:
-  description: You have graduated from novice to proficient! You may now learn level two spells from any of your spellbooks.
+  brief: You can learn tier 1 spells.
+Tier Two Spells:
+  description: You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.
   type: general
-  brief: You can learn level 2 spells.
-Level Three Spells:
-  description: Magical energy flows through you. You may now learn level three spells from any of your spellbooks.
+  brief: You can learn tier 2 spells.
+Tier Three Spells:
+  description: Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.
   type: general
-  brief: You can learn level 3 spells.
-Level Four Spells:
-  description: You are a master of your spellcraft. You can now learn level four spells from any of your spellbooks.
+  brief: You can learn tier 3 spells.
+Tier Four Spells:
+  description: You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.
   type: general
-  brief: You can learn level 4 spells.
-Level Five Spells:
-  description: You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn level five spells from any of your spellbooks.
+  brief: You can learn tier 4 spells.
+Tier Five Spells:
+  description: You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.
   type: general
-  brief: You can learn level 5 spells.
+  brief: You can learn tier 5 spells.
 Learn Spells:
-  description: Each time you level up, learn one new spell of each spell level that you have access to. Spells must be learned from one of your spellbooks.
+  description: Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.
   type: rule
-  brief: Each time you level up, learn one new spell of each spell level you have access to.
+  brief: Each time you level up, learn one new spell of each spell tier you have access to.
 Starting Fighting Techniques:
   description: Begin your journey with two standard fighting techniques.
   type: choice
   brief: You know 2 standard fighting techniques.
 Learn Fighting Techniques: 
-  description: Each time you level up, learn one fighting technique from each fighting technique level you have access to.
+  description: Each time you level up, learn one fighting technique from each fighting technique tier you have access to.
   type: rule
-  brief: Each time you level up, learn 1 fighting technique from each level you have access to.
+  brief: Each time you level up, learn 1 fighting technique from each tier you have access to.
 Fighting Techniques:
   description: You may learn a new fighting technique from the book of chi.
   type: general

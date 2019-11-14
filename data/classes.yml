@@ -187,7 +187,7 @@ Heavy Fighter:
         - Pledge
         - Learning Spells
         - Learn Spells
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
         - Hammer of Light
@@ -195,7 +195,7 @@ Heavy Fighter:
       level_2:
         abilities:
         - Stat Increase
-        - Level One Spells
+        - Tier One Spells
       level_3:
         abilities:
         - Faithful Weapon
@@ -209,7 +209,7 @@ Heavy Fighter:
       level_6:
         abilities:
         - Stat Increase
-        - Level Two Spells
+        - Tier Two Spells
       level_7:
         abilities:
         - Greater Offhand Spell
@@ -221,7 +221,7 @@ Heavy Fighter:
       level_9:
         abilities:
         - Beacon of Hope
-        - Level Three Spells
+        - Tier Three Spells
       level_10:
         abilities:
         - Stat Increase
@@ -231,7 +231,7 @@ Heavy Fighter:
       level_12:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_13:
         abilities:
         - Winged Jump
@@ -241,7 +241,7 @@ Heavy Fighter:
       level_15:
         abilities:
         - Fires of Heaven
-        - Level Five Spells
+        - Tier Five Spells
     questions:
     - What deity does your character worship?
     - What their relationship is like with their deity? Do they pray to them often?
@@ -778,11 +778,11 @@ Mage:
         - My Father's Oboe
         - The Bard's Songbook
         - Regular Patron
-        - Level Zero Spells
+        - Tier Zero Spells
         - Slight of Hand
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
         - Minor Restful Melody
         - One up the Sleeve
         # - Cartwheel
@@ -795,7 +795,7 @@ Mage:
         - Spell Coin
       level_4:
         abilities:
-        - Level Two Spells
+        - Tier Two Spells
         - Stat Increase
       level_5:
         abilities:
@@ -807,7 +807,7 @@ Mage:
         abilities:
         - Offhand Attack
         - Imbue Weapon
-        - Level Three Spells
+        - Tier Three Spells
         - Greater Restful Melody
       level_8:
         abilities:
@@ -819,7 +819,7 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_11:
         abilities:
         - Major Restful Melody
@@ -829,7 +829,7 @@ Mage:
       level_13:
         abilities:
         - Additional Spell Coin
-        - Level Five Spells
+        - Tier Five Spells
       level_14:
         abilities:
         - Stat Increase
@@ -867,11 +867,11 @@ Mage:
         - Learn Spells
         - The Book of Healing
         - Pledge
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
         - Purge Decay
-        - Level One Spells
+        - Tier One Spells
       level_2:
         abilities:
         - Stat Increase
@@ -882,7 +882,7 @@ Mage:
       level_4:
         abilities:
         - Stat Increase
-        - Level Two Spells
+        - Tier Two Spells
       level_5:
         abilities:
         - Feint
@@ -893,7 +893,7 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Level Three Spells
+        - Tier Three Spells
       level_8:
         abilities:
         - Stat Increase
@@ -903,7 +903,7 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_11:
         abilities:
         - True Heal
@@ -915,7 +915,7 @@ Mage:
         abilities:
         - Halo
         - Burning Bright
-        - Level Five Spells
+        - Tier Five Spells
       level_14:
         abilities:
         - Stat Increase
@@ -940,7 +940,7 @@ Mage:
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful nature
       based magic, which they use to smite those who threaten them, their friends,
-      or their home. Druids utilize intelligence based spell points to cast spells,
+      or their home. Druids utilize intelligence based action points to cast spells,
       and are a good match for players interested in playing a mage. As you build
       your druid, consider where they came from. Why are they so attached to nature?
       How does their attachment to the natural world change how they think? How do
@@ -958,10 +958,10 @@ Mage:
         - Melee Weapon Proficiency
         - Novice Spellbook
         - The Druid's Field Guide
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
       level_2:
         abilities:
         - Stat Increase
@@ -971,7 +971,7 @@ Mage:
       level_4:
         abilities:
         - Stat Increase
-        - Level Two Spells
+        - Tier Two Spells
       level_5:
         abilities:
         - Tracker
@@ -982,7 +982,7 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Level Three Spells
+        - Tier Three Spells
       level_8:
         abilities:
         - Stat Increase
@@ -992,7 +992,7 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_11:
         abilities:
         - Ascended Flight
@@ -1003,7 +1003,7 @@ Mage:
       level_13:
         abilities:
         - True Ascension
-        - Level Five Spells
+        - Tier Five Spells
       level_14:
         abilities:
         - Stat Increase
@@ -1045,10 +1045,10 @@ Mage:
         - Mortal Coil
         - Vegan
         - The Macabre Manual
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
         - Edge of Eternity
       level_2:
         abilities:
@@ -1060,7 +1060,7 @@ Mage:
       level_4:
         abilities:
         - Stat Increase
-        - Level Two Spells
+        - Tier Two Spells
       level_5:
         abilities:
         - Eyes of the Others
@@ -1072,7 +1072,7 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Level Three Spells
+        - Tier Three Spells
         - Reap
       level_8:
         abilities:
@@ -1083,7 +1083,7 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_11:
         abilities:
         - Phylactery
@@ -1098,7 +1098,7 @@ Mage:
       level_14:
         abilities:
         - Stat Increase
-        - Level Five Spells
+        - Tier Five Spells
         - Larger Soul Jar
       level_15:
         abilities:
@@ -1120,7 +1120,7 @@ Mage:
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
       but rather through raw force of personality. To perform magic, a sorcerer wrestles
       with a spirit, natural or otherwise, and convinces them to do their bidding.
-      To this end, Sorcerers have no spell points, but rather must pass a charisma
+      To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma
       check to perform magic. As you create your sorcerer, consider how they learned
       magic. Who did they learn it from? How did they first wrestle a spirit to aid
       them? When they cast a spell, do they always use the same spirit, or different
@@ -1135,11 +1135,11 @@ Mage:
         - Charisma Based Spellcaster
         - Novice Spellbook
         - The Sorcerer's Scrolls
-        - Level Zero Spells
+        - Tier Zero Spells
         - Influence
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
       level_2:
         abilities:
         - Stat Increase
@@ -1150,7 +1150,7 @@ Mage:
       level_4:
         abilities:
         - Stat Increase
-        - Level Two Spells
+        - Tier Two Spells
       level_5:
         abilities:
         - Prepare Spell
@@ -1161,7 +1161,7 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Level Three Spells
+        - Tier Three Spells
       level_8:
         abilities:
         - Stat Increase
@@ -1171,7 +1171,7 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_11:
         abilities:
         - Spiritual Movement
@@ -1181,7 +1181,7 @@ Mage:
         - Major Offhand Spell
       level_13:
         abilities:
-        - Level Five Spells
+        - Tier Five Spells
       level_14:
         abilities:
         - Stat Increase
@@ -1205,10 +1205,8 @@ Mage:
     description: Often eccentric, wizards are known to be wayfarers and meddlers.
       Most keep to themselves, approaching others only to entwine them in schemes
       only they know about. Wizards arrive precisely when they mean to. To use magic,
-      Wizards use spell points, and begin with a number of spell points equal to their
-      intelligence. Spells cost the same amount of spell points as their level, and
-      are reaquired upon a long rest. Wizards have the least health of any class,
-      but also have more spell points than any other class. As you create your wizard,
+      Wizards use action points to cast spells. Wizards gain access to new spell tiers
+      before any other class. As you create your wizard,
       consider what their past is. How old are they? What kind of family did they
       come from? How long have they been a wizard? Are they mysterious? Are they competent?
       How do they interact with others? Who taught them magic? How will being a wizard
@@ -1222,10 +1220,10 @@ Mage:
         - Learning Spells
         - Novice Spellbook
         - The Wizard's Addendum
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
         - Looming Presence
       level_2:
         abilities:
@@ -1235,7 +1233,7 @@ Mage:
         - Minor Offhand Spell
       level_4:
         abilities:
-        - Level Two Spells
+        - Tier Two Spells
         - Stat Increase
       level_5:
         abilities:
@@ -1246,7 +1244,7 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Level Three Spells
+        - Tier Three Spells
         - Commit to Memory
       level_8:
         abilities:
@@ -1257,14 +1255,14 @@ Mage:
       level_10:
         abilities:
         - Stat Increase
-        - Level Four Spells
+        - Tier Four Spells
       level_12:
         abilities:
         - Stat Increase
         - Spell Invention
       level_13:
         abilities:
-        - Level Five Spells
+        - Tier Five Spells
       level_14:
         abilities:
         - Stat Increase

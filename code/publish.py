@@ -29,6 +29,9 @@ if __name__ == "__main__":
   for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
     class_lines += rnr_class.markdownify()
 
+  spells = rnr_utils.markdown_spellbooks()
+  skills = rnr_utils.markdown_skills()
+
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
@@ -36,12 +39,12 @@ if __name__ == "__main__":
   md.slurp_markdown_lines(race_lines)
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
   md.slurp_markdown_lines(class_lines)
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'skills_part.md'))
+  md.slurp_markdown_lines(skills)
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
+  md.slurp_markdown_lines(spells)
+
   
-
-
-  #outfile.write(rnr_utils.markdown_spellbooks())
-  #print()
-
 
   md.write_toc(max_to_include=3)
   md.write_buffer()

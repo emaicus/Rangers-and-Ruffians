@@ -9,6 +9,7 @@ import re
 import time
 from tqdm import tqdm
 import random
+import string
 
 CODE_DIRECTORY = os.path.dirname(__file__)
 BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
@@ -29,7 +30,7 @@ GLOBAL_MAGIC_CLASSES = dict()
 
 GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
-GLOBAL_SPELL_LEVEL_ABILITIES = dict()
+GLOBAL_SPELL_TIER_ABILITIES = dict()
 
 
 class rnr_entity:
@@ -139,7 +140,7 @@ class rnr_entity:
       ret.append(f"|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  \n")
       ret.append(f"|{self.get_stat('strength')}|{self.get_stat('dexterity')}|{self.get_stat('intelligence')}|{self.get_stat('inner_fire')}|{self.get_stat('charisma')}|{self.get_stat('perception')}|{self.get_stat('luck')}|{self.health_die_pieces}|  \n")
       ret.append(f"\n")
-      ret.append(f"__{self.name.replace('_',' ').title()} Abilities:__ \n")
+      ret.append(f"__{string.capwords(self.name.replace('_',' '))} Abilities:__ \n")
       abilities = filterAbilities(self.abilities, verbose=True)
       for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'combat'):
         if not key in abilities:
@@ -218,7 +219,7 @@ class rnr_class(rnr_entity):
         level = f'level_{i}'
         if not level in level_data:
           continue
-        ret.append( f"__{level.title().replace('_',' ')} {self.name.replace('_', ' ').title()}__\n\n")
+        ret.append( f"__{string.capwords(level.replace('_',' '))} {string.capwords(self.name.replace('_', ' '))}__\n\n")
 
         if 'abilities' in level_data[level]:
           level_abilities = filterAbilities(level_data[level]['abilities'], verbose=True)
@@ -234,7 +235,7 @@ class rnr_class(rnr_entity):
             ret.append('\n\n')
         for key in level_data[level].keys():
           if 'subclass' in key:
-            ret.append( '__{0} Abilities__  \n'.format(key.split('_')[1].title()))
+            ret.append( '__{0} Abilities__  \n'.format(string.capwords(key.split('_')[1])))
             sub_ability = filterAbilities(level_data[level][key], verbose=True)
             for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
               if not key in sub_ability:
@@ -279,7 +280,7 @@ class rnr_class(rnr_entity):
       return serial
 
     def get_spell_counts(self):
-      global GLOBAL_SPELL_LEVEL_ABILITIES, GLOBAL_INITIAL_SPELL_ABILITIES
+      global GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_INITIAL_SPELL_ABILITIES
 
       class_data = get_rnr_class_data_with_name(self.name)
       if class_data == None:
@@ -301,9 +302,9 @@ class rnr_class(rnr_entity):
           abilities = abilities + level_details['subclass_{0}_abilities'.format(self.subclass)]
 
         for ability in abilities:
-          if ability in GLOBAL_SPELL_LEVEL_ABILITIES:
-            if not GLOBAL_SPELL_LEVEL_ABILITIES[ability] in spell_counts:
-              spell_counts[GLOBAL_SPELL_LEVEL_ABILITIES[ability]] = 0
+          if ability in GLOBAL_SPELL_TIER_ABILITIES:
+            if not GLOBAL_SPELL_TIER_ABILITIES[ability] in spell_counts:
+              spell_counts[GLOBAL_SPELL_TIER_ABILITIES[ability]] = 0
           elif ability in GLOBAL_INITIAL_SPELL_ABILITIES and ability not in one_timers:
             one_timers.add(ability)
             for key, val in GLOBAL_INITIAL_SPELL_ABILITIES[ability].items():
@@ -324,7 +325,7 @@ class rnr_class(rnr_entity):
             s += ','
           else:
             s += ', and'
-        s = '{0} {1} {2}'.format(s, val, get_formal_spell_level_name(key))
+        s = '{0} {1} {2}'.format(s, val, get_formal_spell_tier_name(key))
         i += 1
       return s + '.'
 
@@ -483,22 +484,35 @@ def printLogo():
   print()
 
 def markdown_spellbooks():
-  ret = '# Spells  \n'
+  lines = []
   spellbooks = get_all_spellbooks()
   for spellbook, chapters in spellbooks.items():
-    ret += '## {0}  \n'.format(spellbook.replace('_',' '))
+    lines.append(f'### {string.capwords(spellbook.replace("_"," "))}  \n')
     for chapter, spell_list in chapters.items():
-      ret += '### {0}  \n'.format(chapter.replace('_',' '))
+      lines.append(f'  \n__{string.capwords(chapter.replace("_"," "))}:__  \n')
       for spell, spell_data in spell_list.items():
         if not 'charisma_cost' in spell_data:
           if 'cost' in spell_data:
-            ret += '* **{0}:** (Cost: {1}) {2}  \n'.format(spell.replace('_',' '), spell_data['cost'], spell_data['description'])
+            lines.append('* __{0}:__ _(Cost: {1})_ {2}  \n'.format(spell.replace('_',' '), spell_data['cost'], spell_data['description']))
           else:
-            ret += '* **{0}:** {1}  \n'.format(spell, spell_data['description'])
+            lines.append('* __{0}:__ {1}  \n'.format(spell, spell_data['description']))
         else:
-          ret += '* **{0}:** (Cost: {1}, Charisma Cost: {2}) {3}  \n'.format(spell, spell_data['cost'],spell_data['charisma_cost'], spell_data['description'])
-    #ret += "\\page\n"
-  return ret
+          lines.append('* __{0}:__ _(Cost: {1}, Charisma Cost: {2})_ {3}  \n'.format(spell, spell_data['cost'],spell_data['charisma_cost'], spell_data['description']))
+  return lines
+
+def markdown_skills():
+  global GLOBAL_SKILL_DATA
+  lines = []
+  for skill, info in GLOBAL_SKILL_DATA.items():
+    lines.append(f'* __{skill}:__ { info["description"] }  \n')
+    if 'requirements' in info:
+      if 'skills' in info['requirements']:
+        skill_list = [item for item in info['requirements']['skills']]
+        lines.append(f"  * Skill Requirements: _{ ', '.join(skill_list) }_  \n")
+      if 'stats' in info['requirements']:
+        stat_str = [f'{stat}: {val}' for stat, val in info['requirements']['stats'].items() ]
+        lines.append(f"  * Stat Requirements: _{ ', '.join(stat_str) }_  \n") 
+  return lines     
 
 
 ####################################################################################
@@ -557,7 +571,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_LEVEL_ABILITIES
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -584,12 +598,12 @@ def load_Rangers_And_Ruffians_Data():
     GLOBAL_SKILL_DATA = json.load(data_file)
 
   for spellbook, chapters in GLOBAL_SPELL_BOOKS.items():
-    for level, spells in chapters.items():
+    for tier, spells in chapters.items():
       if spells == None:
         continue
       for spell, details in spells.items():
         GLOBAL_COMPENDIUM_OF_SPELLS[spell] = dict()
-        GLOBAL_COMPENDIUM_OF_SPELLS[spell]['level'] = level
+        GLOBAL_COMPENDIUM_OF_SPELLS[spell]['tier'] = tier
         GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'] = details
 
   with open(race_path) as data_file:
@@ -625,18 +639,18 @@ def load_Rangers_And_Ruffians_Data():
   }
 
   GLOBAL_INITIAL_SPELL_ABILITIES = {
-    'Minor Spell Choice' : { 'Level_0': 1},
-    'Spell Choice' : {'Level_0': 2},
+    'Minor Spell Choice' : { 'Tier_0': 1},
+    'Spell Choice' : {'Tier_0': 2},
     'Starting Fighting Techniques' : {'Basic_Techniques' : 2}
   }
 
-  GLOBAL_SPELL_LEVEL_ABILITIES   = {
-    'Level Zero Spells'   : 'Level_0', 
-    'Level One Spells'    : 'Level_1',
-    'Level Two Spells'    : 'Level_2', 
-    'Level Three Spells'  : 'Level_3',
-    'Level Four Spells'   : 'Level_4',
-    'Level Five Spells'   : 'Level_5',
+  GLOBAL_SPELL_TIER_ABILITIES   = {
+    'Tier Zero Spells'   : 'Tier_0', 
+    'Tier One Spells'    : 'Tier_1',
+    'Tier Two Spells'    : 'Tier_2', 
+    'Tier Three Spells'  : 'Tier_3',
+    'Tier Four Spells'   : 'Tier_4',
+    'Tier Five Spells'   : 'Tier_5',
     'Fighting Techniques' : 'Basic_Techniques',
     'Master Fighting Techniques' : 'Master_Techniques',
     'Legendary Fighting Techniques' : 'Legendary Techniques'
@@ -645,9 +659,9 @@ def load_Rangers_And_Ruffians_Data():
   finish = time.time()
   #print('LOAD TIME: {0}(s)'.format(finish - start))
 
-def get_formal_spell_level_name(programatic_name):
-  global GLOBAL_SPELL_LEVEL_ABILITIES
-  for key, val in GLOBAL_SPELL_LEVEL_ABILITIES.items():
+def get_formal_spell_tier_name(programatic_name):
+  global GLOBAL_SPELL_TIER_ABILITIES
+  for key, val in GLOBAL_SPELL_TIER_ABILITIES.items():
     if val == programatic_name:
       return key
   return None
@@ -763,7 +777,7 @@ def find_spell_by_name(spell):
   global GLOBAL_COMPENDIUM_OF_SPELLS
   load_Rangers_And_Ruffians_Data()
   if spell in GLOBAL_COMPENDIUM_OF_SPELLS:
-    return copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['level']), copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'])
+    return copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['tier']), copy.deepcopy(GLOBAL_COMPENDIUM_OF_SPELLS[spell]['details'])
   return None, None
 
 def gather_spells(spell_data):
@@ -773,15 +787,15 @@ def gather_spells(spell_data):
 
   tmp_spells = dict()
   for spell in spell_data:
-    level, data = find_spell_by_name(spell.replace('_',' '))
+    tier, data = find_spell_by_name(spell.replace('_',' '))
     #if data is None, the spell could not be found in the spellbook.   
     if data == None:
       print("Could not find {0}".format(spell))
       continue
     #put the spell in the player's spellbook.
-    if not level in player_spellbook:
-      player_spellbook[level] = dict()
-    player_spellbook[level][spell] = data
+    if not tier in player_spellbook:
+      player_spellbook[tier] = dict()
+    player_spellbook[tier][spell] = data
   return player_spellbook
 
 # If rnr_class is provided, return a spellbook for that class

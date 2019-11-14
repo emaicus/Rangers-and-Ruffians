@@ -393,8 +393,8 @@ def game_stats():
 def evaluate_spells_for_failures(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  # Get new spell level at levels 0, 1, 5, 8, 11, 14
-  target_spell_counts = {'Level_0':16,'Level_1':15,'Level_2':10,'Level_3':8,'Level_4':5,'Level_5':2}
+  # Get new spell tier at levels 0, 1, 5, 8, 11, 14
+  target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
   for spell_book, levels in all_spellbooks.items():
     for level, spell_list in levels.items():
@@ -410,7 +410,7 @@ def evaluate_spells_for_failures(print_errors=True):
 def evaluate_spells_for_doubling(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  target_spell_counts = {'Level_0':16,'Level_1':15,'Level_2':10,'Level_3':8,'Level_4':5,'Level_5':2}
+  target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
   running_total = 0
   for spell_book, levels in all_spellbooks.items():

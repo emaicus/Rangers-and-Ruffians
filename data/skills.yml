@@ -28,13 +28,13 @@ Firearm Proficiency:
       Intelligence: 2
       Dexterity: 1
 Basic Magic:
-  description: "You may use level zero magic. Each time you level up, gain a level zero spell."
+  description: "You may use tier zero magic. Each time you level up, gain a tier zero spell."
   type: general
   requirements:
     stats:
       Intelligence: 3
 Advanced Magic:
-  description: "You may use level one magic. Each time you level up, gain a level one spell."
+  description: "You may use tier one magic. Each time you level up, gain a tier one spell."
   type: general
   requirements:
     stats:
@@ -165,7 +165,7 @@ Close Quarters Combat:
   description: "Do not take disadvantage with ranged weapons in close quarters."
   type: combat
 Empowered Spells:
-  description: "Double the damage dice for your level zero spells."
+  description: "Roll double the damage dice for your tier zero spells."
   type: combat
   requirements:
     stats:
