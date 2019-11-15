@@ -443,7 +443,7 @@ class rnr_character(rnr_entity):
     return serial
 
   def get_health(self):
-    base = self.health_dice
+    base = self.health_dice + 2
     health_dice_rolls = (self.health_dice // 2)* self.level
     bonus_dice_rolls  = 2 * self.level
     return base + health_dice_rolls + bonus_dice_rolls
@@ -797,6 +797,13 @@ def gather_spells(spell_data):
       player_spellbook[tier] = dict()
     player_spellbook[tier][spell] = data
   return player_spellbook
+
+def is_casting_class(rnr_class):
+  global GLOBAL_MAGIC_CLASSES
+  if rnr_class.name.replace(' ', '_').lower() in GLOBAL_MAGIC_CLASSES:
+    return True
+  else:
+    return False
 
 # If rnr_class is provided, return a spellbook for that class
 def join_spellbooks(rnr_class=None):
