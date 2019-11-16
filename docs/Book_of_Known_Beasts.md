@@ -52,7 +52,7 @@
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 0 ( +0 ) | -2 ( -2 ) | 0 ( +0 ) | -7 ( -5 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| 0 (+0) | -2 (-2) | 0 (+0) | -7 (-5) | 0 (+0) | 0 (+0) | 0 (+0) |  
   
 __Actions:__  
 * __Nip:__ _1d4 + 0 Strength._ The pup bites, dealing piercing damage.  
@@ -71,7 +71,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 ( +1 ) | 1 ( +1 ) | 0 ( +0 ) | -5 ( -4 ) | 0 ( +0 ) | 3 ( +3 ) | 0 ( +0 ) |  
+| 1 (+1) | 1 (+1) | 0 (+0) | -5 (-4) | 0 (+0) | 3 (+3) | 0 (+0) |  
   
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
@@ -93,7 +93,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 2 ( +2 ) | 2 ( +2 ) | 1 ( +1 ) | -3 ( -3 ) | 0 ( +0 ) | 3 ( +3 ) | 0 ( +0 ) |  
+| 2 (+2) | 2 (+2) | 1 (+1) | -3 (-3) | 0 (+0) | 3 (+3) | 0 (+0) |  
   
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
@@ -118,7 +118,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 2 ( +2 ) | 2 ( +2 ) | 1 ( +1 ) | 0 ( +0 ) | 0 ( +0 ) | 3 ( +3 ) | 0 ( +0 ) |  
+| 2 (+2) | 2 (+2) | 1 (+1) | 0 (+0) | 0 (+0) | 3 (+3) | 0 (+0) |  
   
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
@@ -161,7 +161,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 ( -1 ) | -1 ( -1 ) | 0 ( +0 ) | 1 ( +1 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| -1 (-1) | -1 (-1) | 0 (+0) | 1 (+1) | 0 (+0) | 0 (+0) | 0 (+0) |  
   
 __Actions:__  
 * __Nip:__ _1d4 + -1 Strength._ The tiny hatchling nips at its enemy in fear.  
@@ -183,7 +183,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 ( +3 ) | 2 ( +2 ) | 1 ( +1 ) | 1 ( +1 ) | 1 ( +1 ) | 2 ( +2 ) | 0 ( +0 ) |  
+| 3 (+3) | 2 (+2) | 1 (+1) | 1 (+1) | 1 (+1) | 2 (+2) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Multi-Claw:__ A dragon whelp  can make 2 claw attacks as an action.  
@@ -209,7 +209,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 ( +3 ) | 3 ( +3 ) | 2 ( +2 ) | 3 ( +3 ) | 1 ( +1 ) | 3 ( +3 ) | 0 ( +0 ) |  
+| 3 (+3) | 3 (+3) | 2 (+2) | 3 (+3) | 1 (+1) | 3 (+3) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Multi-Attack:__ A drake can make 2 claw attacks and 1 bite as an action.  
@@ -252,7 +252,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 7 ( +5 ) | 5 ( +4 ) | 2 ( +2 ) | 5 ( +4 ) | 3 ( +3 ) | 3 ( +3 ) | 0 ( +0 ) |  
+| 7 (+5) | 5 (+4) | 2 (+2) | 5 (+4) | 3 (+3) | 3 (+3) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Multi-Attack:__ An adult dragon can make 2 claw attacks and 1 devour attack as an action.  
@@ -298,7 +298,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 0 ( +0 ) | -1 ( -1 ) | -1 ( -1 ) | -1 ( -1 ) | -5 ( -4 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| 0 (+0) | -1 (-1) | -1 (-1) | -1 (-1) | -5 (-4) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
@@ -321,7 +321,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 ( -1 ) | -1 ( -1 ) | 1 ( +1 ) | 1 ( +1 ) | -5 ( -4 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| -1 (-1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-4) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
@@ -344,7 +344,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 ( +1 ) | -1 ( -1 ) | 1 ( +1 ) | 1 ( +1 ) | -5 ( -4 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| 1 (+1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-4) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
@@ -370,7 +370,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 0 ( +0 ) | -2 ( -2 ) | 1 ( +1 ) | 1 ( +1 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| 0 (+0) | -2 (-2) | 1 (+1) | 1 (+1) | 0 (+0) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
@@ -404,7 +404,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 ( -1 ) | 1 ( +1 ) | 1 ( +1 ) | -2 ( -2 ) | -2 ( -2 ) | 1 ( +1 ) | 0 ( +0 ) |  
+| -1 (-1) | 1 (+1) | 1 (+1) | -2 (-2) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -425,7 +425,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 ( -1 ) | 1 ( +1 ) | 1 ( +1 ) | -2 ( -2 ) | -2 ( -2 ) | 1 ( +1 ) | 0 ( +0 ) |  
+| -1 (-1) | 1 (+1) | 1 (+1) | -2 (-2) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -446,7 +446,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -3 ( -3 ) | 1 ( +1 ) | 2 ( +2 ) | 1 ( +1 ) | -2 ( -2 ) | 1 ( +1 ) | 0 ( +0 ) |  
+| -3 (-3) | 1 (+1) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -469,7 +469,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -3 ( -3 ) | 1 ( +1 ) | 2 ( +2 ) | 1 ( +1 ) | -2 ( -2 ) | 1 ( +1 ) | 0 ( +0 ) |  
+| -3 (-3) | 1 (+1) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -492,7 +492,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -3 ( -3 ) | 1 ( +1 ) | 2 ( +2 ) | 1 ( +1 ) | -2 ( -2 ) | 1 ( +1 ) | 0 ( +0 ) |  
+| -3 (-3) | 1 (+1) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -528,7 +528,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 ( +1 ) | 1 ( +1 ) | 1 ( +1 ) | -1 ( -1 ) | -2 ( -2 ) | 2 ( +2 ) | 0 ( +0 ) |  
+| 1 (+1) | 1 (+1) | 1 (+1) | -1 (-1) | -2 (-2) | 2 (+2) | 0 (+0) |  
   
 __Abilities:__  
 * __Unseated:__ If the wolf rider falls below half health, roll 1d20. If the roll is less than ten, the wolf dies and the goblin falls for 1d4 damage. If it is ten or greater, the goblin dies, leaving a forest wolf.  
@@ -561,7 +561,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 ( +3 ) | -3 ( -3 ) | -7 ( -5 ) | 2 ( +2 ) | -2 ( -2 ) | -3 ( -3 ) | 0 ( +0 ) |  
+| 3 (+3) | -3 (-3) | -7 (-5) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
   
 __Actions:__  
 * __Hurl Goblin:__ _2d6 + 3 Strength._ If there is a goblin within 10 feet, the ogre can snatch it up and throw it at an enemy. Deals damage to both the goblin and the target.  
@@ -582,7 +582,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 ( +3 ) | -3 ( -3 ) | -7 ( -5 ) | 2 ( +2 ) | -2 ( -2 ) | -3 ( -3 ) | 0 ( +0 ) |  
+| 3 (+3) | -3 (-3) | -7 (-5) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Villain:__ If the Ogre Lord is being used as a villain, it may make one out of turn villain action per round.  
@@ -618,7 +618,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 ( -1 ) | 1 ( +1 ) | -3 ( -3 ) | -3 ( -3 ) | -3 ( -3 ) | -2 ( -2 ) | 0 ( +0 ) |  
+| -1 (-1) | 1 (+1) | -3 (-3) | -3 (-3) | -3 (-3) | -2 (-2) | 0 (+0) |  
   
 __Actions:__  
 * __Sword:__ _1d4 + -1 Strength._ The skeleton strikes at a foe with a brittle sword.  
@@ -640,7 +640,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 ( +1 ) | -2 ( -2 ) | -7 ( -5 ) | -3 ( -3 ) | -7 ( -5 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| 1 (+1) | -2 (-2) | -7 (-5) | -3 (-3) | -7 (-5) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Smell Blood:__ If a nearby zombie successfully bites an enemy, all nearby zombies double their speed.  

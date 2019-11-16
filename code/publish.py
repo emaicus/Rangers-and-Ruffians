@@ -68,7 +68,7 @@ def publish_book_of_known_beasts():
         md.paragraph(f"* __Health:__ {info['health']}")
 
         # This looks gross, but we're looping through stat names and then putting a nice little +/- effective stat.
-        my_stats = [ f"{info['stats'][x]} ( {'+' if int(info['stats'][x]) >= 0 else ''}{rnr_utils.convert_stat_to_effective_stat(int(info['stats'][x]))} )" for x in stats ]
+        my_stats = [ f"{info['stats'][x]} ({'+' if int(info['stats'][x]) >= 0 else ''}{rnr_utils.convert_stat_to_effective_stat(int(info['stats'][x]))})" for x in stats ]
 
         md.paragraph(f"* __Spell Power:__ { 12 + rnr_utils.convert_stat_to_effective_stat( info['stats']['Inner_Fire'] ) } ")
         md.paragraph(f"* __Movement:__")
