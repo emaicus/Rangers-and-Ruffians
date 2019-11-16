@@ -589,7 +589,16 @@ def check_known_beasts():
               all_errors.append(f'{beast}: bad value for health')
           except Exception as e:
             all_errors.append(f'{beast}: malformed health')
-      
+        
+        if 'action_spec' in info:
+          for key, val in info['action_spec'].items():
+            if not isinstance(val, str):
+              all_errors.append(f'{beast} action_spec {key}: description should be a string')
+            else:
+              if not val[-1] in ['.', '!']:
+                all_errors.append(f'{beast} action_spec {key}: description should end in punctuation.')
+
+
         if not 'actions' in info:
           all_errors.append(f'{beast}: does not have actions')
         else:
@@ -611,9 +620,12 @@ def check_known_beasts():
                   all_errors.append(f'{beast} {action}: bad damage {a_info["damage"]}')
               except Exception as e:
                 all_errors.append(f'{beast} {action}: (exception) bad damage {a_info["damage"]}')
+            
+            if not 'description' in a_info:
+              all_errors.append(f'{beast} {action}: no description')
             else:
-              if not 'effect' in a_info:
-                all_errors.append(f'{beast} {action}: no damage or effect')
+              if a_info['description'][-1] not in ['.', '!']:
+                all_errors.append(f'{beast} {action}: description does not end with punctuation.')
 
             if 'modifier' in a_info and 'damage' not in a_info:
               all_errors.append(f'{beast} {action}: has modifier but no damage')
@@ -623,6 +635,9 @@ def check_known_beasts():
           for ability, description in info['abilities'].items():
             if not isinstance(description, str):
               all_errors.append(f'{beast} {ability} does not have a string description.')
+            else:
+              if description[-1] not in ['.', '!']:
+                all_errors.append(f'{beast} {ability}: description does not end with punctuation.')
 
         if not 'movement' in info:
           all_errors.append(f'{beast}: does not have movement')
@@ -649,8 +664,10 @@ def check_known_beasts():
           if key in info:
             for action_type, a_description in info[key].items():
               if not isinstance(a_description, str):
-                all_errors.append(f'{beast} {key} {key}: description is not a string')
-
+                all_errors.append(f'{beast} {key} {action_type}: description is not a string')
+              else:
+                if a_description[-1] not in ['.', '!']:
+                  all_errors.append(f'{beast} {key} {action_type}: description does not end with punctuation.')
 
   return all_errors
 

@@ -54,8 +54,8 @@
 | 0 ( +0 ) | -2 ( -2 ) | 0 ( +0 ) | -7 ( -5 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
   
 __Actions:__  
-* __Nip:__ _1d4 + 0 Strength._.  
-* __Yip:__ Roll 1d20. On a 15 or above, any nearby wolves run to the pup's aid.  
+* __Nip:__ _1d4 + 0 Strength._ The pup bites, dealing piercing damage.  
+* __Yip:__ The pup cries for help. Roll 1d20. On a 15 or above, any nearby wolves run to the pup's aid.  
   
   
 ___  
@@ -76,8 +76,8 @@ __Abilities:__
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
   
 __Actions:__  
-* __Bite:__ _1d6 + 1 Strength._.  
-* __Howl:__ All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
+* __Bite:__ _1d6 + 1 Strength._ The wolf tears at it's enemy with sharp fangs.  
+* __Howl:__ The wolf lets out a fearsome howl. All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
   
   
 ___  
@@ -97,10 +97,12 @@ ___
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
   
+__Special Action Rules:__  
+* __Multi-Attack:__ A Dire Wolf can make 2 bite attacks as an action.  
+  
 __Actions:__  
-* __Multi Bite:__ An Alpha Wolf can make 2 bite attacks as an action.  
-* __Bite:__ _1d6 + 2 Strength._ Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone.  
-* __Howl:__ All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
+* __Bite:__ _1d6 + 2 Strength._ The wolf tears at its target with its teeth. Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone.  
+* __Howl:__ The wolf lets out a fearsome howl. All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
   
   
 ___  
@@ -120,15 +122,18 @@ ___
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
   
+__Special Action Rules:__  
+* __Multi-Attack:__ An Alpha Wolf can make 2 bite attacks as an action.  
+* __Villain:__ If an Alpha Wolf is being used as a Villain, it can make one out of turn attack as a villain action per round.  
+  
 __Actions:__  
-* __Multi Bite:__ An Alpha Wolf can make 2 bite attacks as an action.  
-* __Bite:__ _1d6 + 2 Strength._ Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone.  
-* __Howl:__ All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
+* __Bite:__ _1d6 + 2 Strength._ The Alpha Wolf tears at its target with its teeth. Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone.  
+* __Howl:__ The Alpha Wolf let's out a fearsome howl. All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
   
 __Conditional Actions:__  
 * __First Turn:__ Howl, giving all allies 10 feet of movement.  
 * __Second Turn:__ Growl, causing all players to make a Spell Power Save or become frightened.  
-* __Third Turn:__ Howl, calling 1d4 Forest Wolves into the fray. .  
+* __Third Turn:__ Howl, calling 1d4 Forest Wolves into the fray.  
   
 __Sanctuary Actions:__  
 * __Dark Lair:__ If you attack a Alpha Wolf in it's den, it will likely be dark inside.  
@@ -148,19 +153,19 @@ ___
 #### Red Dragon Hatchling:
 * ___Level 0 Light Enemy___  
 * __Health:__ 6  
-* __Spell Power:__ 12   
+* __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 5 feet  
 * __Armor:__ 1  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -3 ( -3 ) | -1 ( -1 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
+| -1 ( -1 ) | -1 ( -1 ) | 0 ( +0 ) | 1 ( +1 ) | 0 ( +0 ) | 0 ( +0 ) | 0 ( +0 ) |  
   
 __Actions:__  
-* __Nip:__ _1d2 + -3 Strength._.  
-* __Cinder:__ _1d2 + 0 Inner Fire._ The dragon spits out a tiny bit of cinder, capable of igniting dry grass, thatch, or wood.  
-* __Yip:__ Roll 1d20. On a 15 or above, the hatchling alerts nearby allies that it is in danger.  
+* __Nip:__ _1d4 + -1 Strength._ The tiny hatchling nips at its enemy in fear.  
+* __Cinder:__ _1d2 + 1 Inner Fire._ The hatchling spits out a tiny bit of cinder, capable of igniting dry grass, thatch, or wood.  
+* __Cry Out:__ The hatchling cries out for aid. Roll 1d20. On a 15 or above, the hatchling alerts nearby allies that it is in danger.  
   
   
 ___  
@@ -179,11 +184,13 @@ ___
  | --------|--------|--------|--------|--------|--------|--------|
 | 3 ( +3 ) | 2 ( +2 ) | 1 ( +1 ) | 1 ( +1 ) | 1 ( +1 ) | 2 ( +2 ) | 0 ( +0 ) |  
   
+__Special Action Rules:__  
+* __Multi-Claw:__ A dragon whelp  can make 2 claw attacks as an action.  
+  
 __Actions:__  
-* __Multi Claw:__ A dragon whelp  can make 2 claw attacks as an action.  
-* __Bite:__ _2d10 + 3 Strength._.  
-* __Claw:__ _1d10 + 3 Strength._.  
-* __Minor Fire Breath:__ _4d6 + 1 Inner Fire._ The fire makes a 15 foot cone, damaging all enemies within.  
+* __Bite:__ _2d10 + 3 Strength._ The whelp clamps down on an enemy with its jaws.  
+* __Claw:__ _1d10 + 3 Strength._ The whelp rakes its enemy with its claws.  
+* __Minor Fire Breath:__ _4d6 + 1 Inner Fire._ The whelp releases a small torrent of fire from its maw. The fire makes a 15 foot cone, damaging all enemies within.  
 * __Dive Bomb:__ _2d12 + 3 Strength._ If the dragon whelp is in flight, it can dive bomb an enemy, smashing into them with claws and talons. If the enemy fails an contested dex save, they are thrown 10 feet.  
   
   
@@ -203,13 +210,17 @@ ___
  | --------|--------|--------|--------|--------|--------|--------|
 | 3 ( +3 ) | 3 ( +3 ) | 2 ( +2 ) | 3 ( +3 ) | 1 ( +1 ) | 3 ( +3 ) | 0 ( +0 ) |  
   
+__Special Action Rules:__  
+* __Multi-Attack:__ A drake can make 2 claw attacks and 1 bite as an action.  
+* __Villain:__ If a drake is being used as a villain, it can make one out of turn villain action per turn. The action must be a bite, a tail strike, or a dash action.  
+* __Villain Immunity:__ 2 times during a battle, an Adult Red Dragon can roll a spell power save with advantage.  
+  
 __Actions:__  
-* __Multi Attack:__ A drake can make 2 claw attacks and 1 bite as an action.  
-* __Bite:__ _2d10 + 3 Strength._.  
-* __Claw:__ _1d10 + 3 Strength._.  
-* __Fire Breath:__ _6d8 + 3 Inner Fire._ The fire makes a 30 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
-* __Grab:__ _1d12 + 3 Strength._ An enemy must attempt a contested DEX check. On failure, the drake grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D14 strength check to hang on.  
-* __Tail Strike:__ _4d8 + 3 Strength._ Strikes all enemies up to 10 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
+* __Bite:__ _2d10 + 3 Strength._ The drake clamps down on an enemy with jagged teeth.  
+* __Claw:__ _1d10 + 3 Strength._ The drake rakes its enemy with daggerlike claws.  
+* __Fire Breath:__ _6d8 + 3 Inner Fire._ The drake let's loose a roaring stream of  fire. The flames make a 30 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
+* __Grab:__ _1d8 + 3 Strength._ The drake snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the drake grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D14 strength check to hang on.  
+* __Tail Strike:__ _4d8 + 3 Strength._ The drake swings its treelike tail at its enemies. Strikes all enemies up to 10 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
   
 __Villain Actions:__  
 * __Tail Strike:__ A red drake can make a Tail Strike as a villain action.  
@@ -234,7 +245,7 @@ ___
 * __Spell Power:__ 16   
 * __Movement:__  
   * __Land:__ 15 feet  
-  * __Air:__ 60 feet  
+  * __Air:__ 90 feet  
 * __Armor:__ 4  
 * __Magic Armor:__ 4  
   
@@ -242,17 +253,18 @@ ___
  | --------|--------|--------|--------|--------|--------|--------|
 | 7 ( +5 ) | 5 ( +4 ) | 2 ( +2 ) | 5 ( +4 ) | 3 ( +3 ) | 3 ( +3 ) | 0 ( +0 ) |  
   
-__Actions:__  
-* __Multi Attack:__ An adult dragon can make 2 claw attacks and 1 bite as an action.  
-* __Devour:__ _2d12 + 5 Strength._ If a creature's size is small, they must make a contested dexterity check or be consumed by the dragon. A consumed entity takes 6d6 damage per turn. If the dragon takes 20 damage in one turn from without (or 15 from within) it must succeed a D14 INF save, or spit up the consumed entity.  
-* __Claw:__ _2d12 + 5 Strength._.  
-* __Fire Breath:__ _6d12 + 4 Inner Fire._ The fire makes a 50 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
-* __Fireball:__ _4d12 + 4 Inner Fire._ The dragon spits up a fireball at a targeted spot, which deals damage to everyone within a 20 foot radius.  
-* __Grab:__ _2d12 + 5 Strength._ An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on.  
-* __Tail Strike:__ _4d12 + 5 Strength._ Strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
+__Special Action Rules:__  
+* __Multi-Attack:__ An adult dragon can make 2 claw attacks and 1 devour attack as an action.  
+* __Villain:__ If an adult dragon is being used as a villain, it can make one out of turn villain action per turn. Fire Breath cannot be used as a villain action.  
+* __Villain Immunity:__ 3 times during a battle, an Adult Red Dragon can roll a spell power save with advantage.  
   
-__Villain Actions:__  
-* __Tail Strike:__ The dragon may make a tail strike as a villain action.  
+__Actions:__  
+* __Devour:__ _2d12 + 5 Strength._ The dragon bites at an enemy with swordlike teeth. If a creature's size is small, they must make a contested dexterity check or be consumed by the dragon. A consumed entity takes 6d6 damage per turn. If the dragon takes 20 damage in one turn from without (or 15 from within) it must succeed a D14 INF save, or spit up the consumed entity.  
+* __Claw:__ _2d12 + 5 Strength._ The dragon pierces its foe with foot-long claws.  
+* __Fire Breath:__ _6d12 + 4 Inner Fire._ The dragon unleashes a maelstrom of fire, causing the air to crackle and pop. The fire makes a 50 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
+* __Fireball:__ _4d12 + 4 Inner Fire._ The dragon belches a fireball at a targeted spot, which deals damage to everyone within a 20 foot radius.  
+* __Grab:__ _1d12 + 5 Strength._ The dragon snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on.  
+* __Tail Strike:__ _4d12 + 5 Strength._ The dragons tail whistles as it hurtles towards its enemies. The tail strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
   
 __Conditional Actions:__  
 * __Turn 1:__ Roar: All enemies must make a Spell Power save. On failure, they are frightened, and additionally have disadvantage on saves.  
@@ -291,9 +303,9 @@ __Abilities:__
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
   
 __Actions:__  
-* __Flail:__ _1d4 + 0 Strength._.  
-* __Bite:__ _1d2 + 0 Strength._.  
-* __Bow:__ _1d4 + -1 Dexterity._.  
+* __Flail:__ _1d4 + 0 Strength._ The gnoll pounces at an enemy with its flail.  
+* __Bite:__ _1d2 + 0 Strength._ The gnoll chomps down on an enemy with ragged teeth.  
+* __Bow:__ _1d4 + -1 Dexterity._ The gnoll uses its crude bow to take a shot at an enemy.  
   
   
 ___  
@@ -314,9 +326,9 @@ __Abilities:__
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
   
 __Actions:__  
-* __Bite:__ _1d2 + -1 Strength._.  
-* __Pain:__ _1d4 + 1 Inner Fire._ The attacked entity must make an Spell Power save. On failure, they are in intense pain, and must make their next action at disadvantage.  
-* __Frenzy:__ Cast on a friendly entity. The affected entity gains 1 armor, 5 feet of movement, makes all attacks with advantage.  
+* __Bite:__ _1d2 + -1 Strength._ The shaman bites at its enemy with rotting teeth.  
+* __Pain:__ _1d4 + 1 Inner Fire._ The Shaman barks a spell, and tendrils of black fly from its hands and at an enemy. The attacked entity must make an Spell Power save. On failure, they are in intense pain, and must make their next action at disadvantage.  
+* __Frenzy:__ Blood flows freely from the Shaman's hand as it gives itself a light cut and chants a spell on a friendly entity. The affected entity gains 1 armor, 5 feet of movement, makes all attacks with advantage.  
   
   
 ___  
@@ -336,11 +348,13 @@ ___
 __Abilities:__  
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
   
+__Special Action Rules:__  
+* __Multi-Flail:__ A gnoll brute can make 2 flail attacks as an action.  
+  
 __Actions:__  
-* __Multi Flail:__ A gnoll brute can make 2 flail attacks as an action.  
-* __Bite:__ _1d4 + 1 Strength._.  
-* __Longbow:__ _1d8 + -1 Dexterity._.  
-* __Flail:__ _1d4 + 1 Strength._.  
+* __Bite:__ _1d4 + 1 Strength._ The Brute tears at an enemy with its fangs.  
+* __Longbow:__ _1d8 + -1 Dexterity._ The Brute's longbow strains as it aims a shot, before releasing with a hiss.  
+* __Flail:__ _1d4 + 1 Strength._ The brute frantically clubs at a foe with its flail.  
   
   
 ___  
@@ -361,11 +375,11 @@ __Abilities:__
 * __Cornered Animal:__ If a gnoll is at less than half health, it can make a bite attack as an offhand action.  
   
 __Actions:__  
-* __Bite:__ _1d4 + 0 Strength._.  
-* __Minor Magic Armor:__ The Witch Doctor grants itself +1 armor.  
-* __Mass Frenzy:__ Cast on all friendly entities within 30 feet. Affected entities gain 1 armor, 5 feet of movement, and make all attacks with advantage.  
-* __Mass Minor Heal:__ Cast on all friendly entities within 30 feet. Affected entities regain 1d4 health.  
-* __Minor Life Drain:__ _1d4 + 1 Inner Fire._ Any damage done by life drain is restored to the Witch Doctor's health.  
+* __Bite:__ _1d4 + 0 Strength._ The witch doctor bites at its enemy with sharp fangs.  
+* __Minor Magic Armor:__ Reaching it's hands to the sky, the witch doctor barks a spell in guttural language. The Witch Doctor grants itself +1 armor.  
+* __Mass Frenzy:__ With a barked cry, the witch doctor casts a spell on all friendly entities within 30 feet. Affected entities gain 1 armor, 5 feet of movement, and make all attacks with advantage.  
+* __Mass Minor Heal:__ Smoke pours from the witch doctor's mouth and eyes, and rushes towards its allies. All allies within 30 feet are healed for 1d4 health.  
+* __Minor Life Drain:__ _1d4 + 1 Inner Fire._ The Witch Doctor points a finger at an enemy. They feel faint as their lifeforce is stolen. Any damage done by life drain is restored to the Witch Doctor's health.  
   
 __Conditional Actions:__  
 * __First Turn:__ Reposition: All gnolls on the field may move 5 feet.  
@@ -395,7 +409,7 @@ __Abilities:__
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Crude Sword:__ _1d4 + 1 Dexterity._.  
+* __Crude Sword:__ _1d4 + 1 Dexterity._ The goblin lunges forth with a brittle sword.  
   
   
 ___  
@@ -416,7 +430,7 @@ __Abilities:__
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Bow:__ _1d4 + 1 Dexterity._.  
+* __Bow:__ _1d4 + 1 Dexterity._ A bent arrow made of knotted wood and fletched with sparrow feathers hisses through the air.  
   
   
 ___  
@@ -437,9 +451,9 @@ __Abilities:__
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Hex:__ The target must make an Spell Power Save. On failure, they must make all moves with disadvantage until they succeed. Repeat each turn.  
-* __Firebolt:__ _1d6 + 1 Inner Fire._.  
-* __Hasten:__ Cast on an ally to immediately allow them to move up to their maximum movement.  
+* __Hex:__ The goblin chants a ritual and reddish runes appear around its target. The target must make an Spell Power Save. On failure, they must make all moves with disadvantage until they succeed. Repeat each turn.  
+* __Firebolt:__ _1d6 + 1 Inner Fire._ A bolt of crackling fire flies forth from the shaman's hands.  
+* __Hasten:__ The shaman reaches into it's pouch and produces a fistfull of powder, which it sets alight in a flash. An ally is immediately allowed to move up to their maximum movement.  
   
   
 ___  
@@ -460,8 +474,8 @@ __Abilities:__
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Heal:__ Heal an ally for 1d4 health.  
-* __Burst Of Light:__ _1d4 + 1 Inner Fire._ Range 15 feet. The attacked enemy must make a Spell Power save or be rendered blind during their next turn, giving them disadvantage on all actions.  
+* __Heal:__ The goblin cleric barks a prayer to whatever awful god it worships. It heals an ally for 1d4 health.  
+* __Burst Of Light:__ _1d4 + 1 Inner Fire._ A burst of white light flies from the cleric's fingertips. Range 15 feet. The attacked enemy must make a Spell Power save or be rendered blind during their next turn, giving them disadvantage on all actions.  
   
   
 ___  
@@ -482,11 +496,14 @@ ___
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
+__Special Action Rules:__  
+* __Villain:__ If the goblin chieftain is being used as a villain, it may take one out of turn villain action per round. This action may be either a call for aid or an attack.  
+  
 __Actions:__  
-* __Hurl Poison Spear:__ _1d8 + 1 Dexterity._ The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage.  
+* __Hurl Poison Spear:__ _1d8 + 1 Dexterity._ The chieftain hurls a knobby spear at its enemy. The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage.  
   
 __Offhand Actions:__  
-* __Drink Minor Health Potion:__ Goblin Chieftains begin with 1 minor health potion.  
+* __Drink Minor Health Potion:__ The Goblin Chieftain begins with 1 minor health potion.  
   
 __Villain Actions:__  
 * __Summon Allies:__ Each turn, the Goblin Chieftain may roll 1d20. On a 18, a goblin swordsman is summoned, on a 19 a goblin archer, on a 20, a goblin shaman.  
@@ -518,8 +535,8 @@ ___
 | 3 ( +3 ) | -3 ( -3 ) | -7 ( -5 ) | 2 ( +2 ) | -2 ( -2 ) | -3 ( -3 ) | 0 ( +0 ) |  
   
 __Actions:__  
-* __Hurl Goblin:__ _2d6 + 3 Strength._ If there is a goblin within 10 feet, lift it up and throw it at an enemy. Deals damage to both the goblin and the target.  
-* __Club:__ _1d8 + 3 Strength._ On a critical hit, the enemy is tossed backwards 5 feet.  
+* __Hurl Goblin:__ _2d6 + 3 Strength._ If there is a goblin within 10 feet, the ogre can snatch it up and throw it at an enemy. Deals damage to both the goblin and the target.  
+* __Club:__ _1d8 + 3 Strength._ The ogre's club hurtles through the air at its enemy. On a critical hit, the enemy is tossed backwards 5 feet.  
   
   
 ___  
@@ -538,12 +555,15 @@ ___
  | --------|--------|--------|--------|--------|--------|--------|
 | 3 ( +3 ) | -3 ( -3 ) | -7 ( -5 ) | 2 ( +2 ) | -2 ( -2 ) | -3 ( -3 ) | 0 ( +0 ) |  
   
+__Special Action Rules:__  
+* __Villain:__ If the Ogre Lord is being used as a villain, it may make one out of turn villain action per round.  
+  
 __Actions:__  
-* __Studded Club:__ _1d12 + 3 Strength._ On a critical hit, the enemy is tossed backwards 5 feet.  
-* __Grab:__ Force an enemy to make a contested dexterity save. On failure, they are grabbed and hoisted ten feet into the air. If the Ogre takes damage, it must make a D10 strength save or drop the grabbed entity.  
-* __Slam Grabbed Entity:__ _2d8 + 3 Strength._ Slam a grabbed entity into the ground with full force. They must make a D12 Dex save or drop their weapon.  
-* __Hurl Grabbed Entity:__ _2d6 + 3 Strength._ Hurl a grabbed entity at a target. Both the entity and the target take damage.  
-* __Club With Grabbed Entity:__ _1d8 + 3 Strength._ Use a grabbed entity as a club. Both the entity and the target take damage.  
+* __Studded Club:__ _1d12 + 3 Strength._ The Ogre Lord swings a cruel, studded club at an enemy. On a critical hit, the enemy is tossed backwards 5 feet.  
+* __Grab:__ The Ogre Lord grabs at an enemy with sausage-like fingers. Force an enemy to make a contested dexterity save. On failure, they are grabbed and hoisted ten feet into the air. If the Ogre takes damage, it must make a D10 strength save or drop the grabbed entity.  
+* __Slam Grabbed Entity:__ _2d8 + 3 Strength._ The Ogre Lord slams a grabbed entity into the ground with full force. They must make a D12 Dex save or drop their weapon.  
+* __Hurl Grabbed Entity:__ _2d6 + 3 Strength._ The Ogre Lord Hurls a grabbed entity at a target. Both the entity and the target take damage.  
+* __Club With Grabbed Entity:__ _1d8 + 3 Strength._ The Ogre Lord uses a grabbed entity as a club. Both the entity and the target take damage.  
   
 __Conditional Actions:__  
 * __First Turn:__ CHARGE: All nearby allies, including the Ogre Lord, get to move their full movement towards the enemy.  
@@ -572,8 +592,8 @@ ___
 | -1 ( -1 ) | 1 ( +1 ) | -3 ( -3 ) | -3 ( -3 ) | -3 ( -3 ) | -2 ( -2 ) | 0 ( +0 ) |  
   
 __Actions:__  
-* __Sword:__ _1d4 + -1 Strength._.  
-* __Bow:__ _1d4 + 1 Dexterity._.  
+* __Sword:__ _1d4 + -1 Strength._ The skeleton strikes at a foe with a brittle sword.  
+* __Bow:__ _1d4 + 1 Dexterity._ The skeleton fires a shot from its aged, chipped bow.  
   
   
 ___  
@@ -598,8 +618,8 @@ __Abilities:__
 * __Hard To Kill:__ If a zombie hits 0 health, it may make a D15 save. On success, it regains 1hp.  
   
 __Actions:__  
-* __Grapple:__ _1d2 + 1 Strength._ The attacked entity must succeed at a contested dexterity check or be grappled.  
-* __Bite:__ _1d4 + 1 Strength._ A zombie may only bite a grappled entity.  
+* __Grapple:__ _1d2 + 1 Strength._ The zombie grabs at its enemy with cold fingers. The attacked entity must succeed at a contested dexterity check or be grappled.  
+* __Bite:__ _1d4 + 1 Strength._ Rotten teeth tear at an enemies flesh. A zombie may only bite a grappled entity.  
   
   
 ___  

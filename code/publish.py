@@ -90,11 +90,17 @@ def publish_book_of_known_beasts():
           md.paragraph("__Abilities:__")
           for ability, description in info['abilities'].items():
             ability_str = f"* __{ability.replace('_', ' ').title()}:__ {description}"
-            if not ability_str[-1] == '.':
-              ability_str += '.'
             md.paragraph(ability_str)
           # Reset after abilities
           md.add_whitespace()
+
+        if 'action_spec' in info:
+          md.paragraph("__Special Action Rules:__")
+          for key, val in info['action_spec'].items():
+            md.paragraph(f"* __{key.replace('_', ' ').title()}:__ {val}")
+          # Reset after action spec
+          md.add_whitespace()
+
 
         md.paragraph("__Actions:__")
         for action, a_info in info['actions'].items():
@@ -102,10 +108,7 @@ def publish_book_of_known_beasts():
           if 'damage' in a_info:
             damage_addition = rnr_utils.convert_stat_to_effective_stat(info['stats'][a_info['modifier']])
             action_str = f"{action_str} _{a_info['damage']} + {damage_addition} {a_info['modifier'].replace('_', ' ').title()}._"
-          if 'effect' in a_info:
-            action_str = f"{action_str} {a_info['effect']}"
-          if not action_str[-1] == '.':
-            action_str += '.'
+          action_str = f"{action_str} {a_info['description']}"
           md.paragraph(action_str)
 
         # Reset after action
@@ -116,8 +119,6 @@ def publish_book_of_known_beasts():
           if action_type in info:
             md.paragraph(f"__{action_type.replace('_', ' ').title()}:__")
             for action, description in info[action_type].items():
-              if not description[-1] == '.':
-                description += '.'
               md.paragraph(f"* __{action.replace('_', ' ').title()}:__ {description}")
             # Reset after new action type.
             md.add_whitespace()
