@@ -21,6 +21,10 @@ class markdown_handler:
             append_file.write('')
 
     def start_heading(self, heading, level):
+      if heading in self.BUFFER:
+        print(f"ERROR: Duplicate heading {heading}. Not adding.")
+        return
+
       if level <= 0 or level >= 6:
         print("ERROR cannot print heading level {level}")
         sys.exit(1)

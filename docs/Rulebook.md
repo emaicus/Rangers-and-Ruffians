@@ -4,8 +4,8 @@
      * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
      * [What do you need to play?](#what-do-you-need-to-play)  
      * [How does the game work?](#how-does-the-game-work)  
-   * [Being the Grand Poohbah](#being-the-grand-poohbah)  
-   * [Participating as a Player](#participating-as-a-player)  
+     * [Being the Grand Poohbah](#being-the-grand-poohbah)  
+     * [Participating as a Player](#participating-as-a-player)  
    * [Dice and Rolling](#dice-and-rolling)  
      * [Advantage and Disadvantage](#advantage-and-disadvantage)  
      * [Inspiration Dice](#inspiration-dice)  
@@ -225,7 +225,7 @@ and are the font from which most of the life of a tabletop RPG flows, but rememb
   
 
   
-## Being the Grand Poohbah
+### Being the Grand Poohbah
 Regardless of the tabletop RPG being played, the Game Master (or Grand Poohbah)
 is the unsung hero. It is up to the Poohbah to present the game's world,
 arbitrate player interactions, and to interpret the game's rules. Despite
@@ -247,7 +247,7 @@ section:
   
 
   
-## Participating as a Player
+### Participating as a Player
 Participating as a player in Rangers and Ruffians is a bit easier than being the
 Poohbah. However, that doesn't mean that you shouldn't take it seriously. The
 Poohbah may present the world, but only _you_ can engage with it! Before we get
@@ -994,6 +994,7 @@ It is important to remember that a character can be much, _much_ more than just 
 As a player, it is up to you to breathe life into your character, and make them into a living, breathing
 part of the world that your Poohbah is weaving. To this end, consider the following:
 1. Where did my character come from? Do they have family? Friends?
+2. Is my character family or friends with any of the other players' characters?
 2. What does my character want? Where are they going? What motivates them?
 3. Why would my character be interested in going on an adventure?
 4. What are a few of my characters virtues? What about vices?
@@ -1002,8 +1003,8 @@ part of the world that your Poohbah is weaving. To this end, consider the follow
   
   
 As you come up with a backstory for your character remember the following:
-Try to keep things vague but evocative, so that your Poohbah can easily weave them into their world.
-Consider the following quick backstory: 
+Try to keep things vague but evocative, and which is open ended. That way, your Poohbah can easily weave it into their world.
+Consider the following simple backstory: 
 > "Elizabeth is from the town of Lindhearth. Some years ago she 
 was visited by an aged wizard, who warned her of a great trial approaching in her future. Ever since that
 day, she has been preparing for an evil that may never come." 
@@ -1022,7 +1023,7 @@ While quite basic, let's examine what the above backstory does well.
   
   
 Let's make a second backstory.
-> "Richard spent his entire childhood in the Lost Library. Only, it wasn't called the 'Lost' Library, but the Holy Library.
+> "Richard spent his entire childhood in the Lost Library. Only, it wasn't called the 'Lost' Library, but the Holy Library back then.
    He had made friends with the old Clerics and Paladins that kept their noses in books all day, and had even gotten them to
    teach him some of their divine magics. His favorite of them was an old greybeard named Scanderbeg. All of this changed
    when a Gold Dragon descended on the Library, tearing through the roof and killing many of those within. With the help of

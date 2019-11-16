@@ -565,6 +565,94 @@ def spell_check(fix_errors=True, print_errors=True):
   
   return all_errors
   
+def check_known_beasts():
+  all_errors = list()
+  for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
+    for beast_class, beasts in category_info.items():
+      for beast, info in beasts.items():
+        if 'type' not in info:
+          all_errors.append(f'{beast} missing type.')
+        else:
+          try:
+            level_str, num, size = info['type'].split(' ')
+            if level_str != 'Level' or int(num) < 0 or int(num) > 15 or size not in ['Light', 'Heavy', 'Villain']:
+              all_errors.append(f'{beast}: malformed type')
+          except Exception as e:
+            all_errors.append(f'{beast}: (exception) malformed type')
+
+        if not 'health' in info:
+          all_errors.append(f'{beast}: missing health')
+        else:
+          try:
+            h = int(info['health'])
+            if h <= 0:
+              all_errors.append(f'{beast}: bad value for health')
+          except Exception as e:
+            all_errors.append(f'{beast}: malformed health')
+      
+        if not 'actions' in info:
+          all_errors.append(f'{beast}: does not have actions')
+        else:
+          for action, a_info in info['actions'].items():
+            if 'damage' in a_info:
+              if not 'modifier' in a_info:
+                all_errors.append(f'{beast} {action}: missing modifier')
+              else:
+                if not isinstance(a_info['modifier'], str):
+                  all_errors.append(f'{beast} {action}: modifier should be a string')
+                else:
+                  if not a_info['modifier'] in ["Strength", "Dexterity", "Inner_Fire"]:
+                    all_errors.append(f'{beast} {action}: bad modifier {a_info["modifier"]}')
+              try:
+                n, d = a_info['damage'].split('d')
+                n_i = int(n)
+                d_i = int(d)
+                if n_i <= 0 or d_i not in [2, 4, 6, 8, 10, 12, 20, 100]:
+                  all_errors.append(f'{beast} {action}: bad damage {a_info["damage"]}')
+              except Exception as e:
+                all_errors.append(f'{beast} {action}: (exception) bad damage {a_info["damage"]}')
+            else:
+              if not 'effect' in a_info:
+                all_errors.append(f'{beast} {action}: no damage or effect')
+
+            if 'modifier' in a_info and 'damage' not in a_info:
+              all_errors.append(f'{beast} {action}: has modifier but no damage')
+
+
+        if 'abilities' in info:
+          for ability, description in info['abilities'].items():
+            if not isinstance(description, str):
+              all_errors.append(f'{beast} {ability} does not have a string description.')
+
+        if not 'movement' in info:
+          all_errors.append(f'{beast}: does not have movement')
+        else:
+          if not isinstance(info['movement'], dict):
+            all_errors.append(f'{beast}: movement should be a dict of terrain to speed')
+          else:
+            for m_type, m_dist in info['movement'].items():
+              if not m_type in ['land', 'water', 'air']:
+                all_errors.append(f'{beast}: movement has unsupported type {m_type}')
+              if not isinstance(m_dist, int):
+                all_errors.append(f'{beast}: {m_type} movement is not an integer')
+
+        if not 'stats' in info:
+          all_errors.append(f'{beast}: does not have stats')
+        else:
+          for stat, val in info['stats'].items():
+            if not stat in rnr_utils.get_all_stat_names():
+              all_errors.append(f'{beast}: bad stat name {stat}')
+            if not isinstance(val, int):
+              all_errors.append(f'{beast}: bad {stat} value {val}')
+
+        for key in ['conditional_actions', 'sanctuary_actions', 'villain_actions', 'offhand_actions']:
+          if key in info:
+            for action_type, a_description in info[key].items():
+              if not isinstance(a_description, str):
+                all_errors.append(f'{beast} {key} {key}: description is not a string')
+
+
+  return all_errors
 
 
 if __name__ == '__main__':

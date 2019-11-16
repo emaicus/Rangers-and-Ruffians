@@ -14,17 +14,17 @@ STAT_STEPS = {
   2 : 1,
   3 : 1,
   4 : 1,
-  5 : 1,
-  6 : 1,
-  7 : 1,
-  8 : 2,
-  9 : 2,
-  10: 2,
-  11: 2,
-  12: 2,
-  13: 2,
-  14: 3,
-  15: 3
+  5 : 3,
+  6 : 3,
+  7 : 3,
+  8 : 3,
+  9 : 3,
+  10: 3,
+  11: 3,
+  12: 5,
+  13: 5,
+  14: 5,
+  15: 5
 }
 
 RECOMMENDED_WEAPONS = {
@@ -187,13 +187,13 @@ def roll_dice(dice, crit_allowed=True, advantage=False, disadvantage = False, mo
       selected_roll += random.randint(1, dice)
   return selected_roll + mod
 
-def run_game(players, level, required_health, armor, chatty= False):
+def run_game(players, level, required_health, armor, chatty= False, use_action_points=True):
   global DMG_STEPS, STAT_STEPS, BUFFER  
   #chatty=True
   curr_health = required_health
   combatants = list()
   for character in players:
-    action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level])
+    action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level]) if use_action_points else 0
     caster = rnr_utils.is_casting_class(character.rnr_class_obj)
     if caster:
       stat_mod = get_real_stat_value(character.get_stat('Inner_Fire') + STAT_STEPS[level])
@@ -214,7 +214,7 @@ def run_game(players, level, required_health, armor, chatty= False):
       print(f'Monster Health: {curr_health}')
     for combatant in combatants:
       damage, ap_spent = choose_attacks(level, combatant['caster'], action_points_to_spend=combatant['action_points'], compute_average=False, stat_mod = stat_mod, enemy_armor=armor, actually_role=True)
-        
+      combatant['action_points'] -= ap_spent
       curr_health -= damage
       if chatty:
         print(f'Combatant dealt {damage} damage to the enemy ({curr_health} remaining)')
@@ -223,7 +223,7 @@ def run_game(players, level, required_health, armor, chatty= False):
     rounds_survived += 1
   return rounds_survived
 
-def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5):
+def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5,use_action_points=True):
   global DMG_STEPS, STAT_STEPS, BUFFER
   
   BUFFER.start_heading(f'{title}', 4)
@@ -238,7 +238,7 @@ def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_a
     dat[level] = [0 for i in range(num_rounds_to_simulate)]
 
     for character in players:
-      action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level])
+      action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level]) if use_action_points else 0
       caster = rnr_utils.is_casting_class(character.rnr_class_obj)
       if caster:
         stat_mod = get_real_stat_value(character.get_stat('Inner_Fire') + STAT_STEPS[level])
@@ -273,7 +273,7 @@ def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_a
         stats[level][required_health][armor] = list()
         for i in range(num_games):
 
-          rounds_survived = run_game(players, level, required_health, armor, chatty= False)
+          rounds_survived = run_game(players, level, required_health, armor, chatty= False, use_action_points=use_action_points)
           stats[level][required_health][armor].append(rounds_survived)
 
   BUFFER.start_heading(f'Simulated {title}', 4)
@@ -290,7 +290,7 @@ def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_a
   BUFFER.add_whitespace()
   return stats
 
-def make_dice(target, negative_mod = 0):
+def make_dice(target, negative_mod = 0, min_mod=100):
   dice = [2,4,6,8,10,12]
 
   # From low to high, see how many dice it takes.
@@ -302,13 +302,13 @@ def make_dice(target, negative_mod = 0):
       dmg = (mult * (die / 2)) - negative_mod
       if dmg >= target:
         return mult, die, 0
-      elif dmg + 1 >= target:
+      elif dmg + 1 >= target and 1 <= min_mod:
         return mult, die, 1
-      elif dmg + 2 >= target and die not in [2, 4]:
+      elif dmg + 2 >= target and die not in [2, 4] and 2 <= min_mod:
         return mult, die, 2
-      elif dmg + 3 >= target and die not in [2,4,6]:
+      elif dmg + 3 >= target and die not in [2,4,6] and 3 <= min_mod:
         return mult, die, 3
-      elif target > 12 and dmg + 4 >= target and die not in [2,4,6]:
+      elif target > 12 and dmg + 4 >= target and die not in [2,4,6] and 4 <= min_mod:
         return mult, die, 4
       elif target > 18 and dmg + 5 >= target and die not in [2,4,6]:
         return mult, die, 5
@@ -538,7 +538,7 @@ def player_survivability():
   BUFFER.start_heading("Player Survivability",4)
   BUFFER.chart_title(['Level', 'Character Health', 'Character Armor'] + round_strs )
 
-  wizard_health = generate_health(STARTING_HEALTH['Sprout Wizard'])
+  wizard_health = generate_health(STARTING_HEALTH['Human Fighter'])
   # For every level
   for level in range(15 + 1):
     round_list = list()
@@ -547,17 +547,17 @@ def player_survivability():
       # Add 10% to the characters health so that our attack is a little overpowered.
       target = health / num_rounds
       multi_atk = 1
-      if target > 32:
-        multi_atk = 4
-      elif target > 16:
-        multi_atk = 3
-      elif target > 8:
-        multi_atk = 2
+      # if target > 32:
+      #   multi_atk = 4
+      # elif target > 16:
+      #   multi_atk = 3
+      # elif target > 8:
+      #   multi_atk = 2
 
       target = target / multi_atk
 
-
-      num,dice,mod = make_dice(target + (multi_atk - 1), RECOMMENDED_MAX_ARMOR[level])
+      # Armor comes in  through multiattack
+      num,dice,mod = make_dice(target + (multi_atk - 1), 0)
       atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
       
       append_str = atk if multi_atk == 1 else f'{multi_atk} x {atk}'
@@ -565,6 +565,12 @@ def player_survivability():
     BUFFER.chart_row([level, health, RECOMMENDED_MAX_ARMOR[level]] + round_list)
 
   BUFFER.add_whitespace()
+
+# DON'T CALL, HELPER
+def compute_avg_damage(num, dice, mod):
+  avg_roll = dice / 2
+  avg_damage = math.floor(avg_roll * num)
+  return int(avg_damage + mod)
 
 # DON'T CALL, HELPER
 def monster_template(monster_name, rounds_to_survive, hits_to_KO_a_player, monster_stats):
@@ -594,15 +600,31 @@ def monster_template(monster_name, rounds_to_survive, hits_to_KO_a_player, monst
           nearest_health = health
           nearest_armor = armor
     char_health = rnr_class[level]
-    num, dice, mod = make_dice(char_health / hits_to_KO_a_player, RECOMMENDED_MAX_ARMOR[level])
+    target = char_health / hits_to_KO_a_player
+    multi_atk = 1
+    if target > 34:
+      multi_atk = 4
+    elif target > 26:
+      multi_atk = 3
+    elif target > 8:
+      multi_atk = 2
+    target = target / multi_atk
+    # armor is computed in multi_atk
+    num, dice, mod = make_dice(target + (multi_atk - 1), 0, min_mod=level // 3)
+    avg_damage = compute_avg_damage(num, dice, mod)
+
     atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
-    BUFFER.chart_row([level, nearest_health, nearest_armor, atk])
+
+    append_str = f'({avg_damage}) {atk}' if multi_atk == 1 else f'({avg_damage*multi_atk}) {multi_atk} x {atk}'
+
+    BUFFER.chart_row([level, nearest_health, nearest_armor, append_str])
 
 def all_monster_info():
   global BUFFER
   # survivability prints and also runs simulation.
   boss_stats = survivability('Boss Survivability', players=[HUMAN_FIGHTER, SPROUT_WIZARD, AUTOMATON_BARBARIAN], num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5)
-  monster_stats = survivability('Monster Survivability', players=[HUMAN_FIGHTER,], num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5)
+  monster_stats_no_ap = survivability('Monster Survivability', players=[HUMAN_FIGHTER,], num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5, use_action_points=False)
+  #monster_stats_ap = survivability('Monster Survivability', players=[HUMAN_FIGHTER,], num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5, use_action_points=True)
 
   rounds_to_survive = 3
   hits_to_KO_a_player = 3
@@ -623,7 +645,7 @@ def all_monster_info():
   BUFFER.paragraph('To fight a party of 4, about 6 light monsters should be deployed to challenge them.')
   BUFFER.paragraph('Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.')
   BUFFER.add_whitespace()
-  monster_template("Light Monster", hits_to_survive, hits_to_KO_a_player, monster_stats)
+  monster_template("Light Monster", hits_to_survive, hits_to_KO_a_player, monster_stats_no_ap)
   BUFFER.add_whitespace()
 
   hits_to_survive = 4
@@ -635,7 +657,7 @@ def all_monster_info():
   BUFFER.paragraph('Treat a single heavy monster as 2 heavy monsters, and 1/3 of a boss.')
   BUFFER.paragraph('To fight a party of 4, about 3 heavy monsters should be deployed to challenge them.')
   BUFFER.add_whitespace()
-  monster_template("Heavy Monster", hits_to_survive, hits_to_KO_a_player, monster_stats)
+  monster_template("Heavy Monster", hits_to_survive, hits_to_KO_a_player, monster_stats_no_ap)
   BUFFER.add_whitespace()
 
 def dice_info():

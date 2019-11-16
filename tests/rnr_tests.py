@@ -109,6 +109,14 @@ class rnrTests(unittest.TestCase):
 
     self.assertEqual(len(errors), 0)
 
+  def test_book_of_known_beasts(self):
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    errors = balance_report.check_known_beasts()
+    if len(errors) > 0:
+      log_output("Known Beasts", errors)
+    self.assertEqual(len(errors),0)
+
+
 if __name__ == '__main__':
   unittest.main()
 

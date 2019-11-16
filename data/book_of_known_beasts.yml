@@ -1,0 +1,598 @@
+beasts:
+  wolves:
+    Dire Wolf Pup:
+      type: "Level 0 Light"
+      health: 4
+      actions:
+        Nip:
+          modifier: "Strength"
+          damage: "1d4"
+        Yip:
+          effect: "Roll 1d20. On a 15 or above, any nearby wolves run to the pup's aid."
+      movement:
+        land: 10
+      stats:
+        Charisma: 0
+        Dexterity: -2
+        Inner_Fire: -7
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: 0
+    Forest Wolf:
+      type: "Level 1 Light"
+      health: 12
+      actions:
+        bite:
+          modifier: "Strength"
+          damage: "1d6"
+        howl:
+          effect: "All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage."
+      abilities:
+        Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
+      movement:
+        land: 20
+      stats:
+        Charisma: 0
+        Dexterity: 1
+        Inner_Fire: -5
+        Intelligence: 0
+        Luck: 0
+        Perception: 3
+        Strength: 1
+    Dire Wolf:
+      type: "Level 1 Heavy"
+      health: 18
+      actions:
+        multi_bite: 
+          effect: "An Alpha Wolf can make 2 bite attacks as an action."
+        bite: 
+          damage: "1d6"
+          modifier: "Strength"
+          effect: "Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone."
+        howl:
+          effect: "All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage."
+      abilities:
+        Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
+      movement:
+        land: 20
+      stats:
+        Charisma: 0
+        Dexterity: 2
+        Inner_Fire: -3
+        Intelligence: 1
+        Luck: 0
+        Perception: 3
+        Strength: 2
+    Alpha Wolf:
+      type: "Level 1 Villain"
+      health: 40
+      actions:
+        multi_bite: 
+          effect: "An Alpha Wolf can make 2 bite attacks as an action."
+        bite: 
+          damage: "1d6"
+          modifier: "Strength"
+          effect: "Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone."
+        howl:
+          effect: "All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage."
+      abilities:
+        Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
+      movement:
+        land: 20
+      conditional_actions:
+        First Turn: "Howl, giving all allies 10 feet of movement."
+        Second Turn: "Growl, causing all players to make a Spell Power Save or become frightened."
+        Third Turn: "Howl, calling 1d4 Forest Wolves into the fray. "
+      sanctuary_actions:
+        Dark Lair: "If you attack a Alpha Wolf in it's den, it will likely be dark inside."
+        From the Shadows: "Every turn while fighting an Alpha Wolf in its lair, roll 1d20. On a 18 or 19, a Forest Wolf enters the fray. On a 20, a Dire Wolf appears."
+        Pups: "An Alpha Wolf Den will almost certainly have pup within. If a pup is harmed, the Alpha Wolf howls, and all nearby wolves gain advantage on their next attack."
+      stats:
+        Charisma: 0
+        Dexterity: 2
+        Inner_Fire: 0
+        Intelligence: 1
+        Luck: 0
+        Perception: 3
+        Strength: 2
+dragons:
+  red_dragons:
+    red_dragon_hatchling:
+      type: "Level 0 Light"
+      health: 6
+      armor: 1
+      actions:
+        Nip:
+          modifier: "Strength"
+          damage: "1d2"
+        Cinder:
+          damage: "1d2"
+          modifier: "Inner_Fire"
+          effect: "The dragon spits out a tiny bit of cinder, capable of igniting dry grass, thatch, or wood."
+        Yip:
+          effect: "Roll 1d20. On a 15 or above, the hatchling alerts nearby allies that it is in danger."
+      movement:
+        land: 5
+      stats:
+        Charisma: 0
+        Dexterity: -1
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 0
+        Perception: 0
+        Strength: -3
+    red_dragon_whelp:
+      type: "Level 3 Heavy"
+      health: 36
+      armor: 2
+      actions:
+        multi_claw: 
+          effect: "A dragon whelp  can make 2 claw attacks as an action"
+        Bite:
+          modifier: "Strength"
+          damage: "2d10"
+        Claw:
+          damage: "1d10"
+          modifier: "Strength"
+        Minor Fire Breath:
+          damage: "4d6"
+          modifier: "Inner_Fire"
+          effect: "The fire makes a 15 foot cone, damaging all enemies within."
+        Dive Bomb:
+          damage: "2d12"
+          modifier: "Strength"
+          effect: "If the dragon whelp is in flight, it can dive bomb an enemy, smashing into them with claws and talons. If the enemy fails an contested dex save, they are thrown 10 feet."
+      movement:
+        land: 10
+        air: 30
+      stats:
+        Charisma: 1
+        Dexterity: 2
+        Inner_Fire: 1
+        Intelligence: 1
+        Luck: 0
+        Perception: 2
+        Strength: 3
+    red_drake:
+      type: "Level 5 Villain"
+      health: 85
+      armor: 3
+      actions:
+        multi_attack: 
+          effect: "A drake can make 2 claw attacks and 1 bite as an action"
+        Bite:
+          modifier: "Strength"
+          damage: "2d10"
+        Claw:
+          damage: "1d10"
+          modifier: "Strength"
+        Fire Breath:
+          damage: "6d8"
+          modifier: "Inner_Fire"
+          effect: "The fire makes a 30 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged)"
+        Grab:
+          damage: "1d12"
+          modifier: "Strength"
+          effect: "An enemy must attempt a contested DEX check. On failure, the drake grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D14 strength check to hang on."
+        Tail Strike: 
+          damage: "4d8"
+          modifier: "Strength"
+          effect: "Strikes all enemies up to 10 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail."
+      villain_actions:
+        Tail Strike: "A red drake can make a Tail Strike as a villain action."
+      conditional_actions:
+        Turn 1: "Roar: All enemies must make a Spell Power save. On failure, they are frightened, and additionally have disadvantage on saves."
+        Turn 2: "Wingbeats: The dragon beats its wings, dealing 2d6 damage. All enemies within 30 feet must make an D14 Strength check or be pushed back 30 feet. Entities that save take half damage."
+        Turn 3: "Fire Breath: The drake's fire Breath instantly recharges."
+      sanctuary_actions:
+        Dug In: "If the drake can't make use of it's grab action because of a low ceiling, it instead gets advantage on it's fire breath recharge."
+        Molten Gold: "If the drake uses it's fire breathe in it's den, some of its horde begins to melt, causing molten gold to flow across the battlefield. Players must make dex checks to jump across rivers of molten gold, or take 2d8 damage if they touch it."
+        Falling Stones: "The thunderous sounds of your battle cause rocks to fall from the ceiling of the drake's cave. All players must make a D10 dex check or take 4d8 damage."
+      movement:
+        land: 15
+        air: 60
+      stats:
+        Charisma: 1
+        Dexterity: 3
+        Inner_Fire: 3
+        Intelligence: 2
+        Luck: 0
+        Perception: 3
+        Strength: 3
+    adult_red_dragon:
+      type: "Level 10 Villain"
+      health: 200
+      armor: 4
+      magic_armor: 4
+      actions:
+        multi_attack: 
+          effect: "An adult dragon can make 2 claw attacks and 1 bite as an action"
+        Devour:
+          modifier: "Strength"
+          damage: "2d12"
+          effect: "If a creature's size is small, they must make a contested dexterity check or be consumed by the dragon. A consumed entity takes 6d6 damage per turn. If the dragon takes 20 damage in one turn from without (or 15 from within) it must succeed a D14 INF save, or spit up the consumed entity."
+        Claw:
+          damage: "2d12"
+          modifier: "Strength"
+        Fire Breath:
+          damage: "6d12"
+          modifier: "Inner_Fire"
+          effect: "The fire makes a 50 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged)"
+        Fireball:
+          damage: "4d12"
+          modifier: "Inner_Fire"
+          effect: "The dragon spits up a fireball at a targeted spot, which deals damage to everyone within a 20 foot radius."
+        Grab:
+          damage: "2d12"
+          modifier: "Strength"
+          effect: "An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on."
+        Tail Strike: 
+          damage: "4d12"
+          modifier: "Strength"
+          effect: "Strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail."
+      villain_actions:
+        Tail Strike: "The dragon may make a tail strike as a villain action."
+      conditional_actions:
+        Turn 1: "Roar: All enemies must make a Spell Power save. On failure, they are frightened, and additionally have disadvantage on saves."
+        Turn 2: "Wingbeats: The dragon beats its wings, dealing 4d10 damage. All enemies within 30 feet must make an D18 Strength check or be pushed back 30 feet and knocked prone. Entities that save take half damage."
+        Turn 3: "Smokescreen: The dragon exhales toxic smoke, that fills the entirety of the battlefield. Visibility is considered low, giving ranged attacks disadvantage. Each turn, every player must make a D14 INF save or take 2d6 poison damage."
+        Turn 4: "Fire Breath: The dragon's fire Breath instantly recharges."
+        One Quarter Health: "Rivulets of molten blood start to flow down the dragon's hide. All melee attacks result in 1d6 fire damage."
+      sanctuary_actions:
+        Dug In: "If the drake can't make use of it's grab action because of a low ceiling, it instead gets advantage on it's fire breath recharge."
+        Molten Lair: "The dragon burns so hot that players take 1d6 damage per turn just by being in it. Rivers of lava and molten gold cover the floor."
+        Falling Stones: "The thunderous sounds of your battle cause rocks to fall from the ceiling of the drake's cave. All players must make a D10 dex check or take 4d8 damage."
+      movement:
+        land: 15
+        air: 60
+      stats:
+        Charisma: 3
+        Dexterity: 5
+        Inner_Fire: 5
+        Intelligence: 2
+        Luck: 0
+        Perception: 3
+        Strength: 7
+humanoids:
+  goblins:
+    Goblin Swordsman:
+      type: "Level 0 Light"
+      health: 8
+      actions:
+        Crude Sword:
+          modifier: "Dexterity"
+          damage: "1d4"
+      abilities:
+        Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+      movement:
+        land: 15
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: -2
+        Intelligence: 1
+        Luck: 0
+        Perception: 1
+        Strength: -1
+    Goblin Archer:
+      type: "Level 0 Light"
+      health: 6
+      actions:
+        Bow:
+          modifier: "Dexterity"
+          damage: "1d4"
+      abilities:
+        Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+      movement:
+        land: 20
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: -2
+        Intelligence: 1
+        Luck: 0
+        Perception: 1
+        Strength: -1
+    Goblin Shaman:
+      type: "Level 0 Light"
+      health: 4
+      actions:
+        Hex:
+          effect: "The target must make an Spell Power Save. On failure, they must make all moves with disadvantage until they succeed. Repeat each turn."
+        Firebolt:
+          damage: "1d6"
+          modifier: "Inner_Fire"
+        Hasten:
+          effect: "Cast on an ally to immediately allow them to move up to their maximum movement."
+      abilities:
+        Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+      movement:
+        land: 20
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 2
+        Luck: 0
+        Perception: 1
+        Strength: -3
+    Goblin Cleric:
+      type: "Level 0 Light"
+      health: 4
+      actions:
+        Heal:
+          effect: "Heal an ally for 1d4 health."
+        Burst of Light:
+          damage: "1d4"
+          effect: "Range 15 feet. The attacked enemy must make a Spell Power save or be rendered blind during their next turn, giving them disadvantage on all actions."
+          modifier: "Inner_Fire"
+      abilities:
+        Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+      movement:
+        land: 20
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 2
+        Luck: 0
+        Perception: 1
+        Strength: -3
+    Goblin Chieftain:
+      type: "Level 1 Villain"
+      health: 26
+      armor: 2
+      actions:
+        Hurl Poison Spear: 
+          modifier: "Dexterity"
+          damage: "1d8"
+          effect: "The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage."
+      offhand_actions:
+        Drink Minor Health Potion: "Goblin Chieftains begin with 1 minor health potion."
+      reactions:
+        Save Me: "Once per turn, when the goblin chieftain is under attack, it may force an ally within 30 feet to jump in front of it, taking the damage instead."
+      conditional_actions:
+        First Turn: "Protect Me: The goblin Chieftain immediately grants all allies up to their maximum movement, which must be used to get between the chieftan and danger."
+        Second Turn: "Kill That One!: The goblin Chieftain grants all nearby goblin archers the ability to make an attack on a single enemy of its choice."
+        Third Turn: "Release the Dogs!: The goblin shaman summons 2 forest wolves to its aid."    
+        One Quarter Health: "Smoke Bomb: The goblin Chieftain hurls a smoke bomb at the ground, and moves it's maximum movement away from combat."
+      villain_actions:
+        Summon Allies: "Each turn, the Goblin Chieftain may roll 1d20. On a 18, a goblin swordsman is summoned, on a 19 a goblin archer, on a 20, a goblin shaman."
+      abilities:
+        Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+      movement:
+        land: 20
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 2
+        Luck: 0
+        Perception: 1
+        Strength: -3
+  ogres:
+    Ogre:
+      type: "Level 1 Heavy"
+      health: 32
+      armor: 0
+      magic_armor: 2
+      actions:
+        Hurl Goblin: 
+          damage: "2d6"
+          modifier: "Strength"
+          effect: "If there is a goblin within 10 feet, lift it up and throw it at an enemy. Deals damage to both the goblin and the target."
+        Club:
+          damage: "1d8"
+          modifier: "Strength"
+          effect: "On a critical hit, the enemy is tossed backwards 5 feet."
+      movement:
+        land: 15
+      stats:
+        Charisma: -2
+        Dexterity: -3
+        Inner_Fire: 2
+        Intelligence: -7
+        Luck: 0
+        Perception: -3
+        Strength: 3
+    Ogre Lord:
+      type: "Level 1 Villain"
+      health: 48
+      armor: 2
+      magic_armor: 2
+      actions:
+        Studded Club:
+          damage: "1d12"
+          modifier: "Strength"
+          effect: "On a critical hit, the enemy is tossed backwards 5 feet."
+        Grab:
+          effect: "Force an enemy to make a contested dexterity save. On failure, they are grabbed and hoisted ten feet into the air. If the Ogre takes damage, it must make a D10 strength save or drop the grabbed entity."
+        Slam Grabbed Entity:
+          damage: "2d8"
+          modifier: "Strength"
+          effect: "Slam a grabbed entity into the ground with full force. They must make a D12 Dex save or drop their weapon."
+        Hurl Grabbed Entity:
+          damage: "2d6"
+          modifier: "Strength"
+          effect: "Hurl a grabbed entity at a target. Both the entity and the target take damage."
+        Club with Grabbed Entity:
+          damage: "1d8"
+          modifier: "Strength"
+          effect: "Use a grabbed entity as a club. Both the entity and the target take damage."
+      movement:
+        land: 15
+      conditional_actions:
+        First Turn: "CHARGE: All nearby allies, including the Ogre Lord, get to move their full movement towards the enemy."
+        Second Turn: "SPIN ATTACK: The Ogre Lord spins in a circle, hitting everything within 10 feet with its club for 1d8 damage, before throwing the club at an enemy within 15 feet."
+        Third Turn: "WAR CRY: The Ogre Lord gives out a Hideous Bellow. All nearby enemies must make a Spell Power save or be frightened by it." 
+      reactions:
+        Exposed Grab: If an enemy runs past the Ogre Lord, it can make a grab attack instead of a regular strike."
+      stats:
+        Charisma: -2
+        Dexterity: -3
+        Inner_Fire: 2
+        Intelligence: -7
+        Luck: 0
+        Perception: -3
+        Strength: 3
+  gnolls:
+    Lesser Gnoll:
+      type: "Level 0 Light"
+      health: 8
+      actions:
+        Flail:
+          modifier: "Strength"
+          damage: "1d4"
+        Bite:
+          modifier: "Strength"
+          damage: 1d2
+        Bow:
+          modifier: "Dexterity"
+          damage: 1d4
+      abilities:
+        Cornered Animal: "If a gnoll is at less than half health, it can make a bite attack as an offhand action."
+      movement:
+        land: 15
+      stats:
+        Charisma: -5
+        Dexterity: -1
+        Inner_Fire: -1
+        Intelligence: -1
+        Luck: 0
+        Perception: 0
+        Strength: 0
+    Lesser Gnoll Shaman:
+      type: "Level 0 Light"
+      health: 8
+      actions:
+        Bite:
+          modifier: "Strength"
+          damage: 1d2
+        Pain:
+          damage: "1d4"
+          modifier: "Inner_Fire"
+          effect: "The attacked entity must make an Spell Power save. On failure, they are in intense pain, and must make their next action at disadvantage."
+        Frenzy:
+          effect: "Cast on a friendly entity. The affected entity gains 1 armor, 5 feet of movement, makes all attacks with advantage."
+      abilities:
+        Cornered Animal: "If a gnoll is at less than half health, it can make a bite attack as an offhand action."
+      movement:
+        land: 15
+      stats:
+        Charisma: -5
+        Dexterity: -1
+        Inner_Fire: 1
+        Intelligence: 1
+        Luck: 0
+        Perception: 0
+        Strength: -1
+    Lesser Gnoll Brute:
+      type: "Level 0 Heavy"
+      health: 16
+      actions:
+        multi_flail:
+          effect: "A gnoll brute can make 2 flail attacks as an action."
+        Bite:
+          modifier: "Strength"
+          damage: 1d4
+        Longbow:
+          modifier: "Dexterity"
+          damage: 1d8
+        Flail:
+          modifier: "Strength"
+          damage: "1d4"
+      abilities:
+        Cornered Animal: "If a gnoll is at less than half health, it can make a bite attack as an offhand action."
+      movement:
+        land: 15
+      stats:
+        Charisma: -5
+        Dexterity: -1
+        Inner_Fire: 1
+        Intelligence: 1
+        Luck: 0
+        Perception: 0
+        Strength: 1
+    Lesser Gnoll Witch Doctor:
+      type: "Level 0 Villain"
+      health: 20
+      actions:
+        Bite:
+          modifier: "Strength"
+          damage: 1d4
+        Minor Magic Armor:
+          effect: "The Witch Doctor grants itself +1 armor."
+        Mass Frenzy:
+          effect: "Cast on all friendly entities within 30 feet. Affected entities gain 1 armor, 5 feet of movement, and make all attacks with advantage."
+        Mass Minor Heal:
+          effect: "Cast on all friendly entities within 30 feet. Affected entities regain 1d4 health."
+        Minor Life Drain:
+          damage: "1d4"
+          modifier: "Inner_Fire"
+          effect: "Any damage done by life drain is restored to the Witch Doctor's health"
+      abilities:
+        Cornered Animal: "If a gnoll is at less than half health, it can make a bite attack as an offhand action."
+      movement:
+        land: 15
+      conditional_actions:
+        First Turn: "Reposition: All gnolls on the field may move 5 feet."
+        Second Turn: "Fireball!: The Witch Doctor throws a vial of red liquid which does the equivalent damage of a fireball spell, but leaves the area burning until it is extinguished."
+        Third Turn: "Get Up: All dead gnolls raise as undead with 1hp."    
+        One Quarter Health: "Smoke Bomb: The goblin Chieftain hurls a smoke bomb at the ground, and moves it's maximum movement away from combat."
+      stats:
+        Charisma: 0
+        Dexterity: -2
+        Inner_Fire: 1
+        Intelligence: 1
+        Luck: 0
+        Perception: 0
+        Strength: 0
+undead:
+  zombies:
+    Shambling Zombie:
+      type: "Level 0 Light"
+      health: 8
+      actions:
+        Grapple:
+          modifier: "Strength"
+          damage: "1d2"
+          effect: "The attacked entity must succeed at a contested dexterity check or be grappled."
+        Bite:
+          modifier: "Strength"
+          damage: 1d4
+          effect: "A zombie may only bite a grappled entity."
+      abilities:
+        Smell Blood: "If a nearby zombie successfully bites an enemy, all nearby zombies double their speed."
+        Hard to Kill: "If a zombie hits 0 health, it may make a D15 save. On success, it regains 1hp."
+      movement:
+        land: 10
+      stats:
+        Charisma: -7
+        Dexterity: -2
+        Inner_Fire: -3
+        Intelligence: -7
+        Luck: 0
+        Perception: 0
+        Strength: 1
+  skeletons:
+    skeleton:
+      type: "Level 0 Light"
+      health: 6
+      actions:
+        Sword:
+          damage: "1d4"
+          modifier: "Strength"
+        Bow:
+          damage: "1d4"
+          modifier: "Dexterity"
+      movement:
+        land: 15
+      stats:
+        Charisma: -3
+        Dexterity: 1
+        Inner_Fire: -3
+        Intelligence: -3
+        Luck: 0
+        Perception: -2
+        Strength: -1

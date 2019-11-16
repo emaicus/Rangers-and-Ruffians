@@ -4,8 +4,8 @@ import os
 import rnr_utils
 import markdown_handler
 
-if __name__ == "__main__":
-  rnr_utils.printLogo()
+
+def publish_rulebook():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
@@ -44,8 +44,98 @@ if __name__ == "__main__":
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
 
-  
-
   md.write_toc(max_to_include=3)
   md.write_buffer()
+
+
+def publish_book_of_known_beasts():
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+
+  md = markdown_handler.markdown_handler('Book of Known Beasts _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
+
+  stats = rnr_utils.standard_stat_order()
+  abbreviations = [rnr_utils.abbreviate_stat(stat).upper() for stat in stats]
+
+  lines = []
+  for category in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
+    md.start_heading(f"{category.replace('_',' ').title()}:", 2)
+    for beast_class in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category].keys()):
+      md.start_heading(f"{beast_class.replace('_',' ').title()}:", 3)
+      for beast, info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category][beast_class].items():
+        md.start_heading(f"{beast.replace('_',' ').title()}:", 4)
+        md.paragraph(f"* ___{info['type']} Enemy___")
+        md.paragraph(f"* __Health:__ {info['health']}")
+
+        # This looks gross, but we're looping through stat names and then putting a nice little +/- effective stat.
+        my_stats = [ f"{info['stats'][x]} ( {'+' if int(info['stats'][x]) >= 0 else ''}{rnr_utils.convert_stat_to_effective_stat(int(info['stats'][x]))} )" for x in stats ]
+
+        md.paragraph(f"* __Spell Power:__ { 12 + rnr_utils.convert_stat_to_effective_stat( info['stats']['Inner_Fire'] ) } ")
+        md.paragraph(f"* __Movement:__")
+        for key, val in info['movement'].items():
+          md.paragraph(f"  * __{key.title()}:__ {val} feet")
+                #movement_str = '  '.join([f"{key.title()}: _{val}_" for key, val in info['movement'].items() ])
+
+        
+        if 'armor' in info:
+          md.paragraph(f"* __Armor:__ {info['armor']}")
+        if 'magic_armor' in info:
+          md.paragraph(f"* __Magic Armor:__ {info['magic_armor']}")
+
+        md.chart_title(abbreviations)
+        md.chart_row(my_stats)
+        md.add_whitespace()
+
+        if 'abilities' in info:
+          md.paragraph("__Abilities:__")
+          for ability, description in info['abilities'].items():
+            ability_str = f"* __{ability.replace('_', ' ').title()}:__ {description}"
+            if not ability_str[-1] == '.':
+              ability_str += '.'
+            md.paragraph(ability_str)
+          # Reset after abilities
+          md.add_whitespace()
+
+        md.paragraph("__Actions:__")
+        for action, a_info in info['actions'].items():
+          action_str = f"* __{action.replace('_', ' ').title()}:__"
+          if 'damage' in a_info:
+            damage_addition = rnr_utils.convert_stat_to_effective_stat(info['stats'][a_info['modifier']])
+            action_str = f"{action_str} _{a_info['damage']} + {damage_addition} {a_info['modifier'].replace('_', ' ').title()}._"
+          if 'effect' in a_info:
+            action_str = f"{action_str} {a_info['effect']}"
+          if not action_str[-1] == '.':
+            action_str += '.'
+          md.paragraph(action_str)
+
+        # Reset after action
+        md.add_whitespace()
+
+
+        for action_type in ['offhand_actions', 'villain_actions', 'conditional_actions', 'sanctuary_actions']:
+          if action_type in info:
+            md.paragraph(f"__{action_type.replace('_', ' ').title()}:__")
+            for action, description in info[action_type].items():
+              if not description[-1] == '.':
+                description += '.'
+              md.paragraph(f"* __{action.replace('_', ' ').title()}:__ {description}")
+            # Reset after new action type.
+            md.add_whitespace()
+
+        # One last reset just in case.
+        md.add_whitespace()
+        md.paragraph('___')
+
+  md.write_toc(max_to_include=4)
+  md.write_buffer()
+
+
+
+
+if __name__ == "__main__":
+  rnr_utils.printLogo()
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  
+  publish_rulebook()
+  publish_book_of_known_beasts()
   print("Done!")

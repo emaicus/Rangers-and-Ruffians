@@ -10,6 +10,7 @@ import time
 from tqdm import tqdm
 import random
 import string
+import traceback
 
 CODE_DIRECTORY = os.path.dirname(__file__)
 BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
@@ -25,7 +26,7 @@ GLOBAL_RACE_DATA = dict()
 GLOBAL_SKILL_DATA = dict()
 GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
-
+GLOBAL_BOOK_OF_KNOWN_BEATS = dict()
 GLOBAL_MAGIC_CLASSES = dict()
 
 GLOBAL_INITIAL_SPELL_ABILITIES = dict()
@@ -562,6 +563,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
         convert_yaml_file_to_json_file(source, destination)
       except Exception as e:
         print("ERROR: Could not install {0} to {1}".format(source, destination))
+        traceback.print_exc()
         raise
       timestamps[filename] = mod_time
 
@@ -571,7 +573,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -590,6 +592,7 @@ def load_Rangers_And_Ruffians_Data():
   skill_path = os.path.join(INSTALL_DIRECTORY, 'skills.json')
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
   art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
+  known_beasts_path = os.path.join(INSTALL_DIRECTORY, 'book_of_known_beasts.json')
 
   with open(spell_path) as data_file:
     GLOBAL_SPELL_BOOKS = json.load(data_file)
@@ -626,6 +629,9 @@ def load_Rangers_And_Ruffians_Data():
   with open(art_path) as data_file:
     GLOBAL_ART_DICTIONARY = json.load(data_file)
 
+  with open(known_beasts_path) as data_file:
+    GLOBAL_BOOK_OF_KNOWN_BEATS = json.load(data_file)
+
   GLOBAL_MAGIC_CLASSES = {
     'bard': ["the_bard's_songbook", ],
     'cleric': ['the_book_of_healing', ],
@@ -655,6 +661,7 @@ def load_Rangers_And_Ruffians_Data():
     'Master Fighting Techniques' : 'Master_Techniques',
     'Legendary Fighting Techniques' : 'Legendary Techniques'
   }
+
 
   finish = time.time()
   #print('LOAD TIME: {0}(s)'.format(finish - start))
@@ -867,6 +874,17 @@ def get_rnr_race_data(name):
     return copy.deepcopy(GLOBAL_RACE_DATA[name.title()])
   return None
 
+def convert_stat_to_effective_stat(stat):
+  # Remember if we should negate the stat at the end
+  neg = True if stat < 0 else False
+  # Absolute value to simplify code and help with rounding
+  stat = abs(stat)
+  # The first 3 in either direction count, then it takes 2
+  neg_three = stat - 3
+  val = stat if stat <= 3 else 3 + neg_three // 2
+  # Add the negation back in
+  return -val if neg else val 
+
 def get_race_given_subrace(subrace):
   global GLOBAL_RACE_DATA
 
@@ -926,7 +944,7 @@ def get_all_subrace_names(underscore=True):
   return subrace_names
 
 def get_all_stat_names():
-  return ['Charisma','Dexterity','Strength','Inner_Fire','Intelligence','Luck','Perception']
+  return standard_stat_order()
 
 def get_all_rnr_abilities():
   global GLOBAL_ABILITY_DICT
