@@ -23,6 +23,7 @@
        * [Goblin Shaman:](#goblin-shaman)  
        * [Goblin Cleric:](#goblin-cleric)  
        * [Goblin Chieftain:](#goblin-chieftain)  
+       * [Goblin Wolf Rider:](#goblin-wolf-rider)  
      * [Ogres:](#ogres)  
        * [Ogre:](#ogre)  
        * [Ogre Lord:](#ogre-lord)  
@@ -513,6 +514,34 @@ __Conditional Actions:__
 * __Second Turn:__ Kill That One!: The goblin Chieftain grants all nearby goblin archers the ability to make an attack on a single enemy of its choice.  
 * __Third Turn:__ Release the Dogs!: The goblin shaman summons 2 forest wolves to its aid.  
 * __One Quarter Health:__ Smoke Bomb: The goblin Chieftain hurls a smoke bomb at the ground, and moves it's maximum movement away from combat.  
+  
+  
+___  
+
+  
+#### Goblin Wolf Rider:
+* ___Level 1 Heavy Enemy___  
+* __Health:__ 20  
+* __Spell Power:__ 11   
+* __Movement:__  
+  * __Land:__ 20 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 1 ( +1 ) | 1 ( +1 ) | 1 ( +1 ) | -1 ( -1 ) | -2 ( -2 ) | 2 ( +2 ) | 0 ( +0 ) |  
+  
+__Abilities:__  
+* __Unseated:__ If the wolf rider falls below half health, roll 1d20. If the roll is less than ten, the wolf dies and the goblin falls for 1d4 damage. If it is ten or greater, the goblin dies, leaving a forest wolf.  
+  
+__Special Action Rules:__  
+* __Multi-Attack:__ The wolf rider may make both a goblin attack (Sword Strike, Crude Bow, or Net) and a wolf action (Bite or Howl) in one action.  
+  
+__Actions:__  
+* __Sword Strike:__ _1d6 + 1 Dexterity._ The rider swings at an enemy with its sword.  
+* __Crude Bow:__ _1d6 + 1 Dexterity._ The rider aims a wobbly arrow shot at an enemy. This attack must be made with disadvantage.  
+* __Net:__ The rider throws a net at an enemy within 10 feet. The enemy must make a D10 dexterity save, or be grappled by the net.  
+* __Bite:__ _1d6 + 1 Strength._ The wolf tears at it's enemy with sharp fangs.  
+* __Howl:__ The wolf lets out a fearsome howl. All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage.  
   
   
 ___  

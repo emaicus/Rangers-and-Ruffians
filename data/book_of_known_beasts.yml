@@ -387,6 +387,40 @@ humanoids:
         Luck: 0
         Perception: 1
         Strength: -3
+    Goblin Wolf Rider:
+      type: "Level 1 Heavy"
+      health: 20
+      action_spec:
+        Multi-Attack: The wolf rider may make both a goblin attack (Sword Strike, Crude Bow, or Net) and a wolf action (Bite or Howl) in one action.
+      actions:
+        Sword Strike:
+          modifier: "Dexterity"
+          damage: "1d6"
+          description: "The rider swings at an enemy with its sword."
+        Crude Bow:
+          modifier: "Dexterity"
+          damage: "1d6"
+          description: "The rider aims a wobbly arrow shot at an enemy. This attack must be made with disadvantage."
+        Net:
+          description: "The rider throws a net at an enemy within 10 feet. The enemy must make a D10 dexterity save, or be grappled by the net."
+        Bite:
+          modifier: "Strength"
+          damage: "1d6"
+          description: "The wolf tears at it's enemy with sharp fangs."
+        Howl:
+          description: "The wolf lets out a fearsome howl. All players in earshot must make a Spell Power save, or be afraid, and make their next action with disadvantage."
+      abilities:
+        Unseated: "If the wolf rider falls below half health, roll 1d20. If the roll is less than ten, the wolf dies and the goblin falls for 1d4 damage. If it is ten or greater, the goblin dies, leaving a forest wolf."
+      movement:
+        land: 20
+      stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: -1
+        Intelligence: 1
+        Luck: 0
+        Perception: 2
+        Strength: 1
   ogres:
     Ogre:
       type: "Level 1 Heavy"
