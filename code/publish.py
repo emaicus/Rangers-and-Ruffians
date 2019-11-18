@@ -60,10 +60,37 @@ def publish_book_of_known_beasts():
   lines = []
   for category in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
     md.start_heading(f"{category.replace('_',' ').title()}:", 2)
-    for beast_class in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category].keys()):
+    c_info = rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category]
+    
+    if 'description' in c_info:
+      md.paragraph(f">{c_info['description']}")
+      md.add_whitespace()
+
+    if 'tactics' in c_info:
+      md.paragraph(f"___{c_info['tactics']}___")
+    
+    for beast_class in sorted(c_info['types'].keys()):
       md.start_heading(f"{beast_class.replace('_',' ').title()}:", 3)
-      for beast, info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category][beast_class].items():
+      b_info = c_info['types'][beast_class]
+      
+      if 'description' in b_info:
+        md.paragraph(f">{b_info['description']}")
+        md.add_whitespace()
+
+      if 'tactics' in b_info:
+        md.paragraph(f"___{b_info['tactics']}___")
+
+      for beast, info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category]['types'][beast_class]['types'].items():
         md.start_heading(f"{beast.replace('_',' ').title()}:", 4)
+
+        if 'description' in info:
+          md.paragraph(f">{info['description']}")
+          md.add_whitespace()
+
+        if 'tactics' in info:
+          md.paragraph(f"___{info['tactics']}___")
+
+
         md.paragraph(f"* ___{info['type']} Enemy___")
         md.paragraph(f"* __Health:__ {info['health']}")
 

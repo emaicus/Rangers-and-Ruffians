@@ -1189,10 +1189,11 @@ Dire Companion:
   type: rule
   brief: Your companion is dire in size.
 Pup:
-  description: Your companion animal is small size. See the book of known beasts for details.
+  description: You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, 
+               from the beasts section or a dragon hatchling from the book of known beasts.
   type: rule
-  brief: Your companion is small in size.
-Grown: 
+  brief: Choose a companion pup, kid, cub, or hatchling from the book of known beasts.
+Grown:
   description: Your companion animal is adult in size. See the book of known beasts for details.
   type: rule
   brief: Your companion animal is small in size.

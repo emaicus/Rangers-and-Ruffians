@@ -2433,7 +2433,7 @@ For the Beastmaster 'Animal Person' is an understatement. Beastmaster's begin th
   
 __Beastmaster Abilities:__ 
 * __Rules:__   
-  * __Pup:__ Your companion animal is small size. See the book of known beasts for details.  
+  * __Pup:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
 * __Choices:__   
   * __Animal Companion:__ At the beginning of your journey, you may choose a an animal companion. See the book of known beasts for stats.  
   * __Favorite Terrain:__ At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage on any check related to the terrain, and may take advantage on an action every third turn during combat.  
@@ -2444,7 +2444,7 @@ __Beastmaster Abilities:__
 __Level 0 Beastmaster__
 
 * __Rules:__   
-  * __Pup:__ Your companion animal is small size. See the book of known beasts for details.  
+  * __Pup:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
   
   
 * __Choices:__   

@@ -564,12 +564,42 @@ def spell_check(fix_errors=True, print_errors=True):
         print("  {0}".format(error))
   
   return all_errors
-  
+
+# Returns a list of errors found in a description.
+def string_key_check(dictionary, key, err_name, required=True, punctuation_check=True):
+  errors = list()
+  if key in dictionary:
+    if not isinstance(dictionary[key], str):
+      errors.append(f'{err_name}: {key} is not a string.')
+    else:
+      if not dictionary[key][-1] in ['.', '!'] and punctuation_check:
+        errors.append(f'{err_name}: {key} should end in punctuation.')
+  elif required:
+    errors.append(f'{err_name}: does not have a {key}.')
+
+  return errors
+
 def check_known_beasts():
   all_errors = list()
   for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
-    for beast_class, beasts in category_info.items():
-      for beast, info in beasts.items():
+    
+    all_errors += string_key_check(category_info, 'description', category)
+    all_errors += string_key_check(category_info, 'tactics', category)
+
+    if not 'types' in category_info:
+      all_errors.append(f'{category}: no types defined.')
+      continue
+    
+    for beast_class, beasts in category_info['types'].items():
+      all_errors += string_key_check(beasts, 'description', beast_class)
+      all_errors += string_key_check(category_info, 'description', category)
+
+      if not 'types' in beasts:
+        all_errors.append(f'{beast_class}: no types defined.')
+        continue
+
+      for beast, info in beasts['types'].items():
+        is_villain = False
         if 'type' not in info:
           all_errors.append(f'{beast} missing type.')
         else:
@@ -577,8 +607,25 @@ def check_known_beasts():
             level_str, num, size = info['type'].split(' ')
             if level_str != 'Level' or int(num) < 0 or int(num) > 15 or size not in ['Light', 'Heavy', 'Villain']:
               all_errors.append(f'{beast}: malformed type')
+            else:
+              if size == 'Villain':
+                is_villain = True
           except Exception as e:
             all_errors.append(f'{beast}: (exception) malformed type')
+
+        all_errors += string_key_check(beast, 'description', info, required=False)
+        all_errors += string_key_check(category_info, 'tactics', category, required=is_villain)
+
+        for k in ['average_damage_per_round', 'average_villain_damage_per_round']:
+          if k in info:
+            if not isinstance(info[k], int):
+              all_errors.append(f'{beast}: {k} ADPR is not an int')
+            if not is_villain and k == 'average_villain_damage_per_round':
+              all_errors.append(f'{beast}: has Villain ADPR despite not being a villain.')
+          elif is_villain and k == 'average_villain_damage_per_round':
+            all_errors.append(f'{beast}: is a villain but does not have a Villain ADPR.')
+          elif k == 'average_damage_per_round':
+            all_errors.append(f'{beast} is missing {k}.')
 
         if not 'health' in info:
           all_errors.append(f'{beast}: missing health')
