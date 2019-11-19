@@ -47,7 +47,6 @@ def publish_rulebook():
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
-
 def publish_book_of_known_beasts():
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
@@ -157,7 +156,13 @@ def publish_book_of_known_beasts():
   md.write_toc(max_to_include=4)
   md.write_buffer()
 
+def publish_pantheon():
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
+  md = markdown_handler.markdown_handler('Book of Lore _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
+
+  
 
 
 if __name__ == "__main__":

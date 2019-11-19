@@ -1,7 +1,9 @@
 # Changleog
-## Rangers V2.1
+## Rangers and Ruffians Version 2.1.0
 
 ### New Features:
+0. __The Last Huge Update!__
+  1. With the introduction of the changelog, future updates will be more frequent, but much smaller.
 1. __The Rangers and Ruffians Rulebook!__
   1. It was long past time for the rules of ```RnR``` to finally get written down, and with new Poohbah's stepping up to the plate,
      we finally did it! Please see ```docs/Rulebook.md``` to read through the (hopefully) complete rules of Rangers and Ruffians!
@@ -16,24 +18,27 @@
   4. These new changes mean that, for the first time ever, we can roll for stats! See the ```Rulebook``` for more info.
   5. ```Luck``` and ```Health Dice``` now vary inversely, so if you have a high ```Health Dice``` you have a low starting
     ```Luck``` and vice versa.
-3. __Renamings__
+3. __Weapon Balance:__
+  1. With new stat balance came new ```health```, ```rest```, ```weapon damage``` and ```magic damage``` balance tweaks.
+4. __Renamings__
   1. __Spell Points -> Action Points:__ ```Spell Points``` were to ```Action Points```. This reflects their new use by non-mage classes.
   2. __Spell Levels -> Spell Tiers:__ ```Spell Levels``` were renamed to ```Spell Tiers```. With the character leveling system in place, it is confusing
-    to talk about both spell and character levels. 
-4. __Introduction of Skills:__
-    1. When a player levels up, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
+    to talk about both spell and character levels.
+  3. __Opportunity Attacks -> Exposed Attacks__ 
+5. __Introduction of Skills:__
+    1. When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
     2. Skills are like small abilities that give you new ways to play your character.
     3. For example, a knight might gain access to firearms!
     4. Some skills have stat prerequisites. For example, you need 3 intelligence to gain access to tier zero magic.
     5. Some skills are upgrades of other skills. For example, you need the "Cook" skill before you can get the "Master Chef" skill.
-5. __New Race:__
+6. __New Race:__
     A new challenger approaches! The Kragraven is a bird based race. It has vestigial wings that it can use to jump high or to coast from great heights.
 
 ### Rule Changes:
 1. Spell Power is now computed as 12 + INF rather than 10 + (2 x INF). Under the previous system, if a player or enemy had even modestly high inner fire, it became nearly impossible to avoid their spells. For example, if an enemy had 4 inner fire, you would have to roll an 18 or greater to break their spell (10 + (2 x 4)). Now, you need to beat a 16 (12 + 4).
 
 ### All Races and Classes:
-The stat chances referenced [above](#new-features) affected all races and classes, and are not detailed here to save space.
+The stat changes referenced [above](#new-features) affected all races and classes, and are not detailed here to save space.
 To see the result of the changes, please view the ```Race``` and ```Class``` sections of the ```Rulebook.```
 
 ### Race Balance Changes:
@@ -234,36 +239,96 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
   * __Added Ability Side By Side__ _Level 8, advantage when adjacent to an ally._
 
 #### Ranger:
-  Removed Trap Master
-  Fire and Ice now costs 1 action point instead of 2.
-  Greater medicine potions reduced from 2d20 to 1d10
-  Monster slayer bonus damage reduced from 1d10 to 1d6
+* __Abilities:__
+  * __Removed Trap Master__ ___Able to create simple traps.___
+    * __Reasoning:__ Not in line with other ranger abilities. Too difficult to use in play.
+  * __Changed Fire and Ice__ ___Level 15, Add 1d6 elemental damage to each of your swords.___
+    * __Change:__ Now costs 1 action point instead of 2.
+    * __Reasoning:__ Increases the value of this capstone ability.
+  * __Changed Minor Medicine:__ ___Level 0, Create a health potion once per day (lasts 24 hours)___
+    * __Change:__ Removed requirement that you must be in your favorite terrain. Ability now creates a _Salve_ (heals 1d6+2 at
+      the time of this writing). The ability used to create a 1d20 health potion.
+    * __Reasoning:__ Favorite terrain requirement was restrictive. New health regained is in line with level system health.
+      Creating a _Salve_ means that the ability will scale more easily with any future health balancing changes.
+  * __Changed Greater Medicine:__ ___Level 7, Create a health potion once per day (lasts 24 hours)___
+    * __Change:__ Removed requirement that you must be in your favorite terrain. Ability now creates a _Minor Health Potion_ (heals 1d12+3 at
+      the time of this writing). The ability used to create 2 1d20 health potions.
+    * __Reasoning:__ Favorite terrain requirement was restrictive. New health regained is in line with level system health.
+      Creating a _Minor Health Potion_ means that the ability will scale more easily with any future health balancing changes.
+  * __Changed Monster Slayer:__ ___Additional damage vs monsters.___
+    * __Change:__ Rather than dealing a static 1d10 additional damage, monster slayer now awards an additional dice of damage.
+    * __Reasoning:__ In line with other such abilities. Additional damage dice scale better than static values.
 
-Rouge:
-  Added thief ability: Soft landing: Reduce any falling damage by 20 feet. level 7
+#### Rouge:
+* __Abilities:__
+  * __Added Subclass Thief Ability Soft Landing:__ ___Level 7, Reduce any falling damage by 20 feet.___
 
-Bard:
-  Added Imbue Weapon: 1 SP. Add 1d6 elemental damage to your weapon for 1 battle/1hr. Level 6
-  Boozehound is now a base ability
-  Removed multi-action
-  Restful Melody (Grant your party 1d8 extra healing when resting.) now costs 1 action point.
+#### Bard:
+* __Abilities:__
+  * __Added Imbue Weapon:__ ___Level 5, Costs 1 action point. Add a dice of elemental damage to your weapon for 1 battle/hr.___
+    * __Reasoning:__ Imbue weapon was a holdover from the battle mage, and makes the bard more versitle.
+      The ability was updated to add a dice of damage rather than a static 1d6.
+  * __Added Greater Imbue Weapon:__ ___Level 5, Costs 2 action points. Add 2 dice of elemental damage to your weapon for 1 battle/hr.___
+    * __Reasoning:__ Imbue weapon was a holdover from the battle mage, and makes the bard more versitle.
+      The ability was updated to add a 2 dice of damage rather than a static 1d10.
+  * __Boozehound is now a base ability:__
+    * __Reasoning:__ Subclassing to bard no longer gives you increased alcohol tolerance.
+  * __Removed multi-action__ ___Grants the wielder an extra action ever 3 turns.___
+    * __Reasoning:__ Multi-action been replaced with offhand attacks and spells.
+  * __Changed Restful Melody:__ ___Grant your party extra health when resting.___
+    * __Change:__ Restful Melody has been split into three abilities tiers (lesser, greater, major)
+      gained at levels 1, 9, 11, which grant the party 1d4, 1d10 and 2d10 extra health respectively. All tiers cost 1 action point.
+    * __Reasoning:__ Splitting Restful Melody into tiers means that it scales much better with new health
+      balancing. Giving restful melody a cost means that players must make a choice about whether to do it.
 
-Cleric:
-  Last ditch prayer now lets you add 1d8 to a roll.
-  Cost of last ditch prayer lowered to 1 from 1/3 turns.
+#### Cleric:
+* __Abilities:__
+  * __Changed Last Ditch Prayer:__ ___Level 3: Your deity helps you with a roll.___ 
+    * __Change:__ Now lets you add 1d8 to a roll rather than advantage. Cost changed from 1/3 turns
+      to 1 action point.
+    * __Reasoning:__ Old advantage based ability conflicts with the new _Luck_ system. Cost is in
+      line with other such abilities.
 
-Druid
-  Ascended action now also allows movement.
+#### Druid
+* __Abilities:__
+  * __Changed Ascended Action:__ ___Level 15, take an extra action out of turn when in the ascended state.___
+    * __Change:__ Ascended action is now an extra action _and_ a movement.
+    * __Reasoning:__ Increases utility of the capstone.
 
-Wizard:
-  Removed cost reduction
-  Wizards learn new spell tiers one level earlier than other casters.
+#### Wizard:
+* __Abilities:__
+  * __Changed Walking Stick:__ ___You start with an staff that adds extra damage to magic attacks.___
+    * __Change:__ The magic staff now adds +1 damage rather than +1d4 damage.
+    * __Reasoning:__ This is in line with current enemy balancing.
+  * __Wizards learn new spell tiers one level earlier than other casters.__
+    * __Reasoning:__ Helps to make wizards stand out among other casters.
 
-Archer:
-  Focus now costs 1 action point, up from 1/3 turns.
-  Dual shot now costs 1 action point, up from 1/3 turns.
-  Added ability: Expert Fletcher: Decrease arrow cost by 1. Level 10.
+#### Archer:
+* __Abilities:__
+  * __Changed Focus:__ ___Level 0, Spend 1 Action point to gain advantage on an attack.___
+    * __Change:__ Focus now costs 1 action point, up from 1/3 turns.
+    * __Reasoning:__ In line with new action point ability costs.
+  * __Dual Shot:__ ___Level 3, Spend 1 Action point to fire two arrows at once.___
+    * __Change:__ Dual Shot now costs 1 action point, up from 1/3 turns.
+    * __Reasoning:__ In line with new action point ability costs.
+  * __Dual Shot:__ ___Level 3, Spend 1 Action point to fire two arrows at once.___
+    * __Change:__ Dual Shot now costs 1 action point, up from 1/3 turns.
+    * __Reasoning:__ In line with new action point ability costs.
+  * __Added Expert Fletcher:__ ___Level 13 Reduce all arrow costs by 2.___
+    * __Reasoning:__ Allows better arrows to be used more freely at higher levels.
+  * __Tuned Arrow Economy:__
+    * __Change:__ With the introduction of expert fletcher, revisited arrow action point costs.
 
-Gunslinger:
-  Flash grenades now cost 1 action point, up from 0.
-  Bull Rush added to marksman (Bayonet Charge)
+#### Gunslinger:
+* __Abilities:__
+  * __Changed Flash Grenades:__ ___Blind enemies who fail a Dex check.___
+    * __Change:__ Now cost 1 action point, rather than 3/day.
+    * __Reasoning:__ In line with action point economy.
+  * __Added Marksman Ability Bull Rush:__ ___Level 1 Rush forward at least 10 feet to deal an extra dice of melee damage to an enemy (Bayonet Charge).___
+
+#### Spellbooks:
+  * __Balance Changes:__ Spell damage was balanced as part of the health/rest/monster/weapon damage re-balancing.
+
+## Pre- Rangers and Ruffians 2.1.0
+* This changelog was first established in Rangers and Ruffians 2.1.0. For details
+  about prior releases, please review the Github commit history.

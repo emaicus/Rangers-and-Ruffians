@@ -8,10 +8,10 @@ Armored:
   type: starting_item
   brief: +2 armor when worn.
 Bull Rush:
-  description: Spend 1 action point to burst forward 15 feet, doing 1d6 damage to everyone you hit and causing
-    them to fall prone if they fail a spell power saving throw.
+  description: Spend 1 action point to rush at least 10 feet, doing an additional dice of damage
+   to whoever you your target. The target must win at a contested strength check or fall prone.
   type: combat
-  brief: Burst forward 15 feet. 1d6 damage to anyone you hit. SP save or fall prone.
+  brief: Rush forward at least 10 ft. Additional dice of damage. SP save or fall prone.
   cost: 1
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
@@ -37,19 +37,19 @@ Animal Magnetism:
   type: general
   brief: You may attempt CHR checks to manipulate animals.
 Imbue Weapon:
-  description: As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 action point. Lasts 1 battle or 1 hour.
+  description: As an offhand action, add an additional dice of elemental damage to your weapon at the cost of 1 action point. Lasts 1 battle or 1 hour.
   type: combat
-  brief: 1 SP. Add 1d6 elemental damage to your weapon for 1 battle/1hr.
+  brief: Add a dice of elemental damage to your weapon for 1 battle/1hr.
   cost: 1
 Inherent Magic:
   description: You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.
   type: general
   brief: You can cast tier zero spells, and start 2 extra from any spellbook.
 Greater Imbue Weapon:
-  description: As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 action points. Lasts 1d4 turns.
+  description: As an offhand action, add two dice of elemental damage to your weapon for 2 spell points. Lasts 1 battle or 1 hour.
   type: combat
-  brief: For 1 action point, add 1d8 elemental damage to your weapon for 1d4 turns.
-  cost: 1
+  brief: Add 2 dice of elemental damage to your weapon for 1 battle/hour.
+  cost: 2
 Major Imbue Weapon:
   description: As an offhand action, add 1d12 elemental damage to your weapons at the cost of 1 action points. Lasts 1d4 turns.
   type: combat
@@ -192,7 +192,7 @@ Shadow and Light Arrows:
     Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against 
     your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch
     darkness. Light arrows deal an additional 1d6 light damage, and deal another
-    1d12 damage to the undead.
+    1d6 damage to the undead.
   type: general
   brief: "Shadow: +1d6. SP save or 1d4 turns blind. 10ft dark. Light: +1d6 +1d12 undead."
   cost: 1
@@ -210,13 +210,13 @@ Explosive Arrows:
     in a twenty foot radius.
   type: general
   brief: 2d10 explosion with a 20 foot radius.
-  cost: 2
+  cost: 3
 Blink Arrows:
   description: After learning more about magic, you have learned how to create blink arrows. 
     Blink arrows instantly teleport you to the position that they hit.
   type: general
-  brief: You can craft blink arrows. For info, see long description.
-  cost: 1
+  brief: You can craft blink arrows, which teleport you to where they hit.
+  cost: 2
 Net Arrows:
   description: You can now craft net arrows. When a net arrow
     hits its target, they must make an inner fire saving throw against your spell power.
@@ -233,7 +233,7 @@ Anti-Gravity Arrows:
     last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.
   type: general
   brief: SP save or gravity is reversed for them. Lasts 1 min, 1d4 turns, or till save.
-  cost: 1
+  cost: 2
 Smoke Arrow: 
   description: You can now craft smoke arrows. When a smoke arrow hits the ground, 
     it creates a smokescreen with a 30 foot radius.
@@ -263,7 +263,7 @@ Firestorm Arrow:
     turns. 
   type: general
   brief: After 1 turn, 15 ft. diameter. pillar of flame for 3 turns. 4d10 dmg.
-  cost: 3
+  cost: 4
 Charm:
   description: As an action, you may cast a charm spell on an entity. If the
     entity fails an inner fire saving throw against your spell power, they cannot
@@ -284,11 +284,11 @@ Color Choice:
     hold only three colors at a time unless Camouflage is being used.
     This may be used to gain advantage on a stealth check.
   type: advantage
-  brief: Costs 1 SP. Change scales' color. Advantage on stealth checks.
+  brief: Change scales' color. Advantage on stealth checks.
   cost: 1
 Commit to Memory:
-  description: At the beginning of a day, you may commit one spell to memory of tier
-    2 or greater. For the remainder of the day, that spell costs 1 fewer action points.
+  description: At the beginning of a day, you may commit one spell to memory of tier.
+    For the remainder of the day, that spell costs 1 fewer action points.
   type: combat
   brief: 1/day at the beginning, declare a tier 2 or greater spell to have -1 cost.
 Counter Attack:
@@ -485,9 +485,9 @@ Greater Choice Stat:
   type: choice
   brief: Add +2 to STR, DEX, or INF.
 Greater Medicine:
-  description: You can create 2 1d10 health potions per day. Potions keep for 24 hours. If you are in on your favorite terrain, potions restore an additional 1d10 health.
+  description: Spend 1 hour to create a Minor Health Potion once per day. Potions last 24 hours. 
   type: general
-  brief: You can create 2 1d10 health potions per day. Last 24 hours.
+  brief: You can create 1 Minor Health Potion per day. Last 24 hours.
 Hammer of Light:
   description: Any weapon that you wield does an additional dice of damage to undead.
   type: combat
@@ -671,9 +671,9 @@ Entangling Attack:
   brief: Force enemy SP save on attack. On fail, ensnared. Repeat check each turn.
   cost: 1
 Minor Medicine:
-  description: If you are in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.
+  description: Spend an hour to create a salve once per day. Salves keep for 24 hours.
   type: general
-  brief: If in favorite terrain, create 1 1d20 health potion per day. Lasts 24 hours.
+  brief: Spend 1 hr. to create a salve once per day. Lasts 24 hours.
 Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
@@ -998,9 +998,9 @@ Vegan:
     -1 VIT and STR, gain +2 CHR. As a vegan, you can't harvest souls from the innocent, but
     limit Mortal Coil to once per month.
 Walking Stick:
-  description: You begin your adventure with a wizard's staff which gives you 1d4 additional damage to all spells.
+  description: You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.
   type: starting_item
-  brief: You have a wizards staff that adds 1d4 to spell damage.
+  brief: You have a wizards staff that adds +1 to spell damage.
 Warm Butter:
   description: Your are naturally talented chef. Any food that you cook heals 1d6 health.
   type: general
@@ -1349,17 +1349,17 @@ Freed from this Mortal Coil:
 Minor Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 1d8 healing.
   type: general
-  brief: Grant your party 1d8 extra healing when resting.
+  brief: Grant your party 1d4 extra healing when resting.
   cost: 1
 Greater Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 2d8 healing.
   type: general
-  brief: Grant your party 2d8 extra healing when resting.
+  brief: Grant your party 1d10 extra healing when resting.
   cost: 1
 Major Restful Melody:
   description: When your party is resting, you may perform a song for them which grants them an extra 3d8 healing.
   type: general
-  brief: Grant your party 3d8 extra healing when resting.
+  brief: Grant your party 2d10 extra healing when resting.
   cost: 1
 Spell Coin:
   description: You have one spell coin, which may store a spell of up to tier one. Any person who rubs the coin may cast

@@ -799,6 +799,7 @@ Mage:
         - Stat Increase
       level_5:
         abilities:
+        - Imbue Weapon
         - Additional Spell Coin
       level_6:
         abilities:
@@ -806,7 +807,6 @@ Mage:
       level_7:
         abilities:
         - Offhand Attack
-        - Imbue Weapon
         - Tier Three Spells
         - Greater Restful Melody
       level_8:
@@ -1309,19 +1309,19 @@ Ranged Fighter:
       level_3:
         abilities:
         - Dual Shot
-        - Fire and Ice Arrows
+        - Fire and Ice Arrows # Cost 1
       level_4:
         abilities:
         - Stat Increase
-        - Rope Arrows
+        - Rope Arrows # Cost 1
       level_5:
         abilities:
-        - Net Arrows
-        - Smoke Arrow
+        - Net Arrows # Cost 1
+        - Smoke Arrow # Cost 1
       level_6:
         abilities:
         - Stat Increase
-        - Shadow and Light Arrows
+        - Shadow and Light Arrows # Cost 1
       level_7:
         abilities:
         - Reflexes
@@ -1330,33 +1330,33 @@ Ranged Fighter:
       level_8:
         abilities:
         - Stat Increase
-        - Explosive Arrows
+        - Explosive Arrows # Cost 2
       level_9:
         abilities:
-        - Vampiric Arrow
+        - Vampiric Arrow # Cost 2
       level_10:
         abilities:
         - Stat Increase
         - True Mastery
       level_11:
         abilities:
-        - Blink Arrows
-        - Uncanny Perception
+        - Blink Arrows # Cost 2
+        - Uncanny Perception 
       level_12:
         abilities:
         - Stat Increase
-        - Shock Arrow
+        - Shock Arrow # Cost 2
       level_13:
         abilities:
-        - Expert Fletcher
-        - Anti-Gravity Arrows
+        - Expert Fletcher # Reduces all arrow cost by 1
+        - Anti-Gravity Arrows # Cost 2
         - Volley
       level_14:
         abilities:
         - Stat Increase
       level_15:
         abilities:
-        - Firestorm Arrow
+        - Firestorm Arrow # Cost 4
     questions:
     - Where did your character come from?
     - How did they get so good at archery?
