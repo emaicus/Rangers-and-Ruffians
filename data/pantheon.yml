@@ -216,6 +216,7 @@ Hesh:
       Goddess of Navigation:
         description: You have advantage on tracking checks, and may add 1d6 to any roles involving steering,
           guiding, or working on a ship.
+        type: advantage
     Level_10:
       Goddess of the Icy Depths: 
         description: You take half damage from cold attacks, and have advantage on spell power saves against
@@ -299,11 +300,10 @@ Yilena:
         description: Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.
         type: general
     Level_10:
-      Champion of Goodness:
-        description:
-          Warden of the Woods:
-            description: You are able to commune with all of nature around you for one mile, gaining
-              some level of understanding about the lay of the land, and where enemies may be hiding.
+      Warden of the Woods:
+        description: You are able to commune with all of nature around you for one mile, gaining
+          some level of understanding about the lay of the land, and where enemies may be hiding.
+        type: general
 Melekar: 
   evil: true
   description: Melekar, Lord of Sin. Ruler of the hells. Melekar sits atop a throne of the damned,

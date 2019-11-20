@@ -1,4 +1,6 @@
- * [Rangers and Ruffians Rulebook _Version 2.1.0_](#rangers-and-ruffians-rulebook-version-210)  
+  
+# Rangers and Ruffians Rulebook _Version 2.1.0_
+
    * [Versioning and the Changelog](#versioning-and-the-changelog)  
    * [Introduction](#introduction)  
      * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
@@ -90,9 +92,6 @@
      * [The Sorcerer's Scrolls](#the-sorcerers-scrolls)  
      * [The Tome Of The Ancients](#the-tome-of-the-ancients)  
      * [The Wizard's Addendum](#the-wizards-addendum)  
-
-  
-# Rangers and Ruffians Rulebook _Version 2.1.0_
 
   
 ## Versioning and the Changelog
@@ -1241,10 +1240,7 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/automaton.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/automaton.jpg?raw=true' style='width:350px' />
 
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
 >
@@ -1280,10 +1276,7 @@ ___
 
   
 ### Catterwol
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/catterwol.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/catterwol.jpg?raw=true' style='width:350px' />
 
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
 >
@@ -1328,10 +1321,7 @@ ___
 
   
 ### Daemonspawn
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/daemonspawn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/daemonspawn.jpg?raw=true' style='width:350px' />
 
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
 >
@@ -1362,10 +1352,7 @@ ___
 
   
 ### Deep Elf
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/deep_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/deep_elf.jpg?raw=true' style='width:350px' />
 
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1396,10 +1383,7 @@ ___
 
   
 ### Dwarf
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/dwarf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/dwarf.jpg?raw=true' style='width:350px' />
 
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
 >
@@ -1431,10 +1415,7 @@ ___
 
   
 ### Fleetfoot Halfling
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
 
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
@@ -1468,10 +1449,7 @@ ___
 
   
 ### Gnome
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/gnome.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/gnome.jpg?raw=true' style='width:350px' />
 
 >Gnomes are tiny. They make things, sometimes. I can crush them.
 >
@@ -1512,10 +1490,7 @@ ___
 
   
 ### Goblin
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/goblin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/goblin.jpg?raw=true' style='width:350px' />
 
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
 >
@@ -1547,10 +1522,7 @@ ___
 
   
 ### Hardfoot Halfling
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
 
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
@@ -1583,10 +1555,7 @@ ___
 
   
 ### High Elf
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/high_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/high_elf.jpg?raw=true' style='width:350px' />
 
 >High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1617,10 +1586,7 @@ ___
 
   
 ### Hissling
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/hissling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/hissling.jpg?raw=true' style='width:350px' />
 
 >So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
 >
@@ -1654,10 +1620,7 @@ ___
 
   
 ### Human
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/human.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/human.jpg?raw=true' style='width:350px' />
 
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
 >
@@ -1689,10 +1652,7 @@ ___
 
   
 ### Kragraven
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/kragraven.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/kragraven.jpg?raw=true' style='width:350px' />
 
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
 >
@@ -1723,10 +1683,7 @@ ___
 
   
 ### Lizkin
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/lizkin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/lizkin.jpg?raw=true' style='width:350px' />
 
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
 >
@@ -1760,10 +1717,7 @@ ___
 
   
 ### Orc
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/orc.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/orc.jpg?raw=true' style='width:350px' />
 
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
 >
@@ -1795,10 +1749,7 @@ ___
 
   
 ### Sprout
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/sprout.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/sprout.jpg?raw=true' style='width:350px' />
 
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
 >
@@ -1834,10 +1785,7 @@ ___
 
   
 ### Waterborn
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/waterborn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/waterborn.jpg?raw=true' style='width:350px' />
 
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
 >
@@ -1869,10 +1817,7 @@ ___
 
   
 ### Wood Elf
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/race/female/wood_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/wood_elf.jpg?raw=true' style='width:350px' />
 
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1914,10 +1859,7 @@ we have worked hard to make sure that all of them are very fun, so no matter wha
 to have a good time!
   
 ### Archer
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/archer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/archer.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2002,7 +1944,7 @@ __Level 6 Archer__
   
   
 * __General Abilities:__   
-  * __Shadow and Light Arrows:__ _(Cost 1)_ You have mastered the art of crafting shadow and light arrows. Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch darkness. Light arrows deal an additional 1d6 light damage, and deal another 1d12 damage to the undead.  
+  * __Shadow and Light Arrows:__ _(Cost 1)_ You have mastered the art of crafting shadow and light arrows. Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch darkness. Light arrows deal an additional 1d6 light damage, and deal another 1d6 damage to the undead.  
   
   
 __Level 7 Archer__
@@ -2026,7 +1968,7 @@ __Level 8 Archer__
   
   
 * __General Abilities:__   
-  * __Explosive Arrows:__ _(Cost 2)_ After much experimentation, you have finally mastered the art of crafting explosive arrows. Explosive arrows do 2d10 damage to all enemies in a twenty foot radius.  
+  * __Explosive Arrows:__ _(Cost 3)_ After much experimentation, you have finally mastered the art of crafting explosive arrows. Explosive arrows do 2d10 damage to all enemies in a twenty foot radius.  
   
   
 __Level 9 Archer__
@@ -2048,7 +1990,7 @@ __Level 10 Archer__
 __Level 11 Archer__
 
 * __General Abilities:__   
-  * __Blink Arrows:__ _(Cost 1)_ After learning more about magic, you have learned how to create blink arrows. Blink arrows instantly teleport you to the position that they hit.  
+  * __Blink Arrows:__ _(Cost 2)_ After learning more about magic, you have learned how to create blink arrows. Blink arrows instantly teleport you to the position that they hit.  
   
   
 * __Advantages:__   
@@ -2069,7 +2011,7 @@ __Level 13 Archer__
 
 * __General Abilities:__   
   * __Expert Fletcher:__ All arrows now cost 1 action point less.  
-  * __Anti-Gravity Arrows:__ _(Cost 1)_ You can now craft Anti-Gravity arrows. When an Anti-Gravity arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.  
+  * __Anti-Gravity Arrows:__ _(Cost 2)_ You can now craft Anti-Gravity arrows. When an Anti-Gravity arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.  
   
   
 * __Combat Abilities:__   
@@ -2085,7 +2027,7 @@ __Level 14 Archer__
 __Level 15 Archer__
 
 * __General Abilities:__   
-  * __Firestorm Arrow:__ _(Cost 3)_ You can now craft firestorm arrows. A firestorm arrow does nothing for one turn or one minute after it strikes something. Then, it explodes into a massive pillar of flame with a fifteen foot diameter. All entities caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3 turns.  
+  * __Firestorm Arrow:__ _(Cost 4)_ You can now craft firestorm arrows. A firestorm arrow does nothing for one turn or one minute after it strikes something. Then, it explodes into a massive pillar of flame with a fifteen foot diameter. All entities caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3 turns.  
   
   
   
@@ -2093,10 +2035,7 @@ ___
 
   
 ### Barbarian
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/barbarian.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/barbarian.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2234,10 +2173,7 @@ ___
 
   
 ### Bard
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/bard.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/bard.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2333,6 +2269,10 @@ __Level 5 Bard__
   * __Additional Spell Coin:__ You have an additional spell coin.  
   
   
+* __Combat Abilities:__   
+  * __Imbue Weapon:__ _(Cost 1)_ As an offhand action, add an additional dice of elemental damage to your weapon at the cost of 1 action point. Lasts 1 battle or 1 hour.  
+  
+  
 __Level 6 Bard__
 
 * __Choices:__   
@@ -2350,10 +2290,6 @@ __Level 7 Bard__
   * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 2d8 healing.  
   
   
-* __Combat Abilities:__   
-  * __Imbue Weapon:__ _(Cost 1)_ As an offhand action, add 1d6 elemental damage to your weapon at the cost of 1 action point. Lasts 1 battle or 1 hour.  
-  
-  
 __Level 8 Bard__
 
 * __Choices:__   
@@ -2367,7 +2303,7 @@ __Level 9 Bard__
   
   
 * __Combat Abilities:__   
-  * __Greater Imbue Weapon:__ _(Cost 1)_ As an offhand action, add 1d8 elemental damage to your weapon at the cost of 1 action points. Lasts 1d4 turns.  
+  * __Greater Imbue Weapon:__ _(Cost 2)_ As an offhand action, add two dice of elemental damage to your weapon for 2 spell points. Lasts 1 battle or 1 hour.  
   
   
 __Level 10 Bard__
@@ -2416,10 +2352,7 @@ ___
 
   
 ### Beastmaster
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/beastmaster.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/beastmaster.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2568,10 +2501,7 @@ ___
 
   
 ### Cleric
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/cleric.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/cleric.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2750,10 +2680,7 @@ ___
 
   
 ### Druid
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/druid.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/druid.jpg?raw=true' style='width:350px' />
 
   
   
@@ -2917,10 +2844,7 @@ ___
 
   
 ### Fighter
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/fighter.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/fighter.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3044,10 +2968,7 @@ ___
 
   
 ### Gunslinger
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/gunslinger.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/gunslinger.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3104,7 +3025,7 @@ __Gunslinger Abilities__
 __Marksman Abilities__  
 * Combat Abilities:   
   * __Bayonet:__ You can affix a blade to your rifle, which functions as a 1d6 bayonet.  
-  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to burst forward 15 feet, doing 1d6 damage to everyone you hit and causing them to fall prone if they fail a spell power saving throw.  
+  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush at least 10 feet, doing an additional dice of damage to whoever you your target. The target must win at a contested strength check or fall prone.  
   
   
 __Level 2 Gunslinger__
@@ -3248,10 +3169,7 @@ ___
 
   
 ### Highborn
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/highborn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/highborn.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3398,10 +3316,7 @@ ___
 
   
 ### Knight
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/knight.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/knight.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3536,10 +3451,7 @@ ___
 
   
 ### Monk
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/monk.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/monk.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3631,10 +3543,7 @@ ___
 
   
 ### Necromancer
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/necromancer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/necromancer.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3823,10 +3732,7 @@ ___
 
   
 ### Paladin
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/paladin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/paladin.jpg?raw=true' style='width:350px' />
 
   
   
@@ -3994,10 +3900,7 @@ ___
 
   
 ### Ranger
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/ranger.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/ranger.jpg?raw=true' style='width:350px' />
 
   
   
@@ -4014,7 +3917,7 @@ __Ranger Abilities:__
   * __Learned:__ You are fluent in an extra language of your choosing.  
 * __General Abilities:__   
   * __Under the Stars:__ You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.  
-  * __Minor Medicine:__ If you are in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.  
+  * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
 * __Starting Items:__   
   * __Shifting Cloak:__ You possess a unique cloak, which takes on the color of your surroundings, giving you a 1d10 bonus to stealth checks made while standing still.  
 * __Advantages:__   
@@ -4028,7 +3931,7 @@ __Level 0 Ranger__
   
   
 * __General Abilities:__   
-  * __Minor Medicine:__ If you are in your favorite terrain, you can create 1 1d20 health potion per day. Potions keep for 24 hours.  
+  * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
   
   
 * __Advantages:__   
@@ -4086,7 +3989,7 @@ __Level 6 Ranger__
 __Level 7 Ranger__
 
 * __General Abilities:__   
-  * __Greater Medicine:__ You can create 2 1d10 health potions per day. Potions keep for 24 hours. If you are in on your favorite terrain, potions restore an additional 1d10 health.  
+  * __Greater Medicine:__ Spend 1 hour to create a Minor Health Potion once per day. Potions last 24 hours.  
   
   
 * __Combat Abilities:__   
@@ -4155,10 +4058,7 @@ ___
 
   
 ### Rogue
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/rogue.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/rogue.jpg?raw=true' style='width:350px' />
 
   
   
@@ -4346,10 +4246,7 @@ ___
 
   
 ### Sorcerer
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/female/sorcerer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/sorcerer.jpg?raw=true' style='width:350px' />
 
   
   
@@ -4513,10 +4410,7 @@ ___
 
   
 ### Wizard
-<div></div>
-<div></div>
-
-<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/class/wizard.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/wizard.jpg?raw=true' style='width:350px' />
 
   
   
@@ -4541,7 +4435,7 @@ __Wizard Abilities:__
   * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
   * __The Sword and the Satchel:__ You begin your adventure with a bottomless satchel.  
-  * __Walking Stick:__ You begin your adventure with a wizard's staff which gives you 1d4 additional damage to all spells.  
+  * __Walking Stick:__ You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.  
 * __Advantages:__   
   * __Historian:__ You have a deep knowledge of the land in which your adventure takes place. You gave advantage on any history or geography checks.  
   
@@ -4621,7 +4515,7 @@ __Level 7 Wizard__
   
   
 * __Combat Abilities:__   
-  * __Commit to Memory:__ At the beginning of a day, you may commit one spell to memory of tier 2 or greater. For the remainder of the day, that spell costs 1 fewer action points.  
+  * __Commit to Memory:__ At the beginning of a day, you may commit one spell to memory of tier. For the remainder of the day, that spell costs 1 fewer action points.  
   
   
 __Level 8 Wizard__
@@ -4943,7 +4837,7 @@ __Tier 0:__
 * __Give of Yourself:__ _(Cost: 0)_ Give a teammate up to 20 points of your own health per turn.  
 * __Guidance:__ _(Cost: 0)_ Give an ally a 1d4 inspiration dice as an offhand action.  
 * __Extra Weight:__ _(Cost: 0)_ Double the weight of an object. The object must be no larger than a horse.  
-* __Holy Orders:__ _(Cost: 0)_ As an offhand action, mark an enemy as a target for your group. Anyone who damages the target regains 1d4 health. Anyone who kills the target regains 1d6 health. You can mark at most one enemy at a time.  
+* __Holy Orders:__ _(Cost: 0)_ As an offhand action, mark an enemy as a target for your group. Anyone who damages the target regains 1d2 health. Anyone who kills the target regains 1d4 health. You can mark at most one enemy at a time.  
 * __Lighten Object:__ _(Cost: 0)_ Decrease the weight of an object by half. The object must be no larger than a horse.  
 * __Mending:__ _(Cost: 0)_ You can magically mend small dents, dings, scratches, and tears in items.  
 * __Purify:__ _(Cost: 0)_ Purify a food, drink, or potion to remove ill effects. Purify can be used to remove drunkenness from entities, or to render poison innocuous.  
@@ -5409,5 +5303,5 @@ __Tier 4:__
 __Tier 5:__  
 * __Invulnerability:__ _(Cost: 3)_ Make yourself or another entity invulnerable to damage for 3 turns.  
 * __Reverse Gravity:__ _(Cost: 3)_ Reverse the gravity in a space up to 1000 square feet.  
-* __Storm of Swords:__ _(Cost: 3)_ Conjure 6 swords of pure arcane energy around yourself. Each of the swords has 20 hit points. Each turn, each remaining sword may attack for 1d8 damage. If an enemy physically attacks you, you may make a contested dexterity check to command the remaining swords to parry. On a successful parry, all but the parrying sword may attack the enemy as a reaction.  
+* __Storm of Swords:__ _(Cost: 5)_ Conjure 6 swords of pure arcane energy around yourself. Each of the swords has 20 hit points. Each turn, each remaining sword may attack for 1d8 damage. If an enemy physically attacks you, you may make a contested dexterity check to command the remaining swords to parry. On a successful parry, all but the parrying sword may attack the enemy as a reaction.  
 

@@ -1,4 +1,6 @@
- * [Book of Known Beasts _Version 2.1.0_](#book-of-known-beasts-version-210)  
+  
+# Book of Known Beasts _Version 2.1.0_
+
    * [Beasts:](#beasts)  
      * [Bears:](#bears)  
        * [Dire Bear Cub:](#dire-bear-cub)  
@@ -39,9 +41,6 @@
        * [Skeleton:](#skeleton)  
      * [Zombies:](#zombies)  
        * [Shambling Zombie:](#shambling-zombie)  
-
-  
-# Book of Known Beasts _Version 2.1.0_
 
   
 ## Beasts:

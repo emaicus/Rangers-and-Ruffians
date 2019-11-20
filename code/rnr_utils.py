@@ -28,6 +28,7 @@ GLOBAL_SPELL_BOOKS = dict()
 GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 GLOBAL_BOOK_OF_KNOWN_BEATS = dict()
 GLOBAL_MAGIC_CLASSES = dict()
+GLOBAL_PANTHEON = dict()
 
 GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
@@ -116,11 +117,13 @@ class rnr_entity:
       abilities = self.abilities
 
       ret.append("### {0} \n".format(self.name.replace('_',' ')))
-      ret.append('<div></div>\n<div></div>\n\n')
       
       if image_path != "":
-        ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
-        #ret += '![{0}]({1}?raw=true "{2}") \n\n'.format(self.name, image_path, self.name)
+        print(image_path)
+        full_image_path = f'../site/static/images/{image_path}'
+        #ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
+        ret.append(f"<img src='{full_image_path}?raw=true' style='width:350px' />\n\n")
+        #ret.append(f'![{self.name}]({full_image_path}?raw=true "{self.name}" =350x) \n')
      
       if custom_chunk != "":
         ret.append(custom_chunk ) 
@@ -515,6 +518,27 @@ def markdown_skills():
         lines.append(f"  * Stat Requirements: _{ ', '.join(stat_str) }_  \n") 
   return lines     
 
+def markdown_pantheon():
+  global GLOBAL_PANTHEON
+  lines = []
+
+  for deity_type, evil_val in [('Light', False), ('Darkness', True)]:
+    lines.append(f'### Gods of {deity_type}  \n')
+    for deity, info in GLOBAL_PANTHEON.items():
+      if info['evil'] != evil_val:
+        continue
+      lines.append(f'#### {deity.title()}  \n  \n')
+      lines.append(f'>{info["description"]}  \n  \n')
+      if not 'abilities' in info:
+        continue
+      lines.append('__Gifts:__  \n  \n')
+      for level in sorted(info['abilities'].keys()):
+        lines.append(f'* __{level.replace("_", " ").title()}__  \n')
+        for ability, description in info['abilities'][level].items():
+          lines.append(f'  * __{ability.replace("_", " ").title()}:__ {description}  \n')
+
+
+  return lines
 
 ####################################################################################
 #
@@ -573,7 +597,7 @@ def INSTALL_RANGERS_AND_RUFFIANS():
 
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS
+  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -590,6 +614,7 @@ def load_Rangers_And_Ruffians_Data():
   race_path = os.path.join(INSTALL_DIRECTORY, 'races.json')
   spell_path = os.path.join(INSTALL_DIRECTORY, 'spells.json')
   skill_path = os.path.join(INSTALL_DIRECTORY, 'skills.json')
+  pantheon_path = os.path.join(INSTALL_DIRECTORY, 'pantheon.json')
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
   art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
   known_beasts_path = os.path.join(INSTALL_DIRECTORY, 'book_of_known_beasts.json')
@@ -631,6 +656,9 @@ def load_Rangers_And_Ruffians_Data():
 
   with open(known_beasts_path) as data_file:
     GLOBAL_BOOK_OF_KNOWN_BEATS = json.load(data_file)
+
+  with open(pantheon_path) as data_file:
+    GLOBAL_PANTHEON = json.load(data_file)
 
   GLOBAL_MAGIC_CLASSES = {
     'bard': ["the_bard's_songbook", ],

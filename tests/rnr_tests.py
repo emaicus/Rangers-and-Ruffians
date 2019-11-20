@@ -116,6 +116,13 @@ class rnrTests(unittest.TestCase):
       log_output("Known Beasts", errors)
     self.assertEqual(len(errors),0)
 
+  def test_pantheon(self):
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    errors = balance_report.check_pantheon()
+    if len(errors) > 0:
+      log_output("Pantheon", errors)
+    self.assertEqual(len(errors),0)
+
 
 if __name__ == '__main__':
   unittest.main()

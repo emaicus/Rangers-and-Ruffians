@@ -575,7 +575,7 @@ def string_key_check(dictionary, key, err_name, required=True, punctuation_check
       if not dictionary[key][-1] in ['.', '!'] and punctuation_check:
         errors.append(f'{err_name}: {key} should end in punctuation.')
   elif required:
-    errors.append(f'{err_name}: does not have a {key}.')
+    errors.append(f'{err_name}: does not have {key}.')
 
   return errors
 
@@ -592,7 +592,7 @@ def check_known_beasts():
     
     for beast_class, beasts in category_info['types'].items():
       all_errors += string_key_check(beasts, 'description', beast_class)
-      all_errors += string_key_check(category_info, 'description', category)
+      all_errors += string_key_check(beasts, 'tactics', beast_class)
 
       if not 'types' in beasts:
         all_errors.append(f'{beast_class}: no types defined.')
@@ -614,7 +614,7 @@ def check_known_beasts():
             all_errors.append(f'{beast}: (exception) malformed type')
 
         all_errors += string_key_check(beast, 'description', info, required=False)
-        all_errors += string_key_check(category_info, 'tactics', category, required=is_villain)
+        all_errors += string_key_check(beast, 'tactics', beast, required=is_villain)
 
         for k in ['average_damage_per_round', 'average_villain_damage_per_round']:
           if k in info:
@@ -717,6 +717,38 @@ def check_known_beasts():
                   all_errors.append(f'{beast} {key} {action_type}: description does not end with punctuation.')
 
   return all_errors
+
+def check_pantheon():
+  all_errors = list()
+  for deity, info in rnr_utils.GLOBAL_PANTHEON.items():
+    if 'evil' in info:
+      if not isinstance(info['evil'], bool):
+        all_errors.append(f'{deity}: evil is not a boolean')
+    else:
+      all_errors.append(f'{diety}: missing evil value')
+    
+    all_errors += string_key_check(info, "description", deity)
+
+    if 'abilities' in info:
+      for level, abilities in info['abilities'].items():
+        try:
+          level_str, level_num = level.split('_')
+          level_num = int(level_num)
+          if not level_str == 'Level' or level_num > 15 or level_num < 0:
+            all_errors.append(f'{deity}: bad level {level}')
+        except Exception as e:
+          all_errors.append(f'{deity}: bad level (exception) {level}')
+
+        for ability, ability_info in abilities.items():
+          all_errors += string_key_check(ability_info, 'description', f'{deity} {ability}')
+          if 'type' in ability_info:
+            if not ability_info['type'] in ['combat', 'general', 'advantage', 'disadvantage', 'starting_item']:
+              all_errors.append(f'{deity} {ability}: bad type {ability_info["type"]}')
+          else:
+            all_errors.append(f'{deity} {ability}: missing type')
+
+  return all_errors
+
 
 
 if __name__ == '__main__':

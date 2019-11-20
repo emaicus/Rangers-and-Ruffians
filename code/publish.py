@@ -15,7 +15,6 @@ def publish_rulebook():
     sys.exit(1)
 
   md = markdown_handler.markdown_handler('Rangers and Ruffians Rulebook _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
-  md.order_next('Rangers and Ruffians Rulebook _Version 2.1.0_')
 
   races = rnr_utils.load_all_race_objects()
   rnr_classes = rnr_utils.load_all_class_objects()
@@ -44,6 +43,7 @@ def publish_rulebook():
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
 
+  md._write_section('Rangers and Ruffians Rulebook _Version 2.1.0_')
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
@@ -153,6 +153,7 @@ def publish_book_of_known_beasts():
         md.add_whitespace()
         md.paragraph('___')
 
+  md._write_section('Book of Known Beasts _Version 2.1.0_')
   md.write_toc(max_to_include=4)
   md.write_buffer()
 
@@ -162,6 +163,13 @@ def publish_pantheon():
 
   md = markdown_handler.markdown_handler('Book of Lore _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
 
+  pantheon = rnr_utils.markdown_pantheon()
+  md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'pantheon_part.md'))
+  md.slurp_markdown_lines(pantheon)
+
+  md._write_section('Book of Lore _Version 2.1.0_')
+  md.write_toc()
+  md.write_buffer()
   
 
 
@@ -171,4 +179,5 @@ if __name__ == "__main__":
   
   publish_rulebook()
   publish_book_of_known_beasts()
+  publish_pantheon()
   print("Done!")
