@@ -119,10 +119,9 @@ class rnr_entity:
       ret.append("### {0} \n".format(self.name.replace('_',' ')))
       
       if image_path != "":
-        print(image_path)
         full_image_path = f'../site/static/images/{image_path}'
         #ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
-        ret.append(f"<img src='{full_image_path}?raw=true' style='width:350px' />\n\n")
+        ret.append(f"<img src='{full_image_path}' style='width:350px' />\n\n")
         #ret.append(f'![{self.name}]({full_image_path}?raw=true "{self.name}" =350x) \n')
      
       if custom_chunk != "":

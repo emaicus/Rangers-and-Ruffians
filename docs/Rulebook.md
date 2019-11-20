@@ -1240,7 +1240,7 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<img src='../site/static/images/race/female/automaton.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/automaton.jpg' style='width:350px' />
 
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
 >
@@ -1276,7 +1276,7 @@ ___
 
   
 ### Catterwol
-<img src='../site/static/images/race/female/catterwol.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/catterwol.jpg' style='width:350px' />
 
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
 >
@@ -1321,7 +1321,7 @@ ___
 
   
 ### Daemonspawn
-<img src='../site/static/images/race/female/daemonspawn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/daemonspawn.jpg' style='width:350px' />
 
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
 >
@@ -1352,7 +1352,7 @@ ___
 
   
 ### Deep Elf
-<img src='../site/static/images/race/female/deep_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/deep_elf.jpg' style='width:350px' />
 
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1383,7 +1383,7 @@ ___
 
   
 ### Dwarf
-<img src='../site/static/images/race/female/dwarf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/dwarf.jpg' style='width:350px' />
 
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
 >
@@ -1415,7 +1415,7 @@ ___
 
   
 ### Fleetfoot Halfling
-<img src='../site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/halfling.jpg' style='width:350px' />
 
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
@@ -1449,7 +1449,7 @@ ___
 
   
 ### Gnome
-<img src='../site/static/images/race/female/gnome.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/gnome.jpg' style='width:350px' />
 
 >Gnomes are tiny. They make things, sometimes. I can crush them.
 >
@@ -1490,7 +1490,7 @@ ___
 
   
 ### Goblin
-<img src='../site/static/images/race/female/goblin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/goblin.jpg' style='width:350px' />
 
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
 >
@@ -1522,7 +1522,7 @@ ___
 
   
 ### Hardfoot Halfling
-<img src='../site/static/images/race/female/halfling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/halfling.jpg' style='width:350px' />
 
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
@@ -1555,7 +1555,7 @@ ___
 
   
 ### High Elf
-<img src='../site/static/images/race/female/high_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/high_elf.jpg' style='width:350px' />
 
 >High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1586,7 +1586,7 @@ ___
 
   
 ### Hissling
-<img src='../site/static/images/race/female/hissling.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/hissling.jpg' style='width:350px' />
 
 >So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
 >
@@ -1620,7 +1620,7 @@ ___
 
   
 ### Human
-<img src='../site/static/images/race/female/human.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/human.jpg' style='width:350px' />
 
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
 >
@@ -1652,7 +1652,7 @@ ___
 
   
 ### Kragraven
-<img src='../site/static/images/race/female/kragraven.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/kragraven.jpg' style='width:350px' />
 
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
 >
@@ -1683,7 +1683,7 @@ ___
 
   
 ### Lizkin
-<img src='../site/static/images/race/female/lizkin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/lizkin.jpg' style='width:350px' />
 
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
 >
@@ -1717,7 +1717,7 @@ ___
 
   
 ### Orc
-<img src='../site/static/images/race/female/orc.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/orc.jpg' style='width:350px' />
 
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
 >
@@ -1749,7 +1749,7 @@ ___
 
   
 ### Sprout
-<img src='../site/static/images/race/female/sprout.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/sprout.jpg' style='width:350px' />
 
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
 >
@@ -1785,7 +1785,7 @@ ___
 
   
 ### Waterborn
-<img src='../site/static/images/race/female/waterborn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/waterborn.jpg' style='width:350px' />
 
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
 >
@@ -1817,7 +1817,7 @@ ___
 
   
 ### Wood Elf
-<img src='../site/static/images/race/female/wood_elf.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/race/female/wood_elf.jpg' style='width:350px' />
 
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
@@ -1859,7 +1859,7 @@ we have worked hard to make sure that all of them are very fun, so no matter wha
 to have a good time!
   
 ### Archer
-<img src='../site/static/images/class/female/archer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/archer.jpg' style='width:350px' />
 
   
   
@@ -2035,7 +2035,7 @@ ___
 
   
 ### Barbarian
-<img src='../site/static/images/class/barbarian.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/barbarian.jpg' style='width:350px' />
 
   
   
@@ -2173,7 +2173,7 @@ ___
 
   
 ### Bard
-<img src='../site/static/images/class/bard.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/bard.jpg' style='width:350px' />
 
   
   
@@ -2352,7 +2352,7 @@ ___
 
   
 ### Beastmaster
-<img src='../site/static/images/class/female/beastmaster.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/beastmaster.jpg' style='width:350px' />
 
   
   
@@ -2501,7 +2501,7 @@ ___
 
   
 ### Cleric
-<img src='../site/static/images/class/cleric.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/cleric.jpg' style='width:350px' />
 
   
   
@@ -2680,7 +2680,7 @@ ___
 
   
 ### Druid
-<img src='../site/static/images/class/druid.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/druid.jpg' style='width:350px' />
 
   
   
@@ -2844,7 +2844,7 @@ ___
 
   
 ### Fighter
-<img src='../site/static/images/class/fighter.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/fighter.jpg' style='width:350px' />
 
   
   
@@ -2968,7 +2968,7 @@ ___
 
   
 ### Gunslinger
-<img src='../site/static/images/class/female/gunslinger.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/gunslinger.jpg' style='width:350px' />
 
   
   
@@ -3169,7 +3169,7 @@ ___
 
   
 ### Highborn
-<img src='../site/static/images/class/female/highborn.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/highborn.jpg' style='width:350px' />
 
   
   
@@ -3316,7 +3316,7 @@ ___
 
   
 ### Knight
-<img src='../site/static/images/class/knight.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/knight.jpg' style='width:350px' />
 
   
   
@@ -3451,7 +3451,7 @@ ___
 
   
 ### Monk
-<img src='../site/static/images/class/female/monk.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/monk.jpg' style='width:350px' />
 
   
   
@@ -3543,7 +3543,7 @@ ___
 
   
 ### Necromancer
-<img src='../site/static/images/class/necromancer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/necromancer.jpg' style='width:350px' />
 
   
   
@@ -3732,7 +3732,7 @@ ___
 
   
 ### Paladin
-<img src='../site/static/images/class/paladin.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/paladin.jpg' style='width:350px' />
 
   
   
@@ -3900,7 +3900,7 @@ ___
 
   
 ### Ranger
-<img src='../site/static/images/class/ranger.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/ranger.jpg' style='width:350px' />
 
   
   
@@ -4058,7 +4058,7 @@ ___
 
   
 ### Rogue
-<img src='../site/static/images/class/rogue.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/rogue.jpg' style='width:350px' />
 
   
   
@@ -4246,7 +4246,7 @@ ___
 
   
 ### Sorcerer
-<img src='../site/static/images/class/female/sorcerer.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/female/sorcerer.jpg' style='width:350px' />
 
   
   
@@ -4410,7 +4410,7 @@ ___
 
   
 ### Wizard
-<img src='../site/static/images/class/wizard.jpg?raw=true' style='width:350px' />
+<img src='../site/static/images/class/wizard.jpg' style='width:350px' />
 
   
   
