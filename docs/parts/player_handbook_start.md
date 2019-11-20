@@ -1,29 +1,3 @@
-## Versioning and the Changelog
-The Version Number used by Rangers and Ruffians is broken into
-3 parts, each of which is separated by a period. The greatest (leftmost)
-digit represents a massive refactor to the core systems of the game
-which requires an entirely new ruleset to be adopted. This version was first
-incremented when the character leveling system was added to Rangers and Ruffians.
-
-The second digit represents the introduction of a new subsystem to the
-rules of the game which is not significant enough so as to impact the
-broader ruleset. This number was first incremented in Rangers and Ruffians
-2.1.0, when ```Skills``` were added to the game which could be learned
-when leveling up as an alternative to a Stat increase.
-
-The final, and least significant digit represents a balance change
-which does not change any existing systems within the game. These
-are usually binned together into one large incremental update.
-For example, if a set of spells were deemed to be underpowered and
-there power was slightly increased, the the third version digit
-would be incremented.
-
-The majority of revisions made to Rangers and Ruffians after the
-transition to version 2.0.0 are recorded in the ```changelog.md``` file
-found in the ```docs``` folder of the Rangers and Ruffians repository.
-For details about what changed between two versions of the game,
-please consult that documentation.
-
 ## Introduction
 
 ### What is Rangers and Ruffians?
@@ -574,12 +548,20 @@ or receiving healing magic.
 There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__, and
 __Sleep in a bed.__
 
-| Rest Type      | Required Time | Health Restored | Action Points Restored | Luck Tokens Restored | Frequency       |
-| -------------- |---------------| --------------- | ---------------------- | ---------------------| --------------- |
-| Quick Rest     | 1 hour        | 20%             | 2                      |  0                   | 3 times per day |
-| Sleep          | 8 hours       | 50%             | 5                      | All                  | Once per day    |
-| Sleep in a bed | 8 hours       | 75%             | All                    | All                  | Once per day    |
+<!-- | Type           | Time   | Health Gained | Action Points Gained   | Luck Gained   | Times/Day  |
+| -------------- |--------| ------------- | ---------------------- | --------------| ---------- |
+| Quick Rest     | 1 hr.  | 20%           | 2                      |  0            | 3          |
+| Sleep          | 8 hrs. | 50%           | 5                      | All           | 1          |
+| Sleep in a bed | 10 hrs.| 75%           | All                    | All           | 1          | -->
 
+
+|                        | Quick Rest | Sleep   | Sleep in a Bed |
+| -----------------------|------------|---------|----------------|
+| Time Required          | 1 hour     | 8 hours | 8 hours        |
+| Health Restored        | 20%        | 40%     | 50%            |
+| Action Points Restored | 2          | 5       | All            |
+| Luck Restored          | 0          | All     | All            |
+| Times/Day              | 3x         | 1x      | 1x             |
 
 ## Magic
 As mentioned in the [Action Points](#action-points) section, a mage may spend action points

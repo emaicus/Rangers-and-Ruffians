@@ -533,8 +533,8 @@ def markdown_pantheon():
       lines.append('__Gifts:__  \n  \n')
       for level in sorted(info['abilities'].keys()):
         lines.append(f'* __{level.replace("_", " ").title()}__  \n')
-        for ability, description in info['abilities'][level].items():
-          lines.append(f'  * __{ability.replace("_", " ").title()}:__ {description}  \n')
+        for ability, ability_info in info['abilities'][level].items():
+          lines.append(f'  * __{ability.replace("_", " ").title()}:__ {ability_info["description"]}  \n')
 
 
   return lines

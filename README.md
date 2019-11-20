@@ -2,7 +2,7 @@
 _Version 2.1.0_
 
 ## What is Rangers and Ruffians?
-Rangers and Ruffians (also called just "Rangers" or "RnR")  
+Rangers and Ruffians (also called just "Rangers" or "RnR")
 is a fantasy tabletop roleplaying game (RPG) created for and by a group of
 nerdy friends. It can be dramatic, epic, and meaningful.
 It can also be silly and funny. We think that it is usually pretty fun. 

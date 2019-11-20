@@ -40,11 +40,11 @@ deity also influences special abilities that they gain while leveling up.
 __Gifts:__  
   
 * __Level 0__  
-  * __Lawbringer:__ {'description': 'Followers of Iro have advantage when speaking with lawmen.', 'type': 'advantage'}  
+  * __Lawbringer:__ Followers of Iro have advantage when speaking with lawmen.  
 * __Level 10__  
-  * __Fortify:__ {'description': 'At the cost of one spell point, add 1d6 armor to yourself or another for one day.', 'type': 'combat'}  
+  * __Fortify:__ At the cost of one spell point, add 1d6 armor to yourself or another for one day.  
 * __Level 5__  
-  * __Iro'S Judgement:__ {'description': 'As an action, call on Iro to judge an individual. If he judges them impure, take advantage in all attacks against them.', 'type': 'combat'}  
+  * __Iro'S Judgement:__ As an action, call on Iro to judge an individual. If he judges them impure, take advantage in all attacks against them.  
 
   
 #### Aunora
@@ -53,11 +53,11 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __Minor Goddess Of Healing:__ {'description': 'Clerics and Paladins of Aunora may add 1d4 to all healing rolls.', 'type': 'advantage'}  
+  * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d4 to all healing rolls.  
 * __Level 10__  
-  * __Major Goddess Of Healing:__ {'description': 'Clerics and Paladins of Aunora may add 1d12 to all healing rolls.', 'type': 'advantage'}  
+  * __Major Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d12 to all healing rolls.  
 * __Level 5__  
-  * __Minor Goddess Of Healing:__ {'description': 'Clerics and Paladins of Aunora may add 1d6 to all healing rolls.', 'type': 'advantage'}  
+  * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d6 to all healing rolls.  
 
   
 #### Eandar
@@ -66,12 +66,12 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __God Of The Common Man:__ {'description': 'Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.', 'type': 'advantage'}  
-  * __Distrusted By Authorities:__ {'description': 'Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.', 'type': 'disadvantage'}  
+  * __God Of The Common Man:__ Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.  
+  * __Distrusted By Authorities:__ Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.  
 * __Level 10__  
-  * __Greater Helpful God:__ {'description': 'Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.', 'type': 'general'}  
+  * __Greater Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.  
 * __Level 5__  
-  * __The Helpful God:__ {'description': 'Your spells which buff your allies have extra potency. Depending on the spell, this may mean increasing the effect by one, for example by granting +2 strength instead of +1, or giving them an inspiration dice that is one size larger.', 'type': 'general'}  
+  * __The Helpful God:__ Your spells which buff your allies have extra potency. Depending on the spell, this may mean increasing the effect by one, for example by granting +2 strength instead of +1, or giving them an inspiration dice that is one size larger.  
 
   
 #### Juliet
@@ -80,13 +80,13 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __Minor Goddess Of Luck:__ {'description': 'Gain 1 luck token above your maximum.', 'type': 'general'}  
+  * __Minor Goddess Of Luck:__ Gain 1 luck token above your maximum.  
 * __Level 10__  
-  * __Always Lucky:__ {'description': 'Regain 1d4 luck tokens during a short rest.', 'type': 'general'}  
+  * __Always Lucky:__ Regain 1d4 luck tokens during a short rest.  
 * __Level 15__  
-  * __Major Goddess Of Luck:__ {'description': 'Gain 3 luck tokens above your maximum.', 'type': 'general'}  
+  * __Major Goddess Of Luck:__ Gain 3 luck tokens above your maximum.  
 * __Level 5__  
-  * __Greater Goddess Of Luck:__ {'description': 'Gain 2 luck tokens above your maximum.', 'type': 'general'}  
+  * __Greater Goddess Of Luck:__ Gain 2 luck tokens above your maximum.  
 
   
 #### Raghnal
@@ -95,12 +95,12 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __God Of Knowledge:__ {'description': 'You have advantage on intelligence checks.', 'type': 'advantage'}  
-  * __Minor God Of Intelligence:__ {'description': 'Gain one effective intelligence, and the corresponding spell point.', 'type': 'general'}  
+  * __God Of Knowledge:__ You have advantage on intelligence checks.  
+  * __Minor God Of Intelligence:__ Gain one effective intelligence, and the corresponding spell point.  
 * __Level 10__  
-  * __Major God Of Intelligence:__ {'description': 'Gain three effective intelligence, and the corresponding 3 spell points.', 'type': 'general'}  
+  * __Major God Of Intelligence:__ Gain three effective intelligence, and the corresponding 3 spell points.  
 * __Level 5__  
-  * __Greater God Of Intelligence:__ {'description': 'Gain two effective intelligence, and the corresponding 2 spell points.', 'type': 'general'}  
+  * __Greater God Of Intelligence:__ Gain two effective intelligence, and the corresponding 2 spell points.  
 
   
 #### Hesh
@@ -109,12 +109,12 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __Goddes Of The Water:__ {'description': 'You are able to manipulate small amounts of water at will. For example, you may stop rain from falling on your head, or lift water out of a bucket.', 'type': 'general'}  
+  * __Goddes Of The Water:__ You are able to manipulate small amounts of water at will. For example, you may stop rain from falling on your head, or lift water out of a bucket.  
 * __Level 10__  
-  * __Goddess Of The Icy Depths:__ {'description': 'You take half damage from cold attacks, and have advantage on spell power saves against being slowed.', 'type': 'general'}  
+  * __Goddess Of The Icy Depths:__ You take half damage from cold attacks, and have advantage on spell power saves against being slowed.  
 * __Level 5__  
-  * __Waterbreathing:__ {'description': 'You are able to breathe underwater.', 'type': 'general'}  
-  * __Goddess Of Navigation:__ {'description': 'You have advantage on tracking checks, and may add 1d6 to any roles involving steering, guiding, or working on a ship.', 'type': 'advantage'}  
+  * __Waterbreathing:__ You are able to breathe underwater.  
+  * __Goddess Of Navigation:__ You have advantage on tracking checks, and may add 1d6 to any roles involving steering, guiding, or working on a ship.  
 
   
 #### Ronar
@@ -123,13 +123,13 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __God Of Protection:__ {'description': 'As an offhand action, grant an all +1 armor for a turn or 10 minutes.', 'type': 'combat'}  
-  * __God Of The Woods:__ {'description': 'You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.', 'type': 'general'}  
+  * __God Of Protection:__ As an offhand action, grant an all +1 armor for a turn or 10 minutes.  
+  * __God Of The Woods:__ You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.  
 * __Level 10__  
-  * __God Of Growing:__ {'description': 'At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with Photosynthesis.', 'type': 'general'}  
+  * __God Of Growing:__ At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with Photosynthesis.  
 * __Level 5__  
-  * __God Of Marriage:__ {'description': 'Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.', 'type': 'general'}  
-  * __God Of Conflict Resolution:__ {'description': 'Gain advantage on any charisma checks made to end a fight.', 'type': 'general'}  
+  * __God Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
+  * __God Of Conflict Resolution:__ Gain advantage on any charisma checks made to end a fight.  
 
   
 #### Yilena
@@ -138,13 +138,13 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __Goddess Of The Woods:__ {'description': 'You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.', 'type': 'general'}  
-  * __Goddess Of The Hunt:__ {'description': 'Gain advantage on any tracking and foraging checks. Your spells also have extra potency when cast on beasts. Depending on the spell, this can add an additional dice of damage, healing an extra turn of duration, or give a beast advantage or disadvantage on relavant checks.', 'type': 'general'}  
+  * __Goddess Of The Woods:__ You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.  
+  * __Goddess Of The Hunt:__ Gain advantage on any tracking and foraging checks. Your spells also have extra potency when cast on beasts. Depending on the spell, this can add an additional dice of damage, healing an extra turn of duration, or give a beast advantage or disadvantage on relavant checks.  
 * __Level 10__  
-  * __Warden Of The Woods:__ {'description': 'You are able to commune with all of nature around you for one mile, gaining some level of understanding about the lay of the land, and where enemies may be hiding.', 'type': 'general'}  
+  * __Warden Of The Woods:__ You are able to commune with all of nature around you for one mile, gaining some level of understanding about the lay of the land, and where enemies may be hiding.  
 * __Level 5__  
-  * __Darkvision:__ {'description': 'You gain the darkvision ability.', 'type': 'general'}  
-  * __Goddess Of Marriage:__ {'description': 'Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.', 'type': 'general'}  
+  * __Darkvision:__ You gain the darkvision ability.  
+  * __Goddess Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
 
   
 #### Naris
@@ -161,11 +161,11 @@ __Gifts:__
 __Gifts:__  
   
 * __Level 0__  
-  * __Minor God Of Death:__ {'description': 'You have access to tier zero spells from the macabre manual.', 'type': 'general'}  
+  * __Minor God Of Death:__ You have access to tier zero spells from the macabre manual.  
 * __Level 10__  
-  * __Major God Of Death:__ {'description': 'You have access to tier two spells from the macabre manual.', 'type': 'general'}  
+  * __Major God Of Death:__ You have access to tier two spells from the macabre manual.  
 * __Level 5__  
-  * __Greater God Of Death:__ {'description': 'You have access to tier one spells from the macabre manual.', 'type': 'general'}  
+  * __Greater God Of Death:__ You have access to tier one spells from the macabre manual.  
 
   
 #### Melekar

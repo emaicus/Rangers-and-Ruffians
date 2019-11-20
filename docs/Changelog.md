@@ -1,41 +1,65 @@
 # Changleog
+
+## Versioning and the Changelog
+The Version Number used by Rangers and Ruffians is broken into
+3 parts, each of which is separated by a period. The greatest (leftmost)
+digit represents a massive refactor to the core systems of the game
+which requires an entirely new ruleset to be adopted. This version was first
+incremented when the character leveling system was added to Rangers and Ruffians.
+
+The second digit represents the introduction of a new subsystem to the
+rules of the game which is not significant enough so as to impact the
+broader ruleset. This number was first incremented in Rangers and Ruffians
+2.1.0, when ```Skills``` were added to the game which could be learned
+when leveling up as an alternative to a Stat increase.
+
+The final, and least significant digit represents a balance change
+which does not change any existing systems within the game. These
+are usually binned together into one large incremental update.
+For example, if a set of spells were deemed to be underpowered and
+there power was slightly increased, the the third version digit
+would be incremented.
+
+The majority of revisions made to Rangers and Ruffians after the
+transition to version 2.0.0 are recorded in this file.
+
 ## Rangers and Ruffians Version 2.1.0
 
 ### New Features:
-0. __The Last Huge Update!__
-  1. With the introduction of the changelog, future updates will be more frequent, but much smaller.
-1. __The Rangers and Ruffians Rulebook!__
-  1. It was long past time for the rules of ```RnR``` to finally get written down, and with new Poohbah's stepping up to the plate,
-     we finally did it! Please see ```docs/Rulebook.md``` to read through the (hopefully) complete rules of Rangers and Ruffians!
-2. __Stat Rebalances__
-  1. With the formalization of the Rulebook, it finally became time to also formalize the core "balance" math of Rangers and Ruffians,
-     so that new Poohbahs can more easily get up and running. To this end, the following balance changes were made:
-  2. All Races now add ```+1``` to 2 stats (or ```+2```  to 1 stat) and ```-1``` to 2 stats (or ```-2``` to 1 stat).
-     This means that race plays a little bit less of a role in the stat makeup of a character than it previously did. This
-     is great, as it enforces the idea that _any_ race can pair with any _any_ class.
-  3. Not including ```Luck``` and ```Health Dice```, classes now assign a ```2```, ```1```, ```0```, ```-1```, ```-2``` and ```-3```
-     to their other stats. This keeps an internal logic, so that all classes are good and bad at the same number of things.
-  4. These new changes mean that, for the first time ever, we can roll for stats! See the ```Rulebook``` for more info.
-  5. ```Luck``` and ```Health Dice``` now vary inversely, so if you have a high ```Health Dice``` you have a low starting
-    ```Luck``` and vice versa.
-3. __Weapon Balance:__
-  1. With new stat balance came new ```health```, ```rest```, ```weapon damage``` and ```magic damage``` balance tweaks.
-4. __Renamings__
-  1. __Spell Points -> Action Points:__ ```Spell Points``` were to ```Action Points```. This reflects their new use by non-mage classes.
-  2. __Spell Levels -> Spell Tiers:__ ```Spell Levels``` were renamed to ```Spell Tiers```. With the character leveling system in place, it is confusing
-    to talk about both spell and character levels.
-  3. __Opportunity Attacks -> Exposed Attacks__ 
-5. __Introduction of Skills:__
-    1. When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
-    2. Skills are like small abilities that give you new ways to play your character.
-    3. For example, a knight might gain access to firearms!
-    4. Some skills have stat prerequisites. For example, you need 3 intelligence to gain access to tier zero magic.
-    5. Some skills are upgrades of other skills. For example, you need the "Cook" skill before you can get the "Master Chef" skill.
-6. __New Race:__
-    A new challenger approaches! The Kragraven is a bird based race. It has vestigial wings that it can use to jump high or to coast from great heights.
+*  __The Last Oversized Update!__
+    *  With the introduction of the changelog, future updates will be more frequent, but much smaller.
+*  __The Rangers and Ruffians Rulebook!__
+    *  It was long past time for the rules of ```RnR``` to finally get written down, and with new Poohbah's stepping up to the plate,
+       we finally did it! Please see ```docs/Rulebook.md``` to read through the (hopefully) complete rules of Rangers and Ruffians!
+*  __Stat Rebalances__
+    *  With the formalization of the Rulebook, it finally became time to also formalize the core "balance" math of Rangers and Ruffians,
+       so that new Poohbahs can more easily get up and running. To this end, the following balance changes were made:
+    *  All Races now add ```+1``` to 2 stats (or ```+2```  to 1 stat) and ```-1``` to 2 stats (or ```-2``` to 1 stat).
+       This means that race plays a little bit less of a role in the stat makeup of a character than it previously did. This
+       is great, as it enforces the idea that _any_ race can pair with any _any_ class.
+    *  Not including ```Luck``` and ```Health Dice```, classes now assign a ```2```, ```1```, ```0```, ```-1```, ```-2``` and ```-3```
+       to their other stats. This keeps an internal logic, so that all classes are good and bad at the same number of things.
+    *  These new changes mean that, for the first time ever, we can roll for stats! See the ```Rulebook``` for more info.
+    *  ```Luck``` and ```Health Dice``` now vary inversely, so if you have a high ```Health Dice``` you have a low starting
+      ```Luck``` and vice versa.
+*  __Weapon Balance:__
+    *  With new stat balance came new ```health```, ```rest```, ```weapon damage``` and ```magic damage``` balance tweaks.
+*  __Renamings__
+    *  __Spell Points -> Action Points:__ ```Spell Points``` were to ```Action Points```. This reflects their new use by non-mage classes.
+    *  __Spell Levels -> Spell Tiers:__ ```Spell Levels``` were renamed to ```Spell Tiers```. With the character leveling system in place, it is confusing
+      to talk about both spell and character levels.
+    *  __Opportunity Attacks -> Exposed Attacks__ 
+*  __Introduction of Skills:__
+    *  When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
+    *  Skills are like small abilities that give you new ways to play your character.
+    *  For example, a knight might gain access to firearms!
+    *  Some skills have stat prerequisites. For example, you need 3 intelligence to gain access to tier zero magic.
+    *  Some skills are upgrades of other skills. For example, you need the "Cook" skill before you can get the "Master Chef" skill.
+*  __New Race:__
+    *  A new challenger approaches! The Kragraven is a bird based race. It has vestigial wings that it can use to jump high or to coast from great heights.
 
 ### Rule Changes:
-1. Spell Power is now computed as 12 + INF rather than 10 + (2 x INF). Under the previous system, if a player or enemy had even modestly high inner fire, it became nearly impossible to avoid their spells. For example, if an enemy had 4 inner fire, you would have to roll an 18 or greater to break their spell (10 + (2 x 4)). Now, you need to beat a 16 (12 + 4).
+*  Spell Power is now computed as 12 + INF rather than 10 + (2 x INF). Under the previous system, if a player or enemy had even modestly high inner fire, it became nearly impossible to avoid their spells. For example, if an enemy had 4 inner fire, you would have to roll an 18 or greater to break their spell (10 + (2 x 4)). Now, you need to beat a 16 (12 + 4).
 
 ### All Races and Classes:
 The stat changes referenced [above](#new-features) affected all races and classes, and are not detailed here to save space.
