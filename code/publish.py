@@ -4,21 +4,17 @@ import os
 import rnr_utils
 import markdown_handler
 
+VERSION_NUMBER = '2.1.0'
 
-def publish_rulebook():
+def publish_character_creation():
+  global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
-
-
-  if not os.path.exists(docs_directory):
-    print(f"ERROR: cannot find docs directory: {docs_directory}")
-    sys.exit(1)
-
-  md = markdown_handler.markdown_handler('Rangers and Ruffians Rulebook _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  
+  md = markdown_handler.markdown_handler(f'Compendium of Character Creation _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
 
   races = rnr_utils.load_all_race_objects()
   rnr_classes = rnr_utils.load_all_class_objects()
-
 
   race_lines = []
   for race in sorted(races, key=lambda x: x.name):
@@ -28,30 +24,63 @@ def publish_rulebook():
   for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
     class_lines += rnr_class.markdownify()
 
-  spells = rnr_utils.markdown_spellbooks()
   skills = rnr_utils.markdown_skills()
 
-
-  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
-  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
   md.slurp_markdown_lines(race_lines)
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
   md.slurp_markdown_lines(class_lines)
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'skills_part.md'))
   md.slurp_markdown_lines(skills)
+
+  md._write_section(f'Compendium of Character Creation _Version {VERSION_NUMBER}_')
+  md.write_toc()
+  md.write_buffer()
+
+
+def publish_spells():
+  global VERSION_NUMBER
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_parts_directory = os.path.join(docs_directory, 'parts')
+  
+  md = markdown_handler.markdown_handler(f'The Tome of the Ancients _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
+
+  spells = rnr_utils.markdown_spellbooks()
+
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
 
-  md._write_section('Rangers and Ruffians Rulebook _Version 2.1.0_')
+  md._write_section(f'The Tome of the Ancients _Version {VERSION_NUMBER}_')
+  md.write_toc()
+  md.write_buffer()
+
+
+def publish_rulebook():
+  global VERSION_NUMBER
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_parts_directory = os.path.join(docs_directory, 'parts')
+
+  if not os.path.exists(docs_directory):
+    print(f"ERROR: cannot find docs directory: {docs_directory}")
+    sys.exit(1)
+
+  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+
+
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
+  md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_redirect.md'))
+  md._write_section(f'Rangers and Ruffians Rulebook _Version {VERSION_NUMBER}_')
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
 def publish_book_of_known_beasts():
+  global VERSION_NUMBER
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler('Book of Known Beasts _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
+  md = markdown_handler.markdown_handler(f'Book of Known Beasts _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
 
   stats = rnr_utils.standard_stat_order()
   abbreviations = [rnr_utils.abbreviate_stat(stat).upper() for stat in stats]
@@ -153,21 +182,22 @@ def publish_book_of_known_beasts():
         md.add_whitespace()
         md.paragraph('___')
 
-  md._write_section('Book of Known Beasts _Version 2.1.0_')
+  md._write_section(f'Book of Known Beasts _Version {VERSION_NUMBER}_')
   md.write_toc(max_to_include=4)
   md.write_buffer()
 
 def publish_pantheon():
+  global VERSION_NUMBER
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler('Book of Lore _Version 2.1.0_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
+  md = markdown_handler.markdown_handler(f'Book of Lore _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
 
   pantheon = rnr_utils.markdown_pantheon()
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'pantheon_part.md'))
   md.slurp_markdown_lines(pantheon)
 
-  md._write_section('Book of Lore _Version 2.1.0_')
+  md._write_section(f'Book of Lore _Version {VERSION_NUMBER}_')
   md.write_toc()
   md.write_buffer()
   
@@ -180,4 +210,6 @@ if __name__ == "__main__":
   publish_rulebook()
   publish_book_of_known_beasts()
   publish_pantheon()
+  publish_character_creation()
+  publish_spells()
   print("Done!")

@@ -30,7 +30,9 @@ transition to version 2.0.0 are recorded in this file.
     *  With the introduction of the changelog, future updates will be more frequent, but much smaller.
 *  __The Rangers and Ruffians Rulebook!__
     *  It was long past time for the rules of ```RnR``` to finally get written down, and with new Poohbah's stepping up to the plate,
-       we finally did it! Please see ```docs/Rulebook.md``` to read through the (hopefully) complete rules of Rangers and Ruffians!
+       we finally did it!
+ * __A Brand New Website!__
+     * We acquired ```www.rangersandruffians.com``` and are now hosting a website with all of the game rules!
 *  __Stat Rebalances__
     *  With the formalization of the Rulebook, it finally became time to also formalize the core "balance" math of Rangers and Ruffians,
        so that new Poohbahs can more easily get up and running. To this end, the following balance changes were made:
@@ -48,7 +50,7 @@ transition to version 2.0.0 are recorded in this file.
     *  __Spell Points -> Action Points:__ ```Spell Points``` were to ```Action Points```. This reflects their new use by non-mage classes.
     *  __Spell Levels -> Spell Tiers:__ ```Spell Levels``` were renamed to ```Spell Tiers```. With the character leveling system in place, it is confusing
       to talk about both spell and character levels.
-    *  __Opportunity Attacks -> Exposed Attacks__ 
+    *  __Opportunity Attacks -> Exposed Attacks__
 *  __Introduction of Skills:__
     *  When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
     *  Skills are like small abilities that give you new ways to play your character.
@@ -96,7 +98,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
     * __Reasoning:__ Not in line with small, sneaky, fleetfoot halfling.
   * __Added Nimble Fingers__ _Advantage when stealing_
     * __Reasoning:__ In line with small, sneaky fleetfoot halfling.
-  
+
 
 #### Lizkin:
 * __Abilities:__
@@ -307,7 +309,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
 
 #### Cleric:
 * __Abilities:__
-  * __Changed Last Ditch Prayer:__ ___Level 3: Your deity helps you with a roll.___ 
+  * __Changed Last Ditch Prayer:__ ___Level 3: Your deity helps you with a roll.___
     * __Change:__ Now lets you add 1d8 to a roll rather than advantage. Cost changed from 1/3 turns
       to 1 action point.
     * __Reasoning:__ Old advantage based ability conflicts with the new _Luck_ system. Cost is in

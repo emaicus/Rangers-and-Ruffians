@@ -23,7 +23,10 @@ It can also be silly and funny. We think that it is usually pretty fun.
 
 ### Getting Started:
 Check out:
-1. [The Core Rulebook](docs/Rulebook.md), which has info on how to play and build characters.
-2. [The Book of Known Beasts](docs/Book_of_Known_Beasts.md) which contains creatures you might encounter on your travels.
-3. [The Book of Lore](docs/Book_of_Lore.md) to learn about the world of Rangers and Ruffians.
-4. [The Changelog](docs/Changelog.md) to keep up to date with the goings-on of Rangers and Ruffians.
+1. [The Core Rulebook](docs/Rulebook.md), which explains the rules of the game.
+2. [The Compendium of Character Creation](docs/Compendium_of_Character_Creation.md), which houses all of the _Races_, _Classes_, and _Skills_ needed to build a character.
+3. [The Tome of the Ancients ](docs/Tome_of_the_Ancients.md) which holds all of the spellbooks and spells that a mage might need.
+4. [The Book of Known Beasts](docs/Book_of_Known_Beasts.md) which contains creatures you might encounter on your travels.
+5. [The Book of Lore](docs/Book_of_Lore.md) to learn about the world of Rangers and Ruffians.
+6. [The Changelog](docs/Changelog.md) to keep up to date with the goings-on of Rangers and Ruffians.
+
