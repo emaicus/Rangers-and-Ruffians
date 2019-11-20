@@ -54,13 +54,13 @@ Catterwol:
                   that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
                   their family now? What members of the party is your character close to?
       stats:
-        Charisma: 1
+        Charisma: 0
         Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: -1
-        Luck: 0
+        Inner_Fire: -1
+        Intelligence: 0
+        Luck: 1
         Perception: 1
-        Strength: 0
+        Strength: -1
 Elf:
   subraces:
     Wood Elf:
@@ -68,7 +68,7 @@ Elf:
       abilities:
         - Sleepless
         - Low-Light Vision
-        - Winged feet
+        - Winged Feet
         - Counter Attack
         - Tracker
       quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
@@ -81,12 +81,12 @@ Elf:
         are naturally beautiful, and this beauty benefits them when they deal with the other
         races. Elves make strong mages and good dexterity based fighters.
       stats:
-        Charisma: 1
+        Charisma: 0
         Dexterity: 1
-        Inner_Fire: 0
+        Inner_Fire: -1
         Intelligence: 0
-        Luck: 0
-        Perception: 2
+        Luck: 1
+        Perception: 1
         Strength: -1
     High Elf:
       health_die_pieces: 2
@@ -94,7 +94,7 @@ Elf:
         - Sleepless
         - Low-Light Vision
         - Wink Wink, Nudge Nudge
-        # - Inherent Magic Replace this with skill
+        - Inherent Magic
         - Detect Magic
       quote: High Elves can be slippery folk. It seems to me that rarely say what they mean, 
         and they seldom mean what they say. They're strong mages, though, and too clever
@@ -104,15 +104,15 @@ Elf:
       description: High elves are among the most magical of the races. Reclusive by nature,
         high elves often confine themselves to gleaming costal cities. When a high elf does
         venture out into the world at large, it is often in a diplomatic capacity. 
-        High elves are as charming aas they are naturally beautiful, and commonly feel as though
+        High elves are as charming as they are naturally beautiful, and commonly feel as though
         it is their duty to maintain balance in the world. High elves make 
         good mages.
       stats:
-        Charisma: 2
+        Charisma: 1
         Dexterity: 0
         Inner_Fire: -1
-        Intelligence: 3
-        Luck: 0
+        Intelligence: 1
+        Luck: 2
         Perception: 0
         Strength: -1
     Deep Elf:
@@ -120,7 +120,7 @@ Elf:
       abilities:
         - Sleepless
         - Dark Vision
-        - Winged feet
+        - Winged Feet
         - Counter Attack
         - Born in Darkness
       quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
@@ -133,11 +133,11 @@ Elf:
         are naturally beautiful, and this beauty benefits them when they deal with the other
         races. Elves make strong mages and good dexterity based fighters.
       stats:
-        Charisma: -1
+        Charisma: -2
         Dexterity: 0
-        Inner_Fire: 1
+        Inner_Fire: 0
         Intelligence: 0
-        Luck: 0
+        Luck: 1
         Perception: 1
         Strength: 1
 Gnome:
@@ -159,11 +159,11 @@ Gnome:
         and are capable of succeeding at anything they put their minds to.
       stats:
         Charisma: -1
-        Dexterity: 1
+        Dexterity: 0
         Inner_Fire: 1
         Intelligence: 1
-        Luck: 0
-        Perception: 0
+        Luck: 2
+        Perception: -1
         Strength: 0
       handbook:
         sections: 
@@ -213,12 +213,12 @@ Goblin:
         and family. This can be very painful, as goblins are communal creatures by nature.
       stats:
         Charisma: -1
-        Dexterity: 2
+        Dexterity: 1
         Inner_Fire: -1
-        Intelligence: 1
-        Luck: 1
-        Perception: 2
-        Strength: -1
+        Intelligence: 0
+        Luck: 2
+        Perception: 1
+        Strength: 0
 Halfling:
   subraces:
     Fleetfoot Halfling:
@@ -229,24 +229,24 @@ Halfling:
         - Carry a Tune
         - Lightweight
         - Nimble
-        - Bull Rush
+        - Nimble Fingers
       quote: Halflings are decent enough, and fun to be around. They have potential as
-        since they can see without being seen, but I'm not sure if they're clever enough.
+        rogues since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
       description: Small folk, the Halflings would rather be drinking tea and eating toast
         in their holes than adventuring. They are naturally tricksters, are hardy
         for their size, and are adept at sqeezing into tight spots. On average, the Halflings
         stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
       stats:
-        Charisma: 1
-        Dexterity: 2
-        Inner_Fire: -1
-        Intelligence: 1
-        Luck: 1
+        Charisma: 0
+        Dexterity: 1
+        Inner_Fire: 0
+        Intelligence: 0
+        Luck: 2
         Perception: 1
         Strength: -2
     Hardfoot Halfling:
-      health_die_pieces: 2
+      health_die_pieces: 4
       abilities:
         - Sling
         - Warm Butter
@@ -255,7 +255,7 @@ Halfling:
         - Thick Headed
         - Courageous Blow
       quote: Halflings are decent enough, and fun to be around. They have potential as
-        since they can see without being seen, but I'm not sure if they're clever enough.
+        rogues since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
       description: Small folk, the Halflings would rather be drinking tea and eating toast
         in their holes than adventuring. They are naturally tricksters, are hardy
@@ -263,12 +263,12 @@ Halfling:
         stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
       stats:
         Charisma: 1
-        Dexterity: 0
+        Dexterity: -1
         Inner_Fire: 1
         Intelligence: -1
-        Luck: 0
+        Luck: 1
         Perception: 0
-        Strength: 1
+        Strength: 0
 Human:
   subraces:
     Human:
@@ -277,7 +277,8 @@ Human:
       - Last Stand
       - Strength of Men
       - Rally
-      - Tactics
+      - Adaptable
+      - Skilled
       quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
       author: Orkensheild, Orc Archer
       description: Humans are the most average of the races. The race of men can become good 
@@ -285,11 +286,11 @@ Human:
         That doesn't stop them from trying, though, and it is this natural willpower that
         makes them a force to be reckoned with.
       stats:
-        Charisma: 1
-        Dexterity: 0
+        Charisma: 0
+        Dexterity: -1
         Inner_Fire: 1
         Intelligence: 0
-        Luck: 0
+        Luck: 1
         Perception: -1
         Strength: 1
 Lizkin:
@@ -303,16 +304,15 @@ Lizkin:
       - Poison Resist
       - Shed Tail
       - Taste Air
-      - Camouflage
       quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
       author: Mister Li, Gnomeish Monk
       description: ''
       stats:
         Charisma: -1
-        Dexterity: 1
+        Dexterity: -1
         Inner_Fire: 0
-        Intelligence: -1
-        Luck: 0
+        Intelligence: 0
+        Luck: 1
         Perception: 1
         Strength: 1
 Waterborn:
@@ -320,14 +320,12 @@ Waterborn:
     Waterborn:
       health_die_pieces: 2
       abilities:
-      - Unbreathing
+      - Water Breathing
       - Flows Like Water
       - Water Healing
       - Become Mist
       - Charm
-      - Beast Form
       - Lightweight
-      - Dry Up
       quote: Most Waterborn I've seen have been dried up and dying. Their need
         for water is their undoing, out here in the desert. Once they've been 
         wetted down a bit, they perk right up. It's then that you have to watch
@@ -340,12 +338,12 @@ Waterborn:
         the other races.
       stats:
         Charisma: 1
-        Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 1
+        Dexterity: 0
+        Inner_Fire: -1
+        Intelligence: 1
+        Luck: 2
         Perception: 0
-        Strength: -2
+        Strength: -1
 Orc:
   subraces:
     Orc:
@@ -365,25 +363,22 @@ Orc:
       stats:
         Charisma: -2
         Dexterity: 0
-        Inner_Fire: 2
-        Intelligence: -1
-        Luck: 0
-        Perception: 1
+        Inner_Fire: 1
+        Intelligence: 0
+        Luck: 1
+        Perception: 0
         Strength: 1
 Dwarf:
   subraces:
     Dwarf:
       health_die_pieces: 4
       abilities:
-      - Mending
-      - Miner's Eye
       - Stocky
-      - Natural Sprinter
       - Very Dangerous Over Short Distances
-      - Stone Skin
       - Boozehound
       - Thick Headed
-      - Forgeborn 
+      - Forgeborn
+      - Incombustible
       quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be 
         well placed if you want to bring one down.
       author: Orkinshield, Orc Gunslinger
@@ -393,10 +388,10 @@ Dwarf:
                     been known to drink their adversaries under the table.
       stats:
         Charisma: 0
-        Dexterity: -1
+        Dexterity: -2
         Inner_Fire: 1
         Intelligence: 0
-        Luck: 0
+        Luck: 1
         Perception: 0
         Strength: 1
 Daemonspawn:
@@ -404,11 +399,11 @@ Daemonspawn:
     Daemonspawn:
       health_die_pieces: 4
       abilities: 
-      - Fix Your Eyes on Me 
-      - Infernal Blood
+      - Fix Your Eyes on Me
+      - Sacrificial Rite
       - True Sight
-      - Dark Vision
       - Sleepless
+      - Incombustible
       quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
         to use their dark and terrible magicks as to give you a passing smile. I've never met 
         one though; I've been careful to avoid them.
@@ -418,27 +413,26 @@ Daemonspawn:
                    vigilant and trusts no one.
       stats:
         Charisma: 0
-        Dexterity: 0
+        Dexterity: -1
         Inner_Fire: 1
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 1
+        Intelligence: 1
+        Luck: 1
+        Perception: -1
+        Strength: 0
 Sprout:
   subraces:
     Sprout:
       health_die_pieces: 2
       abilities: 
         - Photosynthesis
-        - Blade of Grass
-        - Mantel
         - Scurry
         - Dodge
-        - Harden
         - Small Fry
         - Soft Landing
         - Commune with Nature
         - Lightweight
+        - Blade of Grass
+        - Harden
       quote: And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my 
               hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
               dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
@@ -448,16 +442,16 @@ Sprout:
                     jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see 
                     a sprout knight attempting to make a name for themself.
       stats:
-        Charisma: 1
-        Dexterity: 2
-        Inner_Fire: -1
-        Intelligence: 1
+        Charisma: 0
+        Dexterity: 1
+        Inner_Fire: 0
+        Intelligence: 0
         Luck: 2
-        Perception: 2
-        Strength: -3
+        Perception: 1
+        Strength: -2
 Automaton:
   subraces:
-    Heavy Metal Automaton:
+    Automaton:
       health_die_pieces: 6
       abilities: 
       - Power Core 
@@ -480,9 +474,9 @@ Automaton:
                     to be an automaton, and the quest for meaning is a path that all such beings must walk.
       stats:
         Charisma: -1
-        Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: -1
+        Dexterity: -1
+        Inner_Fire: 0
+        Intelligence: 0
         Luck: 0
         Perception: 0
         Strength: 2
@@ -496,7 +490,6 @@ Hissling:
         - Chomp Chomp
         - Riding High
         - Dig Dig Dig
-        - And this Part Goes Here...
         - I'm a Red One!
         - Tossed Around
       quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, 
@@ -519,10 +512,32 @@ Hissling:
         and can reproduce just a few years after.
         "
       stats:
-        Charisma: -1
-        Dexterity: 3
-        Inner_Fire: 1
+        Charisma: 0
+        Dexterity: 1
+        Inner_Fire: -1
         Intelligence: 0
+        Luck: 2
+        Perception: 1
+        Strength: -1
+Kragraven:
+  subraces:
+    Kragraven:
+      health_die_pieces: 4
+      abilities: 
+        - Peck
+        - High Jump
+        - Coast
+        - Carrion
+        - Mimic
+      quote: "I don't trust them, those bird-men that live to the west. Don't trust them one bit."
+      author: Old Man Mcuffit, Racist Old Man
+      description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive, 
+                    taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
+      stats:
+        Charisma: -1
+        Dexterity: 0
+        Inner_Fire: -1
+        Intelligence: 1
         Luck: 1
-        Perception: 3
-        Strength: -3
+        Perception: 1
+        Strength: 0

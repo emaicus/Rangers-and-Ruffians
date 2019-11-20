@@ -76,7 +76,7 @@ def verify_gender(gender):
   return gender.lower() if gender.lower() in ['male', 'female'] else None
 
 def verify_level(level):
-  valid_levels = ['0','1','2','3','4','5','6','7','8','9','10']
+  valid_levels = [str(x) for x in range(16)]
   return int(level) if level in valid_levels else None
 
 def is_magic_class(rnr_class):
@@ -168,11 +168,11 @@ def which_icons(rnr_race, rnr_class):
   # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
   # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
 
-  #Clerics and Paladins get special spell points.
+  #Clerics and Paladins get special action points.
   if rnr_class in ['cleric', 'paladin']:
-    icons.append(('prayer.svg', 'Spell Points'))
+    icons.append(('prayer.svg', 'Action Points'))
   else:
-    icons.append(('ink-swirl.svg', 'Spell Points'))
+    icons.append(('ink-swirl.svg', 'Action Points'))
 
   #Sorcerers have influence points
   if rnr_class == 'sorcerer':

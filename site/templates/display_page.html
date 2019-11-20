@@ -100,8 +100,15 @@
                               <p> 
                                  <ol style="list-style-type: upper-roman;">
                                     {% for key in ('combat', 'general', 'starting_item', 'choice', 'advantage', 'spellbook','rule','action') if key in rnr_entity["abilities"]%}
-                                       {% for ability in rnr_entity["abilities"][key]%}
-                                          <li> <b> {{ability[0]}}: </b> {{ability[1]}} </li>
+                                       {% for ability, ability_info in rnr_entity["abilities"][key].items()%}
+                                          <li> 
+                                             <b> {{ability}}: 
+                                                {% if ability_info["cost"] != None %}
+                                                   (Cost {{ ability_info['cost'] }})
+                                                {% endif %}
+                                             </b> 
+                                             {{ability_info['description']}} 
+                                          </li>
                                        {% endfor %}
                                     {% endfor %}
                                  </ol>

@@ -1,0 +1,212 @@
+# All stats requirements are understood to be "effective"
+Cook:
+  description: "During a rest, you may cook food which heals 1d6 health."
+  type: general
+Master Chef:
+  description: "During a rest, you may cook food which heals 2d6 health."
+  type: general
+  requirements:
+    skills:
+      - Cook
+Hearty:
+  description: "When you level up, you may roll your health dice with advantage."
+  type: general
+Hand to Hand Weapon Proficiency:
+  description: "You may wield physical weapons without disadvantage."
+  type: general
+Ranged Weapon Proficiency:
+  description: "You may wield non-firearm ranged weapons without disadvantage"
+  type: general
+  requirements:
+    stats:
+      Dexterity: 1
+Firearm Proficiency:
+  description: "You may wield firearms without disadvantages"
+  type: general
+  requirements:
+    stats:
+      Intelligence: 2
+      Dexterity: 1
+Basic Magic:
+  description: "You may use tier zero magic. Each time you level up, gain a tier zero spell."
+  type: general
+  requirements:
+    stats:
+      Intelligence: 3
+Advanced Magic:
+  description: "You may use tier one magic. Each time you level up, gain a tier one spell."
+  type: general
+  requirements:
+    stats:
+      Intelligence: 5
+    skills:
+      - Basic Magic
+Fast Draw:
+  description: "You may add your dexterity rather than your perception to an initiative roll."
+  type: general
+  requirements:
+    stats:
+      Dexterity: 0
+Tinker:
+  description: "You may attempt to make items and contraptions during rests."
+  type: general
+  requirements:
+    stats:
+      Intelligence: 3
+      Dexterity: 1
+Nimble Navigator:
+  description: "Don't take penalty from difficult terrain. Stand up for free after being knocked prone."
+  type: combat
+  requirements:
+    stats:
+      Dexterity: 3
+En Garde:
+  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your dexterity."
+  type: general
+  requirements:
+    stats:
+      Dexterity: 1
+Shrug it Off:
+  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your strength."
+  type: general
+  requirements:
+    stats:
+      Strength: 1
+Leader:
+  description: "Give all allies a 1d6 inspiration dice at the start of each battle."
+  type: combat
+  requirements:
+    stats:
+      Inner Fire: 3
+      Charisma: 3
+Mage Hunter:
+  description: "Gain advantage on breaking enemy concentration and on SP saves."
+  type:  advantage
+  requirements:
+    stats:
+      Inner Fire: 3
+Minor Movement Distance Increase:
+  description: "Move an additional 5 feet per turn."
+  type: combat
+  requirements:
+    stats:
+      Dexterity: 2
+Greater Movement Distance Increase:
+  description: "Move an additional 5 feet per turn."
+  type: combat
+  requirements:
+    stats:
+      Dexterity: 4
+    skills:
+    - Minor Movement Distance Increase
+Major Movement Distance Increase:
+  description: "Move an additional 5 feet per turn."
+  type: combat
+  requirements:
+    stats:
+      Dexterity: 6
+    skills:
+    - Greater Movement Distance Increase
+Lip-Reader:
+  description: "You can read the lips of anyone you can see."
+  type: general
+  requirements:
+    stats:
+      Perception: 3
+Insomniac:
+  description: "You can gain the benefits of normal sleep for one night without sleeping."
+  type: general
+  requirements:
+    stats:
+      Inner Fire: 2
+Battle Mage:
+  description: "Gain advantage on concentration checks. Re-roll 1's made on attack spells."
+  type: combat
+Ventriloquist:
+  description: "You can throw your voice without a skill check."
+  type: general
+  requirements:
+    Charisma: 1
+Fight from the Shadows:
+  description: "You are able to attempt to hide as an offhand action."
+  type: combat
+  requirements:
+    stats:
+      Dexterity: 3
+Phallanx:
+  description: "When you are adjacent to an ally, enemy attacks are at disadvantage."
+  type: combat
+Medic:
+  description: "You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 SP."
+  type: combat
+Greater Medic:
+  description: "You are able to heal a teammate for 2d6 health for 1SP."
+  type: general
+  requirements:
+    stats:
+      Inner Fire: 2
+      Dexterity: 1
+    skills:
+      - Medic
+Functioning Alcoholic:
+  description: "When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks."
+  type: general
+  requirements:
+    stats:
+      Inner Fire: 3
+Sage:
+  description: "Re-roll any ones or twos rolled while casting magic."
+  type: general
+  requirements:
+    stats:
+      Intelligence: 5
+      Inner Fire: 3
+Close Quarters Combat:
+  description: "Do not take disadvantage with ranged weapons in close quarters."
+  type: combat
+Empowered Spells:
+  description: "Roll double the damage dice for your tier zero spells."
+  type: combat
+  requirements:
+    stats:
+      Intelligence: 3
+      Inner Fire: 3
+Two Handed Weapon Master:
+  description: "Carry two handed weapons with one hand."
+  type: combat
+  requirements:
+    stats:
+      Strength: 3
+      Dexterity: 1
+Master of Concentration:
+  description: "Concentrate on two spells at the same time"
+  type: general
+  requirements:
+    stats:
+      Inner Fire: 5
+      Intelligence: 3
+Duelist:
+  description: "When fighting an enemy take advantage on attacks if there are no other combatants within 30 feet."
+  type: combat
+Demolitionist:
+  description: "Do double damage with non-spell based explosives."
+  type: combat
+Controlled Retreat:
+  description: "Take half damage when retreating."
+  type: combat
+Pivot:
+  description: "Swap positions with an adjacent teammate."
+  type: combat
+Contortionist:
+  description: "You are able to easily contort your body."
+  type: general
+  requirements:
+    stats:
+      Dexterity: 3
+Tumble:
+  description: "Take 20 feet less fall damage."
+  type: general
+Fire Bug:
+  description: "Roll advantage when attacking with fire."
+  type: combat
+

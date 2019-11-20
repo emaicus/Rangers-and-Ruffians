@@ -28,7 +28,8 @@ def rank_races():
   with open(os.path.join(STAT_OUTPUT, 'race_rankings.txt'), 'w') as outfile:
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
-      races.sort(key = attrgetter(stat.lower()), reverse = True)
+      #races.sort(key = attrgetter(stat.lower()), reverse = True)
+      races.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       for race in races:
         outfile.write("    {0}: {1}\n".format(race.name, race.get_stat(stat)))
       outfile.write("\n")
@@ -42,12 +43,15 @@ def rank_classes():
     level_zero  = rnr_utils.load_all_class_objects(level=0)
     level_five = rnr_utils.load_all_class_objects(level=5)
     level_ten  = rnr_utils.load_all_class_objects(level=10)
+    level_fifteen  = rnr_utils.load_all_class_objects(level=15)
+
     
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
-      level_zero.sort(key = attrgetter(stat.lower()), reverse = True)
-      level_five.sort(key = attrgetter(stat.lower()), reverse = True)
-      level_ten.sort(key = attrgetter(stat.lower()), reverse = True)
+      level_zero.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_five.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_ten.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
+      level_fifteen.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       for level_classes, level_str in ((level_zero,'0'),):#(level_five,'5'),(level_ten,'10')):
         outfile.write('    LEVEL {0}:\n'.format(level_str))
         for rnr_class in level_classes:
@@ -65,7 +69,7 @@ def rank_characters():
       for stat in rnr_utils.get_all_stat_names():
         outfile.write('  {0}:\n'.format(stat))
         characters = rnr_utils.load_combos_given_list(rnr_races, [r_class,], level=0)
-        characters.sort(key = attrgetter(stat.lower()), reverse = True)
+        characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
         for c in characters:
           outfile.write("    {0}: {1}\n".format(c.name, c.get_stat(stat)))
         outfile.write('\n')
@@ -73,7 +77,7 @@ def rank_characters():
     outfile.write('NOW, IT GETS REAL!\n')
     characters = rnr_utils.load_all_characters(level=0)
     for stat in rnr_utils.get_all_stat_names():
-      characters.sort(key = attrgetter(stat.lower()), reverse = True)
+      characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       outfile.write('{}\n'.format(stat))
       for c in characters:
         outfile.write("  {0}: {1}\n".format(c.name, c.get_stat(stat))) 
@@ -130,7 +134,7 @@ def vitality_chart(data_packet):
       outfile.write('{0}\n'.format(mode.upper()))
       
       outfile.write('{0:<4}'.format('DIE'))
-      for i in range(0,11):
+      for i in range(0,16):
         s = 'LV{0}'.format(i)
         outfile.write('{0:<5}'.format(s))
       outfile.write('\n')
@@ -138,7 +142,7 @@ def vitality_chart(data_packet):
       for health_die in [4, 6, 8, 10, 12]:
         outfile.write('{0:<4}'.format(health_die))
         health = health_die
-        for level in range(0,11):
+        for level in range(0,16):
           health = quick_health(health, level, health_die, mode)
           outfile.write('{0:<5}'.format(health))
         outfile.write('\n')
@@ -184,8 +188,10 @@ def spell_stats():
   print('-----------------------------------------')
   level_dict = {'Level Zero' : 2}
   can_learn_mask = {}
-  for num in range(11):
+  for num in range(16):
     level_string = 'level_{0}'.format(num)
+    if not level_string in wizard['levels']:
+      continue
     if 'abilities' in wizard['levels'][level_string]:
       for ability in wizard['levels'][level_string]['abilities']:
         if 'Level' in ability and 'Spells' in ability:
@@ -289,7 +295,7 @@ def process_classes():
 
   for name in class_names:
     with open(os.path.join(STAT_OUTPUT, 'level_output','{0}.txt'.format(name)), 'w') as outfile:
-      for level in range(0,11):
+      for level in range(0,16):
         subclasses = rnr_utils.subclasses_at_level(name, level)
 
         if len(subclasses) == 0:
@@ -327,11 +333,11 @@ Game stats. call game_stats()
 
 def evaluate(num, target):
   if num < target:
-    return 'FAIL! (-{0})'.format((target*2)-num)
+    return 'FAIL!'.format((target*2)-num)
   elif num >= target*2:
-    return 'VICTORY! (+{0})'.format(num-(target*2))
+    return 'VICTORY!'.format(num-(target*2))
   else:
-    return 'PASS! (-{0})'.format((target*2)-num)
+    return 'PASS!'.format((target*2)-num)
 
 def game_stats():
   store_data = dict()
@@ -387,14 +393,15 @@ def game_stats():
 def evaluate_spells_for_failures(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  # Get new spell tier at levels 0, 1, 5, 8, 11, 14
+  target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
   for spell_book, levels in all_spellbooks.items():
     for level, spell_list in levels.items():
       num = len(spell_list)
       if level in target_spell_counts:
         if evaluate(num, target_spell_counts[level]) == "FAIL!":
-          offenders.append('{0} {2} needs {1}'.format(spell_book, target_spell_counts['level'] - num, level))
+          offenders.append('{0} {2} needs {1}'.format(spell_book, target_spell_counts[level] - num, level))
   if print_errors:
     for error in offenders:
       print(error)
@@ -403,7 +410,7 @@ def evaluate_spells_for_failures(print_errors=True):
 def evaluate_spells_for_doubling(print_errors=True):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   all_spellbooks = rnr_utils.get_all_spellbooks()
-  target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
+  target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
   running_total = 0
   for spell_book, levels in all_spellbooks.items():
@@ -557,7 +564,191 @@ def spell_check(fix_errors=True, print_errors=True):
         print("  {0}".format(error))
   
   return all_errors
-  
+
+# Returns a list of errors found in a description.
+def string_key_check(dictionary, key, err_name, required=True, punctuation_check=True):
+  errors = list()
+  if key in dictionary:
+    if not isinstance(dictionary[key], str):
+      errors.append(f'{err_name}: {key} is not a string.')
+    else:
+      if not dictionary[key][-1] in ['.', '!'] and punctuation_check:
+        errors.append(f'{err_name}: {key} should end in punctuation.')
+  elif required:
+    errors.append(f'{err_name}: does not have {key}.')
+
+  return errors
+
+def check_known_beasts():
+  all_errors = list()
+  for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
+    
+    all_errors += string_key_check(category_info, 'description', category)
+    all_errors += string_key_check(category_info, 'tactics', category)
+
+    if not 'types' in category_info:
+      all_errors.append(f'{category}: no types defined.')
+      continue
+    
+    for beast_class, beasts in category_info['types'].items():
+      all_errors += string_key_check(beasts, 'description', beast_class)
+      all_errors += string_key_check(beasts, 'tactics', beast_class)
+
+      if not 'types' in beasts:
+        all_errors.append(f'{beast_class}: no types defined.')
+        continue
+
+      for beast, info in beasts['types'].items():
+        is_villain = False
+        if 'type' not in info:
+          all_errors.append(f'{beast} missing type.')
+        else:
+          try:
+            level_str, num, size = info['type'].split(' ')
+            if level_str != 'Level' or int(num) < 0 or int(num) > 15 or size not in ['Light', 'Heavy', 'Villain']:
+              all_errors.append(f'{beast}: malformed type')
+            else:
+              if size == 'Villain':
+                is_villain = True
+          except Exception as e:
+            all_errors.append(f'{beast}: (exception) malformed type')
+
+        all_errors += string_key_check(beast, 'description', info, required=False)
+        all_errors += string_key_check(beast, 'tactics', beast, required=is_villain)
+
+        for k in ['average_damage_per_round', 'average_villain_damage_per_round']:
+          if k in info:
+            if not isinstance(info[k], int):
+              all_errors.append(f'{beast}: {k} ADPR is not an int')
+            if not is_villain and k == 'average_villain_damage_per_round':
+              all_errors.append(f'{beast}: has Villain ADPR despite not being a villain.')
+          elif is_villain and k == 'average_villain_damage_per_round':
+            all_errors.append(f'{beast}: is a villain but does not have a Villain ADPR.')
+          elif k == 'average_damage_per_round':
+            all_errors.append(f'{beast} is missing {k}.')
+
+        if not 'health' in info:
+          all_errors.append(f'{beast}: missing health')
+        else:
+          try:
+            h = int(info['health'])
+            if h <= 0:
+              all_errors.append(f'{beast}: bad value for health')
+          except Exception as e:
+            all_errors.append(f'{beast}: malformed health')
+        
+        if 'action_spec' in info:
+          for key, val in info['action_spec'].items():
+            if not isinstance(val, str):
+              all_errors.append(f'{beast} action_spec {key}: description should be a string')
+            else:
+              if not val[-1] in ['.', '!']:
+                all_errors.append(f'{beast} action_spec {key}: description should end in punctuation.')
+
+
+        if not 'actions' in info:
+          all_errors.append(f'{beast}: does not have actions')
+        else:
+          for action, a_info in info['actions'].items():
+            if 'damage' in a_info:
+              if not 'modifier' in a_info:
+                all_errors.append(f'{beast} {action}: missing modifier')
+              else:
+                if not isinstance(a_info['modifier'], str):
+                  all_errors.append(f'{beast} {action}: modifier should be a string')
+                else:
+                  if not a_info['modifier'] in ["Strength", "Dexterity", "Inner_Fire"]:
+                    all_errors.append(f'{beast} {action}: bad modifier {a_info["modifier"]}')
+              try:
+                n, d = a_info['damage'].split('d')
+                n_i = int(n)
+                d_i = int(d)
+                if n_i <= 0 or d_i not in [2, 4, 6, 8, 10, 12, 20, 100]:
+                  all_errors.append(f'{beast} {action}: bad damage {a_info["damage"]}')
+              except Exception as e:
+                all_errors.append(f'{beast} {action}: (exception) bad damage {a_info["damage"]}')
+            
+            if not 'description' in a_info:
+              all_errors.append(f'{beast} {action}: no description')
+            else:
+              if a_info['description'][-1] not in ['.', '!']:
+                all_errors.append(f'{beast} {action}: description does not end with punctuation.')
+
+            if 'modifier' in a_info and 'damage' not in a_info:
+              all_errors.append(f'{beast} {action}: has modifier but no damage')
+
+
+        if 'abilities' in info:
+          for ability, description in info['abilities'].items():
+            if not isinstance(description, str):
+              all_errors.append(f'{beast} {ability} does not have a string description.')
+            else:
+              if description[-1] not in ['.', '!']:
+                all_errors.append(f'{beast} {ability}: description does not end with punctuation.')
+
+        if not 'movement' in info:
+          all_errors.append(f'{beast}: does not have movement')
+        else:
+          if not isinstance(info['movement'], dict):
+            all_errors.append(f'{beast}: movement should be a dict of terrain to speed')
+          else:
+            for m_type, m_dist in info['movement'].items():
+              if not m_type in ['land', 'water', 'air']:
+                all_errors.append(f'{beast}: movement has unsupported type {m_type}')
+              if not isinstance(m_dist, int):
+                all_errors.append(f'{beast}: {m_type} movement is not an integer')
+
+        if not 'stats' in info:
+          all_errors.append(f'{beast}: does not have stats')
+        else:
+          for stat, val in info['stats'].items():
+            if not stat in rnr_utils.get_all_stat_names():
+              all_errors.append(f'{beast}: bad stat name {stat}')
+            if not isinstance(val, int):
+              all_errors.append(f'{beast}: bad {stat} value {val}')
+
+        for key in ['conditional_actions', 'sanctuary_actions', 'villain_actions', 'offhand_actions']:
+          if key in info:
+            for action_type, a_description in info[key].items():
+              if not isinstance(a_description, str):
+                all_errors.append(f'{beast} {key} {action_type}: description is not a string')
+              else:
+                if a_description[-1] not in ['.', '!']:
+                  all_errors.append(f'{beast} {key} {action_type}: description does not end with punctuation.')
+
+  return all_errors
+
+def check_pantheon():
+  all_errors = list()
+  for deity, info in rnr_utils.GLOBAL_PANTHEON.items():
+    if 'evil' in info:
+      if not isinstance(info['evil'], bool):
+        all_errors.append(f'{deity}: evil is not a boolean')
+    else:
+      all_errors.append(f'{diety}: missing evil value')
+    
+    all_errors += string_key_check(info, "description", deity)
+
+    if 'abilities' in info:
+      for level, abilities in info['abilities'].items():
+        try:
+          level_str, level_num = level.split('_')
+          level_num = int(level_num)
+          if not level_str == 'Level' or level_num > 15 or level_num < 0:
+            all_errors.append(f'{deity}: bad level {level}')
+        except Exception as e:
+          all_errors.append(f'{deity}: bad level (exception) {level}')
+
+        for ability, ability_info in abilities.items():
+          all_errors += string_key_check(ability_info, 'description', f'{deity} {ability}')
+          if 'type' in ability_info:
+            if not ability_info['type'] in ['combat', 'general', 'advantage', 'disadvantage', 'starting_item']:
+              all_errors.append(f'{deity} {ability}: bad type {ability_info["type"]}')
+          else:
+            all_errors.append(f'{deity} {ability}: missing type')
+
+  return all_errors
+
 
 
 if __name__ == '__main__':

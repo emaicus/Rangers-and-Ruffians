@@ -41,13 +41,6 @@ class rnrTests(unittest.TestCase):
       log_output("Spell Counts", errors)
     self.assertEqual(len(errors),0)
 
-  def test_spell_count_doubling(self):
-    rnr_utils.load_Rangers_And_Ruffians_Data()
-    errors = balance_report.evaluate_spells_for_doubling(print_errors=False)
-    if len(errors) > 0:
-      log_output("Spell Doubling", errors)
-    self.assertEqual(len(errors),0)
-
   def test_description_lengths(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
     errors = balance_report.check_brief_abilities(print_errors=False)
@@ -77,9 +70,20 @@ class rnrTests(unittest.TestCase):
     all_classes = rnr_utils.load_all_class_objects(level=0)
     errors = list()
     for c in all_classes:
-      val = sum(list(c.stats.values()))
-      if val != -3:
-        errors.append("{0}'s stats sum to {1}".format(c.name, val))
+      hp = (c.health_die_pieces - 2) // 2
+      if hp != 2 - c.get_stat('luck'):
+        errors.append(f'{c.name} has {hp} health die pieces and {c.get_stat("luck")} luck.')
+
+      necessary_set = set([2,1,0,-1,-2,-3])
+      
+      for key, val in c.stats.items():
+        if key.lower() == 'luck':
+          continue
+        if val in necessary_set:
+          necessary_set.remove(val)
+        else:
+          errors.append(f'{c.name} has duplicate or bad stats! Could not find {val}')
+          break
     
     if len(errors) > 0:
       log_output("Class Balance", errors)
@@ -90,11 +94,35 @@ class rnrTests(unittest.TestCase):
     all_races = rnr_utils.load_all_race_objects()
     errors = list()
     for r in all_races:
-      val = sum(list(r.stats.values()))
-      if val != 4:
-        errors.append("{0}'s stats sum to {1}".format(r.name, val))
+      hp = (r.health_die_pieces - 2) // 2
+      if hp != 2 - r.get_stat('luck'):
+        errors.append(f'{r.name} has {hp} health die pieces and {r.get_stat("luck")} luck.')
+
+
+      stat_sum = sum(list(r.stats.values())) - r.get_stat('luck')
+
+      if stat_sum != 0:
+        errors.append("{0}'s stats sum to {1}".format(r.name, stat_sum))
+
+    if len(errors) > 0:
+      log_output("Race Balance", errors)
 
     self.assertEqual(len(errors), 0)
+
+  def test_book_of_known_beasts(self):
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    errors = balance_report.check_known_beasts()
+    if len(errors) > 0:
+      log_output("Known Beasts", errors)
+    self.assertEqual(len(errors),0)
+
+  def test_pantheon(self):
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    errors = balance_report.check_pantheon()
+    if len(errors) > 0:
+      log_output("Pantheon", errors)
+    self.assertEqual(len(errors),0)
+
 
 if __name__ == '__main__':
   unittest.main()

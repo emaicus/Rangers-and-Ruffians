@@ -3,14 +3,15 @@ Heavy Fighter:
     base_abilities:
     - Colossal
     - Boozehound
+    - Ruffians
     base_stats:
-      Charisma: -4
-      Dexterity: 2
-      Inner_Fire: 1
-      Intelligence: -5
+      Charisma: -2
+      Dexterity: 1
+      Inner_Fire: -1
+      Intelligence: -3
       Luck: 0
-      Perception: -2
-      Strength: 5
+      Perception: 0
+      Strength: 2
     description: Barbarians are hearty, and can dole out a lot of damage, making them
       great tanks for a party of adventurers. They are marked by their berserk ability,
       which allows them to fly into a battle frenzy, gaining extra attacks and health.
@@ -23,45 +24,57 @@ Heavy Fighter:
         abilities:
         - Melee Weapon Proficiency
         - Berserk
+        - Intimidate
+        - Taunt
       level_1:
         abilities:
-        - Taunt
-        - Hand to Hand Combat
+        - Throw Anything
+        - Throw Caution to the Wind
       level_2:
         abilities:
-        - Crushing Blow
+        - Stat Increase
       level_3:
         abilities:
-        - Ruffians
-        - Intimidate
+        - Crushing Blow
+        - Line Them Up
       level_4:
         abilities:
-        - Furious Blows
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
-        - Warmaster
-        - Always Angry
-        - Throw Anything
+        - Blind Rage
+        - Savage Critical
       level_6:
         abilities:
-        - Blind Rage
-        - Line Them Up
+        - Stat Increase
       level_7:
         abilities:
-        - Throw Caution to the Wind
-        - Savage Critical
+        - Always Angry
+        - Furious Blows
       level_8:
         abilities:
-        - Controlled Rage
-        - Berserker
+        - Stat Increase
       level_9:
         abilities:
-        - Offhand Attack
-        - Reduced Critical
+        - Berserker
       level_10:
         abilities:
+        - Stat Increase
+      level_11:
+        abilities:
+        - Warmaster
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Controlled Rage
         - Glory
+      level_14:
+        abilities: 
+        - Stat Increase
+      level_15:
+        abilities:
         - Spirit of Rage
     questions:
     - Where did your character come from?
@@ -74,10 +87,10 @@ Heavy Fighter:
     base_abilities:
     - Armored
     base_stats:
-      Charisma: 1
-      Dexterity: -2
+      Charisma: 0
+      Dexterity: -3
       Inner_Fire: 1
-      Intelligence: -3
+      Intelligence: -1
       Luck: 0
       Perception: -2
       Strength: 2
@@ -90,41 +103,55 @@ Heavy Fighter:
       level_0:
         abilities:
         - Melee Weapon Proficiency
-        - Trained Precision
+        - Kingsmen
+        - Shield Bash
       level_1:
         abilities:
-        - Shield Bash
+        - Shield of Men
       level_2:
         abilities:
-        - Kingsmen
-        - Taunt
+        - Stat Increase
       level_3:
         abilities:
-        - Shield of Men
         - Shield Up
+        - Taunt
       level_4:
         abilities:
-        - Hold the Line
+        - Stat Increase
       level_5:
         abilities:
-        - Offhand Attack
-        - Steel Yourself
-        - Multi-class Option
+        - Trained Precision
       level_6:
         abilities:
-        - Cleave
+        - Stat Increase
       level_7:
         abilities:
-        - Second Action
+        - Ready Stance
+        - Offhand Attack
       level_8:
         abilities:
-        - Last Line of Defense
+        - Stat Increase
       level_9:
         abilities:
-        - Stay on Your Feet
+        - Steel Yourself
+        - Cleave
       level_10:
         abilities:
-        - Reduced Critical
+        - Stat Increase
+      level_11:
+        abilities:
+        - Stalwart Defender
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Last Line of Defense
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities: 
         - Sword of Honor
     questions:
     - How did your character get where they are, and where they are going next?
@@ -139,19 +166,19 @@ Heavy Fighter:
     - Minor Spell Choice
     - Chainmail
     base_stats:
-      Charisma: -1
-      Dexterity: -4
-      Inner_Fire: 2
-      Intelligence: 1
-      Luck: 0
-      Perception: -3
+      Charisma: 0
+      Dexterity: -3
+      Inner_Fire: 1
+      Intelligence: -1
+      Luck: 1
+      Perception: -2
       Strength: 2
     description: Palidins are Soldiers of the Light, and are adept both at hand to
       hand combat and basic healing magic. Paladins are devoted to their deity, and
       aim to bring their influence into the world. Paladins are especially good at
       taking out evil entities, and are known for their Faithful Weapon ability, which
       lets them summon their weapon to their hand after throwing it.
-    health_die_pieces: 6
+    health_die_pieces: 4
     levels:
       level_0:
         abilities:
@@ -160,48 +187,61 @@ Heavy Fighter:
         - Pledge
         - Learning Spells
         - Learn Spells
-        - Spell Power
-        - Hammer of Light
-        - Faithful Weapon
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Link Lifeforce
-        - Level One Spells
+        - Hammer of Light
+        - Bash
       level_2:
         abilities:
-        - Bash
+        - Stat Increase
+        - Tier One Spells
       level_3:
         abilities:
-        - Minor Offhand Spell
+        - Faithful Weapon
       level_4:
         abilities:
-        - Shield of Men
-        - Level Two Spells
+        - Stat Increase
+        - Minor Offhand Spell
       level_5:
         abilities:
-        - Offhand Attack
-        - Greater Offhand Spell
-        - Multi-class Option
+        - Link Lifeforce
       level_6:
         abilities:
-        - Sinner's Bane
-        - Level Three Spells
+        - Stat Increase
+        - Tier Two Spells
       level_7:
         abilities:
-        - Beacon of Hope
-        - Second Action
+        - Greater Offhand Spell
+        - Shield of Men
+        - Offhand Attack
       level_8:
         abilities:
-        - Last Line of Defense
-        - Level Four Spells
+        - Stat Increase
       level_9:
         abilities:
-        - Winged Jump
+        - Beacon of Hope
+        - Tier Three Spells
       level_10:
         abilities:
+        - Stat Increase
+      level_11:
+        abilities:
+        - Last Line of Defense
+      level_12:
+        abilities:
+        - Stat Increase
+        - Tier Four Spells
+      level_13:
+        abilities:
+        - Winged Jump
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
         - Fires of Heaven
-        - Level Five Spells
+        - Tier Five Spells
     questions:
     - What deity does your character worship?
     - What their relationship is like with their deity? Do they pray to them often?
@@ -215,12 +255,12 @@ Heavy Fighter:
 Light Fighter:
   Beastmaster:
     base_stats:
-      Charisma: -4
+      Charisma: -3
       Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: -3
-      Luck: 0
-      Perception: 1
+      Inner_Fire: -2
+      Intelligence: -1
+      Luck: 1
+      Perception: 0
       Strength: 2
     description: For the Beastmaster 'Animal Person' is an understatement. Beastmaster's
       begin their adventure with a loyal animal companion, which they can select from
@@ -244,39 +284,48 @@ Light Fighter:
         - Hobble
       level_2:
         abilities:
-        - Lightfoot
-        - Huntsman
-        - Leaping Strike
+        - Stat Increase
       level_3:
         abilities:
-        - Dog Pile
-        - Field Healing
-        - Offhand Attack
+        - Leaping Strike
+        - Huntsman
       level_4:
         abilities:
-        - Tracker
-        - Coordinated Attack
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
-        - Closest Friend
-        - Grown
+        - Coordinated Attack
+        - Dog Pile
+        - Tracker
       level_6:
         abilities:
-        - Mantel
-        - Wild Sight
+        - Stat Increase
       level_7:
         abilities:
-        - Second Action
-        - Inseparable
+        - Closest Friend
+        - Offhand Attack
       level_8:
         abilities:
-        - Dire Companion
-        - Poison Strike
+        - Stat Increase
       level_9:
         abilities:
-        - Dominate
+        - Wild Sight
       level_10:
+        abilities:
+        - Stat Increase
+      level_11:
+        abilities:
+        - Inseparable
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Dominate
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
         abilities:
         - Beast Form
     questions:
@@ -290,13 +339,13 @@ Light Fighter:
     tag_line: Companion Fighter
   Fighter:
     base_stats:
-      Charisma: 1
-      Dexterity: 1
-      Inner_Fire: -2
-      Intelligence: -3
-      Luck: 0
+      Charisma: -1
+      Dexterity: 2
+      Inner_Fire: -3
+      Intelligence: -2
+      Luck: 1
       Perception: 0
-      Strength: 0
+      Strength: 1
     description: Fighters are powerful strength or dexterity based warriors. Unlike
       the knight, fighters are unarmored, and have a skillset more suited to keeping
       themselves alive and bringing down enemies than providing support.
@@ -310,35 +359,48 @@ Light Fighter:
       level_1:
         abilities:
         - Determination
-        - Minor Second Wind
       level_2:
         abilities:
-        - Resolve
+        - Stat Increase
       level_3:
         abilities:
-        - Nimble
-        - Offhand Attack
+        - Minor Second Wind
+        - Resolve
       level_4:
         abilities:
-        - Reduced Critical
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
-        - Multi-Action
+        - Nimble
+        - Reduced Critical
       level_6:
         abilities:
-        - Major Second Wind
+        - Stat Increase
       level_7:
         abilities:
-        - Reduced Critical
-        - Find Center
+        - Offhand Attack
       level_8:
         abilities:
-        - Feint
+        - Stat Increase
       level_9:
         abilities:
-        - Stay on Your Feet
+        - Major Second Wind
       level_10:
+        abilities:
+        - Stat Increase
+      level_11:
+        abilities:
+        - Find Center
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Stay on Your Feet
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
         abilities:
         - Reduced Critical
         - Whirlwind of Blades
@@ -355,14 +417,15 @@ Light Fighter:
     - My Father's Coffers
     - The Family Sword
     - Lightweight
+    - Beauty Incarnate
     base_stats:
-      Charisma: 3
+      Charisma: 2
       Dexterity: 1
-      Inner_Fire: -2
+      Inner_Fire: -3
       Intelligence: 0
       Luck: 1
-      Perception: -3
-      Strength: -3
+      Perception: -1
+      Strength: -2
     description: Highborns were born into a noble house and have connections and money
       as a result. They are well trained fighters, and have the charisma necessary
       to rally people to their side. While the typical highborn is not as hardened
@@ -375,38 +438,55 @@ Light Fighter:
         - Melee Weapon Proficiency
         - My People
         - Happy Smiles
-        - Beauty Incarnate
+        - Swoon
       level_1:
         abilities:
-        - Swoon
+        - Mantel
       level_2:
         abilities:
-        - Gumption
+        - Stat Increase
       level_3:
         abilities:
-        - Mantel
+        - Disarming
+        - Gumption
       level_4:
         abilities:
-        - Disarming
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
+        - Feeling Lucky
+        - Fallen
       level_6:
         abilities:
-        - Feeling Lucky
+        - Stat Increase
       level_7:
         abilities:
-        - Forced Focus
-        - Second Action
+        - Spurred to Movement
       level_8:
         abilities:
-        - Fallen
+        - Stat Increase
       level_9:
         abilities:
-        - Rally Cry
+        - Offhand Attack
       level_10:
         abilities:
+        - Stat Increase
+      level_11:
+        abilities:
+        - Lionhearted
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Rally Cry
         - Aura of Peace
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
+        - Strike First
     questions:
     - Why is your character embarking on their adventure? Are they out to prove themself?
       Or perhaps they are idealistic and want adventure?
@@ -421,12 +501,12 @@ Light Fighter:
     base_abilities:
     - Starting Fighting Techniques
     base_stats:
-      Charisma: -1
+      Charisma: -3
       Dexterity: 1
-      Inner_Fire: 1
+      Inner_Fire: 0
       Intelligence: -2
-      Luck: 0
-      Perception: -1
+      Luck: 1
+      Perception: 2
       Strength: -1
     description: Monks are masters of hand to hand combat, who use their extensive
       control of their bodies to overcome their foes. Monks are able to learn abilities
@@ -446,12 +526,28 @@ Light Fighter:
         - The Book of Chi
         - Fighting Techniques
         - Learn Fighting Techniques
-      level_5:
+      level_2:
         abilities:
-        - Multi-class Option
+        - Stat Increase
+      level_4:
+        abilities:
+        - Stat Increase
+      level_6:
+        abilities:
+        - Stat Increase
+      level_8:
+        abilities:
+        - Stat Increase
+      level_10:
+        abilities:
         - Master Fighting Techniques
-      level_9:
+        - Stat Increase
+      level_12:
         abilities:
+        - Stat Increase
+      level_14:
+        abilities:
+        - Stat Increase
         - Legendary Fighting Techniques
     standings: Monks keep to themselves, which cause some outside of their religion
       to attempt to take advantage of them.
@@ -461,14 +557,15 @@ Light Fighter:
     - Action
     - Offhand Action
     - Shifting Cloak
+    - Under the Stars
     base_stats:
-      Charisma: -2
+      Charisma: 0
       Dexterity: 1
       Inner_Fire: -1
-      Intelligence: -2
-      Luck: 0
-      Perception: 1
-      Strength: 0
+      Intelligence: -3
+      Luck: 1
+      Perception: 2
+      Strength: -2
     description: Rangers are the vigilante law keepers and monster hunters of the
       wilds. Rangers are powerful dexterity based fighters, and are known for their
       abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able
@@ -488,62 +585,73 @@ Light Fighter:
         - Ranged Weapon Proficiency
         - Minor Medicine
         - Learned
+        - Camouflage
       level_1:
         abilities:
+        - Entangling Attack
         - Favorite Terrain
-        - Finesse Strike
       level_2:
         abilities:
-        - Twin Blades
-        - Camouflage
+        - Stat Increase
       level_3:
         abilities:
         - Tracker
-        - Twin Blade Parry
         - Ward of Tracking
       level_4:
         abilities:
-        - Entangling Attack
-        - Under the Stars
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
-        - Monster Slayer
-        - Spell of Darkvision
+        - Finesse Strike
+        - Twin Blades
       level_6:
         abilities:
-        - Greater Medicine
-        - Cartwheel
+        - Stat Increase
       level_7:
         abilities:
-        - Disarming Blow
-        - Disengage
+        - Twin Blade Parry
+        - Greater Medicine
       level_8:
         abilities:
-        - Offhand Attack
-        - Flame Strike
+        - Stat Increase
       level_9:
         abilities:
-        - Expert Tracker
-        - Fire and Ice
+        - Monster Slayer
+        - Disengage
       level_10:
         abilities:
-        - Assassinate
-        - Trap Expert
-        - Soundless
+        - Stat Increase
+      level_11:
+        abilities:
+        - Spell of Darkvision
+        - Disarming Blow
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Offhand Attack   
+        - Expert Tracker   
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
+        - Fire and Ice
     standings: Barbarians are the enemies of law keepers.
     tag_line: Duel Wielding Tracker
   Rogue:
     base_abilities:
     - A Thief's Gear
+    - Ruffians
     base_stats:
       Charisma: 0
       Dexterity: 2
-      Inner_Fire: -1
+      Inner_Fire: -2
       Intelligence: -1
-      Luck: 1
-      Perception: 0
-      Strength: -4
+      Luck: 2
+      Perception: 1
+      Strength: -3
     description: Sneaktheives and criminals, rogues have often fallen in with bad
       company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak,
       and lockpick their way into most anything. Rogues are very weak, however, and
@@ -561,55 +669,69 @@ Light Fighter:
       level_1:
         abilities:
         - Mantel
+        - Strike From the Shadows
       level_2:
         abilities:
-        - Master of Disguise
-        - Ruffians
+        - Stat Increase
       level_3:
         abilities:
+        - Master of Disguise
         - High Ground
       level_4:
         abilities:
-        - Offhand Attack
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
         - Thief or Assassin
         subclass_assassin_abilities:
         - Imposter
-        - Assassinate
         subclass_thief_abilities:
-        - Lucky Actions
-        - Pickpocket
-        - Trap Expert
-      level_6:
-        subclass_assassin_abilities:
-        - Poison
-        - Minor Blink
-        subclass_thief_abilities:
+        - Soft Landing
         - Soundless
-        - Flee
+      level_6:
+        abilities:
+        - Stat Increase
       level_7:
         subclass_assassin_abilities:
-        - Double Strike
-        - Dark Vision
+        - Offhand Attack
+        - Poison
         subclass_thief_abilities:
-        - Feint
+        - Offhand Attack
+        - Pickpocket
       level_8:
-        subclass_assassin_abilities:
-        - Reduced Critical
-        - Line Them Up
-        subclass_thief_abilities:
-        - Strike From the Shadows
-        - Superior Mantel
+        abilities:
+        - Stat Increase
       level_9:
         subclass_assassin_abilities:
+        - Minor Blink
+        - Dark Vision
+        subclass_thief_abilities:
+        - Flee
+        - Trap Expert
+      level_10:
+        abilities:
+        - Stat Increase
+      level_11:
+        subclass_assassin_abilities:
+        - Reduced Critical
+        subclass_thief_abilities:
+        - Lucky Actions
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        subclass_assassin_abilities:
+        - Line Them Up
         - Savage Critical
         subclass_thief_abilities:
         - Party Save
-      level_10:
+        - Superior Mantel
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
         subclass_assassin_abilities:
-        - Reduced Critical
+        - Double Strike
         - All-consuming Shadow
         subclass_thief_abilities:
         - Spider Climb
@@ -626,14 +748,15 @@ Mage:
   Bard:
     base_abilities:
     - Spell Choice
+    - Boozehound
     base_stats:
       Charisma: 2
-      Dexterity: 1
+      Dexterity: 0
       Inner_Fire: -1
-      Intelligence: -1
+      Intelligence: 1
       Luck: 1
-      Perception: 0
-      Strength: -5
+      Perception: -2
+      Strength: -3
     description: Showmen by nature, Bards are known for their skills at performing
       and distracting others from the sorrows of life. Bards are usually at least
       a little bit gaudy and outgoing. They are quick in a fight, and often fight
@@ -652,67 +775,79 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Melee Weapon Proficiency
-        - Spell Power
         - My Father's Oboe
         - The Bard's Songbook
-        - Boozehound
         - Regular Patron
-        - Level Zero Spells
+        - Tier Zero Spells
+        - Slight of Hand
       level_1:
         abilities:
+        - Tier One Spells
         - Minor Restful Melody
         - One up the Sleeve
-        - Level One Spells
+        # - Cartwheel
       level_2:
         abilities:
-        - Spell Coin
-        - Slight of Hand
+        - Stat Increase
       level_3:
         abilities:
-        - Cartwheel
-        - Level Two Spells
+        - Nimble Fingers
+        - Spell Coin
       level_4:
         abilities:
-        - Nimble Fingers
+        - Tier Two Spells
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
+        - Imbue Weapon
         - Additional Spell Coin
-        - Greater Restful Melody
-        - Level Three Spells
       level_6:
         abilities:
-        - Greater Imbue Weapon
+        - Stat Increase
       level_7:
         abilities:
-        - Greater Spell Coin
-        - Double Strike
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
+        - Greater Restful Melody
       level_8:
         abilities:
-        - Major Restful Melody
+        - Stat Increase
       level_9:
         abilities:
-        - Additional Spell Coin
-        - Level Five Spells
+        - Greater Imbue Weapon
+        - Greater Spell Coin
       level_10:
         abilities:
-        - Multi-Action
+        - Stat Increase
+        - Tier Four Spells
+      level_11:
+        abilities:
+        - Major Restful Melody
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
+        abilities:
+        - Additional Spell Coin
+        - Tier Five Spells
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
         - Major Spell Coin
-    standings: Bards are loved by most, and are welcomed equally among thieves and
-      gentlefolk.
     tag_line: Entertaining Spellcaster
   Cleric:
     base_abilities:
     - Spell Choice
     base_stats:
       Charisma: 1
-      Dexterity: -1
-      Inner_Fire: 2
+      Dexterity: -2
+      Inner_Fire: 0
       Intelligence: 2
-      Luck: 1
-      Perception: -3
-      Strength: -5
+      Luck: 2
+      Perception: -1
+      Strength: -3
     description: After pledging their allegiance to their deity, Clerics have made
       it their duty to follow their will. Clerics are weak, and do not fight with
       physical magic. However, they are powerful spellcasters who are adept at healing,
@@ -730,46 +865,64 @@ Mage:
         abilities:
         - Learning Spells
         - Learn Spells
-        - Spell Power
-        - Purge Decay
         - The Book of Healing
         - Pledge
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Purge Decay
+        - Tier One Spells
       level_2:
         abilities:
-        - Last Ditch Prayer
+        - Stat Increase
       level_3:
         abilities:
+        - Last Ditch Prayer
         - Minor Offhand Spell
-        - Level Two Spells
-        - Taunt
       level_4:
         abilities:
-          - Feint
+        - Stat Increase
+        - Tier Two Spells
       level_5:
         abilities:
-        - Multi-class Option
+        - Feint
+      level_6:
+        abilities:
+        - Stat Increase
         - Greater Offhand Spell
-        - Level Three Spells
       level_7:
         abilities:
-        - Major Offhand Spell
-        - Halo
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
       level_8:
         abilities:
-        - Burning Bright
-        - True Heal
+        - Stat Increase
       level_9:
         abilities:
-        - Aura of Advantage
-        - Level Five Spells
+        - Link Lifeforce
       level_10:
         abilities:
+        - Stat Increase
+        - Tier Four Spells
+      level_11:
+        abilities:
+        - True Heal
+      level_12:
+        abilities:
+        - Stat Increase
+        - Major Offhand Spell
+      level_13:
+        abilities:
+        - Halo
+        - Burning Bright
+        - Tier Five Spells
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
         - Angelic Wings
+        - Aura of Advantage
     standings: Clerics are friends to all those who fight for good, and get along
       especially well with Holy Knights, Paladins, and members of their church.
     tag_line: Healer
@@ -777,17 +930,17 @@ Mage:
     base_abilities:
     - Spell Choice
     base_stats:
-      Charisma: -4
-      Dexterity: 0
-      Inner_Fire: 1
-      Intelligence: 2
-      Luck: 0
-      Perception: 0
+      Charisma: -3
+      Dexterity: -1
+      Inner_Fire: 2
+      Intelligence: 0
+      Luck: 1
+      Perception: 1
       Strength: -2
     description: Gaurdians of nature, most druids prefer to live in tribes in the
       forests, mountains, prairie, tundra, or desert. Druid's command powerful nature
       based magic, which they use to smite those who threaten them, their friends,
-      or their home. Druids utilize intelligence based spell points to cast spells,
+      or their home. Druids utilize intelligence based action points to cast spells,
       and are a good match for players interested in playing a mage. As you build
       your druid, consider where they came from. Why are they so attached to nature?
       How does their attachment to the natural world change how they think? How do
@@ -803,37 +956,61 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Melee Weapon Proficiency
-        - Spell Power
         - Novice Spellbook
         - The Druid's Field Guide
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
-      level_10:
+        - Tier One Spells
+      level_2:
         abilities:
-        - True Ascension
+        - Stat Increase
       level_3:
         abilities:
         - Minor Offhand Spell
-        - Level Two Spells
+      level_4:
+        abilities:
+        - Stat Increase
+        - Tier Two Spells
       level_5:
         abilities:
-        - Multi-class Option
+        - Tracker
+      level_6:
+        abilities:
+        - Stat Increase
         - Greater Offhand Spell
-        - Level Three Spells
       level_7:
         abilities:
-        - Ascend
-        - Major Offhand Spell
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
       level_8:
         abilities:
-        - Power of Ascension
+        - Stat Increase
       level_9:
         abilities:
+        - Ascend
+      level_10:
+        abilities:
+        - Stat Increase
+        - Tier Four Spells
+      level_11:
+        abilities:
+        - Ascended Flight
+      level_12:
+        abilities:
+        - Stat Increase
+        - Major Offhand Spell
+      level_13:
+        abilities:
+        - True Ascension
+        - Tier Five Spells
+      level_14:
+        abilities:
+        - Stat Increase
+        - Power of Ascension
+      level_15:
+        abilities:
         - Ascended Action
-        - Level Five Spells
     tag_line: Naturalistic Spellcaster
   Necromancer:
     base_abilities:
@@ -841,11 +1018,11 @@ Mage:
     base_stats:
       Charisma: -3
       Dexterity: -1
-      Inner_Fire: 3
-      Intelligence: -2
-      Luck: 1
+      Inner_Fire: 2
+      Intelligence: 1
+      Luck: 2
       Perception: -2
-      Strength: 1
+      Strength: 0
     description: Death is not my enemy, nor is it my ally, it is my servant. So say
       Necromancers, mages who study the intricacies of death, and what follows after.
       Often fuled by macabre fasination or a god complex, Necromancy is deeply feared
@@ -864,53 +1041,68 @@ Mage:
         - Learn Spells
         - Soul Harvest
         - Learning Spells
-        - Spell Power
         - Soul Based Magic
         - Mortal Coil
         - Vegan
         - The Macabre Manual
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
+        - Edge of Eternity
       level_2:
         abilities:
-        - Larger Soul Jar
-        - Edge of Eternity
+        - Stat Increase
       level_3:
         abilities:
         - Minor Offhand Spell
         - Fear the Light
-        - Level Two Spells
       level_4:
         abilities:
-        - Larger Soul Jar
-        - Eyes of the Others
+        - Stat Increase
+        - Tier Two Spells
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Reap
-        - Level Three Spells
+        - Eyes of the Others
       level_6:
         abilities:
-        - Major Offhand Spell
+        - Stat Increase
+        - Larger Soul Jar
+        - Greater Offhand Spell
       level_7:
         abilities:
-        - Larger Soul Jar
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
+        - Reap
       level_8:
         abilities:
-        - Phylactery
+        - Stat Increase
       level_9:
         abilities:
         - Larger Soul Jar
-        - Freed from this Mortal Coil
-        - Level Five Spells
       level_10:
         abilities:
-        - Army of the Damned
+        - Stat Increase
+        - Tier Four Spells
+      level_11:
+        abilities:
+        - Phylactery
         - Larger Soul Jar
+      level_12:
+        abilities:
+        - Stat Increase
+        - Major Offhand Spell
+      level_13:
+        abilities:
+        - Freed from this Mortal Coil
+      level_14:
+        abilities:
+        - Stat Increase
+        - Tier Five Spells
+        - Larger Soul Jar
+      level_15:
+        abilities:
+        - Army of the Damned
     standings: Necromancers are feared by most, and are actively hunted by Clerics
       and followers of the light.
     tag_line: Death Mage
@@ -919,16 +1111,16 @@ Mage:
     - Spell Choice
     base_stats:
       Charisma: 2
-      Dexterity: -1
+      Dexterity: -2
       Inner_Fire: 1
-      Intelligence: -2
-      Luck: 0
-      Perception: -2
+      Intelligence: 0
+      Luck: 1
+      Perception: -3
       Strength: -1
     description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
       but rather through raw force of personality. To perform magic, a sorcerer wrestles
       with a spirit, natural or otherwise, and convinces them to do their bidding.
-      To this end, Sorcerers have no spell points, but rather must pass a charisma
+      To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma
       check to perform magic. As you create your sorcerer, consider how they learned
       magic. Who did they learn it from? How did they first wrestle a spirit to aid
       them? When they cast a spell, do they always use the same spirit, or different
@@ -941,40 +1133,59 @@ Mage:
         - Learning Spells
         - Learn Spells
         - Charisma Based Spellcaster
-        - Spell Power
         - Novice Spellbook
         - The Sorcerer's Scrolls
-        - Level Zero Spells
+        - Tier Zero Spells
         - Influence
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
       level_2:
         abilities:
-        - Spell Modification
+        - Stat Increase
       level_3:
         abilities:
-        - Level Two Spells
+        - Spell Modification
+        - Minor Offhand Spell
       level_4:
         abilities:
-        - Minor Offhand Spell
+        - Stat Increase
+        - Tier Two Spells
       level_5:
         abilities:
-        - Multi-class Option
-        - Greater Offhand Spell
-        - Level Three Spells
+        - Prepare Spell
       level_6:
         abilities:
-        - Prepare Spell
+        - Stat Increase
+        - Greater Offhand Spell
       level_7:
         abilities:
-        - Major Offhand Spell
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
+      level_8:
+        abilities:
+        - Stat Increase
       level_9:
         abilities:
         - Spirits Within
-        - Level Five Spells
       level_10:
+        abilities:
+        - Stat Increase
+        - Tier Four Spells
+      level_11:
+        abilities:
+        - Spiritual Movement
+      level_12:
+        abilities:
+        - Stat Increase
+        - Major Offhand Spell
+      level_13:
+        abilities:
+        - Tier Five Spells
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
         abilities:
         - Light and Shadow
     tag_line: Charismatic Spirit Wrangler
@@ -984,20 +1195,18 @@ Mage:
     - The Sword and the Satchel
     - Walking Stick
     base_stats:
-      Charisma: 1
+      Charisma: 0
       Dexterity: -3
-      Inner_Fire: 2
+      Inner_Fire: 1
       Intelligence: 2
-      Luck: 0
+      Luck: 2
       Perception: -2
-      Strength: -3
+      Strength: -1
     description: Often eccentric, wizards are known to be wayfarers and meddlers.
       Most keep to themselves, approaching others only to entwine them in schemes
       only they know about. Wizards arrive precisely when they mean to. To use magic,
-      Wizards use spell points, and begin with a number of spell points equal to their
-      intelligence. Spells cost the same amount of spell points as their level, and
-      are reaquired upon a long rest. Wizards have the least health of any class,
-      but also have more spell points than any other class. As you create your wizard,
+      Wizards use action points to cast spells. Wizards gain access to new spell tiers
+      before any other class. As you create your wizard,
       consider what their past is. How old are they? What kind of family did they
       come from? How long have they been a wizard? Are they mysterious? Are they competent?
       How do they interact with others? Who taught them magic? How will being a wizard
@@ -1011,37 +1220,53 @@ Mage:
         - Learning Spells
         - Novice Spellbook
         - The Wizard's Addendum
-        - Level Zero Spells
+        - Tier Zero Spells
       level_1:
         abilities:
-        - Level One Spells
+        - Tier One Spells
+        - Looming Presence
       level_2:
         abilities:
-        - Minor Offhand Spell
-        - Looming Presence
+        - Stat Increase
       level_3:
         abilities:
-        - Level Two Spells
+        - Minor Offhand Spell
+      level_4:
+        abilities:
+        - Tier Two Spells
+        - Stat Increase
       level_5:
         abilities:
-        - Multi-class Option
         - Greater Offhand Spell
-        - Level Three Spells
       level_6:
         abilities:
-        - Cost Reduction
+        - Stat Increase
       level_7:
         abilities:
-        - Major Offhand Spell
-        - Level Four Spells
+        - Offhand Attack
+        - Tier Three Spells
+        - Commit to Memory
       level_8:
         abilities:
-        - Commit to Memory
+        - Stat Increase
       level_9:
         abilities:
-        - Spell Invention
-        - Level Five Spells
+        - Major Offhand Spell
       level_10:
+        abilities:
+        - Stat Increase
+        - Tier Four Spells
+      level_12:
+        abilities:
+        - Stat Increase
+        - Spell Invention
+      level_13:
+        abilities:
+        - Tier Five Spells
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
         abilities:
         - Tome of the Ancients
     standings: Wizards are known to be friends to all races, and get along particularly
@@ -1054,12 +1279,12 @@ Ranged Fighter:
     - Boot Knife
     base_stats:
       Charisma: 0
-      Dexterity: 1
-      Inner_Fire: -1
-      Intelligence: -2
-      Luck: 0
+      Dexterity: 2
+      Inner_Fire: -2
+      Intelligence: -1
+      Luck: 1
       Perception: 1
-      Strength: -2
+      Strength: -3
     description: Some of the best marksmen in the world, archers are naturals with
       ranged weapons. They are often attached to their bow, and carry it with them
       everywhere. Archers come from all walks of life; some compete in tournaments,
@@ -1076,46 +1301,62 @@ Ranged Fighter:
       level_1:
         abilities:
         - Arrow Stab
-      level_2:
-        abilities:
         - Mantel
         - Crippling Shot
+      level_2:
+        abilities:
+        - Stat Increase
       level_3:
         abilities:
-        - Fire and Ice Arrows
-        - Smoke Arrow
-        - Steady
+        - Dual Shot
+        - Fire and Ice Arrows # Cost 1
       level_4:
         abilities:
-        - Rope Arrows
-        - Net Arrows
-        - Dual Shot
+        - Stat Increase
+        - Rope Arrows # Cost 1
       level_5:
         abilities:
-        - Shadow and Light Arrows
-        - Offhand Attack
-        - Reflexes
-        - Multi-class Option
+        - Net Arrows # Cost 1
+        - Smoke Arrow # Cost 1
       level_6:
         abilities:
-        - Explosive Arrows
-        - Vampiric Arrow
-        - True Mastery
+        - Stat Increase
+        - Shadow and Light Arrows # Cost 1
       level_7:
         abilities:
-        - Blink Arrows
-        - Second Action
+        - Reflexes
+        - Steady
+        - Offhand Attack
       level_8:
         abilities:
-        - Uncanny Perception
-        - Shock Arrow
-        - Anti-Gravity Arrows
+        - Stat Increase
+        - Explosive Arrows # Cost 2
       level_9:
         abilities:
-        - Volley
+        - Vampiric Arrow # Cost 2
       level_10:
         abilities:
-        - Firestorm Arrow
+        - Stat Increase
+        - True Mastery
+      level_11:
+        abilities:
+        - Blink Arrows # Cost 2
+        - Uncanny Perception 
+      level_12:
+        abilities:
+        - Stat Increase
+        - Shock Arrow # Cost 2
+      level_13:
+        abilities:
+        - Expert Fletcher # Reduces all arrow cost by 1
+        - Anti-Gravity Arrows # Cost 2
+        - Volley
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
+        - Firestorm Arrow # Cost 4
     questions:
     - Where did your character come from?
     - How did they get so good at archery?
@@ -1129,12 +1370,12 @@ Ranged Fighter:
     tag_line: Bow and Arrow Expert
   Gunslinger:
     base_stats:
-      Charisma: 1
+      Charisma: 0
       Dexterity: 1
-      Inner_Fire: 0
-      Intelligence: -4
-      Luck: 0
-      Perception: 1
+      Inner_Fire: -3
+      Intelligence: -1
+      Luck: 1
+      Perception: 2
       Strength: -2
     description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
       to acquire one of the rarest weapons in the world. As such, they have a close
@@ -1159,60 +1400,72 @@ Ranged Fighter:
         - Flash Grenade
         subclass_marksman_abilities:
         - Bayonet
+        - Bull Rush
       level_2:
         abilities:
-        - From the Hip
-        - High Grain
+        - Stat Increase
       level_3:
-        subclass_gunslinger_abilities:
-        - Quickdraw
-        subclass_marksman_abilities:
-        - Reduced Critical
-        - Scope
+        abilities:
+        - High Grain
+        - From the Hip
       level_4:
         abilities:
-        - Re-chamber
-        - Suppressor
-        subclass_gunslinger_abilities:
-        - Lighter Gear
+        - Stat Increase
       level_5:
+        subclass_gunslinger_abilities:
+        - Quickdraw
         abilities:
-        - Multi-class Option
+        - High Grain
+      level_6:
+        abilities:
+        - Stat Increase
+      level_7:
+        abilities:
+        - Line Them Up
         subclass_gunslinger_abilities:
         - Twin Guns
         subclass_marksman_abilities:
-        - Line Them Up
         - Offhand Attack
-      level_6:
+      level_8:
         abilities:
-        - High Grain
+        - Stat Increase
+      level_9:
         subclass_gunslinger_abilities:
         - Feeling Lucky
-        subclass_marksman_abilities:
-        - Reduced Critical
-        - Savage Critical
-      level_7:
-        subclass_gunslinger_abilities:
         - Fastest Gun
-        - Second Action
         subclass_marksman_abilities:
-        - Re-chamber
-      level_8:
+        - Savage Critical
+        - Reduced Critical
+      level_10:
+        abilities:
+        - Stat Increase
+      level_11:
         subclass_gunslinger_abilities:
         - Hollowpoint
-        - Strike First
         subclass_marksman_abilities:
+        - Re-chamber
         - Armor Penetrating Rounds
-        - High Grain
-      level_9:
+      level_12:
+        abilities:
+        - Stat Increase
+      level_13:
         abilities:
         - Harrying Shot
-      level_10:
+        subclass_gunslinger_abilities:
+        - Strike First
+        subclass_marksman_abilities:
+        - High Grain
+      level_14:
+        abilities:
+        - Stat Increase
+      level_15:
+        abilities:
+        - Reduced Critical
         subclass_gunslinger_abilities:
         - Volley
         subclass_marksman_abilities:
         - Re-chamber
-        - Reduced Critical
+        - Assassinate
     questions:
     - How did they acquired their firearm?
     - Who made it?
