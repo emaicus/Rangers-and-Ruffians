@@ -62,7 +62,7 @@ Player 2: URTAG THE STRONG KICKS THE DOOR DOWN!
 Player 1: Urtag! You’re going to wake the whole castle!  
 Poohbah (grinning): Roll for it.  
 Player 2: I got an 18!  
-Poohbah (grinning): There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.  
+Poohbah: There is a crash as the door bursts into splinters, but that sound is drowned out by Urtag’s savage cries.  
 Player 2 (nodding): Damn right it is.  
 
 In the above interaction, there are a few things to note. Twice, the Poohbah called for rolls.
@@ -149,7 +149,7 @@ In some cases, it is necessary to roll a ```d100```. Since we
 don't actually have a 100 sided die, we instead roll a ```percentile```
 and a ```d10```. When we do this, the ```percentile``` represents the tens
 place, and the ```d10``` the ones place. The minimum roll, then, is
-a ```0``` (where we roll a zero on both the ```d10``` and the ```percentile```)
+a ```0``` (where we roll a ```0``` on both the ```d10``` and the ```percentile```)
 and the maximum roll is a ```99``` (where we roll a ```90``` on the ```percentile```
 and a ```9``` on the ```d10```).
 If we rolled a ```60``` on the ```percentile```, and a ```4``` on the ```d10```,
@@ -157,13 +157,13 @@ we would say that we rolled a ```64```.
 
 ### Advantage and Disadvantage
 When a character is especially good or bad at something in Rangers and Ruffians,
-they may have __Advantage__ or __Disadvantage__ at that thing. For example, the
+they may have __Advantage__ or __Disadvantage__ at it. For example, the
 sneaky Rogue mentioned earlier earlier is good at hiding, so it has advantage.
 This means that, when the rogue tries to hide, they get to roll a ```d20``` twice,
 and keep the higher roll. So if the rogue rolled a ```10``` followed by a ```15```,
 they would keep the ```15```. __Disadvantage__ is similar, but the player keeps the
 _worse_ of the two rolls. So in the case above, if the rogue had disadvantage,
-they would keep the ```10```. When you build your character, you advantages and
+they would keep the ```10```. When you build your character, your advantages and
 disadvantages will be explicitly listed out for you. However, your Poohbah
 may sometimes call for a role with advantage or disadvantage even though
 the rules of the game do not explicitly give you advantage or disadvantage
@@ -185,9 +185,9 @@ your Poohbah says if you succeed or fail at a check.
 ### Saving Throws
 Saving throws are special checks that are made when something bad is happening
 to an entity (a player, npc, or enemey) in RnR. The most important of these is the
-__Spell Saving Throw.__ A spell saving throw occurs when someone tries to cast
+__Spell Power Saving Throw.__ A spell power saving throw occurs when someone tries to cast
 a spell on someone else. For example, if a character is a wizard, and tries
-to turn a villager into a frog, the villager must make a spell saving
+to turn a villager into a frog, the villager must make a spell power saving
 throw. See the [Spell Power](#spell-power) section for details about
 this saving throw.
 
@@ -235,10 +235,10 @@ that you play the game in three ways.
 1. __Inner Fire is added to magical attacks.__ If your character is a mage who attacks with magic,
    Inner Fire is added to any damage that you deal.
 2. __Inner Fire affects how susceptible your character is to spells.__ Inner Fire is added to most
-  [__Spell Saving Throws__](#spell-saving-throws) in the game. This means that having a higher Inner Fire means
+  [__Spell Power Saving Throws__](#spell-power) in the game. This means that having a higher Inner Fire means
   that you are less likely to be affected by enemy spells.
 3. __Inner Fire determines how likely your spells are to affect an enemy.__ If one of your spells imposes
-  a  [__Spell Saving Throws__](#spell-saving-throws) on an enemy, the target that the enemy is trying to beat
+  a  [__Spell Power Saving Throws__](#spell-power) on an enemy, the target that the enemy is trying to beat
   is directly influenced by your inner fire. This is further detailed in the
   [__Spell Power__](#spell-power) section.
 
@@ -250,7 +250,7 @@ affect the way you play the game in two ways:
   or *something* is stopping him. In this scenario, you would want high charisma, so that you can convince
   him to help you despite the risk.
 2. __(Conditional) If you are playing a Sorcerer, Charisma determines whether or not your spells succeed or
-  fail.__ Further detailed in the [Sorcerer](#sorcerer) section.
+  fail.__ Further detailed in the [Sorcerer](Compendium_of_Character_Creation.md#sorcerer) section.
 
 #### Perception
 __Perception__ (PER) determines how likely it is your character will notice things going on in the world around them.
@@ -484,20 +484,20 @@ Weapons have 3 parts in RnR:
 2. Their modifier.
 3. Their effect.
 
-A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's affect
+A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's effect
 might be that it returns to a players hand after it is thrown.
 
-Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's affect
+Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's effect
 might be that it does an extra ```1d6``` damage to the undead.
 
-A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's affect
+A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's effect
 might be that, if an enemy is stabbed with it, they must make a saving throw against the
 wielder's [Spell Power](#spell-power) or be struck blind.
 
 
 ### Combat Abilities
 As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers
-and Ruffians that make the various [Races](#races) and [Classes](#classes) unique.
+and Ruffians that make the various [Races](Compendium_of_Character_Creation.md#races) and [Classes](Compendium_of_Character_Creation.md#classes) unique.
 Many of these abilities are specific to combat. For example, a character might be able
 to spend one of their [Action Points](#action-points) to add an additional dice of damage
 to an attack. This means that, if they have a ```1d6 + 1``` weapon, they can spend
@@ -558,7 +558,7 @@ __Sleep in a bed.__
 |                        | Quick Rest | Sleep   | Sleep in a Bed |
 | -----------------------|------------|---------|----------------|
 | Time Required          | 1 hour     | 8 hours | 8 hours        |
-| Health Restored        | 20%        | 40%     | 50%            |
+| Health Restored        | 20%        | 50%     | 75%            |
 | Action Points Restored | 2          | 5       | All            |
 | Luck Restored          | 0          | All     | All            |
 | Times/Day              | 3x         | 1x      | 1x             |
@@ -603,7 +603,7 @@ Such events could include:
 1. Victory in a major combat encounter.
 2. Success in a stealthy infiltration.
 3. Snatching an artifact from a villain's lair.
-4. Saving an kidnapped noble.
+4. Saving a kidnapped noble.
 
 ### What Happens when I Level Up?
 
@@ -623,8 +623,8 @@ you to perform all new actions or granting you new advantages.
 #### Even Levels: New Stats
 When you reach an even level, you get ```2``` __Stat Points__ to spend. You can spend these to increase your stats.
 Review the [Effective Stats](#effective-stats) section for details on how this works.
-Alternatively instead of increasing your stats, you are able to instead take a new [Skill](#skills). See the
-[Skills](#skills) section for more details.
+Alternatively instead of increasing your stats, you are able to instead take a new [Skill](Compendium_of_Character_Creation.md#skills). See the
+[Skills](Compendium_of_Character_Creation.md#skills) section for more details.
 
 
 #### New Spells

@@ -726,7 +726,7 @@ def check_pantheon():
         all_errors.append(f'{deity}: evil is not a boolean')
     else:
       all_errors.append(f'{diety}: missing evil value')
-    
+
     all_errors += string_key_check(info, "description", deity)
 
     if 'abilities' in info:
@@ -746,6 +746,8 @@ def check_pantheon():
               all_errors.append(f'{deity} {ability}: bad type {ability_info["type"]}')
           else:
             all_errors.append(f'{deity} {ability}: missing type')
+    elif deity.strip().lower() != 'the shaper':
+      all_errors.append(f"{deity}: missing abilities.")
 
   return all_errors
 

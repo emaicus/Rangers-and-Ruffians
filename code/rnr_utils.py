@@ -527,7 +527,7 @@ def markdown_pantheon():
       if info['evil'] != evil_val:
         continue
       lines.append(f'#### {deity.title()}  \n  \n')
-      lines.append(f'>{info["description"]}  \n  \n')
+      lines.append(f'{info["description"]}  \n  \n')
       if not 'abilities' in info:
         continue
       lines.append('__Gifts:__  \n  \n')

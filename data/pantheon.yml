@@ -309,21 +309,25 @@ Melekar:
   description: Melekar, Lord of Sin. Ruler of the hells. Melekar sits atop a throne of the damned,
     deep in the Blazing City. His goal is to conquer and subjugate all of existence. He has two sigils --
     the face of a burning man, and an elven woman impaled on a spike, but still living.
-  abilites:
-    level_0:
+  abilities:
+    Level_0:
       Lord of Cruelty: 
-        description: "Add an additional dice of damage to any of your attacks."
+        description: "Add an additional dice of damage to any of your magic attacks."
         type: combat
-    level_5:
+    Level_5:
       Greater Lord of Cruelty: 
-        description: "Add two additional damage dice to any of your attacks."
+        description: "Add two additional damage dice to any of your magic attacks."
+        type: combat
       Harvester of Souls: 
         description: "Every time you slay an enemy, regain an action point."
-    level_10:
+        type: combat
+    Level_10:
       Major Lord of Cruelty: 
-        description: "Add three additional damage dice to any of your attacks."
+        description: "Add three additional damage dice to any of your magic attacks."
+        type: combat
       Major Harvester of Souls: 
         description: "Every time an enemy is slain near you, gain an action point."
+        type: combat
 The Void Father: 
   evil: true
   description: Lord of Nothing. Enemy of existence. Believes that life is nothing but pain, and should
@@ -331,19 +335,19 @@ The Void Father:
     The void father has many faces, but most often he appears as a tall, spindly figure with overlong appendages
     and cold, white eyes. The Void Father makes his residence in an ethereal plane between life and death,
     where massive creatures stalk a land shrouded in eternal dusk.
-  abilites:
-    level_0: 
+  abilities:
+    Level_0: 
       Oblivion: 
         description: You do not dream, and you cannot be affected by sleep based spells.
         type: general
-    level_5: 
+    Level_5: 
       Ward of Antimagic: 
         description: Once per day, choose to shrug off the effects of a spell.
         type: combat
       Ceremony of Sleep: 
         description: When you kill an entity, you may make another attack against its soul to destroy it.
         type: general
-    level_10: 
+    Level_10: 
       Shepard of Darkness: 
         description: You have advantage on any charisma or intimidation checks used to break someone's spirit.
         type: general
@@ -363,12 +367,12 @@ Lady Dusk:
     Her followers are few, and many are bound to her because of their ambition or cruelty. The Lady Dusk has been known to appear
     to those who are dying, and to offer them healing in return for service and loyalty. Among her followers are a league of timeless
     assassins, who she has magically imbued with long life and slow aging.
-  abilites:
-    level_0: 
+  abilities:
+    Level_0: 
       Ever of Use: 
         description: Once per day, channel the power of Lady Dusk to gain advantage on a check.
         type: advantage
-    level_5: 
+    Level_5: 
       Purge the Useless: 
         description: You gain advantage on attacks made against any entity that is sick or cursed.
         type: advantage
@@ -376,7 +380,7 @@ Lady Dusk:
         description: You are able to evaluate any entity to gain an understanding of it's significance in Lady Dusk's eyes.
           If the creature is deemed to be insignificant, gain advantage in all attacks made against it.
         type: combat
-    level_10: 
+    Level_10: 
       No Mercy for the Weak: 
         description: Any action that you take against an entity on death's door instantly slays the entity.
         type: combat
@@ -391,15 +395,15 @@ Naris:
     who want children to be blessed at one of her temples. Frequently, Naris takes the form of an 
     aged woman with a pleasant smile and a face lined by with age. She also sometimes takes the form of 
     of a beautiful maiden. 
-  abilites:
-    level_0: 
+  abilities:
+    Level_0: 
       Goddess of Rest: 
         description: As a follower of Naris, you and all allies naturally heal 1d4 additional from any rest you take. 
         type: general
       Goddess of Growth: 
         description: You have advantage on any rolls which involve planting or otherwise growing something.
         type: general
-    level_5: 
+    Level_5: 
       Greater Goddess of Rest: 
         description: As a devoted follower of Naris, you and all allies naturally heal 1d6 more from any rest that you take.
         type: general
@@ -409,7 +413,7 @@ Naris:
       Goddess of Animal Husbandry: 
         description: You have advantage on animal handling checks.
         type: advantage
-    level_10: 
+    Level_10: 
       Major Goddess of Rest: 
         description: As a champion of Naris, you and all allies naturally heal 1d12 more from any rest that you take.
         type: general
