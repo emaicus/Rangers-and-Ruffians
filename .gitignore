@@ -6,3 +6,4 @@ INSTALLED_DATA/
 **/__pycache__/
 code/reports
 tests/log.txt
+data/legacy
