@@ -7,3 +7,12 @@ INSTALLED_DATA/
 code/reports
 tests/log.txt
 data/legacy
+_site/
+.sass-cache/
+.jekyll-metadata
+Gemfile.lock
+*.iml
+.idea/
+*~
+.DS_Store
+vendor/
