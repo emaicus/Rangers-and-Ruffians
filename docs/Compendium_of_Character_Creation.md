@@ -1,7 +1,9 @@
   
 # Compendium of Character Creation _Version 2.1.0_
 
-   * [Building your Character](#building-your-character)  
+   * [Building a Character](#building-a-character)  
+     * [Personality and Background](#personality-and-background)  
+     * [Health Dice Pieces](#health-dice-pieces)  
    * [Races](#races)  
      * [Automaton](#automaton)  
      * [Catterwol](#catterwol)  
@@ -42,11 +44,120 @@
    * [Skills](#skills)  
 
   
-## Building your Character
-This manual contains the Races, Classes, and Skills that you may choose from to create a character
-in Rangers and Ruffians. The rules of character creation are deeply detailed in the
-[Rangers and Ruffians Rulebook](Rulebook.md). This document contains an abbreviated refresher
-which assumes that you have read the rulebook.
+## Building a Character
+  
+  
+This manual contains the __Races__, __Classes__, and __Skills__ that you may choose from to create a character
+in Rangers and Ruffians. This compendium assumes that you have looked over the rules set forth in
+the [Rangers and Ruffians Rulebook](Rulebook.md).
+  
+  
+In terms of gameplay, a character is made up of two major components: a __Race__ and a __Class.__
+A Race represents the racial background that your character comes from. Your choice of race grants you base
+abilities and stats, and can greatly affect the way that you interact with the world. If you choose to play a
+tiny _Sprout_, you might ride atop the shoulders of the another player's _Orc_ character.
+  
+  
+  
+  
+__Class,__ meanwhile, affects your role within your adventuring party. A _Rouge_ might spend their time
+scouting, skulking, and sneaking. A _Highborn_ might use their high Charisma to barter for goods or
+get information out of an important non-player character. A _Barbarian_ will spend their time in combat
+shielding and soaking up damage for their more-squishy counterparts.
+When you level up in Rangers and Ruffians, it is your class that grants you new abilities.
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Personality and Background
+It is important to remember that a character can be much, _much_ more than just a sack of stats an abilities.
+As a player, it is up to you to breathe life into your character, and make them into a living, breathing
+part of the world that your Poohbah is weaving. To this end, consider the following:
+1. Where did my character come from? Do they have family? Friends?
+2. Is my character family or friends with any of the other players' characters?
+2. What does my character want? Where are they going? What motivates them?
+3. Why would my character be interested in going on an adventure?
+4. What are a few of my characters virtues? What about vices?
+5. How did my character end up being the class that they are?
+6. How does my character interact with others? How do they speak? What are they're mannerisms?
+  
+  
+  
+  
+As you come up with a backstory for your character remember the following:
+Try to keep things vague but evocative, and which is open ended. That way, your Poohbah can easily weave it into their world.
+Consider the following simple backstory: 
+> "Elizabeth is from the town of Lindhearth. Some years ago she 
+was visited by an aged wizard, who warned her of a great trial approaching in her future. Ever since that
+day, she has been preparing for an evil that may never come." 
+  
+  
+  
+  
+While quite basic, let's examine what the above backstory does well.
+1. While it introduces a town, ```Lindhearth```, the town is not rigidly defined, and is simple for a Poohbah to add to their campaign setting.
+  As a bonus, wouldn't it be cool if the Poohbah included Lindhearth in their campaign! Maybe some of your friends or family could make an appearance,
+  or maybe even the mysterious wizard!
+2. While you have been warned of a "great trial," the nature of that trial is left entirely up to the Poohbah. That means that it can easily 
+  be tied into the adventure. This is awesome, as it can easily fit into any story that the Poohbah might want to tell. Just like that, you
+  are personally invested in the adventure!
+3. It provides a basis for you to start further fleshing out Elizabeth's character. How has she been preparing? Has she been learning magic?
+  Practicing her skill with the sword? Praying to her deity? How has this training affected her personality? Is her adventuring career part
+  of these preparations?
+  
+  
+  
+  
+Let's make a second backstory.
+> "Richard spent his entire childhood in the Lost Library. Only, it wasn't called the 'Lost' Library, but the Holy Library back then.
+   He had made friends with the old Clerics and Paladins that kept their noses in books all day, and had even gotten them to
+   teach him some of their divine magics. His favorite of them was an old greybeard named Scanderbeg. All of this changed
+   when a Gold Dragon descended on the Library, tearing through the roof and killing many of those within. With the help of
+   Scanderbeg, Richard had fled, helpless, with no home and nowhere to go, displaced and a refugee."
+  
+  
+  
+  
+Again, this backstory introduces a location, the Lost Library, which can easily be integrated into a Poohbah's campaign. This
+backstory also introduces a villain, an evil ```Gold Dragon.``` Perhaps this fits perfectly into the Poohbah's plans, but maybe it doesn't.
+Perhaps the Poohbah is planning on running an ```undead``` heavy campaign, in which a ```Lich``` is the main villain. Together, the player and
+the Poohbah can tailor Richards backstory, so that instead, it reads:
+  
+  
+  
+  
+> "All of this changed the army of the dead arrived, swarming throughout the City of Linth and leaving a path of carnage in their wake. 
+   With the help of the holy magics he had learned from Scanderbeg, Richard fled, but not before laying eyes on ___him.___ The face of death itself. Hozius the
+   Defiler. As Richard watched, Hozius raised his hands, and all of those who had been dead rose up to join his army."
+  
+  
+  
+  
+Now the backstory fits the Poohbah's campaign, and it's maybe even cooler than it was before! This is the benefit of talking things through with
+your Poohbah before the game begins, and why it is a great idea to come up with vague and evocative character concepts to run past them.
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Health Dice Pieces
+Races and Classes each have ```Health Dice Pieces```. When building a character,
+you add these pieces together to get your total health dice. For example,
+if you race has ```2``` health dice pieces, and your class has ```4```,
+your health dice would be ```6```.
+  
+  
   
   
 __To Create Your Character__
@@ -69,8 +180,9 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<img src='../site/static/images/race/female/automaton.jpg' style='width:350px' />
+<img src='images/race/female/automaton.jpg' style='width:350px' />
 
+"[Rose"](https://www.deviantart.com/vagocool/art/Rose-488273011) by Vagocool is licensed under [CC BY-ND 3.0](https://creativecommons.org/licenses/by-nd/3.0/)  
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
 >
 >—Simon, Gnome Tinker
@@ -105,8 +217,9 @@ ___
 
   
 ### Catterwol
-<img src='../site/static/images/race/female/catterwol.jpg' style='width:350px' />
+<img src='images/race/female/catterwol.jpg' style='width:350px' />
 
+"[Portrait of warrior"](https://www.deviantart.com/alsareslynx/art/Portrait-of-warrior-415698430) by AlsaresLynx is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
 >
 >—Archibold, the Wizard
@@ -150,8 +263,9 @@ ___
 
   
 ### Daemonspawn
-<img src='../site/static/images/race/female/daemonspawn.jpg' style='width:350px' />
+<img src='images/race/female/daemonspawn.jpg' style='width:350px' />
 
+"[Jazera"](https://www.deviantart.com/artoflariz/art/Jazera-702870460) by ArtofLariz is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
 >
 >—Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
@@ -181,8 +295,9 @@ ___
 
   
 ### Deep Elf
-<img src='../site/static/images/race/female/deep_elf.jpg' style='width:350px' />
+<img src='images/race/female/deep_elf.jpg' style='width:350px' />
 
+"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -212,8 +327,9 @@ ___
 
   
 ### Dwarf
-<img src='../site/static/images/race/female/dwarf.jpg' style='width:350px' />
+<img src='images/race/female/dwarf.jpg' style='width:350px' />
 
+"[Flaming Swords"](https://www.deviantart.com/patriartis/art/Flaming-Swords-722419104) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
 >
 >—Orkinshield, Orc Gunslinger
@@ -244,8 +360,6 @@ ___
 
   
 ### Fleetfoot Halfling
-<img src='../site/static/images/race/female/halfling.jpg' style='width:350px' />
-
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -278,8 +392,9 @@ ___
 
   
 ### Gnome
-<img src='../site/static/images/race/female/gnome.jpg' style='width:350px' />
+<img src='images/race/female/gnome.jpg' style='width:350px' />
 
+"[Explorer"](https://www.deviantart.com/yanporfirio/art/Explorer-606889176) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Gnomes are tiny. They make things, sometimes. I can crush them.
 >
 >—Throgar, Barbarian and Sheriff
@@ -319,8 +434,9 @@ ___
 
   
 ### Goblin
-<img src='../site/static/images/race/female/goblin.jpg' style='width:350px' />
+<img src='images/race/female/goblin.jpg' style='width:350px' />
 
+"[Run Through the Jungle"](https://www.deviantart.com/patriartis/art/Run-Through-the-Jungle-717257587) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
 >
 >—Tamberdoodle, Bard Extraordinare
@@ -351,8 +467,6 @@ ___
 
   
 ### Hardfoot Halfling
-<img src='../site/static/images/race/female/halfling.jpg' style='width:350px' />
-
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -384,8 +498,9 @@ ___
 
   
 ### High Elf
-<img src='../site/static/images/race/female/high_elf.jpg' style='width:350px' />
+<img src='images/race/female/high_elf.jpg' style='width:350px' />
 
+"[Elf Girl"](https://www.deviantart.com/selenada/art/Elf-Girl-459931558) by Selenada is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -415,8 +530,9 @@ ___
 
   
 ### Hissling
-<img src='../site/static/images/race/female/hissling.jpg' style='width:350px' />
+<img src='images/race/female/hissling.jpg' style='width:350px' />
 
+"[Kobold Sketch"](https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664) by Kronteisdrawing is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
 >
 >—Gillthunder, Human Knight
@@ -449,8 +565,9 @@ ___
 
   
 ### Human
-<img src='../site/static/images/race/female/human.jpg' style='width:350px' />
+<img src='images/race/female/human.jpg' style='width:350px' />
 
+"[Ranger"](https://www.deviantart.com/nathanparkart/art/Ranger-454217001) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
 >
 >—Orkensheild, Orc Archer
@@ -481,8 +598,9 @@ ___
 
   
 ### Kragraven
-<img src='../site/static/images/race/female/kragraven.jpg' style='width:350px' />
+<img src='images/race/female/kragraven.jpg' style='width:350px' />
 
+"[The Reaping Raven"](https://www.deviantart.com/foxtrack/art/The-Reaping-Raven-by-burdfish-396214428) by Foxtrack is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
 >
 >—Old Man Mcuffit, Racist Old Man
@@ -512,8 +630,9 @@ ___
 
   
 ### Lizkin
-<img src='../site/static/images/race/female/lizkin.jpg' style='width:350px' />
+<img src='images/race/female/lizkin.jpg' style='width:350px' />
 
+"[Naphas alchemist"](https://www.deviantart.com/themefinland/art/Naphas-alchemist-Glimpse-of-Luna-trading-card-760806047) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
 >
 >—Mister Li, Gnomeish Monk
@@ -546,8 +665,9 @@ ___
 
   
 ### Orc
-<img src='../site/static/images/race/female/orc.jpg' style='width:350px' />
+<img src='images/race/female/orc.jpg' style='width:350px' />
 
+"[Rakhven portrait"](https://www.deviantart.com/jeleynai/art/Rakhven-portrait-732800784) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
 >
 >—unattributed folk wisdom
@@ -578,8 +698,9 @@ ___
 
   
 ### Sprout
-<img src='../site/static/images/race/female/sprout.jpg' style='width:350px' />
+<img src='images/race/female/sprout.jpg' style='width:350px' />
 
+"[Kynitia"](https://www.deviantart.com/deevad/art/Kynitia-322571692) by Deevad is licensed under [CC BY-SA 3.0 US](https://creativecommons.org/licenses/by-sa/3.0/us/)  
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
 >
 >—Harley, Elf Paladin
@@ -614,8 +735,9 @@ ___
 
   
 ### Waterborn
-<img src='../site/static/images/race/female/waterborn.jpg' style='width:350px' />
+<img src='images/race/female/waterborn.jpg' style='width:350px' />
 
+"[Dark Elf"](https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
 >
 >—Leaf, Gnome Rogue from the Wild Desert
@@ -646,8 +768,9 @@ ___
 
   
 ### Wood Elf
-<img src='../site/static/images/race/female/wood_elf.jpg' style='width:350px' />
+<img src='images/race/female/wood_elf.jpg' style='width:350px' />
 
+"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -688,8 +811,9 @@ we have worked hard to make sure that all of them are very fun, so no matter wha
 to have a good time!
   
 ### Archer
-<img src='../site/static/images/class/female/archer.jpg' style='width:350px' />
+<img src='images/class/female/archer.jpg' style='width:350px' />
 
+"[Archer-Comission"](https://www.deviantart.com/robcv/art/Archer-Comission-786575653) by RobCV is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)  
   
   
 Some of the best marksmen in the world, archers are naturals with ranged weapons. They are often attached to their bow, and carry it with them everywhere. Archers come from all walks of life; some compete in tournaments, others are hunters and farmer's sons. Still others have served in the military. Archers should stay off of the front line, instead picking off foes from a distance.
@@ -864,8 +988,9 @@ ___
 
   
 ### Barbarian
-<img src='../site/static/images/class/barbarian.jpg' style='width:350px' />
+<img src='images/class/barbarian.jpg' style='width:350px' />
 
+"[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
@@ -1002,8 +1127,9 @@ ___
 
   
 ### Bard
-<img src='../site/static/images/class/bard.jpg' style='width:350px' />
+<img src='images/class/bard.jpg' style='width:350px' />
 
+"[Song of nature"](https://www.deviantart.com/yanporfirio/art/Song-of-nature-695972090) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Showmen by nature, Bards are known for their skills at performing and distracting others from the sorrows of life. Bards are usually at least a little bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based weapons such a shortswords or knives. Bards are powerful spellcasters, and are excellent at providing support to their party and at making enemies weaker. As you prepare your bard, consider how they chose this way of life. How did they learn magic? How do they perform? Do they play music? Dance? Tell stories? How did they learn to fight? Who did they learn to fight from? How old are they? How many places have they been? Where do they perform? Why do they perform there? How will being a bard change the way you interact with your party?
@@ -1181,8 +1307,9 @@ ___
 
   
 ### Beastmaster
-<img src='../site/static/images/class/female/beastmaster.jpg' style='width:350px' />
+<img src='images/class/female/beastmaster.jpg' style='width:350px' />
 
+"[Friendship is magic"](https://www.deviantart.com/junowski/art/Friendship-is-magic-787103260) by Junowski is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)  
   
   
 For the Beastmaster 'Animal Person' is an understatement. Beastmaster's begin their adventure with a loyal animal companion, which they can select from the Book of Known Beasts. This can include a wolf, a bear, and eagle, or even a dragon! Most Beastmasters have forgone civilization, choosing instead to roam the wilds, capturing and befriending animals. They are quick, dexterity based fighters, and are good at tackling and hobbling enemies and leading their party through the wilds.
@@ -1330,8 +1457,9 @@ ___
 
   
 ### Cleric
-<img src='../site/static/images/class/cleric.jpg' style='width:350px' />
+<img src='images/class/cleric.jpg' style='width:350px' />
 
+"[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. Clerics are weak, and do not fight with physical magic. However, they are powerful spellcasters who are adept at healing, and who can make a huge difference in combat. Clerics try to embody the ideals of their deity, paying them homage and working to enact their will in the world. As you design your cleric, ask yourself how they chose this path. When and how did their deity reach out to them? How did they make their pledge? Under what circumstances? How often do they pray to their deity? How do they react to people who don't believe? What do they believe in? What is their moral code, and how does that interact with that of their deity? How will being a cleric affect the way that you interact with your party?
@@ -1509,8 +1637,9 @@ ___
 
   
 ### Druid
-<img src='../site/static/images/class/druid.jpg' style='width:350px' />
+<img src='images/class/druid.jpg' style='width:350px' />
 
+"[Firbolg Druid [C]"](https://www.deviantart.com/jeleynai/art/Firbolg-Druid-C-767712399) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Gaurdians of nature, most druids prefer to live in tribes in the forests, mountains, prairie, tundra, or desert. Druid's command powerful nature based magic, which they use to smite those who threaten them, their friends, or their home. Druids utilize intelligence based action points to cast spells, and are a good match for players interested in playing a mage. As you build your druid, consider where they came from. Why are they so attached to nature? How does their attachment to the natural world change how they think? How do they react to large towns and cities? What do they wear, and how do they speak? How do they feel about other types of magic? Why are they on their adventure? How do they feel about eating meat? What are their values? What do they think the place of people is in the world? How will being a druid change the way you interact with your party?
@@ -1673,8 +1802,9 @@ ___
 
   
 ### Fighter
-<img src='../site/static/images/class/fighter.jpg' style='width:350px' />
+<img src='images/class/fighter.jpg' style='width:350px' />
 
+"[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Fighters are powerful strength or dexterity based warriors. Unlike the knight, fighters are unarmored, and have a skillset more suited to keeping themselves alive and bringing down enemies than providing support.
@@ -1797,8 +1927,9 @@ ___
 
   
 ### Gunslinger
-<img src='../site/static/images/class/female/gunslinger.jpg' style='width:350px' />
+<img src='images/class/female/gunslinger.jpg' style='width:350px' />
 
+"[Commission: Lauryn"](https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398) by  MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
@@ -1998,8 +2129,9 @@ ___
 
   
 ### Highborn
-<img src='../site/static/images/class/female/highborn.jpg' style='width:350px' />
+<img src='images/class/female/highborn.jpg' style='width:350px' />
 
+"[Commission: Selena Rosewood"](https://www.deviantart.com/marcelafreire/art/Commission-Selena-Rosewood-785212777) by MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
@@ -2145,8 +2277,9 @@ ___
 
   
 ### Knight
-<img src='../site/static/images/class/knight.jpg' style='width:350px' />
+<img src='images/class/knight.jpg' style='width:350px' />
 
+"[Vikings : Lagherta the shield maiden"](https://www.deviantart.com/fredrickruntu/art/Vikings-Lagherta-the-shield-maiden-426150632) by fredrickruntu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Knights are heavy, armored fighters who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able to protect their allies.
@@ -2280,8 +2413,9 @@ ___
 
   
 ### Monk
-<img src='../site/static/images/class/female/monk.jpg' style='width:350px' />
+<img src='images/class/female/monk.jpg' style='width:350px' />
 
+"[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Monks are masters of hand to hand combat, who use their extensive control of their bodies to overcome their foes. Monks are able to learn abilities from scrolls, which they may find scattered throughout the world. Monks have dedicated themself to the art of understanding the natural and spiritual world, and are often levelheaded and intelligent. As you create your monk, consider what their goals are. How did they become a monk, and what are they hoping to gain by doing so? How do they react in stressful situations? How do they interact with other people? Are they quiet and reserved? Confident and sure of themself? How will being a monk affect the way you interact with your party?
@@ -2372,8 +2506,9 @@ ___
 
   
 ### Necromancer
-<img src='../site/static/images/class/necromancer.jpg' style='width:350px' />
+<img src='images/class/necromancer.jpg' style='width:350px' />
 
+"[Necromancer"](https://www.deviantart.com/paolapieretti/art/Necromancer-519605226) by PaolaPieretti is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers, mages who study the intricacies of death, and what follows after. Often fuled by macabre fasination or a god complex, Necromancy is deeply feared and considered taboo by almost everyone. Clerics and Paladins, in particular, may despise or hunt necromacers. At the beginning of their journey, necromancers may choose to be vegan, promising only to eat the souls of evil individuals. As you create your necromancer, consider their values. How did they end up studying such horrible magics? Was it out of necessity? Curiosity? What are they hoping to accomplish? How do they rationalize what they do? Do they have any ticks or quirks? How will being a necromancer affect how you interact with your party?
@@ -2561,8 +2696,9 @@ ___
 
   
 ### Paladin
-<img src='../site/static/images/class/paladin.jpg' style='width:350px' />
+<img src='images/class/paladin.jpg' style='width:350px' />
 
+"[Dwarf King of the Unicorns"](https://www.deviantart.com/jameszapata/art/Dwarf-King-of-the-Unicorns-244186494) by jameszapata is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Palidins are Soldiers of the Light, and are adept both at hand to hand combat and basic healing magic. Paladins are devoted to their deity, and aim to bring their influence into the world. Paladins are especially good at taking out evil entities, and are known for their Faithful Weapon ability, which lets them summon their weapon to their hand after throwing it.
@@ -2729,8 +2865,9 @@ ___
 
   
 ### Ranger
-<img src='../site/static/images/class/ranger.jpg' style='width:350px' />
+<img src='images/class/ranger.jpg' style='width:350px' />
 
+"[Swordman-sketch"](https://www.deviantart.com/josephqiuart/art/Swordman-sketch-702721751) by JosephQuiArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers are powerful dexterity based fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able to easily traverse their favorite terrain, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters. As you create your ranger, consider how they ended up a ranger? How did they become so adept at navigating the wilderness? Do they feel the need to protect villagers? What kinds of monsters have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact with your party?
@@ -2887,8 +3024,9 @@ ___
 
   
 ### Rogue
-<img src='../site/static/images/class/rogue.jpg' style='width:350px' />
+<img src='images/class/rogue.jpg' style='width:350px' />
 
+"[Commission: Adalia"](https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811) by raikoart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
@@ -3075,8 +3213,9 @@ ___
 
   
 ### Sorcerer
-<img src='../site/static/images/class/female/sorcerer.jpg' style='width:350px' />
+<img src='images/class/female/sorcerer.jpg' style='width:350px' />
 
+"[Playing with Fire"](https://www.deviantart.com/patriartis/art/Playing-with-Fire-647239859) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, but rather through raw force of personality. To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma check to perform magic. As you create your sorcerer, consider how they learned magic. Who did they learn it from? How did they first wrestle a spirit to aid them? When they cast a spell, do they always use the same spirit, or different spirits? Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer change the way that you interact with the world and your party?
@@ -3239,8 +3378,9 @@ ___
 
   
 ### Wizard
-<img src='../site/static/images/class/wizard.jpg' style='width:350px' />
+<img src='images/class/wizard.jpg' style='width:350px' />
 
+"[Spellcaster"](https://www.deviantart.com/ncorva/art/Spellcaster-768564631) by ncorva is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to. To use magic, Wizards use action points to cast spells. Wizards gain access to new spell tiers before any other class. As you create your wizard, consider what their past is. How old are they? What kind of family did they come from? How long have they been a wizard? Are they mysterious? Are they competent? How do they interact with others? Who taught them magic? How will being a wizard affect how you interact with your other party members?

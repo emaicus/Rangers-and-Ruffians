@@ -34,6 +34,8 @@ GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
 GLOBAL_SPELL_TIER_ABILITIES = dict()
 
+GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'docs', 'images')
+
 
 class rnr_entity:
     def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
@@ -108,7 +110,7 @@ class rnr_entity:
       serial['quote_author'] = self.quote_author
       return serial
 
-    def base_markdownify(self, image_path, custom_chunk="",handbook=None):
+    def base_markdownify(self, image_path, image_attribution, custom_chunk="",handbook=None):
       load_Rangers_And_Ruffians_Data()
 
       ret = []
@@ -118,11 +120,11 @@ class rnr_entity:
 
       ret.append("### {0} \n".format(self.name.replace('_',' ')))
       
-      if image_path != "":
-        full_image_path = f'../site/static/images/{image_path}'
+      if image_path is not None and image_attribution is not None:
         #ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
-        ret.append(f"<img src='{full_image_path}' style='width:350px' />\n\n")
-        #ret.append(f'![{self.name}]({full_image_path}?raw=true "{self.name}" =350x) \n')
+        ret.append(f"<img src='{image_path}' style='width:350px' />\n\n")
+        ret.append(image_attribution)
+        #ret.append(f'![{self.name}]({image_path}?raw=true "{self.name}" =350x) \n')
      
       if custom_chunk != "":
         ret.append(custom_chunk ) 
@@ -204,13 +206,14 @@ class rnr_class(rnr_entity):
 
 
     def markdownify(self, male=False):
-      gender_string = 'male' if male else 'female'
-      if os.path.exists('../site/static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
-        image_path = 'class/{0}/{1}.jpg'.format(gender_string,self.name.lower())
-      else:
-        image_path = 'class/{0}.jpg'.format(self.name.lower())
+      global GLOBAL_ART_PATH
 
-      ret = self.base_markdownify(image_path, handbook=self.handbook) + self.markdownify_level_sheet()
+      absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
+      relative_art_folder = os.path.join('images', 'class')
+      
+      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
+
+      ret = self.base_markdownify(image_path, attribution, handbook=self.handbook) + self.markdownify_level_sheet()
       ret.append(f"  \n___\n")
       return ret
 
@@ -256,17 +259,17 @@ class rnr_class(rnr_entity):
       return ret
 
     def serialize(self, male=False, verbose=False):
-      print(self.name)
+      global SITE_IMAGE_PATH
+
       serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
-      if os.path.exists('static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())):
-        serial["path_to_image"] = '/static/images/class/{0}/{1}.jpg'.format(gender_string,self.name.lower())
-        art_request = '{0}_{1}'.format(gender_string, self.name.lower())
-      else:
-        serial["path_to_image"] = "/static/images/class/{0}.jpg".format(self.name.lower())
-        art_request = self.name.lower()
 
-      serial['rights'] = GLOBAL_ART_DICTIONARY.get(art_request,None)
+      absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
+      relative_art_folder = os.path.join('images', 'class')
+      
+      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
+
+      serial['rights'] = attribution
 
       all_data = get_rnr_class_data_with_name(self.name)
       serial['levels'] = all_data['levels']
@@ -354,40 +357,40 @@ class rnr_race(rnr_entity):
     return cls(name, subrace, race_data['abilities'], race_data['stats'], race_data['description'],
                race_data['quote'], race_data['author'], race_data.get('handbook', None), race_data['health_die_pieces'])
 
-
   def markdownify(self,male=False):
+    global GLOBAL_ART_PATH
     custom_chunk = f'>{self.quote}\n>\n>—{self.quote_author}\n\n'
+
+    absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
+    relative_art_folder = os.path.join('images', 'race')
+
+    image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
     
-    gender_string = 'male' if male else 'female'
-
-    site_path = os.path.join(BASE_DIRECTORY, 'site', 'static', 'images')
-    if os.path.exists(os.path.join(site_path, "race/{0}/{1}.jpg".format(gender_string, self.subrace_name.replace(' ','_').lower()))):
-      img_name = self.subrace_name.replace(' ','_').lower()
-    else:
-      print('could not find {0}'.format( os.path.join(BASE_DIRECTORY, 'site', 'static', 'images', 'race', gender_string, self.subrace_name.replace(' ','_').lower() ) ) )
-      img_name = self.race_name.replace(' ','_').lower()
-
+    #Fall back to race image if no subrace image exists.
+    if image_path is None:
+      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
 
     gender = "male" if male else "female"
-    ret = self.base_markdownify("race/{0}/{1}.jpg".format(gender, img_name), custom_chunk=custom_chunk,handbook=self.handbook)
+    ret = self.base_markdownify(image_path, attribution, custom_chunk=custom_chunk,handbook=self.handbook)
     ret.append(f"  \n___\n")
     return ret
 
   def serialize(self, male=False, verbose=False):
+    global GLOBAL_ART_PATH
     serial = self.base_serialize(verbose)
-    gender = "male" if male else "female"
+    
+    absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
+    relative_art_folder = os.path.join('..' , 'docs', 'images', 'race')
 
+    image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
+    
     #Fall back to race image if no subrace image exists.
-    if os.path.exists("static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())):
-      img_name = self.subrace_name.replace(' ','_').lower()
-    else:
-      print('could not find {0}'.format("static/images/race/{0}/{1}.jpg".format(gender, self.subrace_name.replace(' ','_').lower())))
-      img_name = self.race_name.replace(' ','_').lower()
-
-    serial["path_to_image"] = "static/images/race/{0}/{1}.jpg".format(gender, img_name)
-    print('path to image is {0}'.format(serial['path_to_image']))
+    if image_path is None:
+      image_path, attribution = get_gendered_art(os.path.join(SITE_IMAGE_PATH, 'race'), self.race_name.replace(' ','_').lower(), male)
+    
+    serial["path_to_image"] = image_path
     serial['health_die_pieces'] = self.health_die_pieces
-    serial['rights'] = GLOBAL_ART_DICTIONARY.get('{1}_{0}'.format(gender, img_name), None)
+    serial['rights'] = attribution
 
     return serial
 
@@ -538,6 +541,62 @@ def markdown_pantheon():
 
 
   return lines
+
+
+def get_art(relative_art_folder, art_name, in_docs=False):
+  jpg_art_name = f'{art_name}.jpg'
+  neutral_image = os.path.join(relative_art_folder, jpg_art_name)
+  markdown_rights = generate_markdown_art_attribution(art_name)
+
+  if markdown_rights is None:
+    return None, None
+  else:
+    return neutral_image, markdown_rights
+
+def get_gendered_art(relative_art_folder, absolute_art_folder, art_name, male):
+  global BASE_DIRECTORY
+  jpg_art_name = f'{art_name}.jpg'
+  gender_string = 'male' if male else 'female'
+
+  gender_image =  os.path.join(gender_string, jpg_art_name)
+  neutral_image = jpg_art_name
+
+  if os.path.exists(os.path.join(absolute_art_folder, gender_image)):
+    path = os.path.join(relative_art_folder, gender_image)
+    art_request = f'{art_name}_{gender_string}'
+  else:
+    path = os.path.join(relative_art_folder, neutral_image)
+    art_request = art_name
+
+  markdown_rights = generate_markdown_art_attribution(art_request)
+
+  if markdown_rights is None:
+    print(f'could not find rights info for {art_request}.')
+    return None, None
+  else:
+    return path, markdown_rights
+
+def generate_markdown_art_attribution(art):
+  global GLOBAL_ART_DICTIONARY
+
+  rights = GLOBAL_ART_DICTIONARY.get(art,None)
+
+  if rights == None:
+    return None
+
+  try:
+    title           = GLOBAL_ART_DICTIONARY[art]['title']
+    url             = GLOBAL_ART_DICTIONARY[art]['url']
+    artist          = GLOBAL_ART_DICTIONARY[art]['artist']
+    license_acronym = GLOBAL_ART_DICTIONARY[art]['license_acronym']
+    license_url     = GLOBAL_ART_DICTIONARY[art]['license_url']
+  except Exception as e:
+    traceback.print_exc()
+    return None
+
+  return f'"[{title}"]({url}) by {artist} is licensed under [{license_acronym}]({license_url})  \n'
+  
+  
 
 ####################################################################################
 #

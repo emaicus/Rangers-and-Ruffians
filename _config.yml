@@ -1,4 +1,5 @@
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 relative_links:
   enabled: true
   collections: true
@@ -11,3 +12,5 @@ include:
   # - CONTRIBUTING.md
   # - ISSUE_TEMPLATE.md
   # - PULL_REQUEST_TEMPLATE.md
+
+logo: /docs/images/backdrops/banner.jpg

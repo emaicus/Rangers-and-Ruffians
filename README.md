@@ -1,3 +1,13 @@
+---
+banner_image_path: /docs/images/backdrops/banner.jpg
+banner_image_link: https://www.deviantart.com/themefinland/art/The-winding-path-commission-800945478
+banner_image_name: The winding path
+banner_image_artist: ThemeFinland
+banner_image_artist_link: https://www.deviantart.com/themefinland
+banner_image_license: CC BY-NC-SA 3.0
+banner_image_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
+---
+
 # Rangers and Ruffians
 _Version 2.1.0_
 

@@ -9,6 +9,7 @@ class markdown_handler:
       self.file = file
       self.start_heading(start_heading, heading_level)
       self.ordering = list()
+      self.topmatter = None
 
       # Clear the file if it exists
       if file is not None:
@@ -78,8 +79,20 @@ class markdown_handler:
       if flush:
         del self.BUFFER[heading] #self.BUFFER[heading]['content'] = ''
 
+    def _write_topmatter(self):
+      if self.topmatter is None:
+        return
+
+      with open(self.file, 'a') as append_file:
+        for line in self.topmatter:
+          append_file.write(f'{line}\n')
+      self.topmatter = None
+
     def write_buffer(self, flush=True):
       keys = list(self.BUFFER.keys())
+
+      if self.topmatter is not None:
+        self._write_topmatter()
 
       if len(self.ordering) > 0:
         for section in self.ordering:
@@ -152,5 +165,11 @@ class markdown_handler:
         lines = infile.readlines()
 
       self.slurp_markdown_lines(lines)
+
+    def slurp_topmatter_file(self, file):
+      with open(file, 'r') as infile:
+        lines = infile.readlines()
+
+      self.topmatter = lines
 
       
