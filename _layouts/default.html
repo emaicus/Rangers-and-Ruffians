@@ -24,7 +24,7 @@
       <h1 class="project-name" style="margin-bottom: 2rem;">Rangers and Ruffians</h1>
         {% if page.banner_image_path %}
           <figure>
-            <img src="{{page.banner_image_path}}" alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
+            <img src="{{page.banner_image_path}}" style="max-width: 100%;"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
             <figcaption>
               <a href="{{page.banner_image_link}}">{{page.banner_image_name}}</a> 
               by 
