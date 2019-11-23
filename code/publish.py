@@ -3,6 +3,7 @@ import sys
 import os
 import rnr_utils
 import markdown_handler
+from pathlib import Path
 
 VERSION_NUMBER = '2.1.0'
 
@@ -41,7 +42,6 @@ def publish_character_creation():
   md.write_toc()
   md.write_buffer()
 
-
 def publish_spells():
   global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
@@ -73,7 +73,6 @@ def publish_examples():
   md._write_section(f'The Book of Examples')
   md.write_toc()
   md.write_buffer()
-
 
 def publish_rulebook():
   global VERSION_NUMBER
@@ -230,7 +229,31 @@ def publish_pantheon():
   md.write_toc()
   md.write_buffer()
   
+def publish_changelog():
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  parts_directory = os.path.join(docs_directory, 'parts')
+  changelog_directory = os.path.join(parts_directory, 'changelog_parts')
 
+  md = markdown_handler.markdown_handler(f'Changelog', heading_level=1, file=os.path.join(docs_directory, 'Changelog.md'))
+  md.slurp_topmatter_file(os.path.join(parts_directory, 'topmatter', 'changelog_topmatter.md'))
+
+  changelogs = list()
+  for file in Path(changelog_directory).glob('*.md'):
+    name = str(file).split('/')[-1].replace('.md', '')
+    major, greater, minor = name.split('_')
+    changelogs.append( ( int(major), int(greater), int(minor) ) )
+
+  changelogs = sorted(changelogs, reverse=True)
+
+  for changelog in changelogs:
+    major, greater, minor = changelog
+    filename = f'{major}_{greater}_{minor}.md'
+    md.slurp_markdown_file(os.path.join(changelog_directory, filename))
+  
+  md._write_topmatter()
+  md._write_section(f'Changelog')
+  md.write_toc()
+  md.write_buffer()
 
 if __name__ == "__main__":
   rnr_utils.printLogo()
@@ -242,4 +265,5 @@ if __name__ == "__main__":
   publish_character_creation()
   publish_spells()
   publish_examples()
+  publish_changelog()
   print("Done!")
