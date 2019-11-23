@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo">
   <head>
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -20,11 +21,11 @@
   </head>
   <body>
 
-    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a;">
-      <h1 class="project-name" style="margin-bottom: 2rem;">Rangers and Ruffians</h1>
+    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem">
+      <h1 class="project-name" style="font-family: 'Cardo', serif; font-size:4rem; font-weight: normal;">Rangers and Ruffians</h1>
         {% if page.banner_image_path %}
-          <figure>
-            <img src="{{page.banner_image_path}}" style="max-width: 100%;"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
+          <figure style="max-height:70vh;">
+            <img src="{{page.banner_image_path}}" style="max-width: 100%; max-height:69vh"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
             <figcaption>
               <a href="{{page.banner_image_link}}">{{page.banner_image_name}}</a> 
               by 
