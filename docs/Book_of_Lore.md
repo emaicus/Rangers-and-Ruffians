@@ -14,10 +14,17 @@ banner_image_license: CC BY-NC-ND 3.0
 
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
+title: The Book of Lore
+
+description: The gods and Backstory of Rangers and Ruffians!
+
+show_download: false
+
 ---
 
   
-# Book of Lore _Version 2.1.0_
+# Book of Lore
+_Version 2.1.0_  
 
    * [The Pantheon](#the-pantheon)  
      * [Gods of Light](#gods-of-light)  

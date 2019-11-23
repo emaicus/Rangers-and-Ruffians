@@ -1,5 +1,6 @@
   
-# The Tome of the Ancients _Version 2.1.0_
+# The Tome of the Ancients
+_Version 2.1.0_  
 
    * [Spellbooks](#spellbooks)  
      * [The Bard's Songbook](#the-bards-songbook)  

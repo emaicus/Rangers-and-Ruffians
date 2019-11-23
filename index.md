@@ -6,6 +6,7 @@ banner_image_artist: ThemeFinland
 banner_image_artist_link: https://www.deviantart.com/themefinland
 banner_image_license: CC BY-NC-SA 3.0
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
+show_download: true
 ---
 
 # Rangers and Ruffians

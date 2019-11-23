@@ -1,5 +1,6 @@
   
-# _The Book of Examples 2.1.0_
+# The Book of Examples
+_Version 2.1.0_  
 
    * [Additional Dice Information](#additional-dice-information)  
      * [Types of Dice Used](#types-of-dice-used)  

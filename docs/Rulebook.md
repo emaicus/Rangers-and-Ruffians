@@ -14,10 +14,17 @@ banner_image_license: CC BY-NC-ND 3.0
 
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
+title: The Rulebook
+
+description: The Rules of the Game!
+
+show_download: false
+
 ---
 
   
-# Rangers and Ruffians Rulebook _Version 2.1.0_
+# Rangers and Ruffians Rulebook
+_Version 2.1.0_  
 
    * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
      * [What do you need to play?](#what-do-you-need-to-play)  

@@ -6,4 +6,7 @@ banner_image_artist: 000Fesbra000
 banner_image_artist_link: https://www.deviantart.com/000fesbra000
 banner_image_license: CC BY-NC-ND 3.0
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+title: The Book of Known Beasts
+description: Goblins and Skeletons and Bears, oh my!
+show_download: false
 ---

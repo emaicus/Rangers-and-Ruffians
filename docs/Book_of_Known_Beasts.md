@@ -14,10 +14,17 @@ banner_image_license: CC BY-NC-ND 3.0
 
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
+title: The Book of Known Beasts
+
+description: Goblins and Skeletons and Bears, oh my!
+
+show_download: false
+
 ---
 
   
-# Book of Known Beasts _Version 2.1.0_
+# Book of Known Beasts
+_Version 2.1.0_  
 
    * [Beasts:](#beasts)  
      * [Bears:](#bears)  

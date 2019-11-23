@@ -6,4 +6,7 @@ banner_image_artist: JavSama
 banner_image_artist_link: https://www.deviantart.com/javsama
 banner_image_license: CC BY-NC-ND 3.0
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+title: The Rulebook
+description: The Rules of the Game!
+show_download: false
 ---

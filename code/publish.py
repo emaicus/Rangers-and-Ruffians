@@ -11,7 +11,8 @@ def publish_character_creation():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'Compendium of Character Creation _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
+  md = markdown_handler.markdown_handler(f'Compendium of Character Creation', heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
 
   races = rnr_utils.load_all_race_objects()
   rnr_classes = rnr_utils.load_all_class_objects()
@@ -26,7 +27,7 @@ def publish_character_creation():
 
   skills = rnr_utils.markdown_skills()
   
-  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'character_creation_topmatter.md'))
+  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
   md.slurp_markdown_lines(race_lines)
@@ -36,7 +37,7 @@ def publish_character_creation():
   md.slurp_markdown_lines(skills)
   
   md._write_topmatter()
-  md._write_section(f'Compendium of Character Creation _Version {VERSION_NUMBER}_')
+  md._write_section(f'Compendium of Character Creation')
   md.write_toc()
   md.write_buffer()
 
@@ -46,14 +47,15 @@ def publish_spells():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'The Tome of the Ancients _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
+  md = markdown_handler.markdown_handler(f'The Tome of the Ancients', heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
 
   spells = rnr_utils.markdown_spellbooks()
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
 
-  md._write_section(f'The Tome of the Ancients _Version {VERSION_NUMBER}_')
+  md._write_section(f'The Tome of the Ancients')
   md.write_toc()
   md.write_buffer()
 
@@ -62,12 +64,13 @@ def publish_examples():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'_The Book of Examples {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
+  md = markdown_handler.markdown_handler(f'The Book of Examples', heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
 
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'explanations_part.md'))
 
-  md._write_section(f'_The Book of Examples {VERSION_NUMBER}_')
+  md._write_section(f'The Book of Examples')
   md.write_toc()
   md.write_buffer()
 
@@ -81,15 +84,16 @@ def publish_rulebook():
     print(f"ERROR: cannot find docs directory: {docs_directory}")
     sys.exit(1)
 
-  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
 
-  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'rulebook_topmatter.md'))
+  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'rulebook_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_redirect.md'))
   
   md._write_topmatter()
-  md._write_section(f'Rangers and Ruffians Rulebook _Version {VERSION_NUMBER}_')
+  md._write_section(f'Rangers and Ruffians Rulebook')
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
@@ -98,8 +102,10 @@ def publish_book_of_known_beasts():
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Known Beasts _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
-  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'known_beasts_topmatter.md'))
+  md = markdown_handler.markdown_handler(f'Book of Known Beasts', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
+
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
 
   stats = rnr_utils.standard_stat_order()
   abbreviations = [rnr_utils.abbreviate_stat(stat).upper() for stat in stats]
@@ -202,7 +208,7 @@ def publish_book_of_known_beasts():
         md.paragraph('___')
 
   md._write_topmatter()
-  md._write_section(f'Book of Known Beasts _Version {VERSION_NUMBER}_')
+  md._write_section(f'Book of Known Beasts')
   md.write_toc(max_to_include=4)
   md.write_buffer()
 
@@ -211,14 +217,16 @@ def publish_pantheon():
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Lore _Version {VERSION_NUMBER}_', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
-  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'lore_topmatter.md'))
+  md = markdown_handler.markdown_handler(f'Book of Lore', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
+  md.paragraph(f'_Version {VERSION_NUMBER}_')
+
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
   pantheon = rnr_utils.markdown_pantheon()
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'pantheon_part.md'))
   md.slurp_markdown_lines(pantheon)
 
   md._write_topmatter()
-  md._write_section(f'Book of Lore _Version {VERSION_NUMBER}_')
+  md._write_section(f'Book of Lore')
   md.write_toc()
   md.write_buffer()
   

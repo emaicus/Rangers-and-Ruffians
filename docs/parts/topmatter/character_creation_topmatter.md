@@ -6,4 +6,7 @@ banner_image_artist: hifarry
 banner_image_artist_link: https://www.deviantart.com/hifarry
 banner_image_license: CC BY-NC-ND 3.0
 banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+title: The Compendium of Character Creation
+description: Everything you need to build your character!
+show_download: false
 ---
