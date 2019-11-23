@@ -122,7 +122,7 @@ class rnr_entity:
       
       if image_path is not None and image_attribution is not None:
         #ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
-        ret.append(f"<img src='{image_path}' style='width:350px' />\n\n")
+        ret.append(f"<img src='{image_path}' class=\"raceClassImage\" />\n\n")
         ret.append(image_attribution)
         #ret.append(f'![{self.name}]({image_path}?raw=true "{self.name}" =350x) \n')
      

@@ -1,3 +1,21 @@
+---
+
+banner_image_path: /docs/images/backdrops/character_creation.jpg
+
+banner_image_link: https://www.deviantart.com/hifarry/art/Tavern-Meeting-742777343
+
+banner_image_name: Tavern Meeting
+
+banner_image_artist: hifarry
+
+banner_image_artist_link: https://www.deviantart.com/hifarry
+
+banner_image_license: CC BY-NC-ND 3.0
+
+banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+---
+
   
 # Compendium of Character Creation _Version 2.1.0_
 
@@ -180,7 +198,7 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<img src='images/race/female/automaton.jpg' style='width:350px' />
+<img src='images/race/female/automaton.jpg' class="raceClassImage" />
 
 "[Rose"](https://www.deviantart.com/vagocool/art/Rose-488273011) by Vagocool is licensed under [CC BY-ND 3.0](https://creativecommons.org/licenses/by-nd/3.0/)  
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
@@ -217,7 +235,7 @@ ___
 
   
 ### Catterwol
-<img src='images/race/female/catterwol.jpg' style='width:350px' />
+<img src='images/race/female/catterwol.jpg' class="raceClassImage" />
 
 "[Portrait of warrior"](https://www.deviantart.com/alsareslynx/art/Portrait-of-warrior-415698430) by AlsaresLynx is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
@@ -263,7 +281,7 @@ ___
 
   
 ### Daemonspawn
-<img src='images/race/female/daemonspawn.jpg' style='width:350px' />
+<img src='images/race/female/daemonspawn.jpg' class="raceClassImage" />
 
 "[Jazera"](https://www.deviantart.com/artoflariz/art/Jazera-702870460) by ArtofLariz is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
@@ -295,7 +313,7 @@ ___
 
   
 ### Deep Elf
-<img src='images/race/female/deep_elf.jpg' style='width:350px' />
+<img src='images/race/female/deep_elf.jpg' class="raceClassImage" />
 
 "[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
@@ -327,7 +345,7 @@ ___
 
   
 ### Dwarf
-<img src='images/race/female/dwarf.jpg' style='width:350px' />
+<img src='images/race/female/dwarf.jpg' class="raceClassImage" />
 
 "[Flaming Swords"](https://www.deviantart.com/patriartis/art/Flaming-Swords-722419104) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
@@ -392,7 +410,7 @@ ___
 
   
 ### Gnome
-<img src='images/race/female/gnome.jpg' style='width:350px' />
+<img src='images/race/female/gnome.jpg' class="raceClassImage" />
 
 "[Explorer"](https://www.deviantart.com/yanporfirio/art/Explorer-606889176) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Gnomes are tiny. They make things, sometimes. I can crush them.
@@ -434,7 +452,7 @@ ___
 
   
 ### Goblin
-<img src='images/race/female/goblin.jpg' style='width:350px' />
+<img src='images/race/female/goblin.jpg' class="raceClassImage" />
 
 "[Run Through the Jungle"](https://www.deviantart.com/patriartis/art/Run-Through-the-Jungle-717257587) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
@@ -498,7 +516,7 @@ ___
 
   
 ### High Elf
-<img src='images/race/female/high_elf.jpg' style='width:350px' />
+<img src='images/race/female/high_elf.jpg' class="raceClassImage" />
 
 "[Elf Girl"](https://www.deviantart.com/selenada/art/Elf-Girl-459931558) by Selenada is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
@@ -530,7 +548,7 @@ ___
 
   
 ### Hissling
-<img src='images/race/female/hissling.jpg' style='width:350px' />
+<img src='images/race/female/hissling.jpg' class="raceClassImage" />
 
 "[Kobold Sketch"](https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664) by Kronteisdrawing is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
@@ -565,7 +583,7 @@ ___
 
   
 ### Human
-<img src='images/race/female/human.jpg' style='width:350px' />
+<img src='images/race/female/human.jpg' class="raceClassImage" />
 
 "[Ranger"](https://www.deviantart.com/nathanparkart/art/Ranger-454217001) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
@@ -598,7 +616,7 @@ ___
 
   
 ### Kragraven
-<img src='images/race/female/kragraven.jpg' style='width:350px' />
+<img src='images/race/female/kragraven.jpg' class="raceClassImage" />
 
 "[The Reaping Raven"](https://www.deviantart.com/foxtrack/art/The-Reaping-Raven-by-burdfish-396214428) by Foxtrack is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
@@ -630,7 +648,7 @@ ___
 
   
 ### Lizkin
-<img src='images/race/female/lizkin.jpg' style='width:350px' />
+<img src='images/race/female/lizkin.jpg' class="raceClassImage" />
 
 "[Naphas alchemist"](https://www.deviantart.com/themefinland/art/Naphas-alchemist-Glimpse-of-Luna-trading-card-760806047) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
@@ -665,7 +683,7 @@ ___
 
   
 ### Orc
-<img src='images/race/female/orc.jpg' style='width:350px' />
+<img src='images/race/female/orc.jpg' class="raceClassImage" />
 
 "[Rakhven portrait"](https://www.deviantart.com/jeleynai/art/Rakhven-portrait-732800784) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
@@ -698,7 +716,7 @@ ___
 
   
 ### Sprout
-<img src='images/race/female/sprout.jpg' style='width:350px' />
+<img src='images/race/female/sprout.jpg' class="raceClassImage" />
 
 "[Kynitia"](https://www.deviantart.com/deevad/art/Kynitia-322571692) by Deevad is licensed under [CC BY-SA 3.0 US](https://creativecommons.org/licenses/by-sa/3.0/us/)  
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
@@ -735,7 +753,7 @@ ___
 
   
 ### Waterborn
-<img src='images/race/female/waterborn.jpg' style='width:350px' />
+<img src='images/race/female/waterborn.jpg' class="raceClassImage" />
 
 "[Dark Elf"](https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
@@ -768,7 +786,7 @@ ___
 
   
 ### Wood Elf
-<img src='images/race/female/wood_elf.jpg' style='width:350px' />
+<img src='images/race/female/wood_elf.jpg' class="raceClassImage" />
 
 "[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
@@ -811,7 +829,7 @@ we have worked hard to make sure that all of them are very fun, so no matter wha
 to have a good time!
   
 ### Archer
-<img src='images/class/female/archer.jpg' style='width:350px' />
+<img src='images/class/female/archer.jpg' class="raceClassImage" />
 
 "[Archer-Comission"](https://www.deviantart.com/robcv/art/Archer-Comission-786575653) by RobCV is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)  
   
@@ -988,7 +1006,7 @@ ___
 
   
 ### Barbarian
-<img src='images/class/barbarian.jpg' style='width:350px' />
+<img src='images/class/barbarian.jpg' class="raceClassImage" />
 
 "[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
@@ -1127,7 +1145,7 @@ ___
 
   
 ### Bard
-<img src='images/class/bard.jpg' style='width:350px' />
+<img src='images/class/bard.jpg' class="raceClassImage" />
 
 "[Song of nature"](https://www.deviantart.com/yanporfirio/art/Song-of-nature-695972090) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
@@ -1307,7 +1325,7 @@ ___
 
   
 ### Beastmaster
-<img src='images/class/female/beastmaster.jpg' style='width:350px' />
+<img src='images/class/female/beastmaster.jpg' class="raceClassImage" />
 
 "[Friendship is magic"](https://www.deviantart.com/junowski/art/Friendship-is-magic-787103260) by Junowski is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)  
   
@@ -1457,7 +1475,7 @@ ___
 
   
 ### Cleric
-<img src='images/class/cleric.jpg' style='width:350px' />
+<img src='images/class/cleric.jpg' class="raceClassImage" />
 
 "[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -1637,7 +1655,7 @@ ___
 
   
 ### Druid
-<img src='images/class/druid.jpg' style='width:350px' />
+<img src='images/class/druid.jpg' class="raceClassImage" />
 
 "[Firbolg Druid [C]"](https://www.deviantart.com/jeleynai/art/Firbolg-Druid-C-767712399) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -1802,7 +1820,7 @@ ___
 
   
 ### Fighter
-<img src='images/class/fighter.jpg' style='width:350px' />
+<img src='images/class/fighter.jpg' class="raceClassImage" />
 
 "[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -1927,7 +1945,7 @@ ___
 
   
 ### Gunslinger
-<img src='images/class/female/gunslinger.jpg' style='width:350px' />
+<img src='images/class/female/gunslinger.jpg' class="raceClassImage" />
 
 "[Commission: Lauryn"](https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398) by  MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2129,7 +2147,7 @@ ___
 
   
 ### Highborn
-<img src='images/class/female/highborn.jpg' style='width:350px' />
+<img src='images/class/female/highborn.jpg' class="raceClassImage" />
 
 "[Commission: Selena Rosewood"](https://www.deviantart.com/marcelafreire/art/Commission-Selena-Rosewood-785212777) by MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2277,7 +2295,7 @@ ___
 
   
 ### Knight
-<img src='images/class/knight.jpg' style='width:350px' />
+<img src='images/class/knight.jpg' class="raceClassImage" />
 
 "[Vikings : Lagherta the shield maiden"](https://www.deviantart.com/fredrickruntu/art/Vikings-Lagherta-the-shield-maiden-426150632) by fredrickruntu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2413,7 +2431,7 @@ ___
 
   
 ### Monk
-<img src='images/class/female/monk.jpg' style='width:350px' />
+<img src='images/class/female/monk.jpg' class="raceClassImage" />
 
 "[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2506,7 +2524,7 @@ ___
 
   
 ### Necromancer
-<img src='images/class/necromancer.jpg' style='width:350px' />
+<img src='images/class/necromancer.jpg' class="raceClassImage" />
 
 "[Necromancer"](https://www.deviantart.com/paolapieretti/art/Necromancer-519605226) by PaolaPieretti is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2696,7 +2714,7 @@ ___
 
   
 ### Paladin
-<img src='images/class/paladin.jpg' style='width:350px' />
+<img src='images/class/paladin.jpg' class="raceClassImage" />
 
 "[Dwarf King of the Unicorns"](https://www.deviantart.com/jameszapata/art/Dwarf-King-of-the-Unicorns-244186494) by jameszapata is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -2865,7 +2883,7 @@ ___
 
   
 ### Ranger
-<img src='images/class/ranger.jpg' style='width:350px' />
+<img src='images/class/ranger.jpg' class="raceClassImage" />
 
 "[Swordman-sketch"](https://www.deviantart.com/josephqiuart/art/Swordman-sketch-702721751) by JosephQuiArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -3024,7 +3042,7 @@ ___
 
   
 ### Rogue
-<img src='images/class/rogue.jpg' style='width:350px' />
+<img src='images/class/rogue.jpg' class="raceClassImage" />
 
 "[Commission: Adalia"](https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811) by raikoart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -3213,7 +3231,7 @@ ___
 
   
 ### Sorcerer
-<img src='images/class/female/sorcerer.jpg' style='width:350px' />
+<img src='images/class/female/sorcerer.jpg' class="raceClassImage" />
 
 "[Playing with Fire"](https://www.deviantart.com/patriartis/art/Playing-with-Fire-647239859) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
@@ -3378,7 +3396,7 @@ ___
 
   
 ### Wizard
-<img src='images/class/wizard.jpg' style='width:350px' />
+<img src='images/class/wizard.jpg' class="raceClassImage" />
 
 "[Spellcaster"](https://www.deviantart.com/ncorva/art/Spellcaster-768564631) by ncorva is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   

@@ -25,7 +25,8 @@ def publish_character_creation():
     class_lines += rnr_class.markdownify()
 
   skills = rnr_utils.markdown_skills()
-
+  
+  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'character_creation_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
   md.slurp_markdown_lines(race_lines)
@@ -33,7 +34,8 @@ def publish_character_creation():
   md.slurp_markdown_lines(class_lines)
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'skills_part.md'))
   md.slurp_markdown_lines(skills)
-
+  
+  md._write_topmatter()
   md._write_section(f'Compendium of Character Creation _Version {VERSION_NUMBER}_')
   md.write_toc()
   md.write_buffer()
@@ -65,7 +67,7 @@ def publish_examples():
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'explanations_part.md'))
 
-  md._write_section(f'The Book of Examples {VERSION_NUMBER}_')
+  md._write_section(f'_The Book of Examples {VERSION_NUMBER}_')
   md.write_toc()
   md.write_buffer()
 
