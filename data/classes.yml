@@ -23,59 +23,58 @@ Heavy Fighter:
       level_0:
         abilities:
         - Melee Weapon Proficiency
-        - Berserk
-        - Intimidate
-        - Taunt
+        - Berserk # 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER.
+        - Intimidate # Advantage on intimidation checks.
+        - Taunt # Force enemies to attack you on a failed SP save
       level_1:
         abilities:
-        - Throw Anything
-        - Throw Caution to the Wind
+        - Throw Anything # Throw anything
+        - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
-        - Crushing Blow
-        - Line Them Up
+        - Crushing Blow # Give all enemies disadvantage if you land a critical hit.
+        - Line Them Up # If you kill an enemy, gain another attack
       level_4:
         abilities:
         - Stat Increase
       level_5:
         abilities:
-        - Blind Rage
-        - Savage Critical
+        - Always Angry # Berserk once per battle
       level_6:
         abilities:
         - Stat Increase
       level_7:
         abilities:
-        - Always Angry
-        - Furious Blows
+        - Furious Blows # Two attacks when berserk
       level_8:
         abilities:
         - Stat Increase
       level_9:
         abilities:
-        - Berserker
+        - Berserker # Half damage from physical attacks when berserk
       level_10:
         abilities:
         - Stat Increase
       level_11:
         abilities:
-        - Warmaster
+        #- Warmaster # Extra +1 to STR and INF when berserk
+        - Savage Critical # Additional dice of damage when you crit
       level_12:
         abilities:
         - Stat Increase
       level_13:
         abilities:
-        - Controlled Rage
-        - Glory
+        - Controlled Rage # No negative effects from being berserk
+        - Glory # When you hit low health, double your damage (25%)
       level_14:
         abilities: 
         - Stat Increase
       level_15:
         abilities:
-        - Spirit of Rage
+        - Spirit of Rage # Once per day, double a turn.
     questions:
     - Where did your character come from?
     - Where is their tribe? Did they leave it?
@@ -105,6 +104,7 @@ Heavy Fighter:
         - Melee Weapon Proficiency
         - Kingsmen
         - Shield Bash
+        - Shield Up
       level_1:
         abilities:
         - Shield of Men
@@ -113,7 +113,6 @@ Heavy Fighter:
         - Stat Increase
       level_3:
         abilities:
-        - Shield Up
         - Taunt
       level_4:
         abilities:
@@ -164,7 +163,7 @@ Heavy Fighter:
   Paladin:
     base_abilities:
     - Minor Spell Choice
-    - Chainmail
+    - Armored
     base_stats:
       Charisma: 0
       Dexterity: -3
@@ -276,8 +275,8 @@ Light Fighter:
         - Melee Weapon Proficiency
         - Animal Companion
         - Animal Magnetism
-        - Favorite Terrain
-        - Pup
+        #- Favorite Terrain
+        - Tracker
       level_1:
         abilities:
         - Tackle
@@ -296,7 +295,6 @@ Light Fighter:
         abilities:
         - Coordinated Attack
         - Dog Pile
-        - Tracker
       level_6:
         abilities:
         - Stat Increase
@@ -353,18 +351,18 @@ Light Fighter:
     levels:
       level_0:
         abilities:
-        - Trained Attack
+        - Focused Attack
         - Ranged Weapon Proficiency
         - Melee Weapon Proficiency
+        - Determination
       level_1:
         abilities:
-        - Determination
+        - Minor Second Wind
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
-        - Minor Second Wind
         - Resolve
       level_4:
         abilities:
@@ -372,6 +370,7 @@ Light Fighter:
       level_5:
         abilities:
         - Nimble
+        - Greater Second Wind
         - Reduced Critical
       level_6:
         abilities:
@@ -554,9 +553,9 @@ Light Fighter:
     tag_line: Brawler/Martial Artist
   Ranger:
     base_abilities:
-    - Action
-    - Offhand Action
-    - Shifting Cloak
+    # - Action
+    # - Offhand Action
+    # - Shifting Cloak
     - Under the Stars
     base_stats:
       Charisma: 0
@@ -569,7 +568,7 @@ Light Fighter:
     description: Rangers are the vigilante law keepers and monster hunters of the
       wilds. Rangers are powerful dexterity based fighters, and are known for their
       abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able
-      to easily traverse their favorite terrain, as well as to prepare simple medicines
+      to easily traverse the wilds, as well as to prepare simple medicines
       in times of need. Rangers are often known by common folk to be quiet and mysterious,
       however, they are well loved, as it is understood that they are the thin line
       that stands between many villages and an onslaught of monsters. As you create
@@ -584,54 +583,54 @@ Light Fighter:
         - Melee Weapon Proficiency
         - Ranged Weapon Proficiency
         - Minor Medicine
-        - Learned
-        - Camouflage
+        - Tracker # Advantage on tracking.
+        - Camouflage # Stealth advantage while still
       level_1:
         abilities:
-        - Entangling Attack
-        - Favorite Terrain
+        - Embers
+        - Entangling Attack # tangle an enemy, ensnaring them
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
-        - Tracker
-        - Ward of Tracking
+        - Finesse Strike # additional dice. On SP fail, another on the next turn
+        - Spell of Darkvision    
       level_4:
         abilities:
         - Stat Increase
       level_5:
         abilities:
-        - Finesse Strike
-        - Twin Blades
+        - Twin Blades # 2x attacks in an action
       level_6:
         abilities:
         - Stat Increase
       level_7:
         abilities:
-        - Twin Blade Parry
-        - Greater Medicine
+        - Twin Blade Parry # strike back when an enemy attacks you?
+        - Greater Medicine # Make better potions
       level_8:
         abilities:
         - Stat Increase
       level_9:
         abilities:
-        - Monster Slayer
-        - Disengage
+        - Elemental Weapon 
+        # - Monster Slayer # Extra damage to monsters
+        # - Disengage # Enemies take disadvantage against you when you are moving
       level_10:
         abilities:
         - Stat Increase
       level_11:
         abilities:
-        - Spell of Darkvision
-        - Disarming Blow
+        - Expert Tracker
+        - Major Medicine
+        # - Disarming Blow # On a crit, make someone drop something??????
       level_12:
         abilities:
         - Stat Increase
       level_13:
         abilities:
-        - Offhand Attack   
-        - Expert Tracker   
+        - Offhand Attack
       level_14:
         abilities:
         - Stat Increase
@@ -643,7 +642,6 @@ Light Fighter:
   Rogue:
     base_abilities:
     - A Thief's Gear
-    - Ruffians
     base_stats:
       Charisma: 0
       Dexterity: 2
@@ -663,7 +661,7 @@ Light Fighter:
       level_0:
         abilities:
         - Melee Weapon Proficiency
-        - Ranged Weapon Proficiency
+        - Thrown Weapon Proficiency
         - Lightfoot
         - Nimble Fingers
       level_1:
@@ -685,9 +683,11 @@ Light Fighter:
         - Thief or Assassin
         subclass_assassin_abilities:
         - Imposter
+        - Spell of Darkvision
         subclass_thief_abilities:
         - Soft Landing
         - Soundless
+        - Sticky Fingers
       level_6:
         abilities:
         - Stat Increase
@@ -704,7 +704,7 @@ Light Fighter:
       level_9:
         subclass_assassin_abilities:
         - Minor Blink
-        - Dark Vision
+        - Spell of Minor Invisibility
         subclass_thief_abilities:
         - Flee
         - Trap Expert
@@ -731,7 +731,7 @@ Light Fighter:
         - Stat Increase
       level_15:
         subclass_assassin_abilities:
-        - Double Strike
+        - Assassinate
         - All-consuming Shadow
         subclass_thief_abilities:
         - Spider Climb
@@ -779,7 +779,7 @@ Mage:
         - The Bard's Songbook
         - Regular Patron
         - Tier Zero Spells
-        - Slight of Hand
+        - Sleight of Hand
       level_1:
         abilities:
         - Tier One Spells
@@ -842,11 +842,11 @@ Mage:
     - Spell Choice
     base_stats:
       Charisma: 1
-      Dexterity: -2
+      Dexterity: -1
       Inner_Fire: 0
       Intelligence: 2
       Luck: 2
-      Perception: -1
+      Perception: -2
       Strength: -3
     description: After pledging their allegiance to their deity, Clerics have made
       it their duty to follow their will. Clerics are weak, and do not fight with
@@ -1017,12 +1017,12 @@ Mage:
     - Spell Choice
     base_stats:
       Charisma: -3
-      Dexterity: -1
+      Dexterity: 0
       Inner_Fire: 2
       Intelligence: 1
       Luck: 2
       Perception: -2
-      Strength: 0
+      Strength: -1
     description: Death is not my enemy, nor is it my ally, it is my servant. So say
       Necromancers, mages who study the intricacies of death, and what follows after.
       Often fuled by macabre fasination or a god complex, Necromancy is deeply feared
@@ -1279,11 +1279,11 @@ Ranged Fighter:
     - Boot Knife
     base_stats:
       Charisma: 0
-      Dexterity: 2
+      Dexterity: 1
       Inner_Fire: -2
       Intelligence: -1
       Luck: 1
-      Perception: 1
+      Perception: 2
       Strength: -3
     description: Some of the best marksmen in the world, archers are naturals with
       ranged weapons. They are often attached to their bow, and carry it with them
@@ -1300,7 +1300,6 @@ Ranged Fighter:
         - Huntsman
       level_1:
         abilities:
-        - Arrow Stab
         - Mantel
         - Crippling Shot
       level_2:

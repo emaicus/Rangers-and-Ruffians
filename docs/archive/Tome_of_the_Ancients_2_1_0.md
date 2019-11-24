@@ -1,6 +1,6 @@
   
 # The Tome of the Ancients
-_Version 2.1.1_  
+_Version 2.1.0_  
 
    * [Spellbooks](#spellbooks)  
      * [The Bard's Songbook](#the-bards-songbook)  
@@ -10,7 +10,7 @@ _Version 2.1.1_
      * [The Macabre Manual](#the-macabre-manual)  
      * [The Novice Spellbook](#the-novice-spellbook)  
      * [The Sorcerer's Scrolls](#the-sorcerers-scrolls)  
-     * [The Tome Of The Ancients](#the-tome-of-the-ancients-1)  
+     * [The Tome Of The Ancients](#the-tome-of-the-ancients)  
      * [The Wizard's Addendum](#the-wizards-addendum)  
 
   

@@ -24,7 +24,7 @@ show_download: false
 
   
 # Book of Lore
-_Version 2.1.1_  
+_Version 2.1.0_  
 
    * [The Pantheon](#the-pantheon)  
      * [Gods of Light](#gods-of-light)  

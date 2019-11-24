@@ -3,17 +3,17 @@ import sys
 import os
 import rnr_utils
 import markdown_handler
+import traceback
+import shutil
 from pathlib import Path
 
-VERSION_NUMBER = '2.1.0'
 
 def publish_character_creation():
-  global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
   md = markdown_handler.markdown_handler(f'Compendium of Character Creation', heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   races = rnr_utils.load_all_race_objects()
   rnr_classes = rnr_utils.load_all_class_objects()
@@ -43,12 +43,11 @@ def publish_character_creation():
   md.write_buffer()
 
 def publish_spells():
-  global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
   md = markdown_handler.markdown_handler(f'The Tome of the Ancients', heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   spells = rnr_utils.markdown_spellbooks()
 
@@ -60,12 +59,11 @@ def publish_spells():
   md.write_buffer()
 
 def publish_examples():
-  global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
   md = markdown_handler.markdown_handler(f'The Book of Examples', heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'explanations_part.md'))
@@ -75,7 +73,6 @@ def publish_examples():
   md.write_buffer()
 
 def publish_rulebook():
-  global VERSION_NUMBER
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
@@ -84,7 +81,7 @@ def publish_rulebook():
     sys.exit(1)
 
   md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'rulebook_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
@@ -97,12 +94,11 @@ def publish_rulebook():
   md.write_buffer()
 
 def publish_book_of_known_beasts():
-  global VERSION_NUMBER
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Book of Known Beasts', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
 
@@ -212,12 +208,11 @@ def publish_book_of_known_beasts():
   md.write_buffer()
 
 def publish_pantheon():
-  global VERSION_NUMBER
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Book of Lore', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
-  md.paragraph(f'_Version {VERSION_NUMBER}_')
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
   pantheon = rnr_utils.markdown_pantheon()
@@ -245,20 +240,51 @@ def publish_changelog():
 
   changelogs = sorted(changelogs, reverse=True)
 
+  i = 0
   for changelog in changelogs:
     major, greater, minor = changelog
     filename = f'{major}_{greater}_{minor}.md'
-    md.slurp_markdown_file(os.path.join(changelog_directory, filename))
+    header_append = f'-{i}' if i > 0 else ''
+    i += 1
+    md.slurp_markdown_file(os.path.join(changelog_directory, filename))#, header_append=header_append, prepend=False)
   
   md._write_topmatter()
   md._write_section(f'Changelog')
   md.write_toc()
   md.write_buffer()
 
+def archive_past_versions():
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  archve_directory = os.path.join(docs_directory, 'archive')
+
+  old_version = rnr_utils.VERSION_NUMBER.replace('.', '_')
+
+  print(f'searching {docs_directory} for markdown files')
+  for file in Path(docs_directory).glob('*.md'):
+    name = str(file).split('/')[-1].replace('.md', '')
+    name = f'{name}_{old_version}.md'
+    print(f'moving {file} to {os.path.join(archve_directory, name)}')
+    shutil.move(file, os.path.join(archve_directory, name))
+
 if __name__ == "__main__":
   rnr_utils.printLogo()
   rnr_utils.load_Rangers_And_Ruffians_Data()
-  
+
+  update_version = False  
+  try:
+    new_version = input('Is this a new edition? If so, what is the new number? ')
+    major, greater, minor = new_version.split('.')
+    _,_,_ = int(major), int(greater), int(minor)
+    update_version = True
+  except Exception as e:
+    print("Not naming a new version.")
+
+  if update_version:
+    print('Archiving past versions...')
+    archive_past_versions()
+    rnr_utils.update_version(new_version)
+    print(f"The Version Number is now {rnr_utils.VERSION_NUMBER}")
+
   publish_rulebook()
   publish_book_of_known_beasts()
   publish_pantheon()

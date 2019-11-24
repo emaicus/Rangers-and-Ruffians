@@ -35,7 +35,7 @@ GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 GLOBAL_SPELL_TIER_ABILITIES = dict()
 
 GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'docs', 'images')
-
+VERSION_NUMBER = None
 
 class rnr_entity:
     def __init__(self, name, abilities, stats, description,quote='', quote_author='',standings = ''):
@@ -653,9 +653,67 @@ def INSTALL_RANGERS_AND_RUFFIANS():
       json.dump(timestamps, outfile)
     pbar.close()
 
+def update_version(version_string):
+  global VERSION_NUMBER
+  load_Rangers_And_Ruffians_Data()
+
+  major, greater, minor = version_string.split('.')
+  major = int(major)
+  greater = int(greater)
+  minor = int(minor)
+
+  current_major, current_greater, current_minor = VERSION_NUMBER.split('.')
+  current_major = int(current_major)
+  current_greater = int(current_greater)
+  current_minor = int(current_minor)
+
+  good_version = False
+  if current_major < major:
+    if current_major + 1 == major:
+      if greater != 0 or minor != 0:
+        raise("Incrementing major, but not setting greater and minor to 0.")
+      good_version = True
+    else:
+      raise Exception('Attempting to raise major version by an increment greater than 1.')
+  elif current_major > major:
+    raise Exception('Attempting to decrease major version')
+
+  # major versions are equal.
+  if not good_version:
+    if current_greater < greater:
+      if current_greater + 1 == greater:
+        if minor != 0:
+          raise('Attempting to raise greater, but not setting minor to 0.')
+        good_version = True
+      else:
+        raise Exception('Attempting to raise greater version by an increment greater than 1.')
+    elif current_greater > greater:
+      raise Exception('Attempting to decrease greater version')
+
+  if not good_version:
+    if current_minor < minor:
+      if current_minor + 1 == minor:
+        good_version = True
+      else:
+        raise Exception('Attempting to raise minor version by an increment greater than 1.')
+    elif current_minor > minor:
+      raise Exception('Attempting to decrease minor version')
+    else: #the are equal
+      raise Exception('Called update version with the current version')
+
+  #We can safely increase the version.
+  VERSION_NUMBER = f'{major}.{greater}.{minor}'
+
+  with open(os.path.join(BASE_DIRECTORY, 'meta.json'), 'r') as infile:
+    data = json.load(infile)
+
+  data['most_recent_version'] = VERSION_NUMBER
+
+  with open(os.path.join(BASE_DIRECTORY, 'meta.json'), 'w') as outfile:
+    json.dump(data, outfile, indent=4)
 
 def load_Rangers_And_Ruffians_Data():
-  global GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
+  global VERSION_NUMBER, GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -676,6 +734,11 @@ def load_Rangers_And_Ruffians_Data():
   description_path = os.path.join(INSTALL_DIRECTORY, 'description_database.json')
   art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
   known_beasts_path = os.path.join(INSTALL_DIRECTORY, 'book_of_known_beasts.json')
+  version_number_path = os.path.join(BASE_DIRECTORY, 'meta.json')
+
+  with open(version_number_path) as infile:
+    data = json.load(infile)
+    VERSION_NUMBER = data['most_recent_version']
 
   with open(spell_path) as data_file:
     GLOBAL_SPELL_BOOKS = json.load(data_file)

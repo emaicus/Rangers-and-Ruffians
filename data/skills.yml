@@ -88,23 +88,16 @@ Mage Hunter:
 Minor Movement Distance Increase:
   description: "Move an additional 5 feet per turn."
   type: combat
-  requirements:
-    stats:
-      Dexterity: 2
 Greater Movement Distance Increase:
   description: "Move an additional 5 feet per turn."
   type: combat
   requirements:
-    stats:
-      Dexterity: 4
     skills:
     - Minor Movement Distance Increase
 Major Movement Distance Increase:
   description: "Move an additional 5 feet per turn."
   type: combat
   requirements:
-    stats:
-      Dexterity: 6
     skills:
     - Greater Movement Distance Increase
 Lip-Reader:

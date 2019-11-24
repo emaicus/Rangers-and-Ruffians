@@ -1,11 +1,25 @@
 import sys
 import os
 
+# Some global cariables for dealing with the buffer tuples
+HEADING = 0
+LEVEL = 1
+CONTENT = 2
+LINK = 3
+
+def fix_link(link):
+  bad_chars = [':', '(', ')', '.', '!', '?', '&', '_', ',',"'", '"']
+  good_link = link.replace(' ', '-').lower()
+  for c in bad_chars:
+    good_link = good_link.replace(c,'')
+  return good_link
+
 class markdown_handler:
     def __init__(self, start_heading, heading_level=1, file=None,):
       # dict of heading to content
-      self.BUFFER = dict()
-      self.current_heading = ''
+      self.encountered_dict = dict()
+      self.BUFFER = list()
+      self.current_heading = -1
       self.file = file
       self.start_heading(start_heading, heading_level)
       self.ordering = list()
@@ -22,25 +36,29 @@ class markdown_handler:
             append_file.write('')
 
     def start_heading(self, heading, level):
-      if heading in self.BUFFER:
-        print(f"ERROR: Duplicate heading {heading}. Not adding.")
-        return
-
       if level <= 0 or level >= 6:
-        print("ERROR cannot print heading level {level}")
+        print(f"ERROR cannot print heading level {level}")
         sys.exit(1)
+
+      link = fix_link(heading)
+
+      # print(f'Starting {link}')
+      if link not in self.encountered_dict:
+        self.encountered_dict[link] = 0
+      self.encountered_dict[link] += 1
+
+      if self.encountered_dict[link] > 1:
+        # print(f'We encountered {link} twice, so we will use a special link for it')
+        link = f'{link}-{self.encountered_dict[link] - 1}'
       
-      self.BUFFER[heading] = {
-        'level' : level,
-        'content' : ''
-      }
-      self.current_heading = heading
+      
+      self.BUFFER.append([heading, level, '', link])
 
     def add_whitespace(self):
-      self.BUFFER[self.current_heading]['content'] += '  \n'
+      self.BUFFER[self.current_heading][CONTENT] += '  \n'
 
     def line(self, line):
-      self.BUFFER[self.current_heading]['content'] += f'{line}'
+      self.BUFFER[self.current_heading][CONTENT] += f'{line}'
 
     def paragraph(self, line):
       self.line(line)
@@ -50,7 +68,7 @@ class markdown_handler:
       bookend = '|'
       str_fields = [str(x) for x in fields]
       middle = ' | '.join(str_fields)
-      self.BUFFER[self.current_heading]['content'] += f'{bookend} {middle} {bookend}  \n'
+      self.BUFFER[self.current_heading][CONTENT] += f'{bookend} {middle} {bookend}  \n'
 
     def chart_title(self, fields):
       self.add_whitespace()
@@ -59,17 +77,36 @@ class markdown_handler:
       p = ' | '
       for i in range(len(fields)):
         p += '--------|'
-      self.BUFFER[self.current_heading]['content'] += f'{p}\n'
+      self.BUFFER[self.current_heading][CONTENT] += f'{p}\n'
+
+    def heading_exists(self, heading):
+      return True if get_heading_pos(heading) != -1 else False
+
+    def get_heading_pos(self, heading):
+      for i in range(len(self.BUFFER)):
+        if self.BUFFER[i][HEADING] == heading:
+          return i
+      return -1
+
+    def get_all_headings(self):
+      headings = list()
+      for heading, _, _, _ in self.BUFFER:
+        headings.append(heading)
+      return headings
 
     # DANGER: When called directly, does not remove heading from ordering on flush.
     def _write_section(self, heading, flush=True):
-      if heading not in self.BUFFER:
+      heading_pos = self.get_heading_pos(heading)
+
+      if heading_pos == -1:
         print(f'ERROR: Bad heading {heading}')
         sys.exit(1)
       
       md_heading = f""
 
-      section = f"  \n{'#' * self.BUFFER[heading]['level']} {heading}\n{self.BUFFER[heading]['content']}"
+      heading, level, content, link = self.BUFFER[heading_pos]
+
+      section = f"  \n{'#' * level} {heading}\n{content}"
 
       if self.file is None:
         print(section)
@@ -77,7 +114,10 @@ class markdown_handler:
         with open(self.file, 'a') as append_file:
           append_file.write(f'{section}\n')
       if flush:
-        del self.BUFFER[heading] #self.BUFFER[heading]['content'] = ''
+        curr_len = len(self.BUFFER)
+        if self.current_heading + 1 == curr_len:
+          self.current_heading -= 1
+        self.BUFFER.pop(heading_pos)
 
     def _write_topmatter(self):
       if self.topmatter is None:
@@ -89,12 +129,13 @@ class markdown_handler:
       self.topmatter = None
 
     def write_buffer(self, flush=True):
-      keys = list(self.BUFFER.keys())
+      keys = self.get_all_headings()
 
       if self.topmatter is not None:
         self._write_topmatter()
 
       if len(self.ordering) > 0:
+        print('using ordering mode')
         for section in self.ordering:
           if section not in keys:
             print(f'ERROR: Ordering referenced bad section {section}')
@@ -102,7 +143,11 @@ class markdown_handler:
           self._write_section(section, flush = False)
         if flush == True:
           for section in set(self.ordering):
-            del self.BUFFER[section]
+            heading_pos = self.get_heading_pos(section)
+            curr_len = len(self.BUFFER)
+            if self.current_heading + 1 == curr_len:
+              self.current_heading -= 1
+            self.BUFFER.pop(heading_pos)
       else:
         for heading in keys:
           self._write_section(heading, flush)
@@ -115,10 +160,9 @@ class markdown_handler:
       left = list(self.BUFFER.keys())
       if len(left) > 0:
         print(f"ERROR: the following elements remained in the buffer. {left}")
-        sys.exit(1)
 
     def write_toc(self, max_to_include=1000):
-      keys = list(self.BUFFER.keys())
+      keys = self.get_all_headings()
       toc_buffer = ''
 
       if len(self.ordering) == 0:
@@ -127,14 +171,14 @@ class markdown_handler:
         it = self.ordering
 
       for key in it:
-        if self.BUFFER[key]['level'] > max_to_include:
+        heading_pos = self.get_heading_pos(key)
+        heading, level, content, link = self.BUFFER[heading_pos]
+        
+        if level > max_to_include:
           continue
-        indent = f" {' '* (2*(self.BUFFER[key]['level']-1))}* "
-        bad_chars = [':', '(', ')', '.', '!', '?', '&', '_', ',',"'", '"']
-        good_key = key.replace(' ', '-').lower()
-        for c in bad_chars:
-          good_key = good_key.replace(c,'')
-        toc_buffer += f"{indent}[{key}](#{good_key})  \n"
+
+        indent = f" {' '* (2*(level-1))}* "
+        toc_buffer += f"{indent}[{heading}](#{link})  \n"
       
 
 
@@ -144,7 +188,7 @@ class markdown_handler:
         with open(self.file, 'a') as append_file:
           append_file.write(f'{toc_buffer}\n')
 
-    def slurp_markdown_lines(self, lines):
+    def slurp_markdown_lines(self, lines, explicit_ordering=False):
       for line in lines:
         # line = line.rstrip()
         if len(line.strip()) == 0:
@@ -155,12 +199,13 @@ class markdown_handler:
           level = len(parts[0])
           heading = ' '.join(parts[1:])
           self.start_heading(heading, level)
-          self.order_next(heading)
+          if explicit_ordering:
+            self.order_next(heading)
         else:
           self.line(line)
 
 
-    def slurp_markdown_file(self, file):
+    def slurp_markdown_file(self, file, explicit_ordering=False):
       with open(file, 'r') as infile:
         lines = infile.readlines()
 

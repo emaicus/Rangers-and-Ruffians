@@ -10,7 +10,7 @@ show_download: true
 ---
 
 # Rangers and Ruffians
-_Version 2.1.0_
+_Version 2.1.1_
 
 ## What is Rangers and Ruffians?
 Rangers and Ruffians (also called just "Rangers" or "RnR")

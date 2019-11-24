@@ -8,7 +8,7 @@ Catterwol:
         - Land on your feet
         - Loose Skin
         - Fear of Water
-        - Fast Paws
+        #- Fast Paws
       quote: Ah, yes, well... It was then that we stumbled upon an encampment of
         cat-folk. They seemed a nice enough sort, so we bought some of their wares,
         beads and knives and potions, that sort of thing. After that, we supped with them. 
@@ -96,6 +96,7 @@ Elf:
         - Wink Wink, Nudge Nudge
         - Inherent Magic
         - Detect Magic
+        - Learned
       quote: High Elves can be slippery folk. It seems to me that rarely say what they mean, 
         and they seldom mean what they say. They're strong mages, though, and too clever
         for their own good. If you're dealing with elves, try to appeal to their pride,
@@ -229,7 +230,6 @@ Halfling:
         - Carry a Tune
         - Lightweight
         - Nimble
-        - Nimble Fingers
       quote: Halflings are decent enough, and fun to be around. They have potential as
         rogues since they can see without being seen, but I'm not sure if they're clever enough.
       author: Vasha, Catterwol Thief
@@ -412,13 +412,13 @@ Daemonspawn:
                    Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
                    vigilant and trusts no one.
       stats:
-        Charisma: 0
+        Charisma: -1
         Dexterity: -1
-        Inner_Fire: 1
+        Inner_Fire: 0
         Intelligence: 1
         Luck: 1
-        Perception: -1
-        Strength: 0
+        Perception: 0
+        Strength: 1
 Sprout:
   subraces:
     Sprout:
@@ -499,7 +499,7 @@ Hissling:
         Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows.
         So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw?
         An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks.
-        All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder
+        All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder
         approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken
         speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
         if they're still down there."
