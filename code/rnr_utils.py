@@ -259,7 +259,6 @@ class rnr_class(rnr_entity):
       return ret
 
     def serialize(self, male=False, verbose=False):
-      global SITE_IMAGE_PATH
 
       serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
@@ -386,7 +385,7 @@ class rnr_race(rnr_entity):
     
     #Fall back to race image if no subrace image exists.
     if image_path is None:
-      image_path, attribution = get_gendered_art(os.path.join(SITE_IMAGE_PATH, 'race'), self.race_name.replace(' ','_').lower(), male)
+      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
     
     serial["path_to_image"] = image_path
     serial['health_die_pieces'] = self.health_die_pieces

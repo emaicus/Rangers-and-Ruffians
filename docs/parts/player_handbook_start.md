@@ -461,11 +461,11 @@ Some example conditions that may trigger a conditional action include:
   
 
 ### Weapons
-Weapons have 3 parts in RnR:
+Weapons have 4 parts in RnR:
 1. Their primary die.
 2. Their modifier.
 3. Their effect.
-  
+
 A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's effect
 might be that it returns to a players hand after it is thrown.
   
@@ -475,6 +475,22 @@ might be that it does an extra ```1d6``` damage to the undead.
 A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's effect
 might be that, if an enemy is stabbed with it, they must make a saving throw against the
 wielder's [Spell Power](#spell-power) or be struck blind.
+
+#### Types of Weapon
+There are broad classifications of weapon in Rangers and Ruffians, ```Melee Weapons```, ```Ranged Weapons```, and ```Firearms```.
+
+##### Melee Weapons
+Melee weapons are defined as handheld weapons which are swung, stabbed, or thrust at nearby enemies.
+Melee weapons may be either ```Dexterity``` or ```Strength```. A __Dexterity Based Melee Weapon__ is
+one which requires some finesse to strike an enemy. Examples are ```Rapiers```, ```Spears```, and ```Daggers```.
+__Strength Based Melee Weapons__ are weapons which require power behind their strike. Examples are 
+```Greatswords```, ```Clubs```, and ```Flails```.
+
+Melee weapons may be ```Two Handed```, ```One Handed```, or ```Hand-and-a-Half```. As their name applies,
+two handed weapons like a ```War Hammer``` may only be wielded with two hands. One handed weapons, like a
+```Shortsword``` may be wielded with one hand. ```Hand-and-a-Half``` weapons may be wielded with either
+one or both hands. In some cases, a ```Hand-and-a-Half``` weapon may have a different primary die
+depending on how it is wielded.
 
 #### Attacking With a Weapon
 Attacks nearly always hit in Rangers and Ruffians. Therefore, to make a sword attack against an
@@ -504,9 +520,25 @@ Attacks made with magic work identically to attacks with a weapon with one diffe
 magic attacks do not have a ```primary die```, magic users instead roll ```1d20``` every time they 
 attack. If they roll a ```1```, their magic does not function as intended, and fizzles out. If they 
 roll a ```20```, they score a critical hit, and double their damage dice. 
- 
 
-#### Combat Abilities
+#### Armor and Shields
+Armor in Rangers and Ruffians falls under a number of broad classifications.
+
+| Armor Type             | Requirements                           | Benefits     |
+| -----------------------|----------------------------------------|--------------|
+| Chainmail              | 1 STR or reduce movement by 5ft.       | +1 Armor     |
+| Light Plate Armor      | 3 STR or reduce movement by 15ft.      | +2 Armor     |
+| Heavy Plate Armor      | 5 STR or reduce movement by 25ft.      | +3 Armor     |
+| Legendary Plate        | 7 STR or reduce movement to 0.         | +4 Armor     |
+| Leather Armor          | 2 Dexterity or -5 to all stealth rolls    | +1 Armor     |
+| Elven Leather Armor    | 5 Dexterity or -10 to all stealth rolls   | +2 Armor     |
+
+| Shield Type            | Benefits                                              |
+| -----------------------|-------------------------------------------------------|
+| Standard Shield        | __Shield Up:__ Offhand Ability: Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks. Must be done at the start of a turn. |
+  
+
+### Combat Abilities
 As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers
 and Ruffians that make the various [Races](Compendium_of_Character_Creation.md#races) and [Classes](Compendium_of_Character_Creation.md#classes) unique.
 Many of these abilities are specific to combat. For example, a character might be able

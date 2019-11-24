@@ -28,6 +28,7 @@ show_download: false
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
      * [Overview:](#overview)  
      * [Rule Changes:](#rule-changes)  
+     * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes)  
        * [Catterwol](#catterwol)  
        * [Wood Elf](#wood-elf)  
@@ -92,7 +93,7 @@ show_download: false
   
 ### Overview:
 This revision brings:
-1. Additional Race and Class Balance Tweaks.
+1. Additional Race and Class Balance Tweaks, especially to ```Rouges``` and ```Rangers```.
 2. An updated rule regarding player movement speed.
   
   
@@ -102,6 +103,12 @@ This revision brings:
 * A character's movement distance on a given turn is now computed via the following formula: ```movement = 15ft + (5ft x dexterity)```,
   where negative dexterity values are treated as ```0```. This makes Dexterity an important stat even for the most ardent knight, and, paired
   with the ```2.1.0```'s update to make perception affect initiative, should make choosing stats on level up far more interesting.
+  
+  
+
+  
+### Additional Clarifications:
+* Clarified how armor and shields work in the [Rulebook](Rulebook.md#armor-and-shields).
   
   
 
@@ -224,10 +231,14 @@ This revision brings:
   
 #### Knight:
 * __Abilities:__
-  * __Moved Shield Up from level 3 to level 1__ _Half damage from non-magic ranged attacks when you have a shield_
-    * __Reasoning:__ This makes a good base ability, and there's no reason to wait to get it.
+  * __Removed Shield Up__ _Level 3. Half damage from non-magic ranged attacks when you have a shield_
+    * __Reasoning:__ Shields now come with their own abilities and requirements.
+  * __Added New Ability Shield Master__ _Level 0. Don't take movement penalties from shield use._
+    * __Reasoning:__ With the new shield and movement rules, this ability was a great replacement for ```Shield Up```.
+  * __Added New Ability Charge!__ _Offhand. Run an extra 10ft. Contested STR check if you hit someone. Looser is knocked prone._
+    * __Reasoning:__ With the move towards ```DEX``` based movement, the knight was being left behind. This new ability helps to make them feel like they have more movement.
   * __Changed Armored__ _You start with a suit of armor._
-    * __Change:__ Armor is now ```+1``` instead of ```+2```.
+    * __Change:__ Armor is now Chainmail (```+1```) instead of Light Plate (```+2```).
     * __Reasoning:__ ```+2``` armor is too effective at level 0.
   
   

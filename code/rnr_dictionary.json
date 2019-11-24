@@ -133,6 +133,12 @@
         "LV12",
         "30ft",
         "Lionhearted",
-        "non-magic"
+        "non-magic",
+        "LV9",
+        "hatchling",
+        "battlehour",
+        "Salves",
+        "turnmin",
+        "Stackable"
     ]
 }

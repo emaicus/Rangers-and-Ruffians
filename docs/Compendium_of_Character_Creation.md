@@ -2333,19 +2333,20 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
 __Knight Abilities:__ 
 * __General Abilities:__   
-  * __Shield Up:__ Take half damage from non-magic piercing or blunt force ranged attacks if holding a shield.  
+  * __Shield Master:__ Don't take movement penalties from shield use.  
 * __Starting Items:__   
-  * __Armored:__ You begin your journey with a suit of +1 armor light plate.  
+  * __Armored:__ You begin your journey with a chainmail.  
 * __Advantages:__   
   * __Kingsmen:__ Gain advantage on charisma checks when speaking with kingsmen.  
 * __Combat Abilities:__   
   * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 0 Knight__
 
 * __General Abilities:__   
-  * __Shield Up:__ Take half damage from non-magic piercing or blunt force ranged attacks if holding a shield.  
+  * __Shield Master:__ Don't take movement penalties from shield use.  
   
   
 * __Advantages:__   
@@ -2354,6 +2355,7 @@ __Level 0 Knight__
   
 * __Combat Abilities:__   
   * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 1 Knight__
@@ -2764,7 +2766,7 @@ __Paladin Abilities:__
 * __General Abilities:__   
   * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
-  * __Armored:__ You begin your journey with a suit of +1 armor light plate.  
+  * __Armored:__ You begin your journey with a chainmail.  
   
   
 __Level 0 Paladin__
@@ -3411,7 +3413,7 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|-3|2|1|0|-2|2|2|  
+|-2|-1|2|1|0|-3|2|2|  
   
   
 __Wizard Abilities:__ 
@@ -3577,6 +3579,8 @@ the required skill or skills first.
 * __Cook:__ During a rest, you may cook food which heals 1d6 health.  
 * __Master Chef:__ During a rest, you may cook food which heals 2d6 health.  
   * Skill Requirements: _Cook_  
+* __Shield Master:__ Don't take movement penalties from shield use.  
+  * Stat Requirements: _Strength: 1, Dexterity: 2_  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  
 * __Hand to Hand Weapon Proficiency:__ You may wield physical weapons without disadvantage.  
 * __Ranged Weapon Proficiency:__ You may wield non-firearm ranged weapons without disadvantage  
@@ -3588,7 +3592,7 @@ the required skill or skills first.
 * __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Fast Draw:__ You may add your dexterity rather than your perception to an initiative roll.  
+* __Fast Draw:__ You may add your dexterity as well as your perception to an initiative roll.  
   * Stat Requirements: _Dexterity: 0_  
 * __Tinker:__ You may attempt to make items and contraptions during rests.  
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
@@ -3616,8 +3620,8 @@ the required skill or skills first.
 * __Fight from the Shadows:__ You are able to attempt to hide as an offhand action.  
   * Stat Requirements: _Dexterity: 3_  
 * __Phallanx:__ When you are adjacent to an ally, enemy attacks are at disadvantage.  
-* __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 SP.  
-* __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1SP.  
+* __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP.  
+* __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1 AP.  
   * Skill Requirements: _Medic_  
   * Stat Requirements: _Inner Fire: 2, Dexterity: 1_  
 * __Functioning Alcoholic:__ When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks.  

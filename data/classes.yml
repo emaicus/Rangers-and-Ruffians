@@ -104,7 +104,8 @@ Heavy Fighter:
         - Melee Weapon Proficiency
         - Kingsmen
         - Shield Bash
-        - Shield Up
+        - Shield Master
+        - Charge!
       level_1:
         abilities:
         - Shield of Men
@@ -1196,12 +1197,12 @@ Mage:
     - Walking Stick
     base_stats:
       Charisma: 0
-      Dexterity: -3
+      Dexterity: -1
       Inner_Fire: 1
       Intelligence: 2
       Luck: 2
-      Perception: -2
-      Strength: -1
+      Perception: -3
+      Strength: -2
     description: Often eccentric, wizards are known to be wayfarers and meddlers.
       Most keep to themselves, approaching others only to entwine them in schemes
       only they know about. Wizards arrive precisely when they mean to. To use magic,

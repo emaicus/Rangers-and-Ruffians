@@ -8,6 +8,12 @@ Master Chef:
   requirements:
     skills:
       - Cook
+Shield Master:
+  description: "Don't take movement penalties from shield use."
+  requirements:
+    stats:
+      Strength: 1
+      Dexterity: 2
 Hearty:
   description: "When you level up, you may roll your health dice with advantage."
   type: general
@@ -42,7 +48,7 @@ Advanced Magic:
     skills:
       - Basic Magic
 Fast Draw:
-  description: "You may add your dexterity rather than your perception to an initiative roll."
+  description: "You may add your dexterity as well as your perception to an initiative roll."
   type: general
   requirements:
     stats:
@@ -130,10 +136,10 @@ Phallanx:
   description: "When you are adjacent to an ally, enemy attacks are at disadvantage."
   type: combat
 Medic:
-  description: "You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 SP."
+  description: "You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP."
   type: combat
 Greater Medic:
-  description: "You are able to heal a teammate for 2d6 health for 1SP."
+  description: "You are able to heal a teammate for 2d6 health for 1 AP."
   type: general
   requirements:
     stats:

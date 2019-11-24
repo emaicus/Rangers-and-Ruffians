@@ -4,9 +4,9 @@ A Thief's Gear:
   brief: You have 100 feet of rope, a lockpick, a smoke-bomb, a 1d6 dagger.
   type: starting_item
 Armored:
-  description: You begin your journey with a suit of +1 armor light plate.
+  description: You begin your journey with a chainmail.
   type: starting_item
-  brief: +1 armor when worn.
+  brief: You have a suit of chainmail.
 Bull Rush:
   description: Spend 1 action point to rush at least 10 feet, doing an additional dice of damage
    to your target. The target must win at a contested strength check or fall prone.
@@ -17,6 +17,10 @@ Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
+Shield Master:
+  description: Don't take movement penalties from shield use.
+  type: general
+  brief: "Don't take movement penalties from shield use."
 Courageous Blow:
   description: Add your Inner Fire to an attack.
   type: combat
@@ -1137,9 +1141,14 @@ Line Them Up:
   type: combat
   brief: If you slay an enemy, gain another attack.
 Shield Up: 
-  description: Take half damage from non-magic piercing or blunt force ranged attacks if holding a shield.
+  description: Offhand. Hold up your shield. Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks if holding a shield. Must be done at the start of a turn.
   type: general
-  brief: Take half damage from non-magic ranged attacks if holding a shield.
+  brief: Offhand. -5ft. Movement. Take half damage from non-magic ranged attacks. Must be done at the start of a turn.
+Charge!: 
+  description: As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.
+  type: combat
+  brief: Offhand. Run an extra 10ft. Contested STR check if you hit someone. Looser is knocked prone.
+  cost: 1
 Joust: 
   description: Add an extra damage dice to an attack if it is performed with a running start.
   type: combat
