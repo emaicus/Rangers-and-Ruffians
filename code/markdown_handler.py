@@ -15,7 +15,7 @@ def fix_link(link):
   return good_link
 
 class markdown_handler:
-    def __init__(self, start_heading, heading_level=1, file=None,):
+    def __init__(self, start_heading, heading_level=1, file=None, force_overwrite=False):
       # dict of heading to content
       self.encountered_dict = dict()
       self.BUFFER = list()
@@ -28,10 +28,11 @@ class markdown_handler:
       # Clear the file if it exists
       if file is not None:
         if os.path.exists(self.file):
-          val = input(f'WARNING: File {file} already exists. Is it alright to overwrite it? (y,n) ')
-          if val.strip().lower() != 'y':
-            print('terminating')
-            sys.exit(1)
+          if not force_overwrite:
+            val = input(f'WARNING: File {file} already exists. Is it alright to overwrite it? (y,n) ')
+            if val.strip().lower() != 'y':
+              print('terminating')
+              sys.exit(1)
           with open(self.file, 'w') as append_file:
             append_file.write('')
 

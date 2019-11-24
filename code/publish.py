@@ -6,13 +6,13 @@ import markdown_handler
 import traceback
 import shutil
 from pathlib import Path
+import argparse
 
-
-def publish_character_creation():
+def publish_character_creation(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'Compendium of Character Creation', heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
+  md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   races = rnr_utils.load_all_race_objects()
@@ -42,27 +42,29 @@ def publish_character_creation():
   md.write_toc()
   md.write_buffer()
 
-def publish_spells():
+def publish_ancients(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'The Tome of the Ancients', heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
+  md = markdown_handler.markdown_handler(f'The Tome of the Ancients', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   spells = rnr_utils.markdown_spellbooks()
-
+  
+  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'ancients_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
-
+  
+  md._write_topmatter()
   md._write_section(f'The Tome of the Ancients')
   md.write_toc()
   md.write_buffer()
 
-def publish_examples():
+def publish_examples(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'The Book of Examples', heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
+  md = markdown_handler.markdown_handler(f'The Book of Examples', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
 
@@ -72,7 +74,7 @@ def publish_examples():
   md.write_toc()
   md.write_buffer()
 
-def publish_rulebook():
+def publish_rulebook(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
@@ -80,7 +82,7 @@ def publish_rulebook():
     print(f"ERROR: cannot find docs directory: {docs_directory}")
     sys.exit(1)
 
-  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'rulebook_topmatter.md'))
@@ -93,11 +95,11 @@ def publish_rulebook():
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
-def publish_book_of_known_beasts():
+def publish_book_of_known_beasts(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Known Beasts', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
+  md = markdown_handler.markdown_handler(f'Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
@@ -207,11 +209,11 @@ def publish_book_of_known_beasts():
   md.write_toc(max_to_include=4)
   md.write_buffer()
 
-def publish_pantheon():
+def publish_pantheon(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Lore', heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
+  md = markdown_handler.markdown_handler(f'Book of Lore', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
@@ -224,12 +226,12 @@ def publish_pantheon():
   md.write_toc()
   md.write_buffer()
   
-def publish_changelog():
+def publish_changelog(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   parts_directory = os.path.join(docs_directory, 'parts')
   changelog_directory = os.path.join(parts_directory, 'changelog_parts')
 
-  md = markdown_handler.markdown_handler(f'Changelog', heading_level=1, file=os.path.join(docs_directory, 'Changelog.md'))
+  md = markdown_handler.markdown_handler(f'Changelog', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Changelog.md'))
   md.slurp_topmatter_file(os.path.join(parts_directory, 'topmatter', 'changelog_topmatter.md'))
 
   changelogs = list()
@@ -270,6 +272,14 @@ if __name__ == "__main__":
   rnr_utils.printLogo()
   rnr_utils.load_Rangers_And_Ruffians_Data()
 
+  parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
+  parser.add_argument('--yes', action='store_true')
+  args = parser.parse_args()
+  force_overwrite = args.yes
+
+  print(f"Yes is {force_overwrite}")
+
+
   update_version = False  
   try:
     new_version = input('Is this a new edition? If so, what is the new number? ')
@@ -285,11 +295,11 @@ if __name__ == "__main__":
     rnr_utils.update_version(new_version)
     print(f"The Version Number is now {rnr_utils.VERSION_NUMBER}")
 
-  publish_rulebook()
-  publish_book_of_known_beasts()
-  publish_pantheon()
-  publish_character_creation()
-  publish_spells()
-  publish_examples()
-  publish_changelog()
+  publish_rulebook(force_overwrite)
+  publish_book_of_known_beasts(force_overwrite)
+  publish_pantheon(force_overwrite)
+  publish_character_creation(force_overwrite)
+  publish_ancients(force_overwrite)
+  publish_examples(force_overwrite)
+  publish_changelog(force_overwrite)
   print("Done!")

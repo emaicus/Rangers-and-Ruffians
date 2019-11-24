@@ -1,18 +1,18 @@
 ---
 
-banner_image_path: /docs/images/backdrops/changelog.jpg
+portrait_banner_path: /docs/images/backdrops/portrait_changelog.jpg
 
-banner_image_link: https://www.deviantart.com/stevegibson/art/Henrietta-Grimslingers-Art-676407322
+portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Toad-Newmann-803282064
 
-banner_image_name: Henrietta - Grimslingers Art
+portrait_banner_name: Toad Newmann
 
-banner_image_artist:  SteveGibson
+portrait_banner_artist:  SpikedMcGrath
 
-banner_image_artist_link: https://www.deviantart.com/stevegibson
+portrait_banner_artist_link: https://www.deviantart.com/spikedmcgrath
 
-banner_image_license: CC BY-NC-ND 3.0
+portrait_banner_license: CC BY-NC-ND 3.0
 
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
 title: The Changelog
 
@@ -681,7 +681,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
       The ability was updated to add a 2 dice of damage rather than a static 1d10.
   * __Boozehound is now a base ability:__
     * __Reasoning:__ Subclassing to bard no longer gives you increased alcohol tolerance.
-  * __Removed multi-action__ _Grants the wielder an extra action ever 3 turns._
+  * __Removed multi-action__ _Grants the wielder an extra action every 3 turns._
     * __Reasoning:__ Multi-action been replaced with offhand attacks and spells.
   * __Changed Restful Melody:__ _Grant your party extra health when resting._
     * __Change:__ Restful Melody has been split into three abilities tiers (lesser, greater, major)

@@ -1,11 +1,20 @@
 ---
-banner_image_path: /docs/images/backdrops/rulebook.jpg
-banner_image_link: https://www.deviantart.com/javsama/art/Fantasy-Landscape-652550768
-banner_image_name: Fantasy Landscape
-banner_image_artist: JavSama
-banner_image_artist_link: https://www.deviantart.com/javsama
-banner_image_license: CC BY-NC-ND 3.0
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+<!-- landscape_banner_path: /docs/images/backdrops/landscape_rulebook.jpg
+landscape_banner_link: https://www.deviantart.com/javsama/art/Fantasy-Landscape-652550768
+landscape_banner_name: Fantasy Landscape
+landscape_banner_artist: JavSama
+landscape_banner_artist_link: https://www.deviantart.com/javsama
+landscape_banner_license: CC BY-NC-ND 3.0
+landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/-->
+
+landscape_banner_path: /docs/images/backdrops/landscape_rulebook.jpg
+landscape_banner_link: https://www.deviantart.com/assumzaek/art/Summer-Time-Activities-442251327
+landscape_banner_name: Summer Time Activities
+landscape_banner_artist: assumzaek
+landscape_banner_artist_link: https://www.deviantart.com/assumzaek
+landscape_banner_license: CC BY-NC-SA 3.0
+landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
 title: The Rulebook
 description: The Rules of the Game!
 show_download: false
