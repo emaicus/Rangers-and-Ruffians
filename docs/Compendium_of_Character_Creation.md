@@ -1226,7 +1226,7 @@ __Level 1 Bard__
 
 * __General Abilities:__   
   * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
-  * __Minor Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 1d8 healing.  
+  * __Minor Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an extra dice of healing.  
   
   
 * __Combat Abilities:__   
@@ -1283,7 +1283,7 @@ __Level 7 Bard__
   
 * __General Abilities:__   
   * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
-  * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 2d8 healing.  
+  * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an two dice of healing healing.  
   
   
 __Level 8 Bard__
@@ -1315,7 +1315,7 @@ __Level 10 Bard__
 __Level 11 Bard__
 
 * __General Abilities:__   
-  * __Major Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 3d8 healing.  
+  * __Major Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an extra three dice of healing.  
   
   
 __Level 12 Bard__
@@ -3579,6 +3579,8 @@ the required skill or skills first.
 * __Cook:__ During a rest, you may cook food which heals 1d6 health.  
 * __Master Chef:__ During a rest, you may cook food which heals 2d6 health.  
   * Skill Requirements: _Cook_  
+* __Light Sleeper:__ Make perception checks with advantage while sleeping  
+* __Restful Sleeper:__ Roll healing dice with advantage when resting or sleeping.  
 * __Shield Master:__ Don't take movement penalties from shield use.  
   * Stat Requirements: _Strength: 1, Dexterity: 2_  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  

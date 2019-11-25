@@ -533,6 +533,7 @@ Armor in Rangers and Ruffians falls under a number of broad classifications.
 | Leather Armor          | 2 Dexterity or -5 to all stealth rolls    | +1 Armor     |
 | Elven Leather Armor    | 5 Dexterity or -10 to all stealth rolls   | +2 Armor     |
 
+
 | Shield Type            | Benefits                                              |
 | -----------------------|-------------------------------------------------------|
 | Standard Shield        | __Shield Up:__ Offhand Ability: Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks. Must be done at the start of a turn. |
@@ -596,13 +597,14 @@ or receiving healing magic.
 There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__, and
 __Sleep in a bed.__
   
-|                        | Quick Rest | Sleep   | Sleep in a Bed |
-| -----------------------|------------|---------|----------------|
-| Time Required          | 1 hour     | 8 hours | 8 hours        |
-| Health Restored        | 20%        | 50%     | 75%            |
-| Action Points Restored | 2          | 5       | All            |
-| Luck Restored          | 0          | All     | All            |
-| Times/Day              | 3x         | 1x      | 1x             |
+|                                      | Quick Rest    | Sleep         | Sleep in a Bed     |
+| -------------------------------------|---------------|---------------|--------------------|
+| Time Required                        | 1 hour        | 8 hours       | 8 hours            |
+| # of Healing Dice Rolled             | 1/2 level + 1 | 1/2 level + 1 | 1/2 level + 1      |
+| Type of Healing Dice Rolled          | d4            | d8            | d12                |
+| Action Points Restored               | 2             | 5             | All                |
+| Luck Restored                        | 0             | All           | All                |
+| Times/Day                            | 3x            | 1x            | 1x                 |
   
 
 ## Magic

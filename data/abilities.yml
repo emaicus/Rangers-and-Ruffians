@@ -1383,17 +1383,17 @@ Freed from this Mortal Coil:
   type: general
   brief: You may possess your thralls.
 Minor Restful Melody:
-  description: When your party is resting, you may perform a song for them which grants them an extra 1d8 healing.
+  description: When your party is resting or sleeping, you may perform a song for them which grants them an extra dice of healing.
   type: general
   brief: Grant your party 1d4 extra healing when resting.
   cost: 1
 Greater Restful Melody:
-  description: When your party is resting, you may perform a song for them which grants them an extra 2d8 healing.
+  description: When your party is resting or sleeping, you may perform a song for them which grants them an two dice of healing healing.
   type: general
   brief: Grant your party 1d10 extra healing when resting.
   cost: 1
 Major Restful Melody:
-  description: When your party is resting, you may perform a song for them which grants them an extra 3d8 healing.
+  description: When your party is resting or sleeping, you may perform a song for them which grants them an extra three dice of healing.
   type: general
   brief: Grant your party 2d10 extra healing when resting.
   cost: 1

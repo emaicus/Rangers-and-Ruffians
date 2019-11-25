@@ -35,6 +35,7 @@ GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 GLOBAL_SPELL_TIER_ABILITIES = dict()
 
 GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'docs', 'images')
+GLOBAL_SITE_ART_PATH = os.path.join(BASE_DIRECTORY, 'site', 'static', 'images')
 VERSION_NUMBER = None
 
 class rnr_entity:
@@ -259,18 +260,25 @@ class rnr_class(rnr_entity):
       return ret
 
     def serialize(self, male=False, verbose=False):
+      global GLOBAL_SITE_ART_PATH, GLOBAL_ART_DICTIONARY
 
       serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
 
-      absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
-      relative_art_folder = os.path.join('images', 'class')
+      absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'class')
+      relative_art_folder = os.path.join('static', 'images', 'class')
       
       image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
 
-      serial['rights'] = attribution
+      img_name = image_path.split('/')[-1].split('.')[0]
+      rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
+      if rights is None:
+        rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}', None)
+
+      serial['rights'] = rights
 
       all_data = get_rnr_class_data_with_name(self.name)
+      serial["path_to_image"] = image_path
       serial['levels'] = all_data['levels']
       serial['health_die_pieces'] = self.health_die_pieces
 
@@ -375,21 +383,24 @@ class rnr_race(rnr_entity):
     return ret
 
   def serialize(self, male=False, verbose=False):
-    global GLOBAL_ART_PATH
+    global GLOBAL_SITE_ART_PATH
     serial = self.base_serialize(verbose)
     
-    absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
-    relative_art_folder = os.path.join('..' , 'docs', 'images', 'race')
-
+    gender_string = 'male' if male else 'female'
+    absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'race')
+    relative_art_folder = os.path.join('static', 'images', 'race')
     image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
     
     #Fall back to race image if no subrace image exists.
     if image_path is None:
       image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
     
+    img_name = image_path.split('/')[-1].split('.')[0]
+    print(img_name)
+    serial['rights'] = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
+
     serial["path_to_image"] = image_path
     serial['health_die_pieces'] = self.health_die_pieces
-    serial['rights'] = attribution
 
     return serial
 
@@ -533,10 +544,13 @@ def markdown_pantheon():
       if not 'abilities' in info:
         continue
       lines.append('__Gifts:__  \n  \n')
-      for level in sorted(info['abilities'].keys()):
-        lines.append(f'* __{level.replace("_", " ").title()}__  \n')
-        for ability, ability_info in info['abilities'][level].items():
-          lines.append(f'  * __{ability.replace("_", " ").title()}:__ {ability_info["description"]}  \n')
+      for i in range(30):
+        for level in sorted(info['abilities'].keys()):
+          actual_level = str(level.split('_')[-1])
+          if str(i) == actual_level:
+            lines.append(f'* __{level.replace("_", " ").title()}__  \n')
+            for ability, ability_info in info['abilities'][level].items():
+              lines.append(f'  * __{ability.replace("_", " ").title()}:__ {ability_info["description"]}  \n')
 
 
   return lines

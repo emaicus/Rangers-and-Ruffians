@@ -162,6 +162,16 @@ class markdown_handler:
       if len(left) > 0:
         print(f"ERROR: the following elements remained in the buffer. {left}")
 
+    def find_nth(self, needle, n):
+      haystack = self.BUFFER
+      found = 0
+      for val in haystack:
+        if val[HEADING] == needle:
+          found += 1
+        if found == n:
+          return val
+      return None
+
     def write_toc(self, max_to_include=1000):
       keys = self.get_all_headings()
       toc_buffer = ''
@@ -171,9 +181,13 @@ class markdown_handler:
       else: 
         it = self.ordering
 
+      encountered_dict = dict()
+
       for key in it:
-        heading_pos = self.get_heading_pos(key)
-        heading, level, content, link = self.BUFFER[heading_pos]
+        if not key in encountered_dict:
+          encountered_dict[key] = 0
+        encountered_dict[key] += 1
+        heading, level, content, link = self.find_nth(key, encountered_dict[key])
         
         if level > max_to_include:
           continue

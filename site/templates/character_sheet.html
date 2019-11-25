@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-3">
                   <p>
-                    <span class="subtitle">Alignment:</span><span class="normalText"> __________ </span><br/>
+                    <span class="subtitle">HD:</span><span class="normalText"> __________ </span><br/>
                     <span class="subtitle">Faith:</span><span class="normalText"> __________ </span><br/>
                     <span class="subtitle">Level:</span><span class="normalText"> __________ </span><br/>
                     <!-- {% if visualStats == True %}
@@ -94,7 +94,7 @@
             </div>
           </div>
           <div class="col-6">
-            {% if visualStats == True %}
+            {% if visualStats != True %}
             <div class="boxDiv" style="margin-top:10px;">
               <p class="boxSubtitle">Stats:</p>
               {% for stat in ['STR', 'DEX', 'INT', 'INF', 'PER', 'CHA', 'LUK'] %}
@@ -208,7 +208,7 @@
               </div> -->
               {% endif %}
               <div id="combatAbilities" 
-                {% if visualStats == True %}
+                {% if visualStats != True %}
                   class="combatAbilitiesVisualStats">
                 {% else %}
                   class="combatAbilities">

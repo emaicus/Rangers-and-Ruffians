@@ -30,59 +30,13 @@ show_download: false
      * [Rule Changes:](#rule-changes)  
      * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes)  
-       * [Catterwol](#catterwol)  
-       * [Wood Elf](#wood-elf)  
-       * [High Elf](#high-elf)  
-       * [Orc](#orc)  
-       * [Lizkin](#lizkin)  
-       * [Daemonspawn](#daemonspawn)  
-       * [Automaton](#automaton)  
-       * [Sprout](#sprout)  
-       * [Hissling](#hissling)  
      * [Class Balance Changes:](#class-balance-changes)  
-       * [Barbarian:](#barbarian)  
-       * [Knight:](#knight)  
-       * [Paladin:](#paladin)  
-       * [Fighter](#fighter)  
-       * [Ranger](#ranger)  
-       * [Rogue](#rogue)  
-       * [Archer](#archer)  
-       * [Sorcerer](#sorcerer)  
    * [Rangers and Ruffians 2.1.0: The Skills Update. November 19, 2019](#rangers-and-ruffians-210-the-skills-update-november-19-2019)  
      * [New Features:](#new-features)  
-     * [Rule Changes:](#rule-changes)  
+     * [Rule Changes:](#rule-changes-1)  
      * [All Races and Classes:](#all-races-and-classes)  
-     * [Race Balance Changes:](#race-balance-changes)  
-       * [Human:](#human)  
-       * [Catterwol:](#catterwol-1)  
-       * [High Elf:](#high-elf-1)  
-       * [Fleetfoot Halfling:](#fleetfoot-halfling)  
-       * [Lizkin:](#lizkin-1)  
-       * [Orc:](#orc-1)  
-       * [Dwarf:](#dwarf)  
-       * [Daemonspawn:](#daemonspawn-1)  
-       * [Sprout:](#sprout-1)  
-       * [Automaton:](#automaton-1)  
-       * [Hissling:](#hissling-1)  
-       * [Waterborn:](#waterborn)  
-     * [Class Balance Changes:](#class-balance-changes)  
-       * [All:](#all)  
-       * [Barbarian:](#barbarian)  
-       * [Knight:](#knight)  
-       * [Paladin:](#paladin)  
-       * [Beastmaster:](#beastmaster)  
-       * [Sorcerer:](#sorcerer-1)  
-       * [Fighter:](#fighter-1)  
-       * [Highborn:](#highborn)  
-       * [Ranger:](#ranger-1)  
-       * [Rouge:](#rouge)  
-       * [Bard:](#bard)  
-       * [Cleric:](#cleric)  
-       * [Druid](#druid)  
-       * [Wizard:](#wizard)  
-       * [Archer:](#archer-1)  
-       * [Gunslinger:](#gunslinger)  
-       * [Spellbooks:](#spellbooks)  
+     * [Race Balance Changes:](#race-balance-changes-1)  
+     * [Class Balance Changes:](#class-balance-changes-1)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
 
   
@@ -109,6 +63,7 @@ This revision brings:
   
 ### Additional Clarifications:
 * Clarified how armor and shields work in the [Rulebook](Rulebook.md#armor-and-shields).
+* Clarified how rest works. [Rulebook](Rulebook.md#rest).
   
   
 
@@ -323,6 +278,15 @@ In the future, a monster hunter subclass will likely be added.
 * __Abilities__
   * __Removed Arrow Stab__ _Make a 1d6 arrow stab._
     * __Reasoning:__ Better than a bow at low levels, totally useless at high levels. Not needed in the game.
+  
+  
+
+  
+#### Bard
+* __Abilities__
+  * __Modified Minor, Greater, and Major Restful Melody__ _Bonus health for allies during rest._
+    * __Change:__ Instead of granting 1, 2, or 3 d8 extra healing, it grants 1, 2, or 3 rest dies of healing.
+    * __Reasoning:__ In line with new rest health rules.
   
   
 

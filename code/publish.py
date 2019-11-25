@@ -225,6 +225,20 @@ def publish_pantheon(force_overwrite):
   md._write_section(f'Book of Lore')
   md.write_toc()
   md.write_buffer()
+
+def publish_poohbah_printables(force_overwrite):
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+
+  md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Poohbah_Printables.md'))
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'poohbah_printout_topmatter.md'))
+  md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'poohbah_printables_part.md'))
+
+  md._write_topmatter()
+  md._write_section(f'Print Material for Poohbahs')
+  md.write_buffer()
   
 def publish_changelog(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
@@ -252,8 +266,9 @@ def publish_changelog(force_overwrite):
   
   md._write_topmatter()
   md._write_section(f'Changelog')
-  md.write_toc()
+  md.write_toc(max_to_include=3)
   md.write_buffer()
+
 
 def archive_past_versions():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
@@ -267,6 +282,8 @@ def archive_past_versions():
     name = f'{name}_{old_version}.md'
     print(f'moving {file} to {os.path.join(archve_directory, name)}')
     shutil.move(file, os.path.join(archve_directory, name))
+
+
 
 if __name__ == "__main__":
   rnr_utils.printLogo()
@@ -302,4 +319,5 @@ if __name__ == "__main__":
   publish_ancients(force_overwrite)
   publish_examples(force_overwrite)
   publish_changelog(force_overwrite)
+  publish_poohbah_printables(force_overwrite)
   print("Done!")

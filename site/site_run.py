@@ -13,7 +13,7 @@ sys.path.append(os.path.abspath('../code'))
 import rnr_utils
 import rnr_descriptions
 import urllib
-
+import shutil
 
 SAVE_CHARACTER_DIR = 'SAVE_DATA'
 
@@ -343,14 +343,19 @@ def ajax_save_character():
   return 'OK'
 
 if __name__ == '__main__':
-    # Bind to PORT if defined, otherwise default to 5000.
-    rnr_utils.printLogo()
-    rnr_utils.load_Rangers_And_Ruffians_Data()
-    port = int(os.environ.get('PORT', 9000))
-    if len(sys.argv) > 1 and sys.argv[1] == '--public':
-      print(f"Don't forget to run the following command 'sudo ufw allow {port}/tcp'")
-      print("Run ifconfig to find the correct local network inet address.")
-      app.run(host='0.0.0.0', port=port, threaded=False, processes=10)
-    else:
-      app.run(port=port)
+  img_dir = os.path.join('static', 'images')
+  if not os.path.exists(img_dir):
+    print(f"Images did not exist. Copying them over from {rnr_utils.GLOBAL_ART_PATH}")
+    shutil.copytree(rnr_utils.GLOBAL_ART_PATH, img_dir)
+
+  # Bind to PORT if defined, otherwise default to 5000.
+  rnr_utils.printLogo()
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  port = int(os.environ.get('PORT', 9000))
+  if len(sys.argv) > 1 and sys.argv[1] == '--public':
+    print(f"Don't forget to run the following command 'sudo ufw allow {port}/tcp'")
+    print("Run ifconfig to find the correct local network inet address.")
+    app.run(host='0.0.0.0', port=port, threaded=False, processes=10)
+  else:
+    app.run(port=port)
 

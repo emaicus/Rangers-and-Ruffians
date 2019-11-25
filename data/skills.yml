@@ -8,6 +8,12 @@ Master Chef:
   requirements:
     skills:
       - Cook
+Light Sleeper:
+  description: "Make perception checks with advantage while sleeping"
+  type: advantage
+Restful Sleeper:
+  description: "Roll healing dice with advantage when resting or sleeping."
+  type: advantage
 Shield Master:
   description: "Don't take movement penalties from shield use."
   requirements:

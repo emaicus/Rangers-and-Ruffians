@@ -228,7 +228,7 @@ div.combatItems
 
 div.combatAbilities
 {
-  height: 9.4in;
+  height: 9.25in;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -239,7 +239,7 @@ div.combatAbilities
 
 div.combatAbilitiesVisualStats
 {
-  height: 7.8in;
+  height: 7.65in;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -250,7 +250,7 @@ div.combatAbilitiesVisualStats
 
 div.generalAbilities
 {
-  height: 7.96in;
+  height: 7.81in;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
