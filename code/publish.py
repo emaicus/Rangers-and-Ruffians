@@ -8,7 +8,56 @@ import shutil
 from pathlib import Path
 import argparse
 
+MALE = True
+FEMALE = False
+UNDEFINED = True
+
+# True means male
+PREFERRED_IMAGES = {
+  'automaton' : UNDEFINED,
+  'catterwol' : FEMALE,
+  'daemonspawn' : MALE,
+  'deep_elf' : FEMALE,
+  'dwarf' : MALE,
+  'fleetfoot_halfling' : FEMALE,
+  'gnome' : FEMALE,
+  'goblin' : MALE,
+  'hardfoot_halfling' : FEMALE,
+  'high_elf' : FEMALE,
+  'hissling' : UNDEFINED,
+  'human' : MALE,
+  'kragraven' : UNDEFINED,
+  'lizkin' : MALE,
+  'orc' : FEMALE,
+  'sprout' : FEMALE,
+  'waterborn' : FEMALE,
+  'wood_elf' : FEMALE,
+
+  'archer' : FEMALE,
+  'barbarian' : FEMALE,
+  'bard' : FEMALE,
+  'beastmaster' : FEMALE,
+  'cleric' : FEMALE,
+  'druid' : MALE,
+  'fighter' : FEMALE,
+  'gunslinger' : MALE,
+  'highborn' : MALE,
+  'knight' : MALE,
+  'monk' : MALE,
+  'necromancer' : FEMALE,
+  'paladin' : MALE,
+  'ranger' : MALE,
+  'rogue' : MALE,
+  'sorcerer' : MALE,
+  'wizard' : MALE
+
+
+
+
+}
+
 def publish_character_creation(force_overwrite):
+  global PREFERRED_IMAGES
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
@@ -20,11 +69,17 @@ def publish_character_creation(force_overwrite):
 
   race_lines = []
   for race in sorted(races, key=lambda x: x.name):
-    race_lines += race.markdownify()
+    preferred_image = PREFERRED_IMAGES.get(race.subrace_name.lower().replace(" ", "_"), None)
+    gender_string = 'male' if preferred_image else 'female'
+    #print(f'{race.subrace_name}: using {gender_string} image.')
+    race_lines += race.markdownify(preferred_image)
 
   class_lines = []
   for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
-    class_lines += rnr_class.markdownify()
+    preferred_image = PREFERRED_IMAGES.get(rnr_class.name.lower().replace(" ", "_"), None)
+    gender_string = 'male' if preferred_image else 'female'
+    #print(f'{rnr_class.name}: using {gender_string} image.')
+    class_lines += rnr_class.markdownify(preferred_image)
 
   skills = rnr_utils.markdown_skills()
   

@@ -189,7 +189,8 @@ class rnr_class(rnr_entity):
       self.handbook = class_data.get('handbook', None)
 
       # Gather up the abilities for all levels we've earned
-      abilities = class_data.get('base_abilities', list())
+      self.base_abilities = class_data.get('base_abilities', list())
+      abilities = list(self.base_abilities)
       for step in range(0,level+1):
         level_string = 'level_{0}'.format(step)
         if not level_string in class_data['levels']:
@@ -214,7 +215,10 @@ class rnr_class(rnr_entity):
       
       image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
 
+      tmp_abilities = list(self.abilities)
+      self.abilities = list(self.base_abilities)
       ret = self.base_markdownify(image_path, attribution, handbook=self.handbook) + self.markdownify_level_sheet()
+      self.abilities = list(tmp_abilities)
       ret.append(f"  \n___\n")
       return ret
 

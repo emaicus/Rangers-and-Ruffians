@@ -8,10 +8,10 @@ landscape_banner_license: CC BY-NC-SA 3.0
 landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 portrait_banner_path: /docs/images/backdrops/portrait_banner.jpg
-portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Apprentice-Quest-779369039
-portrait_banner_name: Apprentice Quest
-portrait_banner_artist: SpikedMcGrath
-portrait_banner_artist_link: https://www.deviantart.com/spikedmcgrath
+portrait_banner_link: https://www.deviantart.com/ncorva/art/Call-to-adventure-664775437
+portrait_banner_name: Call to Adventure
+portrait_banner_artist: ncorva
+portrait_banner_artist_link: https://www.deviantart.com/ncorva
 portrait_banner_license: CC BY-NC-ND 3.0
 portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 

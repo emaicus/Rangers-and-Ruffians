@@ -223,7 +223,7 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<img src='images/race/female/automaton.jpg' class="raceClassImage" />
+<img src='images/race/male/automaton.jpg' class="raceClassImage" />
 
 "[Rose"](https://www.deviantart.com/vagocool/art/Rose-488273011) by Vagocool is licensed under [CC BY-ND 3.0](https://creativecommons.org/licenses/by-nd/3.0/)  
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
@@ -305,9 +305,9 @@ ___
 
   
 ### Daemonspawn
-<img src='images/race/female/daemonspawn.jpg' class="raceClassImage" />
+<img src='images/race/male/daemonspawn.jpg' class="raceClassImage" />
 
-"[Jazera"](https://www.deviantart.com/artoflariz/art/Jazera-702870460) by ArtofLariz is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Tiefling Bard Custom DnD Char Comission"](https://www.deviantart.com/surugamonkey/art/Tiefling-Bard-Custom-DnD-Char-Comission-663338002) by SurugaMonkey is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
 >
 >—Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
@@ -369,9 +369,9 @@ ___
 
   
 ### Dwarf
-<img src='images/race/female/dwarf.jpg' class="raceClassImage" />
+<img src='images/race/male/dwarf.jpg' class="raceClassImage" />
 
-"[Flaming Swords"](https://www.deviantart.com/patriartis/art/Flaming-Swords-722419104) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[The Hunter"](https://www.deviantart.com/ortsmor/art/The-Hunter-590846159) by ortsmor is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
 >
 >—Orkinshield, Orc Gunslinger
@@ -402,6 +402,9 @@ ___
 
   
 ### Fleetfoot Halfling
+<img src='images/race/female/fleetfoot_halfling.jpg' class="raceClassImage" />
+
+"[On a Quest"](https://www.deviantart.com/nathanparkart/art/On-a-Quest-721516754) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -475,9 +478,9 @@ ___
 
   
 ### Goblin
-<img src='images/race/female/goblin.jpg' class="raceClassImage" />
+<img src='images/race/male/goblin.jpg' class="raceClassImage" />
 
-"[Run Through the Jungle"](https://www.deviantart.com/patriartis/art/Run-Through-the-Jungle-717257587) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Goblin archer"](https://www.deviantart.com/fjft-art/art/Goblin-archer-551201383) by FJFT-Art is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
 >
 >—Tamberdoodle, Bard Extraordinare
@@ -508,6 +511,9 @@ ___
 
   
 ### Hardfoot Halfling
+<img src='images/race/female/hardfoot_halfling.jpg' class="raceClassImage" />
+
+"[Houma"](https://www.deviantart.com/junica-hots/art/Houma-743629249) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -574,7 +580,7 @@ ___
 
   
 ### Hissling
-<img src='images/race/female/hissling.jpg' class="raceClassImage" />
+<img src='images/race/male/hissling.jpg' class="raceClassImage" />
 
 "[Kobold Sketch"](https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664) by Kronteisdrawing is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
@@ -609,9 +615,9 @@ ___
 
   
 ### Human
-<img src='images/race/female/human.jpg' class="raceClassImage" />
+<img src='images/race/male/human.jpg' class="raceClassImage" />
 
-"[Ranger"](https://www.deviantart.com/nathanparkart/art/Ranger-454217001) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Escape"](https://www.deviantart.com/gkb3rk/art/Escape-464097162) by gkb3rk is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
 >
 >—Orkensheild, Orc Archer
@@ -642,7 +648,7 @@ ___
 
   
 ### Kragraven
-<img src='images/race/female/kragraven.jpg' class="raceClassImage" />
+<img src='images/race/male/kragraven.jpg' class="raceClassImage" />
 
 "[The Reaping Raven"](https://www.deviantart.com/foxtrack/art/The-Reaping-Raven-by-burdfish-396214428) by Foxtrack is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
@@ -674,9 +680,9 @@ ___
 
   
 ### Lizkin
-<img src='images/race/female/lizkin.jpg' class="raceClassImage" />
+<img src='images/race/male/lizkin.jpg' class="raceClassImage" />
 
-"[Naphas alchemist"](https://www.deviantart.com/themefinland/art/Naphas-alchemist-Glimpse-of-Luna-trading-card-760806047) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+"[Cleric of the three moons"](https://www.deviantart.com/themefinland/art/Cleric-of-the-three-moons-709879645) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
 >
 >—Mister Li, Gnomeish Monk
@@ -869,14 +875,9 @@ Some of the best marksmen in the world, archers are naturals with ranged weapons
   
   
 __Archer Abilities:__ 
-* __General Abilities:__   
-  * __Fletcher:__ You know how to craft your own arrows, and always seem to have some on hand.  
 * __Starting Items:__   
   * __Longbow:__ You begin your journey with a d6 longbow.  
   * __Boot Knife:__ You carry a hidden d6 knife in your boot.  
-* __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
-  * __Huntsman:__ You have advantage when attacking beasts.  
   
   
 __Level 0 Archer__
@@ -1050,10 +1051,6 @@ __Barbarian Abilities:__
 * __Advantages:__   
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
-  * __Intimidate:__ You have advantage on intimidation checks.  
-* __Combat Abilities:__   
-  * __Berserk:__ Once per rest, you can go into a rage, giving you +1 effective strength and dexterity, but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
-  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
   
 __Level 0 Barbarian__
@@ -1182,20 +1179,10 @@ Showmen by nature, Bards are known for their skills at performing and distractin
   
   
 __Bard Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __My Father's Oboe:__ You are proficient and start with two instruments of your choice.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-* __Starting Items:__   
-  * __The Bard's Songbook:__ You can learn spells from the Bard's Songbook.  
 * __Advantages:__   
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-  * __Sleight of Hand:__ You have advantage when performing sleight of hand actions.  
   
   
 __Level 0 Bard__
@@ -1362,12 +1349,6 @@ For the Beastmaster 'Animal Person' is an understatement. Beastmaster's begin th
   
   
 __Beastmaster Abilities:__ 
-* __Choices:__   
-  * __Animal Companion:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
-* __General Abilities:__   
-  * __Animal Magnetism:__ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
-* __Advantages:__   
-  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
 __Level 0 Beastmaster__
@@ -1506,16 +1487,8 @@ After pledging their allegiance to their deity, Clerics have made it their duty 
   
   
 __Cleric Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 0 Cleric__
@@ -1686,16 +1659,8 @@ Gaurdians of nature, most druids prefer to live in tribes in the forests, mounta
   
   
 __Druid Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Druid's Field Guide:__ You can learn spells from the Druid's Field Guide.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 0 Druid__
@@ -1851,10 +1816,6 @@ Fighters are powerful strength or dexterity based warriors. Unlike the knight, f
   
   
 __Fighter Abilities:__ 
-* __General Abilities:__   
-  * __Determination:__ _(Cost 1)_ Gain a d10 inspiration dice as an offhand action.  
-* __Combat Abilities:__   
-  * __Focused Attack:__ _(Cost 1)_ Re-roll an attack after you make it.  
   
   
 __Level 0 Fighter__
@@ -1968,9 +1929,9 @@ ___
 
   
 ### Gunslinger
-<img src='images/class/female/gunslinger.jpg' class="raceClassImage" />
+<img src='images/class/gunslinger.jpg' class="raceClassImage" />
 
-"[Commission: Lauryn"](https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398) by  MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Spellslinger"](https://www.deviantart.com/soldevia/art/Spellslinger-609290699) by SolDevia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
@@ -1982,13 +1943,6 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
   
   
 __Gunslinger Abilities:__ 
-* __Choices:__   
-  * __This is my Weapon:__ Your gun is the only friend you need. Make sure to give it a name.  
-  * __Gunslinger or Marksman:__ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
-* __Advantages:__   
-  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-* __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
   
   
 __Level 0 Gunslinger__
@@ -2170,9 +2124,9 @@ ___
 
   
 ### Highborn
-<img src='images/class/female/highborn.jpg' class="raceClassImage" />
+<img src='images/class/highborn.jpg' class="raceClassImage" />
 
-"[Commission: Selena Rosewood"](https://www.deviantart.com/marcelafreire/art/Commission-Selena-Rosewood-785212777) by MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Before I leave"](https://www.deviantart.com/maxprodanov/art/Before-I-leave-749261058) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
@@ -2186,15 +2140,11 @@ Highborns were born into a noble house and have connections and money as a resul
 __Highborn Abilities:__ 
 * __General Abilities:__   
   * __Lightweight:__ Any cup of alcohol affects you like two.  
-  * __Happy Smiles:__ Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
 * __Starting Items:__   
   * __My Father's Coffers:__ Begin your journey with 1000 extra gold pieces.  
   * __The Family Sword:__ Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving of your family's sigil.  
 * __Advantages:__   
   * __Beauty Incarnate:__ Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.  
-  * __My People:__ Gain advantage when speaking with guards and +2 charisma when speaking with citizens in your family's territory.  
-* __Combat Abilities:__   
-  * __Swoon:__ During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake up after one turn.  
   
   
 __Level 0 Highborn__
@@ -2318,9 +2268,9 @@ ___
 
   
 ### Knight
-<img src='images/class/knight.jpg' class="raceClassImage" />
+<img src='images/class/male/knight.jpg' class="raceClassImage" />
 
-"[Vikings : Lagherta the shield maiden"](https://www.deviantart.com/fredrickruntu/art/Vikings-Lagherta-the-shield-maiden-426150632) by fredrickruntu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Warrior Concept"](https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Knights are heavy, armored fighters who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able to protect their allies.
@@ -2332,15 +2282,8 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
   
 __Knight Abilities:__ 
-* __General Abilities:__   
-  * __Shield Master:__ Don't take movement penalties from shield use.  
 * __Starting Items:__   
   * __Armored:__ You begin your journey with a chainmail.  
-* __Advantages:__   
-  * __Kingsmen:__ Gain advantage on charisma checks when speaking with kingsmen.  
-* __Combat Abilities:__   
-  * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
-  * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 0 Knight__
@@ -2458,9 +2401,9 @@ ___
 
   
 ### Monk
-<img src='images/class/female/monk.jpg' class="raceClassImage" />
+<img src='images/class/monk.jpg' class="raceClassImage" />
 
-"[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Monk Warrior"](https://www.deviantart.com/ekoputeh/art/Monk-Warrior-512015315) by ekoputeh is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Monks are masters of hand to hand combat, who use their extensive control of their bodies to overcome their foes. Monks are able to learn abilities from scrolls, which they may find scattered throughout the world. Monks have dedicated themself to the art of understanding the natural and spiritual world, and are often levelheaded and intelligent. As you create your monk, consider what their goals are. How did they become a monk, and what are they hoping to gain by doing so? How do they react in stressful situations? How do they interact with other people? Are they quiet and reserved? Confident and sure of themself? How will being a monk affect the way you interact with your party?
@@ -2472,14 +2415,8 @@ Monks are masters of hand to hand combat, who use their extensive control of the
   
   
 __Monk Abilities:__ 
-* __Rules:__   
-  * __Learn Fighting Techniques:__ Each time you level up, learn one fighting technique from each fighting technique tier you have access to.  
-* __Spellbooks:__   
-  * __The Book of Chi:__ You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.  
 * __Choices:__   
   * __Starting Fighting Techniques:__ Begin your journey with two standard fighting techniques.  
-* __General Abilities:__   
-  * __Fighting Techniques:__ You may learn a new fighting technique from the book of chi.  
   
   
 __Level 0 Monk__
@@ -2565,21 +2502,8 @@ Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers,
   
   
 __Necromancer Abilities:__ 
-* __Rules:__   
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Soul Harvest:__ You may harvest 1 soul from a sentient entity that has died within twenty four hours.  
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Soul Based Magic:__ To fuel your magic, you use the concentrated essence of life, which you are able to harvest from the dead. These "souls" are stored in your soul jar until they are expended on a spell or by an ability. At that time, they escape to the hereafter.  
-* __Spellbooks:__   
-  * __The Macabre Manual:__ You are able to learn spells from the Macabre Manual.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __Vegan:__ At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 2 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
-* __General Abilities:__   
-  * __Mortal Coil:__ Once every week, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.  
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-* __Starting Items:__   
-  * __Soul Jar:__ You have a soul jar, which produces 1d6 souls each day at midnight, the jar can produce 2 souls at maximum. Your soul jar is capable of holding 20 souls at maximum.  
   
   
 __Level 0 Necromancer__
@@ -2755,16 +2679,8 @@ Palidins are Soldiers of the Light, and are adept both at hand to hand combat an
   
   
 __Paladin Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
 * __Choices:__   
   * __Minor Spell Choice:__ At the start of your journey, you know 1 extra tier zero spells.  
-  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
   * __Armored:__ You begin your journey with a chainmail.  
   
@@ -2926,10 +2842,6 @@ Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers 
 __Ranger Abilities:__ 
 * __General Abilities:__   
   * __Under the Stars:__ You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.  
-  * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
-* __Advantages:__   
-  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
-  * __Camouflage:__ If you stay absolutely still, you can take on the color of your surroundings. This gives you advantage on stealth checks while camouflaged.  
   
   
 __Level 0 Ranger__
@@ -3048,9 +2960,9 @@ ___
 
   
 ### Rogue
-<img src='images/class/rogue.jpg' class="raceClassImage" />
+<img src='images/class/male/rogue.jpg' class="raceClassImage" />
 
-"[Commission: Adalia"](https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811) by raikoart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
@@ -3064,9 +2976,6 @@ Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues
 __Rogue Abilities:__ 
 * __Starting Items:__   
   * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
-* __Advantages:__   
-  * __Lightfoot:__ Gain advantage on stealth checks.  
-  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
   
   
 __Level 0 Rogue__
@@ -3238,9 +3147,9 @@ ___
 
   
 ### Sorcerer
-<img src='images/class/female/sorcerer.jpg' class="raceClassImage" />
+<img src='images/class/sorcerer.jpg' class="raceClassImage" />
 
-"[Playing with Fire"](https://www.deviantart.com/patriartis/art/Playing-with-Fire-647239859) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Sorca, Magus of the first Seal"](https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, but rather through raw force of personality. To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma check to perform magic. As you create your sorcerer, consider how they learned magic. Who did they learn it from? How did they first wrestle a spirit to aid them? When they cast a spell, do they always use the same spirit, or different spirits? Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer change the way that you interact with the world and your party?
@@ -3252,18 +3161,8 @@ Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, bu
   
   
 __Sorcerer Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Charisma Based Spellcaster:__ To succeed at casting spells, you must convince your familiar to perform it for you. To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Sorcerer's Scrolls:__ You are able to learn spells from the Sorcerer's Scrolls.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-  * __Influence:__ You may use action points to increase any charisma roll by 2.  
   
   
 __Level 0 Sorcerer__
@@ -3417,16 +3316,6 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   
   
 __Wizard Abilities:__ 
-* __Rules:__   
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Wizard's Addendum:__ You are able to learn spells from the Wizard's Addendum.  
-* __Choices:__   
-  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
   * __The Sword and the Satchel:__ You begin your adventure with a bottomless satchel.  
   * __Walking Stick:__ You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.  

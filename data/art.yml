@@ -180,7 +180,7 @@ fighter_male:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: just burnin stuff
   url: https://www.deviantart.com/nathanparkart/art/just-burnin-stuff-447985112
-fleetfoot_female:
+fleetfoot_halfling_female:
   artist: NathanParkArt
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_acronym: CC BY-NC-ND 3.0
@@ -229,7 +229,7 @@ gunslinger_female:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: 'Commission: Lauryn'
   url: https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398
-halfling_female:
+hardfoot_halfling_female:
   artist: Junica-Hots
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_acronym: CC BY-NC-ND 3.0
@@ -320,7 +320,7 @@ knight:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: 'Vikings : Lagherta the shield maiden'
   url: https://www.deviantart.com/fredrickruntu/art/Vikings-Lagherta-the-shield-maiden-426150632
-knight_male:
+alt_knight_male:
   artist: RobCV
   license: Creative Commons Attribution-Share Alike 3.0 License.
   license_acronym: CC BY-SA 3.0
@@ -369,13 +369,20 @@ male:
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   title: Warrior Concept
   url: https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635
+knight_male:
+  artist: maxprodanov
+  license: Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.
+  license_acronym: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  title: Warrior Concept
+  url: https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635
 monk:
-  artist: SurugaMonkey
+  artist: ekoputeh
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
   license_acronym: CC BY-NC-ND 3.0
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
-  title: Aasimar Monk
-  url: https://www.deviantart.com/surugamonkey/art/Aasimar-Monk-680761336
+  title: Monk Warrior
+  url: https://www.deviantart.com/ekoputeh/art/Monk-Warrior-512015315
 monk_female:
   artist: SimonPape
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
@@ -432,6 +439,13 @@ rogue:
   license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
   title: 'Commission: Adalia'
   url: https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811
+rogue_male:
+  artist: arckyu
+  license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License
+  license_acronym: CC BY-NC-ND 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-nd/3.0/
+  title: 'Valeros'
+  url: https://www.deviantart.com/arckyu/art/Valeros-484518336
 sorcerer:
   artist: SimonPape
   license: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License.
