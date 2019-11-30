@@ -23,6 +23,7 @@ Heavy Fighter:
       level_0:
         abilities:
         - Melee Weapon Proficiency
+        - Thrown Weapon Proficiency
         - Berserk # 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER.
         - Intimidate # Advantage on intimidation checks.
         - Taunt # Force enemies to attack you on a failed SP save
@@ -43,6 +44,7 @@ Heavy Fighter:
       level_5:
         abilities:
         - Always Angry # Berserk once per battle
+        - The Opener
       level_6:
         abilities:
         - Stat Increase
@@ -54,6 +56,7 @@ Heavy Fighter:
         - Stat Increase
       level_9:
         abilities:
+        - The Closer
         - Berserker # Half damage from physical attacks when berserk
       level_10:
         abilities:
@@ -108,19 +111,19 @@ Heavy Fighter:
         - Charge!
       level_1:
         abilities:
-        - Shield of Men
+        - Trained Precision
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
-        - Taunt
+        - Shield of Men
       level_4:
         abilities:
         - Stat Increase
       level_5:
         abilities:
-        - Trained Precision
+        - Taunt
       level_6:
         abilities:
         - Stat Increase
@@ -184,6 +187,7 @@ Heavy Fighter:
         abilities:
         - The Book of Healing
         - Melee Weapon Proficiency
+        - Thrown Weapon Proficiency
         - Pledge
         - Learning Spells
         - Learn Spells
@@ -278,6 +282,7 @@ Light Fighter:
         - Animal Magnetism
         #- Favorite Terrain
         - Tracker
+        - Leaping Strike
       level_1:
         abilities:
         - Tackle
@@ -287,7 +292,6 @@ Light Fighter:
         - Stat Increase
       level_3:
         abilities:
-        - Leaping Strike
         - Huntsman
       level_4:
         abilities:
@@ -442,20 +446,20 @@ Light Fighter:
       level_1:
         abilities:
         - Mantel
+        - Gumption
       level_2:
         abilities:
         - Stat Increase
       level_3:
         abilities:
         - Disarming
-        - Gumption
+        - Fallen
       level_4:
         abilities:
         - Stat Increase
       level_5:
         abilities:
         - Feeling Lucky
-        - Fallen
       level_6:
         abilities:
         - Stat Increase
@@ -535,6 +539,9 @@ Light Fighter:
       level_6:
         abilities:
         - Stat Increase
+      level_7:
+        abilities:
+        - Offhand Attack
       level_8:
         abilities:
         - Stat Increase
@@ -665,9 +672,11 @@ Light Fighter:
         - Thrown Weapon Proficiency
         - Lightfoot
         - Nimble Fingers
+        - Disengage
       level_1:
         abilities:
         - Mantel
+        - Disappear
         - Strike From the Shadows
       level_2:
         abilities:
@@ -707,7 +716,6 @@ Light Fighter:
         - Minor Blink
         - Spell of Minor Invisibility
         subclass_thief_abilities:
-        - Flee
         - Trap Expert
       level_10:
         abilities:
@@ -1302,7 +1310,7 @@ Ranged Fighter:
       level_1:
         abilities:
         - Mantel
-        - Crippling Shot
+        - Called Shot
       level_2:
         abilities:
         - Stat Increase
@@ -1390,17 +1398,19 @@ Ranged Fighter:
         - This is my Weapon
         - Gunslinger or Marksman
         - Focus
-        - Regular Patron
+        - Called Shot
         subclass_gunslinger_abilities:
         - Pistol
         subclass_marksman_abilities:
         - Rifle
+        - Bayonet
+        - Bull Rush
       level_1:
         subclass_gunslinger_abilities:
         - Flash Grenade
+        - Repeating Shot
         subclass_marksman_abilities:
-        - Bayonet
-        - Bull Rush
+        - Flame Strike
       level_2:
         abilities:
         - Stat Increase
@@ -1420,11 +1430,10 @@ Ranged Fighter:
         abilities:
         - Stat Increase
       level_7:
-        abilities:
-        - Line Them Up
         subclass_gunslinger_abilities:
         - Twin Guns
         subclass_marksman_abilities:
+        - Line Them Up
         - Offhand Attack
       level_8:
         abilities:
@@ -1434,6 +1443,7 @@ Ranged Fighter:
         - Feeling Lucky
         - Fastest Gun
         subclass_marksman_abilities:
+        - Armor Penetrating Rounds
         - Savage Critical
         - Reduced Critical
       level_10:
@@ -1443,8 +1453,7 @@ Ranged Fighter:
         subclass_gunslinger_abilities:
         - Hollowpoint
         subclass_marksman_abilities:
-        - Re-chamber
-        - Armor Penetrating Rounds
+        - Penetration
       level_12:
         abilities:
         - Stat Increase
@@ -1464,7 +1473,6 @@ Ranged Fighter:
         subclass_gunslinger_abilities:
         - Volley
         subclass_marksman_abilities:
-        - Re-chamber
         - Assassinate
     questions:
     - How did they acquired their firearm?

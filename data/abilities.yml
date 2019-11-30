@@ -4,14 +4,15 @@ A Thief's Gear:
   brief: You have 100 feet of rope, a lockpick, a smoke-bomb, a 1d6 dagger.
   type: starting_item
 Armored:
-  description: You begin your journey with a chainmail.
+  description: You begin your journey with a suit of chainmail.
   type: starting_item
   brief: You have a suit of chainmail.
 Bull Rush:
-  description: Spend 1 action point to rush at least 10 feet, doing an additional dice of damage
-   to your target. The target must win at a contested strength check or fall prone.
+  description: Spend 1 action point to rush forward 10 feet, doing an additional dice of damage
+   to your target. The target must win at a contested strength check or fall prone. This distance
+   can be in addition to you standard movement.
   type: combat
-  brief: Rush forward at least 10 ft. Additional dice of damage. SP save or fall prone.
+  brief: Rush forward at least 10 ft. Additional dice of melee damage. SP save or fall prone.
   cost: 1
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
@@ -110,12 +111,13 @@ Bellow:
   brief: Force all in earshot to make an SP Save. Frightened on failure.
   cost: 1
 Berserk:
-  description: Once per rest, you can go into a rage, giving you +1 effective strength and dexterity,
+  description: Go berserk, giving you +1 effective strength and dexterity,
     but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk.
     Going berserk lasts for 1 hour. Leaving berserk prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
   type: combat
-  brief: 1/rest, +1 STR, DEX, -3 INT. ADV on SP saves. Lasts 1 hour. Fatigue if ended early.
+  brief: +1 STR, DEX, -3 INT. ADV on SP saves. Lasts 1 hour. Fatigue if ended early.
+  cost: 1
 Berserker: 
   description: You take half damage from physical attacks while going berserk.
   type: combat
@@ -137,9 +139,10 @@ Blind Rage:
   type: combat
   brief: Make all spell saves with advantage while berserk.
 Furious Blows:
-  description: When going berserk, you can make two attacks in a single action.
+  description: Spend an action point to take attack twice in a single attaction while going berserk.
   type: combat
-  brief: While berserk, make 2 attacks per action.
+  brief: Make two attacks in a single action while going berserk.
+  cost: 1
 Boot Knife:
   description: You carry a hidden d6 knife in your boot.
   type: starting_item
@@ -178,9 +181,14 @@ Disarming Blow:
   type: combat
   brief: On a critical hit, force an enemy to drop something.
 Flame Strike:
-  description: Spend one action point to add 1d10 fire damage to an attack.
+  description: Spend one action point to add one dice of fire damage to an attack.
   type: combat
   brief: Add 1d10 fire damage to an attack.
+  cost: 1
+Repeating Shot:
+  description: Make an extra attack during your action.
+  type: combat
+  brief: Make 2 attacks in your action.
   cost: 1
 Ward of Tracking:
   description: Costs one action point. Lay your hand on an opponent. For the next forty-eight hours, you 
@@ -313,20 +321,21 @@ Counter Attack:
   type: combat
   brief: Reaction. Counterattack when an enemy attacks you.
   cost: 1
-Crippling Shot:
-  description: You can aim at an opponents knees for 1d4 damage, making them go prone
-    on a critical hit.
+Called Shot:
+  description: Aim for a specific part of an enemy. The enemy must make a spell power save or
+    drop a weapon, be blinded, or be knocked prone.
   type: combat
-  brief: Do 1d4 damage. On a 4, cause an enemy to fall prone.
+  brief: Aim for a specific part of an enemy. SP save or drop weapon, be blinded, or be knocked prone.
+  cost: 1
 Dual Shot:
   description: Fire two arrows at the same target in a single attack.
   type: combat
   brief: Fire 2 arrows in a single attack.
   cost: 1
 Crushing Blow:
-  description: On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.
+  description: On a critical hit, knock an enemy prone and give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.
   type: combat
-  brief: On crit, enemies who see have disadv on the first action of their next turn.
+  brief: On crit, knock the attacked enemy prone and give enemies who see have disadv on the first action of their next turn.
 Dark Vision:
   description: You can see even in perfect darkness.
   type: general
@@ -337,9 +346,10 @@ All-consuming Shadow:
   brief: Offhand, fill a 100 ft. radius with darkness.
   cost: 1
 Detect Magic:
-  description: You are able to perform magic detection checks.
+  description: Perform a magic detection check.
   type: general
-  brief: You can make magic perception checks.
+  brief: Make a magic perception checks.
+  cost: 1
 Dominate:
   description: You may attempt to dominate an enemy. If they fail
     an inner fire saving throw, they must obey you. They can attempt a saving throw
@@ -369,9 +379,8 @@ Faithful Weapon:
   brief: Your weapon returns when you throw it.
 Fast Paws:
   description: Gain an additional offhand action which cannot be used as an offhand attack.
-  type: combat
+  type: general
   brief: Gain an offhand action. Can't be used as an offhand attack.
-  cost: 1
 Favorite Terrain:
   description: At the beginning of your journey, pick a favorite terrain. Whenever
     you are on it, you have advantage on any check related to the terrain, and may take
@@ -460,13 +469,13 @@ Re-chamber:
   type: combat
   brief: Add 1d6 to rifle damage.
 Pistol:
-  description: You begin your adventure with a 1d6 pistol.
+  description: You begin your adventure with a pistol.
   type: combat
-  brief: You have a 1d6 pistol.
+  brief: You have a pistol.
 Rifle:
-  description: You begin your adventure with a 1d8 rifle.
+  description: You begin your adventure with a rifle.
   type: combat
-  brief: You have a 1d8 rifle.
+  brief: You have a rifle.
 Predator:
   description: When tracking, you have advantage on perception checks.
   type: advantage
@@ -485,10 +494,10 @@ Focus:
   brief: Gain advantage on a shot. Negates distance checks.
   cost: 1
 From the Hip:
-  description: Once per combat round, fire a retaliation shot when you are attacked. Roll a contested dexterity saving throw against the enemy. On success,
-    it hits, hurting the enemy and stopping their attack.
+  description: Reaction. Fire a retaliation shot before you are attacked. If your enemy fails a Spell Power save, they attack is stopped.
   type: combat
-  brief: Reaction. 1/round. Contested DEX save. Success, counter and stop enemy attack.
+  brief: Reaction. Fire a retaliation shot before you are attacked. On SP save fail, the enemy attack fails.
+  cost: 1
 Gather:
   description: You passively collect ingredients for your tinkering.
   type: general
@@ -501,14 +510,21 @@ Greater Choice Stat:
   description: At the beginning of your adventure, permanently add 2 to strength or dexterity.
   type: choice
   brief: Add +2 to STR, DEX, or INF.
+Minor Medicine:
+  description: Spend 20 minutes to create a salve. Salves keep for 24 hours.
+  type: general
+  brief: Spend 20 mins to create a salve. Lasts 24 hours.
+  cost: 1
 Greater Medicine:
-  description: Spend 1 hour to create a Minor Health Potion once per day. Potions last 24 hours. 
+  description: Spend 20 minutes to create a Minor Health Potion. Potions last 24 hours. 
   type: general
-  brief: You can create 1 Minor Health Potion per day. Last 24 hours.
+  brief: Spend 20 mins to create 1 Minor Health Potion. Last 24 hours.
+  cost: 1
 Major Medicine:
-  description: Spend 1 hour to create a Greater Health Potion once per day. Potions last 24 hours. 
+  description: Spend 20 minutes to create a Greater Health Potion. Potions last 24 hours. 
   type: general
-  brief: You can create 1 Minor Health Potion per day. Last 24 hours.
+  brief: Spend 20 mins to create 1 Greater Health Potion per day. Last 24 hours.
+  cost: 1
 Hammer of Light:
   description: Any weapon that you wield does an additional dice of damage to undead.
   type: combat
@@ -544,9 +560,10 @@ Hold the Line:
   type: combat
   brief: When a party member is on death's door, gain advantage on attacks.
 Disengage:
-  description: Enemies take disadvantage when striking you while you are moving.
+  description: Spend an action point to avoid provoking exposed attacks.
   type: combat
-  brief: Enemies take disadvantage attacking you while you are moving.
+  brief: Avoid provoking exposed attacks.
+  cost: 1
 Huntsman:
   description: You have advantage when attacking beasts.
   type: combat
@@ -649,7 +666,7 @@ Closest Friend:
   type: combat
   brief: Gain advantage in all things if your animal is on deaths door and vice versa.
 Inseparable:
-  description: Instantly teleport from your current position to a spot within five feet of your animal companion.
+  description: Cost a minor spell to instantly teleport from your current position to a spot within five feet of your animal companion.
     The same can be done by your animal companion. Counts as an offhand action.
   type: general
   brief: Offhand. Teleport yourself to your animal or vice versa.
@@ -659,9 +676,10 @@ Dog Pile:
   type: general
   brief: Any sleep taken with your animal counts as sleep in a bed.
 Wild Sight:
-  description: You are able to see through the eyes of your animal companion.
+  description: Cast a minor spell to see through the eyes of your animal companion.
   type: general
   brief: You can see through your animal's eyes.
+  cost: 1
 Poison Strike:
   description: Force an enemy to make an inner fire saving throw
     against your spell power when you attack and deal 1d12 extra damage. 
@@ -691,10 +709,6 @@ Entangling Attack:
   type: combat
   brief: Force enemy SP save on attack. On fail, ensnared. Repeat check each turn.
   cost: 1
-Minor Medicine:
-  description: Spend an hour to create a salve once per day. Salves keep for 24 hours.
-  type: general
-  brief: Spend 1 hr. to create a salve once per day. Lasts 24 hours.
 Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
@@ -723,9 +737,9 @@ Mounted Warrior:
   type: starting_item
   brief: You have a well trained horse.
 My Father's Coffers:
-  description: Begin your journey with 1000 extra gold pieces.
+  description: Begin your journey with significant additional funds.
   type: starting_item
-  brief: You have 1000 gold pieces.
+  brief: You start with extra money.
 My Father's Oboe:
   description: You are proficient and start with two instruments of your choice.
   type: choice
@@ -754,14 +768,15 @@ Uncanny Perception:
   type: advantage
   brief: You can see in pitch dark, and have PER advantage.
 One up the Sleeve:
-  description: You may make a throwing knife attack as an offhand action.
+  description: You may make an extra throwing knife attack.
   type: combat
-  brief: Make a throwing knife attack as an offhand action.
+  brief: Make an extra throwing knife attack.
   cost: 1
 Penetration:
-  description: If enemies are in a row, your shot will pass right through them, hitting multiple.
+  description: Fire a shot that will pass through enemies, hitting multiple.
   type: combat
-  brief: If enemies are in a row, hit all of them.
+  brief: Fire a shot that passes through enemies, hitting multiple.
+  cost: 1
 Padfoot:
   description: You have advantage on stealth checks.
   type: advantage
@@ -783,9 +798,9 @@ Poison Resist:
   type: general
   brief: You are resistant to poison. Advantage on poison checks, half damage at worst.
 Potion Bonus:
-  description: Add 1d10 health to any potion you drink.
+  description: Add an additional dice of health to any potion you drink.
   type: general
-  brief: Add 1d10 health to any potion.
+  brief: Add an additional dice health to any potion.
 Purge Decay:
   description: Gain 1d6 damage when fighting the undead.
   type: combat
@@ -800,7 +815,7 @@ Regular Patron:
   type: advantage
   brief: Add 1d6 to CHA checks made in a tavern.
 Resist Magic:
-  description: You may make any rolls against an enemy's spell power with advantage.
+  description: You make any rolls against an enemy's spell power with advantage.
   type: advantage
   brief: Make checks against an enemy's spell power with advantage.
 See and Remember:
@@ -822,11 +837,13 @@ Shield Bash:
     damage increases to 1d12.
   type: combat
   brief: "Contested STR check. Fail: loose action. d6 damage LV0 d8 LV4, d10 LV8, d12 LV12."
+  cost: 1
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.
   type: combat
   brief: Reaction. 1/round, take a teammates damage for them. Damage is halved. 30ft rad.
+  cost: 1
 Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
     1d10 bonus to stealth checks made while standing still.
@@ -847,9 +864,9 @@ Smokevision:
   type: advantage
   brief: You can see when underwater or in smoke.
 Soft Bed:
-  description: You recover 2d6 extra health from sleeping in a real bed.
+  description: You recover 2d8 extra health from sleeping in a real bed.
   type: general
-  brief: You recover 2d6 additional health when sleeping in a bed.
+  brief: You recover 2d8 additional health when sleeping in a bed.
 Soul Based Magic:
   description: To fuel your magic, you use the concentrated essence of life, which you 
     are able to harvest from the dead. These "souls" are stored in your soul jar until they
@@ -894,6 +911,7 @@ Swoon:
     up after one turn.
   type: combat
   brief: Reaction. Faint to avoid further damage for 1 turn.
+  cost: 1
 Sword and Spell:
   description: Once every three turns, combine a spell and a physical attack into one attack action.
   type: combat
@@ -904,7 +922,7 @@ Tackle:
   type: advantage
   brief: Advantage when grappling. Choose STR or DEX contested save.
 Adaptable:
-  description: Once affected by an effect or spell, gain advantage on saves against for the remainder
+  description: Once affected by an effect or spell, gain advantage on saves against it for the remainder
     of the day.
   type: general
   brief: Gain advantage on subsequent saves for 1 day after a failure.
@@ -982,9 +1000,9 @@ Throw Anything:
   type: general
   brief: You can throw anything up to one size larger than yourself.
 Thunderous Blow:
-  description: Roll an extra dice for your attack.
+  description: Roll an extra dice for your attack. On a critical hit, knock the enemy prone.
   type: combat
-  brief: Roll an extra dice for your attack.
+  brief: Roll an extra dice for your attack. On a critical hit, knock the target prone.
   cost: 1
 Tinker:
   description: Every night, you can attempt to to create a device. Once you create
@@ -1029,9 +1047,9 @@ Walking Stick:
   type: starting_item
   brief: You have a wizards staff that adds +1 to spell damage.
 Warm Butter:
-  description: Your are naturally talented chef. Any food that you cook heals 1d6 health.
+  description: Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.
   type: general
-  brief: You can cook food that heals 1d6 health.
+  brief: You can cook food which heals for an extra dice of health during a rest.
 Water Healing:
   description: When you sleep in water, it is as if you are in a bed.
   type: general
@@ -1063,10 +1081,11 @@ Fix Your Eyes on Me:
     Make charisma and intimidation checks with advantage for the remainder of the conversation.
   type: general
   brief: "Force SP save. Fail: you have advantage on CHA."
+  cost: 1
 Sacrificial Rite: 
-  description: At the cost of your level in health (minimum 1), make a second action during combat.
+  description: At the cost of half your level in health (minimum 1, round down), make a second action during combat.
   type: combat
-  brief: At the cost of your level in hp (min 1), make an extra action.
+  brief: At the cost of half your level in hp (min 1, round down), make an extra action.
 Ready Stance:
   description: As an offhand action, take up a stance that grants you 1d4 armor until your next turn.
   type: general
@@ -1076,6 +1095,10 @@ The Opener:
     If they fail a contested strength saving throw, they are knocked prone.
   type: combat
   brief: "Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone."
+The Closer:
+  description: "If you attack an enemy that is prone, add two additional dice of damage."
+  brief: "Add two dice of damage to prone enemies."
+  type: combat
 True Sight: 
   description: You are able to see invisible entities. 
   type: general
@@ -1172,9 +1195,10 @@ Link Lifeforce:
   type: combat
   brief: Offhand. Link lifeforce to another and take its damage. Offhand to remove.
 Spirit of Rage: 
-  description: Once per day, double one of your turns.
+  description: Double one of your turns.
   type: combat
-  brief: 1/day, double one of your turns.
+  brief: Double one of your turns.
+  cost: 2
 Glory: 
   description: When your health falls below 25%, double all damage you deal.
   type: combat
@@ -1236,7 +1260,7 @@ Leaping Strike:
   brief: Leap 5 feet forward to an additional dice of damage.
   cost: 1
 Reduced Critical: 
-  description: You perform a critical hit if you roll one less than your die's number of sides.
+  description: Decrease your critical hit target by 1.
   type: combat
   brief: Decrease your critical target by 1.
 Disarming: 
@@ -1244,7 +1268,6 @@ Disarming:
                saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.
   type: combat
   brief: "Reaction. Force enemy to make INF save VS CHA. Fail: attack disadv."
-  cost: 0
 Aura of Peace: 
   description: Passive. All allies near you take heart, and gain 10 health while in your presence.
   type: general
@@ -1283,10 +1306,16 @@ Superior Mantel:
   type: general
   brief: Add 1d6 to climbing checks.
 Reflexes: 
-  description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
+  description: Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
     If reduced to zero, you catch the projectile.
   type: general
   brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to 0, catch.
+  cost: 1
+Disappear:
+  description: "Spend an action point to attempt to hide."
+  type: combat
+  brief: "Attempt to hide."
+  cost: 1
 Strike From the Shadows: 
   description: Do an additional dice of damage on an attacks made from hiding.
   type: general
@@ -1296,10 +1325,6 @@ Minor Blink:
   type: general
   brief: Teleport to a position you can see within 100 feet.
   cost: 1
-Flee: 
-  description: You may use an offhand action to flee without provoking exposed attacks.
-  type: general
-  brief: Offhand. Flee without being attacked.
 Lucky Actions: 
   description: You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. 
     These tokens refill on a long rest.
@@ -1320,6 +1345,7 @@ Party Save:
   cost: 1
 Assassinate: 
   description: If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.
+    Hiding for less than one round of combat is not enough.
   type: combat
   brief: If an enemy is unsuspecting, do double damage.
 Imposter: 
@@ -1345,7 +1371,7 @@ One With Magic:
   brief: 1/day, drop to 1 health, but cast three spells free of charge.
 Ascend: 
   description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. 
-    he ascended state lasts for 3
+    The ascended state lasts for 3
     turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
   type: general
@@ -1362,6 +1388,7 @@ Ascended Action:
   description: Once per turn while ascended, you may take an extra action and movement when it is not your turn.
   type: combat
   brief: When ascended, take an action and movement when it is not your turn.
+  cost: 1
 True Ascension:
   description: Ascension no longer has a time limit. While ascended, you make all perception checks and 
     inner fire saving throws with advantage. You may enter and leave the ascended state as often as you want.
@@ -1454,19 +1481,21 @@ Aura of Advantage:
   description: Give all party members advantage on their next action.
   type: combat 
   brief: Give all party members advantage on their next action.
-  cost: 2
+  cost: 1
 Angelic Wings: 
-  description: Once per day, summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.
+  description: Summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.
   type: general
-  brief: 1/day, summon angelic wings, and take flight.
+  brief: Summon angelic wings, and take flight.
+  cost: 1
 True Mastery: 
   description: Every ranged weapon functions as at least a d12 weapon in your hands.
   type: general
   brief: Every ranged weapon is at least 1d12 to you.
 Volley: 
-  description: Once per rest, attack every enemy you can see in a single action.
+  description: Attack every enemy you can see in a single action.
   type: combat
-  brief: 1/rest, attack all enemies you can see in one action.
+  brief: Attack all enemies you can see in one action.
+  cost: 2
 Arrow Stab: 
   description: You can stab an enemy with an arrow for 1d4 damage.
   type: combat
@@ -1566,7 +1595,7 @@ All Tuckered Out:
   type: general
   brief: You have to sleep every six hours or be exhausted.
 Chomp Chomp:
-  description: You can make a 1d6 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
+  description: You can make a 1d4 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
   type: combat
   brief: 1d6 bite. Contested dex check to make you let go.
 Riding High:
@@ -1609,6 +1638,7 @@ Twin Blade Parry:
   description: Once per round of combat, you may strike back when an enemy attacks you. 
   type: combat
   brief: Reaction. Strike back when attacked.
+  cost: 1
 Offhand Attack: 
   description: You may use an offhand action to make an attack.
   type: action
@@ -1643,13 +1673,14 @@ Multi-Action:
   brief: Take an extra action.
   cost: 2
 Gumption:
-  description: You have gumption points equal to your action points. Spend one to add 1d10 to a check.
+  description: You may spend an action point to add 1d10 to a check.
   type: action
-  brief:  You have gumption equal to your SP. Spend one to add 1d10 to a check.
+  brief:  Spend an action point to add 1d10 to a check.
+  cost: 1
 Spurred to Movement:
-  description: You may now spend a point of gumption to perform an action on your turn.
+  description: You may can spend an action point to perform an action on your turn.
   type: action
-  brief: You can use a gumption to perform an action.
+  brief: You can use an action point to perform an action.
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.

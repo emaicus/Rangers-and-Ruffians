@@ -324,12 +324,12 @@ The daemonspawn were born of an unholy union between elves and the demons of old
   
 __Daemonspawn Abilities:__ 
 * __General Abilities:__   
-  * __Fix Your Eyes on Me:__ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation.  
+  * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation.  
   * __True Sight:__ You are able to see invisible entities.  
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
-  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round down), make a second action during combat.  
   
   
   
@@ -470,7 +470,7 @@ __Gnome Abilities:__
 * __Starting Items:__   
   * __Grapple Gun:__ You carry a retractable grappling gun. The gun carries 40 feet of rope.  
 * __Advantages:__   
-  * __Resist Magic:__ You may make any rolls against an enemy's spell power with advantage.  
+  * __Resist Magic:__ You make any rolls against an enemy's spell power with advantage.  
   
   
   
@@ -530,8 +530,8 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   
 __Hardfoot Halfling Abilities:__ 
 * __General Abilities:__   
-  * __Warm Butter:__ Your are naturally talented chef. Any food that you cook heals 1d6 health.  
-  * __Soft Bed:__ You recover 2d6 extra health from sleeping in a real bed.  
+  * __Warm Butter:__ Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.  
+  * __Soft Bed:__ You recover 2d8 extra health from sleeping in a real bed.  
   * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
 * __Starting Items:__   
   * __Sling:__ Your character begins their journey with a 1d4 sling.  
@@ -570,7 +570,7 @@ __High Elf Abilities:__
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Low-Light Vision:__ You can see in low light.  
   * __Inherent Magic:__ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
-  * __Detect Magic:__ You are able to perform magic detection checks.  
+  * __Detect Magic:__ _(Cost 1)_ Perform a magic detection check.  
 * __Advantages:__   
   * __Wink Wink, Nudge Nudge:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
   
@@ -605,7 +605,7 @@ __Hissling Abilities:__
   * __All Tuckered Out:__ You must sleep once every six hours, or suffer exhaustion.  
   * __Tossed Around:__ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is. Take full damage if you hit something as a result.  
 * __Combat Abilities:__   
-  * __Chomp Chomp:__ You can make a 1d6 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
+  * __Chomp Chomp:__ You can make a 1d4 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
   * __Riding High:__ Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.  
   * __Dig Dig Dig:__ You are able to burrow through earth at a rate of 1 foot per minute.  
   
@@ -636,7 +636,7 @@ __Human Abilities:__
 * __Choices:__   
   * __Skilled:__ Begin your journey with one extra skill.  
 * __General Abilities:__   
-  * __Adaptable:__ Once affected by an effect or spell, gain advantage on saves against for the remainder of the day.  
+  * __Adaptable:__ Once affected by an effect or spell, gain advantage on saves against it for the remainder of the day.  
 * __Combat Abilities:__   
   * __Last Stand:__ When your health is below 25%, you can take an extra action on your turn.  
   * __Strength of Men:__ _(Cost 1)_ You have basic healing abilities. You may heal a party member for 1d6 + inner fire health.  
@@ -739,7 +739,7 @@ __Orc Abilities:__
   * __Predator:__ When tracking, you have advantage on perception checks.  
 * __Combat Abilities:__   
   * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
-  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack.  
+  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone.  
   * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
   
   
@@ -898,7 +898,7 @@ __Level 1 Archer__
   
   
 * __Combat Abilities:__   
-  * __Crippling Shot:__ You can aim at an opponents knees for 1d4 damage, making them go prone on a critical hit.  
+  * __Called Shot:__ _(Cost 1)_ Aim for a specific part of an enemy. The enemy must make a spell power save or drop a weapon, be blinded, or be knocked prone.  
   
   
 __Level 2 Archer__
@@ -951,7 +951,7 @@ __Level 7 Archer__
   
   
 * __General Abilities:__   
-  * __Reflexes:__ Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
+  * __Reflexes:__ _(Cost 1)_ Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
   
   
 * __Advantages:__   
@@ -1012,7 +1012,7 @@ __Level 13 Archer__
   
   
 * __Combat Abilities:__   
-  * __Volley:__ Once per rest, attack every enemy you can see in a single action.  
+  * __Volley:__ _(Cost 2)_ Attack every enemy you can see in a single action.  
   
   
 __Level 14 Archer__
@@ -1060,7 +1060,7 @@ __Level 0 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Berserk:__ Once per rest, you can go into a rage, giving you +1 effective strength and dexterity, but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
+  * __Berserk:__ _(Cost 1)_ Go berserk, giving you +1 effective strength and dexterity, but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
   * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
   
@@ -1083,7 +1083,7 @@ __Level 2 Barbarian__
 __Level 3 Barbarian__
 
 * __Combat Abilities:__   
-  * __Crushing Blow:__ On a critical hit, you give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.  
+  * __Crushing Blow:__ On a critical hit, knock an enemy prone and give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.  
   * __Line Them Up:__ If you slay an enemy, gain another attack action.  
   
   
@@ -1097,6 +1097,7 @@ __Level 5 Barbarian__
 
 * __Combat Abilities:__   
   * __Always Angry:__ You may now go berserk once per battle.  
+  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
   
   
 __Level 6 Barbarian__
@@ -1108,7 +1109,7 @@ __Level 6 Barbarian__
 __Level 7 Barbarian__
 
 * __Combat Abilities:__   
-  * __Furious Blows:__ When going berserk, you can make two attacks in a single action.  
+  * __Furious Blows:__ _(Cost 1)_ Spend an action point to take attack twice in a single attaction while going berserk.  
   
   
 __Level 8 Barbarian__
@@ -1120,6 +1121,7 @@ __Level 8 Barbarian__
 __Level 9 Barbarian__
 
 * __Combat Abilities:__   
+  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
   * __Berserker:__ You take half damage from physical attacks while going berserk.  
   
   
@@ -1157,7 +1159,7 @@ __Level 14 Barbarian__
 __Level 15 Barbarian__
 
 * __Combat Abilities:__   
-  * __Spirit of Rage:__ Once per day, double one of your turns.  
+  * __Spirit of Rage:__ _(Cost 2)_ Double one of your turns.  
   
   
   
@@ -1217,7 +1219,7 @@ __Level 1 Bard__
   
   
 * __Combat Abilities:__   
-  * __One up the Sleeve:__ _(Cost 1)_ You may make a throwing knife attack as an offhand action.  
+  * __One up the Sleeve:__ _(Cost 1)_ You may make an extra throwing knife attack.  
   
   
 __Level 2 Bard__
@@ -1365,6 +1367,10 @@ __Level 0 Beastmaster__
   * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
+* __Combat Abilities:__   
+  * __Leaping Strike:__ _(Cost 1)_ Leap 5 feet forward to attack an enemy, dealing an additional dice of damage. This distance can be added to your movement, but must be used to land an attack.  
+  
+  
 __Level 1 Beastmaster__
 
 * __General Abilities:__   
@@ -1384,7 +1390,6 @@ __Level 2 Beastmaster__
 __Level 3 Beastmaster__
 
 * __Combat Abilities:__   
-  * __Leaping Strike:__ _(Cost 1)_ Leap 5 feet forward to attack an enemy, dealing an additional dice of damage. This distance can be added to your movement, but must be used to land an attack.  
   * __Huntsman:__ You have advantage when attacking beasts.  
   
   
@@ -1429,7 +1434,7 @@ __Level 8 Beastmaster__
 __Level 9 Beastmaster__
 
 * __General Abilities:__   
-  * __Wild Sight:__ You are able to see through the eyes of your animal companion.  
+  * __Wild Sight:__ _(Cost 1)_ Cast a minor spell to see through the eyes of your animal companion.  
   
   
 __Level 10 Beastmaster__
@@ -1441,7 +1446,7 @@ __Level 10 Beastmaster__
 __Level 11 Beastmaster__
 
 * __General Abilities:__   
-  * __Inseparable:__ _(Cost 1)_ Instantly teleport from your current position to a spot within five feet of your animal companion. The same can be done by your animal companion. Counts as an offhand action.  
+  * __Inseparable:__ _(Cost 1)_ Cost a minor spell to instantly teleport from your current position to a spot within five feet of your animal companion. The same can be done by your animal companion. Counts as an offhand action.  
   
   
 __Level 12 Beastmaster__
@@ -1633,11 +1638,11 @@ __Level 14 Cleric__
 __Level 15 Cleric__
 
 * __General Abilities:__   
-  * __Angelic Wings:__ Once per day, summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.  
+  * __Angelic Wings:__ _(Cost 1)_ Summon angelic wings to your back for one hour. These give you an effect identical to the fly spell.  
   
   
 * __Combat Abilities:__   
-  * __Aura of Advantage:__ _(Cost 2)_ Give all party members advantage on their next action.  
+  * __Aura of Advantage:__ _(Cost 1)_ Give all party members advantage on their next action.  
   
   
   
@@ -1742,7 +1747,7 @@ __Level 8 Druid__
 __Level 9 Druid__
 
 * __General Abilities:__   
-  * __Ascend:__ Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. he ascended state lasts for 3 turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.  
+  * __Ascend:__ Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. The ascended state lasts for 3 turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.  
   
   
 __Level 10 Druid__
@@ -1794,7 +1799,7 @@ __Level 14 Druid__
 __Level 15 Druid__
 
 * __Combat Abilities:__   
-  * __Ascended Action:__ Once per turn while ascended, you may take an extra action and movement when it is not your turn.  
+  * __Ascended Action:__ _(Cost 1)_ Once per turn while ascended, you may take an extra action and movement when it is not your turn.  
   
   
   
@@ -1860,7 +1865,7 @@ __Level 5 Fighter__
   
 * __Combat Abilities:__   
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
-  * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Level 6 Fighter__
@@ -1920,7 +1925,7 @@ __Level 14 Fighter__
 __Level 15 Fighter__
 
 * __Combat Abilities:__   
-  * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   * __Whirlwind of Blades:__ _(Cost 2)_ Make an additional 3 attacks on your turn.  
   
   
@@ -1952,22 +1957,21 @@ __Level 0 Gunslinger__
   * __Gunslinger or Marksman:__ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
   
   
-* __Advantages:__   
-  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-  
-  
 * __Combat Abilities:__   
   * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
+  * __Called Shot:__ _(Cost 1)_ Aim for a specific part of an enemy. The enemy must make a spell power save or drop a weapon, be blinded, or be knocked prone.  
   
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
-  * __Pistol:__ You begin your adventure with a 1d6 pistol.  
+  * __Pistol:__ You begin your adventure with a pistol.  
   
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Rifle:__ You begin your adventure with a 1d8 rifle.  
+  * __Rifle:__ You begin your adventure with a rifle.  
+  * __Bayonet:__ You can affix a dagger to your rifle, which functions as a bayonet.  
+  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush forward 10 feet, doing an additional dice of damage to your target. The target must win at a contested strength check or fall prone. This distance can be in addition to you standard movement.  
   
   
 __Level 1 Gunslinger__
@@ -1975,12 +1979,12 @@ __Level 1 Gunslinger__
 __Gunslinger Abilities__  
 * Combat Abilities:   
   * __Flash Grenade:__ _(Cost 1)_ Throw a flash grenade. These grenades have a 10ft radius on explosion. If an entity that sees the explosion a D10 dexterity saving throw, they are blinded for 2 turns, and all actions they take have disadvantage.  
+  * __Repeating Shot:__ _(Cost 1)_ Make an extra attack during your action.  
   
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Bayonet:__ You can affix a dagger to your rifle, which functions as a bayonet.  
-  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush at least 10 feet, doing an additional dice of damage to your target. The target must win at a contested strength check or fall prone.  
+  * __Flame Strike:__ _(Cost 1)_ Spend one action point to add one dice of fire damage to an attack.  
   
   
 __Level 2 Gunslinger__
@@ -1993,7 +1997,7 @@ __Level 3 Gunslinger__
 
 * __Combat Abilities:__   
   * __High Grain:__ Add 1 to your firearm damage.  
-  * __From the Hip:__ Once per combat round, fire a retaliation shot when you are attacked. Roll a contested dexterity saving throw against the enemy. On success, it hits, hurting the enemy and stopping their attack.  
+  * __From the Hip:__ _(Cost 1)_ Reaction. Fire a retaliation shot before you are attacked. If your enemy fails a Spell Power save, they attack is stopped.  
   
   
 __Level 4 Gunslinger__
@@ -2021,10 +2025,6 @@ __Level 6 Gunslinger__
   
 __Level 7 Gunslinger__
 
-* __Combat Abilities:__   
-  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
-  
-  
 __Gunslinger Abilities__  
 * Actions:   
   * __Twin Guns:__ You are able to wield two firearms. You may attack with both in a single action.  
@@ -2033,6 +2033,10 @@ __Gunslinger Abilities__
 __Marksman Abilities__  
 * Actions:   
   * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* Combat Abilities:   
+  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
   
   
 __Level 8 Gunslinger__
@@ -2051,8 +2055,9 @@ __Gunslinger Abilities__
   
 __Marksman Abilities__  
 * Combat Abilities:   
+  * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
   * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
-  * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Level 10 Gunslinger__
@@ -2070,8 +2075,7 @@ __Gunslinger Abilities__
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Re-chamber:__ Add 1d6 to your rifle damage.  
-  * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
+  * __Penetration:__ _(Cost 1)_ Fire a shot that will pass through enemies, hitting multiple.  
   
   
 __Level 12 Gunslinger__
@@ -2105,18 +2109,17 @@ __Level 14 Gunslinger__
 __Level 15 Gunslinger__
 
 * __Combat Abilities:__   
-  * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
-  * __Volley:__ Once per rest, attack every enemy you can see in a single action.  
+  * __Volley:__ _(Cost 2)_ Attack every enemy you can see in a single action.  
   
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Re-chamber:__ Add 1d6 to your rifle damage.  
-  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.  
+  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
   
   
   
@@ -2141,7 +2144,7 @@ __Highborn Abilities:__
 * __General Abilities:__   
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Starting Items:__   
-  * __My Father's Coffers:__ Begin your journey with 1000 extra gold pieces.  
+  * __My Father's Coffers:__ Begin your journey with significant additional funds.  
   * __The Family Sword:__ Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving of your family's sigil.  
 * __Advantages:__   
   * __Beauty Incarnate:__ Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.  
@@ -2158,11 +2161,15 @@ __Level 0 Highborn__
   
   
 * __Combat Abilities:__   
-  * __Swoon:__ During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake up after one turn.  
+  * __Swoon:__ _(Cost 1)_ During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake up after one turn.  
   
   
 __Level 1 Highborn__
 
+* __Actions:__   
+  * __Gumption:__ _(Cost 1)_ You may spend an action point to add 1d10 to a check.  
+  
+  
 * __Advantages:__   
   * __Mantel:__ You have advantage on dexterity checks when climbing.  
   
@@ -2175,12 +2182,12 @@ __Level 2 Highborn__
   
 __Level 3 Highborn__
 
-* __Actions:__   
-  * __Gumption:__ You have gumption points equal to your action points. Spend one to add 1d10 to a check.  
+* __General Abilities:__   
+  * __Fallen:__ While you are on death's door, all of your allies gain a bonus action.  
   
   
 * __Combat Abilities:__   
-  * __Disarming:__ _(Cost 0)_ Reaction. Force an enemy that attacks you to make an inner fire saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.  
+  * __Disarming:__ Reaction. Force an enemy that attacks you to make an inner fire saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.  
   
   
 __Level 4 Highborn__
@@ -2191,10 +2198,6 @@ __Level 4 Highborn__
   
 __Level 5 Highborn__
 
-* __General Abilities:__   
-  * __Fallen:__ While you are on death's door, all of your allies gain a bonus action.  
-  
-  
 * __Combat Abilities:__   
   * __Feeling Lucky:__ _(Cost 1)_ Add a number of d4's equal to your luck to an attack.  
   
@@ -2208,7 +2211,7 @@ __Level 6 Highborn__
 __Level 7 Highborn__
 
 * __Actions:__   
-  * __Spurred to Movement:__ You may now spend a point of gumption to perform an action on your turn.  
+  * __Spurred to Movement:__ You may can spend an action point to perform an action on your turn.  
   
   
 __Level 8 Highborn__
@@ -2283,7 +2286,7 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
 __Knight Abilities:__ 
 * __Starting Items:__   
-  * __Armored:__ You begin your journey with a chainmail.  
+  * __Armored:__ You begin your journey with a suit of chainmail.  
   
   
 __Level 0 Knight__
@@ -2297,14 +2300,14 @@ __Level 0 Knight__
   
   
 * __Combat Abilities:__   
-  * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Shield Bash:__ _(Cost 1)_ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
   * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 1 Knight__
 
 * __Combat Abilities:__   
-  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
+  * __Trained Precision:__ _(Cost 1)_ Gain an additional damage dice on your attack.  
   
   
 __Level 2 Knight__
@@ -2316,7 +2319,7 @@ __Level 2 Knight__
 __Level 3 Knight__
 
 * __Combat Abilities:__   
-  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
+  * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
   
   
 __Level 4 Knight__
@@ -2328,7 +2331,7 @@ __Level 4 Knight__
 __Level 5 Knight__
 
 * __Combat Abilities:__   
-  * __Trained Precision:__ _(Cost 1)_ Gain an additional damage dice on your attack.  
+  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
   
 __Level 6 Knight__
@@ -2449,6 +2452,12 @@ __Level 6 Monk__
 
 * __Choices:__   
   * __Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+__Level 7 Monk__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 __Level 8 Monk__
@@ -2682,7 +2691,7 @@ __Paladin Abilities:__
 * __Choices:__   
   * __Minor Spell Choice:__ At the start of your journey, you know 1 extra tier zero spells.  
 * __Starting Items:__   
-  * __Armored:__ You begin your journey with a chainmail.  
+  * __Armored:__ You begin your journey with a suit of chainmail.  
   
   
 __Level 0 Paladin__
@@ -2761,7 +2770,7 @@ __Level 7 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
+  * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
   
   
 __Level 8 Paladin__
@@ -2847,7 +2856,7 @@ __Ranger Abilities:__
 __Level 0 Ranger__
 
 * __General Abilities:__   
-  * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
+  * __Minor Medicine:__ _(Cost 1)_ Spend 20 minutes to create a salve. Salves keep for 24 hours.  
   
   
 * __Advantages:__   
@@ -2899,11 +2908,11 @@ __Level 6 Ranger__
 __Level 7 Ranger__
 
 * __General Abilities:__   
-  * __Greater Medicine:__ Spend 1 hour to create a Minor Health Potion once per day. Potions last 24 hours.  
+  * __Greater Medicine:__ _(Cost 1)_ Spend 20 minutes to create a Minor Health Potion. Potions last 24 hours.  
   
   
 * __Combat Abilities:__   
-  * __Twin Blade Parry:__ Once per round of combat, you may strike back when an enemy attacks you.  
+  * __Twin Blade Parry:__ _(Cost 1)_ Once per round of combat, you may strike back when an enemy attacks you.  
   
   
 __Level 8 Ranger__
@@ -2928,7 +2937,7 @@ __Level 11 Ranger__
 
 * __General Abilities:__   
   * __Expert Tracker:__ Add 1d6 to any checks made to track an individual.  
-  * __Major Medicine:__ Spend 1 hour to create a Greater Health Potion once per day. Potions last 24 hours.  
+  * __Major Medicine:__ _(Cost 1)_ Spend 20 minutes to create a Greater Health Potion. Potions last 24 hours.  
   
   
 __Level 12 Ranger__
@@ -2985,6 +2994,10 @@ __Level 0 Rogue__
   * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
   
   
+* __Combat Abilities:__   
+  * __Disengage:__ _(Cost 1)_ Spend an action point to avoid provoking exposed attacks.  
+  
+  
 __Level 1 Rogue__
 
 * __General Abilities:__   
@@ -2993,6 +3006,10 @@ __Level 1 Rogue__
   
 * __Advantages:__   
   * __Mantel:__ You have advantage on dexterity checks when climbing.  
+  
+  
+* __Combat Abilities:__   
+  * __Disappear:__ _(Cost 1)_ Spend an action point to attempt to hide.  
   
   
 __Level 2 Rogue__
@@ -3078,7 +3095,6 @@ __Assassin Abilities__
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Flee:__ You may use an offhand action to flee without provoking exposed attacks.  
   * __Trap Expert:__ Gain advantage when looking for, disarming, or creating traps.  
   
   
@@ -3092,7 +3108,7 @@ __Level 11 Rogue__
 
 __Assassin Abilities__  
 * Combat Abilities:   
-  * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Thief Abilities__  
@@ -3134,7 +3150,7 @@ __Assassin Abilities__
   
   
 * Combat Abilities:   
-  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.  
+  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
   
   
 __Thief Abilities__  

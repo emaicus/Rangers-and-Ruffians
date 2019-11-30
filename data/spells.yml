@@ -425,6 +425,7 @@ the_book_of_chi:
       description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce
         the projectile's damage by that amount. If reduced to zero, you catch the
         projectile.
+      cost: 1
     Combo:
       description: You make an unarmed attack as an offhand action.
       cost: 1
@@ -433,8 +434,8 @@ the_book_of_chi:
         throw against your spell power, they drop their weapon.
       cost: 1
     Disengage:
-      description: Enemies take disadvantage when striking you while you are moving,
-        you may use an offhand action to avoid exposed attacks entirely.
+      description: Spend an action point to avoid provoking exposed attacks.
+      cost: 1
     Dodge:
       description: Roll a contested dexterity check to attempt to dodge
         an opponent's attack.
@@ -481,7 +482,7 @@ the_book_of_chi:
       description: You are able to mantle across objects. You have advantage on dexterity
         checks when climbing or leaping.
     Meditate:
-      description: Gain an additional 1d6 health from any rest.
+      description: Gain an additional dice of health from any rest.
     Meld into Shadow:
       description: Take advantage on stealth checks when hiding in shadows.
     Minor Heal:
@@ -507,7 +508,7 @@ the_book_of_chi:
     Flaming Fist:
       description: Add an additional 1d12 fire damage to a punching attack.
       cost: 1
-    Hearty:
+    Path of the Brawler:
       description: Increase the size of your health dice by 1.
     Major Heal:
       description: Heal yourself or an ally for 4d10 + inner fire
@@ -530,8 +531,7 @@ the_book_of_chi:
       description: Reaction. Once per turn, select an enemy attack aimed at you. Make
         a contested dexterity check. If you succeed, redirect the attack anywhere you
         wish.
-    Second Action:
-      description: Take two actions on your turn.
+      cost: 1
     Shadow Step:
       description: Step from any point in darkness to any other point in darkness
         within 50 feet.
@@ -539,12 +539,15 @@ the_book_of_chi:
     Share Ability:
       description: Every day, share in a teammates ability for the day.
     Surrounded:
-      description: Strike up to 5 foes in one action if you are surrounded.
+      description: Strike every foe adjacent to you.
+      cost: 1
     Thunderous Punch:
       description: Your attack may make a thunder wave, which
         affects all enemies in front of you with the punch's damage.
       cost: 1
   Legendary Techniques:
+    Second Action:
+      description: Take two actions on your turn.
     Consecutive Normal Punches: 
       description: Take two attacks with each of your actions and offhand actions.
       cost: 2
@@ -564,6 +567,7 @@ the_book_of_chi:
     Perfect Understanding:
       description: Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.
       type: general
+      cost: 1
     Everywhere and Nowhere:
       description: Instead of taking movement during combat, instantly teleport from one location to another within
         thirty feet of you. If you do not attack on your turn, you may choose to be ethereal until
