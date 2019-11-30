@@ -1374,7 +1374,7 @@ __Level 0 Beastmaster__
 __Level 1 Beastmaster__
 
 * __General Abilities:__   
-  * __Hobble:__ You are capable of quickly tying very strong knots without a check. If you have an entity grappled, you may hobble them with an action. Hobbled entities may attempt a strength saving throw against your spell power each turn to attempt to escape. Hobbled entities make all movements with disadvantage, and cannot attack with a handheld weapon.  
+  * __Hobble:__ _(Cost 1)_ You are capable of quickly tying very strong knots without a check. If you have an entity grappled, you may hobble them with an action. Hobbled entities may attempt a strength saving throw against your spell power each turn to attempt to escape. Hobbled entities make all movements with disadvantage, and cannot attack with a handheld weapon.  
   
   
 * __Advantages:__   
@@ -2211,7 +2211,7 @@ __Level 6 Highborn__
 __Level 7 Highborn__
 
 * __Actions:__   
-  * __Spurred to Movement:__ You may can spend an action point to perform an action on your turn.  
+  * __Spurred to Movement:__ _(Cost 1)_ You may can spend an action point to perform an action on your turn.  
   
   
 __Level 8 Highborn__

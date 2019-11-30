@@ -554,6 +554,7 @@ Hobble:
     attempt to escape. Hobbled entities make all movements with disadvantage, and cannot attack with a handheld weapon.
   type: general
   brief: Tie up grappled enemies. Each turn, they make a STR SP save to escape.
+  cost: 1
 Hold the Line:
   description: When any member of your party is on death's door, gain advantage on
     all attacks and checks used to protect them.
@@ -1681,6 +1682,7 @@ Spurred to Movement:
   description: You may can spend an action point to perform an action on your turn.
   type: action
   brief: You can use an action point to perform an action.
+  cost: 1
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
