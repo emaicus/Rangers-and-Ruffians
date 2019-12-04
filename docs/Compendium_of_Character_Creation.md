@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.1.1_  
+_Version 2.1.2_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -296,6 +296,8 @@ __Catterwol Abilities:__
 * __Advantages:__   
   * __Predator:__ When tracking, you have advantage on perception checks.  
   * __Loose Skin:__ You have advantage when breaking grapples.  
+* __Disadvantages:__   
+  * __Fear of Water:__ You have disadvantage when soaked through.  
 * __Combat Abilities:__   
   * __They're Retractable:__ You have retractable, razor sharp claws capable of doing 1d4 damage.  
   
@@ -360,6 +362,8 @@ __Deep Elf Abilities:__
   * __Dark Vision:__ You can see even in perfect darkness.  
 * __Advantages:__   
   * __Winged Feet:__ You have advantage on acrobatics checks.  
+* __Disadvantages:__   
+  * __Born in Darkness:__ You are incredibly light sensitive, and take 1d6 damage per hour spent with your skin exposed to bright light or to the sun. As a result, you must wear protective garments during the day.  
 * __Combat Abilities:__   
   * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
@@ -2549,6 +2553,10 @@ __Level 3 Necromancer__
 
 * __Actions:__   
   * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
+  
+  
+* __Disadvantages:__   
+  * __Fear the Light:__ You are considered undead, and therefore take extra damage from holy weapons.  
   
   
 __Level 4 Necromancer__

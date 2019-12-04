@@ -1,6 +1,6 @@
   
 # The Book of Examples
-_Version 2.1.0_  
+_Version 2.1.1_  
 
    * [Additional Dice Information](#additional-dice-information)  
      * [Types of Dice Used](#types-of-dice-used)  
@@ -11,10 +11,15 @@ _Version 2.1.0_
      * [Why are Diminishing Returns Important?](#why-are-diminishing-returns-important)  
    * [Initiative](#initiative)  
      * [Initiative Example](#initiative-example)  
+   * [Movement Computation Examples](#movement-computation-examples)  
+     * [Example 1: Low Positive Dexterity](#example-1-low-positive-dexterity)  
+     * [Example 2: Negative Dexterity](#example-2-negative-dexterity)  
+     * [Example 3: High Positive Dexterity](#example-3-high-positive-dexterity)  
    * [Stat Computation Examples](#stat-computation-examples)  
      * [Method 1 (Easiest) Use Pre-generated Stats:](#method-1-easiest-use-pre-generated-stats)  
      * [Method 2 (Easy) Standard Array:](#method-2-easy-standard-array)  
      * [Method 3 (High Risk, High Reward) Roll:](#method-3-high-risk-high-reward-roll)  
+     * [Example Sorcerer Spell Modifications](#example-sorcerer-spell-modifications)  
 
   
 ## Additional Dice Information
@@ -196,6 +201,59 @@ is ```12```. So, in this combat, player 2 would go first (as ```16``` is highest
 then the goblin with ```12```, then player 1 with ```10``` initiative.
   
   
+
+  
+## Movement Computation Examples
+Your maximum movement is based on the following formula:
+```movement = 15ft + (5ft x dexterity)``` where _negative dexterity_ is treated as ```0```. 
+  
+  
+
+  
+### Example 1: Low Positive Dexterity
+For example, let us have a character with ```2``` dexterity.
+Their movement speed would be computed as follows:
+```
+movement = 15ft + (5ft x 2)
+movement = 15ft + 10ft
+movement = 25ft
+```
+  
+  
+
+  
+### Example 2: Negative Dexterity
+Now let us have a character with -1 dexterity.
+Negative dexterities are treated as ```0```, so the computation for their speed would be as follows:
+```
+movement = 15ft + (5ft x 0)
+movement = 15ft
+```
+  
+  
+
+  
+### Example 3: High Positive Dexterity
+Finally, let us have a character with 7 dexterity.
+Remember that because of [Diminishing Returns](#diminishing-returns), the
+first 3 points of a stat are treated as full points, while subsequent points
+are treated as half points. That means our character's __Effective Dexterity__
+is 
+```
+effective stat = 3 + (4 x .5) 
+effective stat = 3 + 2 
+effective stat = 5
+```
+  
+  
+Now that we know our character's effective dexterity, we can compute their movement as follows:
+```
+movement = 15ft + (5ft x 5)
+movement = 15ft + 25ft
+movement = 40ft
+```
+  
+  
   
   
 
@@ -366,4 +424,25 @@ It looks like we have  better ```Dexterity``` and ```Perception.```
 However, our ```Intelligence``` and ```Charisma``` are worse.
 Depending on what our class was built for, this could be good or bad.
 The fun is in the rolling!
+  
+  
+
+  
+### Example Sorcerer Spell Modifications
+Sorcerers are able to _modify_ their magic, forcing the spirits that they commune
+with to bend the very weave of magic to their whim. However, doing this increases the target
+difficulty of a spell. Following are some example modifications
+and their recommended additional difficulty. As a Sorcerer, you are allowed to propose additional modifications, which your
+Poohbah will assign a cost to. Remember that the costs that your Poohbah provides are subject
+to change, and that a Poohbah may simply tell you that a proposed modification is not allowed.
+  
+  
+| Modification                                                             | Additional Difficulty |   
+|:------------------------------------------------------------------------:|:---------------------:|
+| Double the radius of an area of effect spell                             | +2 Cost               |
+| Halve the radius of an area of effect spell                              | +2 Cost               |
+| Change the elemental damage type of a spell                              | +2 Cost               |
+| Change the audible volume of a spell                                     | +2 Cost               |
+| Add an additional damage dice to a spell                                 | +2 Cost               |
+| Tie off a spell, making it last 20 minutes after concentration is broken | +4 Cost               |
 

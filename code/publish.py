@@ -50,10 +50,6 @@ PREFERRED_IMAGES = {
   'rogue' : MALE,
   'sorcerer' : MALE,
   'wizard' : MALE
-
-
-
-
 }
 
 def publish_character_creation(force_overwrite):
@@ -288,11 +284,25 @@ def publish_poohbah_printables(force_overwrite):
   md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Poohbah_Printables.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
   
-  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'poohbah_printout_topmatter.md'))
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'poohbah_printables_part.md'))
 
   md._write_topmatter()
   md._write_section(f'Print Material for Poohbahs')
+  md.write_buffer()
+
+def publish_printabled_materials(force_overwrite):
+  rnr_utils.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+
+  md = markdown_handler.markdown_handler(f'Printed Materials', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Printed_Materials.md'))
+  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
+  md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'printed_materials.md'))
+
+  md._write_topmatter()
+  md._write_section(f'Printed Materials')
   md.write_buffer()
   
 def publish_changelog(force_overwrite):
@@ -374,5 +384,6 @@ if __name__ == "__main__":
   publish_ancients(force_overwrite)
   publish_examples(force_overwrite)
   publish_changelog(force_overwrite)
+  publish_printabled_materials(force_overwrite)
   publish_poohbah_printables(force_overwrite)
   print("Done!")

@@ -1,18 +1,36 @@
 ---
 
-banner_image_path: /docs/images/backdrops/rulebook.jpg
+landscape_banner_path: /docs/images/backdrops/landscape_rulebook.jpg
 
-banner_image_link: https://www.deviantart.com/javsama/art/Fantasy-Landscape-652550768
+landscape_banner_link: https://www.deviantart.com/assumzaek/art/Summer-Time-Activities-442251327
 
-banner_image_name: Fantasy Landscape
+landscape_banner_name: Summer Time Activities
 
-banner_image_artist: JavSama
+landscape_banner_artist: assumzaek
 
-banner_image_artist_link: https://www.deviantart.com/javsama
+landscape_banner_artist_link: https://www.deviantart.com/assumzaek
 
-banner_image_license: CC BY-NC-ND 3.0
+landscape_banner_license: CC BY-NC-SA 3.0
 
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+
+
+portrait_banner_path: /docs/images/backdrops/portrait_rulebook.jpg
+
+portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Apprentice-Quest-779369039
+
+portrait_banner_name: Apprentice Quest
+
+portrait_banner_artist: SpikedMcGrath
+
+portrait_banner_artist_link: https://www.deviantart.com/spikedmcgrath
+
+portrait_banner_license: CC BY-NC-ND 3.0
+
+portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+
 
 title: The Rulebook
 
@@ -24,7 +42,7 @@ show_download: false
 
   
 # Rangers and Ruffians Rulebook
-_Version 2.1.0_  
+_Version 2.1.1_  
 
    * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
      * [What do you need to play?](#what-do-you-need-to-play)  
@@ -38,7 +56,7 @@ _Version 2.1.0_
    * [Stats and Abilities](#stats-and-abilities)  
      * [Core Stats](#core-stats)  
      * [Stat Values](#stat-values)  
-     * [Diminishing Returns: The Most Confusing Rule in Rangers and Ruffians](#diminishing-returns-the-most-confusing-rule-in-rangers-and-ruffians)  
+     * [Diminishing Returns](#diminishing-returns)  
      * [Bonus Stat: Health Die](#bonus-stat-health-die)  
      * [Abilities](#abilities)  
      * [Action Points](#action-points)  
@@ -48,12 +66,8 @@ _Version 2.1.0_
      * [Your Turn](#your-turn)  
      * [The Enemy Turn](#the-enemy-turn)  
      * [Weapons](#weapons)  
-     * [Attacking With a Weapon](#attacking-with-a-weapon)  
-     * [Critical Hits](#critical-hits)  
-     * [Critical Hits with Magic](#critical-hits-with-magic)  
      * [Combat Abilities](#combat-abilities)  
      * [Hitting Zero Health](#hitting-zero-health)  
- * [Irreversible Death](#irreversible-death)  
    * [Health, Rest, and Healing](#health-rest-and-healing)  
      * [Rest](#rest)  
    * [Magic](#magic)  
@@ -88,7 +102,7 @@ upon, some numbers became necessary. New ideas, like character
 leveling and specialized skills crept in. These ideas have
 greatly enriched the RnR experience, but have also slowly
 added to the complexity of the game. With the introduction
-of RnR 2.1.0, we look to formalize the rules of the game,
+of RnR 2.1.0, we moved to formalize the rules of the game,
 and to re-evaluate them through the lens of our initial vision:
 that tabletop RPGs are for _everyone,_ and not just for people
 who like to crunch numbers and watch fantasy movies and
@@ -382,7 +396,8 @@ you play the game in three ways:
   the amount of damage you do with strength based weapons such as warhammers, great-axes,
   and clubs.
 3. __Strength affects the type of armor you can wear.__ The stronger you are, the heavier
-  the armor that you can wear.
+  the armor that you can wear. For types that grant greater than 1 armor, you may only wear
+  them if you have an equivalent strength to the protection granted.
   
   
   
@@ -395,15 +410,16 @@ you play the game in three ways:
   
 #### Dexterity
 __Dexterity__ (DEX) is defined as mobility, nimbleness, and ability with the body.
-Dexterity affects the way that you play the game in two ways:
+Dexterity affects the way that you play the game in three ways:
 1. __Dexterity is added to dexterity checks.__ You are chasing a fleeing thief across
   the rooftops of a city. You come up to a gap, and have to jump! In this scenario,
   you would add your dexterity to a ```d20``` roll.
 2. __Dexterity affects your dexterity weapon damage.__ In a combat scenario, dexterity
   is added to the amount of damage you do with dexterity based weapons, such as spears,
   daggers, and falchions.
-  
-  
+3. __Dexterity affects the distance that you can move.__ In a combat scenario, __positve dexterity__
+  is added to the distance you are allowed to move under the following formula: ```movement = 15ft + (5ft x dexterity)```.
+  For examples of how to compute movement, see [The Book of Examples](Examples.md#computing-movement).
   
   
   
@@ -519,7 +535,7 @@ As they grow and get stronger, their stats increase. For more details about incr
   
 
   
-### Diminishing Returns: The Most Confusing Rule in Rangers and Ruffians
+### Diminishing Returns
 Thus far, we have treated stats as increasing linearly (e.g. if you dexterity is 3, you add 3 to a roll).
 In fact, for the balancing of leveling up in Rangers and Ruffians
 to work, this is not always true. Instead, the rule is as follows.
@@ -532,7 +548,7 @@ to work, this is not always true. Instead, the rule is as follows.
   
   
 For an in depth explanation of [how diminishing returns work](Examples.md#diminishing-returns-explained)
-and [why they are important](Examples.md#why-are-diminishing-returns-important)[The Book of Examples](Examples.md).  
+and [why they are important](Examples.md#why-are-diminishing-returns-important) see [The Book of Examples](Examples.md).  
   
   
 
@@ -607,7 +623,7 @@ That way, there is one less thing for the Poohbah to have to handle.
   
   
 For an example of [initiative in action](Examples.md#diminishing-returns-explained)
-and [why they are important](Examples.md#why-are-diminishing-returns-important)[The Book of Examples](Examples.md).
+and [why they are important](Examples.md#why-are-diminishing-returns-important) see [The Book of Examples](Examples.md).
   
   
   
@@ -652,11 +668,14 @@ able to take a reaction. You may take up to one reaction per turn.
 
   
 #### Movement
-On each turn, you are able to make 15 feet of movement. This movement can be decomposed however
+On each turn, you are able to movement. Your maximum movement is based on the following formula:
+```movement = 15ft + (5ft x dexterity)``` where _negative dexterity_ is treated as ```0```. 
+This movement can be decomposed however
 you wish. For example, you might drink a potion as an offhand action, walk 5 feet forward, lift
 a cauldron as an action, and then walk ten 10 feet to the right.
   
   
+For examples of how to compute movement, see [The Book of Examples](Examples.md#computing-movement).
   
   
 
@@ -747,7 +766,7 @@ Some example conditions that may trigger a conditional action include:
 
   
 ### Weapons
-Weapons have 3 parts in RnR:
+Weapons have 4 parts in RnR:
 1. Their primary die.
 2. Their modifier.
 3. Their effect.
@@ -768,7 +787,30 @@ wielder's [Spell Power](#spell-power) or be struck blind.
   
 
   
-### Attacking With a Weapon
+#### Types of Weapon
+There are broad classifications of weapon in Rangers and Ruffians, ```Melee Weapons```, ```Ranged Weapons```, and ```Firearms```.
+  
+  
+
+  
+##### Melee Weapons
+Melee weapons are defined as handheld weapons which are swung, stabbed, or thrust at nearby enemies.
+Melee weapons may be either ```Dexterity``` or ```Strength```. A __Dexterity Based Melee Weapon__ is
+one which requires some finesse to strike an enemy. Examples are ```Rapiers```, ```Spears```, and ```Daggers```.
+__Strength Based Melee Weapons__ are weapons which require power behind their strike. Examples are 
+```Greatswords```, ```Clubs```, and ```Flails```.
+  
+  
+Melee weapons may be ```Two Handed```, ```One Handed```, or ```Hand-and-a-Half```. As their name applies,
+two handed weapons like a ```War Hammer``` may only be wielded with two hands. One handed weapons, like a
+```Shortsword``` may be wielded with one hand. ```Hand-and-a-Half``` weapons may be wielded with either
+one or both hands. In some cases, a ```Hand-and-a-Half``` weapon may have a different primary die
+depending on how it is wielded.
+  
+  
+
+  
+#### Attacking With a Weapon
 Attacks nearly always hit in Rangers and Ruffians. Therefore, to make a sword attack against an
 adjacent enemy, there are two steps.
   
@@ -785,7 +827,7 @@ adjacent enemy, there are two steps.
   
 
   
-### Critical Hits
+#### Critical Hits
 A critical hit occurs when a player rolls the highest possible value for an eligible weapon.
 When this occurs, the player may roll the dice a second time and add that to the damage total.
 So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy
@@ -801,11 +843,34 @@ with ```0``` armor. It might play out like this:
   
 
   
-### Critical Hits with Magic
+#### Critical Hits with Magic
 Attacks made with magic work identically to attacks with a weapon with one difference. Because
 magic attacks do not have a ```primary die```, magic users instead roll ```1d20``` every time they 
 attack. If they roll a ```1```, their magic does not function as intended, and fizzles out. If they 
 roll a ```20```, they score a critical hit, and double their damage dice. 
+  
+  
+
+  
+#### Armor and Shields
+Armor in Rangers and Ruffians falls under a number of broad classifications.
+  
+  
+| Armor Type             | Requirements                           | Benefits     |
+| -----------------------|----------------------------------------|--------------|
+| Chainmail              | 1 STR or reduce movement by 5ft.       | +1 Armor     |
+| Light Plate Armor      | 3 STR or reduce movement by 15ft.      | +2 Armor     |
+| Heavy Plate Armor      | 5 STR or reduce movement by 25ft.      | +3 Armor     |
+| Legendary Plate        | 7 STR or reduce movement to 0.         | +4 Armor     |
+| Leather Armor          | 2 Dexterity or -5 to all stealth rolls    | +1 Armor     |
+| Elven Leather Armor    | 5 Dexterity or -10 to all stealth rolls   | +2 Armor     |
+  
+  
+  
+  
+| Shield Type            | Benefits                                              |
+| -----------------------|-------------------------------------------------------|
+| Standard Shield        | __Shield Up:__ Offhand Ability: Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks. Must be done at the start of a turn. |
   
   
   
@@ -863,7 +928,7 @@ dying...
   
 
   
-# Irreversible Death
+#### Irreversible Death
 Sometimes, however, death is here to stay. It is important to remember that the death of a
 character doesn't have to be the end of your fun! Losing a character can be hard and
 emotional, but there is more fun to be had with a brand new character! Maybe a relative of
@@ -893,13 +958,14 @@ There are three types of rest in Rangers and Ruffians: __Quick Rest__, __Sleep__
 __Sleep in a bed.__
   
   
-|                        | Quick Rest | Sleep   | Sleep in a Bed |
-| -----------------------|------------|---------|----------------|
-| Time Required          | 1 hour     | 8 hours | 8 hours        |
-| Health Restored        | 20%        | 50%     | 75%            |
-| Action Points Restored | 2          | 5       | All            |
-| Luck Restored          | 0          | All     | All            |
-| Times/Day              | 3x         | 1x      | 1x             |
+|                                      | Quick Rest    | Sleep         | Sleep in a Bed     |
+| -------------------------------------|---------------|---------------|--------------------|
+| Time Required                        | 1 hour        | 8 hours       | 8 hours            |
+| # of Healing Dice Rolled             | 1/2 level + 1 | 1/2 level + 1 | 1/2 level + 1      |
+| Type of Healing Dice Rolled          | d4            | d8            | d12                |
+| Action Points Restored               | 2             | 5             | All                |
+| Luck Restored                        | 0             | All           | All                |
+| Times/Day                            | 3x            | 1x            | 1x                 |
   
   
   

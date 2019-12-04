@@ -148,7 +148,7 @@ class rnr_entity:
       ret.append(f"\n")
       ret.append(f"__{string.capwords(self.name.replace('_',' '))} Abilities:__ \n")
       abilities = filterAbilities(self.abilities, verbose=True)
-      for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'combat'):
+      for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
         if not key in abilities:
           continue
         ret.append(f"* __{mapAbilityType(key)}:__   \n")
@@ -234,7 +234,7 @@ class rnr_class(rnr_entity):
 
         if 'abilities' in level_data[level]:
           level_abilities = filterAbilities(level_data[level]['abilities'], verbose=True)
-          for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
+          for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'disadvantage','combat'):
             if not key in level_abilities:
               continue
             ret.append( "* __{0}:__   \n".format(mapAbilityType(key)))
@@ -248,7 +248,7 @@ class rnr_class(rnr_entity):
           if 'subclass' in key:
             ret.append( '__{0} Abilities__  \n'.format(string.capwords(key.split('_')[1])))
             sub_ability = filterAbilities(level_data[level][key], verbose=True)
-            for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'combat'):
+            for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
               if not key in sub_ability:
                 continue
               ret.append( "* {0}:   \n".format(mapAbilityType(key)))
@@ -889,20 +889,22 @@ def roll_dice(number=1,sides=6,advantage=False,disadvantage=False):
       total += first_roll
   return total
 
-def mapAbilityType(abilitiy_type):
-  if abilitiy_type == "combat":
+def mapAbilityType(ability_type):
+  if ability_type == "combat":
     return "Combat Abilities"
-  elif abilitiy_type == "advantage":
+  elif ability_type == "advantage":
     return "Advantages"
-  elif abilitiy_type == "starting_item":
+  elif ability_type == 'disadvantage':
+    return "Disadvantages"
+  elif ability_type == "starting_item":
     return "Starting Items"
-  elif abilitiy_type == "choice":
+  elif ability_type == "choice":
     return "Choices"
-  elif abilitiy_type == 'rule':
+  elif ability_type == 'rule':
     return "Rules"
-  elif abilitiy_type == 'spellbook':
+  elif ability_type == 'spellbook':
     return "Spellbooks"
-  elif abilitiy_type == 'action':
+  elif ability_type == 'action':
     return "Actions" 
   else:
     return "General Abilities"

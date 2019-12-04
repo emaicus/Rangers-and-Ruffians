@@ -42,7 +42,7 @@ show_download: false
 
   
 # Book of Known Beasts
-_Version 2.1.1_  
+_Version 2.1.2_  
 
    * [Beasts:](#beasts)  
      * [Bears:](#bears)  

@@ -1,18 +1,18 @@
 ---
 
-banner_image_path: /docs/images/backdrops/changelog.jpg
+portrait_banner_path: /docs/images/backdrops/portrait_changelog.jpg
 
-banner_image_link: https://www.deviantart.com/stevegibson/art/Henrietta-Grimslingers-Art-676407322
+portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Toad-Newmann-803282064
 
-banner_image_name: Henrietta - Grimslingers Art
+portrait_banner_name: Toad Newmann
 
-banner_image_artist:  SteveGibson
+portrait_banner_artist:  SpikedMcGrath
 
-banner_image_artist_link: https://www.deviantart.com/stevegibson
+portrait_banner_artist_link: https://www.deviantart.com/spikedmcgrath
 
-banner_image_license: CC BY-NC-ND 3.0
+portrait_banner_license: CC BY-NC-ND 3.0
 
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
 title: The Changelog
 
@@ -25,45 +25,277 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians Version 2.1.0 (November 22, 2019)](#rangers-and-ruffians-version-210-november-22-2019)  
-     * [New Features:](#new-features)  
+   * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
+     * [Overview:](#overview)  
      * [Rule Changes:](#rule-changes)  
-     * [All Races and Classes:](#all-races-and-classes)  
+     * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes)  
-       * [Human:](#human)  
-       * [Catterwol:](#catterwol)  
-       * [High Elf:](#high-elf)  
-       * [Fleetfoot Halfling:](#fleetfoot-halfling)  
-       * [Lizkin:](#lizkin)  
-       * [Orc:](#orc)  
-       * [Dwarf:](#dwarf)  
-       * [Daemonspawn:](#daemonspawn)  
-       * [Sprout:](#sprout)  
-       * [Automaton:](#automaton)  
-       * [Hissling:](#hissling)  
-       * [Waterborn:](#waterborn)  
      * [Class Balance Changes:](#class-balance-changes)  
-       * [All:](#all)  
-       * [Barbarian:](#barbarian)  
-       * [Knight:](#knight)  
-       * [Paladin:](#paladin)  
-       * [Beastmaster:](#beastmaster)  
-       * [Sorcerer:](#sorcerer)  
-       * [Fighter:](#fighter)  
-       * [Highborn:](#highborn)  
-       * [Ranger:](#ranger)  
-       * [Rouge:](#rouge)  
-       * [Bard:](#bard)  
-       * [Cleric:](#cleric)  
-       * [Druid](#druid)  
-       * [Wizard:](#wizard)  
-       * [Archer:](#archer)  
-       * [Gunslinger:](#gunslinger)  
-       * [Spellbooks:](#spellbooks)  
+   * [Rangers and Ruffians 2.1.0: The Skills Update. November 19, 2019](#rangers-and-ruffians-210-the-skills-update-november-19-2019)  
+     * [New Features:](#new-features)  
+     * [Rule Changes:](#rule-changes-1)  
+     * [All Races and Classes:](#all-races-and-classes)  
+     * [Race Balance Changes:](#race-balance-changes-1)  
+     * [Class Balance Changes:](#class-balance-changes-1)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
 
   
-## Rangers and Ruffians Version 2.1.0 (November 22, 2019)
+## Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019
+  
+  
+
+  
+### Overview:
+This revision brings:
+1. Additional Race and Class Balance Tweaks, especially to ```Rouges``` and ```Rangers```.
+2. An updated rule regarding player movement speed.
+  
+  
+
+  
+### Rule Changes:
+* A character's movement distance on a given turn is now computed via the following formula: ```movement = 15ft + (5ft x dexterity)```,
+  where negative dexterity values are treated as ```0```. This makes Dexterity an important stat even for the most ardent knight, and, paired
+  with the ```2.1.0```'s update to make perception affect initiative, should make choosing stats on level up far more interesting.
+  
+  
+
+  
+### Additional Clarifications:
+* Clarified how armor and shields work in the [Rulebook](Rulebook.md#armor-and-shields).
+* Clarified how rest works. [Rulebook](Rulebook.md#rest).
+  
+  
+
+  
+### Race Balance Changes:
+  
+  
+
+  
+#### Catterwol
+* __Abilities__
+  * __Changed Fast Paws__ _Gain an extra offhand action_
+    * __Change:__ The extra offhand action cannot be used as an attack.
+    * __Reasoning:__ If the extra offhand was used as an attack, the Catterwol would have the highest damage output of any race by far.
+  
+  
+
+  
+#### Wood Elf
+* __Abilities__
+  * __Changed Counter Attack__ _Reaction, for 1 Action Point, counter attack when you are attacked_
+    * __Change:__ You no longer have to roll to see if the counterattack succeeds.
+    * __Reasoning:__ With a cost associated with the counterattack and ```Reaction``` meaning it can only be done once per turn, it felt unnecessarily punishing to force the ability to sometimes fail.
+  
+  
+
+  
+#### High Elf
+* __Abilities:__
+  * __Added Learned__ _Start with an extra language._
+    * __Reasoning:__ In line with erudite High Elf.
+  
+  
+
+  
+#### Orc
+* __Abilities:__
+  * __Changed Thunderous Blow__ _Add an extra dice of damage to an attack for 1 action point._
+    * __Change:__ Reduced cost from 2 to 1 action point.
+    * __Reasoning:__ In line with costs for similar abilities.
+  
+  
+
+  
+#### Lizkin
+* __Abilities:__
+  * __Changed Posion Bite__ _Bite an enemy and have a chance to do poison damage_
+    * __Change:__ Damage now scales with level.
+    * __Reasoning:__ Ability is now worthwhile to use at higher levels.
+  
+  
+  
+  
+
+  
+#### Daemonspawn
+* __Abilities:__ 
+  * __Changed Charm__ _If an enemy fails an SP save, they cannot attack you._
+    * __Change:__ You now also gain advantage on CHA checks with the affected entity.
+    * __Reasoning:__ This makes sense and gives the ability more utility.
+  * __Changed Sacrificial Rite:__ _Spend health to gain an extra action._
+    * __Change:__ Amount of health needed is now equal to your level (minimum of 1) rather than a static 10.
+    * __Reasoning:__ A static 10 health makes the ability impossible to use until high levels.
+  
+  
+  
+  
+
+  
+#### Automaton
+* __Abilities:__
+  * __Changed Piston Punch__ _Throw a powerful punch that could knock enemies prone._
+    * __Change:__ Damage now scales with Level. Prone happens on contested Strength rather than critical hit. Chance scales with enemy size.
+  * __Changed Overdrive:__ _Spend health to gain extra strength or dexterity._
+    * __Change:__ Amount of health needed is now 2x the amount gained rather than a static 10. The maximum amount gained is 10.
+    * __Reasoning:__ A static 10 health makes the ability impossible to use until high levels.
+  
+  
+
+  
+#### Sprout
+* __Abilities:__
+  * __Changed Harden:__ _Lose 2 DEX to gain 2 armor_
+    * __Change:__ Now explicitly does not stack with other armor.
+    * __Reasoning:__ It is not the intention of this ability to be used to create an un-killable strength based sprout build.
+  
+  
+
+  
+#### Hissling
+* __Abilities:__
+  * __Changed Tossed Around__ _Take half blunt damage, but be tossed back by the attack._
+    * __Change:__ Take full damage if being tossed back makes you hit something.
+    * __Reasoning:__ Adds an interesting dynamic to an already cool ability.
+  
+  
+
+  
+### Class Balance Changes:
+  
+  
+
+  
+#### Barbarian:
+* __Abilities:__
+  * __Merged Blind Rage and Berserk__ _Blind Rage: Advantage at SP saves while berserk._
+    * __Reasoning:__ Berserk was already granting a static +1 to inner fire. Removed that and merged
+      in blind rage to keep things simpler.
+  * __Moved Always angry from level 7 to level 5__ _Go Berserk once per battle (up from 1/day)_
+    * __Reasoning:__ Berserk is a core barbarian feature, so it was problematic to wait for it to become 
+      consistently good until level 7.
+  * __Removed Warmaster__ _Level 11, gain +1 additional strength when going berserk_
+    * __Reasoning:__ This ability was underwhelming at best.
+  * __Moved Savage Critical from level 5 to level 11__ _Additional damage on critical hit_
+    * __Reasoning:__ Replaced Warmaster. Was a little overpowered at early levels when combined with other Barbarian 
+      abilities. 
+  
+  
+
+  
+#### Knight:
+* __Abilities:__
+  * __Removed Shield Up__ _Level 3. Half damage from non-magic ranged attacks when you have a shield_
+    * __Reasoning:__ Shields now come with their own abilities and requirements.
+  * __Added New Ability Shield Master__ _Level 0. Don't take movement penalties from shield use._
+    * __Reasoning:__ With the new shield and movement rules, this ability was a great replacement for ```Shield Up```.
+  * __Added New Ability Charge!__ _Offhand. Run an extra 10ft. Contested STR check if you hit someone. Looser is knocked prone._
+    * __Reasoning:__ With the move towards ```DEX``` based movement, the knight was being left behind. This new ability helps to make them feel like they have more movement.
+  * __Changed Armored__ _You start with a suit of armor._
+    * __Change:__ Armor is now Chainmail (```+1```) instead of Light Plate (```+2```).
+    * __Reasoning:__ ```+2``` armor is too effective at level 0.
+  
+  
+
+  
+#### Paladin:
+* __Abilities:__
+  * __Swapped Chainmail with Armored__ _You start with armor_
+    * __Reasoning:__ With the change of armored from ```+2``` to ```+1```, the chainmail ability became redundant.
+  
+  
+
+  
+#### Fighter
+* __Abilities:__
+  * __Renamed Trained Attack to Focused Attack__ _Re-roll an attack_
+    * __Reasoning:__ It was confusing to have abilities named ```Trained Attack``` and ```Trained Precision```.
+  * __Moved Determination from Level 1 to Level 0__ _Gain a D10 inspiration dice as an offhand_
+    * __Reasoning:__ The fighter's level 0 was sparse, and Determination is a core class feature.
+  * __Moved Minor Second Wind from Level 3 to level 1__ _Regain 1d6 health for 1 action point as an offhand action_
+    * __Reasoning:__ Filled the void left by moving determination.
+  * __Added Greater Second Wind to level 5__ _Heal yourself for 1d12 damage as an offhand for 1 action point_
+    * __Reasoning:__ It was an oversight that their was a ```Minor``` and ```Major``` second wind but no ```Greater```.
+  
+  
+
+  
+#### Ranger
+This was a larger Rework of the Ranger, which had kind of lost its way and become a Jack of all Trades,
+Master of None. Now, the Ranger is a very competent fighter with minor magic, who excels at tracking enemies.
+In the future, a monster hunter subclass will likely be added.
+  
+  
+* __Abilities:__
+  * __Removed Shifting Cloak__ _You begin with a cloak which gives you advantage on stealth checks when still_.
+    * __Reasoning:__ Redundant, did the same thing as ```Camouflage```.
+  *  __Moved Tracker from Level 3 to Level 0__ _Advantage on tracking checks_.  
+    * __Reasoning:__ Tracking is a core ranger feature, and should be present from level 0.
+  * __Added New Ability, Embers__ _Shoot fire 10ft. Deals 1d4 dmg. Increases to 1d8 at LV3, 1d10 LV6, 1d12 LV9, 2d12 LV12._
+    * __Reasoning:__ The Ranger was missing a solid damage dealing ability. Embers is the solution.
+  * __Changed Finesse Strike__ _Add additional damage to an attack, which is extended over two turns if the enemy fails a SP save._
+    * __Change:__ The ability used to add an additional dice of damage _and_ then another next turn if the enemy failed an SP save.  Now it adds an additional dice of damage and half as much next turn on a failed SP save.
+    * __Reasoning__ This is more balanced at lower levels.
+  * __Moved Finesse Strike from Level 5 to Level 3__
+    * __Reasoning:__ Rangers gain ```Twin Blades``` at level 5, which overshadowed the value of ```Finesse Strike```.
+  * __Removed Monster Slayer__ _Level 9, bonus damage to monsters_
+    * __Reasoning:__ Didn't work with the more streamlined Ranger. Will return with new ```Monster Hunter``` subclass later.
+  * __Removed Disengage__ _Level 9, Don't provoke exposed attacks as an offhand action._
+    * __Reasoning:__ Didn't quite fit the Ranger class.
+  * __Added New Ability Elemental Weapon__ _Level 9, Change your weapon's damage type for 1 action point. Lasts until dispelled._
+    * __Reasoning:__ Fit well with the capstone ```Fire and Ice```. A good and unique ability.
+  * __Moved Spell of Darkvision From Level 11 to Level 3__ _Cast Darkvision on yourself for 1 Action Point_
+    * __Reasoning:__ Too late in the game for an ability like this. A great ability at low levels.
+  * __Removed Disarming Blow__ _Level 11, Disarm an opponent on a critical hit_
+    * __Reasoning:__ Interesting ability, but did not fit with Ranger or Level 11.
+  * __Added new Ability Major Medicine__ _Level 11, make 1x per day make a potion equivalent to a greater healing poition. Lasts 24 hours._
+    * __Reasoning:__ It was an oversight that there were ```Minor``` and ```Greater``` Medicine abilities, but no ```Major```.
+  * __Moved Expert Tracker from Level 13 to Level 11__ _Add 1d6 to tracking checks._
+    * __Reasoning:__ This ability is quite useful, and it is better to get it to the player earlier.
+  
+  
+
+  
+#### Rogue
+* __Abilities__
+  * __Removed Ruffians__ _Base ability, gain advantage when speaking with seedy folk._
+    * __Reasoning:__ This may be part of a larger trend. It is in consideration that we may add a new system ```Backgrounds```, which can be chosen from to gain specific (very small) advantages or abilities. This ability would fall under one of those Backgrounds.
+  * __Changed Ranged Weapon Proficiency to Thrown Weapon Proficiency__
+    * __Reasoning:__ It wasn't the intention of the Rogue design that they would be able to use bows by default.
+  * __Added Spell of Darkvision to Assassin Level 5__ _Gain Darkvision for 1 action point_
+    * __Reasoning:__ Previously, the Assassin gained regular Darkvision at level 9. This was both too late to be useful and didn't make sense.
+  * __Added New Ability Sticky Fingers to Level 5 Thieves__ _Add 1d6 to checks made to steal something_.
+    * __Reasoning:__ Thieves didn't actually have many abilities that made them better at thievery.
+  * __Added New Ability Spell of Minor Invisibility to Level 9 Assassins__ _Become invisible for 5 minutes for 1 action point_
+    * __Reasoning:__ With Darkvision moved from Level 9 to Level 5, a new ability was needed. This will add additional utility to the assassin, and should be very strong paired with their Strike from the Shadows ability.
+  * __Returned Assassinate as a Level 15 Assassin Capstone__
+  
+  
+
+  
+#### Archer
+* __Abilities__
+  * __Removed Arrow Stab__ _Make a 1d6 arrow stab._
+    * __Reasoning:__ Better than a bow at low levels, totally useless at high levels. Not needed in the game.
+  
+  
+
+  
+#### Bard
+* __Abilities__
+  * __Modified Minor, Greater, and Major Restful Melody__ _Bonus health for allies during rest._
+    * __Change:__ Instead of granting 1, 2, or 3 d8 extra healing, it grants 1, 2, or 3 rest dies of healing.
+    * __Reasoning:__ In line with new rest health rules.
+  
+  
+
+  
+#### Sorcerer
+* __Clarification__
+  * Finally clarified sorcerer's ```Spell Modification``` Ability. 
+  
+## Rangers and Ruffians 2.1.0: The Skills Update. November 19, 2019
   
   
 
@@ -90,12 +322,12 @@ show_download: false
 *  __Weapon Balance:__
     *  With new stat balance came new ```health```, ```rest```, ```weapon damage``` and ```magic damage``` balance tweaks.
 *  __Renamings__
-    *  __Spell Points -> Action Points:__ ```Spell Points``` were to ```Action Points```. This reflects their new use by non-mage classes.
+    *  __Spell Points -> Action Points:__ ```Spell Points``` were renamed to ```Action Points```. This reflects their new use by non-mage classes.
     *  __Spell Levels -> Spell Tiers:__ ```Spell Levels``` were renamed to ```Spell Tiers```. With the character leveling system in place, it is confusing
       to talk about both spell and character levels.
     *  __Opportunity Attacks -> Exposed Attacks__
 *  __Introduction of Skills:__
-    *  When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend, or to gain a new skill.
+    *  When a player reaches an even level, they may now __choose__ either to gain 2 stat points to spend or to gain a new skill.
     *  Skills are like small abilities that give you new ways to play your character.
     *  For example, a knight might gain access to firearms!
     *  Some skills have stat prerequisites. For example, you need 3 intelligence to gain access to tier zero magic.
@@ -107,13 +339,15 @@ show_download: false
 
   
 ### Rule Changes:
-*  Spell Power is now computed as 12 + INF rather than 10 + (2 x INF). Under the previous system, if a player or enemy had even modestly high inner fire, it became nearly impossible to avoid their spells. For example, if an enemy had 4 inner fire, you would have to roll an 18 or greater to break their spell (10 + (2 x 4)). Now, you need to beat a 16 (12 + 4).
+*  Spell Power is now computed as ```12 + INF``` rather than ```10 + (2 x INF)```. Under the previous system, if a player or enemy had even modestly high inner fire, it became nearly impossible to avoid their spells. For example, if an enemy had ```4``` effective inner fire, you would have to roll an ```18``` or greater to avoid their spell ```(10 + (2 x 4))```. Now, you need to beat a ```16``` ```(12 + 4)```.
+* Perception is now added to initiative. This makes perception a more viable stat, and makes choosing stats on level-up
+  more interesting.
   
   
 
   
 ### All Races and Classes:
-The stat changes referenced [above](#new-features) affected all races and classes, and are not detailed here to save space.
+The stat changes referenced above affected all races and classes, and are not detailed here to save space.
 To see the result of the changes, please view the ```Race``` and ```Class``` sections of the ```Rulebook.```
   
   
@@ -141,7 +375,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
 * __Abilities:__
   * __Changed:__ __Fast Paws__ _Cost 1, Gain an additional action._
     * __Change:__ Now grants a bonus action rather than an action.
-    * __Reasoning:__ Balances the Catterwol, where they can't yet attack as an offhand action.
+    * __Reasoning:__ Balances low level the Catterwol, which can't yet attack as an offhand action.
   
   
   
@@ -170,7 +404,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
   
 #### Lizkin:
 * __Abilities:__
-  * __Combined Camouflage and Color Choice_
+  * __Combined Camouflage and Color Choice__
   * __Changed Color Choice__
     * __Change:__ Now costs 1 SP and can explicitly be used for stealth.
     * __Reasoning:__ Cost increase due to added benefit.
@@ -226,7 +460,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
 * __Abilities:__
   * __Changed Self Repair__ _Spend a full turn to heal_
     * __Change:__ Can now be done every turn rather than every 3 turns.
-    * __Reasoning:__ Because Automaton's can't drink potions and self repair takes a full turn, the situations where using this ability two turns in a row are necessary should be more common than situations where it is abused.
+    * __Reasoning:__ Because Automata can't drink potions and self repair takes a full turn, the situations where using this ability two turns in a row are necessary should be more common than situations where it is abused.
   
   
 
@@ -272,7 +506,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
 * __Abilities:__
   * __Changed Glory__ _When you are at low health, double your damage._
     * __Change:__ Now activates at 25% health instead of 10% health.
-    * __Reasoning:__ Even at low level, 10% health isn't much. Increasing the activation percentage to 25% makes this ability actually useful.
+    * __Reasoning:__ Even at high level, 10% health isn't much. Increasing the activation percentage to 25% makes this ability actually useful.
   * __Changed Taunt:__ _SP save. On failure, force all within 30ft. to attack only you._
     * __Change:__ Now costs 1 action point.
     * __Reasoning:__ Makes taunt use more tactical.
@@ -293,8 +527,6 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
     * __Changed Shield Up:__ _Half damage from targeted ranged attacks._
       * __Change:__ Clarified that Shield Up works for non-magic, targeted attacks (e.g. not a lightning bolt).
       * __Reasoning:__ This was the intention of the ability.
-    * __Removed Taunt:__ _Force enemies to attack you if they fail a Spell Power Save._
-      * __Reasoning:__ Ability bloat. May add a knight subclass and add taunt to it in the future.
     * __Removed Hold the Line:__ _Advantage on attacks when an ally is down._
       * __Reasoning:__ Redundant with Last Line of Defense _Extra damage when an ally is down_. Rolling more damage is easier than advantage.
     * __Changed Steel Yourself:__ _Choose to take half damage from an attack._
@@ -315,7 +547,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
       * __Change:__ Damage now scales with the weapon you are holding rather than just being +1d6.
       * __Reasoning:__ Scales better to higher levels.
     * __Removed Sinner's Bane:__ _Extra damage to undead._
-      * __Reasoning:__ Redundant with Hammer of Light _Extra damage to undead._.
+      * __Reasoning:__ Redundant with Hammer of Light _Extra damage to undead._
   
   
 
@@ -325,7 +557,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
   * __Changed Leaping Strike__ _Leap forward to deal extra damage. LV0 1d6, LV5 2d6, LV10 3d6._
     * __Change:__ Now costs 1 action point rather than 0.
     * __Reason:__ In line with new action point rules.
-  * __Inseparable___  _Offhand. Teleport yourself to your animal or vice versa._
+  * __Inseparable__  _Offhand. Teleport yourself to your animal or vice versa._
     * __Change:__ Now costs 1 action point rather than 0.
     * __Reason:__ In line with new action point rules.
   
@@ -392,12 +624,12 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
     * __Reasoning:__ Increases the value of this capstone ability.
   * __Changed Minor Medicine:__ _Level 0, Create a health potion once per day (lasts 24 hours)_
     * __Change:__ Removed requirement that you must be in your favorite terrain. Ability now creates a _Salve_ (heals 1d6+2 at
-      the time of this writing). The ability used to create a 1d20 health potion.
+      the time of this writing). The ability previously created a 1d20 health potion.
     * __Reasoning:__ Favorite terrain requirement was restrictive. New health regained is in line with level system health.
       Creating a _Salve_ means that the ability will scale more easily with any future health balancing changes.
   * __Changed Greater Medicine:__ _Level 7, Create a health potion once per day (lasts 24 hours)_
     * __Change:__ Removed requirement that you must be in your favorite terrain. Ability now creates a _Minor Health Potion_ (heals 1d12+3 at
-      the time of this writing). The ability used to create 2 1d20 health potions.
+      the time of this writing). The ability previously created 2 1d20 health potions.
     * __Reasoning:__ Favorite terrain requirement was restrictive. New health regained is in line with level system health.
       Creating a _Minor Health Potion_ means that the ability will scale more easily with any future health balancing changes.
   * __Changed Monster Slayer:__ _Additional damage vs monsters._
@@ -409,7 +641,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
   
 #### Rouge:
 * __Abilities:__
-  * __Added Subclass Thief Ability Soft Landing:__ ___Level 7, Reduce any falling damage by 20 feet.___
+  * __Added Subclass Thief Ability Soft Landing:__ _Level 7, Reduce any falling damage by 20 feet._
   
   
 
@@ -424,7 +656,7 @@ To see the result of the changes, please view the ```Race``` and ```Class``` sec
       The ability was updated to add a 2 dice of damage rather than a static 1d10.
   * __Boozehound is now a base ability:__
     * __Reasoning:__ Subclassing to bard no longer gives you increased alcohol tolerance.
-  * __Removed multi-action__ _Grants the wielder an extra action ever 3 turns._
+  * __Removed multi-action__ _Grants the wielder an extra action every 3 turns._
     * __Reasoning:__ Multi-action been replaced with offhand attacks and spells.
   * __Changed Restful Melody:__ _Grant your party extra health when resting._
     * __Change:__ Restful Melody has been split into three abilities tiers (lesser, greater, major)

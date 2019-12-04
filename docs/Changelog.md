@@ -25,8 +25,11 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
+   * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. November 23, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-november-23-2019)  
      * [Overview:](#overview)  
+     * [Ability Changes](#ability-changes)  
+   * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
+     * [Overview:](#overview-1)  
      * [Rule Changes:](#rule-changes)  
      * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes)  
@@ -38,6 +41,28 @@ show_download: false
      * [Race Balance Changes:](#race-balance-changes-1)  
      * [Class Balance Changes:](#class-balance-changes-1)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
+
+  
+## Rangers and Ruffians 2.1.2: The Action Point Economy Update. November 23, 2019
+  
+  
+
+  
+### Overview:
+This revision:
+1. Adds many abilities to the action point economy.
+2. Modifies leveling up so that at each odd level players gain 1 stat point.
+3. Fixes a bug which was causing disadvantages not to be displayed on the site.
+  
+  
+  
+  
+
+  
+### Ability Changes
+Added an action point cost to the following abilities: __Berserk__, __Furious Blows__, __Repeating Shot__, __Called Shot__, __Detect Magic__, __From the Hip__, __Minor Medicine__, __Greater Medicine__, __Major Medicine__, __Disengage__, __Wild Sight__, __Penetration__, __Shield Bash__, __Shield of Men__, __Swoon__, __Fix Your Eyes on Me__, __Spirit of Rage__, __Reflexes__, __Disappear__, __Ascended Action__, __Aura of Advantage__, __Angelic Wings__, __Volley__, __Twin Blade Parry__, __Gumption__, __Spurred to Movement__.
+  
+  
 
   
 ## Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019

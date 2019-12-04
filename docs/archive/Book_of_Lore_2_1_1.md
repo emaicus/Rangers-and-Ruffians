@@ -1,18 +1,36 @@
 ---
 
-banner_image_path: /docs/images/backdrops/lore.jpg
+landscape_banner_path: /docs/images/backdrops/landscape_lore.jpg
 
-banner_image_link: https://www.deviantart.com/000fesbra000/art/Lord-of-the-Sword-Conquest-of-the-faithless-697268211
+landscape_banner_link: https://www.deviantart.com/000fesbra000/art/Lord-of-the-Sword-Conquest-of-the-faithless-697268211
 
-banner_image_name: Lord of the Sword - Conquest of the faithless
+landscape_banner_name: Lord of the Sword - Conquest of the faithless
 
-banner_image_artist: 000Fesbra000
+landscape_banner_artist: 000Fesbra000
 
-banner_image_artist_link: https://www.deviantart.com/000fesbra000
+landscape_banner_artist_link: https://www.deviantart.com/000fesbra000
 
-banner_image_license: CC BY-NC-ND 3.0
+landscape_banner_license: CC BY-NC-ND 3.0
 
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+
+
+portrait_banner_path: /docs/images/backdrops/portrait_lore.jpg
+
+portrait_banner_link: https://www.deviantart.com/agnes-green/art/Love-731732518
+
+portrait_banner_name: Love
+
+portrait_banner_artist: agnes-green
+
+portrait_banner_artist_link: https://www.deviantart.com/agnes-green
+
+portrait_banner_license: CC BY-NC-ND 3.0
+
+portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+
 
 title: The Book of Lore
 
@@ -24,7 +42,7 @@ show_download: false
 
   
 # Book of Lore
-_Version 2.1.0_  
+_Version 2.1.1_  
 
    * [The Pantheon](#the-pantheon)  
      * [Gods of Light](#gods-of-light)  
@@ -66,10 +84,10 @@ __Gifts:__
   
 * __Level 0__  
   * __Lawbringer:__ Followers of Iro have advantage when speaking with lawmen.  
-* __Level 10__  
-  * __Fortify:__ At the cost of one spell point, add 1d6 armor to yourself or another for one day.  
 * __Level 5__  
   * __Iro'S Judgement:__ As an action, call on Iro to judge an individual. If he judges them impure, take advantage in all attacks against them.  
+* __Level 10__  
+  * __Fortify:__ At the cost of one spell point, add 1d6 armor to yourself or another for one day.  
 
   
 #### Aunora
@@ -79,10 +97,10 @@ __Gifts:__
   
 * __Level 0__  
   * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d4 to all healing rolls.  
-* __Level 10__  
-  * __Major Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d12 to all healing rolls.  
 * __Level 5__  
   * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d6 to all healing rolls.  
+* __Level 10__  
+  * __Major Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d12 to all healing rolls.  
 
   
 #### Eandar
@@ -93,10 +111,10 @@ __Gifts:__
 * __Level 0__  
   * __God Of The Common Man:__ Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.  
   * __Distrusted By Authorities:__ Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.  
-* __Level 10__  
-  * __Greater Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.  
 * __Level 5__  
   * __The Helpful God:__ Your spells which buff your allies have extra potency. Depending on the spell, this may mean increasing the effect by one, for example by granting +2 strength instead of +1, or giving them an inspiration dice that is one size larger.  
+* __Level 10__  
+  * __Greater Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.  
 
   
 #### Juliet
@@ -106,12 +124,12 @@ __Gifts:__
   
 * __Level 0__  
   * __Minor Goddess Of Luck:__ Gain 1 luck token above your maximum.  
+* __Level 5__  
+  * __Greater Goddess Of Luck:__ Gain 2 luck tokens above your maximum.  
 * __Level 10__  
   * __Always Lucky:__ Regain 1d4 luck tokens during a short rest.  
 * __Level 15__  
   * __Major Goddess Of Luck:__ Gain 3 luck tokens above your maximum.  
-* __Level 5__  
-  * __Greater Goddess Of Luck:__ Gain 2 luck tokens above your maximum.  
 
   
 #### Raghnal
@@ -122,10 +140,10 @@ __Gifts:__
 * __Level 0__  
   * __God Of Knowledge:__ You have advantage on intelligence checks.  
   * __Minor God Of Intelligence:__ Gain one effective intelligence, and the corresponding spell point.  
-* __Level 10__  
-  * __Major God Of Intelligence:__ Gain three effective intelligence, and the corresponding 3 spell points.  
 * __Level 5__  
   * __Greater God Of Intelligence:__ Gain two effective intelligence, and the corresponding 2 spell points.  
+* __Level 10__  
+  * __Major God Of Intelligence:__ Gain three effective intelligence, and the corresponding 3 spell points.  
 
   
 #### Hesh
@@ -135,11 +153,11 @@ __Gifts:__
   
 * __Level 0__  
   * __Goddes Of The Water:__ You are able to manipulate small amounts of water at will. For example, you may stop rain from falling on your head, or lift water out of a bucket.  
-* __Level 10__  
-  * __Goddess Of The Icy Depths:__ You take half damage from cold attacks, and have advantage on spell power saves against being slowed.  
 * __Level 5__  
   * __Waterbreathing:__ You are able to breathe underwater.  
   * __Goddess Of Navigation:__ You have advantage on tracking checks, and may add 1d6 to any roles involving steering, guiding, or working on a ship.  
+* __Level 10__  
+  * __Goddess Of The Icy Depths:__ You take half damage from cold attacks, and have advantage on spell power saves against being slowed.  
 
   
 #### Ronar
@@ -150,11 +168,11 @@ __Gifts:__
 * __Level 0__  
   * __God Of Protection:__ As an offhand action, grant an all +1 armor for a turn or 10 minutes.  
   * __God Of The Woods:__ You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.  
-* __Level 10__  
-  * __God Of Growing:__ At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with Photosynthesis.  
 * __Level 5__  
   * __God Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
   * __God Of Conflict Resolution:__ Gain advantage on any charisma checks made to end a fight.  
+* __Level 10__  
+  * __God Of Growing:__ At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with Photosynthesis.  
 
   
 #### Yilena
@@ -165,11 +183,11 @@ __Gifts:__
 * __Level 0__  
   * __Goddess Of The Woods:__ You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.  
   * __Goddess Of The Hunt:__ Gain advantage on any tracking and foraging checks. Your spells also have extra potency when cast on beasts. Depending on the spell, this can add an additional dice of damage, healing an extra turn of duration, or give a beast advantage or disadvantage on relavant checks.  
-* __Level 10__  
-  * __Warden Of The Woods:__ You are able to commune with all of nature around you for one mile, gaining some level of understanding about the lay of the land, and where enemies may be hiding.  
 * __Level 5__  
   * __Darkvision:__ You gain the darkvision ability.  
   * __Goddess Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
+* __Level 10__  
+  * __Warden Of The Woods:__ You are able to commune with all of nature around you for one mile, gaining some level of understanding about the lay of the land, and where enemies may be hiding.  
 
   
 #### Naris
@@ -180,14 +198,14 @@ __Gifts:__
 * __Level 0__  
   * __Goddess Of Rest:__ As a follower of Naris, you and all allies naturally heal 1d4 additional from any rest you take.  
   * __Goddess Of Growth:__ You have advantage on any rolls which involve planting or otherwise growing something.  
-* __Level 10__  
-  * __Major Goddess Of Rest:__ As a champion of Naris, you and all allies naturally heal 1d12 more from any rest that you take.  
-  * __Beacon Of Growth:__ Where you trod, green grass grows, and nature itself makes way for your passing. As a result, you have advantage on checks made when moving through difficult natural terrain.  
-  * __Ceremony Of Fertility:__ You are able to bless newlyweds and those seeking children to increase their fertility.  
 * __Level 5__  
   * __Greater Goddess Of Rest:__ As a devoted follower of Naris, you and all allies naturally heal 1d6 more from any rest that you take.  
   * __Ceremony Of Growing:__ You may make offerings and prayers to Naris to bless the growth of crops or animals.  
   * __Goddess Of Animal Husbandry:__ You have advantage on animal handling checks.  
+* __Level 10__  
+  * __Major Goddess Of Rest:__ As a champion of Naris, you and all allies naturally heal 1d12 more from any rest that you take.  
+  * __Beacon Of Growth:__ Where you trod, green grass grows, and nature itself makes way for your passing. As a result, you have advantage on checks made when moving through difficult natural terrain.  
+  * __Ceremony Of Fertility:__ You are able to bless newlyweds and those seeking children to increase their fertility.  
 
   
 ### Gods of Darkness
@@ -200,10 +218,10 @@ __Gifts:__
   
 * __Level 0__  
   * __Minor God Of Death:__ You have access to tier zero spells from the macabre manual.  
-* __Level 10__  
-  * __Major God Of Death:__ You have access to tier two spells from the macabre manual.  
 * __Level 5__  
   * __Greater God Of Death:__ You have access to tier one spells from the macabre manual.  
+* __Level 10__  
+  * __Major God Of Death:__ You have access to tier two spells from the macabre manual.  
 
   
 #### Melekar
@@ -213,12 +231,12 @@ __Gifts:__
   
 * __Level 0__  
   * __Lord Of Cruelty:__ Add an additional dice of damage to any of your magic attacks.  
-* __Level 10__  
-  * __Major Lord Of Cruelty:__ Add three additional damage dice to any of your magic attacks.  
-  * __Major Harvester Of Souls:__ Every time an enemy is slain near you, gain an action point.  
 * __Level 5__  
   * __Greater Lord Of Cruelty:__ Add two additional damage dice to any of your magic attacks.  
   * __Harvester Of Souls:__ Every time you slay an enemy, regain an action point.  
+* __Level 10__  
+  * __Major Lord Of Cruelty:__ Add three additional damage dice to any of your magic attacks.  
+  * __Major Harvester Of Souls:__ Every time an enemy is slain near you, gain an action point.  
 
   
 #### The Void Father
@@ -228,12 +246,12 @@ __Gifts:__
   
 * __Level 0__  
   * __Oblivion:__ You do not dream, and you cannot be affected by sleep based spells.  
-* __Level 10__  
-  * __Shepard Of Darkness:__ You have advantage on any charisma or intimidation checks used to break someone's spirit.  
-  * __Lamb To The Slaughter:__ If an entity's spirit has been broken, have them make an inner fire saving throw against your spell power. On failure, any moves that they make must inflict self harm.  
 * __Level 5__  
   * __Ward Of Antimagic:__ Once per day, choose to shrug off the effects of a spell.  
   * __Ceremony Of Sleep:__ When you kill an entity, you may make another attack against its soul to destroy it.  
+* __Level 10__  
+  * __Shepard Of Darkness:__ You have advantage on any charisma or intimidation checks used to break someone's spirit.  
+  * __Lamb To The Slaughter:__ If an entity's spirit has been broken, have them make an inner fire saving throw against your spell power. On failure, any moves that they make must inflict self harm.  
 
   
 #### Lady Dusk
@@ -243,10 +261,10 @@ __Gifts:__
   
 * __Level 0__  
   * __Ever Of Use:__ Once per day, channel the power of Lady Dusk to gain advantage on a check.  
-* __Level 10__  
-  * __No Mercy For The Weak:__ Any action that you take against an entity on death's door instantly slays the entity.  
-  * __Of Use:__ Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.  
 * __Level 5__  
   * __Purge The Useless:__ You gain advantage on attacks made against any entity that is sick or cursed.  
   * __Ceremony Of Evaluation:__ You are able to evaluate any entity to gain an understanding of it's significance in Lady Dusk's eyes. If the creature is deemed to be insignificant, gain advantage in all attacks made against it.  
+* __Level 10__  
+  * __No Mercy For The Weak:__ Any action that you take against an entity on death's door instantly slays the entity.  
+  * __Of Use:__ Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.  
 

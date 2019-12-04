@@ -1,18 +1,36 @@
 ---
 
-banner_image_path: /docs/images/backdrops/character_creation.jpg
+landscape_banner_path: /docs/images/backdrops/landscape_character_creation.jpg
 
-banner_image_link: https://www.deviantart.com/hifarry/art/Tavern-Meeting-742777343
+landscape_banner_link: https://www.deviantart.com/hifarry/art/Tavern-Meeting-742777343
 
-banner_image_name: Tavern Meeting
+landscape_banner_name: Tavern Meeting
 
-banner_image_artist: hifarry
+landscape_banner_artist: hifarry
 
-banner_image_artist_link: https://www.deviantart.com/hifarry
+landscape_banner_artist_link: https://www.deviantart.com/hifarry
 
-banner_image_license: CC BY-NC-ND 3.0
+landscape_banner_license: CC BY-NC-ND 3.0
 
-banner_image_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+
+
+portrait_banner_path: /docs/images/backdrops/portrait_character_creation.jpg
+
+portrait_banner_link: https://www.deviantart.com/zezhou/art/Knight-of-Lies-562010429
+
+portrait_banner_name: Knight of Lies
+
+portrait_banner_artist: Zezhou
+
+portrait_banner_artist_link: https://www.deviantart.com/zezhou
+
+portrait_banner_license: CC BY-NC-ND 3.0
+
+portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
+
+
 
 title: The Compendium of Character Creation
 
@@ -24,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.1.0_  
+_Version 2.1.1_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -205,7 +223,7 @@ you with minor stat increases and a handful of starting abilities. Any race shou
 class, though some pairings will start out slightly stronger than others. That's fine, though! It will all balance out in the end!
   
 ### Automaton
-<img src='images/race/female/automaton.jpg' class="raceClassImage" />
+<img src='images/race/male/automaton.jpg' class="raceClassImage" />
 
 "[Rose"](https://www.deviantart.com/vagocool/art/Rose-488273011) by Vagocool is licensed under [CC BY-ND 3.0](https://creativecommons.org/licenses/by-nd/3.0/)  
 >Well, for a time, I was working on a project to produce artificial life forms, automata, if you will. The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does the automaton.
@@ -228,13 +246,13 @@ __Automaton Abilities:__
   * __Repair:__ You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.  
   * __Upgrades:__ A tinker can craft upgrades for you.  
 * __General Abilities:__   
-  * __Overdrive:__ Spend 5 health per turn (or 1 health per minute) to increase your strength and dexterity by 3.  
+  * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
   * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
   * __Armored Exterior:__ You naturally have an armor of 1.  
 * __Combat Abilities:__   
   * __Self Repair:__ During combat, you can self repair in place of a full turn.  
   * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
-  * __Piston Punch:__ You may perform a 1d6 strength based punch on an enemy of your choice. On a critical hit, the enemy is knocked prone.  
+  * __Piston Punch:__ _(Cost 1)_ You may perform a 1d6 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone. Enemies larger than your size take advantage, smaller take disadvantage. At level 4, increase damage to 1d10. At level 8, to 1d12. At level 12 to 2d12.  
   
   
   
@@ -279,8 +297,7 @@ __Catterwol Abilities:__
   * __Predator:__ When tracking, you have advantage on perception checks.  
   * __Loose Skin:__ You have advantage when breaking grapples.  
 * __Combat Abilities:__   
-  * __They're Retractable:__ You have retractable, razor sharp claws capable of doing 1d6 damage.  
-  * __Fast Paws:__ _(Cost 1)_ Gain an additional offhand action.  
+  * __They're Retractable:__ You have retractable, razor sharp claws capable of doing 1d4 damage.  
   
   
   
@@ -288,9 +305,9 @@ ___
 
   
 ### Daemonspawn
-<img src='images/race/female/daemonspawn.jpg' class="raceClassImage" />
+<img src='images/race/male/daemonspawn.jpg' class="raceClassImage" />
 
-"[Jazera"](https://www.deviantart.com/artoflariz/art/Jazera-702870460) by ArtofLariz is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Tiefling Bard Custom DnD Char Comission"](https://www.deviantart.com/surugamonkey/art/Tiefling-Bard-Custom-DnD-Char-Comission-663338002) by SurugaMonkey is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Never trust a daemonspawn, that's what I've alwasy been told. They're as liable to use their dark and terrible magicks as to give you a passing smile. I've never met one though; I've been careful to avoid them.
 >
 >—Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
@@ -302,7 +319,7 @@ The daemonspawn were born of an unholy union between elves and the demons of old
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|-1|1|1|0|-1|1|4|  
+|1|-1|1|0|-1|0|1|4|  
   
   
 __Daemonspawn Abilities:__ 
@@ -312,7 +329,7 @@ __Daemonspawn Abilities:__
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
-  * __Sacrificial Rite:__ At the cost of 10 hp, make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat.  
   
   
   
@@ -344,7 +361,7 @@ __Deep Elf Abilities:__
 * __Advantages:__   
   * __Winged Feet:__ You have advantage on acrobatics checks.  
 * __Combat Abilities:__   
-  * __Counter Attack:__ _(Cost 1)_ Once per round of combat, you may strike back when an enemy attacks you. Role a d20 and add your dexterity. If greater than 15, you land the blow.  
+  * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
   
   
@@ -352,9 +369,9 @@ ___
 
   
 ### Dwarf
-<img src='images/race/female/dwarf.jpg' class="raceClassImage" />
+<img src='images/race/male/dwarf.jpg' class="raceClassImage" />
 
-"[Flaming Swords"](https://www.deviantart.com/patriartis/art/Flaming-Swords-722419104) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[The Hunter"](https://www.deviantart.com/ortsmor/art/The-Hunter-590846159) by ortsmor is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be well placed if you want to bring one down.
 >
 >—Orkinshield, Orc Gunslinger
@@ -385,6 +402,9 @@ ___
 
   
 ### Fleetfoot Halfling
+<img src='images/race/female/fleetfoot_halfling.jpg' class="raceClassImage" />
+
+"[On a Quest"](https://www.deviantart.com/nathanparkart/art/On-a-Quest-721516754) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -401,13 +421,12 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   
 __Fleetfoot Halfling Abilities:__ 
 * __General Abilities:__   
-  * __Carry a Tune:__ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
+  * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Starting Items:__   
-  * __Sling:__ Your character begins their journey with a 1d6 sling.  
+  * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
   * __Padfoot:__ You have advantage on stealth checks.  
-  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
 * __Combat Abilities:__   
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   
@@ -459,9 +478,9 @@ ___
 
   
 ### Goblin
-<img src='images/race/female/goblin.jpg' class="raceClassImage" />
+<img src='images/race/male/goblin.jpg' class="raceClassImage" />
 
-"[Run Through the Jungle"](https://www.deviantart.com/patriartis/art/Run-Through-the-Jungle-717257587) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Goblin archer"](https://www.deviantart.com/fjft-art/art/Goblin-archer-551201383) by FJFT-Art is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >It is a rarity to find a kindly goblin, but when I have, I have found them to be most agreeable companions. Mind you, their penchant for raw flesh can be most off-putting... As can their little yellow eyes. Still, though, if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious ally.
 >
 >—Tamberdoodle, Bard Extraordinare
@@ -492,6 +511,9 @@ ___
 
   
 ### Hardfoot Halfling
+<img src='images/race/female/hardfoot_halfling.jpg' class="raceClassImage" />
+
+"[Houma"](https://www.deviantart.com/junica-hots/art/Houma-743629249) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
 >
 >—Vasha, Catterwol Thief
@@ -509,13 +531,14 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
 __Hardfoot Halfling Abilities:__ 
 * __General Abilities:__   
   * __Warm Butter:__ Your are naturally talented chef. Any food that you cook heals 1d6 health.  
-  * __Soft Bed:__ You recover 2d8 extra health from sleeping in a real bed.  
-  * __Carry a Tune:__ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
+  * __Soft Bed:__ You recover 2d6 extra health from sleeping in a real bed.  
+  * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
 * __Starting Items:__   
-  * __Sling:__ Your character begins their journey with a 1d6 sling.  
-  * __Courageous Blow:__ _(Cost 1)_ Add your Inner Fire to an attack.  
+  * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
   * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
+* __Combat Abilities:__   
+  * __Courageous Blow:__ _(Cost 1)_ Add your Inner Fire to an attack.  
   
   
   
@@ -541,6 +564,8 @@ High elves are among the most magical of the races. Reclusive by nature, high el
   
   
 __High Elf Abilities:__ 
+* __Choices:__   
+  * __Learned:__ You are fluent in an extra language of your choosing.  
 * __General Abilities:__   
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Low-Light Vision:__ You can see in low light.  
@@ -555,10 +580,10 @@ ___
 
   
 ### Hissling
-<img src='images/race/female/hissling.jpg' class="raceClassImage" />
+<img src='images/race/male/hissling.jpg' class="raceClassImage" />
 
 "[Kobold Sketch"](https://www.deviantart.com/kronteisdrawing/art/Kobold-Sketch-796966664) by Kronteisdrawing is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
->So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd see Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
+>So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently, things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there. Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows. So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw? An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks. All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder if they're still down there.
 >
 >—Gillthunder, Human Knight
 
@@ -578,7 +603,7 @@ __Hissling Abilities:__
 * __General Abilities:__   
   * __Small Fry:__ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
   * __All Tuckered Out:__ You must sleep once every six hours, or suffer exhaustion.  
-  * __Tossed Around:__ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is.  
+  * __Tossed Around:__ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is. Take full damage if you hit something as a result.  
 * __Combat Abilities:__   
   * __Chomp Chomp:__ You can make a 1d6 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
   * __Riding High:__ Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.  
@@ -590,9 +615,9 @@ ___
 
   
 ### Human
-<img src='images/race/female/human.jpg' class="raceClassImage" />
+<img src='images/race/male/human.jpg' class="raceClassImage" />
 
-"[Ranger"](https://www.deviantart.com/nathanparkart/art/Ranger-454217001) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Escape"](https://www.deviantart.com/gkb3rk/art/Escape-464097162) by gkb3rk is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Humans are good, but a little bit tough. That's why you have to eat them raw.
 >
 >—Orkensheild, Orc Archer
@@ -623,7 +648,7 @@ ___
 
   
 ### Kragraven
-<img src='images/race/female/kragraven.jpg' class="raceClassImage" />
+<img src='images/race/male/kragraven.jpg' class="raceClassImage" />
 
 "[The Reaping Raven"](https://www.deviantart.com/foxtrack/art/The-Reaping-Raven-by-burdfish-396214428) by Foxtrack is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >I don't trust them, those bird-men that live to the west. Don't trust them one bit.
@@ -655,9 +680,9 @@ ___
 
   
 ### Lizkin
-<img src='images/race/female/lizkin.jpg' class="raceClassImage" />
+<img src='images/race/male/lizkin.jpg' class="raceClassImage" />
 
-"[Naphas alchemist"](https://www.deviantart.com/themefinland/art/Naphas-alchemist-Glimpse-of-Luna-trading-card-760806047) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+"[Cleric of the three moons"](https://www.deviantart.com/themefinland/art/Cleric-of-the-three-moons-709879645) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
 >
 >—Mister Li, Gnomeish Monk
@@ -682,7 +707,7 @@ __Lizkin Abilities:__
   * __Color Choice:__ _(Cost 1)_ You may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used. This may be used to gain advantage on a stealth check.  
   * __Smokevision:__ Your double eyelids allows you to see well when underwater or in smoke.  
 * __Combat Abilities:__   
-  * __Poison Bite:__ _(Cost 1)_ You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw.  
+  * __Poison Bite:__ _(Cost 1)_ You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw. At level 5, increase this damage to 1d12. At level 8, increase it to 10, increase it to 2d12.  
   
   
   
@@ -714,7 +739,7 @@ __Orc Abilities:__
   * __Predator:__ When tracking, you have advantage on perception checks.  
 * __Combat Abilities:__   
   * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
-  * __Thunderous Blow:__ _(Cost 2)_ Roll an extra dice for your attack.  
+  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack.  
   * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
   
   
@@ -748,7 +773,7 @@ __Sprout Abilities:__
   * __Commune with Nature:__ You are naturally able to speak with plants and animals.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
   * __Blade of Grass:__ Summon a 1d6 blade of woven plant fiber on command.  
-  * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 defense and loose 2 dexterity.  
+  * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but loose 2 dexterity. Does not stack with other armor.  
 * __Advantages:__   
   * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
@@ -785,7 +810,7 @@ __Waterborn Abilities:__
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
   * __Become Mist:__ _(Cost 1)_ Spend one action point to become mist to have an attack pass right through you as a reaction.  
-  * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed.  
+  * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed, and you gain advantage on charisma checks with them.  
   
   
   
@@ -818,7 +843,7 @@ __Wood Elf Abilities:__
   * __Winged Feet:__ You have advantage on acrobatics checks.  
   * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
 * __Combat Abilities:__   
-  * __Counter Attack:__ _(Cost 1)_ Once per round of combat, you may strike back when an enemy attacks you. Role a d20 and add your dexterity. If greater than 15, you land the blow.  
+  * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
   
   
@@ -846,18 +871,13 @@ Some of the best marksmen in the world, archers are naturals with ranged weapons
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-1|-2|0|1|1|4|  
+|-3|1|-1|-2|0|2|1|4|  
   
   
 __Archer Abilities:__ 
-* __General Abilities:__   
-  * __Fletcher:__ You know how to craft your own arrows, and always seem to have some on hand.  
 * __Starting Items:__   
   * __Longbow:__ You begin your journey with a d6 longbow.  
   * __Boot Knife:__ You carry a hidden d6 knife in your boot.  
-* __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
-  * __Huntsman:__ You have advantage when attacking beasts.  
   
   
 __Level 0 Archer__
@@ -878,7 +898,6 @@ __Level 1 Archer__
   
   
 * __Combat Abilities:__   
-  * __Arrow Stab:__ You can stab an enemy with an arrow for 1d6 damage.  
   * __Crippling Shot:__ You can aim at an opponents knees for 1d4 damage, making them go prone on a critical hit.  
   
   
@@ -1032,10 +1051,6 @@ __Barbarian Abilities:__
 * __Advantages:__   
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
-  * __Intimidate:__ You have advantage on intimidation checks.  
-* __Combat Abilities:__   
-  * __Berserk:__ Once per rest, you can go into a rage, giving you +1 strength and dexterity, but decreasing your intelligence and perception by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
-  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
   
 __Level 0 Barbarian__
@@ -1045,7 +1060,7 @@ __Level 0 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Berserk:__ Once per rest, you can go into a rage, giving you +1 strength and dexterity, but decreasing your intelligence and perception by 3. A rage lasts for 1 hour. Coming out of a rage prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
+  * __Berserk:__ Once per rest, you can go into a rage, giving you +1 effective strength and dexterity, but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
   * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
   
@@ -1081,8 +1096,7 @@ __Level 4 Barbarian__
 __Level 5 Barbarian__
 
 * __Combat Abilities:__   
-  * __Blind Rage:__ You make all spell saving throws with advantage while going berserk.  
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
+  * __Always Angry:__ You may now go berserk once per battle.  
   
   
 __Level 6 Barbarian__
@@ -1094,7 +1108,6 @@ __Level 6 Barbarian__
 __Level 7 Barbarian__
 
 * __Combat Abilities:__   
-  * __Always Angry:__ You may now go berserk once per battle.  
   * __Furious Blows:__ When going berserk, you can make two attacks in a single action.  
   
   
@@ -1119,7 +1132,7 @@ __Level 10 Barbarian__
 __Level 11 Barbarian__
 
 * __Combat Abilities:__   
-  * __Warmaster:__ Going berserk now gives you an additional +1 strength and inner fire.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
   
   
 __Level 12 Barbarian__
@@ -1166,20 +1179,10 @@ Showmen by nature, Bards are known for their skills at performing and distractin
   
   
 __Bard Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __My Father's Oboe:__ You are proficient and start with two instruments of your choice.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-* __Starting Items:__   
-  * __The Bard's Songbook:__ You can learn spells from the Bard's Songbook.  
 * __Advantages:__   
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-  * __Slight of Hand:__ You have advantage when performing slight of hand actions.  
   
   
 __Level 0 Bard__
@@ -1203,14 +1206,14 @@ __Level 0 Bard__
   
 * __Advantages:__   
   * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-  * __Slight of Hand:__ You have advantage when performing slight of hand actions.  
+  * __Sleight of Hand:__ You have advantage when performing sleight of hand actions.  
   
   
 __Level 1 Bard__
 
 * __General Abilities:__   
   * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
-  * __Minor Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 1d8 healing.  
+  * __Minor Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an extra dice of healing.  
   
   
 * __Combat Abilities:__   
@@ -1267,7 +1270,7 @@ __Level 7 Bard__
   
 * __General Abilities:__   
   * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
-  * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 2d8 healing.  
+  * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an two dice of healing healing.  
   
   
 __Level 8 Bard__
@@ -1299,7 +1302,7 @@ __Level 10 Bard__
 __Level 11 Bard__
 
 * __General Abilities:__   
-  * __Major Restful Melody:__ _(Cost 1)_ When your party is resting, you may perform a song for them which grants them an extra 3d8 healing.  
+  * __Major Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an extra three dice of healing.  
   
   
 __Level 12 Bard__
@@ -1346,28 +1349,20 @@ For the Beastmaster 'Animal Person' is an understatement. Beastmaster's begin th
   
   
 __Beastmaster Abilities:__ 
-* __Rules:__   
-  * __Pup:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
-* __Choices:__   
-  * __Animal Companion:__ At the beginning of your journey, you may choose a an animal companion. See the book of known beasts for stats.  
-  * __Favorite Terrain:__ At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage on any check related to the terrain, and may take advantage on an action every third turn during combat.  
-* __General Abilities:__   
-  * __Animal Magnetism:__ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
   
   
 __Level 0 Beastmaster__
 
-* __Rules:__   
-  * __Pup:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
-  
-  
 * __Choices:__   
-  * __Animal Companion:__ At the beginning of your journey, you may choose a an animal companion. See the book of known beasts for stats.  
-  * __Favorite Terrain:__ At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage on any check related to the terrain, and may take advantage on an action every third turn during combat.  
+  * __Animal Companion:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
   
   
 * __General Abilities:__   
   * __Animal Magnetism:__ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
+  
+  
+* __Advantages:__   
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
 __Level 1 Beastmaster__
@@ -1389,7 +1384,7 @@ __Level 2 Beastmaster__
 __Level 3 Beastmaster__
 
 * __Combat Abilities:__   
-  * __Leaping Strike:__ _(Cost 1)_ Leap 5 feet forward to attack an enemy, dealing 1d6 additional damage. At level five, damage increases to 2d6. At level ten, it increases to 3d6.  
+  * __Leaping Strike:__ _(Cost 1)_ Leap 5 feet forward to attack an enemy, dealing an additional dice of damage. This distance can be added to your movement, but must be used to land an attack.  
   * __Huntsman:__ You have advantage when attacking beasts.  
   
   
@@ -1403,10 +1398,6 @@ __Level 5 Beastmaster__
 
 * __General Abilities:__   
   * __Dog Pile:__ Any sleep taken while with your animal companion counts as sleep in a bed.  
-  
-  
-* __Advantages:__   
-  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
 * __Combat Abilities:__   
@@ -1462,7 +1453,7 @@ __Level 12 Beastmaster__
 __Level 13 Beastmaster__
 
 * __General Abilities:__   
-  * __Dominate:__ _(Cost 1)_ You may attempt to dominate an enemy. If they fail an inner fire saving throw, they must obey you. They can attempt a saving throw every turn thereafter.  
+  * __Dominate:__ _(Cost 1)_ You may attempt to dominate an enemy. If they fail an inner fire saving throw, they must obey you. They can attempt a saving throw every turn thereafter or if you give them an order that causes them significant distress.  
   
   
 __Level 14 Beastmaster__
@@ -1492,20 +1483,12 @@ After pledging their allegiance to their deity, Clerics have made it their duty 
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|-2|2|0|1|-1|2|2|  
+|-3|-1|2|0|1|-2|2|2|  
   
   
 __Cleric Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 0 Cleric__
@@ -1676,16 +1659,8 @@ Gaurdians of nature, most druids prefer to live in tribes in the forests, mounta
   
   
 __Druid Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Druid's Field Guide:__ You can learn spells from the Druid's Field Guide.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 0 Druid__
@@ -1841,20 +1816,22 @@ Fighters are powerful strength or dexterity based warriors. Unlike the knight, f
   
   
 __Fighter Abilities:__ 
-* __Combat Abilities:__   
-  * __Trained Attack:__ _(Cost 1)_ Re-roll an attack after you make it.  
   
   
 __Level 0 Fighter__
 
+* __General Abilities:__   
+  * __Determination:__ _(Cost 1)_ Gain a d10 inspiration dice as an offhand action.  
+  
+  
 * __Combat Abilities:__   
-  * __Trained Attack:__ _(Cost 1)_ Re-roll an attack after you make it.  
+  * __Focused Attack:__ _(Cost 1)_ Re-roll an attack after you make it.  
   
   
 __Level 1 Fighter__
 
 * __General Abilities:__   
-  * __Determination:__ _(Cost 1)_ Gain a d10 inspiration dice as an offhand action.  
+  * __Minor Second Wind:__ _(Cost 1)_ Heal yourself for 1d6 damage as an offhand action.  
   
   
 __Level 2 Fighter__
@@ -1865,10 +1842,6 @@ __Level 2 Fighter__
   
 __Level 3 Fighter__
 
-* __General Abilities:__   
-  * __Minor Second Wind:__ _(Cost 1)_ Heal yourself for 1d6 damage as an offhand action.  
-  
-  
 * __Combat Abilities:__   
   * __Resolve:__ When your health drops below 25%, all attacks do half damage against you.  
   
@@ -1881,6 +1854,10 @@ __Level 4 Fighter__
   
 __Level 5 Fighter__
 
+* __General Abilities:__   
+  * __Greater Second Wind:__ _(Cost 1)_ Heal yourself for 1d12 damage as an offhand action.  
+  
+  
 * __Combat Abilities:__   
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   * __Reduced Critical:__ You perform a critical hit if you roll one less than your die's number of sides.  
@@ -1952,9 +1929,9 @@ ___
 
   
 ### Gunslinger
-<img src='images/class/female/gunslinger.jpg' class="raceClassImage" />
+<img src='images/class/gunslinger.jpg' class="raceClassImage" />
 
-"[Commission: Lauryn"](https://www.deviantart.com/marcelafreire/art/Commission-Lauryn-734065398) by  MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Spellslinger"](https://www.deviantart.com/soldevia/art/Spellslinger-609290699) by SolDevia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
@@ -1966,13 +1943,6 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
   
   
 __Gunslinger Abilities:__ 
-* __Choices:__   
-  * __This is my Weapon:__ Your gun is the only friend you need. Make sure to give it a name.  
-  * __Gunslinger or Marksman:__ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
-* __Advantages:__   
-  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
-* __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
   
   
 __Level 0 Gunslinger__
@@ -2009,8 +1979,8 @@ __Gunslinger Abilities__
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Bayonet:__ You can affix a blade to your rifle, which functions as a 1d6 bayonet.  
-  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush at least 10 feet, doing an additional dice of damage to whoever you your target. The target must win at a contested strength check or fall prone.  
+  * __Bayonet:__ You can affix a dagger to your rifle, which functions as a bayonet.  
+  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush at least 10 feet, doing an additional dice of damage to your target. The target must win at a contested strength check or fall prone.  
   
   
 __Level 2 Gunslinger__
@@ -2154,9 +2124,9 @@ ___
 
   
 ### Highborn
-<img src='images/class/female/highborn.jpg' class="raceClassImage" />
+<img src='images/class/highborn.jpg' class="raceClassImage" />
 
-"[Commission: Selena Rosewood"](https://www.deviantart.com/marcelafreire/art/Commission-Selena-Rosewood-785212777) by MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Before I leave"](https://www.deviantart.com/maxprodanov/art/Before-I-leave-749261058) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
@@ -2170,15 +2140,11 @@ Highborns were born into a noble house and have connections and money as a resul
 __Highborn Abilities:__ 
 * __General Abilities:__   
   * __Lightweight:__ Any cup of alcohol affects you like two.  
-  * __Happy Smiles:__ Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
 * __Starting Items:__   
   * __My Father's Coffers:__ Begin your journey with 1000 extra gold pieces.  
-  * __The Family Sword:__ Begin your journey with a 1d8 sword with a ruby on its hilt and an engraving of your family's sigil.  
+  * __The Family Sword:__ Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving of your family's sigil.  
 * __Advantages:__   
   * __Beauty Incarnate:__ Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.  
-  * __My People:__ Gain advantage when speaking with guards and +2 charisma when speaking with citizens in your family's territory.  
-* __Combat Abilities:__   
-  * __Swoon:__ During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake up after one turn.  
   
   
 __Level 0 Highborn__
@@ -2214,7 +2180,7 @@ __Level 3 Highborn__
   
   
 * __Combat Abilities:__   
-  * __Disarming:__ _(Cost 0)_ Force an enemy that attacks you to make an inner fire saving throw against your charisma. If they fail, their attack must be made with disadvantage.  
+  * __Disarming:__ _(Cost 0)_ Reaction. Force an enemy that attacks you to make an inner fire saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.  
   
   
 __Level 4 Highborn__
@@ -2302,9 +2268,9 @@ ___
 
   
 ### Knight
-<img src='images/class/knight.jpg' class="raceClassImage" />
+<img src='images/class/male/knight.jpg' class="raceClassImage" />
 
-"[Vikings : Lagherta the shield maiden"](https://www.deviantart.com/fredrickruntu/art/Vikings-Lagherta-the-shield-maiden-426150632) by fredrickruntu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Warrior Concept"](https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
 Knights are heavy, armored fighters who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able to protect their allies.
@@ -2317,27 +2283,28 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
 __Knight Abilities:__ 
 * __Starting Items:__   
-  * __Armored:__ You begin your journey with a suit of +2 armor light plate.  
-* __Advantages:__   
-  * __Kingsmen:__ Gain advantage on charisma checks when speaking with kingsmen.  
-* __Combat Abilities:__   
-  * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Armored:__ You begin your journey with a chainmail.  
   
   
 __Level 0 Knight__
 
+* __General Abilities:__   
+  * __Shield Master:__ Don't take movement penalties from shield use.  
+  
+  
 * __Advantages:__   
   * __Kingsmen:__ Gain advantage on charisma checks when speaking with kingsmen.  
   
   
 * __Combat Abilities:__   
   * __Shield Bash:__ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 1 Knight__
 
 * __Combat Abilities:__   
-  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 30 feet.  
+  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
   
   
 __Level 2 Knight__
@@ -2348,10 +2315,6 @@ __Level 2 Knight__
   
 __Level 3 Knight__
 
-* __General Abilities:__   
-  * __Shield Up:__ Take half damage from non-magic piercing or blunt force ranged attacks if holding a shield.  
-  
-  
 * __Combat Abilities:__   
   * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
   
@@ -2381,7 +2344,7 @@ __Level 7 Knight__
   
   
 * __General Abilities:__   
-  * __Ready Stance:__ As an offhand action, take up a stance that grants you 1d6 armor until your next turn.  
+  * __Ready Stance:__ As an offhand action, take up a stance that grants you 1d4 armor until your next turn.  
   
   
 __Level 8 Knight__
@@ -2430,7 +2393,7 @@ __Level 14 Knight__
 __Level 15 Knight__
 
 * __Combat Abilities:__   
-  * __Sword of Honor:__ _(Cost 3)_ Imbue your blade with radiant light. The light lasts for 5 turns, and causes your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage on all spell saving throws, and cannot be frightened.  
+  * __Sword of Honor:__ _(Cost 1)_ Imbue your blade with radiant light. The light lasts for 5 turns, and causes your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage on all spell saving throws, and cannot be frightened.  
   
   
   
@@ -2438,9 +2401,9 @@ ___
 
   
 ### Monk
-<img src='images/class/female/monk.jpg' class="raceClassImage" />
+<img src='images/class/monk.jpg' class="raceClassImage" />
 
-"[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Monk Warrior"](https://www.deviantart.com/ekoputeh/art/Monk-Warrior-512015315) by ekoputeh is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Monks are masters of hand to hand combat, who use their extensive control of their bodies to overcome their foes. Monks are able to learn abilities from scrolls, which they may find scattered throughout the world. Monks have dedicated themself to the art of understanding the natural and spiritual world, and are often levelheaded and intelligent. As you create your monk, consider what their goals are. How did they become a monk, and what are they hoping to gain by doing so? How do they react in stressful situations? How do they interact with other people? Are they quiet and reserved? Confident and sure of themself? How will being a monk affect the way you interact with your party?
@@ -2452,14 +2415,8 @@ Monks are masters of hand to hand combat, who use their extensive control of the
   
   
 __Monk Abilities:__ 
-* __Rules:__   
-  * __Learn Fighting Techniques:__ Each time you level up, learn one fighting technique from each fighting technique tier you have access to.  
-* __Spellbooks:__   
-  * __The Book of Chi:__ You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.  
 * __Choices:__   
   * __Starting Fighting Techniques:__ Begin your journey with two standard fighting techniques.  
-* __General Abilities:__   
-  * __Fighting Techniques:__ You may learn a new fighting technique from the book of chi.  
   
   
 __Level 0 Monk__
@@ -2541,25 +2498,12 @@ Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers,
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|-1|1|2|-3|-2|2|2|  
+|-1|0|1|2|-3|-2|2|2|  
   
   
 __Necromancer Abilities:__ 
-* __Rules:__   
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Soul Harvest:__ You may harvest 1 soul from a sentient entity that has died within twenty four hours.  
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Soul Based Magic:__ To fuel your magic, you use the concentrated essence of life, which you are able to harvest from the dead. These "souls" are stored in your soul jar until they are expended on a spell or by an ability. At that time, they escape to the hereafter.  
-* __Spellbooks:__   
-  * __The Macabre Manual:__ You are able to learn spells from the Macabre Manual.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-  * __Vegan:__ At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 2 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
-* __General Abilities:__   
-  * __Mortal Coil:__ Once every week, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.  
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-* __Starting Items:__   
-  * __Soul Jar:__ You have a soul jar, which produces 1d6 souls each day at midnight, the jar can produce 2 souls at maximum. Your soul jar is capable of holding 20 souls at maximum.  
   
   
 __Level 0 Necromancer__
@@ -2735,18 +2679,10 @@ Palidins are Soldiers of the Light, and are adept both at hand to hand combat an
   
   
 __Paladin Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-* __Spellbooks:__   
-  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
 * __Choices:__   
   * __Minor Spell Choice:__ At the start of your journey, you know 1 extra tier zero spells.  
-  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
-  * __Chainmail:__ You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.  
+  * __Armored:__ You begin your journey with a chainmail.  
   
   
 __Level 0 Paladin__
@@ -2825,7 +2761,7 @@ __Level 7 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 30 feet.  
+  * __Shield of Men:__ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
   
   
 __Level 8 Paladin__
@@ -2895,7 +2831,7 @@ ___
 "[Swordman-sketch"](https://www.deviantart.com/josephqiuart/art/Swordman-sketch-702721751) by JosephQuiArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers are powerful dexterity based fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able to easily traverse their favorite terrain, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters. As you create your ranger, consider how they ended up a ranger? How did they become so adept at navigating the wilderness? Do they feel the need to protect villagers? What kinds of monsters have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact with your party?
+Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers are powerful dexterity based fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able to easily traverse the wilds, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters. As you create your ranger, consider how they ended up a ranger? How did they become so adept at navigating the wilderness? Do they feel the need to protect villagers? What kinds of monsters have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact with your party?
   
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
@@ -2904,38 +2840,25 @@ Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers 
   
   
 __Ranger Abilities:__ 
-* __Choices:__   
-  * __Learned:__ You are fluent in an extra language of your choosing.  
 * __General Abilities:__   
   * __Under the Stars:__ You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.  
-  * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
-* __Starting Items:__   
-  * __Shifting Cloak:__ You possess a unique cloak, which takes on the color of your surroundings, giving you a 1d10 bonus to stealth checks made while standing still.  
-* __Advantages:__   
-  * __Camouflage:__ If you stay absolutely still, you can take on the color of your surroundings. This gives you advantage on stealth checks while camouflaged.  
   
   
 __Level 0 Ranger__
 
-* __Choices:__   
-  * __Learned:__ You are fluent in an extra language of your choosing.  
-  
-  
 * __General Abilities:__   
   * __Minor Medicine:__ Spend an hour to create a salve once per day. Salves keep for 24 hours.  
   
   
 * __Advantages:__   
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   * __Camouflage:__ If you stay absolutely still, you can take on the color of your surroundings. This gives you advantage on stealth checks while camouflaged.  
   
   
 __Level 1 Ranger__
 
-* __Choices:__   
-  * __Favorite Terrain:__ At the beginning of your journey, pick a favorite terrain. Whenever you are on it, you have advantage on any check related to the terrain, and may take advantage on an action every third turn during combat.  
-  
-  
 * __Combat Abilities:__   
+  * __Embers:__ _(Cost 1)_ Cast forth fire from your hand with a range of 10 feet. Deals 1d4 damage. This increases to 1d8 at level 3, 1d10 at level 6, 1d12 at level 9, and 2d12 at level 12.  
   * __Entangling Attack:__ _(Cost 1)_ You may attempt to entangle an enemy during one of your attacks using minor magic. The enemy must make an inner fire saving throw against your spell power. On a failure, the entity is ensnared, and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and all attacks made against it have advantage.  
   
   
@@ -2948,11 +2871,11 @@ __Level 2 Ranger__
 __Level 3 Ranger__
 
 * __General Abilities:__   
-  * __Ward of Tracking:__ _(Cost 1)_ Costs one action point. Lay your hand on an opponent. For the next forty-eight hours, you know their position within 100 feet.  
+  * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
   
   
-* __Advantages:__   
-  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+* __Combat Abilities:__   
+  * __Finesse Strike:__ _(Cost 1)_ Add an additional dice of damage to an attack of your choosing. If the affected entity fails an inner fire saving throw against your spell power, it suffers as much bleeding damage at the start of its next turn.  
   
   
 __Level 4 Ranger__
@@ -2965,10 +2888,6 @@ __Level 5 Ranger__
 
 * __Actions:__   
   * __Twin Blades:__ You are able to wield two weapons. You may attack with both in a single action.  
-  
-  
-* __Combat Abilities:__   
-  * __Finesse Strike:__ _(Cost 1)_ Add an additional dice of damage to an attack of your choosing. If the affected entity fails an inner fire saving throw against your spell power, it suffers an additional dice of bleeding damage at the start of its next turn.  
   
   
 __Level 6 Ranger__
@@ -2996,8 +2915,7 @@ __Level 8 Ranger__
 __Level 9 Ranger__
 
 * __Combat Abilities:__   
-  * __Monster Slayer:__ Whenever you attack a beast classified as a monster, do an additional dice of damage on the attack.  
-  * __Disengage:__ Enemies take disadvantage when striking you while you are moving.  
+  * __Elemental Weapon:__ _(Cost 1)_ Change the primary damage die for your weapon to deal elemental damage of your choice. Lasts until dispelled.  
   
   
 __Level 10 Ranger__
@@ -3009,11 +2927,8 @@ __Level 10 Ranger__
 __Level 11 Ranger__
 
 * __General Abilities:__   
-  * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
-  
-  
-* __Combat Abilities:__   
-  * __Disarming Blow:__ On a critical hit, force an enemy to drop something they are holding.  
+  * __Expert Tracker:__ Add 1d6 to any checks made to track an individual.  
+  * __Major Medicine:__ Spend 1 hour to create a Greater Health Potion once per day. Potions last 24 hours.  
   
   
 __Level 12 Ranger__
@@ -3026,10 +2941,6 @@ __Level 13 Ranger__
 
 * __Actions:__   
   * __Offhand Attack:__ You may use an offhand action to make an attack.  
-  
-  
-* __General Abilities:__   
-  * __Expert Tracker:__ Add 1d6 to any checks made to track an individual.  
   
   
 __Level 14 Ranger__
@@ -3049,9 +2960,9 @@ ___
 
   
 ### Rogue
-<img src='images/class/rogue.jpg' class="raceClassImage" />
+<img src='images/class/male/rogue.jpg' class="raceClassImage" />
 
-"[Commission: Adalia"](https://www.deviantart.com/raikoart/art/Commission-Adalia-587270811) by raikoart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
@@ -3065,10 +2976,6 @@ Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues
 __Rogue Abilities:__ 
 * __Starting Items:__   
   * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
-* __Advantages:__   
-  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
-  * __Lightfoot:__ Gain advantage on stealth checks.  
-  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
   
   
 __Level 0 Rogue__
@@ -3119,12 +3026,14 @@ __Level 5 Rogue__
 __Assassin Abilities__  
 * General Abilities:   
   * __Imposter:__ Gain 1d6 on any checks made to imitate someone.  
+  * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
   
   
 __Thief Abilities__  
 * General Abilities:   
   * __Soft Landing:__ Reduce any falling damage by 20 feet.  
   * __Soundless:__ Gain an additional 1d6 on stealth checks.  
+  * __Sticky Fingers:__ Add 1d6 to any check made to steal something.  
   
   
 __Level 6 Rogue__
@@ -3164,12 +3073,12 @@ __Level 9 Rogue__
 __Assassin Abilities__  
 * General Abilities:   
   * __Minor Blink:__ _(Cost 1)_ Teleport to a position you can see within 100 feet.  
-  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Spell of Minor Invisibility:__ _(Cost 1)_ You may use minor magic to make yourself invisible for 5 minutes.  
   
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Flee:__ You may use an offhand action to flee without provoking attacks.  
+  * __Flee:__ You may use an offhand action to flee without provoking exposed attacks.  
   * __Trap Expert:__ Gain advantage when looking for, disarming, or creating traps.  
   
   
@@ -3220,12 +3129,12 @@ __Level 14 Rogue__
 __Level 15 Rogue__
 
 __Assassin Abilities__  
-* Actions:   
-  * __Double Strike:__ You may attack twice in a single action.  
-  
-  
 * General Abilities:   
   * __All-consuming Shadow:__ _(Cost 1)_ Fill a 100 foot radius with pitch darkness as an offhand action.  
+  
+  
+* Combat Abilities:   
+  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.  
   
   
 __Thief Abilities__  
@@ -3238,9 +3147,9 @@ ___
 
   
 ### Sorcerer
-<img src='images/class/female/sorcerer.jpg' class="raceClassImage" />
+<img src='images/class/sorcerer.jpg' class="raceClassImage" />
 
-"[Playing with Fire"](https://www.deviantart.com/patriartis/art/Playing-with-Fire-647239859) by Patriartis is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Sorca, Magus of the first Seal"](https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, but rather through raw force of personality. To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma check to perform magic. As you create your sorcerer, consider how they learned magic. Who did they learn it from? How did they first wrestle a spirit to aid them? When they cast a spell, do they always use the same spirit, or different spirits? Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer change the way that you interact with the world and your party?
@@ -3252,18 +3161,8 @@ Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, bu
   
   
 __Sorcerer Abilities:__ 
-* __Rules:__   
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Charisma Based Spellcaster:__ To succeed at casting spells, you must convince your familiar to perform it for you. To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Sorcerer's Scrolls:__ You are able to learn spells from the Sorcerer's Scrolls.  
 * __Choices:__   
   * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-  * __Influence:__ You may use action points to increase any charisma roll by 2.  
   
   
 __Level 0 Sorcerer__
@@ -3299,7 +3198,7 @@ __Level 2 Sorcerer__
 __Level 3 Sorcerer__
 
 * __Rules:__   
-  * __Spell Modification:__ You may make one or more of the following modifications to your spells. Increase difficulty by 2 to double the radius, halve the radius, or change the volume of a spell. Increase difficulty by 4  to add an additional effect dice to the spell (e.g. making a spell that does 1d10 damage do 2d10) or to tie off a spell, making it last 1d20 minutes after casting even if it is a concentration spell.  
+  * __Spell Modification:__ You may make one or more modifications to your spells. For example modifications, see the list of Sorcerer Modification in the Book of Examples.  
   
   
 * __Actions:__   
@@ -3413,20 +3312,10 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|-3|2|1|0|-2|2|2|  
+|-2|-1|2|1|0|-3|2|2|  
   
   
 __Wizard Abilities:__ 
-* __Rules:__   
-  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-* __Spellbooks:__   
-  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
-  * __The Wizard's Addendum:__ You are able to learn spells from the Wizard's Addendum.  
-* __Choices:__   
-  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
-* __General Abilities:__   
-  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
 * __Starting Items:__   
   * __The Sword and the Satchel:__ You begin your adventure with a bottomless satchel.  
   * __Walking Stick:__ You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.  
@@ -3579,6 +3468,10 @@ the required skill or skills first.
 * __Cook:__ During a rest, you may cook food which heals 1d6 health.  
 * __Master Chef:__ During a rest, you may cook food which heals 2d6 health.  
   * Skill Requirements: _Cook_  
+* __Light Sleeper:__ Make perception checks with advantage while sleeping  
+* __Restful Sleeper:__ Roll healing dice with advantage when resting or sleeping.  
+* __Shield Master:__ Don't take movement penalties from shield use.  
+  * Stat Requirements: _Strength: 1, Dexterity: 2_  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  
 * __Hand to Hand Weapon Proficiency:__ You may wield physical weapons without disadvantage.  
 * __Ranged Weapon Proficiency:__ You may wield non-firearm ranged weapons without disadvantage  
@@ -3590,7 +3483,7 @@ the required skill or skills first.
 * __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Fast Draw:__ You may add your dexterity rather than your perception to an initiative roll.  
+* __Fast Draw:__ You may add your dexterity as well as your perception to an initiative roll.  
   * Stat Requirements: _Dexterity: 0_  
 * __Tinker:__ You may attempt to make items and contraptions during rests.  
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
@@ -3605,13 +3498,10 @@ the required skill or skills first.
 * __Mage Hunter:__ Gain advantage on breaking enemy concentration and on SP saves.  
   * Stat Requirements: _Inner Fire: 3_  
 * __Minor Movement Distance Increase:__ Move an additional 5 feet per turn.  
-  * Stat Requirements: _Dexterity: 2_  
 * __Greater Movement Distance Increase:__ Move an additional 5 feet per turn.  
   * Skill Requirements: _Minor Movement Distance Increase_  
-  * Stat Requirements: _Dexterity: 4_  
 * __Major Movement Distance Increase:__ Move an additional 5 feet per turn.  
   * Skill Requirements: _Greater Movement Distance Increase_  
-  * Stat Requirements: _Dexterity: 6_  
 * __Lip-Reader:__ You can read the lips of anyone you can see.  
   * Stat Requirements: _Perception: 3_  
 * __Insomniac:__ You can gain the benefits of normal sleep for one night without sleeping.  
@@ -3621,8 +3511,8 @@ the required skill or skills first.
 * __Fight from the Shadows:__ You are able to attempt to hide as an offhand action.  
   * Stat Requirements: _Dexterity: 3_  
 * __Phallanx:__ When you are adjacent to an ally, enemy attacks are at disadvantage.  
-* __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 SP.  
-* __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1SP.  
+* __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP.  
+* __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1 AP.  
   * Skill Requirements: _Medic_  
   * Stat Requirements: _Inner Fire: 2, Dexterity: 1_  
 * __Functioning Alcoholic:__ When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks.  
