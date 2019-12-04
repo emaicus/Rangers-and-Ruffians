@@ -31,52 +31,60 @@ Heavy Fighter:
         abilities:
         - Throw Anything # Throw anything
         - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.
+        - Minor Stat Increase
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
         - Crushing Blow # Give all enemies disadvantage if you land a critical hit.
         - Line Them Up # If you kill an enemy, gain another attack
+        - Minor Stat Increase
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Always Angry # Berserk once per battle
         - The Opener
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Furious Blows # Two attacks when berserk
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - The Closer
         - Berserker # Half damage from physical attacks when berserk
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         #- Warmaster # Extra +1 to STR and INF when berserk
         - Savage Critical # Additional dice of damage when you crit
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Controlled Rage # No negative effects from being berserk
         - Glory # When you hit low health, double your damage (25%)
       level_14:
         abilities: 
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Spirit of Rage # Once per day, double a turn.
     questions:
     - Where did your character come from?
@@ -111,50 +119,58 @@ Heavy Fighter:
         - Charge!
       level_1:
         abilities:
+        - Minor Stat Increase
         - Trained Precision
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Shield of Men
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Taunt
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Ready Stance
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Steel Yourself
         - Cleave
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Stalwart Defender
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Last Line of Defense
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities: 
+        - Minor Stat Increase
         - Sword of Honor
     questions:
     - How did your character get where they are, and where they are going next?
@@ -194,56 +210,64 @@ Heavy Fighter:
         - Tier Zero Spells
       level_1:
         abilities:
+        - Minor Stat Increase
         - Hammer of Light
         - Bash
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier One Spells
       level_3:
         abilities:
+        - Minor Stat Increase
         - Faithful Weapon
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Minor Offhand Spell
       level_5:
         abilities:
+        - Minor Stat Increase
         - Link Lifeforce
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Two Spells
       level_7:
         abilities:
+        - Minor Stat Increase
         - Greater Offhand Spell
         - Shield of Men
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Beacon of Hope
         - Tier Three Spells
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Last Line of Defense
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_13:
         abilities:
+        - Minor Stat Increase
         - Winged Jump
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Fires of Heaven
         - Tier Five Spells
     questions:
@@ -285,51 +309,59 @@ Light Fighter:
         - Leaping Strike
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tackle
         - Hobble
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Huntsman
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Coordinated Attack
         - Dog Pile
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Closest Friend
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Wild Sight
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Inseparable
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Dominate
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Beast Form
     questions:
     - Does your character live in the wilds, and if so, why?
@@ -362,50 +394,58 @@ Light Fighter:
         - Determination
       level_1:
         abilities:
+        - Minor Stat Increase
         - Minor Second Wind
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Resolve
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Nimble
         - Greater Second Wind
         - Reduced Critical
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Major Second Wind
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Find Center
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Stay on Your Feet
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Reduced Critical
         - Whirlwind of Blades
     questions:
@@ -445,51 +485,59 @@ Light Fighter:
         - Swoon
       level_1:
         abilities:
+        - Minor Stat Increase
         - Mantel
         - Gumption
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Disarming
         - Fallen
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Feeling Lucky
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Spurred to Movement
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Lionhearted
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Rally Cry
         - Aura of Peace
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Strike First
     questions:
     - Why is your character embarking on their adventure? Are they out to prove themself?
@@ -530,32 +578,54 @@ Light Fighter:
         - The Book of Chi
         - Fighting Techniques
         - Learn Fighting Techniques
+      level_1:
+        abilities:
+        - Minor Stat Increase
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
+      level_3:
+        abilities:
+        - Minor Stat Increase
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
+      level_5:
+        abilities:
+        - Minor Stat Increase
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
+      level_9:
+        abilities:
+        - Minor Stat Increase
       level_10:
         abilities:
         - Master Fighting Techniques
-        - Stat Increase
+        - Major Stat Increase
+      level_11:
+        abilities:
+        - Minor Stat Increase
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
+      level_13:
+        abilities:
+        - Minor Stat Increase
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Legendary Fighting Techniques
+      level_15:
+        abilities:
+        - Minor Stat Increase
     standings: Monks keep to themselves, which cause some outside of their religion
       to attempt to take advantage of them.
     tag_line: Brawler/Martial Artist
@@ -595,55 +665,63 @@ Light Fighter:
         - Camouflage # Stealth advantage while still
       level_1:
         abilities:
+        - Minor Stat Increase
         - Embers
         - Entangling Attack # tangle an enemy, ensnaring them
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Finesse Strike # additional dice. On SP fail, another on the next turn
         - Spell of Darkvision    
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Twin Blades # 2x attacks in an action
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Twin Blade Parry # strike back when an enemy attacks you?
         - Greater Medicine # Make better potions
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Elemental Weapon 
         # - Monster Slayer # Extra damage to monsters
         # - Disengage # Enemies take disadvantage against you when you are moving
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
         abilities:
+        - Minor Stat Increase
         - Expert Tracker
         - Major Medicine
         # - Disarming Blow # On a crit, make someone drop something??????
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Fire and Ice
     standings: Barbarians are the enemies of law keepers.
     tag_line: Duel Wielding Tracker
@@ -675,21 +753,24 @@ Light Fighter:
         - Disengage
       level_1:
         abilities:
+        - Minor Stat Increase
         - Mantel
         - Disappear
         - Strike From the Shadows
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Master of Disguise
         - High Ground
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Thief or Assassin
         subclass_assassin_abilities:
         - Imposter
@@ -700,8 +781,10 @@ Light Fighter:
         - Sticky Fingers
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
+        abilities: 
+        - Minor Stat Increase
         subclass_assassin_abilities:
         - Offhand Attack
         - Poison
@@ -710,8 +793,10 @@ Light Fighter:
         - Pickpocket
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
+        abilities:
+        - Minor Stat Increase
         subclass_assassin_abilities:
         - Minor Blink
         - Spell of Minor Invisibility
@@ -719,16 +804,20 @@ Light Fighter:
         - Trap Expert
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
+        abilities: 
+        - Minor Stat Increase
         subclass_assassin_abilities:
         - Reduced Critical
         subclass_thief_abilities:
         - Lucky Actions
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
+        abilities:
+        - Minor Stat Increase
         subclass_assassin_abilities:
         - Line Them Up
         - Savage Critical
@@ -737,8 +826,10 @@ Light Fighter:
         - Superior Mantel
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
+        abilities:
+        - Minor Stat Increase
         subclass_assassin_abilities:
         - Assassinate
         - All-consuming Shadow
@@ -791,59 +882,67 @@ Mage:
         - Sleight of Hand
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tier One Spells
         - Minor Restful Melody
         - One up the Sleeve
         # - Cartwheel
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Nimble Fingers
         - Spell Coin
       level_4:
         abilities:
         - Tier Two Spells
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Imbue Weapon
         - Additional Spell Coin
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
         - Greater Restful Melody
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Greater Imbue Weapon
         - Greater Spell Coin
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_11:
         abilities:
+        - Minor Stat Increase
         - Major Restful Melody
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Additional Spell Coin
         - Tier Five Spells
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Major Spell Coin
     tag_line: Entertaining Spellcaster
   Cleric:
@@ -879,57 +978,65 @@ Mage:
         - Tier Zero Spells
       level_1:
         abilities:
+        - Minor Stat Increase
         - Purge Decay
         - Tier One Spells
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Last Ditch Prayer
         - Minor Offhand Spell
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Two Spells
       level_5:
         abilities:
+        - Minor Stat Increase
         - Feint
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Greater Offhand Spell
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Link Lifeforce
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_11:
         abilities:
+        - Minor Stat Increase
         - True Heal
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Major Offhand Spell
       level_13:
         abilities:
+        - Minor Stat Increase
         - Halo
         - Burning Bright
         - Tier Five Spells
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Angelic Wings
         - Aura of Advantage
     standings: Clerics are friends to all those who fight for good, and get along
@@ -970,55 +1077,63 @@ Mage:
         - Tier Zero Spells
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tier One Spells
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Minor Offhand Spell
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Two Spells
       level_5:
         abilities:
+        - Minor Stat Increase
         - Tracker
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Greater Offhand Spell
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Ascend
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_11:
         abilities:
+        - Minor Stat Increase
         - Ascended Flight
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Major Offhand Spell
       level_13:
         abilities:
+        - Minor Stat Increase
         - True Ascension
         - Tier Five Spells
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Power of Ascension
       level_15:
         abilities:
+        - Minor Stat Increase
         - Ascended Action
     tag_line: Naturalistic Spellcaster
   Necromancer:
@@ -1057,60 +1172,68 @@ Mage:
         - Tier Zero Spells
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tier One Spells
         - Edge of Eternity
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Minor Offhand Spell
         - Fear the Light
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Two Spells
       level_5:
         abilities:
+        - Minor Stat Increase
         - Eyes of the Others
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Larger Soul Jar
         - Greater Offhand Spell
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
         - Reap
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Larger Soul Jar
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_11:
         abilities:
+        - Minor Stat Increase
         - Phylactery
         - Larger Soul Jar
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Major Offhand Spell
       level_13:
         abilities:
+        - Minor Stat Increase
         - Freed from this Mortal Coil
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Five Spells
         - Larger Soul Jar
       level_15:
         abilities:
+        - Minor Stat Increase
         - Army of the Damned
     standings: Necromancers are feared by most, and are actively hunted by Clerics
       and followers of the light.
@@ -1148,54 +1271,62 @@ Mage:
         - Influence
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tier One Spells
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Spell Modification
         - Minor Offhand Spell
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Two Spells
       level_5:
         abilities:
+        - Minor Stat Increase
         - Prepare Spell
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Greater Offhand Spell
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Spirits Within
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
       level_11:
         abilities:
+        - Minor Stat Increase
         - Spiritual Movement
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Major Offhand Spell
       level_13:
         abilities:
+        - Minor Stat Increase
         - Tier Five Spells
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Light and Shadow
     tag_line: Charismatic Spirit Wrangler
   Wizard:
@@ -1232,51 +1363,61 @@ Mage:
         - Tier Zero Spells
       level_1:
         abilities:
+        - Minor Stat Increase
         - Tier One Spells
         - Looming Presence
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Minor Offhand Spell
       level_4:
         abilities:
         - Tier Two Spells
-        - Stat Increase
+        - Major Stat Increase
       level_5:
         abilities:
+        - Minor Stat Increase
         - Greater Offhand Spell
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
         abilities:
+        - Minor Stat Increase
         - Offhand Attack
         - Tier Three Spells
         - Commit to Memory
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
         abilities:
+        - Minor Stat Increase
         - Major Offhand Spell
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Tier Four Spells
+      level_11:
+        abilities:
+        - Minor Stat Increase
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Spell Invention
       level_13:
         abilities:
+        - Minor Stat Increase
         - Tier Five Spells
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Tome of the Ancients
     standings: Wizards are known to be friends to all races, and get along particularly
       well with Halflings and Rangers.
@@ -1309,61 +1450,69 @@ Ranged Fighter:
         - Huntsman
       level_1:
         abilities:
+        - Minor Stat Increase
         - Mantel
         - Called Shot
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - Dual Shot
         - Fire and Ice Arrows # Cost 1
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Rope Arrows # Cost 1
       level_5:
         abilities:
+        - Minor Stat Increase
         - Net Arrows # Cost 1
         - Smoke Arrow # Cost 1
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Shadow and Light Arrows # Cost 1
       level_7:
         abilities:
+        - Minor Stat Increase
         - Reflexes
         - Steady
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Explosive Arrows # Cost 2
       level_9:
         abilities:
+        - Minor Stat Increase
         - Vampiric Arrow # Cost 2
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - True Mastery
       level_11:
         abilities:
+        - Minor Stat Increase
         - Blink Arrows # Cost 2
         - Uncanny Perception 
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
         - Shock Arrow # Cost 2
       level_13:
         abilities:
+        - Minor Stat Increase
         - Expert Fletcher # Reduces all arrow cost by 1
         - Anti-Gravity Arrows # Cost 2
         - Volley
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Firestorm Arrow # Cost 4
     questions:
     - Where did your character come from?
@@ -1406,6 +1555,8 @@ Ranged Fighter:
         - Bayonet
         - Bull Rush
       level_1:
+        abilities:
+        - Minor Stat Increase
         subclass_gunslinger_abilities:
         - Flash Grenade
         - Repeating Shot
@@ -1413,23 +1564,27 @@ Ranged Fighter:
         - Flame Strike
       level_2:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_3:
         abilities:
+        - Minor Stat Increase
         - High Grain
         - From the Hip
       level_4:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_5:
+        abilities:
+        - Minor Stat Increase
+        - High Grain
         subclass_gunslinger_abilities:
         - Quickdraw
-        abilities:
-        - High Grain
       level_6:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_7:
+        abilities:
+        - Minor Stat Increase
         subclass_gunslinger_abilities:
         - Twin Guns
         subclass_marksman_abilities:
@@ -1437,8 +1592,10 @@ Ranged Fighter:
         - Offhand Attack
       level_8:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_9:
+        abilities:
+        - Minor Stat Increase
         subclass_gunslinger_abilities:
         - Feeling Lucky
         - Fastest Gun
@@ -1448,17 +1605,20 @@ Ranged Fighter:
         - Reduced Critical
       level_10:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_11:
+        abilities:
+        - Minor Stat Increase
         subclass_gunslinger_abilities:
         - Hollowpoint
         subclass_marksman_abilities:
         - Penetration
       level_12:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_13:
         abilities:
+        - Minor Stat Increase
         - Harrying Shot
         subclass_gunslinger_abilities:
         - Strike First
@@ -1466,9 +1626,10 @@ Ranged Fighter:
         - High Grain
       level_14:
         abilities:
-        - Stat Increase
+        - Major Stat Increase
       level_15:
         abilities:
+        - Minor Stat Increase
         - Reduced Critical
         subclass_gunslinger_abilities:
         - Volley

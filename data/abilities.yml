@@ -1825,7 +1825,11 @@ Mimic:
   description: "You can mimic any voice you've heard."
   type: general
   brief: "Mimic any voice you've heard."
-Stat Increase:
+Minor Stat Increase:
+  description: You gain one stat point to add to a stat of your choosing.
+  brief: You gain one stat point to add to a stat of your choosing.
+  type: choice
+Major Stat Increase:
   description: You gain two stat points to add to a stat or stats of your choosing.
   brief: You gain two stat points to add to a stat or stats of your choosing.
   type: choice

@@ -751,6 +751,26 @@ def check_pantheon():
 
   return all_errors
 
+def check_for_stat_increases():
+  all_errors = list()
+  class_names = rnr_utils.get_all_class_names()
+  for name in class_names:
+    all_data = rnr_utils.get_rnr_class_data_with_name(name)
+    level_data = all_data['levels']
+    for i in range(1,16):
+      level_str = f'level_{i}'
+      if i % 2 == 0:
+        if not 'Major Stat Increase' in level_data[level_str]['abilities']:
+          all_errors.append(f"ERROR: {name} {level_str} missing Major Stat Increase")
+        if 'Minor Stat Increase' in level_data[level_str]['abilities']:
+          all_errors.append(f"ERROR: {name} {level_str} has Minor Stat Increase")
+      else:
+        if not 'Minor Stat Increase' in level_data[level_str]['abilities']:
+          all_errors.append(f"ERROR: {name} {level_str} missing Minor Stat Increase")
+        if 'Major Stat Increase' in level_data[level_str]['abilities']:
+          all_errors.append(f"ERROR: {name} {level_str} has Major Stat Increase")
+  return all_errors
+
 
 
 if __name__ == '__main__':
