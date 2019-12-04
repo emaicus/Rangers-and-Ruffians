@@ -25,7 +25,7 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. November 23, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-november-23-2019)  
+   * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
      * [Overview:](#overview)  
      * [Ability Changes](#ability-changes)  
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
@@ -43,7 +43,7 @@ show_download: false
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
 
   
-## Rangers and Ruffians 2.1.2: The Action Point Economy Update. November 23, 2019
+## Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019
   
   
 
