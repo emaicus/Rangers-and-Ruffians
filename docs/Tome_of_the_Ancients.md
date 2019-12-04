@@ -166,10 +166,10 @@ __Tier 5:__
   
 __Basic Techniques:__  
 * __Brawler:__ Your hands are d6 weapons.  
-* __Catch Projectile:__ Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
+* __Catch Projectile:__ _(Cost: 1)_ Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
 * __Combo:__ _(Cost: 1)_ You make an unarmed attack as an offhand action.  
 * __Disarm:__ _(Cost: 1)_ Attack with a single punch. If the opponent fails a strength saving throw against your spell power, they drop their weapon.  
-* __Disengage:__ Enemies take disadvantage when striking you while you are moving, you may use an offhand action to avoid exposed attacks entirely.  
+* __Disengage:__ _(Cost: 1)_ Spend an action point to avoid provoking exposed attacks.  
 * __Dodge:__ _(Cost: 1)_ Roll a contested dexterity check to attempt to dodge an opponent's attack.  
 * __Find Balance:__ Use a bonus action to cleanse yourself of poison or other status effects.  
 * __Grapple:__ You have advantage when grappling.  
@@ -186,7 +186,7 @@ __Basic Techniques:__
 * __Inner Eye:__ You have advantage when detecting evil, good, or spiritual energy.  
 * __Listen:__ You have advantage on perception checks.  
 * __Mantle:__ You are able to mantle across objects. You have advantage on dexterity checks when climbing or leaping.  
-* __Meditate:__ Gain an additional 1d6 health from any rest.  
+* __Meditate:__ Gain an additional dice of health from any rest.  
 * __Meld into Shadow:__ Take advantage on stealth checks when hiding in shadows.  
 * __Minor Heal:__ _(Cost: 1)_ Heal yourself or another for 1d6 + inner fire damage.  
 * __Run on water:__ Get a running start to run up to 50 feet on water.  
@@ -198,25 +198,25 @@ __Master Techniques:__
 * __Darkness:__ _(Cost: 2)_ Create a veil of darkness with a 50 foot radius which lasts for 1d4 turns. All entities within the shadow must make perception checks before attacking, and then must attack with disadvantage. You are not affected by the darkness.  
 * __Fists of Steel:__ Your bare hands are d12 weapons.  
 * __Flaming Fist:__ _(Cost: 1)_ Add an additional 1d12 fire damage to a punching attack.  
-* __Hearty:__ Increase the size of your health dice by 1.  
+* __Path of the Brawler:__ Increase the size of your health dice by 1.  
 * __Major Heal:__ _(Cost: 2)_ Heal yourself or an ally for 4d10 + inner fire health.  
 * __Master of Body and Soul:__ Once per day, when you reach 0 health, drop to 2d10 health instead.  
 * __Opening Blow:__ If you strike an opponent before it is able to move in combat, take advantage on all subsequent attacks against that foe so long as you continue attacking it with each of your actions. Add an additional 1d12 blunt damage to the initial strike.  
 * __Perfect Zen:__ _(Cost: 1)_ As an offhand action, become untouchable by physical attacks for one turn or one minute.  
 * __Press the Advantage:__ On a critical hit, gain another attack.  
-* __Redirect Attack:__ Reaction. Once per turn, select an enemy attack aimed at you. Make a contested dexterity check. If you succeed, redirect the attack anywhere you wish.  
-* __Second Action:__ Take two actions on your turn.  
+* __Redirect Attack:__ _(Cost: 1)_ Reaction. Once per turn, select an enemy attack aimed at you. Make a contested dexterity check. If you succeed, redirect the attack anywhere you wish.  
 * __Shadow Step:__ _(Cost: 1)_ Step from any point in darkness to any other point in darkness within 50 feet.  
 * __Share Ability:__ Every day, share in a teammates ability for the day.  
-* __Surrounded:__ Strike up to 5 foes in one action if you are surrounded.  
+* __Surrounded:__ _(Cost: 1)_ Strike every foe adjacent to you.  
 * __Thunderous Punch:__ _(Cost: 1)_ Your attack may make a thunder wave, which affects all enemies in front of you with the punch's damage.  
   
 __Legendary Techniques:__  
+* __Second Action:__ Take two actions on your turn.  
 * __Consecutive Normal Punches:__ _(Cost: 2)_ Take two attacks with each of your actions and offhand actions.  
 * __Pressure Points:__ Whenever you attack a non-villain enemy, force them to make a spell power save. On failure, they fall instantly limp, and are stunned until they succeed.  
 * __Consuming Blow:__ _(Cost: 2)_ When you attack an enemy, force them to make a spell power save. On failure, shadows fly forth from you at the point of contact, tearing at the flesh of your opponent. The opponent takes 4d10 damage as a result.  
 * __Ultimate Punch:__ _(Cost: 2)_ As an action, channel the energy of your ancestors into a perfectly tuned punch. With a thunderclap, unleash a blow capable of destroying buildings with its shock-wave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities in a 100 foot cone in front of you.  
-* __Perfect Understanding:__ Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.  
+* __Perfect Understanding:__ _(Cost: 1)_ Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.  
 * __Everywhere and Nowhere:__ _(Cost: 1)_ Instead of taking movement during combat, instantly teleport from one location to another within thirty feet of you. If you do not attack on your turn, you may choose to be ethereal until your next turn, and therefore to be immune to physical damage.  
 
   
