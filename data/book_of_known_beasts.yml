@@ -483,7 +483,7 @@ humanoids:
           tactics: "Goblin swordsmen know enough to defend their archers if at all possible. They will gang up on a single target
                     if they can. Above all, however, they are cowards. If they feel that they cannot win, they will flee to get help."
           type: "Level 0 Light"
-          health: 8
+          health: 10
           average_damage_per_round: 3
           actions:
             Crude Sword:
@@ -493,7 +493,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 15
+            land: 20
           stats:
             Charisma: -2
             Dexterity: 1
@@ -507,7 +507,7 @@ humanoids:
           tactics: "Goblin archers will try to stay away from combat, fleeing as far as they can and then taking
                     shots from a distance. If they feel that they cannot win, goblin archers will flee from combat to get help."
           type: "Level 0 Light"
-          health: 6
+          health: 8
           average_damage_per_round: 3
           actions:
             Bow:
@@ -517,7 +517,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 15
+            land: 20
           stats:
             Charisma: -2
             Dexterity: 1
@@ -566,7 +566,7 @@ humanoids:
           average_damage_per_round: 3
           actions:
             Heal:
-              description: "The goblin cleric barks a prayer to whatever awful god it worships. It heals an ally within 30 feet for 1d4 health."
+              description: "The goblin cleric barks a prayer to whatever awful god it worships. It heals an ally within 30 feet for 1d8 health."
             Burst of Light:
               damage: "1d4"
               description: "A burst of white light flies from the cleric's fingertips. Range 15 feet. The attacked enemy must make a Spell Power save or be rendered blind during their next turn, giving them disadvantage on all actions."
@@ -592,8 +592,8 @@ humanoids:
                     if all seems lost, it will use a smoke-bomb to try to escape. The goblin chieftain will keep its
                     minions between it and a party of adventurers."
           type: "Level 1 Villain"
-          health: 26
-          armor: 2
+          health: 60
+          armor: 3
           average_damage_per_round: 5
           average_villain_damage_per_round: 10
           action_spec:
@@ -633,6 +633,7 @@ humanoids:
                     Riders will move their full movement and then throw nets at fleeing enemies, giving swordsmen time to catch up."
           type: "Level 1 Heavy"
           health: 20
+          armor: 2
           average_damage_per_round: 8
           action_spec:
             Multi-Attack: The wolf rider may make both a goblin attack (Sword Strike, Crude Bow, or Net) and a wolf action (Bite or Howl) in one action.
@@ -671,9 +672,9 @@ humanoids:
           tactics: "An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly 
                     begins attacking enemies, while the rider picks off mages and ranged enemies at a distance."
           type: "Level 2 Villain"
-          health: 60
-          armor: 2
-          magic_armor: 2
+          health: 101
+          armor: 5
+          magic_armor: 5
           average_damage_per_round: 13
           average_villain_damage_per_round: 13
           action_spec:
@@ -698,11 +699,14 @@ humanoids:
               modifier: "Strength"
               description: "If a netted enemy is within reach of the Ogre, it may pick the enemy up, spin it as if spinning a sling, and throw it at a target within 15 feet.
                             Both the target and the netted enemy are injured."
+          villain_actions:
+            Throw Net: "The Ogre Rider may throw a net as a villain action."
+            Charge!: "The Ogre Rider may charge as a villain action."
           conditional_actions:
             First Turn: "Reckless Charge: At the start of the first round of combat, the Ogre Rider may charge up to 30 feet."
             Second Turn: "Join the Fray: The Ogre Rider grants all allies the ability to take up to their maximum movement."
-            Third Turn: 1
-            20 Health: "If the ogre rider falls below 20 health, the goblin dies. The ogre immediately grabs the dead goblin off of its back, and may throw it at an enemy for 2d6 damage."
+            Third Turn: "Jump and Stomp: The Ogre Leaps up to 10 feet, before landing with a crash, harming any entity within a 5 foot radius for 2d8 damage."
+            20 Health: "If the ogre rider falls below 40 health, the goblin dies. The ogre immediately grabs the dead goblin off of its back, and may throw it at an enemy for 2d6 damage."
           movement:
             land: 15
           stats:
@@ -759,8 +763,8 @@ humanoids:
                     Once an enemy is grabbed, the Ogre Lord will mercilessly slam the entity into its comrades,
                     the ground, or even hurl it into a wall or off of a cliff."
           type: "Level 1 Villain"
-          health: 48
-          armor: 2
+          health: 97
+          armor: 5
           magic_armor: 2
           average_damage_per_round: 11
           average_villain_damage_per_round: 20
@@ -785,6 +789,10 @@ humanoids:
               damage: "1d8"
               modifier: "Strength"
               description: "The Ogre Lord uses a grabbed entity as a club. Both the entity and the target take damage."
+            Charge:
+              damage: "2d6"
+              modifier: "Strength"
+              description: "In place of its movement, the ogre runs a full 15 feet in a straight line, trampling anyone in its path. Players may make a D14 dexterity check to jump out of the way. If the ogre stops in a space occupied by an entity, the entity is pushed to the side."
           movement:
             land: 15
           conditional_actions:

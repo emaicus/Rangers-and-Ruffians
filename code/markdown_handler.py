@@ -158,8 +158,7 @@ class markdown_handler:
 
 
     def verify_empty_buffer(self):
-      left = list(self.BUFFER.keys())
-      if len(left) > 0:
+      if len(self.BUFFER) > 0:
         print(f"ERROR: the following elements remained in the buffer. {left}")
 
     def find_nth(self, needle, n):
@@ -187,6 +186,7 @@ class markdown_handler:
         if not key in encountered_dict:
           encountered_dict[key] = 0
         encountered_dict[key] += 1
+        print(f"finding {key}")
         heading, level, content, link = self.find_nth(key, encountered_dict[key])
         
         if level > max_to_include:
