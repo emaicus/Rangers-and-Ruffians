@@ -432,14 +432,18 @@ def check_brief_abilities(print_errors=True):
   errors = list()
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     if not 'brief' in ability_info:
-      errors.append('ERROR: No brief in {0}'.format(ability_name))
+      errors.append(f'ERROR: No brief in {ability_name}')
+      continue
+    if not 'type' in ability_info:
+      errors.append(f'ERROR: No type in {ability_name}')
+      continue
     if ability_info['type'] in ['rule', 'choice', 'starting_item', 'action']:
       continue
     if len(ability_info['brief']) > target_length:
-      errors.append("ERROR: {0}'s brief is {1} characters too long ({2} characters long)".format(ability_name, len(ability_info['brief']) - target_length, len(ability_info['brief']) ))
+      errors.append(f"ERROR: {ability_name}'s brief is {len(ability_info['brief']) - target_length} characters too long ({len(ability_info['brief'])} characters long)")
     if len(ability_info['brief']) > len(ability_info['description']):
       success = False
-      errors.append("ERROR: {0}'s brief is longer than it's description!".format(ability_name))
+      errors.append(f"ERROR: {ability_name}'s brief is longer than it's description!")
   if print_errors:
     for error in errors:
       print(error)

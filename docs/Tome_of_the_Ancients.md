@@ -24,7 +24,7 @@ show_download: false
 
   
 # The Tome of the Ancients
-_Version 2.1.2_  
+_Version 2.1.3_  
 
    * [Spellbooks](#spellbooks)  
      * [The Bard's Songbook](#the-bards-songbook)  

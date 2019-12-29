@@ -42,7 +42,7 @@ show_download: false
 
   
 # Book of Known Beasts
-_Version 2.1.2_  
+_Version 2.1.3_  
 
    * [Beasts:](#beasts)  
      * [Bears:](#bears)  
@@ -566,10 +566,10 @@ ___In the early days of a goblin tribe, commoners likely won't notice that anyth
   
 ___Goblin swordsmen know enough to defend their archers if at all possible. They will gang up on a single target if they can. Above all, however, they are cowards. If they feel that they cannot win, they will flee to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* __Health:__ 10  
 * __Spell Power:__ 10   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 20 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -590,10 +590,10 @@ ___
   
 ___Goblin archers will try to stay away from combat, fleeing as far as they can and then taking shots from a distance. If they feel that they cannot win, goblin archers will flee from combat to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 6  
+* __Health:__ 8  
 * __Spell Power:__ 10   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 20 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -653,7 +653,7 @@ __Abilities:__
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Heal:__ The goblin cleric barks a prayer to whatever awful god it worships. It heals an ally within 30 feet for 1d4 health.  
+* __Heal:__ The goblin cleric barks a prayer to whatever awful god it worships. It heals an ally within 30 feet for 1d8 health.  
 * __Burst Of Light:__ _1d4 + 1 Inner Fire._ A burst of white light flies from the cleric's fingertips. Range 15 feet. The attacked enemy must make a Spell Power save or be rendered blind during their next turn, giving them disadvantage on all actions.  
   
   
@@ -665,11 +665,11 @@ ___
   
 ___A chieftain puts its own survival first. It attacks from a distance, hurling spears at its enemies from a safe distance. If a chieftain is injured too heavily, it will drink its health potion, and if all seems lost, it will use a smoke-bomb to try to escape. The goblin chieftain will keep its minions between it and a party of adventurers.___  
 * ___Level 1 Villain Enemy___  
-* __Health:__ 26  
+* __Health:__ 60  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 20 feet  
-* __Armor:__ 2  
+* __Armor:__ 3  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -709,6 +709,7 @@ ___Wolf Riders can move further than other goblins, so they are often used to ch
 * __Spell Power:__ 11   
 * __Movement:__  
   * __Land:__ 20 feet  
+* __Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -736,12 +737,12 @@ ___
   
 ___An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly begins attacking enemies, while the rider picks off mages and ranged enemies at a distance.___  
 * ___Level 2 Villain Enemy___  
-* __Health:__ 60  
+* __Health:__ 101  
 * __Spell Power:__ 12   
 * __Movement:__  
   * __Land:__ 15 feet  
-* __Armor:__ 2  
-* __Magic Armor:__ 2  
+* __Armor:__ 5  
+* __Magic Armor:__ 5  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -757,11 +758,15 @@ __Actions:__
 * __Charge:__ _2d6 + 3 Strength._ In place of its movement, the ogre runs a full 15 feet in a straight line, trampling anyone in its path. Players may make a D14 dexterity check to jump out of the way. If the ogre stops in a space occupied by an entity, the entity is pushed to the side.  
 * __Throw Netted Enemy:__ _2d6 + 3 Strength._ If a netted enemy is within reach of the Ogre, it may pick the enemy up, spin it as if spinning a sling, and throw it at a target within 15 feet. Both the target and the netted enemy are injured.  
   
+__Villain Actions:__  
+* __Throw Net:__ The Ogre Rider may throw a net as a villain action.  
+* __Charge!:__ The Ogre Rider may charge as a villain action.  
+  
 __Conditional Actions:__  
 * __First Turn:__ Reckless Charge: At the start of the first round of combat, the Ogre Rider may charge up to 30 feet.  
 * __Second Turn:__ Join the Fray: The Ogre Rider grants all allies the ability to take up to their maximum movement.  
-* __Third Turn:__ 1  
-* __20 Health:__ If the ogre rider falls below 20 health, the goblin dies. The ogre immediately grabs the dead goblin off of its back, and may throw it at an enemy for 2d6 damage.  
+* __Third Turn:__ Jump and Stomp: The Ogre Leaps up to 10 feet, before landing with a crash, harming any entity within a 5 foot radius for 2d8 damage.  
+* __20 Health:__ If the ogre rider falls below 40 health, the goblin dies. The ogre immediately grabs the dead goblin off of its back, and may throw it at an enemy for 2d6 damage.  
   
   
 ___  
@@ -798,11 +803,11 @@ ___
   
 ___The Ogre Lord will charge a threat head on, and will make heavy use of its grab attack. Once an enemy is grabbed, the Ogre Lord will mercilessly slam the entity into its comrades, the ground, or even hurl it into a wall or off of a cliff.___  
 * ___Level 1 Villain Enemy___  
-* __Health:__ 48  
+* __Health:__ 97  
 * __Spell Power:__ 14   
 * __Movement:__  
   * __Land:__ 15 feet  
-* __Armor:__ 2  
+* __Armor:__ 5  
 * __Magic Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
@@ -818,6 +823,7 @@ __Actions:__
 * __Slam Grabbed Entity:__ _2d8 + 3 Strength._ The Ogre Lord slams a grabbed entity into the ground with full force. They must make a D12 Dex save or drop their weapon.  
 * __Hurl Grabbed Entity:__ _2d6 + 3 Strength._ The Ogre Lord Hurls a grabbed entity at a target. Both the entity and the target take damage.  
 * __Club With Grabbed Entity:__ _1d8 + 3 Strength._ The Ogre Lord uses a grabbed entity as a club. Both the entity and the target take damage.  
+* __Charge:__ _2d6 + 3 Strength._ In place of its movement, the ogre runs a full 15 feet in a straight line, trampling anyone in its path. Players may make a D14 dexterity check to jump out of the way. If the ogre stops in a space occupied by an entity, the entity is pushed to the side.  
   
 __Conditional Actions:__  
 * __First Turn:__ CHARGE: All nearby allies, including the Ogre Lord, get to move their full movement towards the enemy.  

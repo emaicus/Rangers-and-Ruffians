@@ -1028,10 +1028,13 @@ def get_random_spellbook(rnr_class, counts):
 
 def get_rnr_class_data_with_name(name):
   global GLOBAL_CLASS_DATA
-
   load_Rangers_And_Ruffians_Data()
-  if name.title() in GLOBAL_CLASS_DATA:
+  
+  if name in GLOBAL_CLASS_DATA:
+    return copy.deepcopy(GLOBAL_CLASS_DATA[name])
+  elif name.title() in GLOBAL_CLASS_DATA:
     return copy.deepcopy(GLOBAL_CLASS_DATA[name.title()])
+  
   return None
 
 def get_rnr_race_data(name):

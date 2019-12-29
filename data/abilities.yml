@@ -23,9 +23,9 @@ Shield Master:
   type: general
   brief: "Don't take movement penalties from shield use."
 Courageous Blow:
-  description: Add your Inner Fire to an attack.
+  description: Add twice your Inner Fire to an attack.
   type: combat
-  brief: Add INF to an attack.
+  brief: Add twice your INF to an attack.
   cost: 1
 Embers:
   description: Cast forth fire from your hand with a range of 10 feet. Deals 1d4 damage. This increases to 1d8 at level
@@ -111,17 +111,17 @@ Bellow:
   brief: Force all in earshot to make an SP Save. Frightened on failure.
   cost: 1
 Berserk:
-  description: Go berserk, giving you +1 effective strength and dexterity,
-    but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk.
+  description: Go berserk, giving you +1 effective strength and dexterity. 
+    Further, gain advantage on Spell Power Saves when berserk and take half damage from any physical attacks.
     Going berserk lasts for 1 hour. Leaving berserk prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
   type: combat
-  brief: +1 STR, DEX, -3 INT. ADV on SP saves. Lasts 1 hour. Fatigue if ended early.
+  brief: +1 STR, DEX. ADV on SP saves. Half physical dmg. 1 hour. Fatigue if ended early.
   cost: 1
-Berserker: 
-  description: You take half damage from physical attacks while going berserk.
-  type: combat
-  brief: You take half physical damage while going berserk.
+# Berserker: 
+#   description: You take half damage from physical attacks while going berserk.
+#   type: combat
+#   brief: You take half physical damage while going berserk.
 Warmaster: 
   description: Going berserk now gives you an additional +1 strength and inner fire.
   type: combat
@@ -139,10 +139,45 @@ Blind Rage:
   type: combat
   brief: Make all spell saves with advantage while berserk.
 Furious Blows:
-  description: Spend an action point to take attack twice in a single attaction while going berserk.
+  description: Attack twice in a single attack action while going berserk.
   type: combat
   brief: Make two attacks in a single action while going berserk.
+Fury:
+  description: "On a turn in which you have taken damage, add an extra damage dice to all of your attacks."
+  type: combat
+  brief: "Add an extra damage dice on turns in which you have been attacked."
+Warrior Spirit:
+  description: "If you slay an enemy or land a critical hit, regain one action point."
+  type: combat
+  brief: Gain 1 AP when you kill an enemy or land a critical hit.
+Adrenaline: 
+  description: "When you are below 50% health, gain an extra 10 feet of movement."
+  type: combat
+  brief: "Gain 10ft of movement when below 50% health."
+Chain Attack:
+  description: "After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon."
+  type: combat
+  brief: "After killing an enemy, gain 10ft movement and free attack or hurl weapon."
+Arching Swing:
+  description: "Make an attack which damages all enemies adjacent to you."
+  type: combat
+  brief: "Make an attack which hits all adjacent enemies."
   cost: 1
+Hurl Weapon: 
+  description: "Throw your weapon up to 5ft. times your Strength or Dexterity. Treat this as a normal attack and then double its damage."
+  type: combat
+  brief: "Hurl your weapon 5ft x STR or DEX. Attack does 2x damage."
+  cost: 1
+Single Out:
+  description: "Single out an enemy as an offhand action. Gain 15ft. of extra movement on any turn when you move towards them, and gain advantage on all attacks made against them."
+  type: combat
+  brief: "Pick an enemy. Gain 15ft. movement when going towards them and adv on attacks."
+  cost: 1
+Terrify:
+  description: "Singled out enemies must make a spell power save or be frightened."
+  type: combat
+  brief: "Singled out enemies must make an SP save. Fail: frightened."
+
 Boot Knife:
   description: You carry a hidden d6 knife in your boot.
   type: starting_item
@@ -378,9 +413,9 @@ Faithful Weapon:
   type: combat
   brief: Your weapon returns when you throw it.
 Fast Paws:
-  description: Gain an additional offhand action which cannot be used as an offhand attack.
+  description: Gain an additional offhand action.
   type: general
-  brief: Gain an offhand action. Can't be used as an offhand attack.
+  brief: Gain an extra offhand action.
 Favorite Terrain:
   description: At the beginning of your journey, pick a favorite terrain. Whenever
     you are on it, you have advantage on any check related to the terrain, and may take
@@ -865,7 +900,7 @@ Smokevision:
   type: advantage
   brief: You can see when underwater or in smoke.
 Soft Bed:
-  description: You recover 2d8 extra health from sleeping in a real bed.
+  description: You recover two extra health dice from sleeping in a real bed.
   type: general
   brief: You recover 2d8 additional health when sleeping in a bed.
 Soul Based Magic:
@@ -1069,9 +1104,9 @@ Stocky:
   type: advantage
   brief:  You have advantage against checks made to knock you over.
 Very Dangerous Over Short Distances:
-  description: If you begin your turn next to an enemy, take advantage on your attack roll.
+  description: If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.
   type: advantage
-  brief: If you begin your turn next to an enemy, gain advantage when attacking them.
+  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Negates short range disadvantage.
 Stone Skin:
   description: You take half damage on blunt force attacks, such as being hit with a club.
   type: general
@@ -1079,18 +1114,23 @@ Stone Skin:
 Fix Your Eyes on Me: 
   description: Conversation spell. If the person you are talking with fails an inner fire saving throw against
     your spell power, the world goes black for them except for you. 
-    Make charisma and intimidation checks with advantage for the remainder of the conversation.
-  type: general
-  brief: "Force SP save. Fail: you have advantage on CHA."
+    Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.
+  type: combat
+  brief: "Force SP save. Fail: you have advantage on CHA and enemy can only attack you."
   cost: 1
 Sacrificial Rite: 
-  description: At the cost of half your level in health (minimum 1, round down), make a second action during combat.
+  description: At the cost of half your level in health (minimum 1, round up), make a second action during combat.
   type: combat
   brief: At the cost of half your level in hp (min 1, round down), make an extra action.
 Ready Stance:
   description: As an offhand action, take up a stance that grants you 1d4 armor until your next turn.
   type: general
   brief: Offhand. Gain 1d4 armor until next turn.
+Brutal Attack:
+  description: "Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone."
+  type: combat
+  brief: "Add an additional dice of damage. Size based contested STR save. Fail: prone."
+  cost: 1
 The Opener: 
   description: If you attack an enemy that has not yet moved in combat, do double damage. 
     If they fail a contested strength saving throw, they are knocked prone.
@@ -1157,9 +1197,9 @@ Fire and Ice:
   brief: Imbue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
   cost: 2
 Savage Critical:
-  description: On a critical hit, do an additional dice of damage.
+  description: On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.
   type: combat
-  brief: On a crit, do an additional dice of damage.
+  brief: On a crit, do an additional dice of damage and give all enemies within 30ft disadv on their next action.
 Line Them Up:
   description: If you slay an enemy, gain another attack action.
   type: combat
@@ -1196,14 +1236,124 @@ Link Lifeforce:
   type: combat
   brief: Offhand. Link lifeforce to another and take its damage. Offhand to remove.
 Spirit of Rage: 
-  description: Double one of your turns.
+  description: After slaying an enemy, gain an additional full turn.
   type: combat
-  brief: Double one of your turns.
-  cost: 2
+  brief: After slaying an enemy gain an additional full turn.
 Glory: 
   description: When your health falls below 25%, double all damage you deal.
   type: combat
   brief: When your health falls below 25% double your damage.
+Spiritual Infusion:
+  description: "Equip one of your aspects."
+  type: general
+  cost: 1
+  brief: Equip one of your aspects.
+Greater Spiritual Infusion:
+  description: "Equip two of your aspects."
+  type: general
+  cost: 1
+  brief: Equip two of your aspects.
+Major Spiritual Infusion:
+  description: "Equip three of your aspects."
+  type: general
+  cost: 1
+  brief: Equip three of your aspects.
+Legendary Spiritual Infusion:
+  description: "Equip six of your aspects."
+  type: general
+  cost: 1
+  brief: Equip six of your aspects.
+Elk Aspect:
+  description: "Gain an additional 15 feet of movement and advantage on athletics checks."
+  type: general
+  brief: Gain 15ft. of extra movement and adv on athletics checks.
+Wolf Aspect:
+  description: "If you attack an enemy with an ally, gain advantage. Gain advantage on tracking checks."
+  type: general
+  brief: Advantage on attacks made with an ally and tracking checks.
+Wildcat Aspect:
+  description: "When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks."
+  type: general
+  brief: When attacked, 1d20+DEX. 15 or above, dodge. Advantage on stealth.
+Bull Aspect:
+  description: "Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks."
+  type: general
+  brief: When you attack, size based contested STR save or enemy prone. ADV on STR checks.
+Bear Aspect:
+  description: "You take half blunt and piercing damage."
+  type: general
+  brief: You take half blunt and piercing damage.
+Elemental Aspect:
+  description: "Convert your damage to a different type. You must declare the type when this aspect is equipped."
+  type: general
+  brief: Convert you damage to a different type. Declare when equipped.
+Leech Aspect:
+  description: "Recover half your level (round up, minimum 1) in health whenever you land a blow."
+  type: general
+  brief: When you attack, recover 1/2 your level (round up, min 1) in health.
+Dolphin Aspect:
+  description: "You can swim at twice your running speed and hold your breath for 15 minutes."
+  type: general
+  brief: Swim at 2x running speed and hold your breath for 15 mins.
+Spiritual Strike:
+  description: "A spiritual version of your weapon appears next to an enemy of your choice up to 50 feet away, allowing you to attack them."
+  type: combat
+  brief: Make a melee attack against an enemy up to 50ft. away.
+  cost: 1
+Phase Walk:
+  description: "If you strike down an enemy with a spiritual strike, you may instantly teleport to their position."
+  type: combat
+  brief: If you kill an enemy with Spiritual Strike, you may teleport to their position.
+Spiritual Shield:
+  description: "As a reaction, stop an enemy attack from hitting you using spiritual energy."
+  cost: 1
+  type: combat
+  brief: Reaction. Stop an enemy attack from hitting you.
+Greater Spiritual Shield:
+  description: "Block an enemy attack from harming any allies within 15 feet of you using spiritual energy."
+  type: combat
+  brief: Stop an enemy attack from hitting all allies within 15ft. of you.
+  cost: 2
+Spiritually Reinforced Blow:
+  description: "Reinforce your attack with the spirits of nature. Add an extra damage dice and force an enemy to make a size based contested strength check. On failure, they are knocked back 10 feet."
+  type: combat
+  brief: "Add an extra dice to an attack. STR based contested STR check. Fail: knocked back 10 feet."
+  cost: 1
+Chain Strike:
+  description: "Attack an adjacent enemy with a spiritual weapon. The attack immediately chains to a second enemy within 15 feet. Role 1d20. On 10 or greater, continue the chain and repeat."
+  type: combat
+  brief: "Attack an adjacent enemy. The attack chains (1st free). 1d20. 10 or greater, chain."
+  cost: 2
+Draining Strike:
+  description: "Sap an enemies spirit with an attack. Regain half of the damage as health."
+  type: combat
+  brief: "Regain half of the damage you deal as health."
+  cost: 1
+Spiritual Aid:
+  description: "As an offhand action, grant an ally spiritual aid which gives them advantage on their next action or an extra damage dice on their next attack."
+  type: combat
+  brief: "Offhand. Grant ally adv on next action or extra dmg dice on next attack."
+  cost: 1
+Rouse to Action: 
+  description: "As an offhand action, grant an ally their full movement an an action."
+  type: combat
+  brief: "Offhand. Grant an ally full movement and an action."
+  cost: 1
+Form Shift:
+  description: "The power of one of your aspects fills you. Transform into the shape of the aspect. Stats in the book of known beasts."
+  type: general
+  brief: "Transform into the spirit of one of your equipped aspects."
+  cost: 1
+Spiritual Blast:
+  description: "Make an attack with your weapon which harms all enemies in a 30 foot line in front of you."
+  type: combat
+  cost: 1
+  brief: "Make an attack which hits all enemies in a 30ft. line in front of you."
+Infuse Other: 
+  description: "Grant an ally the benefit of your of your aspects for 1 battle or 1 hour."
+  cost: 1
+  brief: "Infuse an ally for one hour or 1 battle."
+  type: general
 Sword of Honor: 
   description: Imbue your blade with radiant light. The light lasts for 5 turns, and causes
     your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage
@@ -1532,9 +1682,9 @@ Repair:
   brief: You cannot heal using potions or rest. Rather, you must repair. Self-repair counts as rest. Repair with help as sleep.
     Repair with expert as sleep in a bed.
 Self Repair: 
-  description: During combat, you can self repair in place of a full turn.
+  description: During combat, you can self repair as an action.
   type: combat
-  brief: Self repair in place of a full turn.
+  brief: Self repair as an action.
 True Sleeplessness: 
   description: You cannot grow tired, nor can you sleep.
   type: general
@@ -1544,15 +1694,15 @@ Gyroscopic Center of Mass:
   type: combat
   brief: Add +5 to any check that involves knocking you prone.
 Armored Exterior: 
-  description: You naturally have an armor of 1.
+  description: "You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk."
   type: general
-  brief: You have 1 armor.
+  brief: Take half damage from piecing, slashing, blunt, fire, and ice attacks.
 Piston Punch: 
-  description: You may perform a 1d6 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone.
+  description: You may perform a 1d8 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone.
                Enemies larger than your size take advantage, smaller take disadvantage.
-               At level 4, increase damage to 1d10. At level 8, to 1d12. At level 12 to 2d12.
+               At level 4, increase damage to 1d12. At level 8, to 2d12. At level 12 to 3d12.
   type: combat
-  brief: 1d6 punch. On contested STR fail, knock enemy prone. d10 damage LV4, d12 LV8, 2d12 LV12.
+  brief: 1d8 punch. On contested STR fail, knock enemy prone. d12 damage LV4, 2d12 LV8, 3d12 LV12.
   cost: 1
 Upgrades: 
   description: A tinker can craft upgrades for you.
@@ -1596,9 +1746,9 @@ All Tuckered Out:
   type: general
   brief: You have to sleep every six hours or be exhausted.
 Chomp Chomp:
-  description: You can make a 1d4 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
+  description: You can make a 1d4 bite attack as an offhand action. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.
   type: combat
-  brief: 1d6 bite. Contested dex check to make you let go.
+  brief: 1d4 bite. Contested dex check to make you let go. Gives enemy disadvantage.
 Riding High:
   description: Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.
   type: combat

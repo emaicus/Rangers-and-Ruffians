@@ -27,6 +27,7 @@ Heavy Fighter:
         - Berserk # 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER.
         - Intimidate # Advantage on intimidation checks.
         - Taunt # Force enemies to attack you on a failed SP save
+        - Brutal Attack # Extra damage dice
       level_1:
         abilities:
         - Throw Anything # Throw anything
@@ -46,7 +47,7 @@ Heavy Fighter:
       level_5:
         abilities:
         - Minor Stat Increase
-        - Always Angry # Berserk once per battle
+        # - Always Angry # Berserk once per battle
         - The Opener
       level_6:
         abilities:
@@ -62,7 +63,6 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - The Closer
-        - Berserker # Half damage from physical attacks when berserk
       level_10:
         abilities:
         - Major Stat Increase
@@ -86,6 +86,210 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Spirit of Rage # Once per day, double a turn.
+    questions:
+    - Where did your character come from?
+    - Where is their tribe? Did they leave it?
+    - If they did, why? How do the people of the world feel about barbarians?
+    - How will being a barbarian affect the way that you interact with your party?
+    standings: Barbarians are the enemies of law keepers.
+    tag_line: Heavy Hitter
+  Path_of_Rage_Barbarian:
+    base_abilities:
+    - Colossal
+    - Boozehound
+    - Ruffians
+    base_stats:
+      Charisma: -2
+      Dexterity: 1
+      Inner_Fire: -1
+      Intelligence: -3
+      Luck: 0
+      Perception: 0
+      Strength: 2
+    description: Barbarians are hearty, and can dole out a lot of damage, making them
+      great tanks for a party of adventurers. They are marked by their berserk ability,
+      which allows them to fly into a battle frenzy, gaining extra attacks and health.
+      Barbarians cannot use magic, and are much better up close than at a distance.
+      They are known for their rugged ways, and usually prefer wide open spaces to
+      cities.
+    health_die_pieces: 6
+    levels:
+      level_0:
+        abilities:
+        - Melee Weapon Proficiency
+        - Thrown Weapon Proficiency
+        - Berserk # 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER.
+        - Throw Anything # Throw anything
+        - Intimidate # Advantage on intimidation checks.
+        - Brutal Attack # Extra damage dice
+      level_1:
+        abilities:
+        - Taunt # Force enemies to attack you on a failed SP save
+        - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.
+        - Minor Stat Increase
+      level_2:
+        abilities:
+        - Major Stat Increase
+        - Single Out
+      level_3:
+        abilities:
+        - Hurl Weapon
+        - Minor Stat Increase
+      level_4:
+        abilities:
+        - Major Stat Increase
+        - Warrior Spirit # When you slay an enemy or land a critical hit, gain 1 action point.
+      level_5:
+        abilities:
+        - Minor Stat Increase
+        - Chain Attack # If you kill an enemy, gain another attack
+        - The Opener # Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone.
+      level_6:
+        abilities:
+        - Major Stat Increase
+        - Adrenaline
+      level_7:
+        abilities:
+        - Minor Stat Increase
+        - Offhand Attack
+        - Terrify
+      level_8:
+        abilities:
+        - Arching Swing
+        - Major Stat Increase
+      level_9:
+        abilities:
+        - Minor Stat Increase
+        - The Closer
+      level_10:
+        abilities:
+        - Major Stat Increase
+        - Savage Critical # Additional dice of damage when you crit
+      level_11:
+        abilities:
+        - Minor Stat Increase
+        - Furious Blows # Two attacks when berserk
+        #- Warmaster # Extra +1 to STR and INF when berserk
+      level_12:
+        abilities:
+        - Major Stat Increase
+        - The Closer
+      level_13:
+        abilities:
+        - Minor Stat Increase
+        # - Controlled Rage # No negative effects from being berserk
+        - Glory # When you hit low health, double your damage (25%)
+      level_14:
+        abilities: 
+        - Major Stat Increase
+        - Fury
+      level_15:
+        abilities:
+        - Minor Stat Increase
+        - Spirit of Rage # Once per day, double a turn.
+    questions:
+    - Where did your character come from?
+    - Where is their tribe? Did they leave it?
+    - If they did, why? How do the people of the world feel about barbarians?
+    - How will being a barbarian affect the way that you interact with your party?
+    standings: Barbarians are the enemies of law keepers.
+    tag_line: Heavy Hitter
+  Path_of_Nature_Barbarian:
+    base_abilities:
+    - Colossal
+    - Boozehound
+    - Ruffians
+    base_stats:
+      Charisma: -3
+      Dexterity: 2
+      Inner_Fire: -2
+      Intelligence: 0
+      Luck: 0
+      Perception: -1
+      Strength: 1
+    description: Barbarians are hearty, and can dole out a lot of damage, making them
+      great tanks for a party of adventurers. They are marked by their berserk ability,
+      which allows them to fly into a battle frenzy, gaining extra attacks and health.
+      Barbarians cannot use magic, and are much better up close than at a distance.
+      They are known for their rugged ways, and usually prefer wide open spaces to
+      cities.
+    health_die_pieces: 6
+    levels:
+      level_0:
+        abilities:
+        - Melee Weapon Proficiency
+        - Thrown Weapon Proficiency
+        - Spiritual Infusion
+        - Elk Aspect # Add 15 feet of movement.
+        - Wolf Aspect # If you attack an enemy with an ally, gain advantage.
+        - Wildcat Aspect # You have the ability to dodge incoming attacks.
+        - Bull Aspect # All of your attacks have a chance to knock an enemy prone.
+        - Bear Aspect # You take half blunt and piercing damage.
+        - Elemental Aspect # Convert your damage to a different type of damage of your choice. Declare when aspect is equipped.
+        - Leech Aspect # Recover half your level (round up, min 1) in health whenever you land a blow.
+        - Dolphin Aspect # Swim at twice your walking speed and hold your breath for fifteen minutes.
+        - Spiritually Reinforced Blow # Extra damage dice + Enemy must make a size based contested STR check or be knocked back 10 feet.
+      level_1:
+        abilities:
+        - Spiritual Aid #: Grant an ally advantage on their next action or an extra damage dice on their next attack.
+        - Minor Stat Increase
+      level_2:
+        abilities:
+        - Major Stat Increase
+        - Spiritual Shield
+      level_3:
+        abilities:
+        - Minor Stat Increase
+        - Spiritual Strike
+      level_4:
+        abilities:
+        - Major Stat Increase
+        - Draining Strike #: Regain half of the damage you deal as health.
+      level_5:
+        abilities:
+        - Minor Stat Increase
+        - Greater Spiritual Infusion # Equip two aspects
+      level_6:
+        abilities:
+        - Major Stat Increase
+        - Warrior Spirit
+      level_7:
+        abilities:
+        - Minor Stat Increase
+        - Offhand Attack
+        - Spiritual Blast
+      level_8:
+        abilities:
+        - Major Stat Increase
+        - Chain Strike
+      level_9:
+        abilities:
+        - Minor Stat Increase
+        - Greater Spiritual Shield
+      level_10:
+        abilities:
+        - Major Stat Increase
+        - Major Spiritual Infusion # Equip 3 infusions
+      level_11:
+        abilities:
+        - Minor Stat Increase
+        - Infuse Other
+      level_12:
+        abilities:
+        - Major Stat Increase
+        - Phase Walk # If you strike down an enemy with spiritual strike, teleport to their position.
+      level_13:
+        abilities:
+        - Minor Stat Increase
+        - Rouse to Action
+      level_14:
+        abilities: 
+        - Major Stat Increase
+        - Form Shift
+      level_15:
+        abilities:
+        - Minor Stat Increase
+        - Legendary Spiritual Infusion # Equip all spiritual infusions
     questions:
     - Where did your character come from?
     - Where is their tribe? Did they leave it?

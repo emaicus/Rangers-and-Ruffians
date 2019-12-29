@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.1.2_  
+_Version 2.1.3_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -80,6 +80,8 @@ _Version 2.1.2_
      * [Monk](#monk)  
      * [Necromancer](#necromancer)  
      * [Paladin](#paladin)  
+     * [Path of Nature Barbarian](#path-of-nature-barbarian)  
+     * [Path of Rage Barbarian](#path-of-rage-barbarian)  
      * [Ranger](#ranger)  
      * [Rogue](#rogue)  
      * [Sorcerer](#sorcerer)  
@@ -248,11 +250,11 @@ __Automaton Abilities:__
 * __General Abilities:__   
   * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
   * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
-  * __Armored Exterior:__ You naturally have an armor of 1.  
+  * __Armored Exterior:__ You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk.  
 * __Combat Abilities:__   
-  * __Self Repair:__ During combat, you can self repair in place of a full turn.  
+  * __Self Repair:__ During combat, you can self repair as an action.  
   * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
-  * __Piston Punch:__ _(Cost 1)_ You may perform a 1d6 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone. Enemies larger than your size take advantage, smaller take disadvantage. At level 4, increase damage to 1d10. At level 8, to 1d12. At level 12 to 2d12.  
+  * __Piston Punch:__ _(Cost 1)_ You may perform a 1d8 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone. Enemies larger than your size take advantage, smaller take disadvantage. At level 4, increase damage to 1d12. At level 8, to 2d12. At level 12 to 3d12.  
   
   
   
@@ -293,6 +295,7 @@ __Catterwol Abilities:__
 * __General Abilities:__   
   * __Dark Vision:__ You can see even in perfect darkness.  
   * __Land on your feet:__ You can fall 40 feet before taking fall damage.  
+  * __Fast Paws:__ Gain an additional offhand action.  
 * __Advantages:__   
   * __Predator:__ When tracking, you have advantage on perception checks.  
   * __Loose Skin:__ You have advantage when breaking grapples.  
@@ -326,12 +329,12 @@ The daemonspawn were born of an unholy union between elves and the demons of old
   
 __Daemonspawn Abilities:__ 
 * __General Abilities:__   
-  * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation.  
   * __True Sight:__ You are able to see invisible entities.  
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
-  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round down), make a second action during combat.  
+  * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
+  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round up), make a second action during combat.  
   
   
   
@@ -395,7 +398,7 @@ __Dwarf Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Advantages:__   
   * __Stocky:__ You have advantage against any check that could cause you to go prone.  
-  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll.  
+  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.  
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
   * __Forgeborn:__ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
@@ -535,14 +538,14 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
 __Hardfoot Halfling Abilities:__ 
 * __General Abilities:__   
   * __Warm Butter:__ Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.  
-  * __Soft Bed:__ You recover 2d8 extra health from sleeping in a real bed.  
+  * __Soft Bed:__ You recover two extra health dice from sleeping in a real bed.  
   * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
 * __Starting Items:__   
   * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
   * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
 * __Combat Abilities:__   
-  * __Courageous Blow:__ _(Cost 1)_ Add your Inner Fire to an attack.  
+  * __Courageous Blow:__ _(Cost 1)_ Add twice your Inner Fire to an attack.  
   
   
   
@@ -609,7 +612,7 @@ __Hissling Abilities:__
   * __All Tuckered Out:__ You must sleep once every six hours, or suffer exhaustion.  
   * __Tossed Around:__ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is. Take full damage if you hit something as a result.  
 * __Combat Abilities:__   
-  * __Chomp Chomp:__ You can make a 1d4 bite attack. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
+  * __Chomp Chomp:__ You can make a 1d4 bite attack as an offhand action. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
   * __Riding High:__ Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.  
   * __Dig Dig Dig:__ You are able to burrow through earth at a rate of 1 foot per minute.  
   
@@ -1096,8 +1099,9 @@ __Level 0 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Berserk:__ _(Cost 1)_ Go berserk, giving you +1 effective strength and dexterity, but decreasing your intelligence by 3. Further, gain advantage on Spell Power Saves when berserk. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
+  * __Berserk:__ _(Cost 1)_ Go berserk, giving you +1 effective strength and dexterity. Further, gain advantage on Spell Power Saves when berserk and take half damage from any physical attacks. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
   * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
+  * __Brutal Attack:__ _(Cost 1)_ Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone.  
   
   
 __Level 1 Barbarian__
@@ -1144,7 +1148,6 @@ __Level 5 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Always Angry:__ You may now go berserk once per battle.  
   * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
   
   
@@ -1161,7 +1164,7 @@ __Level 7 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Furious Blows:__ _(Cost 1)_ Spend an action point to take attack twice in a single attaction while going berserk.  
+  * __Furious Blows:__ Attack twice in a single attack action while going berserk.  
   
   
 __Level 8 Barbarian__
@@ -1178,7 +1181,6 @@ __Level 9 Barbarian__
   
 * __Combat Abilities:__   
   * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
-  * __Berserker:__ You take half damage from physical attacks while going berserk.  
   
   
 __Level 10 Barbarian__
@@ -1194,7 +1196,7 @@ __Level 11 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
   
   
 __Level 12 Barbarian__
@@ -1227,7 +1229,7 @@ __Level 15 Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Spirit of Rage:__ _(Cost 2)_ Double one of your turns.  
+  * __Spirit of Rage:__ After slaying an enemy, gain an additional full turn.  
   
   
   
@@ -2304,7 +2306,7 @@ __Gunslinger Abilities__
 __Marksman Abilities__  
 * Combat Abilities:   
   * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
   * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
@@ -3272,6 +3274,395 @@ __Level 15 Paladin__
 ___
 
   
+### Path of Nature Barbarian
+  
+  
+Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
+  
+  
+|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|1|2|0|-2|-3|-1|0|6|  
+  
+  
+__Path Of Nature Barbarian Abilities:__ 
+* __General Abilities:__   
+  * __Colossal:__ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
+* __Advantages:__   
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
+  
+  
+__Level 0 Path Of Nature Barbarian__
+
+* __General Abilities:__   
+  * __Spiritual Infusion:__ _(Cost 1)_ Equip one of your aspects.  
+  * __Elk Aspect:__ Gain an additional 15 feet of movement and advantage on athletics checks.  
+  * __Wolf Aspect:__ If you attack an enemy with an ally, gain advantage. Gain advantage on tracking checks.  
+  * __Wildcat Aspect:__ When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks.  
+  * __Bull Aspect:__ Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks.  
+  * __Bear Aspect:__ You take half blunt and piercing damage.  
+  * __Elemental Aspect:__ Convert your damage to a different type. You must declare the type when this aspect is equipped.  
+  * __Leech Aspect:__ Recover half your level (round up, minimum 1) in health whenever you land a blow.  
+  * __Dolphin Aspect:__ You can swim at twice your running speed and hold your breath for 15 minutes.  
+  
+  
+* __Combat Abilities:__   
+  * __Spiritually Reinforced Blow:__ _(Cost 1)_ Reinforce your attack with the spirits of nature. Add an extra damage dice and force an enemy to make a size based contested strength check. On failure, they are knocked back 10 feet.  
+  
+  
+__Level 1 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spiritual Aid:__ _(Cost 1)_ As an offhand action, grant an ally spiritual aid which gives them advantage on their next action or an extra damage dice on their next attack.  
+  
+  
+__Level 2 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spiritual Shield:__ _(Cost 1)_ As a reaction, stop an enemy attack from hitting you using spiritual energy.  
+  
+  
+__Level 3 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spiritual Strike:__ _(Cost 1)_ A spiritual version of your weapon appears next to an enemy of your choice up to 50 feet away, allowing you to attack them.  
+  
+  
+__Level 4 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Draining Strike:__ _(Cost 1)_ Sap an enemies spirit with an attack. Regain half of the damage as health.  
+  
+  
+__Level 5 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Spiritual Infusion:__ _(Cost 1)_ Equip two of your aspects.  
+  
+  
+__Level 6 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Warrior Spirit:__ If you slay an enemy or land a critical hit, regain one action point.  
+  
+  
+__Level 7 Path Of Nature Barbarian__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spiritual Blast:__ _(Cost 1)_ Make an attack with your weapon which harms all enemies in a 30 foot line in front of you.  
+  
+  
+__Level 8 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Chain Strike:__ _(Cost 2)_ Attack an adjacent enemy with a spiritual weapon. The attack immediately chains to a second enemy within 15 feet. Role 1d20. On 10 or greater, continue the chain and repeat.  
+  
+  
+__Level 9 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Spiritual Shield:__ _(Cost 2)_ Block an enemy attack from harming any allies within 15 feet of you using spiritual energy.  
+  
+  
+__Level 10 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Major Spiritual Infusion:__ _(Cost 1)_ Equip three of your aspects.  
+  
+  
+__Level 11 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Infuse Other:__ _(Cost 1)_ Grant an ally the benefit of your of your aspects for 1 battle or 1 hour.  
+  
+  
+__Level 12 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Phase Walk:__ If you strike down an enemy with a spiritual strike, you may instantly teleport to their position.  
+  
+  
+__Level 13 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Rouse to Action:__ _(Cost 1)_ As an offhand action, grant an ally their full movement an an action.  
+  
+  
+__Level 14 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Form Shift:__ _(Cost 1)_ The power of one of your aspects fills you. Transform into the shape of the aspect. Stats in the book of known beasts.  
+  
+  
+__Level 15 Path Of Nature Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Legendary Spiritual Infusion:__ _(Cost 1)_ Equip six of your aspects.  
+  
+  
+  
+___
+
+  
+### Path of Rage Barbarian
+  
+  
+Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
+  
+  
+|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|2|1|-3|-1|-2|0|0|6|  
+  
+  
+__Path Of Rage Barbarian Abilities:__ 
+* __General Abilities:__   
+  * __Colossal:__ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
+* __Advantages:__   
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
+  
+  
+__Level 0 Path Of Rage Barbarian__
+
+* __General Abilities:__   
+  * __Throw Anything:__ You can throw anything up to one size larger than yourself.  
+  
+  
+* __Advantages:__   
+  * __Intimidate:__ You have advantage on intimidation checks.  
+  
+  
+* __Combat Abilities:__   
+  * __Berserk:__ _(Cost 1)_ Go berserk, giving you +1 effective strength and dexterity. Further, gain advantage on Spell Power Saves when berserk and take half damage from any physical attacks. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
+  * __Brutal Attack:__ _(Cost 1)_ Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone.  
+  
+  
+__Level 1 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
+  * __Throw Caution to the Wind:__ On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.  
+  
+  
+__Level 2 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Single Out:__ _(Cost 1)_ Single out an enemy as an offhand action. Gain 15ft. of extra movement on any turn when you move towards them, and gain advantage on all attacks made against them.  
+  
+  
+__Level 3 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Hurl Weapon:__ _(Cost 1)_ Throw your weapon up to 5ft. times your Strength or Dexterity. Treat this as a normal attack and then double its damage.  
+  
+  
+__Level 4 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Warrior Spirit:__ If you slay an enemy or land a critical hit, regain one action point.  
+  
+  
+__Level 5 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Chain Attack:__ After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon.  
+  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
+  
+  
+__Level 6 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Adrenaline:__ When you are below 50% health, gain an extra 10 feet of movement.  
+  
+  
+__Level 7 Path Of Rage Barbarian__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Terrify:__ Singled out enemies must make a spell power save or be frightened.  
+  
+  
+__Level 8 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Arching Swing:__ _(Cost 1)_ Make an attack which damages all enemies adjacent to you.  
+  
+  
+__Level 9 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
+  
+  
+__Level 10 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
+  
+  
+__Level 11 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Furious Blows:__ Attack twice in a single attack action while going berserk.  
+  
+  
+__Level 12 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
+  
+  
+__Level 13 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Glory:__ When your health falls below 25%, double all damage you deal.  
+  
+  
+__Level 14 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Fury:__ On a turn in which you have taken damage, add an extra damage dice to all of your attacks.  
+  
+  
+__Level 15 Path Of Rage Barbarian__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spirit of Rage:__ After slaying an enemy, gain an additional full turn.  
+  
+  
+  
+___
+
+  
 ### Ranger
 <img src='images/class/ranger.jpg' class="raceClassImage" />
 
@@ -3622,7 +4013,7 @@ __Level 13 Rogue__
 __Assassin Abilities__  
 * Combat Abilities:   
   * __Line Them Up:__ If you slay an enemy, gain another attack action.  
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
   
   
 __Thief Abilities__  

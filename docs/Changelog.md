@@ -25,23 +25,124 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
+   * [Rangers and Ruffians 2.1.3: The Barbarian Update](#rangers-and-ruffians-213-the-barbarian-update)  
      * [Overview:](#overview)  
+     * [Race Balance Changes](#race-balance-changes)  
+     * [Class Balance Changes](#class-balance-changes)  
+   * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
+     * [Overview:](#overview-1)  
      * [Ability Changes](#ability-changes)  
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
-     * [Overview:](#overview-1)  
+     * [Overview:](#overview-2)  
      * [Rule Changes:](#rule-changes)  
      * [Additional Clarifications:](#additional-clarifications)  
-     * [Race Balance Changes:](#race-balance-changes)  
-     * [Class Balance Changes:](#class-balance-changes)  
+     * [Race Balance Changes:](#race-balance-changes-1)  
+     * [Class Balance Changes:](#class-balance-changes-1)  
    * [Rangers and Ruffians 2.1.0: The Skills Update. November 19, 2019](#rangers-and-ruffians-210-the-skills-update-november-19-2019)  
      * [New Features:](#new-features)  
      * [Rule Changes:](#rule-changes-1)  
      * [All Races and Classes:](#all-races-and-classes)  
-     * [Race Balance Changes:](#race-balance-changes-1)  
-     * [Class Balance Changes:](#class-balance-changes-1)  
+     * [Race Balance Changes:](#race-balance-changes-2)  
+     * [Class Balance Changes:](#class-balance-changes-2)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
 
+  
+## Rangers and Ruffians 2.1.3: The Barbarian Update
+  
+  
+
+  
+### Overview:
+Wip
+  
+  
+
+  
+### Race Balance Changes
+
+  
+#### Catterwol
+* __Abilities__
+  * __Changed Fast Paws__ _Gain an extra offhand action_
+    * __Change:__ Reverted Fast Paws to its previous, pre-2.1.1 state (Offhand action can be used as an attack again).
+    * __Reasoning:__ Allows Catterwol to shine.
+  
+  
+
+  
+#### Hardfoot Halfling
+* __Abilities__
+  * __Changed Courageous Blow__ _Add your INF to an attack_
+    * __Change:__ Now allows you to add twice your INF to an attack.
+    * __Reasoning:__ Makes the ability more useful at high levels.
+  
+  
+
+  
+#### Dwarf
+* __Abilities__
+  * __Changed Very Dangerous Over Short Distances__ _Advantage if you begin your turn next to an enemy_
+    * __Change:__ Clarified that this ability negates disadvantage when attacking with a ranged weapon.
+    * __Reasoning:__ Clarification.
+  
+  
+
+  
+#### Daemonspawn
+* __Abilities__
+  * __Changed Fix Your Eyes on Me__ _Force an enemy to see only you. Adv on CHA checks._
+    * __Change:__ Added combat use: force enemy to attack only you.
+    * __Reasoning:__ Increases the utility of the ability.
+  * __Changed Sacrificial Rite__ _Sacrifice half your level in health to make a second action._
+    * __Change:__ Round up rather than down.
+    * __Reasoning:__ Adds to cost-benefit of ability.
+  
+  
+
+  
+#### Automaton
+* __Abilities__
+  * __Changed Self Repair__ _During combat, self repair._
+    * __Change:__ Now costs an action rather than a turn.
+    * __Reasoning:__ Makes automaton more survivable despite its inability to heal via potions.
+  * __Changed Armored Exterior__ _Take less damage in combat._
+    * __Change:__ Rather than adding a static +1 armor, this ability now gives the automaton it's level in bonus health, which can be instantly restored via a repair action.
+    * __Reasoning:__ This change will make the automaton far more survivable despite its inability to drink potions.
+  * __Changed Piston Punch__ _Attempt to knock an opponent down._
+    * __Change:__ Increased damage across the board.
+    * __Reasoning:__ Makes this attack more viable at all levels.
+  
+  
+
+  
+#### Hissling
+* __Abilities__
+  * __Changed Chomp Chomp__ _Bite and cling to an enemy._
+    * __Change:__ Now costs an offhand action rather than an action.
+    * __Reasoning:__ Makes this low damage ability more viable at all levels.
+  
+  
+  
+  
+
+  
+### Class Balance Changes
+  
+  
+
+  
+#### Barbarian
+* __Abilities__
+  * __Changed Berserk__ _Go into a rage to get various buffs_ 
+    * __Change:__ Removed INT penalty.
+    * __Reasoning:__ This was an antiquated penalty post- action points.
+  * __Changed Berserk__ _Go into a rage to get various buffs_ 
+    * __Change:__ Berserk now allows barbarians to take half damage from physical attacks.
+    * __Reasoning:__ Makes the Barbarian a more viable tank.
+  * __Removed Berserker__ _Level 9: Take half physical damage while berserk_ 
+    * __Change:__ Merged with Berserk.
+  * __Added Brutal Attack__ _Add an additional dice of damage. Size based contested STR save. Fail: prone or 10ft knockback._ 
+    * __Reasoning:__ Adds an active barbarian ability.
   
 ## Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019
   
