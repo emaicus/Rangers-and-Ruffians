@@ -68,7 +68,6 @@ _Version 2.1.3_
      * [Wood Elf](#wood-elf)  
    * [Classes](#classes)  
      * [Archer](#archer)  
-     * [Barbarian](#barbarian)  
      * [Bard](#bard)  
      * [Beastmaster](#beastmaster)  
      * [Cleric](#cleric)  
@@ -1070,172 +1069,6 @@ __Level 15 Archer__
 ___
 
   
-### Barbarian
-<img src='images/class/barbarian.jpg' class="raceClassImage" />
-
-"[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
-  
-  
-Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
-  
-  
-|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|1|-3|-1|-2|0|0|6|  
-  
-  
-__Barbarian Abilities:__ 
-* __General Abilities:__   
-  * __Colossal:__ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
-* __Advantages:__   
-  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
-  
-  
-__Level 0 Barbarian__
-
-* __Advantages:__   
-  * __Intimidate:__ You have advantage on intimidation checks.  
-  
-  
-* __Combat Abilities:__   
-  * __Berserk:__ _(Cost 1)_ Go berserk, giving you +1 effective strength and dexterity. Further, gain advantage on Spell Power Saves when berserk and take half damage from any physical attacks. Going berserk lasts for 1 hour. Leaving berserk prematurely makes you fatigued, and gives you disadvantage on all rolls until you next sleep.  
-  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
-  * __Brutal Attack:__ _(Cost 1)_ Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone.  
-  
-  
-__Level 1 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __General Abilities:__   
-  * __Throw Anything:__ You can throw anything up to one size larger than yourself.  
-  
-  
-* __Combat Abilities:__   
-  * __Throw Caution to the Wind:__ On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.  
-  
-  
-__Level 2 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 3 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Crushing Blow:__ On a critical hit, knock an enemy prone and give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.  
-  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
-  
-  
-__Level 4 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 5 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
-  
-  
-__Level 6 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 7 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Furious Blows:__ Attack twice in a single attack action while going berserk.  
-  
-  
-__Level 8 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 9 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
-  
-  
-__Level 10 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 11 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
-  
-  
-__Level 12 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 13 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Controlled Rage:__ Ending berserk early no longer gives you any negative effects and no longer has a time limit.  
-  * __Glory:__ When your health falls below 25%, double all damage you deal.  
-  
-  
-__Level 14 Barbarian__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 15 Barbarian__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Spirit of Rage:__ After slaying an enemy, gain an additional full turn.  
-  
-  
-  
-___
-
-  
 ### Bard
 <img src='images/class/bard.jpg' class="raceClassImage" />
 
@@ -2139,7 +1972,7 @@ __Level 13 Fighter__
   
   
 * __Combat Abilities:__   
-  * __Stay on Your Feet:__ If you fall to zero health, make a D14 inner fire saving throw. If you succeed, drop to 1 health instead.  
+  * __Stay on Your Feet:__ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
   
   
 __Level 14 Fighter__
@@ -2587,6 +2420,7 @@ __Level 0 Knight__
 
 * __General Abilities:__   
   * __Shield Master:__ Don't take movement penalties from shield use.  
+  * __Armor Master:__ Don't take movement penalties from armor use.  
   
   
 * __Advantages:__   
@@ -2594,8 +2428,9 @@ __Level 0 Knight__
   
   
 * __Combat Abilities:__   
-  * __Shield Bash:__ _(Cost 1)_ Use an action to shield bash an enemy, dealing 1d6 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
-  * __Charge!:__ _(Cost 1)_ As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
+  * __Overwhelming Strike:__ _(Cost 1)_ Batter away an enemies defenses. Add a damage dice to your attack and force the enemy to make a size based contested Strength check. On failure, the next attack against the enemy has advantage.  
+  * __Pivot:__ As an offhand action, trade spaces with an adjacent ally.  
+  * __Steel Yourself:__ _(Cost 1)_ Choose to take half damage from an attack.  
   
   
 __Level 1 Knight__
@@ -2605,13 +2440,19 @@ __Level 1 Knight__
   
   
 * __Combat Abilities:__   
-  * __Trained Precision:__ _(Cost 1)_ Gain an additional damage dice on your attack.  
+  * __Shield Bash:__ _(Cost 1)_ Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Ready Stance:__ As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack.  
   
   
 __Level 2 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
+  * __Last Line of Defense:__ If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.  
   
   
 __Level 3 Knight__
@@ -2621,13 +2462,17 @@ __Level 3 Knight__
   
   
 * __Combat Abilities:__   
-  * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
+  * __None Shall Pass:__ If you hit an enemy with your exposed attack, they must make a size based contested strength check or be stopped in their tracks.  
   
   
 __Level 4 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Press the Advantage:__ When you land a critical hit, gain a free shield bash attack.  
   
   
 __Level 5 Knight__
@@ -2637,13 +2482,18 @@ __Level 5 Knight__
   
   
 * __Combat Abilities:__   
-  * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
+  * __Advance:__ If you slay an enemy with a melee attack, you may step forward into the space that they occupied.  
+  * __Knight's Challenge:__ _(Cost 1)_ As an offhand action, issue a challenge to one of your enemies. The enemy must make an spell power save or be forced to attack only you. Regardless, you have advantage when attacking a challenged enemy.  
   
   
 __Level 6 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Charge:__ _(Cost 1)_ As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
   
   
 __Level 7 Knight__
@@ -2656,14 +2506,14 @@ __Level 7 Knight__
   * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
-* __General Abilities:__   
-  * __Ready Stance:__ As an offhand action, take up a stance that grants you 1d4 armor until your next turn.  
-  
-  
 __Level 8 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Inspiring Critical:__ Inspire an ally when you land a critical hit or slay an enemy. Grant a chosen ally a d10 inspiration dice.  
   
   
 __Level 9 Knight__
@@ -2673,14 +2523,18 @@ __Level 9 Knight__
   
   
 * __Combat Abilities:__   
-  * __Steel Yourself:__ _(Cost 1)_ Choose to take half damage from an attack.  
-  * __Cleave:__ Strike up to two adjacent foes when you make a melee attack.  
+  * __Hold the Line:__ Gain a second exposed attack.  
   
   
 __Level 10 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Cleave:__ Strike up to two adjacent foes when you make a melee attack.  
+  * __Greater Charge:__ Your charge now carries you 15 feet, and may end in an attack.  
   
   
 __Level 11 Knight__
@@ -2690,13 +2544,17 @@ __Level 11 Knight__
   
   
 * __Combat Abilities:__   
-  * __Stalwart Defender:__ Grant all allies within 30 feet of you +1 armor.  
+  * __Stay on Your Feet:__ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
   
   
 __Level 12 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Controlled Advance:__ When you use the Advance ability, gain an action which may be used to either attack again or to ready your stance.  
   
   
 __Level 13 Knight__
@@ -2706,13 +2564,17 @@ __Level 13 Knight__
   
   
 * __Combat Abilities:__   
-  * __Last Line of Defense:__ If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.  
+  * __Defender Aura:__ _(Cost 1)_ Grant all allies within 30 feet of you half damage from physical attacks for three turns.  
   
   
 __Level 14 Knight__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Resilient Defense:__ You have become so hardened by combat that a single attack can deal at most 40 damage to you.  
   
   
 __Level 15 Knight__
@@ -2722,7 +2584,7 @@ __Level 15 Knight__
   
   
 * __Combat Abilities:__   
-  * __Sword of Honor:__ _(Cost 1)_ Imbue your blade with radiant light. The light lasts for 5 turns, and causes your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage on all spell saving throws, and cannot be frightened.  
+  * __Warrior's Vow:__ You gain an extra attack against an entity you have challenged.  
   
   
   
@@ -3338,7 +3200,7 @@ __Level 3 Path Of Nature Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Spiritual Strike:__ _(Cost 1)_ A spiritual version of your weapon appears next to an enemy of your choice up to 50 feet away, allowing you to attack them.  
+  * __Spiritual Strike:__ _(Cost 1)_ A spiritual version of your weapon appears next to an enemy of your choice up to 30 feet away, allowing you to attack them.  
   
   
 __Level 4 Path Of Nature Barbarian__
@@ -3432,7 +3294,7 @@ __Level 12 Path Of Nature Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Phase Walk:__ If you strike down an enemy with a spiritual strike, you may instantly teleport to their position.  
+  * __Phase Walk:__ If you strike an enemy with a spiritual weapon, you may instantly teleport to their position.  
   
   
 __Level 13 Path Of Nature Barbarian__

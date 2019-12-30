@@ -22,6 +22,10 @@ Shield Master:
   description: Don't take movement penalties from shield use.
   type: general
   brief: "Don't take movement penalties from shield use."
+Armor Master:
+  description: Don't take movement penalties from armor use.
+  type: general
+  brief: "Don't take movement penalties from armor use."
 Courageous Blow:
   description: Add twice your Inner Fire to an attack.
   type: combat
@@ -591,10 +595,9 @@ Hobble:
   brief: Tie up grappled enemies. Each turn, they make a STR SP save to escape.
   cost: 1
 Hold the Line:
-  description: When any member of your party is on death's door, gain advantage on
-    all attacks and checks used to protect them.
+  description: Gain a second exposed attack.
   type: combat
-  brief: When a party member is on death's door, gain advantage on attacks.
+  brief: You have 2 exposed attacks.
 Disengage:
   description: Spend an action point to avoid provoking exposed attacks.
   type: combat
@@ -867,18 +870,18 @@ Shed Tail:
   type: general
   brief: 1/week. Shed your tail to escape a grapple.
 Shield Bash:
-  description: Use an action to shield bash an enemy, dealing 1d6 damage and staggering
+  description: Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering
     them if they fail a contested strength check. A staggered enemy looses one of its actions.
     At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, 
     damage increases to 1d12.
   type: combat
-  brief: "Contested STR check. Fail: loose action. d6 damage LV0 d8 LV4, d10 LV8, d12 LV12."
+  brief: "Offhand. Contested STR check. Fail: loose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
   cost: 1
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
     taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.
   type: combat
-  brief: Reaction. 1/round, take a teammates damage for them. Damage is halved. 30ft rad.
+  brief: Reaction. Take a teammates damage for them. Damage is halved. 30ft rad.
   cost: 1
 Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
@@ -1208,11 +1211,15 @@ Shield Up:
   description: Offhand. Hold up your shield. Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks if holding a shield. Must be done at the start of a turn.
   type: general
   brief: Offhand. -5ft. Movement. Take half damage from non-magic ranged attacks. Must be done at the start of a turn.
-Charge!: 
-  description: As an offhand action, run an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.
+Charge: 
+  description: As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.
   type: combat
-  brief: Offhand. Run an extra 10ft. Contested STR check if you hit someone. Looser is knocked prone.
+  brief: Offhand. Charge an extra 10ft. Size based contested STR check if you hit someone. Looser is knocked prone.
   cost: 1
+Greater Charge:
+  description: "Your charge now carries you 15 feet, and may end in an attack."
+  type: combat
+  brief: "Charge now goes 15ft. and ends in an attack."
 Joust: 
   description: Add an extra damage dice to an attack if it is performed with a running start.
   type: combat
@@ -1230,6 +1237,52 @@ Cleave:
   description: Strike up to two adjacent foes when you make a melee attack.
   type: combat
   brief: Hit up to 2 side by side enemies with melee attacks.
+Inspiring Critical:
+  description: "Inspire an ally when you land a critical hit or slay an enemy. Grant a chosen ally a d10 inspiration dice."
+  type: combat
+  brief: "When you land a crit or kill an enemy, give a chosen ally 1d10 inspiration."
+Press the Advantage:
+  description: "When you land a critical hit, gain a free shield bash attack."
+  type: combat
+  brief: Shield bash for free when you crit.
+None Shall Pass:
+  description: If you hit an enemy with your exposed attack, they must make a size based contested strength check or be stopped in their tracks.
+  type: combat
+  brief: "When you hit a passing entity, size based contested STR check. Fail: stopped."
+Pivot:
+  description: "As an offhand action, trade spaces with an adjacent ally."
+  type: combat
+  brief: "Offhand: swap spaces with adjacent ally."
+Resilient Defense:
+  description: "You have become so hardened by combat that a single attack can deal at most 40 damage to you."
+  type: combat
+  brief: "A single attack can do at most 40 dmg to you."
+Advance:
+  description: "If you slay an enemy with a melee attack, you may step forward into the space that they occupied."
+  type: combat
+  brief: "If you slay an enemy, you may move forward into their space."
+Controlled Advance:
+  description: "When you use the Advance ability, gain an action which may be used to either attack again or to ready your stance."
+  type: combat
+  brief: "When you use Advance, gain either an attack or a Ready Stance."
+Overwhelming Strike:
+  description: "Batter away an enemies defenses. Add a damage dice to your attack and force the enemy to make a size based contested Strength check. On failure, the next attack against the enemy has advantage."
+  type: combat
+  brief: "Additional damage dice. Size based contested STR check. Fail: Next attack has advantage."
+  cost: 1
+Ready Stance:
+  description: "As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack."
+  type: combat
+  brief: "Offhand: one time you are attacked before next turn, counterattack."
+Knight's Challenge:
+  description: "As an offhand action, issue a challenge to one of your enemies. The enemy must make an spell power save or be forced to attack only you. Regardless, you have advantage when attacking a challenged enemy."
+  cost: 1
+  type: combat
+  brief: "Offhand: SP save. Fail: Forced to attack you. Regardless, you have attack advantage."
+Warrior's Vow:
+  description: "You gain an extra attack against an entity you have challenged."
+  type: combat
+  brief: "Extra attack vs. challenged enemies."
 Link Lifeforce: 
   description: As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you.
     Remove the link as an offhand action.
@@ -1296,14 +1349,14 @@ Dolphin Aspect:
   type: general
   brief: Swim at 2x running speed and hold your breath for 15 mins.
 Spiritual Strike:
-  description: "A spiritual version of your weapon appears next to an enemy of your choice up to 50 feet away, allowing you to attack them."
+  description: "A spiritual version of your weapon appears next to an enemy of your choice up to 30 feet away, allowing you to attack them."
   type: combat
-  brief: Make a melee attack against an enemy up to 50ft. away.
+  brief: Make a melee attack against an enemy up to 30ft. away.
   cost: 1
 Phase Walk:
-  description: "If you strike down an enemy with a spiritual strike, you may instantly teleport to their position."
+  description: "If you strike an enemy with a spiritual weapon, you may instantly teleport to their position."
   type: combat
-  brief: If you kill an enemy with Spiritual Strike, you may teleport to their position.
+  brief: If you strike an enemy with Spiritual Strike, you may teleport to their position.
 Spiritual Shield:
   description: "As a reaction, stop an enemy attack from hitting you using spiritual energy."
   cost: 1
@@ -1362,13 +1415,13 @@ Sword of Honor:
   brief: Lasts 5 turns. +2d6 damage, gain advantage on SP saves. Immune to fear.
   cost: 1
 Stay on Your Feet: 
-  description: If you fall to zero health, make a D14 inner fire saving throw. If you succeed, drop to 1 health instead.
+  description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
-  brief: If your health hits 0, make a D14 INF save. On success, drop to 1 hp instead.
+  brief: If your health hits 0, make a D10 INF save. On success, drop to 1 hp instead.
 Last Line of Defense: 
   description: If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.
   type: combat
-  brief: If your allies are on death's door or have died, +1 dmg dice to all attacks.
+  brief: If your allies are on death's door or have died, add a dmg dice to all attacks.
 Beacon of Hope: 
   description: Passive. All allies within 100 feet of you gain +1 to all saving throws.
   type: general
@@ -1428,10 +1481,11 @@ Rally Cry:
   type: combat
   brief: Offhand. Allow all allies to do an additional dice of damage on their next attack.
   cost: 1
-Stalwart Defender:
-  description: Grant all allies within 30 feet of you +1 armor.
+Defender Aura:
+  description: Grant all allies within 30 feet of you half damage from physical attacks for three turns.
   type: combat
-  brief: Grant allies within 30ft +1 armor.
+  brief: Grant allies within 30ft half damage from physical attacks for 3 turns.
+  cost: 1
 Fallen: 
   description: While you are on death's door, all of your allies gain a bonus action.
   type: general

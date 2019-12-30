@@ -1,98 +1,4 @@
-Heavy Fighter:
-  Barbarian:
-    base_abilities:
-    - Colossal
-    - Boozehound
-    - Ruffians
-    base_stats:
-      Charisma: -2
-      Dexterity: 1
-      Inner_Fire: -1
-      Intelligence: -3
-      Luck: 0
-      Perception: 0
-      Strength: 2
-    description: Barbarians are hearty, and can dole out a lot of damage, making them
-      great tanks for a party of adventurers. They are marked by their berserk ability,
-      which allows them to fly into a battle frenzy, gaining extra attacks and health.
-      Barbarians cannot use magic, and are much better up close than at a distance.
-      They are known for their rugged ways, and usually prefer wide open spaces to
-      cities.
-    health_die_pieces: 6
-    levels:
-      level_0:
-        abilities:
-        - Melee Weapon Proficiency
-        - Thrown Weapon Proficiency
-        - Berserk # 1/rest, +1 STR, DEX, +2 INF, -3 INT, PER.
-        - Intimidate # Advantage on intimidation checks.
-        - Taunt # Force enemies to attack you on a failed SP save
-        - Brutal Attack # Extra damage dice
-      level_1:
-        abilities:
-        - Throw Anything # Throw anything
-        - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.
-        - Minor Stat Increase
-      level_2:
-        abilities:
-        - Major Stat Increase
-      level_3:
-        abilities:
-        - Crushing Blow # Give all enemies disadvantage if you land a critical hit.
-        - Line Them Up # If you kill an enemy, gain another attack
-        - Minor Stat Increase
-      level_4:
-        abilities:
-        - Major Stat Increase
-      level_5:
-        abilities:
-        - Minor Stat Increase
-        # - Always Angry # Berserk once per battle
-        - The Opener
-      level_6:
-        abilities:
-        - Major Stat Increase
-      level_7:
-        abilities:
-        - Minor Stat Increase
-        - Furious Blows # Two attacks when berserk
-      level_8:
-        abilities:
-        - Major Stat Increase
-      level_9:
-        abilities:
-        - Minor Stat Increase
-        - The Closer
-      level_10:
-        abilities:
-        - Major Stat Increase
-      level_11:
-        abilities:
-        - Minor Stat Increase
-        #- Warmaster # Extra +1 to STR and INF when berserk
-        - Savage Critical # Additional dice of damage when you crit
-      level_12:
-        abilities:
-        - Major Stat Increase
-      level_13:
-        abilities:
-        - Minor Stat Increase
-        - Controlled Rage # No negative effects from being berserk
-        - Glory # When you hit low health, double your damage (25%)
-      level_14:
-        abilities: 
-        - Major Stat Increase
-      level_15:
-        abilities:
-        - Minor Stat Increase
-        - Spirit of Rage # Once per day, double a turn.
-    questions:
-    - Where did your character come from?
-    - Where is their tribe? Did they leave it?
-    - If they did, why? How do the people of the world feel about barbarians?
-    - How will being a barbarian affect the way that you interact with your party?
-    standings: Barbarians are the enemies of law keepers.
-    tag_line: Heavy Hitter
+Heavy Fighter:    
   Path_of_Rage_Barbarian:
     base_abilities:
     - Colossal
@@ -318,64 +224,75 @@ Heavy Fighter:
         abilities:
         - Melee Weapon Proficiency
         - Kingsmen
-        - Shield Bash
         - Shield Master
-        - Charge!
+        - Armor Master
+        - Overwhelming Strike
+        - Pivot
+        - Steel Yourself
       level_1:
         abilities:
         - Minor Stat Increase
-        - Trained Precision
+        - Shield Bash
+        - Ready Stance
       level_2:
         abilities:
         - Major Stat Increase
+        - Shield of Men
+        - Last Line of Defense
       level_3:
         abilities:
         - Minor Stat Increase
-        - Shield of Men
+        - None Shall Pass
       level_4:
         abilities:
         - Major Stat Increase
+        - Press the Advantage
       level_5:
         abilities:
         - Minor Stat Increase
-        - Taunt
+        - Advance
+        - Knight's Challenge
       level_6:
         abilities:
         - Major Stat Increase
+        - Charge
       level_7:
         abilities:
         - Minor Stat Increase
-        - Ready Stance
         - Offhand Attack
       level_8:
         abilities:
         - Major Stat Increase
+        - Inspiring Critical
       level_9:
         abilities:
         - Minor Stat Increase
-        - Steel Yourself
-        - Cleave
+        - Hold the Line
       level_10:
         abilities:
         - Major Stat Increase
+        - Cleave
+        - Greater Charge
       level_11:
         abilities:
         - Minor Stat Increase
-        - Stalwart Defender
+        - Stay on Your Feet
       level_12:
         abilities:
         - Major Stat Increase
+        - Controlled Advance
       level_13:
         abilities:
         - Minor Stat Increase
-        - Last Line of Defense
+        - Defender Aura
       level_14:
         abilities:
         - Major Stat Increase
+        - Resilient Defense
       level_15:
         abilities: 
         - Minor Stat Increase
-        - Sword of Honor
+        - Warrior's Vow
     questions:
     - How did your character get where they are, and where they are going next?
     - Are they already annointed as a knight, or are they still aspiring to knighthood?
