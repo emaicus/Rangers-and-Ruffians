@@ -1,0 +1,36 @@
+<div>
+  <p>
+    <span class="characterName">Automatic Character Sheet Creation Tool</span>
+  </p>
+
+  Character Name: <input type="text" id="chosen_name" onkeyup="updateCharacterName()"><br>
+
+  <select id="chosen_level" onchange="updateCharacterSheet()">
+    {% for i in range(0, 16) -%}
+      <option value="{{i}}">Level {{i}}</option>
+    {%- endfor %}
+  </select>
+
+  <br/>
+  
+  <select id="chosen_race" onchange="updateCharacterSheet()">
+    {% for race in races | sort %}
+    <option value="{{race}}">{{race}}</option>
+    {% endfor %}
+  </select>
+
+  <br/>
+
+  <!-- onchange="leaveChange()" -->
+  
+  <select id="chosen_class" onchange="updateCharacterSheet()">
+    {% for rnr_class in classes | sort %}
+    <option value="{{rnr_class}}">{{rnr_class}}</option>
+    {% endfor %}
+  </select>
+
+  <br/>
+  
+  <!-- <button onclick="updateCharacterSheet()">Build Character</button> -->
+
+</div>

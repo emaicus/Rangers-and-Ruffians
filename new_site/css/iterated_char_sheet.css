@@ -1,0 +1,305 @@
+body
+{
+  margin:0;
+  padding: 0;
+  background:  white;/*url('/static/images/subtle_white_mini_waves.png') repeat 0 0*/;
+  -webkit-print-color-adjust: exact !important;
+}
+
+
+
+/* WRAPPERS/HEIGHT STUFF*/
+
+/* WHOLE THING*/
+
+.printRegion 
+{
+  width: 66vh; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+  height:100vh;
+  margin: 0 auto;
+  padding:0px;
+  background: #fff;
+  margin-top:30px;
+}
+
+/* Applies to both */
+
+div.characterDetails
+{
+  height: 15vh;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+/* APPLIES TO LEFT */
+
+div.squareWrapper
+{
+  height: 13.5vh;
+  margin: 1.1rem auto;
+  margin-top: 1.1rem;
+}
+
+div.square
+{
+  width: 6vh;
+  height: 6vh;
+  display: inline-block; /* could be float */
+  border: 2px solid black;
+  margin: 0.2rem;
+  margin-top: 2px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+div.combatAbilities
+{
+  height: 69vh;
+  margin-top: 10px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+  padding-left: 5px;
+  padding-right: 4px;
+  border-bottom: 1px solid black;
+}
+
+div.combatAbilitiesVisualStats
+{
+  height: 7.60in;
+  margin-top: 10px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+  padding-left: 5px;
+  padding-right: 4px;
+  border-bottom: 1px solid black;
+}
+
+/* APPLIES TO RIGHT */
+
+div.generalAbilities
+{
+  height: 58.5vh;
+  margin-top: 10px;
+  border-left: 2px solid black;
+  background-color: #E8E8E8  ;
+  padding-left: 5px;
+  padding-right: 4px;
+  border-bottom: 1px solid black;
+}
+
+.splitBoxDiv
+{
+  height: 25vh;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding-left : 5px;
+  margin-top: 10px;
+  background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+}
+
+/* TEXT */
+
+.squareContent
+{
+  font-size: 1.1rem;
+}
+
+span.normalText
+{ 
+  font-family: 'Angkor';
+  font-size: 1rem;
+}
+
+span.characterName
+{
+  font-family: 'Angkor';
+  font-size: 4rem;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+span.circleText
+{
+  transform: translate(-1px, -5px);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+figcaption.caption
+{
+  color:grey;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'Angkor';
+  text-align: center;
+}
+
+p.boxSubtitle
+{
+  font-family: 'Angkor';
+  font-size: 1.58rem;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+span.subtitle
+{
+  font-family: 'Angkor';
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+span.statName
+{
+  font-family: 'Angkor';
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+span.plusMinus
+{
+  font-family: 'Angkor';
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* STYLING/BORDERS/ICONS */
+
+div.boxDiv
+{
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  padding-right : 9px;
+}
+
+p.ability
+{
+  margin-bottom: 5px;
+}
+
+.statDiv {
+  padding-left: 5px;
+  margin-top: 2px;
+}
+
+p.statText
+{
+  width:90px;
+  margin-bottom: 0px;
+}
+
+.statCircle {
+    background-color:#fff;
+    border:2px solid black;    
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    text-align: center;
+}
+
+div.iconDiv
+{
+  float: right;
+}
+
+div.icon
+{
+  display:table;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4.5rem;
+  height:4.5rem;
+}
+
+img.icon
+{
+  width:4.5rem;
+  height:4.5rem;
+}
+
+img.tinyicon
+{
+  width: 22px;
+  height: 22px; 
+}
+
+.tooSmallWarning{
+    display: none;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    html{ font-size: 1.8vw; }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    html{ font-size: 1.8vw; }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    html{ font-size: 1.3vw; }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    html{ font-size: 1vw; }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  html{ font-size: 1vw; }
+}
+
+/* Full HD (1080p) */
+@media only screen and (min-width: 1800px) {
+  html{ font-size: 0.7vw; }
+}
+
+/* QHD  (2K) */
+@media only screen and (min-width: 2400px) {
+  html{ font-size: 0.6vw; }
+}
+
+@media print {
+
+    html {font-size: 1.5vw};
+
+    @page {
+       size: 8.5in 11in;  /* width height */
+    }
+    .body{
+        background:  white;
+        background-color: white;
+    }
+
+    .tooSmallWarning{
+      display: none;
+    }
+
+    .selection_area{
+      display:none;
+    }
+
+    .printRegion 
+    {
+
+
+      break-inside: avoid;
+      break-after: always;
+      width: 100vw;
+      height:100vh;
+      margin: 0px;
+      padding:0px;
+      background: #fff;
+
+    }
+}

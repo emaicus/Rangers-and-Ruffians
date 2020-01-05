@@ -49,3 +49,4 @@ It can also be silly and funny. We think that it is usually pretty fun.
 5. [Read Up on the Lore](docs/Book_of_Lore.md).
 6. [Download Printed Materials](docs/Printed_Materials.md)
 7. [View the Changelog](docs/Changelog.md).
+8. [Test the Character Sheet Generator](new_site/pages/character_sheet.html).

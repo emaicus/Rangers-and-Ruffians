@@ -334,7 +334,6 @@ def publish_changelog(force_overwrite):
   md.write_toc(max_to_include=3)
   md.write_buffer()
 
-
 def archive_past_versions():
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   archve_directory = os.path.join(docs_directory, 'archive')
@@ -348,6 +347,19 @@ def archive_past_versions():
     print(f'moving {file} to {os.path.join(archve_directory, name)}')
     shutil.move(file, os.path.join(archve_directory, name))
 
+def create_all_race_class_json():
+  all_characters = rnr_utils.load_all_characters(level=0)
+
+  data = {'races' : rnr_utils.get_all_subrace_names(), 'classes' : rnr_utils.get_all_class_names(), 'characters' : {} }
+
+  for char in all_characters:
+    if not char.subrace in data['characters']:
+      data['characters'][char.subrace] = {}
+    proper_class = char.subclass if char.subclass != '' else char.rnr_class
+    data['characters'][char.subrace][proper_class] = char.new_character_sheet_serialize()
+
+  with open( os.path.join(rnr_utils.DATA_DIRECTORY, 'GENERATED', 'all_data.json' ), 'w' ) as outfile:
+    json.dump(data, outfile, indent=4)
 
 
 if __name__ == "__main__":
@@ -386,4 +398,5 @@ if __name__ == "__main__":
   publish_changelog(force_overwrite)
   publish_printabled_materials(force_overwrite)
   publish_poohbah_printables(force_overwrite)
+  create_all_race_class_json()
   print("Done!")

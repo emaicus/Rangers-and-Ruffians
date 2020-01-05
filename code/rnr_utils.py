@@ -263,37 +263,46 @@ class rnr_class(rnr_entity):
       #ret += "\\page\n"
       return ret
 
-    def serialize(self, male=False, verbose=False):
+    def serialize_level_up_sheet(self):
+      levels = dict()
+      all_data = get_rnr_class_data_with_name(self.name)
+      levels = all_data['levels']
+
+      for level in levels.keys():
+        if not 'abilities' in levels[level] or levels[level]['abilities'] is None:
+          levels[level]['abilities'] = dict()
+        else:
+          levels[level]['abilities'] = filterAbilities(levels[level]['abilities'])
+        for key in levels[level].keys():
+          if 'subclass' in key:
+            levels[level][key] = filterAbilities(levels[level][key])
+
+      return levels
+
+    def serialize(self, male=False, verbose=False, skip_art=False):
       global GLOBAL_SITE_ART_PATH, GLOBAL_ART_DICTIONARY
 
       serial = dict(self.base_serialize(verbose))
       gender_string = 'male' if male else 'female'
 
-      absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'class')
-      relative_art_folder = os.path.join('static', 'images', 'class')
-      
-      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
+      if not skip_art:
+        absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'class')
+        relative_art_folder = os.path.join('static', 'images', 'class')
+        
+        image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
 
-      img_name = image_path.split('/')[-1].split('.')[0]
-      rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
-      if rights is None:
-        rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}', None)
+        img_name = image_path.split('/')[-1].split('.')[0]
+        rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
+        if rights is None:
+          rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}', None)
 
-      serial['rights'] = rights
+        serial['rights'] = rights
+        serial["path_to_image"] = image_path
 
       all_data = get_rnr_class_data_with_name(self.name)
-      serial["path_to_image"] = image_path
-      serial['levels'] = all_data['levels']
       serial['health_die_pieces'] = self.health_die_pieces
 
-      for level in serial['levels'].keys():
-        if not 'abilities' in serial['levels'][level] or serial['levels'][level]['abilities'] is None:
-          serial['levels'][level]['abilities'] = dict()
-        else:
-          serial['levels'][level]['abilities'] = filterAbilities(serial['levels'][level]['abilities'])
-        for key in serial['levels'][level].keys():
-          if 'subclass' in key:
-            serial['levels'][level][key] = filterAbilities(serial['levels'][level][key])
+      serial['levels'] = self.serialize_level_up_sheet()
       return serial
 
     def get_spell_counts(self):
@@ -386,26 +395,25 @@ class rnr_race(rnr_entity):
     ret.append(f"  \n___\n")
     return ret
 
-  def serialize(self, male=False, verbose=False):
+  def serialize(self, male=False, verbose=False, skip_art=False):
     global GLOBAL_SITE_ART_PATH
     serial = self.base_serialize(verbose)
     
-    gender_string = 'male' if male else 'female'
-    absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'race')
-    relative_art_folder = os.path.join('static', 'images', 'race')
-    image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
+    if not skip_art:
+      gender_string = 'male' if male else 'female'
+      absolute_art_folder = os.path.join(GLOBAL_SITE_ART_PATH, 'race')
+      relative_art_folder = os.path.join('static', 'images', 'race')
+      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
+      
+      #Fall back to race image if no subrace image exists.
+      if image_path is None:
+        image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
+      
+      img_name = image_path.split('/')[-1].split('.')[0]
+      serial['rights'] = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
+      serial["path_to_image"] = image_path
     
-    #Fall back to race image if no subrace image exists.
-    if image_path is None:
-      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
-    
-    img_name = image_path.split('/')[-1].split('.')[0]
-    print(img_name)
-    serial['rights'] = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
-
-    serial["path_to_image"] = image_path
     serial['health_die_pieces'] = self.health_die_pieces
-
     return serial
 
 class rnr_character(rnr_entity):
@@ -462,6 +470,18 @@ class rnr_character(rnr_entity):
     #   serial["abilities"]["choice"].append(spellstr)
     return serial
 
+  def new_character_sheet_serialize(self, verbose=False):
+    serial = dict()
+    serial['race'] = self.race
+    serial['subrace'] = self.subrace
+    serial['class'] = self.rnr_class
+    serial['subclass'] = self.subclass
+    serial['stats'] = self.stats
+    serial['base_abilities'] = filterAbilities(self.abilities)
+    serial['levels'] = self.rnr_class_obj.serialize_level_up_sheet()
+    serial['icons'] = which_icons(self.subrace, self.subclass if self.subclass not in [None, ''] else self.rnr_class)
+    return serial
+
   def get_health(self):
     base = self.health_dice + 2
     health_dice_rolls = (self.health_dice // 2)* self.level
@@ -473,6 +493,49 @@ class rnr_ability:
     self.name = name
     self.description = description
     self.type = ability_type
+
+
+
+def which_icons(rnr_race, rnr_class):
+  icons = list()
+
+  #Everyone has health
+  icons.append(('hearts.svg', 'Health'))
+
+  # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
+  # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
+
+  #Clerics and Paladins get special action points.
+  if rnr_class in ['cleric', 'paladin']:
+    icons.append(('prayer.svg', 'Action Points'))
+  else:
+    icons.append(('ink-swirl.svg', 'Action Points'))
+
+  #Sorcerers have influence points
+  if rnr_class == 'sorcerer':
+    icons.append(('magic-swirl.svg', 'Influence'))
+  
+  #necromancers have souls
+  if rnr_class == 'necromancer':
+    icons.append(('tombstone.svg', 'Souls'))
+  
+  #highborn have gumption
+  if rnr_class == 'highborn':
+    icons.append(('swords-power.svg', 'Gumption'))
+
+  # #archers have magic arrows
+  # if rnr_class == 'archer':
+  #   icons.append(('quiver.svg', 'Magic Quiver'))
+
+  #Bards have spell coins
+  if rnr_class == 'bard':
+    icons.append(('swap-bag.svg', 'Spell Coins'))
+
+  #Everyone has spell power, armor, and magic armor.
+  icons.append(('fire-spell-cast.svg', 'Spell Power'))
+  icons.append(('shield.svg', 'Armor'))
+  icons.append(('bolt-shield.svg', 'Mage Armor'))
+  return icons
 
 
 ####################################################################################
@@ -849,7 +912,7 @@ def filterAbilities(abilities, verbose=False):
       filtered_abilities[ability_type] = dict()
     filtered_abilities[ability_type][ability] = dict()
     filtered_abilities[ability_type][ability]['description'] = GLOBAL_ABILITY_DICT[ability][filt]
-    filtered_abilities[ability_type][ability]['cost'] = GLOBAL_ABILITY_DICT[ability]['cost'] if 'cost' in GLOBAL_ABILITY_DICT[ability] else None
+    filtered_abilities[ability_type][ability]['cost'] = GLOBAL_ABILITY_DICT[ability]['cost'] if 'cost' in GLOBAL_ABILITY_DICT[ability] else 0
   return filtered_abilities
 
 def abbreviate_stat(stat, upper=False):
