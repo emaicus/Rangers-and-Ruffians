@@ -40,3 +40,13 @@ h4 { font-size: 1.5rem; text-decoration: underline;}
   .header-landscape{display:inline-block;}
   .header-portrait{display:none;}
 }
+
+
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-select/sass/bootstrap-select";
+
+button{
+  background-color: #53a054;
+}
+

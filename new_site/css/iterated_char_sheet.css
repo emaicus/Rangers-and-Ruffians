@@ -67,7 +67,7 @@ div.combatAbilities
 
 div.combatAbilitiesVisualStats
 {
-  height: 7.60in;
+  height: 63vh;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -127,6 +127,16 @@ span.circleText
   font-size: 0.8rem;
 }
 
+.circleDiv {
+  width:99%;
+  height:2.4vh;
+}
+
+.singleCircle {
+  padding-left: 5px;
+  display:inline-block;
+}
+
 figcaption.caption
 {
   color:grey;
@@ -158,10 +168,11 @@ span.statName
   font-weight: bold;
 }
 
-span.plusMinus
+div.plusMinus
 {
+  display:inline-block;
   font-family: 'Angkor';
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-left: 5px;
 }
@@ -170,6 +181,7 @@ span.plusMinus
 
 div.boxDiv
 {
+  height:20vh;
   border: 2px solid black;
   border-radius: 15px;
   padding: 5px;
@@ -184,12 +196,6 @@ p.ability
 .statDiv {
   padding-left: 5px;
   margin-top: 2px;
-}
-
-p.statText
-{
-  width:90px;
-  margin-bottom: 0px;
 }
 
 .statCircle {
@@ -225,8 +231,7 @@ img.icon
 
 img.tinyicon
 {
-  width: 22px;
-  height: 22px; 
+  width: 1.4rem;
 }
 
 .tooSmallWarning{
@@ -256,12 +261,12 @@ img.tinyicon
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  html{ font-size: 1vw; }
+  html{ font-size: .6vw; }
 }
 
 /* Full HD (1080p) */
 @media only screen and (min-width: 1800px) {
-  html{ font-size: 0.7vw; }
+  html{ font-size: 0.55vw; }
 }
 
 /* QHD  (2K) */
@@ -273,9 +278,19 @@ img.tinyicon
 
     html {font-size: 1.5vw};
 
+
+
     @page {
        size: 8.5in 11in;  /* width height */
     }
+
+    img.tinyicon {
+      width: 1.8rem;
+    }
+    div.plusMinus {
+    font-size: 1.4rem;
+    }
+
     .body{
         background:  white;
         background-color: white;

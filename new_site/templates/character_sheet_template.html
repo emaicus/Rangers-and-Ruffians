@@ -5,7 +5,7 @@
         <div id="characterDetails" class="characterDetails">
           <div class="row" style="height:7.5vh; margin-bottom: 0px;">
             <div class="col-5">
-              <span class="characterName"> {{ name }}</span><br/>
+              <span class="characterName" id="characterName"> {{ name }}</span><br/>
             </div>
             <div class="col-7">
               <div id="iconDiv" class="iconDiv">
@@ -75,44 +75,46 @@
         </div>
       </div>
       <div class="col-6">
-        {% if visualStats != True %}
+        {% if visualStats %}
         <div class="boxDiv" style="margin-top:10px;">
           <p class="boxSubtitle">Stats:</p>
           {% for stat in ['STR', 'DEX', 'INT', 'INF', 'PER', 'CHA', 'LUK'] %}
           <div class="circleDiv">
-            <div class="statDiv">
-              <p class="statText">
-                <span class="statName"> 
+            <div class="plusMinus">
+              <p>
+                <span class="plusMinus"> 
                   {{stat}}:
-                </span>
               {% if stat != 'LUK' %}
-                <span class="plusMinus">+&nbsp;&nbsp;-</span>
+                 +&nbsp;&nbsp;-
               {% endif %}
+                </span>
               </p>
             </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-              <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
-            </div>
-            <div class="singleCircle">
-            &nbsp;&nbsp;________
+            <div style="float: right;">
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                <img src="/new_site/icons/circle-halved.svg" class="tinyicon">
+              </div>
+              <div class="singleCircle">
+                &nbsp;&nbsp;________
+              </div>
             </div>
           </div>
           {% endfor %}

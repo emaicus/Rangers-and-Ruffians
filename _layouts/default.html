@@ -11,6 +11,11 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="/docs/images/icons/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js' | prepend: site.baseurl}}"></script>
+
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -27,7 +32,8 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
+<!--     <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
+ -->  </head>
   <body>
     {% assign skipheader   = page.skip_header | default: false %}
     {% if skipheader == false %}

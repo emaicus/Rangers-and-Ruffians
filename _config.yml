@@ -12,5 +12,11 @@ include:
   # - CONTRIBUTING.md
   # - ISSUE_TEMPLATE.md
   # - PULL_REQUEST_TEMPLATE.md
+sass:
+  load_paths:
+  - _sass
+  - node_modules
+# Important for node_modules
+exclude: []
 
 logo: /docs/images/backdrops/banner.jpg

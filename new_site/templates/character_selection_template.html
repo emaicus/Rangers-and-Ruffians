@@ -3,34 +3,39 @@
     <span class="characterName">Automatic Character Sheet Creation Tool</span>
   </p>
 
-  Character Name: <input type="text" id="chosen_name" onkeyup="updateCharacterName()"><br>
-
-  <select id="chosen_level" onchange="updateCharacterSheet()">
+  Character Name:<br>
+  <input type="text" id="chosen_name" onkeyup="updateCharacterName()"><br>
+  <br/>
+  Character Level:
+  <br/>
+  <select data-style="btn-primary" id="chosen_level" onChange="updateCharacterSheet();">
     {% for i in range(0, 16) -%}
-      <option value="{{i}}">Level {{i}}</option>
-    {%- endfor %}
+      <option value={{i}}>Level {{i}}</option>
+    {% endfor %}
   </select>
-
   <br/>
-  
-  <select id="chosen_race" onchange="updateCharacterSheet()">
+  Character Race:
+  <br/>
+  <select data-style="btn-primary" id="chosen_race" onChange="updateCharacterSheet();">
     {% for race in races | sort %}
-    <option value="{{race}}">{{race}}</option>
+      <option value={{race}}>{{race}}</option>
     {% endfor %}
   </select>
-
   <br/>
-
-  <!-- onchange="leaveChange()" -->
-  
-  <select id="chosen_class" onchange="updateCharacterSheet()">
+  Character Class:
+  <br/>
+  <select data-style="btn-primary" id="chosen_class" onChange="updateCharacterSheet();">
     {% for rnr_class in classes | sort %}
-    <option value="{{rnr_class}}">{{rnr_class}}</option>
+      <option value={{rnr_class}}>{{rnr_class}}</option>
     {% endfor %}
   </select>
-
   <br/>
-  
-  <!-- <button onclick="updateCharacterSheet()">Build Character</button> -->
+  Character Sheet Type:
+  <br>
+  <select data-style="btn-primary" id="sheet_type" onChange="updateCharacterSheet();">
+    <option value="v1">Standard</option>
+    <option value="v1_visual">Visual</option>
+  </select>
+  <br/>
 
 </div>

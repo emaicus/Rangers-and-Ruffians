@@ -3,19 +3,10 @@ skip_header: true
 ---
 
 <script src="../js/nunjucks.js"></script>
-<script src="../js/jquery-3.3.1.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/materialize.min.js"></script>
-
-
-
 <html>
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Fix the below. -->
-      <link rel="stylesheet" href="/new_site/css/bootstrap.min.css">
-      <link rel="stylesheet" href="/new_site/css/materialize.min.css">
       <link rel="stylesheet" href="/new_site/css/iterated_char_sheet.css">
       <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
@@ -31,23 +22,38 @@ skip_header: true
 </html>
 
 <script>
-  var global_json = null;
 
+  // Global character data dictionary (so we only have to hit the backend once.)
+  var global_json = null;
   $.getJSON("/data/GENERATED/all_data.json", function(json) {
     global_json = json;
     nunjucks.configure('/new_site/templates', {autoescape: true });
     var content = nunjucks.render('character_selection_template.html', json );
     $( "#selection_area" ).html( content );
-    $('select').formSelect();
+  
+    // Automatically update dropdown text when an option is selected.
+    // $('.dropdown').each(function (key, dropdown) {
+    //     var $dropdown = $(dropdown);
+    //     $dropdown.find('.dropdown-menu a').on('click', function () {
+    //         $dropdown.find('button').text($(this).text()).append(' <span class="caret"></span>');
+    //     });
+    // });
+    $(function () {
+        $('select').selectpicker();
+    });
+
+
     updateCharacterSheet();
   })
 
+  // Dynamically  change the character name on the sheet when the user types.
   function updateCharacterName(){
     var name = $( "#chosen_name" ).val();
-    $(".characterName").text(name);
+    $("#characterName").text(name);
   }
 
 
+  // Grab the name, race, class and other data for this character and render a sheet.
   function updateCharacterSheet(){
     if(global_json == null){
       console.log("ERROR: json not loaded.");
@@ -59,6 +65,8 @@ skip_header: true
     var level     = parseInt(level_str, 10);
     var rnr_race  = $( "#chosen_race" ).val();
     var rnr_class = $( "#chosen_class" ).val();
+    var sheet_type= $( "#sheet_type" ).val();
+
     //Deep copy the character.
     var data = JSON.parse(JSON.stringify(global_json["characters"][rnr_race][rnr_class]));
     data["name"] = name;
@@ -87,9 +95,16 @@ skip_header: true
       }
     }
 
-    var character_sheet = nunjucks.render('character_sheet_template.html', data );
-    $( "#character_sheet_area" ).html( character_sheet );
+    var character_sheet = "ERROR: Sheet did not render.";
 
+    console.log(sheet_type);
+    if(sheet_type == "v1_visual"){
+      data["visualStats"] = true;
+      character_sheet = nunjucks.render('character_sheet_template.html', data );
+    } else{
+      character_sheet = nunjucks.render('character_sheet_template.html', data );
+    }
+    $( "#character_sheet_area" ).html( character_sheet );
   }
 </script>
 
