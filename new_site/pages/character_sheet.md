@@ -31,13 +31,6 @@ skip_header: true
     var content = nunjucks.render('character_selection_template.html', json );
     $( "#selection_area" ).html( content );
   
-    // Automatically update dropdown text when an option is selected.
-    // $('.dropdown').each(function (key, dropdown) {
-    //     var $dropdown = $(dropdown);
-    //     $dropdown.find('.dropdown-menu a').on('click', function () {
-    //         $dropdown.find('button').text($(this).text()).append(' <span class="caret"></span>');
-    //     });
-    // });
     $(function () {
         $('select').selectpicker();
     });
@@ -73,7 +66,7 @@ skip_header: true
     data["abilities"] = data["base_abilities"];
 
 
-    for(i = 1; i < level; i++){
+    for(i = 1; i <= level; i++){
       // Create the string representation of the level.
       var tmp_lvl_str = "level_" + i;
       // Make sure that the level is valid.
