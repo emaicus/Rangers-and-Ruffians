@@ -361,7 +361,6 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Greater Boon
-        - Shared Healing # Healing
         - Greater Guardian Ward
       level_6:
         abilities:
@@ -393,6 +392,7 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Greater Link Lifeforce
+        - Shared Healing # Healing
       level_12:
         abilities:
         - Major Stat Increase
@@ -410,7 +410,7 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Legendary Boon
-        - Legendary Guardian Ward
+        # - Legendary Guardian Ward # This is too much.
         - Greater Holy Shield #Healing
     questions:
     - What deity does your character worship?

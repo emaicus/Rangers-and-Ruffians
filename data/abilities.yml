@@ -1323,13 +1323,13 @@ Greater Link Lifeforce:
   type: combat
   brief: "Half any damage taken via link lifeforce."
 Enhanced Healing:
-  description: "Add an extra dice of healing when healing an ally with a guardian ward."
+  description: "Add two extra dice of healing when healing an ally with a guardian ward."
   type: combat
-  brief: "Extra dice of healing to allies with a guardian ward."
+  brief: "2 extra dice of healing to allies with a guardian ward."
 Shared Healing:
-  description: "If you heal an ally, also heal any allies with your guardian ward half as much."
+  description: "If a paladin heals one ally with a guardian ward, it heals the other for half as much."
   type: combat
-  brief: "If you heal an ally, also heal any allies with your guardian ward 1/2 as much."
+  brief: "Healing 1 ally with a guardian ward heals the other for 1/2 as much."
 Last Hope:
   description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
   type: combat

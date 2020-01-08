@@ -3044,7 +3044,7 @@ __Level 4 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Enhanced Healing:__ Add an extra dice of healing when healing an ally with a guardian ward.  
+  * __Enhanced Healing:__ Add two extra dice of healing when healing an ally with a guardian ward.  
   
   
 __Level 5 Paladin__
@@ -3058,7 +3058,6 @@ __Level 5 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Shared Healing:__ If you heal an ally, also heal any allies with your guardian ward half as much.  
   * __Greater Guardian Ward:__ Your guardian wards now grant +2 armor  
   
   
@@ -3135,6 +3134,7 @@ __Level 11 Paladin__
   
 * __Combat Abilities:__   
   * __Greater Link Lifeforce:__ Half any damage taken from linking lifeforce with an ally with a guardian ward.  
+  * __Shared Healing:__ If a paladin heals one ally with a guardian ward, it heals the other for half as much.  
   
   
 __Level 12 Paladin__
@@ -3182,7 +3182,6 @@ __Level 15 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Legendary Guardian Ward:__ Your guardian wards now grant +5 armor  
   * __Greater Holy Shield:__ Holy shields grant one turn of invulnerability before they gain their normal health.  
   
   
