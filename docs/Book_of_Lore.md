@@ -101,6 +101,9 @@ __Gifts:__
   * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d6 to all healing rolls.  
 * __Level 10__  
   * __Major Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d12 to all healing rolls.  
+  * __Purity:__ Healing spells cast by a Cleric or Paladin of Aunora remove most status effects from injured individuals.  
+* __Level 15__  
+  * __Legendary Goddess Of Healing:__ Clerics and Paladins of Aunora may add 2d12 to all healing rolls.  
 
   
 #### Eandar
@@ -114,7 +117,9 @@ __Gifts:__
 * __Level 5__  
   * __The Helpful God:__ Your spells which buff your allies have extra potency. Depending on the spell, this may mean increasing the effect by one, for example by granting +2 strength instead of +1, or giving them an inspiration dice that is one size larger.  
 * __Level 10__  
-  * __Greater Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.  
+  * __Greater Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 2, or grant 2 inspiration dice rather than 1.  
+* __Level 15__  
+  * __Major Helpful God:__ Your spells which buff your allies have extra potency. Multiply the effectiveness of any spell which buff an allies stats by 3, or grant 3 inspiration dice rather than 1.  
 
   
 #### Juliet
@@ -144,6 +149,8 @@ __Gifts:__
   * __Greater God Of Intelligence:__ Gain two effective intelligence, and the corresponding 2 spell points.  
 * __Level 10__  
   * __Major God Of Intelligence:__ Gain three effective intelligence, and the corresponding 3 spell points.  
+* __Level 15__  
+  * __Legendary God Of Intelligence:__ Gain five effective intelligence, and the corresponding 5 spell points.  
 
   
 #### Hesh
@@ -158,6 +165,8 @@ __Gifts:__
   * __Goddess Of Navigation:__ You have advantage on tracking checks, and may add 1d6 to any roles involving steering, guiding, or working on a ship.  
 * __Level 10__  
   * __Goddess Of The Icy Depths:__ You take half damage from cold attacks, and have advantage on spell power saves against being slowed.  
+* __Level 15__  
+  * __The Mother Of Chaos:__ Gain one free tier 5 spell cast per day.  
 
   
 #### Ronar
@@ -166,13 +175,15 @@ Ronar is the god of the forest, and is first and foremost the gaurdian of the fl
 __Gifts:__  
   
 * __Level 0__  
-  * __God Of Protection:__ As an offhand action, grant an all +1 armor for a turn or 10 minutes.  
+  * __God Of Protection:__ As an offhand action, grant an all allies +1 armor for a turn or 10 minutes.  
   * __God Of The Woods:__ You are able to influence plants and vines. For example, if you are falling, vines might reach out to catch you, or if you are making your way through a forest, trees will lean slightly out of your way.  
 * __Level 5__  
   * __God Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
   * __God Of Conflict Resolution:__ Gain advantage on any charisma checks made to end a fight.  
 * __Level 10__  
   * __God Of Growing:__ At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with Photosynthesis.  
+* __Level 15__  
+  * __Legendary God Of Growing:__ At the start of each turn during combat or once every hour, regain 2d4 health. Stacks with Photosynthesis.  
 
   
 #### Yilena
@@ -186,8 +197,11 @@ __Gifts:__
 * __Level 5__  
   * __Darkvision:__ You gain the darkvision ability.  
   * __Goddess Of Marriage:__ Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.  
+  * __Warrior Goddess:__ Add an additional dice of damage to any attack spell that you cast.  
 * __Level 10__  
   * __Warden Of The Woods:__ You are able to commune with all of nature around you for one mile, gaining some level of understanding about the lay of the land, and where enemies may be hiding.  
+* __Level 15__  
+  * __Legendary Warrior Goddess:__ Add two additional dice of damage to any attack spell that you cast.  
 
   
 #### Naris
@@ -206,6 +220,8 @@ __Gifts:__
   * __Major Goddess Of Rest:__ As a champion of Naris, you and all allies naturally heal 1d12 more from any rest that you take.  
   * __Beacon Of Growth:__ Where you trod, green grass grows, and nature itself makes way for your passing. As a result, you have advantage on checks made when moving through difficult natural terrain.  
   * __Ceremony Of Fertility:__ You are able to bless newlyweds and those seeking children to increase their fertility.  
+* __Level 15__  
+  * __Legendary Goddess Of Rest:__ Regain 2d12 additional health from any rest that you take and cure any status effects.  
 
   
 ### Gods of Darkness
@@ -222,6 +238,8 @@ __Gifts:__
   * __Greater God Of Death:__ You have access to tier one spells from the macabre manual.  
 * __Level 10__  
   * __Major God Of Death:__ You have access to tier two spells from the macabre manual.  
+* __Level 15__  
+  * __Legendary God Of Death:__ You have access to all spell tiers from the macabre manual.  
 
   
 #### Melekar
@@ -237,6 +255,8 @@ __Gifts:__
 * __Level 10__  
   * __Major Lord Of Cruelty:__ Add three additional damage dice to any of your magic attacks.  
   * __Major Harvester Of Souls:__ Every time an enemy is slain near you, gain an action point.  
+* __Level 15__  
+  * __Bound To Service:__ Any time that you slay an enemy, it is instead converted into an imp, which fights for you.  
 
   
 #### The Void Father
@@ -252,10 +272,13 @@ __Gifts:__
 * __Level 10__  
   * __Shepard Of Darkness:__ You have advantage on any charisma or intimidation checks used to break someone's spirit.  
   * __Lamb To The Slaughter:__ If an entity's spirit has been broken, have them make an inner fire saving throw against your spell power. On failure, any moves that they make must inflict self harm.  
+* __Level 15__  
+  * __Antimagic Essense:__ All spells have half potency when used against you.  
+  * __Feed On Life:__ When you slay an enemy's soul, immediately regain health equal to half of their total hit points.  
 
   
 #### Lady Dusk
-Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty, and of the first frost of winter. She believes that things should be destroyed after they hit the peak of their beauty or usefulness. Her sigil is a blazing candle with a roaring flame atop. She appears as an unspeakably beautiful maiden, wearing revealing clothes of either the brightest white or a black so deep it sucks all other light out of a room. Her features are reminiscent of that of a high elf, with lightly pointed ears and the palest skin. Her frame is lithe, with soft hands which are often clasped. Her skin is as pale, and her eyes are dark, and her rosebud lips are the color of blood. While in her halls, she can summon to herself anything that she wishes in the peak of its perfection. Her followers are few, and many are bound to her because of their ambition or cruelty. The Lady Dusk has been known to appear to those who are dying, and to offer them healing in return for service and loyalty. Among her followers are a league of timeless assassins, who she has magically imbued with long life and slow aging.  
+Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty, and of the first frost of winter. Vain and Cruel, The Pale Lady uses her followers viciously to achieve her ends. For her, there are only two groups of people: who follow her and are therefore of use, and those who are better off dead. Her sigil is a blazing candle with a roaring flame atop. She appears as an unspeakably beautiful maiden, wearing revealing clothes of either the brightest white or a black so deep it sucks all other light out of a room. Her features are reminiscent of that of a high elf, with lightly pointed ears and the palest skin. Her frame is lithe, with soft hands which are often clasped. Her skin is as pale, and her eyes are dark, and her rosebud lips are the color of blood. While in her halls, she can summon to herself anything that she wishes in the peak of its perfection. Her followers are few, and many are bound to her because of their ambition or cruelty. The Lady Dusk has been known to appear to those who are dying, and to offer them healing in return for service and loyalty. Among her followers are a league of timeless assassins, who she has magically imbued with long life and slow aging.  
   
 __Gifts:__  
   
@@ -264,7 +287,10 @@ __Gifts:__
 * __Level 5__  
   * __Purge The Useless:__ You gain advantage on attacks made against any entity that is sick or cursed.  
   * __Ceremony Of Evaluation:__ You are able to evaluate any entity to gain an understanding of it's significance in Lady Dusk's eyes. If the creature is deemed to be insignificant, gain advantage in all attacks made against it.  
+  * __Ageless:__ Fueled by Lady Dusk's power, you no longer age.  
 * __Level 10__  
   * __No Mercy For The Weak:__ Any action that you take against an entity on death's door instantly slays the entity.  
-  * __Of Use:__ Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.  
+  * __Still Of Use:__ Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.  
+* __Level 15__  
+  * __Brutal Attacks:__ When attacking someone who Lady Dusk has deemed to be worthless, double your damage.  
 

@@ -62,15 +62,22 @@ Aunora:
     Level_0:
       Minor Goddess of Healing:
         description: Clerics and Paladins of Aunora may add 1d4 to all healing rolls. 
-        type: advantage
+        type: general
     Level_5:
       Minor Goddess of Healing:
         description: Clerics and Paladins of Aunora may add 1d6 to all healing rolls. 
-        type: advantage
+        type: general
     Level_10:
       Major Goddess of Healing:
         description: Clerics and Paladins of Aunora may add 1d12 to all healing rolls. 
-        type: advantage
+        type: general
+      Purity:
+        description: Healing spells cast by a Cleric or Paladin of Aunora remove most status effects from injured individuals.
+        type: general
+    Level_15:
+      Legendary Goddess of Healing:
+        description: Clerics and Paladins of Aunora may add 2d12 to all healing rolls. 
+        type: general
 Eandar:
   evil: false
   description: Eandar is the deity of the downtrodden, and of atonement. The followers of Eandar, called the Browncloaks, are tasked
@@ -102,7 +109,12 @@ Eandar:
     Level_10:
       Greater Helpful God:
         description: Your spells which buff your allies have extra potency. Multiply the effectiveness of
-          any spell which buff an allies stats by 2, or grant two inspiration dice rather than 1.
+          any spell which buff an allies stats by 2, or grant 2 inspiration dice rather than 1.
+        type: general
+    Level_15:
+      Major Helpful God:
+        description: Your spells which buff your allies have extra potency. Multiply the effectiveness of
+          any spell which buff an allies stats by 3, or grant 3 inspiration dice rather than 1.
         type: general
 #Death:
 Juliet:
@@ -161,6 +173,10 @@ Illillael:
       Major God of Death:
         description: You have access to tier two spells from the macabre manual.
         type: general
+    Level_15:
+      Legendary God of Death:
+        description: You have access to all spell tiers from the macabre manual.
+        type: general
 Raghnal:
   evil: false
   description: Raghnal, the All-Seer, is the god of knowledge. Raghnal takes the form of a massive owl, who lives 
@@ -188,6 +204,10 @@ Raghnal:
     Level_10:
       Major God of intelligence: 
         description: Gain three effective intelligence, and the corresponding 3 spell points.
+        type: general
+    Level_15:
+      Legendary God of intelligence: 
+        description: Gain five effective intelligence, and the corresponding 5 spell points.
         type: general
 Hesh:
   evil: false
@@ -222,6 +242,10 @@ Hesh:
         description: You take half damage from cold attacks, and have advantage on spell power saves against
           being slowed.
         type: general
+    Level_15:
+      The Mother of Chaos: 
+        description: Gain one free tier 5 spell cast per day.
+        type: general
 Ronar:
   evil: false
   description: "Ronar is the god of the forest, and is first and foremost the gaurdian of the flora of the natural world. 
@@ -240,7 +264,7 @@ Ronar:
   abilities:
     Level_0:
       God of Protection:
-        description: As an offhand action, grant an all +1 armor for a turn or 10 minutes.
+        description: As an offhand action, grant an all allies +1 armor for a turn or 10 minutes.
         type: combat
       God of the Woods:
         description: You are able to influence plants and vines. For example, if you are falling,
@@ -257,6 +281,11 @@ Ronar:
     Level_10:
       God of Growing: 
         description: At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with
+          Photosynthesis.
+        type: general
+    Level_15:
+      Legendary God of Growing: 
+        description: At the start of each turn during combat or once every hour, regain 2d4 health. Stacks with
           Photosynthesis.
         type: general
 Yilena:
@@ -299,11 +328,18 @@ Yilena:
       Goddess of Marriage:
         description: Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.
         type: general
+      Warrior Goddess:
+        description: Add an additional dice of damage to any attack spell that you cast.
+        type: combat
     Level_10:
       Warden of the Woods:
         description: You are able to commune with all of nature around you for one mile, gaining
           some level of understanding about the lay of the land, and where enemies may be hiding.
         type: general
+    Level_15:
+      Legendary Warrior Goddess:
+        description: Add two additional dice of damage to any attack spell that you cast.
+        type: combat
 Melekar: 
   evil: true
   description: Melekar, Lord of Sin. Ruler of the hells. Melekar sits atop a throne of the damned,
@@ -327,6 +363,10 @@ Melekar:
         type: combat
       Major Harvester of Souls: 
         description: "Every time an enemy is slain near you, gain an action point."
+        type: combat
+    Level_15:
+      Bound to Service:
+        description: "Any time that you slay an enemy, it is instead converted into an imp, which fights for you."
         type: combat
 The Void Father: 
   evil: true
@@ -355,18 +395,26 @@ The Void Father:
         description: If an entity's spirit has been broken, have them make an inner fire saving throw against your
           spell power. On failure, any moves that they make must inflict self harm.
         type: general
+    Level_15:
+      Antimagic Essense:
+        description: "All spells have half potency when used against you."
+        type: general
+      Feed on Life:
+        description: "When you slay an enemy's soul, immediately regain health equal to half of their total hit points."
+        type: general
 Lady Dusk: 
   evil: true
-  description: Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty, and of the first frost of winter.
-    She believes that things should be destroyed
-    after they hit the peak of their beauty or usefulness. Her sigil is a blazing candle with a roaring flame atop. She appears as an unspeakably beautiful
+  description: "Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty, and of the first frost of winter.
+    Vain and Cruel, The Pale Lady uses her followers viciously to achieve her ends. For her, there are only two groups of people:
+    who follow her and are therefore of use, and those who are better off dead. 
+    Her sigil is a blazing candle with a roaring flame atop. She appears as an unspeakably beautiful
     maiden, wearing revealing clothes of either the brightest white or a black so deep it sucks all other light out of a room.
     Her features are reminiscent of that of a high elf, with lightly pointed ears and the palest skin. Her frame is 
     lithe, with soft hands which are often clasped. Her skin is as pale, and her eyes are dark, and her rosebud lips are the 
     color of blood. While in her halls, she can summon to herself anything that she wishes in the peak of its perfection. 
     Her followers are few, and many are bound to her because of their ambition or cruelty. The Lady Dusk has been known to appear
     to those who are dying, and to offer them healing in return for service and loyalty. Among her followers are a league of timeless
-    assassins, who she has magically imbued with long life and slow aging.
+    assassins, who she has magically imbued with long life and slow aging."
   abilities:
     Level_0: 
       Ever of Use: 
@@ -380,13 +428,20 @@ Lady Dusk:
         description: You are able to evaluate any entity to gain an understanding of it's significance in Lady Dusk's eyes.
           If the creature is deemed to be insignificant, gain advantage in all attacks made against it.
         type: combat
+      Ageless:
+        description: "Fueled by Lady Dusk's power, you no longer age."
+        type: general
     Level_10: 
       No Mercy for the Weak: 
         description: Any action that you take against an entity on death's door instantly slays the entity.
         type: combat
-      Of Use: 
+      Still of Use: 
         description: Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.
         type: general
+    Level_15:
+      Brutal Attacks: 
+        description: "When attacking someone who Lady Dusk has deemed to be worthless, double your damage."
+        type: combat
 Naris: 
   evil: false
   description: Naris. Naris is the goddess of Fertility and Life. Her goal, and that of her followers
@@ -423,6 +478,10 @@ Naris:
         type: advantage
       Ceremony of Fertility: 
         description: You are able to bless newlyweds and those seeking children to increase their fertility.
+        type: general
+    Level_15:
+      Legendary Goddess of Rest:
+        description: "Regain 2d12 additional health from any rest that you take and cure any status effects."
         type: general
 # Ceremonies:
 #   General:

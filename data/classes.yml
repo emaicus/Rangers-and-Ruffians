@@ -92,7 +92,7 @@ Heavy Fighter:
       level_15:
         abilities:
         - Minor Stat Increase
-        - Spirit of Rage # Once per day, double a turn.
+        - Spirit of Rage # After slaying an enemy, gain an additional turn.
     questions:
     - Where did your character come from?
     - Where is their tribe? Did they leave it?
@@ -224,8 +224,8 @@ Heavy Fighter:
         abilities:
         - Melee Weapon Proficiency
         - Kingsmen
-        - Shield Master
-        - Armor Master
+        - Shield Training
+        - Armor Training
         - Overwhelming Strike
         - Pivot
         - Steel Yourself
@@ -306,13 +306,13 @@ Heavy Fighter:
     - Minor Spell Choice
     - Armored
     base_stats:
-      Charisma: 0
-      Dexterity: -3
-      Inner_Fire: 1
-      Intelligence: -1
+      Charisma: -1
+      Dexterity: 0
+      Inner_Fire: 2
+      Intelligence: -2
       Luck: 1
-      Perception: -2
-      Strength: 2
+      Perception: -3
+      Strength: 1
     description: Palidins are Soldiers of the Light, and are adept both at hand to
       hand combat and basic healing magic. Paladins are devoted to their deity, and
       aim to bring their influence into the world. Paladins are especially good at
@@ -323,74 +323,95 @@ Heavy Fighter:
       level_0:
         abilities:
         - The Book of Healing
+        - Learning Spells
+        - Learn Spells
         - Melee Weapon Proficiency
         - Thrown Weapon Proficiency
         - Pledge
-        - Learning Spells
-        - Learn Spells
-        - Tier Zero Spells
+        - Minor Boon
+        - Shield Training # Tank
+        - Armor Training #Tank
+        - Tier Zero Spells # Attack Heal
+        - Hammer of Light # Attack
+        - Faithful Weapon # Attack
+        - Pivot # Mobile
+        - Healing Blow # Heal
       level_1:
         abilities:
         - Minor Stat Increase
-        - Hammer of Light
-        - Bash
+        - Tier One Spells
+        - Bash # Attack
+        - Guardian Ward # Buff/Healing
       level_2:
         abilities:
         - Major Stat Increase
-        - Tier One Spells
+        - Healing Blast # Healing
+        - Holy Shield # Healing
       level_3:
         abilities:
         - Minor Stat Increase
-        - Faithful Weapon
+        - Link Lifeforce # Healing
       level_4:
         abilities:
         - Major Stat Increase
         - Minor Offhand Spell
+        - Tier Two Spells
+        - Enhanced Healing # Tank
       level_5:
         abilities:
         - Minor Stat Increase
-        - Link Lifeforce
+        - Greater Boon
+        - Shared Healing # Healing
+        - Greater Guardian Ward
       level_6:
         abilities:
         - Major Stat Increase
-        - Tier Two Spells
+        - Warrior Spirit # Replenish
       level_7:
         abilities:
         - Minor Stat Increase
+        - Tier Three Spells
         - Greater Offhand Spell
-        - Shield of Men
         - Offhand Attack
+        - Last Hope # Heal
       level_8:
         abilities:
         - Major Stat Increase
+        - Blessing of Protection # Healing
       level_9:
         abilities:
         - Minor Stat Increase
-        - Beacon of Hope
-        - Tier Three Spells
+        - Beacon of Hope # Buff
       level_10:
         abilities:
         - Major Stat Increase
+        - Major Boon
+        - Tier Four Spells
+        - Major Guardian Ward
+        - Second Guardian Ward # Healing
       level_11:
         abilities:
         - Minor Stat Increase
-        - Last Line of Defense
+        - Greater Link Lifeforce
       level_12:
         abilities:
         - Major Stat Increase
-        - Tier Four Spells
+        - Guardian Spirit # Replenish
       level_13:
         abilities:
         - Minor Stat Increase
-        - Winged Jump
+        - Tier Five Spells
+        - Ward Conversion # Healing
       level_14:
         abilities:
         - Major Stat Increase
+        - Mass Holy Shield
       level_15:
         abilities:
         - Minor Stat Increase
-        - Fires of Heaven
-        - Tier Five Spells
+        - Legendary Boon
+        - Legendary Guardian Ward
+        - Greater Holy Shield #Healing
     questions:
     - What deity does your character worship?
     - What their relationship is like with their deity? Do they pray to them often?

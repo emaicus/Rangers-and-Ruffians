@@ -18,11 +18,11 @@ Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
-Shield Master:
+Shield Training:
   description: Don't take movement penalties from shield use.
   type: general
   brief: "Don't take movement penalties from shield use."
-Armor Master:
+Armor Training:
   description: Don't take movement penalties from armor use.
   type: general
   brief: "Don't take movement penalties from armor use."
@@ -151,9 +151,9 @@ Fury:
   type: combat
   brief: "Add an extra damage dice on turns in which you have been attacked."
 Warrior Spirit:
-  description: "If you slay an enemy or land a critical hit, regain one action point."
+  description: "If you slay an enemy, regain one action point."
   type: combat
-  brief: Gain 1 AP when you kill an enemy or land a critical hit.
+  brief: Gain 1 AP when you kill an enemy.
 Adrenaline: 
   description: "When you are below 50% health, gain an extra 10 feet of movement."
   type: combat
@@ -1254,9 +1254,9 @@ Pivot:
   type: combat
   brief: "Offhand: swap spaces with adjacent ally."
 Resilient Defense:
-  description: "You have become so hardened by combat that a single attack can deal at most 40 damage to you."
+  description: "You have become so hardened by combat that a single attack can deal at most 50 damage to you."
   type: combat
-  brief: "A single attack can do at most 40 dmg to you."
+  brief: "A single attack can do at most 50 dmg to you."
 Advance:
   description: "If you slay an enemy with a melee attack, you may step forward into the space that they occupied."
   type: combat
@@ -1270,6 +1270,94 @@ Overwhelming Strike:
   type: combat
   brief: "Additional damage dice. Size based contested STR check. Fail: Next attack has advantage."
   cost: 1
+Healing Blow:
+  description: "Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to any allies within 15 feet of you."
+  type: combat
+  brief: "Additional damage dice. 1/4 damage done by attack is restored to allies within 15 feet."
+  cost: 1
+Guardian Ward:
+  description: "As an offhand action, Say a fervent prayer to place a ward on an ally. The marked ally gains +1 armor. At most one ally may have a guardian ward at a time."
+  type: combat
+  brief: "Offhand. Grant an ally a ward which gives them +1 armor. One ally at a time."
+Greater Guardian Ward:
+  description: "Your guardian wards now grant +2 armor"
+  type: combat
+  brief: "Guardian wards now grant +2 armor."
+Major Guardian Ward:
+  description: "Your guardian wards now grant +3 armor"
+  type: combat
+  brief: "Guardian wards now grant +3 armor."
+Legendary Guardian Ward:
+  description: "Your guardian wards now grant +5 armor"
+  type: combat
+  brief: "Guardian wards now grant +5 armor."
+Second Guardian Ward:
+  description: "You may now place guardian wards on two allies."
+  type: combat
+  brief: "You may now place a guardian ward on 2 allies."
+Healing Blast:
+  description: "Fire a 30 foot cone of healing energy. All allies struck by it regain half your level (round up) d4's in health. Deals damage to enemies."
+  type: combat
+  brief: "30ft. Cone. Heals allies, harms enemies. 1/2 your level (round up) d4."
+  cost: 1
+Holy Shield:
+  description: "Grant an ally or yourself a holy shield with health equal to twice your level."
+  type: combat
+  brief: "Give an ally or yourself a shield with health equal to 2x your level."
+  cost: 1
+Greater Holy Shield:
+  description: "Holy shields grant one turn of invulnerability before they gain their normal health."
+  type: combat
+  brief: "Holy shields now grant 1 turn of invulnerability before gaining normal health."
+Mass Holy Shield:
+  description: "Grant all allies within 30 feet a holy shield."
+  type: combat
+  brief: "Grant all allies within 30 feet a holy shield."
+  cost: 3
+Link Lifeforce: 
+  description: You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.
+  type: combat
+  brief: Offhand. Take all or part of an ally with a guardian ward's damage.
+Greater Link Lifeforce: 
+  description: "Half any damage taken from linking lifeforce with an ally with a guardian ward."
+  type: combat
+  brief: "Half any damage taken via link lifeforce."
+Enhanced Healing:
+  description: "Add an extra dice of healing when healing an ally with a guardian ward."
+  type: combat
+  brief: "Extra dice of healing to allies with a guardian ward."
+Shared Healing:
+  description: "If you heal an ally, also heal any allies with your guardian ward half as much."
+  type: combat
+  brief: "If you heal an ally, also heal any allies with your guardian ward 1/2 as much."
+Last Hope:
+  description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
+  type: combat
+  brief: "Double healing while an ally is down or has died in this combat."
+Beacon of Hope: 
+  description: Passive. All allies within 100 feet of you gain +2 to all saving throws.
+  type: combat
+  brief: Passive. All allies within 100 feet gain +2 to all saving throws.
+Blessing of Protection:
+  description: "After landing a critical hit, you may immediately place a holy shield on an ally or yourself."
+  type: combat
+  brief: "On a critical hit, give a holy shield on an ally or yourself."
+Guardian Spirit:
+  description: "When an ally with a guardian ward strikes down an enemy, regain 1 action point."
+  type: combat
+  brief: "Regain 1AP when an ally with a guardian ward slays an enemy."
+Blow From on High:
+  description: "You may end any winged jump in a plunging attack."
+  type: combat
+  brief: "End a winged jump in a plunging attack."
+From Death, Life:
+  description: "After slaying an enemy, you may immediately cast a healing spell that you know for -1 cost as a free action."
+  type: combat
+  brief: "Cast a healing spell at -1 cost after slaying an enemy."
+Ward Conversion:
+  description: "As a reaction or Offhand Action, convert any guardian wards to holy shields."
+  type: combat
+  brief: "Reaction or Offhand. Convert guardian wards to holy shields."
 Ready Stance:
   description: "As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack."
   type: combat
@@ -1283,11 +1371,6 @@ Warrior's Vow:
   description: "You gain an extra attack against an entity you have challenged."
   type: combat
   brief: "Extra attack vs. challenged enemies."
-Link Lifeforce: 
-  description: As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you.
-    Remove the link as an offhand action.
-  type: combat
-  brief: Offhand. Link lifeforce to another and take its damage. Offhand to remove.
 Spirit of Rage: 
   description: After slaying an enemy, gain an additional full turn.
   type: combat
@@ -1358,14 +1441,14 @@ Phase Walk:
   type: combat
   brief: If you strike an enemy with Spiritual Strike, you may teleport to their position.
 Spiritual Shield:
-  description: "As a reaction, stop an enemy attack from hitting you using spiritual energy."
+  description: "As a reaction, stop up to 20 damage from an enemy attack from hitting you using spiritual energy."
   cost: 1
   type: combat
-  brief: Reaction. Stop an enemy attack from hitting you.
+  brief: Reaction. Stop up to 20 damage of enemy attack from hitting you.
 Greater Spiritual Shield:
-  description: "Block an enemy attack from harming any allies within 15 feet of you using spiritual energy."
+  description: "Block up to 50 damage of an enemy attack from harming any allies within 15 feet of you using spiritual energy."
   type: combat
-  brief: Stop an enemy attack from hitting all allies within 15ft. of you.
+  brief: Stop up to 50 damage from an enemy attack from hitting all allies within 15ft. of you.
   cost: 2
 Spiritually Reinforced Blow:
   description: "Reinforce your attack with the spirits of nature. Add an extra damage dice and force an enemy to make a size based contested strength check. On failure, they are knocked back 10 feet."
@@ -1422,10 +1505,6 @@ Last Line of Defense:
   description: If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.
   type: combat
   brief: If your allies are on death's door or have died, add a dmg dice to all attacks.
-Beacon of Hope: 
-  description: Passive. All allies within 100 feet of you gain +1 to all saving throws.
-  type: general
-  brief: Passive. All allies within 100 feet gain +1 to all saving throws.
 Sinner's Bane: 
   description: Do an additional 1d6 damage to undead or demonic entities. Stacks with hammer of light.
   type: combat
@@ -1436,9 +1515,9 @@ Fires of Heaven:
   brief: Create a 20 foot 2d10 explosion on plunging attacks.
   cost: 1
 Winged Jump: 
-  description: Leap up to 40 feet using ethereal, angelic wings. Counts as an action.
+  description: As an offhand action, leap up to 15 feet using ethereal, angelic wings.
   type: combat
-  brief: Leap 40 feet using angelic wings as an action.
+  brief: Offhand. Leap 15 feet using angelic wings.
   cost: 1
 Side by Side: 
   description: Gain advantage on attacks if you stand shoulder to shoulder with an ally.
@@ -1928,10 +2007,30 @@ Learning Spells:
     you can learn from with a tier up to the spellbook's maximum spell tier.
   type: rule
   brief: You can learn new spells from spellbooks or when you level up.
+Learn Spells:
+  description: Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.
+  type: general
+  brief: Each time you level up, learn one new spell of each spell tier you have access to.
 Falling Damage:
   description: After a 20 foot fall, you take 1d6 damage for every 10 feet.
   type: rule
   brief: After a 20 foot fall, take 1d6 damage for every 10 feet.
+Minor Boon:
+  description: "You have access to a minor boon from your chosen deity. See the pantheon for details."
+  type: general
+  brief: "You have a minor boon from your deity:"
+Greater Boon:
+  description: "You have access to a greater boon from your chosen deity. See the pantheon for details."
+  type: general
+  brief: "You have a greater boon from your deity:"
+Major Boon:
+  description: "You have access to a major boon from your chosen deity. See the pantheon for details."
+  type: general
+  brief: "You have a major boon from your deity:"
+Legendary Boon:
+  description: "You have access to a legendary boon from your chosen deity. See the pantheon for details."
+  type: general
+  brief: "You have a legendary boon from your deity:"
 Tier Zero Spells:
   description: You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.
   type: general
@@ -1956,10 +2055,6 @@ Tier Five Spells:
   description: You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.
   type: general
   brief: You can learn tier 5 spells.
-Learn Spells:
-  description: Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.
-  type: rule
-  brief: Each time you level up, learn one new spell of each spell tier you have access to.
 Starting Fighting Techniques:
   description: Begin your journey with two standard fighting techniques.
   type: choice

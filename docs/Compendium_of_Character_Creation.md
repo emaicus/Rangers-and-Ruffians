@@ -243,16 +243,16 @@ The biproduct of tinkers and mages, the automaton is considered by many to be an
   
 __Automaton Abilities:__ 
 * __Rules:__   
-  * __Power Core:__ _(Cost 0)_ The source of your power is housed within you. If you are destroyed in combat, you can be rebuilt so long as the power core survives.  
-  * __Repair:__ _(Cost 0)_ You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.  
-  * __Upgrades:__ _(Cost 0)_ A tinker can craft upgrades for you.  
+  * __Power Core:__ The source of your power is housed within you. If you are destroyed in combat, you can be rebuilt so long as the power core survives.  
+  * __Repair:__ You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.  
+  * __Upgrades:__ A tinker can craft upgrades for you.  
 * __General Abilities:__   
-  * __Overdrive:__ _(Cost 0)_ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
-  * __True Sleeplessness:__ _(Cost 0)_ You cannot grow tired, nor can you sleep.  
-  * __Armored Exterior:__ _(Cost 0)_ You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk.  
+  * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
+  * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
+  * __Armored Exterior:__ You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk.  
 * __Combat Abilities:__   
-  * __Self Repair:__ _(Cost 0)_ During combat, you can self repair as an action.  
-  * __Gyroscopic Center of Mass:__ _(Cost 0)_ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
+  * __Self Repair:__ During combat, you can self repair as an action.  
+  * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
   * __Piston Punch:__ _(Cost 1)_ You may perform a 1d8 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone. Enemies larger than your size take advantage, smaller take disadvantage. At level 4, increase damage to 1d12. At level 8, to 2d12. At level 12 to 3d12.  
   
   
@@ -292,16 +292,16 @@ Catterwol are among the most lithe and dexterous of the races, and are adept at 
   
 __Catterwol Abilities:__ 
 * __General Abilities:__   
-  * __Dark Vision:__ _(Cost 0)_ You can see even in perfect darkness.  
-  * __Land on your feet:__ _(Cost 0)_ You can fall 40 feet before taking fall damage.  
-  * __Fast Paws:__ _(Cost 0)_ Gain an additional offhand action.  
+  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Land on your feet:__ You can fall 40 feet before taking fall damage.  
+  * __Fast Paws:__ Gain an additional offhand action.  
 * __Advantages:__   
-  * __Predator:__ _(Cost 0)_ When tracking, you have advantage on perception checks.  
-  * __Loose Skin:__ _(Cost 0)_ You have advantage when breaking grapples.  
+  * __Predator:__ When tracking, you have advantage on perception checks.  
+  * __Loose Skin:__ You have advantage when breaking grapples.  
 * __Disadvantages:__   
-  * __Fear of Water:__ _(Cost 0)_ You have disadvantage when soaked through.  
+  * __Fear of Water:__ You have disadvantage when soaked through.  
 * __Combat Abilities:__   
-  * __They're Retractable:__ _(Cost 0)_ You have retractable, razor sharp claws capable of doing 1d4 damage.  
+  * __They're Retractable:__ You have retractable, razor sharp claws capable of doing 1d4 damage.  
   
   
   
@@ -328,12 +328,12 @@ The daemonspawn were born of an unholy union between elves and the demons of old
   
 __Daemonspawn Abilities:__ 
 * __General Abilities:__   
-  * __True Sight:__ _(Cost 0)_ You are able to see invisible entities.  
-  * __Sleepless:__ _(Cost 0)_ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Incombustible:__ _(Cost 0)_ You take half damage from heat and fire.  
+  * __True Sight:__ You are able to see invisible entities.  
+  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
+  * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ _(Cost 0)_ At the cost of half your level in health (minimum 1, round up), make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round up), make a second action during combat.  
   
   
   
@@ -360,12 +360,12 @@ Elves are the most magical of the races. Forest-dwellers with long lives, many e
   
 __Deep Elf Abilities:__ 
 * __General Abilities:__   
-  * __Sleepless:__ _(Cost 0)_ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Dark Vision:__ _(Cost 0)_ You can see even in perfect darkness.  
+  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
+  * __Dark Vision:__ You can see even in perfect darkness.  
 * __Advantages:__   
-  * __Winged Feet:__ _(Cost 0)_ You have advantage on acrobatics checks.  
+  * __Winged Feet:__ You have advantage on acrobatics checks.  
 * __Disadvantages:__   
-  * __Born in Darkness:__ _(Cost 0)_ You are incredibly light sensitive, and take 1d6 damage per hour spent with your skin exposed to bright light or to the sun. As a result, you must wear protective garments during the day.  
+  * __Born in Darkness:__ You are incredibly light sensitive, and take 1d6 damage per hour spent with your skin exposed to bright light or to the sun. As a result, you must wear protective garments during the day.  
 * __Combat Abilities:__   
   * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
@@ -394,13 +394,13 @@ A stocky, brooding people, many dwarves are natural craftsman and artisans. Dwar
   
 __Dwarf Abilities:__ 
 * __General Abilities:__   
-  * __Incombustible:__ _(Cost 0)_ You take half damage from heat and fire.  
+  * __Incombustible:__ You take half damage from heat and fire.  
 * __Advantages:__   
-  * __Stocky:__ _(Cost 0)_ You have advantage against any check that could cause you to go prone.  
-  * __Very Dangerous Over Short Distances:__ _(Cost 0)_ If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.  
-  * __Boozehound:__ _(Cost 0)_ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Thick Headed:__ _(Cost 0)_ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
-  * __Forgeborn:__ _(Cost 0)_ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
+  * __Stocky:__ You have advantage against any check that could cause you to go prone.  
+  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.  
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
+  * __Forgeborn:__ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
   
   
   
@@ -428,13 +428,13 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
 __Fleetfoot Halfling Abilities:__ 
 * __General Abilities:__   
   * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
-  * __Lightweight:__ _(Cost 0)_ Any cup of alcohol affects you like two.  
+  * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Starting Items:__   
-  * __Sling:__ _(Cost 0)_ Your character begins their journey with a 1d4 sling.  
+  * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
-  * __Padfoot:__ _(Cost 0)_ You have advantage on stealth checks.  
+  * __Padfoot:__ You have advantage on stealth checks.  
 * __Combat Abilities:__   
-  * __Nimble:__ _(Cost 0)_ Targeted ranged attacks take disadvantage against you.  
+  * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   
   
   
@@ -468,15 +468,15 @@ Tinkerers by nature, Gnomes are known to craft miraculous inventions to help the
   
 __Gnome Abilities:__ 
 * __Rules:__   
-  * __Build:__ _(Cost 0)_ Once you have a recipe for an item, you can build it. You can attempt to build one item per rest, or two per sleep.  
+  * __Build:__ Once you have a recipe for an item, you can build it. You can attempt to build one item per rest, or two per sleep.  
 * __General Abilities:__   
-  * __Tinker:__ _(Cost 0)_ Every night, you can attempt to to create a device. Once you create one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs, firebombs, and saddles. (Tinkering requires an intelligence check)  
-  * __See and Remember:__ _(Cost 0)_ Once you see something, you will probably remember it.  
-  * __Gather:__ _(Cost 0)_ You passively collect ingredients for your tinkering.  
+  * __Tinker:__ Every night, you can attempt to to create a device. Once you create one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs, firebombs, and saddles. (Tinkering requires an intelligence check)  
+  * __See and Remember:__ Once you see something, you will probably remember it.  
+  * __Gather:__ You passively collect ingredients for your tinkering.  
 * __Starting Items:__   
-  * __Grapple Gun:__ _(Cost 0)_ You carry a retractable grappling gun. The gun carries 40 feet of rope.  
+  * __Grapple Gun:__ You carry a retractable grappling gun. The gun carries 40 feet of rope.  
 * __Advantages:__   
-  * __Resist Magic:__ _(Cost 0)_ You make any rolls against an enemy's spell power with advantage.  
+  * __Resist Magic:__ You make any rolls against an enemy's spell power with advantage.  
   
   
   
@@ -503,13 +503,13 @@ Small and wicked, most goblins are tricksters and thieves. Known for eating thei
   
 __Goblin Abilities:__ 
 * __General Abilities:__   
-  * __Still Warm:__ _(Cost 0)_ You can eat raw meat without penalty.  
-  * __Dark Vision:__ _(Cost 0)_ You can see even in perfect darkness.  
-  * __Seek Gold:__ _(Cost 0)_ You are able to smell gold. You can perform gold detection checks.  
+  * __Still Warm:__ You can eat raw meat without penalty.  
+  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Seek Gold:__ You are able to smell gold. You can perform gold detection checks.  
 * __Advantages:__   
-  * __Mantel:__ _(Cost 0)_ You have advantage on dexterity checks when climbing.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
 * __Combat Abilities:__   
-  * __Cheap Blow:__ _(Cost 0)_ On a critical hit, knock an enemy prone.  
+  * __Cheap Blow:__ On a critical hit, knock an enemy prone.  
   
   
   
@@ -536,13 +536,13 @@ Small folk, the Halflings would rather be drinking tea and eating toast in their
   
 __Hardfoot Halfling Abilities:__ 
 * __General Abilities:__   
-  * __Warm Butter:__ _(Cost 0)_ Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.  
-  * __Soft Bed:__ _(Cost 0)_ You recover two extra health dice from sleeping in a real bed.  
+  * __Warm Butter:__ Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.  
+  * __Soft Bed:__ You recover two extra health dice from sleeping in a real bed.  
   * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
 * __Starting Items:__   
-  * __Sling:__ _(Cost 0)_ Your character begins their journey with a 1d4 sling.  
+  * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
-  * __Thick Headed:__ _(Cost 0)_ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
+  * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
 * __Combat Abilities:__   
   * __Courageous Blow:__ _(Cost 1)_ Add twice your Inner Fire to an attack.  
   
@@ -571,14 +571,14 @@ High elves are among the most magical of the races. Reclusive by nature, high el
   
 __High Elf Abilities:__ 
 * __Choices:__   
-  * __Learned:__ _(Cost 0)_ You are fluent in an extra language of your choosing.  
+  * __Learned:__ You are fluent in an extra language of your choosing.  
 * __General Abilities:__   
-  * __Sleepless:__ _(Cost 0)_ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Low-Light Vision:__ _(Cost 0)_ You can see in low light.  
-  * __Inherent Magic:__ _(Cost 0)_ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
+  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
+  * __Low-Light Vision:__ You can see in low light.  
+  * __Inherent Magic:__ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
   * __Detect Magic:__ _(Cost 1)_ Perform a magic detection check.  
 * __Advantages:__   
-  * __Wink Wink, Nudge Nudge:__ _(Cost 0)_ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
+  * __Wink Wink, Nudge Nudge:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
   
   
   
@@ -605,15 +605,15 @@ Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hissl
   
 __Hissling Abilities:__ 
 * __Choices:__   
-  * __I'm a Red One!:__ _(Cost 0)_ At the start of your journey, choose your color. This choice affects elemental resistances.  
+  * __I'm a Red One!:__ At the start of your journey, choose your color. This choice affects elemental resistances.  
 * __General Abilities:__   
-  * __Small Fry:__ _(Cost 0)_ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
-  * __All Tuckered Out:__ _(Cost 0)_ You must sleep once every six hours, or suffer exhaustion.  
-  * __Tossed Around:__ _(Cost 0)_ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is. Take full damage if you hit something as a result.  
+  * __Small Fry:__ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
+  * __All Tuckered Out:__ You must sleep once every six hours, or suffer exhaustion.  
+  * __Tossed Around:__ You take half damage from blunt attacks, but are tossed 5 feet backward for every size larger than you your enemy is. Take full damage if you hit something as a result.  
 * __Combat Abilities:__   
-  * __Chomp Chomp:__ _(Cost 0)_ You can make a 1d4 bite attack as an offhand action. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
-  * __Riding High:__ _(Cost 0)_ Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.  
-  * __Dig Dig Dig:__ _(Cost 0)_ You are able to burrow through earth at a rate of 1 foot per minute.  
+  * __Chomp Chomp:__ You can make a 1d4 bite attack as an offhand action. Once you have bitten an enemy, your jaw sets, and you won't let go until even after you are dead. The enemy can attempt contested dexterity checks to try to free themselves of you.  
+  * __Riding High:__ Allies take no disadvantage while you ride them. You gain advantage on attacks while riding a party member.  
+  * __Dig Dig Dig:__ You are able to burrow through earth at a rate of 1 foot per minute.  
   
   
   
@@ -640,11 +640,11 @@ Humans are the most average of the races. The race of men can become good at mos
   
 __Human Abilities:__ 
 * __Choices:__   
-  * __Skilled:__ _(Cost 0)_ Begin your journey with one extra skill.  
+  * __Skilled:__ Begin your journey with one extra skill.  
 * __General Abilities:__   
-  * __Adaptable:__ _(Cost 0)_ Once affected by an effect or spell, gain advantage on saves against it for the remainder of the day.  
+  * __Adaptable:__ Once affected by an effect or spell, gain advantage on saves against it for the remainder of the day.  
 * __Combat Abilities:__   
-  * __Last Stand:__ _(Cost 0)_ When your health is below 25%, you can take an extra action on your turn.  
+  * __Last Stand:__ When your health is below 25%, you can take an extra action on your turn.  
   * __Strength of Men:__ _(Cost 1)_ You have basic healing abilities. You may heal a party member for 1d6 + inner fire health.  
   * __Rally:__ _(Cost 1)_ You may use an aura which gives all of your allies a 1d8 inspiration dice.  
   
@@ -675,10 +675,10 @@ __Kragraven Abilities:__
 * __Choices:__   
   * __Peck:__ _(Cost 1)_ As an offhand action, peck an enemy, dealing 1d6 damage. On a critical hit, blind them until they succeed a SP save.  
 * __General Abilities:__   
-  * __High Jump:__ _(Cost 0)_ Flap your vestigial wings to jump twice your height directly upward.  
-  * __Coast:__ _(Cost 0)_ Use your wings to coast from great heights.  
-  * __Carrion:__ _(Cost 0)_ You can eat raw and rotten meat without penalty.  
-  * __Mimic:__ _(Cost 0)_ You can mimic any voice you've heard.  
+  * __High Jump:__ Flap your vestigial wings to jump twice your height directly upward.  
+  * __Coast:__ Use your wings to coast from great heights.  
+  * __Carrion:__ You can eat raw and rotten meat without penalty.  
+  * __Mimic:__ You can mimic any voice you've heard.  
   
   
   
@@ -706,12 +706,12 @@ ___
   
 __Lizkin Abilities:__ 
 * __General Abilities:__   
-  * __Poison Resist:__ _(Cost 0)_ You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.  
-  * __Shed Tail:__ _(Cost 0)_ Once per week, you can shed your tail to escape a grapple.  
-  * __Taste Air:__ _(Cost 0)_ Gain advantage on tracking perception checks by tasting the air. Works in all environments.  
+  * __Poison Resist:__ You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.  
+  * __Shed Tail:__ Once per week, you can shed your tail to escape a grapple.  
+  * __Taste Air:__ Gain advantage on tracking perception checks by tasting the air. Works in all environments.  
 * __Advantages:__   
   * __Color Choice:__ _(Cost 1)_ You may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used. This may be used to gain advantage on a stealth check.  
-  * __Smokevision:__ _(Cost 0)_ Your double eyelids allows you to see well when underwater or in smoke.  
+  * __Smokevision:__ Your double eyelids allows you to see well when underwater or in smoke.  
 * __Combat Abilities:__   
   * __Poison Bite:__ _(Cost 1)_ You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw. At level 5, increase this damage to 1d12. At level 8, increase it to 10, increase it to 2d12.  
   
@@ -740,13 +740,13 @@ A brutish and warlike race, orcs stab first and ask questions later. Orcs are of
   
 __Orc Abilities:__ 
 * __General Abilities:__   
-  * __Still Warm:__ _(Cost 0)_ You can eat raw meat without penalty.  
+  * __Still Warm:__ You can eat raw meat without penalty.  
 * __Advantages:__   
-  * __Predator:__ _(Cost 0)_ When tracking, you have advantage on perception checks.  
+  * __Predator:__ When tracking, you have advantage on perception checks.  
 * __Combat Abilities:__   
   * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
   * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone.  
-  * __Vengeful Death:__ _(Cost 0)_ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
+  * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
   
   
   
@@ -773,17 +773,17 @@ Sprouts are among the smallest of the races, standing at about 2 feet. As a resu
   
 __Sprout Abilities:__ 
 * __General Abilities:__   
-  * __Photosynthesis:__ _(Cost 0)_ Every turn or once per hour, regain 1d4 health.  
-  * __Small Fry:__ _(Cost 0)_ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
-  * __Soft Landing:__ _(Cost 0)_ Reduce any falling damage by 20 feet.  
-  * __Commune with Nature:__ _(Cost 0)_ You are naturally able to speak with plants and animals.  
-  * __Lightweight:__ _(Cost 0)_ Any cup of alcohol affects you like two.  
-  * __Blade of Grass:__ _(Cost 0)_ Summon a 1d6 blade of woven plant fiber on command.  
-  * __Harden:__ _(Cost 0)_ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but loose 2 dexterity. Does not stack with other armor.  
+  * __Photosynthesis:__ Every turn or once per hour, regain 1d4 health.  
+  * __Small Fry:__ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
+  * __Soft Landing:__ Reduce any falling damage by 20 feet.  
+  * __Commune with Nature:__ You are naturally able to speak with plants and animals.  
+  * __Lightweight:__ Any cup of alcohol affects you like two.  
+  * __Blade of Grass:__ Summon a 1d6 blade of woven plant fiber on command.  
+  * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but loose 2 dexterity. Does not stack with other armor.  
 * __Advantages:__   
-  * __Scurry:__ _(Cost 0)_ You have advantage on dexterity based athletics checks.  
+  * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
-  * __Dodge:__ _(Cost 0)_ Any time you are attacked, roll a d20 and add your dexterity. If you get above a 15, the attack misses.  
+  * __Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get above a 15, the attack misses.  
   
   
   
@@ -810,10 +810,10 @@ Alien among the other races, Waterborn hail from the depths of oceans, lakes, an
   
 __Waterborn Abilities:__ 
 * __General Abilities:__   
-  * __Water Breathing:__ _(Cost 0)_ You only need to breathe once every three days. If you do not go underwater to breath, you will suffocate.  
-  * __Flows Like Water:__ _(Cost 0)_ You can walk on water, and swim as fast as a horse can run.  
-  * __Water Healing:__ _(Cost 0)_ When you sleep in water, it is as if you are in a bed.  
-  * __Lightweight:__ _(Cost 0)_ Any cup of alcohol affects you like two.  
+  * __Water Breathing:__ You only need to breathe once every three days. If you do not go underwater to breath, you will suffocate.  
+  * __Flows Like Water:__ You can walk on water, and swim as fast as a horse can run.  
+  * __Water Healing:__ When you sleep in water, it is as if you are in a bed.  
+  * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
   * __Become Mist:__ _(Cost 1)_ Spend one action point to become mist to have an attack pass right through you as a reaction.  
   * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed, and you gain advantage on charisma checks with them.  
@@ -843,11 +843,11 @@ Elves are the most magical of the races. Forest-dwellers with long lives, many e
   
 __Wood Elf Abilities:__ 
 * __General Abilities:__   
-  * __Sleepless:__ _(Cost 0)_ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Low-Light Vision:__ _(Cost 0)_ You can see in low light.  
+  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
+  * __Low-Light Vision:__ You can see in low light.  
 * __Advantages:__   
-  * __Winged Feet:__ _(Cost 0)_ You have advantage on acrobatics checks.  
-  * __Tracker:__ _(Cost 0)_ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+  * __Winged Feet:__ You have advantage on acrobatics checks.  
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
 * __Combat Abilities:__   
   * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
@@ -882,29 +882,29 @@ Some of the best marksmen in the world, archers are naturals with ranged weapons
   
 __Archer Abilities:__ 
 * __Starting Items:__   
-  * __Longbow:__ _(Cost 0)_ You begin your journey with a d6 longbow.  
-  * __Boot Knife:__ _(Cost 0)_ You carry a hidden d6 knife in your boot.  
+  * __Longbow:__ You begin your journey with a d6 longbow.  
+  * __Boot Knife:__ You carry a hidden d6 knife in your boot.  
   
   
 __Level 0 Archer__
 
 * __General Abilities:__   
-  * __Fletcher:__ _(Cost 0)_ You know how to craft your own arrows, and always seem to have some on hand.  
+  * __Fletcher:__ You know how to craft your own arrows, and always seem to have some on hand.  
   
   
 * __Combat Abilities:__   
   * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
-  * __Huntsman:__ _(Cost 0)_ You have advantage when attacking beasts.  
+  * __Huntsman:__ You have advantage when attacking beasts.  
   
   
 __Level 1 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Advantages:__   
-  * __Mantel:__ _(Cost 0)_ You have advantage on dexterity checks when climbing.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
   
   
 * __Combat Abilities:__   
@@ -914,13 +914,13 @@ __Level 1 Archer__
 __Level 2 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -934,7 +934,7 @@ __Level 3 Archer__
 __Level 4 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -944,7 +944,7 @@ __Level 4 Archer__
 __Level 5 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -955,7 +955,7 @@ __Level 5 Archer__
 __Level 6 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -965,11 +965,11 @@ __Level 6 Archer__
 __Level 7 Archer__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -977,13 +977,13 @@ __Level 7 Archer__
   
   
 * __Advantages:__   
-  * __Steady:__ _(Cost 0)_ Do not take disadvantage when being jostled about.  
+  * __Steady:__ Do not take disadvantage when being jostled about.  
   
   
 __Level 8 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -993,7 +993,7 @@ __Level 8 Archer__
 __Level 9 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1003,17 +1003,17 @@ __Level 9 Archer__
 __Level 10 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __True Mastery:__ _(Cost 0)_ Every ranged weapon functions as at least a d12 weapon in your hands.  
+  * __True Mastery:__ Every ranged weapon functions as at least a d12 weapon in your hands.  
   
   
 __Level 11 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1021,13 +1021,13 @@ __Level 11 Archer__
   
   
 * __Advantages:__   
-  * __Uncanny Perception:__ _(Cost 0)_ You have uncanny perception, which allows you to sense your way in total darkness, and gives you advantage on all perception checks.  
+  * __Uncanny Perception:__ You have uncanny perception, which allows you to sense your way in total darkness, and gives you advantage on all perception checks.  
   
   
 __Level 12 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -1037,11 +1037,11 @@ __Level 12 Archer__
 __Level 13 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Expert Fletcher:__ _(Cost 0)_ All arrows now cost 1 action point less.  
+  * __Expert Fletcher:__ All arrows now cost 1 action point less.  
   * __Anti-Gravity Arrows:__ _(Cost 2)_ You can now craft Anti-Gravity arrows. When an Anti-Gravity arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.  
   
   
@@ -1052,13 +1052,13 @@ __Level 13 Archer__
 __Level 14 Archer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Archer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1085,43 +1085,43 @@ Showmen by nature, Bards are known for their skills at performing and distractin
   
 __Bard Abilities:__ 
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
 * __Advantages:__   
-  * __Boozehound:__ _(Cost 0)_ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   
   
 __Level 0 Bard__
 
 * __Rules:__   
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
   
   
 * __Choices:__   
-  * __My Father's Oboe:__ _(Cost 0)_ You are proficient and start with two instruments of your choice.  
+  * __My Father's Oboe:__ You are proficient and start with two instruments of your choice.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 * __Starting Items:__   
-  * __The Bard's Songbook:__ _(Cost 0)_ You can learn spells from the Bard's Songbook.  
+  * __The Bard's Songbook:__ You can learn spells from the Bard's Songbook.  
   
   
 * __Advantages:__   
-  * __Regular Patron:__ _(Cost 0)_ You may add 1d6 to charisma checks made in a tavern.  
-  * __Sleight of Hand:__ _(Cost 0)_ You have advantage when performing sleight of hand actions.  
+  * __Regular Patron:__ You may add 1d6 to charisma checks made in a tavern.  
+  * __Sleight of Hand:__ You have advantage when performing sleight of hand actions.  
   
   
 __Level 1 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   * __Minor Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an extra dice of healing.  
   
   
@@ -1132,41 +1132,41 @@ __Level 1 Bard__
 __Level 2 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Spell Coin:__ _(Cost 0)_ You have one spell coin, which may store a spell of up to tier one. Any person who rubs the coin may cast the spell as an offhand action. Each day, you may re-summon the coin to yourself, and may put a spell into it free of cost.  
+  * __Spell Coin:__ You have one spell coin, which may store a spell of up to tier one. Any person who rubs the coin may cast the spell as an offhand action. Each day, you may re-summon the coin to yourself, and may put a spell into it free of cost.  
   
   
 * __Advantages:__   
-  * __Nimble Fingers:__ _(Cost 0)_ You have advantage on dexterity and stealth checks made while stealing.  
+  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
   
   
 __Level 4 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Additional Spell Coin:__ _(Cost 0)_ You have an additional spell coin.  
+  * __Additional Spell Coin:__ You have an additional spell coin.  
   
   
 * __Combat Abilities:__   
@@ -1176,38 +1176,38 @@ __Level 5 Bard__
 __Level 6 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Bard__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   * __Greater Restful Melody:__ _(Cost 1)_ When your party is resting or sleeping, you may perform a song for them which grants them an two dice of healing healing.  
   
   
 __Level 8 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Greater Spell Coin:__ _(Cost 0)_ You have learned the art of storing second tier spells in your spell coins.  
+  * __Greater Spell Coin:__ You have learned the art of storing second tier spells in your spell coins.  
   
   
 * __Combat Abilities:__   
@@ -1217,17 +1217,17 @@ __Level 9 Bard__
 __Level 10 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1237,34 +1237,34 @@ __Level 11 Bard__
 __Level 12 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Additional Spell Coin:__ _(Cost 0)_ You have an additional spell coin.  
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Additional Spell Coin:__ You have an additional spell coin.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 __Level 14 Bard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Bard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Major Spell Coin:__ _(Cost 0)_ You have learned the art of storing third tier spells in your spell coins.  
+  * __Major Spell Coin:__ You have learned the art of storing third tier spells in your spell coins.  
   
   
   
@@ -1291,15 +1291,15 @@ __Beastmaster Abilities:__
 __Level 0 Beastmaster__
 
 * __Choices:__   
-  * __Animal Companion:__ _(Cost 0)_ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
+  * __Animal Companion:__ You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, from the beasts section or a dragon hatchling from the book of known beasts.  
   
   
 * __General Abilities:__   
-  * __Animal Magnetism:__ _(Cost 0)_ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
+  * __Animal Magnetism:__ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
   
   
 * __Advantages:__   
-  * __Tracker:__ _(Cost 0)_ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
 * __Combat Abilities:__   
@@ -1309,7 +1309,7 @@ __Level 0 Beastmaster__
 __Level 1 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1317,75 +1317,75 @@ __Level 1 Beastmaster__
   
   
 * __Advantages:__   
-  * __Tackle:__ _(Cost 0)_ You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.  
+  * __Tackle:__ You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.  
   
   
 __Level 2 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Huntsman:__ _(Cost 0)_ You have advantage when attacking beasts.  
+  * __Huntsman:__ You have advantage when attacking beasts.  
   
   
 __Level 4 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Dog Pile:__ _(Cost 0)_ Any sleep taken while with your animal companion counts as sleep in a bed.  
+  * __Dog Pile:__ Any sleep taken while with your animal companion counts as sleep in a bed.  
   
   
 * __Combat Abilities:__   
-  * __Coordinated Attack:__ _(Cost 0)_ If you and your animal companion are both attacking the same entity, you both gain advantage on your attacks.  
+  * __Coordinated Attack:__ If you and your animal companion are both attacking the same entity, you both gain advantage on your attacks.  
   
   
 __Level 6 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Beastmaster__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Closest Friend:__ _(Cost 0)_ Gain advantage in all things if your animal companion is on deaths door or has died in the current battle. Similarly, if you are at death's door or have died, your animal companion takes advantage in all things.  
+  * __Closest Friend:__ Gain advantage in all things if your animal companion is on deaths door or has died in the current battle. Similarly, if you are at death's door or have died, your animal companion takes advantage in all things.  
   
   
 __Level 8 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1395,13 +1395,13 @@ __Level 9 Beastmaster__
 __Level 10 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1411,13 +1411,13 @@ __Level 11 Beastmaster__
 __Level 12 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1427,13 +1427,13 @@ __Level 13 Beastmaster__
 __Level 14 Beastmaster__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Beastmaster__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1460,56 +1460,56 @@ After pledging their allegiance to their deity, Clerics have made it their duty 
   
 __Cleric Abilities:__ 
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
   
   
 __Level 0 Cleric__
 
 * __Rules:__   
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
   
   
 * __Spellbooks:__   
-  * __The Book of Healing:__ _(Cost 0)_ You are able to learn spells from the Book of Healing.  
+  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
   
   
 * __Choices:__   
-  * __Pledge:__ _(Cost 0)_ At the start of your journey, you may select a deity to pledge yourself to.  
+  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 1 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __Purge Decay:__ _(Cost 0)_ Gain 1d6 damage when fighting the undead.  
+  * __Purge Decay:__ Gain 1d6 damage when fighting the undead.  
   
   
 __Level 2 Cleric__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Cleric__
 
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -1519,17 +1519,17 @@ __Level 3 Cleric__
 __Level 4 Cleric__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -1539,101 +1539,101 @@ __Level 5 Cleric__
 __Level 6 Cleric__
 
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Cleric__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   
   
 __Level 8 Cleric__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Link Lifeforce:__ _(Cost 0)_ As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you. Remove the link as an offhand action.  
+  * __Link Lifeforce:__ You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.  
   
   
 __Level 10 Cleric__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __True Heal:__ _(Cost 0)_ Re-roll any ones or twos rolled while healing.  
+  * __True Heal:__ Re-roll any ones or twos rolled while healing.  
   
   
 __Level 12 Cleric__
 
 * __Actions:__   
-  * __Major Offhand Spell:__ _(Cost 0)_ You may cast a tier two spell as an offhand action.  
+  * __Major Offhand Spell:__ You may cast a tier two spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 * __Advantages:__   
-  * __Halo:__ _(Cost 0)_ A halo shines about your head. Take advantage when dealing with god-fearing people, and when intimidating anyone wicked.  
+  * __Halo:__ A halo shines about your head. Take advantage when dealing with god-fearing people, and when intimidating anyone wicked.  
   
   
 * __Combat Abilities:__   
-  * __Burning Bright:__ _(Cost 0)_ At will, you can make your halo blaze with the same intensity as the light spell, dealing damage 1d6 damage to the undead.  
+  * __Burning Bright:__ At will, you can make your halo blaze with the same intensity as the light spell, dealing damage 1d6 damage to the undead.  
   
   
 __Level 14 Cleric__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Cleric__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1664,169 +1664,169 @@ Gaurdians of nature, most druids prefer to live in tribes in the forests, mounta
   
 __Druid Abilities:__ 
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
   
   
 __Level 0 Druid__
 
 * __Rules:__   
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
   
   
 * __Spellbooks:__   
-  * __Novice Spellbook:__ _(Cost 0)_ You are able to learn spells from the Novice Spellbook.  
-  * __The Druid's Field Guide:__ _(Cost 0)_ You can learn spells from the Druid's Field Guide.  
+  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
+  * __The Druid's Field Guide:__ You can learn spells from the Druid's Field Guide.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 1 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   
   
 __Level 2 Druid__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Druid__
 
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 4 Druid__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Advantages:__   
-  * __Tracker:__ _(Cost 0)_ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
   
   
 __Level 6 Druid__
 
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Druid__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   
   
 __Level 8 Druid__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Ascend:__ _(Cost 0)_ Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. The ascended state lasts for 3 turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.  
+  * __Ascend:__ Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. The ascended state lasts for 3 turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.  
   
   
 __Level 10 Druid__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Ascended Flight:__ _(Cost 0)_ While in the Ascended state, you may take flight as an offhand action.  
+  * __Ascended Flight:__ While in the Ascended state, you may take flight as an offhand action.  
   
   
 __Level 12 Druid__
 
 * __Actions:__   
-  * __Major Offhand Spell:__ _(Cost 0)_ You may cast a tier two spell as an offhand action.  
+  * __Major Offhand Spell:__ You may cast a tier two spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __True Ascension:__ _(Cost 0)_ Ascension no longer has a time limit. While ascended, you make all perception checks and inner fire saving throws with advantage. You may enter and leave the ascended state as often as you want. When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are fatigued.  
+  * __True Ascension:__ Ascension no longer has a time limit. While ascended, you make all perception checks and inner fire saving throws with advantage. You may enter and leave the ascended state as often as you want. When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are fatigued.  
   
   
 __Level 14 Druid__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Power of Ascension:__ _(Cost 0)_ While in the ascended state, gain 5 inner fire, strength, and dexterity.  
+  * __Power of Ascension:__ While in the ascended state, gain 5 inner fire, strength, and dexterity.  
   
   
 __Level 15 Druid__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -1867,7 +1867,7 @@ __Level 0 Fighter__
 __Level 1 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1877,29 +1877,29 @@ __Level 1 Fighter__
 __Level 2 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Resolve:__ _(Cost 0)_ When your health drops below 25%, all attacks do half damage against you.  
+  * __Resolve:__ When your health drops below 25%, all attacks do half damage against you.  
   
   
 __Level 4 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1907,36 +1907,36 @@ __Level 5 Fighter__
   
   
 * __Combat Abilities:__   
-  * __Nimble:__ _(Cost 0)_ Targeted ranged attacks take disadvantage against you.  
-  * __Reduced Critical:__ _(Cost 0)_ Decrease your critical hit target by 1.  
+  * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Level 6 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Fighter__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 8 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -1946,13 +1946,13 @@ __Level 9 Fighter__
 __Level 10 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -1962,33 +1962,33 @@ __Level 11 Fighter__
 __Level 12 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Stay on Your Feet:__ _(Cost 0)_ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
+  * __Stay on Your Feet:__ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
   
   
 __Level 14 Fighter__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Fighter__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Reduced Critical:__ _(Cost 0)_ Decrease your critical hit target by 1.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   * __Whirlwind of Blades:__ _(Cost 2)_ Make an additional 3 attacks on your turn.  
   
   
@@ -2016,8 +2016,8 @@ __Gunslinger Abilities:__
 __Level 0 Gunslinger__
 
 * __Choices:__   
-  * __This is my Weapon:__ _(Cost 0)_ Your gun is the only friend you need. Make sure to give it a name.  
-  * __Gunslinger or Marksman:__ _(Cost 0)_ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
+  * __This is my Weapon:__ Your gun is the only friend you need. Make sure to give it a name.  
+  * __Gunslinger or Marksman:__ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
   
   
 * __Combat Abilities:__   
@@ -2027,20 +2027,20 @@ __Level 0 Gunslinger__
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
-  * __Pistol:__ _(Cost 0)_ You begin your adventure with a pistol.  
+  * __Pistol:__ You begin your adventure with a pistol.  
   
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Rifle:__ _(Cost 0)_ You begin your adventure with a rifle.  
-  * __Bayonet:__ _(Cost 0)_ You can affix a dagger to your rifle, which functions as a bayonet.  
+  * __Rifle:__ You begin your adventure with a rifle.  
+  * __Bayonet:__ You can affix a dagger to your rifle, which functions as a bayonet.  
   * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush forward 10 feet, doing an additional dice of damage to your target. The target must win at a contested strength check or fall prone. This distance can be in addition to you standard movement.  
   
   
 __Level 1 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Gunslinger Abilities__  
@@ -2057,107 +2057,107 @@ __Marksman Abilities__
 __Level 2 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __High Grain:__ _(Cost 0)_ Add 1 to your firearm damage.  
+  * __High Grain:__ Add 1 to your firearm damage.  
   * __From the Hip:__ _(Cost 1)_ Reaction. Fire a retaliation shot before you are attacked. If your enemy fails a Spell Power save, they attack is stopped.  
   
   
 __Level 4 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __High Grain:__ _(Cost 0)_ Add 1 to your firearm damage.  
+  * __High Grain:__ Add 1 to your firearm damage.  
   
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
-  * __Quickdraw:__ _(Cost 0)_ Add 1d4 to your initiative.  
+  * __Quickdraw:__ Add 1d4 to your initiative.  
   
   
 __Level 6 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Gunslinger Abilities__  
 * Actions:   
-  * __Twin Guns:__ _(Cost 0)_ You are able to wield two firearms. You may attack with both in a single action.  
+  * __Twin Guns:__ You are able to wield two firearms. You may attack with both in a single action.  
   
   
 __Marksman Abilities__  
 * Actions:   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * Combat Abilities:   
-  * __Line Them Up:__ _(Cost 0)_ If you slay an enemy, gain another attack action.  
+  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
   
   
 __Level 8 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
   * __Feeling Lucky:__ _(Cost 1)_ Add a number of d4's equal to your luck to an attack.  
-  * __Fastest Gun:__ _(Cost 0)_ Add 1d10 to your initiative.  
+  * __Fastest Gun:__ Add 1d10 to your initiative.  
   
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Armor Penetrating Rounds:__ _(Cost 0)_ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
-  * __Savage Critical:__ _(Cost 0)_ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
-  * __Reduced Critical:__ _(Cost 0)_ Decrease your critical hit target by 1.  
+  * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Level 10 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Gunslinger Abilities__  
 * Combat Abilities:   
-  * __Hollowpoint:__ _(Cost 0)_ Your shots do 1d6 additional damage to unarmored targets.  
+  * __Hollowpoint:__ Your shots do 1d6 additional damage to unarmored targets.  
   
   
 __Marksman Abilities__  
@@ -2168,17 +2168,17 @@ __Marksman Abilities__
 __Level 12 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Harrying Shot:__ _(Cost 0)_ On a critical hit, the attacked entity must make their next move with disadvantage.  
+  * __Harrying Shot:__ On a critical hit, the attacked entity must make their next move with disadvantage.  
   
   
 __Gunslinger Abilities__  
@@ -2188,23 +2188,23 @@ __Gunslinger Abilities__
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __High Grain:__ _(Cost 0)_ Add 1 to your firearm damage.  
+  * __High Grain:__ Add 1 to your firearm damage.  
   
   
 __Level 14 Gunslinger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Gunslinger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Reduced Critical:__ _(Cost 0)_ Decrease your critical hit target by 1.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Gunslinger Abilities__  
@@ -2214,7 +2214,7 @@ __Gunslinger Abilities__
   
 __Marksman Abilities__  
 * Combat Abilities:   
-  * __Assassinate:__ _(Cost 0)_ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
+  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
   
   
   
@@ -2237,22 +2237,22 @@ Highborns were born into a noble house and have connections and money as a resul
   
 __Highborn Abilities:__ 
 * __General Abilities:__   
-  * __Lightweight:__ _(Cost 0)_ Any cup of alcohol affects you like two.  
+  * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Starting Items:__   
-  * __My Father's Coffers:__ _(Cost 0)_ Begin your journey with significant additional funds.  
-  * __The Family Sword:__ _(Cost 0)_ Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving of your family's sigil.  
+  * __My Father's Coffers:__ Begin your journey with significant additional funds.  
+  * __The Family Sword:__ Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving of your family's sigil.  
 * __Advantages:__   
-  * __Beauty Incarnate:__ _(Cost 0)_ Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.  
+  * __Beauty Incarnate:__ Gain advantage and +2 charisma when speaking to individuals who find your sex attractive.  
   
   
 __Level 0 Highborn__
 
 * __General Abilities:__   
-  * __Happy Smiles:__ _(Cost 0)_ Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
+  * __Happy Smiles:__ Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
   
   
 * __Advantages:__   
-  * __My People:__ _(Cost 0)_ Gain advantage when speaking with guards and +2 charisma when speaking with citizens in your family's territory.  
+  * __My People:__ Gain advantage when speaking with guards and +2 charisma when speaking with citizens in your family's territory.  
   
   
 * __Combat Abilities:__   
@@ -2266,43 +2266,43 @@ __Level 1 Highborn__
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Advantages:__   
-  * __Mantel:__ _(Cost 0)_ You have advantage on dexterity checks when climbing.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
   
   
 __Level 2 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Highborn__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Fallen:__ _(Cost 0)_ While you are on death's door, all of your allies gain a bonus action.  
+  * __Fallen:__ While you are on death's door, all of your allies gain a bonus action.  
   
   
 * __Combat Abilities:__   
-  * __Disarming:__ _(Cost 0)_ Reaction. Force an enemy that attacks you to make an inner fire saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.  
+  * __Disarming:__ Reaction. Force an enemy that attacks you to make an inner fire saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.  
   
   
 __Level 4 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Highborn__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -2312,7 +2312,7 @@ __Level 5 Highborn__
 __Level 6 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Highborn__
@@ -2322,55 +2322,55 @@ __Level 7 Highborn__
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 8 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Highborn__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 10 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Highborn__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Advantages:__   
-  * __Lionhearted:__ _(Cost 0)_ Gain advantage on SP saves.  
+  * __Lionhearted:__ Gain advantage on SP saves.  
   
   
 __Level 12 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Highborn__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Aura of Peace:__ _(Cost 0)_ Passive. All allies near you take heart, and gain 10 health while in your presence.  
+  * __Aura of Peace:__ Passive. All allies near you take heart, and gain 10 health while in your presence.  
   
   
 * __Combat Abilities:__   
@@ -2380,13 +2380,13 @@ __Level 13 Highborn__
 __Level 14 Highborn__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Highborn__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -2413,83 +2413,83 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
 __Knight Abilities:__ 
 * __Starting Items:__   
-  * __Armored:__ _(Cost 0)_ You begin your journey with a suit of chainmail.  
+  * __Armored:__ You begin your journey with a suit of chainmail.  
   
   
 __Level 0 Knight__
 
 * __General Abilities:__   
-  * __Shield Master:__ _(Cost 0)_ Don't take movement penalties from shield use.  
-  * __Armor Master:__ _(Cost 0)_ Don't take movement penalties from armor use.  
+  * __Shield Training:__ Don't take movement penalties from shield use.  
+  * __Armor Training:__ Don't take movement penalties from armor use.  
   
   
 * __Advantages:__   
-  * __Kingsmen:__ _(Cost 0)_ Gain advantage on charisma checks when speaking with kingsmen.  
+  * __Kingsmen:__ Gain advantage on charisma checks when speaking with kingsmen.  
   
   
 * __Combat Abilities:__   
   * __Overwhelming Strike:__ _(Cost 1)_ Batter away an enemies defenses. Add a damage dice to your attack and force the enemy to make a size based contested Strength check. On failure, the next attack against the enemy has advantage.  
-  * __Pivot:__ _(Cost 0)_ As an offhand action, trade spaces with an adjacent ally.  
+  * __Pivot:__ As an offhand action, trade spaces with an adjacent ally.  
   * __Steel Yourself:__ _(Cost 1)_ Choose to take half damage from an attack.  
   
   
 __Level 1 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
   * __Shield Bash:__ _(Cost 1)_ Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
-  * __Ready Stance:__ _(Cost 0)_ As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack.  
+  * __Ready Stance:__ As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack.  
   
   
 __Level 2 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
   * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
-  * __Last Line of Defense:__ _(Cost 0)_ If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.  
+  * __Last Line of Defense:__ If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.  
   
   
 __Level 3 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __None Shall Pass:__ _(Cost 0)_ If you hit an enemy with your exposed attack, they must make a size based contested strength check or be stopped in their tracks.  
+  * __None Shall Pass:__ If you hit an enemy with your exposed attack, they must make a size based contested strength check or be stopped in their tracks.  
   
   
 __Level 4 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Press the Advantage:__ _(Cost 0)_ When you land a critical hit, gain a free shield bash attack.  
+  * __Press the Advantage:__ When you land a critical hit, gain a free shield bash attack.  
   
   
 __Level 5 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Advance:__ _(Cost 0)_ If you slay an enemy with a melee attack, you may step forward into the space that they occupied.  
+  * __Advance:__ If you slay an enemy with a melee attack, you may step forward into the space that they occupied.  
   * __Knight's Challenge:__ _(Cost 1)_ As an offhand action, issue a challenge to one of your enemies. The enemy must make an spell power save or be forced to attack only you. Regardless, you have advantage when attacking a challenged enemy.  
   
   
 __Level 6 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -2499,68 +2499,68 @@ __Level 6 Knight__
 __Level 7 Knight__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 8 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Inspiring Critical:__ _(Cost 0)_ Inspire an ally when you land a critical hit or slay an enemy. Grant a chosen ally a d10 inspiration dice.  
+  * __Inspiring Critical:__ Inspire an ally when you land a critical hit or slay an enemy. Grant a chosen ally a d10 inspiration dice.  
   
   
 __Level 9 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Hold the Line:__ _(Cost 0)_ Gain a second exposed attack.  
+  * __Hold the Line:__ Gain a second exposed attack.  
   
   
 __Level 10 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Cleave:__ _(Cost 0)_ Strike up to two adjacent foes when you make a melee attack.  
-  * __Greater Charge:__ _(Cost 0)_ Your charge now carries you 15 feet, and may end in an attack.  
+  * __Cleave:__ Strike up to two adjacent foes when you make a melee attack.  
+  * __Greater Charge:__ Your charge now carries you 15 feet, and may end in an attack.  
   
   
 __Level 11 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Stay on Your Feet:__ _(Cost 0)_ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
+  * __Stay on Your Feet:__ If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
   
   
 __Level 12 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Controlled Advance:__ _(Cost 0)_ When you use the Advance ability, gain an action which may be used to either attack again or to ready your stance.  
+  * __Controlled Advance:__ When you use the Advance ability, gain an action which may be used to either attack again or to ready your stance.  
   
   
 __Level 13 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -2570,21 +2570,21 @@ __Level 13 Knight__
 __Level 14 Knight__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Resilient Defense:__ _(Cost 0)_ You have become so hardened by combat that a single attack can deal at most 40 damage to you.  
+  * __Resilient Defense:__ You have become so hardened by combat that a single attack can deal at most 50 damage to you.  
   
   
 __Level 15 Knight__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Warrior's Vow:__ _(Cost 0)_ You gain an extra attack against an entity you have challenged.  
+  * __Warrior's Vow:__ You gain an extra attack against an entity you have challenged.  
   
   
   
@@ -2607,123 +2607,123 @@ Monks are masters of hand to hand combat, who use their extensive control of the
   
 __Monk Abilities:__ 
 * __Choices:__   
-  * __Starting Fighting Techniques:__ _(Cost 0)_ Begin your journey with two standard fighting techniques.  
+  * __Starting Fighting Techniques:__ Begin your journey with two standard fighting techniques.  
   
   
 __Level 0 Monk__
 
 * __Rules:__   
-  * __Learn Fighting Techniques:__ _(Cost 0)_ Each time you level up, learn one fighting technique from each fighting technique tier you have access to.  
+  * __Learn Fighting Techniques:__ Each time you level up, learn one fighting technique from each fighting technique tier you have access to.  
   
   
 * __Spellbooks:__   
-  * __The Book of Chi:__ _(Cost 0)_ You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.  
+  * __The Book of Chi:__ You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.  
   
   
 * __General Abilities:__   
-  * __Fighting Techniques:__ _(Cost 0)_ You may learn a new fighting technique from the book of chi.  
+  * __Fighting Techniques:__ You may learn a new fighting technique from the book of chi.  
   
   
 __Level 1 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 2 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 4 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 6 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Monk__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 8 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 10 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Master Fighting Techniques:__ _(Cost 0)_ You may learn a new master fighting technique from the book of chi.  
+  * __Master Fighting Techniques:__ You may learn a new master fighting technique from the book of chi.  
   
   
 __Level 11 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 12 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 14 Monk__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Legendary Fighting Techniques:__ _(Cost 0)_ You may learn a new legendary fighting technique from the book of chi.  
+  * __Legendary Fighting Techniques:__ You may learn a new legendary fighting technique from the book of chi.  
   
   
 __Level 15 Monk__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
   
@@ -2746,197 +2746,197 @@ Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers,
   
 __Necromancer Abilities:__ 
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
   
   
 __Level 0 Necromancer__
 
 * __Rules:__   
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Soul Harvest:__ _(Cost 0)_ You may harvest 1 soul from a sentient entity that has died within twenty four hours.  
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Soul Based Magic:__ _(Cost 0)_ To fuel your magic, you use the concentrated essence of life, which you are able to harvest from the dead. These "souls" are stored in your soul jar until they are expended on a spell or by an ability. At that time, they escape to the hereafter.  
+  * __Soul Harvest:__ You may harvest 1 soul from a sentient entity that has died within twenty four hours.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
+  * __Soul Based Magic:__ To fuel your magic, you use the concentrated essence of life, which you are able to harvest from the dead. These "souls" are stored in your soul jar until they are expended on a spell or by an ability. At that time, they escape to the hereafter.  
   
   
 * __Spellbooks:__   
-  * __The Macabre Manual:__ _(Cost 0)_ You are able to learn spells from the Macabre Manual.  
+  * __The Macabre Manual:__ You are able to learn spells from the Macabre Manual.  
   
   
 * __Choices:__   
-  * __Vegan:__ _(Cost 0)_ At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 2 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
+  * __Vegan:__ At the start of your journey you may choose to become a 'vegan.' Deduct 1 point from your vitality and strength, and add 2 to your charisma. As a vegan, you swear not to harvest souls from the innocent, but increase the time limit on Mortal Coil to once per month.  
   
   
 * __General Abilities:__   
-  * __Mortal Coil:__ _(Cost 0)_ Once every week, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.  
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Mortal Coil:__ Once every week, you must consume a soul. If you do not, your body begins to rot away, causing fear and horror in those who see you.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 * __Starting Items:__   
-  * __Soul Jar:__ _(Cost 0)_ You have a soul jar, which produces 1d6 souls each day at midnight, the jar can produce 2 souls at maximum. Your soul jar is capable of holding 20 souls at maximum.  
+  * __Soul Jar:__ You have a soul jar, which produces 1d6 souls each day at midnight, the jar can produce 2 souls at maximum. Your soul jar is capable of holding 20 souls at maximum.  
   
   
 __Level 1 Necromancer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
-  * __Edge of Eternity:__ _(Cost 0)_ You can consume a soul to increase a stat by 1 or to give yourself a temporary increase of 1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal Coil to once per day for three days.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Edge of Eternity:__ You can consume a soul to increase a stat by 1 or to give yourself a temporary increase of 1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal Coil to once per day for three days.  
   
   
 __Level 2 Necromancer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Necromancer__
 
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Disadvantages:__   
-  * __Fear the Light:__ _(Cost 0)_ You are considered undead, and therefore take extra damage from holy weapons.  
+  * __Fear the Light:__ You are considered undead, and therefore take extra damage from holy weapons.  
   
   
 __Level 4 Necromancer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Necromancer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Eyes of the Others:__ _(Cost 0)_ Consume a soul to give yourself darkvision and detect life for a day.  
+  * __Eyes of the Others:__ Consume a soul to give yourself darkvision and detect life for a day.  
   
   
 __Level 6 Necromancer__
 
 * __Rules:__   
-  * __Larger Soul Jar:__ _(Cost 0)_ Your soul jar can produce at maximum 1 more soul per day.  
+  * __Larger Soul Jar:__ Your soul jar can produce at maximum 1 more soul per day.  
   
   
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Necromancer__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
-  * __Reap:__ _(Cost 0)_ When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Reap:__ When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2.  
   
   
 __Level 8 Necromancer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Necromancer__
 
 * __Rules:__   
-  * __Larger Soul Jar:__ _(Cost 0)_ Your soul jar can produce at maximum 1 more soul per day.  
+  * __Larger Soul Jar:__ Your soul jar can produce at maximum 1 more soul per day.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 10 Necromancer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Necromancer__
 
 * __Rules:__   
-  * __Larger Soul Jar:__ _(Cost 0)_ Your soul jar can produce at maximum 1 more soul per day.  
+  * __Larger Soul Jar:__ Your soul jar can produce at maximum 1 more soul per day.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Phylactery:__ _(Cost 0)_ You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.  
+  * __Phylactery:__ You may remove your soul and put it in a box. If the box is destroyed, are destroyed with it. If your body dies and you have a thrall, your consciousness may be transferred to the thrall. If you have no thralls remaining, your body is regenerated at your phylactery after one day.  
   
   
 __Level 12 Necromancer__
 
 * __Actions:__   
-  * __Major Offhand Spell:__ _(Cost 0)_ You may cast a tier two spell as an offhand action.  
+  * __Major Offhand Spell:__ You may cast a tier two spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Necromancer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Freed from this Mortal Coil:__ _(Cost 0)_ You may bond your consciousness to one of your thralls, taking full control of them. If the thrall is destroyed, your soul returns to your primary body, another thrall, or to your phylactery.  
+  * __Freed from this Mortal Coil:__ You may bond your consciousness to one of your thralls, taking full control of them. If the thrall is destroyed, your soul returns to your primary body, another thrall, or to your phylactery.  
   
   
 __Level 14 Necromancer__
 
 * __Rules:__   
-  * __Larger Soul Jar:__ _(Cost 0)_ Your soul jar can produce at maximum 1 more soul per day.  
+  * __Larger Soul Jar:__ Your soul jar can produce at maximum 1 more soul per day.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 __Level 15 Necromancer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Army of the Damned:__ _(Cost 0)_ As an action, resurrect every entity within 100 feet as zombies at the cost of 5 souls.  
+  * __Army of the Damned:__ As an action, resurrect every entity within 100 feet as zombies at the cost of 5 souls.  
   
   
   
@@ -2954,182 +2954,236 @@ Palidins are Soldiers of the Light, and are adept both at hand to hand combat an
   
 |STR|DEX|INT|INF|CHR|PER|LUK|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|-3|-1|1|0|-2|1|4|  
+|1|0|-2|2|-1|-3|1|4|  
   
   
 __Paladin Abilities:__ 
 * __Choices:__   
-  * __Minor Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 1 extra tier zero spells.  
+  * __Minor Spell Choice:__ At the start of your journey, you know 1 extra tier zero spells.  
 * __Starting Items:__   
-  * __Armored:__ _(Cost 0)_ You begin your journey with a suit of chainmail.  
+  * __Armored:__ You begin your journey with a suit of chainmail.  
   
   
 __Level 0 Paladin__
 
 * __Rules:__   
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
   
   
 * __Spellbooks:__   
-  * __The Book of Healing:__ _(Cost 0)_ You are able to learn spells from the Book of Healing.  
+  * __The Book of Healing:__ You are able to learn spells from the Book of Healing.  
   
   
 * __Choices:__   
-  * __Pledge:__ _(Cost 0)_ At the start of your journey, you may select a deity to pledge yourself to.  
+  * __Pledge:__ At the start of your journey, you may select a deity to pledge yourself to.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Minor Boon:__ You have access to a minor boon from your chosen deity. See the pantheon for details.  
+  * __Shield Training:__ Don't take movement penalties from shield use.  
+  * __Armor Training:__ Don't take movement penalties from armor use.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  
+  
+* __Combat Abilities:__   
+  * __Hammer of Light:__ Any weapon that you wield does an additional dice of damage to undead.  
+  * __Faithful Weapon:__ After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.  
+  * __Pivot:__ As an offhand action, trade spaces with an adjacent ally.  
+  * __Healing Blow:__ _(Cost 1)_ Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to any allies within 15 feet of you.  
   
   
 __Level 1 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __Hammer of Light:__ _(Cost 0)_ Any weapon that you wield does an additional dice of damage to undead.  
-  * __Bash:__ _(Cost 0)_ Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.  
+  * __Bash:__ Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.  
+  * __Guardian Ward:__ As an offhand action, Say a fervent prayer to place a ward on an ally. The marked ally gains +1 armor. At most one ally may have a guardian ward at a time.  
   
   
 __Level 2 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
-* __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+* __Combat Abilities:__   
+  * __Healing Blast:__ _(Cost 1)_ Fire a 30 foot cone of healing energy. All allies struck by it regain half your level (round up) d4's in health. Deals damage to enemies.  
+  * __Holy Shield:__ _(Cost 1)_ Grant an ally or yourself a holy shield with health equal to twice your level.  
   
   
 __Level 3 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Faithful Weapon:__ _(Cost 0)_ After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.  
+  * __Link Lifeforce:__ You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.  
   
   
 __Level 4 Paladin__
 
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  
+  
+* __Combat Abilities:__   
+  * __Enhanced Healing:__ Add an extra dice of healing when healing an ally with a guardian ward.  
   
   
 __Level 5 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Boon:__ You have access to a greater boon from your chosen deity. See the pantheon for details.  
   
   
 * __Combat Abilities:__   
-  * __Link Lifeforce:__ _(Cost 0)_ As an action, link your lifeforce to that of another. Any damage they take is transferred directly to you. Remove the link as an offhand action.  
+  * __Shared Healing:__ If you heal an ally, also heal any allies with your guardian ward half as much.  
+  * __Greater Guardian Ward:__ Your guardian wards now grant +2 armor  
   
   
 __Level 6 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
-* __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+* __Combat Abilities:__   
+  * __Warrior Spirit:__ If you slay an enemy, regain one action point.  
   
   
 __Level 7 Paladin__
 
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __Shield of Men:__ _(Cost 1)_ Reaction. Once per round of combat, you can throw yourself in front of a teammate, taking their damage for them. Any damage you receive as a result is halved. Works up to 15 feet.  
+  * __Last Hope:__ Double any healing that you do while an ally has fallen in this combat or is currently at death's door.  
   
   
 __Level 8 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Blessing of Protection:__ After landing a critical hit, you may immediately place a holy shield on an ally or yourself.  
   
   
 __Level 9 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
-* __General Abilities:__   
-  * __Beacon of Hope:__ _(Cost 0)_ Passive. All allies within 100 feet of you gain +1 to all saving throws.  
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+* __Combat Abilities:__   
+  * __Beacon of Hope:__ Passive. All allies within 100 feet of you gain +2 to all saving throws.  
   
   
 __Level 10 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Major Boon:__ You have access to a major boon from your chosen deity. See the pantheon for details.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  
+  
+* __Combat Abilities:__   
+  * __Major Guardian Ward:__ Your guardian wards now grant +3 armor  
+  * __Second Guardian Ward:__ You may now place guardian wards on two allies.  
   
   
 __Level 11 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Last Line of Defense:__ _(Cost 0)_ If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.  
+  * __Greater Link Lifeforce:__ Half any damage taken from linking lifeforce with an ally with a guardian ward.  
   
   
 __Level 12 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
-* __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+* __Combat Abilities:__   
+  * __Guardian Spirit:__ When an ally with a guardian ward strikes down an enemy, regain 1 action point.  
   
   
 __Level 13 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __Winged Jump:__ _(Cost 1)_ Leap up to 40 feet using ethereal, angelic wings. Counts as an action.  
+  * __Ward Conversion:__ As a reaction or Offhand Action, convert any guardian wards to holy shields.  
   
   
 __Level 14 Paladin__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Mass Holy Shield:__ _(Cost 3)_ Grant all allies within 30 feet a holy shield.  
   
   
 __Level 15 Paladin__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Legendary Boon:__ You have access to a legendary boon from your chosen deity. See the pantheon for details.  
   
   
 * __Combat Abilities:__   
-  * __Fires of Heaven:__ _(Cost 1)_ When you perform a plunging attack, create an explosion dealing 2d10 damage to all entities within a 20 foot radius.  
+  * __Legendary Guardian Ward:__ Your guardian wards now grant +5 armor  
+  * __Greater Holy Shield:__ Holy shields grant one turn of invulnerability before they gain their normal health.  
   
   
   
@@ -3149,24 +3203,24 @@ Barbarians are hearty, and can dole out a lot of damage, making them great tanks
   
 __Path Of Nature Barbarian Abilities:__ 
 * __General Abilities:__   
-  * __Colossal:__ _(Cost 0)_ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
+  * __Colossal:__ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
 * __Advantages:__   
-  * __Boozehound:__ _(Cost 0)_ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Ruffians:__ _(Cost 0)_ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
   
   
 __Level 0 Path Of Nature Barbarian__
 
 * __General Abilities:__   
   * __Spiritual Infusion:__ _(Cost 1)_ Equip one of your aspects.  
-  * __Elk Aspect:__ _(Cost 0)_ Gain an additional 15 feet of movement and advantage on athletics checks.  
-  * __Wolf Aspect:__ _(Cost 0)_ If you attack an enemy with an ally, gain advantage. Gain advantage on tracking checks.  
-  * __Wildcat Aspect:__ _(Cost 0)_ When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks.  
-  * __Bull Aspect:__ _(Cost 0)_ Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks.  
-  * __Bear Aspect:__ _(Cost 0)_ You take half blunt and piercing damage.  
-  * __Elemental Aspect:__ _(Cost 0)_ Convert your damage to a different type. You must declare the type when this aspect is equipped.  
-  * __Leech Aspect:__ _(Cost 0)_ Recover half your level (round up, minimum 1) in health whenever you land a blow.  
-  * __Dolphin Aspect:__ _(Cost 0)_ You can swim at twice your running speed and hold your breath for 15 minutes.  
+  * __Elk Aspect:__ Gain an additional 15 feet of movement and advantage on athletics checks.  
+  * __Wolf Aspect:__ If you attack an enemy with an ally, gain advantage. Gain advantage on tracking checks.  
+  * __Wildcat Aspect:__ When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks.  
+  * __Bull Aspect:__ Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks.  
+  * __Bear Aspect:__ You take half blunt and piercing damage.  
+  * __Elemental Aspect:__ Convert your damage to a different type. You must declare the type when this aspect is equipped.  
+  * __Leech Aspect:__ Recover half your level (round up, minimum 1) in health whenever you land a blow.  
+  * __Dolphin Aspect:__ You can swim at twice your running speed and hold your breath for 15 minutes.  
   
   
 * __Combat Abilities:__   
@@ -3176,7 +3230,7 @@ __Level 0 Path Of Nature Barbarian__
 __Level 1 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3186,17 +3240,17 @@ __Level 1 Path Of Nature Barbarian__
 __Level 2 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Spiritual Shield:__ _(Cost 1)_ As a reaction, stop an enemy attack from hitting you using spiritual energy.  
+  * __Spiritual Shield:__ _(Cost 1)_ As a reaction, stop up to 20 damage from an enemy attack from hitting you using spiritual energy.  
   
   
 __Level 3 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3206,7 +3260,7 @@ __Level 3 Path Of Nature Barbarian__
 __Level 4 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3216,7 +3270,7 @@ __Level 4 Path Of Nature Barbarian__
 __Level 5 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -3226,21 +3280,21 @@ __Level 5 Path Of Nature Barbarian__
 __Level 6 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Warrior Spirit:__ _(Cost 0)_ If you slay an enemy or land a critical hit, regain one action point.  
+  * __Warrior Spirit:__ If you slay an enemy, regain one action point.  
   
   
 __Level 7 Path Of Nature Barbarian__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3250,7 +3304,7 @@ __Level 7 Path Of Nature Barbarian__
 __Level 8 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3260,17 +3314,17 @@ __Level 8 Path Of Nature Barbarian__
 __Level 9 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Greater Spiritual Shield:__ _(Cost 2)_ Block an enemy attack from harming any allies within 15 feet of you using spiritual energy.  
+  * __Greater Spiritual Shield:__ _(Cost 2)_ Block up to 50 damage of an enemy attack from harming any allies within 15 feet of you using spiritual energy.  
   
   
 __Level 10 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -3280,7 +3334,7 @@ __Level 10 Path Of Nature Barbarian__
 __Level 11 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -3290,17 +3344,17 @@ __Level 11 Path Of Nature Barbarian__
 __Level 12 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Phase Walk:__ _(Cost 0)_ If you strike an enemy with a spiritual weapon, you may instantly teleport to their position.  
+  * __Phase Walk:__ If you strike an enemy with a spiritual weapon, you may instantly teleport to their position.  
   
   
 __Level 13 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3310,7 +3364,7 @@ __Level 13 Path Of Nature Barbarian__
 __Level 14 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
@@ -3320,7 +3374,7 @@ __Level 14 Path Of Nature Barbarian__
 __Level 15 Path Of Nature Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -3344,20 +3398,20 @@ Barbarians are hearty, and can dole out a lot of damage, making them great tanks
   
 __Path Of Rage Barbarian Abilities:__ 
 * __General Abilities:__   
-  * __Colossal:__ _(Cost 0)_ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
+  * __Colossal:__ You stand 2 feet taller than the average individual of your race, and are treated as one size larger.  
 * __Advantages:__   
-  * __Boozehound:__ _(Cost 0)_ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Ruffians:__ _(Cost 0)_ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
+  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
+  * __Ruffians:__ Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.  
   
   
 __Level 0 Path Of Rage Barbarian__
 
 * __General Abilities:__   
-  * __Throw Anything:__ _(Cost 0)_ You can throw anything up to one size larger than yourself.  
+  * __Throw Anything:__ You can throw anything up to one size larger than yourself.  
   
   
 * __Advantages:__   
-  * __Intimidate:__ _(Cost 0)_ You have advantage on intimidation checks.  
+  * __Intimidate:__ You have advantage on intimidation checks.  
   
   
 * __Combat Abilities:__   
@@ -3368,18 +3422,18 @@ __Level 0 Path Of Rage Barbarian__
 __Level 1 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
   * __Taunt:__ _(Cost 1)_ You can taunt your opponents. Foes within 30 feet of you must make an inner fire saving throw or be forced to attack you instead of others. Repeat save each turn.  
-  * __Throw Caution to the Wind:__ _(Cost 0)_ On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.  
+  * __Throw Caution to the Wind:__ On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.  
   
   
 __Level 2 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3389,7 +3443,7 @@ __Level 2 Path Of Rage Barbarian__
 __Level 3 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3399,52 +3453,52 @@ __Level 3 Path Of Rage Barbarian__
 __Level 4 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Warrior Spirit:__ _(Cost 0)_ If you slay an enemy or land a critical hit, regain one action point.  
+  * __Warrior Spirit:__ If you slay an enemy, regain one action point.  
   
   
 __Level 5 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Chain Attack:__ _(Cost 0)_ After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon.  
-  * __The Opener:__ _(Cost 0)_ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
+  * __Chain Attack:__ After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon.  
+  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
   
   
 __Level 6 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Adrenaline:__ _(Cost 0)_ When you are below 50% health, gain an extra 10 feet of movement.  
+  * __Adrenaline:__ When you are below 50% health, gain an extra 10 feet of movement.  
   
   
 __Level 7 Path Of Rage Barbarian__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Terrify:__ _(Cost 0)_ Singled out enemies must make a spell power save or be frightened.  
+  * __Terrify:__ Singled out enemies must make a spell power save or be frightened.  
   
   
 __Level 8 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3454,71 +3508,71 @@ __Level 8 Path Of Rage Barbarian__
 __Level 9 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __The Closer:__ _(Cost 0)_ If you attack an enemy that is prone, add two additional dice of damage.  
+  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
   
   
 __Level 10 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Savage Critical:__ _(Cost 0)_ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
   
   
 __Level 11 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Furious Blows:__ _(Cost 0)_ Attack twice in a single attack action while going berserk.  
+  * __Furious Blows:__ Attack twice in a single attack action while going berserk.  
   
   
 __Level 12 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __The Closer:__ _(Cost 0)_ If you attack an enemy that is prone, add two additional dice of damage.  
+  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
   
   
 __Level 13 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Glory:__ _(Cost 0)_ When your health falls below 25%, double all damage you deal.  
+  * __Glory:__ When your health falls below 25%, double all damage you deal.  
   
   
 __Level 14 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Fury:__ _(Cost 0)_ On a turn in which you have taken damage, add an extra damage dice to all of your attacks.  
+  * __Fury:__ On a turn in which you have taken damage, add an extra damage dice to all of your attacks.  
   
   
 __Level 15 Path Of Rage Barbarian__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Spirit of Rage:__ _(Cost 0)_ After slaying an enemy, gain an additional full turn.  
+  * __Spirit of Rage:__ After slaying an enemy, gain an additional full turn.  
   
   
   
@@ -3541,7 +3595,7 @@ Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers 
   
 __Ranger Abilities:__ 
 * __General Abilities:__   
-  * __Under the Stars:__ _(Cost 0)_ You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.  
+  * __Under the Stars:__ You have been forced to learn to sleep anywhere. All sleep acts as though you are in a bed.  
   
   
 __Level 0 Ranger__
@@ -3551,14 +3605,14 @@ __Level 0 Ranger__
   
   
 * __Advantages:__   
-  * __Tracker:__ _(Cost 0)_ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
-  * __Camouflage:__ _(Cost 0)_ If you stay absolutely still, you can take on the color of your surroundings. This gives you advantage on stealth checks while camouflaged.  
+  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+  * __Camouflage:__ If you stay absolutely still, you can take on the color of your surroundings. This gives you advantage on stealth checks while camouflaged.  
   
   
 __Level 1 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3569,13 +3623,13 @@ __Level 1 Ranger__
 __Level 2 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -3589,29 +3643,29 @@ __Level 3 Ranger__
 __Level 4 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Ranger__
 
 * __Actions:__   
-  * __Twin Blades:__ _(Cost 0)_ You are able to wield two weapons. You may attack with both in a single action.  
+  * __Twin Blades:__ You are able to wield two weapons. You may attack with both in a single action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 6 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
@@ -3625,13 +3679,13 @@ __Level 7 Ranger__
 __Level 8 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3641,46 +3695,46 @@ __Level 9 Ranger__
 __Level 10 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Expert Tracker:__ _(Cost 0)_ Add 1d6 to any checks made to track an individual.  
+  * __Expert Tracker:__ Add 1d6 to any checks made to track an individual.  
   * __Major Medicine:__ _(Cost 1)_ Spend 20 minutes to create a Greater Health Potion. Potions last 24 hours.  
   
   
 __Level 12 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Ranger__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 14 Ranger__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Ranger__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
@@ -3707,14 +3761,14 @@ Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues
   
 __Rogue Abilities:__ 
 * __Starting Items:__   
-  * __A Thief's Gear:__ _(Cost 0)_ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
+  * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
   
   
 __Level 0 Rogue__
 
 * __Advantages:__   
-  * __Lightfoot:__ _(Cost 0)_ Gain advantage on stealth checks.  
-  * __Nimble Fingers:__ _(Cost 0)_ You have advantage on dexterity and stealth checks made while stealing.  
+  * __Lightfoot:__ Gain advantage on stealth checks.  
+  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
   
   
 * __Combat Abilities:__   
@@ -3724,15 +3778,15 @@ __Level 0 Rogue__
 __Level 1 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Strike From the Shadows:__ _(Cost 0)_ Do an additional dice of damage on an attacks made from hiding.  
+  * __Strike From the Shadows:__ Do an additional dice of damage on an attacks made from hiding.  
   
   
 * __Advantages:__   
-  * __Mantel:__ _(Cost 0)_ You have advantage on dexterity checks when climbing.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
   
   
 * __Combat Abilities:__   
@@ -3742,89 +3796,89 @@ __Level 1 Rogue__
 __Level 2 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Advantages:__   
-  * __Master of Disguise:__ _(Cost 0)_ You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.  
+  * __Master of Disguise:__ You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.  
   
   
 * __Combat Abilities:__   
-  * __High Ground:__ _(Cost 0)_ Gain advantage on any plunging attacks.  
+  * __High Ground:__ Gain advantage on any plunging attacks.  
   
   
 __Level 4 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 5 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
-  * __Thief or Assassin:__ _(Cost 0)_ You may choose to subclass into a Thief or an Assassin. Thieves focus on sneaking and theft. Assassins maximize their damage output to kill enemies before they have a chance to react. On subsequent level-ups, you will gain unique abilities based on your choice.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  * __Thief or Assassin:__ You may choose to subclass into a Thief or an Assassin. Thieves focus on sneaking and theft. Assassins maximize their damage output to kill enemies before they have a chance to react. On subsequent level-ups, you will gain unique abilities based on your choice.  
   
   
 __Assassin Abilities__  
 * General Abilities:   
-  * __Imposter:__ _(Cost 0)_ Gain 1d6 on any checks made to imitate someone.  
+  * __Imposter:__ Gain 1d6 on any checks made to imitate someone.  
   * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
   
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Soft Landing:__ _(Cost 0)_ Reduce any falling damage by 20 feet.  
-  * __Soundless:__ _(Cost 0)_ Gain an additional 1d6 on stealth checks.  
-  * __Sticky Fingers:__ _(Cost 0)_ Add 1d6 to any check made to steal something.  
+  * __Soft Landing:__ Reduce any falling damage by 20 feet.  
+  * __Soundless:__ Gain an additional 1d6 on stealth checks.  
+  * __Sticky Fingers:__ Add 1d6 to any check made to steal something.  
   
   
 __Level 6 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Assassin Abilities__  
 * Actions:   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * General Abilities:   
-  * __Poison:__ _(Cost 0)_ Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.  
+  * __Poison:__ Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.  
   
   
 __Thief Abilities__  
 * Actions:   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * Combat Abilities:   
-  * __Pickpocket:__ _(Cost 0)_ If you land a critical hit, steal an item the enemy is holding.  
+  * __Pickpocket:__ If you land a critical hit, steal an item the enemy is holding.  
   
   
 __Level 8 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Assassin Abilities__  
@@ -3835,65 +3889,65 @@ __Assassin Abilities__
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Trap Expert:__ _(Cost 0)_ Gain advantage when looking for, disarming, or creating traps.  
+  * __Trap Expert:__ Gain advantage when looking for, disarming, or creating traps.  
   
   
 __Level 10 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 11 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Assassin Abilities__  
 * Combat Abilities:   
-  * __Reduced Critical:__ _(Cost 0)_ Decrease your critical hit target by 1.  
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
   
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Lucky Actions:__ _(Cost 0)_ You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. These tokens refill on a long rest.  
+  * __Lucky Actions:__ You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. These tokens refill on a long rest.  
   
   
 __Level 12 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Assassin Abilities__  
 * Combat Abilities:   
-  * __Line Them Up:__ _(Cost 0)_ If you slay an enemy, gain another attack action.  
-  * __Savage Critical:__ _(Cost 0)_ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
+  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
+  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
   
   
 __Thief Abilities__  
 * General Abilities:   
   * __Party Save:__ _(Cost 1)_ Add 1d10 to one party member's stealth check.  
-  * __Superior Mantel:__ _(Cost 0)_ Add 1d6 to all climbing checks.  
+  * __Superior Mantel:__ Add 1d6 to all climbing checks.  
   
   
 __Level 14 Rogue__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Rogue__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Assassin Abilities__  
@@ -3902,12 +3956,12 @@ __Assassin Abilities__
   
   
 * Combat Abilities:   
-  * __Assassinate:__ _(Cost 0)_ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
+  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
   
   
 __Thief Abilities__  
 * General Abilities:   
-  * __Spider Climb:__ _(Cost 0)_ You are able to climb on walls as though you are a spider.  
+  * __Spider Climb:__ You are able to climb on walls as though you are a spider.  
   
   
   
@@ -3930,171 +3984,171 @@ Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, bu
   
 __Sorcerer Abilities:__ 
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
   
   
 __Level 0 Sorcerer__
 
 * __Rules:__   
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Charisma Based Spellcaster:__ _(Cost 0)_ To succeed at casting spells, you must convince your familiar to perform it for you. To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
+  * __Charisma Based Spellcaster:__ To succeed at casting spells, you must convince your familiar to perform it for you. To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.  
   
   
 * __Spellbooks:__   
-  * __Novice Spellbook:__ _(Cost 0)_ You are able to learn spells from the Novice Spellbook.  
-  * __The Sorcerer's Scrolls:__ _(Cost 0)_ You are able to learn spells from the Sorcerer's Scrolls.  
+  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
+  * __The Sorcerer's Scrolls:__ You are able to learn spells from the Sorcerer's Scrolls.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
-  * __Influence:__ _(Cost 0)_ You may use action points to increase any charisma roll by 2.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Influence:__ You may use action points to increase any charisma roll by 2.  
   
   
 __Level 1 Sorcerer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   
   
 __Level 2 Sorcerer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Sorcerer__
 
 * __Rules:__   
-  * __Spell Modification:__ _(Cost 0)_ You may make one or more modifications to your spells. For example modifications, see the list of Sorcerer Modification in the Book of Examples.  
+  * __Spell Modification:__ You may make one or more modifications to your spells. For example modifications, see the list of Sorcerer Modification in the Book of Examples.  
   
   
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 4 Sorcerer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Sorcerer__
 
 * __Actions:__   
-  * __Prepare Spell:__ _(Cost 0)_ At the start of each day, choose a spell to have 2 less difficulty.  
+  * __Prepare Spell:__ At the start of each day, choose a spell to have 2 less difficulty.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 6 Sorcerer__
 
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Sorcerer__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   
   
 __Level 8 Sorcerer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Sorcerer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Spirits Within:__ _(Cost 0)_ Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. While you are imbued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, and may add +1 to strength, dexterity, perception, and inner fire.  
+  * __Spirits Within:__ Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. While you are imbued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, and may add +1 to strength, dexterity, perception, and inner fire.  
   
   
 __Level 10 Sorcerer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Sorcerer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Spiritual Movement:__ _(Cost 0)_ While you contain a spirit, you may instantly teleport between patches of darkness as an offhand action or once per ten minutes out of combat.  
+  * __Spiritual Movement:__ While you contain a spirit, you may instantly teleport between patches of darkness as an offhand action or once per ten minutes out of combat.  
   
   
 __Level 12 Sorcerer__
 
 * __Actions:__   
-  * __Major Offhand Spell:__ _(Cost 0)_ You may cast a tier two spell as an offhand action.  
+  * __Major Offhand Spell:__ You may cast a tier two spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 13 Sorcerer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 __Level 14 Sorcerer__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Sorcerer__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __Combat Abilities:__   
-  * __Light and Shadow:__ _(Cost 0)_ While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability, and advantage on any inner fire saving throws, including the one used to keep control of the spirit.  
+  * __Light and Shadow:__ While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability, and advantage on any inner fire saving throws, including the one used to keep control of the spirit.  
   
   
   
@@ -4117,172 +4171,172 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   
 __Wizard Abilities:__ 
 * __Starting Items:__   
-  * __The Sword and the Satchel:__ _(Cost 0)_ You begin your adventure with a bottomless satchel.  
-  * __Walking Stick:__ _(Cost 0)_ You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.  
+  * __The Sword and the Satchel:__ You begin your adventure with a bottomless satchel.  
+  * __Walking Stick:__ You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.  
 * __Advantages:__   
-  * __Historian:__ _(Cost 0)_ You have a deep knowledge of the land in which your adventure takes place. You gave advantage on any history or geography checks.  
+  * __Historian:__ You have a deep knowledge of the land in which your adventure takes place. You gave advantage on any history or geography checks.  
   
   
 __Level 0 Wizard__
 
 * __Rules:__   
-  * __Learn Spells:__ _(Cost 0)_ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
-  * __Learning Spells:__ _(Cost 0)_ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
+  * __Learning Spells:__ New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that you can learn from with a tier up to the spellbook's maximum spell tier.  
   
   
 * __Spellbooks:__   
-  * __Novice Spellbook:__ _(Cost 0)_ You are able to learn spells from the Novice Spellbook.  
-  * __The Wizard's Addendum:__ _(Cost 0)_ You are able to learn spells from the Wizard's Addendum.  
+  * __Novice Spellbook:__ You are able to learn spells from the Novice Spellbook.  
+  * __The Wizard's Addendum:__ You are able to learn spells from the Wizard's Addendum.  
   
   
 * __Choices:__   
-  * __Spell Choice:__ _(Cost 0)_ At the start of your journey, you know 2 extra tier zero spells.  
+  * __Spell Choice:__ At the start of your journey, you know 2 extra tier zero spells.  
   
   
 * __General Abilities:__   
-  * __Tier Zero Spells:__ _(Cost 0)_ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
+  * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
 __Level 1 Wizard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier One Spells:__ _(Cost 0)_ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
+  * __Tier One Spells:__ Your powers are growing. You may now learn tier one spells from any of your spellbooks.  
   
   
 * __Advantages:__   
-  * __Looming Presence:__ _(Cost 0)_ Gain advantage when attempting to intimidate anything of lower intelligence than yourself.  
+  * __Looming Presence:__ Gain advantage when attempting to intimidate anything of lower intelligence than yourself.  
   
   
 __Level 2 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 3 Wizard__
 
 * __Actions:__   
-  * __Minor Offhand Spell:__ _(Cost 0)_ You may cast a tier zero spell as an offhand action.  
+  * __Minor Offhand Spell:__ You may cast a tier zero spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 4 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Two Spells:__ _(Cost 0)_ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
+  * __Tier Two Spells:__ You have graduated from novice to proficient! You may now learn tier two spells from any of your spellbooks.  
   
   
 __Level 5 Wizard__
 
 * __Actions:__   
-  * __Greater Offhand Spell:__ _(Cost 0)_ You may cast a tier one spell as an offhand action.  
+  * __Greater Offhand Spell:__ You may cast a tier one spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 6 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 7 Wizard__
 
 * __Actions:__   
-  * __Offhand Attack:__ _(Cost 0)_ You may use an offhand action to make an attack.  
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Three Spells:__ _(Cost 0)_ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
+  * __Tier Three Spells:__ Magical energy flows through you. You may now learn tier three spells from any of your spellbooks.  
   
   
 * __Combat Abilities:__   
-  * __Commit to Memory:__ _(Cost 0)_ At the beginning of a day, you may commit one spell to memory of tier. For the remainder of the day, that spell costs 1 fewer action points.  
+  * __Commit to Memory:__ At the beginning of a day, you may commit one spell to memory of tier. For the remainder of the day, that spell costs 1 fewer action points.  
   
   
 __Level 8 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 9 Wizard__
 
 * __Actions:__   
-  * __Major Offhand Spell:__ _(Cost 0)_ You may cast a tier two spell as an offhand action.  
+  * __Major Offhand Spell:__ You may cast a tier two spell as an offhand action.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 10 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Four Spells:__ _(Cost 0)_ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
+  * __Tier Four Spells:__ You are a master of your spellcraft. You can now learn tier four spells from any of your spellbooks.  
   
   
 __Level 11 Wizard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 __Level 12 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 * __General Abilities:__   
-  * __Spell Invention:__ _(Cost 0)_ You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered something like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.  
+  * __Spell Invention:__ You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered something like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.  
   
   
 __Level 13 Wizard__
 
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
 * __General Abilities:__   
-  * __Tier Five Spells:__ _(Cost 0)_ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
+  * __Tier Five Spells:__ You have achieved the highest form of sorcery, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks.  
   
   
 __Level 14 Wizard__
 
 * __Choices:__   
-  * __Major Stat Increase:__ _(Cost 0)_ You gain two stat points to add to a stat or stats of your choosing.  
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
 __Level 15 Wizard__
 
 * __Spellbooks:__   
-  * __Tome of the Ancients:__ _(Cost 0)_ You are now able to learn spells from the tome of the ancients.  
+  * __Tome of the Ancients:__ You are now able to learn spells from the tome of the ancients.  
   
   
 * __Choices:__   
-  * __Minor Stat Increase:__ _(Cost 0)_ You gain one stat point to add to a stat of your choosing.  
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
   

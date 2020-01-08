@@ -59,20 +59,20 @@ section of the Rulebook. For information on the ```Action Points``` used to cast
 ### The Bard's Songbook
   
 __Tier 0:__  
-* __Carry on the wind:__ _(Cost: 0)_ Point at someone and they hear you regardless of distance.  
-* __Conceal Weapon:__ _(Cost: 0)_ Magically conceal up to three weapons on your person.  
-* __Control Shadows:__ _(Cost: 0)_ Influence the movement of shadows within thirty yards of yourself.  
-* __Create Sound:__ _(Cost: 0)_ Create any sound that you have heard before.  
-* __Cruel Limerick:__ _(Cost: 0)_ Tell a cruel rhyme, imbued with magic. If a targeted entity within earshot fails a spell power save spell power, they take disadvantage on their next action.  
-* __Folk Tune:__ _(Cost: 0)_ Play an old country classic to gain favor with commoners present, giving you advantage on charisma checks when speaking with them. The song must last at least three minutes.  
-* __Forge Writing:__ _(Cost: 0)_ Magically forge the handwriting of anyone you have spoken with.  
-* __Hypnotize:__ _(Cost: 0)_ Requires the use of a swinging trinket. Force someone to make an spell power save. On failure, you may influence their actions for up to sixty seconds. The entity may attempt an additional saving throw if asked to do anything that causes themselves or those they love physical harm.  
-* __Ode to Country:__ _(Cost: 0)_ Play a country's anthem, Gain favor with soldiers, guards, or kingsmen present, giving you advantage on charisma checks when speaking with them. The song must last at least three minutes.  
-* __Steal Voice:__ _(Cost: 0)_ Force an entity to make an inner fire saving throw against your spell power. On failure, they loose their voice. They may attempt another saving throw at disadvantage every turn or once every minute thereafter.  
-* __Sweet Nothings:__ _(Cost: 0)_ Force an individual attracted to your sex to make an inner fire saving throw against your spell power. On failure, they find you to be irresistibly attractive, and you gain advantage when persuading them.  
-* __Throw Voice:__ _(Cost: 0)_ Magically throw your voice up to fifty feet.  
-* __Trick up Your Sleeve:__ _(Cost: 0)_ Summon up to forty feet of tied together cloths from your sleeve.  
-* __Harsh Note:__ _(Cost: 0)_ Create a harsh noise which either damages one enemy for 1d4 damage, or everyone who can hear for 1d2.  
+* __Carry on the wind:__ Point at someone and they hear you regardless of distance.  
+* __Conceal Weapon:__ Magically conceal up to three weapons on your person.  
+* __Control Shadows:__ Influence the movement of shadows within thirty yards of yourself.  
+* __Create Sound:__ Create any sound that you have heard before.  
+* __Cruel Limerick:__ Tell a cruel rhyme, imbued with magic. If a targeted entity within earshot fails a spell power save spell power, they take disadvantage on their next action.  
+* __Folk Tune:__ Play an old country classic to gain favor with commoners present, giving you advantage on charisma checks when speaking with them. The song must last at least three minutes.  
+* __Forge Writing:__ Magically forge the handwriting of anyone you have spoken with.  
+* __Hypnotize:__ Requires the use of a swinging trinket. Force someone to make an spell power save. On failure, you may influence their actions for up to sixty seconds. The entity may attempt an additional saving throw if asked to do anything that causes themselves or those they love physical harm.  
+* __Ode to Country:__ Play a country's anthem, Gain favor with soldiers, guards, or kingsmen present, giving you advantage on charisma checks when speaking with them. The song must last at least three minutes.  
+* __Steal Voice:__ Force an entity to make an inner fire saving throw against your spell power. On failure, they loose their voice. They may attempt another saving throw at disadvantage every turn or once every minute thereafter.  
+* __Sweet Nothings:__ Force an individual attracted to your sex to make an inner fire saving throw against your spell power. On failure, they find you to be irresistibly attractive, and you gain advantage when persuading them.  
+* __Throw Voice:__ Magically throw your voice up to fifty feet.  
+* __Trick up Your Sleeve:__ Summon up to forty feet of tied together cloths from your sleeve.  
+* __Harsh Note:__ Create a harsh noise which either damages one enemy for 1d4 damage, or everyone who can hear for 1d2.  
   
 __Tier 1:__  
 * __Belch Fire:__ _(Cost: 1)_ Belch fire onto something for 1d6 damage. If a creature is targeted, they must make a spell power save. On failure, they are burned, and take 1d4 damage at the start of each of their turns until they are healed or two more turns pass.  
@@ -95,7 +95,7 @@ __Tier 1:__
 * __Minor Trickery:__ _(Cost: 1)_ Force a target to make a spell power save. On failure, convince the entity that it sees something that it does not.  
 * __Not So Fast:__ _(Cost: 1)_ Reaction. Force an enemy to remake a roll, or to make a roll with disadvantage.  
 * __Project Image:__ _(Cost: 1)_ Project an image of yourself. This image can move, but cannot speak, and lasts at most 1d4 minutes.  
-* __Song of Haste:__ _(Cost: 1)_ Allow a teammate an extra action on their next turn and to move at double speed. Lasts for 1 minute when out of battle.  
+* __Song of Haste:__ _(Cost: 1)_ Allow a teammate an extra action on their next turn and to move an extra 15 feet. Lasts for 1 minute when out of battle.  
 * __Song of Inspiration:__ _(Cost: 1)_ Play a tune which grants an ally a 1d8 inspiration dice.  
 * __Song of Slow:__ _(Cost: 1)_ Force an entity to make an inner fire saving throw against your spell power. If they fail, they are pushed back 1d4 spots in the initiative order.  
 * __Song of Slow Healing:__ _(Cost: 1)_ Play a song that heals an entity for 1d4 health each turn for 2 turns.  
@@ -223,22 +223,22 @@ __Legendary Techniques:__
 ### The Book Of Healing
   
 __Tier 0:__  
-* __Beguile:__ _(Cost: 0)_ Your holy presence shakes an enemy's constitution. Force them to make a spell power save. On failure, the entity does 1d4 fewer damage on all attacks it makes on its next turn.  
+* __Beguile:__ Your holy presence shakes an enemy's constitution. Force them to make a spell power save. On failure, the entity does 1d4 fewer damage on all attacks it makes on its next turn.  
 * __Bless Water:__ _(Cost: 1)_ You may bless water by praying over it, converting it to holy water. This can be done at a rate of one gallon per hour.  
-* __Beam of Light:__ _(Cost: 0)_ Fire a bolt of radiant energy at an enemy, dealing 1d4 damage, or 1d6 damage if the enemy is undead.  
-* __Detect Evil:__ _(Cost: 0)_ Make a perception check to detect if an evil entity is within 50 feet of you.  
-* __Detect Magic:__ _(Cost: 0)_ Make a perception check to detect magic within 30 feet of you.  
-* __Fake Death:__ _(Cost: 0)_ Touch a willing entity to send them into a catatonic state that is impossible to distinguish from death.  
-* __Give of Yourself:__ _(Cost: 0)_ Give a teammate up to 20 points of your own health per turn.  
-* __Guidance:__ _(Cost: 0)_ Give an ally a 1d4 inspiration dice as an offhand action.  
-* __Extra Weight:__ _(Cost: 0)_ Double the weight of an object. The object must be no larger than a horse.  
-* __Holy Orders:__ _(Cost: 0)_ As an offhand action, mark an enemy as a target for your group. Anyone who damages the target regains 1d2 health. Anyone who kills the target regains 1d4 health. You can mark at most one enemy at a time.  
-* __Lighten Object:__ _(Cost: 0)_ Decrease the weight of an object by half. The object must be no larger than a horse.  
-* __Mending:__ _(Cost: 0)_ You can magically mend small dents, dings, scratches, and tears in items.  
-* __Purify:__ _(Cost: 0)_ Purify a food, drink, or potion to remove ill effects. Purify can be used to remove drunkenness from entities, or to render poison innocuous.  
-* __Sacred Flame:__ _(Cost: 0)_ As an offhand action, summon a sacred flame to your hand. Ash created by the flame is considered sacred. You may melee attack with the flame for 1d6 damage. Add an additional 1d6 damage to corrupted entities or the undead.  
-* __Spare:__ _(Cost: 0)_ Offhand. Touch an ally that is on death's door to stabilize them. Stabilized entities immediately return to 0 health. The are still unconcious, but no longer need to make death coin flips.  
-* __The Face of Good:__ _(Cost: 0)_ Once per rest, the light of your deity shines from you. For five minutes, you gain advantage on charisma checks, and advantage on intimidation checks when attempting to intimidate evil enemies.  
+* __Beam of Light:__ Fire a bolt of radiant energy at an enemy, dealing 1d4 damage, or 1d6 damage if the enemy is undead.  
+* __Detect Evil:__ Make a perception check to detect if an evil entity is within 50 feet of you.  
+* __Detect Magic:__ Make a perception check to detect magic within 30 feet of you.  
+* __Fake Death:__ Touch a willing entity to send them into a catatonic state that is impossible to distinguish from death.  
+* __Give of Yourself:__ Give a teammate up to 20 points of your own health per turn.  
+* __Guidance:__ Give an ally a 1d4 inspiration dice as an offhand action.  
+* __Extra Weight:__ Double the weight of an object. The object must be no larger than a horse.  
+* __Holy Orders:__ As an offhand action, mark an enemy as a target for your group. Anyone who damages the target regains 1d2 health. Anyone who kills the target regains 1d4 health. You can mark at most one enemy at a time.  
+* __Lighten Object:__ Decrease the weight of an object by half. The object must be no larger than a horse.  
+* __Mending:__ You can magically mend small dents, dings, scratches, and tears in items.  
+* __Purify:__ Purify a food, drink, or potion to remove ill effects. Purify can be used to remove drunkenness from entities, or to render poison innocuous.  
+* __Sacred Flame:__ As an offhand action, summon a sacred flame to your hand. Ash created by the flame is considered sacred. You may melee attack with the flame for 1d6 damage. Add an additional 1d6 damage to corrupted entities or the undead.  
+* __Spare:__ Offhand. Touch an ally that is on death's door to stabilize them. Stabilized entities immediately return to 0 health. The are still unconcious, but no longer need to make death coin flips.  
+* __The Face of Good:__ Once per rest, the light of your deity shines from you. For five minutes, you gain advantage on charisma checks, and advantage on intimidation checks when attempting to intimidate evil enemies.  
 * __Minor Heal:__ _(Cost: 1)_ Restore 1d6 health to one ally or yourself.  
   
 __Tier 1:__  
@@ -248,8 +248,8 @@ __Tier 1:__
 * __Forget Ability:__ _(Cost: 1)_ Concentration. Force an entity to make an inner fire saving throw against your spell power. On failure, you may force the entity to forget one of it's combat or physical abilities. The entity may repeat the check with disadvantage every turn thereafter.  
 * __Giant's Strength:__ _(Cost: 1)_ Grant a teammate one additional effective strength. Lasts a number of hours equal to your inner fire.  
 * __Greater Guidance:__ _(Cost: 1)_ Give an ally a 1d8 inspiration dice.  
-* __Haste:__ _(Cost: 1)_ Cast a spell which invigorates an ally, allowing them to take an extra action on their turn and to gain 5 feet of movement.  
-* __Heighten Emotions:__ _(Cost: 0)_ Force an entity to make a spell power save. On failure, the affected entity's emotions are amplified to the extreme. This may cause them to act recklessly or to take actions with disadvantage.  
+* __Haste:__ _(Cost: 1)_ Cast a spell which invigorates an ally, allowing them to take an extra action on their turn and to gain 15 feet of movement.  
+* __Heighten Emotions:__ Force an entity to make a spell power save. On failure, the affected entity's emotions are amplified to the extreme. This may cause them to act recklessly or to take actions with disadvantage.  
 * __Hold Weapon:__ _(Cost: 1)_ Concentration. Bind an enemy's weapon to their body. The enemy may attempt a strength check against your spell power to remove it.  
 * __Hound's Resolve:__ _(Cost: 1)_ Grant a teammate one additional effective inner fire. Lasts a number of hours equal to your spell power.  
 * __Light:__ _(Cost: 1)_ Summon a light with a 10ft radius. Evil and undead entities within the light take 1d6 damage every turn that they are in it. Concentration.  
@@ -257,9 +257,9 @@ __Tier 1:__
 * __Minor Dispel Magic:__ _(Cost: 1)_ Undo the effects wrought by up to a 2nd tier spell.  
 * __Minor Holy weapon:__ _(Cost: 1)_ Imbue your weapon with the spirit of righteousness. Your weapon gets +2 damage for a day, and advantage against evil and undead entities.  
 * __Monkey's Dexterity:__ _(Cost: 1)_ Grant a teammate one additional effective dexterity. Lasts a number of hours equal to your inner fire.  
-* __Omen:__ _(Cost: 0)_ Once per day, ask your deity for an omen in regards to a decision you will make.  
+* __Omen:__ Once per day, ask your deity for an omen in regards to a decision you will make.  
 * __Pacify:__ _(Cost: 1)_ If an enemy fails a saving throw against your spell power, it becomes passive and calm. A pacified enemy cannot attack. The entity may make a saving throw every turn thereafter. This effect ends if they entity is attacked.  
-* __Share Sense:__ _(Cost: 0)_ Concentration. Touch a teammate. For the duration of the spell, you are able to share their senses.  
+* __Share Sense:__ Concentration. Touch a teammate. For the duration of the spell, you are able to share their senses.  
 * __Shield of Light:__ _(Cost: 1)_ Reaction. Make a contested dexterity check against an attacking opponent. On success, block the enemy attack for everyone in a 5 foot radius of the shield. You may increase the cost of this spell by 1 to give yourself advantage on the check.  
 * __Slow:__ _(Cost: 1)_ Force an entity to make a spell power save. If they fail, they are pushed back 1d4 spots in the initiative order and loose 5 feet of movement.  
 * __Slow Heal:__ _(Cost: 1)_ Cast a healing spell upon an ally that restores 1d6 health to them per turn. Lasts 2 turns.  
@@ -307,7 +307,7 @@ __Tier 4:__
 __Tier 5:__  
 * __Battle Angel:__ _(Cost: 3)_ Summon a holy great weapon of your choice to your hand, and a shield to your other. The weapon does 1d20 damage plus 3d10 radiant damage, and the shield allows you to perform the shield bash ability as a bonus action. While you are in the battle angel state, you may perform spells at -1 cost, have +3 strength, and have 50 hit points. When the 50 hit points drop to zero, you fall out of the battle angel state, and gain your previous hit points.  
 * __Cleanse with Fire:__ _(Cost: 5)_ Tongues of white flame spiral around you, enveloping any enemies within a twenty foot radius. Evil or undead enemies take 5d20 damage, other enemies take 5d10.  
-* __Divine Intervention:__ _(Cost: 0)_ Roll 1d20. On a critical success, call upon your deity and ask of them a favor. Can be attempted once per day. Success can happen at most once per week.  
+* __Divine Intervention:__ Roll 1d20. On a critical success, call upon your deity and ask of them a favor. Can be attempted once per day. Success can happen at most once per week.  
 * __Hallowed Ground:__ _(Cost: 5)_ Requires holy water, blessed by your deity, charcoal created by a holy flame, and at least 3 diamonds worth 1000 gold each. Arrange the diamonds in a ring, spaced no more than 20 feet apart. Connect them with a trail of holy water, and etch the sigil of your deity into the rings center. After one hour of prayer, it becomes impossible for any entity to be injured within the ring. Lasts for one week. The diamonds are destroyed at the spell's end.  
 * __Holy Avatar:__ _(Cost: 3)_ Summon a radiant projection of yourself within 15 feet of an ally, regardless of where they are in the world. The projection has your stats, and you may share its senses. The projection may attack, cast spells, and perform any of your abilities, but can not be healed. You may not act in any way while controlling the projection, and loose track of your surroundings.  
 
@@ -315,18 +315,18 @@ __Tier 5:__
 ### The Druid's Guidebook
   
 __Tier 0:__  
-* __Catseye:__ _(Cost: 0)_ Change your eyes to those of a cat, giving yourself low light vision for one hour.  
-* __Claws:__ _(Cost: 0)_ Grow claws from your fingers capable of dealing 1d6 damage.  
-* __Cold Resistance:__ _(Cost: 0)_ Resist cold. You take 1d4 fewer damage from cold or frost based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
-* __Control Plant Growth:__ _(Cost: 0)_ Quickly grow a plant up to the size of a hedge in about 5 minutes or 1 turn in combat.  
-* __Crown of Fireflies:__ _(Cost: 0)_ Summon a crown of fireflies to dance around your head, casting candlelight around you. You may command the fireflies up to a distance of 100 feet.  
-* __Echolocate:__ _(Cost: 0)_ Let out an inaudible sonic pulse, which allows you to gain a picture of a room as a perception check, even if it is completely dark.  
-* __Fire Resistance:__ _(Cost: 0)_ Resist fire damage. You take 1d4 fewer damage from fire based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
-* __Forest Sense:__ _(Cost: 0)_ Perform perception checks using the natural world around you. Take advantage on perception checks made using living natural entities to aid you.  
-* __Lightning Resistance:__ _(Cost: 0)_ Resist electricity. You take 1d4 fewer damage from lightning based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
-* __Mend:__ _(Cost: 0)_ Instantly mend a broken item or object. You must have most of the pieces and the object must not be too complicated. Make an intelligence check if repairing a complex object.  
-* __Spider Web:__ _(Cost: 0)_ Create incredibly sticky spiderweb, capable of holding a person. You are able to create it at the rate of five cubic feet per five minute span, or one five foot cube per action.  
-* __Walk on Water:__ _(Cost: 0)_ Walk atop the water. Concentration.  
+* __Catseye:__ Change your eyes to those of a cat, giving yourself low light vision for one hour.  
+* __Claws:__ Grow claws from your fingers capable of dealing 1d6 damage.  
+* __Cold Resistance:__ Resist cold. You take 1d4 fewer damage from cold or frost based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
+* __Control Plant Growth:__ Quickly grow a plant up to the size of a hedge in about 5 minutes or 1 turn in combat.  
+* __Crown of Fireflies:__ Summon a crown of fireflies to dance around your head, casting candlelight around you. You may command the fireflies up to a distance of 100 feet.  
+* __Echolocate:__ Let out an inaudible sonic pulse, which allows you to gain a picture of a room as a perception check, even if it is completely dark.  
+* __Fire Resistance:__ Resist fire damage. You take 1d4 fewer damage from fire based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
+* __Forest Sense:__ Perform perception checks using the natural world around you. Take advantage on perception checks made using living natural entities to aid you.  
+* __Lightning Resistance:__ Resist electricity. You take 1d4 fewer damage from lightning based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
+* __Mend:__ Instantly mend a broken item or object. You must have most of the pieces and the object must not be too complicated. Make an intelligence check if repairing a complex object.  
+* __Spider Web:__ Create incredibly sticky spiderweb, capable of holding a person. You are able to create it at the rate of five cubic feet per five minute span, or one five foot cube per action.  
+* __Walk on Water:__ Walk atop the water. Concentration.  
 * __Constricting Vine:__ _(Cost: 1)_ A vine bursts from the ground at an enemies feet dealing 1d4 damage. On a failed dex save against your inner fire, the enemy is held in place until it hacks the vines away or succeeds at the save.  
 * __Hurl Stone:__ _(Cost: 1)_ Magically hurl a stone at an enemy for 1d4 damage. On a failed spell power save, the enemy is knocked prone.  
   
@@ -394,17 +394,17 @@ __Tier 5:__
 ### The Macabre Manual
   
 __Tier 0:__  
-* __Detect Death:__ _(Cost: 0)_ You may make perception checks to detect nearby corpses.  
-* __Drain Spirit:__ _(Cost: 0)_ Steal 1 point of an enemies inner fire and add it to your own. The increased inner fire lasts for one hour. If an entity reaches -10 inner fire, it instantly dies.  
-* __Ghastly Visage:__ _(Cost: 0)_ Make yourself look like a horrible monster. Gain advantage on intimidation checks.  
-* __Isolate:__ _(Cost: 0)_ Force an entity to make an inner fire saving throw against your spell power. On failure, sever any magical or psychic connections that they maintain with other entities. Such connections can not be re-established so long as you maintain concentration.  
-* __Minor Death Coil:__ _(Cost: 0)_ Fire a ball of pure death from your hand. Deals 1d4 damage. Heals undead.  
-* __Night Terror:__ _(Cost: 0)_ Force a sleeping entity to make a disadvantaged inner fire saving throw against your spell power. On failure, impose your will on them by manifesting yourself in their dreams.  
-* __Rot:__ _(Cost: 0)_ Cause an item to rot or deal 1d6 damage. Must touch the item.  
-* __Sentient Shadow:__ _(Cost: 0)_ Bring to life a sentient shadow. The shadow lasts for one minute or three turns, and will follow your orders. The shadow is capable of influencing objects by manipulating their shadows. The shadow is capable of attacking for 1d2 damage, and has a strength of -3. It can be killed by being exposed to bright light.  
-* __Shadow:__ _(Cost: 0)_ Move like shadow through the darkness. Gain advantage on stealth checks when in shadow.  
-* __Vampiric Touch:__ _(Cost: 0)_ Touch an enemy and deal 1d4 damage. Increase your health by the damage dealt.  
-* __Vivify:__ _(Cost: 0)_ Make something rotten or dead appear living.  
+* __Detect Death:__ You may make perception checks to detect nearby corpses.  
+* __Drain Spirit:__ Steal 1 point of an enemies inner fire and add it to your own. The increased inner fire lasts for one hour. If an entity reaches -10 inner fire, it instantly dies.  
+* __Ghastly Visage:__ Make yourself look like a horrible monster. Gain advantage on intimidation checks.  
+* __Isolate:__ Force an entity to make an inner fire saving throw against your spell power. On failure, sever any magical or psychic connections that they maintain with other entities. Such connections can not be re-established so long as you maintain concentration.  
+* __Minor Death Coil:__ Fire a ball of pure death from your hand. Deals 1d4 damage. Heals undead.  
+* __Night Terror:__ Force a sleeping entity to make a disadvantaged inner fire saving throw against your spell power. On failure, impose your will on them by manifesting yourself in their dreams.  
+* __Rot:__ Cause an item to rot or deal 1d6 damage. Must touch the item.  
+* __Sentient Shadow:__ Bring to life a sentient shadow. The shadow lasts for one minute or three turns, and will follow your orders. The shadow is capable of influencing objects by manipulating their shadows. The shadow is capable of attacking for 1d2 damage, and has a strength of -3. It can be killed by being exposed to bright light.  
+* __Shadow:__ Move like shadow through the darkness. Gain advantage on stealth checks when in shadow.  
+* __Vampiric Touch:__ Touch an enemy and deal 1d4 damage. Increase your health by the damage dealt.  
+* __Vivify:__ Make something rotten or dead appear living.  
   
 __Tier 1:__  
 * __Bloodlust:__ _(Cost: 1)_ Cast a spell of an ally which sends them into a frenzy. Their intelligence and perception is decreased by 3 for the duration, but they are granted an additional attack action on their turn.  
@@ -662,11 +662,11 @@ __Tier 6:__
 ### The Wizard's Addendum
   
 __Tier 0:__  
-* __Eat slugs:__ _(Cost: 0)_ Fill a person's mouth with slugs. If they fail an inner fire saving throw against your spell power, they are staggered, and make their next action with disadvantage.  
-* __Enchanting:__ _(Cost: 0)_ Once per evening, you may attempt to imbue an object with one of your spells. Works best if the object has at least one gemstone on it. The spell may be one or more use. Duration it is left in the object is dependent on the success of the enchanting. The cost of this spell is equivalent to the cost of the spell being added to the gemstone.  
-* __Firecrackers:__ _(Cost: 0)_ Summon firecrackers to a position you can see.  
-* __Minor Manifest Will:__ _(Cost: 0)_ Conjure a small, nonliving object of no more than 1 pound. Only one can be conjured at a time. The object must be something you have seen. The object and its effects will disappear when you stop concentrating on it. Concentration.  
-* __Summoning Spell:__ _(Cost: 0)_ Summon an object of up to 20 pounds to you. The object must be within one mile, you must have a rough idea of where it is, and you must have seen it before.  
+* __Eat slugs:__ Fill a person's mouth with slugs. If they fail an inner fire saving throw against your spell power, they are staggered, and make their next action with disadvantage.  
+* __Enchanting:__ Once per evening, you may attempt to imbue an object with one of your spells. Works best if the object has at least one gemstone on it. The spell may be one or more use. Duration it is left in the object is dependent on the success of the enchanting. The cost of this spell is equivalent to the cost of the spell being added to the gemstone.  
+* __Firecrackers:__ Summon firecrackers to a position you can see.  
+* __Minor Manifest Will:__ Conjure a small, nonliving object of no more than 1 pound. Only one can be conjured at a time. The object must be something you have seen. The object and its effects will disappear when you stop concentrating on it. Concentration.  
+* __Summoning Spell:__ Summon an object of up to 20 pounds to you. The object must be within one mile, you must have a rough idea of where it is, and you must have seen it before.  
   
 __Tier 1:__  
 * __Catch Soul:__ _(Cost: 1, Charisma Cost: 10)_ Capture a soul in a diamond valued at 100 gold pieces. Soul gems can be used as a power source when creating magic items and in certain rituals. They may also be utilized by necromancers to cast spells.  

@@ -153,7 +153,7 @@ class rnr_entity:
           continue
         ret.append(f"* __{mapAbilityType(key)}:__   \n")
         for ability, info in abilities[key].items():
-          if 'cost' in info and info['cost'] is not None:
+          if 'cost' in info and info['cost'] not in [None, 0]:
             ret.append(f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
           else:
             ret.append(f"  * __{ability}:__ {info['description']}  \n")
@@ -239,7 +239,7 @@ class rnr_class(rnr_entity):
               continue
             ret.append( "* __{0}:__   \n".format(mapAbilityType(key)))
             for ability, info in level_abilities[key].items():
-              if 'cost' in info and info['cost'] is not None:
+              if 'cost' in info and info['cost'] not in [None, 0]:
                 ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
               else:
                 ret.append( f"  * __{ability}:__ {info['description']}  \n")
@@ -253,7 +253,7 @@ class rnr_class(rnr_entity):
                 continue
               ret.append( "* {0}:   \n".format(mapAbilityType(key)))
               for ability, info in sub_ability[key].items():
-                if 'cost' in info and info['cost'] is not None:
+                if 'cost' in info and info['cost'] not in [None, 0]:
                   ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
                 else:
                   ret.append( f"  * __{ability}:__ {info['description']}  \n")
@@ -575,7 +575,7 @@ def markdown_spellbooks():
       lines.append(f'  \n__{string.capwords(chapter.replace("_"," "))}:__  \n')
       for spell, spell_data in spell_list.items():
         if not 'charisma_cost' in spell_data:
-          if 'cost' in spell_data:
+          if 'cost' in spell_data and spell_data['cost'] not in [None, 0]:
             lines.append('* __{0}:__ _(Cost: {1})_ {2}  \n'.format(spell.replace('_',' '), spell_data['cost'], spell_data['description']))
           else:
             lines.append('* __{0}:__ {1}  \n'.format(spell, spell_data['description']))

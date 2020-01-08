@@ -153,7 +153,7 @@ the_bard's_songbook:
     Song of Haste:
       cost: 1
       description: Allow a teammate an extra action on their next turn and to move
-        at double speed. Lasts for 1 minute when out of battle.
+        an extra 15 feet. Lasts for 1 minute when out of battle.
     Song of Inspiration:
       cost: 1
       description: Play a tune which grants an ally a 1d8 inspiration dice.
@@ -670,7 +670,7 @@ the_book_of_healing:
     Haste:
       cost: 1
       description: Cast a spell which invigorates an ally, allowing them to take an
-        extra action on their turn and to gain 5 feet of movement.
+        extra action on their turn and to gain 15 feet of movement.
     Heighten Emotions:
       cost: 0
       description: Force an entity to make a spell power save. On failure, the 
