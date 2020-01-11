@@ -50,3 +50,4 @@ It can also be silly and funny. We think that it is usually pretty fun.
 6. [Download Printed Materials](docs/Printed_Materials.md)
 7. [View the Changelog](docs/Changelog.md).
 8. [Test the Character Sheet Generator](new_site/pages/character_sheet.html).
+9. [Test the Character Creation Helper](new_site/pages/character_creation_helper_page.html).

@@ -14,6 +14,12 @@ skip_header: true
   <body>
     <div id="selection_area" class="selection_area">
     </div>
+    <div class="noprint">
+      <h4>Character Sheet Preview</h4>
+      <p>
+        Scales differently when printing.
+      </p>
+    </div>
     <div id="character_sheet_area">
     </div>
     <div id="level_up_sheet_area">

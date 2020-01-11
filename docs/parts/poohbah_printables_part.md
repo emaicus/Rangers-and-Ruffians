@@ -114,3 +114,14 @@ Armor can be enchanted to provide equivalent __Magic Armor__.
 | Standard Shield        | __Shield Up:__ Offhand Ability: Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks. Must be done at the start of a turn. |
   
 ___  
+
+## Common Damage Types and Status Effects
+
+| Damage Type      | Effect                                                   |
+| -----------------|----------------------------------------------------------|
+| Fire Damage      | Repeat half of the damage at the start of the next turn. |
+| Ice Damage       | Loose 1d4 spaces in initiative.                          |
+| Lightning Damage | Fall Prone.                                              |
+| Light Damage     | Extra damage to undead.                                  |
+| Shadow Damage    | Fall blind until a spell power save. Repeat each turn or every ten minutes. |
+| Vampiric Damage  | Return a portion of the damage to the attacker.          |

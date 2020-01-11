@@ -8,12 +8,16 @@ Armored:
   type: starting_item
   brief: You have a suit of chainmail.
 Bull Rush:
-  description: Spend 1 action point to rush forward 10 feet, doing an additional dice of damage
-   to your target. The target must win at a contested strength check or fall prone. This distance
-   can be in addition to you standard movement.
+  description: "Spend 1 action point to rush forward 10 feet. This rush may end in a melee attack
+    which does an additional dice of damage to your target. The target must win at a contested
+    strength check or fall prone."
   type: combat
-  brief: Rush forward at least 10 ft. Additional dice of melee damage. SP save or fall prone.
+  brief: "Rush forward at 10 ft, may end in melee attack w/ extra dmg dice. SP save or fall prone."
   cost: 1
+Greater Bull Rush:
+  description: "Bull rush now carries you 20 feet."
+  type: combat
+  brief: "Bull rush now carries you 20 feet."
 Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
@@ -178,10 +182,9 @@ Single Out:
   brief: "Pick an enemy. Gain 15ft. movement when going towards them and adv on attacks."
   cost: 1
 Terrify:
-  description: "Singled out enemies must make a spell power save or be frightened."
+  description: "Singled out or Marked enemies must make a spell power save or be frightened."
   type: combat
-  brief: "Singled out enemies must make an SP save. Fail: frightened."
-
+  brief: "Singled out or Marked enemies must make an SP save. Fail: frightened."
 Boot Knife:
   description: You carry a hidden d6 knife in your boot.
   type: starting_item
@@ -222,7 +225,7 @@ Disarming Blow:
 Flame Strike:
   description: Spend one action point to add one dice of fire damage to an attack.
   type: combat
-  brief: Add 1d10 fire damage to an attack.
+  brief: Add a dice of fire damage to an attack.
   cost: 1
 Repeating Shot:
   description: Make an extra attack during your action.
@@ -245,36 +248,41 @@ Expert Fletcher:
   brief: Arrows cost 1 less SP.
 Fire and Ice Arrows:
   description: You have mastered the art of crafting fire and ice arrows, and can craft at most 2 per day.
-    Fire arrows do an additional 1d6 fire damage and deal 1d6 burn damage to enemies that fail a saving 
-    throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to 
+    Fire arrows do an additional dice of fire damage and deal half as much burn damage to enemies that fail a saving 
+    throw against your spell power. Ice arrows deal an additional dice of ice damage, and cause an enemy to 
     move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
   type: general
-  brief: "Fire: +d6. SP save or d6 next turn. Ice: +d8. SP save or d4 back in initiative."
+  brief: "Additional dice of fire (repeat) or ice (push back in initiative) damage."
   cost: 1
 Shadow and Light Arrows:
   description: You have mastered the art of crafting shadow and light arrows.
-    Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against 
-    your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch
-    darkness. Light arrows deal an additional 1d6 light damage, and deal another
-    1d6 damage to the undead.
+    Shadow arrows do an additional dice of dark damage and cause enemies who fail an inner fire saving throw against 
+    your spell power to go blind until they make a spell power save. This save is repeated
+    at the end of each of  their turns or once every ten minutes. Light arrows deal 
+    an additional dice of light damage, or twice as much to the undead.
   type: general
-  brief: "Shadow: +1d6. SP save or 1d4 turns blind. 10ft dark. Light: +1d6 +1d12 undead."
+  brief: "Additional dice of shadow (blind) or light (double vs undead) damage."
   cost: 1
 Rope Arrows: 
-  description: You have mastered the art of crafting rope arrows using minor magic. 
+  description: "You have mastered the art of crafting rope arrows using minor magic. 
     As soon as a rope arrow hits its target, a rope instantly appears connecting the target
-    to your hand. This can be used to climb, or to grapple opponents. To grapple an opponent, you must
-    make a contested strength check.
+    to your hand. This can be used to climb, or to tether enemies. If an enemy is tethered, 
+    you may make a size based contested strength check to stop them from moving away from you. "
   type: general
-  brief: When a rope arrow hits, a rope springs from it to you. STR check to grapple.
+  brief: When a rope arrow hits, a rope springs from it to you. Size based contested STR check to stop from moving away.
   cost: 1
 Explosive Arrows:
   description: After much experimentation, you have finally mastered the art of crafting
-    explosive arrows. Explosive arrows do 2d10 damage to all enemies
+    explosive arrows. Explosive arrows do 4d10 damage to all enemies
     in a twenty foot radius.
   type: general
-  brief: 2d10 explosion with a 20 foot radius.
-  cost: 3
+  brief: 4d10 explosion with a 20 foot radius.
+  cost: 2
+Delayed Explosive Arrows:
+  description: Fire an explosive arrow which detonates when you speak a command word.
+  type: general
+  brief: Fire an explosive arrow which detonates when you say a command word.
+  cost: 2
 Blink Arrows:
   description: After learning more about magic, you have learned how to create blink arrows. 
     Blink arrows instantly teleport you to the position that they hit.
@@ -294,36 +302,44 @@ Anti-Gravity Arrows:
   description: You can now craft Anti-Gravity arrows. When an Anti-Gravity
     arrow hits its target, they must make an inner fire saving throw against your spell power.
     On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows
-    last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.
+    last for one minute, 1d4 turns, or until the entity succeeds its spell power saving throw.
   type: general
   brief: SP save or gravity is reversed for them. Lasts 1 min, 1d4 turns, or till save.
   cost: 2
-Smoke Arrow: 
+Smoke Arrows: 
   description: You can now craft smoke arrows. When a smoke arrow hits the ground, 
     it creates a smokescreen with a 30 foot radius.
   type: general
   brief: 30 ft radius smokescreen.
   cost: 1
-Shock Arrow: 
+Healing Arrows: 
+  description: "You can craft healing arrows. Fire a healing arrow at an
+                ally to heal them for half of its damage."
+  type: general
+  brief: Fire an arrow at an ally and heal them for half its damage.
+  cost: 1
+Shock Arrows: 
   description: You can now craft shock arrows. When a shock arrow hits an enemy, 
-    it deals 2d8 shock damage to them and any other entities within 30 feet. If an affected entity is
-    wearing metal armor or is made of or standing in water, they take an extra 2d8 damage. All affected 
-    entities must make an inner fire saving throw against your spell power. On failure, they are knocked prone.
+    it deals an additional dice of shock damage. If an affected entity is
+    wearing metal armor or is made of or standing in water, they take a second
+    additional dice of damage. The affected 
+    entity must make an inner fire saving throw against your spell power. 
+    On failure, they are knocked prone.
   type: general
-  brief: +2d8 dmg with 30 ft rad. Armor +2d8 dmg. All make SP save or are prone.
+  brief: Extra dice of shock (prone) damage.
   cost: 2
-Vampiric Arrow: 
+Vampiric Arrows: 
   description: You can now craft vampiric arrows. Vampiric arrows
-    do an additional 2d6 damage to an entity. You regain half of the damage done by 
-    a vampiric arrow to your health.
+    do an additional dice of damage to an entity. 
+    Half of all damage done by the vampiric returns to you as health.
   type: general
-  brief: +2d6 dmg. Regain half as health.
+  brief: Extra dice of damage. Half of all damage returns as health.
   cost: 2
-Firestorm Arrow: 
+Firestorm Arrows: 
   description: You can now craft firestorm arrows. A firestorm 
     arrow does nothing for one turn or one minute after it strikes something. Then,
     it explodes into a massive pillar of flame with a fifteen foot diameter. All entities
-    caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3
+    caught in the pillar of flame take 8d10 damage instantly. The pillar of flame stays for 3
     turns. 
   type: general
   brief: After 1 turn, 15 ft. diameter. pillar of flame for 3 turns. 4d10 dmg.
@@ -361,15 +377,15 @@ Counter Attack:
   brief: Reaction. Counterattack when an enemy attacks you.
   cost: 1
 Called Shot:
-  description: Aim for a specific part of an enemy. The enemy must make a spell power save or
-    drop a weapon, be blinded, or be knocked prone.
+  description: Aim for a specific part of an enemy. Add an extra damage dice. The enemy must make a spell power save or
+    drop a weapon, be blinded, drop 50 feet if flying, or be knocked prone.
   type: combat
-  brief: Aim for a specific part of an enemy. SP save or drop weapon, be blinded, or be knocked prone.
+  brief: Extra damage dice. SP save or drop weapon, fall 50 feet if flying, be blinded, or be knocked prone.
   cost: 1
 Dual Shot:
-  description: Fire two arrows at the same target in a single attack.
+  description: Fire two arrows at the same target in a single attack. With standard arrows, this effectively adds a dice of damage.
   type: combat
-  brief: Fire 2 arrows in a single attack.
+  brief: Fire 2 arrows in a single attack. For standard arrows, adds a dice of damage.
   cost: 1
 Crushing Blow:
   description: On a critical hit, knock an enemy prone and give all enemies who see, including the attacked enemy, disadvantage on the first action of their next turn.
@@ -380,9 +396,9 @@ Dark Vision:
   type: general
   brief: You can see in perfect dark.
 All-consuming Shadow:
-  description: Fill a 100 foot radius with pitch darkness as an offhand action.
+  description: "As an offhand action, fill an area up to 100 feet with magical darkness. The area must be within 50 feet of you."
   type: general
-  brief: Offhand, fill a 100 ft. radius with darkness.
+  brief: Offhand. Range 50ft. Fill a 50 ft. radius with darkness.
   cost: 1
 Detect Magic:
   description: Perform a magic detection check.
@@ -470,51 +486,6 @@ Last Ditch Prayer:
   type: combat
   brief: Add 1d8 to a roll.
   cost: 1
-Harrying Shot:
-  description: On a critical hit, the attacked entity must make their next move with disadvantage.
-  type: combat
-  brief: On a crit, give the target disadvantage on their next action.
-Suppressor:
-  description: You can now craft a silencer. Silencers decrease your damage by 1, 
-    but silence your weapon. The silencer is removable.
-  type: general
-  brief: You have a removable silencer. -1 damage, but less sound.
-Armor Penetrating Rounds:
-  description: Your shots now pass through up to 1 foot of stone and are unaffected
-    by armor.
-  type: combat
-  brief: Your shots are unaffected by armor and pass through 1ft of stone.
-Bayonet:
-  description: You can affix a dagger to your rifle, which functions as a bayonet.
-  type: combat
-  brief: You can attach a dagger to your rifle as a bayonet.
-High Grain:
-  description: Add 1 to your firearm damage.
-  type: combat
-  brief: Add +1 to firearm damage.
-Scope:
-  description: Craft a scope for your weapon to increase engagement range. Can
-    look through it to identify enemies at a distance. You do not take disadvantage
-    on attacks made up to 200 yards.
-  type: combat
-  brief: No disadvantage on a shot up to 200 yards. 
-Shock Absorption:
-  description: Place a shock absorber on your weapon's stock to increase
-    accuracy.
-  type: combat
-  brief: Advantage on long distance checks.
-Re-chamber:
-  description: Add 1d6 to your rifle damage.
-  type: combat
-  brief: Add 1d6 to rifle damage.
-Pistol:
-  description: You begin your adventure with a pistol.
-  type: combat
-  brief: You have a pistol.
-Rifle:
-  description: You begin your adventure with a rifle.
-  type: combat
-  brief: You have a rifle.
 Predator:
   description: When tracking, you have advantage on perception checks.
   type: advantage
@@ -570,7 +541,7 @@ Hammer of Light:
   brief: You do an additional dice of damage to undead.
 Hand to Hand Combat:
   description: Your hands are 1d6 weapons.
-  type: skill
+  type: general
   brief: Your hands are 1d6 weapons.
 Happy Smiles:
   description: Your presence increases party cheer in good weather, giving them a
@@ -579,14 +550,18 @@ Happy Smiles:
   type: general
   brief: 1/day in good weather, give party a 1d8 INSP dice. In bad weather, -1 CHA.
 High Ground:
-  description: Gain advantage on any plunging attacks.
+  description: You have advantage on plunging attacks.
   type: combat
-  brief: Gain advantage on plunging attacks.
+  brief: You have advantage on plunging attacks
 Historian:
   description: You have a deep knowledge of the land in which your adventure takes
     place. You gave advantage on any history or geography checks.
   type: advantage
   brief: You have advantage on history or geography checks.
+Natural Intellect:
+  description: "You have a natural intelligence which grants you advantage on intelligence checks."
+  type: advantage
+  brief: Advantage on intelligence checks.
 Hobble:
   description: You are capable of quickly tying very strong knots without a check. If you have an entity grappled,
     you may hobble them with an action. Hobbled entities may attempt a strength saving throw against your spell power each turn to
@@ -599,9 +574,9 @@ Hold the Line:
   type: combat
   brief: You have 2 exposed attacks.
 Disengage:
-  description: Spend an action point to avoid provoking exposed attacks.
+  description: Spend an action point to avoid provoking exposed attacks. This effect ends if you make an attack.
   type: combat
-  brief: Avoid provoking exposed attacks.
+  brief: Avoid provoking exposed attacks. Ends if you make an attack.
   cost: 1
 Huntsman:
   description: You have advantage when attacking beasts.
@@ -752,16 +727,6 @@ Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
   brief: You know an extra tier 0 spell.
-Spell of Darkvision:
-  description: You may use minor magic to give yourself darkvision for one hour.
-  type: general
-  brief: Gain darkvision for 1 hour.
-  cost: 1
-Spell of Minor Invisibility:
-  description: You may use minor magic to make yourself invisible for 5 minutes.
-  type: general
-  brief: Become invisible for 5 minutes.
-  cost: 1
 Mortal Coil:
   description: Once every week, you must consume a soul. If you do not, your body
     begins to rot away, causing fear and horror in those who see you.
@@ -803,18 +768,13 @@ Old Hand:
   brief: You can attempt to perceive enemy stats.
 Uncanny Perception:
   description: You have uncanny perception, which allows you to sense your way in total darkness,
-    and gives you advantage on all perception checks.
+    gives you advantage on all perception checks, and let you role initiative with advantage.
   type: advantage
-  brief: You can see in pitch dark, and have PER advantage.
+  brief: You can see in pitch dark, have PER advantage, and role initiative with advantage.
 One up the Sleeve:
   description: You may make an extra throwing knife attack.
   type: combat
   brief: Make an extra throwing knife attack.
-  cost: 1
-Penetration:
-  description: Fire a shot that will pass through enemies, hitting multiple.
-  type: combat
-  brief: Fire a shot that passes through enemies, hitting multiple.
   cost: 1
 Padfoot:
   description: You have advantage on stealth checks.
@@ -871,11 +831,11 @@ Shed Tail:
   brief: 1/week. Shed your tail to escape a grapple.
 Shield Bash:
   description: Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering
-    them if they fail a contested strength check. A staggered enemy looses one of its actions.
+    them if they fail a contested strength check. A staggered enemy loses one of its actions.
     At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, 
     damage increases to 1d12.
   type: combat
-  brief: "Offhand. Contested STR check. Fail: loose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
+  brief: "Offhand. Contested STR check. Fail: lose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
   cost: 1
 Shield of Men:
   description: Reaction. Once per round of combat, you can throw yourself in front of a teammate,
@@ -1034,6 +994,84 @@ This is my Weapon:
   description: Your gun is the only friend you need. Make sure to give it a name.
   type: choice
   brief: Don't forget to name your gun.
+Firearm Creation and Modification:
+  description: "You are able to create and modify your firearms as detailed in the rulebook."
+  type: general
+  brief: "You can attempt to create and modify firearms."
+Greater Firearm Creation and Modification:
+  description: "You have advantage on checks used to create and modify firearms, and have access to advanced firearm designs."
+  type: general
+  brief: "You have advantage when creating or modifying firearms and can use advanced designs."
+Harrying Critical:
+  description: "On a critical hit, the attacked entity is considered harried 
+                and must make its next action with disadvantage."
+  type: combat
+  brief: On a crit, enemy is harried for 1 turn and disadvantage on their next action.
+Tracer Round:
+  description: "Fire a bright tracer round to gage the exact distance to an enemy. Add a dice of fire
+                damage to the attack and give the next attack made against the enemy advantage."
+  type: combat
+  brief: Additional dice of fire damage, next attack against enemy is with advantage.
+Forceful Shot:
+  description: "Fire a shot which carries force behind it. Add an additional dice of damage and force the
+                enemy to make an inner fire saving throw against your spell power. On failure, they are pushed back
+                fifteen feet."
+  type: combat
+  brief: Additional dice of damage. SP save or pushed back 15 feet.
+Suppressor:
+  description: You can now craft a silencer. Silencers decrease your damage by 1, 
+    but silence your weapon. The silencer is removable.
+  type: general
+  brief: You have a removable silencer. -1 damage, but less sound.
+Armor Penetrating Rounds:
+  description: Your shots now pass through up to 1 foot of stone or 1 enemey and are unaffected
+    by armor.
+  type: combat
+  brief: Your shots are unaffected by armor and pass through 1ft of stone or 1 enemy.
+Greater Armor Penetrating Rounds:
+  description: Your shots now pass up to three enemies.
+  type: combat
+  brief: Your shots can pass through up to 3 enemies.
+Set Up:
+  description: "Take five minutes or 1 round of combat to guarantee that your next shot is a critical hit."
+  type: combat
+  brief: Spend five minutes or 1 round of combat to ensure that your next shot is a crit.
+Called Critical:
+  description: "On critical hit, immediately apply one of the effects from called shot to the enemy. 
+                If the critical is on a called shot, apply a second effect."
+  type: combat
+  brief: "On crit, apply a called shot effect to the enemy."
+Bayonet:
+  description: You can affix a dagger to your rifle, which functions as a bayonet.
+  type: combat
+  brief: You can attach a dagger to your rifle as a bayonet.
+High Grain:
+  description: Add 1 to your firearm damage.
+  type: combat
+  brief: Add +1 to firearm damage.
+Scope:
+  description: Craft a scope for your weapon to increase engagement range. Can
+    look through it to identify enemies at a distance. You do not take disadvantage
+    on attacks made up to 200 yards.
+  type: combat
+  brief: No disadvantage on a shot up to 200 yards. 
+Shock Absorption:
+  description: Place a shock absorber on your weapon's stock to increase
+    accuracy.
+  type: combat
+  brief: Advantage on long distance checks.
+Re-chamber:
+  description: Add 1d6 to your rifle damage.
+  type: combat
+  brief: Add 1d6 to rifle damage.
+Pistol:
+  description: You begin your adventure with a pistol.
+  type: starting_item
+  brief: You have a pistol.
+Rifle:
+  description: You begin your adventure with a rifle.
+  type: starting_item
+  brief: You have a rifle.
 Throw Anything:
   description: You can throw anything up to one size larger than yourself.
   type: general
@@ -1204,17 +1242,21 @@ Savage Critical:
   type: combat
   brief: On a crit, do an additional dice of damage and give all enemies within 30ft disadv on their next action.
 Line Them Up:
-  description: If you slay an enemy, gain another attack action.
+  description: If you slay an enemy, gain another attack action and 10 feet of movement.
   type: combat
-  brief: If you slay an enemy, gain another attack.
+  brief: If you slay an enemy, gain another attack and 10ft. of movement.
+Greater Line Them Up:
+  description: "When you score a critical hit on an enemy, gain another attack action and 10 feet of movement."
+  type: combat
+  brief: On crit, gain another attack and 10ft. of movement.
 Shield Up: 
-  description: Offhand. Hold up your shield. Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks if holding a shield. Must be done at the start of a turn.
+  description: Offhand. Hold up your shield. Lose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks if holding a shield. Must be done at the start of a turn.
   type: general
   brief: Offhand. -5ft. Movement. Take half damage from non-magic ranged attacks. Must be done at the start of a turn.
 Charge: 
-  description: As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.
+  description: As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The loser is knocked prone.
   type: combat
-  brief: Offhand. Charge an extra 10ft. Size based contested STR check if you hit someone. Looser is knocked prone.
+  brief: Offhand. Charge an extra 10ft. Size based contested STR check if you hit someone. Loser is knocked prone.
   cost: 1
 Greater Charge:
   description: "Your charge now carries you 15 feet, and may end in an attack."
@@ -1271,9 +1313,9 @@ Overwhelming Strike:
   brief: "Additional damage dice. Size based contested STR check. Fail: Next attack has advantage."
   cost: 1
 Healing Blow:
-  description: "Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to any allies within 15 feet of you."
+  description: "Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to yourself and any allies within 15 feet of you."
   type: combat
-  brief: "Additional damage dice. 1/4 damage done by attack is restored to allies within 15 feet."
+  brief: "Additional damage dice. 1/4 damage done by attack is restored to you and allies within 15 feet."
   cost: 1
 Guardian Ward:
   description: "As an offhand action, Say a fervent prayer to place a ward on an ally. The marked ally gains +1 armor. At most one ally may have a guardian ward at a time."
@@ -1315,21 +1357,17 @@ Mass Holy Shield:
   brief: "Grant all allies within 30 feet a holy shield."
   cost: 3
 Link Lifeforce: 
-  description: You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.
+  description: "As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do."
   type: combat
-  brief: Offhand. Take all or part of an ally with a guardian ward's damage.
+  brief: Offhand. Link to warded ally/allies. Take share healing/damage. Free unlink on your turn. All damage must be taken by someone.
 Greater Link Lifeforce: 
-  description: "Half any damage taken from linking lifeforce with an ally with a guardian ward."
+  description: "Halve any damage taken from linking lifeforce with an ally with a guardian ward."
   type: combat
-  brief: "Half any damage taken via link lifeforce."
+  brief: "Halve any damage taken via link lifeforce."
 Enhanced Healing:
   description: "Add two extra dice of healing when healing an ally with a guardian ward."
   type: combat
   brief: "2 extra dice of healing to allies with a guardian ward."
-Shared Healing:
-  description: "If a paladin heals one ally with a guardian ward, it heals the other for half as much."
-  type: combat
-  brief: "Healing 1 ally with a guardian ward heals the other for 1/2 as much."
 Last Hope:
   description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
   type: combat
@@ -1376,29 +1414,29 @@ Spirit of Rage:
   type: combat
   brief: After slaying an enemy gain an additional full turn.
 Glory: 
-  description: When your health falls below 25%, double all damage you deal.
+  description: When your health falls below 25%, add an extra damage dice to all attacks.
   type: combat
-  brief: When your health falls below 25% double your damage.
+  brief: Extra damage dice when health falls below 25%.
 Spiritual Infusion:
-  description: "Equip one of your aspects."
+  description: "As an offhand action, equip one of your aspects."
   type: general
   cost: 1
-  brief: Equip one of your aspects.
+  brief: Offhand. Equip one of your aspects.
 Greater Spiritual Infusion:
-  description: "Equip two of your aspects."
+  description: "As an offhand action, equip two of your aspects."
   type: general
   cost: 1
-  brief: Equip two of your aspects.
+  brief: Offhand. Equip two of your aspects.
 Major Spiritual Infusion:
-  description: "Equip three of your aspects."
+  description: "As an offhand action, equip three of your aspects."
   type: general
   cost: 1
-  brief: Equip three of your aspects.
+  brief: Offhand. Equip three of your aspects.
 Legendary Spiritual Infusion:
-  description: "Equip six of your aspects."
+  description: "As an offhand action, equip six of your aspects."
   type: general
   cost: 1
-  brief: Equip six of your aspects.
+  brief: Offhand. Equip six of your aspects.
 Elk Aspect:
   description: "Gain an additional 15 feet of movement and advantage on athletics checks."
   type: general
@@ -1408,9 +1446,9 @@ Wolf Aspect:
   type: general
   brief: Advantage on attacks made with an ally and tracking checks.
 Wildcat Aspect:
-  description: "When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks."
+  description: "When attacked, role 1d20 and add your dexterity. On a 17 or above, dodge the attack. Gain advantage on stealth checks."
   type: general
-  brief: When attacked, 1d20+DEX. 15 or above, dodge. Advantage on stealth.
+  brief: "When attacked, role a D17 DEX check. Success: dodge. Advantage on stealth."
 Bull Aspect:
   description: "Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks."
   type: general
@@ -1423,6 +1461,15 @@ Elemental Aspect:
   description: "Convert your damage to a different type. You must declare the type when this aspect is equipped."
   type: general
   brief: Convert you damage to a different type. Declare when equipped.
+Elemental Strike:
+  description: "Convert your damage to a different type as a free action."
+  type: general
+  brief: Free Action. Convert your damage to a different type for 1 turn.
+  cost: 1
+Greater Elemental Strike:
+  description: "There is no longer a cost associated with converting your damage type."
+  type: general
+  brief: No cost to convert damage type.
 Leech Aspect:
   description: "Recover half your level (round up, minimum 1) in health whenever you land a blow."
   type: general
@@ -1437,9 +1484,15 @@ Spiritual Strike:
   brief: Make a melee attack against an enemy up to 30ft. away.
   cost: 1
 Phase Walk:
-  description: "If you strike an enemy with a spiritual weapon, you may instantly teleport to their position."
+  description: "If you kill an enemy with a spiritual weapon, you may instantly teleport to their position."
   type: combat
-  brief: If you strike an enemy with Spiritual Strike, you may teleport to their position.
+  brief: If you kill an enemy with Spiritual Strike, you may teleport to their position.
+Greater Phase Walk:
+  description: "You may now spend 1 action point to phase walk to an enemy any time you strike them 
+                with a spiritual weapon."
+  type: combat
+  brief: "Phase walk any time you use a spiritual weapon."
+  cost: 1
 Spiritual Shield:
   description: "As a reaction, stop up to 20 damage from an enemy attack from hitting you using spiritual energy."
   cost: 1
@@ -1578,14 +1631,30 @@ Monster Slayer:
   type: combat
   brief: Do an additional dice of damage to monsters.
 Pickpocket: 
-  description: If you land a critical hit, steal an item the enemy is holding.
+  description: "Add a damage dice to an attack and force the target to make a contested dexterity check.
+                On success, steal something from the enemy."
   type: combat
-  brief: On a crit, steal something.
+  brief: "Extra damage dice. Contested Dex Check. On success, steal something from the enemy."
+Flank: 
+  description: "If an enemy is harried --one of your allies is adjacent -- gain advantage on attacks made
+                from behind it. You are considered to be hiding from an enemy while flanking it."
+  type: combat
+  brief: "You have attack advantage vs. and are considered hiding when behind harried enemies."
+Ride the Blindspot:
+  description: "If you are flanking an enemy and it tries to turn to look at you, 
+                spend an action point to pivot around it."
+  type: combat
+  cost: 1
+  brief: "If a flanked enemy turns to attack you, pivot to stay behind it."
+Break Away:
+  description: "If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks."
+  type: combat
+  brief: "If you begin a turn flanking an enemy, move away without being exposed."
 Sticky Fingers: 
-  description: Add 1d6 to any check made to steal something.
+  description: Add 1d4 to any check made to steal something.
   type: general
-  brief: Add 1d6 to checks made to steal something.
-Superior Mantel:
+  brief: Add 1d4 to checks made to steal something.
+Greater Mantel:
   description: Add 1d6 to all climbing checks.
   type: general
   brief: Add 1d6 to climbing checks.
@@ -1595,19 +1664,124 @@ Reflexes:
   type: general
   brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to 0, catch.
   cost: 1
+Greater Reflexes: 
+  description: "If you stop an arrow with reflexes, you may immediately make an attack with it."
+  type: general
+  brief: Reaction. If you catch an arrow, fire it back at the enemy.
 Disappear:
-  description: "Spend an action point to attempt to hide."
+  description: "Use an offhand action to attempt to hide. You must be out of line of sight of enemies
+                and not where they would reasonably expect you to be."
   type: combat
-  brief: "Attempt to hide."
-  cost: 1
+  brief: "Offhand. Attempt to hide. Must be out of sight and out of mind."
 Strike From the Shadows: 
   description: Do an additional dice of damage on an attacks made from hiding.
-  type: general
+  type: combat
   brief: Do an additional dice of damage on attacks made from hiding.
-Minor Blink: 
-  description: Teleport to a position you can see within 100 feet.
+Assassinate: 
+  description: Do two dice of damage on attacks made from hiding. Replaces Strike from the Shadows.
+  type: combat
+  brief: 2 additional dice of damage on attacks made from hiding.
+Minor Spell of Distraction:
+  description: "As an offhand action, you may use magic to create a minor ruckus within 100 feet of yourself. This
+                might include a loud sound or bright light.
+                When used in combat, the enemy must make an inner fire save against your spell power or lose 
+                an action on their next turn and have the next attack against them made at advantage."
   type: general
-  brief: Teleport to a position you can see within 100 feet.
+  brief: Offhand. Create a loud noise or bright light. Enemy must make a SP save or lose an action and have the next attack against them at advantage.
+  cost: 1
+Greater Spell of Distraction:
+  description: "As an offhand action, you may use magic to create a large distraction within 100 feet of yourself. This can
+                include a moderately sized illusion,
+                very loud noise or bright light, or the sound of someone's voice that you have heard. When in
+                combat, all enemies within 30 feet of your target must make an spell power saving throw or loose
+                an action on their next turn and have the next attack against them be made at advantage."
+  type: general
+  brief: Offhand. Create a loud noise or bright light. Enemy must make a SP save or lose an action.
+  cost: 2
+Spell of Darkvision:
+  description: As an Offhand Action, you may use minor magic to give yourself darkvision for one hour.
+  type: general
+  brief: Offhand. Gain darkvision for 1 hour.
+  cost: 1
+Spell of True Sight:
+  description: As an Offhand Action, use magic to grant yourself the effects of darkvision and may also see invisible objects and entities for one hour.
+  type: general
+  brief: Offhand. See invisible things and have darkvision for 1 hour.
+  cost: 1
+Minor Spell of Invisibility:
+  description: As an Offhand Action, you may use minor magic to make yourself invisible for 5 minutes or 3 turns.
+  type: general
+  brief: Offhand. Become invisible for 5 minutes or 2 turns.
+  cost: 1
+Greater Spell of Invisibility:
+  description: As an Offhand Action, you may use minor magic to make yourself invisible for 1 hour.
+  type: general
+  brief: Offhand. Become invisible for 1 hour or 1 battle. 
+  cost: 1
+Major Spell of Invisibility:
+  description: As an Offhand Action, you may use magic to make yourself invisible.
+  type: general
+  brief: Offhand. Become invisible.
+  cost: 1
+Radiant Invisibility Break:
+  description: "Create a distraction equivalent to Minor Spell of Distraction when you break invisibility."
+  type: general
+  brief: "Create a distraction equivalent to Minor Spell of Distraction when you break invisibility."
+Spell of Nimbleness:
+  description: "As an offhand action, cast a spell which makes you even nimbler, giving 
+                targeted ranged attacks take disadvantage against you for one hour or 1 battle."
+  type: combat
+  brief: "Offhand. Targeted ranged attacks take disadv against you for 1hr. or 1 battle."
+  cost: 1
+Meat Shield:
+  description: "As a reaction when you are attacked, role a contested DEX check against an adjacent
+                enemy of up to one size larger than yourself. On success, you may avoid the attack by pulling
+                them into its way."
+  type: combat
+  brief: Attack Reaction. Contested DEX check against adjacent enemy. Success, they are hit instead of you.
+  cost: 1
+Flow with the Battle:
+  description: "Move through spaces occupied by enemies at a cost of 10 feet of movement.
+                You still leave yourself exposed as you do this."
+  type: combat
+  brief: "Move through spaces occupied by enemies at a 10ft. of movement penalty. Still exposed."
+Greater Flow with the Battle:
+  description: "Passing through enemy spaces no longer results in a movement penalty."
+  type: combat
+  brief: "No movement penalty for moving through enemy spaces."
+Slip Away:
+  description: "When you slay an enemy, you may immediately disengage for free."
+  type: combat
+  brief: "When you slay an enemy, disengage for free."
+Greater Slip Away:
+  description: "When you slip away, also regain your full movement."
+  type: combat
+  brief: "Regain full movement when you slip away."
+Assisted Strike:
+  description: "If you have advantage on an attack, you may
+                instead add an additional dice of damage to it.
+                This stacks from multiple sources."
+  type: "combat"
+  brief: "If you have attack advantage, you can add a damage dice instead. Stacks."
+Vicious Critical:
+  description: "On a critical hit, do an extra dice of damage."
+  type: combat
+  brief: "On a crit, do an additional dice of damage."
+Mark:
+  description: "As an offhand action, mark an enemy. While marked, the enemy takes disadvantage in all attacks
+                made against you and is considered to be harried. You gain advantage while tracking marked enemies."
+  type: combat
+  brief: "Offhand. Mark an enemy. Marked enemies have disadv in attacks against you and are harried. You have advantage while tracking them."
+  cost: 1
+Corner:
+  description: "If an enemy moves to pass you within 15 feet to either side, you may move to block them."
+  type: combat
+  brief: "Reaction. If an enemy moves to pass 15 feet of you to either side, move to block them."
+  cost: 1
+Surrounded:
+  description: "Attack all adjacent enemies."
+  type: combat
+  brief: "Attack all adjacent enemies."
   cost: 1
 Lucky Actions: 
   description: You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. 
@@ -1623,23 +1797,26 @@ Trap Expert:
   type: general
   brief: Gain advantage on anything trap related.
 Party Save: 
-  description: Add 1d10 to one party member's stealth check.
+  description: Give all allies 1d10 to role on a stealth check..
   type: general
-  brief: Add 1d10 to one entity's stealth check.
+  brief: Add 1d10 to all allies' stealth check.
   cost: 1
-Assassinate: 
-  description: If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present.
-    Hiding for less than one round of combat is not enough.
-  type: combat
-  brief: If an enemy is unsuspecting, do double damage.
 Imposter: 
   description: Gain 1d6 on any checks made to imitate someone.
   type: general
   brief: Gain +1d6 on imitation checks.
-Poison: 
-  description: Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.
+Poison Creation: 
+  description: "During a rest, you are able to create a vial of poison which may have one of the
+                following effects: add a dice of damage to a blade, slow an enemy to half movement, give an
+                enemy disadvantage on its attacks for 1 turn if it fails an inner fire save against your spell power.
+                You may stockpile at most 2 vials of poison."
   type: general
-  brief: 1/day, spend 6 hrs crafting poison. 3d20 dmg eaten. 1d10 on blade. Lasts 24 hrs.
+  brief: "During a rest, create a vial of poison which either adds a dice of damage to a blade,
+          slows an enemy to 1/2 movement, or SP save or disadvantage on attacks."
+Greater Poison Creation:
+  description: "You can now create 2 vials of poison during a rest, and may stockpile 4."
+  type: general
+  brief: "Create 2 vials of poison during a rest, stockpile 4."
 Focus Energy:
   description: As an offhand action, convert action points into strength or dexterity. 1 action point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
@@ -1784,15 +1961,10 @@ Arrow Stab:
   description: You can stab an enemy with an arrow for 1d4 damage.
   type: combat
   brief: Stab an enemy with an arrow for 1d4 damage.
-Strike First: 
-  description: Reaction. When an enemy attacks you, attack them first.
-  type: combat
-  brief: Reaction. When an enemy attacks you, attack them first.
-  cost: 1
 Hollowpoint:
-  description: Your shots do 1d6 additional damage to unarmored targets.
+  description: Your shots do an additional dice of damage to to unarmored targets.
   type: combat
-  brief: Deal +1d6 damage to unarmored enemies.
+  brief: Deal an additional dice of damage to to unarmored targets.
 Quickdraw:
   description: Add 1d4 to your initiative.
   type: combat
@@ -1855,11 +2027,21 @@ Scurry:
   brief: Gain advantage on DEX athletics checks.
 Dodge:
   description: Any time you are attacked, roll a d20 and add your dexterity. 
-    If you get above a 15, the attack misses.
+    If you get a 17 or above, the attack misses.
   type: combat
   brief: "Reaction. When attacked. Roll D17 dex check. Success: attack misses."
+Greater Dodge:
+  description: "Any time you are attacked, roll a d20 and add your dexterity. 
+    If you get a 17 or above, the attack misses."
+  type: combat
+  brief: "Reaction. When attacked. Roll D17 dex check. Success: attack misses."
+Redirecting Dodge:
+  description: Redirect any dodged damage to an enemy within range.
+  type: combat
+  cost: 1
+  brief: "Redirect any dodged damage to an enemy within range."
 Harden: 
-  description: As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but loose 2 dexterity. Does not stack with other armor.
+  description: As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.
   type: general
   brief: As an offhand action, harden or unharden. Gain +2 armor -2 dexterity. Does not stack.
 Small Fry: 
@@ -1969,19 +2151,19 @@ Spurred to Movement:
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
-  type: skill
+  type: general
   brief: You are able to use hand to hand weapons without disadvantage.
 Proficient With Firearms:
   description: You are able to use firearms without disadvantage.
-  type: skill
+  type: general
   brief:  You don't take disadvantage when using firearms.
 Ranged Weapon Proficiency:
   description: You are able to use bows, throwing weapons, and simple projectile weapons without disadvantage.
-  type: skill
+  type: general
   brief:  You can use bows and throwing weapons without disadvantage.
 Thrown Weapon Proficiency:
   description: You are able to use thrown weapons, such as throwing knives, without disadvantage.
-  type: skill
+  type: general
   brief:  You can use thrown weapons without disadvantage.
 Charisma Based Spellcaster:
   description: To succeed at casting spells, you must convince your familiar to perform it for you.

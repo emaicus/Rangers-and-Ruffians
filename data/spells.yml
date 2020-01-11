@@ -1460,7 +1460,8 @@ the_macabre_manual:
         5 corpses. See the book of known beasts for details.
     Death Inducement:
       cost: 5
-      description: Mark the time that a person will die. Requires a piece of paper
+      description: Ritual requires one month. Mark the time that a person will die.
+        Requires a piece of paper
         made from the skin of a sentient being, one ounce of the blood of the one
         who is to die, and blood diamonds valuing 20,000 gold. At the prescribed time,
         the entity must make an inner fire saving throw against your spell power.
@@ -2227,7 +2228,7 @@ the_novice_spellbook:
         ray of electricity, and does 3d10 damage and causes the entity to go prone
         if they fail a save. On a d5, it is a beam of discord, and causes the entity
         to spontaneously change gender on a failed save. On a 6, it is a ray of death,
-        and causes the entity to take 3d20 damage.
+        and causes the entity to take 6d10 damage.
     Wall of Steel:
       charisma_cost: 16
       cost: 3

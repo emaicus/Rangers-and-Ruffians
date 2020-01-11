@@ -823,6 +823,24 @@ adjacent enemy, there are two steps.
 3. Deduct the enemy's armor (if they have any). Let's say our enemy had ```1``` armor. That means that we actually did ```6 - 1 = 5``` damage.
   
   
+
+  
+#### Common Damage Types and Status Effects
+There are a number of common special damage types in Rangers and Ruffians.
+Usually, these damage types require a Spell Power saving throw, and on failure
+effect the damaged entity in specific way.
+  
+  
+| Damage Type      | Effect                                                   |
+| -----------------|----------------------------------------------------------|
+| Fire Damage      | Repeat half of the damage at the start of the next turn. |
+| Ice Damage       | Loose 1d4 spaces in initiative.                          |
+| Lightning Damage | Fall Prone.                                              |
+| Light Damage     | Extra damage to undead.                                  |
+| Shadow Damage    | Fall blind until a spell power save. Repeat each turn or every ten minutes. |
+| Vampiric Damage  | Return a portion of the damage to the attacker.          |
+  
+  
   
   
 

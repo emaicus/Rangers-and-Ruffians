@@ -304,6 +304,10 @@ img.tinyicon
       display:none;
     }
 
+    .noprint{
+      display:none;
+    }
+
     .printRegion 
     {
 

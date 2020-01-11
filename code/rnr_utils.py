@@ -187,6 +187,7 @@ class rnr_class(rnr_entity):
       stats = class_data['base_stats']
       self.health_die_pieces = class_data['health_die_pieces']
       self.handbook = class_data.get('handbook', None)
+      self.roles = class_data['roles']
 
       # Gather up the abilities for all levels we've earned
       self.base_abilities = class_data.get('base_abilities', list())
@@ -480,6 +481,7 @@ class rnr_character(rnr_entity):
     serial['base_abilities'] = filterAbilities(self.abilities)
     serial['levels'] = self.rnr_class_obj.serialize_level_up_sheet()
     serial['icons'] = which_icons(self.subrace, self.subclass if self.subclass not in [None, ''] else self.rnr_class)
+    serial['roles'] = self.rnr_class_obj.roles
     return serial
 
   def get_health(self):

@@ -352,6 +352,49 @@ def create_all_race_class_json():
 
   data = {'races' : rnr_utils.get_all_subrace_names(), 'classes' : rnr_utils.get_all_class_names(), 'characters' : {} }
 
+  data["roles"] = dict()
+  data["roles"]["class_roles"] = dict()
+  unique_roles = set()
+  class_objs = rnr_utils.load_all_class_objects()
+  for obj in class_objs:
+    data["roles"]["class_roles"][obj.name] = {
+      "roles" : obj.roles
+    }
+    unique_roles.update(set(obj.roles))
+  
+  data["roles"]["unique_roles"] = list(unique_roles)
+
+  tooltips = {
+    "tank": "Too big to fall!",
+    "low-health": "Squishy, better hide!",
+    "self-sufficient": "Self-healing!",
+    "nature-based": "Hug the Trees!",
+    "undead": "No Longer 6ft. Under!",
+    "high-damage": "Vexing Poohbahs Since 2016!",
+    "mage": "Simple Magic or Otherwise!",
+    "non-magic": "Good Old Fashioned Steel!",
+    "spellbooks": "Choose New Spells!",
+    "support": "Helpful!",
+    "healer": "Every party needs one!",
+    "mobile": "Like a chicken with it's head cut off!",
+    "ranged": "Stays out of the fray!",
+    "area-control": "This is MY ground!",
+    "companion-creature": "Because everybody needs a friend!",
+    "charismatic": "Because somebody has to be!",
+    "sneaky": "A Sneaky Hider!",
+    "good-first-class": "Simple to pick up!",
+    "complicated": "Lots to pay attention to!"
+  }
+
+  tooltip_present = set(tooltips.keys())
+  if len(unique_roles - tooltip_present) > 0:
+    print("ERROR! Missing tooltips for the following!")
+    for item in list(unique_roles - tooltip_present):
+      print(item)
+    sys.exit(1)
+
+  data["roles"]["tooltips"] = tooltips
+
   for char in all_characters:
     if not char.subrace in data['characters']:
       data['characters'][char.subrace] = {}

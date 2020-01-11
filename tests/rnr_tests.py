@@ -41,6 +41,13 @@ class rnrTests(unittest.TestCase):
       log_output("Spell Counts", errors)
     self.assertEqual(len(errors),0)
 
+  def test_ability_types(self):
+    rnr_utils.load_Rangers_And_Ruffians_Data()
+    errors = balance_report.check_ability_types(print_errors=False)
+    if len(errors) > 0:
+      log_output("Ability Types", errors)
+    self.assertEqual(len(errors),0)
+
   def test_description_lengths(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
     errors = balance_report.check_brief_abilities(print_errors=False)

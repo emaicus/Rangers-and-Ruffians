@@ -1,0 +1,5 @@
+{% for role in unique_roles %}
+  <button type="button" class="btn btn-secondary" data-role="{{role}}" onclick="toggleButton(this)" data-toggle="tooltip" data-placement="right" title="{{tooltips[role]}}">
+    {{role | title}}
+  </button>
+{% endfor %}

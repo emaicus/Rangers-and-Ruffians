@@ -1,0 +1,9 @@
+{% for rnr_class, info in data %}
+  <div class="rnr_class" style="display:none" data-roles="{% for role in info["roles"] %}{{role}} {% endfor %}">
+    <p>
+    <span class="class_name">
+      {{rnr_class}}
+    </span>
+    </p>
+  </div>
+{% endfor %}

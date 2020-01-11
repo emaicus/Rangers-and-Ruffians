@@ -1,5 +1,6 @@
 Heavy Fighter:    
   Path_of_Rage_Barbarian:
+    roles: ["tank", "high-damage", "non-magic"]
     base_abilities:
     - Colossal
     - Boozehound
@@ -39,30 +40,29 @@ Heavy Fighter:
         - Single Out
       level_3:
         abilities:
-        - Hurl Weapon
         - Minor Stat Increase
+        - Hurl Weapon
       level_4:
         abilities:
         - Major Stat Increase
-        - Warrior Spirit # When you slay an enemy or land a critical hit, gain 1 action point.
+        - Warrior Spirit # When you slay an enemy, gain 1 action point.
       level_5:
         abilities:
         - Minor Stat Increase
         - Chain Attack # If you kill an enemy, gain another attack
-        - The Opener # Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone.
       level_6:
         abilities:
         - Major Stat Increase
-        - Adrenaline
+        - The Opener # Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone.
       level_7:
         abilities:
         - Minor Stat Increase
         - Offhand Attack
-        - Terrify
+        - Adrenaline
       level_8:
         abilities:
-        - Arching Swing
         - Major Stat Increase
+        - Terrify
       level_9:
         abilities:
         - Minor Stat Increase
@@ -79,7 +79,7 @@ Heavy Fighter:
       level_12:
         abilities:
         - Major Stat Increase
-        - The Closer
+        - Arching Swing
       level_13:
         abilities:
         - Minor Stat Increase
@@ -101,6 +101,7 @@ Heavy Fighter:
     standings: Barbarians are the enemies of law keepers.
     tag_line: Heavy Hitter
   Path_of_Nature_Barbarian:
+    roles: ["tank", "mage", "support", "mobile", "nature-based"]
     base_abilities:
     - Colossal
     - Boozehound
@@ -155,6 +156,7 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Greater Spiritual Infusion # Equip two aspects
+        - Phase Walk
       level_6:
         abilities:
         - Major Stat Increase
@@ -183,7 +185,7 @@ Heavy Fighter:
       level_12:
         abilities:
         - Major Stat Increase
-        - Phase Walk # If you strike down an enemy with spiritual strike, teleport to their position.
+        - Greater Phase Walk # If you strike down an enemy with spiritual strike, teleport to their position.
       level_13:
         abilities:
         - Minor Stat Increase
@@ -195,7 +197,7 @@ Heavy Fighter:
       level_15:
         abilities:
         - Minor Stat Increase
-        - Legendary Spiritual Infusion # Equip all spiritual infusions
+        - Legendary Spiritual Infusion # Equip 6 spiritual infusions
     questions:
     - Where did your character come from?
     - Where is their tribe? Did they leave it?
@@ -204,6 +206,7 @@ Heavy Fighter:
     standings: Barbarians are the enemies of law keepers.
     tag_line: Heavy Hitter
   Knight:
+    roles: ["tank", "area-control", "non-magic"]
     base_abilities:
     - Armored
     base_stats:
@@ -302,6 +305,7 @@ Heavy Fighter:
       rangers. Knights are duty bound to fight the lawless.
     tag_line: Shield of the Party
   Paladin:
+    roles: ["tank", "mage", "spellbooks", "support", "healer", "ranged", "self-sufficient"]
     base_abilities:
     - Minor Spell Choice
     - Armored
@@ -392,7 +396,6 @@ Heavy Fighter:
         abilities:
         - Minor Stat Increase
         - Greater Link Lifeforce
-        - Shared Healing # Healing
       level_12:
         abilities:
         - Major Stat Increase
@@ -424,6 +427,7 @@ Heavy Fighter:
     tag_line: Soldier of Light
 Light Fighter:
   Beastmaster:
+    roles: ["companion-creature", "non-magic", "nature-based"]
     base_stats:
       Charisma: -3
       Dexterity: 1
@@ -515,6 +519,7 @@ Light Fighter:
       animals, and can find people difficult to talk to.
     tag_line: Companion Fighter
   Fighter:
+    roles: ["self-sufficient", "high-damage", "ranged", "non-magic"]
     base_stats:
       Charisma: -1
       Dexterity: 2
@@ -599,6 +604,7 @@ Light Fighter:
     standings: Fighters come from all walks of life.
     tag_line: Front-line combatant
   Highborn:
+    roles: ["charismatic", "support", "non-magic"]
     base_abilities:
     - My Father's Coffers
     - The Family Sword
@@ -680,7 +686,7 @@ Light Fighter:
       level_15:
         abilities:
         - Minor Stat Increase
-        - Strike First
+        #- Strike First
     questions:
     - Why is your character embarking on their adventure? Are they out to prove themself?
       Or perhaps they are idealistic and want adventure?
@@ -692,6 +698,7 @@ Light Fighter:
       to attacks by thieves and brigands.
     tag_line: Noble Adventurer
   Monk:
+    roles: ["sneaky", "self-sufficient", "mobile"]
     base_abilities:
     - Starting Fighting Techniques
     base_stats:
@@ -772,6 +779,7 @@ Light Fighter:
       to attempt to take advantage of them.
     tag_line: Brawler/Martial Artist
   Ranger:
+    roles: ["self-sufficient", "ranged", "sneaky", "nature-based"]
     base_abilities:
     # - Action
     # - Offhand Action
@@ -867,7 +875,8 @@ Light Fighter:
         - Fire and Ice
     standings: Barbarians are the enemies of law keepers.
     tag_line: Duel Wielding Tracker
-  Rogue:
+  Thief:
+    roles: ["mobile", "sneaky", "low-health", "non-magic"]
     base_abilities:
     - A Thief's Gear
     base_stats:
@@ -890,93 +899,190 @@ Light Fighter:
         abilities:
         - Melee Weapon Proficiency
         - Thrown Weapon Proficiency
-        - Lightfoot
-        - Nimble Fingers
-        - Disengage
+        - Lightfoot # Stealth advantage
+        - Nimble Fingers # Stealing advantage
+        - Mantel # Climbing advantage
+        - Disengage # Cost 1. No exposed attacks
+        - Disappear # Offhand to hide.
+        - Strike From the Shadows # If you begin your turn in hiding, do an additional dice of damage on all attacks.
       level_1:
         abilities:
         - Minor Stat Increase
-        - Mantel
-        - Disappear
-        - Strike From the Shadows
+        - Pickpocket # Cost 1: Extra damage dice. Try to steal something from an enemy with an attack.
+        - Trap Expert # Advantage in anything trap related.
+        - Dodge
       level_2:
         abilities:
         - Major Stat Increase
+        - Slip Away # When you slay an enemy, disengage for free
+        - Master of Disguise # Advantage when crafting disguises.
       level_3:
         abilities:
         - Minor Stat Increase
-        - Master of Disguise
-        - High Ground
+        - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
       level_4:
         abilities:
         - Major Stat Increase
+        - Flank # If an enemy is harried, get behind them to hide and gain advantage.
       level_5:
         abilities:
         - Minor Stat Increase
-        - Thief or Assassin
-        subclass_assassin_abilities:
-        - Imposter
-        - Spell of Darkvision
-        subclass_thief_abilities:
-        - Soft Landing
-        - Soundless
-        - Sticky Fingers
+        - Ride the Blindspot # If flanked enemy tries to turn to look at you, spend an action point to pivot around behind them.
+        - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage stacks.
       level_6:
         abilities:
         - Major Stat Increase
+        - Soft Landing # Less fall damage
+        - High Ground # Extra dice on plunging attacks.
       level_7:
         abilities: 
         - Minor Stat Increase
-        subclass_assassin_abilities:
         - Offhand Attack
-        - Poison
-        subclass_thief_abilities:
-        - Offhand Attack
-        - Pickpocket
+        - Break Away # Once you have established flanking position, you may break it without provoking exposed attacks.
+        - Sticky Fingers
       level_8:
         abilities:
         - Major Stat Increase
+        - Greater Mantel
+        - Soundless
       level_9:
         abilities:
         - Minor Stat Increase
-        subclass_assassin_abilities:
-        - Minor Blink
-        - Spell of Minor Invisibility
-        subclass_thief_abilities:
-        - Trap Expert
+        - Party Save
       level_10:
         abilities:
         - Major Stat Increase
+        - Mark # Mark an enemy. While Marked, they take disadvantage in attacks made against you and are considered harried.
       level_11:
         abilities: 
         - Minor Stat Increase
-        subclass_assassin_abilities:
-        - Reduced Critical
-        subclass_thief_abilities:
-        - Lucky Actions
       level_12:
         abilities:
         - Major Stat Increase
+        - Greater Dodge
       level_13:
         abilities:
         - Minor Stat Increase
-        subclass_assassin_abilities:
-        - Line Them Up
-        - Savage Critical
-        subclass_thief_abilities:
-        - Party Save
-        - Superior Mantel
+        - Greater Flow with the Battle # No movement cost from moving through enemy spaces
       level_14:
         abilities:
         - Major Stat Increase
+        - Greater Slip Away #When you slip away, also gain your full movement.
       level_15:
         abilities:
         - Minor Stat Increase
-        subclass_assassin_abilities:
+        - Redirecting Dodge # Redirect 
+    questions:
+    - Does your character have a moral code?
+    - Who do they tend to target, and why?
+    - Do their crimes involve hurting people? Theivery? Information gathering?
+    - How did they get so good at what they do?
+    - How will being a rogue affect how you interact with your party?
+    - Remember, just because you are a rogue doesn't mean you can't have friends!
+    standings: Thieves hate law keepers and Thief Catchers
+    tag_line: Sneak-thief
+  Assassin:
+    roles: ["mobile", "sneaky", "low-health", "high-damage", "self-sufficient"]
+    base_abilities:
+    - A Thief's Gear
+    base_stats:
+      Charisma: 0
+      Dexterity: 2
+      Inner_Fire: -2
+      Intelligence: -1
+      Luck: 2
+      Perception: 1
+      Strength: -3
+    description: Sneaktheives and criminals, rogues have often fallen in with bad
+      company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak,
+      and lockpick their way into most anything. Rogues are very weak, however, and
+      will have better luck running away than fighting if caught. When they have to
+      fight, Rogues often pick daggers or shortswords, and strike from on high or
+      from in the shadows, letting their more armored friends soak up the damage.
+    health_die_pieces: 2
+    levels:
+      level_0:
+        abilities:
+        - Melee Weapon Proficiency
+        - Thrown Weapon Proficiency
+        - Lightfoot # Stealth advantage
+        - Mantel # Climbing advantage
+        - Master of Disguise
+        - Predator
+        - Disengage # Cost 1. No exposed attacks
+        - Disappear # Offhand to hide.
+        - Strike From the Shadows # If you begin your turn in hiding, do an additional dice of damage on all attacks.
+      level_1:
+        abilities:
+        - Minor Stat Increase
+        - Minor Spell of Distraction
+        - Spell of Darkvision
+        - Meat Shield
+        - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
+      level_2:
+        abilities:
+        - Major Stat Increase
+        - Draining Strike
+        - Poison Creation
+      level_3:
+        abilities:
+        - Minor Stat Increase
+        - Vicious Critical
+      level_4:
+        abilities:
+        - Major Stat Increase
+        - Minor Spell of Invisibility
+        - High Ground
+      level_5:
+        abilities:
+        - Minor Stat Increase
+        - Spell of Nimbleness
+        - Throw Caution to the Wind
+      level_6:
+        abilities:
+        - Major Stat Increase
+        - Spell of True Sight
+        - Imposter
+      level_7:
+        abilities: 
+        - Minor Stat Increase
+        - Offhand Attack
+        - Line Them Up
+        - Thick Headed # Hard to enter your mind.
+      level_8:
+        abilities:
+        - Major Stat Increase
+        - Greater Spell of Invisibility
+        - Greater Flow with the Battle
+      level_9:
+        abilities:
+        - Minor Stat Increase
+        - Corner
+        - Greater Poison Creation
+      level_10:
+        abilities:
+        - Major Stat Increase
         - Assassinate
+      level_11:
+        abilities: 
+        - Minor Stat Increase
+        - Greater Spell of Distraction
+      level_12:
+        abilities:
+        - Major Stat Increase
+        - Radiant Invisibility Break
+      level_13:
+        abilities:
+        - Minor Stat Increase
+        - Reduced Critical
+      level_14:
+        abilities:
+        - Major Stat Increase
+        - Major Spell of Invisibility
+      level_15:
+        abilities:
+        - Minor Stat Increase
         - All-consuming Shadow
-        subclass_thief_abilities:
-        - Spider Climb
     questions:
     - Does your character have a moral code?
     - Who do they tend to target, and why?
@@ -988,6 +1094,7 @@ Light Fighter:
     tag_line: Sneak-thief
 Mage:
   Bard:
+    roles: ["mage", "spellbooks", "support", "healer", "ranged", "charismatic", "self-sufficient", "ranged"]
     base_abilities:
     - Spell Choice
     - Boozehound
@@ -1088,6 +1195,7 @@ Mage:
         - Major Spell Coin
     tag_line: Entertaining Spellcaster
   Cleric:
+    roles: ["mage", "spellbooks", "support", "healer", "low-health", "ranged"]
     base_abilities:
     - Spell Choice
     base_stats:
@@ -1185,6 +1293,7 @@ Mage:
       especially well with Holy Knights, Paladins, and members of their church.
     tag_line: Healer
   Druid:
+    roles: ["mage", "spellbooks", "nature-based", "ranged"]
     base_abilities:
     - Spell Choice
     base_stats:
@@ -1279,6 +1388,7 @@ Mage:
         - Ascended Action
     tag_line: Naturalistic Spellcaster
   Necromancer:
+    roles: ["mage", "spellbooks", "high-damage", "undead", "ranged", "companion-creature"]
     base_abilities:
     - Spell Choice
     base_stats:
@@ -1381,6 +1491,7 @@ Mage:
       and followers of the light.
     tag_line: Death Mage
   Sorcerer:
+    roles: ["mage", "spellbooks", "companion-creature", "charismatic", "ranged"]
     base_abilities:
     - Spell Choice
     base_stats:
@@ -1472,6 +1583,7 @@ Mage:
         - Light and Shadow
     tag_line: Charismatic Spirit Wrangler
   Wizard:
+    roles: ["mage", "spellbooks", "low-health", "ranged"]
     base_abilities:
     - Historian
     - The Sword and the Satchel
@@ -1566,6 +1678,7 @@ Mage:
     tag_line: Pointy Hatted Mage
 Ranged Fighter:
   Archer:
+    roles: ["ranged"]
     base_abilities:
     - Longbow
     - Boot Knife
@@ -1588,30 +1701,33 @@ Ranged Fighter:
         abilities:
         - Ranged Weapon Proficiency
         - Fletcher
-        - Focus
         - Huntsman
+        - Dual Shot
+        - Net Arrows
       level_1:
         abilities:
         - Minor Stat Increase
         - Mantel
-        - Called Shot
+        - Smoke Arrows
+        - Rope Arrows
       level_2:
         abilities:
         - Major Stat Increase
+        - Healing Arrows
+        - Reflexes
       level_3:
         abilities:
         - Minor Stat Increase
-        - Dual Shot
         - Fire and Ice Arrows # Cost 1
       level_4:
         abilities:
         - Major Stat Increase
-        - Rope Arrows # Cost 1
+        - Vampiric Arrows # Cost 2
       level_5:
         abilities:
         - Minor Stat Increase
-        - Net Arrows # Cost 1
-        - Smoke Arrow # Cost 1
+        - Steady
+        - Explosive Arrows # Cost 2
       level_6:
         abilities:
         - Major Stat Increase
@@ -1619,17 +1735,17 @@ Ranged Fighter:
       level_7:
         abilities:
         - Minor Stat Increase
-        - Reflexes
-        - Steady
         - Offhand Attack
+        - Shock Arrows # Cost 2
+        - Greater Reflexes
       level_8:
         abilities:
         - Major Stat Increase
-        - Explosive Arrows # Cost 2
+        - Blink Arrows # Cost 2
       level_9:
         abilities:
         - Minor Stat Increase
-        - Vampiric Arrow # Cost 2
+        - Uncanny Perception 
       level_10:
         abilities:
         - Major Stat Increase
@@ -1637,25 +1753,23 @@ Ranged Fighter:
       level_11:
         abilities:
         - Minor Stat Increase
-        - Blink Arrows # Cost 2
-        - Uncanny Perception 
+        - Expert Fletcher # Reduces all arrow cost by 1
       level_12:
         abilities:
         - Major Stat Increase
-        - Shock Arrow # Cost 2
+        - Delayed Explosive Arrows
       level_13:
         abilities:
         - Minor Stat Increase
-        - Expert Fletcher # Reduces all arrow cost by 1
-        - Anti-Gravity Arrows # Cost 2
         - Volley
       level_14:
         abilities:
         - Major Stat Increase
+        - Anti-Gravity Arrows # Cost 2
       level_15:
         abilities:
         - Minor Stat Increase
-        - Firestorm Arrow # Cost 4
+        - Firestorm Arrows
     questions:
     - Where did your character come from?
     - How did they get so good at archery?
@@ -1666,13 +1780,14 @@ Ranged Fighter:
     - What are their goals?
     - How will being an archer affect how you interact with the rest of your party?
     standings: Excellent archers, Marksmen come from all walks of life.
-    tag_line: Bow and Arrow Expert
-  Gunslinger:
+    tag_line: Bow and Arrow Expert    
+  Marksman:
+    roles: ["ranged", "high-damage", "non-magic"]
     base_stats:
       Charisma: 0
-      Dexterity: 1
-      Inner_Fire: -3
-      Intelligence: -1
+      Dexterity: -3
+      Inner_Fire: -1
+      Intelligence: 1
       Luck: 1
       Perception: 2
       Strength: -2
@@ -1687,96 +1802,78 @@ Ranged Fighter:
         abilities:
         - Proficient With Firearms
         - This is my Weapon
-        - Gunslinger or Marksman
-        - Focus
-        - Called Shot
-        subclass_gunslinger_abilities:
-        - Pistol
-        subclass_marksman_abilities:
+        - Natural Intellect
+        - Firearm Creation and Modification
         - Rifle
-        - Bayonet
-        - Bull Rush
+        - Called Shot
+        - Strike From the Shadows
+        - Disappear
       level_1:
         abilities:
         - Minor Stat Increase
-        subclass_gunslinger_abilities:
-        - Flash Grenade
-        - Repeating Shot
-        subclass_marksman_abilities:
-        - Flame Strike
+        - Focus
+        - Harrying Critical
       level_2:
         abilities:
         - Major Stat Increase
+        - Bull Rush
       level_3:
         abilities:
         - Minor Stat Increase
-        - High Grain
-        - From the Hip
+        - Tracer Round
+        - Steady
       level_4:
         abilities:
         - Major Stat Increase
+        - Vicious Critical
       level_5:
         abilities:
         - Minor Stat Increase
-        - High Grain
-        subclass_gunslinger_abilities:
-        - Quickdraw
+        - Forceful Shot
+        - Line Them Up
       level_6:
         abilities:
         - Major Stat Increase
+        - Elemental Strike
       level_7:
         abilities:
         - Minor Stat Increase
-        subclass_gunslinger_abilities:
-        - Twin Guns
-        subclass_marksman_abilities:
-        - Line Them Up
         - Offhand Attack
+        - Reduced Critical
+        - Armor Penetrating Rounds
       level_8:
         abilities:
         - Major Stat Increase
+        - Warrior Spirit
       level_9:
         abilities:
         - Minor Stat Increase
-        subclass_gunslinger_abilities:
-        - Feeling Lucky
-        - Fastest Gun
-        subclass_marksman_abilities:
-        - Armor Penetrating Rounds
-        - Savage Critical
-        - Reduced Critical
+        - Greater Bull Rush
       level_10:
         abilities:
         - Major Stat Increase
+        - Greater Firearm Creation and Modification
+        - Assassinate
       level_11:
         abilities:
         - Minor Stat Increase
-        subclass_gunslinger_abilities:
-        - Hollowpoint
-        subclass_marksman_abilities:
-        - Penetration
+        - Set Up
       level_12:
         abilities:
         - Major Stat Increase
+        - Called Critical
       level_13:
         abilities:
         - Minor Stat Increase
-        - Harrying Shot
-        subclass_gunslinger_abilities:
-        - Strike First
-        subclass_marksman_abilities:
-        - High Grain
+        - Greater Armor Penetrating Rounds
       level_14:
         abilities:
         - Major Stat Increase
+        - Greater Elemental Strike
       level_15:
         abilities:
         - Minor Stat Increase
-        - Reduced Critical
-        subclass_gunslinger_abilities:
-        - Volley
-        subclass_marksman_abilities:
-        - Assassinate
+        - Greater Line Them Up
     questions:
     - How did they acquired their firearm?
     - Who made it?

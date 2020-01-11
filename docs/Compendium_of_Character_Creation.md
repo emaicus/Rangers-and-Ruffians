@@ -68,22 +68,23 @@ _Version 2.1.3_
      * [Wood Elf](#wood-elf)  
    * [Classes](#classes)  
      * [Archer](#archer)  
+     * [Assassin](#assassin)  
      * [Bard](#bard)  
      * [Beastmaster](#beastmaster)  
      * [Cleric](#cleric)  
      * [Druid](#druid)  
      * [Fighter](#fighter)  
-     * [Gunslinger](#gunslinger)  
      * [Highborn](#highborn)  
      * [Knight](#knight)  
+     * [Marksman](#marksman)  
      * [Monk](#monk)  
      * [Necromancer](#necromancer)  
      * [Paladin](#paladin)  
      * [Path of Nature Barbarian](#path-of-nature-barbarian)  
      * [Path of Rage Barbarian](#path-of-rage-barbarian)  
      * [Ranger](#ranger)  
-     * [Rogue](#rogue)  
      * [Sorcerer](#sorcerer)  
+     * [Thief](#thief)  
      * [Wizard](#wizard)  
    * [Skills](#skills)  
 
@@ -779,11 +780,11 @@ __Sprout Abilities:__
   * __Commune with Nature:__ You are naturally able to speak with plants and animals.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
   * __Blade of Grass:__ Summon a 1d6 blade of woven plant fiber on command.  
-  * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but loose 2 dexterity. Does not stack with other armor.  
+  * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.  
 * __Advantages:__   
   * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
-  * __Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get above a 15, the attack misses.  
+  * __Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get a 17 or above, the attack misses.  
   
   
   
@@ -889,12 +890,14 @@ __Archer Abilities:__
 __Level 0 Archer__
 
 * __General Abilities:__   
+  * __Ranged Weapon Proficiency:__ You are able to use bows, throwing weapons, and simple projectile weapons without disadvantage.  
   * __Fletcher:__ You know how to craft your own arrows, and always seem to have some on hand.  
+  * __Net Arrows:__ _(Cost 1)_ You can now craft net arrows. When a net arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, they are instantly wrapped in a net, and are considered restrained. Each turn, they may make a strength saving throw against your spell power to attempt to break out of the net.  
   
   
 * __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
   * __Huntsman:__ You have advantage when attacking beasts.  
+  * __Dual Shot:__ _(Cost 1)_ Fire two arrows at the same target in a single attack. With standard arrows, this effectively adds a dice of damage.  
   
   
 __Level 1 Archer__
@@ -903,18 +906,24 @@ __Level 1 Archer__
   * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
+* __General Abilities:__   
+  * __Smoke Arrows:__ _(Cost 1)_ You can now craft smoke arrows. When a smoke arrow hits the ground, it creates a smokescreen with a 30 foot radius.  
+  * __Rope Arrows:__ _(Cost 1)_ You have mastered the art of crafting rope arrows using minor magic. As soon as a rope arrow hits its target, a rope instantly appears connecting the target to your hand. This can be used to climb, or to tether enemies. If an enemy is tethered, you may make a size based contested strength check to stop them from moving away from you.   
+  
+  
 * __Advantages:__   
   * __Mantel:__ You have advantage on dexterity checks when climbing.  
-  
-  
-* __Combat Abilities:__   
-  * __Called Shot:__ _(Cost 1)_ Aim for a specific part of an enemy. The enemy must make a spell power save or drop a weapon, be blinded, or be knocked prone.  
   
   
 __Level 2 Archer__
 
 * __Choices:__   
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Healing Arrows:__ _(Cost 1)_ You can craft healing arrows. Fire a healing arrow at an ally to heal them for half of its damage.  
+  * __Reflexes:__ _(Cost 1)_ Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
   
   
 __Level 3 Archer__
@@ -924,11 +933,7 @@ __Level 3 Archer__
   
   
 * __General Abilities:__   
-  * __Fire and Ice Arrows:__ _(Cost 1)_ You have mastered the art of crafting fire and ice arrows, and can craft at most 2 per day. Fire arrows do an additional 1d6 fire damage and deal 1d6 burn damage to enemies that fail a saving throw against your spell power. Ice arrows deal an additional 1d8 ice damage, and cause an enemy to move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.  
-  
-  
-* __Combat Abilities:__   
-  * __Dual Shot:__ _(Cost 1)_ Fire two arrows at the same target in a single attack.  
+  * __Fire and Ice Arrows:__ _(Cost 1)_ You have mastered the art of crafting fire and ice arrows, and can craft at most 2 per day. Fire arrows do an additional dice of fire damage and deal half as much burn damage to enemies that fail a saving throw against your spell power. Ice arrows deal an additional dice of ice damage, and cause an enemy to move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.  
   
   
 __Level 4 Archer__
@@ -938,7 +943,7 @@ __Level 4 Archer__
   
   
 * __General Abilities:__   
-  * __Rope Arrows:__ _(Cost 1)_ You have mastered the art of crafting rope arrows using minor magic. As soon as a rope arrow hits its target, a rope instantly appears connecting the target to your hand. This can be used to climb, or to grapple opponents. To grapple an opponent, you must make a contested strength check.  
+  * __Vampiric Arrows:__ _(Cost 2)_ You can now craft vampiric arrows. Vampiric arrows do an additional dice of damage to an entity. Half of all damage done by the vampiric returns to you as health.  
   
   
 __Level 5 Archer__
@@ -948,8 +953,11 @@ __Level 5 Archer__
   
   
 * __General Abilities:__   
-  * __Net Arrows:__ _(Cost 1)_ You can now craft net arrows. When a net arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, they are instantly wrapped in a net, and are considered restrained. Each turn, they may make a strength saving throw against your spell power to attempt to break out of the net.  
-  * __Smoke Arrow:__ _(Cost 1)_ You can now craft smoke arrows. When a smoke arrow hits the ground, it creates a smokescreen with a 30 foot radius.  
+  * __Explosive Arrows:__ _(Cost 2)_ After much experimentation, you have finally mastered the art of crafting explosive arrows. Explosive arrows do 4d10 damage to all enemies in a twenty foot radius.  
+  
+  
+* __Advantages:__   
+  * __Steady:__ Do not take disadvantage when being jostled about.  
   
   
 __Level 6 Archer__
@@ -959,7 +967,7 @@ __Level 6 Archer__
   
   
 * __General Abilities:__   
-  * __Shadow and Light Arrows:__ _(Cost 1)_ You have mastered the art of crafting shadow and light arrows. Shadow arrows do an additional 1d6 dark damage and cause enemies who fail an inner fire saving throw against your spell power to go blind for 1d4 turns. Shadow arrows may also be used to fill a 10 foot radius with pitch darkness. Light arrows deal an additional 1d6 light damage, and deal another 1d6 damage to the undead.  
+  * __Shadow and Light Arrows:__ _(Cost 1)_ You have mastered the art of crafting shadow and light arrows. Shadow arrows do an additional dice of dark damage and cause enemies who fail an inner fire saving throw against your spell power to go blind until they make a spell power save. This save is repeated at the end of each of  their turns or once every ten minutes. Light arrows deal an additional dice of light damage, or twice as much to the undead.  
   
   
 __Level 7 Archer__
@@ -973,11 +981,8 @@ __Level 7 Archer__
   
   
 * __General Abilities:__   
-  * __Reflexes:__ _(Cost 1)_ Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
-  
-  
-* __Advantages:__   
-  * __Steady:__ Do not take disadvantage when being jostled about.  
+  * __Shock Arrows:__ _(Cost 2)_ You can now craft shock arrows. When a shock arrow hits an enemy, it deals an additional dice of shock damage. If an affected entity is wearing metal armor or is made of or standing in water, they take a second additional dice of damage. The affected entity must make an inner fire saving throw against your spell power. On failure, they are knocked prone.  
+  * __Greater Reflexes:__ If you stop an arrow with reflexes, you may immediately make an attack with it.  
   
   
 __Level 8 Archer__
@@ -987,7 +992,7 @@ __Level 8 Archer__
   
   
 * __General Abilities:__   
-  * __Explosive Arrows:__ _(Cost 3)_ After much experimentation, you have finally mastered the art of crafting explosive arrows. Explosive arrows do 2d10 damage to all enemies in a twenty foot radius.  
+  * __Blink Arrows:__ _(Cost 2)_ After learning more about magic, you have learned how to create blink arrows. Blink arrows instantly teleport you to the position that they hit.  
   
   
 __Level 9 Archer__
@@ -996,8 +1001,8 @@ __Level 9 Archer__
   * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
-* __General Abilities:__   
-  * __Vampiric Arrow:__ _(Cost 2)_ You can now craft vampiric arrows. Vampiric arrows do an additional 2d6 damage to an entity. You regain half of the damage done by a vampiric arrow to your health.  
+* __Advantages:__   
+  * __Uncanny Perception:__ You have uncanny perception, which allows you to sense your way in total darkness, gives you advantage on all perception checks, and let you role initiative with advantage.  
   
   
 __Level 10 Archer__
@@ -1017,11 +1022,7 @@ __Level 11 Archer__
   
   
 * __General Abilities:__   
-  * __Blink Arrows:__ _(Cost 2)_ After learning more about magic, you have learned how to create blink arrows. Blink arrows instantly teleport you to the position that they hit.  
-  
-  
-* __Advantages:__   
-  * __Uncanny Perception:__ You have uncanny perception, which allows you to sense your way in total darkness, and gives you advantage on all perception checks.  
+  * __Expert Fletcher:__ All arrows now cost 1 action point less.  
   
   
 __Level 12 Archer__
@@ -1031,18 +1032,13 @@ __Level 12 Archer__
   
   
 * __General Abilities:__   
-  * __Shock Arrow:__ _(Cost 2)_ You can now craft shock arrows. When a shock arrow hits an enemy, it deals 2d8 shock damage to them and any other entities within 30 feet. If an affected entity is wearing metal armor or is made of or standing in water, they take an extra 2d8 damage. All affected entities must make an inner fire saving throw against your spell power. On failure, they are knocked prone.  
+  * __Delayed Explosive Arrows:__ _(Cost 2)_ Fire an explosive arrow which detonates when you speak a command word.  
   
   
 __Level 13 Archer__
 
 * __Choices:__   
   * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __General Abilities:__   
-  * __Expert Fletcher:__ All arrows now cost 1 action point less.  
-  * __Anti-Gravity Arrows:__ _(Cost 2)_ You can now craft Anti-Gravity arrows. When an Anti-Gravity arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows last for one minute, 1d4 turns, or until the entity succeeds its inner fire saving throw.  
   
   
 * __Combat Abilities:__   
@@ -1055,6 +1051,10 @@ __Level 14 Archer__
   * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
   
   
+* __General Abilities:__   
+  * __Anti-Gravity Arrows:__ _(Cost 2)_ You can now craft Anti-Gravity arrows. When an Anti-Gravity arrow hits its target, they must make an inner fire saving throw against your spell power. On failure, gravity is reversed for them, and they fly towards the sky. Anti-gravity arrows last for one minute, 1d4 turns, or until the entity succeeds its spell power saving throw.  
+  
+  
 __Level 15 Archer__
 
 * __Choices:__   
@@ -1062,7 +1062,229 @@ __Level 15 Archer__
   
   
 * __General Abilities:__   
-  * __Firestorm Arrow:__ _(Cost 4)_ You can now craft firestorm arrows. A firestorm arrow does nothing for one turn or one minute after it strikes something. Then, it explodes into a massive pillar of flame with a fifteen foot diameter. All entities caught in the pillar of flame take 4d10 damage instantly. The pillar of flame stays for 3 turns.  
+  * __Firestorm Arrows:__ _(Cost 4)_ You can now craft firestorm arrows. A firestorm arrow does nothing for one turn or one minute after it strikes something. Then, it explodes into a massive pillar of flame with a fifteen foot diameter. All entities caught in the pillar of flame take 8d10 damage instantly. The pillar of flame stays for 3 turns.  
+  
+  
+  
+___
+
+  
+### Assassin
+  
+  
+Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
+  
+  
+|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-1|-2|0|1|2|2|  
+  
+  
+__Assassin Abilities:__ 
+* __Starting Items:__   
+  * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
+  
+  
+__Level 0 Assassin__
+
+* __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Thrown Weapon Proficiency:__ You are able to use thrown weapons, such as throwing knives, without disadvantage.  
+  
+  
+* __Advantages:__   
+  * __Lightfoot:__ Gain advantage on stealth checks.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
+  * __Master of Disguise:__ You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.  
+  * __Predator:__ When tracking, you have advantage on perception checks.  
+  
+  
+* __Combat Abilities:__   
+  * __Disengage:__ _(Cost 1)_ Spend an action point to avoid provoking exposed attacks. This effect ends if you make an attack.  
+  * __Disappear:__ Use an offhand action to attempt to hide. You must be out of line of sight of enemies and not where they would reasonably expect you to be.  
+  * __Strike From the Shadows:__ Do an additional dice of damage on an attacks made from hiding.  
+  
+  
+__Level 1 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Minor Spell of Distraction:__ _(Cost 1)_ As an offhand action, you may use magic to create a minor ruckus within 100 feet of yourself. This might include a loud sound or bright light. When used in combat, the enemy must make an inner fire save against your spell power or lose an action on their next turn and have the next attack against them made at advantage.  
+  * __Spell of Darkvision:__ _(Cost 1)_ As an Offhand Action, you may use minor magic to give yourself darkvision for one hour.  
+  
+  
+* __Combat Abilities:__   
+  * __Meat Shield:__ _(Cost 1)_ As a reaction when you are attacked, role a contested DEX check against an adjacent enemy of up to one size larger than yourself. On success, you may avoid the attack by pulling them into its way.  
+  * __Flow with the Battle:__ Move through spaces occupied by enemies at a cost of 10 feet of movement. You still leave yourself exposed as you do this.  
+  
+  
+__Level 2 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Poison Creation:__ During a rest, you are able to create a vial of poison which may have one of the following effects: add a dice of damage to a blade, slow an enemy to half movement, give an enemy disadvantage on its attacks for 1 turn if it fails an inner fire save against your spell power. You may stockpile at most 2 vials of poison.  
+  
+  
+* __Combat Abilities:__   
+  * __Draining Strike:__ _(Cost 1)_ Sap an enemies spirit with an attack. Regain half of the damage as health.  
+  
+  
+__Level 3 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Vicious Critical:__ On a critical hit, do an extra dice of damage.  
+  
+  
+__Level 4 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Minor Spell of Invisibility:__ _(Cost 1)_ As an Offhand Action, you may use minor magic to make yourself invisible for 5 minutes or 3 turns.  
+  
+  
+* __Combat Abilities:__   
+  * __High Ground:__ You have advantage on plunging attacks.  
+  
+  
+__Level 5 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Spell of Nimbleness:__ _(Cost 1)_ As an offhand action, cast a spell which makes you even nimbler, giving targeted ranged attacks take disadvantage against you for one hour or 1 battle.  
+  * __Throw Caution to the Wind:__ On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.  
+  
+  
+__Level 6 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Spell of True Sight:__ _(Cost 1)_ As an Offhand Action, use magic to grant yourself the effects of darkvision and may also see invisible objects and entities for one hour.  
+  * __Imposter:__ Gain 1d6 on any checks made to imitate someone.  
+  
+  
+__Level 7 Assassin__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Advantages:__   
+  * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
+  
+  
+* __Combat Abilities:__   
+  * __Line Them Up:__ If you slay an enemy, gain another attack action and 10 feet of movement.  
+  
+  
+__Level 8 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Spell of Invisibility:__ _(Cost 1)_ As an Offhand Action, you may use minor magic to make yourself invisible for 1 hour.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Flow with the Battle:__ Passing through enemy spaces no longer results in a movement penalty.  
+  
+  
+__Level 9 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Poison Creation:__ You can now create 2 vials of poison during a rest, and may stockpile 4.  
+  
+  
+* __Combat Abilities:__   
+  * __Corner:__ _(Cost 1)_ If an enemy moves to pass you within 15 feet to either side, you may move to block them.  
+  
+  
+__Level 10 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Assassinate:__ Do two dice of damage on attacks made from hiding. Replaces Strike from the Shadows.  
+  
+  
+__Level 11 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Spell of Distraction:__ _(Cost 2)_ As an offhand action, you may use magic to create a large distraction within 100 feet of yourself. This can include a moderately sized illusion, very loud noise or bright light, or the sound of someone's voice that you have heard. When in combat, all enemies within 30 feet of your target must make an spell power saving throw or loose an action on their next turn and have the next attack against them be made at advantage.  
+  
+  
+__Level 12 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Radiant Invisibility Break:__ Create a distraction equivalent to Minor Spell of Distraction when you break invisibility.  
+  
+  
+__Level 13 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
+  
+  
+__Level 14 Assassin__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Major Spell of Invisibility:__ _(Cost 1)_ As an Offhand Action, you may use magic to make yourself invisible.  
+  
+  
+__Level 15 Assassin__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __All-consuming Shadow:__ _(Cost 1)_ As an offhand action, fill an area up to 100 feet with magical darkness. The area must be within 50 feet of you.  
   
   
   
@@ -1102,6 +1324,7 @@ __Level 0 Bard__
   
 * __General Abilities:__   
   * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
@@ -1295,6 +1518,7 @@ __Level 0 Beastmaster__
   
   
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Animal Magnetism:__ Most animals inherently understand you on some level. You can attempt to persuade the actions of animals.  
   
   
@@ -1573,7 +1797,7 @@ __Level 9 Cleric__
   
   
 * __Combat Abilities:__   
-  * __Link Lifeforce:__ You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.  
+  * __Link Lifeforce:__ As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do.  
   
   
 __Level 10 Cleric__
@@ -1680,6 +1904,7 @@ __Level 0 Druid__
   
 * __General Abilities:__   
   * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Tier Zero Spells:__ You have achieved a basic knowledge of the arcane, and may now learn tier zero spells from any of your spellbooks.  
   
   
@@ -1857,6 +2082,8 @@ __Fighter Abilities:__
 __Level 0 Fighter__
 
 * __General Abilities:__   
+  * __Ranged Weapon Proficiency:__ You are able to use bows, throwing weapons, and simple projectile weapons without disadvantage.  
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Determination:__ _(Cost 1)_ Gain a d10 inspiration dice as an offhand action.  
   
   
@@ -1996,231 +2223,6 @@ __Level 15 Fighter__
 ___
 
   
-### Gunslinger
-<img src='images/class/gunslinger.jpg' class="raceClassImage" />
-
-"[Spellslinger"](https://www.deviantart.com/soldevia/art/Spellslinger-609290699) by SolDevia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
-  
-  
-Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
-  
-  
-|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|1|-1|-3|0|2|1|4|  
-  
-  
-__Gunslinger Abilities:__ 
-  
-  
-__Level 0 Gunslinger__
-
-* __Choices:__   
-  * __This is my Weapon:__ Your gun is the only friend you need. Make sure to give it a name.  
-  * __Gunslinger or Marksman:__ You may choose to subclass into a Gunslinger or a Marksman. Gunslinger's carry Pistols, and focus on shooting quickly and frequently. Marksmen carry a rifle, and aim to do high damage on single shots. On subsequent level-ups, you will gain unique abilities based on your choice.  
-  
-  
-* __Combat Abilities:__   
-  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
-  * __Called Shot:__ _(Cost 1)_ Aim for a specific part of an enemy. The enemy must make a spell power save or drop a weapon, be blinded, or be knocked prone.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Pistol:__ You begin your adventure with a pistol.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __Rifle:__ You begin your adventure with a rifle.  
-  * __Bayonet:__ You can affix a dagger to your rifle, which functions as a bayonet.  
-  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush forward 10 feet, doing an additional dice of damage to your target. The target must win at a contested strength check or fall prone. This distance can be in addition to you standard movement.  
-  
-  
-__Level 1 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Flash Grenade:__ _(Cost 1)_ Throw a flash grenade. These grenades have a 10ft radius on explosion. If an entity that sees the explosion a D10 dexterity saving throw, they are blinded for 2 turns, and all actions they take have disadvantage.  
-  * __Repeating Shot:__ _(Cost 1)_ Make an extra attack during your action.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __Flame Strike:__ _(Cost 1)_ Spend one action point to add one dice of fire damage to an attack.  
-  
-  
-__Level 2 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 3 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __High Grain:__ Add 1 to your firearm damage.  
-  * __From the Hip:__ _(Cost 1)_ Reaction. Fire a retaliation shot before you are attacked. If your enemy fails a Spell Power save, they attack is stopped.  
-  
-  
-__Level 4 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 5 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __High Grain:__ Add 1 to your firearm damage.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Quickdraw:__ Add 1d4 to your initiative.  
-  
-  
-__Level 6 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 7 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Gunslinger Abilities__  
-* Actions:   
-  * __Twin Guns:__ You are able to wield two firearms. You may attack with both in a single action.  
-  
-  
-__Marksman Abilities__  
-* Actions:   
-  * __Offhand Attack:__ You may use an offhand action to make an attack.  
-  
-  
-* Combat Abilities:   
-  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
-  
-  
-__Level 8 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 9 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Feeling Lucky:__ _(Cost 1)_ Add a number of d4's equal to your luck to an attack.  
-  * __Fastest Gun:__ Add 1d10 to your initiative.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone and are unaffected by armor.  
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
-  * __Reduced Critical:__ Decrease your critical hit target by 1.  
-  
-  
-__Level 10 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 11 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Hollowpoint:__ Your shots do 1d6 additional damage to unarmored targets.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __Penetration:__ _(Cost 1)_ Fire a shot that will pass through enemies, hitting multiple.  
-  
-  
-__Level 12 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 13 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Harrying Shot:__ On a critical hit, the attacked entity must make their next move with disadvantage.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Strike First:__ _(Cost 1)_ Reaction. When an enemy attacks you, attack them first.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __High Grain:__ Add 1 to your firearm damage.  
-  
-  
-__Level 14 Gunslinger__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 15 Gunslinger__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Combat Abilities:__   
-  * __Reduced Critical:__ Decrease your critical hit target by 1.  
-  
-  
-__Gunslinger Abilities__  
-* Combat Abilities:   
-  * __Volley:__ _(Cost 2)_ Attack every enemy you can see in a single action.  
-  
-  
-__Marksman Abilities__  
-* Combat Abilities:   
-  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
-  
-  
-  
-___
-
-  
 ### Highborn
 <img src='images/class/highborn.jpg' class="raceClassImage" />
 
@@ -2248,6 +2250,7 @@ __Highborn Abilities:__
 __Level 0 Highborn__
 
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Happy Smiles:__ Your presence increases party cheer in good weather, giving them a d8 inspiration dice once per day. It also decreases it in bad weather, giving them -1 charisma.  
   
   
@@ -2389,10 +2392,6 @@ __Level 15 Highborn__
   * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
   
   
-* __Combat Abilities:__   
-  * __Strike First:__ _(Cost 1)_ Reaction. When an enemy attacks you, attack them first.  
-  
-  
   
 ___
 
@@ -2419,6 +2418,7 @@ __Knight Abilities:__
 __Level 0 Knight__
 
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
   * __Shield Training:__ Don't take movement penalties from shield use.  
   * __Armor Training:__ Don't take movement penalties from armor use.  
   
@@ -2440,7 +2440,7 @@ __Level 1 Knight__
   
   
 * __Combat Abilities:__   
-  * __Shield Bash:__ _(Cost 1)_ Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering them if they fail a contested strength check. A staggered enemy looses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
+  * __Shield Bash:__ _(Cost 1)_ Use an offhand action to shield bash an enemy, dealing 1d4 damage and staggering them if they fail a contested strength check. A staggered enemy loses one of its actions. At level 4, damage increases to 1d8. At level 8, damage increases to 1d10. At level 12, damage increases to 1d12.  
   * __Ready Stance:__ As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack.  
   
   
@@ -2493,7 +2493,7 @@ __Level 6 Knight__
   
   
 * __Combat Abilities:__   
-  * __Charge:__ _(Cost 1)_ As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The looser is knocked prone.  
+  * __Charge:__ _(Cost 1)_ As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The loser is knocked prone.  
   
   
 __Level 7 Knight__
@@ -2591,6 +2591,214 @@ __Level 15 Knight__
 ___
 
   
+### Marksman
+  
+  
+Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
+  
+  
+|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|-3|1|-1|0|2|1|4|  
+  
+  
+__Marksman Abilities:__ 
+  
+  
+__Level 0 Marksman__
+
+* __Choices:__   
+  * __This is my Weapon:__ Your gun is the only friend you need. Make sure to give it a name.  
+  
+  
+* __General Abilities:__   
+  * __Proficient With Firearms:__ You are able to use firearms without disadvantage.  
+  * __Firearm Creation and Modification:__ You are able to create and modify your firearms as detailed in the rulebook.  
+  
+  
+* __Starting Items:__   
+  * __Rifle:__ You begin your adventure with a rifle.  
+  
+  
+* __Advantages:__   
+  * __Natural Intellect:__ You have a natural intelligence which grants you advantage on intelligence checks.  
+  
+  
+* __Combat Abilities:__   
+  * __Called Shot:__ _(Cost 1)_ Aim for a specific part of an enemy. Add an extra damage dice. The enemy must make a spell power save or drop a weapon, be blinded, drop 50 feet if flying, or be knocked prone.  
+  * __Strike From the Shadows:__ Do an additional dice of damage on an attacks made from hiding.  
+  * __Disappear:__ Use an offhand action to attempt to hide. You must be out of line of sight of enemies and not where they would reasonably expect you to be.  
+  
+  
+__Level 1 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Focus:__ _(Cost 1)_ Focus before a shot to gain advantage on it. Removes distance penalties.  
+  * __Harrying Critical:__ On a critical hit, the attacked entity is considered harried and must make its next action with disadvantage.  
+  
+  
+__Level 2 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Bull Rush:__ _(Cost 1)_ Spend 1 action point to rush forward 10 feet. This rush may end in a melee attack which does an additional dice of damage to your target. The target must win at a contested strength check or fall prone.  
+  
+  
+__Level 3 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Advantages:__   
+  * __Steady:__ Do not take disadvantage when being jostled about.  
+  
+  
+* __Combat Abilities:__   
+  * __Tracer Round:__ Fire a bright tracer round to gage the exact distance to an enemy. Add a dice of fire damage to the attack and give the next attack made against the enemy advantage.  
+  
+  
+__Level 4 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Vicious Critical:__ On a critical hit, do an extra dice of damage.  
+  
+  
+__Level 5 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Forceful Shot:__ Fire a shot which carries force behind it. Add an additional dice of damage and force the enemy to make an inner fire saving throw against your spell power. On failure, they are pushed back fifteen feet.  
+  * __Line Them Up:__ If you slay an enemy, gain another attack action and 10 feet of movement.  
+  
+  
+__Level 6 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Elemental Strike:__ _(Cost 1)_ Convert your damage to a different type as a free action.  
+  
+  
+__Level 7 Marksman__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Reduced Critical:__ Decrease your critical hit target by 1.  
+  * __Armor Penetrating Rounds:__ Your shots now pass through up to 1 foot of stone or 1 enemey and are unaffected by armor.  
+  
+  
+__Level 8 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Warrior Spirit:__ If you slay an enemy, regain one action point.  
+  
+  
+__Level 9 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Bull Rush:__ Bull rush now carries you 20 feet.  
+  
+  
+__Level 10 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Firearm Creation and Modification:__ You have advantage on checks used to create and modify firearms, and have access to advanced firearm designs.  
+  
+  
+* __Combat Abilities:__   
+  * __Assassinate:__ Do two dice of damage on attacks made from hiding. Replaces Strike from the Shadows.  
+  
+  
+__Level 11 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Set Up:__ Take five minutes or 1 round of combat to guarantee that your next shot is a critical hit.  
+  
+  
+__Level 12 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Called Critical:__ On critical hit, immediately apply one of the effects from called shot to the enemy. If the critical is on a called shot, apply a second effect.  
+  
+  
+__Level 13 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Armor Penetrating Rounds:__ Your shots now pass up to three enemies.  
+  
+  
+__Level 14 Marksman__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Elemental Strike:__ There is no longer a cost associated with converting your damage type.  
+  
+  
+__Level 15 Marksman__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Line Them Up:__ When you score a critical hit on an enemy, gain another attack action and 10 feet of movement.  
+  
+  
+  
+___
+
+  
 ### Monk
 <img src='images/class/monk.jpg' class="raceClassImage" />
 
@@ -2621,6 +2829,8 @@ __Level 0 Monk__
   
   
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Hand to Hand Combat:__ Your hands are 1d6 weapons.  
   * __Fighting Techniques:__ You may learn a new fighting technique from the book of chi.  
   
   
@@ -2980,6 +3190,8 @@ __Level 0 Paladin__
   
 * __General Abilities:__   
   * __Learn Spells:__ Each time you level up, learn one new spell of each spell tier that you have access to. Spells must be learned from one of your spellbooks.  
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Thrown Weapon Proficiency:__ You are able to use thrown weapons, such as throwing knives, without disadvantage.  
   * __Minor Boon:__ You have access to a minor boon from your chosen deity. See the pantheon for details.  
   * __Shield Training:__ Don't take movement penalties from shield use.  
   * __Armor Training:__ Don't take movement penalties from armor use.  
@@ -2990,7 +3202,7 @@ __Level 0 Paladin__
   * __Hammer of Light:__ Any weapon that you wield does an additional dice of damage to undead.  
   * __Faithful Weapon:__ After throwing your weapon, you can return it to yourself. You do not take disadvantage when throwing hammers or maces.  
   * __Pivot:__ As an offhand action, trade spaces with an adjacent ally.  
-  * __Healing Blow:__ _(Cost 1)_ Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to any allies within 15 feet of you.  
+  * __Healing Blow:__ _(Cost 1)_ Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to yourself and any allies within 15 feet of you.  
   
   
 __Level 1 Paladin__
@@ -3026,7 +3238,7 @@ __Level 3 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Link Lifeforce:__ You may choose to take any portion of damage done to an ally with a guardian ward in place of the ally.  
+  * __Link Lifeforce:__ As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do.  
   
   
 __Level 4 Paladin__
@@ -3133,8 +3345,7 @@ __Level 11 Paladin__
   
   
 * __Combat Abilities:__   
-  * __Greater Link Lifeforce:__ Half any damage taken from linking lifeforce with an ally with a guardian ward.  
-  * __Shared Healing:__ If a paladin heals one ally with a guardian ward, it heals the other for half as much.  
+  * __Greater Link Lifeforce:__ Halve any damage taken from linking lifeforce with an ally with a guardian ward.  
   
   
 __Level 12 Paladin__
@@ -3211,10 +3422,12 @@ __Path Of Nature Barbarian Abilities:__
 __Level 0 Path Of Nature Barbarian__
 
 * __General Abilities:__   
-  * __Spiritual Infusion:__ _(Cost 1)_ Equip one of your aspects.  
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Thrown Weapon Proficiency:__ You are able to use thrown weapons, such as throwing knives, without disadvantage.  
+  * __Spiritual Infusion:__ _(Cost 1)_ As an offhand action, equip one of your aspects.  
   * __Elk Aspect:__ Gain an additional 15 feet of movement and advantage on athletics checks.  
   * __Wolf Aspect:__ If you attack an enemy with an ally, gain advantage. Gain advantage on tracking checks.  
-  * __Wildcat Aspect:__ When attacked, role 1d20 and add your dexterity. On a 15 or above, dodge the attack. Gain advantage on stealth checks.  
+  * __Wildcat Aspect:__ When attacked, role 1d20 and add your dexterity. On a 17 or above, dodge the attack. Gain advantage on stealth checks.  
   * __Bull Aspect:__ Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks.  
   * __Bear Aspect:__ You take half blunt and piercing damage.  
   * __Elemental Aspect:__ Convert your damage to a different type. You must declare the type when this aspect is equipped.  
@@ -3273,7 +3486,11 @@ __Level 5 Path Of Nature Barbarian__
   
   
 * __General Abilities:__   
-  * __Greater Spiritual Infusion:__ _(Cost 1)_ Equip two of your aspects.  
+  * __Greater Spiritual Infusion:__ _(Cost 1)_ As an offhand action, equip two of your aspects.  
+  
+  
+* __Combat Abilities:__   
+  * __Phase Walk:__ If you kill an enemy with a spiritual weapon, you may instantly teleport to their position.  
   
   
 __Level 6 Path Of Nature Barbarian__
@@ -3327,7 +3544,7 @@ __Level 10 Path Of Nature Barbarian__
   
   
 * __General Abilities:__   
-  * __Major Spiritual Infusion:__ _(Cost 1)_ Equip three of your aspects.  
+  * __Major Spiritual Infusion:__ _(Cost 1)_ As an offhand action, equip three of your aspects.  
   
   
 __Level 11 Path Of Nature Barbarian__
@@ -3347,7 +3564,7 @@ __Level 12 Path Of Nature Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Phase Walk:__ If you strike an enemy with a spiritual weapon, you may instantly teleport to their position.  
+  * __Greater Phase Walk:__ _(Cost 1)_ You may now spend 1 action point to phase walk to an enemy any time you strike them with a spiritual weapon.  
   
   
 __Level 13 Path Of Nature Barbarian__
@@ -3377,7 +3594,7 @@ __Level 15 Path Of Nature Barbarian__
   
   
 * __General Abilities:__   
-  * __Legendary Spiritual Infusion:__ _(Cost 1)_ Equip six of your aspects.  
+  * __Legendary Spiritual Infusion:__ _(Cost 1)_ As an offhand action, equip six of your aspects.  
   
   
   
@@ -3406,6 +3623,8 @@ __Path Of Rage Barbarian Abilities:__
 __Level 0 Path Of Rage Barbarian__
 
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Thrown Weapon Proficiency:__ You are able to use thrown weapons, such as throwing knives, without disadvantage.  
   * __Throw Anything:__ You can throw anything up to one size larger than yourself.  
   
   
@@ -3467,7 +3686,6 @@ __Level 5 Path Of Rage Barbarian__
   
 * __Combat Abilities:__   
   * __Chain Attack:__ After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon.  
-  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
   
   
 __Level 6 Path Of Rage Barbarian__
@@ -3477,7 +3695,7 @@ __Level 6 Path Of Rage Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Adrenaline:__ When you are below 50% health, gain an extra 10 feet of movement.  
+  * __The Opener:__ If you attack an enemy that has not yet moved in combat, do double damage. If they fail a contested strength saving throw, they are knocked prone.  
   
   
 __Level 7 Path Of Rage Barbarian__
@@ -3491,7 +3709,7 @@ __Level 7 Path Of Rage Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Terrify:__ Singled out enemies must make a spell power save or be frightened.  
+  * __Adrenaline:__ When you are below 50% health, gain an extra 10 feet of movement.  
   
   
 __Level 8 Path Of Rage Barbarian__
@@ -3501,7 +3719,7 @@ __Level 8 Path Of Rage Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Arching Swing:__ _(Cost 1)_ Make an attack which damages all enemies adjacent to you.  
+  * __Terrify:__ Singled out or Marked enemies must make a spell power save or be frightened.  
   
   
 __Level 9 Path Of Rage Barbarian__
@@ -3541,7 +3759,7 @@ __Level 12 Path Of Rage Barbarian__
   
   
 * __Combat Abilities:__   
-  * __The Closer:__ If you attack an enemy that is prone, add two additional dice of damage.  
+  * __Arching Swing:__ _(Cost 1)_ Make an attack which damages all enemies adjacent to you.  
   
   
 __Level 13 Path Of Rage Barbarian__
@@ -3551,7 +3769,7 @@ __Level 13 Path Of Rage Barbarian__
   
   
 * __Combat Abilities:__   
-  * __Glory:__ When your health falls below 25%, double all damage you deal.  
+  * __Glory:__ When your health falls below 25%, add an extra damage dice to all attacks.  
   
   
 __Level 14 Path Of Rage Barbarian__
@@ -3600,6 +3818,8 @@ __Ranger Abilities:__
 __Level 0 Ranger__
 
 * __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Ranged Weapon Proficiency:__ You are able to use bows, throwing weapons, and simple projectile weapons without disadvantage.  
   * __Minor Medicine:__ _(Cost 1)_ Spend 20 minutes to create a salve. Salves keep for 24 hours.  
   
   
@@ -3632,7 +3852,7 @@ __Level 3 Ranger__
   
   
 * __General Abilities:__   
-  * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
+  * __Spell of Darkvision:__ _(Cost 1)_ As an Offhand Action, you may use minor magic to give yourself darkvision for one hour.  
   
   
 * __Combat Abilities:__   
@@ -3738,229 +3958,6 @@ __Level 15 Ranger__
   
 * __Combat Abilities:__   
   * __Fire and Ice:__ _(Cost 2)_ Imbue one of your blades with fire and the other with ice. Each do an additional 1d6 damage for the duration of a battle.  
-  
-  
-  
-___
-
-  
-### Rogue
-<img src='images/class/male/rogue.jpg' class="raceClassImage" />
-
-"[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
-  
-  
-Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
-  
-  
-|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-1|-2|0|1|2|2|  
-  
-  
-__Rogue Abilities:__ 
-* __Starting Items:__   
-  * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
-  
-  
-__Level 0 Rogue__
-
-* __Advantages:__   
-  * __Lightfoot:__ Gain advantage on stealth checks.  
-  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
-  
-  
-* __Combat Abilities:__   
-  * __Disengage:__ _(Cost 1)_ Spend an action point to avoid provoking exposed attacks.  
-  
-  
-__Level 1 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __General Abilities:__   
-  * __Strike From the Shadows:__ Do an additional dice of damage on an attacks made from hiding.  
-  
-  
-* __Advantages:__   
-  * __Mantel:__ You have advantage on dexterity checks when climbing.  
-  
-  
-* __Combat Abilities:__   
-  * __Disappear:__ _(Cost 1)_ Spend an action point to attempt to hide.  
-  
-  
-__Level 2 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 3 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-* __Advantages:__   
-  * __Master of Disguise:__ You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.  
-  
-  
-* __Combat Abilities:__   
-  * __High Ground:__ Gain advantage on any plunging attacks.  
-  
-  
-__Level 4 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 5 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  * __Thief or Assassin:__ You may choose to subclass into a Thief or an Assassin. Thieves focus on sneaking and theft. Assassins maximize their damage output to kill enemies before they have a chance to react. On subsequent level-ups, you will gain unique abilities based on your choice.  
-  
-  
-__Assassin Abilities__  
-* General Abilities:   
-  * __Imposter:__ Gain 1d6 on any checks made to imitate someone.  
-  * __Spell of Darkvision:__ _(Cost 1)_ You may use minor magic to give yourself darkvision for one hour.  
-  
-  
-__Thief Abilities__  
-* General Abilities:   
-  * __Soft Landing:__ Reduce any falling damage by 20 feet.  
-  * __Soundless:__ Gain an additional 1d6 on stealth checks.  
-  * __Sticky Fingers:__ Add 1d6 to any check made to steal something.  
-  
-  
-__Level 6 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 7 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Assassin Abilities__  
-* Actions:   
-  * __Offhand Attack:__ You may use an offhand action to make an attack.  
-  
-  
-* General Abilities:   
-  * __Poison:__ Once per day, create a draught of deadly poison. If ingested, the poison does 3d20 damage. If placed on a blade, the blade does an additional 1d10 damage. Poison keeps for 24 hours. Creating poison takes 6 continuous hours.  
-  
-  
-__Thief Abilities__  
-* Actions:   
-  * __Offhand Attack:__ You may use an offhand action to make an attack.  
-  
-  
-* Combat Abilities:   
-  * __Pickpocket:__ If you land a critical hit, steal an item the enemy is holding.  
-  
-  
-__Level 8 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 9 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Assassin Abilities__  
-* General Abilities:   
-  * __Minor Blink:__ _(Cost 1)_ Teleport to a position you can see within 100 feet.  
-  * __Spell of Minor Invisibility:__ _(Cost 1)_ You may use minor magic to make yourself invisible for 5 minutes.  
-  
-  
-__Thief Abilities__  
-* General Abilities:   
-  * __Trap Expert:__ Gain advantage when looking for, disarming, or creating traps.  
-  
-  
-__Level 10 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 11 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Assassin Abilities__  
-* Combat Abilities:   
-  * __Reduced Critical:__ Decrease your critical hit target by 1.  
-  
-  
-__Thief Abilities__  
-* General Abilities:   
-  * __Lucky Actions:__ You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. These tokens refill on a long rest.  
-  
-  
-__Level 12 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 13 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Assassin Abilities__  
-* Combat Abilities:   
-  * __Line Them Up:__ If you slay an enemy, gain another attack action.  
-  * __Savage Critical:__ On a critical hit, do an additional dice of damage and give all enemies within 30 feet disadvantage on their next action.  
-  
-  
-__Thief Abilities__  
-* General Abilities:   
-  * __Party Save:__ _(Cost 1)_ Add 1d10 to one party member's stealth check.  
-  * __Superior Mantel:__ Add 1d6 to all climbing checks.  
-  
-  
-__Level 14 Rogue__
-
-* __Choices:__   
-  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
-  
-  
-__Level 15 Rogue__
-
-* __Choices:__   
-  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
-  
-  
-__Assassin Abilities__  
-* General Abilities:   
-  * __All-consuming Shadow:__ _(Cost 1)_ Fill a 100 foot radius with pitch darkness as an offhand action.  
-  
-  
-* Combat Abilities:   
-  * __Assassinate:__ If an enemy is unsuspecting, do double damage. An enemy is unsuspecting if they don't know you are present. Hiding for less than one round of combat is not enough.  
-  
-  
-__Thief Abilities__  
-* General Abilities:   
-  * __Spider Climb:__ You are able to climb on walls as though you are a spider.  
   
   
   
@@ -4148,6 +4145,214 @@ __Level 15 Sorcerer__
   
 * __Combat Abilities:__   
   * __Light and Shadow:__ While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability, and advantage on any inner fire saving throws, including the one used to keep control of the spirit.  
+  
+  
+  
+___
+
+  
+### Thief
+  
+  
+Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
+  
+  
+|STR|DEX|INT|INF|CHR|PER|LUK|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-1|-2|0|1|2|2|  
+  
+  
+__Thief Abilities:__ 
+* __Starting Items:__   
+  * __A Thief's Gear:__ You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and a hidden 1d6 dagger.  
+  
+  
+__Level 0 Thief__
+
+* __General Abilities:__   
+  * __Melee Weapon Proficiency:__ When you attack with a strength based weapon, you may add your strength stat to your attack. When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.  
+  * __Thrown Weapon Proficiency:__ You are able to use thrown weapons, such as throwing knives, without disadvantage.  
+  
+  
+* __Advantages:__   
+  * __Lightfoot:__ Gain advantage on stealth checks.  
+  * __Nimble Fingers:__ You have advantage on dexterity and stealth checks made while stealing.  
+  * __Mantel:__ You have advantage on dexterity checks when climbing.  
+  
+  
+* __Combat Abilities:__   
+  * __Disengage:__ _(Cost 1)_ Spend an action point to avoid provoking exposed attacks. This effect ends if you make an attack.  
+  * __Disappear:__ Use an offhand action to attempt to hide. You must be out of line of sight of enemies and not where they would reasonably expect you to be.  
+  * __Strike From the Shadows:__ Do an additional dice of damage on an attacks made from hiding.  
+  
+  
+__Level 1 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Trap Expert:__ Gain advantage when looking for, disarming, or creating traps.  
+  
+  
+* __Combat Abilities:__   
+  * __Pickpocket:__ Add a damage dice to an attack and force the target to make a contested dexterity check. On success, steal something from the enemy.  
+  * __Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get a 17 or above, the attack misses.  
+  
+  
+__Level 2 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Advantages:__   
+  * __Master of Disguise:__ You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.  
+  
+  
+* __Combat Abilities:__   
+  * __Slip Away:__ When you slay an enemy, you may immediately disengage for free.  
+  
+  
+__Level 3 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Flow with the Battle:__ Move through spaces occupied by enemies at a cost of 10 feet of movement. You still leave yourself exposed as you do this.  
+  
+  
+__Level 4 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Flank:__ If an enemy is harried --one of your allies is adjacent -- gain advantage on attacks made from behind it. You are considered to be hiding from an enemy while flanking it.  
+  
+  
+__Level 5 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Ride the Blindspot:__ _(Cost 1)_ If you are flanking an enemy and it tries to turn to look at you, spend an action point to pivot around it.  
+  * __Assisted Strike:__ If you have advantage on an attack, you may instead add an additional dice of damage to it. This stacks from multiple sources.  
+  
+  
+__Level 6 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Soft Landing:__ Reduce any falling damage by 20 feet.  
+  
+  
+* __Combat Abilities:__   
+  * __High Ground:__ You have advantage on plunging attacks.  
+  
+  
+__Level 7 Thief__
+
+* __Actions:__   
+  * __Offhand Attack:__ You may use an offhand action to make an attack.  
+  
+  
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Sticky Fingers:__ Add 1d4 to any check made to steal something.  
+  
+  
+* __Combat Abilities:__   
+  * __Break Away:__ If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.  
+  
+  
+__Level 8 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Greater Mantel:__ Add 1d6 to all climbing checks.  
+  * __Soundless:__ Gain an additional 1d6 on stealth checks.  
+  
+  
+__Level 9 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __General Abilities:__   
+  * __Party Save:__ _(Cost 1)_ Give all allies 1d10 to role on a stealth check..  
+  
+  
+__Level 10 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Mark:__ _(Cost 1)_ As an offhand action, mark an enemy. While marked, the enemy takes disadvantage in all attacks made against you and is considered to be harried. You gain advantage while tracking marked enemies.  
+  
+  
+__Level 11 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+__Level 12 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get a 17 or above, the attack misses.  
+  
+  
+__Level 13 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Flow with the Battle:__ Passing through enemy spaces no longer results in a movement penalty.  
+  
+  
+__Level 14 Thief__
+
+* __Choices:__   
+  * __Major Stat Increase:__ You gain two stat points to add to a stat or stats of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Greater Slip Away:__ When you slip away, also regain your full movement.  
+  
+  
+__Level 15 Thief__
+
+* __Choices:__   
+  * __Minor Stat Increase:__ You gain one stat point to add to a stat of your choosing.  
+  
+  
+* __Combat Abilities:__   
+  * __Redirecting Dodge:__ _(Cost 1)_ Redirect any dodged damage to an enemy within range.  
   
   
   
