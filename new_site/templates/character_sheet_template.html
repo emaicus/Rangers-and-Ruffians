@@ -3,7 +3,7 @@
     <div class="row h-100" style="margin-bottom: 0px;">
       <div class="col-12">
         <div id="characterDetails" class="characterDetails">
-          <div class="row" style="height:7.5vh; margin-bottom: 0px;">
+          <div class="row topCharacter">
             <div class="col-5">
               <span class="characterName" id="characterName"> {{ name }}</span><br/>
             </div>
@@ -18,7 +18,7 @@
               </div>
             </div>
           </div>
-          <div class="row" style="height:6.5vh; margin-bottom: 0px;">
+          <div class="row bottomCharacter">
             <div class="col-3">
               <p>
                 {% if subrace and subrace != "" %}
@@ -166,7 +166,7 @@
                       {% endif %}
                     </span>
                     <span class="normalText">
-                      {{ability_info['description']}}
+                      {{ability_info['brief']}}
                     </span>
                   </p>
                 {% endfor %}
@@ -186,7 +186,7 @@
                   {% endif %}
                 </span>
                 <span class="normalText">
-                  {{ability_info['description']}}
+                  {{ability_info['brief']}}
                 </span>
               </p>
             {% endfor %}
@@ -206,7 +206,7 @@
                       {% endif %}
                       </span>
                       <span class="normalText">
-                        {{ability_info['description']}}
+                        {{ability_info['brief']}}
                       </span>
                     </p>
                   {% endfor %}
@@ -225,7 +225,7 @@
                       {% endif %}
                       </span>
                       <span class="normalText">
-                        {{ability_info['description']}}
+                        {{ability_info['brief']}}
                       </span>
                     </p>
                   {% endfor %}

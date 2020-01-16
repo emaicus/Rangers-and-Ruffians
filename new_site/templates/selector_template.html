@@ -1,0 +1,9 @@
+{{title}}
+{% if title %}
+<br/>
+{% endif %}
+<select data-style="btn-primary" id={{id}} onChange="selectButtonUpdateHandler();">
+  {% for item in data | sort %}
+    <option value="{{item}}" {% if item == chosen %} selected {% endif %} >{{item}}</option>
+  {% endfor %}
+</select>

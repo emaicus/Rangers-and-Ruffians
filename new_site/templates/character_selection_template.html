@@ -10,23 +10,23 @@
   <br/>
   <select data-style="btn-primary" id="chosen_level" onChange="updateCharacterSheet();">
     {% for i in range(0, 16) -%}
-      <option value={{i}}>Level {{i}}</option>
+      <option value="{{i}}">Level {{i}}</option>
     {% endfor %}
   </select>
   <br/>
   Character Race:
   <br/>
   <select data-style="btn-primary" id="chosen_race" onChange="updateCharacterSheet();">
-    {% for race in races | sort %}
-      <option value={{race}}>{{race}}</option>
+    {% for race in race_names | sort %}
+      <option value="{{race}}" {% if race == chosen_race %} selected {% endif %} >{{race}}</option>
     {% endfor %}
   </select>
   <br/>
   Character Class:
   <br/>
   <select data-style="btn-primary" id="chosen_class" onChange="updateCharacterSheet();">
-    {% for rnr_class in classes | sort %}
-      <option value={{rnr_class}}>{{rnr_class}}</option>
+    {% for rnr_class in class_names | sort %}
+      <option value="{{rnr_class}}" {% if rnr_class == chosen_class %} selected {% endif %} >{{rnr_class}}</option>
     {% endfor %}
   </select>
   <br/>

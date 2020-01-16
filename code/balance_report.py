@@ -181,7 +181,8 @@ def vitality_chart(data_packet):
 Spell output function. Call spell_stats()
 '''
 def spell_stats():
-  wizard = rnr_utils.get_rnr_class_data_with_name('wizard')
+  wizard = rnr_utils.get_subclass_data_with_name('Wizard')
+  print(json.dumps(wizard, indent=4))
 
   print('Assuming classes start with 2 spells, and wizard spell gaining cadence')
   print()
@@ -192,7 +193,7 @@ def spell_stats():
     level_string = 'level_{0}'.format(num)
     if not level_string in wizard['levels']:
       continue
-    if 'abilities' in wizard['levels'][level_string]:
+    if 'abilities' in wizard['levels'][level_string] and wizard['levels'][level_string]["abilities"] is not None and len(wizard['levels'][level_string]["abilities"]) >= 1:
       for ability in wizard['levels'][level_string]['abilities']:
         if 'Level' in ability and 'Spells' in ability:
           split = ability.split(' ')
@@ -227,11 +228,12 @@ def get_all_class_abilities_used():
   rnr_classes = rnr_utils.get_rnr_class_dict()
   abilities = list()
   for rnr_class, info in rnr_classes.items():
-    abilities += info.get('base_abilities', list())
-    for level, stats in info['levels'].items():
-      for key, value in stats.items():
-        if 'abilities' in key and not stats[key] is None:
-          abilities += value
+    for subclass, subclass_info in info["subclasses"].items():
+      abilities += subclass_info.get('base_abilities', list())
+      for level, stats in subclass_info['levels'].items():
+        for key, value in stats.items():
+          if 'abilities' in key and not stats[key] is None:
+            abilities += value
   return abilities 
 
 def get_non_existent_abilities():
@@ -286,46 +288,6 @@ def print_abilities(subclass, abilities, file_stream):
     file_stream.write('    {0}\n'.format(ability))
   file_stream.write('\n')
 
-def process_classes():
-  class_names = rnr_utils.get_all_class_names()
-  if not os.path.exists(STAT_OUTPUT):
-    os.mkdir(STAT_OUTPUT)
-  if not os.path.exists(os.path.join(STAT_OUTPUT, 'level_output')):
-    os.mkdir(os.path.join(STAT_OUTPUT, 'level_output'))
-
-  for name in class_names:
-    with open(os.path.join(STAT_OUTPUT, 'level_output','{0}.txt'.format(name)), 'w') as outfile:
-      for level in range(0,16):
-        subclasses = rnr_utils.subclasses_at_level(name, level)
-
-        if len(subclasses) == 0:
-          subclasses.add('')
-                
-        for subclass in subclasses:
-          rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
-          print_header(level, name, outfile)
-          print_stats(rnr_class_object.stats, outfile)
-          print_abilities(subclass, rnr_class_object.abilities, outfile)
-
-def level_details(level=0):
-  class_names = rnr_utils.get_all_class_names()
-  if not os.path.exists(STAT_OUTPUT):
-    os.path.mkdir(STAT_OUTPUT)
-  if not os.path.exists(os.path.join(STAT_OUTPUT, 'level_output')):
-    os.mkdir(os.path.join(STAT_OUTPUT, 'level_output'))
-  
-  with open(os.path.join(STAT_OUTPUT, 'level_output','level_{0}.txt'.format(level)), 'w') as outfile:
-    for name in class_names:
-      subclasses = rnr_utils.subclasses_at_level(name, level)
-
-      if len(subclasses) == 0:
-        subclasses.add('')
-              
-      for subclass in subclasses:
-        rnr_class_object = rnr_utils.rnr_class(name, level,subclass=subclass)
-        print_header(level, name, outfile)
-        print_stats(rnr_class_object.stats, outfile)
-        print_abilities(subclass, rnr_class_object.abilities, outfile)   
 
 '''
 Game stats. call game_stats()
@@ -341,11 +303,9 @@ def evaluate(num, target):
 
 def game_stats():
   store_data = dict()
-  process_classes()
   rnr_utils.load_Rangers_And_Ruffians_Data()
 
   all_races = rnr_utils.load_all_race_objects()
-  all_classes = rnr_utils.load_all_class_objects_by_type()
 
   target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
 
@@ -354,12 +314,6 @@ def game_stats():
   print('R&R CONSISTS OF:')
   print('{0} Races'.format(len(all_races)))
   print('{0} Classes consisting of:'.format(len(rnr_utils.load_all_class_objects())))
-
-  total = 0
-  for class_type, classes in all_classes.items():
-    total+= len(classes)
-    print('    {0} {1} classes'.format(len(classes), class_type))
-  print()
 
   ability_counts = {}
   total = 0
@@ -771,25 +725,25 @@ def check_pantheon():
 
   return all_errors
 
-def check_for_stat_increases():
-  all_errors = list()
-  class_names = rnr_utils.get_all_class_names()
-  for name in class_names:
-    all_data = rnr_utils.get_rnr_class_data_with_name(name)
-    level_data = all_data['levels']
-    for i in range(1,16):
-      level_str = f'level_{i}'
-      if i % 2 == 0:
-        if not 'Major Stat Increase' in level_data[level_str]['abilities']:
-          all_errors.append(f"ERROR: {name} {level_str} missing Major Stat Increase")
-        if 'Minor Stat Increase' in level_data[level_str]['abilities']:
-          all_errors.append(f"ERROR: {name} {level_str} has Minor Stat Increase")
-      else:
-        if not 'Minor Stat Increase' in level_data[level_str]['abilities']:
-          all_errors.append(f"ERROR: {name} {level_str} missing Minor Stat Increase")
-        if 'Major Stat Increase' in level_data[level_str]['abilities']:
-          all_errors.append(f"ERROR: {name} {level_str} has Major Stat Increase")
-  return all_errors
+# def check_for_stat_increases():
+#   all_errors = list()
+#   class_names = rnr_utils.get_all_class_names()
+#   for name in class_names:
+#     all_data = rnr_utils.get_rnr_class_data_with_name(name)
+#     level_data = all_data['levels']
+#     for i in range(1,16):
+#       level_str = f'level_{i}'
+#       if i % 2 == 0:
+#         if not 'Major Stat Increase' in level_data[level_str]['abilities']:
+#           all_errors.append(f"ERROR: {name} {level_str} missing Major Stat Increase")
+#         if 'Minor Stat Increase' in level_data[level_str]['abilities']:
+#           all_errors.append(f"ERROR: {name} {level_str} has Minor Stat Increase")
+#       else:
+#         if not 'Minor Stat Increase' in level_data[level_str]['abilities']:
+#           all_errors.append(f"ERROR: {name} {level_str} missing Minor Stat Increase")
+#         if 'Major Stat Increase' in level_data[level_str]['abilities']:
+#           all_errors.append(f"ERROR: {name} {level_str} has Major Stat Increase")
+#   return all_errors
 
 
 
@@ -806,10 +760,6 @@ if __name__ == '__main__':
   print()
   print('GENERATING VITALITY CHARTS')
   vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
-  print('GENERATING LEVEL DETAILS FOR 0,5,10')
-  level_details(level=0)
-  level_details(level=5)
-  level_details(level=10)
   print('GENERATING RACE RANKINGS')
   rank_races() 
   print("GENERATING CLASS RANKINGS")

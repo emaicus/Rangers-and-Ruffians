@@ -139,6 +139,22 @@
         "battlehour",
         "Salves",
         "turnmin",
-        "Stackable"
+        "Stackable",
+        "5ft",
+        "15ft",
+        "detonates",
+        "50ft",
+        "-5ft",
+        "unlink",
+        "allyallies",
+        "healingdamage",
+        "1AP",
+        "slays",
+        "1st",
+        "--one",
+        "--",
+        "Blindspot",
+        "nimbler",
+        "1hr"
     ]
 }

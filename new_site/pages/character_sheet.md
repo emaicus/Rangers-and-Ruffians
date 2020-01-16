@@ -1,7 +1,7 @@
 ---
 skip_header: true
 ---
-
+<script src="../js/rangers.js"></script>
 <script src="../js/nunjucks.js"></script>
 <html>
   <head>
@@ -31,26 +31,62 @@ skip_header: true
 
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/data/GENERATED/all_data.json", function(json) {
+  $.getJSON("/data/GENERATED/ALT.json", function(json) {
     global_json = json;
     nunjucks.configure('/new_site/templates', {autoescape: true });
-    var content = nunjucks.render('character_selection_template.html', json );
+    starting_values = parseGetRequest();
+    console.log(starting_values);
+    console.log(starting_values["race"]);
+    var content = nunjucks.render('character_selection_template.html', {
+                                                                        "chosen_race" : starting_values["race"], 
+                                                                        "chosen_class": starting_values["class"],
+                                                                        "race_names"  : json["race_names"],
+                                                                        "class_names" : json["class_names"]
+                                                                      } );
     $( "#selection_area" ).html( content );
   
     $(function () {
         $('select').selectpicker();
     });
 
-
     updateCharacterSheet();
   })
+
 
   // Dynamically  change the character name on the sheet when the user types.
   function updateCharacterName(){
     var name = $( "#chosen_name" ).val();
     $("#characterName").text(name);
+
+    if(name == ""){
+      $("#levelUpSheetCharacterName").text($( "#chosen_class" ).val() + " Level Up Sheet");
+    }else{
+      $("#levelUpSheetCharacterName").text(name + "'s Level Up Sheet");
+    }  
   }
 
+  // merges new_dict into base
+  function mergeAbilities(base, new_dict){
+    for(ability_type in new_dict){
+      // Add the ability type to data if it doesn't exist yet.
+      if(!(ability_type in base)){
+        base[ability_type] = {};
+      }
+      // Add every ability for the ability type to our data objects
+      for(ability in new_dict[ability_type]){
+        base[ability_type][ability] = new_dict[ability_type][ability];
+      }
+    }
+    return base;
+  }
+
+  // combines new_dict's stats into base
+  function mergeStats(base, new_dict){
+    for(stat in new_dict){
+      base[stat] += new_dict[stat]
+    }
+    return base;
+  }
 
   // Grab the name, race, class and other data for this character and render a sheet.
   function updateCharacterSheet(){
@@ -60,43 +96,46 @@ skip_header: true
     }
 
     var name = $( "#chosen_name" ).val();
-    var level_str = $( "#chosen_level" ).val();
-    var level     = parseInt(level_str, 10);
-    var rnr_race  = $( "#chosen_race" ).val();
-    var rnr_class = $( "#chosen_class" ).val();
-    var sheet_type= $( "#sheet_type" ).val();
+    var level_str    = $( "#chosen_level" ).val();
+    var level        = parseInt(level_str, 10);
+    var rnr_subrace  = $( "#chosen_race" ).val();
+    var rnr_subclass     = $( "#chosen_class" ).val();
+    var sheet_type   = $( "#sheet_type" ).val();
+    var rnr_race  = getRaceFromSubrace(global_json, rnr_subrace);
+    var rnr_class = getClassFromSubclass(global_json, rnr_subclass);
+    if(rnr_race === null){
+      console.log("Error, race not found for " + rnr_subrace);
+      return;
+    }
 
-    //Deep copy the character.
-    var data = JSON.parse(JSON.stringify(global_json["characters"][rnr_race][rnr_class]));
+    //Deep copy the data.
+    var race_data  = JSON.parse(JSON.stringify(global_json["races"][rnr_race]["subraces"][rnr_subrace]));
+    var class_data = JSON.parse(JSON.stringify(global_json["classes"][rnr_class]["subclasses"][rnr_subclass]));
+
+    data = {}
+    data["race"] = rnr_race;
+    data["subrace"] = rnr_subrace;
+    data["class"] = rnr_class;
+    data["subclass"] = rnr_subclass;
     data["name"] = name;
-    data["abilities"] = data["base_abilities"];
+    data["stats"] = mergeStats(race_data["stats"], class_data["base_stats"]);
+    data["abilities"] = mergeAbilities(race_data["abilities"], class_data["base_abilities"]);
+    data["icons"] = class_data["icons"];
 
 
-    for(i = 1; i <= level; i++){
+    for(i = 0; i <= level; i++){
       // Create the string representation of the level.
       var tmp_lvl_str = "level_" + i;
       // Make sure that the level is valid.
-      if(!(tmp_lvl_str in data["levels"])){
+      if(!(tmp_lvl_str in class_data["levels"])){
         console.log("ERROR: Could not find level " + tmp_lvl_str + " for " + rnr_race + " " + rnr_class);
         continue;
       }
-      console.log(tmp_lvl_str);
-      // For every ability type in the current level
-      for(ability_type in data["levels"][tmp_lvl_str]["abilities"]){
-        // Add the ability type to data if it doesn't exist yet.
-        if(!(ability_type in data["abilities"])){
-          data["abilities"][ability_type] = {};
-        }
-        // Add every ability for the ability type to our data objects
-        for(ability in data["levels"][tmp_lvl_str]["abilities"][ability_type]){
-          data["abilities"][ability_type][ability] = data["levels"][tmp_lvl_str]["abilities"][ability_type][ability];
-        }
-      }
+      data["abilities"] = mergeAbilities(data["abilities"], class_data["levels"][tmp_lvl_str]["abilities"]);
     }
 
     var character_sheet = "ERROR: Sheet did not render.";
 
-    console.log(sheet_type);
     if(sheet_type == "v1_visual"){
       data["visualStats"] = true;
       character_sheet = nunjucks.render('character_sheet_template.html', data );
@@ -104,6 +143,12 @@ skip_header: true
       character_sheet = nunjucks.render('character_sheet_template.html', data );
     }
     $( "#character_sheet_area" ).html( character_sheet );
+
+
+    var name_text =  name != "" ? name : rnr_subclass;
+    level_up_sheet = nunjucks.render('level_up_sheet_template.html', {"levels" : class_data["levels"], "name" : name_text});
+    $("#level_up_sheet_area").html(level_up_sheet);
   }
+
 </script>
 

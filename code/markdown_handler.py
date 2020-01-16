@@ -186,7 +186,6 @@ class markdown_handler:
         if not key in encountered_dict:
           encountered_dict[key] = 0
         encountered_dict[key] += 1
-        print(f"finding {key}")
         heading, level, content, link = self.find_nth(key, encountered_dict[key])
         
         if level > max_to_include:

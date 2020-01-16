@@ -7,6 +7,7 @@ import traceback
 import shutil
 from pathlib import Path
 import argparse
+import copy
 
 MALE = True
 FEMALE = False
@@ -60,22 +61,16 @@ def publish_character_creation(force_overwrite):
   md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
-  races = rnr_utils.load_all_race_objects()
-  rnr_classes = rnr_utils.load_all_class_objects()
+  rnr_race_wrappers  = rnr_utils.load_all_race_wrappers()
+  rnr_class_wrappers = rnr_utils.load_all_class_wrappers()
 
   race_lines = []
-  for race in sorted(races, key=lambda x: x.name):
-    preferred_image = PREFERRED_IMAGES.get(race.subrace_name.lower().replace(" ", "_"), None)
-    gender_string = 'male' if preferred_image else 'female'
-    #print(f'{race.subrace_name}: using {gender_string} image.')
-    race_lines += race.markdownify(preferred_image)
+  for race in sorted(rnr_race_wrappers, key=lambda x: x.race_name):
+    race_lines += race.markdownify(PREFERRED_IMAGES)
 
   class_lines = []
-  for rnr_class in sorted(rnr_classes, key=lambda x: x.name):
-    preferred_image = PREFERRED_IMAGES.get(rnr_class.name.lower().replace(" ", "_"), None)
-    gender_string = 'male' if preferred_image else 'female'
-    #print(f'{rnr_class.name}: using {gender_string} image.')
-    class_lines += rnr_class.markdownify(preferred_image)
+  for rnr_class in sorted(rnr_class_wrappers, key=lambda x: x.class_name):
+    class_lines += rnr_class.markdownify(PREFERRED_IMAGES)
 
   skills = rnr_utils.markdown_skills()
   
@@ -347,11 +342,37 @@ def archive_past_versions():
     print(f'moving {file} to {os.path.join(archve_directory, name)}')
     shutil.move(file, os.path.join(archve_directory, name))
 
-def create_all_race_class_json():
-  all_characters = rnr_utils.load_all_characters(level=0)
+def create_alt_all_race_class_json():
+  all_race_data = copy.deepcopy(rnr_utils.GLOBAL_RACE_DATA)
+  all_class_data = copy.deepcopy(rnr_utils.GLOBAL_CLASS_DATA)
+  ability_data = rnr_utils.GLOBAL_ABILITY_DICT
 
-  data = {'races' : rnr_utils.get_all_subrace_names(), 'classes' : rnr_utils.get_all_class_names(), 'characters' : {} }
+  for race in all_race_data.keys():
+    for subrace in all_race_data[race]['subraces'].keys():
+      all_race_data[race]['subraces'][subrace]['abilities'] = rnr_utils.filterAbilities(all_race_data[race]['subraces'][subrace]['abilities'])
+  
+  for rnr_class in all_class_data.keys():
+    for subclass in all_class_data[rnr_class]["subclasses"].keys():
+      all_class_data[rnr_class]["subclasses"][subclass]["icons"] = rnr_utils.which_icons('', rnr_class)
 
+      if 'base_abilities' in all_class_data[rnr_class]["subclasses"][subclass]:
+        all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'])
+      else:
+        all_class_data[rnr_class]["subclasses"][subclass]['base_abilities']   = {}
+      for level in all_class_data[rnr_class]["subclasses"][subclass]['levels']:
+        all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'])
+
+  data = {
+    'race_names' : rnr_utils.get_all_subrace_names(), 
+    'class_names' : rnr_utils.get_all_subclass_names(), 
+    'races' : all_race_data,
+    'classes' : all_class_data,
+    'role_info' : {
+      'unique_roles' : [],
+      'class_roles' : {},
+      'tooltips' : {}
+    }
+  }
   data["roles"] = dict()
   data["roles"]["class_roles"] = dict()
   unique_roles = set()
@@ -395,15 +416,8 @@ def create_all_race_class_json():
 
   data["roles"]["tooltips"] = tooltips
 
-  for char in all_characters:
-    if not char.subrace in data['characters']:
-      data['characters'][char.subrace] = {}
-    proper_class = char.subclass if char.subclass != '' else char.rnr_class
-    data['characters'][char.subrace][proper_class] = char.new_character_sheet_serialize()
-
-  with open( os.path.join(rnr_utils.DATA_DIRECTORY, 'GENERATED', 'all_data.json' ), 'w' ) as outfile:
+  with open( os.path.join(rnr_utils.DATA_DIRECTORY, 'GENERATED', 'ALT.json' ), 'w' ) as outfile:
     json.dump(data, outfile, indent=4)
-
 
 if __name__ == "__main__":
   rnr_utils.printLogo()
@@ -441,5 +455,5 @@ if __name__ == "__main__":
   publish_changelog(force_overwrite)
   publish_printabled_materials(force_overwrite)
   publish_poohbah_printables(force_overwrite)
-  create_all_race_class_json()
+  create_alt_all_race_class_json()
   print("Done!")

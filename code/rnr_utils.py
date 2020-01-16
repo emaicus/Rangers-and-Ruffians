@@ -21,7 +21,6 @@ GLOBAL_ART_DICTIONARY = dict()
 GLOBAL_DESCRIPTIONS_DATABASE = dict()
 GLOBAL_ABILITY_DICT = dict()
 GLOBAL_CLASS_DATA = dict()
-GLOBAL_CLASS_DATA_BY_TYPE = dict()
 GLOBAL_RACE_DATA = dict()
 GLOBAL_SKILL_DATA = dict()
 GLOBAL_SPELL_BOOKS = dict()
@@ -100,32 +99,28 @@ class rnr_entity:
       # Add the negation back in
       return -val if neg else val 
 
-    def base_serialize(self, verbose=False):
+    def base_serialize(self, verbose=False, underscore=False):
+      underscore_char = '_' if underscore else ' '
       serial = dict()
       serial["stats"] = self.stats
       serial["effective_stats"] = self.effective_stats
-      serial["name"] = self.name.replace(' ', '_')
+      serial["name"] = self.name.replace(' ', underscore_char)
       serial["abilities"] = filterAbilities(self.abilities, verbose)
       serial["description"] = self.description
       serial['quote'] = self.quote
       serial['quote_author'] = self.quote_author
       return serial
 
-    def base_markdownify(self, image_path, image_attribution, custom_chunk="",handbook=None):
-      load_Rangers_And_Ruffians_Data()
-
+    def base_markdownify(self, image_path, image_attribution, custom_chunk="",handbook=None, sub=False):
       ret = []
-      lowername = self.name.lower().replace(' ', '_')
       description = self.description
       abilities = self.abilities
-
-      ret.append("### {0} \n".format(self.name.replace('_',' ')))
+      indent = '####' if sub else '###'
+      ret.append(f"{indent} {self.name} \n")
       
       if image_path is not None and image_attribution is not None:
-        #ret.append(f"<img src='https://github.com/emaicus/Rangers-and-Ruffians/blob/rangers_v2.1/site/static/images/{image_path}?raw=true' style='width:350px' />\n\n")
         ret.append(f"<img src='{image_path}' class=\"raceClassImage\" />\n\n")
         ret.append(image_attribution)
-        #ret.append(f'![{self.name}]({image_path}?raw=true "{self.name}" =350x) \n')
      
       if custom_chunk != "":
         ret.append(custom_chunk ) 
@@ -142,27 +137,26 @@ class rnr_entity:
       ret.append(f"\n")
       ret.append(f"{description}\n")
       ret.append(f"\n")
-      ret.append(f"|STR|DEX|INT|INF|CHR|PER|LUK|HD|  \n")
+      ret.append(f"|STR|INT|PER|LUK|DEX|INF|CHA|HD|  \n")
       ret.append(f"|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  \n")
-      ret.append(f"|{self.get_stat('strength')}|{self.get_stat('dexterity')}|{self.get_stat('intelligence')}|{self.get_stat('inner_fire')}|{self.get_stat('charisma')}|{self.get_stat('perception')}|{self.get_stat('luck')}|{self.health_die_pieces}|  \n")
+      ret.append(f"|{self.get_stat('strength')}|{self.get_stat('intelligence')}|{self.get_stat('perception')}|{self.get_stat('luck')}|{self.get_stat('dexterity')}|{self.get_stat('inner_fire')}|{self.get_stat('charisma')}|{self.health_die_pieces}|  \n")
       ret.append(f"\n")
-      ret.append(f"__{string.capwords(self.name.replace('_',' '))} Abilities:__ \n")
-      abilities = filterAbilities(self.abilities, verbose=True)
-      for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
-        if not key in abilities:
-          continue
-        ret.append(f"* __{mapAbilityType(key)}:__   \n")
-        for ability, info in abilities[key].items():
-          if 'cost' in info and info['cost'] not in [None, 0]:
-            ret.append(f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
-          else:
-            ret.append(f"  * __{ability}:__ {info['description']}  \n")
+      abilities = filterAbilities(self.abilities)
 
-        #ret +='> <div></div>\n>\n'
+      if len(abilities) > 0:
+        ret.append(f"__{string.capwords(self.name)} Abilities:__ \n")
+        for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
+          if not key in abilities:
+            continue
+          ret.append(f"* __{mapAbilityType(key)}:__   \n")
+          for ability, info in abilities[key].items():
+            if 'cost' in info and info['cost'] not in [None, 0]:
+              ret.append(f"  * __{ability}:__ _(Cost {info['cost']})_ {info['verbose']}  \n")
+            else:
+              ret.append(f"  * __{ability}:__ {info['verbose']}  \n")
 
       ret.append('  \n')
 
-      #ret += "\\page\n"
       return ret
 
     def __str__(self):
@@ -179,11 +173,11 @@ class rnr_entity:
       return '\n'.join(ret_list)
 
 class rnr_class(rnr_entity):
-    def __init__(self, name, level=0, subclass=""):
+    def __init__(self, rnr_class, subclass, level=0):
 
-      class_data = get_rnr_class_data_with_name(name)
+      class_data = get_subclass_data_with_name(subclass)
       if class_data == None:
-        raise Exception('ERROR: Could not load class {0}'.format(name))
+        raise Exception(f'ERROR: Could not load class {rnr_class}')
       stats = class_data['base_stats']
       self.health_die_pieces = class_data['health_die_pieces']
       self.handbook = class_data.get('handbook', None)
@@ -197,35 +191,37 @@ class rnr_class(rnr_entity):
         if not level_string in class_data['levels']:
           continue
         level_details = class_data['levels'][level_string]
-        
-        abilities = abilities + level_details.get('abilities', list())
-        if not subclass is None and 'subclass_{0}_abilities'.format(subclass) in level_details:
-          abilities = abilities + level_details['subclass_{0}_abilities'.format(subclass)]
+        level_abilities = level_details['abilities'] if 'abilities' in level_details and level_details['abilities'] is not None else []
+        abilities = abilities + level_abilities
 
       self.level = level
-      self.subclass = subclass if subclass != "" else None
-      super().__init__(name, abilities, stats, class_data['description'], '', '')
+      self.subclass = subclass
+      self.class_name = rnr_class
+      super().__init__(subclass, abilities, stats, class_data['description'], '', '')
       self.spells_known = self.get_spell_counts()
 
 
-    def markdownify(self, male=False):
+    def markdownify(self, male=False, sub=False):
       global GLOBAL_ART_PATH
+      gender = "male" if male else "female"
+
 
       absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
       relative_art_folder = os.path.join('images', 'class')
-      
-      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
 
-      tmp_abilities = list(self.abilities)
-      self.abilities = list(self.base_abilities)
-      ret = self.base_markdownify(image_path, attribution, handbook=self.handbook) + self.markdownify_level_sheet()
-      self.abilities = list(tmp_abilities)
+      image_path, image_attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subclass.replace(' ','_').lower(), male)
+
+      tmp = self.abilities
+      self.abilities = []
+      ret = self.base_markdownify(image_path, image_attribution, handbook=self.handbook, sub=sub) #+ self.markdownify_level_sheet()
+      ret.append(f'\n<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class={self.name}" role="button">Level Up Sheet</a>\n')
       ret.append(f"  \n___\n")
+      self.abilities = tmp
       return ret
 
     def markdownify_level_sheet(self):
       ret = []
-      all_data = get_rnr_class_data_with_name(self.name)
+      all_data = get_subclass_data_with_name(self.subclass)
       level_data = all_data['levels']
       for i in range(0,100):
         level = f'level_{i}'
@@ -234,31 +230,17 @@ class rnr_class(rnr_entity):
         ret.append( f"__{string.capwords(level.replace('_',' '))} {string.capwords(self.name.replace('_', ' '))}__\n\n")
 
         if 'abilities' in level_data[level]:
-          level_abilities = filterAbilities(level_data[level]['abilities'], verbose=True)
+          level_abilities = filterAbilities(level_data[level]['abilities'])
           for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'disadvantage','combat'):
             if not key in level_abilities:
               continue
             ret.append( "* __{0}:__   \n".format(mapAbilityType(key)))
             for ability, info in level_abilities[key].items():
               if 'cost' in info and info['cost'] not in [None, 0]:
-                ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
+                ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['verbose']}  \n")
               else:
-                ret.append( f"  * __{ability}:__ {info['description']}  \n")
+                ret.append( f"  * __{ability}:__ {info['verbose']}  \n")
             ret.append('\n\n')
-        for key in level_data[level].keys():
-          if 'subclass' in key:
-            ret.append( '__{0} Abilities__  \n'.format(string.capwords(key.split('_')[1])))
-            sub_ability = filterAbilities(level_data[level][key], verbose=True)
-            for key in ('rule', 'spellbook', 'action', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
-              if not key in sub_ability:
-                continue
-              ret.append( "* {0}:   \n".format(mapAbilityType(key)))
-              for ability, info in sub_ability[key].items():
-                if 'cost' in info and info['cost'] not in [None, 0]:
-                  ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
-                else:
-                  ret.append( f"  * __{ability}:__ {info['description']}  \n")
-              ret.append('\n\n')
         #ret += '```\n```\n'
 
       #ret += "\\page\n"
@@ -266,7 +248,7 @@ class rnr_class(rnr_entity):
 
     def serialize_level_up_sheet(self):
       levels = dict()
-      all_data = get_rnr_class_data_with_name(self.name)
+      all_data = get_subclass_data_with_name(self.subclass)
       levels = all_data['levels']
 
       for level in levels.keys():
@@ -274,9 +256,6 @@ class rnr_class(rnr_entity):
           levels[level]['abilities'] = dict()
         else:
           levels[level]['abilities'] = filterAbilities(levels[level]['abilities'])
-        for key in levels[level].keys():
-          if 'subclass' in key:
-            levels[level][key] = filterAbilities(levels[level][key])
 
       return levels
 
@@ -300,7 +279,6 @@ class rnr_class(rnr_entity):
         serial['rights'] = rights
         serial["path_to_image"] = image_path
 
-      all_data = get_rnr_class_data_with_name(self.name)
       serial['health_die_pieces'] = self.health_die_pieces
 
       serial['levels'] = self.serialize_level_up_sheet()
@@ -309,7 +287,7 @@ class rnr_class(rnr_entity):
     def get_spell_counts(self):
       global GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_INITIAL_SPELL_ABILITIES
 
-      class_data = get_rnr_class_data_with_name(self.name)
+      class_data = get_subclass_data_with_name(self.subclass)
       if class_data == None:
         raise Exception('ERROR: Could not load class {0}'.format(self.name))
       abilities = class_data.get('base_abilities', list())
@@ -323,10 +301,8 @@ class rnr_class(rnr_entity):
           # print('ERROR: could not load level {0} in class {1}'.format(step, self.name))
           continue
         level_details = class_data['levels'][level_string]
-        
-        abilities = abilities + level_details.get('abilities', [])
-        if not self.subclass is None and 'subclass_{0}_abilities'.format(self.subclass) in level_details:
-          abilities = abilities + level_details['subclass_{0}_abilities'.format(self.subclass)]
+        level_abilities = level_details['abilities'] if 'abilities' in level_details and level_details['abilities'] is not None else []
+        abilities = abilities + level_abilities
 
         for ability in abilities:
           if ability in GLOBAL_SPELL_TIER_ABILITIES:
@@ -378,7 +354,7 @@ class rnr_race(rnr_entity):
     return cls(name, subrace, race_data['abilities'], race_data['stats'], race_data['description'],
                race_data['quote'], race_data['author'], race_data.get('handbook', None), race_data['health_die_pieces'])
 
-  def markdownify(self,male=False):
+  def markdownify(self,male=False, sub=False):
     global GLOBAL_ART_PATH
     custom_chunk = f'>{self.quote}\n>\n>—{self.quote_author}\n\n'
 
@@ -386,13 +362,9 @@ class rnr_race(rnr_entity):
     relative_art_folder = os.path.join('images', 'race')
 
     image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
-    
-    #Fall back to race image if no subrace image exists.
-    if image_path is None:
-      image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
 
     gender = "male" if male else "female"
-    ret = self.base_markdownify(image_path, attribution, custom_chunk=custom_chunk,handbook=self.handbook)
+    ret = self.base_markdownify(image_path, attribution, custom_chunk=custom_chunk,handbook=self.handbook, sub=sub)
     ret.append(f"  \n___\n")
     return ret
 
@@ -418,9 +390,9 @@ class rnr_race(rnr_entity):
     return serial
 
 class rnr_character(rnr_entity):
-  def __init__(self, character_name, race_name, subrace, class_name, level, male=False, subclass = None, character_origin='', character_weakness='',  character_quote='', character_quote_author='', skills=dict()):
+  def __init__(self, character_name, race_name, subrace, class_name, subclass, level, male=False, character_origin='', character_weakness='',  character_quote='', character_quote_author='', skills=dict()):
     rnr_race_obj = rnr_race.basic_constructor(race_name, subrace)
-    rnr_class_obj = rnr_class(class_name, level, subclass)
+    rnr_class_obj = rnr_class(class_name, subclass, level)
     
     abilities = rnr_race_obj.abilities + rnr_class_obj.abilities
     stats = combine_stats(rnr_class_obj.stats, rnr_race_obj.stats)
@@ -437,14 +409,14 @@ class rnr_character(rnr_entity):
     self.gender = 'male' if male==True else 'female'
     self.origin = character_origin
     self.weakness = character_weakness
-    self.race = rnr_race_obj.race_name.replace(' ', '_')
-    self.subrace = rnr_race_obj.subrace_name.replace(' ', '_')
-    self.rnr_class = rnr_class_obj.name.replace(' ', '_')
+    self.race = rnr_race_obj.race_name
+    self.subrace = rnr_race_obj.subrace_name
+    self.rnr_class = rnr_class_obj.name
     self.rnr_race_obj = rnr_race_obj
     self.rnr_class_obj = rnr_class_obj
     self.level = level
-    self.subclass = subclass.replace(' ', '_') if not subclass is None else ''
-    self.character_name = character_name.replace(' ', '_')
+    self.subclass = subclass
+    self.character_name = character_name
 
   def markdownify(self):
     return self.base_markdownify()
@@ -490,6 +462,87 @@ class rnr_character(rnr_entity):
     bonus_dice_rolls  = 2 * self.level
     return base + health_dice_rolls + bonus_dice_rolls
 
+class rnr_class_wrapper():
+  def __init__(self, class_name):
+    subclasses = get_subclasses_for_class(class_name)
+    self.class_data = get_overarching_rnr_class_data_with_name(class_name)
+    self.class_name = class_name
+    
+    self.subclasses = list()
+    for subclass in subclasses:
+      self.subclasses.append( rnr_class(class_name, subclass) )
+
+  def markdownify(self, gender_mappings):
+    global GLOBAL_ART_PATH
+
+    preferred_image = gender_mappings.get(self.class_name.lower().replace(" ", "_"), None)
+    male = 'male' if preferred_image else 'female'
+
+    absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
+    relative_art_folder = os.path.join('images', 'class')
+    
+    image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.class_name.lower(), male)
+
+    ret = []
+
+    sub = False
+    if len(self.subclasses) > 1:
+      ret.append(f"### {self.class_name} \n")
+      
+      if image_path is not None and attribution is not None:
+        ret.append(f"<img src='{image_path}' class=\"raceClassImage\" />\n\n")
+        ret.append(attribution)
+      sub = True
+
+    for subclass in sorted(self.subclasses, key=lambda x: x.name):
+      print(subclass.subclass)
+      preferred_image = gender_mappings.get(subclass.subclass.lower().replace(" ", "_"), None)
+      male = 'male' if preferred_image else 'female'
+      ret += subclass.markdownify(male=male, sub=sub)
+      
+    return ret
+
+class rnr_race_wrapper():
+  def __init__(self, race_name):
+    print(race_name)
+    subraces = get_subraces_for_race(race_name)
+    print(subraces)
+    self.race_data = get_overarching_rnr_race_data_with_name(race_name)
+    self.race_name = race_name
+    
+    self.subraces = list()
+    for subrace in subraces:
+      self.subraces.append( rnr_race.basic_constructor(race_name, subrace) )
+
+  def markdownify(self, gender_mappings):
+    global GLOBAL_ART_PATH
+
+    preferred_image = gender_mappings.get(self.race_name.lower().replace(" ", "_"), None)
+    male = 'male' if preferred_image else 'female'
+
+    absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
+    relative_art_folder = os.path.join('images', 'race')
+    image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
+    
+
+    ret = []
+    sub = False
+    if len(self.subraces) > 1:
+      ret.append(f"### {self.race_name} \n")
+      
+      if image_path is not None and attribution is not None:
+        ret.append(f"<img src='{image_path}' class=\"raceClassImage\" />\n\n")
+        ret.append(attribution)
+      sub = True
+
+    for subrace in sorted(self.subraces, key=lambda x: x.name):
+      preferred_image = gender_mappings.get(subrace.subrace_name.lower().replace(" ", "_"), None)
+      male = 'male' if preferred_image else 'female'
+      ret += subrace.markdownify(male=male, sub=sub)
+        
+      
+    return ret
+
 class rnr_ability:
   def __init__(self, name, description, ability_type):
     self.name = name
@@ -508,21 +561,21 @@ def which_icons(rnr_race, rnr_class):
   # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
 
   #Clerics and Paladins get special action points.
-  if rnr_class in ['cleric', 'paladin']:
+  if rnr_class.lower() in ['cleric', 'paladin']:
     icons.append(('prayer.svg', 'Action Points'))
   else:
     icons.append(('ink-swirl.svg', 'Action Points'))
 
   #Sorcerers have influence points
-  if rnr_class == 'sorcerer':
+  if rnr_class.lower() == 'sorcerer':
     icons.append(('magic-swirl.svg', 'Influence'))
   
   #necromancers have souls
-  if rnr_class == 'necromancer':
+  if rnr_class.lower() == 'necromancer':
     icons.append(('tombstone.svg', 'Souls'))
   
   #highborn have gumption
-  if rnr_class == 'highborn':
+  if rnr_class.lower() == 'highborn':
     icons.append(('swords-power.svg', 'Gumption'))
 
   # #archers have magic arrows
@@ -530,7 +583,7 @@ def which_icons(rnr_race, rnr_class):
   #   icons.append(('quiver.svg', 'Magic Quiver'))
 
   #Bards have spell coins
-  if rnr_class == 'bard':
+  if rnr_class.lower() == 'bard':
     icons.append(('swap-bag.svg', 'Spell Coins'))
 
   #Everyone has spell power, armor, and magic armor.
@@ -795,7 +848,7 @@ def update_version(version_string):
     json.dump(data, outfile, indent=4)
 
 def load_Rangers_And_Ruffians_Data():
-  global VERSION_NUMBER, GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_CLASS_DATA_BY_TYPE, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
+  global VERSION_NUMBER, GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -841,12 +894,7 @@ def load_Rangers_And_Ruffians_Data():
     GLOBAL_RACE_DATA = json.load(data_file)
 
   with open(class_path) as data_file:
-    GLOBAL_CLASS_DATA_BY_TYPE = json.load(data_file)
-
-  GLOBAL_CLASS_DATA_BY_TYPE.pop('CUT', None)
-
-  for class_type, info in GLOBAL_CLASS_DATA_BY_TYPE.items():
-    GLOBAL_CLASS_DATA.update(info)
+    GLOBAL_CLASS_DATA = json.load(data_file)
 
   with open(ability_path) as data_file:
     GLOBAL_ABILITY_DICT = json.load(data_file)
@@ -904,16 +952,20 @@ def get_formal_spell_tier_name(programatic_name):
       return key
   return None
 
-def filterAbilities(abilities, verbose=False):
-  filt = "description" if verbose else "brief"
+def filterAbilities(abilities):
   global GLOBAL_ABILITY_DICT
+
+  if abilities is None:
+    return {}
+
   filtered_abilities = dict()
   for ability in abilities:
     ability_type = GLOBAL_ABILITY_DICT[ability]["type"]
     if not ability_type in filtered_abilities:
       filtered_abilities[ability_type] = dict()
     filtered_abilities[ability_type][ability] = dict()
-    filtered_abilities[ability_type][ability]['description'] = GLOBAL_ABILITY_DICT[ability][filt]
+    filtered_abilities[ability_type][ability]['brief'] = GLOBAL_ABILITY_DICT[ability]['brief']
+    filtered_abilities[ability_type][ability]['verbose'] = GLOBAL_ABILITY_DICT[ability]['description']
     filtered_abilities[ability_type][ability]['cost'] = GLOBAL_ABILITY_DICT[ability]['cost'] if 'cost' in GLOBAL_ABILITY_DICT[ability] else 0
   return filtered_abilities
 
@@ -1088,18 +1140,38 @@ def get_random_spellbook(rnr_class, counts):
       random_spellbook[key][s] = possible_spells[key][s]
   return random_spellbook
 
+def get_overarching_rnr_race_data_with_name(race):
+  global GLOBAL_RACE_DATA
+  load_Rangers_And_Ruffians_Data()
+  
+  if race.title() in GLOBAL_RACE_DATA:
+    return copy.deepcopy(GLOBAL_RACE_DATA[race.title()])
+  
+  return None
 
-
-
-def get_rnr_class_data_with_name(name):
+def get_overarching_rnr_class_data_with_name(rnr_class):
   global GLOBAL_CLASS_DATA
   load_Rangers_And_Ruffians_Data()
   
-  if name in GLOBAL_CLASS_DATA:
-    return copy.deepcopy(GLOBAL_CLASS_DATA[name])
-  elif name.title() in GLOBAL_CLASS_DATA:
-    return copy.deepcopy(GLOBAL_CLASS_DATA[name.title()])
+  if rnr_class.title() in GLOBAL_CLASS_DATA:
+    return copy.deepcopy(GLOBAL_CLASS_DATA[rnr_class.title()])
   
+  return None
+
+def get_subclass_data_with_name(subclass):
+  load_Rangers_And_Ruffians_Data()
+
+  for rnr_class, info in GLOBAL_CLASS_DATA.items():
+    if subclass in info["subclasses"]:
+      return get_subclass_data(rnr_class, subclass)
+  return None
+
+def get_subclass_data(rnr_class, subclass):
+  load_Rangers_And_Ruffians_Data()
+
+  if rnr_class in GLOBAL_CLASS_DATA:
+    if subclass in GLOBAL_CLASS_DATA[rnr_class]['subclasses']:
+      return copy.deepcopy(GLOBAL_CLASS_DATA[rnr_class]['subclasses'][subclass])
   return None
 
 def get_rnr_race_data(name):
@@ -1123,11 +1195,20 @@ def convert_stat_to_effective_stat(stat):
 
 def get_race_given_subrace(subrace):
   global GLOBAL_RACE_DATA
-
   load_Rangers_And_Ruffians_Data()
+
   for race, data in GLOBAL_RACE_DATA.items():
     if subrace.replace('_',' ').title() in data['subraces'].keys():
       return race
+  return None
+
+def get_class_given_subclass(subclass):
+  global GLOBAL_CLASS_DATA
+  load_Rangers_And_Ruffians_Data()
+
+  for rnr_class, data in GLOBAL_CLASS_DATA.items():
+    if subclass.replace('_',' ').title() in data['subclasses'].keys():
+      return rnr_class
   return None
 
 def get_subraces_for_race(race):
@@ -1135,8 +1216,17 @@ def get_subraces_for_race(race):
 
   load_Rangers_And_Ruffians_Data()
   if race in GLOBAL_RACE_DATA:
-    return list(GLOBAL_RACE_DATA[race].keys())
+    return list(GLOBAL_RACE_DATA[race]["subraces"].keys())
   return None
+
+def get_subclasses_for_class(needle):
+  global GLOBAL_CLASS_DATA
+
+  load_Rangers_And_Ruffians_Data()
+  if needle in GLOBAL_CLASS_DATA:
+    return list(GLOBAL_CLASS_DATA[needle]["subclasses"].keys())
+  else:
+    return None
 
 def get_rnr_subrace_data(name, subrace):
   global GLOBAL_RACE_DATA
@@ -1149,16 +1239,18 @@ def get_rnr_subrace_data(name, subrace):
       return copy.deepcopy(GLOBAL_RACE_DATA[name.replace('_',' ').title()]['subraces'][subrace.replace('_',' ').title()])
   return None
 
-def get_all_class_names(underscore=True):
+def get_all_class_names(underscore=False):
   global GLOBAL_CLASS_DATA
   underscore_char = '_' if underscore else ' '
-
   load_Rangers_And_Ruffians_Data()
-  class_names = list(GLOBAL_CLASS_DATA.keys())
-  class_names = [c.replace(' ', underscore_char) for c in class_names]
+
+  class_names = list()
+  for class_name in GLOBAL_CLASS_DATA.keys():
+    for subclass_name in GLOBAL_CLASS_DATA[class_name]['subclasses']:
+      class_names.append((class_name.replace(' ', underscore_char), subclass_name.replace(' ', underscore_char)))
   return class_names
 
-def get_all_race_names(underscore=True):
+def get_all_race_names(underscore=False):
   global GLOBAL_RACE_DATA
   load_Rangers_And_Ruffians_Data()
   underscore_char = '_' if underscore else ' '
@@ -1168,7 +1260,7 @@ def get_all_race_names(underscore=True):
       race_names.append((race.replace(' ', underscore_char), subrace.replace(' ', underscore_char)))
   return race_names
 
-def get_all_subrace_names(underscore=True):
+def get_all_subrace_names(underscore=False):
   load_Rangers_And_Ruffians_Data()
   global GLOBAL_RACE_DATA
   underscore_char = '_' if underscore else ' '
@@ -1178,6 +1270,17 @@ def get_all_subrace_names(underscore=True):
     for subrace in GLOBAL_RACE_DATA[race]['subraces']:
       subrace_names.append(subrace.replace(' ', underscore_char))
   return subrace_names
+
+def get_all_subclass_names(underscore=False):
+  load_Rangers_And_Ruffians_Data()
+  global GLOBAL_CLASS_DATA
+  underscore_char = '_' if underscore else ' '
+
+  subclass_names = list()
+  for rnr_class in GLOBAL_CLASS_DATA.keys():
+    for subclass in GLOBAL_CLASS_DATA[rnr_class]['subclasses']:
+      subclass_names.append(subclass.replace(' ', underscore_char))
+  return subclass_names
 
 def get_all_stat_names():
   return standard_stat_order()
@@ -1190,27 +1293,9 @@ def get_rnr_class_dict():
   global GLOBAL_CLASS_DATA
   return copy.deepcopy(GLOBAL_CLASS_DATA)
 
-def get_rnr_class_data_by_type():
-  global GLOBAL_CLASS_DATA_BY_TYPE
-  return copy.deepcopy(GLOBAL_CLASS_DATA_BY_TYPE)
-
 def get_rnr_race_dict():
   global GLOBAL_RACE_DATA
   return copy.deepcopy(GLOBAL_RACE_DATA)
-
-#returns a set of all subclass options a class has by a level
-def subclasses_at_level(class_name, target_level):
-  class_data = get_rnr_class_data_with_name(class_name)
-  subclass_names = set()
-  for level in range(0,target_level+1):
-    level_string = 'level_{0}'.format(level)
-    if not level_string in class_data['levels']:
-      continue
-    level_details = class_data['levels'][level_string]
-    for key in level_details.keys():
-      if 'subclass' in key:
-        subclass_names.add(key.split('_')[1])
-  return subclass_names
 
 def get_possible_skills(character):
   global GLOBAL_SKILL_DATA
@@ -1325,42 +1410,56 @@ def load_all_race_objects():
   load_Rangers_And_Ruffians_Data()
   races = list()
   for race, data in GLOBAL_RACE_DATA.items():
-    if 'subraces' in data:
-      for subrace in data['subraces'].keys():
-        try:
-          new_race = rnr_race.basic_constructor(race, subrace)
-        except: 
-          traceback.print_exc()
-          continue
-        races.append(new_race)
+    for subrace in data['subraces'].keys():
+      try:
+        new_race = rnr_race.basic_constructor(race, subrace)
+      except: 
+        traceback.print_exc()
+        continue
+      races.append(new_race)
   return races
 
 #TODO doesn't take subclass into account.
 def load_all_class_objects(level=0):
+  global GLOBAL_CLASS_DATA
   load_Rangers_And_Ruffians_Data()
   rnr_classes = list()
-  class_names = get_all_class_names()
-  for class_name in class_names:
-    try:
-      new_class = rnr_class(class_name, level)
-    except:
-      traceback.print_exc()
-      continue
-    rnr_classes.append(new_class)
+  for class_name, data in GLOBAL_CLASS_DATA.items():
+    for subclass in data['subclasses'].keys():
+      try:
+        new_class = rnr_class(class_name, subclass,level=level)
+      except:
+        traceback.print_exc()
+        continue
+      rnr_classes.append(new_class)
   return rnr_classes
 
-def load_all_class_objects_by_type(level=0):
-  global GLOBAL_CLASS_DATA_BY_TYPE
+def load_all_class_wrappers():
   load_Rangers_And_Ruffians_Data()
-  ret = dict()
-  for c_type, c_info in GLOBAL_CLASS_DATA_BY_TYPE.items():
-    ret[c_type] = list()
-    for name in c_info.keys():
-      try:
-        new_class = rnr_class(name, level)
-      except: 
-        continue
-      ret[c_type].append(new_class)
+
+  class_names = get_all_class_names()
+  ret = list()
+  visited = set()
+  for rnr_class, _ in class_names:
+    if rnr_class in visited:
+      continue
+    visited.add(rnr_class)
+    ret.append(rnr_class_wrapper(rnr_class))
+
+  return ret
+
+def load_all_race_wrappers():
+  load_Rangers_And_Ruffians_Data()
+
+  race_names = get_all_race_names()
+  ret = list()
+  visited = set()
+  for rnr_race, _ in race_names:
+    if rnr_race in visited:
+      continue
+    visited.add(rnr_race)
+    ret.append(rnr_race_wrapper(rnr_race))
+
   return ret
 
 def load_all_characters(level=0):
@@ -1370,8 +1469,8 @@ def load_all_characters(level=0):
 
   lis = list()
   for race_name, subrace_name in rnr_races:
-    for class_name in rnr_classes:
-      character = rnr_character('', race_name, subrace_name, class_name, level)
+    for class_name, subclass_name in rnr_classes:
+      character = rnr_character('', race_name, subrace_name, class_name, subclass_name, level)
       lis.append(character)
   return lis
 

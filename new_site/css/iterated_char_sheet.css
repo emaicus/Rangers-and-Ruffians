@@ -15,18 +15,28 @@ body
 .printRegion 
 {
   width: 66vh; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
-  height:100vh;
+  min-height:100vh;
   margin: 0 auto;
   padding:0px;
   background: #fff;
   margin-top:30px;
 }
 
+.topCharacter{
+  min-height:7.5vh; 
+  margin-bottom: 0px;
+}
+
+.bottomCharacter{
+  min-height:6.5vh; 
+  margin-bottom: 0px;
+}
+
 /* Applies to both */
 
 div.characterDetails
 {
-  height: 15vh;
+  min-height: 15vh;
   border: 2px solid black;
   border-radius: 3px;
   padding: 10px;
@@ -37,7 +47,7 @@ div.characterDetails
 
 div.squareWrapper
 {
-  height: 13.5vh;
+  min-height: 13.5vh;
   margin: 1.1rem auto;
   margin-top: 1.1rem;
 }
@@ -56,7 +66,7 @@ div.square
 
 div.combatAbilities
 {
-  height: 69vh;
+  min-height: 69vh;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -67,7 +77,7 @@ div.combatAbilities
 
 div.combatAbilitiesVisualStats
 {
-  height: 63vh;
+  min-height: 63vh;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -80,7 +90,7 @@ div.combatAbilitiesVisualStats
 
 div.generalAbilities
 {
-  height: 58.5vh;
+  min-height: 58.5vh;
   margin-top: 10px;
   border-left: 2px solid black;
   background-color: #E8E8E8  ;
@@ -91,7 +101,7 @@ div.generalAbilities
 
 .splitBoxDiv
 {
-  height: 25vh;
+  min-height: 25vh;
   border: 2px solid black;
   border-radius: 15px;
   padding-left : 5px;
@@ -320,5 +330,48 @@ img.tinyicon
       padding:0px;
       background: #fff;
 
+    }
+
+    div.characterDetails
+    {
+      height: 15vh;
+    }
+
+    .topCharacter{
+      height:7.5vh; 
+    }
+
+    .bottomCharacter{
+      height:6.5vh; 
+    }
+
+    /* APPLIES TO LEFT */
+
+    div.squareWrapper
+    {
+      height: 13.5vh;
+    }
+
+
+    div.combatAbilities
+    {
+      height: 69vh;
+    }
+
+    div.combatAbilitiesVisualStats
+    {
+      height: 63vh;
+    }
+
+    /* APPLIES TO RIGHT */
+
+    div.generalAbilities
+    {
+      height: 58.5vh;
+    }
+
+    .splitBoxDiv
+    {
+      height: 25vh;
     }
 }
