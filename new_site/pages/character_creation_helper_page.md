@@ -14,7 +14,7 @@ skip_header: true
 <script>
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/data/GENERATED/all_data.json", function(json) {
+  $.getJSON("/new_site/pages/GENERATED/ALT.json", function(json) {
     global_json = json;
     nunjucks.configure('/new_site/templates', {autoescape: true });
     var content = nunjucks.render('character_creation_helper_template.html', { "data" : json["roles"]["class_roles"] } );

@@ -33,7 +33,7 @@ GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
 GLOBAL_SPELL_TIER_ABILITIES = dict()
 
-GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'docs', 'images')
+GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'new_site', 'images')
 GLOBAL_SITE_ART_PATH = os.path.join(BASE_DIRECTORY, 'site', 'static', 'images')
 VERSION_NUMBER = None
 
@@ -207,7 +207,7 @@ class rnr_class(rnr_entity):
 
 
       absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
-      relative_art_folder = os.path.join('images', 'class')
+      relative_art_folder = os.path.join('..', '..', 'images', 'class')
 
       image_path, image_attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subclass.replace(' ','_').lower(), male)
 
@@ -359,7 +359,7 @@ class rnr_race(rnr_entity):
     custom_chunk = f'>{self.quote}\n>\n>—{self.quote_author}\n\n'
 
     absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
-    relative_art_folder = os.path.join('images', 'race')
+    relative_art_folder = os.path.join('..', '..', 'images', 'race')
 
     image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.subrace_name.replace(' ','_').lower(), male)
 
@@ -479,7 +479,7 @@ class rnr_class_wrapper():
     male = 'male' if preferred_image else 'female'
 
     absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
-    relative_art_folder = os.path.join('images', 'class')
+    relative_art_folder = os.path.join('..', '..', 'images', 'class')
     
     image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.class_name.lower(), male)
 
@@ -521,7 +521,7 @@ class rnr_race_wrapper():
     male = 'male' if preferred_image else 'female'
 
     absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
-    relative_art_folder = os.path.join('images', 'race')
+    relative_art_folder = os.path.join('..', '..', 'images', 'race')
     image_path, attribution = get_gendered_art(relative_art_folder, absolute_art_folder, self.race_name.replace(' ','_').lower(), male)
     
 

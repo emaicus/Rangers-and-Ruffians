@@ -9,6 +9,8 @@ from pathlib import Path
 import argparse
 import copy
 
+GENERATED_SITE_DIRECTORY = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'pages', 'GENERATED')
+
 MALE = True
 FEMALE = False
 UNDEFINED = True
@@ -58,7 +60,7 @@ def publish_character_creation(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Compendium_of_Character_Creation.md'))
+  md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Compendium_of_Character_Creation.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   rnr_race_wrappers  = rnr_utils.load_all_race_wrappers()
@@ -92,7 +94,7 @@ def publish_ancients(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'The Tome of the Ancients', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Tome_of_the_Ancients.md'))
+  md = markdown_handler.markdown_handler(f'The Tome of the Ancients', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Tome_of_the_Ancients.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   spells = rnr_utils.markdown_spellbooks()
@@ -110,7 +112,7 @@ def publish_examples(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
   
-  md = markdown_handler.markdown_handler(f'The Book of Examples', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Examples.md'))
+  md = markdown_handler.markdown_handler(f'The Book of Examples', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Examples.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
 
@@ -128,7 +130,7 @@ def publish_rulebook(force_overwrite):
     print(f"ERROR: cannot find docs directory: {docs_directory}")
     sys.exit(1)
 
-  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Rulebook.md'))
+  md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Rulebook.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'rulebook_topmatter.md'))
@@ -145,7 +147,7 @@ def publish_book_of_known_beasts(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Book_of_Known_Beasts.md'))
+  md = markdown_handler.markdown_handler(f'Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Book_of_Known_Beasts.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
@@ -259,7 +261,7 @@ def publish_pantheon(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Book of Lore', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Book_of_Lore.md'))
+  md = markdown_handler.markdown_handler(f'Book of Lore', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Book_of_Lore.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
@@ -276,7 +278,7 @@ def publish_poohbah_printables(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Poohbah_Printables.md'))
+  md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Poohbah_Printables.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
   
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
@@ -290,7 +292,7 @@ def publish_printabled_materials(force_overwrite):
   rnr_utils.load_Rangers_And_Ruffians_Data()
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
 
-  md = markdown_handler.markdown_handler(f'Printed Materials', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Printed_Materials.md'))
+  md = markdown_handler.markdown_handler(f'Printed Materials', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Printed_Materials.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
   
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
@@ -305,7 +307,7 @@ def publish_changelog(force_overwrite):
   parts_directory = os.path.join(docs_directory, 'parts')
   changelog_directory = os.path.join(parts_directory, 'changelog_parts')
 
-  md = markdown_handler.markdown_handler(f'Changelog', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(docs_directory, 'Changelog.md'))
+  md = markdown_handler.markdown_handler(f'Changelog', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Changelog.md'))
   md.slurp_topmatter_file(os.path.join(parts_directory, 'topmatter', 'changelog_topmatter.md'))
 
   changelogs = list()
@@ -416,12 +418,35 @@ def create_alt_all_race_class_json():
 
   data["roles"]["tooltips"] = tooltips
 
-  with open( os.path.join(rnr_utils.DATA_DIRECTORY, 'GENERATED', 'ALT.json' ), 'w' ) as outfile:
+  with open( os.path.join(GENERATED_SITE_DIRECTORY, 'ALT.json' ), 'w' ) as outfile:
     json.dump(data, outfile, indent=4)
+
+def check_service_worker_dependencies():
+  new_site = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site')
+  known_dependencies_file = os.path.join(new_site, 'known_dependencies.json')
+  with open(known_dependencies_file, 'r') as infile:
+    old_dependencies = set(json.load(infile)["dependencies"])
+
+  new_dependencies = set()
+  for path, subdirs, files in os.walk(new_site):
+    for name in files:
+      to_add = os.path.relpath(os.path.join(path, name), rnr_utils.BASE_DIRECTORY)
+      new_dependencies.add(to_add)
+  
+  new_dependencies = list(new_dependencies - old_dependencies)
+
+  if len(new_dependencies) > 0:
+    print("The following new files have to be added both to the /service_worker.js and the /new_site/known_dependencies.json")
+    for file in new_dependencies[:-1]:
+      print(f'"{file}",')
+    print(f'"{new_dependencies[-1]}"')
 
 if __name__ == "__main__":
   rnr_utils.printLogo()
   rnr_utils.load_Rangers_And_Ruffians_Data()
+
+  if not os.path.exists(GENERATED_SITE_DIRECTORY):
+    os.mkdir(GENERATED_SITE_DIRECTORY)
 
   parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
   parser.add_argument('--yes', action='store_true')
@@ -456,4 +481,5 @@ if __name__ == "__main__":
   publish_printabled_materials(force_overwrite)
   publish_poohbah_printables(force_overwrite)
   create_alt_all_race_class_json()
+  check_service_worker_dependencies()
   print("Done!")

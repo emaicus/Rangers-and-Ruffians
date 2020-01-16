@@ -1,6 +1,6 @@
 ---
 
-landscape_banner_path: /docs/images/backdrops/landscape_rulebook.jpg
+landscape_banner_path: /new_site/images/backdrops/landscape_rulebook.jpg
 
 landscape_banner_link: https://www.deviantart.com/assumzaek/art/Summer-Time-Activities-442251327
 
@@ -16,7 +16,7 @@ landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0
 
 
 
-portrait_banner_path: /docs/images/backdrops/portrait_rulebook.jpg
+portrait_banner_path: /new_site/images/backdrops/portrait_rulebook.jpg
 
 portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Apprentice-Quest-779369039
 

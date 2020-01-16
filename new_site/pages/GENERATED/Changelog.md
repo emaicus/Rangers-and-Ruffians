@@ -1,6 +1,6 @@
 ---
 
-portrait_banner_path: /docs/images/backdrops/portrait_changelog.jpg
+portrait_banner_path: /new_site/images/backdrops/portrait_changelog.jpg
 
 portrait_banner_link: https://www.deviantart.com/spikedmcgrath/art/Toad-Newmann-803282064
 

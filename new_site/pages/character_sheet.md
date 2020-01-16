@@ -31,7 +31,7 @@ skip_header: true
 
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/data/GENERATED/ALT.json", function(json) {
+  $.getJSON("/new_site/pages/GENERATED/ALT.json", function(json) {
     global_json = json;
     nunjucks.configure('/new_site/templates', {autoescape: true });
     starting_values = parseGetRequest();

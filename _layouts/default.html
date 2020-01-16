@@ -2,14 +2,14 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/docs/images/icons/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/docs/images/icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/docs/images/icons/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/docs/images/icons/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/docs/images/icons/favicon/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="/docs/images/icons/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/new_site/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/new_site/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/new_site/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/new_site/icons/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="/new_site/icons/favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/docs/images/icons/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="/new_site/icons/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
@@ -26,6 +26,21 @@
       </script>
     {% endif %}
     <meta charset="UTF-8">
+
+    {% if page.indexpage %}
+      <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service_worker.js')
+        .then(function(registration) {
+          console.log('Registration successful, scope is:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Service worker registration failed, error:', error);
+        });
+      }
+      </script>
+    {% endif %}
+    <!-- end of service worker -->
 
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
