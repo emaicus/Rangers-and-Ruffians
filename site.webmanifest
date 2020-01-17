@@ -1,6 +1,7 @@
 {
     "name": "Rangers and Ruffians",
     "short_name": "RnR",
+    "start_url" : "/",
     "icons": [
         {
             "src": "/new_site/icons/favicon/android-chrome-192x192.png",

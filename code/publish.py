@@ -419,7 +419,7 @@ def create_alt_all_race_class_json():
   data["roles"]["tooltips"] = tooltips
 
   with open( os.path.join(GENERATED_SITE_DIRECTORY, 'ALT.json' ), 'w' ) as outfile:
-    json.dump(data, outfile, indent=4)
+    json.dump(data, outfile)
 
 def check_service_worker_dependencies():
   new_site = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site')

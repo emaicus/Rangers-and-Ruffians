@@ -27,10 +27,23 @@
     {% endif %}
     <meta charset="UTF-8">
 
+    {% if page.fake_value %}
+      <button onclick="goBack()">Go Back</button>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+    {% endif %}
+
     {% if page.indexpage %}
       <script>
+
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service_worker.js')
+        .catch(function(error) {
+          console.log('TEST Service worker registration failed, error:', error);
+        })
         .then(function(registration) {
           console.log('Registration successful, scope is:', registration.scope);
         })
@@ -38,6 +51,17 @@
           console.log('Service worker registration failed, error:', error);
         });
       }
+
+      window.addEventListener('beforeinstallprompt', event => {
+          event.preventDefault();
+          var button = document.querySelector('#pwaInstall');
+          button.removeAttribute('hidden');
+          button.addEventListener('click', () => {
+            event.prompt();
+            button.setAttribute('disabled', true);
+          });
+        });
+
       </script>
     {% endif %}
     <!-- end of service worker -->
@@ -116,6 +140,11 @@
     </header>
     {% endif %}
     <main id="content" class="main-content" role="main">
+
+      {% if page.indexpage %}
+        <button hidden class="btn-primary" id="pwaInstall">Install Rangers and Ruffians</button>
+      {% endif %}
+
       {{ content }}
 
       {% if  skipheader == false %}

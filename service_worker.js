@@ -14,8 +14,8 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v0.0.1';
-const RUNTIME = 'runtime-v0.0.1';
+const PRECACHE = 'precache-v0.0.7';
+const RUNTIME = 'runtime-v0.0.7';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
@@ -26,7 +26,6 @@ const PRECACHE_URLS = [
   "new_site/icons/flame.svg",
   "new_site/images/class/female/highborn.jpg",
   "new_site/images/class/female/monk.jpg",
-  "new_site/images/race/female/comingsoon.jpg",
   "new_site/icons/favicon/android-chrome-512x512.png",
   "new_site/images/class/barbarian.jpg",
   "new_site/images/race/female/kragraven.jpg",
@@ -47,13 +46,11 @@ const PRECACHE_URLS = [
   "new_site/printed_materials/standard_character_sheet.pdf",
   "new_site/icons/swap-bag.svg",
   "new_site/images/race/female/high_elf.jpg",
-  "new_site/images/race/male/comingsoon.jpg",
   "new_site/images/backdrops/landscape_beasts.jpg",
   "new_site/icons/power-lightning.svg",
   "new_site/icons/magic-swirl.svg",
   "new_site/images/class/knight.jpg",
   "new_site/pages/level_up_sheet.html",
-  "new_site/images/race/male/OLD_waterborn.jpg",
   "new_site/icons/favicon/browserconfig.xml",
   "new_site/templates/selector_template.html",
   "new_site/icons/favicon/favicon-16x16.png",
@@ -65,13 +62,11 @@ const PRECACHE_URLS = [
   "new_site/images/race/male/human.jpg",
   "new_site/images/race/male/waterborn.jpg",
   "new_site/js/nunjucks.js",
-  "new_site/images/backdrops/OLD_landscape_rulebook.jpg",
   "new_site/images/race/male/orc.jpg",
   "new_site/templates/character_sheet_template.html",
   "new_site/icons/circle.svg",
   "new_site/icons/favicon/favicon-32x32.png",
   "new_site/images/race/female/catterwol.jpg",
-  "new_site/images/class/old/knight.jpg",
   "new_site/templates/role_selection_template.html",
   "new_site/images/race/female/goblin.jpg",
   "new_site/icons/quiver.svg",
@@ -93,7 +88,6 @@ const PRECACHE_URLS = [
   "new_site/images/class/monk.jpg",
   "new_site/images/class/female/gunslinger.jpg",
   "new_site/css/character_selection.css",
-  "new_site/images/backdrops/background.png",
   "new_site/images/class/archer.jpg",
   "new_site/images/backdrops/portrait_banner.jpg",
   "new_site/images/race/female/human.jpg",
@@ -130,7 +124,6 @@ const PRECACHE_URLS = [
   "new_site/images/race/male/wood_elf.jpg",
   "new_site/images/class/battle_mage.jpg",
   "new_site/icons/swords-power.svg",
-  "new_site/images/class/old/barbarian.jpg",
   "new_site/pages/GENERATED/Compendium_of_Character_Creation.html",
   "new_site/icons/favicon/safari-pinned-tab.svg",
   "new_site/images/race/male/deep_elf.jpg",
@@ -148,13 +141,10 @@ const PRECACHE_URLS = [
   "new_site/css/character_creation_helper.css",
   "new_site/templates/character_selection_template.html",
   "new_site/images/class/male/alt_knight.jpg",
-  "new_site/images/backdrops/background.jpg",
   "new_site/pages/GENERATED/Poohbah_Printables.html",
   "new_site/images/backdrops/portrait_beasts.jpg",
   "new_site/icons/raise-zombie.svg",
   "new_site/icons/sword-brandish.svg",
-  "new_site/images/class/old/beastmaster.jpg",
-  "new_site/images/class/old/d7if7sj-96d92cd4-efbf-4492-8a1c-d624e8a3788c.jpg",
   "new_site/images/race/female/automaton.jpg",
   "new_site/pages/GENERATED/Examples.html",
   "new_site/images/class/magic_arrow.jpg",
@@ -212,12 +202,14 @@ self.addEventListener('fetch', event => {
         }
 
         return caches.open(RUNTIME).then(cache => {
-          return fetch(event.request).then(response => {
+          return fetch(event.request)
+            .catch(function(error) { console.log("ERROR!") })
+            .then(response => {
             // Put a copy of the response in the runtime cache.
             return cache.put(event.request, response.clone()).then(() => {
               return response;
             });
-          });
+          })
         });
       })
     );
