@@ -1,7 +1,5 @@
 body
 {
-  margin:0;
-  padding: 0;
   background:  white;/*url('/static/images/subtle_white_mini_waves.png') repeat 0 0*/;
   -webkit-print-color-adjust: exact !important;
 }
@@ -302,6 +300,8 @@ img.tinyicon
     }
 
     .body{
+        margin:0;
+        padding: 0;
         background:  white;
         background-color: white;
     }

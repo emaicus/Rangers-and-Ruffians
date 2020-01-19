@@ -60,13 +60,18 @@
     <!-- end of service worker -->
 
 {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=default">
+
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 <!--     <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
  -->  </head>
   <body>
+    <!-- Handle Iphone X and other notched devices. -->
+    <div class="blackBox"></div>
+
+
 
     <div class="navbar">
       <a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></i></a>
@@ -78,7 +83,7 @@
 
     {% assign skipheader   = page.skip_header | default: false %}
     {% if skipheader == false %}
-    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem">
+    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem; padding-top: env(safe-area-inset-top, 1);">
       <h1 class="project-name" >{{ page.title | default: "Rangers and Ruffians"}}</h1>
       <!-- {% if page.description %}
         <h2 class="page-title">{{page.title}}</h2>
