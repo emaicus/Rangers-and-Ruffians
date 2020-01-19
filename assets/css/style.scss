@@ -61,6 +61,7 @@ button{
 }
 
 /* The navigation bar */
+
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -75,6 +76,10 @@ button{
   padding-right: 2vw;
   padding-top: 0rem;
   padding-bottom: 0rem;
+}
+
+.navbar-nav {
+  flex-direction: row;
 }
 
 /* Links inside the navbar */

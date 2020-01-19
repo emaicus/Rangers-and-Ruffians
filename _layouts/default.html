@@ -73,13 +73,22 @@
 
 
 
-    <div class="navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></a></li>
+          <li style="padding-left: 1vw;"><a href="/index.html">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <div class="navbar">
       <a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></i></a>
       <a href="/index.html">Home</a>
-      <!-- <a href="/new_site/pages/GENERATED/Rulebook.html">Rules</a> 
+      <a href="/new_site/pages/GENERATED/Rulebook.html">Rules</a> 
       <a href="/new_site/pages/GENERATED/Compendium_of_Character_Creation.html">Races/Classes</a>
-      <a href="/new_site/pages/GENERATED/Tome_of_the_Ancients.html">Spells</a>  -->
-    </div>
+      <a href="/new_site/pages/GENERATED/Tome_of_the_Ancients.html">Spells</a> 
+    </div> -->
 
     {% assign skipheader   = page.skip_header | default: false %}
     {% if skipheader == false %}
