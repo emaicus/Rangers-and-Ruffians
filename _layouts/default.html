@@ -83,7 +83,7 @@
 
     {% assign skipheader   = page.skip_header | default: false %}
     {% if skipheader == false %}
-    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem; padding-top: env(safe-area-inset-top, 1);">
+    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem; padding-top: 6vh;">
       <h1 class="project-name" >{{ page.title | default: "Rangers and Ruffians"}}</h1>
       <!-- {% if page.description %}
         <h2 class="page-title">{{page.title}}</h2>
