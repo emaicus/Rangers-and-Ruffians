@@ -17,6 +17,11 @@
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js' | prepend: site.baseurl}}"></script>
     <script src="/new_site/js/rangers.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
 
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -60,12 +65,7 @@
     <!-- end of service worker -->
 
 {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-<!--     <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
- -->  </head>
+  </head>
   <body>
     <div class="blackBox"></div>
     <div style="margin-top:env(safe-area-inset-top, 0); margin-right: env(safe-area-inset-right, 0);margin-left: env(safe-area-inset-left, 0); margin-bottom: env(safe-area-inset-bottom, 0);">
