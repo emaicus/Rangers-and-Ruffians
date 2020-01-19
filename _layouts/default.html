@@ -68,110 +68,109 @@
 <!--     <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
  -->  </head>
   <body>
-    <!-- Handle Iphone X and other notched devices. -->
-    <div class="blackBox"></div>
+    
+    <div style="margin-top:env(safe-area-inset-top, 0); margin-right: env(safe-area-inset-right, 0);margin-left: env(safe-area-inset-left, 0); margin-bottom: env(safe-area-inset-bottom, 0);">
 
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></a></li>
+            <li style="padding-left: 1vw;"><a href="/index.html">Home</a></li>
+          </ul>
+        </div>
+      </nav>
 
+      <!-- <div class="navbar">
+        <a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></i></a>
+        <a href="/index.html">Home</a>
+        <a href="/new_site/pages/GENERATED/Rulebook.html">Rules</a> 
+        <a href="/new_site/pages/GENERATED/Compendium_of_Character_Creation.html">Races/Classes</a>
+        <a href="/new_site/pages/GENERATED/Tome_of_the_Ancients.html">Spells</a> 
+      </div> -->
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></a></li>
-          <li style="padding-left: 1vw;"><a href="/index.html">Home</a></li>
-        </ul>
-      </div>
-    </nav>
+      {% assign skipheader   = page.skip_header | default: false %}
+      {% if skipheader == false %}
+      <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem; padding-top: 6vh;">
+        <h1 class="project-name" >{{ page.title | default: "Rangers and Ruffians"}}</h1>
+        <!-- {% if page.description %}
+          <h2 class="page-title">{{page.title}}</h2>
+        {% endif %} -->
+        {% assign portrait_path   = page.portrait_banner_path    | default: page.landscape_banner_path    | default: false %}
+        {% assign portrait_name   = page.portrait_banner_name    | default: page.landscape_banner_name    | default: false %}
+        {% assign portrait_artist = page.portrait_banner_artist  | default: page.landscape_banner_artist  | default: false %}
+        {% assign portrait_license= page.portrait_banner_license | default: page.landscape_banner_license | default: false %}
+        {% assign portrait_link   = page.portrait_banner_link    | default: page.landscape_banner_link    | default: false %}
+        {% assign portrait_artist_link  = page.portrait_banner_artist_link | default: page.landscape_banner_artist_link | default: false %}
+        {% assign portrait_license_link = page.portrait_banner_license_link| default: page.landscape_banner_license_link| default: false %}
 
-    <!-- <div class="navbar">
-      <a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></i></a>
-      <a href="/index.html">Home</a>
-      <a href="/new_site/pages/GENERATED/Rulebook.html">Rules</a> 
-      <a href="/new_site/pages/GENERATED/Compendium_of_Character_Creation.html">Races/Classes</a>
-      <a href="/new_site/pages/GENERATED/Tome_of_the_Ancients.html">Spells</a> 
-    </div> -->
+        
+        {% assign landscape_path   = page.landscape_banner_path    | default: page.portrait_banner_path    | default: false %}
+        {% assign landscape_name   = page.landscape_banner_name    | default: page.portrait_banner_name    | default: false %}
+        {% assign landscape_artist = page.landscape_banner_artist  | default: page.portrait_banner_artist  | default: false %}
+        {% assign landscape_license= page.landscape_banner_license | default: page.portrait_banner_license | default: false %}
+        {% assign landscape_link   = page.landscape_banner_link    | default: page.portrait_banner_link    | default: false %}
+        {% assign landscape_artist_link  = page.landscape_banner_artist_link | default: page.portrait_banner_artist_link | default: false %}
+        {% assign landscape_license_link = page.landscape_banner_license_link| default: page.portrait_banner_license_link| default: false %}
 
-    {% assign skipheader   = page.skip_header | default: false %}
-    {% if skipheader == false %}
-    <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem; padding-top: 6vh;">
-      <h1 class="project-name" >{{ page.title | default: "Rangers and Ruffians"}}</h1>
-      <!-- {% if page.description %}
-        <h2 class="page-title">{{page.title}}</h2>
-      {% endif %} -->
-      {% assign portrait_path   = page.portrait_banner_path    | default: page.landscape_banner_path    | default: false %}
-      {% assign portrait_name   = page.portrait_banner_name    | default: page.landscape_banner_name    | default: false %}
-      {% assign portrait_artist = page.portrait_banner_artist  | default: page.landscape_banner_artist  | default: false %}
-      {% assign portrait_license= page.portrait_banner_license | default: page.landscape_banner_license | default: false %}
-      {% assign portrait_link   = page.portrait_banner_link    | default: page.landscape_banner_link    | default: false %}
-      {% assign portrait_artist_link  = page.portrait_banner_artist_link | default: page.landscape_banner_artist_link | default: false %}
-      {% assign portrait_license_link = page.portrait_banner_license_link| default: page.landscape_banner_license_link| default: false %}
-
-      
-      {% assign landscape_path   = page.landscape_banner_path    | default: page.portrait_banner_path    | default: false %}
-      {% assign landscape_name   = page.landscape_banner_name    | default: page.portrait_banner_name    | default: false %}
-      {% assign landscape_artist = page.landscape_banner_artist  | default: page.portrait_banner_artist  | default: false %}
-      {% assign landscape_license= page.landscape_banner_license | default: page.portrait_banner_license | default: false %}
-      {% assign landscape_link   = page.landscape_banner_link    | default: page.portrait_banner_link    | default: false %}
-      {% assign landscape_artist_link  = page.landscape_banner_artist_link | default: page.portrait_banner_artist_link | default: false %}
-      {% assign landscape_license_link = page.landscape_banner_license_link| default: page.portrait_banner_license_link| default: false %}
-
-      <div class="header-portrait">
-      {% if portrait_path %}
-        <figure style="max-height:71vh; margin:0; margin-bottom:1rem;">
-          <img src="{{portrait_path}}" style="max-width: 100%; max-height:69vh"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
-          <figcaption>
-            <a href="{{portrait_link}}">{{portrait_name}}</a> 
-            by 
-            <a href="{{portrait_artist_link}}">{{portrait_artist}}</a> 
-            is licensed under 
-            <a href="{{portrait_license_link}}">{{portrait_license}}</a>
-          </figcaption>
-        </figure>
-      {% endif %}
-      </div>
-
-      <div class="header-landscape">
-      {% if landscape_path %}
-        <figure style="max-height:71vh; margin:0; margin-bottom:1rem;">
-          <img src="{{landscape_path}}" style="max-width: 100%; max-height:69vh"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
-          <figcaption>
-            <a href="{{landscape_link}}">{{landscape_name}}</a> 
-            by 
-            <a href="{{landscape_artist_link}}">{{landscape_artist}}</a> 
-            is licensed under 
-            <a href="{{landscape_license_link}}">{{landscape_license}}</a>
-          </figcaption>
-        </figure>
-      {% endif %}
-      </div>      
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
-      {% if site.github.is_project_page and page.show_download %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-
-    </header>
-    {% endif %}
-
-    <main id="content" class="main-content" role="main">
-
-      {% if page.indexpage %}
-        <button hidden class="btn-primary" id="pwaInstall">Install Rangers and Ruffians</button>
-      {% endif %}
-
-      {{ content }}
-
-      {% if  skipheader == false %}
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        <div class="header-portrait">
+        {% if portrait_path %}
+          <figure style="max-height:71vh; margin:0; margin-bottom:1rem;">
+            <img src="{{portrait_path}}" style="max-width: 100%; max-height:69vh"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
+            <figcaption>
+              <a href="{{portrait_link}}">{{portrait_name}}</a> 
+              by 
+              <a href="{{portrait_artist_link}}">{{portrait_artist}}</a> 
+              is licensed under 
+              <a href="{{portrait_license_link}}">{{portrait_license}}</a>
+            </figcaption>
+          </figure>
         {% endif %}
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
+        </div>
+
+        <div class="header-landscape">
+        {% if landscape_path %}
+          <figure style="max-height:71vh; margin:0; margin-bottom:1rem;">
+            <img src="{{landscape_path}}" style="max-width: 100%; max-height:69vh"; alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name"/>
+            <figcaption>
+              <a href="{{landscape_link}}">{{landscape_name}}</a> 
+              by 
+              <a href="{{landscape_artist_link}}">{{landscape_artist}}</a> 
+              is licensed under 
+              <a href="{{landscape_license_link}}">{{landscape_license}}</a>
+            </figcaption>
+          </figure>
+        {% endif %}
+        </div>      
+        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+
+        {% if site.github.is_project_page and page.show_download %}
+          <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+        {% endif %}
+        {% if site.show_downloads %}
+          <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+          <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+        {% endif %}
+
+      </header>
       {% endif %}
-    </main>
+
+      <main id="content" class="main-content" role="main">
+
+        {% if page.indexpage %}
+          <button hidden class="btn-primary" id="pwaInstall">Install Rangers and Ruffians</button>
+        {% endif %}
+
+        {{ content }}
+
+        {% if  skipheader == false %}
+        <footer class="site-footer">
+          {% if site.github.is_project_page %}
+            <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+          {% endif %}
+          <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+        </footer>
+        {% endif %}
+      </main>
+    </div>
   </body>
 </html>
