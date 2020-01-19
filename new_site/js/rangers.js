@@ -37,3 +37,8 @@ function getClassFromSubclass(base, subclass){
     }
     return rnr_class;
 }
+
+// Takes the user back.
+function goBack() {
+  window.history.back();
+}

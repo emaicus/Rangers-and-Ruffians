@@ -6,7 +6,7 @@
 @import 'jekyll-theme-cayman';
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #000000fc; }
-body {padding: 0;margin: 0;font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 16px;line-height: 1.5;color: #43484a;}
+body {padding: 0; padding-top: 2.5rem; margin: 0;font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 16px;line-height: 1.5;color: #43484a;}
 .main-content blockquote {padding: 0 1rem;margin-left: 0;color: #000000d4;border-left: 0.3rem solid #dce6f0;}
 
 // .project-name { margin-top: 0; margin-bottom: 2rem; font-family: 'Tangerine', serif; font-size:4rem" }
@@ -50,3 +50,44 @@ button{
   background-color: #53a054;
 }
 
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  height: 2.5rem; /* Full width */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.project-tagline {
+  opacity: 1;
+}
+
+.headerIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}

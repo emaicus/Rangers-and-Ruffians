@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo">
   <head>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/new_site/icons/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/new_site/icons/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/new_site/icons/favicon/favicon-16x16.png">
@@ -15,6 +15,7 @@
     <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js' | prepend: site.baseurl}}"></script>
+    <script src="/new_site/js/rangers.js"></script>
 
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -26,15 +27,6 @@
       </script>
     {% endif %}
     <meta charset="UTF-8">
-
-    {% if page.fake_value %}
-      <button onclick="goBack()">Go Back</button>
-      <script>
-        function goBack() {
-          window.history.back();
-        }
-      </script>
-    {% endif %}
 
     {% if page.indexpage %}
       <script>
@@ -74,6 +66,15 @@
 <!--     <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
  -->  </head>
   <body>
+
+    <div class="navbar">
+      <a href="javascript:goBack();"><img src="/new_site/icons/fast-backward-button.svg" class="headerIcon"></i></a>
+      <a href="/index.html">Home</a>
+      <!-- <a href="/new_site/pages/GENERATED/Rulebook.html">Rules</a> 
+      <a href="/new_site/pages/GENERATED/Compendium_of_Character_Creation.html">Races/Classes</a>
+      <a href="/new_site/pages/GENERATED/Tome_of_the_Ancients.html">Spells</a>  -->
+    </div>
+
     {% assign skipheader   = page.skip_header | default: false %}
     {% if skipheader == false %}
     <header class="page-header" role="banner"   style="background-image: none; background-color: #171d1a; min-height:100vh; padding: 1rem">
@@ -139,6 +140,7 @@
 
     </header>
     {% endif %}
+
     <main id="content" class="main-content" role="main">
 
       {% if page.indexpage %}
