@@ -60,6 +60,8 @@ button{
   height: 2.5rem; /* Full width */
   width: 100%; /* Full width */
   z-index: 1;
+  padding-bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Links inside the navbar */
