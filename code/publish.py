@@ -52,8 +52,42 @@ PREFERRED_IMAGES = {
   'ranger' : MALE,
   'rogue' : MALE,
   'sorcerer' : MALE,
-  'wizard' : MALE
+  'wizard' : MALE,
 }
+
+def copyImages():
+  races = ('race', rnr_utils.get_all_race_names())
+  classes = ('class', rnr_utils.get_all_class_names())
+
+  visited = set()
+
+  for img_type, items in (races, classes):
+    for (item, sub_item) in items:
+      usable_item = item.lower().replace(' ', '_')
+      usable = sub_item.lower().replace(' ', '_')
+
+      if not usable in PREFERRED_IMAGES:
+        usable = usable_item
+
+      if usable in visited:
+        continue
+
+      if not usable in PREFERRED_IMAGES:
+        print(f"No preferred image for {usable}!")
+        sys.exit(1)
+
+      male = 'male' if PREFERRED_IMAGES[usable] else 'female'
+      source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
+      dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, male, f'{usable}.jpg')
+
+      if not os.path.exists(source):
+        print(f"couldn't find {source}")
+        source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
+        dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, f'{usable}.jpg')
+
+      shutil.copy(source, dest)
+      visited.add(usable)
+
 
 def publish_character_creation(force_overwrite):
   global PREFERRED_IMAGES
@@ -471,6 +505,7 @@ if __name__ == "__main__":
     rnr_utils.update_version(new_version)
     print(f"The Version Number is now {rnr_utils.VERSION_NUMBER}")
 
+  copyImages()
   publish_rulebook(force_overwrite)
   publish_book_of_known_beasts(force_overwrite)
   publish_pantheon(force_overwrite)
