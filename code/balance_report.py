@@ -385,7 +385,7 @@ def evaluate_spells_for_doubling(print_errors=True):
   return offenders
 
 def check_brief_abilities(print_errors=True):
-  target_length = 80
+  target_length = 100
   errors = list()
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
     if not 'brief' in ability_info:
@@ -443,8 +443,17 @@ def is_word_unknown(word, spell, new_words):
   else:
     return False
 
+def split_words_on(words, c):
+  ret = list()
+  for word in words:
+    ret += word.split(c)
+  return ret
+
 def process_word(word):
   words = contractions.fix(word).split()
+  words = split_words_on('/')
+  words = split_words_on('-')
+  
   ret = list()
   for word in words:
     if re.findall("\\d*d\\d+", word) or re.findall("\\d+x\\d+x?\\d*", word):
@@ -456,7 +465,8 @@ def process_word(word):
     ret.append(word)
   return ret
 
-def fix_spelling_errors(words, spell, rnr_dictionary, errors):
+def fix_spelling_errors(words, spell, rnr_dictionary):
+  errors = list()
   for word in words:
     w = process_word(word)
     for element in w:
@@ -464,14 +474,14 @@ def fix_spelling_errors(words, spell, rnr_dictionary, errors):
         continue
       if is_word_unknown(element, spell, rnr_dictionary) and not element in errors:
         correct = inquirer.prompt([inquirer.Confirm('correct', message='Is {0} properly spelled?'.format(word)),])['correct']
-        print(correct)
         if correct == True:
           rnr_dictionary.append(element)
         else:
           errors.add(element)   
   return errors
 
-def just_find_typos(words, spell, rnr_dictionary, errors):
+def just_find_typos(words, spell, rnr_dictionary):
+  errors = list()
   for word in words:
     w = process_word(word)
     for element in w:
@@ -480,6 +490,15 @@ def just_find_typos(words, spell, rnr_dictionary, errors):
       if is_word_unknown(element, spell, rnr_dictionary):
         errors.add(element)
   return errors
+
+def spell_check_a_file(filename, spell_check_function, spell, rnr_dictionary):
+  with open(filename, 'r') as infile:
+    lines = infile.readlines()
+
+  words = lines.split()
+  return spell_check_function(words, spell, rnr_dictionary)
+
+
 
 def spell_check(fix_errors=True, print_errors=True):
 
@@ -497,39 +516,53 @@ def spell_check(fix_errors=True, print_errors=True):
   if os.path.exists(dictionary_path):
     with open(dictionary_path, 'r') as infile:
       data = json.load(infile)
-      rnr_dictionary = data['rnr_words']
+      rnr_dictionary = data['rnr_words'] if 'rnr_words' in data else {}
 
-  ##############################################
-  # ABILITIES
-  ###############################################
-  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
-    title_words = ability_name.split(' ')
-    spell_check_function(title_words, spell, rnr_dictionary, ability_errors)
 
-    words = ability_info['description'].split(' ') + ability_info['brief'].split(' ')
-    spell_check_function(words, spell, rnr_dictionary, ability_errors)
+  directories_to_check = [
+                           Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'data')),
+                           Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')),
+                         ]
+  testable_extensions = ['.txt', '.yml', '.json', '.md']
 
-  ##############################################
-  # Spells
-  ###############################################
-  for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
-    title_words = spell_name.split(' ')
-    spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, spell_errors))
+  all_errors = dict()
+  for directory in directories_to_check:
+    for extension in testable_extensions:
+      for file in directory.glob(f'**/*{extension}'):
+        all_errors[file] = spell_check_a_file(str(file), spell_check_function, spell, rnr_dictionary)
 
-    spell_info['details']['description'].split(' ')
-    spell_check_function(words, spell, rnr_dictionary, spell_errors)
+  # if len(spell_errors) > 0:
+  #   all_errors["spellbooks"] = list(spell_errors)
+  # if len(ability_errors) > 0:
+  #   all_errors["abilities"] = list(ability_errors)  
+
+  
+
+  # ##############################################
+  # # ABILITIES
+  # ###############################################
+  # for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+  #   title_words = ability_name.split(' ')
+  #   spell_check_function(title_words, spell, rnr_dictionary, ability_errors)
+
+  #   words = ability_info['description'].split(' ') + ability_info['brief'].split(' ')
+  #   spell_check_function(words, spell, rnr_dictionary, ability_errors)
+
+  # ##############################################
+  # # Spells
+  # ###############################################
+  # for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
+  #   title_words = spell_name.split(' ')
+  #   spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, spell_errors))
+
+  #   words = spell_info['details']['description'].split(' ')
+  #   spell_check_function(words, spell, rnr_dictionary, spell_errors)
+
 
   if fix_errors:
     output_json = {'rnr_words' : rnr_dictionary}
     with open('rnr_dictionary.json', 'w') as outfile:
       json.dump(output_json, outfile, indent=4)
-
-  all_errors = dict()
-  if len(spell_errors) > 0:
-    all_errors["spellbooks"] = list(spell_errors)
-  if len(ability_errors) > 0:
-    all_errors["abilities"] = list(ability_errors)  
-
 
   if print_errors:
     for file, errors in all_errors.items():
@@ -557,8 +590,8 @@ def check_known_beasts():
   all_errors = list()
   for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
     
-    all_errors += string_key_check(category_info, 'description', category)
-    all_errors += string_key_check(category_info, 'tactics', category)
+    # all_errors += string_key_check(category_info, 'description', category)
+    # all_errors += string_key_check(category_info, 'tactics', category)
 
     if not 'types' in category_info:
       all_errors.append(f'{category}: no types defined.')
@@ -725,57 +758,37 @@ def check_pantheon():
 
   return all_errors
 
-# def check_for_stat_increases():
-#   all_errors = list()
-#   class_names = rnr_utils.get_all_class_names()
-#   for name in class_names:
-#     all_data = rnr_utils.get_rnr_class_data_with_name(name)
-#     level_data = all_data['levels']
-#     for i in range(1,16):
-#       level_str = f'level_{i}'
-#       if i % 2 == 0:
-#         if not 'Major Stat Increase' in level_data[level_str]['abilities']:
-#           all_errors.append(f"ERROR: {name} {level_str} missing Major Stat Increase")
-#         if 'Minor Stat Increase' in level_data[level_str]['abilities']:
-#           all_errors.append(f"ERROR: {name} {level_str} has Minor Stat Increase")
-#       else:
-#         if not 'Minor Stat Increase' in level_data[level_str]['abilities']:
-#           all_errors.append(f"ERROR: {name} {level_str} missing Minor Stat Increase")
-#         if 'Major Stat Increase' in level_data[level_str]['abilities']:
-#           all_errors.append(f"ERROR: {name} {level_str} has Major Stat Increase")
-#   return all_errors
-
 
 
 if __name__ == '__main__':
-  print('GENERATING SPELL STATS:')
-  spell_stats()
-  print()
-  print('RUNNING ABILITY CHECK:')
-  ability_check()
-  print()
-  print('GENERATING GAME STATS:')
-  print()
-  game_stats()
-  print()
-  print('GENERATING VITALITY CHARTS')
-  vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
-  print('GENERATING RACE RANKINGS')
-  rank_races() 
-  print("GENERATING CLASS RANKINGS")
-  rank_classes()
-  print("GENERATING CHARACTER RANKINGS")
-  rank_characters()
-  print("WRITING OUT ALL CHARACTERS FOR REVIEW")
-  dump_characters()
-  print()
-  print("CHECKING ABILITY DESCRIPTION LENGTHS")
-  print()
-  check_brief_abilities()
-  print()
-  print('CHECKING DESCRIPTIONS')
-  check_descriptions()
-  print()
+  # print('GENERATING SPELL STATS:')
+  # spell_stats()
+  # print()
+  # print('RUNNING ABILITY CHECK:')
+  # ability_check()
+  # print()
+  # print('GENERATING GAME STATS:')
+  # print()
+  # game_stats()
+  # print()
+  # print('GENERATING VITALITY CHARTS')
+  # vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
+  # print('GENERATING RACE RANKINGS')
+  # rank_races() 
+  # print("GENERATING CLASS RANKINGS")
+  # rank_classes()
+  # print("GENERATING CHARACTER RANKINGS")
+  # rank_characters()
+  # print("WRITING OUT ALL CHARACTERS FOR REVIEW")
+  # dump_characters()
+  # print()
+  # print("CHECKING ABILITY DESCRIPTION LENGTHS")
+  # print()
+  # check_brief_abilities()
+  # print()
+  # print('CHECKING DESCRIPTIONS')
+  # check_descriptions()
+  # print()
   print('RUNNING CUSTOM SPELL CHECK')
   spell_check()
   print()

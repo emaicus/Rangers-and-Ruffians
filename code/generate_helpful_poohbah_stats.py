@@ -27,24 +27,7 @@ STAT_STEPS = {
   15: 7
 }
 
-# RECOMMENDED_WEAPONS = {
-#   0 : '1d4',
-#   1 : '1d4 + 1',
-#   2 : '1d6. Rare 1d4 + 2',
-#   3 : '1d6 + 1. Rare 1d4 + 3',
-#   4 : '1d8', # 
-#   5 : '1d8. Rare 1d6 + 2',
-#   6 : '1d8 + 1. Rare 1d6 + 3.',
-#   7 : '1d8 + 1. Rare 1d6 + 3',
-#   8 : '1d10. Rare 1d8 + 2',
-#   9 : '1d10 + 1. Rare 1d8 + 3',
-#   10: '1d12. Rare 1d10 + 2',
-#   11: '1d12 + 1. Rare 1d10 + 3',
-#   12: '1d12 + 2',
-#   13: '1d12 + 3',
-#   14: '1d12 + 3',
-#   15: '1d12 + 3'
-# }
+
 
 RECOMMENDED_MAX_ARMOR = {
   0 : 0,
@@ -187,6 +170,26 @@ DMG_STEPS = {
   14: [{'dice' : 12,'mod' : 3},{'dice' : 12,'mod' : 3}], # 1d12 + 3 weapons
   15: [{'dice' : 12,'mod' : 4},{'dice' : 12,'mod' : 4}]  # 1d12 + 3 weapons
 }
+
+NEW_DMG_STEPS = {
+  0 : [{'dice' : 4, 'mod' : 0 } ],
+  1 : [{'dice' : 4, 'mod' : 0 } ], # rare 1d4 + 1 weapons
+  2 : [{'dice' : 6, 'mod' : 0 } ], # 1d6 weapons and rare 1d4 +2 weapons
+  3 : [{'dice' : 6, 'mod' : 0 } ], # 1d6 + 1 weapons rare 1d4 + 3 weapons
+  4 : [{'dice' : 8 'mod' : 0 } ], # 1d8 weapons
+  5 : [{'dice' : 8, 'mod' : 0 } ], # 1d8 weapons rare 1d6 + 2 weapons
+  6 : [{'dice' : 10, 'mod' : 0 } ], # 1d8 weapons + 1 rare 1d6 + 3 weapons
+  7 : [{'dice' : 10,'mod' : 0 }, {'dice' : 12,'mod': 0}], # 1d8 + 1  weapons rare 1d6 + 3 weapons
+  8 : [{'dice' : 12, 'mod' : 0 }, {'dice' : 12,'mod' : 0}], # 1d10 weapons. Rare 1d8 + 2 weapons.
+  9 : [{'dice' : 12,'mod' : 0 }, {'dice' : 12,'mod' : 0}], # 1d10 + 1 weapons. Rare 1d8 + 3 weapons
+  10: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 weapons, rare 1d10 + 2 weapons.
+  11: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 1 weapons. Rare 1d10 + 3 weapons
+  12: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 2 weapons
+  13: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 3 weapons
+  14: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 3 weapons
+  15: [{'dice' : 12,'mod' : 4},{'dice' : 12,'mod' : 0}]  # 1d12 + 3 weapons
+}
+
 
 BUFFER = markdown_handler.markdown_handler("Poohbah Handbook",file=os.path.join(rnr_utils.BASE_DIRECTORY,'docs','helpful_poohbah_stats.md'))
 

@@ -126,6 +126,11 @@ Berserk:
   type: combat
   brief: +1 STR, DEX. ADV on SP saves. Half physical dmg. 1 hour. Fatigue if ended early.
   cost: 1
+Mighty:
+  description: "Through arduous physical training, you have become immensely strong
+                 add 1d6 to any strength checks."
+  brief: "Add 1d6 to STR checks."
+  type: advantage
 # Berserker: 
 #   description: You take half damage from physical attacks while going berserk.
 #   type: combat
@@ -166,6 +171,10 @@ Chain Attack:
   description: "After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon."
   type: combat
   brief: "After killing an enemy, gain 10ft movement and free attack or hurl weapon."
+Greater Chain Attack:
+  description: "When you use chain attack, regain your full movement."
+  type: combat
+  brief: "When you use chain attack, regain full movement."
 Arching Swing:
   description: "Make an attack which damages all enemies adjacent to you."
   type: combat
@@ -475,12 +484,7 @@ Flash Grenade:
 Lighter Gear:
   description: You spend time crafting lighter gear for yourself and gain +2 on dexterity checks.
   type: general
-  brief:  You gain +2 on dex checks.
-Feeling Lucky:
-  description: Add a number of d4's equal to your luck to an attack.
-  type: combat
-  brief: Add a number of d4's equal to your luck to an attack.
-  cost: 1
+  brief:  You gain +2 on dex checks
 Last Ditch Prayer:
   description: Say a fervent prayer to your deity, and add 1d8 to your roll.
   type: combat
@@ -543,12 +547,6 @@ Hand to Hand Combat:
   description: Your hands are 1d6 weapons.
   type: general
   brief: Your hands are 1d6 weapons.
-Happy Smiles:
-  description: Your presence increases party cheer in good weather, giving them a
-    d8 inspiration dice once per day. It also decreases it in bad weather, giving
-    them -1 charisma.
-  type: general
-  brief: 1/day in good weather, give party a 1d8 INSP dice. In bad weather, -1 CHA.
 High Ground:
   description: You have advantage on plunging attacks.
   type: combat
@@ -744,15 +742,141 @@ My Father's Coffers:
   description: Begin your journey with significant additional funds.
   type: starting_item
   brief: You start with extra money.
+Rally Cry: 
+  description: As an offhand action, grant all allies within 30 feet advantage on their next action.
+  type: general
+  brief: Offhand. Grant all allies within 30ft. advantage on their next action.
+  cost: 1
+Inspire: 
+  description: Spend 1 Action Point to grant an ally a 1d12 inspiration dice.
+  type: general
+  brief: Give an ally a 1d12 inspiration dice.
+  cost: 1
+Inspiring Attack: 
+  description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d6 inspiration dice.
+  type: combat
+  brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d6 inspiration.
+  cost: 1
+Greater Inspiring Attack: 
+  description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d8 inspiration dice.
+  type: combat
+  brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d8 inspiration.
+  cost: 1
+Major Inspiring Attack: 
+  description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d10 inspiration dice.
+  type: combat
+  brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d10 inspiration.
+  cost: 1
+Legendary Inspiring Attack: 
+  description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d12 inspiration dice.
+  type: combat
+  brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d12 inspiration.
+  cost: 1
+Encouraging Presence: 
+  description: If you stand next to an ally in combat, both you and the adjacent ally gain advantage on attacks.
+  type: combat
+  brief: Both you and adjacent allies take advantage on attacks.
+Gumption:
+  description: You can collect up to ten Gumption, which allows you to perform special feats. You gain 1 gumption when an ally succeeds a check aided by one of your inspiration dice or gains a critical hit using advantage you granted them. You also restore 1 gumption after resting and 2 after sleeping. 
+  type: rule
+  brief:  You can collect up to 10 Gumption, which allows you to perform special feats. You gain 1 gumption when an ally succeeds a check aided by one of your inspiration dice or gains a critical hit using advantage you granted them. You also restore 1 gumption after resting and 2 after sleeping. 
+Audacious Attempt:
+  description: Rally yourself via sheer force of will. Spend one gumption to add 1d10 to a check.
+  type: general
+  brief: Spend 1 gumption to add 1d10 to a check.
+Forceful Blow:
+  description: "Make an attack that carries with it the force of your resolve. The enemy must make a Spell Power save or be pushed back 15 feet."
+  brief: "Costs 1 Gumption. Make an attack which forces a SP save. On failure, enemy is pushed back 15ft."
+  type: combat
+Valiant Success:
+  description: When you land a critical hit, regain 1 Gumption.
+  type: combat
+  brief: When you land a critical hit, regain 1 Gumption.
+Greater Valiant Success:
+  description: When you slay an enemy, regain 1 Gumption.
+  type: combat
+  brief: When you slay an enemy, regain 1 Gumption.
+Lead the Way:
+  description: Rush into battle! Spend a gumption to add 1d6 to your initiative.
+  type: combat
+  brief: Spend 1 Gumption to add 1d6 to your initiative.
+Greater Lead the Way:
+  description: Lead the way now adds 1d10 to your initiative.
+  type: combat
+  brief: Lead the way adds 1d10 to your initiative.
+Spurred to Movement:
+  description: Spend one Gumption to move an additional 15 feet on your turn.
+  type: combat
+  brief: Spend 1 Gumption to move an additional 15ft. on your turn.
+Greater Spurred to Movement:
+  description: Spend one Gumption to move an additional 30 feet on your turn.
+  type: combat
+  brief: Spend 1 Gumption to move an additional 30ft. on your turn.
+Reposition:
+  description: "Order an ally to move, immediately granting them 15 feet of movement and advantage on their next attack."
+  type: combat
+  brief: Immediately grant an ally 15ft. of movement and advantage on their next attack.
+Greater Reposition:
+  description: Order an ally to move, immediately granting them 30 feet of movement and advantage on their next attack.
+  type: combat
+  brief: Immediately grant an ally 30ft. of movement and advantage on their next attack.
+Prepare for Combat:
+  description: "At the start of combat, spend 1 Gumption to immediately grant all allies 15 feet of movement."
+  brief: "At the start of combat, spend 1 Gumption to grant all allies 15ft. of movement."
+  type: combat
+Heroic Blow:
+  description: Spend a Gumption to add an additional dice of damage to an attack. Stacks.
+  type: combat
+  brief: Spend 1 Gumption to add an extra dice to an attack. Stacks.
+Heroic Action:
+  description: Spend two Gumption to make an extra action on your turn.
+  type: combat
+  brief: Spend 2 Gumption to make an extra action on your turn.
+Greater Heroic Action:
+  description: Spend three Gumption to gain 30 feet of movement and an action out of turn.
+  type: combat
+  brief: Spend 3 Gumption to gain 30ft. of movement and an action out of turn.
+Parry:
+  description: As a reaction, spend a Gumption to parry an incoming physical attack. Role a contested Dexterity check against an enemy. On success, take no damage. On failure, take half.
+  type: combat
+  brief: Reaction. Spend 1 Gumption. Contested DEX check. On success, no damage. On failure, half.
+My People:
+  description: "Gain advantage when speaking with guards, respectable individuals, and upper-class merchants."
+  type: advantage
+  brief: "CHA advantage with guards, respectable individuals, and upper-class merchants."
+Disarming: 
+  description: Reaction. Force an enemy that attacks you to make an inner fire
+               saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.
+  type: combat
+  brief: "Reaction. Force enemy to make INF save VS CHA. Fail: attack disadv."
+Gallant Resolve: 
+  description: Spend one Gumption to heal yourself for your level in health.
+  type: general
+  brief: "Spend 1 Gumption to heal yourself for your level in health."
+Commanding Presence:
+  description: "Add 1d6 to all of your Charisma checks."
+  type: advantage
+  brief: "Add 1d6 to all CHA checks."
+Bravery: 
+  description: Gain 1d4 Gumption at the start of each battle.
+  type: general
+  brief: "Gain 1d4 Gumption at the start of each battle."
+Aura of Courage: 
+  description: Allies cannot be affected by the frightened effect while in your presence.
+  type: general
+  brief: Allies can't be frightened when near you.
+Aura of Peace: 
+  description: Passive. All allies near you take heart, and gain 10 health while in your presence.
+  type: general
+  brief: Passive. All allies gain 10 health when in your presence.
+Fallen: 
+  description: While you are on death's door, all of your allies gain an extra action.
+  type: general
+  brief: While you are on death's door, your allies gain an extra action.
 My Father's Oboe:
   description: You are proficient and start with two instruments of your choice.
   type: choice
   brief: You are proficient with 2 instruments.
-My People:
-  description: Gain advantage when speaking with guards and +2 charisma when speaking
-    with citizens in your family's territory.
-  type: advantage
-  brief: Gain advantage on CHA with guards and +2 CHA when in your domain.
 Nimble Fingers:
   description: You have advantage on dexterity and stealth checks made while stealing.
   type: advantage
@@ -906,10 +1030,10 @@ Strength of Men:
   brief: You may heal someone 1d6 + INF.
   cost: 1
 Swoon:
-  description: During battle, you can faint as a reaction or offhand action to avoid further damage. You may wake
+  description: During battle, you can faint as a reaction to avoid an attack. You may wake
     up after one turn.
   type: combat
-  brief: Reaction. Faint to avoid further damage for 1 turn.
+  brief: Reaction. Faint to avoid an attack.
   cost: 1
 Sword and Spell:
   description: Once every three turns, combine a spell and a physical attack into one attack action.
@@ -961,10 +1085,10 @@ The Book of Chi:
   type: spellbook
   brief: You have access to the Book of Chi.
 The Family Sword:
-  description: Begin your journey with a 1d6 sword with a ruby on its hilt and an engraving
+  description: Begin your journey with a better than average sword with a ruby on its hilt and an engraving
     of your family's sigil.
   type: starting_item
-  brief: You have an expensive 1d8 sword.
+  brief: You have an expensive sword.
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
   type: spellbook
@@ -1008,7 +1132,7 @@ Harrying Critical:
   type: combat
   brief: On a crit, enemy is harried for 1 turn and disadvantage on their next action.
 Tracer Round:
-  description: "Fire a bright tracer round to gage the exact distance to an enemy. Add a dice of fire
+  description: "Fire a bright tracer round to gauge the exact distance to an enemy. Add a dice of fire
                 damage to the attack and give the next attack made against the enemy advantage."
   type: combat
   brief: Additional dice of fire damage, next attack against enemy is with advantage.
@@ -1185,10 +1309,6 @@ True Sight:
   description: You are able to see invisible entities. 
   type: general
   brief: You can see invisible entities.
-Influence: 
-  description: You may use action points to increase any charisma roll by 2.
-  type: general
-  brief: You can use action points to add +2 to a CHA role. 
 Nimble:
   description: Targeted ranged attacks take disadvantage against you.
   type: combat
@@ -1280,9 +1400,9 @@ Cleave:
   type: combat
   brief: Hit up to 2 side by side enemies with melee attacks.
 Inspiring Critical:
-  description: "Inspire an ally when you land a critical hit or slay an enemy. Grant a chosen ally a d10 inspiration dice."
+  description: "Inspire an ally when you land a critical hit. Grant a chosen ally a d10 inspiration dice."
   type: combat
-  brief: "When you land a crit or kill an enemy, give a chosen ally 1d10 inspiration."
+  brief: "When you land a crit, give a chosen ally 1d10 inspiration."
 Press the Advantage:
   description: "When you land a critical hit, gain a free shield bash attack."
   type: combat
@@ -1359,15 +1479,15 @@ Mass Holy Shield:
 Link Lifeforce: 
   description: "As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do."
   type: combat
-  brief: Offhand. Link to warded ally/allies. Take share healing/damage. Free unlink on your turn. All damage must be taken by someone.
+  brief: Offhand. Link to warded ally/allies. Take/share healing/damage. Free unlink on your turn. All damage must be taken by someone.
 Greater Link Lifeforce: 
   description: "Halve any damage taken from linking lifeforce with an ally with a guardian ward."
   type: combat
   brief: "Halve any damage taken via link lifeforce."
 Enhanced Healing:
-  description: "Add two extra dice of healing when healing an ally with a guardian ward."
+  description: "Add an extra dice of healing when healing an ally with a guardian ward."
   type: combat
-  brief: "2 extra dice of healing to allies with a guardian ward."
+  brief: "Add an extra dice of healing to allies with a guardian ward."
 Last Hope:
   description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
   type: combat
@@ -1534,10 +1654,10 @@ Form Shift:
   brief: "Transform into the spirit of one of your equipped aspects."
   cost: 1
 Spiritual Blast:
-  description: "Make an attack with your weapon which harms all enemies in a 30 foot line in front of you."
+  description: "Make an attack with your weapon which harms all enemies in a 25 foot line in front of you."
   type: combat
   cost: 1
-  brief: "Make an attack which hits all enemies in a 30ft. line in front of you."
+  brief: "Make an attack which hits all enemies in a 25ft. line in front of you."
 Infuse Other: 
   description: "Grant an ally the benefit of your of your aspects for 1 battle or 1 hour."
   cost: 1
@@ -1578,9 +1698,13 @@ Side by Side:
   brief: Advantage on attacks if adjacent to an ally.
   cost: 1
 Lionhearted:
-  description: Gain advantage on SP saves.
+  description: Spend 1 Gumption to make a spell power save with advantage.
   type: advantage
-  brief: Advantage on SP saves.
+  brief: Spend 1 Gumption to make a spell power save with advantage.
+Greater Lionhearted:
+  description: Spend 1 Gumption to shrug off all status effects.
+  brief: Spend 1 Gumption to shrug off all status effects.
+  type: general
 Dire Companion: 
   description: Your companion animal is now of Dire size. See the book of known beasts for details.
   type: rule
@@ -1599,29 +1723,11 @@ Reduced Critical:
   description: Decrease your critical hit target by 1.
   type: combat
   brief: Decrease your critical target by 1.
-Disarming: 
-  description: Reaction. Force an enemy that attacks you to make an inner fire
-               saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.
-  type: combat
-  brief: "Reaction. Force enemy to make INF save VS CHA. Fail: attack disadv."
-Aura of Peace: 
-  description: Passive. All allies near you take heart, and gain 10 health while in your presence.
-  type: general
-  brief: Passive. All allies gain 10 health when in your presence.
-Rally Cry: 
-  description: Let out a rally cry as an offhand action which allows all allies to do an additional dice of damage on their next attack.
-  type: combat
-  brief: Offhand. Allow all allies to do an additional dice of damage on their next attack.
-  cost: 1
 Defender Aura:
   description: Grant all allies within 30 feet of you half damage from physical attacks for three turns.
   type: combat
   brief: Grant allies within 30ft half damage from physical attacks for 3 turns.
   cost: 1
-Fallen: 
-  description: While you are on death's door, all of your allies gain a bonus action.
-  type: general
-  brief: While you are on death's door, all of your allies get a bonus action.
 Favorite Enemy:
   description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
   type: choice
@@ -1696,7 +1802,7 @@ Greater Spell of Distraction:
                 combat, all enemies within 30 feet of your target must make an spell power saving throw or loose
                 an action on their next turn and have the next attack against them be made at advantage."
   type: general
-  brief: Offhand. Create a loud noise or bright light. Enemy must make a SP save or lose an action.
+  brief: Offhand. Create a loud noise or bright light. Enemies within 30ft. make an SP save or lose an action and have the next attack against them at advantage.
   cost: 2
 Spell of Darkvision:
   description: As an Offhand Action, you may use minor magic to give yourself darkvision for one hour.
@@ -1902,22 +2008,6 @@ Major Spell Coin:
   description: You have learned the art of storing third tier spells in your spell coins.
   type: general
   brief: You can store tier 3 spells in your spell coins.
-Spirits Within: 
-  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, 
-    make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
-    While you are imbued with a spirit, you have advantage on all charisma checks. You are also able to take an extra actions each turn, 
-    and may add +1 to strength, dexterity, perception, and inner fire.
-  type: combat
-  brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. ADV CHA, +1 STR DEX PER INF.
-Spiritual Movement:
-  description: While you contain a spirit, you may instantly teleport between patches of darkness as an offhand action or once per ten minutes out of combat.
-  type: general
-  brief: Offhand teleport to darkness. 1/10 mins out of combat.
-Light and Shadow: 
-  description: While you possess a spirit, add 1d10 damage to any attack that you make. Further, gain the darkvision ability,
-    and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
-  type: combat
-  brief: While you possess a spirit, +1d10 dmg, darkvision and adv on INF saves.
 Tome of the Ancients: 
   description: You are now able to learn spells from the tome of the ancients.
   type: spellbook
@@ -2138,16 +2228,6 @@ Multi-Action:
   type: combat
   brief: Take an extra action.
   cost: 2
-Gumption:
-  description: You may spend an action point to add 1d10 to a check.
-  type: action
-  brief:  Spend an action point to add 1d10 to a check.
-  cost: 1
-Spurred to Movement:
-  description: You may can spend an action point to perform an action on your turn.
-  type: action
-  brief: You can use an action point to perform an action.
-  cost: 1
 Melee Weapon Proficiency:
   description: When you attack with a strength based weapon, you may add your strength stat to your attack.
     When you attack with a dexterity based weapon, you may add your dexterity stat to your attack.
@@ -2170,19 +2250,96 @@ Charisma Based Spellcaster:
     To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.
   type: rule
   brief: To cast spells, make a CHA check and beat the spell's difficulty.
-Spell Modification:
-  description: You may make one or more modifications to your spells.
-    For example modifications, see the list of Sorcerer Modification in the
-    Book of Examples. 
-  type: rule
-  brief: You may make one or more of the following modifications to your spells.
-    Increase difficulty by 2 to double the radius, halve the radius, or change the volume of a spell.
-    Increase difficulty by 4  to add an additional effect dice to the spell (e.g. making a spell that does 1d10 damage do 2d10)
-    or to tie off a spell, making it last 1d20 minutes after casting even if it is a concentration spell.
+Spell Area Modification:
+  description: "Increase the difficulty of a spell by 3 to double or half its area of effect."
+  brief: "Increase spell difficulty by 3, 2x or 1/2 its AOE."
+  type: combat
+Spell Volume Modification:
+  description: "Increase the difficulty of a spell by 2 to change it's audible volume."
+  brief: "Increase spell difficulty by 2, increase or decrease it's audible volume."
+  type: combat
+Empower Spell Modification:
+  description: "Increase the difficulty of a spell by 4 to add an additional dice. Stackable."
+  brief: "Increase spell difficulty by 4 to add a dice. Stackable."
+  type: combat
+Tie Off Modification:
+  description: "Increase the difficulty of a concentration spell by 4 to tie it off, leaving it in place for 20 minutes."
+  brief: "Increase concentration spell difficulty by 4 to leave it in place for 20 minutes."
+  type: combat
+Spell Element Modification:
+  description: "Increase the difficulty of a spell by 3 to change its damage type."
+  brief: "Increase spell difficulty by 3 to change damage type."
+  type: combat
+Offhand Modification:
+  description: "Increase the difficulty of a spell by its tier to cast it as an offhand action."
+  brief: "Increase a spell's difficulty by its tier to cast it as an offhand action."
+  type: combat
+Enforce Will Modification:
+  description: "Increase the difficulty of a spell by 3 to force an enemy to make any related saves with disadvantage."
+  brief: "Increase spell difficulty by 3 to force an enemy to make related saves at disadvantage."
+  type: combat
+Influence: 
+  description: "You may use action points to increase any charisma roll by 3."
+  type: general
+  brief: "You can use action points to add +3 to a CHA role."
+  type: general
 Prepare Spell:
-  description: At the start of each day, choose a spell to have 2 less difficulty.
-  type: action
-  brief: At the start of the day, choose a spell to cost 2 less.
+  description: At the start of each day, choose a spell to have 3 less difficulty.
+  type: general
+  brief: At the start of the day, choose a spell to have 3 less difficulty.
+Spirits Within: 
+  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, 
+    make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
+    While you are imbued with a spirit, you have advantage on all charisma checks 
+    and may add +1 to strength, dexterity, perception, and inner fire.
+  type: combat
+  brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. ADV CHA, +1 STR DEX PER INF.
+Light and Shadow: 
+  description: While you possess a spirit, add an extra dice of dark or light damage to any attack that you make. 
+    Further, gain the darkvision ability,
+    and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
+  type: combat
+  brief: While you possess a spirit, add 1 extra dark/light dmg dice to attacks, gain darkvision, adv on INF saves.
+Summon Minor Familiar:
+  description: "Summon an ethereal beast of level 0 (light) or lower from the book of known beasts."
+  brief: "Summon an ethereal beast of level 0 (light) or lower from the book of known beasts."
+  cost: 1
+  type: general
+Summon Greater Familiar:
+  description: "Summon an ethereal beast of level 3 (heavy) or lower from the book of known beasts."
+  brief: "Summon an ethereal beast of level 3 (heavy) or lower from the book of known beasts."
+  cost: 3
+  type: general
+Summon Major Familiar:
+  description: "Summon an ethereal beast of level 5 (heavy) or lower from the book of known beasts."
+  brief: "Summon an ethereal beast of level 5 (heavy) or lower from the book of known beasts."
+  cost: 5
+  type: general
+Summon Legendary Familiar:
+  description: "Summon an ethereal beast of level 10 (heavy) or lower from the book of known beasts."
+  brief: "Summon an ethereal beast of level 10 (heavy) or lower from the book of known beasts."
+  cost: 7
+  type: general
+Through My Familiar's Eyes:
+  description: "View the world through your familiar's eyes or ears. Increase cost by 1 for both."
+  brief: "View the world through your familiar's eyes or ears. Increase cost by 1 for both."
+  cost: 1
+  type: general
+Fuse into Familiar:
+  description: "Touch your familiar to fuse with it. Lasts for up to 10 minutes, before
+      you reappear where your familiar stands."
+  brief: "Offhand. Touch your familiar to fuse. Lasts 10 minutes."
+  cost: 1
+  type: general
+Greater Fuse into Familiar:
+  description: "There is no longer a time limit for how long you can fuse with your familiar."
+  brief: "There is no longer a time limit for how long you can fuse with your familiar."
+  type: general
+Blink to Familiar:
+  description: "As an offhand action, instantly teleport to your familiar."
+  brief: "Offhand. Instantly teleport to your familiar."
+  type: general
+  cost: 1
 Learning Spells:
   description: New spells or techniques are obtained by leveling up or by finding spellbooks or scrolls in the world. A spellbook may contain a specific spell, or
     a maximum spell tier. Spellbooks with a maximum spell tier contain one spell of your choice from the spellbooks that

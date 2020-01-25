@@ -217,10 +217,12 @@ beasts:
           average_damage_per_round: 5
           actions:
             Bite:
-              modifier: "Strength"
+              modifier: "Dexterity"
               damage: "1d6"
               description: "The panther bites with needle-like teeth, dealing piercing damage."
             Claw:
+              modifier: "Dexterity"
+              damage: "1d6"
               description: "The panther swats at an enemy with its claws."
           abilities:
             Climb: "Panthers can climb nearly anything."

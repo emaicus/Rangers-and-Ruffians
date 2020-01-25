@@ -2281,12 +2281,6 @@ the_sorcerer's_scrolls:
       cost: 0
       description: Manifest your thoughts as a hologram standing one foot tall on
         your palm.
-    Summon Familiar:
-      charisma_cost: 8
-      cost: 0
-      description: Summon a small familiar with 5 health. The familiar obeys your
-        every command and can attack for 1d4 damage. If a familiar dies, it cannot be resummoned until the next
-        day.
     Tickle:
       charisma_cost: 8
       cost: 0
@@ -2324,11 +2318,6 @@ the_sorcerer's_scrolls:
       cost: 1
       description: Conjure an unseen hand which can manipulate objects up to 50 feet
         away.
-    Through My Familiar's Eyes:
-      charisma_cost: 12
-      cost: 2
-      description: View the world through your familiar's eyes. Increase the difficulty
-        by 2 to hear through your familiar's ears.
   Tier_2:
     Conjure major illusion:
       charisma_cost: 14
@@ -2373,12 +2362,6 @@ the_sorcerer's_scrolls:
       cost: 2
       description: Create a ward on an entity to allow you to communicate with them
         via thought. Works up to 1/2 mile. Lasts 6 hours.
-    Summon Greater Familiar:
-      charisma_cost: 8
-      cost: 0
-      description: Summon a moderately sized familiar with 20 health. The familiar obeys your
-        every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next
-        day.
   Tier_3:
     Pocket Dimension:
       charisma_cost: 15
@@ -2388,11 +2371,6 @@ the_sorcerer's_scrolls:
         you can always exit. For every 10 minutes you are in the pocket dimension,
         Make a D8 inner fire saving throw. If you fail, you are ejected from the
         pocket dimension.
-    Fuse into Familiar:
-      charisma_cost: 14
-      cost: 2
-      description: Touch your familiar to fuse with it. Lasts for up to 10 minutes, before
-        you reappear where your familiar stands.
     Gateway:
       charisma_cost: 15
       cost: 2
@@ -2412,10 +2390,6 @@ the_sorcerer's_scrolls:
         if they fail an inner fire saving throw against your spell power. They can
         attempt a saving throw every turn thereafter.
   Tier_4:
-    Blink to Familiar:
-      charisma_cost: 16
-      cost: 3
-      description: Instantly teleport to your familiar.
     Fly:
       charisma_cost: 14
       cost: 2
@@ -2467,11 +2441,6 @@ the_sorcerer's_scrolls:
         bang. It takes one full turn or five minutes to cast this spell properly.
         If improperly cast, the cost of this spell is 12, and the gateway lets out
         at an undetermined location within one mile. Concentration.
-    Summon Major Familiar:
-      charisma_cost: 8
-      cost: 1
-      description: Summon an beast of up to level 8 from the book of known beasts as your familiar.
-        Excludes villains.
 the_tome_of_the_ancients:
   Tier_6:
     Massive Levitation:

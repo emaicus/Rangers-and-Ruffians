@@ -2,7 +2,7 @@
 Barbarian:
   subclasses:
     Path of Rage Barbarian:
-      roles: ["tank", "high-damage", "non-magic"]
+      roles: ["tank", "high-damage", "mobile", "non-magic"]
       base_abilities:
       - Colossal
       - Boozehound
@@ -57,6 +57,7 @@ Barbarian:
         level_8:
           abilities:
           - Terrify
+          - Mighty
         level_9:
           abilities:
           - The Closer
@@ -76,10 +77,10 @@ Barbarian:
           - Glory # When you hit low health, double your damage (25%)
         level_14:
           abilities: 
-          - Fury
+          - Greater Chain Attack 
         level_15:
           abilities:
-          - Spirit of Rage # After slaying an enemy, gain an additional turn.
+          - Fury
       questions:
       - Where did your character come from?
       - Where is their tribe? Did they leave it?
@@ -128,45 +129,45 @@ Barbarian:
           - Spiritual Aid #: Grant an ally advantage on their next action or an extra damage dice on their next attack.
         level_2:
           abilities:
-          - Spiritual Shield
+          - Spiritual Shield # stop up to 20 damage from an enemy attack
         level_3:
           abilities:
-          - Spiritual Strike
+          - Spiritual Strike # Make a melee attack against an enemy up to 30ft. away.
         level_4:
           abilities:
           - Draining Strike #: Regain half of the damage you deal as health.
         level_5:
           abilities:
           - Greater Spiritual Infusion # Equip two aspects
-          - Phase Walk
+          - Phase Walk # If you kill an enemy with a spiritual weapon, teleport
         level_6:
           abilities:
-          - Warrior Spirit
+          - Warrior Spirit # Slay an enemy, regain an action point
         level_7:
           abilities:
           - Offhand Attack
-          - Spiritual Blast
+          - Spiritual Blast # Harm all enemies in a 25 foot line.
         level_8:
           abilities:
-          - Chain Strike
+          - Chain Strike # Chain together attacks on enemies.
         level_9:
           abilities:
-          - Greater Spiritual Shield
+          - Greater Spiritual Shield # Block 50 points of damage from all allies within 15 feet.
         level_10:
           abilities:
           - Major Spiritual Infusion # Equip 3 infusions
         level_11:
           abilities:
-          - Infuse Other
+          - Infuse Other # Grant someone else the benefit of one of your infusions
         level_12:
           abilities:
-          - Greater Phase Walk # If you strike down an enemy with spiritual strike, teleport to their position.
+          - Greater Phase Walk # If attack an enemy with a spiritual strike, teleport to their position.
         level_13:
           abilities:
-          - Rouse to Action
+          - Rouse to Action # Grant someone their full movement and an attack
         level_14:
           abilities: 
-          - Form Shift
+          - Form Shift # Transform into your infusion.
         level_15:
           abilities:
           - Legendary Spiritual Infusion # Equip 6 spiritual infusions
@@ -229,6 +230,7 @@ Knight:
           - Charge
         level_7:
           abilities:
+          - Mighty
           - Offhand Attack
         level_8:
           abilities:
@@ -303,11 +305,11 @@ Paladin:
           - Healing Blow # Heal
         level_1:
           abilities:
-          - Tier One Spells
           - Bash # Attack
           - Guardian Ward # Buff/Healing
         level_2:
           abilities:
+          - Tier One Spells
           - Healing Blast # Healing
           - Holy Shield # Healing
         level_3:
@@ -315,46 +317,45 @@ Paladin:
           - Link Lifeforce # Healing
         level_4:
           abilities:
-          - Minor Offhand Spell
-          - Tier Two Spells
           - Enhanced Healing # Tank
         level_5:
           abilities:
+          - Tier Two Spells
+          - Minor Offhand Spell
           - Greater Boon
           - Greater Guardian Ward
         level_6:
           abilities:
-          - Warrior Spirit # Replenish
+          - Last Hope # Heal
         level_7:
           abilities:
-          - Tier Three Spells
-          - Greater Offhand Spell
           - Offhand Attack
-          - Last Hope # Heal
         level_8:
           abilities:
+          - Tier Three Spells
           - Blessing of Protection # Healing
         level_9:
           abilities:
+          - Greater Offhand Spell
           - Beacon of Hope # Buff
         level_10:
           abilities:
           - Major Boon
-          - Tier Four Spells
           - Major Guardian Ward
           - Second Guardian Ward # Healing
         level_11:
           abilities:
+          - Tier Four Spells
           - Greater Link Lifeforce
         level_12:
           abilities:
           - Guardian Spirit # Replenish
         level_13:
           abilities:
-          - Tier Five Spells
           - Ward Conversion # Healing
         level_14:
           abilities:
+          - Tier Five Spells
           - Mass Holy Shield
         level_15:
           abilities:
@@ -371,6 +372,7 @@ Paladin:
       standings: Paladins are generally respected. They hate evil, and try to destroy
         it wherever they find it.
       tag_line: Soldier of Light
+# LIGHT FIGHTER
 Beastmaster:
   subclasses:
     Beastmaster:
@@ -450,7 +452,6 @@ Beastmaster:
       standings: More comfortable in nature than cities, Beastmasters get on best with
         animals, and can find people difficult to talk to.
       tag_line: Companion Fighter
-# LIGHT FIGHTER
 Fighter:
   subclasses:
     Fighter:
@@ -525,21 +526,19 @@ Fighter:
       tag_line: Front-line combatant
 Highborn:
   subclasses:
-    Highborn:
-      roles: ["charismatic", "support", "non-magic"]
+    Heroic Highborn:
+      roles: ["charismatic", "support", "non-magic", "mobile", "self-sufficient", "non-magic"]
       base_abilities:
       - My Father's Coffers
       - The Family Sword
-      - Lightweight
-      - Beauty Incarnate
       base_stats:
-        Charisma: 2
-        Dexterity: 1
-        Inner_Fire: -3
-        Intelligence: 0
+        Charisma: 1
+        Dexterity: 0
+        Inner_Fire: 2
+        Intelligence: -2
         Luck: 1
-        Perception: -1
-        Strength: -2
+        Perception: -3
+        Strength: -1
       description: Highborns were born into a noble house and have connections and money
         as a result. They are well trained fighters, and have the charisma necessary
         to rally people to their side. While the typical highborn is not as hardened
@@ -551,49 +550,67 @@ Highborn:
           abilities:
           - Melee Weapon Proficiency
           - My People
-          - Happy Smiles
-          - Swoon
+          - Inspire # Grant an ally a 1d12 inspiration dice.
+          - Inspiring Attack # Cost 1. Extra damage dice, grant an ally a 1d6 inspiration.
+          - Encouraging Presence # When you are standing adjacent to an ally, both of you get advantage on attacks.
         level_1:
           abilities:
-          - Mantel
-          - Gumption
+          - Gumption # Regain 2 Gumption on rest. If an ally succeeds a check aided by one of your inspiration dice or gets a critical hit using advantage you grant, gain a gumption.
+          - Audacious Attempt # Spend a Gumption to add 1d10 to a check
         level_2:
           abilities:
+          - Valiant Success # When you role a critical hit, gain a Gumption.
+          - Lead the Way # Spend 1 Gumption to add 1d6 to your initiative.
+          - Spurred to Movement # Spend 1 Gumption to move 15 feet.
         level_3:
           abilities:
-          - Disarming
-          - Fallen
+          - Rally Cry # Offhand. Cost 1. Grant all allies advantage on their next action.        
+          - Reposition # Cost 1. Grant an ally 15ft. of movement and advantage on their next attack.
         level_4:
           abilities:
+          - Heroic Blow # Spend 1 Gumption to add an extra damage dice to an attack.
+          - Greater Inspiring Attack # Cost 1. Extra dmg dice. Grant an ally a 1d8 INSP dice
         level_5:
           abilities:
-          - Feeling Lucky
+          - Forceful Blow # Spend 1 Gumption to force an enemy to make a contested STR check. On success, add 15 feet of knockback to an attack
+          - Parry # Spend 1 Gumption. Reaction. Roll a contested DEX check against a physical attack. On success, no damage. On failure, half.
+          - Gallant Resolve # Spend 1 Gumption to give yourself your level in health.
         level_6:
           abilities:
+          - Fallen # When you are on death's door, all of your allies gain an extra action.
+          - Greater Spurred to Movement # Spend 1 Gumption to move 30 feet.
         level_7:
           abilities:
-          - Spurred to Movement
+          - Offhand Attack
+          - Greater Valiant Success # Gain Gumption by slaying enemies.
+          - Greater Lead the Way # Spend 1 Gumption to add 1d10 to initiative
         level_8:
           abilities:
+          - Commanding Presence # Add 1d6 to any Charisma Checks.
+          - Major Inspiring Attack # 1d10 insp.
         level_9:
           abilities:
-          - Offhand Attack
+          - Lionhearted # Spend 1 Gumption to make an SP save with advantage.
         level_10:
           abilities:
+          - Heroic Action # Spend 2 to make an extra action  on your turn.
         level_11:
           abilities:
-          - Lionhearted
+          -  Greater Reposition # Cost 1. Grant an ally 30ft. movement and advantage on their next action.
         level_12:
           abilities:
+          - Legendary Inspiring Attack # 1d12
+          - Prepare for Combat # At the start of combat, spend 1 Gumption to immediately grant all allies 15 feet of movement.
         level_13:
           abilities:
-          - Rally Cry
-          - Aura of Peace
+          - Greater Heroic Action # Spend 3 Gumption to make an extra action out of turn.
         level_14:
           abilities:
+          - Aura of Courage # All allies gain 10 health while in your presence.
+          - Greater Lionhearted # Spend 1 Gumption to make an SP save with advantage.
         level_15:
           abilities:
-          #- Strike First
+          - Bravery #: Gain 1d4 Gumption at the start of every battle.
       questions:
       - Why is your character embarking on their adventure? Are they out to prove themself?
         Or perhaps they are idealistic and want adventure?
@@ -806,7 +823,7 @@ Rogue:
         level_5:
           abilities:
           - Ride the Blindspot # If flanked enemy tries to turn to look at you, spend an action point to pivot around behind them.
-          - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage stacks.
+          - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage. Stacks.
         level_6:
           abilities:
           - Soft Landing # Less fall damage
@@ -885,7 +902,6 @@ Rogue:
           - Minor Spell of Distraction
           - Spell of Darkvision
           - Meat Shield
-          - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
         level_2:
           abilities:
           - Draining Strike
@@ -893,6 +909,7 @@ Rogue:
         level_3:
           abilities:
           - Vicious Critical
+          - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
         level_4:
           abilities:
           - Minor Spell of Invisibility
@@ -1324,48 +1341,59 @@ Sorcerer:
           - Novice Spellbook
           - The Sorcerer's Scrolls
           - Tier Zero Spells
-          - Influence
+          - Empower Spell Modification
+          - Summon Minor Familiar
         level_1:
           abilities:
           - Tier One Spells
+          - Influence
         level_2:
           abilities:
+          - Spell Volume Modification
+          - Through My Familiar's Eyes
         level_3:
           abilities:
-          - Spell Modification
-          - Minor Offhand Spell
+          - Spell Element Modification
         level_4:
           abilities:
           - Tier Two Spells
+          - Summon Greater Familiar
         level_5:
           abilities:
-          - Prepare Spell
+          - Offhand Modification
+          - Fuse into Familiar
         level_6:
           abilities:
-          - Greater Offhand Spell
+          - Spell Area Modification
         level_7:
           abilities:
           - Offhand Attack
           - Tier Three Spells
+          - Summon Major Familiar
         level_8:
           abilities:
+          - Prepare Spell
         level_9:
           abilities:
-          - Spirits Within
+          - Blink to Familiar
         level_10:
           abilities:
           - Tier Four Spells
+          - Spirits Within
         level_11:
           abilities:
-          - Spiritual Movement
+          - Greater Fuse into Familiar
         level_12:
           abilities:
           - Major Offhand Spell
+          - Summon Legendary Familiar
         level_13:
           abilities:
           - Tier Five Spells
+          - Enforce Will Modification
         level_14:
           abilities:
+          - Tie Off Modification
         level_15:
           abilities:
           - Light and Shadow
@@ -1480,12 +1508,12 @@ Archer:
           - Fletcher
           - Huntsman
           - Dual Shot
-          - Net Arrows
+          - Rope Arrows
         level_1:
           abilities:
           - Mantel
           - Smoke Arrows
-          - Rope Arrows
+          - Net Arrows
         level_2:
           abilities:
           - Healing Arrows
