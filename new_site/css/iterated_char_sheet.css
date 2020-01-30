@@ -147,8 +147,7 @@ span.circleText
   display:inline-block;
 }
 
-figcaption.caption
-{
+figcaption.caption {
   color:grey;
   font-size: 0.8rem;
   font-weight: bold;

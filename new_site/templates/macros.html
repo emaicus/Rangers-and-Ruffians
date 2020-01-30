@@ -1,0 +1,19 @@
+{% macro stat_square(stat) %}
+  <div class="stat-square" id="{{stat}}">
+    <div style="height:60%; width:60%;">
+      <span class="stat-square-content">{{stat}}</span>
+    </div>
+    <div style="height:40%; width:40%; border-left: 1px solid black; border-top: 1px solid black; float: right;"></div>
+  </div>
+{% endmacro %}
+
+{% macro character_data_square(name, img_path) %}
+  <div class="character-attribute-square">
+    <div class="character-attribute-name-container">
+      <span class="character-attribute-name">{{name}}</span>
+    </div>
+    <div class="character-attribute-icon-container">
+      <img src="/new_site/icons/{{img_path}}" class="character-attribute-icon">
+    </div>
+  </div>
+{% endmacro %}

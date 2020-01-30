@@ -13,6 +13,7 @@ import inquirer
 import contractions
 import string 
 import re
+from pathlib import Path
 
 STAT_OUTPUT = 'reports'
 
@@ -451,9 +452,10 @@ def split_words_on(words, c):
 
 def process_word(word):
   words = contractions.fix(word).split()
-  words = split_words_on('/')
-  words = split_words_on('-')
-  
+  words = split_words_on(words, '/')
+  words = split_words_on(words, '-')
+  words = split_words_on(words, '_')
+
   ret = list()
   for word in words:
     if re.findall("\\d*d\\d+", word) or re.findall("\\d+x\\d+x?\\d*", word):
@@ -466,22 +468,23 @@ def process_word(word):
   return ret
 
 def fix_spelling_errors(words, spell, rnr_dictionary):
-  errors = list()
+  errors = set()
   for word in words:
     w = process_word(word)
     for element in w:
       if element == '':
         continue
       if is_word_unknown(element, spell, rnr_dictionary) and not element in errors:
-        correct = inquirer.prompt([inquirer.Confirm('correct', message='Is {0} properly spelled?'.format(word)),])['correct']
+        correct = inquirer.prompt([inquirer.Confirm('correct', message=f'Is {element} properly spelled? (originally {word})'),])['correct']
+        print("yes" if correct else "error")
         if correct == True:
-          rnr_dictionary.append(element)
+          rnr_dictionary.add(element)
         else:
           errors.add(element)   
   return errors
 
 def just_find_typos(words, spell, rnr_dictionary):
-  errors = list()
+  errors = set()
   for word in words:
     w = process_word(word)
     for element in w:
@@ -495,8 +498,13 @@ def spell_check_a_file(filename, spell_check_function, spell, rnr_dictionary):
   with open(filename, 'r') as infile:
     lines = infile.readlines()
 
-  words = lines.split()
-  return spell_check_function(words, spell, rnr_dictionary)
+  words = set()
+  for line in lines:
+    words_in_line = line.split()
+    for word in words_in_line:
+      words.add(word.lower())
+
+  return spell_check_function(list(words), spell, rnr_dictionary)
 
 
 
@@ -516,20 +524,36 @@ def spell_check(fix_errors=True, print_errors=True):
   if os.path.exists(dictionary_path):
     with open(dictionary_path, 'r') as infile:
       data = json.load(infile)
-      rnr_dictionary = data['rnr_words'] if 'rnr_words' in data else {}
+      rnr_dictionary = set(data['rnr_words']) if 'rnr_words' in data else set()
 
 
   directories_to_check = [
                            Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'data')),
                            Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')),
                          ]
+
+  directories_to_skip = [
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "wip"),
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "legacy"),
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "scratch.txt"),
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "art.yml"),
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "description_database.yml"),
+    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "helper_scripts"),
+  ]
   testable_extensions = ['.txt', '.yml', '.json', '.md']
 
   all_errors = dict()
+  all_errors["turtle"] = list()
   for directory in directories_to_check:
     for extension in testable_extensions:
       for file in directory.glob(f'**/*{extension}'):
-        all_errors[file] = spell_check_a_file(str(file), spell_check_function, spell, rnr_dictionary)
+        skip = False
+        for skip_dir in directories_to_skip:
+          if str(file).startswith(skip_dir):
+            skip = True
+            break
+        if not skip:
+          all_errors[file] = spell_check_a_file(str(file), spell_check_function, spell, rnr_dictionary)
 
   # if len(spell_errors) > 0:
   #   all_errors["spellbooks"] = list(spell_errors)
@@ -560,7 +584,7 @@ def spell_check(fix_errors=True, print_errors=True):
 
 
   if fix_errors:
-    output_json = {'rnr_words' : rnr_dictionary}
+    output_json = {'rnr_words' : list(rnr_dictionary)}
     with open('rnr_dictionary.json', 'w') as outfile:
       json.dump(output_json, outfile, indent=4)
 

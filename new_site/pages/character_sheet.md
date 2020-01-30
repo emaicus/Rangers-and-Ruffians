@@ -8,6 +8,7 @@ skip_header: true
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" href="/new_site/css/iterated_char_sheet.css">
+      <link rel="stylesheet" href="/new_site/css/two_sided_character_sheet.css">
       <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
   </head>
@@ -35,8 +36,6 @@ skip_header: true
     global_json = json;
     nunjucks.configure('/new_site/templates', {autoescape: true });
     starting_values = parseGetRequest();
-    console.log(starting_values);
-    console.log(starting_values["race"]);
     var content = nunjucks.render('character_selection_template.html', {
                                                                         "chosen_race" : starting_values["race"], 
                                                                         "chosen_class": starting_values["class"],
@@ -135,11 +134,23 @@ skip_header: true
     }
 
     var character_sheet = "ERROR: Sheet did not render.";
-
+    data["character_name"] = name;
+    tmp_icons = {};
+    tmp_icons["health"] = data["icons"][0][0];
+    tmp_icons["action_points"] = data["icons"][1][0];
+    tmp_icons["spell_power"] = data["icons"][2][0];
+    tmp_icons["armor"] = data["icons"][3][0];
+    tmp_icons["special"] = data["icons"][4][0];
+    data["tmp_icons"] = tmp_icons;
+    console.log(tmp_icons);
     if(sheet_type == "v1_visual"){
       data["visualStats"] = true;
       character_sheet = nunjucks.render('character_sheet_template.html', data );
-    } else{
+    } else if(sheet_type == "v2"){
+      character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
+    } 
+    else{
+      console.log("in else with " + sheet_type);
       character_sheet = nunjucks.render('character_sheet_template.html', data );
     }
     $( "#character_sheet_area" ).html( character_sheet );

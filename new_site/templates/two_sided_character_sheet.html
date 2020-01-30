@@ -1,0 +1,99 @@
+{#  
+    Requires:
+      character_name: The name of the player character.
+      figures: A set of figures for an image containing health, action points, armor, spell power, and an optional special image.
+#}
+{% import 'macros.html' as macros %}
+<div class="new-print-region">
+  <div class="front-top" id="front-top">
+    <div class="front-name-div">
+      <span class="front-name" id="front-name"> {{ character_name }}</span><br/>
+    </div>
+    {% for attribute_name, attribute_path in [
+        ['Special', tmp_icons['special']], 
+        ['Spell Power', tmp_icons['spell_power']],
+        ['Action Points', tmp_icons['action_points']],
+        ['Armor', tmp_icons['armor']],
+        ['Health', tmp_icons['health']]
+      ] %}
+      {{macros.character_data_square(attribute_name, attribute_path)}}
+    {% endfor %}
+ 
+    
+
+<!--         <div class="front-name-div">
+          <span class="front-name" id="front-name"> {{ character_name }}</span><br/>
+        </div>
+        <div class="front-char-info">
+          <div class="front-info">Race:</div>
+          <div class="front-info">Class:</div>
+          <div class="front-info">Level:</div>
+        </div>
+      </div>
+      <div class="front-small-icon-div sixth-width" id="front-small-icon-div">
+        <div class="small-icon-wrapper">
+          <figure class="front-small-icon-figure">
+            <img src="/new_site/icons/{{tmp_icons['armor']}}" class="front-small-icon">
+            <figcaption class="front-small-figure-caption">Armor</figcaption>
+          </figure>
+        </div>
+        <div class="small-icon-wrapper">
+          <figure class="front-small-icon-figure">
+            <img src="/new_site/icons/{{tmp_icons['spell_power']}}" class="front-small-icon">
+            <figcaption class="front-small-figure-caption">Spell Power</figcaption>
+          </figure>
+        </div>
+        <div class="small-icon-wrapper">
+          <figure class="front-small-icon-figure">
+            <img src="/new_site/icons/{{tmp_icons['special']}}" class="front-small-icon">
+            <figcaption class="front-small-figure-caption">Special</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="sixth-width">
+        <div class="front-large-icon-div" id="front-large-icon-div">
+          <figure class="front-large-icon-figure">
+            <img src="/new_site/icons/{{tmp_icons['health']}}" class="front-large-icon">
+            <figcaption class="front-large-figure-caption">Health</figcaption>
+          </figure>
+          <figure class="front-large-icon-figure">
+            <img src="/new_site/icons/{{tmp_icons['action_points']}}" class="front-large-icon">
+            <figcaption class="front-large-figure-caption">Action Points</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="third-width">-->
+  </div>
+  <div class="front-bottom" id="front-bottom">
+    <div class="tenth-width tall">
+      <div class="stat-sidebar" id="stat-sidebar">
+        <div class="tall">
+          {% for stat in ["STR", "DEX", "INT", "INF", "PER", "CHA" ] %}
+            {{ macros.stat_square(stat) }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="forty-five-width tall">
+      <div class="combat-ability-div dark" id="combat-ability-div">
+        <div class="inner">
+          <span class="combat-ability-header">Combat Abilities </span>
+        </div>
+      </div>
+    </div>
+    <div class="forty-five-width tall">
+      <div class="weapons-div dark" id="weapons-div">
+        <div class="inner">
+          <span class="weapons-header">Equipped Weapons</span>
+        </div>
+      </div>
+      <div class="inventory-div dark" id="inventory-div">
+        <div class="inner">
+          <span class="inventory-header">Combat Inventory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

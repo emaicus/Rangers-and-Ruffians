@@ -1,0 +1,223 @@
+.new-print-region {
+  height:1200px;
+  width: 800px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+  margin: 0 auto;
+  padding:0px;
+  background: #fff;
+  margin-top:30px !important;
+  padding: 20px;
+}
+
+.front-top {
+  height: 10%;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.front-name {
+  font-family: 'Angkor';
+  font-size: 4rem;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+.front-name-div {
+  height: 100%;
+  float: left;
+}
+
+.front-char-info {
+  height: 50%;
+}
+
+.front-info {
+  font-family: 'Angkor';
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.front-small-icon-div {
+  height: 100%;
+}
+
+.front-small-icon-figure {
+  /*display: inline-block; 
+  margin: 0 0 0;*/
+  height: 100%;
+  width: 100%;
+}
+
+.small-icon-wrapper {
+  height: 33.333%;
+}
+
+.front-small-icon {
+  height: 95%;
+}
+
+.front-small-figure-caption{
+  color:grey;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'Angkor';
+  text-align: center;
+}
+
+.front-large-icon-div {
+  height: 100%;
+}
+
+.front-large-icon-figure {
+  display: inline-block; 
+  margin: 0 0 0;
+}
+
+.front-large-icon {
+  height: 40%;
+}
+
+.front-large-figure-caption {
+  color:grey;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'Angkor';
+  text-align: center;
+}
+
+.front-bottom {
+  height: 80%;
+  border: 2px solid black;
+}
+
+.stat-sidebar {
+  height: 100%;
+  float: left;
+  width: 10%;
+}
+
+.stat-square {
+  width: 80px;
+  height: 80px;
+  display: inline-block; /* could be float */
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0.2rem;
+  margin-top: 2px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.stat-square-content {
+  font-size: 150%;
+}
+
+.combat-ability-div {
+  height: 100%;
+  font-family: 'Angkor';
+}
+
+.combat-ability-header {
+  font-size: 350%;
+}
+
+.dark {
+  background-color: #e2e2e2;
+}
+
+.inner {
+  height: 97%;
+  width: 90%;
+  margin:5%;
+  margin-top: 5% !important;
+  background-color: white;
+  border-radius: 10px;
+  float: left;
+}
+
+.weapons-div {
+  height: 40%;
+  font-family: 'Angkor';
+}
+
+.weapons-header {
+  font-size: 350%;
+}
+
+.inventory-div {
+  height: 60%;
+  font-family: 'Angkor';
+}
+
+.tall {
+  height:100%;
+}
+
+.inventory-header {
+  font-family: 'Angkor';
+  font-size: 350%;
+}
+
+.tenth-width {
+  width : 10%;
+  float: left;
+  border: 2px solid black;
+}
+
+.sixth-width {
+  width : 16.66%;
+  float: left;
+  border: 2px solid black;
+}
+
+.third-width {
+  width : 33.33%;
+  float: left;
+  border: 2px solid black;
+}
+
+.two-thirds-width {
+  width : 66.66%;
+  float: left;
+  border: 2px solid black;
+}
+
+.forty-five-width {
+  width : 45%;
+  float: left;
+  border: 2px solid black;
+}
+
+.character-attribute-square {
+  width: 80px;
+  height: 80px;
+  float: right;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0.2rem;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.character-attribute-name-container {
+  float: left;
+  width:100%;
+  height: 50%;
+}
+
+.character-attribute-name {
+  font-size: 150%;
+  text-decoration: underline;
+  font-family: 'Angkor';
+}
+
+.character-attribute-icon-container {
+  float: left;
+  width:100%;
+  height: 50%;
+}
+
+.character-attribute-icon {
+  height: 95%;
+  transform: translateY(35%);
+}

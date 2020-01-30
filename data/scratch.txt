@@ -1,0 +1,739 @@
+The Big Todo:
+  0. OVERALL (1/8)
+  1. Update Classes (10/20 complete)
+  2. Update Races (0/20 complete)
+  3. Update Spellbooks (0/7)
+  4. Write/Run Balance Scripts w/ new values (0/1)
+  5. Pass All Tests (7/11)
+  6. Make the Repo Private (0/1)
+  7. Fix Service Worker so that auto-build works (1/1)
+  8. Re-structure the repo so that it matches internet-pretty standards.
+
+What is an Action Point worth?
+  1 Action Point:
+    1 extra dice of damage and a targeted %chance debuff.
+
+Need an Audit:
+  Heroic Highborn
+
+Attack Effects vs enemy:
+  Prone
+  Knockback
+  Adv on next attack
+
+Weapons: 
+  Level 0:
+    1d4 crappy knife/sword/thing
+  Level 1-> 2
+    1d6 better weapon
+    MAYBE some minor magic 1d6 weapons
+  Level 3 -> 4
+    1d8 weapon
+    MAYBE some minor magic  1d8 weapons.
+  Level 5 -> 6
+    1d10 weapon
+  Level 7-> 10
+    magic weapons
+
+Tallies:
+  Mark an Enemy
+    Rage Barb: Single Out (I gain advantage)
+    Knight's Challenge: Call out an enemy, forced to attack me
+
+
+  Mark an Ally:
+    Paladin, Guardian Ward
+
+  If an enemy is Slain
+    Rage Barb: Slay an enemy, 10 feet of movement an an attack (Slay, Move, Hurl)
+      Rage Barb: Slay an enemy, gain an action point
+    Spirit Barb: Slay an enemy, gain an action point
+    Assassin Rogue: Slay an enemy, 10 feet of movement and an attack
+    Marksman: Slay an enemy, 10 feet of movement an an attack.
+      Marksman: Slay an enemy, gain an action point
+    Highborn: Slay an enemy, gain a gumption.
+
+
+    Knight: Advance: Slay an enemy, move into their space.
+    Thief Rogue: Slay an enemy, disengage for free.
+
+
+
+Roles:
+  tank: High Health, Defends Teammates
+  low-health: Squishy, better hide!
+  self-sufficient: Able to Self-Heal
+  nature-based: Hug the Trees!
+  undead: No Longer 6ft. Under
+  high-damage: Vexing Poohbah's Since 2016!
+  mage: Simple Magic or Otherwise
+  non-magic: Good Old Fashioned Steel!
+  spellbooks: Choose New Spells
+  support: Helps Allies
+  healer: Heals Allies
+  mobile: Like a chicken with it's head cut off!
+  ranged: Stays out of the Fray!
+  area-control: This is MY ground!
+  companion-creature: Because everybody needs a friend!
+  charismatic: Because somebody has to be!
+  sneaky: A Sneaky Hider!
+
+Both:
+  - Intimidate # Advantage on intimidation checks.
+  - Throw Anything # Throw anything
+
+Path of Rage:
+  Number of Combat Choices: 5
+
+  X Berserk # +1 STR, DEX, +2 INF. Half damage.
+  X Furious Blows # Two attacks when berserk
+
+  X Fury: On a turn where you have taken damage, add an extra damage dice to all of your attacks.
+  X The Opener # Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone.
+  X The Closer # Add two dice of damage to prone enemies.
+  X Warrior Spirit: # When you slay an enemy or land a critical hit, gain 1 action point.
+
+  X Savage Critical # Additional dice of damage when you crit
+
+  X Adrenaline: When you are below 50% health, gain an extra 10 feet of movement.
+  X Glory # When you hit low health, extra damage dice
+  X Chained Together # After slaying an enemy gain 10 feet of movement, and a free attack or Hurl Weapon.
+
+  X Brutal Attack # Extra damage dice. Size based contested STR save. Fail: prone or 10ft knockback.
+  X Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.
+  X Arching Swing # Attack all enemies adjacent to you.
+  X Hurl Weapon # 2xExtra damage dice. 5x STR/DEX distance.
+  X Taunt # Force enemies to attack you on a failed SP save
+
+  X Single Out # Single out an enemy. Gain 15 feet of movement when moving towards them and take advantage on all attacks.
+  X Terrify: Singled out enemies must make an INF save against your spell power or be scared of you.
+
+  X Spirit of Rage # After slaying an enemy, gain another full turn. CAPSTONE
+
+Path of Nature:
+  Number of Combat Choices: 11
+
+  X Infuse # 1/Rest +1 STR, DEX, +2 PER Berserk Alternative. You may equip one infusion.
+  X Greater Spiritual Infusion: You may equip two infusions.
+  X Major Spiritual Infusion: You may equip three infusions
+  X Legendary Spiritual Infusion: You may equip all infusions.
+
+  X Elk Aspect: Add 15 feet of movement.
+  X Wolf Aspect: If you attack an enemy with an ally, gain advantage.
+  X Wildcat Aspect: You have the ability to dodge incoming attacks.
+  X Bull Aspect: All of your attacks have a chance to knock an enemy prone.
+  X Bear Aspect: You take half blunt and piercing damage.
+  X Dragon Aspect: Convert your damage to a different type of damage of your choice. Declare when aspect is equipped.
+  X Leech Aspect: Recover half your level (round up, min 1) in health whenever you land a blow.
+  X Dolphin Aspect: Swim at twice your walking speed and hold your breath for fifteen minutes.
+
+
+
+  X Spiritual Strike: Use your melee weapon to strike an enemy up to 50 feet away.
+  X Phase Walk: If you kill an enemy with a spiritual attack, teleport to them.
+  X Greater Phase Walk: phase walk whenever you hit an enemy with a spiritual weapon.
+
+  X Spiritual Shield: Block an attack.
+  X Greater Spiritual Shield: Block an attack aimed at an ally within 30 feet.
+
+  X Spiritually Reinforced Blow: Extra damage dice + Enemy must make a size based contested STR check or be knocked back 10 feet.
+  X Chain Strike: Make an attack that deals an extra dice of spiritual damage and immediately chains to a second enemy within 15 feet. Roll 1d20. On 10 or greater, continue the chain and repeat.
+  X Draining Strike: Regain half of the damage you deal as health.
+  X Spiritual Aid: Grant an ally advantage on their next action or an extra damage dice on their next attack.
+  X Form Shift: Change form to that of one of the aspects you are inhabiting.
+  X Spiritual Blast: Attack all enemies in a 25ft line in front of you.
+  X Infuse Other: Grant an ally the benefit of one of your infusions for 1 battle.
+
+
+  X Rouse to Action: Grant an ally their full movement and one action.
+
+Knight:
+  Number of Combat Choices: 9
+
+  Good:
+    X Shield Master # No penalty from shields
+    X Last Line of Defense # If an ally is down, gain a damage dice.
+    X Cleave
+    X Inspiring Critical: When you get a critical hit or slay an enemy, grant an ally of your choice a 1d10 inspiration dice.
+    X Press the Advantage: If you land a critical hit, gain a free shield bash attack.
+
+    X Block Movement: If you hit an enemy with your exposed attack, they must make a contested STR check or be stopped in their tracks.
+    X Pivot: Trade spaces with an adjacent ally
+    X Hold the Line: Gain a second exposed attack.
+    X Stay on your feet
+    Resilient Defense # A single attack can do at most 40 damage to you.
+
+    X Advance: If you slay an enemy with a melee attack, you may step into their space.
+    X Controlled Advance: When you use the advance ability, gain an action which may be used to either attack again or ready your stance.
+
+
+    X Defender Aura # Cost: 2 Grant all nearby (30ft) allies half damage from physical attacks for 3 turns.
+
+    X Overwhelming Strike # Extra damage dice. Size based contested STR or advantage on next attack.
+    X Shield Bash # "Offhand: Contested STR check. Fail: loose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
+    X Ready Stance # Allows you to counter-attack
+    
+    X Knight's Challenge: Call out an enemy. It must make a INF save against your spell power or be forced to attack you. You gain advantage in all attacks.
+    Warrior's Vow: Gain an extra attack against an entity you have challenged. 
+
+    X Charge # Charge an extra 10ft. Size STR check. Looser is knocked prone.
+    X Greater Charge # Charge an extra 15ft. End in an attack.
+
+
+    X Steel Yourself # Choose to take half damage.
+    X Shield of Men #  Take a teammate's damage for them. Halved. 30ft rad.
+
+Paladin:
+  Number of Combat Choices: 7 + Spells
+
+  Special Abilities:
+    X Pledge: Levels 0, 5, 10, 15, gain a new ability from chosen deity.
+  Passive Combat Abilities:
+    X Hammer of Light: Extra dice of damage to undead (passive)
+    X Bash: Stun on Crit (Passive)
+    X Faithful Weapon: Weapon Returns when thrown (long range tank)
+    X Last Hope: Double all healing you do if an ally is down or dead.
+  Buff Ally:
+    Beacon of Hope: All nearby allies get +2 to all saves.
+  Combos:
+    X Blessing of Protection: After landing a critical hit, you may immediately place a holy shield on an ally or yourself.
+  Combat (Active):
+    X Healing Blow: Add a dice of damage to your attack or spell. One quarter of the damage done by the attack is restored to any allies within 15 feet of you.
+    X Healing Blast: Fire a 30 foot cone of healing energy. All allies struck by it regain half your level (round up) in d4's in health. Deals damage to enemies.
+
+    X Holy Shield: Give an ally a holy shield with health equal to two times your level.
+    X Greater Holy Shield: Holy shields grant one turn of invulnerability before they gain their normal health. 
+
+    X Guardian Ward: Place a ward on an ally. The marked ally gains +1 armor. At most one ally may have a guardian ward at a time.
+    X Greater Guardian Ward: +2 armor
+    X Major Guardian Ward: +3 armor
+    X Link Lifeforce: As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do.
+    X Enhanced Healing: Add two extra dice of healing when healing an ally with a guardian ward. 
+    X Shared Healing: When you have 2 guardian wards, healing one gives the other half as much healing.
+    X Guardian Spirit: Any time an ally with a guardian ward strikes down an enemy, regain 1 action point.
+    Greater Link Lifeforce: Damage taken via link lifeforce is halved.
+
+    X Second Guardian Ward: Place a guardian ward on a second ally.
+
+    X Ward Conversion: Reaction, convert guardian wards to holy shields.
+
+    X Capstone: Mass Holy shield Ward: Grant all nearby allies a holy shield (30 feet).
+  Movement:
+    X Pivot: Trade spaces with an adjacent ally
+
+Thief Rogue
+  Number of Combat Choices: 5 + Very High Positional Awareness
+
+  Roles: "mobile", "useful", "sneaky", "low_health"
+
+  Special:
+    X Soft Landing: Reduce falling damage by 20 feet
+  Movement:
+    X Flow with the Battle: You can move through spaces occupied by enemies at a cost of 10 feet of movement. You are still exposed.
+      X Greater Flow with the Battle: No movement cost
+    X Flank: If an enemy is harried gain advantage on attacks made from behind it. You are considered to be hiding from an enemy while flanking it.
+      X Break Away: If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.
+      X Ride the Blindspot: If you are flanking an enemy and it tries to turn to look at you, spend an action point to pivot around it.
+  Advantages:
+    X Lightfoot: Stealth Advantage
+      X Soundless: Gain +1d6 on stealth.
+    X Nimble Fingers: Stealing Advantage
+      X Sticky Fingers: Add 1d6 to checks made to steal something including pickpocket.
+    X Mantel: Climbing Advantage
+      X Superior Mantel: Add 1d6 to all climbing checks
+    X Master of Disguise: Gain advantage when crafting disguises.
+    X Trap Expert: Gain advantage on anything trap related.
+  Party Buff:
+    X Party Save: Give all allies 1d10 to role on a stealth check.
+  Passive Combat:
+    X High Ground: # You have advantage on plunging attacks.
+    X Strike From the Shadows: If you begin your turn in hiding, do an additional dice of damage on all attacks.
+    X Assisted Strike: If you have advantage on an attack, you may convert it to an additional damage dice.
+    X Dodge: Cost 1. Role a 17 with dex to avoid damage each time you are attacked.
+      X Greater Dodge: If you role a 14 or above, half damage
+      X Redirecting Dodge: Cost 1. Redirect any dodged damage to an enemy within range.
+  Active Combat:
+    X Pickpocket: Cost 1. Extra damage dice. Contested Dex Check. On success, steal something from the enemy.
+    X Disengage: Cost 1. Free Action. Avoid provoking exposed attacks.
+    X Disappear: "Spend an offhand action to attempt to hide."
+    X Mark: Cost 1. Mark an enemy. While marked, the enemy takes disadvantage in all attacks made against you and is considered to be harried.
+  Combo:
+    X Slip Away: If you slay an enemy, Disengage for free.
+      X Greater Slip Away: When you slip away, also regain your full movement.
+
+Assassin Rogue:
+  Number of Combat Choices: 11
+
+
+  Roles:
+    1. high damage
+    2. sneak
+    3. basic magic
+    4. self-sufficient
+
+  Special:
+    - Poison # During a rest, you are able to create 2 vials of poison which may have one of the following effects: add a dice of damage, slow an enemy to half movement, give an enemy disadvantage on its attacks if it fails an inner fire save against your spell power.
+    - Increased Poison Creation # You can now create 4 vials of poison during a rest.
+  Movement:
+    - Flow with the Battle: You can move through spaces occupied by enemies at a cost of 10 feet of movement. You are still exposed.
+      - Greater Flow with the Battle # Passing through enemy spaces no longer incurs a movement penalty.
+    - Corner: # Cost 1. If an enemy moves to pass you within 15 feet to either side, you may move to block them.
+  Advantages:
+    - Lightfoot
+    - Mantel
+    - Master of Disguise
+      - Imposter
+    - Thick Headed # Hard to enter your mind.
+    - High Ground # You have advantage on plunging attacks.
+  Self Buff:
+    - Spell of Darkvision
+      - Spell of True Sight # Cost 1. You have the effects of darkvision and may also see invisible objects and entities.
+    - Minor Spell of Invisibility # Cost 1. 5 minutes, 3 turns.
+      - Greater Spell of Invisibility # Cost 1. 1 hour, 1 battle.
+      - Major Spell of Invisibility # Cost 1. No limit.
+    - Minor Spell of Distraction # You may use magic to create a minor ruckus, this might include a loud sound or bright light. When used in combat, the enemy must make an inner fire save against your spell power or lose an action on their next turn.
+      - Greater Spell of Distraction # You may use magic to create a large distraction. This can include a moderately sized illusion, very loud noise or bright light, or the sound of someone's voice that you have heard. When in combat, all enemies within 30 feet of your target must make an spell power saving throw or loose an action on their next turn.
+    - Spell of Nimbleness # Cost 1. Targeted ranged attacks take disadvantage against you for one hour or 1 battle.
+  Passive Combat:
+    - Reduced Critical # Your critical hit target is decreased by one.
+    - Savage Critical # Add 2 dice rather than 1 to your critical hits.
+  Active Combat:
+    - Draining Strike # Cost 1. Regain half of the damage done by an attack.
+    - Meat Shield # Cost 1. Push someone into the way of an attack.
+    - Radiant Invisibility Break # Create a distraction equivalent to Minor Spell of Distraction when you break invisibility.
+    - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.    
+    - Disengage # Cost 1 
+    - Disappear # Offhand action to hide.
+    - Strike From the Shadows  # Additional dice of damage from attacks made from hiding.
+      - Assassinate  # 2 additional dice of damage from attacks made from hiding.
+    - All-consuming Shadow # Cost 1. Fill an area up to 100 feet with magical darkness. The area must be within 50 feet of you.
+  Combo:
+    - Line Them Up # If you slay an enemy gain a free 10 feet of movement and an attack.
+
+
+
+  CUT:
+    X Mark: Cost 1. Mark an enemy. While marked, the enemy takes disadvantage in all attacks made against you and is considered to be harried.
+    X Terrify # INF save to marked enemies or frightened. 
+    X Slip Away: If you slay an enemy, Disengage for free.
+    X Greater Slip Away: When you slip away, also regain your full movement.
+    X Assisted Strike: If An enemy is harried, gain advantage in attacks against it.
+    X Surrounded # Cost 1. Attack all adjacent enemies. 
+
+Marksman
+  High Damage, Fewer Shots, Less Mobile, Area Control
+  Number of Combat Choices: 8
+
+
+  Special Abilities:
+    X Firearm Creation and Modification
+      X Greater Firearm Creation and Modification
+  Buff Ally:
+  Combat Passive:
+    X Armor Penetrating Rounds: Your shots go through 1 foot of stone and ignore armor.
+      X Greater Armor Penetrating Rounds: Your shots go through up to 3 enemies.
+  Passive Multiplier:
+    X Strike From the Shadows
+      X Assassinate
+  Combat (Active):
+    X Focus (cost 1): Focus before a shot to gain advantage on it. Negates distance checks.
+    X Bull Rush (cost 1) # 10 feet ends in a extra dmg dice attack
+      X Greater Bull Rush # 20 feet
+    X Elemental Strike (cost 1): Convert the damage type of your attack to something else
+      X Greater Elemental Strike: No cost
+    X Called Shot (cost 1): Extra damage dice. Aim for a specific part of an enemy. SP save or drop something, fall 50 feet if flying, be blinded, or be knocked prone
+    X Forceful Shot (cost 1): Extra damage dice. Fire a round which knocks an enemy back 15 feet if they fail a STR save against your spell power.
+    X Tracer Round (cost 1): Extra damage dice of fire damage. Fire a shot that gives the next attack against the enemy advantage.
+    X Set Up: forgo all attacks during a round of combat to go prone and guarantee a critical hit against a declared enemy.
+    X Disappear
+  Critical Hit:
+    X Harrying Critical: On a critical hit, the target is considered harried and must make its next action with disadvantage.
+    X Vicious Critical
+    X Reduced Critical
+    X Called Critical: On critical hit, immediately apply one of the effects from called shot to the enemy. If the critical is on a called shot, apply a second effect.
+  Combos:
+    X Line Them Up
+    X Warrior Spirit # When you kill an enemy, regain an action point.
+  Movement:
+
+Archer:
+  
+  Special Abilities:
+    X Fletcher
+        X Expert Fletcher # Reduces all arrow cost by 1
+    X True Mastery
+  Advantages:
+    X Huntsman
+    X Mantel
+    X Steady
+    X Uncanny Perception 
+  Buff Ally:
+    X Healing Arrow # Cost 1
+  Combat Passive:
+    X Reflexes
+  Passive Multiplier:
+  Combat (Active):
+    X Dual Shot
+    X Fire and Ice Arrows # Cost 1
+    X Net Arrows # Cost 1
+    X Smoke Arrow # Cost 1
+    X Shadow and Light Arrows # Cost 1
+
+    X Explosive Arrows # Cost 2
+    X Delayed Explosive Arrows # Cost 2
+
+    X Vampiric Arrow # Cost 2
+    X Shock Arrow # Cost 2
+    X Anti-Gravity Arrows # Cost 2
+    X Volley
+    X Firestorm Arrow # Cost 4
+  Critical Hit:
+  Combos:
+    X Greater Reflexes
+  Movement:
+    X Rope Arrows # Cost 1
+    X Blink Arrows # Cost 2
+
+Sorcerer:
+  
+  Spell Modifications:
+    X Spell Area Modification: Increase difficulty by 3 to double or halve the AOE of a spell.
+    X Spell Volume Modification: Increase difficulty by 2 to change the volume of a spell.
+    X Empower Spell Modification: Increase the difficulty by 4 to add an additional dice to a spell. Stacks.
+    X Tie Off Modification: Increase the difficulty of a concentration spell by 4 to tie it off, leaving it in place for 20 minutes.
+    X Spell Element Modification: Increase the difficulty by 3 to change the damage type of a spell.
+    X Offhand Modification: Increase the difficulty of a spell by its tier to cast it as an offhand action.
+    X Enforce Will Modification: Force an enemy to make a spells INF save with disadvantage.
+  Ease of Casting:
+    X Influence: (Cost 1) Increase a charisma role by 3.
+    X Prepare Spell: At the start of a day, declare a spell to have 3 less difficulty.
+  Spirits Within:
+    X Spirits Within: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. On a 1, spirit escapes. CHA advantage and buffs.
+    X Light and Shadow: ADV INF saves. Extra dice of damage.
+  Familiar:
+    X Summon Minor Familiar (Cost: 1): Summon an ethereal beast of level 0 (light) or lower from the book of known beasts.
+    X Summon Greater Familiar (Cost: 3) Summon an ethereal beast of level 3 (heavy) or lower from the book of known beasts.
+    X Summon Major Familiar (Cost: 5) Summon an ethereal beast of level 5 (heavy) or lower from the book of known beasts.
+    X Summon Legendary Familiar (Cost 7) Summon an ethereal beast of level 12 (heavy) or lower from the book of known beasts.
+    X Through My Familiar's Eyes (Cost: 1) View the world through your familiar's eyes or ears. Increase cost by 1 for both.
+    X Fuse into Familiar (Cost: 1): Touch your familiar to fuse with it. Lasts for up to 10 minutes, before
+      you reappear where your familiar stands.
+    X Greater Fuse into Familiar: No time limit
+    X Blink to Familiar (Cost: 1) Instantly teleport to your familiar.
+
+
+
+  Summon Minor Familiar:
+    charisma_cost: 8
+    cost: 0
+    description: Summon a small familiar with 5 health. The familiar obeys your
+      every command and can attack for 1d4 damage. If a familiar dies, it cannot be resummoned until the next
+      day.
+  Summon Greater Familiar:
+    charisma_cost: 8
+    cost: 0
+    description: Summon a moderately sized familiar with 20 health. The familiar obeys your
+      every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next
+      day.
+  Summon Major Familiar:
+      charisma_cost: 8
+      cost: 1
+      description: Summon an beast of up to level 8 from the book of known beasts as your familiar.
+        Excludes villains.
+  Through My Familiar's Eyes:
+    charisma_cost: 12
+    cost: 2
+    description: View the world through your familiar's eyes. Increase the difficulty
+      by 2 to hear through your familiar's ears.
+  Fuse into Familiar:
+    charisma_cost: 14
+    cost: 2
+    description: Touch your familiar to fuse with it. Lasts for up to 10 minutes, before
+      you reappear where your familiar stands.
+  Blink to Familiar:
+    charisma_cost: 16
+    cost: 3
+    description: Instantly teleport to your familiar.
+
+Heroic Highborn:
+
+  The Idea: 
+    - Good on the frontline (some attack capabilities, but mostly abilities that spur on allies.)
+    - Good at diplomacy and charisma.
+    - Good at commanding allies (support)
+
+  INSP dice last 1 hour.
+
+  Advantages:
+    X My People # ADV on CHA with guards, nobles, and merchants.
+    X Commanding Presence: Add 1d6 to any Charisma Checks.
+    X Lionhearted # Advantage on SP saves.
+  Self Buff:
+    X Minor Lead the Way: Spend a Gumption to add 1d6 to your initiative.
+      X Greater Lead the Way: Spend a Gumption to add 1d10 to your initiative.
+    X Audacious Attempt # Spend a Gumption to add 1d10 to a check
+  Ally Buff:
+    X Aura of Courage # Allies can't be frightened while in your presence.
+    X Force of Inspiration # Any inspiration that you grant may be added to an attack.
+  Combat Passive:
+    X Valiant Critical: When you role a critical hit, gain a Gumption.
+    X Fallen # When you are on death's door, all of your allies gain a bonus action.
+    X Bravery: Gain 1d4 Gumption at the start of every battle.
+    X Inspiring Critical: When you get a critical hit or slay an enemy, grant an ally of your choice a 1d10 inspiration dice.
+  Combat Active:
+    X Inspiring Attack: Cost 1. Add an extra dice to your attack and grant a nearby ally a 1d6 inspiration dice.
+      X Greater Inspiring Attack: 1d8 inspiration dice.
+      X Major Inspiring Attack: 1d10 inspiration dice.
+      X Legendary Inspiring Attack: 1d12 inspiration dice.
+
+    X Heroic Blow: Spend a Gumption to add an extra damage dice to an attack.
+    X Heroic Action: Spend 5 Gumption to make your full movement and an attack out of turn.
+    X Swoon # Free Action, fall prone to avoid an attack.
+    X Parry # Cost 1. Reaction. Roll a contested DEX check against a bladed attack. On success, no damage. On failure, half.
+    X Reposition: Offhand. Spend a Gumption to grant an 15 feet of movement and advantage on their next attack.
+      Greater Reposition: Spend a Gumption to grant an ally their full movement and advantage on their next attack.
+      Major Reposition: full movement, an action, and advantage on their next attack.
+    Minor Self-Motivated Movement: Spend a Gumption to move 15 feet.
+      Greater Self-Motivated Movement: Spend a Gumption to move your full movement.
+    X Rally Cry # Offhand. Spend a Gumption to grant all allies a 1d6 inspiration dice.
+      Greater Rally Cry # 1d8
+  Combo:
+  Movement:
+    X Encouraging Presence: When you are standing adjacent to an ally, both of you get advantage on attacks.
+
+
+  Ways to Gain a Gumption:
+    Help an ally succeed with inspiration.
+    Grant an ally a critical success via advantage.
+    Get a critical hit on an enemy
+    Slay an enemy
+  Ways that we grant inspiration:
+    #Happy Smiles. All allies 1d6 per day.
+    #  Greater: 1d8
+    Inspire: Grant an ally a 1d12 inspiration dice.
+    Inspiring attack. Cost 1. An ally 1d6.
+      Greater 1d8
+      Major 1d10
+      Legendary 1d12
+  Ways we grant advantage:
+    Rally Cry. Cost 1. Grant all allies advantage on their next action.
+    Encouraging Presence: Adjacent to an ally.
+    Reposition: Advantage on next action
+  Ways we Spend Action Points:
+    Inspiring Attack
+    Reposition.
+    Rally Cry
+  Ways we Spend Gumption
+    Lead the way. Add to initiative.
+    Audacious attempt. Self inspire (1d10 to check)
+    Heroic Blow: Add a dice to an attack.
+    Forceful Blow: Add knockback to an attack
+    Parry: Stop ourself from taking as much damage.
+    Self Motivated Movement: Move Further
+    Heroic Action: Extra Action.
+    Greater Heroic Action: Action out of turn.
+    Gallant Healing: Your level in health
+    Lionhearted: Advantage on an SP save
+    Prepare for Combat: At the start of combat, immediately grant all allies 15ft. of movement.
+
+  Good Systems are a circle.
+  Mine -> Craft -> Mine -> Craft
+  Buff Allies -> Do Damage -> Buff Allies -> Do Damage
+
+
+
+
+  #- Strike First
+
+  CUT:
+    Happy Smiles:
+    description: Your presence increases party cheer in good weather, giving them a
+      d8 inspiration dice once per day. It also decreases it in bad weather, giving
+      them -1 charisma.
+    type: general
+    brief: 1/day in good weather, give party a 1d8 INSP dice. In bad weather, -1 CHA.
+
+  - Swoon # Fall prone for free to avoid damage
+
+
+  Feeling Lucky:
+    description: Add a number of d4's equal to your luck to an attack.
+    type: combat
+    brief: Add a number of d4's equal to your luck to an attack.
+    cost: 1
+
+
+
+========================= IN PROGRESS ======================================
+
+Druid:
+  Elementalist Druid:
+    Special:
+      - Chosen Element: Choose an element from the list of elements and gain it's corresponding effects.
+        - Fire:
+          - Tier One: Converted Attacks: Any attack damage you deal may be fire damage. 
+          - Tier Two: Resistance: You take half fire damage.
+          - Tier Three: Control Flame: You exert a degree of control over flame <Write a cost 2 or 3 spell for this and let them do it for free>
+          - Tier Four: Empowered Flame: Enemies have disadvantage when attempting to avoid your fire damage.
+          - Tier Five:  
+        - Water:
+        - Earth:
+        - Wind: 
+      
+
+
+
+
+  Naturalist Druid:
+
+  Animist Druid: # Ascribing a soul to animals 
+
+  - The Druid's Field Guide
+  - Tracker
+  - Tier Three Spells
+  - Ascend
+  - Ascended Flight
+  - True Ascension
+  - Power of Ascension
+  - Ascended Action
+
+
+============================================================================
+
+
+Beastmaster:
+
+  Concepts:
+    Shepherd
+    End of Once upon a Time in Hollywood
+    Avatar Navi
+    
+
+  Mechanics of Animal Companion:
+    Fixed Evolutions Based on the creature. The creature says at what level it upgrades
+      Pros:
+        Slots directly into the book of known beasts.
+        Level up stays simple.
+      Cons:
+        You need good resolution of upgrades. If resolution is close to 15, you're basically doing level ups.
+          If it's close to 4 (0,5,10,15) the creature may be useless for good chunks of the process.
+          Ideal resolution might be (0,2,5,7,10,12,15).
+    Level Up Method:
+      Pros:
+        High resolution by default.
+      Cons:
+        More complicated level up.
+        Does not work with book of known beasts by default.
+
+  Special:
+    - Animal Companion # Gain a "pup" from the book of known beasts.
+  Advantage:
+    - Animal Magnetism # Good at animal handling checks.
+    - Tracker # Advantage when Tracking
+    - Mantel # Advantage when Climbing
+  Passive General:
+    - Dog Pile # Any sleep taken with your animal counts as sleep in a bed.
+  Passive Combat:
+    - Huntsman # Advantage when attacking beasts
+    - Coordinated Attack # If you and your animal attack the same entity, both get advantage.
+  Active Combat:
+    - Leaping Strike # Leap forward 5 feet, dealing an extra dice of damage.
+      - Greater
+    - Tackle # Advantage when grappling. Choose STR or DEX contested save.
+    - Hobble # Tie up grappled enemies. Each turn, they make a STR SP save to escape.
+    - Closest Friend # Gain advantage in all things if your animal is on deaths door and vice versa.
+    - Dominate # If enemy fails SP save, they must obey until they save, you attack, or you give them a distressing order.
+
+
+
+    - Wild Sight # You can see through your animal's eyes.
+    - Inseparable # Offhand. Teleport yourself to your animal or vice versa.
+    - Beast Form # Transform back and forth into a dire creature for one hour.
+
+========================= TODO/NOTES ======================================
+
+Noble Highborn:
+  - CHA based everything?
+
+Quickdraw???
+  Mobile, More Shots, Draws first
+
+
+  Special Abilities:
+    - Firearm Creation and Modification
+      - Greater Firearm Creation and Modification
+  Buff Ally:
+  Combat Passive:
+    - Hollowpoint
+    - Quickdraw
+      - Fastest Gun
+    - Twin Guns
+  Passive Multiplier:
+  Combat (Active):
+    - Focus
+    - Called Shot (cost 1): Extra damage dice. Aim for a specific part of an enemy. SP save or drop something, fall 50 feet if flying, be blinded, or be knocked prone
+    - From the Hip
+      - Greater From the Hip
+    - Flash Grenade
+    - Repeating Shot: Fire an extra shot, but all shots are at disadvantage.
+    - Volley: Capstone
+  Critical Hit:
+  Combos:
+  Movement:
+
+
+  ideas:
+    Line in the sand and if an enemy crosses it you can shoot them.
+    - Feeling Lucky
+
+
+
+
+Fighter:
+  - Minor Second Wind # Cost 1. Heal for 1d6
+    - Greater Second Wind # Heal for 1d12
+    - Major Second Wind # Heal for 2d10
+
+  - Nimble # Targeted ranged attacks have disadvantage
+  - Determination #Grant yourself a d10 inspiration
+
+  - Find Center # Free action. Cost 1. Advantage in all things for a turn.
+
+  - Resolve # When you hit half health all attacks do half damage
+  - Stay on Your Feet # When you hit zero health, make a D10. On success, drop to 1 health instead.
+
+  - Whirlwind of Blades # cost 2: Make a third attack
+  - Reduced Critical
+
+  Ideas:
+    - A counterattack
+
+
+
+Rework:
+  - Focused Attack # Re-roll an attack after you make it
+
+
+
+Cleric:
+  Reallocate Health (Siphon).
+
+Ideas:
+  If you attack an enemy, they can't make an exposed attack against you.
+
+
+Gain another luck on critical
+
+ New Subclasses
+  Elemental Blade Fighter
+  
+
+  Healing Rogue
+  
+  Blade-pact sorcerer
+
+  Death Knight Knight
+  Standard Knight (Guardian?)
+  Hedge Knight (Fights Dirty)
+
+  Samurai Ranger

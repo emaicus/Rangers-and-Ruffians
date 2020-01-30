@@ -15,7 +15,6 @@ function parseGetRequest() {
 //Returns null on failure
 function getRaceFromSubrace(base, subrace){
     var rnr_race = null;
-    console.log(base);
     for(r in base["races"] ){
       if(Object.keys(base["races"][r]["subraces"]).includes(subrace)){
         rnr_race = r;
@@ -28,7 +27,6 @@ function getRaceFromSubrace(base, subrace){
 //Returns null on failure
 function getClassFromSubclass(base, subclass){
     var rnr_class = null;
-    console.log(base);
     for(c in base["classes"] ){
       if(Object.keys(base["classes"][c]["subclasses"]).includes(subclass)){
         rnr_class = c;

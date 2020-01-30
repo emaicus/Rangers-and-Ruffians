@@ -61,22 +61,23 @@ Aunora:
   abilities:
     Level_0:
       Minor Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add 1d4 to all healing rolls. 
+        description: Clerics and Paladins of Aunora may add lesser dice to all healing rolls. 
         type: general
     Level_5:
-      Minor Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add 1d6 to all healing rolls. 
+      Greater Goddess of Healing:
+        description: Clerics and Paladins of Aunora may add a greater dice to all healing rolls. 
         type: general
     Level_10:
-      Major Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add 1d12 to all healing rolls. 
+      Sparing Presence:
+        description: "If an ally within 15 feet of you is reduced to less than zero health, it's health immediately returns to zero.
+                      The ally remains on death's door, and must continue to make inner fire saves."
         type: general
       Purity:
         description: Healing spells cast by a Cleric or Paladin of Aunora remove most status effects from injured individuals.
         type: general
     Level_15:
       Legendary Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add 2d12 to all healing rolls. 
+        description: Clerics and Paladins of Aunora may add two greater dice to all healing rolls. 
         type: general
 Eandar:
   evil: false

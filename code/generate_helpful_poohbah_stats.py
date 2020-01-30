@@ -172,22 +172,22 @@ DMG_STEPS = {
 }
 
 NEW_DMG_STEPS = {
-  0 : [{'dice' : 4, 'mod' : 0 } ],
-  1 : [{'dice' : 4, 'mod' : 0 } ], # rare 1d4 + 1 weapons
-  2 : [{'dice' : 6, 'mod' : 0 } ], # 1d6 weapons and rare 1d4 +2 weapons
-  3 : [{'dice' : 6, 'mod' : 0 } ], # 1d6 + 1 weapons rare 1d4 + 3 weapons
-  4 : [{'dice' : 8 'mod' : 0 } ], # 1d8 weapons
-  5 : [{'dice' : 8, 'mod' : 0 } ], # 1d8 weapons rare 1d6 + 2 weapons
-  6 : [{'dice' : 10, 'mod' : 0 } ], # 1d8 weapons + 1 rare 1d6 + 3 weapons
-  7 : [{'dice' : 10,'mod' : 0 }, {'dice' : 12,'mod': 0}], # 1d8 + 1  weapons rare 1d6 + 3 weapons
-  8 : [{'dice' : 12, 'mod' : 0 }, {'dice' : 12,'mod' : 0}], # 1d10 weapons. Rare 1d8 + 2 weapons.
-  9 : [{'dice' : 12,'mod' : 0 }, {'dice' : 12,'mod' : 0}], # 1d10 + 1 weapons. Rare 1d8 + 3 weapons
-  10: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 weapons, rare 1d10 + 2 weapons.
-  11: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 1 weapons. Rare 1d10 + 3 weapons
-  12: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 2 weapons
-  13: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 3 weapons
-  14: [{'dice' : 12,'mod' : 0},{'dice' : 12,'mod' : 0}], # 1d12 + 3 weapons
-  15: [{'dice' : 12,'mod' : 4},{'dice' : 12,'mod' : 0}]  # 1d12 + 3 weapons
+  0 : [{'primary_die' : 4,  'effect_die' : 0, 'mod' : 0 } ],
+  1 : [{'primary_die' : 4,  'effect_die' : 4, 'mod' : 0 } ], # rare 1d4 + 1 weapons
+  2 : [{'primary_die' : 6,  'effect_die' : 0, 'mod' : 1 } ], # 1d6 weapons and rare 1d4 +2 weapons
+  3 : [{'primary_die' : 6,  'effect_die' : 6, 'mod' : 0 } ], # 1d6 + 1 weapons rare 1d4 + 3 weapons
+  4 : [{'primary_die' : 6,  'effect_die' : 6, 'mod' : 1 } ], # 1d8 weapons
+  5 : [{'primary_die' : 6,  'effect_die' : 6, 'mod' : 2 } ], # 1d8 weapons rare 1d6 + 2 weapons
+  6 : [{'primary_die' : 8, 'effect_die' : 8, 'mod' : 1 } ], # 1d8 weapons + 1 rare 1d6 + 3 weapons
+  7 : [{'primary_die' : 8, 'effect_die' : 8, 'mod' : 2 },  ], # 1d8 + 1  weapons rare 1d6 + 3 weapons
+  8 : [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d10 weapons. Rare 1d8 + 2 weapons.
+  9 : [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d10 + 1 weapons. Rare 1d8 + 3 weapons
+  10: [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d12 weapons, rare 1d10 + 2 weapons.
+  11: [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d12 + 1 weapons. Rare 1d10 + 3 weapons
+  12: [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d12 + 2 weapons
+  13: [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d12 + 3 weapons
+  14: [{'primary_die' : 12, 'effect_die' : 0, 'mod' : 0 },  ], # 1d12 + 3 weapons
+  15: [{'primary_die' : 12, 'effect_die' : 12, 'mod' : 5 },  ]  # 1d12 + 3 weapons
 }
 
 

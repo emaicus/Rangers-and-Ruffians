@@ -28,6 +28,7 @@ GLOBAL_COMPENDIUM_OF_SPELLS = dict()
 GLOBAL_BOOK_OF_KNOWN_BEATS = dict()
 GLOBAL_MAGIC_CLASSES = dict()
 GLOBAL_PANTHEON = dict()
+GLOBAL_STANDARD_ITEMS = dict()
 
 GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
@@ -549,8 +550,6 @@ class rnr_ability:
     self.description = description
     self.type = ability_type
 
-
-
 def which_icons(rnr_race, rnr_class):
   icons = list()
 
@@ -677,6 +676,19 @@ def markdown_pantheon():
 
   return lines
 
+# def markdown_items():
+#   global GLOBAL_STANDARD_ITEMS
+#   lines = []
+
+#   lines.append('Weapons consist of the following components:')
+#   lines.append('* __Range:__ The distance to which a weapon can be accurately shot, fired, or thrown.')
+#   lines.append('* __Reach:__: The distance at which a weapon can strike.')
+
+#   for weapon_type, weapon_objects in GLOBAL_STANDARD_ITEMS['Weapons'].items():
+#     lines.append(f'### {weapon_type}')
+#     for weapon, weapon_info in weapon_objects.items():
+#       lines.append(f'#### {weapon}')
+#       lines.append()
 
 def get_art(relative_art_folder, art_name, in_docs=False):
   jpg_art_name = f'{art_name}.jpg'
@@ -848,7 +860,7 @@ def update_version(version_string):
     json.dump(data, outfile, indent=4)
 
 def load_Rangers_And_Ruffians_Data():
-  global VERSION_NUMBER, GLOBAL_ABILITY_DICT, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
+  global VERSION_NUMBER, GLOBAL_ABILITY_DICT, GLOBAL_STANDARD_ITEMS, GLOBAL_SPELL_BOOKS, GLOBAL_RACE_DATA, GLOBAL_SKILL_DATA, GLOBAL_CLASS_DATA, GLOBAL_COMPENDIUM_OF_SPELLS, GLOBAL_DESCRIPTIONS_DATABASE, GLOBAL_ART_DICTIONARY, GLOBAL_MAGIC_CLASSES, GLOBAL_INITIAL_SPELL_ABILITIES, GLOBAL_SPELL_TIER_ABILITIES, GLOBAL_BOOK_OF_KNOWN_BEATS, GLOBAL_PANTHEON
   if len(GLOBAL_ABILITY_DICT.keys()) != 0:
     return
 
@@ -870,6 +882,7 @@ def load_Rangers_And_Ruffians_Data():
   art_path = os.path.join(INSTALL_DIRECTORY, 'art.json')
   known_beasts_path = os.path.join(INSTALL_DIRECTORY, 'book_of_known_beasts.json')
   version_number_path = os.path.join(BASE_DIRECTORY, 'meta.json')
+  items_path = os.path.join(INSTALL_DIRECTORY, 'items.json')
 
   with open(version_number_path) as infile:
     data = json.load(infile)
@@ -907,6 +920,9 @@ def load_Rangers_And_Ruffians_Data():
 
   with open(known_beasts_path) as data_file:
     GLOBAL_BOOK_OF_KNOWN_BEATS = json.load(data_file)
+
+  with open(items_path) as data_file:
+    GLOBAL_STANDARD_ITEMS = json.load(data_file)
 
   with open(pantheon_path) as data_file:
     GLOBAL_PANTHEON = json.load(data_file)

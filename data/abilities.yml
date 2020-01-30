@@ -321,12 +321,12 @@ Smoke Arrows:
   type: general
   brief: 30 ft radius smokescreen.
   cost: 1
-Healing Arrows: 
-  description: "You can craft healing arrows. Fire a healing arrow at an
-                ally to heal them for half of its damage."
-  type: general
-  brief: Fire an arrow at an ally and heal them for half its damage.
-  cost: 1
+# Healing Arrows: 
+#   description: "You can craft healing arrows. Fire a healing arrow at an
+#                 ally to heal them for half of its damage."
+#   type: general
+#   brief: Fire an arrow at an ally and heal them for half its damage.
+#   cost: 1
 Shock Arrows: 
   description: You can now craft shock arrows. When a shock arrow hits an enemy, 
     it deals an additional dice of shock damage. If an affected entity is
@@ -1126,11 +1126,10 @@ Greater Firearm Creation and Modification:
   description: "You have advantage on checks used to create and modify firearms, and have access to advanced firearm designs."
   type: general
   brief: "You have advantage when creating or modifying firearms and can use advanced designs."
-Harrying Critical:
-  description: "On a critical hit, the attacked entity is considered harried 
-                and must make its next action with disadvantage."
+Harrying Shots:
+  description: "When you successfully attack an enemy, they are considered harried."
   type: combat
-  brief: On a crit, enemy is harried for 1 turn and disadvantage on their next action.
+  brief: When you successfully attack an enemy, they are considered harried.
 Tracer Round:
   description: "Fire a bright tracer round to gauge the exact distance to an enemy. Add a dice of fire
                 damage to the attack and give the next attack made against the enemy advantage."
@@ -1284,9 +1283,9 @@ Fix Your Eyes on Me:
   brief: "Force SP save. Fail: you have advantage on CHA and enemy can only attack you."
   cost: 1
 Sacrificial Rite: 
-  description: At the cost of half your level in health (minimum 1, round up), make a second action during combat.
+  description: At the cost of your level in health (minimum 1), make a second action during combat.
   type: combat
-  brief: At the cost of half your level in hp (min 1, round down), make an extra action.
+  brief: At the cost of your level in hp (min 1), make an extra action.
 Ready Stance:
   description: As an offhand action, take up a stance that grants you 1d4 armor until your next turn.
   type: general

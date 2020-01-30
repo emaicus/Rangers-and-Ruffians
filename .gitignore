@@ -17,3 +17,4 @@ Gemfile.lock
 *~
 .DS_Store
 site/static/images
+data/wip

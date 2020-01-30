@@ -1516,7 +1516,7 @@ Archer:
           - Net Arrows
         level_2:
           abilities:
-          - Healing Arrows
+          # - Healing Arrows
           - Reflexes
         level_3:
           abilities:
@@ -1603,7 +1603,7 @@ Gunslinger:
         level_1:
           abilities:
           - Focus
-          - Harrying Critical
+          - Harrying Shots
         level_2:
           abilities:
           - Bull Rush
@@ -1625,7 +1625,7 @@ Gunslinger:
           abilities:
           - Offhand Attack
           - Reduced Critical
-          - Armor Penetrating Rounds
+          #- Armor Penetrating Rounds
         level_8:
           abilities:
           - Warrior Spirit
