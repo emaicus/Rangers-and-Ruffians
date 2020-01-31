@@ -1,7 +1,6 @@
 ---
 skip_header: true
 ---
-<script src="../js/rangers.js"></script>
 <script src="../js/nunjucks.js"></script>
 <html>
   <head>

@@ -2,7 +2,6 @@
 skip_header: true
 ---
 
-<script src="../js/rangers.js"></script>
 <script src="../js/nunjucks.js"></script>
 <link rel="stylesheet" href="/new_site/css/iterated_char_sheet.css">
 
