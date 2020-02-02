@@ -607,7 +607,6 @@ __Tier 5:__
   
 __Tier 0:__  
 * __Hologram:__ _(Cost: 0, Charisma Cost: 8)_ Manifest your thoughts as a hologram standing one foot tall on your palm.  
-* __Summon Familiar:__ _(Cost: 0, Charisma Cost: 8)_ Summon a small familiar with 5 health. The familiar obeys your every command and can attack for 1d4 damage. If a familiar dies, it cannot be resummoned until the next day.  
 * __Tickle:__ _(Cost: 0, Charisma Cost: 8)_ Utilize your magic to tickle an entity within 30 feet of you. If in combat, the entity must make an inner fire saving throw against your spell power, or be forced to move at disadvantage.  
   
 __Tier 1:__  
@@ -616,7 +615,6 @@ __Tier 1:__
 * __Hoist:__ _(Cost: 1, Charisma Cost: 10)_ Concentration. Force an average sized or smaller entity to make a dexterity check against your spell power. On failure, the entity is hoisted into the air by its ankle. On its turn, the entity may repeat its save. While hoisted, the entity is treated as grappled. This spell may be attempted on larger creatures with increased difficulty.  
 * __Slash:__ _(Cost: 1, Charisma Cost: 10)_ Slash at an enemy up to 15 feet away with an invisible blade, dealing 1d8 damage.  
 * __Unseen hand:__ _(Cost: 1, Charisma Cost: 10)_ Conjure an unseen hand which can manipulate objects up to 50 feet away.  
-* __Through My Familiar's Eyes:__ _(Cost: 2, Charisma Cost: 12)_ View the world through your familiar's eyes. Increase the difficulty by 2 to hear through your familiar's ears.  
   
 __Tier 2:__  
 * __Conjure major illusion:__ _(Cost: 2, Charisma Cost: 14)_ Create an illusory object which can move/speak if you tell it to but cannot be bigger than a house. Concentration.  
@@ -627,17 +625,14 @@ __Tier 2:__
 * __Shrink:__ _(Cost: 2, Charisma Cost: 14)_ Shrink an object or entity to a desired size. Unwilling entities can attempt a saving throw every turn. Shrunk enemies must add -3 to all strength checks, and loose 10 feet of movement. Concentration.  
 * __Strange Tongue:__ _(Cost: 2, Charisma Cost: 10)_ You and your party speak in a tongue only you can understand. Concentration.  
 * __Telepathic communication:__ _(Cost: 2, Charisma Cost: 10)_ Create a ward on an entity to allow you to communicate with them via thought. Works up to 1/2 mile. Lasts 6 hours.  
-* __Summon Greater Familiar:__ _(Cost: 0, Charisma Cost: 8)_ Summon a moderately sized familiar with 20 health. The familiar obeys your every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next day.  
   
 __Tier 3:__  
 * __Pocket Dimension:__ _(Cost: 2, Charisma Cost: 15)_ Create a door into your own, private pocket dimension. The dimension is 30x30x30 feet, and persists over time. Once you are in the pocket dimension, you can always exit. For every 10 minutes you are in the pocket dimension, Make a D8 inner fire saving throw. If you fail, you are ejected from the pocket dimension.  
-* __Fuse into Familiar:__ _(Cost: 2, Charisma Cost: 14)_ Touch your familiar to fuse with it. Lasts for up to 10 minutes, before you reappear where your familiar stands.  
 * __Gateway:__ _(Cost: 2, Charisma Cost: 15)_ Create a doorway from one location to another within 300 feet. Both ends must be in view for the spell to be cast. Concentration.  
 * __Mind Blast:__ _(Cost: 2, Charisma Cost: 14)_ Fire a blast of psychic energy at an enemy. Do 3d6 damage and grapple them if you roll above a 10. They can attempt an inner fire saving throw against your spell power each turn at a cost of 1d6 health if they fail. Concentration.  
 * __Polymorph:__ _(Cost: 3, Charisma Cost: 15)_ Transform an entity into a medium or small creature of your choice if they fail an inner fire saving throw against your spell power. They can attempt a saving throw every turn thereafter.  
   
 __Tier 4:__  
-* __Blink to Familiar:__ _(Cost: 3, Charisma Cost: 16)_ Instantly teleport to your familiar.  
 * __Fly:__ _(Cost: 2, Charisma Cost: 14)_ Allow yourself or another entity to fly. Concentration.  
 * __Illusory Terrain:__ _(Cost: 2, Charisma Cost: 12)_ Make 100x100 yards of terrain look any way you choose.  
 * __Lift:__ _(Cost: 2, Charisma Cost: 16)_ Force up to four entities to make dexterity saving throws against your spell power. For each success, lift the entity into the air with your magic and hurl them. Impacts cause 2d12 damage.  
@@ -648,7 +643,6 @@ __Tier 5:__
 * __Firestorm:__ _(Cost: 5, Charisma Cost: 18)_ Fire bursts from your body, spiraling in every direction, dealing 8d8 damage to all entities within 25 feet of you if they fail a dexterity save versus your spell power. If they succeed, they take half damage. Enemies that fail a saving throw are burned, and take 1d6 at the start of each turn until they are healed.  
 * __Grand Illusion:__ _(Cost: 5, Charisma Cost: 16)_ Conjure an illusory object, which can move, speak, and think for itself. Cannot be bigger than a mountain. Concentration.  
 * __Greater Gateway:__ _(Cost: 5, Charisma Cost: 16)_ Create up to a 20x20 foot gateway from your current position to another location within five  miles. The creation of a gateway makes an explosive bang. It takes one full turn or five minutes to cast this spell properly. If improperly cast, the cost of this spell is 12, and the gateway lets out at an undetermined location within one mile. Concentration.  
-* __Summon Major Familiar:__ _(Cost: 1, Charisma Cost: 8)_ Summon an beast of up to level 8 from the book of known beasts as your familiar. Excludes villains.  
 
   
 ### The Tome Of The Ancients

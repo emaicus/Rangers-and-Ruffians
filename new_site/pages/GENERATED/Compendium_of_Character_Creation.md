@@ -79,7 +79,7 @@ _Version 2.1.3_
      * [Druid](#druid)  
      * [Fighter](#fighter)  
      * [Marksman](#marksman)  
-     * [Highborn](#highborn)  
+     * [Heroic Highborn](#heroic-highborn)  
      * [Knight](#knight)  
      * [Monk](#monk)  
      * [Necromancer](#necromancer)  
@@ -335,7 +335,7 @@ __Daemonspawn Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round up), make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat.  
   
   
   
@@ -1042,10 +1042,7 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
 ___
 
   
-### Highborn
-<img src='../../images/class/highborn.jpg' class="raceClassImage" />
-
-"[Before I leave"](https://www.deviantart.com/maxprodanov/art/Before-I-leave-749261058) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+### Heroic Highborn
   
   
 Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
@@ -1053,13 +1050,13 @@ Highborns were born into a noble house and have connections and money as a resul
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|-1|1|1|-3|2|4|  
+|-1|-2|-3|1|0|2|1|4|  
   
   
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Highborn" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Heroic Highborn" role="button">Level Up Sheet</a>
   
 ___
 

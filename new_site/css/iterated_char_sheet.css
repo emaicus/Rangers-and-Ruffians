@@ -248,43 +248,42 @@ img.tinyicon
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    html{ font-size: 1.8vw; }
+/*    html{ font-size: 1.8vw; }*/
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    html{ font-size: 1.8vw; }
+/*    html{ font-size: 1.8vw; }*/
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    html{ font-size: 1.3vw; }
+/*    html{ font-size: 1.3vw; }*/
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    html{ font-size: 1vw; }
+ /*   html{ font-size: 1vw; }*/
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  html{ font-size: .6vw; }
+/*  html{ font-size: .6vw; }*/
 }
 
 /* Full HD (1080p) */
 @media only screen and (min-width: 1800px) {
-  html{ font-size: 0.55vw; }
+/*  html{ font-size: 0.55vw; }*/
 }
 
 /* QHD  (2K) */
 @media only screen and (min-width: 2400px) {
-  html{ font-size: 0.6vw; }
+/*  html{ font-size: 0.6vw; }*/
 }
 
 @media print {
 
-    html {font-size: 1.5vw};
-
+/*    html {font-size: 1.5vw};*/
 
 
     @page {

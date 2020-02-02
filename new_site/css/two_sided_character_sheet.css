@@ -1,124 +1,90 @@
 .new-print-region {
   height:1200px;
-  width: 800px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+  width: 927px; /* Should be close to 3:2 which is close enough to 8.5 x 11*/  
   margin: 0 auto;
-  padding:0px;
   background: #fff;
   margin-top:30px !important;
   padding: 20px;
+  font-family: 'Angkor';
 }
 
 .front-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 10%;
   border: 2px solid black;
   border-radius: 3px;
   padding: 10px;
 }
 
+.back-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px;
+}
+
 .front-name {
-  font-family: 'Angkor';
-  font-size: 4rem;
   margin-bottom: 0px;
   line-height: 1;
 }
 
 .front-name-div {
-  height: 100%;
-  float: left;
+  margin-right: 2%;
 }
 
-.front-char-info {
-  height: 50%;
-}
-
-.front-info {
-  font-family: 'Angkor';
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.front-small-icon-div {
-  height: 100%;
-}
-
-.front-small-icon-figure {
-  /*display: inline-block; 
-  margin: 0 0 0;*/
-  height: 100%;
-  width: 100%;
-}
-
-.small-icon-wrapper {
-  height: 33.333%;
-}
-
-.front-small-icon {
-  height: 95%;
-}
-
-.front-small-figure-caption{
-  color:grey;
-  font-size: 0.8rem;
-  font-weight: bold;
-  font-family: 'Angkor';
-  text-align: center;
-}
-
-.front-large-icon-div {
-  height: 100%;
-}
-
-.front-large-icon-figure {
-  display: inline-block; 
-  margin: 0 0 0;
-}
-
-.front-large-icon {
-  height: 40%;
-}
-
-.front-large-figure-caption {
-  color:grey;
-  font-size: 0.8rem;
-  font-weight: bold;
-  font-family: 'Angkor';
-  text-align: center;
+.attribute-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .front-bottom {
-  height: 80%;
-  border: 2px solid black;
+  height: 90%;
 }
 
-.stat-sidebar {
-  height: 100%;
-  float: left;
-  width: 10%;
+.back-bottom {
+  height: 80%;
 }
+
 
 .stat-square {
   width: 80px;
   height: 80px;
-  display: inline-block; /* could be float */
+  float: left;/* could be display inline block */
   border: 1px solid black;
   border-radius: 3px;
   margin: 0.2rem;
   margin-top: 2px;
   text-align: center;
   text-decoration: underline;
+  background-color: white;
+}
+
+.stat-rectangle {
+  width: 120px;
+  height: 80px;
+  float: left;/* could be display inline block */
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 0.2rem;
+  margin-top: 2px;
+  text-align: center;
+  text-decoration: underline;
+  background-color: white;
 }
 
 .stat-square-content {
-  font-size: 150%;
+  line-height: 1;
+  display: inline-block;
 }
 
 .combat-ability-div {
   height: 100%;
-  font-family: 'Angkor';
-}
-
-.combat-ability-header {
-  font-size: 350%;
 }
 
 .dark {
@@ -126,69 +92,56 @@
 }
 
 .inner {
-  height: 97%;
-  width: 90%;
-  margin:5%;
-  margin-top: 5% !important;
+  height: 98%;
+  width: 98%;
+  margin:2%;
+  margin-top: 2% !important;
   background-color: white;
   border-radius: 10px;
   float: left;
+  border: 3px groove;
 }
 
 .weapons-div {
   height: 40%;
-  font-family: 'Angkor';
-}
-
-.weapons-header {
-  font-size: 350%;
 }
 
 .inventory-div {
   height: 60%;
-  font-family: 'Angkor';
 }
 
 .tall {
   height:100%;
 }
 
-.inventory-header {
-  font-family: 'Angkor';
-  font-size: 350%;
-}
-
 .tenth-width {
   width : 10%;
   float: left;
-  border: 2px solid black;
+}
+
+.half-width {
+  width : 50%;
+  float: left;
 }
 
 .sixth-width {
   width : 16.66%;
   float: left;
-  border: 2px solid black;
 }
 
 .third-width {
   width : 33.33%;
   float: left;
-  border: 2px solid black;
 }
 
 .two-thirds-width {
   width : 66.66%;
   float: left;
-  border: 2px solid black;
 }
 
-.forty-five-width {
-  width : 45%;
-  float: left;
-  border: 2px solid black;
-}
 
 .character-attribute-square {
+  display: inline-block;
   width: 80px;
   height: 80px;
   float: right;
@@ -197,19 +150,16 @@
   margin: 0.2rem;
   margin-top: 2px;
   text-align: center;
+  background-color: white;
 }
 
 .character-attribute-name-container {
+  line-height: 1;
   float: left;
   width:100%;
   height: 50%;
 }
 
-.character-attribute-name {
-  font-size: 150%;
-  text-decoration: underline;
-  font-family: 'Angkor';
-}
 
 .character-attribute-icon-container {
   float: left;
@@ -220,4 +170,314 @@
 .character-attribute-icon {
   height: 95%;
   transform: translateY(35%);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.weapon-top {
+  width: 100%;
+  height: 20%;
+  float: left;
+}
+
+
+.hand {
+  height:50%;
+  width:100%;
+  float:left;
+}
+
+.weapon-damage-container {
+  float: left;
+  width:50%;
+  padding-left:2%;
+  height:35%;
+}
+
+.weapon-info-container {
+  float:left;
+  width: 50%;
+  height:35%;
+}
+
+.weapon-abilities-container  {
+  float:left;
+  width: 50%;
+}
+
+.weapon-drawbacks-container {
+  float: left;
+  width:50%;
+  padding-left:2%;
+}
+
+
+.stat-topbar {
+  padding-top:1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  width:100%;
+  height: 10%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px
+}
+
+.title {
+  font-family: 'Angkor';
+  text-decoration: underline;
+}
+
+p.weapon-attribute {
+  margin-bottom: 0px;
+}
+
+.equipped-items-top {
+  width: 100%;
+  height: 10%;
+}
+
+.equipped-items-section {
+  height: 30%;
+  width: 100%;
+  float: left;
+  line-height: 1;
+}
+
+.advantage {
+  height:20%;
+  width:50%;
+}
+
+.disadvantage {
+  height:20%;
+  width: 50%;
+}
+
+.new-left-col {
+  float: left;
+  height: 90%;
+}
+
+.new-right-col {
+  float: left;
+  height: 90%;
+}
+
+.left-col-top {
+  float: left;
+  height: 35%;
+}
+
+.right-col-top {
+  float: left;
+  height :35%;
+}
+
+.combat-abilities {
+  float: left;
+  height : 79%;
+  width: 100%;
+}
+
+.inventory {
+  float: left;
+  height : 59%;
+  width: 100%;
+}
+
+.equipped {
+  height:40%;
+  width: 100%;
+  float:left;
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.ability {
+  margin-bottom: 1%;
+  line-height: 1;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+    .tiny-font {
+      font-size: 5pt;     
+    }
+
+    .small-font {
+      font-size: 7pt;
+    }
+
+    .big-font {
+      font-size: 14pt;
+    }
+
+    .new-print-region {
+      height:800px;
+      width: 618px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      margin-top:30px !important;
+      padding: 20px;
+    }
+
+    .stat-square {
+      width: 54px;
+      height: 54px;
+    }
+
+    .stat-rectangle {
+      width: 81px;
+      height: 54px;
+    }
+
+    .stat-square-content {
+      line-height: 0.5;
+    }
+
+    .character-attribute-square {
+      width: 54px;
+      height: 54px;
+    }
+
+    .character-attribute-name-container{
+      line-height: 0.5;
+    }
+
+} 
+
+
+/* Large devices (laptops/desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .tiny-font {
+      font-size: 8pt;     
+    }
+
+    .small-font {
+      font-size: 10pt;
+    }
+
+    .medium-font {
+      font-size: 14pt;
+    }
+
+    .big-font {
+      font-size: 18pt;
+    }
+
+    .new-print-region {
+      height:1000px;
+      width: 773px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      margin-top:30px !important;
+      padding: 20px;
+    }
+
+    .stat-square {
+      width: 67px;
+      height: 67px;
+    }
+
+    .stat-rectangle {
+      width: 100px;
+      height: 67px;
+    }
+
+    .character-attribute-square {
+      width: 67px;
+      height: 67px;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .big-font {
+    font-size: 26pt;
+  }
+
+  .new-print-region {
+      height:1200px;
+      width: 927px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      margin-top:30px !important;
+      padding: 20px;
+    }
+
+    .stat-square {
+      width: 80px;
+      height: 80px;
+    }
+
+    .stat-rectangle {
+      width: 120px;
+      height: 80px;
+    }
+
+    .character-attribute-square {
+      width: 80px;
+      height: 80px;
+    }
+}
+
+/* Full HD (1080p) */
+/*@media only screen and (min-width: 1800px) {
+}*/
+
+/* QHD  (2K) */
+/*@media only screen and (min-width: 2400px) {
+}*/
+
+@media print {
+
+    @page {
+       size: 10.5in 13in; 
+    }
+
+    .body{
+        margin:0;
+        padding: 0;
+        background:  white;
+        background-color: white;
+    }
+
+    .selection_area{
+      display:none;
+    }
+
+    .new-print-region 
+    {
+      break-inside: avoid;
+      break-after: always;
+      width: 100vw;
+      height:100vh;
+      margin: 0px;
+      margin-top:0px !important;
+      background: #fff;
+    }
+
+    .main-content {
+      padding-top:0px !important;
+    }
+
+    .tiny-font {
+      font-size: 8pt;     
+    }
+
+    .small-font {
+      font-size: 10pt;
+    }
+
+    .medium-font {
+      font-size: 14pt;
+    }
+
+    .big-font {
+      font-size: 24pt;
+    }
 }

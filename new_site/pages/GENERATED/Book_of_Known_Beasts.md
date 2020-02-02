@@ -187,8 +187,8 @@ __Abilities:__
 * __Pounce:__ Panthers add an additional dice of damage to any plunging attack.  
   
 __Actions:__  
-* __Bite:__ _1d6 + 0 Strength._ The panther bites with needle-like teeth, dealing piercing damage.  
-* __Claw:__ The panther swats at an enemy with its claws.  
+* __Bite:__ _1d6 + 2 Dexterity._ The panther bites with needle-like teeth, dealing piercing damage.  
+* __Claw:__ _1d6 + 2 Dexterity._ The panther swats at an enemy with its claws.  
   
   
 ___  

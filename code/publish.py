@@ -462,7 +462,7 @@ def setup_service_worker():
   site_service_worker_path = os.path.join(site_path, 'service_worker.js')
 
   os.chdir(rnr_utils.BASE_DIRECTORY)
-  os.system("jekyll build")
+  os.system("bundle exec jekyll build")
   os.chdir(site_path)
   os.system("node build.js")
   shutil.copy(site_service_worker_path, intended_service_worker_path)

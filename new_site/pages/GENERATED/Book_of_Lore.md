@@ -96,14 +96,14 @@ Aunora, the Dawnmaiden, is the goddess of peace, love, and healing. In her initi
 __Gifts:__  
   
 * __Level 0__  
-  * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d4 to all healing rolls.  
+  * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add lesser dice to all healing rolls.  
 * __Level 5__  
-  * __Minor Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d6 to all healing rolls.  
+  * __Greater Goddess Of Healing:__ Clerics and Paladins of Aunora may add a greater dice to all healing rolls.  
 * __Level 10__  
-  * __Major Goddess Of Healing:__ Clerics and Paladins of Aunora may add 1d12 to all healing rolls.  
+  * __Sparing Presence:__ If an ally within 15 feet of you is reduced to less than zero health, it's health immediately returns to zero. The ally remains on death's door, and must continue to make inner fire saves.  
   * __Purity:__ Healing spells cast by a Cleric or Paladin of Aunora remove most status effects from injured individuals.  
 * __Level 15__  
-  * __Legendary Goddess Of Healing:__ Clerics and Paladins of Aunora may add 2d12 to all healing rolls.  
+  * __Legendary Goddess Of Healing:__ Clerics and Paladins of Aunora may add two greater dice to all healing rolls.  
 
   
 #### Eandar
