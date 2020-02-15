@@ -7,52 +7,45 @@
   </div>
 {% endmacro %}
 
-{% macro character_data_square(name, img_path, rectangle=false) %}
-  {% set type_class = "data-rectangle" if rectangle else "data-square" %}
-  <div class="character-attribute-square">
-    <div class="character-attribute-name-container">
+{% macro character_data_square(name, img_path, rectangle="false") %}
+  {% set type_class = "rectangle" if rectangle == "true" else "square" %}
+  <div class="character-attribute-{{type_class}}">
+    <div class="character-attribute-name-container half-height full-width">
       <span class="title small-font">{{name}}</span>
     </div>
-    <div class="character-attribute-icon-container">
+    <div class="half-height">
       <img src="/new_site/icons/{{img_path}}" class="character-attribute-icon">
     </div>
   </div>
 {% endmacro %}
 
-{# Handedness should either be "left" or "right" #}
-{% macro weapon_div(handedness) %}
-  {% set hand = "bad-hand" %}
-  {% if handedness == "left" %}
-    {% set hand = "left" %}
-  {% elif handedness == "right" %}
-    {% set hand = "right" %}
-  {% endif %}
+{% macro format_ability(ability, ability_info) %}
+<p class="ability">
+  <span class="small-font bold">{{ability}}: 
+    {% if ability_info["cost"] != None and ability_info["cost"] != 0 %}
+      (Cost {{ ability_info['cost'] }})
+    {% endif %}
+  </span>
+  <span class="small-font">
+    {{ability_info['brief']}}
+  </span>
+</p>
+{% endmacro %}
 
-
-  <div class="weapon-top">
-    <span class="title medium-font">{{hand | title}} Hand</span>
+{% macro character_info_column(first, second, third) %}
+  <div class="third-height">
+    <span class="medium-font"> 
+      {{first}}: _________
+    </span>
   </div>
-  <div class="weapon-info-container">
-    <div class="title small-font">
-      Weapon Info
-    </div>
-    <div class="weapon-type">
-    </div>
+  <div class="third-height">
+    <span class="medium-font">
+      {{second}}: _________
+    </span>
   </div>
-  <div class="weapon-damage-container">
-    <div class="title small-font">
-      Damage
-    </div>
+  <div class="third-height">
+    <span class="medium-font">
+      {{third}}: _________
+    </span>
   </div>
-  <div class="weapon-abilities-container">
-    <p class="title small-font">
-      Abilities:
-    </p>
-  </div>
-  <div class="weapon-drawbacks-container">
-    <p class="title small-font">
-      Drawbacks:
-    </p>
-  </div>
-
 {% endmacro %}

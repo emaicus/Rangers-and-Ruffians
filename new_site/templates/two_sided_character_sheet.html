@@ -5,74 +5,67 @@
 #}
 {% import 'macros.html' as macros %}
 <div class="new-print-region">
-  <div class="front-top" id="front-top">
-    <div class="front-name-div">
-      <span class="front-name big-font" id="characterName"> {{ character_name if character_name else "Archibold the Wizard"}}</span><br/>
+  <div class="front-top full-width twenty-height" id="front-top">
+    <div class="back-flex half-height full-width">
+      <div class="front-name-div">
+        <span class="front-name big-font" id="front-character-name"> {{ character_name if character_name else "Archibold the Wizard"}}</span><br/>
+      </div>
+      <div class="attribute-container" id="attribute-container">
+        {{ macros.character_data_square("Health", tmp_icons['health'],"true") }}
+        {{ macros.character_data_square("Action Points", tmp_icons['action_points'], "true")}}
+      {% for attribute_name, attribute_path in [
+          ['Armor', tmp_icons['armor']],
+          ['Spell Power', tmp_icons['spell_power']],
+          ['Special', tmp_icons['special']]
+        ] %}
+        {{macros.character_data_square(attribute_name, attribute_path)}}
+      {% endfor %}
+      </div>
     </div>
-    <div class="attribute-container" id="attribute-container">
-      {{ macros.character_data_square("Health", tmp_icons['health'],true) }}
-    {% for attribute_name, attribute_path in [
-        ['Armor', tmp_icons['armor']],
-        ['Action Points', tmp_icons['action_points']],
-        ['Spell Power', tmp_icons['spell_power']],
-        ['Special', tmp_icons['special']]
-      ] %}
-      {{macros.character_data_square(attribute_name, attribute_path)}}
-    {% endfor %}
-    </div>
-  </div>
-  <div class="front-bottom dark" id="front-bottom">
-    <div class="stat-topbar">
+    <div class="stat-topbar full-width half-height">
       {% for stat in ["STR", "DEX", "INT", "INF", "PER", "CHA", "LUK", "HD" ] %}
         {{ macros.stat_square(stat) }}
       {% endfor %}
     </div>
-    <div class="new-left-col two-thirds-width">
-      <div class="advantage half-width">
+  </div>
+  <div class="eighty-height full-width dark" id="front-bottom">
+    <div class="front-left-col two-thirds-width" id="combat-advantage">
+      <div class="twenty-height half-width">
         <div class="inner">
           <span class="title medium-font"> 
             Combat Advantages:
           </span>
         </div>
       </div>
-      <div class="disadvantage half-width">
+      <div class="twenty-height half-width" id="combat-disadvantage">
         <div class="inner">
           <span class="title medium-font"> 
             Combat Disadvantages:
           </span>
         </div>
       </div>
-      <div class="combat-abilities">
+      <div class="eighty-height full-width" id="combat-abilities">
         <div class="inner">
           <span class="title medium-font"> 
             Combat Abilities:
           </span>
           {% if "combat" in abilities %}
             {% for ability, ability_info in abilities["combat"] %}
-              <p class="ability">
-                <span class="small-font bold">{{ability}}: 
-                  {% if ability_info["cost"] != None and ability_info["cost"] != 0 %}
-                    (Cost {{ ability_info['cost'] }})
-                  {% endif %}
-                </span>
-                <span class="small-font">
-                  {{ability_info['brief']}}
-                </span>
-              </p>
+              {{ macros.format_ability(ability, ability_info) }}
             {% endfor %}
           {% endif %}
         </div>
       </div>
     </div>
-    <div class="new-right-col third-width">
-      <div class="equipped third-width">
+    <div class="front-right-col third-width">
+      <div class="forty-height full-width" id="equipped-items">
         <div class="inner">
           <span class="title medium-font"> 
             Equipped Items:
           </span>
         </div>
       </div>
-      <div class="inventory third-width">
+      <div class="sixty-height full-width" id="combat-inventory">
         <div class="inner">
           <span class="title medium-font"> 
             Combat Inventory:
@@ -83,27 +76,83 @@
   </div>
 </div>
 <div class="new-print-region">
-  <div class="back-top" id="front-top">
-    <div class="front-name-div">
-      <span class="front-name big-font" id="characterName"> {{ character_name if character_name else "Archibold the Wizard"}}</span><br/>
-    </div>
-  </div>
-  <div class="back-bottom dark">
-    <div class="half-width">
-      <div class="inner">
+  <div class="back-top full-width" id="back-top">
+    <div class="full-width forty-height back-flex">
+      <div class="front-name-div">
+        <span class="front-name big-font" id="back-character-name"> {{ character_name if character_name else "Archibold the Wizard"}}</span><br/>
+      </div>
+      <div class="attribute-container" id="attribute-container">
+      {% for attribute_name, attribute_path in [
+          ['Level', tmp_icons['level']],
+          ['Platinum', tmp_icons['platinum']],
+          ['Gold', tmp_icons['gold']],
+          ['Silver', tmp_icons['silver']],
+          ['Copper', tmp_icons['copper']]
+        ] %}
+        {{macros.character_data_square(attribute_name, attribute_path)}}
+      {% endfor %}
       </div>
     </div>
-    <div class="half-width">
-      <div class="inner">
+    <div class="full-width sixty-height">
+      <div class="quarter-width details-col">
+        {{ macros.character_info_column("Race", "Class", "Subclass") }}
+      </div>
+      <div class="quarter-width details-col">
+        {{ macros.character_info_column("Age", "Gender", "Height") }}
+      </div>
+      <div class="quarter-width details-col">
+        {{ macros.character_info_column("Hair", "Eyes", "Skin") }}
+      </div>
+      <div class="quarter-width details-col">
+        {{ macros.character_info_column("Alignment", "Faith", "Other") }}
       </div>
     </div>
   </div>
-
-
-  What goes on the other side?
-    General Abilities
-    Advantages and Disadvantages.
-    Inventory
-    Notes
+  <div class="back-bottom full-width dark" id="back-bottom">
+    <div class="back-left-col sixty-width">
+      <div class="sixty-height full-width" id="general-abilities">
+        <div class="inner">
+          <span class="title medium-font"> 
+            Abilities:
+          </span>
+          {% if "general" in abilities %}
+            {% for ability, ability_info in abilities["general"] %}
+              {{ macros.format_ability(ability, ability_info) }}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="forty-height full-width" id="general-inventory">
+        <div class="inner">
+          <span class="title medium-font"> 
+            Inventory:
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="back-right-col">
+      <div class="twenty-height full-width" id="general-advantages">
+        <div class="inner">
+          <span class="title medium-font"> 
+            Advantages:
+          </span>
+        </div>
+      </div>
+      <div class="twenty-height full-width" id="general-disadvantages">
+        <div class="inner">
+          <span class="title medium-font"> 
+            Disadvantages:
+          </span>
+        </div>
+      </div>
+      <div class="sixty-height full-width" id="notes">
+        <div class="inner">
+          <span class="title medium-font"> 
+            Notes:
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

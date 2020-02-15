@@ -556,6 +556,7 @@ def which_icons(rnr_race, rnr_class):
   #Everyone has health
   icons.append(('hearts.svg', 'Health'))
 
+
   # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
   # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
 
@@ -589,6 +590,7 @@ def which_icons(rnr_race, rnr_class):
   icons.append(('fire-spell-cast.svg', 'Spell Power'))
   icons.append(('shield.svg', 'Armor'))
   icons.append(('bolt-shield.svg', 'Mage Armor'))
+  icons.append(('moebius-trefoil.svg', 'Level Up'))
   return icons
 
 

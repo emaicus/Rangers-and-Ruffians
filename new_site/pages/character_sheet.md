@@ -55,6 +55,8 @@ skip_header: true
   function updateCharacterName(){
     var name = $( "#chosen_name" ).val();
     $("#characterName").text(name);
+    $("#front-character-name").text(name);
+    $("#back-character-name").text(name);
 
     if(name == ""){
       $("#levelUpSheetCharacterName").text($( "#chosen_class" ).val() + " Level Up Sheet");
@@ -140,13 +142,20 @@ skip_header: true
     tmp_icons["spell_power"] = data["icons"][2][0];
     tmp_icons["armor"] = data["icons"][3][0];
     tmp_icons["special"] = data["icons"][4][0];
+    tmp_icons["copper"] = "token.svg"
+    tmp_icons["silver"] = "two-coins.svg"
+    tmp_icons["gold"] = "swap-bag.svg"
+    tmp_icons["platinum"] = "shiny-purse.svg"
+    tmp_icons["level"] = data["icons"][5][0];
+
     data["tmp_icons"] = tmp_icons;
     console.log(tmp_icons);
     if(sheet_type == "v1_visual"){
       data["visualStats"] = true;
       character_sheet = nunjucks.render('character_sheet_template.html', data );
     } else if(sheet_type == "v2"){
-      character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
+      character_sheet = nunjucks.render('updated_character_sheet.html', data );
+      // character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
     } 
     else{
       console.log("in else with " + sheet_type);
