@@ -6,11 +6,13 @@ import rnr_utils
 import rnr_descriptions
 import balance_report
 
-def log_output(test, errors):
+def log_output(test, errors, sort=False):
   log_path = 'log.txt'
 
   with open(log_path, 'a') as logfile:
     logfile.write('{0}\n'.format(test))
+    if sort:
+      errors = sorted(errors)
     for error in errors:
       logfile.write("  {0}\n".format(error))
 
@@ -52,7 +54,7 @@ class rnrTests(unittest.TestCase):
     rnr_utils.load_Rangers_And_Ruffians_Data()
     errors = balance_report.check_brief_abilities(print_errors=False)
     if len(errors) > 0:
-      log_output("Description Lengths", errors)
+      log_output("Description Lengths", errors, sort=True)
     self.assertEqual(len(errors),0)
 
   def test_descriptions_for_unescaped_characters(self):

@@ -28,13 +28,11 @@ _Version 2.1.3_
 
    * [Spellbooks](#spellbooks)  
      * [The Bard's Songbook](#the-bards-songbook)  
-     * [The Book Of Chi](#the-book-of-chi)  
      * [The Book Of Healing](#the-book-of-healing)  
      * [The Druid's Guidebook](#the-druids-guidebook)  
      * [The Macabre Manual](#the-macabre-manual)  
      * [The Novice Spellbook](#the-novice-spellbook)  
      * [The Sorcerer's Scrolls](#the-sorcerers-scrolls)  
-     * [The Tome Of The Ancients](#the-tome-of-the-ancients-1)  
      * [The Wizard's Addendum](#the-wizards-addendum)  
 
   
@@ -162,64 +160,6 @@ __Tier 5:__
 * __Death Note:__ _(Cost: 5)_ Play a combination of sounds which instantly deals 8d8 damage everyone within 15 feet of you.  
 
   
-### The Book Of Chi
-  
-__Basic Techniques:__  
-* __Brawler:__ Your hands are d6 weapons.  
-* __Catch Projectile:__ _(Cost: 1)_ Once per turn, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. If reduced to zero, you catch the projectile.  
-* __Combo:__ _(Cost: 1)_ You make an unarmed attack as an offhand action.  
-* __Disarm:__ _(Cost: 1)_ Attack with a single punch. If the opponent fails a strength saving throw against your spell power, they drop their weapon.  
-* __Disengage:__ _(Cost: 1)_ Spend an action point to avoid provoking exposed attacks.  
-* __Dodge:__ _(Cost: 1)_ Roll a contested dexterity check to attempt to dodge an opponent's attack.  
-* __Find Balance:__ Use a bonus action to cleanse yourself of poison or other status effects.  
-* __Grapple:__ You have advantage when grappling.  
-* __Icy Kick:__ _(Cost: 1)_ Add an additional 1d6 cold damage to a kicking attack.  
-* __Leap to your feet:__ Get to your feet without penalty.  
-* __Sharpen blade:__ _(Cost: 1)_ Hone your physical weapon to give it an additional 1d4 blunt or slashing damage for the duration of a battle.  
-* __Strike from on High:__ You do an additional 1d6 blunt damage on any plunging attack.  
-* __Stunning Blow:__ _(Cost: 1)_ Attack with a single punch. If the target fails a spell power save, they are stunned, and miss an action, offhand action, and movement on their next turn.  
-* __Sweep the Leg:__ Attack with a single kick. If the target fails a dexterity save, they are knocked prone.  
-* __Aerial Acrobatics:__ You can turn flips and spin in the air. If your feet touch something solid, you can spring from it.  
-* __Balance:__ You have impeccable balance. You have advantage on any saving throws where you could be knocked prone.  
-* __Calligraphy:__ Gain advantage on any fine motor skill dexterity checks.  
-* __Escape:__ You have advantage on any checks involving breaking physical restraints.  
-* __Inner Eye:__ You have advantage when detecting evil, good, or spiritual energy.  
-* __Listen:__ You have advantage on perception checks.  
-* __Mantle:__ You are able to mantle across objects. You have advantage on dexterity checks when climbing or leaping.  
-* __Meditate:__ Gain an additional dice of health from any rest.  
-* __Meld into Shadow:__ Take advantage on stealth checks when hiding in shadows.  
-* __Minor Heal:__ _(Cost: 1)_ Heal yourself or another for 1d6 + inner fire damage.  
-* __Run on water:__ Get a running start to run up to 50 feet on water.  
-* __Silent:__ You have advantage on stealth checks.  
-* __Tumble:__ You take half fall damage.  
-  
-__Master Techniques:__  
-* __Aura of Calm:__ Allies near you gain +1 on all spell power saves.  
-* __Darkness:__ _(Cost: 2)_ Create a veil of darkness with a 50 foot radius which lasts for 1d4 turns. All entities within the shadow must make perception checks before attacking, and then must attack with disadvantage. You are not affected by the darkness.  
-* __Fists of Steel:__ Your bare hands are d12 weapons.  
-* __Flaming Fist:__ _(Cost: 1)_ Add an additional 1d12 fire damage to a punching attack.  
-* __Path of the Brawler:__ Increase the size of your health dice by 1.  
-* __Major Heal:__ _(Cost: 2)_ Heal yourself or an ally for 4d10 + inner fire health.  
-* __Master of Body and Soul:__ Once per day, when you reach 0 health, drop to 2d10 health instead.  
-* __Opening Blow:__ If you strike an opponent before it is able to move in combat, take advantage on all subsequent attacks against that foe so long as you continue attacking it with each of your actions. Add an additional 1d12 blunt damage to the initial strike.  
-* __Perfect Zen:__ _(Cost: 1)_ As an offhand action, become untouchable by physical attacks for one turn or one minute.  
-* __Press the Advantage:__ On a critical hit, gain another attack.  
-* __Redirect Attack:__ _(Cost: 1)_ Reaction. Once per turn, select an enemy attack aimed at you. Make a contested dexterity check. If you succeed, redirect the attack anywhere you wish.  
-* __Shadow Step:__ _(Cost: 1)_ Step from any point in darkness to any other point in darkness within 50 feet.  
-* __Share Ability:__ Every day, share in a teammates ability for the day.  
-* __Surrounded:__ _(Cost: 1)_ Strike every foe adjacent to you.  
-* __Thunderous Punch:__ _(Cost: 1)_ Your attack may make a thunder wave, which affects all enemies in front of you with the punch's damage.  
-  
-__Legendary Techniques:__  
-* __Second Action:__ Take two actions on your turn.  
-* __Consecutive Normal Punches:__ _(Cost: 2)_ Take two attacks with each of your actions and offhand actions.  
-* __Pressure Points:__ Whenever you attack a non-villain enemy, force them to make a spell power save. On failure, they fall instantly limp, and are stunned until they succeed.  
-* __Consuming Blow:__ _(Cost: 2)_ When you attack an enemy, force them to make a spell power save. On failure, shadows fly forth from you at the point of contact, tearing at the flesh of your opponent. The opponent takes 4d10 damage as a result.  
-* __Ultimate Punch:__ _(Cost: 2)_ As an action, channel the energy of your ancestors into a perfectly tuned punch. With a thunderclap, unleash a blow capable of destroying buildings with its shock-wave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities in a 100 foot cone in front of you.  
-* __Perfect Understanding:__ _(Cost: 1)_ Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.  
-* __Everywhere and Nowhere:__ _(Cost: 1)_ Instead of taking movement during combat, instantly teleport from one location to another within thirty feet of you. If you do not attack on your turn, you may choose to be ethereal until your next turn, and therefore to be immune to physical damage.  
-
-  
 ### The Book Of Healing
   
 __Tier 0:__  
@@ -317,12 +257,11 @@ __Tier 5:__
 __Tier 0:__  
 * __Catseye:__ Change your eyes to those of a cat, giving yourself low light vision for one hour.  
 * __Claws:__ Grow claws from your fingers capable of dealing 1d6 damage.  
-* __Cold Resistance:__ Resist cold. You take 1d4 fewer damage from cold or frost based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
+* __Cold Resistance:__ _(Cost: 1)_ Resist cold. You take half damage from cold or frost based attacks, and make saves against frost or cold based damage at advantage.  
 * __Control Plant Growth:__ Quickly grow a plant up to the size of a hedge in about 5 minutes or 1 turn in combat.  
 * __Crown of Fireflies:__ Summon a crown of fireflies to dance around your head, casting candlelight around you. You may command the fireflies up to a distance of 100 feet.  
 * __Echolocate:__ Let out an inaudible sonic pulse, which allows you to gain a picture of a room as a perception check, even if it is completely dark.  
 * __Fire Resistance:__ Resist fire damage. You take 1d4 fewer damage from fire based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
-* __Forest Sense:__ Perform perception checks using the natural world around you. Take advantage on perception checks made using living natural entities to aid you.  
 * __Lightning Resistance:__ Resist electricity. You take 1d4 fewer damage from lightning based attacks. Passive. You may have at most one passive resistance active at a time. You may apply a passive resistance as an offhand action.  
 * __Mend:__ Instantly mend a broken item or object. You must have most of the pieces and the object must not be too complicated. Make an intelligence check if repairing a complex object.  
 * __Spider Web:__ Create incredibly sticky spiderweb, capable of holding a person. You are able to create it at the rate of five cubic feet per five minute span, or one five foot cube per action.  
@@ -420,7 +359,6 @@ __Tier 1:__
 * __Sentry Skull:__ _(Cost: 1)_ Take the skull of a fallen entity and infuse it with the power of a soul to link yourself to it. From this point on, you may see through the eyes of the skull.  
 * __Shadow-step:__ _(Cost: 1)_ Teleport from one shadow to another over a maximum distance of 50 feet.  
 * __Siphon:__ _(Cost: 1)_ Eat the life-force of a wounded enemy, dealing 1d6 damage, and healing yourself for that amount. An enemy may only be siphoned once, and You cannot harvest a soul from an entity that you have siphoned.  
-* __Skeleton:__ _(Cost: 1)_ Raise a skeletal minion from a fallen entity. See the book of known beasts for details.  
 * __Surrogate:__ _(Cost: 1)_ Reaction. Force the nearest entity to make an inner fire saving throw against your spell power. On failure, they dive in front of you to save you from an attack.  
 * __Vampiric Blade:__ _(Cost: 1)_ Enchant any blade so that it does an additional 1d4 damage. You heal an amount equivalent to this damage. This spell lasts for 3 turns or one hour.  
   
@@ -431,12 +369,10 @@ __Tier 2:__
 * __Spikes of Blood:__ _(Cost: 2)_ Form any blood on the ground into spiked daggers which are hurled at the enemy. More blood causes more damage for a maximum of 6d6 damage.  
 * __Steal Senses:__ _(Cost: 2)_ Cover an entity's eyes, ears, and/or mouth with your hand to remove them. Lasts until dispelled.  
 * __Wall of Bone:__ _(Cost: 2)_ Create a wall up to 40 feet high and 100 feet long of solid bone.  
-* __Zombie:__ _(Cost: 1)_ Raise a zombie minion from a fallen entity. See the book of known beasts for details.  
   
 __Tier 3:__  
 * __Trauma:__ _(Cost: 2)_ Cause an enemy to see into the unseen realm of darkness. If they fail an inner fire saving throw against your spell power, they collapse, unable to move on their next turn. On a critical fail, their mind is broken until they are healed.  
 * __Death Beam:__ _(Cost: 2)_ Fire a beam of concentrated death at an enemy, dealing 3d10 damage.  
-* __Ghoul:__ _(Cost: 2)_ Raise a ghoul from a fallen entity. See the book of known beasts for details.  
 * __Hungry Shadows:__ _(Cost: 2)_ Concentration. Summon a pack of 3 shadow hounds which attempt to devour an entity. See the book of known beasts for details.  
 * __Major Darkness:__ _(Cost: 2)_ Fill a 100 square foot area with pitch darkness. Entities within the darkness must roll a perception check against your spell power to act effectively on their turn. If they pass, they act with disadvantage.  
 * __Major Through the eyes of the little ones:__ _(Cost: 2)_ Take control of a large animal, a weak minded person, or child. You lose control after 1 hour or after the creature moves 1 mile away. For the duration, your consciousness can inhabit the creature.  
@@ -444,14 +380,12 @@ __Tier 3:__
 * __Tenmu's Terrible Tentacles:__ _(Cost: 2)_ Concentration. Sprout shadowy tentacles from your back. The tentacles are able to lift you up to seven feet from the ground, and allow you to climb like a spider. Each turn you may make a tentacle attack for 1d10 + inner fire damage as an offhand attack.  
   
 __Tier 4:__  
-* __Death Knight:__ _(Cost: 3)_ Resurrect a greater ghoul to aid you. See the book of known beasts for details.  
 * __Anti-life field:__ _(Cost: 3)_ Create a field of death around yourself with a 10 foot radius. Anything living that enters the field takes 4d8 damage per turn. The field wilts and kills everything. Lasts for one hour or until de-summoned.  
 * __Putrid Air:__ _(Cost: 3)_ Fill a large room with noxious gas. Force all enemies within a 50 foot radius to make an inner fire saving throw against your spell power. On failure, the enemy takes 3d10 and must take all actions on their next turn at disadvantage. On success, the enemy takes half damage and is not at disadvantage. Repeat the check every turn for three turns.  
 * __Sap Age:__ _(Cost: 3)_ Steal the life-force from someone. Every 1 minute or 1 turn in combat, you steal 1 year of their life. This life force can be given to someone else.  
 * __Resurrect:__ _(Cost: 5)_ Resurrect an entity who has died within the past 24 hours. The entity will suffer from nightmares of the other side, and bear the scars of their injuries. Requires an inner fire check.  
   
 __Tier 5:__  
-* __Abomination:__ _(Cost: 5)_ Knit together a monstrous abomination to fight for you. Requires 5 corpses. See the book of known beasts for details.  
 * __Death Inducement:__ _(Cost: 5)_ Ritual requires one month. Mark the time that a person will die. Requires a piece of paper made from the skin of a sentient being, one ounce of the blood of the one who is to die, and blood diamonds valuing 20,000 gold. At the prescribed time, the entity must make an inner fire saving throw against your spell power. If they fail, they take take 10d20 damage, which cannot be healed for 24 hours. On success, they take half damage.  
 * __Horrors:__ _(Cost: 4)_ Summon a mass of fog with a one mile radius. Any entity within the fog sees apparitions of their worst fears. Each turn, they must make a saving throw against your spell power at disadvantage. On success, they can act. On failure, they are considered afraid, and must move as far away from the mist as possible. The mists are considered to be low light.  
 * __Partial Resurrection:__ _(Cost: 5)_ Recall the soul of a being which has died within the past 100 years. Requires the carcass of a freshly dead man, and the heart of a beast of level 10 or higher.The entity is trapped in the body of the dead man, but comes back to life. Requires an inner fire check.  
@@ -581,7 +515,6 @@ __Tier 4:__
 * __Biting winds:__ _(Cost: 3, Charisma Cost: 16)_ Concentration. Wind howls and whips as you utter an incantation. Driving winds that cut like razors push enemies away from you, dealing 2d10 damage per turn to any entity within a forty foot cone in front of you. Affected entities must make an strength saving throw against your spell power to move in the wind. On success, they move at half their normal speed. Gigantic and larger entities make their check with advantage. Small entities make it with disadvantage.  
 * __Cage:__ _(Cost: 2, Charisma Cost: 16)_ Create a 30 cubic foot magical cage around yourself which no one can exit.  
 * __Chains of Fire:__ _(Cost: 3, Charisma Cost: 16)_ Concentration. Force an entity to make a dexterity saving throw against your spell power. On failure, fiery chains large enough to restrain them burst into existence, grappling them. Each turn, the affected entity may make a strength saving throw against your spell power in an attempt to break out. Each turn an entity is tethered, it takes 2d10 fire damage.  
-* __Deadman's Contingency:__ _(Cost: 7, Charisma Cost: 8)_ Put in place a contingency plan for when you die. The contingency can involve up to three of your spells, and is chained together by an ethereal entity which acts as your proxy, and exists for sixty seconds.  
 * __Delayed Explosion:__ _(Cost: 3, Charisma Cost: 16)_ Cast a glyph within 100 feet of yourself which explodes on your command. Does 3d12 damage to entities within a 15 foot radius.  
 * __Flaming Flowers:__ _(Cost: 3, Charisma Cost: 16)_ With a hiss and a crackle, a thousand flours of pure flame sprout in a space up to 100 square feet around you. These flowers do not harm your allies, but deal 1d6 damage for every 5 feet that an enemy moves through them. As a bonus, you are always able to summon a single flaming flower as a tier zero spell.  
 * __Greater Block:__ _(Cost: 4, Charisma Cost: 17)_ Block your entire team from taking damage for 1 turn.  
@@ -607,7 +540,6 @@ __Tier 5:__
   
 __Tier 0:__  
 * __Hologram:__ _(Cost: 0, Charisma Cost: 8)_ Manifest your thoughts as a hologram standing one foot tall on your palm.  
-* __Summon Familiar:__ _(Cost: 0, Charisma Cost: 8)_ Summon a small familiar with 5 health. The familiar obeys your every command and can attack for 1d4 damage. If a familiar dies, it cannot be resummoned until the next day.  
 * __Tickle:__ _(Cost: 0, Charisma Cost: 8)_ Utilize your magic to tickle an entity within 30 feet of you. If in combat, the entity must make an inner fire saving throw against your spell power, or be forced to move at disadvantage.  
   
 __Tier 1:__  
@@ -616,7 +548,6 @@ __Tier 1:__
 * __Hoist:__ _(Cost: 1, Charisma Cost: 10)_ Concentration. Force an average sized or smaller entity to make a dexterity check against your spell power. On failure, the entity is hoisted into the air by its ankle. On its turn, the entity may repeat its save. While hoisted, the entity is treated as grappled. This spell may be attempted on larger creatures with increased difficulty.  
 * __Slash:__ _(Cost: 1, Charisma Cost: 10)_ Slash at an enemy up to 15 feet away with an invisible blade, dealing 1d8 damage.  
 * __Unseen hand:__ _(Cost: 1, Charisma Cost: 10)_ Conjure an unseen hand which can manipulate objects up to 50 feet away.  
-* __Through My Familiar's Eyes:__ _(Cost: 2, Charisma Cost: 12)_ View the world through your familiar's eyes. Increase the difficulty by 2 to hear through your familiar's ears.  
   
 __Tier 2:__  
 * __Conjure major illusion:__ _(Cost: 2, Charisma Cost: 14)_ Create an illusory object which can move/speak if you tell it to but cannot be bigger than a house. Concentration.  
@@ -627,17 +558,14 @@ __Tier 2:__
 * __Shrink:__ _(Cost: 2, Charisma Cost: 14)_ Shrink an object or entity to a desired size. Unwilling entities can attempt a saving throw every turn. Shrunk enemies must add -3 to all strength checks, and loose 10 feet of movement. Concentration.  
 * __Strange Tongue:__ _(Cost: 2, Charisma Cost: 10)_ You and your party speak in a tongue only you can understand. Concentration.  
 * __Telepathic communication:__ _(Cost: 2, Charisma Cost: 10)_ Create a ward on an entity to allow you to communicate with them via thought. Works up to 1/2 mile. Lasts 6 hours.  
-* __Summon Greater Familiar:__ _(Cost: 0, Charisma Cost: 8)_ Summon a moderately sized familiar with 20 health. The familiar obeys your every command, and can attack for 1d8 damage. If a familiar dies, it cannot be resummoned until the next day.  
   
 __Tier 3:__  
 * __Pocket Dimension:__ _(Cost: 2, Charisma Cost: 15)_ Create a door into your own, private pocket dimension. The dimension is 30x30x30 feet, and persists over time. Once you are in the pocket dimension, you can always exit. For every 10 minutes you are in the pocket dimension, Make a D8 inner fire saving throw. If you fail, you are ejected from the pocket dimension.  
-* __Fuse into Familiar:__ _(Cost: 2, Charisma Cost: 14)_ Touch your familiar to fuse with it. Lasts for up to 10 minutes, before you reappear where your familiar stands.  
 * __Gateway:__ _(Cost: 2, Charisma Cost: 15)_ Create a doorway from one location to another within 300 feet. Both ends must be in view for the spell to be cast. Concentration.  
 * __Mind Blast:__ _(Cost: 2, Charisma Cost: 14)_ Fire a blast of psychic energy at an enemy. Do 3d6 damage and grapple them if you roll above a 10. They can attempt an inner fire saving throw against your spell power each turn at a cost of 1d6 health if they fail. Concentration.  
 * __Polymorph:__ _(Cost: 3, Charisma Cost: 15)_ Transform an entity into a medium or small creature of your choice if they fail an inner fire saving throw against your spell power. They can attempt a saving throw every turn thereafter.  
   
 __Tier 4:__  
-* __Blink to Familiar:__ _(Cost: 3, Charisma Cost: 16)_ Instantly teleport to your familiar.  
 * __Fly:__ _(Cost: 2, Charisma Cost: 14)_ Allow yourself or another entity to fly. Concentration.  
 * __Illusory Terrain:__ _(Cost: 2, Charisma Cost: 12)_ Make 100x100 yards of terrain look any way you choose.  
 * __Lift:__ _(Cost: 2, Charisma Cost: 16)_ Force up to four entities to make dexterity saving throws against your spell power. For each success, lift the entity into the air with your magic and hurl them. Impacts cause 2d12 damage.  
@@ -648,15 +576,6 @@ __Tier 5:__
 * __Firestorm:__ _(Cost: 5, Charisma Cost: 18)_ Fire bursts from your body, spiraling in every direction, dealing 8d8 damage to all entities within 25 feet of you if they fail a dexterity save versus your spell power. If they succeed, they take half damage. Enemies that fail a saving throw are burned, and take 1d6 at the start of each turn until they are healed.  
 * __Grand Illusion:__ _(Cost: 5, Charisma Cost: 16)_ Conjure an illusory object, which can move, speak, and think for itself. Cannot be bigger than a mountain. Concentration.  
 * __Greater Gateway:__ _(Cost: 5, Charisma Cost: 16)_ Create up to a 20x20 foot gateway from your current position to another location within five  miles. The creation of a gateway makes an explosive bang. It takes one full turn or five minutes to cast this spell properly. If improperly cast, the cost of this spell is 12, and the gateway lets out at an undetermined location within one mile. Concentration.  
-* __Summon Major Familiar:__ _(Cost: 1, Charisma Cost: 8)_ Summon an beast of up to level 8 from the book of known beasts as your familiar. Excludes villains.  
-
-  
-### The Tome Of The Ancients
-  
-__Tier 6:__  
-* __Massive Levitation:__ _(Cost: 10)_ Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. Requires 12 hours of casting time. Levitate anything up to the size of a mountain.  
-* __True Enchantment:__ _(Cost: 6)_ You are now able to make truly enchanted items. It takes days to make an enchanted object, and may involve multiple roles.  
-* __Teleportation Circle:__ _(Cost: 8)_ Requires diamonds, gold, and jewels valuing 50,000 gold. Craft a circle of teleportation. Any circle of teleportation may link to another you have created or have access to.  
 
   
 ### The Wizard's Addendum
@@ -699,4 +618,9 @@ __Tier 5:__
 * __Invulnerability:__ _(Cost: 3)_ Make yourself or another entity invulnerable to damage for 3 turns.  
 * __Reverse Gravity:__ _(Cost: 3)_ Reverse the gravity in a space up to 1000 square feet.  
 * __Storm of Swords:__ _(Cost: 5)_ Conjure 6 swords of pure arcane energy around yourself. Each of the swords has 20 hit points. Each turn, each remaining sword may attack for 1d8 damage. If an enemy physically attacks you, you may make a contested dexterity check to command the remaining swords to parry. On a successful parry, all but the parrying sword may attack the enemy as a reaction.  
+  
+__Tier 6:__  
+* __Massive Levitation:__ _(Cost: 10)_ Requires gemstones worth 200,000 gold and at least five master spellcasters to assist you. Requires 12 hours of casting time. Levitate anything up to the size of a mountain.  
+* __True Enchantment:__ _(Cost: 6)_ You are now able to make truly enchanted items. It takes days to make an enchanted object, and may involve multiple roles.  
+* __Teleportation Circle:__ _(Cost: 8)_ Requires diamonds, gold, and jewels valuing 50,000 gold. Craft a circle of teleportation. Any circle of teleportation may link to another you have created or have access to.  
 

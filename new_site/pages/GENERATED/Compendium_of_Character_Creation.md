@@ -74,12 +74,24 @@ _Version 2.1.3_
        * [Path of Nature Barbarian](#path-of-nature-barbarian)  
        * [Path of Rage Barbarian](#path-of-rage-barbarian)  
      * [Bard](#bard)  
-     * [Beastmaster](#beastmaster)  
      * [Cleric](#cleric)  
-     * [Druid](#druid)  
+       * [Cleric of Beauty](#cleric-of-beauty)  
+       * [Cleric of Fertility](#cleric-of-fertility)  
+       * [Cleric of Fun](#cleric-of-fun)  
+       * [Cleric of Healing](#cleric-of-healing)  
+       * [Cleric of Knowledge](#cleric-of-knowledge)  
+       * [Cleric of Law](#cleric-of-law)  
+       * [Cleric of Nature](#cleric-of-nature)  
+       * [Cleric of Nothingness](#cleric-of-nothingness)  
+       * [Cleric of Sin](#cleric-of-sin)  
+       * [Cleric of The Downtrodden](#cleric-of-the-downtrodden)  
+       * [Cleric of The Hunt](#cleric-of-the-hunt)  
+       * [Cleric of The Sea](#cleric-of-the-sea)  
+       * [Cleric of Undeath](#cleric-of-undeath)  
+     * [Elementalist Druid](#elementalist-druid)  
      * [Fighter](#fighter)  
      * [Marksman](#marksman)  
-     * [Highborn](#highborn)  
+     * [Heroic Highborn](#heroic-highborn)  
      * [Knight](#knight)  
      * [Monk](#monk)  
      * [Necromancer](#necromancer)  
@@ -297,12 +309,12 @@ Catterwol are among the most lithe and dexterous of the races, and are adept at 
   
 __Catterwol Abilities:__ 
 * __General Abilities:__   
-  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Darkvision:__ You can see even in perfect darkness.  
   * __Land on your feet:__ You can fall 40 feet before taking fall damage.  
-  * __Fast Paws:__ Gain an additional offhand action.  
 * __Advantages:__   
   * __Predator:__ When tracking, you have advantage on perception checks.  
   * __Loose Skin:__ You have advantage when breaking grapples.  
+  * __Mantle:__ You have advantage on dexterity checks when climbing.  
 * __Disadvantages:__   
   * __Fear of Water:__ You have disadvantage when soaked through.  
 * __Combat Abilities:__   
@@ -338,7 +350,7 @@ __Daemonspawn Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ At the cost of half your level in health (minimum 1, round up), make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat.  
   
   
   
@@ -402,7 +414,7 @@ Elves are the most magical of the races. Forest-dwellers with long lives, many e
 __Deep Elf Abilities:__ 
 * __General Abilities:__   
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Darkvision:__ You can see even in perfect darkness.  
 * __Advantages:__   
   * __Winged Feet:__ You have advantage on acrobatics checks.  
 * __Disadvantages:__   
@@ -545,10 +557,10 @@ Small and wicked, most goblins are tricksters and thieves. Known for eating thei
 __Goblin Abilities:__ 
 * __General Abilities:__   
   * __Still Warm:__ You can eat raw meat without penalty.  
-  * __Dark Vision:__ You can see even in perfect darkness.  
+  * __Darkvision:__ You can see even in perfect darkness.  
   * __Seek Gold:__ You are able to smell gold. You can perform gold detection checks.  
 * __Advantages:__   
-  * __Mantel:__ You have advantage on dexterity checks when climbing.  
+  * __Mantle:__ You have advantage on dexterity checks when climbing.  
 * __Combat Abilities:__   
   * __Cheap Blow:__ On a critical hit, knock an enemy prone.  
   
@@ -824,7 +836,7 @@ __Sprout Abilities:__
 * __Advantages:__   
   * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
-  * __Dodge:__ Any time you are attacked, roll a d20 and add your dexterity. If you get a 17 or above, the attack misses.  
+  * __Dodge:__ Any time you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
   
   
   
@@ -856,7 +868,6 @@ __Waterborn Abilities:__
   * __Water Healing:__ When you sleep in water, it is as if you are in a bed.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
-  * __Become Mist:__ _(Cost 1)_ Spend one action point to become mist to have an attack pass right through you as a reaction.  
   * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed, and you gain advantage on charisma checks with them.  
   
   
@@ -924,7 +935,7 @@ ___
 #### Path of Rage Barbarian
   
   
-Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
+Path of Rage Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -962,35 +973,16 @@ Showmen by nature, Bards are known for their skills at performing and distractin
 ___
 
   
-### Beastmaster
-<img src='../../images/class/beastmaster.jpg' class="raceClassImage" />
-
-"[dragon rider"](https://www.deviantart.com/fredrickruntu/art/dragon-rider-461635302) by fredrickruntu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
-  
-  
-For the Beastmaster 'Animal Person' is an understatement. Beastmaster's begin their adventure with a loyal animal companion, which they can select from the Book of Known Beasts. This can include a wolf, a bear, and eagle, or even a dragon! Most Beastmasters have forgone civilization, choosing instead to roam the wilds, capturing and befriending animals. They are quick, dexterity based fighters, and are good at tackling and hobbling enemies and leading their party through the wilds.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|-1|0|1|1|-2|-3|4|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Beastmaster" role="button">Level Up Sheet</a>
-  
-___
-
-  
 ### Cleric
 <img src='../../images/class/male/cleric.jpg' class="raceClassImage" />
 
 "[140203 S"](https://www.deviantart.com/jw8401/art/140203-S-439637005) by 140203 S is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+
+  
+#### Cleric of Beauty
   
   
-After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. Clerics are weak, and do not fight with physical magic. However, they are powerful spellcasters who are adept at healing, and who can make a huge difference in combat. Clerics try to embody the ideals of their deity, paying them homage and working to enact their will in the world. As you design your cleric, ask yourself how they chose this path. When and how did their deity reach out to them? How did they make their pledge? Under what circumstances? How often do they pray to their deity? How do they react to people who don't believe? What do they believe in? What is their moral code, and how does that interact with that of their deity? How will being a cleric affect the way that you interact with your party?
+Servant  of Lady Dusk. Followers of the Pale Lady seek rewards from their dark goddess in return for helping her conform the world to her ideals.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1001,15 +993,240 @@ After pledging their allegiance to their deity, Clerics have made it their duty 
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Beauty" role="button">Level Up Sheet</a>
   
 ___
 
   
-### Druid
-<img src='../../images/class/druid.jpg' class="raceClassImage" />
+#### Cleric of Fertility
+  
+  
+Servant  of Naris. Followers of Naris, aim to spread life and love throughout the world.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
 
-"[Firbolg Druid [C]"](https://www.deviantart.com/jeleynai/art/Firbolg-Druid-C-767712399) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Fertility" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Fun
+  
+  
+Servant  of Juliet. Clerics of Juliet seek to bring fun and chaos to the world.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Fun" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Healing
+  
+  
+Servant  of Aunora. Followers of Aunora, called the Hands of Aunora, seek to bring peace and healing to the world.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Healing" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Knowledge
+  
+  
+Servant  of Raghnal. Followers of Raghnal, called the Eyes of Raghnal, seek to gather information to safeguard the realms, and to keep knowledge from evil eyes.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Knowledge" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Law
+  
+  
+Servant of Iro. Followers of Iro, called the Watchers, uphold the word of law.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Law" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Nature
+  
+  
+Servant  of Ronar. Followers of Ronar, called the Ronari, are called to preserve nature and end conflict wherever they find it.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Nature" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Nothingness
+  
+  
+Servant  of The Void Father. Followers of the Void Father aim to aid their master in obliterating existence.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Nothingness" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Sin
+  
+  
+Servant  of Melekar. Followers of Melekar serve the Lord of Sin by expanding his influence by subjugating the weak.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Sin" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of The Downtrodden
+  
+  
+Servant  of Eandar. Followers of Eandar, called the Browncloaks, seek to help the common man in whatever way they can.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Downtrodden" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of The Hunt
+  
+  
+Servant  of Yilena. Followers of Yilena, called Wardens, are called to protect the wilds from evil, and to keep balance in the natural world.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Hunt" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of The Sea
+  
+  
+Servant  of Hesh. Followers of Hesh are called to the sea.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Sea" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Cleric of Undeath
+  
+  
+Servant  of Illael. Followers of Illael seek to further their dark god's plans, and thus win necromantic immortality.
+  
+  
+|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-3|2|-2|2|-1|0|1|2|  
+  
+  
+  
+  
+
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Undeath" role="button">Level Up Sheet</a>
+  
+___
+
+  
+### Elementalist Druid
   
   
 Gaurdians of nature, most druids prefer to live in tribes in the forests, mountains, prairie, tundra, or desert. Druid's command powerful nature based magic, which they use to smite those who threaten them, their friends, or their home. Druids utilize intelligence based action points to cast spells, and are a good match for players interested in playing a mage. As you build your druid, consider where they came from. Why are they so attached to nature? How does their attachment to the natural world change how they think? How do they react to large towns and cities? What do they wear, and how do they speak? How do they feel about other types of magic? Why are they on their adventure? How do they feel about eating meat? What are their values? What do they think the place of people is in the world? How will being a druid change the way you interact with your party?
@@ -1023,7 +1240,7 @@ Gaurdians of nature, most druids prefer to live in tribes in the forests, mounta
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Druid" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Elementalist Druid" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1069,10 +1286,7 @@ Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire 
 ___
 
   
-### Highborn
-<img src='../../images/class/highborn.jpg' class="raceClassImage" />
-
-"[Before I leave"](https://www.deviantart.com/maxprodanov/art/Before-I-leave-749261058) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+### Heroic Highborn
   
   
 Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
@@ -1080,13 +1294,13 @@ Highborns were born into a noble house and have connections and money as a resul
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|-1|1|1|-3|2|4|  
+|-1|-2|-3|1|0|2|1|4|  
   
   
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Highborn" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Heroic Highborn" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1278,7 +1492,7 @@ Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to th
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|2|-3|2|-1|1|0|2|  
+|-3|2|-1|2|-2|1|0|2|  
   
   
   

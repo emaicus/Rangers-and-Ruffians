@@ -7,513 +7,500 @@
 
 # Evil      Melekar      Undeath                 Void Father, The Pale Lady    
 
-# Male Deities: Iro, Eandar, Ronar, Melekar, The Void Father, 
-# Female Deities: Lillith, The Pale Lady, Yilena, Hesh, Eris
+# Male Deities: Iro, Eandar, Ronar, Melekar, The Void Father, Knowledge, Undeath 
+# Female Deities: Lillith, The Pale Lady, Yilena, Hesh, Eris, Naris
 # Agender Deities:
-# Undecided: Love, Death, Knowledge, Undeath
+# Undecided:  Death, 
 
 # Winter, Summer, Spring, Autumn
 The Shaper:
+  cleric: false
+  cleric_name: null
+  description: Before the time of the gods, there was nothing. The shaper, a deity
+    above all others, brought light to the world, and made everything that is, beginning
+    with the High Realm, the gods, and the angels. After this, the Shaper disappeared
+    from history, and has not been heard from since.
   evil: false
-  description: Before the time of the gods, there was nothing. The shaper, a diety above all others, 
-    brought light to the world, and made everything that is, beginning with the High Realm, the gods, and the angels.
-    After this, the Shaper disappeared from history, and has not been heard from since.
 Iro:
-  evil: false 
-  description: Iro is the deity of honor, and is considered to be the king of the gods after the disappearance of the 
-    Shaper. Iro commands a legion of angels who aid him in policing the High Realm, where the gods reside.
-    Iro was the leader of the Gods of Light during the First War, fighting against Melikar and his demons.
-    When the Gods of Light were loosing the First war, Iro briefly arranged a marriage with Hesh. Knowing that together
-    they could sire a weapon of incredible power, they had a daughter, Juliet. By harnessing Juliet's incredible power,
-    the Gods of Light were able to throw back the Gods of Darkness. After the war was won, Iro turned upon many of the
-    other gods, who he percieved to have desecrated creation by altering it to create the mortals. In his anger, sealed away 
-    the mortals in the Mortal Realm. From that
-    day onward, it became impossible for Mortals to cross the Great Boundary without help from the divine. 
-    Further, it became incredibly painful for a deity to cross the boundary without Iro's permission. 
-    As the millenia passed, Iro grew wiser, forgave many of those who he felt had wronged him, and even developed a following
-    among the mortals. However, he has never released the barrier between the Realms. In the realm of mortals, 
-    those bonded to Iro are called the watchers, and are bound to seek out and end injustice
-    wherever they find it. Iro is a harsh but good diety, with a deep belief in the sanctity of order and law.
-    Iro is displeased by acts of evil, and is pleased by the dispensing of justice.
   abilities:
-    Level_0:
-      Lawbringer:
-        description: Followers of Iro have advantage when speaking with lawmen.
-        type: advantage
-    Level_5:  
-      Iro's Judgement:
-        description: As an action, call on Iro to judge an individual. If he judges them impure, take advantage in all attacks against them.
-        type: combat
-    Level_10:
-      Fortify:
-        description: At the cost of one spell point, add 1d6 armor to yourself or another for one day.
-        type: combat
-Aunora: 
+    level_0:
+    - Lawbringer
+    level_10:
+    - Aura of Courage
+    - Bane of the Unholy
+    - Greater Guardian of the Realms
+    level_13:
+    - Major Resilience
+    level_15:
+    - Major Guardian of the Realms
+    level_3:
+    - Minor Resilience
+    level_5:
+    - Minor Guardian of the Realms
+    level_8:
+    - Greater Resilience
+    - Unwavering
+  cleric: true
+  cleric_description: Servant of Iro. Followers of Iro, called the Watchers, uphold the word of law.
+  cleric_tag: Law
+  description: Iro is the deity of honor, and is considered to be the king of the
+    gods after the disappearance of the Shaper. Iro commands a legion of angels who
+    aid him in policing the High Realm, where the gods reside. Iro was the leader
+    of the Gods of Light during the First War, fighting against Melikar and his demons.
+    When the Gods of Light were loosing the First war, Iro briefly arranged a marriage
+    with Hesh. Knowing that together they could sire a weapon of incredible power,
+    they had a daughter, Juliet. By harnessing Juliet's power, the Gods of Light were
+    able to throw back the Gods of Darkness. After the war was won, Iro turned upon
+    many of the other gods, who he perceived to have desecrated creation by altering
+    it to create the mortals. In his anger, Iro sealed away the mortals in the Mortal
+    Realm. From that day onward, it became impossible for Mortals to cross the Great
+    Boundary without help from the divine. Further, it became incredibly painful for
+    a deity to cross the boundary without Iro's permission. As the millennial passed,
+    Iro grew wiser, forgave many of those who he felt had wronged him, and even developed
+    a following among the mortals. However, he has never released the barrier between
+    the Realms. In the realm of mortals, those bonded to Iro are called the watchers,
+    and are bound to seek out and end injustice wherever they find it. Iro is a harsh
+    but good deity, with a deep belief in the sanctity of order and law. Iro is displeased
+    by acts of evil, and is pleased by the dispensing of justice.
   evil: false
-  description: Aunora, the Dawnmaiden, is the goddess of peace, love, and healing. In her initial form, Aunora bore
-    the guise of a humanoid with golden hair and skin the color of porcelain. One of three sibling gods, Aunora
-    and her sister Lilith were betrayed by their third sister, Elvira, at the start of the First War. On that horrible day,
-    Lilith was all but destroyed, and Aunora suffered a grevious wound that took her right arm and eye. Aunora was
-    incapacitated for the remainder of the war, and could only cast her blessings upon the Gods of Light to aid them 
-    in battle. Now, Aunora lives with Iro within the High Realm, and casts her gaze on the Mortal Realm, where she seeks to undo
-    or stop suffering and to calm conflicts. Those who follow her, called the Hands of Aunora, seek to bring the peace
-    to the world that their Lady was unable to defend in the High Realm.
+Aunora:
   abilities:
-    Level_0:
-      Minor Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add lesser dice to all healing rolls. 
-        type: general
-    Level_5:
-      Greater Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add a greater dice to all healing rolls. 
-        type: general
-    Level_10:
-      Sparing Presence:
-        description: "If an ally within 15 feet of you is reduced to less than zero health, it's health immediately returns to zero.
-                      The ally remains on death's door, and must continue to make inner fire saves."
-        type: general
-      Purity:
-        description: Healing spells cast by a Cleric or Paladin of Aunora remove most status effects from injured individuals.
-        type: general
-    Level_15:
-      Legendary Goddess of Healing:
-        description: Clerics and Paladins of Aunora may add two greater dice to all healing rolls. 
-        type: general
+    level_0:
+    - Minor Goddess of Healing
+    level_10:
+    - Halo
+    - Burning Bright
+    - Sparing Presence
+    level_13:
+    - Angelic Wings
+    level_15:
+    - Aura of Healing
+    level_3:
+    - Kind
+    level_5:
+    - Greater Goddess of Healing
+    level_8:
+    - Purity
+  cleric: true
+  cleric_description: Servant  of Aunora. Followers of Aunora, called the Hands of Aunora, seek to bring
+    peace and healing to the world.
+  cleric_tag: Healing
+  description: Aunora, the Dawnmaiden, is the goddess of peace, love, and healing.
+    In her initial form, Aunora bore the guise of a humanoid with golden hair and
+    skin the color of porcelain. One of three sibling gods, Aunora and her sister
+    Lilith were betrayed by their third sister, Elvira, at the start of the First
+    War. On that horrible day, Lilith was all but destroyed, and Aunora suffered a
+    grevious wound that took her right arm and eye. Aunora was incapacitated for the
+    remainder of the war, and could only cast her blessings upon the Gods of Light
+    to aid them in battle. Now, Aunora lives with Iro within the High Realm, and casts
+    her gaze on the Mortal Realm, where she seeks to undo or stop suffering and to
+    calm conflicts. Those who follow her, called the Hands of Aunora, seek to bring
+    the peace to the world that their Lady was unable to defend in the High Realm.
+  evil: false
 Eandar:
+  abilities:
+    level_0:
+    - God of the Common Man
+    - Distrusted by Authorities
+    level_10:
+    - Greater Helpful God
+    - Face of the People
+    level_13:
+    - Freedom of Movement
+    level_15:
+    - Major Helpful God
+    level_3:
+    - Sly
+    level_5:
+    - Minor Helpful God
+    level_8:
+    - Forgettable
+  cleric: true
+  cleric_description: Servant  of Eandar. Followers of Eandar, called the Browncloaks, seek to help the
+    common man in whatever way they can.
+  cleric_tag: The Downtrodden
+  description: Eandar is the deity of the downtrodden, and of atonement. The followers
+    of Eandar, called the Browncloaks, are tasked with helping the common man in whatever
+    way they can, regardless of what laws or obstacles lie in their path. Eandar began
+    the first war as an outsider, reluctant to take either side. When Lillith was
+    slain, however, Eandar sprang to action despite Iro's explicit order that deities
+    should not toy with creation. He created his children, the Morti, first of the
+    mortals.  What followed was a cosmic arms race, in which many of the gods created
+    races to do their bidding. While his help was accepted during the First War, Eandar
+    was later put on trial by Iro, and barely escaped. Now, he wanders the Realms,
+    seeking to sow seeds of goodness while remaining undetected. Eandar encourages
+    his followers, called the Browncloaks, to bend the rules when necessary, but also
+    tasks them with avoiding harming the innocent or betraying those they have entered
+    into arrangements with. The followers of Eandar are often cavalier in their relationships,
+    and are often on the wrong side of the law. Eandar is pleased by random acts of
+    kindness and by acts that better the downtrodden, but considers it a sin to harm
+    the innocent, place personal desire above the wellbeing of others, or betray the
+    trust of others.
   evil: false
-  description: Eandar is the deity of the downtrodden, and of atonement. The followers of Eandar, called the Browncloaks, are tasked
-    with helping the common man in whatever way they can, regardless of what laws or obstacles lie in their path.
-    Eandar began the first war as an outsider, reluctant to take either side. When Lillith was slain, however, 
-    Eandar sprang to action despite Iro's explicit order that deities should not toy with creation. He created his children,
-    the Morti, first of the mortals.  What followed was a cosmic arms race, in which many of the gods
-    created races to do their bidding. While his help was accepted during the First War, Eandar was later put on trial
-    by Iro, and barely escaped. Now, he wanders the Realms, seeking to sow seeds of goodness while remaining undetected.
-    Eandar encourages his followers, called the Browncloaks, to bend the rules when necessary, but also tasks them with avoiding harming
-    the innocent or betraying those they have entered into arrangements with. The followers of Eandar are often
-    cavalier in their relationships, and are often on the wrong side of the law. Eandar is pleased by random acts
-    of kindness and by acts that better the downtrodden, but considers it a sin to harm the innocent, place personal
-    desire above the wellbeing of others, or betray the trust of others.
-  abilities:
-    Level_0:
-      God of the Common Man:
-        description: Clerics and Paladins of Eandar have advantage on charisma checks when speaking with commonfolk.
-        type: advantage
-      Distrusted by Authorities: 
-        description: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
-        type: disadvantage
-    Level_5:
-      The Helpful God:
-        description: Your spells which buff your allies have extra potency. Depending on the spell, this may mean
-          increasing the effect by one, for example by granting +2 strength instead of +1, or giving them an 
-          inspiration dice that is one size larger.  
-        type: general
-    Level_10:
-      Greater Helpful God:
-        description: Your spells which buff your allies have extra potency. Multiply the effectiveness of
-          any spell which buff an allies stats by 2, or grant 2 inspiration dice rather than 1.
-        type: general
-    Level_15:
-      Major Helpful God:
-        description: Your spells which buff your allies have extra potency. Multiply the effectiveness of
-          any spell which buff an allies stats by 3, or grant 3 inspiration dice rather than 1.
-        type: general
-#Death:
-Juliet:
-  evil: false
-  description: The goddess of luck, fun, and tomfoolery, Juliet is known as the goddess of trickery. Born to
-    Iro and Hesh as a weapon during the First War, Juliet is a being of incredible, worldbending power. 
-    Born fully grown but with the understanding of a child, Juliet was immediately used to lay low the armies
-    of Melekar and the Dark Gods. It was only after the carnage was finished that Juliet came to understand the
-    cost of what she had done in terms of loss of life and the destruction of creation. Broken by this knowledge,
-    Juliet fled from her Father's castle in the High Realm. It was while in exile that she met Eandar, who had
-    run afowl of her her father. Eandar tried to impress upon Juliet what little he could about his worldview,
-    and his quest for goodness, no matter the cost. In the end, Juliet left him after a violent argument in which she
-    barely restrained herslef from destroying him. Over the millenia, Juliet has barely changed, and her worldview has
-    become such that she values fun and games above most anything else. To her, a good joke is the highest form of virtue,
-    as it takes ones mind from their suffering. It was Juliet who created the Deck of Wonderous Doom, and gave it to 
-    one of her followers. Juliet is commonly worshipped by entertainers, as she has been known to bless performances.
-    She is also woshipped by those who have given up on the world, however, as she offers a reprieve from earthly suffering.
-  abilities:
-    Level_0:
-      Minor Goddess of Luck: 
-        description: Gain 1 luck token above your maximum.
-        type: general
-    Level_5:
-      Greater Goddess of Luck: 
-        description: Gain 2 luck tokens above your maximum.
-        type: general 
-    Level_10:
-      Always Lucky:
-        description: Regain 1d4 luck tokens during a short rest.
-        type: general
-    Level_15:
-      Major Goddess of Luck:
-        description: Gain 3 luck tokens above your maximum.
-        type: general
-Illillael:
-  evil: true
-  description: "Illael, the ever-dying god. Illillael is a new god, and as such was not present during the 
-    Forming or the First War. The lord of undeath, Illillael is the god of those who would thwart 
-    death by necromantic means, and it was via his dark and perverse experiments that he ascended to godhood.
-    Illael’s body is a mass of writhing, contorting muscle and flesh, ever dying 
-    and ever healing. It is pockmarked by cancerous tumors and rivulets of oozing juices. However, the 
-    ever-dying god’s pain comes with a great boon: he is all but unkillable, as any damage done to him will
-    nearly instantly heal. If Illael’s body is destroyed, he will soon be incarnated at one of his 
-    phylacteries -- each of which is one of his chosen servants. Illael is one of the few gods to have 
-    ascended from the mortal coil."
-  abilities:
-    Level_0:
-      Minor God of Death:
-        description: You have access to tier zero spells from the macabre manual.
-        type: general
-    Level_5:
-      Greater God of Death:
-        description: You have access to tier one spells from the macabre manual.
-        type: general
-    Level_10:
-      Major God of Death:
-        description: You have access to tier two spells from the macabre manual.
-        type: general
-    Level_15:
-      Legendary God of Death:
-        description: You have access to all spell tiers from the macabre manual.
-        type: general
-Raghnal:
-  evil: false
-  description: Raghnal, the All-Seer, is the god of knowledge. Raghnal takes the form of a massive owl, who lives 
-    high atop the branches of the World Tree in the Realm of Night. One of the first gods, Raghnal served for some time
-    at Iro's right hand. Unbeknownst to Iro, Raghnal created the Kragraven after observing Eandar
-    create the Morti. Using his new Kragraven servants, Raghnal was able both to spy upon Melekar's forces
-    and to locate the elusive goddess Hesh and arrange her brief marriage to Iro. After the War, Iro banished 
-    Raghnal to the Realm of Night upon learning of the creation of the Kragraven. Raghnal's minions are many -- spies, researchers,
-    politicians, and the crows, owls, and rats of the world. All gather knowledge for him under the banner of the Wide Eye 
-    -- a sigil which depicts a human eye consumed by an over-widened pupil. While Raghnall is the God of knowledge, he 
-    is very careful about who possesses it, hoarding dangerous secrets and laying waste to those who might use 
-    knowledge to harm the Realms.
-  abilities:
-    Level_0:
-      God of Knowledge:
-        description: You have advantage on intelligence checks.
-        type: advantage
-      Minor God of intelligence: 
-        description: Gain one effective intelligence, and the corresponding spell point.
-        type: general
-    Level_5:
-      Greater God of intelligence: 
-        description: Gain two effective intelligence, and the corresponding 2 spell points.
-        type: general
-    Level_10:
-      Major God of intelligence: 
-        description: Gain three effective intelligence, and the corresponding 3 spell points.
-        type: general
-    Level_15:
-      Legendary God of intelligence: 
-        description: Gain five effective intelligence, and the corresponding 5 spell points.
-        type: general
 Hesh:
-  evil: false
-  description: Hesh, sometimes called Nae'anala or "The Mother of the Sea" by her followers, is the goddess of 
-    the ocean. Though rarely seen, Hesh most frequently takes the form of a waterborn woman, walking atop the waves.
-    When enraged, Hesh has grown into a massive titan, taller than the highest mountain, and has also been
-    known to take the form of a great sea-serpent with scales of gold, miles long and with a maw that
-    could swallow a ship. During the First War, Hesh was summoned by Raghnal to wed Iro.
-    Hesh consented out of necessity, and gave birth to a daughter, Juliet. Hesh is wild and untamable, however,
-    and she then went against Iro's explicit orders and created the waterborn in her image. In his rage,
-    Iro cast her down into the Mortal Realm before sealing it for all of eternity. Nae'anala is neither good nor evil,
-    and is largely uninterested in the happenings of the world of men. She does,
-    however, listen to the prayers of her followers, frequently granting safe passage to those who pray and sacrifice to 
-    her. Hesh is capable of total control of water, and may summon deadly storms, massive whirlpools, and swarms of creatures
-    of the deep to do her bidding.
   abilities:
-    Level_0:
-      Goddes of the Water:
-        description: You are able to manipulate small amounts of water at will. For example, you may stop
-          rain from falling on your head, or lift water out of a bucket.
-        type: general
-    Level_5:
-      Waterbreathing: 
-        description: You are able to breathe underwater.
-        type: general
-      Goddess of Navigation:
-        description: You have advantage on tracking checks, and may add 1d6 to any roles involving steering,
-          guiding, or working on a ship.
-        type: advantage
-    Level_10:
-      Goddess of the Icy Depths: 
-        description: You take half damage from cold attacks, and have advantage on spell power saves against
-          being slowed.
-        type: general
-    Level_15:
-      The Mother of Chaos: 
-        description: Gain one free tier 5 spell cast per day.
-        type: general
+    level_0:
+    - Goddess of the Water
+    level_10:
+    - Icy Strike
+    level_13:
+    - Become Mist
+    level_15:
+    - The Mother of Chaos
+    level_3:
+    - Flows Like Water
+    level_5:
+    - Goddess of Navigation
+    level_8:
+    - Waterbreathing
+    - Goddess of the Icy Depths
+  cleric: true
+  cleric_description: Servant  of Hesh. Followers of Hesh are called to the sea.
+  cleric_tag: The Sea
+  description: Hesh, sometimes called Nae'anala or "The Mother of the Sea" by her
+    followers, is the goddess of the ocean. Though rarely seen, Hesh most frequently
+    takes the form of a waterborn woman, walking atop the waves. When enraged, Hesh
+    has grown into a massive titan, taller than the highest mountain, and has also
+    been known to take the form of a great sea-serpent with scales of gold, miles
+    long and with a maw that could swallow a ship. During the First War, Hesh was
+    summoned by Raghnal to wed Iro. Hesh consented out of necessity, and gave birth
+    to a daughter, Juliet. Hesh is wild and untamable, however, and she then went
+    against Iro's explicit orders and created the waterborn in her image. In his rage,
+    Iro cast her down into the Mortal Realm before sealing it for all of eternity.
+    Nae'anala is neither good nor evil, and is largely uninterested in the happenings
+    of the world of men. She does, however, listen to the prayers of her followers,
+    frequently granting safe passage to those who pray and sacrifice to her. Hesh
+    is capable of total control of water, and may summon deadly storms, massive whirlpools,
+    and swarms of creatures of the deep to do her bidding.
+  evil: false
+Illael:
+  abilities:
+    level_0:
+    - God of Undeath
+    - Defiled Healing
+    level_10:
+    - Greater Waste Not
+    level_13:
+    - Untethered
+    - Feed on the Dying
+    level_15:
+    - Major Waste Not
+    level_3:
+    - Resistant to Decay
+    level_5:
+    - Minor Waste Not
+    level_8:
+    - Magically Sustained Body
+  cleric: true
+  cleric_description: Servant  of Illael. Followers of Illael seek to further their dark god's plans,
+    and thus win necromantic immortality.
+  cleric_tag: Undeath
+  description: "Illael, the ever-dying god. Illael is a new god, and as such was not\
+    \ present during the Forming or the First War. The lord of undeath, Illael is\
+    \ the god of those who would thwart death by necromantic means, and it was via\
+    \ his dark and perverse experiments that he ascended to godhood. Illael's\
+    s body is a mass of writhing, contorting muscle and flesh, ever dying and ever\
+    \ healing. It is pockmarked by cancerous tumors and rivulets of oozing juices.\
+    \ However, the ever-dying god's pain comes with a great boon: he is all but\
+    \ unkillable, as any damage done to him will nearly instantly heal. If Illael'\
+    s body is destroyed, he will soon be incarnated at one of his phylacteries --\
+    \ each of which is one of his chosen servants. Illael is one of the few gods to\
+    \ have ascended from the mortal coil."
+  evil: true
+Juliet:
+  abilities:
+    level_0:
+    - Minor Goddess of Luck
+    - Goddess of Entertainers
+    level_10:
+    - Always Lucky
+    level_13:
+    - Greater Frenetic Energy
+    level_15:
+    - Major Goddess of Luck
+    level_3:
+    - Winning Smile
+    - Sly
+    level_5:
+    - Greater Goddess of Luck
+    level_8:
+    - Frenetic Energy
+  cleric: true
+  cleric_description: Servant  of Juliet. Clerics of Juliet seek to bring fun and chaos to the world.
+  cleric_tag: Fun
+  description: The goddess of luck, fun, and tomfoolery, Juliet is known as the goddess
+    of trickery. Born to Iro and Hesh as a weapon during the First War, Juliet is
+    a being of incredible, worldbending power. Born fully grown but with the understanding
+    of a child, Juliet was immediately used to lay low the armies of Melekar and the
+    Dark Gods. It was only after the carnage was finished that Juliet came to understand
+    the cost of what she had done in terms of loss of life and the destruction of
+    creation. Broken by this knowledge, Juliet fled from her Father's castle in the
+    High Realm. It was while in exile that she met Eandar, who had run afowl of her
+    her father. Eandar tried to impress upon Juliet what little he could about his
+    worldview, and his quest for goodness, no matter the cost. In the end, Juliet
+    left him after a violent argument in which she barely restrained herslef from
+    destroying him. Over the millenia, Juliet has barely changed, and her worldview
+    has become such that she values fun and games above most anything else. To her,
+    a good joke is the highest form of virtue, as it takes ones mind from their suffering.
+    It was Juliet who created the Deck of Wonderous Doom, and gave it to one of her
+    followers. Juliet is commonly worshipped by entertainers, as she has been known
+    to bless performances. She is also woshipped by those who have given up on the
+    world, as she offers a reprieve from earthly suffering.
+  evil: false
+Lady Dusk:
+  abilities:
+    level_0:
+    - Ever of Use
+    level_10:
+    - No Mercy for the Weak
+    - Still of Use
+    level_13:
+    - Perfect
+    level_15:
+    - Brutal Attacks
+    level_3:
+    - Beautiful
+    level_5:
+    - Purge the Useless
+    - Ceremony of Evaluation
+    level_8:
+    - Ageless
+  cleric: true
+  cleric_description: Servant  of Lady Dusk. Followers of the Pale Lady seek rewards from their dark goddess
+    in return for helping her conform the world to her ideals.
+  cleric_tag: Beauty
+  description: 'Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of
+    Beauty, and of the first frost of winter. Vain and Cruel, The Pale Lady uses her
+    followers viciously to achieve her ends. For her, there are only two groups of
+    people: who follow her and are therefore of use, and those who are better off
+    dead. Her sigil is a blazing candle with a roaring flame atop. She appears as
+    an unspeakably beautiful maiden, wearing revealing clothes of either the brightest
+    white or a black so deep it sucks all other light out of a room. Her features
+    are reminiscent of that of a high elf, with lightly pointed ears and the palest
+    skin. Her frame is lithe, with soft hands which are often clasped. Her skin is
+    as pale, and her eyes are dark, and her rosebud lips are the color of blood. While
+    in her halls, she can summon to herself anything that she wishes in the peak of
+    its perfection. Her followers are few, and many are bound to her because of their
+    ambition or cruelty. The Lady Dusk has been known to appear to those who are dying,
+    and to offer them healing in return for service and loyalty. Among her followers
+    are a league of timeless assassins, who she has magically imbued with long life
+    and slow aging.'
+  evil: true
+Melekar:
+  abilities:
+    level_0:
+    - Lord of Cruelty
+    level_10:
+    - Major Lord of Cruelty
+    - Major Harvester of Souls
+    level_13:
+    - Aura of Pain
+    level_15:
+    - Bound to Service
+    level_3:
+    - Harvester of Souls
+    level_5:
+    - Greater Lord of Cruelty
+    level_8:
+    - Horns
+    - Demonic Strength
+  cleric: true
+  cleric_description: Servant  of Melekar. Followers of Melekar serve the Lord of Sin by expanding his
+    influence by subjugating the weak.
+  cleric_tag: Sin
+  description: Melekar, Lord of Sin. Ruler of the hells. Melekar sits atop a throne
+    of the damned, deep in the Blazing City. His goal is to conquer and subjugate
+    all of existence. He has two sigils -- the face of a burning man, and an elven
+    woman impaled on a spike, but still living.
+  evil: true
+Naris:
+  abilities:
+    level_0:
+    - Minor Goddess of Rest
+    - Goddess of Growth
+    level_10:
+    - Major Goddess of Rest
+    - Ceremony of Fertility
+    level_13:
+    - Aura of Constitution
+    level_15:
+    - Legendary Goddess of Rest
+    level_3:
+    - Beautiful
+    level_5:
+    - Greater Goddess of Rest
+    - Ceremony of Growing
+    - Goddess of Animal Husbandry
+    level_8:
+    - Beacon of Growth
+    - Ageless
+  cleric: true
+  cleric_description: Servant  of Naris. Followers of Naris, aim to spread life and love throughout the
+    world.
+  cleric_tag: Fertility
+  description: Naris is the goddess of Fertility and Life. Her goal, and that of her
+    followers is to see life prosper. In her presence, new growth begins and plants
+    and wildlife flourish. For this reason, it is common to see Farmers set up shrines
+    to her, and for newlyweds and those who want children to be blessed at one of
+    her temples. Frequently, Naris takes the form of an aged woman with a pleasant
+    smile and a face lined by with age. She also sometimes takes the form of of a
+    beautiful maiden.
+  evil: false
+Raghnal:
+  abilities:
+    level_0:
+    - Minor God of Intelligence
+    - Knowledge of the Arcane
+    - Learned
+    - Natural Intellect
+    level_10:
+    - Major God of Intelligence
+    level_13:
+    - description
+    - type
+    level_15:
+    - Legendary God of Intelligence
+    level_3:
+    - All the Little Creatures
+    level_5:
+    - Greater God of Intelligence
+    level_8:
+    - Wide Eyes
+  cleric: true
+  cleric_description: Servant  of Raghnal. Followers of Raghnal, called the Eyes of Raghnal, seek to gather
+    information to safeguard the realms, and to keep knowledge from evil eyes.
+  cleric_tag: Knowledge
+  description: Raghnal, the All-Seer, is the god of knowledge. Raghnal takes the form
+    of a massive owl, who lives high atop the branches of the World Tree in the Realm
+    of Night. One of the first gods, Raghnal served for some time at Iro's right hand.
+    Unbeknownst to Iro, Raghnal created the Kragraven after observing Eandar create
+    the Morti. Using his new Kragraven servants, Raghnal was able both to spy upon
+    Melekar's forces and to locate the elusive goddess Hesh and arrange her brief
+    marriage to Iro. After the War, Iro banished Raghnal to the Realm of Night upon
+    learning of the creation of the Kragraven. Raghnal's minions are many -- spies,
+    researchers, politicians, and the crows, owls, and rats of the world. All gather
+    knowledge for him under the banner of the Wide Eye -- a sigil which depicts a
+    human eye consumed by an over-widened pupil. While Raghnal is the God of knowledge,
+    he is very careful about who possesses it, hoarding dangerous secrets and laying
+    waste to those who might use knowledge to harm the Realms.
+  evil: false
 Ronar:
-  evil: false
-  description: "Ronar is the god of the forest, and is first and foremost the gaurdian of the flora of the natural world. 
-  Ronar is often depicted as a massive buck, standing between twelve and forty feet tall with antlers teaming with vines,
-  or else as a massive man with oaken skin and a beard of vines. During the First War, Ronar aided the Gods of Light out of a sense of duty,
-  but was horrified by the pointless violence of the battles that ensued, especially after the introduction of vast armies of 
-  mortals to the frey. Alone, Ronar went out to attempt to stop the violence, but to no avail. Surrounded and refusing to fight,
-  it looked as though he would be destroyed by the combined forces of the mortals, gods, and demons. As they attempted to tear Ronar
-  to shreds, Yilena, a fledgling goddess, commanded her forces to rescue him. While
-  Yilena continued fighting through the remainder of the war to aid in the victory of the Gods of Light over the Dark Gods, 
-  Ronar grew to love her. They were wed, and together are regarded as the god and goddess of marriage. After the war ended,
-  the pair took to the Mortal Realm, where they are often worshipped by rangers and elves. Ronar and Yilena are widely 
-  acknowledged to have given birth to the Sprouts. Those who devote themselves to Ronar, called the Ronari, often give up
-  their lives in cities or towns, instead living among the trees and forests. They abhor senseless violence, but will fight for
-  what is right, and to protect those in need."
   abilities:
-    Level_0:
-      God of Protection:
-        description: As an offhand action, grant an all allies +1 armor for a turn or 10 minutes.
-        type: combat
-      God of the Woods:
-        description: You are able to influence plants and vines. For example, if you are falling,
-          vines might reach out to catch you, or if you are making your way through a forest,
-          trees will lean slightly out of your way.
-        type: general
-    Level_5:
-      God of Marriage:
-        description: Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.
-        type: general
-      God of Conflict Resolution:
-        description: Gain advantage on any charisma checks made to end a fight.
-        type: general 
-    Level_10:
-      God of Growing: 
-        description: At the start of each turn during combat or once every hour, regain 1d4 health. Stacks with
-          Photosynthesis.
-        type: general
-    Level_15:
-      Legendary God of Growing: 
-        description: At the start of each turn during combat or once every hour, regain 2d4 health. Stacks with
-          Photosynthesis.
-        type: general
+    level_0:
+    - God of Conflict Resolution
+    - God of the Woods
+    level_10:
+    - God of Growing
+    level_15:
+    - Legendary God of Growing
+    level_5:
+    - God of Marriage
+    level_13:
+    - Major Beast Shape
+    level_3:
+    - Lesser Beast Shape
+    - All the Little Creatures
+    level_8:
+    - Greater Beast Shape
+  cleric: true
+  cleric_description: Servant  of Ronar. Followers of Ronar, called the Ronari, are called to preserve
+    nature and end conflict wherever they find it.
+  cleric_tag: Nature
+  description: Ronar is the god of the forest, and is first and foremost the guardian
+    of the flora of the natural world. Ronar is often depicted as a massive buck,
+    standing between twelve and forty feet tall with antlers teaming with vines, or
+    else as a massive man with oaken skin and a beard of vines. During the First War,
+    Ronar aided the Gods of Light out of a sense of duty, but was horrified by the
+    pointless violence of the battles that ensued, especially after the introduction
+    of vast armies of mortals to the frey. Alone, Ronar went out to attempt to stop
+    the violence, but to no avail. Surrounded and refusing to fight, it looked as
+    though he would be destroyed by the combined forces of the mortals, gods, and
+    demons. As they attempted to tear Ronar to shreds, Yilena, a fledgling goddess,
+    commanded her forces to rescue him. While Yilena continued fighting through the
+    remainder of the war to aid in the victory of the Gods of Light over the Dark
+    Gods, Ronar grew to love her. They were wed, and together are regarded as the
+    god and goddess of marriage. After the war ended, the pair took to the Mortal
+    Realm, where they are often worshiped by rangers and elves. Ronar and Yilena are
+    widely acknowledged to have given birth to the Sprouts. Those who devote themselves
+    to Ronar, called the Ronari, often give up their lives in cities or towns, instead
+    living among the trees and forests. They abhor senseless violence, but will fight
+    for what is right, and to protect those in need.
+  evil: false
+The Void Father:
+  abilities:
+    level_0:
+    - Oblivion
+    level_10:
+    - Lamb to the Slaughter
+    level_13:
+    - Antimagic Essense
+    level_15:
+    - Feed on Life
+    level_3:
+    - Ward of Antimagic
+    level_5:
+    - Ceremony of Sleep
+    level_8:
+    - Shepherd of Darkness
+  cleric: true
+  cleric_description: Servant  of The Void Father. Followers of the Void Father aim to aid their master in obliterating
+    existence.
+  cleric_tag: Nothingness
+  description: Lord of Nothing. Enemy of existence. Believes that life is nothing
+    but pain, and should be put a stop to. Ushers disillusioned people into the "long
+    sleep." His sigil is an eye with a white pupil. The void father has many faces,
+    but most often he appears as a tall, spindly figure with overlong appendages and
+    cold, white eyes. The Void Father makes his residence in an ethereal plane between
+    life and death, where massive creatures stalk a land shrouded in eternal dusk.
+  evil: true
 Yilena:
+  abilities:
+    level_0:
+    - Goddess of the Woods
+    - Goddess of the Hunt
+    level_10:
+    - Expert Tracker
+    level_13:
+    - True Sight
+    level_15:
+    - Legendary Warrior Goddess
+    level_3:
+    - Darkvision
+    - All the Little Creatures
+    level_5:
+    - Goddess of Marriage
+    - Warrior Goddess
+    level_8:
+    - Warden of the Woods
+  cleric: true
+  cleric_description: Servant  of Yilena. Followers of Yilena, called Wardens, are called to protect the
+    wilds from evil, and to keep balance in the natural world.
+  cleric_tag: The Hunt
+  description: Yilena is the goddess of the hunt, but is first and foremost the guardian
+    of the fauna of the natural world. Yilena is commonly depicted as an elven huntress,
+    with raven hair and pure black eyes. After hearing tell that Eandar had created
+    the Morti and hearing of the destructive power of Melekar's Heart of Darkness,
+    Yilena created the First Elves, a race that predates the Deep, High, and Wood
+    elves of modern times. Yilena committed herself fully to Ronar's cause, but was
+    caught off guard during the Battle of the Void. There, Yilena's forces were outmaneuvered
+    and trapped, and Melekar was able to use the Heart of Darkness to corrupt a legion
+    of elves, creating the first Deep Elf. Yilena retreated, full of bitter sadness
+    and rage, and was forced to fight the remainder of the war against those that
+    she had brought to life. As the war progressed, Yilena was filled with a feeling
+    of hopelessness as gods killed gods, and mortals died in their millions. She was
+    almost at the point of despair when the usually quiet god Ronar took to the field
+    to plead with everyone to cease the violence. As he was torn to pieces, Yilena
+    felt herself moved, and ordered her elves to save him. As the war progressed,
+    Yilena fell in love with Ronar. When it was over, the pair of them settled deep
+    within the forests of the Mortal Realm with her elves. Over the millennia, many
+    of them left her, some taking to coastal cities to study magic, and others spreading
+    out throughout the forests of the world. Most of all, Yilena kept her eyes on
+    the Deep elves who, despite being free of Melekar's evil, struggled to find their
+    way in this new world. Though Yilena had swore never to bring another mortal into
+    the world, after many millennia, she and Ronar gave birth to the Sprouts. Those
+    who worship Yilena call themsleves the wardens, and interest themselves with keeping
+    balance within the natural world. This can mean driving poachers from the forest,
+    or hunting dangerous monsters that threaten the order of the woods. Those who
+    devote themselves to Yilena often give up their lives in cities or towns, instead
+    living among the trees and forests.
   evil: false
-  description: Yilena is the goddess of the hunt, but is first and foremost the gaurdian of the fauna of the natural world. 
-    Yilena is commonly depicted as an elven huntress, with raven hair and pure black eyes.
-    After hearing tell that Eandar had created the Morti and hearing of the destructive power of Melekar's Heart of Darkness, 
-    Yilena created the First Elves, a race that predates the Deep, High, and Wood elves of modern times. Yilena committed herself
-    fully to Ronar's cause, but was caught off guard during the Battle of the Void. There, Yilena's forces were outmaneuvered and
-    trapped, and Melekar was able to use the Heart of Darkness to corrupt a legion of elves, creating the first Deep Elf. 
-    Yilena retreated, full of bitter sadness and rage, and was forced to fight the remainder of the war against those that she
-    had brought to life. As the war progressed, Yilena was filled with a feeling of hopelessness as gods killed gods, and mortals
-    died in their millions. She was almost at the point of despair when the usually quiet god Ronar took to the field to plead 
-    with everyone to cease the violence. As he was torn to pieces, Yilena felt herself moved, and ordered her elves to save him.
-    As the war progressed, Yilena fell in love with Ronar. When it was over, the pair of them settled deep within the forests
-    of the Mortal Realm with her elves. Over the millenia, many of them left her, some taking to costal cities to study magic,
-    and others spreading out throughout the forests of the world. Most of all, Yilena kept her eyes on the Deep elves who, despite
-    being free of Melekar's evil, struggled to find their way in this new world. Though Yilena had swore never to bring another
-    mortal into the world, after many millenia, she and Ronar gave birth to the Sprouts. Those who worship Yilena call themsleves
-    the wardens, and interest themselves with keeping balance within the natural world. This can mean driving 
-    poachers from the forest, or hunting dangerous monsters that threaten the order of the woods. 
-    Those who devote themselves to Yilena often give up their lives in cities or towns, instead living among the trees and forests. 
-  abilities:
-    Level_0:
-      Goddess of the Woods:
-        description: You are able to influence plants and vines. For example, if you are falling,
-          vines might reach out to catch you, or if you are making your way through a forest,
-          trees will lean slightly out of your way.
-        type: general
-      Goddess of the Hunt:
-        description: Gain advantage on any tracking and foraging checks. Your spells also have extra potency
-          when cast on beasts. Depending on the spell, this can
-          add an additional dice of damage, healing an extra turn of duration, or give a beast advantage or
-          disadvantage on relavant checks.
-        type: general
-    Level_5:
-      Darkvision:
-        description: You gain the darkvision ability.
-        type: general
-      Goddess of Marriage:
-        description: Gain an additional 10 health if you are under the effect of a Marriage or Pledge ritual.
-        type: general
-      Warrior Goddess:
-        description: Add an additional dice of damage to any attack spell that you cast.
-        type: combat
-    Level_10:
-      Warden of the Woods:
-        description: You are able to commune with all of nature around you for one mile, gaining
-          some level of understanding about the lay of the land, and where enemies may be hiding.
-        type: general
-    Level_15:
-      Legendary Warrior Goddess:
-        description: Add two additional dice of damage to any attack spell that you cast.
-        type: combat
-Melekar: 
-  evil: true
-  description: Melekar, Lord of Sin. Ruler of the hells. Melekar sits atop a throne of the damned,
-    deep in the Blazing City. His goal is to conquer and subjugate all of existence. He has two sigils --
-    the face of a burning man, and an elven woman impaled on a spike, but still living.
-  abilities:
-    Level_0:
-      Lord of Cruelty: 
-        description: "Add an additional dice of damage to any of your magic attacks."
-        type: combat
-    Level_5:
-      Greater Lord of Cruelty: 
-        description: "Add two additional damage dice to any of your magic attacks."
-        type: combat
-      Harvester of Souls: 
-        description: "Every time you slay an enemy, regain an action point."
-        type: combat
-    Level_10:
-      Major Lord of Cruelty: 
-        description: "Add three additional damage dice to any of your magic attacks."
-        type: combat
-      Major Harvester of Souls: 
-        description: "Every time an enemy is slain near you, gain an action point."
-        type: combat
-    Level_15:
-      Bound to Service:
-        description: "Any time that you slay an enemy, it is instead converted into an imp, which fights for you."
-        type: combat
-The Void Father: 
-  evil: true
-  description: Lord of Nothing. Enemy of existence. Believes that life is nothing but pain, and should
-    be put a stop to. Ushers disillusioned people into the "long sleep." His sigil is an eye with a white pupil.
-    The void father has many faces, but most often he appears as a tall, spindly figure with overlong appendages
-    and cold, white eyes. The Void Father makes his residence in an ethereal plane between life and death,
-    where massive creatures stalk a land shrouded in eternal dusk.
-  abilities:
-    Level_0: 
-      Oblivion: 
-        description: You do not dream, and you cannot be affected by sleep based spells.
-        type: general
-    Level_5: 
-      Ward of Antimagic: 
-        description: Once per day, choose to shrug off the effects of a spell.
-        type: combat
-      Ceremony of Sleep: 
-        description: When you kill an entity, you may make another attack against its soul to destroy it.
-        type: general
-    Level_10: 
-      Shepard of Darkness: 
-        description: You have advantage on any charisma or intimidation checks used to break someone's spirit.
-        type: general
-      Lamb to the Slaughter: 
-        description: If an entity's spirit has been broken, have them make an inner fire saving throw against your
-          spell power. On failure, any moves that they make must inflict self harm.
-        type: general
-    Level_15:
-      Antimagic Essense:
-        description: "All spells have half potency when used against you."
-        type: general
-      Feed on Life:
-        description: "When you slay an enemy's soul, immediately regain health equal to half of their total hit points."
-        type: general
-Lady Dusk: 
-  evil: true
-  description: "Elvira. The Pale Lady, also known as Lady Dusk, is the goddess of Beauty, and of the first frost of winter.
-    Vain and Cruel, The Pale Lady uses her followers viciously to achieve her ends. For her, there are only two groups of people:
-    who follow her and are therefore of use, and those who are better off dead. 
-    Her sigil is a blazing candle with a roaring flame atop. She appears as an unspeakably beautiful
-    maiden, wearing revealing clothes of either the brightest white or a black so deep it sucks all other light out of a room.
-    Her features are reminiscent of that of a high elf, with lightly pointed ears and the palest skin. Her frame is 
-    lithe, with soft hands which are often clasped. Her skin is as pale, and her eyes are dark, and her rosebud lips are the 
-    color of blood. While in her halls, she can summon to herself anything that she wishes in the peak of its perfection. 
-    Her followers are few, and many are bound to her because of their ambition or cruelty. The Lady Dusk has been known to appear
-    to those who are dying, and to offer them healing in return for service and loyalty. Among her followers are a league of timeless
-    assassins, who she has magically imbued with long life and slow aging."
-  abilities:
-    Level_0: 
-      Ever of Use: 
-        description: Once per day, channel the power of Lady Dusk to gain advantage on a check.
-        type: advantage
-    Level_5: 
-      Purge the Useless: 
-        description: You gain advantage on attacks made against any entity that is sick or cursed.
-        type: advantage
-      Ceremony of Evaluation: 
-        description: You are able to evaluate any entity to gain an understanding of it's significance in Lady Dusk's eyes.
-          If the creature is deemed to be insignificant, gain advantage in all attacks made against it.
-        type: combat
-      Ageless:
-        description: "Fueled by Lady Dusk's power, you no longer age."
-        type: general
-    Level_10: 
-      No Mercy for the Weak: 
-        description: Any action that you take against an entity on death's door instantly slays the entity.
-        type: combat
-      Still of Use: 
-        description: Once per day, when you would have fallen in combat, instead get to your feet with one quarter health.
-        type: general
-    Level_15:
-      Brutal Attacks: 
-        description: "When attacking someone who Lady Dusk has deemed to be worthless, double your damage."
-        type: combat
-Naris: 
-  evil: false
-  description: Naris. Naris is the goddess of Fertility and Life. Her goal, and that of her followers
-    is to see life prosper. In her presence, new growth begins and plants and wildlife flourish.
-    For this reason, it is common to see Farmers set up shrines to her, and for newlyweds and those
-    who want children to be blessed at one of her temples. Frequently, Naris takes the form of an 
-    aged woman with a pleasant smile and a face lined by with age. She also sometimes takes the form of 
-    of a beautiful maiden. 
-  abilities:
-    Level_0: 
-      Goddess of Rest: 
-        description: As a follower of Naris, you and all allies naturally heal 1d4 additional from any rest you take. 
-        type: general
-      Goddess of Growth: 
-        description: You have advantage on any rolls which involve planting or otherwise growing something.
-        type: general
-    Level_5: 
-      Greater Goddess of Rest: 
-        description: As a devoted follower of Naris, you and all allies naturally heal 1d6 more from any rest that you take.
-        type: general
-      Ceremony of Growing: 
-        description: You may make offerings and prayers to Naris to bless the growth of crops or animals.
-        type: general
-      Goddess of Animal Husbandry: 
-        description: You have advantage on animal handling checks.
-        type: advantage
-    Level_10: 
-      Major Goddess of Rest: 
-        description: As a champion of Naris, you and all allies naturally heal 1d12 more from any rest that you take.
-        type: general
-      Beacon of Growth: 
-        description: Where you trod, green grass grows, and nature itself makes way for your passing. As a result, you 
-          have advantage on checks made when moving through difficult natural terrain.
-        type: advantage
-      Ceremony of Fertility: 
-        description: You are able to bless newlyweds and those seeking children to increase their fertility.
-        type: general
-    Level_15:
-      Legendary Goddess of Rest:
-        description: "Regain 2d12 additional health from any rest that you take and cure any status effects."
-        type: general
-# Ceremonies:
-#   General:
-#     Marriage:
-#       description: Bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
-#         order, and gain advantage on all checks when the other is critically injured.
-#       type: rite
-#     Atonement:
-#       description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
-#         the entity a penance of your choice. Upon completion, they are restored to purity.
-#       type: rite
-#     Funeral:
-#       description: Upon an individual’s death, you can perform a funeral for them. Any entity that recieved a proper funeral
-#         cannot be resurrected by an evil entity.
-#       type: rite
-#     Birthing:
-#       description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
-#         by your diety until they are ten years of age. 
-#       type: rite
-#     Conversion:
-#       description:  If an individual wishes to convert to follow your diety, you are able to perform the proper rites
-#       type: rite
-#     Pledge:
-#       description: On your journey, an individual may pledge themselves to protect and serve you. They must have already
-#         been converted to your deity. If they so choose, you must both go to a temple of your deity, or, that being
-#         unavailable, craft one. To craft a temple, you must bless it with ash created from a holy flame and with holy water.
-#         The one who is swearing allegiance must pledge to be always at your side, put you above themself, and share of everything
-#         they have with you. You must pledge to uphold their dignity, and to ever be their ally. You then each must make
-#         a small incision on your hand and mingle your blood. From that point on, you may speak with eachother telepathecially,
-#         always have a vague idea of where the other is, and may split evenly the effects of any potion or food. If either of you
-#         move more than one mile apart, you both want desperately to be reunited. If either of you choose to end this bond, you
-#         both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
-#         of 10 health.
-#       type: rite

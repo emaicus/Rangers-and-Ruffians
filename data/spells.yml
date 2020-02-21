@@ -417,163 +417,6 @@ the_bard's_songbook:
       cost: 5
       description: Play a combination of sounds which instantly deals 8d8 damage everyone
         within 15 feet of you.
-the_book_of_chi:
-  Basic_Techniques:
-    Brawler:
-      description: Your hands are d6 weapons.
-    Catch Projectile:
-      description: Once per turn, attempt to catch a projectile. Roll a d20, and reduce
-        the projectile's damage by that amount. If reduced to zero, you catch the
-        projectile.
-      cost: 1
-    Combo:
-      description: You make an unarmed attack as an offhand action.
-      cost: 1
-    Disarm:
-      description: Attack with a single punch. If the opponent fails a strength saving
-        throw against your spell power, they drop their weapon.
-      cost: 1
-    Disengage:
-      description: Spend an action point to avoid provoking exposed attacks.
-      cost: 1
-    Dodge:
-      description: Roll a contested dexterity check to attempt to dodge
-        an opponent's attack.
-      cost: 1
-    Find Balance:
-      description: Use a bonus action to cleanse yourself of poison or other status
-        effects.
-    Grapple:
-      description: You have advantage when grappling.
-    Icy Kick:
-      description: Add an additional 1d6 cold damage to a
-        kicking attack.
-      cost: 1
-    Leap to your feet:
-      description: Get to your feet without penalty.
-    Sharpen blade:
-      description: Hone your physical weapon to give it an additional
-        1d4 blunt or slashing damage for the duration of a battle.
-      cost: 1
-    Strike from on High:
-      description: You do an additional 1d6 blunt damage on any plunging attack.
-    Stunning Blow:
-      description: Attack with a single punch. If the target fails a spell power save,
-        they are stunned, and miss an action, offhand action, and movement on their next turn.
-      cost: 1
-    Sweep the Leg:
-      description: Attack with a single kick. If the target fails a dexterity save,
-        they are knocked prone.
-    Aerial Acrobatics:
-      description: You can turn flips and spin in the air. If your feet touch something
-        solid, you can spring from it.
-    Balance:
-      description: You have impeccable balance. You have advantage on any saving throws where you
-        could be knocked prone.
-    Calligraphy:
-      description: Gain advantage on any fine motor skill dexterity checks.
-    Escape:
-      description: You have advantage on any checks involving breaking physical restraints.
-    Inner Eye:
-      description: You have advantage when detecting evil, good, or spiritual energy.
-    Listen:
-      description: You have advantage on perception checks.
-    Mantle:
-      description: You are able to mantle across objects. You have advantage on dexterity
-        checks when climbing or leaping.
-    Meditate:
-      description: Gain an additional dice of health from any rest.
-    Meld into Shadow:
-      description: Take advantage on stealth checks when hiding in shadows.
-    Minor Heal:
-      description: Heal yourself or another for 1d6 + inner fire damage.
-      cost: 1
-    Run on water:
-      description: Get a running start to run up to 50 feet on water.
-    Silent:
-      description: You have advantage on stealth checks.
-    Tumble:
-      description: You take half fall damage.
-  Master_Techniques:
-    Aura of Calm:
-      description: Allies near you gain +1 on all spell power saves.
-    Darkness:
-      description: Create a veil of darkness with a 50 foot radius which
-        lasts for 1d4 turns. All entities within the shadow must make
-        perception checks before attacking, and then must attack with disadvantage.
-        You are not affected by the darkness.
-      cost: 2
-    Fists of Steel:
-      description: Your bare hands are d12 weapons.
-    Flaming Fist:
-      description: Add an additional 1d12 fire damage to a punching attack.
-      cost: 1
-    Path of the Brawler:
-      description: Increase the size of your health dice by 1.
-    Major Heal:
-      description: Heal yourself or an ally for 4d10 + inner fire
-        health.
-      cost: 2
-    Master of Body and Soul:
-      description: Once per day, when you reach 0 health, drop to 2d10 health instead.
-    Opening Blow:
-      description: If you strike an opponent before it is able to move in combat,
-        take advantage on all subsequent attacks against that foe so long as you continue
-        attacking it with each of your actions. Add an additional 1d12 blunt damage
-        to the initial strike.
-    Perfect Zen:
-      description: As an offhand action, become untouchable by physical
-        attacks for one turn or one minute.
-      cost: 1
-    Press the Advantage:
-      description: On a critical hit, gain another attack.
-    Redirect Attack:
-      description: Reaction. Once per turn, select an enemy attack aimed at you. Make
-        a contested dexterity check. If you succeed, redirect the attack anywhere you
-        wish.
-      cost: 1
-    Shadow Step:
-      description: Step from any point in darkness to any other point in darkness
-        within 50 feet.
-      cost: 1
-    Share Ability:
-      description: Every day, share in a teammates ability for the day.
-    Surrounded:
-      description: Strike every foe adjacent to you.
-      cost: 1
-    Thunderous Punch:
-      description: Your attack may make a thunder wave, which
-        affects all enemies in front of you with the punch's damage.
-      cost: 1
-  Legendary Techniques:
-    Second Action:
-      description: Take two actions on your turn.
-    Consecutive Normal Punches: 
-      description: Take two attacks with each of your actions and offhand actions.
-      cost: 2
-    Pressure Points: 
-      description: Whenever you attack a non-villain enemy, force them to make a spell power save.
-        On failure, they fall instantly limp, and are stunned until they succeed.
-    Consuming Blow: 
-      description: When you attack an enemy, force them to make a spell power save. On failure, 
-        shadows fly forth from you at the point of contact, tearing at the flesh of your opponent. The opponent takes
-        4d10 damage as a result.
-      cost: 2
-    Ultimate Punch: 
-      description: As an action, channel the energy of your ancestors into a perfectly tuned punch. With a thunderclap, unleash a blow
-        capable of destroying buildings with its shock-wave. Immediately take 4d10 + 20 damage, but deal 5d20 + 20 damage to all entities 
-        in a 100 foot cone in front of you.
-      cost: 2
-    Perfect Understanding:
-      description: Spend one full turn analyzing an enemy. On every attack made against it thereafter, you have advantage.
-      type: general
-      cost: 1
-    Everywhere and Nowhere:
-      description: Instead of taking movement during combat, instantly teleport from one location to another within
-        thirty feet of you. If you do not attack on your turn, you may choose to be ethereal until
-        your next turn, and therefore to be immune to physical damage. 
-      type: general
-      cost: 1
 the_book_of_healing:
   Tier_0:
     Beguile:
@@ -922,10 +765,9 @@ the_druid's_guidebook:
       cost: 0
       description: Grow claws from your fingers capable of dealing 1d6 damage.
     Cold Resistance:
-      cost: 0
-      description: Resist cold. You take 1d4 fewer damage from cold or frost based
-        attacks. Passive. You may have at most one passive resistance active at a time.
-        You may apply a passive resistance as an offhand action.
+      cost: 1
+      description: Resist cold. You take half damage from cold or frost based
+        attacks, and make saves against frost or cold based damage at advantage.
     Control Plant Growth:
       cost: 0
       description: Quickly grow a plant up to the size of a hedge in about 5 minutes
@@ -944,10 +786,6 @@ the_druid's_guidebook:
       description: Resist fire damage. You take 1d4 fewer damage from fire based attacks.
         Passive. You may have at most one passive resistance active at a time.
         You may apply a passive resistance as an offhand action.
-    Forest Sense:
-      cost: 0
-      description: Perform perception checks using the natural world around you. Take
-        advantage on perception checks made using living natural entities to aid you.
     Lightning Resistance:
       cost: 0
       description: Resist electricity. You take 1d4 fewer damage from lightning based
@@ -1346,9 +1184,6 @@ the_macabre_manual:
       description: Eat the life-force of a wounded enemy, dealing 1d6 damage, and
         healing yourself for that amount. An enemy may only be siphoned once, and
         You cannot harvest a soul from an entity that you have siphoned.
-    Skeleton:
-      cost: 1
-      description: Raise a skeletal minion from a fallen entity. See the book of known beasts for details.
     Surrogate:
       cost: 1
       description: Reaction. Force the nearest entity to make an inner fire saving throw
@@ -1383,10 +1218,7 @@ the_macabre_manual:
         to remove them. Lasts until dispelled.
     Wall of Bone:
       cost: 2
-      description: Create a wall up to 40 feet high and 100 feet long of solid bone.
-    Zombie:
-      cost: 1
-      description: Raise a zombie minion from a fallen entity. See the book of known beasts for details.
+      description: Create a wall up to 40 feet high and 100 feet long of solid bone.   
   Tier_3:
     Trauma:
       cost: 2
@@ -1396,9 +1228,6 @@ the_macabre_manual:
     Death Beam:
       cost: 2
       description: Fire a beam of concentrated death at an enemy, dealing 3d10 damage.
-    Ghoul:
-      cost: 2
-      description: Raise a ghoul from a fallen entity. See the book of known beasts for details.
     Hungry Shadows:
       cost: 2
       description: Concentration. Summon a pack of 3 shadow hounds which attempt
@@ -1426,11 +1255,7 @@ the_macabre_manual:
         are able to lift you up to seven feet from the ground, and allow you to climb
         like a spider. Each turn you may make a tentacle attack for 1d10 + inner fire
         damage as an offhand attack.
-  Tier_4:
-    Death Knight: 
-      cost: 3
-      description: Resurrect a greater ghoul to aid you. See the book of known beasts for
-        details.
+  Tier_4: 
     Anti-life field:
       cost: 3
       description: Create a field of death around yourself with a 10 foot radius.
@@ -1454,10 +1279,6 @@ the_macabre_manual:
         entity will suffer from nightmares of the other side, and bear the scars of
         their injuries. Requires an inner fire check.
   Tier_5:
-    Abomination:
-      cost: 5
-      description: Knit together a monstrous abomination to fight for you. Requires
-        5 corpses. See the book of known beasts for details.
     Death Inducement:
       cost: 5
       description: Ritual requires one month. Mark the time that a person will die.
@@ -2147,12 +1968,6 @@ the_novice_spellbook:
         them burst into existence, grappling them. Each turn, the affected entity
         may make a strength saving throw against your spell power in an attempt to
         break out. Each turn an entity is tethered, it takes 2d10 fire damage.
-    Deadman's Contingency:
-      charisma_cost: 8
-      cost: 7
-      description: Put in place a contingency plan for when you die. The contingency
-        can involve up to three of your spells, and is chained together by an ethereal
-        entity which acts as your proxy, and exists for sixty seconds.
     Delayed Explosion:
       charisma_cost: 16
       cost: 3
@@ -2441,22 +2256,6 @@ the_sorcerer's_scrolls:
         bang. It takes one full turn or five minutes to cast this spell properly.
         If improperly cast, the cost of this spell is 12, and the gateway lets out
         at an undetermined location within one mile. Concentration.
-the_tome_of_the_ancients:
-  Tier_6:
-    Massive Levitation:
-      cost: 10
-      description: Requires gemstones worth 200,000 gold and at least five master
-        spellcasters to assist you. Requires 12 hours of casting time. Levitate anything
-        up to the size of a mountain.
-    True Enchantment:
-      cost: 6
-      description: You are now able to make truly enchanted items. It takes days to
-        make an enchanted object, and may involve multiple roles.
-    Teleportation Circle:
-      cost: 8
-      description: Requires diamonds, gold, and jewels valuing 50,000 gold. Craft
-        a circle of teleportation. Any circle of teleportation may link to another
-        you have created or have access to.
 the_wizard's_addendum:
   Tier_0:
     Eat slugs:
@@ -2597,3 +2396,18 @@ the_wizard's_addendum:
         1d8 damage. If an enemy physically attacks you, you may make a contested dexterity
         check to command the remaining swords to parry. On a successful parry, all
         but the parrying sword may attack the enemy as a reaction.
+  Tier_6:
+    Massive Levitation:
+      cost: 10
+      description: Requires gemstones worth 200,000 gold and at least five master
+        spellcasters to assist you. Requires 12 hours of casting time. Levitate anything
+        up to the size of a mountain.
+    True Enchantment:
+      cost: 6
+      description: You are now able to make truly enchanted items. It takes days to
+        make an enchanted object, and may involve multiple roles.
+    Teleportation Circle:
+      cost: 8
+      description: Requires diamonds, gold, and jewels valuing 50,000 gold. Craft
+        a circle of teleportation. Any circle of teleportation may link to another
+        you have created or have access to.
