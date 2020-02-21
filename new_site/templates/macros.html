@@ -1,19 +1,58 @@
 {% macro stat_square(stat) %}
   <div class="stat-square" id="{{stat}}">
     <div style="height:60%; width:60%;">
-      <span class="stat-square-content">{{stat}}</span>
+      <span class="stat-square-content small-font">{{stat}}</span>
     </div>
     <div style="height:40%; width:40%; border-left: 1px solid black; border-top: 1px solid black; float: right;"></div>
   </div>
 {% endmacro %}
 
-{% macro character_data_square(name, img_path) %}
+{% macro character_data_square(name, img_path, rectangle=false) %}
+  {% set type_class = "data-rectangle" if rectangle else "data-square" %}
   <div class="character-attribute-square">
     <div class="character-attribute-name-container">
-      <span class="character-attribute-name">{{name}}</span>
+      <span class="title small-font">{{name}}</span>
     </div>
     <div class="character-attribute-icon-container">
       <img src="/new_site/icons/{{img_path}}" class="character-attribute-icon">
     </div>
   </div>
+{% endmacro %}
+
+{# Handedness should either be "left" or "right" #}
+{% macro weapon_div(handedness) %}
+  {% set hand = "bad-hand" %}
+  {% if handedness == "left" %}
+    {% set hand = "left" %}
+  {% elif handedness == "right" %}
+    {% set hand = "right" %}
+  {% endif %}
+
+
+  <div class="weapon-top">
+    <span class="title medium-font">{{hand | title}} Hand</span>
+  </div>
+  <div class="weapon-info-container">
+    <div class="title small-font">
+      Weapon Info
+    </div>
+    <div class="weapon-type">
+    </div>
+  </div>
+  <div class="weapon-damage-container">
+    <div class="title small-font">
+      Damage
+    </div>
+  </div>
+  <div class="weapon-abilities-container">
+    <p class="title small-font">
+      Abilities:
+    </p>
+  </div>
+  <div class="weapon-drawbacks-container">
+    <p class="title small-font">
+      Drawbacks:
+    </p>
+  </div>
+
 {% endmacro %}

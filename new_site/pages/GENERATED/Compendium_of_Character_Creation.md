@@ -278,9 +278,6 @@ ___
 
   
 ### Catterwol
-<img src='../../images/race/male/catterwol.jpg' class="raceClassImage" />
-
-"[Karn, the Commander of Black Wood"](https://www.deviantart.com/noxypia/art/Karn-the-Commander-of-Black-Wood-287582659) by Noxypia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
 >
 >—Archibold, the Wizard
@@ -394,9 +391,6 @@ ___
 
   
 #### Deep Elf
-<img src='../../images/race/male/deep_elf.jpg' class="raceClassImage" />
-
-"[Drow 3 - Forgotten Realms"](https://www.deviantart.com/000fesbra000/art/Drow-3-Forgotten-Realms-624340575) by 000Fesbra000 is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -428,9 +422,6 @@ ___
 
   
 #### High Elf
-<img src='../../images/race/male/high_elf.jpg' class="raceClassImage" />
-
-"[Thranduil"](https://www.deviantart.com/zeilyan/art/Thranduil-505098917?ref=weheartit) by Zeilyan is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -462,9 +453,6 @@ ___
 
   
 #### Wood Elf
-<img src='../../images/race/male/wood_elf.jpg' class="raceClassImage" />
-
-"[Elf"](https://www.deviantart.com/lorenntyr/art/Elf-765375097) by LorennTyr is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
 >
 >—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
@@ -495,9 +483,6 @@ ___
 
   
 ### Gnome
-<img src='../../images/race/male/gnome.jpg' class="raceClassImage" />
-
-"[Flying Gnome"](https://www.deviantart.com/thepastart/art/Flying-Gnome-499590161) by Thepastart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Gnomes are tiny. They make things, sometimes. I can crush them.
 >
 >—Throgar, Barbarian and Sheriff
@@ -570,9 +555,6 @@ ___
 
   
 ### Halfling
-<img src='../../images/race/male/halfling.jpg' class="raceClassImage" />
-
-"[Pied Piper"](https://www.deviantart.com/hamatsu/art/Pied-Piper-658168672) by HAmatsu is licensed under [CC BY-ND 3.0](https://creativecommons.org/licenses/by-nd/3.0/)  
 
   
 #### Fleetfoot Halfling
@@ -774,9 +756,6 @@ ___
 
   
 ### Orc
-<img src='../../images/race/male/orc.jpg' class="raceClassImage" />
-
-"[Orc Overlord"](https://www.deviantart.com/raphtor/art/Orc-Overlord-714013493) by RAPHTOR is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
 >
 >—unattributed folk wisdom
@@ -807,9 +786,6 @@ ___
 
   
 ### Sprout
-<img src='../../images/race/male/sprout.jpg' class="raceClassImage" />
-
-"[Sage"](https://www.deviantart.com/octoprobz/art/Sage-784012254) by OctoProbz is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
 >
 >—Harley, Elf Paladin
@@ -844,9 +820,6 @@ ___
 
   
 ### Waterborn
-<img src='../../images/race/male/waterborn.jpg' class="raceClassImage" />
-
-"[Commission: Areo Evenbloom"](https://www.deviantart.com/marcelafreire/art/Commission-Areo-Evenbloom-767630238) by MarcelaFreire is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
 >
 >—Leaf, Gnome Rogue from the Wild Desert
@@ -974,9 +947,9 @@ ___
 
   
 ### Cleric
-<img src='../../images/class/male/cleric.jpg' class="raceClassImage" />
+<img src='../../images/class/cleric.jpg' class="raceClassImage" />
 
-"[140203 S"](https://www.deviantart.com/jw8401/art/140203-S-439637005) by 140203 S is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 
   
 #### Cleric of Beauty
@@ -1246,9 +1219,9 @@ ___
 
   
 ### Fighter
-<img src='../../images/class/male/fighter.jpg' class="raceClassImage" />
+<img src='../../images/class/fighter.jpg' class="raceClassImage" />
 
-"[just burnin stuff"](https://www.deviantart.com/nathanparkart/art/just-burnin-stuff-447985112) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 Fighters are powerful strength or dexterity based warriors. Unlike the knight, fighters are unarmored, and have a skillset more suited to keeping themselves alive and bringing down enemies than providing support.

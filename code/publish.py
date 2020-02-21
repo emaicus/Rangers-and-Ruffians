@@ -52,8 +52,41 @@ PREFERRED_IMAGES = {
   'ranger' : MALE,
   'rogue' : MALE,
   'sorcerer' : MALE,
-  'wizard' : MALE
+  'wizard' : MALE,
 }
+
+def copyImages():
+  races = ('race', rnr_utils.get_all_race_names())
+  classes = ('class', rnr_utils.get_all_class_names())
+
+  visited = set()
+
+  for img_type, items in (races, classes):
+    for (item, sub_item) in items:
+      usable_item = item.lower().replace(' ', '_')
+      usable = sub_item.lower().replace(' ', '_')
+
+      if not usable in PREFERRED_IMAGES:
+        usable = usable_item
+
+      if usable in visited:
+        continue
+
+      if not usable in PREFERRED_IMAGES:
+        print(f"No preferred image for {usable}!")
+        sys.exit(1)
+
+      male = 'male' if PREFERRED_IMAGES[usable] else 'female'
+      source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
+      dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, male, f'{usable}.jpg')
+
+      if not os.path.exists(source):
+        print(f"couldn't find {source}")
+        source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
+        dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, f'{usable}.jpg')
+
+      shutil.copy(source, dest)
+      visited.add(usable)
 
 def publish_character_creation(force_overwrite):
   global PREFERRED_IMAGES
@@ -421,25 +454,20 @@ def create_alt_all_race_class_json():
   with open( os.path.join(GENERATED_SITE_DIRECTORY, 'ALT.json' ), 'w' ) as outfile:
     json.dump(data, outfile)
 
-def check_service_worker_dependencies():
-  new_site = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site')
-  known_dependencies_file = os.path.join(new_site, 'known_dependencies.json')
-  with open(known_dependencies_file, 'r') as infile:
-    old_dependencies = set(json.load(infile)["dependencies"])
+def setup_service_worker():
+  intended_service_worker_path = os.path.join(rnr_utils.BASE_DIRECTORY, 'service_worker.js')
+  code_path = os.path.join(rnr_utils.BASE_DIRECTORY, 'code')
 
-  new_dependencies = set()
-  for path, subdirs, files in os.walk(new_site):
-    for name in files:
-      to_add = os.path.relpath(os.path.join(path, name), rnr_utils.BASE_DIRECTORY)
-      new_dependencies.add(to_add)
-  
-  new_dependencies = list(new_dependencies - old_dependencies)
+  site_path = os.path.join(rnr_utils.BASE_DIRECTORY, '_site')
+  site_service_worker_path = os.path.join(site_path, 'service_worker.js')
 
-  if len(new_dependencies) > 0:
-    print("The following new files have to be added both to the /service_worker.js and the /new_site/known_dependencies.json")
-    for file in new_dependencies[:-1]:
-      print(f'"{file}",')
-    print(f'"{new_dependencies[-1]}"')
+  os.chdir(rnr_utils.BASE_DIRECTORY)
+  os.system("bundle exec jekyll build")
+  os.chdir(site_path)
+  os.system("node build.js")
+  shutil.copy(site_service_worker_path, intended_service_worker_path)
+  os.chdir(code_path)
+
 
 if __name__ == "__main__":
   rnr_utils.printLogo()
@@ -449,9 +477,9 @@ if __name__ == "__main__":
     os.mkdir(GENERATED_SITE_DIRECTORY)
 
   parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
-  parser.add_argument('--yes', action='store_true')
+  parser.add_argument('--ask', action='store_true')
   args = parser.parse_args()
-  force_overwrite = args.yes
+  force_overwrite = not args.ask
 
   print(f"Yes is {force_overwrite}")
 
@@ -471,6 +499,7 @@ if __name__ == "__main__":
     rnr_utils.update_version(new_version)
     print(f"The Version Number is now {rnr_utils.VERSION_NUMBER}")
 
+  copyImages()
   publish_rulebook(force_overwrite)
   publish_book_of_known_beasts(force_overwrite)
   publish_pantheon(force_overwrite)
@@ -481,5 +510,5 @@ if __name__ == "__main__":
   publish_printabled_materials(force_overwrite)
   publish_poohbah_printables(force_overwrite)
   create_alt_all_race_class_json()
-  check_service_worker_dependencies()
+  setup_service_worker()
   print("Done!")
