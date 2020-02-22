@@ -117,11 +117,17 @@ ___
 
 ## Common Damage Types and Status Effects
 
-| Damage Type      | Effect                                                   |
-| -----------------|----------------------------------------------------------|
-| Fire Damage      | Repeat half of the damage at the start of the next turn. |
-| Ice Damage       | Loose 1d4 spaces in initiative.                          |
-| Lightning Damage | Fall Prone.                                              |
-| Light Damage     | Extra damage to undead.                                  |
-| Shadow Damage    | Fall blind until a spell power save. Repeat each turn or every ten minutes. |
-| Vampiric Damage  | Return a portion of the damage to the attacker.          |
+| Damage Type        | Effect on Failed Check                                    |
+| -------------------|-----------------------------------------------------------|
+| Blunt              |                                                           |
+| Piercing/Slashing  |                                                           |
+| Fire Damage        | Repeat half of the damage at the start of the next turn.  |
+| Poison Damage      | Repeat one quarter of the damage each turn until success. |
+| Ice Damage         | Loose 1d4 spaces in initiative.                           |
+| Lightning Damage   | Extra dice vs water. Fall Prone.                          |
+| Force Damage       | Fall Prone.                                               |
+| Light Damage       | Extra damage to undead.                                   |
+| Shadow/Dark Damage | Struck Blind until Save. Disadvantage on perception and relevant checks. |
+| Vampiric Damage    | Return a portion of the damage to the attacker.           |
+| Necrotic Damage    | Cannot be healed by potions or non-divine spells.         |
+| Chi Block          | Stop an enemy from using magic or abilities               |

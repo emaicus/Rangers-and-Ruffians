@@ -460,99 +460,6 @@ Some example conditions that may trigger a conditional action include:
 3. An event occurs. For example, a Character slays a ```Dire Wolf's``` pup.
   
 
-### Weapons
-Weapons have 4 parts in RnR:
-1. Their primary die.
-2. Their modifier.
-3. Their effect.
-
-A weapons primary die might be ```1d4```, It's modifier might be ```+1```, and it's effect
-might be that it returns to a players hand after it is thrown.
-  
-Another weapon's primary die might be ```1d6.``` It's modifier might be 0, and it's effect
-might be that it does an extra ```1d6``` damage to the undead.
-  
-A third weapon's primary die might be ```1d12.``` It's modifier might be 0, and it's effect
-might be that, if an enemy is stabbed with it, they must make a saving throw against the
-wielder's [Spell Power](#spell-power) or be struck blind.
-
-#### Types of Weapon
-There are broad classifications of weapon in Rangers and Ruffians, ```Melee Weapons```, ```Ranged Weapons```, and ```Firearms```.
-
-##### Melee Weapons
-Melee weapons are defined as handheld weapons which are swung, stabbed, or thrust at nearby enemies.
-Melee weapons may be either ```Dexterity``` or ```Strength```. A __Dexterity Based Melee Weapon__ is
-one which requires some finesse to strike an enemy. Examples are ```Rapiers```, ```Spears```, and ```Daggers```.
-__Strength Based Melee Weapons__ are weapons which require power behind their strike. Examples are 
-```Greatswords```, ```Clubs```, and ```Flails```.
-
-Melee weapons may be ```Two Handed```, ```One Handed```, or ```Hand-and-a-Half```. As their name applies,
-two handed weapons like a ```War Hammer``` may only be wielded with two hands. One handed weapons, like a
-```Shortsword``` may be wielded with one hand. ```Hand-and-a-Half``` weapons may be wielded with either
-one or both hands. In some cases, a ```Hand-and-a-Half``` weapon may have a different primary die
-depending on how it is wielded.
-
-#### Attacking With a Weapon
-Attacks nearly always hit in Rangers and Ruffians. Therefore, to make a sword attack against an
-adjacent enemy, there are two steps.
-
-
-1. Roll the attack. If you are in possession of a ```1d6 +1``` sword, this means rolling ```1d6```. Let's say we rolled a 3.
-2. Add any relevant modifiers. Our sword was ```+1```, so we will add ```1```. Let's say we have ```2``` strength,
-   so we will also add that. So our total is ```3 (our roll) + 1 (our weapon's modifier) + 2 (our strength) = 6```.
-3. Deduct the enemy's armor (if they have any). Let's say our enemy had ```1``` armor. That means that we actually did ```6 - 1 = 5``` damage.
-
-#### Common Damage Types and Status Effects
-There are a number of common special damage types in Rangers and Ruffians.
-Usually, these damage types require a Spell Power saving throw, and on failure
-effect the damaged entity in specific way.
-
-| Damage Type      | Effect                                                   |
-| -----------------|----------------------------------------------------------|
-| Fire Damage      | Repeat half of the damage at the start of the next turn. |
-| Ice Damage       | Loose 1d4 spaces in initiative.                          |
-| Lightning Damage | Fall Prone.                                              |
-| Light Damage     | Extra damage to undead.                                  |
-| Shadow Damage    | Fall blind until a spell power save. Repeat each turn or every ten minutes. |
-| Vampiric Damage  | Return a portion of the damage to the attacker.          |
-
-
-#### Critical Hits
-A critical hit occurs when a player rolls the highest possible value for an eligible weapon.
-When this occurs, the player may roll the dice a second time and add that to the damage total.
-So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy
-with ```0``` armor. It might play out like this:
-1. We roll an ```8``` on our ```d8``` spear, a critical hit!
-2. We roll again. Another ```8```! But there is no such thing as a "double critical", so
-  that's the end of our rolling.
-3. We total our rolls and add our modifiers ```8 (first roll) + 8 (a lucky critical hit roll) + 0 (our weapons modifier) + 2 (our dexterity)```.
-4. Deduct our enemy's armor ```18 - 0 = 18```. We did a massive ```18``` damage!
-  
-
-#### Critical Hits with Magic
-Attacks made with magic work identically to attacks with a weapon with one difference. Because
-magic attacks do not have a ```primary die```, magic users instead roll ```1d20``` every time they 
-attack. If they roll a ```1```, their magic does not function as intended, and fizzles out. If they 
-roll a ```20```, they score a critical hit, and double their damage dice. 
-
-#### Armor and Shields
-Armor in Rangers and Ruffians falls under a number of broad classifications.
-
-| Armor Type             | Requirements                           | Benefits     |
-| -----------------------|----------------------------------------|--------------|
-| Chainmail              | 1 STR or reduce movement by 5ft.       | +1 Armor     |
-| Light Plate Armor      | 3 STR or reduce movement by 15ft.      | +2 Armor     |
-| Heavy Plate Armor      | 5 STR or reduce movement by 25ft.      | +3 Armor     |
-| Legendary Plate        | 7 STR or reduce movement to 0.         | +4 Armor     |
-| Leather Armor          | 2 Dexterity or -5 to all stealth rolls    | +1 Armor     |
-| Elven Leather Armor    | 5 Dexterity or -10 to all stealth rolls   | +2 Armor     |
-
-
-| Shield Type            | Benefits                                              |
-| -----------------------|-------------------------------------------------------|
-| Standard Shield        | __Shield Up:__ Offhand Ability: Loose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks. Must be done at the start of a turn. |
-  
-
 ### Combat Abilities
 As mentioned in the [Abilities](#abilities) section, there are many abilities in Rangers
 and Ruffians that make the various [Races](Compendium_of_Character_Creation.md#races) and [Classes](Compendium_of_Character_Creation.md#classes) unique.
@@ -600,7 +507,271 @@ sad to lose a character, it is definitely not the end, and certainly not somethi
 angry about. Instead, treat it as an opportunity to interface with the world in a whole new
 way!
   
-   
+
+## Currency Weapons and Equipment 
+
+### Currency
+Their are 5 types of Currency in Rangers and Ruffians.
+In order to help players reason about them, we provide an analog of their value
+to the modern day US Dollar.
+
+| Currency | Relative Value | USD Value | Purchasing Power                     | Description     |
+| ---------|----------------|-----------|--------------------------------------|-----------------|
+| Slag     | 1/10th Copper  | $0.10 | A glass of water. A fistful of grain | Rarely used by adventurers. Most establishments round costs to the nearest copper. |
+| Copper   | 10 Slag   | $1  | A bad ale. 3 copper for a glass of wine | The smallest unit of currency used by adventurers. |
+| Silver   | 10 Copper | $10 | A decent meal. 5 Silver for a night at a cheap inn.  | A common denomination of currency for peasants. |
+| Gold     | 10 Silver | $100 | 2 Gold for a night at a good inn. 12 Gold for a 1d6 shortsword.  | A common denomination of currency for adventurers. |
+| Platinum   | 10 Gold | $1000 | 50 Platinum for a parcel of land  | Rarely used outside of banking and government operations. |
+
+### Magic Equipment
+Rings, Circlets, Armor, and other wearable equipment may grant
+magical benefits in Rangers and Ruffians. Such benefits may be as
+simple as giving you advantage on a type of roll or adding a static modifier
+to one of your stats (e.g. ```+1``` Strength), or may be as complicated as granting
+you a new ability, complete with an action point cost.
+
+Because of the magical nature of such equipment, at most 3 pieces may affect
+an entity at once. Any more, and the magical feedback on an entity's body
+could lead to disastrous effects. This limit does not include items which do not
+directly affect or weapon elemental damage. For example, wielding a sword which has effect damage as
+detailed in the [Weapons](#weapons) section does not count towards your limit.
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Counts Towards 3 Piece Limit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shortsword with Ice Damage</td>
+      <td style="background-color: #ffcccb;"><strong>No</strong></td>
+    </tr>
+    <tr>
+      <td>Amulet which Grants +10 Health</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Circlet which Grants +1 Intelligence</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Armor which Grants Advantage on Stealth Checks</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Armor which Grants Resistance to Fire Damage</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Box Which Spills Out Infinite Rats When Opened</td>
+      <td style="background-color: #ffcccb;"><strong>No</strong></td>
+    </tr>
+    <tr>
+      <td>Bottomless Satchel</td>
+      <td style="background-color: #ffcccb;"><strong>No</strong></td>
+    </tr>
+    <tr>
+      <td>Dagger which Allows you to Teleport 30ft. for 1 Action Point</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Armor which Grants the Power of Flight</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Sword which Grants the power of Flight</td>
+      <td style="background-color: #98fba0;">Yes</td>
+    </tr>
+    <tr>
+      <td>Shotsword with Ice Damage <em>and</em> which Grants the Power of Flight</td>
+      <td style="background-color: #98fba0;">Yes, Due to the New Ability</td>
+    </tr>
+    <tr>
+      <td>Armor which grants Fire Resistance <em>and</em> the Power of Flight</td>
+      <td style="background-color: #98fba0;">Yes, Counts Once, Despite Granting 2 Abilities</td>
+    </tr>
+  </tbody>
+</table>
+
+### Weapons
+Your choice of weapon matters greatly in Rangers and Ruffians.
+
+The standard weapon is made up of the following attributes
+
+| Attribute  | Description |
+| ---------- |                 |
+| Handedness | Weapons require either 1 or 2 hands to wield, which affects whether you can hold something such as a shield in your off-hand. 
+| Movement Penalty | Heavy weapons incur a movement penalty, decreasing how far you can move in a turn. |
+| Reach | Different melee weapons can reach different distances. Explained in the [Weapon Reach](#weapon-reach) section. |
+| Range | Different ranged weapons can accurately fire at different distances, measured in feet. |
+| Damage | Weapon damage consists of a primary die and effects. Explained in the [Weapon Damage](#weapon-damage) section. |
+| Abilities | Different weapon types carry special abilities to be used in combat, sometimes with an action point cost |
+| Drawbacks | Different weapons come with potential drawbacks, which affect the wielder in combat. |
+
+#### Weapon Reach
+The types of weapon reach are as follows:
+
+| Type | Description |
+| Adjacent | You may attack an enemy directly to your front, back, left or right. |
+| Diagonal | You may attack an adjacent or diagonal enemy | 
+| Ten Feet | You may reach an enemy up to 10 feet away from you |
+
+#### Weapon Damage
+
+Weapon damage consists of 3 parts in Rangers and Ruffians:
+1. The primary die.
+2. Effect damage.
+3. Weapons may also have a special magical effect which counts towards a character's [Magic Equipment](#magic-equipment) limit.
+
+A very basic weapon might have a ```1d4``` primary die and no effect damage or special effect.
+
+A more advanced weapon's primary die might be ```1d8```, and it might deal an additional ```1d8``` fire damage.
+
+An even more advanced weapon might have a ```1d8``` primary die, ```1d8``` ice damage as an effect, and it's special effect might be that it returns to the wielder's hand when thrown.
+
+##### Player Stat Modifier
+Depending on a weapon's type and a character's build, either ```Dexterity``` or ```Strength```
+may be added to a weapon's damage. A __Dexterity Based Melee Weapon__ is
+one which requires some finesse to strike an enemy. Examples are ```Rapiers```, ```Spears```, and ```Daggers```.
+__Strength Based Melee Weapons__ are weapons which require power behind their strike. Examples are 
+```Greatswords```, ```Clubs```, and ```Flails```.
+
+#### Attacking With a Physical Weapon
+In Rangers and Ruffians attacks do not miss, rather, they can be dodged as explained in
+the [Dodging Attacks](#dodging-attacks) section. 
+
+Therefore, to make a sword attack against an adjacent enemy, there are three steps.
+
+1. Roll the attack. If you are in possession of a ```1d8``` sword with no effect damage, this means we must
+    1. Roll the primary die, ```1d8```. Let's say we rolled a ```3```.
+2. Add any relevant modifiers. Let us suppose our sword is ```Strength``` based, so we will add our ```Strength``` to the roll. Let's say that its value is ```2```. So our total is ```3 (our roll) + 2 (our strength) = 5```.
+3. Deduct the enemy's armor (if they have any). Let's say our enemy had ```1``` armor. That means that we actually did ```5 - 1 = 4``` damage. Usually, the armor step is done by your Poohbah, so you just say "I did 5 damage," and they deduct the armor behind the scenes.
+
+Now, let's look at an example where we have a magic weapon with an effect dice. Our steps become:
+
+1. Roll damage. If you are in possession of a ```1d8 + 1d6 fire damage``` sword, this means:
+    1. Roll the primary die, ```1d8```. Let's say again that we rolled a ```3```.
+    2. Roll the effect die, ```1d6```. Let's say we rolled a ```6```.
+2. Because our effect is fire, we consult the chart in the [Common Damage Types](#common-damage-types) section, and see that enemies must make a ```Spell Power Save``` or take half as much damage next turn.
+    1. Let's say the enemy fails their save. For example, let's say our spell power is ```14``` and they roll a ```2```.
+    2. This means that, next turn, the enemy will take ```3``` damage at the start of their turn (half as much fire damage).
+3. Add any relevant modifiers. Let us suppose our sword is ```Strength``` based, so we will add our ```Strength``` to the roll. Let's say that its value is ```2```. So our total is ```3``` (our primary damage roll) + ```6``` (our effect dice roll) + ```2``` (our strength) = ```11 damage now + 3 damage next turn```.
+4. Deduct the enemy's armor (if they have any). Let's say our enemy had ```1``` armor. That means that we actually did ```11 - 1 = 10``` damage this turn. Most armor does not guard against fire damage, so the enemy will take a full ```3``` damage next turn.
+
+#### Critical Hits With Weapons
+A critical hit occurs when a player rolls the highest possible value for an eligible weapon.
+When this occurs, the player may add an additional dice of primary damage to their attack.
+
+So let's say that we have a ```1d8``` spear, ```2``` dexterity, and are attacking an enemy
+with ```0``` armor. It might play out like this:
+1. We roll an ```8``` on our ```d8``` spear, a critical hit!
+2. We roll again. Another ```8```! But there is no such thing as a "double critical", so
+  that's the end of our rolling.
+3. We total our rolls and add our modifiers ```8``` (first roll) + ```8``` 
+    (a lucky critical hit roll) + ```2``` (our dexterity).
+4. Deduct our enemy's armor ```18 - 0 = 18```. We did a massive ```18``` damage!
+
+#### Dual Wielding Weapons
+It may be the case that a character wishes to wield two one-handed weapons at a time.
+In order to do this, they must have the ```Dual Wielding Proficiency``` skill.
+
+When a character is able to dual wield, they may make two attacks in a single action. 
+
+There are four important rules regarding dual wielding:
+1. A player may add their stat modifier only once.
+2. ```Dual Wielding``` strikes _cannot_ yield critical hits.
+3. An ```Offhand Attack``` may not be a ```Dual Wielding``` attack. 
+4. Extra attacks gained as the result of abilities such as ```Combo``` (on a critical hit, gain an additional attack), ```Line them Up``` (if you slay an enemy, gain another attack action), or ```Consecutive Normal Punches``` (Make two attacks in an action) _cannot_ be Dual Wielding attacks.
+
+Furthermore, note that some weapon abilities only work when they are
+wielded with a free offhand.
+
+Therefore, a dual wielding action attack may look as follows:
+1. The player is wielding a ```1d6 + 1d6 fire damage handaxe (strength)```  and a ```1d6 + 1d6 ice damage shortsword (strength)```, and has ```3``` strength.
+2. The player rolls a ```6``` primary damage plus ```3``` fire damage with the handaxe. Remember that ```Dual Wielding``` attacks cannot be critical hits. This means that, despite rolling a ```6``` on a ```d6``` weapon, this attack is not a critical hit, so no extra dice is rolled.
+3. The player rolls ```5``` primary damage plus ```4``` ice damage with the shortsword.
+4. The enemy must make two spell power saves, one against fire and one against ice damage.
+5. The overall damage of the attacks is ```6 handaxe primary damage + 3 handaxe effect damage + 5 shortsword primary damage + 4 shortsword ice damage + 3 strength = 21 damage and two spell power saves```.
+
+### Dodging Attacks
+In Rangers and Ruffians, the burden of avoiding an attack is put on the 
+attack's target.
+This means that, rather than having the attacker roll on each attack to see if they 
+successfully "hit" a target, the target can attempt to ```Dodge``` an attack.
+
+```Dodging``` is an ability, and as such, not every character or class has 
+access to it. Furthermore, ```Dodging``` almost always incurs a cost, either
+via the use of an ```Offhand Action``` to move into a ```Dodging Stance```,
+or via the use of a ```Reaction``` and an ```Action Point```.
+
+If a character has ability to ```Dodge```, they may declare their intent to
+do so _before_ an enemy rolls their attack damage. The success of 
+a ```Dodge``` is not guaranteed, but rather requires a check, which is usually
+a ```Contested Dexterity Check```. 
+
+### Wielding Magic
+Almost all magic requires some type of ```Focus```. Example focuses
+include a ```Staff```, a ```Holy Pendant```, or even a ```Ring```.
+
+#### Major and Minor Dice
+Focuses have a ```Major``` and a ```Minor``` dice, where the Major is always  greater than the Minor.
+Any spell that requires the rolling of dice also calls for a type of dice.
+
+For example, a spell which hurls a boulder at an enemy may deal ```2 Major Dice``` of damage.
+A spell that heals all allies within 30 feet, however, may heal ```4 Minor Dice``` of damage.
+
+Let us say that we have a focus with a ```1d6 Major Dice``` and a ```1d4 Minor Dice```.
+Then in the examples above we would roll ```2d6``` and ```4d4``` respectively.
+
+#### Critical Hits with Magic
+Mages cannot gain critical hits, however their spells tend to do more
+baseline damage, have more versatility, and have more effects than weapon damage.
+
+#### Dual Wielding with Magic
+Mages cannot Dual Wield magic. However, they do gain the ```Offhand Spell``` ability,
+which allows them to cast a second spell as an offhand action.
+
+### Shields
+Like weapons, shields come with benefits and drawbacks:
+
+| Attribute  | Description |
+| Movement Penalty | Heavy or large shields can incur a penalty against your overall movement. |
+| Abilities | Different shields types carry special abilities to be used in combat, sometimes with an action point cost |
+| Drawbacks | Different shields come with potential drawbacks, which affect the wielder in combat. |
+
+### Armor
+Like shields and weapons, armor comes with benefits and drawbacks:
+
+| Attribute  | Description |
+| Movement Penalty | Heavy or large shields can incur a penalty against your overall movement. |
+| Abilities | Different shields types carry special abilities to be used in combat, sometimes with an action point cost |
+| Drawbacks | Different shields come with potential drawbacks, which affect the wielder in combat. |
+| Armor     | A static amount of protection that may be subtracted from non-magical damage that you take. Rare armor may also guard against magic. |
+
+### Common Damage Types
+There are a number of common special damage types in Rangers and Ruffians that may be
+applied to a weapon's ```Effect Dice```.
+Usually, these damage types require a Spell Power saving throw, and on failure
+affect the damaged entity in specific way.
+
+| Damage Type        | Effect on Failed Check                                    |
+| -------------------|-----------------------------------------------------------|
+| Blunt              |                                                           |
+| Piercing/Slashing  |                                                           |
+| Fire Damage        | Repeat half of the damage at the start of the next turn.  |
+| Poison Damage      | Repeat one quarter of the damage each turn until success. |
+| Ice Damage         | Loose 1d4 spaces in initiative.                           |
+| Lightning Damage   | Extra dice vs water. Fall Prone.                          |
+| Force Damage       | Fall Prone.                                               |
+| Light Damage       | Extra damage to undead.                                   |
+| Shadow/Dark Damage | Struck Blind until Save. Disadvantage on perception and relevant checks. |
+| Vampiric Damage    | Return a portion of the damage to the attacker.           |
+| Necrotic Damage    | Cannot be healed by potions or non-divine spells.         |
+| Chi Block          | Stop an enemy from using magic or abilities               |
+
+
 ## Health, Rest, and Healing
 Character's begin with an amount of health equal to the maximum roll of their
 health die + ```1d4.``` Health lost in combat can be regained by resting, using items,
@@ -680,22 +851,24 @@ health die is ```1d8``` the following might occur:
 1. You roll a ```3``` on your health die.
 2. You roll a ```2``` on your 1d4.
 3. Your new maximum health is ```26 (your old max health) + 3 (your health die roll) + 2 (your d4 roll) = 31```.
-  
 
-#### Odd Levels: New Abilities
-When you level up, you get better at being your class. That is to say, you are a better _Rouge_ or _Knight_
-or _Gunslinger_ or _Bard_ than you were before. When you reach an odd level, you receive new abilities, allowing
+#### New Abilities
+When you level up you get better at being your class. That is to say, you are a better _Rouge_ or _Knight_
+or _Gunslinger_ or _Bard_ than you were before. When you level up, you receive new abilities, allowing
 you to perform all new actions or granting you new advantages.
-  
 
-#### Even Levels: New Stats
+#### Odd Levels: One Stat Point
+When you reach an odd level, you get ```1``` __Stat Point__ to spend. You can spend it to increase
+a stat of your choice. Review the [Effective Stats](#effective-stats) section for details on how this works.
+  
+#### Even Levels: Two Stat Points or a Skill
 When you reach an even level, you get ```2``` __Stat Points__ to spend. You can spend these to increase your stats.
 Review the [Effective Stats](#effective-stats) section for details on how this works.
 Alternatively instead of increasing your stats, you are able to instead take a new [Skill](Compendium_of_Character_Creation.md#skills). See the
-[Skills](Compendium_of_Character_Creation.md#skills) section for more details.
+[Skills](Compendium_of_Character_Creation.md#skills) section of the Compendium of Character Creation for more details.
   
 
 #### New Spells
 If you are a magic user, you are able to learn 1 new spell of _every_ spell tier that you know each time you level up.
-This means that if you know tier 0, 1, and 2 spells, you get to learn 3 spells: 1 spell each of tier 0, 1, and 2.
+This means that if you know tier ```0```, ```1```, and ```2``` spells, you get to learn ```3``` spells: 1 spell each of tier ```0```, ```1```, and ```2```.
   

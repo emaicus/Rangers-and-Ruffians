@@ -389,19 +389,17 @@ def check_brief_abilities(print_errors=True):
   target_length = 100
   errors = list()
   for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
-    if not 'brief' in ability_info:
-      errors.append(f'ERROR: No brief in {ability_name}')
-      continue
     if not 'type' in ability_info:
       errors.append(f'ERROR: No type in {ability_name}')
-      continue
-    if ability_info['type'] in ['rule', 'choice', 'starting_item', 'action']:
-      continue
-    if len(ability_info['brief']) > target_length:
-      errors.append(f"ERROR: {ability_name}'s brief is {len(ability_info['brief']) - target_length} characters too long ({len(ability_info['brief'])} characters long)")
-    if len(ability_info['brief']) > len(ability_info['description']):
-      success = False
-      errors.append(f"ERROR: {ability_name}'s brief is longer than it's description!")
+
+    if not 'brief' in ability_info:
+      errors.append(f'ERROR: No brief in {ability_name}')
+    else:
+      if len(ability_info['brief']) > target_length:
+        errors.append(f"WARNING: {ability_name}'s brief is {len(ability_info['brief']) - target_length} characters too long ({len(ability_info['brief'])} characters long)")
+      if len(ability_info['brief']) > len(ability_info['description']):
+        success = False
+        errors.append(f"ERROR: {ability_name}'s brief is longer than it's description!")
   if print_errors:
     for error in errors:
       print(error)
@@ -765,18 +763,14 @@ def check_pantheon():
         try:
           level_str, level_num = level.split('_')
           level_num = int(level_num)
-          if not level_str == 'Level' or level_num > 15 or level_num < 0:
+          if not level_str == 'level' or level_num > 15 or level_num < 0:
             all_errors.append(f'{deity}: bad level {level}')
         except Exception as e:
           all_errors.append(f'{deity}: bad level (exception) {level}')
 
-        for ability, ability_info in abilities.items():
-          all_errors += string_key_check(ability_info, 'description', f'{deity} {ability}')
-          if 'type' in ability_info:
-            if not ability_info['type'] in ['combat', 'general', 'advantage', 'disadvantage', 'starting_item']:
-              all_errors.append(f'{deity} {ability}: bad type {ability_info["type"]}')
-          else:
-            all_errors.append(f'{deity} {ability}: missing type')
+        for ability in abilities:
+          if not isinstance(ability, str):
+            all_errors.append(f'{deity} {ability}: not a string')
     elif deity.strip().lower() != 'the shaper':
       all_errors.append(f"{deity}: missing abilities.")
 
@@ -785,35 +779,35 @@ def check_pantheon():
 
 
 if __name__ == '__main__':
-  # print('GENERATING SPELL STATS:')
-  # spell_stats()
-  # print()
-  # print('RUNNING ABILITY CHECK:')
-  # ability_check()
-  # print()
-  # print('GENERATING GAME STATS:')
-  # print()
-  # game_stats()
-  # print()
-  # print('GENERATING VITALITY CHARTS')
-  # vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
-  # print('GENERATING RACE RANKINGS')
-  # rank_races() 
-  # print("GENERATING CLASS RANKINGS")
-  # rank_classes()
-  # print("GENERATING CHARACTER RANKINGS")
-  # rank_characters()
-  # print("WRITING OUT ALL CHARACTERS FOR REVIEW")
-  # dump_characters()
-  # print()
-  # print("CHECKING ABILITY DESCRIPTION LENGTHS")
-  # print()
-  # check_brief_abilities()
-  # print()
-  # print('CHECKING DESCRIPTIONS')
-  # check_descriptions()
-  # print()
-  print('RUNNING CUSTOM SPELL CHECK')
-  spell_check()
+  print('GENERATING SPELL STATS:')
+  spell_stats()
   print()
+  print('RUNNING ABILITY CHECK:')
+  ability_check()
+  print()
+  print('GENERATING GAME STATS:')
+  print()
+  game_stats()
+  print()
+  print('GENERATING VITALITY CHARTS')
+  vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
+  print('GENERATING RACE RANKINGS')
+  rank_races() 
+  print("GENERATING CLASS RANKINGS")
+  rank_classes()
+  print("GENERATING CHARACTER RANKINGS")
+  rank_characters()
+  print("WRITING OUT ALL CHARACTERS FOR REVIEW")
+  dump_characters()
+  print()
+  print("CHECKING ABILITY DESCRIPTION LENGTHS")
+  print()
+  check_brief_abilities()
+  print()
+  print('CHECKING DESCRIPTIONS')
+  check_descriptions()
+  print()
+  # print('RUNNING CUSTOM SPELL CHECK')
+  # spell_check()
+  # print()
   print("FINISHED!")

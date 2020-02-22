@@ -2,13 +2,14 @@ Catterwol:
   subraces:
     Catterwol:
       abilities:
-        - Dark Vision
+        - Darkvision
         - Predator
         - They're Retractable
         - Land on your feet
         - Loose Skin
         - Fear of Water
-        - Fast Paws
+        #- Fast Paws Too powerful
+        - Mantle
       quote: Ah, yes, well... It was then that we stumbled upon an encampment of
         cat-folk. They seemed a nice enough sort, so we bought some of their wares,
         beads and knives and potions, that sort of thing. After that, we supped with them. 
@@ -120,7 +121,7 @@ Elf:
       health_die_pieces: 4
       abilities:
         - Sleepless
-        - Dark Vision
+        - Darkvision
         - Winged Feet
         - Counter Attack
         - Born in Darkness
@@ -198,8 +199,8 @@ Goblin:
       health_die_pieces: 2
       abilities:
         - Still Warm
-        - Mantel
-        - Dark Vision
+        - Mantle
+        - Darkvision
         - Seek Gold
         - Cheap Blow
       quote: It is a rarity to find a kindly goblin, but when I have, I have found
@@ -323,7 +324,7 @@ Waterborn:
       - Water Breathing
       - Flows Like Water
       - Water Healing
-      - Become Mist
+      # - Become Mist
       - Charm
       - Lightweight
       quote: Most Waterborn I've seen have been dried up and dying. Their need

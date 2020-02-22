@@ -56,6 +56,11 @@ _Version 2.1.3_
        * [Forest Wolf:](#forest-wolf)  
        * [Young Dire Wolf:](#young-dire-wolf)  
        * [Alpha Wolf:](#alpha-wolf)  
+   * [Constructs:](#constructs)  
+     * [Homunculi:](#homunculi)  
+       * [Minor Wizard'S Homunculus:](#minor-wizards-homunculus)  
+       * [Greater Wizard'S Homunculus:](#greater-wizards-homunculus)  
+       * [Major Wizard'S Homunculus:](#major-wizards-homunculus)  
    * [Dragons:](#dragons)  
      * [Red Dragons:](#red-dragons)  
        * [Red Dragon Hatchling:](#red-dragon-hatchling)  
@@ -102,7 +107,7 @@ ___A player will almost certainly not see a bear attack coming. Consider having 
 * __Health:__ 8  
 * __Spell Power:__ 7   
 * __Movement:__  
-  * __Land:__ 10 feet  
+  * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -124,7 +129,7 @@ ___
 * __Health:__ 30  
 * __Spell Power:__ 9   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 25 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -154,7 +159,7 @@ ___Big cats almost always hunt alone, and are too intelligent to risk attacking 
 * __Health:__ 6  
 * __Spell Power:__ 7   
 * __Movement:__  
-  * __Land:__ 10 feet  
+  * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -176,7 +181,7 @@ ___
 * __Health:__ 20  
 * __Spell Power:__ 11   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -205,7 +210,7 @@ ___Wolves hunt in packs, so it should be rare to face one alone. Characters may 
 * __Health:__ 6  
 * __Spell Power:__ 7   
 * __Movement:__  
-  * __Land:__ 10 feet  
+  * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -224,7 +229,7 @@ ___
 * __Health:__ 12  
 * __Spell Power:__ 8   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -246,7 +251,7 @@ ___
 * __Health:__ 24  
 * __Spell Power:__ 9   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -268,7 +273,7 @@ ___
 * __Health:__ 40  
 * __Spell Power:__ 12   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -299,6 +304,76 @@ __Sanctuary Actions:__
 ___  
 
   
+## Constructs:
+
+  
+### Homunculi:
+
+  
+#### Minor Wizard'S Homunculus:
+* ___Level 0 Light Enemy___  
+* __Health:__ 4  
+* __Spell Power:__ 9   
+* __Movement:__  
+  * __Land:__ 15 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -11 (-7) | 0 (+0) | 0 (+0) | -3 (-3) | -3 (-3) | -3 (-3) | 0 (+0) |  
+  
+__Actions:__  
+* __Scratch:__ _1d2 + 0 Dexterity._ The homunculus scratches at an enemy with needle-like fingers.  
+  
+  
+___  
+
+  
+#### Greater Wizard'S Homunculus:
+* ___Level 1 Light Enemy___  
+* __Health:__ 12  
+* __Spell Power:__ 12   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -7 (-5) | 1 (+1) | 1 (+1) | 0 (+0) | -3 (-3) | 0 (+0) | 0 (+0) |  
+  
+__Abilities:__  
+* __Utilize Spell Gem:__ If a homunculus has a spell gem in it's possession, it is able to use it as an action.  
+  
+__Actions:__  
+* __Slash:__ _1d6 + 1 Dexterity._ The homunculus slashes at an enemy with a blade-like protrusion.  
+  
+  
+___  
+
+  
+#### Major Wizard'S Homunculus:
+* ___Level 2 Light Enemy___  
+* __Health:__ 20  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 30 feet  
+* __Armor:__ 2  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 0 (+0) | 2 (+2) | 2 (+2) | 1 (+1) | -3 (-3) | 2 (+2) | 0 (+0) |  
+  
+__Abilities:__  
+* __Utilize Spell Gem:__ If a homunculus has a spell gem in it's possession, it is able to use it as an action.  
+  
+__Special Action Rules:__  
+* __Multi-Attack:__ A Major Wizard's Homunculus may make 2 slash attacks in an action.  
+  
+__Actions:__  
+* __Slash:__ _1d12 + 2 Dexterity._ The homunculus slashes at an enemy with a blade-like protrusion.  
+  
+  
+___  
+
+  
 ## Dragons:
 >There are many types of dragon in the world, and all are unique in their own way. Some seek gold, and horde it in mountain lairs. Others are deeply intelligent, and seek power and influence. A dragon's color generally specifies its breed and characteristics. While all dragons are rare, the Red Dragon is the most common, and most individuals' understanding of dragons as incredibly dangerous, greedy, fire breathing animals comes from the actions of red dragons. Dragons make good campaign villains at later levels of play. Dragon hatchlings are one of the companion animals that may be chosen by a Beastmaster. A young dragon is incredibly difficult to care for, as it cannot yet fly or truly control its breath attack. Dragonscales are worth more than their weight in gold, so it is likely that poachers may attempt to steal a hatchling while a beastmaster is unawares. Villagers may attempt to kill a dragon hatchling to prevent it from growing up to become a 'monster.' However, if a dragon survives its infancy, it can become a deeply loving, powerful, and useful companion. Dragons grow more slowly than most other companion animals.  
   
@@ -315,7 +390,7 @@ ___While Red Dragons lack the true sentience of some other breeds, they are by n
 * __Health:__ 6  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 5 feet  
+  * __Land:__ 15 feet  
 * __Armor:__ 1  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
@@ -336,7 +411,7 @@ ___
 * __Health:__ 36  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 10 feet  
+  * __Land:__ 15 feet  
   * __Air:__ 30 feet  
 * __Armor:__ 2  
   
@@ -362,7 +437,7 @@ ___
 * __Health:__ 85  
 * __Spell Power:__ 15   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 30 feet  
   * __Air:__ 60 feet  
 * __Armor:__ 3  
   
@@ -404,7 +479,7 @@ ___
 * __Health:__ 200  
 * __Spell Power:__ 17   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 30 feet  
   * __Air:__ 90 feet  
 * __Armor:__ 4  
 * __Magic Armor:__ 4  
@@ -457,7 +532,7 @@ ___
 * __Health:__ 8  
 * __Spell Power:__ 11   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 25 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -480,7 +555,7 @@ ___
 * __Health:__ 8  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 25 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -503,7 +578,7 @@ ___
 * __Health:__ 16  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 25 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -529,7 +604,7 @@ ___
 * __Health:__ 20  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 25 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -569,7 +644,7 @@ ___Goblin swordsmen know enough to defend their archers if at all possible. They
 * __Health:__ 10  
 * __Spell Power:__ 10   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -593,7 +668,7 @@ ___Goblin archers will try to stay away from combat, fleeing as far as they can 
 * __Health:__ 8  
 * __Spell Power:__ 10   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -617,7 +692,7 @@ ___A goblin shaman is very intelligent, and will dole out its spells to best hel
 * __Health:__ 4  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -643,7 +718,7 @@ ___First and foremost, a goblin cleric will act as a healer, trying to keep its 
 * __Health:__ 4  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -668,7 +743,7 @@ ___A chieftain puts its own survival first. It attacks from a distance, hurling 
 * __Health:__ 60  
 * __Spell Power:__ 13   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 30 feet  
 * __Armor:__ 3  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
@@ -708,7 +783,7 @@ ___Wolf Riders can move further than other goblins, so they are often used to ch
 * __Health:__ 20  
 * __Spell Power:__ 11   
 * __Movement:__  
-  * __Land:__ 20 feet  
+  * __Land:__ 40 feet  
 * __Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
@@ -740,7 +815,7 @@ ___An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Og
 * __Health:__ 101  
 * __Spell Power:__ 12   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 35 feet  
 * __Armor:__ 5  
 * __Magic Armor:__ 5  
   
@@ -783,7 +858,7 @@ ___Ogres are strong, and they know it. When goaded to action, ogres will rush he
 * __Health:__ 32  
 * __Spell Power:__ 14   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 30 feet  
 * __Magic Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
@@ -806,7 +881,7 @@ ___The Ogre Lord will charge a threat head on, and will make heavy use of its gr
 * __Health:__ 97  
 * __Spell Power:__ 14   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 30 feet  
 * __Armor:__ 5  
 * __Magic Armor:__ 2  
   
@@ -845,7 +920,7 @@ ___
 * __Health:__ 6  
 * __Spell Power:__ 9   
 * __Movement:__  
-  * __Land:__ 15 feet  
+  * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -867,7 +942,7 @@ ___
 * __Health:__ 8  
 * __Spell Power:__ 9   
 * __Movement:__  
-  * __Land:__ 10 feet  
+  * __Land:__ 20 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|

@@ -17,7 +17,7 @@ beasts:
             Yip:
               description: "The pup cries for help. Roll 1d20. On a 15 or above, any nearby wolves run to the pup's aid. Allies responding to a yip get advantage on their attacks."
           movement:
-            land: 10
+            land: 15
           stats:
             Charisma: 0
             Dexterity: -2
@@ -40,7 +40,7 @@ beasts:
           abilities:
             Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: 0
             Dexterity: 1
@@ -63,7 +63,7 @@ beasts:
           abilities:
             Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: 0
             Dexterity: 2
@@ -90,7 +90,7 @@ beasts:
           abilities:
             Pack Strength: "If multiple wolves are attacking the same enemy, they gain advantage."
           movement:
-            land: 20
+            land: 30
           conditional_actions:
             First Turn: "Howl, giving all allies 10 feet of movement."
             Second Turn: "Growl, causing all players to make a Spell Power Save or become frightened."
@@ -135,7 +135,7 @@ beasts:
           abilities:
             Climb: "A bear cub can quickly climb surfaces if their are any handholds"
           movement:
-            land: 10
+            land: 15
           stats:
             Charisma: 0
             Dexterity: -3
@@ -165,7 +165,7 @@ beasts:
             Mother Bear: "If a dire bear's cubs are in danger, her movement speed is doubled and she can make both a bite and a claw attack in a single action."
             Companion Trait: "If a dire bear is the companion of an adventurer and the adventurer falls below half health, the bear gains access the Mother Bear ability."
           movement:
-            land: 15
+            land: 25
           stats:
             Charisma: 0
             Dexterity: -5
@@ -202,7 +202,7 @@ beasts:
           abilities:
             Climb: "Panther cubs can climb nearly anything."
           movement:
-            land: 10
+            land: 15
           stats:
             Charisma: 0
             Dexterity: 1
@@ -228,7 +228,7 @@ beasts:
             Climb: "Panthers can climb nearly anything."
             Pounce: "Panthers add an additional dice of damage to any plunging attack."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: 1
             Dexterity: 2
@@ -294,7 +294,7 @@ dragons:
             Cry Out:
               description: "The hatchling cries out for aid. Roll 1d20. On a 15 or above, the hatchling alerts nearby allies that it is in danger."
           movement:
-            land: 5
+            land: 15
           stats:
             Charisma: 0
             Dexterity: -1
@@ -328,7 +328,7 @@ dragons:
               modifier: "Strength"
               description: "If the dragon whelp is in flight, it can dive bomb an enemy, smashing into them with claws and talons. If the enemy fails an contested dex save, they are thrown 10 feet."
           movement:
-            land: 10
+            land: 15
             air: 30
           stats:
             Charisma: 1
@@ -380,7 +380,7 @@ dragons:
             Molten Gold: "If the drake uses it's fire breathe in it's den, some of its horde begins to melt, causing molten gold to flow across the battlefield. Players must make dex checks to jump across rivers of molten gold, or take 2d8 damage if they touch it."
             Falling Stones: "The thunderous sounds of your battle cause rocks to fall from the ceiling of the drake's cave. All players must make a D10 dex check or take 4d8 damage."
           movement:
-            land: 15
+            land: 30
             air: 60
           stats:
             Charisma: 1
@@ -437,7 +437,7 @@ dragons:
             Molten Lair: "The dragon burns so hot that players take 1d6 damage per turn just by being in it. Rivers of lava and molten gold cover the floor."
             Falling Stones: "The thunderous sounds of your battle cause rocks to fall from the ceiling of the drake's cave. All players must make a D10 dex check or take 4d8 damage."
           movement:
-            land: 15
+            land: 30
             air: 90
           stats:
             Charisma: 3
@@ -495,7 +495,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: -2
             Dexterity: 1
@@ -519,7 +519,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: -2
             Dexterity: 1
@@ -549,7 +549,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: -2
             Dexterity: 1
@@ -576,7 +576,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: -2
             Dexterity: 1
@@ -619,7 +619,7 @@ humanoids:
           abilities:
             Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
           movement:
-            land: 20
+            land: 30
           stats:
             Charisma: -2
             Dexterity: 1
@@ -659,7 +659,7 @@ humanoids:
           abilities:
             Unseated: "If the wolf rider falls below half health, roll 1d20. If the roll is less than ten, the wolf dies and the goblin falls for 1d4 damage. If it is ten or greater, the goblin dies, leaving a forest wolf."
           movement:
-            land: 20
+            land: 40
           stats:
             Charisma: -2
             Dexterity: 1
@@ -710,7 +710,7 @@ humanoids:
             Third Turn: "Jump and Stomp: The Ogre Leaps up to 10 feet, before landing with a crash, harming any entity within a 5 foot radius for 2d8 damage."
             20 Health: "If the ogre rider falls below 40 health, the goblin dies. The ogre immediately grabs the dead goblin off of its back, and may throw it at an enemy for 2d6 damage."
           movement:
-            land: 15
+            land: 35
           stats:
             Charisma: -2
             Dexterity: -3
@@ -745,7 +745,7 @@ humanoids:
               modifier: "Strength"
               description: "The ogre's club hurtles through the air at its enemy. On a critical hit, the enemy is tossed backwards 5 feet."
           movement:
-            land: 15
+            land: 30
           stats:
             Charisma: -2
             Dexterity: -3
@@ -796,7 +796,7 @@ humanoids:
               modifier: "Strength"
               description: "In place of its movement, the ogre runs a full 15 feet in a straight line, trampling anyone in its path. Players may make a D14 dexterity check to jump out of the way. If the ogre stops in a space occupied by an entity, the entity is pushed to the side."
           movement:
-            land: 15
+            land: 30
           conditional_actions:
             First Turn: "CHARGE: All nearby allies, including the Ogre Lord, get to move their full movement towards the enemy."
             Second Turn: "SPIN ATTACK: The Ogre Lord spins in a circle, hitting everything within 10 feet with its club for 1d8 damage, before throwing the club at an enemy within 15 feet."
@@ -839,7 +839,7 @@ humanoids:
           abilities:
             Cornered Animal: "If an adlet is at less than half health, it can make a bite attack as an offhand action."
           movement:
-            land: 15
+            land: 25
           stats:
             Charisma: -5
             Dexterity: -1
@@ -866,7 +866,7 @@ humanoids:
           abilities:
             Cornered Animal: "If an adlet is at less than half health, it can make a bite attack as an offhand action."
           movement:
-            land: 15
+            land: 25
           stats:
             Charisma: -5
             Dexterity: -1
@@ -897,7 +897,7 @@ humanoids:
           abilities:
             Cornered Animal: "If a adlet is at less than half health, it can make a bite attack as an offhand action."
           movement:
-            land: 15
+            land: 25
           stats:
             Charisma: -5
             Dexterity: -1
@@ -929,7 +929,7 @@ humanoids:
           abilities:
             Cornered Animal: "If an adlet is at less than half health, it can make a bite attack as an offhand action."
           movement:
-            land: 15
+            land: 25
           conditional_actions:
             First Turn: "Reposition: All adlet on the field may move 10 feet."
             Second Turn: "Fireball!: The Witch Doctor throws a vial of red liquid which does the equivalent damage of a fireball spell, but leaves the area burning until it is extinguished."
@@ -965,7 +965,7 @@ undead:
             Hard to Kill: "If a zombie hits 0 health, it may make a D15 save. On success, it regains 1hp."
             Contagious: "If a creature is killed by a zombies bite, it will raise as a zombie in 1 hour unless burned."
           movement:
-            land: 10
+            land: 20
           stats:
             Charisma: -7
             Dexterity: -2
@@ -990,7 +990,7 @@ undead:
               modifier: "Dexterity"
               description: "The skeleton fires a shot from its aged, chipped bow."
           movement:
-            land: 15
+            land: 30
           stats:
             Charisma: -3
             Dexterity: 1
@@ -999,3 +999,71 @@ undead:
             Luck: 0
             Perception: -2
             Strength: -1
+constructs:
+  types:
+    homunculi:
+      types:
+        Minor Wizard's Homunculus:
+          type: "Level 0 Light"
+          health: 4
+          average_damage_per_round: 1
+          actions:
+            Scratch:
+              modifier: "Dexterity"
+              damage: "1d2"
+              description: "The homunculus scratches at an enemy with needle-like fingers."
+          movement:
+            land: 15
+          stats:
+            Charisma: -3
+            Dexterity: 0
+            Inner_Fire: -3
+            Intelligence: 0
+            Luck: 0
+            Perception: -3
+            Strength: -11
+        Greater Wizard's Homunculus:
+          type: "Level 1 Light"
+          health: 12
+          average_damage_per_round: 4
+          actions:
+            Slash:
+              modifier: "Dexterity"
+              damage: "1d6"
+              description: "The homunculus slashes at an enemy with a blade-like protrusion."
+          abilities: 
+            Utilize Spell Gem: "If a homunculus has a spell gem in it's possession, it is able to use it as an action."
+          movement:
+            land: 30
+          stats:
+            Charisma: -3
+            Dexterity: 1
+            Inner_Fire: 0
+            Intelligence: 1
+            Luck: 0
+            Perception: 0
+            Strength: -7
+        Major Wizard's Homunculus:
+          type: "Level 2 Light"
+          armor: 2
+          health: 20
+          average_damage_per_round: 1
+          action_spec:
+            Multi-Attack: A Major Wizard's Homunculus may make 2 slash attacks in an action.
+          actions:
+            Slash:
+              modifier: "Dexterity"
+              damage: "1d12"
+              description: "The homunculus slashes at an enemy with a blade-like protrusion."
+          abilities: 
+            Utilize Spell Gem: "If a homunculus has a spell gem in it's possession, it is able to use it as an action."
+          movement:
+            land: 30
+          stats:
+            Charisma: -3
+            Dexterity: 2
+            Inner_Fire: 1
+            Intelligence: 2
+            Luck: 0
+            Perception: 2
+            Strength: 0

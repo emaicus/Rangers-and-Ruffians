@@ -50,7 +50,7 @@ Weapons:
             cost: "cheap"
             minimum_damage_dice: 4
             maximum_damage_dice: 8
-            reach: two
+            reach: ten feet
             movement_penalty: 5
             abilities: 
               Guarded Front: "Reaction. If an enemy moves within your reach in front of you, you may make an attack against them."
@@ -65,7 +65,7 @@ Weapons:
             reach: adjacent
             abilities: 
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
-              Slashing Strike: "Cost 1. Make an attack which hits all enemies in a 5 foot cone in front of you."
+              Slashing Strike: "Cost 1. Make an attack which hits all enemies immediately in front of you."
             drawbacks:
               - Slow to Don: "Donning takes a full action"
         Quarterstaff:
@@ -74,7 +74,7 @@ Weapons:
             maximum_damage_dice: 8
             reach: diagonal
             abilities:
-              Quarterstaff Parry: "Cost 1. Reaction. Make a Contested dex against a light melee strike to catch it on your staff, stopping attack."
+              Quarterstaff Parry: "Cost 1. Reaction. Make a Contested dex check against a light melee strike to catch it on your staff, stopping attack."
               Guarding Stance: "As an offhand action, move into a blocking stance. While in a blocking stance you may make an attack against enemies that move within 10 feet of you as a reaction."
               Flurry of Blows: "Cost 1. If attacking as an action, make a second attack at half damage."
             movement_penalty: 5
@@ -138,8 +138,6 @@ Weapons:
               Fan the Hammer: "Cost 1: You may make two attacks with your pistol in a single attack action at disadvantage."
             movement_penalty: 0
             range: middling
-            rules: 
-              Reload Time: "After you have fired a number of shots equal to your firearm's magazine size, you must reload as an Offhand Action."
             drawbacks:
               Loud: "Firing your weapon alerts everyone within 1000 feet of your presence."
         Carbine Rifle:
@@ -150,8 +148,6 @@ Weapons:
               Repeating: "Cost 1: You may make two attacks with your carbine in a single attack action at disadvantage."
             movement_penalty: 5
             range: archer
-            rules: 
-              Reload Time: "After you have fired a number of shots equal to your firearm's magazine size, you must reload as an Offhand Action."
             drawbacks:
               Loud: "Firing your weapon alerts everyone within 1000 feet of your presence."
         Long Rifle:
@@ -160,8 +156,7 @@ Weapons:
             maximum_damage_dice: 12
             movement_penalty: 10
             range: far
-            rules:
-              Reload Time: "After you have fired a number of shots equal to your firearm's magazine size, you must reload as an Offhand Action."
+            abilities:
               Armor Penetrating Rounds: "Your rounds ignore enemy armor."
             drawbacks:
               Very Loud: "Firing your weapon alerts everyone within 1 mile feet of your presence."
@@ -171,20 +166,27 @@ Shields:
     movement_penalty: 0
     abilities:
       Shield Parry: "Cost 1. Reaction. Contested dex against a light melee strike to catch it, stopping attack."
-      Shield Bash: "Use an offhand action to bash an enemy with your shield. If they fail a contested strength check, they loose an action on their next turn, and the next attack against them has advantage."
+      Shield Bash: "Use an offhand action to shield bash an enemy. If they fail a contested Strength Check, they are stunned, and miss an action and an offhand action on their next turn."
+  Round Shield:
+    cost: inexpensive
+    movement_penalty: 5
+    abilities:
+      Shield Parry: "Cost 1. Reaction. Contested dex against a light melee strike to catch it, stopping attack."
+      Shield Bash: "Cost 1. Use an offhand action to shield bash an enemy. If they fail a contested Strength Check, they are stunned, and miss an action and an offhand action on their next turn."
+      Minor Shield Up: "When targeted by a non-magic piercing or blunt ranged attack coming from in front of you, role a contested dexterity check. On success, block the attack."
   Heater Shield:
     cost: inexpensive
     movement_penalty: 5
     abilities:
       Shield Parry: "Cost 1. Reaction. Contested dex against a light melee strike to catch it, stopping attack."
-      Shield Bash: "Use an offhand action to bash an enemy with your shield. If they fail a contested strength check, they loose an action on their next turn, and the next attack against them has advantage."
+      Shield Bash: "Cost 1. Use an offhand action to shield bash an enemy. If they fail a contested Strength Check, they are stunned, and miss an action and an offhand action on their next turn."
       Minor Shield Up: "When targeted by a non-magic piercing or blunt ranged attack coming from in front of you, role a contested dexterity check. On success, block the attack."
   Kite Shield:
     cost: inexpensive
     movement_penalty: 10
     abilities:
       Shield Parry: "Cost 1. Reaction. Contested dex against a light melee strike to catch it, stopping attack."
-      Shield Bash: "Use an offhand action to bash an enemy with your shield. If they fail a contested strength check, they loose an action on their next turn, and the next attack against them has advantage."
+      Shield Bash: "Cost 1. Use an offhand action to shield bash an enemy. If they fail a contested Strength Check, they are stunned, and miss an action and an offhand action on their next turn."
       Greater Shield Up: "You take no damage from non-magic piercing or blunt ranged attacks which come from directly in front of you."
 Armor:
   Padded Armor:
@@ -214,7 +216,6 @@ Armor:
       Blunt Resistance: "You take half damage from blunt attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
-      Dexterity Disadvange: "Make dexterity checks with disadvantage while wearing your armor."
   Scalemail:
     cost: very expensive
     movement_penalty: 5
@@ -223,7 +224,6 @@ Armor:
       Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
-      Dexterity Disadvange: "Make dexterity checks with disadvantage while wearing your armor."
   Plate Armor:
     cost: very expensive
     movement_penalty: 10
@@ -233,7 +233,7 @@ Armor:
       Blunt Resistance: "You take half damage from blunt attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
-      Dexterity Disadvange: "Make dexterity checks with disadvantage while wearing your armor."
+      #Dexterity Disadvange: "Make dexterity checks with disadvantage while wearing your armor."
 
 
 

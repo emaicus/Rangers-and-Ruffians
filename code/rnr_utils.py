@@ -505,9 +505,7 @@ class rnr_class_wrapper():
 
 class rnr_race_wrapper():
   def __init__(self, race_name):
-    print(race_name)
     subraces = get_subraces_for_race(race_name)
-    print(subraces)
     self.race_data = get_overarching_rnr_race_data_with_name(race_name)
     self.race_name = race_name
     
@@ -664,16 +662,16 @@ def markdown_pantheon():
         continue
       lines.append(f'#### {deity.title()}  \n  \n')
       lines.append(f'{info["description"]}  \n  \n')
-      if not 'abilities' in info:
-        continue
-      lines.append('__Gifts:__  \n  \n')
-      for i in range(30):
-        for level in sorted(info['abilities'].keys()):
-          actual_level = str(level.split('_')[-1])
-          if str(i) == actual_level:
-            lines.append(f'* __{level.replace("_", " ").title()}__  \n')
-            for ability, ability_info in info['abilities'][level].items():
-              lines.append(f'  * __{ability.replace("_", " ").title()}:__ {ability_info["description"]}  \n')
+      # if not 'abilities' in info:
+      #   continue
+      # lines.append('__Gifts:__  \n  \n')
+      # for i in range(30):
+      #   for level in sorted(info['abilities'].keys()):
+      #     actual_level = str(level.split('_')[-1])
+      #     if str(i) == actual_level:
+      #       lines.append(f'* __{level.replace("_", " ").title()}__  \n')
+      #       for ability, ability_info in info['abilities'][level].items():
+      #         lines.append(f'  * __{ability.replace("_", " ").title()}:__ {ability_info["description"]}  \n')
 
 
   return lines
