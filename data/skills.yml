@@ -23,8 +23,19 @@ Shield Master:
 Hearty:
   description: "When you level up, you may roll your health dice with advantage."
   type: general
-Hand to Hand Weapon Proficiency:
-  description: "You may wield physical weapons without disadvantage."
+One Handed Weapon Proficiency:
+  description: "You may wield one handed physical weapons without disadvantage."
+  type: general
+Dual Wielding Proficiency:
+  description: "You may wield two one handed weapons without disadvantage."
+  type: general
+  requirements: 
+    skills:
+      - One Handed Weapon Proficiency
+    stats:
+      Dexterity: 3
+Two Handed Weapon Proficiency:
+  description: "You may wield two handed weapons without disadvantage."
   type: general
 Ranged Weapon Proficiency:
   description: "You may wield non-firearm ranged weapons without disadvantage"
@@ -37,10 +48,10 @@ Firearm Proficiency:
   type: general
   requirements:
     stats:
-      Intelligence: 2
+      Intelligence: 3
       Dexterity: 1
 Basic Magic:
-  description: "You may use tier zero magic. Each time you level up, gain a tier zero spell."
+  description: "You may use tier zero magic from the Novice Spell Book. Each time you level up, gain a tier zero spell."
   type: general
   requirements:
     stats:
@@ -53,12 +64,13 @@ Advanced Magic:
       Intelligence: 5
     skills:
       - Basic Magic
-Fast Draw:
-  description: "You may add your dexterity as well as your perception to an initiative roll."
+Quick Draw:
+  description: "You may roll initiative with advantage."
   type: general
   requirements:
     stats:
-      Dexterity: 0
+      Perception: 3
+      Dexterity: 2
 Tinker:
   description: "You may attempt to make items and contraptions during rests."
   type: general
@@ -169,19 +181,19 @@ Sage:
 Close Quarters Combat:
   description: "Do not take disadvantage with ranged weapons in close quarters."
   type: combat
-Empowered Spells:
-  description: "Roll double the damage dice for your tier zero spells."
-  type: combat
-  requirements:
-    stats:
-      Intelligence: 3
-      Inner Fire: 3
+# Empowered Spells:
+#   description: "Roll double the damage dice for your tier zero spells."
+#   type: combat
+#   requirements:
+#     stats:
+#       Intelligence: 3
+#       Inner Fire: 3
 Two Handed Weapon Master:
   description: "Carry two handed weapons with one hand."
   type: combat
   requirements:
     stats:
-      Strength: 3
+      Strength: 5
       Dexterity: 1
 Master of Concentration:
   description: "Concentrate on two spells at the same time"
@@ -202,16 +214,10 @@ Controlled Retreat:
 Pivot:
   description: "Swap positions with an adjacent teammate."
   type: combat
-Contortionist:
-  description: "You are able to easily contort your body."
-  type: general
-  requirements:
-    stats:
-      Dexterity: 3
 Tumble:
   description: "Take 20 feet less fall damage."
   type: general
-Fire Bug:
-  description: "Roll advantage when attacking with fire."
-  type: combat
+# Fire Bug:
+#   description: "Roll advantage when attacking with fire."
+#   type: combat
 

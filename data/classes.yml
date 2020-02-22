@@ -277,7 +277,7 @@ Paladin:
         Dexterity: 0
         Inner_Fire: 2
         Intelligence: -2
-        Luck: 1
+        Luck: 0
         Perception: -3
         Strength: 1
       description: Palidins are Soldiers of the Light, and are adept both at hand to
@@ -285,7 +285,7 @@ Paladin:
         aim to bring their influence into the world. Paladins are especially good at
         taking out evil entities, and are known for their Faithful Weapon ability, which
         lets them summon their weapon to their hand after throwing it.
-      health_die_pieces: 4
+      health_die_pieces: 6
       levels:
         level_0:
           abilities:
@@ -607,7 +607,7 @@ Highborn:
         level_14:
           abilities:
           - Aura of Courage # All allies gain 10 health while in your presence.
-          - Greater Lionhearted # Spend 1 Gumption to make an SP save with advantage.
+          - Greater Lionhearted # Spend 1 Gumption to shrug off all status effects.
         level_15:
           abilities:
           - Bravery #: Gain 1d4 Gumption at the start of every battle.
