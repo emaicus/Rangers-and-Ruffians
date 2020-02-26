@@ -222,6 +222,7 @@ Armor:
     armor: 3
     abilities:
       Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
+      Blunt Resistance: "You take half damage from blunt attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
   Plate Armor:

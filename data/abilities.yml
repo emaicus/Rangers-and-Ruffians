@@ -1,3 +1,7 @@
+Light Sleeper:
+  description: "Make perception checks without disadvantage while sleeping"
+  type: advantage
+  brief: "Make PER checks while sleeping without disadvantage."
 A Thief's Gear:
   description: You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and
     a hidden 1d6 dagger.
@@ -22,14 +26,6 @@ Chainmail:
   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
   type: starting_item
   brief: +1 armor when worn.
-Shield Training:
-  description: Don't take movement penalties from shield use.
-  type: general
-  brief: "Don't take movement penalties from shield use."
-Armor Training:
-  description: Don't take movement penalties from armor use.
-  type: general
-  brief: "Don't take movement penalties from armor use."
 Courageous Blow:
   description: Add twice your Inner Fire to an attack.
   type: combat
@@ -592,11 +588,19 @@ Keep Close:
   type: combat
   brief: "When you make space, follow the enemy, stopping anywhere along the way."
 Dodging Stance:
-  description: "As an Offhand Action, move into a dodging stance. Whenever you are the target of a targeted attack
+  description: "As an Offhand Action, move into a dodging stance. As a reaction before your next
+                turn, when you are the target of a targeted attack,
+                make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
+  type: combat
+  brief: "Offhand. This turn as a reaction when you are the target of an attack , contested DEX to avoid."
+Greater Dodging Stance:
+  description: "As an Offhand Action, move into a dodging stance. Whenever you are the 
+                target of a targeted attack
                 before your next turn,
                 make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
   type: combat
-  brief: "Offhand. Whenever you are the target of an attack before next turn, contested DEX to avoid."
+  brief: "Offhand. Before next turn, whenever you are the target of an attack , contested DEX to avoid."
+
 Grappling Dodge:
   description: "When you successfully dodge an enemy melee attack, you may make a contested strength check to attempt to 
                 grapple them."
@@ -641,7 +645,7 @@ Ultimate Titan-Slayer Punch:
   description: "Make an attack which ignores armor and deals 3 extra dice of damage to creatures of size large or bigger."
   type: combat
   cost: 1
-  brief: "Make an attack which ignores armor and deals 1 extra dice of damage to large creatures."
+  brief: "Make an attack which ignores armor and deals 3 extra dice of damage to large creatures."
 Consecutive Normal Punches:
   description: "Make two attacks in an action."
   type: combat
@@ -772,6 +776,97 @@ Looming Presence:
     than yourself.
   type: advantage
   brief: Gain advantage when intimidating entities with lower INT.
+Enchanting:
+  description: "You may store a cost 0 spell within a crystal valued at 10 gold.
+                  cost 1 in a gem valued at 100 gold, cost 2 in a crystal valued at 1,000 gold, etc.
+                  Activating a crystal takes an action. Gems may be reused."
+  type: general
+  brief: "You may store your spells in gems. Tier 0 in a 10 gold gem. Tier 1 in a 100, etc. Reusable."
+Efficient Enchantment:
+  description: "Halve the cost of enchanting."
+  type: general
+  brief: "Halve the cost of enchanting."
+Spell Invention:
+  description: "Using spells that you know as a template, you are able to 
+                invent new ones at a cost of 100 gold and 1 week of research
+                for a tier 0 spell, 200 and 2 weeks for a tier 1, 400 and 4
+                weeks for a tier 2, 800 and 8 weeks for a tier 3, etc."
+  type: general
+  brief: "Using your spells as a template, invent. Tier 0: 100 gold, 1 week. 2x gold/time each tier higher."
+Efficient Spell Invention:
+  description: "Halve either the cost or time requirement of creating a new spell."
+  type: general
+  brief: "Halve either time or cost of new spell creation."
+Magic Resistance: 
+  description: "You take half damage from magic attacks, and make spell power saves
+                with advantage."
+  type: general
+  brief: "Half damage from magic attacks, SP saves with advantage."
+
+Font of Magic:
+  description: "Focus on recovering your magical energy during a rest. Forgo healing to
+                instead regain twice the action points."
+  type: general
+  brief: "Forgo healing from rest to regain 2x the action points."
+Minor Homunculus:
+  description: "At the cost of 10 gold and 1 evening of work, attempt to create a
+                  Minor Wizard's Homunculus from the Book of Known Beasts."
+  type: general
+  brief: "For 10 gold and 1 evening, attempt to create a Minor Wizard's Homunculus"
+Greater Homunculus:
+  description: "At the cost of 50 gold and 1 evening of effort, attempt to
+                create a Greater Wizard's Homunculus from the Book of Known Beasts."
+  type: general
+  brief: "For 50 gold and 1 evening, attempt to create a Greater Wizard's Homunculus."
+Major Homunculus:
+  description: "At the cost of 1000 gold and 1 week of effort, attempt to create
+                a Major Wizard's Homunculus from the Book of Known Beasts."
+  type: general
+  brief: "For 1000 gold and 1 week, attempt to create a Major Wizard's Homunculus."
+Channel Untapped Magic:
+  description: "You may attempt to channel untapped magic in the world around you.
+        Make a D15 intelligence check. On a 15 or above, cast a spell of tier 2 or 
+        lower for free. On 
+        failure, suffer a rebound which deals 1d10 damage which ignores armor."
+  type: general
+  brief: "Make a D15 INT check. Success, cast a tier 2 or lower spell for free. Fail, 1d10 damage."
+Greater Channel Untapped Magic:
+  description: "You may now attempt to channel tier 3 magic. On failure, take 2d10 damage."
+  type: general
+  brief: "Make a D15 INT check. Success, cast a tier 3 spell for free. Fail, 2d10 damage."
+Major Channel Untapped Magic:
+  description: "You may now attempt to channel tier 4 magic. On failure, you take 4d10 damage."
+  type: general
+  brief: "Make a D15 INT check. Success, cast a tier 4 spell for free. Fail, 4d10 damage."
+Legendary Channel Untapped Magic:
+  description: "You may now attempt to channel a tier 5 spell. On failure, you take 8d10 damage."
+  type: general
+  brief: "Make a D15 INT check. Success, cast a tier 5 spell for free. Fail, 8d10 damage."
+Dueling Mages:
+  description: "As a reaction, when you are attacked by a targeted spell, force the
+                caster to make a contested Inner Fire check. On success, suffer no damage
+                or ill effects."
+  type: combat
+  cost: 1
+  brief: "Reaction. Contested INF check when targeted by a spell. Success: avoid."
+Magic Redirection:
+  description: "When you succeed at Dueling Mages, redirect the spell wherever you wish."
+  type: combat
+  brief: "When you succeed at Dueling Mages, you may redirect the spell"
+Commit to Memory:
+  description: "Spend some time in the evening studying the nuances of one of your
+                spells of tier 2 or higher. Upon waking up the next day, 
+                that spell costs 1 action point fewer for the day."
+  type: general
+  brief: "After sleeping, declare a tier 2 or greater spell to have -1 cost for 24 hours."
+Deadman's Contingency:
+  description: "Put in place a contingency plan for when you hit zero health. The
+                contingency can involve up to three of your spells (powered by your remaining
+                spellpower and/or enchanted crystals), and is chained together
+                by an ethereal entity which acts as your proxy, and which exists for sixty seconds."
+  type: general
+  brief: "Plan for when you hit zero health. Can use 3 spells. Requires power source."
+
 Camouflage:
   description: If you stay absolutely still, you can take on the color of your surroundings.
     This gives you advantage on stealth checks while camouflaged.
@@ -881,14 +976,19 @@ Rally Cry:
   brief: Offhand. Grant all allies within 30ft. advantage on their next action.
   cost: 1
 Inspire: 
-  description: Spend 1 Action Point to grant an ally a 1d12 inspiration dice.
+  description: Spend 1 Action Point to grant an ally advantage on a check.
   type: general
-  brief: Give an ally a 1d12 inspiration dice.
+  brief: Give advantage on a check.
   cost: 1
 Inspiring Attack: 
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d6 inspiration dice.
   type: combat
   brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d6 inspiration.
+  cost: 1
+Inspiring Attack: 
+  description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally advantage on their next attack.
+  type: combat
+  brief: Extra dice of damage and grant an ally within 30ft. adv on their next attack.
   cost: 1
 Greater Inspiring Attack: 
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d8 inspiration dice.
@@ -910,13 +1010,20 @@ Encouraging Presence:
   type: combat
   brief: Both you and adjacent allies take advantage on attacks.
 Gumption:
-  description: You can collect up to ten Gumption, which allows you to perform special feats. You gain 1 gumption when an ally succeeds a check aided by one of your inspiration dice or gains a critical hit using advantage you granted them. You also restore 1 gumption after resting and 2 after sleeping. 
+  description: "You can collect up to ten Gumption, which allow you to perform special feats.
+                You gain 1 gumption when an ally rolls a critical success or critical
+                hit using advantage that you granted them. You also restore 1
+                gumption after resting and 2 after sleeping." 
   type: rule
-  brief:  You can collect up to 10 Gumption, which allows you to perform special feats. You gain 1 gumption when an ally succeeds a check aided by one of your inspiration dice or gains a critical hit using advantage you granted them. You also restore 1 gumption after resting and 2 after sleeping. 
+  brief:  "You can collect up to ten Gumption, which allow you to perform special feats.
+                You gain 1 gumption when an ally rolls a critical success or critical
+                hit using advantage that you granted them. You also restore 1
+                gumption after resting and 2 after sleeping." 
 Audacious Attempt:
-  description: Rally yourself via sheer force of will. Spend one gumption to add 1d10 to a check.
+  description: "Rally yourself via sheer force of will. Spend one gumption to gain advantage
+                on a check."
   type: general
-  brief: Spend 1 gumption to add 1d10 to a check.
+  brief: Spend 1 gumption to add gain advantage on a check.
 Forceful Blow:
   description: "Make an attack that carries with it the force of your resolve. The enemy must make a Spell Power save or be pushed back 15 feet."
   brief: "Costs 1 Gumption. Make an attack which forces a SP save. On failure, enemy is pushed back 15ft."
@@ -970,9 +1077,9 @@ Greater Heroic Action:
   type: combat
   brief: Spend 3 Gumption to gain 30ft. of movement and an action out of turn.
 Parry:
-  description: As a reaction, spend a Gumption to parry an incoming physical attack. Role a contested Dexterity check against an enemy. On success, take no damage. On failure, take half.
+  description: As a reaction, spend a Gumption to parry an incoming physical attack. Role a contested Dexterity check against an enemy. On success, take no damage..
   type: combat
-  brief: Reaction. Spend 1 Gumption. Contested DEX check. On success, no damage. On failure, half.
+  brief: Reaction. Spend 1 Gumption. Contested DEX check. On success, no damage.
 My People:
   description: "Gain advantage when speaking with guards, respectable individuals, and upper-class merchants."
   type: advantage
@@ -1712,15 +1819,19 @@ Wolf Aspect:
   type: general
   brief: Advantage on attacks made with an ally and tracking checks.
 Wildcat Aspect:
-  description: "When you are the target of a targeted attack, the enemy must succeed a contested Dexterity check or miss you."
+  description: "As a reaction, when you are the target of a targeted attack, force the enemy to make a contested Dexterity check or miss you."
   type: general
   brief: "When targeted, contested DEX check. Success: dodge."
-Bull Aspect:
+Bear Aspect:
   description: "Whenever you make an attack, make a size based contested Strength check against your enemy. On failure, they fall prone. Gain advantage on Strength checks."
   type: general
   brief: When you attack, size based contested STR save or enemy prone. ADV on STR checks.
-Bear Aspect:
-  description: "You take half blunt and piercing damage."
+# Bull Aspect:
+#   description: "At the cost of one action point, charge forward 15 feet as an offhand action.
+#                 Any enemies you bump into must make a contested strength check or fall prone."
+#   brief: "Cost 1. Offhand action. Charge 15ft. Enemies hit must make a contested STR check or fall prone."
+Tortoise Aspect:
+  description: "You take half blunt damage."
   type: general
   brief: You take half blunt and piercing damage.
 Elemental Aspect:
@@ -1848,8 +1959,8 @@ Lionhearted:
   type: advantage
   brief: Spend 1 Gumption to make a spell power save with advantage.
 Greater Lionhearted:
-  description: Spend 1 Gumption to shrug off all status effects.
-  brief: Spend 1 Gumption to shrug off all status effects.
+  description: Spend 5 Gumption to ignore a spell.
+  brief: Spend 5 Gumption to ignore a spell.
   type: general
 Dire Companion: 
   description: Your companion animal is now of Dire size. See the book of known beasts for details.
@@ -2252,10 +2363,15 @@ Scurry:
   type: advantage
   brief: Gain advantage on DEX athletics checks.
 Dodge:
-  description: "Any time you are the target of a targeted attack, the enemy must roll a 
-                contested Dexterity check or miss."
+  description: "Once per turn when you are the target of a targeted attack, 
+                the enemy must roll a contested Dexterity check or miss."
   type: combat
-  brief: "When targeted. Roll a contested DEX check. Success: attack misses."
+  brief: "Once per turn when targeted. Roll a contested DEX check. Success: attack misses."
+Greater Dodge:
+  description: "Every time you are the target of a targeted attack, the enemy
+                must succeed a contested Dexterity check or miss."
+  type: combat
+  brief: "Whenever targeted. Roll a contested DEX check. Success: attack misses."
 Redirecting Dodge:
   description: Redirect any dodged damage to an enemy within range.
   type: combat
