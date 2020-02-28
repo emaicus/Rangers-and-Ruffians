@@ -812,7 +812,7 @@ __Sprout Abilities:__
 * __Advantages:__   
   * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
-  * __Dodge:__ Any time you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
+  * __Dodge:__ Once per turn when you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
   
   
   
@@ -1487,12 +1487,10 @@ If a skill has a stat based requirement, you must have a certain value for a sta
 before you can learn the skill. If a skill has a skill requirement, you must learn
 the required skill or skills first.
 * __Cook:__ During a rest, you may cook food which heals 1d6 health.  
-* __Master Chef:__ During a rest, you may cook food which heals 2d6 health.  
+* __Master Chef:__ During a rest, you may cook food which heals 3d8 health.  
   * Skill Requirements: _Cook_  
-* __Light Sleeper:__ Make perception checks with advantage while sleeping  
 * __Restful Sleeper:__ Roll healing dice with advantage when resting or sleeping.  
-* __Shield Master:__ Don't take movement penalties from shield use.  
-  * Stat Requirements: _Strength: 1, Dexterity: 2_  
+* __Shield Master:__ Take 5 feet fewer of movement penalty when using shields.  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  
 * __One Handed Weapon Proficiency:__ You may wield one handed physical weapons without disadvantage.  
 * __Dual Wielding Proficiency:__ You may wield two one handed weapons without disadvantage.  
@@ -1500,7 +1498,6 @@ the required skill or skills first.
   * Stat Requirements: _Dexterity: 3_  
 * __Two Handed Weapon Proficiency:__ You may wield two handed weapons without disadvantage.  
 * __Ranged Weapon Proficiency:__ You may wield non-firearm ranged weapons without disadvantage  
-  * Stat Requirements: _Dexterity: 1_  
 * __Firearm Proficiency:__ You may wield firearms without disadvantages  
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
 * __Basic Magic:__ You may use tier zero magic from the Novice Spell Book. Each time you level up, gain a tier zero spell.  
@@ -1508,25 +1505,18 @@ the required skill or skills first.
 * __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Quick Draw:__ You may roll initiative with advantage.  
-  * Stat Requirements: _Perception: 3, Dexterity: 2_  
 * __Tinker:__ You may attempt to make items and contraptions during rests.  
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
 * __Nimble Navigator:__ Don't take penalty from difficult terrain. Stand up for free after being knocked prone.  
   * Stat Requirements: _Dexterity: 3_  
-* __En Garde:__ Reaction. Once per turn, when attacked, decrease the attack damage by your dexterity.  
+* __Dodging Stance:__ As an Offhand Action, move into a dodging stance. As a reaction before your next turn, when you are the target of a targeted attack, make a contested Dexterity check against the attacking enemy. On success, you avoid the attack.  
   * Stat Requirements: _Dexterity: 1_  
-* __Shrug it Off:__ Reaction. Once per turn, when attacked, decrease the attack damage by your strength.  
+* __Shrug it Off:__ Reaction. Once per turn, when attacked, decrease the attack damage by twice your strength.  
   * Stat Requirements: _Strength: 1_  
 * __Leader:__ Give all allies a 1d6 inspiration dice at the start of each battle.  
   * Stat Requirements: _Inner Fire: 3, Charisma: 3_  
 * __Mage Hunter:__ Gain advantage on breaking enemy concentration and on SP saves.  
   * Stat Requirements: _Inner Fire: 3_  
-* __Minor Movement Distance Increase:__ Move an additional 5 feet per turn.  
-* __Greater Movement Distance Increase:__ Move an additional 5 feet per turn.  
-  * Skill Requirements: _Minor Movement Distance Increase_  
-* __Major Movement Distance Increase:__ Move an additional 5 feet per turn.  
-  * Skill Requirements: _Greater Movement Distance Increase_  
 * __Lip-Reader:__ You can read the lips of anyone you can see.  
   * Stat Requirements: _Perception: 3_  
 * __Insomniac:__ You can gain the benefits of normal sleep for one night without sleeping.  
@@ -1544,7 +1534,7 @@ the required skill or skills first.
   * Stat Requirements: _Inner Fire: 3_  
 * __Sage:__ Re-roll any ones or twos rolled while casting magic.  
   * Stat Requirements: _Intelligence: 5, Inner Fire: 3_  
-* __Close Quarters Combat:__ Do not take disadvantage with ranged weapons in close quarters.  
+* __Close Quarters Combat:__ Do not take disadvantage with ranged weapons when harried.  
 * __Two Handed Weapon Master:__ Carry two handed weapons with one hand.  
   * Stat Requirements: _Strength: 5, Dexterity: 1_  
 * __Master of Concentration:__ Concentrate on two spells at the same time  

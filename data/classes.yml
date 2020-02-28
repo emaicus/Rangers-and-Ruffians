@@ -118,8 +118,8 @@ Barbarian:
           - Elk Aspect # Add 15 feet of movement.
           - Wolf Aspect # If you attack an enemy with an ally, gain advantage.
           - Wildcat Aspect # You have the ability to dodge incoming attacks.
-          - Bull Aspect # All of your attacks have a chance to knock an enemy prone.
-          - Bear Aspect # You take half blunt and piercing damage.
+          - Bear Aspect # All of your attacks have a chance to knock an enemy prone.
+          - Tortoise Aspect # You take half blunt and piercing damage.
           - Elemental Aspect # Convert your damage to a different type of damage of your choice. Declare when aspect is equipped.
           - Leech Aspect # Recover half your level (round up, min 1) in health whenever you land a blow.
           - Dolphin Aspect # Swim at twice your walking speed and hold your breath for fifteen minutes.
@@ -136,10 +136,10 @@ Barbarian:
         level_4:
           abilities:
           # Redundant with Leech Aspect. - Draining Strike #: Regain half of the damage you deal as health.
+          - Phase Walk # If you kill an enemy with a spiritual weapon, teleport
         level_5:
           abilities:
           - Greater Spiritual Infusion # Equip two aspects
-          - Phase Walk # If you kill an enemy with a spiritual weapon, teleport
         level_6:
           abilities:
           - Warrior Spirit # Slay an enemy, regain an action point
@@ -200,8 +200,6 @@ Knight:
           abilities:
           - Melee Weapon Proficiency
           - Kingsmen
-          - Shield Training
-          - Armor Training
           - Overwhelming Strike
           - Pivot
           - Steel Yourself
@@ -290,8 +288,6 @@ Paladin:
           - Melee Weapon Proficiency
           - Thrown Weapon Proficiency
           - Pledge
-          - Shield Training # Tank
-          - Armor Training #Tank
           - Tier Zero Spells # Attack Heal
           - Hammer of Light # Attack
           - Faithful Weapon # Attack
@@ -389,6 +385,7 @@ Ranger:
       levels:
         level_0:
           abilities:
+          - Light Sleeper # PER checks while sleeping
           - Melee Weapon Proficiency
           - Ranged Weapon Proficiency
           - Minor Medicine
@@ -620,13 +617,14 @@ Highborn:
           abilities:
           - Melee Weapon Proficiency
           - My People
-          - Inspire # Grant an ally a 1d12 inspiration dice.
-          - Inspiring Attack # Cost 1. Extra damage dice, grant an ally a 1d6 inspiration.
-          - Encouraging Presence # When you are standing adjacent to an ally, both of you get advantage on attacks.
+          - Inspire # Cost 1. Grant an ally advantage on a check.
+          - Inspiring Attack # Cost 1. Extra damage dice, grant an ally advantage on their next attack.
+          # - Encouraging Presence # When you are standing adjacent to an ally, both of you get advantage on attacks.
         level_1:
           abilities:
-          - Gumption # Regain 2 Gumption on rest. If an ally succeeds a check aided by one of your inspiration dice or gets a critical hit using advantage you grant, gain a gumption.
-          - Audacious Attempt # Spend a Gumption to add 1d10 to a check
+          - Gumption # Regain 2 Gumption on rest. If an ally crits, gain a gumption.
+          - Heroic Blow # Spend 1 Gumption to add an extra damage dice to an attack.
+          - Audacious Attempt # Spend a Gumption to gain advantage on a check.
         level_2:
           abilities:
           - Valiant Success # When you role a critical hit, gain a Gumption.
@@ -638,11 +636,10 @@ Highborn:
           - Reposition # Cost 1. Grant an ally 15ft. of movement and advantage on their next attack.
         level_4:
           abilities:
-          - Heroic Blow # Spend 1 Gumption to add an extra damage dice to an attack.
           - Greater Inspiring Attack # Cost 1. Extra dmg dice. Grant an ally a 1d8 INSP dice
+          - Forceful Blow # Spend 1 Gumption to force an enemy to make a contested STR check. On success, add 15 feet of knockback to an attack
         level_5:
           abilities:
-          - Forceful Blow # Spend 1 Gumption to force an enemy to make a contested STR check. On success, add 15 feet of knockback to an attack
           - Parry # Spend 1 Gumption. Reaction. Roll a contested DEX check against a physical attack. On success, no damage. On failure, half.
           - Gallant Resolve # Spend 1 Gumption to give yourself your level in health.
         level_6:
@@ -652,12 +649,13 @@ Highborn:
         level_7:
           abilities:
           - Offhand Attack
-          - Greater Valiant Success # Gain Gumption by slaying enemies.
-          - Greater Lead the Way # Spend 1 Gumption to add 1d10 to initiative
+          - Greater Reposition # Cost 1. Grant an ally 30ft. movement and advantage on their next action.
+          # - Greater Valiant Success # Gain Gumption by slaying enemies.
         level_8:
           abilities:
           - Commanding Presence # Add 1d6 to any Charisma Checks.
-          - Major Inspiring Attack # 1d10 insp.
+          - Aura of Courage
+          # - Major Inspiring Attack # 1d10 insp.
         level_9:
           abilities:
           - Lionhearted # Spend 1 Gumption to make an SP save with advantage.
@@ -666,17 +664,16 @@ Highborn:
           - Heroic Action # Spend 2 to make an extra action  on your turn.
         level_11:
           abilities:
-          - Greater Reposition # Cost 1. Grant an ally 30ft. movement and advantage on their next action.
+          - Greater Lead the Way # Spend 1 Gumption to add 1d10 to initiative
         level_12:
           abilities:
-          - Legendary Inspiring Attack # 1d12
+          # - Legendary Inspiring Attack # 1d12
           - Prepare for Combat # At the start of combat, spend 1 Gumption to immediately grant all allies 15 feet of movement.
         level_13:
           abilities:
           - Greater Heroic Action # Spend 3 Gumption to make an extra action out of turn.
         level_14:
           abilities:
-          - Aura of Courage # All allies gain 10 health while in your presence.
           - Greater Lionhearted # Spend 1 Gumption to shrug off all status effects.
         level_15:
           abilities:
@@ -835,26 +832,27 @@ Rogue:
           - Flank # If an enemy is harried, get behind them to hide and gain advantage.
         level_5:
           abilities:
+          - Greater Dodge
           - Ride the Blindspot # If flanked enemy tries to turn to look at you, spend an action point to pivot around behind them.
-          - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage. Stacks.
         level_6:
           abilities:
-          - Soft Landing # Less fall damage
+          - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage. Stacks.
           - High Ground # Extra dice on plunging attacks.
         level_7:
           abilities: 
           - Offhand Attack
+          - Soft Landing # Less fall damage
           - Break Away # Once you have established flanking position, you may break it without provoking exposed attacks.
-          - Sticky Fingers
         level_8:
           abilities:
+          - Sticky Fingers
           - Greater Mantle
-          - Soundless
         level_9:
           abilities:
-          - Party Save
+          - Soundless
         level_10:
           abilities:
+          - Party Save
           - Mark # Mark an enemy. While Marked, they take disadvantage in attacks made against you and are considered harried.
         level_11:
           abilities: 
@@ -2617,49 +2615,62 @@ Wizard:
           - Novice Spellbook
           - The Wizard's Addendum
           - Tier Zero Spells
+          - Natural Intellect # Adv on INT checks.
         level_1:
           abilities:
           - Tier One Spells
-          - Looming Presence
+          - Looming Presence # Adv when intimidating lower int.
         level_2:
           abilities:
+          - Enchanting
+          - Font of Magic
         level_3:
           abilities:
-          - Minor Offhand Spell
+          - Minor Homunculus
         level_4:
           abilities:
           - Tier Two Spells
+          - Channel Untapped Magic
         level_5:
           abilities:
-          - Greater Offhand Spell
+          - Dueling Mages
         level_6:
           abilities:
+          - Commit to Memory # declare a tier 2 or greater spell to have -1 cost.
         level_7:
           abilities:
-          - Offhand Attack
+          - Offhand Spell
           - Tier Three Spells
-          - Commit to Memory
+          - Deadman's Contingency
+          - Efficient Enchantment
         level_8:
           abilities:
+          - Greater Homunculus
+          - Magic Resistance
         level_9:
           abilities:
-          - Major Offhand Spell
+          - Greater Channel Untapped Magic
         level_10:
           abilities:
           - Tier Four Spells
+          - Spell Invention
         level_11:
           abilities:
+          - Major Homunculus
         level_12:
           abilities:
-          - Spell Invention
+          - Major Offhand Spell
+          - Major Channel Untapped Magic
         level_13:
           abilities:
           - Tier Five Spells
+          - Magic Redirection
         level_14:
           abilities:
+          - Efficient Spell Invention
         level_15:
           abilities:
-          - Tome of the Ancients
+          - Legendary Channel Untapped Magic
       standings: Wizards are known to be friends to all races, and get along particularly
         well with Halflings and Rangers.
       tag_line: Pointy Hatted Mage
@@ -2829,8 +2840,6 @@ Gunslinger:
         level_14:
           abilities:
           - Reduced Critical
-          # NOPE
-          #- Greater Elemental Strike
         level_15:
           abilities:
           - Greater Line Them Up

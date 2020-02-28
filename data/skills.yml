@@ -3,23 +3,17 @@ Cook:
   description: "During a rest, you may cook food which heals 1d6 health."
   type: general
 Master Chef:
-  description: "During a rest, you may cook food which heals 2d6 health."
+  description: "During a rest, you may cook food which heals 3d8 health."
   type: general
   requirements:
     skills:
       - Cook
-Light Sleeper:
-  description: "Make perception checks with advantage while sleeping"
-  type: advantage
 Restful Sleeper:
   description: "Roll healing dice with advantage when resting or sleeping."
   type: advantage
 Shield Master:
-  description: "Don't take movement penalties from shield use."
-  requirements:
-    stats:
-      Strength: 1
-      Dexterity: 2
+  description: "Take 5 feet fewer of movement penalty when using shields."
+  type: combat
 Hearty:
   description: "When you level up, you may roll your health dice with advantage."
   type: general
@@ -39,10 +33,7 @@ Two Handed Weapon Proficiency:
   type: general
 Ranged Weapon Proficiency:
   description: "You may wield non-firearm ranged weapons without disadvantage"
-  type: general
-  requirements:
-    stats:
-      Dexterity: 1
+  type: combat
 Firearm Proficiency:
   description: "You may wield firearms without disadvantages"
   type: general
@@ -64,13 +55,6 @@ Advanced Magic:
       Intelligence: 5
     skills:
       - Basic Magic
-Quick Draw:
-  description: "You may roll initiative with advantage."
-  type: general
-  requirements:
-    stats:
-      Perception: 3
-      Dexterity: 2
 Tinker:
   description: "You may attempt to make items and contraptions during rests."
   type: general
@@ -84,15 +68,20 @@ Nimble Navigator:
   requirements:
     stats:
       Dexterity: 3
-En Garde:
-  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your dexterity."
-  type: general
+Dodging Stance:
+  description: "As an Offhand Action, move into a dodging stance. As a reaction before your next
+                turn, when you are the target of a targeted attack, make
+                a contested Dexterity check against the attacking enemy. On success, you avoid
+                the attack."
+  type: combat
+  cost: 1
   requirements:
     stats:
       Dexterity: 1
 Shrug it Off:
-  description: "Reaction. Once per turn, when attacked, decrease the attack damage by your strength."
+  description: "Reaction. Once per turn, when attacked, decrease the attack damage by twice your strength."
   type: general
+  cost: 1
   requirements:
     stats:
       Strength: 1
@@ -109,21 +98,6 @@ Mage Hunter:
   requirements:
     stats:
       Inner Fire: 3
-Minor Movement Distance Increase:
-  description: "Move an additional 5 feet per turn."
-  type: combat
-Greater Movement Distance Increase:
-  description: "Move an additional 5 feet per turn."
-  type: combat
-  requirements:
-    skills:
-    - Minor Movement Distance Increase
-Major Movement Distance Increase:
-  description: "Move an additional 5 feet per turn."
-  type: combat
-  requirements:
-    skills:
-    - Greater Movement Distance Increase
 Lip-Reader:
   description: "You can read the lips of anyone you can see."
   type: general
@@ -156,9 +130,11 @@ Phallanx:
 Medic:
   description: "You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP."
   type: combat
+  cost: 1
 Greater Medic:
   description: "You are able to heal a teammate for 2d6 health for 1 AP."
   type: general
+  cost: 1
   requirements:
     stats:
       Inner Fire: 2
@@ -179,7 +155,7 @@ Sage:
       Intelligence: 5
       Inner Fire: 3
 Close Quarters Combat:
-  description: "Do not take disadvantage with ranged weapons in close quarters."
+  description: "Do not take disadvantage with ranged weapons when harried."
   type: combat
 # Empowered Spells:
 #   description: "Roll double the damage dice for your tier zero spells."
@@ -220,4 +196,30 @@ Tumble:
 # Fire Bug:
 #   description: "Roll advantage when attacking with fire."
 #   type: combat
-
+# Fast Draw:
+#   description: "You may add your dexterity as well as your perception to an initiative roll."
+#   type: general
+#   requirements:
+#     stats:
+#       Dexterity: 0
+# Minor Movement Distance Increase:
+#   description: "Move an additional 5 feet per turn."
+#   type: combat
+# Greater Movement Distance Increase:
+#   description: "Move an additional 5 feet per turn."
+#   type: combat
+#   requirements:
+#     skills:
+#     - Minor Movement Distance Increase
+# Major Movement Distance Increase:
+#   description: "Move an additional 5 feet per turn."
+#   type: combat
+#   requirements:
+#     skills:
+#     - Greater Movement Distance Increase
+# Contortionist:
+#   description: "You are able to easily contort your body."
+#   type: general
+#   requirements:
+#     stats:
+#       Dexterity: 3

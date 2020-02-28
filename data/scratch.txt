@@ -1,6 +1,6 @@
 The Big Todo:
   0. OVERALL (1/8)
-  1. Update Classes (13/17 complete)
+  1. Update Classes (14/16 complete)
   2. Check all Classes (0/17)
   3. Update Subclasses (12/25)
   4. Update Races (0/20 complete)
@@ -26,7 +26,7 @@ WEAK PARITY:
   11. [X] Elementalist Druid
   12. [X] Necromancer
   13. [X] Sorcerer
-  14. [ ] Wizard
+  14. [X] Wizard
   15. [X] Archer
   16. [X] Marksman Gunslinger
 
@@ -40,10 +40,8 @@ EXTRA THAT I DID BECAUSE I'M DUMB
   20. [X] Telepath Fighter
   21. [X] Heroic Highborn
 
-THINGS I WANT IN
-  22. [ ] Soulsword Sorcerer
-
 LONG TERM
+  22. [ ] Soulsword Sorcerer
   23. [ ] Beastmaster
   24. [ ] Death Knight Knight
   25. [ ] Hedge Knight Knight
@@ -92,7 +90,7 @@ Combined
         [X] Sorcerer
         [ ] Soulsword Sorcerer
   14. Wizard
-        [ ] Wizard
+        [X] Wizard
   15. Archer
         [X] Archer
   16. Gunslinger
@@ -165,13 +163,13 @@ New Spell Cadence (Wizard Rate):
   3
   4: Tier 2 11
   5: 
-  6: Offhand Spell (lv 0 or 1)
-  7: Tier 3 8
+  6: 
+  7: Tier 3 8, Offhand Spell (lv 0 or 1)
   8: 
   9
   10: Tier 4 5
-  11: Major Offhand Spell (lv 2)
-  12: 
+  11: 
+  12: Major Offhand Spell (lv 2)
   13: Tier 5 2
   14: 
   15: Tier 6
@@ -957,14 +955,18 @@ Ranger:
   Advantages:
     - Tracker # Tracking
       - Expert Tracker
+    - Perception While Sleeping
     - Camouflage # Stealth when still
     - Listen # Advantage on Perception Checks (not initiative)
       - Uncanny Perception # See in the dark, advantage on initiative.
   Passive:
-  - Under the Stars # All sleep works as if you are in a bed.
+    - Under the Stars # All sleep works as if you are in a bed.
   Combat Passive:
   Combat Active:
-    - Dodging Stance
+    - Dodging Stance # Offhand action to go into a dodging stance. Once before next turn, dodge
+      - Greater Dodging Stance # Whenever you are targeted.
+    - Charging Slice # Cost 1. Run forward 15 feet. Terminate the charge with an attack which ignores enemy armor.
+    - 
   Combo:
     - On a critical hit, Immediately assume a dodging stance.
 
@@ -1003,39 +1005,42 @@ Wizard:
 
   Special:
     X Fast Learner: You learn spell tiers one level faster than any other class.
-    - Minor Homunculus: At the cost of 10 gold and 1 evening of work, attempt to create a
+    X Minor Homunculus: At the cost of 10 gold and 1 evening of work, attempt to create a
                   Minor Wizard's Homunculus from the Book of Known Beasts.
-      - Greater Homunculus: At the cost of 50 gold and 1 evening of effort, attempt to
+      X Greater Homunculus: At the cost of 50 gold and 1 evening of effort, attempt to
                               create a Greater Wizard's Homunculus from the Book of Known Beasts.
-      - Major Homunculus: At the cost of 1000 gold and 1 week of effort, attempt to create
+      X Major Homunculus: At the cost of 1000 gold and 1 week of effort, attempt to create
                           a Major Wizard's Homunculus from the Book of Known Beasts. 
-    - Enchanting: You may store 1 a cost 0 spell within a crystal valued at 10 gold.
+    X Enchanting: You may store 1 a cost 0 spell within a crystal valued at 10 gold.
                   cost 1 in a gem valued at 100 gold, cost 2 in a crystal valued at 1,000 gold, etc.
                   Activating a crystal takes an action.
-      - Efficient Enchantment: Halve the cost of enchanting.
-    - Spell Invention: Using spells that you know as a template, you are able to invent new ones at a cost
-                        of 100 gold for a tier 0 spell, 200 for a tier 1, 400 for a tier 2, 800 for a tier 3, etc.
+      X Efficient Enchantment: Halve the cost of enchanting.
+    X Spell Invention: Using spells that you know as a template, you are able to invent new ones at a cost
+                        of 100 gold and 1 week of research for a tier 0 spell, 200 and 2 weeks for a tier 1, 400 and 4 weeks for a tier 2, 800 and 8 weeks for a tier 3, etc.
+      X Efficient Spell Invention: Halve the cost OR time requirement of creating a new spell.
   Advantages:
-    - Historian
-    - Natural Intellect
-    - Looming Presence
+    X Historian
+    X Natural Intellect
+    X Looming Presence
   General Passive:
     - Font of Magic: Forgo healing from rest to regain 2x the action points.
   Combat Passive:
-    - Commit to Memory: declare a tier 2 or greater spell to have -1 cost.
-    - Deadman's Contingency: Put in place a contingency plan for when you hit zero health. The
+    X Commit to Memory: declare a tier 2 or greater spell to have -1 cost.
+    X Deadman's Contingency: Put in place a contingency plan for when you hit zero health. The
       contingency can involve up to three of your spells (powered by your remaining
       spellpower and/or enchanted crystals), and is chained together
       by an ethereal entity which acts as your proxy, and which exists for sixty seconds.
-    - Dueling Mages: Cost 1. When you are attacked by a targeted spell, make a contested
-        inner fire save with the wielder. On success, suffer no damage.
-      - Magic Redirection: When you succeed at dueling mages, you may redirect the spell.
-    - Magic Resistance: You take half damage from magic attacks and make SP saves with advantage.
-    - Channel Untapped Magic: You may attempt to channel untapped magic in the world around you.
-        Roll 1d20. On a 10 or above, cast a spell of tier 2 or lower for free. On failure,
-        suffer a rebound which deals 1d10 damage which ignores armor.
-      - Greater Channel Untapped Magic: Attempt with tier 3 spell. On failure, take
+    X Dueling Mages: Cost 1. When you are attacked by a targeted spell, make a contested
+        inner fire check against the wielder. On success, suffer no damage.
+      X Magic Redirection: When you succeed at dueling mages, you may redirect the spell.
+    X Magic Resistance: You take half damage from magic attacks and make SP saves with advantage.
+    X Channel Untapped Magic: You may attempt to channel untapped magic in the world around you.
+        Make a D15 intelligence check. On a 15 or above, cast a spell of tier 2 or lower for free. On 
+        failure, suffer a rebound which deals 1d10 damage which ignores armor.
+      X Greater Channel Untapped Magic: Attempt with tier 3 spell. On failure, take
           2d10 damage.
+      X Major Channel Untapped Magic: Tier 4, 4d10 damage
+      X Legendary Channel Untapped Magic: Tier 5, 8d10 damage.
   Combat Active:
     
   Combo
@@ -1133,9 +1138,9 @@ Rework:
 Ideas:
   If you attack an enemy, they can't make an exposed attack against you.
 
-  Spell Invention Components
-
-Gain another luck on critical
+Death Knight:
+  Punish: Deal an extra dice of damage to enemies that have failed an SP save this turn.
+  Isolate: Stop an enemy from being able to be healed or aided by friendly magic.
 
 
 ========================= CUT CLASSES =====================================
