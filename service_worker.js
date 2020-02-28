@@ -32,19 +32,19 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/css/character_selection.css",
-    "revision": "5351f61fed9d7ece2b4767d04eea02b6"
+    "revision": "b7c6e4018e834399215c0b73a0d1fa42"
   },
   {
     "url": "new_site/css/iterated_char_sheet.css",
-    "revision": "388d4393bc3d603cbcc91cfabd956a38"
+    "revision": "e40e4976b3b4868617820d6516f75938"
   },
   {
     "url": "new_site/css/rangers.css",
-    "revision": "dce4b1e899df221f966c792f2306f2fc"
+    "revision": "e12fae75d619d03263a4804a3a183469"
   },
   {
     "url": "new_site/css/two_sided_character_sheet.css",
-    "revision": "5c257a9ed6d120944c26b43f79db3477"
+    "revision": "7d8516af9857ee1ed9b320ff842eb2c9"
   },
   {
     "url": "new_site/icons/bolt-shield.svg",
@@ -56,7 +56,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/icons/circle-halved.svg",
-    "revision": "bf8b93da9a86eaec639f942f6377e4d8"
+    "revision": "f1d922149bf80c718ea648be0a1900c5"
   },
   {
     "url": "new_site/icons/circle.svg",
@@ -123,6 +123,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "4b5f5651f170ee64e54d4b097e18f2d7"
   },
   {
+    "url": "new_site/icons/moebius-trefoil.svg",
+    "revision": "7b94303778ad48c63358d87c49d8fee4"
+  },
+  {
     "url": "new_site/icons/power-lightning.svg",
     "revision": "96d1686c81be23108c2b1406f257bfbc"
   },
@@ -143,8 +147,12 @@ workbox.precaching.precacheAndRoute([
     "revision": "8396f1cb288bb874fabd6fb1dc5bee2b"
   },
   {
+    "url": "new_site/icons/shiny-purse.svg",
+    "revision": "9a3f782eb1bf77236ac121fd1e251770"
+  },
+  {
     "url": "new_site/icons/swap-bag.svg",
-    "revision": "afec826ccb7fa028059ef137e6ef1102"
+    "revision": "fad31dd66c26b06eab6af038e704aef8"
   },
   {
     "url": "new_site/icons/sword-brandish.svg",
@@ -155,8 +163,16 @@ workbox.precaching.precacheAndRoute([
     "revision": "50efddea824e634ab7a44d8f432de928"
   },
   {
+    "url": "new_site/icons/token.svg",
+    "revision": "40e9a049484cfe284bfb9ccb60090bb2"
+  },
+  {
     "url": "new_site/icons/tombstone.svg",
     "revision": "5080916dfa69b9c2adac3a167f1052a7"
+  },
+  {
+    "url": "new_site/icons/two-coins.svg",
+    "revision": "5a44d7766e4ec80be3024ab0f75aaf83"
   },
   {
     "url": "new_site/images/backdrops/landscape_ancients.jpg",
@@ -356,43 +372,43 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/js/rangers.js",
-    "revision": "7fe7b6634946aec76bc0f0391ce743b3"
+    "revision": "a06cdf42fa706a43aa7d1aa835187589"
   },
   {
     "url": "new_site/known_dependencies.json",
-    "revision": "93129f5a9d5b628abfb7abf46690d95c"
+    "revision": "cbec16f2ca1287a782f330a10b1c19d0"
   },
   {
     "url": "new_site/pages/character_creation_helper_page.html",
-    "revision": "56c89e9ac009ea5d161f7e83e4ba95b7"
+    "revision": "cb4709f3eff44f401b341b66d698afa7"
   },
   {
     "url": "new_site/pages/character_sheet.html",
-    "revision": "5b6c6be751108e44f7c10408494e8073"
+    "revision": "98f9cc79fb60dfaa0ee744628d2194c1"
   },
   {
     "url": "new_site/pages/GENERATED/ALT.json",
-    "revision": "4383fe24988e4211784b2e02a7baad7a"
+    "revision": "539fd627a5696d3336fbd8d879b67915"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "76d4bf6c3fff85f7da33346687c7be6b"
+    "revision": "e8caf1ee67cb3cd2626023fda73c6cc4"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "c9f896604dd3d2afc3a8a2e0f4ba46ab"
+    "revision": "235759d03b6d767cca6972f593eda96a"
   },
   {
     "url": "new_site/pages/GENERATED/Changelog.html",
-    "revision": "6ac61837476c44192d4267820d0ca8c3"
+    "revision": "925da7d3da4878db08b74b1b23c58034"
   },
   {
     "url": "new_site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "4829cd15b0ede8b5abe964599adb0740"
+    "revision": "cfaefb64f3ac076efe60fd5cfe80d14b"
   },
   {
     "url": "new_site/pages/GENERATED/Examples.html",
-    "revision": "8e5a85686f3437032d60ef5679a98696"
+    "revision": "ea52fa763d4f21fadb0a6e3fdb8aab1d"
   },
   {
     "url": "new_site/pages/GENERATED/Examples.md",
@@ -400,27 +416,27 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "6131c993a24982665816efcd18aefd09"
+    "revision": "36dfc0e26bd54476b603c76b45be3383"
   },
   {
     "url": "new_site/pages/GENERATED/Printed_Materials.html",
-    "revision": "2bb1f700ab8b36455efe8f2a4e27a864"
+    "revision": "ccffaf70f0e87f9359db773af7fbb122"
   },
   {
     "url": "new_site/pages/GENERATED/Rulebook.html",
-    "revision": "c5e3f15a341b51c8492f58f3745a1e7f"
+    "revision": "dac951795abe7574a0306453c8e1b11e"
   },
   {
     "url": "new_site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "e3b08bbac7168c2e09d09b3f3b62c202"
+    "revision": "d14811c8fc5bdd159b8a77f16555c274"
   },
   {
     "url": "new_site/pages/level_up_sheet.html",
-    "revision": "97182cc377215087d486ff865e1d7483"
+    "revision": "9748502b7c79bc40e14d4695eb3107e3"
   },
   {
     "url": "new_site/pages/weapons.html",
-    "revision": "29402cdbd6aa7ccf38634d3bf7f73f4f"
+    "revision": "1cf44e7f6c599ca6875381b5501ad6eb"
   },
   {
     "url": "new_site/pages/weapons.md",
@@ -440,7 +456,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/templates/character_selection_template.html",
-    "revision": "3a976401cadbf56fe507f1e27f1dcf14"
+    "revision": "5c6749fba3df18ae45478670ee684f74"
   },
   {
     "url": "new_site/templates/character_sheet_template.html",
@@ -452,7 +468,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/templates/macros.html",
-    "revision": "d577b9bc2d10d8b2ce728a8aa37a450e"
+    "revision": "ea76cee52a24fd2fee2d4fb3a1c3ef41"
   },
   {
     "url": "new_site/templates/role_selection_template.html",
@@ -464,7 +480,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/templates/two_sided_character_sheet.html",
-    "revision": "6b222bc6d88e40ee05e4b70fd9915e77"
+    "revision": "5ac34931108e41cd8b49dd357fc01fb7"
+  },
+  {
+    "url": "new_site/templates/updated_character_sheet.html",
+    "revision": "7d505bad6de682940a165fe9431072d8"
   },
   {
     "url": "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
@@ -488,7 +508,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "f4c01abb06076c3366ce8929fd56d93f"
+    "revision": "addd92e1d7d4aec80facd5c3a2224cb6"
   },
   {
     "url": "assets/css/style.css",

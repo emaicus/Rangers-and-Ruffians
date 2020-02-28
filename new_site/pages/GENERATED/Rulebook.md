@@ -67,7 +67,7 @@ _Version 2.1.3_
      * [The Enemy Turn](#the-enemy-turn)  
      * [Combat Abilities](#combat-abilities)  
      * [Hitting Zero Health](#hitting-zero-health)  
-   * [Currency Weapons and Equipment](#currency-weapons-and-equipment)  
+   * [Currency, Weapons, and Equipment](#currency-weapons-and-equipment)  
      * [Currency](#currency)  
      * [Magic Equipment](#magic-equipment)  
      * [Weapons](#weapons)  
@@ -84,6 +84,9 @@ _Version 2.1.3_
    * [Leveling Up](#leveling-up)  
      * [When do I Level Up?](#when-do-i-level-up)  
      * [What Happens when I Level Up?](#what-happens-when-i-level-up)  
+     * [Multiclassing](#multiclassing)  
+   * [Miscellaneous Rules](#miscellaneous-rules)  
+     * [Companion Creatures](#companion-creatures)  
    * [How do I Compute my Character's Stats?](#how-do-i-compute-my-characters-stats)  
      * [Method 1 (Easiest) Use Pre-generated Stats:](#method-1-easiest-use-pre-generated-stats)  
      * [Method 2 (Easy) Standard Array:](#method-2-easy-standard-array)  
@@ -643,7 +646,7 @@ and [why they are important](Examples.md#why-are-diminishing-returns-important) 
   
 
   
-#### Actions
+#### Action
 On your turn you are able to take one __Action.__ An action is defined as doing something
 that takes your full attention for a few seconds. This can include casting a spell, making
 an attack, lifting a heavy object, or feeding a potion to an ally.
@@ -653,7 +656,7 @@ an attack, lifting a heavy object, or feeding a potion to an ally.
   
 
   
-#### Offhand Actions
+#### Offhand Action
 On your turn you may also take an offhand action. An offhand action is defined as doing something
 that can be done quickly without removing your full attention from combat. This includes leaping
 across a ledge, drinking a potion yourself, or opening an unlocked door. It does _not_ include
@@ -671,30 +674,25 @@ or some other event or change in battle conditions. When a triggering event occu
 able to take a reaction. You may take up to one reaction per turn.
   
   
+
+  
+##### Exposed Attacks
+If you move past an enemy or break melee (move away from) an enemy you leave yourself exposed,
+allowing the enemy to get a free attack against you as their reaction. Similarly, if an enemy moves away from
+or runs past you, you may make an attack against them as your reaction. 
   
   
 
   
 #### Movement
 On each turn, you are able to movement. Your maximum movement is based on the following formula:
-```movement = 15ft + (5ft x dexterity)``` where _negative dexterity_ is treated as ```0```. 
+```movement = 30ft + (5ft x dexterity)```. 
 This movement can be decomposed however
 you wish. For example, you might drink a potion as an offhand action, walk 5 feet forward, lift
 a cauldron as an action, and then walk ten 10 feet to the right.
   
   
 For examples of how to compute movement, see [The Book of Examples](Examples.md#computing-movement).
-  
-  
-
-  
-#### Exposed Attacks
-If you move past an enemy or break melee (move away from) an enemy you leave yourself exposed,
-allowing the enemy to get a free attack against you. Similarly, if an enemy moves away from
-or runs past you, you may make an attack against them. An entity can make only one such free attack
-per turn.
-  
-  
   
   
 
@@ -839,13 +837,13 @@ way!
   
 
   
-## Currency Weapons and Equipment
+## Currency, Weapons, and Equipment
   
   
 
   
 ### Currency
-Their are 5 types of Currency in Rangers and Ruffians.
+There are 5 types of Currency in Rangers and Ruffians.
 In order to help players reason about them, we provide an analog of their value
 to the modern day US Dollar.
   
@@ -1030,7 +1028,8 @@ Now, let's look at an example where we have a magic weapon with an effect dice. 
 
   
 #### Critical Hits With Weapons
-A critical hit occurs when a player rolls the highest possible value for an eligible weapon.
+A critical hit occurs when a player rolls the highest possible value for
+the primary dice of an eligible weapon.
 When this occurs, the player may add an additional dice of primary damage to their attack.
   
   
@@ -1332,6 +1331,175 @@ Alternatively instead of increasing your stats, you are able to instead take a n
 #### New Spells
 If you are a magic user, you are able to learn 1 new spell of _every_ spell tier that you know each time you level up.
 This means that if you know tier ```0```, ```1```, and ```2``` spells, you get to learn ```3``` spells: 1 spell each of tier ```0```, ```1```, and ```2```.
+  
+  
+  
+  
+
+  
+### Multiclassing
+Multiclassing is when a character wishes to diversify their talents by
+exploring a class other than the one that they started out with. For
+example, a ```Thief Rogue``` may wish to gain some minor magic,
+and explore the ```Sorcerer``` class. Or perhaps a ```Knight``` may
+wish to pick up some of the abilities of a ```Marksman Gunslinger```.
+  
+  
+When a character multiclasses, they declare that, rather than taking
+another level in a class that they already have, they want to gain 
+a level in a new class. For example, let us have a Level 5 ```Bard```
+that is in the process of going to Level 6. Instead of becoming a 
+Level 6 ```Bard```, the character may instead wish to become a 
+Level 5 ```Bard```, Level 0 ```Fighter```.
+  
+  
+
+  
+#### Character Level vs. Class Level
+When a Character begins multiclassing, it is important to distinguish
+the difference between class and character level. In the example described
+above, upon gaining its sixth ```Character Level```, a ```Bard``` chose
+to multiclass by gaining a level of ```Fighter```. In this scenario, we
+say that the character is now a Level 6 Character, which is a 
+Level 5 ```Bard``` and a Level 0 ```Fighter```.
+  
+  
+
+  
+#### Multiclass Abilities
+When a character Multiclasses, they immediately gain all Level 0 abilities
+of their new class. 
+  
+  
+
+  
+#### Multiclass Stats
+When a character Multiclasses, they ___do not___ gain any benefits from the
+starting stats of the class they are multiclassing into with one exception.
+  
+  
+
+  
+##### Multiclass Health Dice
+When a character gains a new level in a class, they must take the new class'
+health dice to roll their added health. For example, let us have an example character
+with a race with ```2``` health dice pieces. Up to this point,
+our character has been class ```Class 1```, which has ```6``` health dice pieces,
+but now they want to multiclass into ```Class 2``` which has ```2``` health dice pieces.
+  
+  
+In this scenario, the character uses ```Class 2's``` health dice to roll its new health.
+That is, it would use a health dice of ```4``` (```2``` pieces for the race, and ```2``` for 
+```Class 2```).
+  
+  
+Less abstractly, if a ```Barbarian``` multiclassed into a ```Wizard```, it would have to use the
+```Wizard's``` low health dice for any ```Wizard``` levels it gained.
+  
+  
+
+  
+#### Multiclass Prerequisites
+The following prerequisites must be met before a character is allowed to gain a level in a new class.
+1. The character must have an overall ```Character Level``` of at least 6. That is, ```Level 6```
+    is the first time that a character can multiclass.
+2. A character must have at least the starting stats for a class as described in the
+    [Compendium of Character Creation](#compendium-of-character-creation). 
+  
+  
+
+  
+## Miscellaneous Rules
+  
+  
+
+  
+### Companion Creatures
+There are multiple ways that a character might gain a companion
+creature in Rangers and Ruffians, including via ```Summoning Spells```,
+the ```Animal Companion``` skill, the Necromancer's ```Resurrection```
+ability, and the Wizard's companion ```Homunculus```.
+  
+  
+
+  
+#### Companion Creature Adventuring
+While out of combat, a character may request for their companion
+creature to perform actions on their behalf, depending on its intelligence.
+For example, a beast such as a player's ```Animal Companion```, might aid them
+by making a perception check on their behalf. A more intelligent creature,
+meanwhile, like a Wizard's ```Homunculus``` might aid them in their research.
+  
+  
+Players _do not_ directly control the actions of their companion creature while
+adventuring. For example, if a character asks their wolf companion to
+split up with them and track an enemy, they loose control of their companion until
+they are rejoined.
+  
+  
+
+  
+#### Companion Creatures in Combat
+  
+  
+
+  
+##### Initiative
+Initiative is not rolled for a companion creature. Instead, companion creatures
+act directly after their player's turn. 
+  
+  
+
+  
+##### Companion Turn
+The player controls their companion creature
+in combat, using their companion's entry in the 
+[The Book of Known Beasts](Book_of_Known_Beasts.md) for information about their
+health, stats, and abilities.
+  
+  
+A Companion Creature's turn is somewhat simpler than a players, it consists of an [Action](#action),
+a [Reaction](#reaction), and [Movement](#movement), but no [Offhand Action](#offhand-action).
+  
+  
+
+  
+#### Companion Animals Gained Via the Animal Companion Skill
+Companion Animals gained via the ```Animal Companion``` skill act differently
+from other types of companion creatures in a few notable ways.
+  
+  
+
+  
+##### Gaining a Companion Animal
+Once a player has the ```Animal Companion``` skill, there are three ways that they can
+acquire an animal companion.
+  
+  
+1. If the character is of ```Level 0``` and the game has not yet started, they may
+   gain an animal companion as part of their backstory.
+2. A player may acquire a young animal by purchasing it.
+3. A player may hunt down and tame a companion animal, either by befriending or dominating an adult animal,
+   or having a young animal imprint on them.
+  
+  
+
+  
+##### Companion Animal Growth
+Unlike most other forms of ```Companion Creature```, animal companions gained via the 
+```Animal Companion Skill``` grow and change over time. As a player [Levels Up](#leveling-up),
+their companion animal grows with them. Each ```Beast``` type creature in [The Book of Known Beasts](Book_of_Known_Beasts.md)
+has a ```Level Count``` and a ```Next Form``` associated with it. 
+Once the beast has been a player's animal companion for
+that many levels, it grows into its next form.
+  
+  
+For example, let us have a ```Dire Bear Cub``` companion, let us assume that the ```Level Count```
+to it's ```Next Form``` is ```3```, and let us assume that it's next form is a ```Young Dire Bear```.
+Further, let us have a Level 0 character be the companion of this bear. This means that,
+when the Level 0 character reaches Level 3 (and has therefore leveled up 3 times),
+the ```Dire Bear Cub``` will become a ```Young Dire Bear```. At this point, its stats,
+abilities, and health will be changed from that of a ```Dire Bear Cub``` to those of a ```Young Dire Bear```.
   
   
 
