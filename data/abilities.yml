@@ -31,12 +31,6 @@ Courageous Blow:
   type: combat
   brief: Add twice your INF to an attack.
   cost: 1
-Embers:
-  description: Cast forth fire from your hand with a range of 10 feet. Deals 1d4 damage. This increases to 1d8 at level
-    3, 1d10 at level 6, 1d12 at level 9, and 2d12 at level 12.
-  type: combat
-  brief: Shoot fire 10ft. Deals 1d4 dmg. Increases to 1d8 at LV3, 1d10 LV6, 1d12 LV9, 2d12 LV12.
-  cost: 1
 Elemental Weapon:
   description: Change the primary damage die for your weapon to deal elemental damage of your choice.
                Lasts until dispelled.
@@ -102,10 +96,10 @@ Bash:
 #   brief: Lasts 3 turns, add +1 to STR, DEX, VIT and INF. Advantage on intimidation.
 #   cost: 1
 Beauty Incarnate:
-  description: Gain advantage and +2 charisma when speaking to individuals who find
-    your sex attractive.
+  description: Due to your beauty, you have advantage on charisma checks when dealing
+    with races that find you attractive.
   type: advantage
-  brief: Gain advantage and +2 CHA when speaking with people that find you attractive.
+  brief: You have advantage when dealing with races that find you attractive.
 Become Mist:
   description: Spend one action point to become mist to have an attack pass right through
     you as a reaction.
@@ -120,7 +114,7 @@ Bellow:
   cost: 1
 Berserk:
   description: Go berserk, giving you +1 effective strength and dexterity. 
-    Further, gain advantage on Spell Power Saves when berserk and take half damage from any physical attacks.
+    Further, take half damage from any physical attacks.
     Going berserk lasts for 1 hour. Leaving berserk prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
   type: combat
@@ -155,6 +149,7 @@ Furious Blows:
   description: Attack twice in a single attack action while going berserk.
   type: combat
   brief: Make two attacks in a single action while going berserk.
+  cost: 1
 Fury:
   description: "On a turn in which you have taken damage, add an extra damage dice to all of your attacks."
   type: combat
@@ -181,7 +176,7 @@ Arching Swing:
   brief: "Make an attack which hits all adjacent enemies."
   cost: 1
 Hurl Weapon: 
-  description: "Throw your weapon up to 5ft. times your Strength or Dexterity. Treat this as a normal attack and then double its damage."
+  description: "Throw your weapon up to 5ft times your Strength or Dexterity. Treat this as a normal attack and then double its damage."
   type: combat
   brief: "Hurl your weapon 5ft x STR or DEX. Attack does 2x damage."
   cost: 1
@@ -228,9 +223,9 @@ Cartwheel:
   type: advantage
   brief: Gain advantage on acrobatics.
 Disarming Blow:
-  description: On a critical hit, force an enemy to drop something they are holding.
+  description: "Add an extra dice of damage. If the attacked enemy fails a spell power save, they must drop an item they are holding of your choice."
   type: combat
-  brief: On a critical hit, force an enemy to drop something.
+  brief: "Extra damage dice. SP save. Fail: Drop something of your choice."
 Flame Strike:
   description: Spend one action point to add one dice of fire damage to an attack.
   type: combat
@@ -526,6 +521,66 @@ Major Medicine:
   type: general
   brief: Spend 20 mins to create 1 Greater Health Potion per day. Last 24 hours.
   cost: 1
+Minor Herbalist:
+  description: "During a rest, heal an ally of any status affliction. Does not include curses."
+  type: general
+  brief: "During a rest, heal an ally of any status affliction. Doesn't include curses."
+  cost: 1
+Charging Slice:
+  description: "Charge forward fifteen feet before making an attack which deals an extra dice of damage and which ignores enemy armor."
+  type: combat
+  cost: 1
+  brief: "Extra dice of damage. Rush forward 15 ft. Ignore enemy armor."
+Tracking Mark:
+  description: "Mark an enemy as an offhand action. You know the direction of that enemy for 24 hours. At most one enemy may be marked at a time."
+  type: general
+  brief: "Offhand. Mark an enemy to know their general direction for 24 hours. 1 at a time."
+Second Tracking Mark:
+  description: "You may now mark two enemies with a tracking mark."
+  type: general
+  brief: "You may now mark 2 enemies with a tracking mark."
+Pinpoint Mark:
+  description: "If a marked enemy is within sight, you know its position within 30 feet."
+  type: general
+  brief: "If a marked enemy is within sight, you know its position within 30 ft."
+Greater Pinpoint Mark:
+  description: "You can see a marked entity even if it is invisible."
+  type: general
+  brief: "You can see invisible marked enemies."
+Know Your Enemy:
+  description: "You deal an extra dice of damage when attacking marked enemies."
+  type: combat
+  brief: "You deal an extra dice of damage when attacking marked enemies."
+Earthen Armor:
+  description: "Chunks of rock fly up to form armor around you, granting you resistance to slashing, piercing, and blunt attacks for 3 turns."
+  type: combat
+  brief: "Form earthen armor around yourself. Resistance to piercing, slashing, and blunt for 3 turns."
+  cost: 1
+Embers:
+  description: "Make an attack which travels an additional 15 feet and deals an extra dice of fire damage."
+  type: combat
+  brief: "Make an attack which travels an additional 15 feet and deals an extra dice of fire damage."
+  cost: 1
+Ice Bolt:
+  description: "Make an attack which travels an additional 15 feet and deals an extra dice of ice damage."
+  type: combat
+  brief: "Make an attack which travels an additional 15 feet and deals an extra dice of ice damage."
+  cost: 1
+Ready Defense:
+  description: "When you slay an enemy, assume a dodging stance."
+  type: combat
+  brief: "When you slay an enemy, assume a dodging stance."
+Greater Ready Defense:
+  description: "When you score a critical hit, assume a dodging stance."
+  type: combat
+  brief: "When you land a crit, assume a dodging stance."
+Fire and Ice:
+  description: Imbue one of your blades with fire and the other with ice. Each do an additional
+    dice damage for the duration of a battle. If you are not dual wielding, imbue your blade with fire or ice
+    at the cost of one action point.
+  type: combat
+  brief: Imbue 1 weapon with fire and another with ice (or only one weapon for 1 cost). Extra dice of damage for 1 battle.
+  cost: 2
 Hammer of Light:
   description: Any weapon that you wield does an additional dice of damage to undead.
   type: combat
@@ -592,14 +647,14 @@ Dodging Stance:
                 turn, when you are the target of a targeted attack,
                 make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
   type: combat
-  brief: "Offhand. This turn as a reaction when you are the target of an attack , contested DEX to avoid."
+  brief: "Offhand. This turn as a reaction when you are the target of an attack, contested DEX to avoid."
 Greater Dodging Stance:
   description: "As an Offhand Action, move into a dodging stance. Whenever you are the 
                 target of a targeted attack
                 before your next turn,
                 make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
   type: combat
-  brief: "Offhand. Before next turn, whenever you are the target of an attack , contested DEX to avoid."
+  brief: "Offhand. Before next turn, whenever you are the target of an attack, contested DEX to avoid."
 
 Grappling Dodge:
   description: "When you successfully dodge an enemy melee attack, you may make a contested strength check to attempt to 
@@ -623,6 +678,18 @@ Major Resting Meditation:
   description: "Find center by meditating during rests to regain 3 additional dice of health and two times the action points."
   type: combat
   brief: "Regain 3 additional dice of healing and 2x action points when resting."
+Ready Defense:
+  description: "When you land a critical hit, immediately enter a dodging stance."
+  type: combat
+  brief: "When you land a crit, enter a dodging stance."
+Greater Ready Defense:
+  description: "When you land a critical hit or slay an enemy, immediately enter a dodging stance."
+  type: combat
+  brief: "When you land a crit or slay an enemy, enter a dodging stance."
+Greater Dual Wielding: 
+  description: "You are able to make a dual wielding attack as an offhand action, and may make two two handed attacks as an action."
+  type: combat
+  brief: "You may make a dual wielding attack as an offhand action, and may make two 2 handed attacks as an action."
 Combo:
   description: "When you land a critical hit, immediately make an additional attack or enter a dodging stance."
   type: combat
@@ -647,12 +714,11 @@ Ultimate Titan-Slayer Punch:
   cost: 1
   brief: "Make an attack which ignores armor and deals 3 extra dice of damage to large creatures."
 Consecutive Normal Punches:
-  description: "Make two attacks in an action."
+  description: "Your hands and both ends of any staff-like weapon are considered melee weapons for the purposes of dual wielding."
   type: combat
-  cost: 1
   brief: "Make two attacks in an action."
 Consecutive Serious Punches:
-  description: "Consecutive normal punches no longer has a cost."
+  description: "You may make dual wielding attacks as an offhand action."
   type: combat
   brief: "Consecutive normal punches no longer has a cost."
 Battlefield Meditation: 
@@ -735,9 +801,9 @@ Ruffians:
   type: advantage  
   brief: You have advantage on charisma with common or seedy folk.
 Land on your feet:
-  description: You can fall 40 feet before taking fall damage.
+  description: Decrease any falling damage by 20 feet.
   type: general
-  brief: You don't suffer fall damage before 40 feet.
+  brief: Decrease any falling damage by 20 feet.
 Colossal:
   description: You stand 2 feet taller than the average individual of your race, and are treated as one size larger.
   type: general
@@ -941,19 +1007,148 @@ Beast Form:
   brief: Transform back and forth into a dire creature for one hour.
   cost: 2
 Finesse Strike:
-  description: Add an additional dice of damage to an attack of your choosing. If the affected entity fails an 
-    inner fire saving throw against your spell power, it suffers as much bleeding damage at the start of its next turn. 
+  description: "Add an additional dice of damage to an attack of your choosing. If the attack is a critical hit, 
+               double all damage dice."
   type: combat
-  brief: Add an additional dice to an attack. Enemy SP save. On fail same next turn.
+  brief: Add an additional dice to an attack. If the attack is a critical hit, double all damage dice.
   cost: 1
-Entangling Attack:
+Entangling Strike:
   description: You may attempt to entangle an enemy during one of your attacks using minor magic. 
-    The enemy must make an inner fire saving throw against your spell power. On a failure, the entity is ensnared, 
+    Add an extra dice of damage to your attack and force the enemy to make a spell power save. On a failure, the entity is ensnared, 
     and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and
     all attacks made against it have advantage.
   type: combat
-  brief: Force enemy SP save on attack. On fail, ensnared. Repeat check each turn.
+  brief: "Add an additional dice of damage to an attack. Force enemy SP save. Fail: ensnared. Repeat check each turn."
   cost: 1
+Chosen Weapon Proficiency:
+  description: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
+  type: choice
+  brief: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
+Read Mind:
+  description: "Attempt to enter an entity's mind to gain an idea of its throughts. The entity must make a spell power save."
+  type: general
+  brief: "Force an entity to make an SP save. Fail: you have an idea of their thoughts."
+  cost: 1
+Telepathic Communication:
+  description: "Speak with an entity within 100 feet using your mind."
+  type: general
+  brief: "Speak to an entity within 100 ft. using your mind."
+Telepathic Suggestion:
+  description: "Force an entity to make a spell power save. On failure, implant a thought or idea into their mind, or convince them of something that they do not currently believe within reason."
+  type: general
+  brief: "Force an entity to make an SP save. Fail: implant a thought/idea, or convince them of something they don't believe within reason."
+Telekinetic Leap:
+  description: "Empower yourself to jump twenty feet into the air per action point spent."
+  type: general
+  cost: 1
+  brief: "For every action point spent, jump 20 feet into the air."
+Featherfall:
+  description: "Reduce 20 feet of falling damage per action point spent."
+  type: general
+  brief: "Reduce 20 ft. of fall damage per action point spent."
+  cost: 1
+Telekinetic Flight:
+  description: "Lift yourself from the ground with telekinesis. Requires concentration."
+  type: general
+  cost: 1
+  brief: "Concentration. Fly using telekinesis."
+Telekinetic Lift:
+  description: "Lift something ten pounds or less with your mind, causing it to float. As an offhand action, move it up to thirty feet. Momentum is preserved if you let it go. Maximum range of 100 feet."
+  type: general
+  brief: "Concentration. Lift something 10 lbs or less with your mind. Offhand: float it 30 feet. Range 100 feet."
+Telekinetic Aid:
+  description: "Give yourself or someone else advantage on a strength or dexterity check, or give them advantage on an attack."
+  type: general
+  cost: 1
+  brief: "Grant yourself or an entity adv on a STR or DEX check or an attack."
+Minor Telekinesis:
+  description: "You may make any hand to hand dexterity or strength check at a distance of 15 feet."
+  type: general
+  brief: "Make a STR or DEX check at 15 feet."
+Greater Telekinesis:
+  description: "Telekinesis works at 30 feet."
+  type: general
+  brief: "Telekinesis works at 30ft."
+Major Telekinesis:
+  description: "Telekinesis works at 50 feet."
+  type: general
+  brief: "Telekinesis works at 50ft."
+Telekinetic Guardian Weapon:
+  description: "Concentrate on a weapon to cause it to float a few feet from you. It can make its own exposed attacks, and you may attack with it as a free action once per turn."
+  type: combat
+  brief: "Concentration. Float a weapon next to you. It can make exposed attacks. You can attack with it 1 time per turn."
+  cost: 1
+Telekinetic Hoist:
+  description: "Force an enemy to make a spell power save or be hoisted three feet into the air. Maintain concentration. The entity may repeat its save each turn. As an offhand action, move the entity 15 feet in any direction."
+  type: combat
+  brief: "Concentration. Force an enemy to make an SP save. Fail: Hoisted 3 feet. Repeat each turn. Offhand, move 15 feet."
+Crushing Telekinetic Grip:
+  description: "As an Offhand Action, squeeze all entities you have hoisted, dealing 1d8 damage."
+  type: combat
+  brief: "Offhand. squeeze all entities that you have hoisted, dealing 1d8 damage."
+Telekinetic Slam:
+  description: "As an offhand action, slam a hoisted enemy into something, dealing 1d12 damage to both."
+  type: combat
+  brief: "Offhand. Slam a hoisted entity into something else, dealing 1d12 damage to both."
+Telekinetic Push:
+  description: "As an offhand action, force all enemies in a 15 foot cone in front of you to make a spell power save or to be pushed back 15 feet."
+  type: combat
+  cost: 1
+  brief: "Offhand. Force all entities in a 15ft cone to make a SP save. Fail: pushed back 15ft."
+Centered Telekinetic Push:
+  description: "As an Offhand Action, force all entities within 10 feet of you to make a Spell Power save or to be pushed back 15 feet."
+  type: combat
+  cost: 1
+  brief: "Offhand. Force all entities within 10ft. to make an SP save. Fail: pushed back 15ft."
+Telekinetic Pull:
+  description: "As an Offhand Action, force an entity within 50 feet of you to make a Spell Power save or be pulled up to 30 feet towards you."
+  type: combat
+  cost: 1
+  brief: "Offhand. Force an entity within 50ft. to make an SP save. Fail: pulled up to 30 feet."
+Mental Shield:
+  description: "As a reaction, stop a targeted projectile or magical attack from striking you."
+  cost: 1
+  type: combat
+  brief: "Reaction. Stop a projectile or magic attack from hitting you."
+Greater Mental Shield:
+  description: "Your mental shield can now block physical attacks."
+  type: combat
+  brief: "Mental Shield can now block physical attacks."
+Major Mental Shield:
+  description: "Spend an extra action point when using mental shield to maintain it for a full turn."
+  cost: 2
+  type: combat
+  brief: "Spend an extra action point when using mental shield to make it last for a turn."
+Antimagic Ring:
+  description: "Stop all magic from working within 30 feet of you for one turn."
+  cost: 1
+  type: general
+  brief: "Stop all magic from working within 30ft. of you."
+Telekinetically Augmented Attack:
+  description: "Use telekinesis to help an attack to strike true. Add an additional dice of damage and decrease the attacks critical hit target by 2."
+  cost: 1
+  type: combat
+  brief: "Make an attack with an extra damage dice. Reduce its critical hit target by 2."
+Empower: 
+  description: "Spend an offhand action to increase the power of one of your other abilities twofold."
+  type: combat
+  brief: "Offhand action. Double the power of one of your other abilities."
+Dual Concentration:
+  description: "Concentrate on two things at once."
+  type: general
+  brief: "Concentrate on 2 things at once."
+Triple Concentration:
+  description: "Concentrate on three things at once."
+  type: general
+  brief: "Concentrate on 3 things at once."
+Mental Assault:
+  description: "Concentrate on battering an enemies mental defenses. Marking an enemy in this way requires an offhand action on the first turn, but is a free action every turn thereafter. Each turn, the entity must make a Spell Power save. On failure, you attack them with advantage, and they attack you with disadvantage. They further have disadvantage on saves versus your spell power."
+  type: combat
+  brief: "Concentration. As an offhand action, mark an enemy. Every turn thereafter, force an SP save. Fail: You have advantage on attacks, they have disadvantage on attacks and SP save vs you."
+Greater Mental Assault:
+  description: "Mental assault also halves an enemy's movement."
+  type: combat
+  brief: "Mental Assault also halves an enemy's movement."
 Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
@@ -1377,9 +1572,9 @@ The Wizard's Addendum:
   type: spellbook
   brief: You have access to the Wizard's Addendum.
 They're Retractable:
-  description: You have retractable, razor sharp claws capable of doing 1d4 damage.
+  description: You have retractable, razor sharp claws which add +1 damage to your punching or kicking attacks.
   type: combat
-  brief: Your claws deal 1d4 damage.
+  brief: Your punch and kick attacks deal +1 damage.
 Thick Headed:
   description: You have advantage on any checks involving an enemy breaking into your
     mind or dominating you.
@@ -1427,9 +1622,9 @@ Greater Armor Penetrating Rounds:
   type: combat
   brief: Your shots can pass through up to 3 enemies.
 Set Up:
-  description: "Take five minutes or 1 round of combat to guarantee that your next shot is a critical hit."
+  description: "Take one minutes or 1 round of combat to guarantee that your next shot is a critical hit."
   type: combat
-  brief: Spend five minutes or 1 round of combat to ensure that your next shot is a crit.
+  brief: Spend one minutes or 1 round of combat to ensure that your next shot is a crit.
 Called Critical:
   description: "On critical hit, immediately apply one of the effects from called shot to the enemy. 
                 If the critical is on a called shot, apply a second effect."
@@ -1454,9 +1649,9 @@ Throw Anything:
   type: general
   brief: You can throw anything up to one size larger than yourself.
 Thunderous Blow:
-  description: Roll an extra dice for your attack. On a critical hit, knock the enemy prone.
+  description: Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.
   type: combat
-  brief: Roll an extra dice for your attack. On a critical hit, knock the target prone.
+  brief: Add an extra dice to an attack. On a crit, knock the target prone or back 10 feet.
   cost: 1
 Tinker:
   description: Every night, you can attempt to to create a device. Once you create
@@ -1523,9 +1718,9 @@ Stocky:
   type: advantage
   brief:  You have advantage against checks made to knock you over.
 Very Dangerous Over Short Distances:
-  description: If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.
+  description: If you begin your turn next to an enemy, take advantage on your attack roll. Negates the harried condition.
   type: advantage
-  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Negates short range disadvantage.
+  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Negates the harried condition.
 Stone Skin:
   description: You take half damage on blunt force attacks, such as being hit with a club.
   type: general
@@ -1538,9 +1733,9 @@ Fix Your Eyes on Me:
   brief: "Force SP save. Fail: you have advantage on CHA and enemy can only attack you."
   cost: 1
 Sacrificial Rite: 
-  description: At the cost of your level in health (minimum 1), make a second action during combat.
+  description: "At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest."
   type: combat
-  brief: At the cost of your level in hp (min 1), make an extra action.
+  brief: At the cost of your level in hp (min 1), make an extra action. Damage cannot be healed until your next long rest.
 Brutal Attack:
   description: "Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone."
   type: combat
@@ -1578,20 +1773,24 @@ Minor Second Wind:
   brief: Heal yourself for 1d6 damage as an offhand.
   cost: 1
 Greater Second Wind:
-  description: Heal yourself for 1d12 damage as an offhand action.
+  description: Heal yourself for 2d6 damage as an offhand action.
   type: general
   brief: Heal yourself for 1d12 damage as an offhand.
   cost: 1
 Major Second Wind:
-  description: Heal yourself for 2d10 damage as an offhand action.
+  description: Heal yourself for 3d6 damage as an offhand action.
   type: general
-  brief: Heal yourself for 2d10 damage as an offhand.
+  brief: Heal yourself for 3d6 damage as an offhand.
   cost: 1
 Focused Attack:
-  description: Re-roll an attack after you make it.
+  description: Use your training to strike true. Add a dice of damage to an attack and decrease its critical hit target by one.
   type: combat
-  brief: Re-roll an attack after you make it.
+  brief: Add a dice of damage to an attack and decrease its critical hit target by one.
   cost: 1
+Greater Focused Attack:
+  description: "Focused attack now decreases an attack's critical hit target by two."
+  type: combat
+  brief: "Focused attack decreases an attack's critical hit target by 2"
 Resolve:
   description: When your health drops below 25%, all attacks do half damage against you.
   type: combat
@@ -1600,12 +1799,6 @@ Whirlwind of Blades:
   description: Make an additional 3 attacks on your turn.
   type: combat
   brief: Make an additional 3 attacks on your turn.
-  cost: 2
-Fire and Ice:
-  description: Imbue one of your blades with fire and the other with ice. Each do an additional
-    1d6 damage for the duration of a battle.
-  type: combat
-  brief: Imbue 1 weapon with fire and another with ice. +1d6 damage for 1 battle.
   cost: 2
 Savage Critical:
   description: On a critical hit, do an additional dice of damage. All enemies within 30ft. must make an spell power save or be frightened.
@@ -1839,7 +2032,7 @@ Elemental Aspect:
   type: general
   brief: Convert you damage to a different type. Declare when equipped.
 Elemental Strike:
-  description: "Convert your melee damage to a different type as a free action."
+  description: "Convert your melee damage to a different type for one turn as a free action."
   type: general
   brief: Free Action. Convert your damage to a different type for 1 turn.
   cost: 1
@@ -1928,6 +2121,10 @@ Sword of Honor:
   brief: Lasts 5 turns. +2d6 damage, gain advantage on SP saves. Immune to fear.
   cost: 1
 Stay on Your Feet: 
+  description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
+  type: combat
+  brief: If your health hits 0, make a D10 INF save. On success, drop to 1 hp instead.
+Too Angry to Die:
   description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
   brief: If your health hits 0, make a D10 INF save. On success, drop to 1 hp instead.
@@ -2336,15 +2533,13 @@ Gyroscopic Center of Mass:
   type: combat
   brief: Add +5 to any check that involves knocking you prone.
 Armored Exterior: 
-  description: "You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk."
+  description: "You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice."
   type: general
-  brief: Take half damage from piecing, slashing, blunt, fire, and ice attacks.
+  brief: You have resistance to piercing, slashing, blunt, fire, and ice attacks.
 Piston Punch: 
-  description: You may perform a 1d8 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone.
-               Enemies larger than your size take advantage, smaller take disadvantage.
-               At level 4, increase damage to 1d12. At level 8, to 2d12. At level 12 to 3d12.
+  description: "Perform an attack which ignores enemy armor."
   type: combat
-  brief: 1d8 punch. On contested STR fail, knock enemy prone. d12 damage LV4, 2d12 LV8, 3d12 LV12.
+  brief: Perform an attack which ignores enemy armor.
   cost: 1
 Upgrades: 
   description: A tinker can craft upgrades for you.
@@ -2372,11 +2567,19 @@ Greater Dodge:
                 must succeed a contested Dexterity check or miss."
   type: combat
   brief: "Whenever targeted. Roll a contested DEX check. Success: attack misses."
+Major Dodge:
+  description: "If an enemy beats your dodge by 2 or less, take half damage."
+  type: combat
+  brief: "If an enemy beats your dodge by 2 or less, take half damage."
+Greater Dash:
+  description: "When you take a dash action, move 30 feet rather than 15."
+  type: combat
+  brief: "Move 30ft. when you dash."
 Redirecting Dodge:
-  description: Redirect any dodged damage to an enemy within range.
+  description: Redirect half of any dodged damage to an enemy within range.
   type: combat
   cost: 1
-  brief: "Redirect any dodged damage to an enemy within range."
+  brief: "Redirect half of any dodged damage to an enemy within range."
 Harden: 
   description: As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.
   type: general
@@ -2389,6 +2592,10 @@ Soft Landing:
   description: Reduce any falling damage by 20 feet.
   type: general
   brief: Reduce falling damage by 20 feet.
+Greater Soft Landing:
+  description: Reduce any falling damage by 40 feet.
+  type: general
+  brief: Reduce falling damage by 40 feet.
 Commune with Nature:
   description: You are naturally able to speak with plants and animals.
   type: general
@@ -2496,6 +2703,14 @@ Thrown Weapon Proficiency:
   description: You are able to use thrown weapons, such as throwing knives, without disadvantage.
   type: general
   brief:  You can use thrown weapons without disadvantage.
+Minor Dual Wielding Proficiency:
+  description: "You are able to dual wield simple blunt weapons. You may attack with both as an action."
+  type: general
+  brief: You may dual wield simple blunt weapons, and may attack with both as an action.
+Dual Wielding Proficiency:
+  description: You are able two one-handed weapons without disadvantage. You may attack with both weapons as an action.
+  type: general
+  brief:  You may dual wield weapons without disadvantage, and may attack with both as an action.
 Charisma Based Spellcaster:
   description: To succeed at casting spells, you must convince your familiar to perform it for you.
     To do this, roll a d20 and add your charisma. The result must beat the difficulty of the spell.

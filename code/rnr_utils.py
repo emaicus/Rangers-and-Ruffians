@@ -353,11 +353,13 @@ class rnr_race(rnr_entity):
     if race_data == None:
       raise Exception('ERROR: Could not load race {0} {1}'.format(name, subrace))
     return cls(name, subrace, race_data['abilities'], race_data['stats'], race_data['description'],
-               race_data['quote'], race_data['author'], race_data.get('handbook', None), race_data['health_die_pieces'])
+               race_data.get('quote', None), race_data.get('author', None), race_data.get('handbook', None), race_data['health_die_pieces'])
 
   def markdownify(self,male=False, sub=False):
     global GLOBAL_ART_PATH
-    custom_chunk = f'>{self.quote}\n>\n>—{self.quote_author}\n\n'
+    custom_chunk = ''
+    if self.quote:
+      custom_chunk = f'>{self.quote}\n>\n>—{self.quote_author}\n\n'
 
     absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'race')
     relative_art_folder = os.path.join('..', '..', 'images', 'race')
@@ -477,6 +479,7 @@ class rnr_class_wrapper():
     global GLOBAL_ART_PATH
 
     preferred_image = gender_mappings.get(self.class_name.lower().replace(" ", "_"), None)
+
     male = 'male' if preferred_image else 'female'
 
     absolute_art_folder = os.path.join(GLOBAL_ART_PATH, 'class')
@@ -495,10 +498,16 @@ class rnr_class_wrapper():
         ret.append(attribution)
       sub = True
 
+    if 'description' in self.class_data:
+      ret.append('\n')
+      ret.append(self.class_data['description'])
+      ret.append('\n')
+
     for subclass in sorted(self.subclasses, key=lambda x: x.name):
       print(subclass.subclass)
       preferred_image = gender_mappings.get(subclass.subclass.lower().replace(" ", "_"), None)
-      male = 'male' if preferred_image else 'female'
+      print(preferred_image)
+      male = True if preferred_image else False
       ret += subclass.markdownify(male=male, sub=sub)
       
     return ret
@@ -534,9 +543,14 @@ class rnr_race_wrapper():
         ret.append(attribution)
       sub = True
 
+    if 'description' in self.race_data:
+      ret.append('\n')
+      ret.append(self.race_data['description'])
+      ret.append('\n')
+
     for subrace in sorted(self.subraces, key=lambda x: x.name):
       preferred_image = gender_mappings.get(subrace.subrace_name.lower().replace(" ", "_"), None)
-      male = 'male' if preferred_image else 'female'
+      male = True if preferred_image else False
       ret += subrace.markdownify(male=male, sub=sub)
         
       

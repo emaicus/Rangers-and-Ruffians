@@ -41,6 +41,7 @@ Barbarian:
         level_3:
           abilities:
           - Hurl Weapon
+          - Blind Rage
         level_4:
           abilities:
           - Warrior Spirit # When you slay an enemy, gain 1 action point.
@@ -66,7 +67,8 @@ Barbarian:
           - Savage Critical # Additional dice of damage when you crit
         level_11:
           abilities:
-          - Furious Blows # Two attacks when berserk
+          - Furious Blows # Cost 1. Two attacks when berserk
+          - Too Angry to Die
           #- Warmaster # Extra +1 to STR and INF when berserk
         level_12:
           abilities:
@@ -102,12 +104,11 @@ Barbarian:
         Luck: 0
         Perception: -1
         Strength: 1
-      description: Barbarians are hearty, and can dole out a lot of damage, making them
-        great tanks for a party of adventurers. They are marked by their berserk ability,
-        which allows them to fly into a battle frenzy, gaining extra attacks and health.
-        Barbarians cannot use magic, and are much better up close than at a distance.
-        They are known for their rugged ways, and usually prefer wide open spaces to
-        cities.
+      description: "The Path of Nature Barbarian is deeply in tune with the power that infuses
+                    the beasts of the world. By harnessing and infusing themselves with these
+                    powers, Path of Nature Barbarians can take on the aspects of animals,
+                    gaining powerful abilities as a result. Path of Nature Barbarians are
+                    highly versatile and mobile, and make good support tanks and frontline fighters."
       health_die_pieces: 6
       levels:
         level_0:
@@ -180,7 +181,7 @@ Barbarian:
       tag_line: Heavy Hitter # DONE
 Knight:
   subclasses:
-    Knight:
+    Stalwart Knight:
       roles: ["tank", "area-control", "non-magic"]
       base_stats:
         Charisma: 0
@@ -190,10 +191,10 @@ Knight:
         Luck: 0
         Perception: -2
         Strength: 2
-      description: Knights are heavy, armored fighters who should place themselves between
+      description: "The Stalwart Knight is a are heavy, armored fighter who should place themselves between
         their party and harm's way. The ideal knight is a bastion of good, a defender
-        of the innocent and the embodiment of chivalry. Knights hold sway over kingsmen,
-        and are able to protect their allies.
+        of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and 
+        are able to deal heavy damage to nearby enemies, and to protect nearby allies."
       health_die_pieces: 6
       levels:
         level_0:
@@ -235,7 +236,7 @@ Knight:
           - Hold the Line
         level_10:
           abilities:
-          - Cleave
+          # Cut. Made redundant by weapons - Cleave
           - Greater Charge
         level_11:
           abilities:
@@ -272,11 +273,11 @@ Paladin:
         Luck: 0
         Perception: -3
         Strength: 1
-      description: Palidins are Soldiers of the Light, and are adept both at hand to
-        hand combat and basic healing magic. Paladins are devoted to their deity, and
+      description: "Paladins are Soldiers of the Light, and are adept both at hand to
+        hand combat and healing magic. Paladins are devoted to their deity, and
         aim to bring their influence into the world. Paladins are especially good at
         taking out evil entities, and are known for their Faithful Weapon ability, which
-        lets them summon their weapon to their hand after throwing it.
+        lets them summon their weapon to their hand after throwing it."
       health_die_pieces: 6
       levels:
         level_0:
@@ -363,24 +364,26 @@ Ranger:
     Ranger:
       roles: ["self-sufficient", "ranged", "sneaky", "nature-based"]
       base_stats:
-        Charisma: 0
+        Charisma: -3
         Dexterity: 1
         Inner_Fire: -1
-        Intelligence: -3
+        Intelligence: 0
         Luck: 1
         Perception: 2
         Strength: -2
-      description: Rangers are the vigilante law keepers and monster hunters of the
-        wilds. Rangers are powerful dexterity based fighters, and are known for their
-        abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able
-        to easily traverse the wilds, as well as to prepare simple medicines
+      description: "Rangers are the vigilante law keepers and monster hunters of the
+        wilds. Tank-like fighters, Rangers are powerful dexterity based combatants, 
+        and are known for their
+        ability to dual wield weapons. Rangers are masters of the wilds, and are able
+        to easily track enemies, as well as to prepare simple medicines
         in times of need. Rangers are often known by common folk to be quiet and mysterious,
         however, they are well loved, as it is understood that they are the thin line
-        that stands between many villages and an onslaught of monsters. As you create
-        your ranger, consider how they ended up a ranger? How did they become so adept
-        at navigating the wilderness? Do they feel the need to protect villagers? What
-        kinds of monsters have they fought? Who trained them, if anyone? How will being
-        a ranger affect the way that you interact with your party?
+        that stands between many villages and an onslaught of monsters."
+        # As you create
+        # your ranger, consider how they ended up a ranger? How did they become so adept
+        # at navigating the wilderness? Do they feel the need to protect villagers? What
+        # kinds of monsters have they fought? Who trained them, if anyone? How will being
+        # a ranger affect the way that you interact with your party?
       health_die_pieces: 4
       levels:
         level_0:
@@ -388,57 +391,73 @@ Ranger:
           - Light Sleeper # PER checks while sleeping
           - Melee Weapon Proficiency
           - Ranged Weapon Proficiency
-          - Minor Medicine
-          - Tracker # Advantage on tracking.
-          - Camouflage # Stealth advantage while still
-          - Under the Stars
+          - Dual Wielding Proficiency
+          - Tracker # Tracking
+          - Camouflage # Stealth when still
+          - Listen # Advantage on Perception Checks (not initiative)
+          - Under the Stars # All sleep works as if you are in a bed.
+          - Charging Slice # Cost 1. Run forward 15 feet. Terminate the charge with an attack which ignores enemy armor.
+          - Disarming Blow
+          - Dodging Stance # Offhand action to go into a dodging stance. Once before next turn, dodge
         level_1:
           abilities:
-          - Embers
-          - Entangling Attack # tangle an enemy, ensnaring them
+          - Minor Medicine #: During a rest, craft a potion equivalent to a salve.
+          - Entangling Strike # Cost 1. Extra dice of damage. SP save or ensnared
         level_2:
           abilities:
+          - Tracking Mark # Know the direction of an enemy for 24 hours.
+          - Nimble
+          - Telekinetic Push
         level_3:
           abilities:
-          - Finesse Strike # additional dice. On SP fail, another on the next turn
-          - Spell of Darkvision    
+          - Finesse Strike # additional dice. On crit, double damage dice.
+          - Earthen Armor
         level_4:
           abilities:
+          - Embers # Cost 1. Make an attack which travels an additional 15 feet and deals an extra dice of fire damage.
+          - Ice Bolt # Cost 1. Make an attack which travels an additional 30 feet and deals an extra dice of frost damage.
         level_5:
           abilities:
-          - Twin Blades # 2x attacks in an action
+          - Advance # Move into an enemy space when you slay them
+          - Pinpoint Mark
         level_6:
           abilities:
+          - Greater Medicine
+          - Minor Herbalist
         level_7:
           abilities:
-          - Twin Blade Parry # strike back when an enemy attacks you?
-          - Greater Medicine # Make better potions
+          - Ready Defense
+          - Offhand Attack
         level_8:
           abilities:
+          - Know Your Enemy # Deal an extra dice of damage to tracked enemies.
+          - Expert Tracker
         level_9:
           abilities:
-          - Elemental Weapon 
-          # - Monster Slayer # Extra damage to monsters
-          # - Disengage # Enemies take disadvantage against you when you are moving
+          - Uncanny Perception
+          - Line Them Up
         level_10:
           abilities:
+          - Greater Ready Defense
         level_11:
           abilities:
-          - Expert Tracker
+          - Greater Pinpoint Mark
           - Major Medicine
-          # - Disarming Blow # On a crit, make someone drop something??????
         level_12:
           abilities:
+          - Stay on Your Feet
+          - Warrior Spirit
         level_13:
           abilities:
-          - Offhand Attack
+          - Second Tracking Mark
         level_14:
           abilities:
+          - Greater Dual Wielding
         level_15:
           abilities:
           - Fire and Ice
       standings: Barbarians are the enemies of law keepers.
-      tag_line: Duel Wielding Tracker
+      tag_line: "Dual Wielding Tracker"
 # LIGHT FIGHTER
 # Beastmaster:
   #   subclasses:
@@ -521,7 +540,7 @@ Ranger:
   #       tag_line: Companion Fighter
 Fighter:
   subclasses:
-    Fighter:
+    Telepath:
       roles: ["self-sufficient", "high-damage", "ranged", "non-magic"]
       base_stats:
         Charisma: -1
@@ -531,58 +550,80 @@ Fighter:
         Luck: 1
         Perception: 0
         Strength: 1
-      description: Fighters are powerful strength or dexterity based warriors. Unlike
-        the knight, fighters are unarmored, and have a skillset more suited to keeping
-        themselves alive and bringing down enemies than providing support.
+      description: "Magic suffuses the world, flowing around and through all things.
+                    The telepath has learned to harness that flow, manipulating the current of
+                    magic to affect the world around them. This ability allows the telepath to
+                    project their thoughts like inaudible sounds through the ripples of magic,
+                    and even to change the flow of magic to affect the material world.
+                    The Telepath Fighter is a powerful combatant, able to push, pull, hoisted
+                    and mentally batter their enemies. Telepaths are among the best suited
+                    fighters to destroy an enemy mage."
       health_die_pieces: 4
       levels:
         level_0:
           abilities:
-          - Focused Attack
-          - Ranged Weapon Proficiency
-          - Melee Weapon Proficiency
-          - Determination
+          - Chosen Weapon Proficiency
+          - Telekinetic Lift # Lift 10 pounds
+          - Minor Telekinesis # Cost 1. You may make any hand to hand dex or STR check at a distance of 15 feet.
+          - Thick Headed # Advantage against enemies breaking into your mind.
+          - Telekinetic Push # Cost 1. Push a cone of enemies 15 feet away.
+          - Telekinetically Augmented Attack # Add a dice to an attack and decrease its crit chance by 1
         level_1:
           abilities:
-          - Minor Second Wind
+          - Telekinetic Aid # Give yourself or someone else advantage on a STR or DEX check or advantage on an attack.
+          - Telekinetic Pull # Cost 1. Pull an enemy towards you.
         level_2:
           abilities:
+          - Telekinetic Hoist # Cost 1. Hoist an enemy into the air. Concentration.
+          - Telepathic Communication # Communicate with an ally within 100 feet.
         level_3:
           abilities:
-          - Resolve
+          - Telekinetic Leap # Leap 20 feet straight up.
+          - Mental Shield # Cost 1. Stop a targetted projectile or magic attack from hitting you.
         level_4:
           abilities:
+          - Featherfall # Cost Variable. Reduce fall damage by 20 feet. Additional 20 feet per action point spent.
+          - Mental Assault # Concentration. Each turn SP save.
         level_5:
           abilities:
-          - Nimble
-          - Greater Second Wind
-          - Reduced Critical
+          - Crushing Telekinetic Grip # 1d8 crushing damage to held enemies.
+          - Greater Telekinesis # 30 feet telekinesis
         level_6:
           abilities:
+          - Telepathic Suggestion # Cost 1. Jedi mind trick 
+          - Centered Telekinetic Push # Cost 1. Push all enemies around you 10 feet away.
         level_7:
           abilities:
           - Offhand Attack
+          - Resist Magic # Advantage on SP saves
+          - Telekinetic Slam # Slam one hoisted enemy into something, dealing 1d12 damage.
         level_8:
           abilities:
+          - Greater Mental Shield
+          - Telekinetic Guardian Weapon # Float a weapon. It makes its own exposed attacks and can attack as an offhand.
+          - Read Mind # Attempt to enter an entity's mind to get a gist of your thoughts.
         level_9:
           abilities:
-          - Major Second Wind
+          - Dual Concentration # Concentrate on two things.
         level_10:
           abilities:
+          - Antimagic Ring # Stop all magic within 30 feet of you for 1 turn.
+          - Major Telekinesis # 50 feet telekinesis
         level_11:
           abilities:
-          - Find Center
+          - Empower # Spend an offhand action to increase the power of one of your abilities twofold
         level_12:
           abilities:
+          - Greater Mental Assault # Also half movement
         level_13:
           abilities:
-          - Stay on Your Feet
+          - Major Mental Shield # Once invoked, mental shield protects you for one turn (invulnerable)
         level_14:
           abilities:
+          - Telekinetic Flight # Cost 1. Fly. Concentration. 
         level_15:
           abilities:
-          - Reduced Critical
-          - Whirlwind of Blades
+          - Triple Concentration # Concentrate on three things.
       questions:
       - Does your character specialize in strength or dexterity based weapons?
       - How did they learn to fight, and why are they good at it?
@@ -606,11 +647,16 @@ Highborn:
         Luck: 1
         Perception: -3
         Strength: -1
-      description: Highborns were born into a noble house and have connections and money
-        as a result. They are well trained fighters, and have the charisma necessary
-        to rally people to their side. While the typical highborn is not as hardened
-        as a knight or fighter, they are able to call upon their gumption for spurts
-        of incredible heroism.
+      description: "The Heroic Highborn is a beacon of fierce nobility, brining hope 
+                    and inspiration to their people. The Heroic Highborn is a powerful fighter
+                    which supports its allies by granting them inspiration. As a Heroic Highborn
+                    watches it's allies succeed, it gains Gumption, the force of will needed
+                    to perform heroic feats in combat."
+      # description: Highborns were born into a noble house and have connections and money
+      #   as a result. They are well trained fighters, and have the charisma necessary
+      #   to rally people to their side. While the typical highborn is not as hardened
+      #   as a knight or fighter, they are able to call upon their gumption for spurts
+      #   of incredible heroism.
       health_die_pieces: 4
       levels:
         level_0:
@@ -700,15 +746,16 @@ Monk:
         Luck: 1
         Perception: 2
         Strength: -1
-      description: Monks are masters of hand to hand combat, who use their extensive
-        control of their bodies to overcome their foes. Monks are able to learn abilities
-        from scrolls, which they may find scattered throughout the world. Monks have
-        dedicated themself to the art of understanding the natural and spiritual world,
-        and are often levelheaded and intelligent. As you create your monk, consider
-        what their goals are. How did they become a monk, and what are they hoping to
-        gain by doing so? How do they react in stressful situations? How do they interact
-        with other people? Are they quiet and reserved? Confident and sure of themself?
-        How will being a monk affect the way you interact with your party?
+      description: "Monks are masters of hand to hand combat who use their extensive
+        control of their bodies to overcome their foes. The monk is a powerful front-line
+        combatant, which excels at making multiple rapid attacks against an enemy, chipping
+        away at their defenses with well placed blows. Monks do well against humanoid enemies
+        and beasts, but have to use their wits to overcome massive, heavily armed creatures."
+        # As you create your monk, consider
+        # what their goals are. How did they become a monk, and what are they hoping to
+        # gain by doing so? How do they react in stressful situations? How do they interact
+        # with other people? Are they quiet and reserved? Confident and sure of themself?
+        # How will being a monk affect the way you interact with your party?
       health_die_pieces: 4
       levels:
         level_0:
@@ -722,6 +769,7 @@ Monk:
           - Slowing Blow # Cost 1. Extra dice, 1d4 turns back in initiative.
           - Make Space # Cost 1. Extra dice. Push an enemy 5 feet away.
           - Dodging Stance # Offhand. Move into a stance that lets you dodge.
+          - Disarming Blow
         level_1:
           abilities:
           - Grappling Dodge # Cost 0. Attempt to grapple an enemy when you dodge them.
@@ -743,8 +791,9 @@ Monk:
           - Disengage # Avoid provoking exposed attacks
         level_5:
           abilities:
-          - Greater Reflexes
+          - Minor Dual Wielding Proficiency
           - Consecutive Normal Punches # Cost 1. two attacks in an attack action
+          - Greater Reflexes
           - Greater Make Space # Push back 10 feet.
         level_6:
           abilities:
@@ -772,9 +821,11 @@ Monk:
         level_12:
           abilities:
           - Major Resting Meditation
+          - Greater Dodging Stance
         level_13:
           abilities:
           - Greater Combo # No cost for combo-ed attack.
+          - Find Center # Free action. Cost 1. Advantage in all things for a turn.
         level_14:
           abilities:
           - Greater Chi Block
@@ -797,12 +848,14 @@ Rogue:
         Luck: 2
         Perception: 1
         Strength: -3
-      description: Sneaktheives and criminals, rogues have often fallen in with bad
-        company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak,
-        and lockpick their way into most anything. Rogues are very weak, however, and
+      description: "Sneaktheives and criminals, Thieves have often fallen in with bad
+        company. Thieves are incredibly nimble and stealthy, and are able to clime, sneak,
+        and lockpick their way into most anything. They are very weak, however, and
         will have better luck running away than fighting if caught. When they have to
         fight, Rogues often pick daggers or shortswords, and strike from on high or
         from in the shadows, letting their more armored friends soak up the damage.
+        Then, after attacking, they disengage from combat, fleeing back to the shadows
+        to prepare for their next attack."
       health_die_pieces: 2
       levels:
         level_0:
@@ -815,6 +868,7 @@ Rogue:
           - Disengage # Cost 1. No exposed attacks
           - Disappear # Offhand to hide.
           - Strike From the Shadows # If you begin your turn in hiding, do an additional dice of damage on all attacks.
+          - Disarming Blow
         level_1:
           abilities:
           - Pickpocket # Cost 1: Extra damage dice. Try to steal something from an enemy with an attack.
@@ -827,6 +881,8 @@ Rogue:
         level_3:
           abilities:
           - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
+          - Finesse Strike
+          - Soft Landing # Less fall damage
         level_4:
           abilities:
           - Flank # If an enemy is harried, get behind them to hide and gain advantage.
@@ -841,7 +897,7 @@ Rogue:
         level_7:
           abilities: 
           - Offhand Attack
-          - Soft Landing # Less fall damage
+          - Greater Soft Landing # Less fall damage
           - Break Away # Once you have established flanking position, you may break it without provoking exposed attacks.
         level_8:
           abilities:
@@ -855,18 +911,20 @@ Rogue:
           - Party Save
           - Mark # Mark an enemy. While Marked, they take disadvantage in attacks made against you and are considered harried.
         level_11:
-          abilities: 
+          abilities:
+          - Greater Dash
         level_12:
           abilities:
+          - Greater Slip Away #When you slip away, also gain your full movement.
         level_13:
           abilities:
           - Greater Flow with the Battle # No movement cost from moving through enemy spaces
         level_14:
           abilities:
-          - Greater Slip Away #When you slip away, also gain your full movement.
+          - Major Dodge
         level_15:
           abilities:
-          # CUT - Redirecting Dodge # Redirect 
+          - Redirecting Dodge # Redirect 
       questions:
       - Does your character have a moral code?
       - Who do they tend to target, and why?
@@ -886,12 +944,13 @@ Rogue:
         Luck: 2
         Perception: 1
         Strength: -3
-      description: Sneaktheives and criminals, rogues have often fallen in with bad
-        company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak,
-        and lockpick their way into most anything. Rogues are very weak, however, and
-        will have better luck running away than fighting if caught. When they have to
-        fight, Rogues often pick daggers or shortswords, and strike from on high or
-        from in the shadows, letting their more armored friends soak up the damage.
+      description: "Experts at dealing massive damage to a single target,
+                    assassins are among the most deadly fighters on the battlefield.
+                    With low-health and light armor, the assassin must rely on their
+                    cunning to win an outright battle. To this end, assassins learn the
+                    art of magic, using their powers to augment their abilities, and 
+                    even to turn invisible before sinking a poisoned dagger between an
+                    enemy's ribs."
       health_die_pieces: 2
       levels:
         level_0:
@@ -905,6 +964,7 @@ Rogue:
           - Disengage # Cost 1. No exposed attacks
           - Disappear # Offhand to hide.
           - Strike From the Shadows # If you begin your turn in hiding, do an additional dice of damage on all attacks.
+          - Finesse Strike
         level_1:
           abilities:
           - Minor Spell of Distraction
@@ -986,17 +1046,21 @@ Bard:
         Luck: 1
         Perception: -2
         Strength: -3
-      description: Showmen by nature, Bards are known for their skills at performing
+      description: "Showmen by nature, Bards are known for their skills at performing
         and distracting others from the sorrows of life. Bards are usually at least
         a little bit gaudy and outgoing. They are quick in a fight, and often fight
         with dexterity based weapons such a shortswords or knives. Bards are powerful
         spellcasters, and are excellent at providing support to their party and at making
-        enemies weaker. As you prepare your bard, consider how they chose this way of
-        life. How did they learn magic? How do they perform? Do they play music? Dance?
-        Tell stories? How did they learn to fight? Who did they learn to fight from?
-        How old are they? How many places have they been? Where do they perform? Why
-        do they perform there? How will being a bard change the way you interact with
-        your party?
+        enemies weaker. The bardic guilds have mastered the art of making Spell Coins,
+        powerful items which can store magical spells for later use. These coins can
+        be used to greatly increase a Bard's arsenal or to give non-casters access to
+        powerful spells." 
+        # As you prepare your bard, consider how they chose this way of
+        # life. How did they learn magic? How do they perform? Do they play music? Dance?
+        # Tell stories? How did they learn to fight? Who did they learn to fight from?
+        # How old are they? How many places have they been? Where do they perform? Why
+        # do they perform there? How will being a bard change the way you interact with
+        # your party?"
       health_die_pieces: 4
       levels:
         level_0:
@@ -1064,17 +1128,17 @@ Bard:
           - Major Spell Coin
       tag_line: Entertaining Spellcaster
 Cleric:
-  description: After pledging their allegiance to their deity, Clerics have made it
+  description: "After pledging their allegiance to their deity, Clerics have made it
     their duty to follow their will. Clerics are weak, and do not fight with physical
     weapons. However, they are powerful spellcasters who are adept at healing, and
     who can make a huge difference in combat. Clerics try to embody the ideals of
-    their deity, paying them homage and working to enact their will in the world.
-    As you design your cleric, ask yourself how they chose this path. When and how
-    did their deity reach out to them? How did they make their pledge? Under what
-    circumstances? How often do they pray to their deity? How do they react to people
-    who don't believe? What do they believe in? What is their moral code, and how
-    does that interact with that of their deity? How will being a cleric affect the
-    way that you interact with your party?
+    their deity, paying them homage and working to enact their will in the world."
+    # As you design your cleric, ask yourself how they chose this path. When and how
+    # did their deity reach out to them? How did they make their pledge? Under what
+    # circumstances? How often do they pray to their deity? How do they react to people
+    # who don't believe? What do they believe in? What is their moral code, and how
+    # does that interact with that of their deity? How will being a cleric affect the
+    # way that you interact with your party?"
   subclasses:
     Cleric of Beauty:
       base_abilities:
@@ -1087,7 +1151,7 @@ Cleric:
         Luck: 2
         Perception: -2
         Strength: -3
-      description: Servant  of Lady Dusk. Followers of the Pale Lady seek rewards
+      description: Servant of Lady Dusk. Followers of the Pale Lady seek rewards
         from their dark goddess in return for helping her conform the world to her
         ideals.
       health_die_pieces: 2
@@ -2316,18 +2380,25 @@ Druid:
         Luck: 1
         Perception: 1
         Strength: -2
-      description: Gaurdians of nature, most druids prefer to live in tribes in the
-        forests, mountains, prairie, tundra, or desert. Druid's command powerful nature
-        based magic, which they use to smite those who threaten them, their friends,
-        or their home. Druids utilize intelligence based action points to cast spells,
-        and are a good match for players interested in playing a mage. As you build
-        your druid, consider where they came from. Why are they so attached to nature?
-        How does their attachment to the natural world change how they think? How do
-        they react to large towns and cities? What do they wear, and how do they speak?
-        How do they feel about other types of magic? Why are they on their adventure?
-        How do they feel about eating meat? What are their values? What do they think
-        the place of people is in the world? How will being a druid change the way you
-        interact with your party?
+      description: "Earth, Water, Fire, Air. These are the domain of the 
+                    Elementalist. Devotees of the power of the elements,
+                    the Elementalist masters the elements one after the other
+                    on their journeys. As the Elementalist masters the elements,
+                    they unlock their potential, unleashing greater and more powerful magic.
+                    The elementalist druid is a powerful combat caster, but may also
+                    be used to support a party."
+        # "Guardians of nature, most druids prefer to live in tribes in the
+        # forests, mountains, prairie, tundra, or desert. Druid's command powerful nature
+        # based magic, which they use to smite those who threaten them, their friends,
+        # or their home. Druids utilize intelligence based action points to cast spells,
+        # and are a good match for players interested in playing a mage. As you build
+        # your druid, consider where they came from. Why are they so attached to nature?
+        # How does their attachment to the natural world change how they think? How do
+        # they react to large towns and cities? What do they wear, and how do they speak?
+        # How do they feel about other types of magic? Why are they on their adventure?
+        # How do they feel about eating meat? What are their values? What do they think
+        # the place of people is in the world? How will being a druid change the way you
+        # interact with your party?"
       health_die_pieces: 4
       levels:
         level_0:
@@ -2405,16 +2476,17 @@ Necromancer:
         Luck: 2
         Perception: -2
         Strength: -1
-      description: Death is not my enemy, nor is it my ally, it is my servant. So say
+      description: "Death is not my enemy, nor is it my ally, it is my servant. So say
         Necromancers, mages who study the intricacies of death, and what follows after.
-        Often fuled by macabre fasination or a god complex, Necromancy is deeply feared
+        Often fueled by macabre fascination or a god complex, Necromancy is deeply feared
         and considered taboo by almost everyone. Clerics and Paladins, in particular,
-        may despise or hunt necromacers. At the beginning of their journey, necromancers
-        may choose to be vegan, promising only to eat the souls of evil individuals.
-        As you create your necromancer, consider their values. How did they end up studying
-        such horrible magics? Was it out of necessity? Curiosity? What are they hoping
-        to accomplish? How do they rationalize what they do? Do they have any ticks
-        or quirks? How will being a necromancer affect how you interact with your party?
+        may despise or hunt necromancers.
+        Necromancers utilize the power inherent in living souls to perform their magic, and
+        are masters of raising an army of undead thralls to serve them."
+        # As you create your necromancer, consider their values. How did they end up studying
+        # such horrible magics? Was it out of necessity? Curiosity? What are they hoping
+        # to accomplish? How do they rationalize what they do? Do they have any ticks
+        # or quirks? How will being a necromancer affect how you interact with your party?"
       health_die_pieces: 2
       levels:
         level_0:
@@ -2506,15 +2578,15 @@ Sorcerer:
         Luck: 1
         Perception: -3
         Strength: -1
-      description: Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding,
-        but rather through raw force of personality. To perform magic, a sorcerer wrestles
-        with a spirit, natural or otherwise, and convinces them to do their bidding.
-        To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma
-        check to perform magic. As you create your sorcerer, consider how they learned
-        magic. Who did they learn it from? How did they first wrestle a spirit to aid
-        them? When they cast a spell, do they always use the same spirit, or different
-        spirits? Is the spirit natural, or the soul of someone who is gone? How will
-        being a sorcerer change the way that you interact with the world and your party?
+      description: "The Sorcerer does not learn their magic, but is rather given it either as a gift
+                      or by trade. Some Sorcerers bargain with the spirits that inhabit the world,
+                      granting them a chance to experience the mortal realm in exchange for magical power.
+                      Others make a pact with one of the Old Ones, half formed gods, powerful demons,
+                      or natural beasts of awe-inspiring power. In these pacts, the Sorcerer must act
+                      as a vassal to their new lord in exchange for rewards. By definition, the Sorcerer must
+                      be charismatic to strike and maintain such deals, and must ask their sponsor for
+                      aid each time they cast a spell. While this means that their borrowed magic sometimes fails
+                      them, it also means that the sorcerer has access to far more power than other mortals."
       health_die_pieces: 4
       levels:
         level_0:
@@ -2596,15 +2668,14 @@ Wizard:
         Luck: 2
         Perception: -1
         Strength: -3
-      description: Often eccentric, wizards are known to be wayfarers and meddlers.
-        Most keep to themselves, approaching others only to entwine them in schemes
-        only they know about. Wizards arrive precisely when they mean to. To use magic,
-        Wizards use action points to cast spells. Wizards gain access to new spell tiers
-        before any other class. As you create your wizard,
-        consider what their past is. How old are they? What kind of family did they
-        come from? How long have they been a wizard? Are they mysterious? Are they competent?
-        How do they interact with others? Who taught them magic? How will being a wizard
-        affect how you interact with your other party members?
+      description: "The study of magic is the study of potential, or so the wizard discovers
+                    during their long hours of research. Unlike other mages who take shortcuts,
+                    the wizard pours over their books to gain understanding over the magic of the
+                    world. It is in this study that wizards learn that magic
+                    is a form of unevaluated energy, energy which has the potential to become anything
+                    given coercion. Using this knowledge, their mind, an arcane focus, 
+                    and an assortment of magically charged objects, the wizard is able to create wondrous
+                    things, and to do mighty deeds."
       health_die_pieces: 2
       levels:
         level_0:
@@ -2687,11 +2758,10 @@ Archer:
         Luck: 1
         Perception: 2
         Strength: -3
-      description: Some of the best marksmen in the world, archers are naturals with
+      description: "Some of the best marksmen in the world, archers are naturals with
         ranged weapons. They are often attached to their bow, and carry it with them
-        everywhere. Archers come from all walks of life; some compete in tournaments,
-        others are hunters and farmer's sons. Still others have served in the military.
-        Archers should stay off of the front line, instead picking off foes from a distance.
+        everywhere. Masters of the trick-shot, archers learn to utilize simple magics
+        to craft their many specialized arrows."
       health_die_pieces: 4
       levels:
         level_0:
@@ -2776,11 +2846,11 @@ Gunslinger:
         Luck: 1
         Perception: 2
         Strength: -2
-      description: Through luck, valor, or perhaps trickery, the Gunslinger has managed
-        to acquire one of the rarest weapons in the world. As such, they have a close
-        bond with their gun, which is usually their primary means of income. At the
-        beginning of their adventure, a gunsling may choose to start with either a rifle
-        or a pistol, a decision that determines engagement range and their upgrade path.
+      description: "Through luck, valor, or perhaps trickery, the Marksman has mastered the
+        use of one of the most complicated weapons in the world. As such, they have a close
+        bond with their gun, which is usually their primary means of income. Marksmen are long-distance
+        snipers, and excel at dealing massive damage to single targets. They are weak, however, against
+        enemies that get in close, and require a good party to stand between themselves and their enemies."
       health_die_pieces: 4
       levels:
         level_0:
@@ -2826,7 +2896,7 @@ Gunslinger:
           - Greater Bull Rush
         level_10:
           abilities:
-          - Greater Firearm Creation and Modification
+          #- Greater Firearm Creation and Modification
           - Assassinate
         level_11:
           abilities:

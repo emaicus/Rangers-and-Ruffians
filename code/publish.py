@@ -85,6 +85,7 @@ def copyImages():
         source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
         dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, f'{usable}.jpg')
 
+      print(f'cp {source} {dest}')
       shutil.copy(source, dest)
       visited.add(usable)
 

@@ -8,7 +8,6 @@ Catterwol:
         - Land on your feet
         - Loose Skin
         - Fear of Water
-        #- Fast Paws Too powerful
         - Mantle
       quote: Ah, yes, well... It was then that we stumbled upon an encampment of
         cat-folk. They seemed a nice enough sort, so we bought some of their wares,
@@ -63,6 +62,11 @@ Catterwol:
         Perception: 1
         Strength: -1
 Elf:
+  quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
+        and they seldom mean what they say. They're strong mages, though, and too clever
+        for their own good. If you're dealing with elves, try to appeal to their pride,
+        but be careful about it. They can see through simple flattery.
+  author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
   subraces:
     Wood Elf:
       health_die_pieces: 4
@@ -70,17 +74,14 @@ Elf:
         - Sleepless
         - Low-Light Vision
         - Winged Feet
-        - Counter Attack
+        - Padfoot
+        #- Counter Attack
         - Tracker
-      quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
-        and they seldom mean what they say. They're strong mages, though, and too clever
-        for their own good. If you're dealing with elves, try to appeal to their pride,
-        but be careful about it. They can see through simple flattery.
-      author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
-      description: Elves are the most magical of the races. Forest-dwellers with long
-        lives, many elves spend their days practicing magic and honing their skills. Elves
-        are naturally beautiful, and this beauty benefits them when they deal with the other
-        races. Elves make strong mages and good dexterity based fighters.
+      description: "True to their common name, wood elves are forest-dwellers. 
+        Stronger and more down to earth than their high elven cousins, 
+        wood elves often make friends with the men, dwarves, sprouts, and halflings of the world.
+        As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters,
+        and a welcome addition to any adventuring party."
       stats:
         Charisma: 0
         Dexterity: 1
@@ -94,15 +95,10 @@ Elf:
       abilities:
         - Sleepless
         - Low-Light Vision
-        - Wink Wink, Nudge Nudge
+        - Beauty Incarnate
         - Inherent Magic
         - Detect Magic
         - Learned
-      quote: High Elves can be slippery folk. It seems to me that rarely say what they mean, 
-        and they seldom mean what they say. They're strong mages, though, and too clever
-        for their own good. If you're dealing with elves, try to appeal to their pride,
-        but be careful about it. They can see through simple flattery.
-      author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
       description: High elves are among the most magical of the races. Reclusive by nature,
         high elves often confine themselves to gleaming costal cities. When a high elf does
         venture out into the world at large, it is often in a diplomatic capacity. 
@@ -123,17 +119,13 @@ Elf:
         - Sleepless
         - Darkvision
         - Winged Feet
-        - Counter Attack
+        - Padfoot
         - Born in Darkness
-      quote: Elves can be slippery folk. It seems to me that rarely say what they mean, 
-        and they seldom mean what they say. They're strong mages, though, and too clever
-        for their own good. If you're dealing with elves, try to appeal to their pride,
-        but be careful about it. They can see through simple flattery.
-      author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
-      description: Elves are the most magical of the races. Forest-dwellers with long
-        lives, many elves spend their days practicing magic and honing their skills. Elves
-        are naturally beautiful, and this beauty benefits them when they deal with the other
-        races. Elves make strong mages and good dexterity based fighters.
+      description: "Sons and daughters of the dark gods, the deep elves
+                    have suffered much hardship for their origin. Pushed
+                    deep underground, dark elves have grown accustomed to the
+                    darkness. Stronger than other elves, dark elves are incredible but
+                    largely uncharismatic fighters."
       stats:
         Charisma: -2
         Dexterity: 0
@@ -153,6 +145,7 @@ Gnome:
         - Gather
         - Grapple Gun
         - Resist Magic
+        - Natural Intellect
       quote: Gnomes are tiny. They make things, sometimes. I can crush them.
       author: Throgar, Barbarian and Sheriff
       description: Tinkerers by nature, Gnomes are known to craft miraculous inventions to
@@ -174,10 +167,10 @@ Gnome:
               - title: ""
                 text: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
                   is coming along quite well, better than expected, actually. Not far away, the
-                  rest of her party snores as they sleep. She should be sleeping as well, tomorrow
+                  rest of her party snores as they sleep. She should be sleeping as well; tomorrow
                   is the big day. But then, that's why she needs a spring loaded spear-thrower
                   in the first place. For a moment, she considers lying down, but then pulls her
-                  goggles over her eyes. Hopefully, her party was sleeping heavily. With a grin,
+                  goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin,
                   she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
           # - title: Magic Resistant
           #   subsections:
@@ -201,7 +194,8 @@ Goblin:
         - Still Warm
         - Mantle
         - Darkvision
-        - Seek Gold
+        - Padfoot
+        # - Seek Gold
         - Cheap Blow
       quote: It is a rarity to find a kindly goblin, but when I have, I have found
         them to be most agreeable companions. Mind you, their penchant for raw
@@ -222,6 +216,9 @@ Goblin:
         Perception: 1
         Strength: 0
 Halfling:
+  quote: Halflings are decent enough, and fun to be around. They have potential as
+        rogues since they can see without being seen, but I'm not sure if they're clever enough.
+  author: Vasha, Catterwol Thief
   subraces:
     Fleetfoot Halfling:
       health_die_pieces: 2
@@ -231,13 +228,11 @@ Halfling:
         - Carry a Tune
         - Lightweight
         - Nimble
-      quote: Halflings are decent enough, and fun to be around. They have potential as
-        rogues since they can see without being seen, but I'm not sure if they're clever enough.
-      author: Vasha, Catterwol Thief
-      description: Small folk, the Halflings would rather be drinking tea and eating toast
-        in their holes than adventuring. They are naturally tricksters, are hardy
-        for their size, and are adept at sqeezing into tight spots. On average, the Halflings
-        stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
+      description: "Tiny and rambunctious, fleetfoot halflings are all high-spirits
+                    and fun. Known for their precocious daring, fleetfoot halflings
+                    make great thieves, archers, and fighters. They are naturally tricksters, are and are 
+                    adept at sqeezing into tight spots. On average, fleetfoot halflings
+                    stand at three feet and have warm, chestnut colored eyes and hair."
       stats:
         Charisma: 0
         Dexterity: 1
@@ -255,13 +250,13 @@ Halfling:
         - Carry a Tune
         - Thick Headed
         - Courageous Blow
-      quote: Halflings are decent enough, and fun to be around. They have potential as
-        rogues since they can see without being seen, but I'm not sure if they're clever enough.
-      author: Vasha, Catterwol Thief
-      description: Small folk, the Halflings would rather be drinking tea and eating toast
-        in their holes than adventuring. They are naturally tricksters, are hardy
-        for their size, and are adept at sqeezing into tight spots. On average, the Halflings
-        stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
+      description: "Taller but squatter than their fleetfoot cousins, the average hardfoot
+                    halfling would rather be drinking tea and eating toast
+                    in their home than adventuring. For a hardfoot halfing to venture out-of-doors,
+                    and become an adventurer, something truly earthshaking must happen to them:
+                    either a true call to adventure or a calamity that wrests them from the comfort of their home.
+                    Once they become adventurers, however, hardfoot halflings tend to be courageous,
+                    hearty, resilient warriors."
       stats:
         Charisma: 1
         Dexterity: -1
@@ -282,10 +277,11 @@ Human:
       - Skilled
       quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
       author: Orkensheild, Orc Archer
-      description: Humans are the most average of the races. The race of men can become good 
-        at most things, but it takes a concerted effort for them to become great at anything.
-        That doesn't stop them from trying, though, and it is this natural willpower that
-        makes them a force to be reckoned with.
+      description: "Humans are quick to learn, and are one of the most adaptable of the races.
+        They pick up new skills quickly, and are known as industrious and intelligent individuals.
+        Humans tend to be varied, and have the potential to succeed in all walks of life.
+        It is their natural willpower that
+        makes them a force to be reckoned with."
       stats:
         Charisma: 0
         Dexterity: -1
@@ -307,7 +303,10 @@ Lizkin:
       - Taste Air
       quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
       author: Mister Li, Gnomeish Monk
-      description: ''
+      description: "Tall and lizard-like, Lizkin are powerful fighters. 
+                    With the ability to taste scents on the air and to change
+                    their color at will, Lizkin make equally dangerous
+                    warriors and mages."
       stats:
         Charisma: -1
         Dexterity: -1
@@ -359,8 +358,8 @@ Orc:
         it is difficult to domesticate them. As the saying goes, you can take the orc out
         of the wilderness, but you can't stop him from trying to eat you.
       author: unattributed folk wisdom
-      description: A brutish and warlike race, orcs stab first and ask questions later.
-        Orcs are often used to living in harsh environments, and living off the land.
+      description: "A brutish and warlike race, orcs stab first and ask questions later.
+                    Orcs are often used to living in harsh environments, and living off the land."
       stats:
         Charisma: -2
         Dexterity: 0
