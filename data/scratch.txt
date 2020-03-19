@@ -16,9 +16,9 @@ WEAK PARITY:
   1.  [X] Path of Rage Barbarian
   2.  [X] Knight
   3.  [X] Paladin
-  4.  [ ] Telepath Fighter
+  4.  [X] Telepath Fighter
   5.  [X] Monk
-  6.  [ ] Ranger
+  6.  [X] Ranger
   7.  [X] Assassin Rogue
   8.  [X] Thief Rogue
   9.  [X] Bard
@@ -36,8 +36,7 @@ STRICT PARITY
   19. [ ] Fastest Gun Gunslinger
 
 EXTRA THAT I DID BECAUSE I'M DUMB
-  19. [X] Path of Nature Barbarian
-  20. [X] Telepath Fighter
+  20. [X] Path of Nature Barbarian
   21. [X] Heroic Highborn
 
 LONG TERM
@@ -63,9 +62,9 @@ Combined
   3.  Paladin
         [X] Paladin
   4.  Ranger
-        [ ] Ranger
+        [X] Ranger
   5.  Fighter
-        [ ] Telepath Fighter
+        [X] Telepath Fighter
         [ ] Champion Fighter
   6.  Monk
         [X] Monk
@@ -192,6 +191,7 @@ Tallies:
     Marksman: Slay an enemy, 10 feet of movement an an attack.
       Marksman: Slay an enemy, gain an action point
     Highborn: Slay an enemy, gain a gumption.
+    Ranger: Slay an enemy, gain 10 feet of movement and an attack
 
 
     Knight: Advance: Slay an enemy, move into their space.
@@ -231,9 +231,10 @@ Path of Rage:
   X Fury: On a turn where you have taken damage, add an extra damage dice to all of your attacks.
   X The Opener # Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone.
   X The Closer # Add two dice of damage to prone enemies.
-  X Warrior Spirit: # When you slay an enemy or land a critical hit, gain 1 action point.
+  X Warrior Spirit: # When you slay an enemy, gain 1 action point.
 
   X Savage Critical # Additional dice of damage when you crit
+  X Too Angry to Die # Reskin of stay on your feet.
 
   X Adrenaline: When you are below 50% health, gain an extra 10 feet of movement.
   X Glory # When you hit low health, extra damage dice
@@ -288,7 +289,7 @@ Path of Nature:
   X Rouse to Action: Grant an ally their full movement and one action.
 
 Knight:
-  Number of Combat Choices: 9
+  Number of Combat Choices: 8
 
   Good:
     X Shield Master # No penalty from shields
@@ -310,11 +311,11 @@ Knight:
     X Defender Aura # Cost: 2 Grant all nearby (30ft) allies half damage from physical attacks for 3 turns.
 
     X Overwhelming Strike # Extra damage dice. Size based contested STR or advantage on next attack.
-    X Shield Bash # "Offhand: Contested STR check. Fail: loose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
+    - Shield Bash # "Offhand: Contested STR check. Fail: loose action. d4 damage LV0 d8 LV4, d10 LV8, d12 LV12."
     X Ready Stance # Allows you to counter-attack
     
     X Knight's Challenge: Call out an enemy. It must make a INF save against your spell power or be forced to attack you. You gain advantage in all attacks.
-    Warrior's Vow: Gain an extra attack against an entity you have challenged. 
+    X Warrior's Vow: Gain an extra attack against an entity you have challenged. 
 
     X Charge # Charge an extra 10ft. Size STR check. Looser is knocked prone.
     X Greater Charge # Charge an extra 15ft. End in an attack.
@@ -390,10 +391,11 @@ Thief Rogue
     X Strike From the Shadows: If you begin your turn in hiding, do an additional dice of damage on all attacks.
     X Assisted Strike: If you have advantage on an attack, you may convert it to an additional damage dice.
     X Dodge: Cost 1. Role a 17 with dex to avoid damage each time you are attacked.
-      - CUT Greater Dodge: If you role a 14 or above, half damage
-      - CUT Redirecting Dodge: Cost 1. Redirect any dodged damage to an enemy within range.
+      - CUT Greater Dodge: If you role a 15 or above, half damage
+      - Redirecting Dodge: Cost 1. Redirect any dodged damage to an enemy within range.
   Active Combat:
     X Pickpocket: Cost 1. Extra damage dice. Contested Dex Check. On success, steal something from the enemy.
+    X Finesse Strike: Cost 1. Extra damage dice. If the attack is a critical hit, add another dice of damage to the total.
     X Disengage: Cost 1. Free Action. Avoid provoking exposed attacks.
     X Disappear: "Spend an offhand action to attempt to hide."
     X Mark: Cost 1. Mark an enemy. While marked, the enemy takes disadvantage in all attacks made against you and is considered to be harried.
@@ -438,7 +440,8 @@ Assassin Rogue:
     - Reduced Critical # Your critical hit target is decreased by one.
     - Savage Critical # Add 2 dice rather than 1 to your critical hits.
   Active Combat:
-    - Draining Strike # Cost 1. Regain half of the damage done by an attack.
+    - Draining Strike # Cost 1. Regain one quarter of the damage done by an attack.
+    - Finesse Strike # Cost 1. Extra damage dice. If crit, double all damage.
     - Meat Shield # Cost 1. Push someone into the way of an attack.
     - Radiant Invisibility Break # Create a distraction equivalent to Minor Spell of Distraction when you break invisibility.
     - Throw Caution to the Wind # Add an extra damage dice, but enemies get advantage on attacks.    
@@ -709,6 +712,7 @@ Druid:
         X Elemental Resistance: You gain resistance to damage from your chosen elements.
         X Elemental Adept: Spells using one of your chosen elements cost one fewer action points.
         X Empowered Elements: Enemies must make spell power saves against elements you have chosen with disadvantage.
+      X Elemental Strike: Cost 1. Convert your melee damage to elemental damage for 1 turn. Free action.
       X Second Element
       X Third Element
       X Final Element
@@ -925,7 +929,6 @@ Necromancer
       description: "Knit together a monstrous abomination to fight for you. Requires
           5 corpses. See the book of known beasts for details."
 
-========================= IN PROGRESS ======================================
 
 Ranger:
   Concept: Dexterity Tank with a dodge.
@@ -949,41 +952,58 @@ Ranger:
 
 
   Special
-    - Melee Weapon Proficiency
-    - Ranged Weapon Proficiency
-    - Dual Wielding Proficiency
+    X Melee Weapon Proficiency
+    X Ranged Weapon Proficiency
+    X Dual Wielding Proficiency
+      X Greater Dual Wielding # dual wielding attack as offhand or two 2 handed attacks as action.
+      X Fire and Ice
+
   Advantages:
-    - Tracker # Tracking
-      - Expert Tracker
-    - Perception While Sleeping
-    - Camouflage # Stealth when still
-    - Listen # Advantage on Perception Checks (not initiative)
-      - Uncanny Perception # See in the dark, advantage on initiative.
+    X Tracker # Tracking
+      X Expert Tracker
+    X Light Sleeper # Make perception checks while sleeping
+    X Camouflage # Stealth when still
+    X Listen # Advantage on Perception Checks (not initiative)
+      X Uncanny Perception # See in the dark, advantage on initiative.
+  General:
+    X Medicine: During a rest, craft a potion equivalent to a salve.
+      X Greater Medicine: Minor Health Potion
+      X Major Medicine: Greater Health Potion
+    X Minor Herbalist: During a rest, heal an ally of any status affliction. Does not include curses.
   Passive:
-    - Under the Stars # All sleep works as if you are in a bed.
+    X Under the Stars # All sleep works as if you are in a bed.
+    X Stay on Your Feet # Roll when you hit zero
   Combat Passive:
+    X Nimble # Targeted ranged attacks take disadvantage.
   Combat Active:
-    - Dodging Stance # Offhand action to go into a dodging stance. Once before next turn, dodge
-      - Greater Dodging Stance # Whenever you are targeted.
-    - Charging Slice # Cost 1. Run forward 15 feet. Terminate the charge with an attack which ignores enemy armor.
-    - 
+    X Dodging Stance # Offhand action to go into a dodging stance. Once before next turn, dodge
+      X Greater Dodging Stance # Whenever you are targeted.
+    X Charging Slice # Cost 1. Run forward 15 feet. Terminate the charge with an attack which ignores enemy armor.
+    X Embers # Cost 1. Make an attack which travels an additional 15 feet and deals an extra dice of fire damage.
+    X Ice Bolt # Cost 1. Make an attack which travels an additional 30 feet and deals an extra dice of frost damage.
+    X Entangling Strike # Cost 1. Extra dice of damage. SP save or ensnared
+    X Earthen Armor # Cost 1. Harden earth around you to gain resistance to slashing, piercing, and blunt attacks. Lasts 3 turns.
+    X Push
+      X Greater Push
+    X Finesse Strike # additional dice. On crit, double damage dice.
   Combo:
-    - On a critical hit, Immediately assume a dodging stance.
-
-
+    X Ready Defense # On a critical hit, Immediately assume a dodging stance.
+      X Greater Ready Defense # On a kill, Immediately assume a dodging stance
+    X Line Them Up # On a kill immediately gain 15 feet of movement and an attack.
+    X Warrior Spirit # Slay an enemy, gain an AP
+  Mark:
+    X Tracking Mark # Mark an enemy. You know the direction of that enemy for 24 hours
+      X Know Your Enemy # Deal an extra dice of damage to marked enemies.
+      X Pinpoint Mark # You know where the enemy is within 30 feet.
+      X Greater Pinpoint Mark # You can see the enemy even if it is invisible.
+      X Second Tracking Mark
 
   CUT:
-  - Embers
-  - Entangling Attack # tangle an enemy, ensnaring them
-  - Finesse Strike # additional dice. On SP fail, another on the next turn
   - Spell of Darkvision    
   - Twin Blades # 2x attacks in an action
   - Twin Blade Parry # strike back when an enemy attacks you?
   - Elemental Weapon 
   - Fire and Ice
-  - Minor Medicine
-  - Greater Medicine # Make better potions
-  - Major Medicine
 
 Wizard:
 
@@ -1050,7 +1070,66 @@ Wizard:
      - Spell Invention
 
 
-============================================================================
+========================= IN PROGRESS ======================================
+
+Champion Fighter:
+
+
+  Movement:
+    - Advance # Kill someone move into their space
+    - Juke # Move on dodge
+      - Greater Juke # Move two spaces on dodge
+      - Major Juke # Move three spaces on dodge
+  General:
+    - Minor Second Wind # Cost 1. Heal for 1d6
+      - Greater Second Wind # Heal for 2d6
+      - Major Second Wind # Heal for 3d6
+      - Legendary Second Wind # Heal for 4d6
+  Combat Passive:
+    - Nimble # Targeted ranged attacks have disadvantage
+    - Resolve # When you hit half health all attacks do half damage
+    - Determination # Add 1d10 to a check.
+  Combat Active:
+    - Focused Attack: # Add a dice of damage. Decrease crit by 1.
+      - Greater Focused Attack: # Decrease crit target by 2.
+    - Proning Strike # Knocks an enemy prone.
+    - Dodging Stance # Cost 1. Dodge
+      - Counterattack Dodge # Attack when you successfully avoid an attack
+    - Warrior's Luck # Regain 1 Luck on rest.
+      - Greater Warrior's Luck # Regain 2 luck on rest
+      - Major Warrior's Luck # Regain 1 luck at the start of combat
+    - Greater Dash # When you dash, dash 6 spaces
+    - 
+  Combo:
+    - Combo # When crit, make another attack or enter a dodging stance
+      - Ready Defense # When you slay an enemy, assume a dodging stance. 
+    - Follow Up # When you score a crit, take your next attack at advantage.
+    - Reduced Critical
+    - Reduced Critical
+
+
+
+  Prone
+  Slowed
+  Damage next turn
+  Inspired
+  Knock Back
+  They get advantage vs you
+  Heal Allies
+  Disarm
+  Ignore Armor
+
+
+
+    - Stay on Your Feet # When you hit zero health, make a D10. On success, drop to 1 health instead.
+    Rework:
+      - Focused Attack # Re-roll an attack after you make it
+      
+
+
+
+
+========================= TODO/NOTES ======================================
 
 
  Naturalist Druid:
@@ -1068,7 +1147,6 @@ Wizard:
 
 
 
-========================= TODO/NOTES ======================================
 
 Noble Highborn:
   - CHA based everything?
@@ -1103,34 +1181,6 @@ Quickdraw???
   ideas:
     Line in the sand and if an enemy crosses it you can shoot them.
     - Feeling Lucky
-
-
-
-
-Fighter:
-  - Minor Second Wind # Cost 1. Heal for 1d6
-    - Greater Second Wind # Heal for 1d12
-    - Major Second Wind # Heal for 2d10
-
-  - Nimble # Targeted ranged attacks have disadvantage
-  - Determination #Grant yourself a d10 inspiration
-
-  - Find Center # Free action. Cost 1. Advantage in all things for a turn.
-
-  - Resolve # When you hit half health all attacks do half damage
-  - Stay on Your Feet # When you hit zero health, make a D10. On success, drop to 1 health instead.
-
-  - Whirlwind of Blades # cost 2: Make a third attack
-  - Reduced Critical
-
-  Ideas:
-    - A counterattack
-
-
-
-Rework:
-  - Focused Attack # Re-roll an attack after you make it
-
 
 
 
@@ -1192,3 +1242,6 @@ Beastmaster:
     - Wild Sight # You can see through your animal's eyes.
     - Inseparable # Offhand. Teleport yourself to your animal or vice versa.
     - Beast Form # Transform back and forth into a dire creature for one hour.
+
+
+

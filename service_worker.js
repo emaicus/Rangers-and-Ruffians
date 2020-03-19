@@ -388,47 +388,47 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/pages/GENERATED/ALT.json",
-    "revision": "9de8057731757584b935205dff0df5ae"
+    "revision": "316da169b3aa7b91e21f0a7bbb90ffc0"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "da989136df11a9f214d19b28051acbf3"
+    "revision": "20ed3481b7c276fcd75b8495f50a9dc3"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "a0238e28b6e195f5b4a7f8c20049cff9"
+    "revision": "12472371923ed752683fdd08b60ab636"
   },
   {
     "url": "new_site/pages/GENERATED/Changelog.html",
-    "revision": "344edd9c70b27e463bc074a85c1e9b45"
+    "revision": "a804ae2b1fa978fb89dc71b43e2661a0"
   },
   {
     "url": "new_site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "12db786864d8ee5e0a15a5ba2fd4e855"
+    "revision": "89efce34365610dd5f050c36f2ad9e1f"
   },
   {
     "url": "new_site/pages/GENERATED/Examples.html",
-    "revision": "423cafd6753de63951ed8ff57bf1d2a3"
+    "revision": "080851ce4f186b94f18d43daadf9df59"
   },
   {
     "url": "new_site/pages/GENERATED/Examples.md",
-    "revision": "8aaf19c18647c8ea210ab92b58479ac7"
+    "revision": "f31fc1f7483675fcb13d69b2f64f7c4c"
   },
   {
     "url": "new_site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "96ac324803b45f1c3b4f1defc3965cc5"
+    "revision": "c0a6de81838de246b2e93cd56789b9f4"
   },
   {
     "url": "new_site/pages/GENERATED/Printed_Materials.html",
-    "revision": "4d06cddd3f6e65c5d02cc3ebb78e432d"
+    "revision": "c3f8821e0669dade588fe235c129fa51"
   },
   {
     "url": "new_site/pages/GENERATED/Rulebook.html",
-    "revision": "e0280ef997822bba8c869e55274a6c2e"
+    "revision": "831b49ee75500c5646afe3b61c821753"
   },
   {
     "url": "new_site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "77d99c7e106d6f154ccd18c30cd9c1f0"
+    "revision": "87033f4814309644c188ded96f12fc57"
   },
   {
     "url": "new_site/pages/level_up_sheet.html",
@@ -508,7 +508,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "05d8b4c64b8c6aae4a456d2c50331585"
+    "revision": "0877921a3b68cafd2aba5d1d325f4118"
   },
   {
     "url": "assets/css/style.css",

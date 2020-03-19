@@ -25,16 +25,18 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians 2.1.3: The Combat Update](#rangers-and-ruffians-213-the-combat-update)  
+   * [Rangers and Ruffians 2.3.0: The New Class Update](#rangers-and-ruffians-230-the-new-class-update)  
      * [Overview:](#overview)  
+   * [Rangers and Ruffians 2.1.3: The Combat Update](#rangers-and-ruffians-213-the-combat-update)  
+     * [Overview:](#overview-1)  
      * [New Rules:](#new-rules)  
      * [Race Balance Changes](#race-balance-changes)  
      * [Class Balance Changes](#class-balance-changes)  
    * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
-     * [Overview:](#overview-1)  
+     * [Overview:](#overview-2)  
      * [Ability Changes](#ability-changes)  
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
-     * [Overview:](#overview-2)  
+     * [Overview:](#overview-3)  
      * [Rule Changes:](#rule-changes)  
      * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes-1)  
@@ -46,6 +48,19 @@ show_download: false
      * [Race Balance Changes:](#race-balance-changes-2)  
      * [Class Balance Changes:](#class-balance-changes-2)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
+
+  
+## Rangers and Ruffians 2.3.0: The New Class Update
+  
+  
+
+  
+### Overview:
+This revision:
+1. Redesigns every class to make them more action oriented and engaging to play.
+2. Tweaks race mechanics to better match new classes.
+  
+  
 
   
 ## Rangers and Ruffians 2.1.3: The Combat Update

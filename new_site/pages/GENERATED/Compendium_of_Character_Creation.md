@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.1.3_  
+_Version 2.3.0_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -89,10 +89,10 @@ _Version 2.1.3_
        * [Cleric of The Sea](#cleric-of-the-sea)  
        * [Cleric of Undeath](#cleric-of-undeath)  
      * [Elementalist Druid](#elementalist-druid)  
-     * [Fighter](#fighter)  
+     * [Telepath](#telepath)  
      * [Marksman](#marksman)  
      * [Heroic Highborn](#heroic-highborn)  
-     * [Knight](#knight)  
+     * [Stalwart Knight](#stalwart-knight)  
      * [Monk](#monk)  
      * [Necromancer](#necromancer)  
      * [Paladin](#paladin)  
@@ -266,11 +266,11 @@ __Automaton Abilities:__
 * __General Abilities:__   
   * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
   * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
-  * __Armored Exterior:__ You naturally take half damage from the following types of attack: piercing, slashing, blunt, fire, and ice. Does not stack with Berserk.  
+  * __Armored Exterior:__ You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice.  
 * __Combat Abilities:__   
   * __Self Repair:__ During combat, you can self repair as an action.  
   * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
-  * __Piston Punch:__ _(Cost 1)_ You may perform a 1d8 strength based punch on an enemy of your choice. If the enemy fails a contested strength check, it is knocked prone. Enemies larger than your size take advantage, smaller take disadvantage. At level 4, increase damage to 1d12. At level 8, to 2d12. At level 12 to 3d12.  
+  * __Piston Punch:__ _(Cost 1)_ Perform an attack which ignores enemy armor.  
   
   
   
@@ -278,6 +278,9 @@ ___
 
   
 ### Catterwol
+<img src='../../images/race/female/catterwol.jpg' class="raceClassImage" />
+
+"[Portrait of warrior"](https://www.deviantart.com/alsareslynx/art/Portrait-of-warrior-415698430) by AlsaresLynx is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Ah, yes, well... It was then that we stumbled upon an encampment of cat-folk. They seemed a nice enough sort, so we bought some of their wares, beads and knives and potions, that sort of thing. After that, we supped with them. Well, before we knew it, we were all unconcious; they drugged the food, no doubt. They made off with everything; my staff, my hat, and even my sandles!
 >
 >—Archibold, the Wizard
@@ -307,7 +310,7 @@ Catterwol are among the most lithe and dexterous of the races, and are adept at 
 __Catterwol Abilities:__ 
 * __General Abilities:__   
   * __Darkvision:__ You can see even in perfect darkness.  
-  * __Land on your feet:__ You can fall 40 feet before taking fall damage.  
+  * __Land on your feet:__ Decrease any falling damage by 20 feet.  
 * __Advantages:__   
   * __Predator:__ When tracking, you have advantage on perception checks.  
   * __Loose Skin:__ You have advantage when breaking grapples.  
@@ -315,7 +318,7 @@ __Catterwol Abilities:__
 * __Disadvantages:__   
   * __Fear of Water:__ You have disadvantage when soaked through.  
 * __Combat Abilities:__   
-  * __They're Retractable:__ You have retractable, razor sharp claws capable of doing 1d4 damage.  
+  * __They're Retractable:__ You have retractable, razor sharp claws which add +1 damage to your punching or kicking attacks.  
   
   
   
@@ -347,7 +350,7 @@ __Daemonspawn Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest.  
   
   
   
@@ -377,7 +380,7 @@ __Dwarf Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Advantages:__   
   * __Stocky:__ You have advantage against any check that could cause you to go prone.  
-  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Do not take short range disadvantage.  
+  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Negates the harried condition.  
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
   * __Forgeborn:__ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
@@ -391,13 +394,12 @@ ___
 
   
 #### Deep Elf
->Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
->
->—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
+<img src='../../images/race/female/deep_elf.jpg' class="raceClassImage" />
 
+"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Elves are the most magical of the races. Forest-dwellers with long lives, many elves spend their days practicing magic and honing their skills. Elves are naturally beautiful, and this beauty benefits them when they deal with the other races. Elves make strong mages and good dexterity based fighters.
+Sons and daughters of the dark gods, the deep elves have suffered much hardship for their origin. Pushed deep underground, dark elves have grown accustomed to the darkness. Stronger than other elves, dark elves are incredible but largely uncharismatic fighters.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -411,10 +413,9 @@ __Deep Elf Abilities:__
   * __Darkvision:__ You can see even in perfect darkness.  
 * __Advantages:__   
   * __Winged Feet:__ You have advantage on acrobatics checks.  
+  * __Padfoot:__ You have advantage on stealth checks.  
 * __Disadvantages:__   
   * __Born in Darkness:__ You are incredibly light sensitive, and take 1d6 damage per hour spent with your skin exposed to bright light or to the sun. As a result, you must wear protective garments during the day.  
-* __Combat Abilities:__   
-  * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
   
   
@@ -422,10 +423,9 @@ ___
 
   
 #### High Elf
->High Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
->
->—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
+<img src='../../images/race/female/high_elf.jpg' class="raceClassImage" />
 
+"[Elf Girl"](https://www.deviantart.com/selenada/art/Elf-Girl-459931558) by Selenada is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
 High elves are among the most magical of the races. Reclusive by nature, high elves often confine themselves to gleaming costal cities. When a high elf does venture out into the world at large, it is often in a diplomatic capacity. High elves are as charming as they are naturally beautiful, and commonly feel as though it is their duty to maintain balance in the world. High elves make good mages.
@@ -445,7 +445,7 @@ __High Elf Abilities:__
   * __Inherent Magic:__ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
   * __Detect Magic:__ _(Cost 1)_ Perform a magic detection check.  
 * __Advantages:__   
-  * __Wink Wink, Nudge Nudge:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
+  * __Beauty Incarnate:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
   
   
   
@@ -453,13 +453,12 @@ ___
 
   
 #### Wood Elf
->Elves can be slippery folk. It seems to me that rarely say what they mean, and they seldom mean what they say. They're strong mages, though, and too clever for their own good. If you're dealing with elves, try to appeal to their pride, but be careful about it. They can see through simple flattery.
->
->—Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
+<img src='../../images/race/female/wood_elf.jpg' class="raceClassImage" />
 
+"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Elves are the most magical of the races. Forest-dwellers with long lives, many elves spend their days practicing magic and honing their skills. Elves are naturally beautiful, and this beauty benefits them when they deal with the other races. Elves make strong mages and good dexterity based fighters.
+True to their common name, wood elves are forest-dwellers. Stronger and more down to earth than their high elven cousins, wood elves often make friends with the men, dwarves, sprouts, and halflings of the world. As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters, and a welcome addition to any adventuring party.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -473,9 +472,8 @@ __Wood Elf Abilities:__
   * __Low-Light Vision:__ You can see in low light.  
 * __Advantages:__   
   * __Winged Feet:__ You have advantage on acrobatics checks.  
+  * __Padfoot:__ You have advantage on stealth checks.  
   * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
-* __Combat Abilities:__   
-  * __Counter Attack:__ _(Cost 1)_ Reaction. You may strike back when an enemy attacks you.  
   
   
   
@@ -483,12 +481,15 @@ ___
 
   
 ### Gnome
+<img src='../../images/race/female/gnome.jpg' class="raceClassImage" />
+
+"[Explorer"](https://www.deviantart.com/yanporfirio/art/Explorer-606889176) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 >Gnomes are tiny. They make things, sometimes. I can crush them.
 >
 >—Throgar, Barbarian and Sheriff
 
 __Tinker__  
-Moonlight paints the room as the Gnomish Tinker bites her lip. Her project is coming along quite well, better than expected, actually. Not far away, the rest of her party snores as they sleep. She should be sleeping as well, tomorrow is the big day. But then, that's why she needs a spring loaded spear-thrower in the first place. For a moment, she considers lying down, but then pulls her goggles over her eyes. Hopefully, her party was sleeping heavily. With a grin, she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*  
+Moonlight paints the room as the Gnomish Tinker bites her lip. Her project is coming along quite well, better than expected, actually. Not far away, the rest of her party snores as they sleep. She should be sleeping as well; tomorrow is the big day. But then, that's why she needs a spring loaded spear-thrower in the first place. For a moment, she considers lying down, but then pulls her goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin, she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*  
   
 __None__  
 __Eccentric__  
@@ -515,6 +516,7 @@ __Gnome Abilities:__
   * __Grapple Gun:__ You carry a retractable grappling gun. The gun carries 40 feet of rope.  
 * __Advantages:__   
   * __Resist Magic:__ You make any rolls against an enemy's spell power with advantage.  
+  * __Natural Intellect:__ You have a natural intelligence which grants you advantage on intelligence checks.  
   
   
   
@@ -543,9 +545,9 @@ __Goblin Abilities:__
 * __General Abilities:__   
   * __Still Warm:__ You can eat raw meat without penalty.  
   * __Darkvision:__ You can see even in perfect darkness.  
-  * __Seek Gold:__ You are able to smell gold. You can perform gold detection checks.  
 * __Advantages:__   
   * __Mantle:__ You have advantage on dexterity checks when climbing.  
+  * __Padfoot:__ You have advantage on stealth checks.  
 * __Combat Abilities:__   
   * __Cheap Blow:__ On a critical hit, knock an enemy prone.  
   
@@ -558,13 +560,12 @@ ___
 
   
 #### Fleetfoot Halfling
->Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
->
->—Vasha, Catterwol Thief
+<img src='../../images/race/female/fleetfoot_halfling.jpg' class="raceClassImage" />
 
+"[On a Quest"](https://www.deviantart.com/nathanparkart/art/On-a-Quest-721516754) by NathanParkArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, are hardy for their size, and are adept at sqeezing into tight spots. On average, the Halflings stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
+Tiny and rambunctious, fleetfoot halflings are all high-spirits and fun. Known for their precocious daring, fleetfoot halflings make great thieves, archers, and fighters. They are naturally tricksters, are and are adept at sqeezing into tight spots. On average, fleetfoot halflings stand at three feet and have warm, chestnut colored eyes and hair.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -589,13 +590,12 @@ ___
 
   
 #### Hardfoot Halfling
->Halflings are decent enough, and fun to be around. They have potential as rogues since they can see without being seen, but I'm not sure if they're clever enough.
->
->—Vasha, Catterwol Thief
+<img src='../../images/race/female/hardfoot_halfling.jpg' class="raceClassImage" />
 
+"[Houma"](https://www.deviantart.com/junica-hots/art/Houma-743629249) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Small folk, the Halflings would rather be drinking tea and eating toast in their holes than adventuring. They are naturally tricksters, are hardy for their size, and are adept at sqeezing into tight spots. On average, the Halflings stand at three-and-a-half feet, and have warm, chestnut colored eyes and hair.
+Taller but squatter than their fleetfoot cousins, the average hardfoot halfling would rather be drinking tea and eating toast in their home than adventuring. For a hardfoot halfing to venture out-of-doors, and become an adventurer, something truly earthshaking must happen to them: either a true call to adventure or a calamity that wrests them from the comfort of their home. Once they become adventurers, however, hardfoot halflings tend to be courageous, hearty, resilient warriors.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -665,7 +665,7 @@ ___
 
   
   
-Humans are the most average of the races. The race of men can become good at most things, but it takes a concerted effort for them to become great at anything. That doesn't stop them from trying, though, and it is this natural willpower that makes them a force to be reckoned with.
+Humans are quick to learn, and are one of the most adaptable of the races. They pick up new skills quickly, and are known as industrious and intelligent individuals. Humans tend to be varied, and have the potential to succeed in all walks of life. It is their natural willpower that makes them a force to be reckoned with.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -730,8 +730,7 @@ ___
 
   
   
-  
-  
+Tall and lizard-like, Lizkin are powerful fighters. With the ability to taste scents on the air and to change their color at will, Lizkin make equally dangerous warriors and mages.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -756,6 +755,9 @@ ___
 
   
 ### Orc
+<img src='../../images/race/female/orc.jpg' class="raceClassImage" />
+
+"[Rakhven portrait"](https://www.deviantart.com/jeleynai/art/Rakhven-portrait-732800784) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >The full-orc is a dangerous specimen. Known to hunt and eat the other races, it is difficult to domesticate them. As the saying goes, you can take the orc out of the wilderness, but you can't stop him from trying to eat you.
 >
 >—unattributed folk wisdom
@@ -777,7 +779,7 @@ __Orc Abilities:__
   * __Predator:__ When tracking, you have advantage on perception checks.  
 * __Combat Abilities:__   
   * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
-  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone.  
+  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.  
   * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
   
   
@@ -786,6 +788,9 @@ ___
 
   
 ### Sprout
+<img src='../../images/race/female/sprout.jpg' class="raceClassImage" />
+
+"[Kynitia"](https://www.deviantart.com/deevad/art/Kynitia-322571692) by Deevad is licensed under [CC BY-SA 3.0 US](https://creativecommons.org/licenses/by-sa/3.0/us/)  
 >And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
 >
 >—Harley, Elf Paladin
@@ -820,6 +825,9 @@ ___
 
   
 ### Waterborn
+<img src='../../images/race/female/waterborn.jpg' class="raceClassImage" />
+
+"[Dark Elf"](https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 >Most Waterborn I've seen have been dried up and dying. Their need for water is their undoing, out here in the desert. Once they've been wetted down a bit, they perk right up. It's then that you have to watch yourself; Waterborn are liable to charm you when you're not looking.
 >
 >—Leaf, Gnome Rogue from the Wild Desert
@@ -859,12 +867,12 @@ we have worked hard to make sure that all of them are very fun, so no matter wha
 to have a good time!
   
 ### Archer
-<img src='../../images/class/archer.jpg' class="raceClassImage" />
+<img src='../../images/class/female/archer.jpg' class="raceClassImage" />
 
-"[Bounty Hunter"](https://www.deviantart.com/johnnymorrow/art/Bounty-Hunter-618263949) by johnnymorrow is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Archer-Comission"](https://www.deviantart.com/robcv/art/Archer-Comission-786575653) by RobCV is licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)  
   
   
-Some of the best marksmen in the world, archers are naturals with ranged weapons. They are often attached to their bow, and carry it with them everywhere. Archers come from all walks of life; some compete in tournaments, others are hunters and farmer's sons. Still others have served in the military. Archers should stay off of the front line, instead picking off foes from a distance.
+Some of the best marksmen in the world, archers are naturals with ranged weapons. They are often attached to their bow, and carry it with them everywhere. Masters of the trick-shot, archers learn to utilize simple magics to craft their many specialized arrows.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -889,7 +897,7 @@ ___
 #### Path of Nature Barbarian
   
   
-Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
+The Path of Nature Barbarian is deeply in tune with the power that infuses the beasts of the world. By harnessing and infusing themselves with these powers, Path of Nature Barbarians can take on the aspects of animals, gaining powerful abilities as a result. Path of Nature Barbarians are highly versatile and mobile, and make good support tanks and frontline fighters.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -930,7 +938,7 @@ ___
 "[Song of nature"](https://www.deviantart.com/yanporfirio/art/Song-of-nature-695972090) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
   
   
-Showmen by nature, Bards are known for their skills at performing and distracting others from the sorrows of life. Bards are usually at least a little bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based weapons such a shortswords or knives. Bards are powerful spellcasters, and are excellent at providing support to their party and at making enemies weaker. As you prepare your bard, consider how they chose this way of life. How did they learn magic? How do they perform? Do they play music? Dance? Tell stories? How did they learn to fight? Who did they learn to fight from? How old are they? How many places have they been? Where do they perform? Why do they perform there? How will being a bard change the way you interact with your party?
+Showmen by nature, Bards are known for their skills at performing and distracting others from the sorrows of life. Bards are usually at least a little bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based weapons such a shortswords or knives. Bards are powerful spellcasters, and are excellent at providing support to their party and at making enemies weaker. The bardic guilds have mastered the art of making Spell Coins, powerful items which can store magical spells for later use. These coins can be used to greatly increase a Bard's arsenal or to give non-casters access to powerful spells.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -950,12 +958,16 @@ ___
 <img src='../../images/class/cleric.jpg' class="raceClassImage" />
 
 "[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+  
+  
+After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. Clerics are weak, and do not fight with physical weapons. However, they are powerful spellcasters who are adept at healing, and who can make a huge difference in combat. Clerics try to embody the ideals of their deity, paying them homage and working to enact their will in the world.  
+  
 
   
 #### Cleric of Beauty
   
   
-Servant  of Lady Dusk. Followers of the Pale Lady seek rewards from their dark goddess in return for helping her conform the world to her ideals.
+Servant of Lady Dusk. Followers of the Pale Lady seek rewards from their dark goddess in return for helping her conform the world to her ideals.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1202,7 +1214,7 @@ ___
 ### Elementalist Druid
   
   
-Gaurdians of nature, most druids prefer to live in tribes in the forests, mountains, prairie, tundra, or desert. Druid's command powerful nature based magic, which they use to smite those who threaten them, their friends, or their home. Druids utilize intelligence based action points to cast spells, and are a good match for players interested in playing a mage. As you build your druid, consider where they came from. Why are they so attached to nature? How does their attachment to the natural world change how they think? How do they react to large towns and cities? What do they wear, and how do they speak? How do they feel about other types of magic? Why are they on their adventure? How do they feel about eating meat? What are their values? What do they think the place of people is in the world? How will being a druid change the way you interact with your party?
+Earth, Water, Fire, Air. These are the domain of the Elementalist. Devotees of the power of the elements, the Elementalist masters the elements one after the other on their journeys. As the Elementalist masters the elements, they unlock their potential, unleashing greater and more powerful magic. The elementalist druid is a powerful combat caster, but may also be used to support a party.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1218,13 +1230,10 @@ Gaurdians of nature, most druids prefer to live in tribes in the forests, mounta
 ___
 
   
-### Fighter
-<img src='../../images/class/fighter.jpg' class="raceClassImage" />
-
-"[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+### Telepath
   
   
-Fighters are powerful strength or dexterity based warriors. Unlike the knight, fighters are unarmored, and have a skillset more suited to keeping themselves alive and bringing down enemies than providing support.
+Magic suffuses the world, flowing around and through all things. The telepath has learned to harness that flow, manipulating the current of magic to affect the world around them. This ability allows the telepath to project their thoughts like inaudible sounds through the ripples of magic, and even to change the flow of magic to affect the material world. The Telepath Fighter is a powerful combatant, able to push, pull, hoisted and mentally batter their enemies. Telepaths are among the best suited fighters to destroy an enemy mage.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1235,7 +1244,7 @@ Fighters are powerful strength or dexterity based warriors. Unlike the knight, f
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Fighter" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Telepath" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1243,7 +1252,7 @@ ___
 ### Marksman
   
   
-Through luck, valor, or perhaps trickery, the Gunslinger has managed to acquire one of the rarest weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. At the beginning of their adventure, a gunsling may choose to start with either a rifle or a pistol, a decision that determines engagement range and their upgrade path.
+Through luck, valor, or perhaps trickery, the Marksman has mastered the use of one of the most complicated weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. Marksmen are long-distance snipers, and excel at dealing massive damage to single targets. They are weak, however, against enemies that get in close, and require a good party to stand between themselves and their enemies.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1262,7 +1271,7 @@ ___
 ### Heroic Highborn
   
   
-Highborns were born into a noble house and have connections and money as a result. They are well trained fighters, and have the charisma necessary to rally people to their side. While the typical highborn is not as hardened as a knight or fighter, they are able to call upon their gumption for spurts of incredible heroism.
+The Heroic Highborn is a beacon of fierce nobility, brining hope and inspiration to their people. The Heroic Highborn is a powerful fighter which supports its allies by granting them inspiration. As a Heroic Highborn watches it's allies succeed, it gains Gumption, the force of will needed to perform heroic feats in combat.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1278,13 +1287,10 @@ Highborns were born into a noble house and have connections and money as a resul
 ___
 
   
-### Knight
-<img src='../../images/class/male/knight.jpg' class="raceClassImage" />
-
-"[Warrior Concept"](https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+### Stalwart Knight
   
   
-Knights are heavy, armored fighters who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Knights hold sway over kingsmen, and are able to protect their allies.
+The Stalwart Knight is a are heavy, armored fighter who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and are able to deal heavy damage to nearby enemies, and to protect nearby allies.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1295,7 +1301,7 @@ Knights are heavy, armored fighters who should place themselves between their pa
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Knight" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Stalwart Knight" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1306,7 +1312,7 @@ ___
 "[Monk Warrior"](https://www.deviantart.com/ekoputeh/art/Monk-Warrior-512015315) by ekoputeh is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Monks are masters of hand to hand combat, who use their extensive control of their bodies to overcome their foes. Monks are able to learn abilities from scrolls, which they may find scattered throughout the world. Monks have dedicated themself to the art of understanding the natural and spiritual world, and are often levelheaded and intelligent. As you create your monk, consider what their goals are. How did they become a monk, and what are they hoping to gain by doing so? How do they react in stressful situations? How do they interact with other people? Are they quiet and reserved? Confident and sure of themself? How will being a monk affect the way you interact with your party?
+Monks are masters of hand to hand combat who use their extensive control of their bodies to overcome their foes. The monk is a powerful front-line combatant, which excels at making multiple rapid attacks against an enemy, chipping away at their defenses with well placed blows. Monks do well against humanoid enemies and beasts, but have to use their wits to overcome massive, heavily armed creatures.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1328,7 +1334,7 @@ ___
 "[Necromancer"](https://www.deviantart.com/paolapieretti/art/Necromancer-519605226) by PaolaPieretti is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers, mages who study the intricacies of death, and what follows after. Often fuled by macabre fasination or a god complex, Necromancy is deeply feared and considered taboo by almost everyone. Clerics and Paladins, in particular, may despise or hunt necromacers. At the beginning of their journey, necromancers may choose to be vegan, promising only to eat the souls of evil individuals. As you create your necromancer, consider their values. How did they end up studying such horrible magics? Was it out of necessity? Curiosity? What are they hoping to accomplish? How do they rationalize what they do? Do they have any ticks or quirks? How will being a necromancer affect how you interact with your party?
+Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers, mages who study the intricacies of death, and what follows after. Often fueled by macabre fascination or a god complex, Necromancy is deeply feared and considered taboo by almost everyone. Clerics and Paladins, in particular, may despise or hunt necromancers. Necromancers utilize the power inherent in living souls to perform their magic, and are masters of raising an army of undead thralls to serve them.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1350,7 +1356,7 @@ ___
 "[Dwarf King of the Unicorns"](https://www.deviantart.com/jameszapata/art/Dwarf-King-of-the-Unicorns-244186494) by jameszapata is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Palidins are Soldiers of the Light, and are adept both at hand to hand combat and basic healing magic. Paladins are devoted to their deity, and aim to bring their influence into the world. Paladins are especially good at taking out evil entities, and are known for their Faithful Weapon ability, which lets them summon their weapon to their hand after throwing it.
+Paladins are Soldiers of the Light, and are adept both at hand to hand combat and healing magic. Paladins are devoted to their deity, and aim to bring their influence into the world. Paladins are especially good at taking out evil entities, and are known for their Faithful Weapon ability, which lets them summon their weapon to their hand after throwing it.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1372,12 +1378,12 @@ ___
 "[Swordman-sketch"](https://www.deviantart.com/josephqiuart/art/Swordman-sketch-702721751) by JosephQuiArt is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Rangers are the vigilante law keepers and monster hunters of the wilds. Rangers are powerful dexterity based fighters, and are known for their abiltiy to dual weild weapons. Rangers are masters of the wilds, and are able to easily traverse the wilds, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters. As you create your ranger, consider how they ended up a ranger? How did they become so adept at navigating the wilderness? Do they feel the need to protect villagers? What kinds of monsters have they fought? Who trained them, if anyone? How will being a ranger affect the way that you interact with your party?
+Rangers are the vigilante law keepers and monster hunters of the wilds. Tank-like fighters, Rangers are powerful dexterity based combatants, and are known for their ability to dual wield weapons. Rangers are masters of the wilds, and are able to easily track enemies, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|-3|2|1|1|-1|0|4|  
+|-2|0|2|1|1|-1|-3|4|  
   
   
   
@@ -1397,7 +1403,7 @@ ___
 #### Assassin
   
   
-Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
+Experts at dealing massive damage to a single target, assassins are among the most deadly fighters on the battlefield. With low-health and light armor, the assassin must rely on their cunning to win an outright battle. To this end, assassins learn the art of magic, using their powers to augment their abilities, and even to turn invisible before sinking a poisoned dagger between an enemy's ribs.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1416,7 +1422,7 @@ ___
 #### Thief
   
   
-Sneaktheives and criminals, rogues have often fallen in with bad company. Rogues are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. Rogues are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage.
+Sneaktheives and criminals, Thieves have often fallen in with bad company. Thieves are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. They are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage. Then, after attacking, they disengage from combat, fleeing back to the shadows to prepare for their next attack.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1438,7 +1444,7 @@ ___
 "[Sorca, Magus of the first Seal"](https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Sorcerer's draw their magic not from cryptic tomes nor nuanced understanding, but rather through raw force of personality. To perform magic, a sorcerer wrestles with a spirit, natural or otherwise, and convinces them to do their bidding. To this end, Sorcerers do not use action points to cast spells, but rather must pass a charisma check to perform magic. As you create your sorcerer, consider how they learned magic. Who did they learn it from? How did they first wrestle a spirit to aid them? When they cast a spell, do they always use the same spirit, or different spirits? Is the spirit natural, or the soul of someone who is gone? How will being a sorcerer change the way that you interact with the world and your party?
+The Sorcerer does not learn their magic, but is rather given it either as a gift or by trade. Some Sorcerers bargain with the spirits that inhabit the world, granting them a chance to experience the mortal realm in exchange for magical power. Others make a pact with one of the Old Ones, half formed gods, powerful demons, or natural beasts of awe-inspiring power. In these pacts, the Sorcerer must act as a vassal to their new lord in exchange for rewards. By definition, the Sorcerer must be charismatic to strike and maintain such deals, and must ask their sponsor for aid each time they cast a spell. While this means that their borrowed magic sometimes fails them, it also means that the sorcerer has access to far more power than other mortals.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
@@ -1460,7 +1466,7 @@ ___
 "[Spellcaster"](https://www.deviantart.com/ncorva/art/Spellcaster-768564631) by ncorva is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Often eccentric, wizards are known to be wayfarers and meddlers. Most keep to themselves, approaching others only to entwine them in schemes only they know about. Wizards arrive precisely when they mean to. To use magic, Wizards use action points to cast spells. Wizards gain access to new spell tiers before any other class. As you create your wizard, consider what their past is. How old are they? What kind of family did they come from? How long have they been a wizard? Are they mysterious? Are they competent? How do they interact with others? Who taught them magic? How will being a wizard affect how you interact with your other party members?
+The study of magic is the study of potential, or so the wizard discovers during their long hours of research. Unlike other mages who take shortcuts, the wizard pours over their books to gain understanding over the magic of the world. It is in this study that wizards learn that magic is a form of unevaluated energy, energy which has the potential to become anything given coercion. Using this knowledge, their mind, an arcane focus, and an assortment of magically charged objects, the wizard is able to create wondrous things, and to do mighty deeds.
   
   
 |STR|INT|PER|LUK|DEX|INF|CHA|HD|  
