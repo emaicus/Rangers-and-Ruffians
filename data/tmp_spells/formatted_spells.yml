@@ -1,0 +1,1200 @@
+the_bard's_songbook:
+    Tier_0:
+      Carry on the wind:
+        cost: 0
+        target: entity
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Point at an entity and your voice carries to them as though you are standing next to them."
+        balance_type: minor utility
+      Conceal Weapon:
+        cost: 1
+        target: self
+        num_targets: 1
+        duration: 24 hours
+        combat_duration: battle
+        description: "Magically conceal up to three weapons on your person."
+        range: self
+        balance_type: minor utility
+      Control Shadows:
+        cost: 0
+        target: space
+        num_targets: 1
+        combat_duration: concentration
+        description: "Influence the movement of shadows."
+        range: archer
+        balance_type: minor utility
+      Create Sound:
+        cost: 1
+        target: self
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: "Create any sound you have heard before."
+        range: self
+        balance_type: minor utility
+      Cruel Limerick:
+        cost: 0
+        target: enemy
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: Tell a cruel rhyme, imbued with magic.
+        minor_damage_dice: 1
+        minor_damage_type: psychic
+        range: middling
+        effects: 
+          - description: "the entity takes Disadvantage on their next action."
+          - save: Spell Power
+          - balance_type: minor debuff
+        balance_type: minor damage
+      Forge Writing:
+        cost: 1
+        target: object
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Magically forge the handwriting of anyone you have spoken with."
+        range: self
+        balance_type: minor utility
+      Hypnotize:
+        cost: 1
+        target: entity
+        num_targets: 1
+        duration: 1 minute
+        combat_duration: 1
+        description: "Attempt to hypnotize an enemy using a swinging trinket."
+        casting_time: 10 seconds
+        combat_casting_time: 1
+        range: hand to hand
+        components: 
+          - "a swinging trinket"
+        effects: 
+          - save: "Spell Power" 
+            description: "the entity is under your influence for up to sixty seconds."
+            repeat:
+              - "if they are asked to do anything that causes themselves or those they love harm"
+        balance_type: greater utility
+      Steal Voice:
+        cost: 1
+        target: enemy
+        num_targets: 1
+        duration: until save
+        combat_duration: save
+        description: "Attempt to steal an enemy's voice and use it as your own."
+        range: middling
+        effects:
+          - save: "Spell Power"
+            description: "you may take an entity's voice and use it as your own."
+            repeat:
+              - "every turn or once every ten minutes"
+        balance_type: minor debuff
+      Throw Voice:
+        cost: 0
+        target: space
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Magically throw your voice."
+        range: archer
+        balance_type: minor utility
+      Trick up Your Sleeve:
+        cost: 1
+        target: self
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: "Summon up to forty feet of tied together cloths from your sleeve."
+        range: self
+        balance_type: minor utility
+      Harsh Note:
+        cost: 0
+        target: enemy
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: "Create a harsh noise which damages one enemy."
+        major_damage_dice: 1
+        major_damage_type: psychic
+        range: archer
+      Discordant Symphony:
+        cost: 0
+        target: enemy
+        num_targets: aoe
+        effect_radius: 30
+        duration: instantaneous
+        combat_duration: 1
+        minor_damage_dice: 1
+        description: "Create a horrible sound which damages all who hear it."
+        range: self
+        balance_type: minor damage
+    Tier_1:
+      Belch Fire:
+        cost: 1
+        target: enemy
+        num_targets: cone
+        duration: instantaneous
+        combat_duration: 1
+        description: "Belch a cone of fire."
+        major_damage_dice: 1
+        major_damage_type: fire
+        range: self
+        balance_type: greater damage
+      Blocking Hand:
+        cost: 1
+        target: self
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: "Summon an unseen hand to protect you from a attack light melee or ranged attack."
+        action_type: Reaction
+        range: self
+        utility_type: greater buff
+      Courage:
+        cost: 1
+        target: friendly
+        num_targets: 1
+        duration: 1 hour
+        combat_duration: battle
+        description: "Make allies within range immune to fear and give them advantage on inner fire saves."
+        range: middling
+        balance_type: greater buff
+      Curse of Crying:
+        cost: 1
+        target: 1
+        num_targets: enemy
+        duration: Until Save
+        combat_duration: save
+        description: "Attempt to curse an enemy."
+        range: middling
+        effects:
+          - save: Spell Power
+            description: "the enemy receives a curse which causes them to weep constantly,
+              giving them disadvantage on actions made during combat. 
+              The curse does not leave until dispelled."
+            balance_type: greater curse
+      Dazzling Lights:
+        cost: 1
+        target: space
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Summon seven dazzling lights to dance about you. You may magically
+              order them to go anywhere within range."
+        range: far
+        balance_type: greater utility
+      Disarmor:
+        cost: 1
+        target: enemy
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Cast a spell which reduce an enemy's armor to zero."
+        range: middling
+        balance_type: greater debuff
+      Disguise:
+        cost: 1
+        target: self
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Magically change yourself or someone else that they look like a generic person
+                      from the region you are in."
+
+        range: self
+        balance_type: greater utility
+      Fatigue:
+        cost: 1
+        target: enemy
+        num_targets: 1
+        duration: Until Save
+        combat_duration: save
+        description: "Attempt to cause an enemy to become exhausted."
+        range: middling
+        effects:
+          - save: Spell Power
+            description: "the entity takes disadvantage on all relevant checks and loses half of their movement"
+            repeat:
+              - "each turn thereafter"
+            balance_type: greater debuff
+      Gnomish Dream:
+        cost: 1
+        target: entity
+        num_targets: 1
+        duration: concentration
+        combat_duration: concentration
+        description: "Gain line of sight on a sleeping entity. Impart upon them any dream
+              that you wish, so long as the characters are all gnomes."
+        range: sight
+        balance_type: greater utility 
+      Kiss and Tell:
+        cost: 1
+        taget: entity
+        num_targets: 1
+        duration: 1 week
+        combat_duration: battle
+        description: "Kiss someone to always know where they are. Know within 10 miles if the 
+              kiss is on the hand, within 5 miles if the kiss is on the cheek or forehead,
+              within 100 feet if on the mouth. Lasts for 1 week."
+        range: hand to hand
+        balance_type: greater utility
+      Liar's Tongue:
+        cost: 1
+        target: entity
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        range: middling
+        effects: 
+          - save: Spell Power
+            description: "the entity believes the next thing that you tell them."
+            repeat: 
+              - "when provided with proof of their newfound belief's fallacy"
+        balance_type: greater utility
+      Minor Trickery:
+        cost: 1
+        target: entity
+        num_targets: 1
+        duration: 5 minutes
+        combat_duration: save
+        range: middling
+        balance_type: greater utility
+        effects:
+          - save: Spell Power
+            description: "the entity is convinced that it sees something that it does not."
+            repeat: 
+              - at the end of each of its turns  
+      Not So Fast:
+        cost: 1
+        target: enemy
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: "Force an enemy to remake a roll, or to make a roll with
+              disadvantage."
+        range: archer
+        balance_type: minor debuff
+        action_type: Reaction
+      Song of Haste:
+        cost: 1
+        target: friendly
+        num_targets: 1
+        duration: 1 turn or  5 minutes
+        combat_duration: 1
+        range: middling
+        balance_type: greater buff
+        description:  "Allow a teammate an extra action on their next turn and to move
+              an extra 15 feet. If out of battle, they may move at double speed for five minutes."
+      Song of Slow Healing:
+        cost: 1
+        target: friendly
+        num_targets: 1
+        duration: One Minute
+        combat_duration: 2
+        minor_healing_dice: 1
+        description: "Play a soothing song which heals an injured ally."
+        range: middling
+        balance_type: minor healing
+    Tier_2:
+      Counter Magic:
+        cost: 1
+        target: enemy
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        action_type: Reaction
+        range: middling
+        balance_type: greater debuff
+        description: "Attempt to stop enemy magic before it takes effect."
+        effects:
+          - save: Spell Power
+            description: "their spell fails as they cast it. Counter Magic 
+              may be cast at a higher tier for an additional cost equal
+              to the tier increase. If the tier of the counter
+              spell is equal to or greater than the opponent's spell, the opponent's spell
+              is instantly dispelled without save. If the difference between
+              your countermagic's tier and the enemy's spell's tier is greater than 1,
+              they make the save with advantage."
+      Swarm of Squirrels:
+        cost: 2
+        target: space
+        num_targets: 1
+        duration: 1 hour
+        combat_duration: battle
+        description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
+          and is capable of doing 1 damage per turn. Squirrels move together in combat, and are
+          attacked as a swarm.
+        range: middling
+        balance_type: minor summoning
+      Greater Conceal Weapons:
+        cost: 2
+        target: friendly
+        num_targets: 7
+        duration: concentration
+        combat_duration: concentration
+        range: middling
+        balance_type: major utility
+        description: Magically conceal up to three weapons on each of up to seven
+          individuals.
+      Invisible Servant:
+        cost: 2
+        target: space
+        num_targets: 1
+        duration: 1 hour
+        combat_duration: battle
+        description: Summon an invisible servant to aid you in a task. The servant is only
+          capable of dealing 1d4 damage and has 20 hit points.
+        range: middling
+        balance_type: minor summoning
+      Kilgore's Thunderous Shout:
+        cost: 2
+        target: enemy
+        num_targets: cone
+        duration: instantaneous
+        combat_duration: 1
+        description: "Unleash a might shout to subdue your enemies."
+        major_damage_dice: 2
+        major_damage_type: force
+        effects: 
+          - save: strength check against your spell power
+            description: the entity is thrown backward 15 feet and take an additional dice of blunt damage
+        range: self
+        balance_type: greater damage
+      Lullaby:
+        cost: 2
+        target: enemy
+        num_targets: aoe
+        effect_radius: 30
+        duration: instantaneous
+        casting_time: 2 minutes
+        combat_casting_time: 2
+        range: self
+        effects: 
+          - save: Spell Power
+            description: on the first failure, the entity becomes dreary, and looses
+                         half it's movement. On a second failure, it falls into a
+                         deep slumber, and cannot be awoken save by damage or a
+                         successful save.
+            repeat:
+              - "Each turn before the entity falls asleep."
+              - "Every hour after the entity has fallen asleep."
+        description: Sing a song which puts all enemies that can hear it to sleep if
+          they fail a spell power save. Each turn thereafter,
+          they can attempt the same saving throw. If harmed, they wake up.
+      Magic Steed:
+        cost: 2
+        target: space
+        num_targets: 1
+        duration: concentration
+        combat_duration: battle
+        description: Summon a steed made of pure magical energy. The stallion has 20
+          health, and may be de-summoned on command.
+        range: middling
+        balance_type: greater utility
+      Marionette:
+        cost: 2
+        target: enemy
+        num_targets: 1
+        duration: Until Save
+        combat_duration: save
+        description: "Attempt to control an enemy like a puppet."
+        range: middling
+        effects: 
+          - save: Spell Power
+            description: you may control them as though they are a puppet and
+              you hold their strings. The entity may attempt an inner fire saving throw
+              each turn thereafter to break your control.
+        balance_type: greater debuff
+      Minor Gate:
+        cost: 2
+        target: self
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: Create a portal exactly big enough to fit yourself and one other
+          individual of your size and instantly transport through it.
+        range: far
+        balance_type: greater utility
+      Raucous Laughter:
+        cost: 2
+        target: enemy
+        num_targets: aoe
+        effect_radius: 30
+        duration: save
+        combat_duration: save
+        range: self
+        description: "Tell an incredibly funny joke imbued with magical power."
+        effects:
+          - save: Spell Power
+            description: "the entity falls prone, laughing, and cannot stand until
+                          it makes its save."
+            repeat:
+              - "each turn"
+        balance_type: greater debuff
+      Smokescreen:
+        cost: 1
+        target: space
+        num_targets: aoe
+        effect_radius: 30
+        duration: 5 minutes
+        combat_duration: 3
+        range: middling
+        description: "Create a smokescreen. Entities within the smokescreen are considered to be 
+                      in darkness."
+        balance_type: greater utility
+      Tyrone's Ravenous Hunger:
+        cost: 2
+        description: Cause an entity to become ravenously hungry. If they fail a
+          spell power save, they will attempt to eat the nearest entity to them.
+      Wall of Sound:
+        cost: 2
+        description: Create a wall up to 40 feet long and 100 feet wide of pure sonic
+          energy. Any entity that attempts to pass through it must make an inner fire
+          saving throw against your spell power or be thrown back and take 2d10 damage.
+      Sonic Dart:
+        cost: 2
+        description: Fire a blast of pure sound at a target within 15 feet, dealing
+          3d6 damage.
+    Tier_3:
+      Forget:
+        cost: 2
+        description: Force an entity to make a spell power save. On failure, the entity
+          forgets 1d10 minutes of your choosing.
+the_druid's_guidebook:
+  Tier_0:
+    Claws:
+      target: self
+      num_targets: 1
+      cost: 1
+      description: "Grow catlike claws from your fingers. The claws are capable of dealing damage equivalent to your
+                    major damage dice, and give you advantage on dexterity checks made when climbing."
+      duration: 1 hour
+      combat_duration: battle
+      range: self
+      balance_type: minor buff
+      school: "natural-animist"
+    Catseye:
+      target: self
+      num_targets: 1
+      cost: 1
+      duration: 1 hour
+      combat_duration: battle
+      description: "Change your eyes to those of a cat. You are granted the effects of Darkvision for one hour."
+      range: self
+      balance_type: minor buff
+      school: "natural-animist"
+    Cold Resistance:
+      target: self
+      num_targets: 1
+      cost: 2
+      duration: 1 hour
+      combat_duration: battle
+      description: "Harden yourself against the cold. You take half damage from cold or frost based
+            attacks, and make saves against frost or cold based damage at advantage. Lasts 1 hour."
+      range: self
+      balance_type: greater buff
+      school: "natural-elemental-water"
+    Fire Resistance:
+      cost: 2
+      target: self
+      num_targets: 1
+      duration: 1 hour
+      combat_duration: battle
+      description: "Temper yourself against fire. You take half damage from fire based
+                    attacks, and make saves against fire based damage at advantage."
+      range: self
+      balance_type: greater buff
+      school: "natural-elemental-fire"
+    Lightning Resistance:
+      cost: 1
+      target: self
+      num_targets: 1
+      duration: 1 hour
+      combat_duration: battle
+      description: "Shield yourself against lightning. You take half damage from lightning based
+            attacks, and make saves against lightning based damage at advantage."
+      range: self
+      balance_type: greater buff
+      school: "natural-elemental-air"
+    Minor Control Plant Growth:
+      cost: 0
+      target: space
+      num_targets: 1
+      range: middling
+      duration: concentration
+      combat_duration: concentration
+      description: "Quickly grow a plant up to the size of a hedge in about 5 minutes
+                    or 1 turn in combat."
+      balance_type: minor utility
+      school: "natural-floral"
+    Crown of Fireflies:
+      cost: 1
+      target: space
+      num_targets: 1
+      duration: concentration
+      combat_duration: concentration
+      description: "Summon a crown of fireflies to dance around your head, casting
+        candlelight around you. You may command the fireflies up to a distance of
+            100 feet."
+      range: self
+      balance_type: greater utility
+      school: "natural-animist"
+    Echolocate:
+      target: self
+      num_targets: 1
+      cost: 1
+      duration: instantaneous
+      combat_duration: 1
+      description: "Let out a nearly inaudible sonic pulse, which allows you to gain a picture of
+        the surrounding area as a perception check."
+      range: far
+      balance_type: greater utility
+      school: "natural-animist"
+    Minor Mending:
+      cost: 0
+      target: object
+      num_targets: 1
+      range: hand to hand
+      duration: instantaneous
+      combat_duration: 1
+      description: "Instantly mend a broken item or object. You must have most of the
+          pieces and the object must not be too complicated. Make an intelligence check
+          if repairing a complex object."
+      balance_type: minor utility
+      school: "arcane"
+    Spider Web:
+      cost: 0
+      target: space
+      num_targets: 1
+      range: hand to hand
+      duration: concentration
+      combat_duration: concentration
+      effects:
+      description: "Create incredibly sticky spiderweb, capable of holding a person.
+            You are able to create it at the rate of five cubic feet per five minute span, 
+            or one five foot cube per action."
+      balance_type: minor utility
+      school: "natural-animist"
+    Walk on Water:
+      cost: 1
+      target: self
+      num_targets: 1
+      range: self
+      duration: concentration
+      combat_duration: concentration
+      description: Walk atop the water. Concentration.
+      balance_type: minor utility
+      school: "natural-elemental-water"
+    Constricting Vine:
+      balance_type: minor damage
+      target: enemy
+      num_targets: 1
+      range: middling
+      duration: concentration
+      combat_duration: concentration
+      cost: 1
+      major_damage_dice: 1
+      description: A vine bursts from the ground at an enemies feet, grabbing at them and dealing damage.
+      effects:
+        - description: "the enemy is held in place, and the damage is repeated. When concentration is
+                       broken, the damage stops, but the entity is still held."
+          save: Spell Power
+          repeat: at the start of its turn
+          balance_type: greater debuff
+      school: "natural-floral"
+    Hurl Stone:
+      balance_type: greater damage
+      target: enemy
+      num_targets: 1
+      range: middling
+      cost: 1
+      duration: instantaneous
+      combat_duration: 1
+      description: Magically hurl a stone at an enemy.
+      major_damage_dice: 2
+      effects:
+        - description: the enemy is knocked prone.
+          save: Spell Power
+          balance_type: greater debuff
+      school: "natural-elemental-earth"
+  Tier_1:
+    Bark Armor:
+      target: friendly
+      num_targets: 1
+      balance_type: minor buff
+      range: middling
+      cost: 1
+      duration: 3 hits
+      combat_duration: 2
+      description: Add 1d4 armor to an individual. The armor breaks after they take
+        3 hits. Bark armor breaks instantly if attacked by fire.
+      school: "natural-floral"
+    Become Flame:
+      target: self
+      num_targets: 1
+      balance_type: greater utility
+      duration: concentration
+      combat_duration: concentration
+      cost: 1
+      major_damage_dice: 1
+      description: "Become wreathed in flame. During that
+        time you are immune to fire or heat based damage, and anything that you touch
+        is set aflame and instantly takes fire damage. Your belongings disappear
+        and are undamaged."
+      school: "natural-elemental-fire"
+    Cloud of Fog:
+      target: space
+      num_targets: 1
+      balance_type: greater utility
+      range: sight
+      duration: 1 hour
+      combat_duration: battle
+      cost: 1
+      description: Create a heavy fog. The fog may
+        have a radius of up to 50 feet. Entities in the fog make relevant checks with
+        disadvantage.
+      school: "natural-elemental-water"
+    Commanding Presence:
+      cost: 2
+      target: friendly
+      num_targets: aoe
+      effect_radius: 30
+      balance_type: greater buff
+      range: self
+      duration: concentration
+      combat_duration: concentration
+      description: Create an aura which grants all nearby allies advantage on spell power
+        saving throws.
+      school: "social"
+    Speak with Nature:
+      cost: 1
+      target: self
+      num_targets: 1
+      balance_type: greater utility
+      range: self
+      duration: concentration
+      combat_duration: concentration
+      description: Speak in the language of plants or animals.
+      school: "natural"
+    Focused Elemental Beam:
+      balance_type: greater damage
+      target: enemy
+      num_targets: 1
+      cost: 1
+      range: archer
+      major_damage_dice: 2
+      major_damage_type: elemental
+      duration: "instantaneous"
+      combat_duration: 1
+      description: Hurl forth a concentrated beam of either ice, fire, electricity, or air.
+      school: "natural-elemental"
+    Fool the Senses:
+      cost: 1
+      balance_type: greater utility
+      target: entity
+      num_targets: 1
+      range: archer
+      duration: until a successful save
+      combat_duration: save
+      description: Cast a charm to attempt to fool an enemy's senses.
+      effects:
+        - description: convince them that they see, hear, or smell something
+            that they do not.
+          save: Spell Power
+          balance_type: minor utility
+          repeat: at the start of each of the entity's turns
+      school: "unknown"
+    Moonlight:
+      cost: 1
+      target: entity
+      num_targets: 1
+      range: middling
+      balance_type: greater utility
+      duration: concentration
+      combat_duration: concentration
+      description: Summon moonlight and attach it to an object or person. The light
+        lasts one hour past when you break concentration on it, and is bright enough
+        to allow you to see 50 feet.
+      school: "natural"
+    Poison Jet:
+      balance_type: greater damage
+      cost: 2
+      target: enemy
+      num_targets: 1
+      range: middling
+      minor_damage_dice: 4
+      minor_damage_type: poison
+      duration: instantaneous
+      combat_duration: 1
+      description: Hit an enemy with a blast of liquid poison.
+      school: "natural-animist"
+    Purify:
+      cost: 1
+      balance_type: minor restoration
+      target: friendly
+      num_targets: 1
+      range: hand to hand
+      duration: instantaneous
+      combat_duration: 1
+      description: Remove poison from an item or person.
+      school: "divine"
+    Summon Eagles:
+      cost: 2
+      balance_type: greater damage
+      target: enemy
+      num_targets: 1
+      range: archer
+      duration: 1 hour
+      combat_duration: 3
+      major_damage_dice: 1
+      description: Summon an eagle which attacks an enemy.
+      effects:
+        - description: "The attacked enemy is considered harried."
+      school: "natural-animist"
+    Tailwind:
+      balance_type: greater utility
+      target: self
+      num_targets: 1
+      range: hand to hand
+      duration: concentration
+      combat_duration: concentration
+      cost: 1
+      description: Summon a mighty tailwind or current behind you.
+      school: "natural-elemental-air"
+    Thorned Caltrops:
+      balance_type: greater utility
+      cost: 1
+      target: space
+      num_targets: 5
+      range: middling
+      minor_damage_dice: 1
+      duration: 1 hour
+      combat_duration: battle
+      description: Cast thorn based spikes onto the ground. Anyone moving across them
+        will move at half speed and take damage every 5 feet.
+      school: "natural-floral"
+    Embue Weapon:
+      cost: 2
+      target: friendly
+      num_targets: 1
+      balance_type: greater buff
+      range: hand to hand
+      duration: 1 hour
+      combat_duration: battle
+      description: Magically embue a weapon, converting its damage to fire, ice, lightning, or poision damage.
+      school: "natural-elemental"
+    Firebolt:
+      balance_type: greater damage
+      target: enemy
+      num_targets: 1
+      range: archer
+      cost: 0
+      major_damage_dice: 1
+      major_damage_type: fire
+      duration: instantaneous
+      combat_duration: 1
+      description: "Fire a sizzling bolt of flames at an enemy."
+      school: "natural-elemental-fire"
+  Tier_2:
+    Charm Animal:
+      cost: 1
+      target: animal
+      num_targets: 1
+      description: Charm an animal or beast to make it friendly towards you.
+      balance_type: greater utility
+      range: middling
+      duration: until save
+      combat_duration: save
+      effects:
+        - description: a hostile animal regards you as friendly.
+          save: Spell Power
+          balance_type: greater utility
+          repeat: every hour
+      school: "natural-animist"
+    Freezing Rain:
+      cost: 2
+      balance_type: greater debuff
+      description: "Cause a freezing rain to fall over one mile of terrain, making it difficult to traverse."
+      range: archer
+      duration: 1 hour
+      combat_duration: battle
+      target: enemy
+      num_targets: battle
+      effects:
+        - description: "they fall prone."
+          check_condition: "When moving at greater than half their speed across affected terrain"
+          save: Dexterity Check against your Spell Power
+          balance_type: greater utility
+      school: "natural-elemental-water"
+    Geyser:
+      cost: 1
+      target: space
+      num_targets: 1
+      balance_type: greater utility
+      range: far
+      duration: 1 hour
+      combat_duration: battle
+      description: Create a geyser with a 3 foot radius which fires water 40 feet
+        directly upward into the air.
+      school: "natural-elemental-earth"
+    Hurl Boulder:
+      cost: 2
+      target: enemy
+      num_targets: 1
+      balance_type: major damage
+      major_damage_dice: 3
+      major_damage_type: force
+      duration: instantaneous
+      combat_duration: 1
+      description: Hurl a boulder at an enemy.
+      school: "natural-elemental-earth"
+    Remove Curse:
+      cost: 2
+      target: friendly
+      num_targets: 1
+      balance_type: greater restoration
+      duration: instantaneous
+      combat_duration: battle
+      description: "Immediately allow an individual to re-make a spell power save against a 
+        curse or other status effect at advantage."
+      school: "divine"
+    Spores:
+      cost: 2
+      minor_damage_dice: 2
+      minor_damage_type: poison
+      target: enemy
+      num_targets: aoe
+      effect_radius: 30
+      balance_type: greater damage
+      range: self
+      duration: 1 minute
+      combat_duration: 1
+      description: Release poison spores. Anyone who inhales
+        them must take damage.
+      effects:
+        - description: "must make all actions with disadvantage as well as being poisoned, as mushrooms begin sprouting from their bodies."
+          save: "Spell Power"
+          balance_type: minor debuff
+      school: "natural-floral"
+    Thieve's Curse: 
+      cost: 2
+      target: entity
+      num_targets: 1
+      duration: eternity
+      description: "Cast a curse on an enemy."
+      balance_type: major debuff
+      duration: eternity
+      combat_duration: battle
+      effects:
+        - description: they are cursed so that they have an irresistible
+            urge to steal something once per hour. Afterward, they forget their acts of thievery,
+            and stow the stolen goods in their quarters or a private place. The curse
+            remains until it is dispelled.
+          save: Spell Power
+          balance_type: major debuff
+      school: "unknown"
+    Wall of ice:
+      cost: 2
+      balance_type: major utility
+      target: space
+      num_targets: 8
+      range: middling
+      duration: 1 hour
+      combat_duration: battle
+      description: Create a wall up to 15 feet high and 40 feet long of solid ice.
+      school: "natural-elemental-water"
+    Wall of Brambles:
+      cost: 2
+      balance_type: major utility
+      target: space
+      num_targets: 8
+      range: middling
+      major_damage_dice: 1
+      duration: eternity
+      combat_duration: battle
+      description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
+        them requires 3 dexterity checks against your spell power, each of which results
+        damage on failure. If a check is failed, the entity is stuck in the
+        brambles until its next turn.
+      school: "natural-floral"
+    Tornado:
+      cost: 2
+      balance_type: greater debuff
+      range: middling
+      target: enemy
+      num_targets: 1
+      description: Trap an entity of your choice in a swirling whirlwind. 
+      duration: 15 minutes
+      combat_duration: 3
+      effects:
+        - description: continues to be trapped. If the entity escapes, 
+            it slams to the ground, causing 40 feet of fall damage.
+          save: dexterity check against your spell power
+          repeat: at the end of each of each turn
+      school: "natural-elemental-air"
+  Tier_3:
+    Animal Form:
+      cost: 2
+      balance_type: major utility
+      target: self
+      num_targets: 1
+      duration: until un-cast
+      combat_duration: battle
+      description: Transform yourself into a Light or Heavy beast of up to second
+        level. See the book of known beasts for more details. You may leave this form as an offhand action.
+      school: "natural-animist"
+    Forest Guardians:
+      cost: 2
+      balance_type: greater summoning
+      range: self
+      target: friendly
+      num_targets: 2
+      duration: 1 hour
+      combat_duration: battle
+      description: Summon one beast of second level, two beasts of first level, or four beasts of first level.
+        of known beasts for more details.
+      school: "natural-animist"
+    Greater Control Plant Growth:
+      cost: 2
+      duration: concentration
+      combat_duration: concentration
+      target: space
+      num_targets: 1
+      balance_type: major utility
+      casting_time: 30 seconds
+      combat_casting_time: 1
+      description: "Quickly grow plants up to the size of a tree.
+        After an hour of use, begin making inner fire saving
+        throws to see if you are too exhausted to continue."
+      school: "natural-floral"
+    Hurricane Force Winds:
+      cost: 2
+      duration: concentration
+      combat_duration: concentration
+      target: enemy
+      num_targets: cone
+      effect_radius: 30
+      balance_type: major debuff
+      range: self
+      description: Summon hurricane force winds with up to a 30 foot horizontal diameter.
+      effects:
+        - description: cannot move. On success, they move at half speed.
+          check: size-based strength check against your spell power
+          check_condition: If they try to move through the wind
+      school: "natural-elemental-air"
+    Nature's Fury:
+      balance_type: major damage
+      cost: 3
+      major_damage_dice: 4
+      major_damage_type: elemental
+      target: enemy
+      num_targets: line
+      range: archer
+      duration: instantaneous
+      combat_duration: 1
+      description: Fire a beam of earth, wind, ice, or fire. The unchecked power of this
+        attack passes through enemies, allowing you to strike multiple if they are in a line.
+      school: "natural-elemental"
+    Grant Elemental Resistance:
+      cost: 2
+      target: friendly
+      num_targets: 1
+      balance_type: greater buff
+      range: middling
+      duration: 1 hour
+      combat_duration: battle
+      description: Select an element. An entity of your choice takes half damage from
+        that element.
+      school: "natural-elemental"
+  Tier_4:
+    Plant Golems:
+      cost: 4
+      balance_type: major summoning
+      target: space
+      num_targets: 2
+      range: self
+      duration: 1 hour
+      combat_duration: battle
+      description: Summon 2 plant golems to your aid. See the book of known beasts
+        for details.
+      school: "natural-floral"
+    Thunder Cloud:
+      balance_type: major damage
+      range: archer
+      duration: 1 hour
+      combat_duration: 3
+      target: enemy
+      num_targets: 2
+      cost: 4
+      major_damage_dice: 2
+      major_damage_type: lightning
+      description: Create a thunder cloud. Each turn, the
+        thundercloud may summon a two lightning strikes which deal which deal damage to
+        an entity of your choice.
+      school: "natural-elemental-air"
+    Wildfire:
+      balance_type: major damage
+      cost: 4
+      major_damage_dice: 3
+      major_damage_type: fire
+      target: space
+      num_targets: 4
+      range: archer
+      duration: 1 hour
+      combat_duration: battle
+      description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
+        space with fire, dealing damage to everyone within. The flames remain in place
+        until extinguished."
+      school: "natural-elemental-fire"
+    Wings:
+      cost: 2
+      balance_type: greater buff
+      duration: 12 hours
+      combat_duration: battle
+      target: self
+      num_targets: 1
+      range: self
+      description: Summon an eagles wings to your back, giving you the ability to
+        fly.
+      school: "natural-animist"
+    Awaken Animal:
+      cost: 5
+      balance_type: major utility
+      duration: eternity
+      combat_duration: battle
+      target: animal
+      num_targets: 1
+      range: hand to hand
+      casting_time: 24 hours
+      combat_casting_time: battle
+      components:
+        - "1,000 gold worth of gemstones"
+        - "A seed from a feywood tree"
+        - "An animal which trusts you completely"
+      description: Grant an animal sentience.
+      school: "natural-animist"
+    Bountiful Harvest:
+      balance_type: healing candidate
+      cost: 3
+      balance_type: major healing
+      range: hand to hand
+      target: friendly
+      num_targets: 8
+      casting_time: 1 hour
+      combat_casting_time: battle
+      duration: 24 hours
+      combat_duration: battle
+      components:
+        - A Chalice worth 100 gold pieces.
+        - A seed from a feywood tree.
+      description: Grow a feast. Up to 8 entities may partake of the feast. Each of
+        these entities fully heal, and gain additional hit points equal to a roll 
+        of your major spell dice for the next 24 hours.
+      school: "natural-floral"
+    Control Weather:
+      cost: 2
+      balance_type: major utility
+      range: self
+      target: region
+      num_targets: 1
+      casting_time: 30 minutes
+      duration: concentration
+      combat_duration: concentration
+      description: Changes the weather in a region. Further,
+        control that weather to accomplish specific tasks. Weather
+        does not change back when concentration is broken.
+      school: "natural-elemental-air"
+  Tier_5:
+    Fix Season:
+      balance_type: major utility
+      cost: 5
+      range: self
+      target: region
+      num_targets: 1
+      casting_time: 24 hours
+      duration: eternity
+      combat_duration: battle
+      components:
+        - 250 gold's worth of crystals.
+        - the seed of a feywood tree
+      description: Find the highest point in a region. Atop this point, create a pillar
+        of rock, at least ten feet tall and with a three foot radius. Spend some time
+        carving symbols significant to you into the stones. Affix crystals valuing
+        250 gold to the top of the spire. Crush the seed of a feywood tree, and channel
+        your energy into the crystals. After many hours, the crystals begin to glow, 
+        and an area of up to 50 miles will be stuck in the season of your choice.
+      school: "natural"
+    Starfall:
+      balance_type: major damage
+      cost: 4
+      major_damage_dice: 6
+      major_damage_type: force
+      range: archer
+      target: enemy
+      num_targets: aoe
+      effect_radius: 30
+      duration: instantaneous
+      combat_duration: 1
+      description: Spend one full round of combat focusing on bringing down a massive
+        meteor. If you are attacked, make a concentration check. On failure, you loose
+        control of the spell. On success, call down a meteor
+        which strikes all enemies in a 10 foot radius for massive damage.
+      school: "natural-elemental-earth"
+    Tsunami:
+      balance_type: major damage
+      cost: 4
+      major_damage_type: force
+      major_damage_dice: 4
+      range: far
+      duration: battle
+      target: enemy
+      num_targets: battle
+      duration: instantaneous
+      combat_duration: 1
+      description: Summon a massive tidal wave to crash down on the battlefield. 
+        The tidal wave does damage to all enemies in a cone in front of you. 
+      effects:
+        - description: are swept away by the tsunami. Entities that are swept
+            away move until they hit something solid or have moved 50 feet. When they
+            stop, they take additional damage. After the tsunami has swept across the battlefield,
+            the battlefield has 2 feet of water on it, and all movement must be taken
+            at half speed.
+          save: size based strength check versus your spell power
+          balance_type: major debuff
+          duration: 1 hour
+          combat_duration: battle
+      school: "natural-elemental-water"
+    Volcano:
+      cost: 6
+      balance_type: major damage
+      major_damage_type: fire
+      range: archer
+      target:  enemy
+      num_targets: battle
+      duration: until dispelled
+      combat_duration: battle
+      major_damage_dice: 4
+      description: Call forth a volcano with a caldera with a 15 foot radius. 
+        Lava bubbles forth, spewing onto the battlefield.
+        All standing where the volcano appears must make a dexterity saving throw
+        against your spell power. On a failure, they are partially submerged in lava,
+        and take damage. On a critical failure, they are fully submerged,
+        and take double damage. Each turn, the volcano spews lava. All creatures on
+        the battlefield must make a dexterity check against your spell power. On failure
+        they take damage. The volcano lasts until it is dispelled.
+      school: "natural-elemental-fire"
+    Winter's Fury:
+      cost: 5
+      balance_type: major damage
+      range: sight
+      target: enemy
+      num_targets: battle
+      minor_damage_dice: 4
+      minor_damage_type: ice
+      duration: concentration
+      combat_duration: concentration
+      description: Summon the biting snows of a massive blizzard. 
+        All entities within the blizzard take
+        damage each turn, and are considered harried.
+      school: "natural-elemental-water"

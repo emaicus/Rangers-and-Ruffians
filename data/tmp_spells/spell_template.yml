@@ -1,0 +1,68 @@
+spellbook:
+  Tier:
+    Title:
+      cost: 0
+      target: ["friendly", "enemy", "entity (friendly, enemy, etc.)", "object", "self", "space", "animal", "region"]
+      num_targets: #, aoe, battle, line, cone
+      duration: String
+      combat_duration: #, save, battle, concentration
+      description: "What the spell does at a high level."
+      major/minor_damage_dice: 0
+      major/major_damage_type: <elemental, poison, fire, force, psychic, ice, dark, light>
+      major/major_healing_dice: 0
+      range: Distance at which it can be cast in ft. (Macros subbed on install for balance purposes)
+      balance_type: <minor, greater, major> <utility, buff, debuff, restoration, summoning, curse>
+
+      # Effects should be used only for saves and secondary effects. Primary effects go at the outer level.
+      effect_radius: # number of feet, defaults to 1
+      casting_time: A number. Defaults to instantaneous.
+      combat_casting_time: # of turns, defaults to 1
+      effects:
+        - description: "Effect description."
+          check_condition: "If present, explains when the check must be made." effect.check_description entities must make a effect.save save
+          save: "Spell Power"
+          balance_type: <minor, greater, major> <utility, buff, debuff, damage reduction, healing>
+          repeat: 
+            - first case
+            - second case
+            - third case (combined with commas then an or)
+      action_type: <Action, Offhand Action, Reaction, Free Action>
+      charisma_cost: Computed based on 8 + (3 x cost) if not specified.
+      components: 
+        - "lowercase thing needed. e.g. a tortoise shell"
+      school: Below.
+Range Macros:
+  self -> a descriptor for targetting oneself.
+  hand to hand -> a descriptor for zero.
+  near -> 15 ft.
+  middling -> 30ft.
+  archer -> 50ft.
+  far -> 100ft.
+  very far -> 1000ft.
+  sight -> line of sight
+
+  Shapes: <cone, line>
+
+Combined as follows:
+
+<Title>
+Cost: <cost>. Range: <range>. <greater_damage_dice> Greater Damage Dice <minor_damage_dice> Minor Damage Dice
+Components: <list of components>
+<description>. The target/targets must perform a effect.save save. On failure, the entity/entities effect.description
+
+Requirements: All spells should have one of description, minor_effect, major_effect.
+
+
+potential spell schools:
+  - Divine
+  - Natural
+    - Elemental
+      - Fire
+      - Water
+      - Earth
+      - Air
+    - Animist
+    - Floral
+  - Arcane
+  - Necromantic
+  - Social
