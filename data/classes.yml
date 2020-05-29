@@ -406,7 +406,6 @@ Ranger:
         level_2:
           abilities:
           - Tracking Mark # Know the direction of an enemy for 24 hours.
-          - Nimble
           - Telekinetic Push
         level_3:
           abilities:
@@ -2769,7 +2768,7 @@ Archer:
           - Ranged Weapon Proficiency
           - Fletcher
           - Huntsman
-          - Dual Shot
+          # - Dual Shot Now a bow feature
           - Rope Arrows
           - Listen
         level_1:

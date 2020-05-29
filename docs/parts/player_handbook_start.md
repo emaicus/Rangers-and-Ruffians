@@ -598,7 +598,7 @@ Your choice of weapon matters greatly in Rangers and Ruffians.
 The standard weapon is made up of the following attributes
 
 | Attribute  | Description |
-| ---------- |                 |
+| ---------- | ----------- |
 | Handedness | Weapons require either 1 or 2 hands to wield, which affects whether you can hold something such as a shield in your off-hand. 
 | Movement Penalty | Heavy weapons incur a movement penalty, decreasing how far you can move in a turn. |
 | Reach | Different melee weapons can reach different distances. Explained in the [Weapon Reach](#weapon-reach) section. |
@@ -611,6 +611,7 @@ The standard weapon is made up of the following attributes
 The types of weapon reach are as follows:
 
 | Type | Description |
+| ---------- | ----------- |
 | Adjacent | You may attack an enemy directly to your front, back, left or right. |
 | Diagonal | You may attack an adjacent or diagonal enemy | 
 | Ten Feet | You may reach an enemy up to 10 feet away from you |

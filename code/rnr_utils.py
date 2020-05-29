@@ -1511,10 +1511,11 @@ def load_combos_given_list(races, classes, level):
   load_Rangers_And_Ruffians_Data()
   characters = list()
   for race, subrace in races:
-    for rnr_class in classes:
+    for class_name, subclass_name in classes:
       try:
-        character = rnr_character('', race, subrace, rnr_class, level)
+        character = rnr_character('', race, subrace, class_name, subclass_name, level)
       except:
+        traceback.print_exc()
         continue
       characters.append(character)
   return characters

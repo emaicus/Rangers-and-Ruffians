@@ -392,7 +392,7 @@ Thief Rogue
     X Assisted Strike: If you have advantage on an attack, you may convert it to an additional damage dice.
     X Dodge: Cost 1. Role a 17 with dex to avoid damage each time you are attacked.
       - CUT Greater Dodge: If you role a 15 or above, half damage
-      - Redirecting Dodge: Cost 1. Redirect any dodged damage to an enemy within range.
+      X Redirecting Dodge: Cost 1. Redirect any dodged damage to an enemy within range.
   Active Combat:
     X Pickpocket: Cost 1. Extra damage dice. Contested Dex Check. On success, steal something from the enemy.
     X Finesse Strike: Cost 1. Extra damage dice. If the attack is a critical hit, add another dice of damage to the total.
@@ -974,7 +974,7 @@ Ranger:
     X Under the Stars # All sleep works as if you are in a bed.
     X Stay on Your Feet # Roll when you hit zero
   Combat Passive:
-    X Nimble # Targeted ranged attacks take disadvantage.
+    - Nimble # Targeted ranged attacks take disadvantage.
   Combat Active:
     X Dodging Stance # Offhand action to go into a dodging stance. Once before next turn, dodge
       X Greater Dodging Stance # Whenever you are targeted.
@@ -1070,11 +1070,58 @@ Wizard:
      - Spell Invention
 
 
+Telepath
+
+    Magic suffuses the world, flowing around and through all things.
+    The telepath has learned to harness that flow, manipulating the current of
+    magic to affect the world around them. This ability allows the telepath to
+    project their thoughts like inaudible sounds through the ripples of magic,
+    and even to change the flow of magic to affect the material world.
+
+
+    General
+      X Chosen Weapon Proficiency # Choose two weapon types to be proficient in from the following list: One handed, Two Handed, Firearm, Ranged
+      X Read Mind: Cost 1. Attempt to enter an entity's mind and get the gist of its thoughts.
+      X Telepathic Communication: Speak with a nearby willing entity using your mind.
+      X Telepathic Suggestion: Cost 1. Jedi Mind Trick.
+      X Telekinetic Leap: Empower yourself to jump 20 feet into the air.
+      X Featherfall. Cost 1. Reduce 20 feet of falling damage. Additional 20 feet per action point spent.
+      X Telekinetic Flight # Concentration. Cost 1. Lift yourself from the ground with telekinesis.
+      X Telekinetic Lift # Lift something small (10 pounds) and float it. As an offhand action, move it up to 30 feet. Momentum preserved if you let it go.
+      X Telekinetic Aid: # Cost 1. Give yourself or someone else advantage in STR and DEX checks with telekinesis. Or give them advantage on an attack.
+      X Minor Telekinesis: You may make any hand to hand dexterity or strength check at a distance of 15 feet.
+        X Greater Telekinesis: 30 feet
+        X Major Telekinesis: 50 feet
+    Passive Combat
+      X Thick Headed # Advantage against enemies breaking into your mind.
+      X Telekinetic Guardian Weapon # Cost 1. Concentrate on a weapon to float a few feet away from you. It
+                         can make its own exposed attacks and you may attack with it as an offhand action.
+    Active Combat
+      X Telekinetic Hoist: SP save. On failure, lift an enemy 3 feet into the air. Concentration. Repeat each turn. When you have someone lifted, use an offhand action to move them 15 feet (includes up).
+        X Crushing Telekinetic Grip: As an offhand action, deal 1d8 damage to an hoisted enemies.
+        X Telekinetic Slam: As an offhand action, slam a hoisted enemy into something, dealing 1d12 damage.
+      X Telekinetic Push: Cost 1. Offhand. Cone of push in front of you. SP save or tossed.
+        X Centered Telekinetic Push # Push everyone away from you 10 feet.
+      X Telekinetic Pull: Cost 1. SP save or pulled towards you.
+      X Mental Shield: # Cost 1. Reaction. Stop a targeted projectile or magical attack from striking you.
+        X Greater Mental Shield # Mental shield can now protect you from melee attacks.
+        X Major Mental Shield: For an additional action point, once invoked, mental shield protects you for one full turn.
+      X Antimagic Ring: # Cost 1. No magic may be used within 30 feet of you for 1 turn.
+      X Telekinetically Augmented Attack # Cost 1. Extra dice. Decrease crit target by 2.
+    Combo
+      X Empower: Spend an offhand action to increase the power of one of your other abilities twofold.
+      X Dual Concentration: Lift multiple enemies
+        X Triple Concentration
+
+      X Mental Assault. Concentration. Attempt to assault an enemies mind. Each turn an SP save. Fail, you attack them with advantage, they attack you with disadvantage, and they have disadvantage on saves vs you.
+        - Greater Mental Assault: Half the enemy's movement
+
 ========================= IN PROGRESS ======================================
 
 Champion Fighter:
 
-
+  General
+    - Chosen Weapon Proficiency # Choose two weapon types to be proficient in from the following list: One handed, Two Handed, Firearm, Ranged
   Movement:
     - Advance # Kill someone move into their space
     - Juke # Move on dodge
@@ -1104,7 +1151,6 @@ Champion Fighter:
     - Combo # When crit, make another attack or enter a dodging stance
       - Ready Defense # When you slay an enemy, assume a dodging stance. 
     - Follow Up # When you score a crit, take your next attack at advantage.
-    - Reduced Critical
     - Reduced Critical
 
 
