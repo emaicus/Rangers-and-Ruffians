@@ -68,6 +68,15 @@ _Version 2.3.0_
        * [Red Drake:](#red-drake)  
        * [Adult Red Dragon:](#adult-red-dragon)  
    * [Humanoids:](#humanoids)  
+     * [Bog Hoppers:](#bog-hoppers)  
+       * [Tadling:](#tadling)  
+       * [Tadling Sorcerer:](#tadling-sorcerer)  
+       * [Bog Hopper:](#bog-hopper)  
+       * [Bog King:](#bog-king)  
+     * [Lizard Folk:](#lizard-folk)  
+       * [Hissling Trickster:](#hissling-trickster)  
+       * [Hissling Chomper:](#hissling-chomper)  
+       * [Lizkin Raider:](#lizkin-raider)  
      * [Adlet:](#adlet)  
        * [Lesser Adlet:](#lesser-adlet)  
        * [Lesser Adlet Shaman:](#lesser-adlet-shaman)  
@@ -125,8 +134,8 @@ ___
 
   
 #### Young Dire Bear:
-* ___Level 2 Heavy Enemy___  
-* __Health:__ 30  
+* ___Level 2 Medium Enemy___  
+* __Health:__ 39  
 * __Spell Power:__ 9   
 * __Movement:__  
   * __Land:__ 25 feet  
@@ -177,8 +186,8 @@ ___
 
   
 #### Young Panther:
-* ___Level 1 Heavy Enemy___  
-* __Health:__ 20  
+* ___Level 0 Light Enemy___  
+* __Health:__ 14  
 * __Spell Power:__ 11   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -225,8 +234,8 @@ ___
 
   
 #### Forest Wolf:
-* ___Level 1 Light Enemy___  
-* __Health:__ 12  
+* ___Level 0 Light Enemy___  
+* __Health:__ 14  
 * __Spell Power:__ 8   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -247,7 +256,7 @@ ___
 
   
 #### Young Dire Wolf:
-* ___Level 1 Heavy Enemy___  
+* ___Level 0 Medium Enemy___  
 * __Health:__ 24  
 * __Spell Power:__ 9   
 * __Movement:__  
@@ -269,8 +278,8 @@ ___
 
   
 #### Alpha Wolf:
-* ___Level 1 Villain Enemy___  
-* __Health:__ 40  
+* ___Level 0 Villain Enemy___  
+* __Health:__ 80  
 * __Spell Power:__ 12   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -312,7 +321,7 @@ ___
   
 #### Minor Wizard'S Homunculus:
 * ___Level 0 Light Enemy___  
-* __Health:__ 4  
+* __Health:__ 6  
 * __Spell Power:__ 9   
 * __Movement:__  
   * __Land:__ 15 feet  
@@ -351,7 +360,7 @@ ___
   
 #### Major Wizard'S Homunculus:
 * ___Level 2 Light Enemy___  
-* __Health:__ 20  
+* __Health:__ 24  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -387,7 +396,7 @@ ___While Red Dragons lack the true sentience of some other breeds, they are by n
   
 #### Red Dragon Hatchling:
 * ___Level 0 Light Enemy___  
-* __Health:__ 6  
+* __Health:__ 10  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 15 feet  
@@ -408,7 +417,7 @@ ___
   
 #### Red Dragon Whelp:
 * ___Level 3 Heavy Enemy___  
-* __Health:__ 36  
+* __Health:__ 61  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 15 feet  
@@ -434,12 +443,12 @@ ___
   
 #### Red Drake:
 * ___Level 5 Villain Enemy___  
-* __Health:__ 85  
+* __Health:__ 173  
 * __Spell Power:__ 15   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Air:__ 60 feet  
-* __Armor:__ 3  
+* __Armor:__ 4  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -476,13 +485,13 @@ ___
   
 #### Adult Red Dragon:
 * ___Level 10 Villain Enemy___  
-* __Health:__ 200  
+* __Health:__ 366  
 * __Spell Power:__ 17   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Air:__ 90 feet  
-* __Armor:__ 4  
-* __Magic Armor:__ 4  
+* __Armor:__ 6  
+* __Magic Armor:__ 6  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -522,14 +531,229 @@ ___
   
 
   
+### Bog Hoppers:
+>Froglike creatures.  
+  
+___Wip___  
+
+  
+#### Tadling:
+>  
+  
+______  
+* ___Level 0 Light Enemy___  
+* __Health:__ 10  
+* __Spell Power:__ 10   
+* __Movement:__  
+  * __Land:__ 20 feet  
+  * __Water:__ 40 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -3 (-3) | 1 (+1) | -2 (-2) | -2 (-2) | -3 (-3) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Spider Climb:__ Tadlings have naturally sticky pads on their hands, which they can use to easily climb.  
+* __Held Breath:__ Tadlings can hold their breath for up to an hour.  
+* __Poison Skin:__ One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned.  
+* __Tossed Around:__ When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage.  
+  
+__Actions:__  
+* __Dagger Slash:__ _1d4 + 1 Dexterity._ The Tadling slashes out with a hiss with its tiny dagger, sticking its enemy.  
+* __Bow And Arrow:__ _1d4 + 1 Dexterity._ The Tadling uses its crude bow to take a shot at an unwary adventurer.  
+  
+  
+___  
+
+  
+#### Tadling Sorcerer:
+>  
+  
+______  
+* ___Level 0 Light Enemy___  
+* __Health:__ 8  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 20 feet  
+  * __Water:__ 40 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -3 (-3) | 0 (+0) | 1 (+1) | 1 (+1) | -3 (-3) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Spider Climb:__ Tadlings have naturally sticky pads on their hands, which they can use to easily climb.  
+* __Held Breath:__ Tadlings can hold their breath for up to an hour.  
+* __Poison Skin:__ One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned.  
+* __Tossed Around:__ When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage.  
+  
+__Actions:__  
+* __Lightning Blast:__ _1d6 + 1 Inner Fire._ With a hiss, the Tadling Sorcerer raises its staff, firing a blast of lightning at its enemy. An enemy must make an SP save, or be knocked prone.  
+* __Darken Vision:__ The Sorcerer's eyes flash red as it fixes them on an enemy. The enemy must make an SP save, or be struck blind. The save may be repeated each turn.  
+  
+  
+___  
+
+  
+#### Bog Hopper:
+>  
+  
+______  
+* ___Level 0 Medium Enemy___  
+* __Health:__ 24  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  * __Water:__ 40 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 1 (+1) | -2 (-2) | 1 (+1) | 1 (+1) | -5 (-4) | -2 (-2) | 0 (+0) |  
+  
+__Abilities:__  
+* __Held Breath:__ Bog hoppers can hold their breath for up to an hour.  
+  
+__Actions:__  
+* __Spear Stab:__ _1d6 + 1 Strength._ The bog hopper lunges forward with its spear.  
+* __Blowgun:__ _1d4 + -2 Dexterity._ With a hiss, a dart flies from the bog hopper's blowgun. An affected entity must make a D10 Spell Power save or be paralyzed.  
+  
+  
+___  
+
+  
+#### Bog King:
+>  
+  
+______  
+* ___Level 3 Villain Enemy___  
+* __Health:__ 145  
+* __Spell Power:__ 15   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  * __Water:__ 40 feet  
+* __Armor:__ 3  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 3 (+3) | -1 (-1) | 2 (+2) | 3 (+3) | -2 (-2) | 0 (+0) | 0 (+0) |  
+  
+__Abilities:__  
+* __Held Breath:__ Bog hoppers can hold their breath for up to an hour.  
+* __Tounge Grapple:__ The Bog King may attempt to grab an enemy up to 10 feet away with its tongue. An enemy must make a contested Dexterity check against the Bog King or be both grappled and bitten.  
+  
+__Special Action Rules:__  
+* __Multi-Attack:__ A Bog King may make an attack with its Offhand Action.  
+* __Villain:__ If a Bog King is being used as a Villain, it can make two out of turn attack as a villain action per round.  
+  
+__Actions:__  
+* __Club:__ _1d12 + 3 Strength._ The massive Bogman takes a swing at an entity with its club. The enemy must make a contested Strength check or be thrown 1d4 spaces.  
+* __Bite:__ _2d8 + 3 Strength._ The Bog King clamps down on an enemy with its massive jaws. If the enemy is reduced to zero health, it is instantly swallowed.  
+* __Massive Jump:__ _1d8 + 3 Strength._ The Bog King takes a massive leap to a position up to 30 feet away. All enemies within 5 feet of its landing point take damage.  
+* __Deafening Croak:__ _1d6 + 3 Inner Fire._ The Bog King unleashes a earsplitting croak. All enemies must make a Spell Power save or take damage and be deafened, giving them disadvantage on their next action.   
+  
+__Conditional Actions:__  
+* __First Turn:__ Rank and File: The Bog King allows all of its allies to move up to 30 feet to form a defensive formation before it.  
+* __Second Turn:__ Summon Tadlings: The Bog King unleashes a deep hiss, summoning 1d6 Tadlings to aid it.  
+* __Third Turn:__ Command: The Bog King grants all of its allies 15 feet of movement.  
+* __40 Health:__ Ooze Poison: The Bog King begins oozing poison. Any melee contact with the Bog King has the following effect: the entity must make a spell power save or be paralyzed.  
+* __10 Health:__ Play Dead: The Bog King plays dead, trying to avoid further damage.  
+  
+  
+___  
+
+  
+### Lizard Folk:
+>Lizardlike creatures.  
+  
+___Wip___  
+
+  
+#### Hissling Trickster:
+>  
+  
+______  
+* ___Level 0 Light Enemy___  
+* __Health:__ 10  
+* __Spell Power:__ 10   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -3 (-3) | 2 (+2) | 2 (+2) | -2 (-2) | -3 (-3) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Tossed Around:__ When hit by a blunt weapon, a hissling is thrown 15 feet, but suffers half damage.  
+* __Poison Resistance:__ Hisslings take half poison damage  
+  
+__Actions:__  
+* __Hive 'A Bees:__ _1d4 + 2 Dexterity._ The Hissling lobs a beehive at an area with a 15ft radius. Every 5 feet of movement through this area, an entity takes damage. Movement through the bees is halved.  
+* __Chomp Chomp Chomp:__ _1d4 + -3 Strength._ The Hissling bites an adventurer and won't let go until they succeed a D14 SP save. Speed is halved when a hissling has chomped onto you.  
+* __Boomerang:__ _1d6 + 2 Dexterity._ The hissling hurls it's boomerang at an enemy.  
+  
+  
+___  
+
+  
+#### Hissling Chomper:
+>  
+  
+______  
+* ___Level 0 Light Enemy___  
+* __Health:__ 14  
+* __Spell Power:__ 10   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -3 (-3) | 2 (+2) | 2 (+2) | -2 (-2) | -3 (-3) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Tossed Around:__ When hit by a blunt weapon, a hissling is thrown 15 feet, but suffers half damage.  
+* __Poison Resistance:__ Hisslings take half poison damage  
+  
+__Actions:__  
+* __Chomp Chomp Chomp:__ _1d4 + -3 Strength._ The Hissling bites an adventurer and won't let go until they succeed a D14 SP save. Speed is halved when a hissling has chomped onto you.  
+* __Stick 'M With The Pointy End:__ _1d4 + 2 Dexterity._ The Hissling stabs an enemy with it's dagger.  
+  
+  
+___  
+
+  
+#### Lizkin Raider:
+>  
+  
+______  
+* ___Level 0 Medium Enemy___  
+* __Health:__ 24  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | -3 (-3) | 0 (+0) | 0 (+0) |  
+  
+__Special Action Rules:__  
+* __Multi-Attack:__ The Raider can make two attacks as an action.  
+  
+__Actions:__  
+* __Sword Slash:__ _1d6 + 2 Strength._ The bog hopper lunges forward with its spear.  
+* __Shield Bash:__ _1d4 + 2 Strength._ The raider smashes into an enemy with its shield. The enemy must make an SP save or be stunned, loosing an action and an offhand action.  
+  
+  
+___  
+
+  
 ### Adlet:
 >Adlet are bipedal, doglike monsters, They stand about six feet tall, but hunch their backs so that they look closer to five. Their pelts vary based on climate, and can be black, grey, or even pure white. Adlet have razor sharp fangs, and padded paws that they use to wield blunt weapons. Adlet are often mistaken for werewolves and other fiends of the night. The truth is not much better. Adlet travel in roving, warlike tribes, laying waste to villages in their path, stealing anything of use and eating the inhabitants.  
   
 
   
 #### Lesser Adlet:
-* ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* ___Level 1 Light Enemy___  
+* __Health:__ 20  
 * __Spell Power:__ 11   
 * __Movement:__  
   * __Land:__ 25 feet  
@@ -551,8 +775,8 @@ ___
 
   
 #### Lesser Adlet Shaman:
-* ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* ___Level 1 Light Enemy___  
+* __Health:__ 16  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 25 feet  
@@ -574,8 +798,8 @@ ___
 
   
 #### Lesser Adlet Brute:
-* ___Level 0 Heavy Enemy___  
-* __Health:__ 16  
+* ___Level 1 Medium Enemy___  
+* __Health:__ 33  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 25 feet  
@@ -600,8 +824,8 @@ ___
 
   
 #### Lesser Adlet Witch Doctor:
-* ___Level 0 Villain Enemy___  
-* __Health:__ 20  
+* ___Level 1 Villain Enemy___  
+* __Health:__ 120  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 25 feet  
@@ -641,7 +865,7 @@ ___In the early days of a goblin tribe, commoners likely won't notice that anyth
   
 ___Goblin swordsmen know enough to defend their archers if at all possible. They will gang up on a single target if they can. Above all, however, they are cowards. If they feel that they cannot win, they will flee to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 10  
+* __Health:__ 14  
 * __Spell Power:__ 10   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -665,7 +889,7 @@ ___
   
 ___Goblin archers will try to stay away from combat, fleeing as far as they can and then taking shots from a distance. If they feel that they cannot win, goblin archers will flee from combat to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* __Health:__ 12  
 * __Spell Power:__ 10   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -689,7 +913,7 @@ ___
   
 ___A goblin shaman is very intelligent, and will dole out its spells to best help its allies succeed. When a battle begins, a shaman will use Hasten to get swordsmen into position. If an enemy is particularly dangerous, a shaman will Hex them. If a battle is lost, a shaman will cast Hasten on an ally to help them escape to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 4  
+* __Health:__ 8  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -715,7 +939,7 @@ ___
   
 ___First and foremost, a goblin cleric will act as a healer, trying to keep its front line alive. Goblin clerics know to keep away from enemies, and will use Burst of Light to blind anyone who gets too near.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 4  
+* __Health:__ 8  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -740,7 +964,7 @@ ___
   
 ___A chieftain puts its own survival first. It attacks from a distance, hurling spears at its enemies from a safe distance. If a chieftain is injured too heavily, it will drink its health potion, and if all seems lost, it will use a smoke-bomb to try to escape. The goblin chieftain will keep its minions between it and a party of adventurers.___  
 * ___Level 1 Villain Enemy___  
-* __Health:__ 60  
+* __Health:__ 80  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -780,7 +1004,7 @@ ___
   
 ___Wolf Riders can move further than other goblins, so they are often used to chase down enemies. Riders will move their full movement and then throw nets at fleeing enemies, giving swordsmen time to catch up.___  
 * ___Level 1 Heavy Enemy___  
-* __Health:__ 20  
+* __Health:__ 52  
 * __Spell Power:__ 11   
 * __Movement:__  
   * __Land:__ 40 feet  
@@ -812,7 +1036,7 @@ ___
   
 ___An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly begins attacking enemies, while the rider picks off mages and ranged enemies at a distance.___  
 * ___Level 2 Villain Enemy___  
-* __Health:__ 101  
+* __Health:__ 133  
 * __Spell Power:__ 12   
 * __Movement:__  
   * __Land:__ 35 feet  
@@ -855,7 +1079,7 @@ ___
 #### Ogre:
 ___Ogres are strong, and they know it. When goaded to action, ogres will rush headlong into battle, and only realize they are in danger when it is too late.___  
 * ___Level 1 Heavy Enemy___  
-* __Health:__ 32  
+* __Health:__ 52  
 * __Spell Power:__ 14   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -878,7 +1102,7 @@ ___
   
 ___The Ogre Lord will charge a threat head on, and will make heavy use of its grab attack. Once an enemy is grabbed, the Ogre Lord will mercilessly slam the entity into its comrades, the ground, or even hurl it into a wall or off of a cliff.___  
 * ___Level 1 Villain Enemy___  
-* __Health:__ 97  
+* __Health:__ 116  
 * __Spell Power:__ 14   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -917,7 +1141,7 @@ ___
   
 #### Skeleton:
 * ___Level 0 Light Enemy___  
-* __Health:__ 6  
+* __Health:__ 10  
 * __Spell Power:__ 9   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -938,8 +1162,8 @@ ___
 
   
 #### Shambling Zombie:
-* ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* ___Level 1 Light Enemy___  
+* __Health:__ 14  
 * __Spell Power:__ 9   
 * __Movement:__  
   * __Land:__ 20 feet  
@@ -954,8 +1178,8 @@ __Abilities:__
 * __Contagious:__ If a creature is killed by a zombies bite, it will raise as a zombie in 1 hour unless burned.  
   
 __Actions:__  
-* __Grapple:__ _1d2 + 1 Strength._ The zombie grabs at its enemy with cold fingers. The attacked entity must succeed at a contested dexterity check or be grappled.  
-* __Bite:__ _1d4 + 1 Strength._ Rotten teeth tear at an enemies flesh. A zombie may only bite a grappled entity.  
+* __Grapple:__ _1d2 + 1 Strength._ The zombie claws at its enemy with cold fingers. The attacked entity must succeed at a contested dexterity check or be grappled.  
+* __Bite:__ _1d4 + 1 Strength._ Rotten teeth tear at an enemies flesh. A zombie may only bite a grappled entity. The enemy must make a SP save or be poisoned.  
   
   
 ___  

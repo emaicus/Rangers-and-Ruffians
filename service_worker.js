@@ -47,6 +47,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "7d8516af9857ee1ed9b320ff842eb2c9"
   },
   {
+    "url": "new_site/css/weapons.css",
+    "revision": "048a0d14787ad278cc6aae00582327db"
+  },
+  {
     "url": "new_site/icons/bolt-shield.svg",
     "revision": "15597019d5e5ecb94339f1c3a14dad3b"
   },
@@ -103,6 +107,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "e6c09f4fceb5d0f9b9da29547102801e"
   },
   {
+    "url": "new_site/icons/firearm.svg",
+    "revision": "f8ffd83b16edda1681bd26b3893df59d"
+  },
+  {
     "url": "new_site/icons/flame.svg",
     "revision": "e7879a3663ef74eb3d6f54de66f1d54d"
   },
@@ -127,6 +135,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "7b94303778ad48c63358d87c49d8fee4"
   },
   {
+    "url": "new_site/icons/one-handed.svg",
+    "revision": "1c80e863faaa775785de4b580e7526e7"
+  },
+  {
     "url": "new_site/icons/power-lightning.svg",
     "revision": "96d1686c81be23108c2b1406f257bfbc"
   },
@@ -141,6 +153,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "new_site/icons/raise-zombie.svg",
     "revision": "7a1e1dc035aaa4789c7e7acef779ad7c"
+  },
+  {
+    "url": "new_site/icons/ranged.svg",
+    "revision": "0ae7c35e62ba21bdd47309256b0a49f4"
   },
   {
     "url": "new_site/icons/shield.svg",
@@ -173,6 +189,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "new_site/icons/two-coins.svg",
     "revision": "5a44d7766e4ec80be3024ab0f75aaf83"
+  },
+  {
+    "url": "new_site/icons/two-handed.svg",
+    "revision": "c67d2aa1c461aa581fd98593bce4592d"
   },
   {
     "url": "new_site/images/backdrops/landscape_ancients.jpg",
@@ -384,15 +404,15 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/pages/character_sheet.html",
-    "revision": "4648c6a091b54eaccb6ff640ce08ffa6"
+    "revision": "66325c6a8fde70721ca8d1495c0bedde"
   },
   {
     "url": "new_site/pages/GENERATED/ALT.json",
-    "revision": "316da169b3aa7b91e21f0a7bbb90ffc0"
+    "revision": "0557cb0edb6cb20d91a179cd8fe1fc1f"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "20ed3481b7c276fcd75b8495f50a9dc3"
+    "revision": "9a84a1eafd52239663ce5c1496e6c30a"
   },
   {
     "url": "new_site/pages/GENERATED/Book_of_Lore.html",
@@ -424,7 +444,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/pages/GENERATED/Rulebook.html",
-    "revision": "831b49ee75500c5646afe3b61c821753"
+    "revision": "31c33038ca9c34a1db566a87c627a59d"
   },
   {
     "url": "new_site/pages/GENERATED/Tome_of_the_Ancients.html",
@@ -436,11 +456,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "new_site/pages/weapons.html",
-    "revision": "c9152b29e03bd67cd9b5da7005cd2c38"
-  },
-  {
-    "url": "new_site/pages/weapons.md",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
+    "revision": "10fcf52be9f6a88477c726d60f012f4e"
   },
   {
     "url": "new_site/printed_materials/standard_character_sheet.pdf",
@@ -487,6 +503,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "7d505bad6de682940a165fe9431072d8"
   },
   {
+    "url": "new_site/templates/weapons_page.html",
+    "revision": "a8ac27dff108723bbd6ef923a6decab0"
+  },
+  {
     "url": "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
     "revision": "69c3d7926d5af92d72665aeb1136fc40"
   },
@@ -508,7 +528,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "0877921a3b68cafd2aba5d1d325f4118"
+    "revision": "abe2bf24410a2577fa5b9af822261280"
   },
   {
     "url": "assets/css/style.css",

@@ -963,10 +963,10 @@ humanoids:
               damage: "1d4"
               description: "The Tadling uses its crude bow to take a shot at an unwary adventurer."
           abilities:
-            - Spider Climb: "Tadlings have naturally sticky pads on their hands, which they can use to easily climb."
-            - Held Breath: "Tadlings can hold their breath for up to an hour."
-            - Poison Skin: "One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned."
-            - Tossed Around: "When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage."
+              Spider Climb: "Tadlings have naturally sticky pads on their hands, which they can use to easily climb."
+              Held Breath: "Tadlings can hold their breath for up to an hour."
+              Poison Skin: "One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned."
+              Tossed Around: "When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage."
           movement:
             land: 20
             water: 40
@@ -986,16 +986,16 @@ humanoids:
           average_damage_per_round: 2
           actions:
             Lightning Blast:
-              modifier: "Inner Fire"
+              modifier: Inner_Fire
               damage: "1d6"
               description: "With a hiss, the Tadling Sorcerer raises its staff, firing a blast of lightning at its enemy. An enemy must make an SP save, or be knocked prone."
             Darken Vision:
               description: "The Sorcerer's eyes flash red as it fixes them on an enemy. The enemy must make an SP save, or be struck blind. The save may be repeated each turn."
           abilities:
-            - Spider Climb: "Tadlings have naturally sticky pads on their hands, which they can use to easily climb."
-            - Held Breath: "Tadlings can hold their breath for up to an hour."
-            - Poison Skin: "One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned."
-            - Tossed Around: "When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage."
+              Spider Climb: "Tadlings have naturally sticky pads on their hands, which they can use to easily climb."
+              Held Breath: "Tadlings can hold their breath for up to an hour."
+              Poison Skin: "One in four tadlings have poisonous skin. All of their attacks and any physical contact with them carries the following effect: the affected entity must make a Spell Power save or be poisoned."
+              Tossed Around: "When hit by a blunt weapon, a tadling is thrown 15 feet, but suffers half damage."
           movement:
             land: 20
             water: 40
@@ -1020,11 +1020,12 @@ humanoids:
               description: "The bog hopper lunges forward with its spear."
             Blowgun:
               damage: "1d4"
+              modifier: "Dexterity"
               description: "With a hiss, a dart flies from the bog hopper's blowgun. An affected entity must make a D10 Spell Power save or be paralyzed."
           reactions:
             - Spear Defense: "If an enemy moves into melee with a bog hopper, it may make an attack."
           abilities:
-            - Held Breath: "Bog hoppers can hold their breath for up to an hour."
+              Held Breath: "Bog hoppers can hold their breath for up to an hour."
           movement:
             land: 30
             water: 40
@@ -1052,19 +1053,20 @@ humanoids:
               damage: "1d12"
               description: "The massive Bogman takes a swing at an entity with its club. The enemy must make a contested Strength check or be thrown 1d4 spaces."
             Bite:
+              modifier: "Strength"
               damage: "2d8"
               description: "The Bog King clamps down on an enemy with its massive jaws. If the enemy is reduced to zero health, it is instantly swallowed."
             Massive Jump:
               modifier: "Strength"
-              damage: "1d10"
+              damage: "1d8"
               description: "The Bog King takes a massive leap to a position up to 30 feet away. All enemies within 5 feet of its landing point take damage."
             Deafening Croak: 
               damage: "1d6"
               modifier: "Inner_Fire"
               description: "The Bog King unleashes a earsplitting croak. All enemies must make a Spell Power save or take damage and be deafened, giving them disadvantage on their next action. "
           abilities:
-            - Held Breath: "Bog hoppers can hold their breath for up to an hour."
-            - Tounge Grapple: "The Bog King may attempt to grab an enemy up to 10 feet away with its tongue. An enemy must make a contested Dexterity check against the Bog King or be both grappled and bitten."
+              Held Breath: "Bog hoppers can hold their breath for up to an hour."
+              Tounge Grapple: "The Bog King may attempt to grab an enemy up to 10 feet away with its tongue. An enemy must make a contested Dexterity check against the Bog King or be both grappled and bitten."
           movement:
             land: 30
             water: 40
@@ -1082,6 +1084,97 @@ humanoids:
             Third Turn: "Command: The Bog King grants all of its allies 15 feet of movement."
             40 Health: "Ooze Poison: The Bog King begins oozing poison. Any melee contact with the Bog King has the following effect: the entity must make a spell power save or be paralyzed."
             10 Health: "Play Dead: The Bog King plays dead, trying to avoid further damage."
+    Lizard Folk:
+      description: "Lizardlike creatures."
+      tactics: "Wip"
+      types:
+        Hissling Trickster:
+          description: ""
+          tactics: ""
+          type: "Level 0 Light"
+          health: 10
+          average_damage_per_round: 2
+          actions:
+            Hive 'a Bees:
+              modifier: "Dexterity"
+              damage: "1d4"
+              description: "The Hissling lobs a beehive at an area with a 15ft radius. Every 5 feet of movement through this area, an entity takes damage. Movement through the bees is halved."
+            Chomp Chomp Chomp:
+              modifier: "Strength"
+              damage: "1d4"
+              description: "The Hissling bites an adventurer and won't let go until they succeed a D14 SP save. Speed is halved when a hissling has chomped onto you."
+            Boomerang:
+              modifier: "Dexterity"
+              damage: "1d6"
+              description: "The hissling hurls it's boomerang at an enemy."
+          abilities:
+              Tossed Around: "When hit by a blunt weapon, a hissling is thrown 15 feet, but suffers half damage."
+              Poison Resistance: "Hisslings take half poison damage"
+          movement:
+            land: 30
+          stats:
+            Charisma: -3
+            Dexterity: 2
+            Inner_Fire: -2
+            Intelligence: 2
+            Luck: 0
+            Perception: 1
+            Strength: -3
+        Hissling Chomper:
+          description: ""
+          tactics: ""
+          type: "Level 0 Light"
+          health: 14
+          average_damage_per_round: 5
+          actions:
+            Chomp Chomp Chomp:
+              modifier: "Strength"
+              damage: "1d4"
+              description: "The Hissling bites an adventurer and won't let go until they succeed a D14 SP save. Speed is halved when a hissling has chomped onto you."
+            Stick 'm with the pointy end:
+              modifier: "Dexterity"
+              damage: 1d4
+              description: "The Hissling stabs an enemy with it's dagger."
+          abilities:
+              Tossed Around: "When hit by a blunt weapon, a hissling is thrown 15 feet, but suffers half damage."
+              Poison Resistance: "Hisslings take half poison damage"
+          movement:
+            land: 30
+          stats:
+            Charisma: -3
+            Dexterity: 2
+            Inner_Fire: -2
+            Intelligence: 2
+            Luck: 0
+            Perception: 1
+            Strength: -3
+        Lizkin Raider:
+          description: ""
+          tactics: ""
+          type: "Level 0 Medium"
+          health: 24
+          average_damage_per_round: 10
+          action_spec:
+            Multi-Attack: The Raider can make two attacks as an action.
+          actions:
+            Sword Slash:
+              modifier: "Strength"
+              damage: "1d6"
+              description: "The bog hopper lunges forward with its spear."
+            Shield Bash:
+              damage: "1d4"
+              modifier: "Strength"
+              description: "The raider smashes into an enemy with its shield. The enemy must make an SP save or be stunned, loosing an action and an offhand action."
+          movement:
+            land: 30
+          stats:
+            Charisma: -3
+            Dexterity: 1
+            Inner_Fire: 1
+            Intelligence: -2
+            Luck: 0
+            Perception: 0
+            Strength: 2
 undead:
   types:
     zombies:

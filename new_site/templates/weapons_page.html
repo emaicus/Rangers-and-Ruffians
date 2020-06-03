@@ -1,0 +1,70 @@
+<div class="new-print-region">
+  {% for weapon_type, weapon_type_data in data.weapons %}
+<!--     <div class="weapon-type-div">
+      <span class="weapon-type-title">
+        {{weapon_type}}
+      </span>
+    </div> -->
+    {% for weapon, weapon_data in weapon_type_data %}
+      <div class="weapon">
+        <div class="weapon-header">
+          <span class="weapon-name">
+            {{ weapon }}
+          </span>
+          {% if weapon_type == "One Handed" %}
+            {% set img_path = "one-handed.svg" %}
+          {% elif weapon_type == "Two Handed" %}
+            {% set img_path = "two-handed.svg" %}
+          {% elif weapon_type == "Ranged" %}
+            {% set img_path = "ranged.svg" %}
+          {% else %}
+            {% set img_path = "firearm.svg" %}
+          {% endif %}
+          <img src="/new_site/icons/{{img_path}}" class="weapon-icon">
+        </div>
+        <div class="weapon-info">
+          <span class="small-title">
+            Movement Penalty
+          </span>
+          <span>
+            {{weapon_data.movement_penalty}} feet
+          </span>
+          <br>
+          <span class="small-title">
+            Range:
+          </span>
+          <span>
+            {{weapon_data.range}}
+          </span>
+          <br>
+
+          {% if weapon_data.abilities | length > 0 %}
+            <span class="small-title">
+              Abilities:
+            </span>
+            <ul>
+            {% for ability_name, ability_description in weapon_data.abilities %}
+              <li>
+                <span class="small-title">{{ ability_name }}:</span> {{ability_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if weapon_data.drawbacks | length > 0 %}
+            <span class="small-title">
+              Drawbacks:
+            </span>
+            <ul>
+            {% for drawback_name, drawback_description in weapon_data.drawbacks %}
+              <li>
+                <span class="small-title">{{ drawback_name }}:</span> {{drawback_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  {% endfor %}
+</div>

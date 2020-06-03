@@ -20,7 +20,7 @@ indexpage: true
 ---
 
 # Rangers and Ruffians
-_Version 2.3.0_
+_Version 2.3.1_
 
 ## What is Rangers and Ruffians?
 Rangers and Ruffians (also called just "Rangers" or "RnR")
@@ -28,8 +28,26 @@ is a fantasy tabletop roleplaying game (RPG) created for and by a group of
 nerdy friends. It can be dramatic, epic, and meaningful.
 It can also be silly and funny. We think that it is usually pretty fun. 
 
+### Build your Character
+1. [Choose your Race and Class](/new_site/pages/GENERATED/Compendium_of_Character_Creation.md)  
+2. [Choose your Spells](new_site/pages/GENERATED/Tome_of_the_Ancients.md)  
+3. [Choose your Deity](new_site/pages/GENERATED/Book_of_Lore.md)  
+4. [Create your Character Sheet](new_site/pages/character_sheet.html)  
+5. [Choose your Weapon](new_site/pages/weapons.html)
 
-### Why Should You Play Rangers and Ruffians?
+### Run the Game
+1. [Read The Rulebook](/new_site/pages/GENERATED/Rulebook.md)  
+2. [Study the Monsters](new_site/pages/GENERATED/Book_of_Known_Beasts.md)  
+3. [Download Printed Materials](new_site/pages/GENERATED/Printed_Materials.md)  
+
+
+## Keep up to Date
+1. [View the Changelog](new_site/pages/GENERATED/Changelog.md)  
+
+## Work in Progress
+1. [Test the Character Creation Helper](new_site/pages/character_creation_helper_page.html)  
+
+<!-- ### Why Should You Play Rangers and Ruffians?
 * __Good for Beginners__ 
   * Rangers and Ruffians is a great introduction to the world of tabletop gaming. With a simple to understand
     set of rules and easily scalable difficulty, R&R was designed with new players in mind. To this end, R&R 
@@ -41,14 +59,4 @@ It can also be silly and funny. We think that it is usually pretty fun.
 * __Constant Updates__
   * Rangers and Ruffians is a passion project, which is constantly receiving new content including new
     classes, races, rules, and tuning.
-
-### Getting Started:
-1. [Learn the Rules](/new_site/pages/GENERATED/Rulebook.md).
-2. [Create your Character](/new_site/pages/GENERATED/Compendium_of_Character_Creation.md).
-3. [Choose your Spells](new_site/pages/GENERATED/Tome_of_the_Ancients.md).
-4. [Study the Monsters](new_site/pages/GENERATED/Book_of_Known_Beasts.md).
-5. [Read Up on the Lore](new_site/pages/GENERATED/Book_of_Lore.md).
-6. [Download Printed Materials](new_site/pages/GENERATED/Printed_Materials.md)
-7. [View the Changelog](new_site/pages/GENERATED/Changelog.md).
-8. [Test the Character Sheet Generator](new_site/pages/character_sheet.html).
-9. [Test the Character Creation Helper](new_site/pages/character_creation_helper_page.html).
+ -->

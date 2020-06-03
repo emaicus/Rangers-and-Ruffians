@@ -382,6 +382,7 @@ def create_alt_all_race_class_json():
   all_race_data = copy.deepcopy(rnr_utils.GLOBAL_RACE_DATA)
   all_class_data = copy.deepcopy(rnr_utils.GLOBAL_CLASS_DATA)
   ability_data = rnr_utils.GLOBAL_ABILITY_DICT
+  items_data = copy.deepcopy(rnr_utils.GLOBAL_STANDARD_ITEMS)
 
   for race in all_race_data.keys():
     for subrace in all_race_data[race]['subraces'].keys():
@@ -403,6 +404,7 @@ def create_alt_all_race_class_json():
     'class_names' : rnr_utils.get_all_subclass_names(), 
     'races' : all_race_data,
     'classes' : all_class_data,
+    'items' : items_data,
     'role_info' : {
       'unique_roles' : [],
       'class_roles' : {},

@@ -154,12 +154,12 @@ skip_header: true
       data["visualStats"] = true;
       character_sheet = nunjucks.render('character_sheet_template.html', data );
     } else if(sheet_type == "v2"){
-      character_sheet = nunjucks.render('updated_character_sheet.html', data );
-      // character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
+      character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
     } 
     else{
-      console.log("in else with " + sheet_type);
-      character_sheet = nunjucks.render('character_sheet_template.html', data );
+      console.log("in else with " + sheet_type)
+      character_sheet = nunjucks.render('updated_character_sheet.html', data );
+      //character_sheet = nunjucks.render('character_sheet_template.html', data );
     }
     $( "#character_sheet_area" ).html( character_sheet );
 
