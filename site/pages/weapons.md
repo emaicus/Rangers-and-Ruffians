@@ -3,8 +3,8 @@ skip_header: true
 ---
 
 <script src="../js/nunjucks.js"></script>
-<link rel="stylesheet" href="/new_site/css/two_sided_character_sheet.css">
-<link rel="stylesheet" href="/new_site/css/weapons.css">
+<link rel="stylesheet" href="/site/css/two_sided_character_sheet.css">
+<link rel="stylesheet" href="/site/css/weapons.css">
 
 <div id="weapons_area">
 </div>
@@ -12,9 +12,9 @@ skip_header: true
 <script>
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/new_site/pages/GENERATED/ALT.json", function(json) {
+  $.getJSON("/site/pages/GENERATED/ALT.json", function(json) {
     global_json = json;
-    nunjucks.configure('/new_site/templates', {autoescape: true, web: {async:true}});
+    nunjucks.configure('/site/templates', {autoescape: true, web: {async:true}});
     console.log(json);
     nunjucks.render('weapons_page.html', 
                       { 

@@ -2,7 +2,7 @@
 Barbarian:
   subclasses:
     Path of Rage Barbarian:
-      roles: ["tank", "high-damage", "mobile", "non-magic"]
+      roles: ["tank","good-first-class", "high-damage", "mobile", "non-magic"]
       base_abilities:
       - Colossal
       - Boozehound
@@ -91,7 +91,7 @@ Barbarian:
       standings: Barbarians are the enemies of law keepers.
       tag_line: Heavy Hitter
     Path of Nature Barbarian:
-      roles: ["tank", "mage", "support", "mobile", "nature-based"]
+      roles: ["complex", "tank", "self-sufficient", "mage", "support", "mobile", "nature-based"]
       base_abilities:
       - Colossal
       - Boozehound
@@ -182,7 +182,7 @@ Barbarian:
 Knight:
   subclasses:
     Stalwart Knight:
-      roles: ["tank", "area-control", "non-magic"]
+      roles: ["tank", "area-control", "non-magic", "good-first-class"]
       base_stats:
         Charisma: 0
         Dexterity: -3
@@ -264,7 +264,7 @@ Knight:
 Paladin:
   subclasses:
     Paladin:
-      roles: ["tank", "mage", "spellbooks", "support", "healer", "ranged", "self-sufficient"]
+      roles: ["tank", "mage", "spellbooks", "complex", "support", "healer", "ranged", "self-sufficient"]
       base_stats:
         Charisma: -1
         Dexterity: 0
@@ -362,7 +362,7 @@ Paladin:
 Ranger:
   subclasses:
     Ranger:
-      roles: ["self-sufficient", "ranged", "sneaky", "nature-based"]
+      roles: ["self-sufficient", "good-first-class", "high-damage", "mage", "ranged", "sneaky", "nature-based"]
       base_stats:
         Charisma: -3
         Dexterity: 1
@@ -540,7 +540,7 @@ Ranger:
 Fighter:
   subclasses:
     Telepath:
-      roles: ["self-sufficient", "high-damage", "ranged", "non-magic"]
+      roles: ["high-damage", "mage", "support", "ranged", "area-control", "complex"]
       base_stats:
         Charisma: -1
         Dexterity: 2
@@ -634,7 +634,7 @@ Fighter:
 Highborn:
   subclasses:
     Heroic Highborn:
-      roles: ["charismatic", "support", "non-magic", "mobile", "self-sufficient", "non-magic"]
+      roles: ["charismatic", "complex", "support", "non-magic", "mobile", "self-sufficient", "non-magic"]
       base_abilities:
       - My Father's Coffers
       - The Family Sword
@@ -736,7 +736,7 @@ Highborn:
 Monk:
   subclasses:
     Monk:
-      roles: ["sneaky", "self-sufficient", "mobile"]
+      roles: ["sneaky", "high-damage", "non-magic", "self-sufficient", "mobile"]
       base_stats:
         Charisma: -3
         Dexterity: 1
@@ -838,7 +838,7 @@ Monk:
 Rogue:
   subclasses:
     Thief:
-      roles: ["mobile", "sneaky", "low-health", "non-magic"]
+      roles: ["mobile", "sneaky", "complex", "mobile", "low-health", "non-magic"]
       base_stats:
         Charisma: 0
         Dexterity: 2
@@ -934,7 +934,7 @@ Rogue:
       standings: Thieves hate law keepers and Thief Catchers
       tag_line: Sneak-thief
     Assassin:
-      roles: ["mobile", "sneaky", "low-health", "high-damage", "self-sufficient"]
+      roles: ["mobile", "mage", "sneaky", "good-first-class", "mobile", "low-health", "high-damage", "self-sufficient"]
       base_stats:
         Charisma: 0
         Dexterity: 2
@@ -1033,7 +1033,7 @@ Rogue:
 Bard:
   subclasses:
     Bard:
-      roles: ["mage", "spellbooks", "support", "healer", "ranged", "charismatic", "self-sufficient", "ranged"]
+      roles: ["good-first-class", "mage", "spellbooks", "support", "healer", "ranged", "charismatic", "self-sufficient"]
       base_abilities:
       - Spell Choice
       - Boozehound
@@ -2368,7 +2368,7 @@ Cleric:
 Druid:
   subclasses:   
     Elementalist Druid:
-      roles: ["mage", "spellbooks", "nature-based", "ranged"]
+      roles: ["mage", "spellbooks", "nature-based", "ranged", "support", "good-first-class"]
       base_abilities:
       - Spell Choice
       base_stats:
@@ -2464,7 +2464,7 @@ Druid:
 Necromancer:
   subclasses:
     Necromancer:
-      roles: ["mage", "spellbooks", "high-damage", "undead", "ranged", "companion-creature"]
+      roles: ["mage", "low-health", "spellbooks", "high-damage", "undead", "ranged", "companion-creature"]
       base_abilities:
       - Spell Choice
       base_stats:
@@ -2656,7 +2656,7 @@ Sorcerer:
 Wizard:
   subclasses:
     Wizard:
-      roles: ["mage", "spellbooks", "low-health", "ranged"]
+      roles: ["mage", "spellbooks", "low-health", "ranged", "companion-creature", "good-first-class"]
       base_abilities:
       - Historian
       base_stats:
@@ -2748,7 +2748,7 @@ Wizard:
 Archer:
   subclasses:
     Archer:
-      roles: ["ranged"]
+      roles: ["ranged", "mage", "good-first-class"]
       base_stats:
         Charisma: 0
         Dexterity: 1
@@ -2836,7 +2836,7 @@ Archer:
 Gunslinger:
   subclasses:
     Marksman:
-      roles: ["ranged", "high-damage", "non-magic"]
+      roles: ["ranged", "high-damage", "non-magic", "good-first-class"]
       base_stats:
         Charisma: 0
         Dexterity: -3

@@ -6,8 +6,8 @@ skip_header: true
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="/new_site/css/iterated_char_sheet.css">
-      <link rel="stylesheet" href="/new_site/css/two_sided_character_sheet.css">
+      <link rel="stylesheet" href="/site/css/iterated_char_sheet.css">
+      <link rel="stylesheet" href="/site/css/two_sided_character_sheet.css">
       <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Angkor' rel='stylesheet'>
   </head>
@@ -31,9 +31,9 @@ skip_header: true
 
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/new_site/pages/GENERATED/ALT.json", function(json) {
+  $.getJSON("/site/pages/GENERATED/ALT.json", function(json) {
     global_json = json;
-    nunjucks.configure('/new_site/templates', {autoescape: true });
+    nunjucks.configure('/site/templates', {autoescape: true });
     starting_values = parseGetRequest();
     var content = nunjucks.render('character_selection_template.html', {
                                                                         "chosen_race" : starting_values["race"], 

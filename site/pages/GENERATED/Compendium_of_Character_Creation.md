@@ -1,6 +1,6 @@
 ---
 
-landscape_banner_path: /new_site/images/backdrops/landscape_character_creation.jpg
+landscape_banner_path: /site/images/backdrops/landscape_character_creation.jpg
 
 landscape_banner_link: https://www.deviantart.com/hifarry/art/Tavern-Meeting-742777343
 
@@ -16,7 +16,7 @@ landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0
 
 
 
-portrait_banner_path: /new_site/images/backdrops/portrait_character_creation.jpg
+portrait_banner_path: /site/images/backdrops/portrait_character_creation.jpg
 
 portrait_banner_link: https://www.deviantart.com/zezhou/art/Knight-of-Lies-562010429
 
@@ -883,7 +883,7 @@ Some of the best marksmen in the world, archers are naturals with ranged weapons
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Archer" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Archer" role="button">Level Up Sheet</a>
   
 ___
 
@@ -908,7 +908,7 @@ The Path of Nature Barbarian is deeply in tune with the power that infuses the b
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Path of Nature Barbarian" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Path of Nature Barbarian" role="button">Level Up Sheet</a>
   
 ___
 
@@ -927,7 +927,7 @@ Path of Rage Barbarians are hearty, and can dole out a lot of damage, making the
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Path of Rage Barbarian" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Path of Rage Barbarian" role="button">Level Up Sheet</a>
   
 ___
 
@@ -949,7 +949,7 @@ Showmen by nature, Bards are known for their skills at performing and distractin
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Bard" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Bard" role="button">Level Up Sheet</a>
   
 ___
 
@@ -978,7 +978,7 @@ Servant of Lady Dusk. Followers of the Pale Lady seek rewards from their dark go
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Beauty" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Beauty" role="button">Level Up Sheet</a>
   
 ___
 
@@ -997,7 +997,7 @@ Servant  of Naris. Followers of Naris, aim to spread life and love throughout th
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Fertility" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Fertility" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1016,7 +1016,7 @@ Servant  of Juliet. Clerics of Juliet seek to bring fun and chaos to the world.
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Fun" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Fun" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1035,7 +1035,7 @@ Servant  of Aunora. Followers of Aunora, called the Hands of Aunora, seek to bri
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Healing" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Healing" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1054,7 +1054,7 @@ Servant  of Raghnal. Followers of Raghnal, called the Eyes of Raghnal, seek to g
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Knowledge" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Knowledge" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1073,7 +1073,7 @@ Servant of Iro. Followers of Iro, called the Watchers, uphold the word of law.
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Law" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Law" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1092,7 +1092,7 @@ Servant  of Ronar. Followers of Ronar, called the Ronari, are called to preserve
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Nature" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Nature" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1111,7 +1111,7 @@ Servant  of The Void Father. Followers of the Void Father aim to aid their maste
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Nothingness" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Nothingness" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1130,7 +1130,7 @@ Servant  of Melekar. Followers of Melekar serve the Lord of Sin by expanding his
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Sin" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Sin" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1149,7 +1149,7 @@ Servant  of Eandar. Followers of Eandar, called the Browncloaks, seek to help th
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Downtrodden" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Downtrodden" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1168,7 +1168,7 @@ Servant  of Yilena. Followers of Yilena, called Wardens, are called to protect t
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Hunt" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Hunt" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1187,7 +1187,7 @@ Servant  of Hesh. Followers of Hesh are called to the sea.
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of The Sea" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Sea" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1206,7 +1206,7 @@ Servant  of Illael. Followers of Illael seek to further their dark god's plans, 
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Cleric of Undeath" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Undeath" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1225,7 +1225,7 @@ Earth, Water, Fire, Air. These are the domain of the Elementalist. Devotees of t
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Elementalist Druid" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Elementalist Druid" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1244,7 +1244,7 @@ Magic suffuses the world, flowing around and through all things. The telepath ha
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Telepath" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Telepath" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1263,7 +1263,7 @@ Through luck, valor, or perhaps trickery, the Marksman has mastered the use of o
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Marksman" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Marksman" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1282,7 +1282,7 @@ The Heroic Highborn is a beacon of fierce nobility, brining hope and inspiration
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Heroic Highborn" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Heroic Highborn" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1301,7 +1301,7 @@ The Stalwart Knight is a are heavy, armored fighter who should place themselves 
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Stalwart Knight" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Stalwart Knight" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1323,7 +1323,7 @@ Monks are masters of hand to hand combat who use their extensive control of thei
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Monk" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Monk" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1345,7 +1345,7 @@ Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers,
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Necromancer" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Necromancer" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1367,7 +1367,7 @@ Paladins are Soldiers of the Light, and are adept both at hand to hand combat an
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Paladin" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Paladin" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1389,7 +1389,7 @@ Rangers are the vigilante law keepers and monster hunters of the wilds. Tank-lik
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Ranger" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Ranger" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1414,7 +1414,7 @@ Experts at dealing massive damage to a single target, assassins are among the mo
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Assassin" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Assassin" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1433,7 +1433,7 @@ Sneaktheives and criminals, Thieves have often fallen in with bad company. Thiev
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Thief" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Thief" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1455,7 +1455,7 @@ The Sorcerer does not learn their magic, but is rather given it either as a gift
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Sorcerer" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Sorcerer" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1477,7 +1477,7 @@ The study of magic is the study of potential, or so the wizard discovers during 
   
   
 
-<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class=Wizard" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Wizard" role="button">Level Up Sheet</a>
   
 ___
 

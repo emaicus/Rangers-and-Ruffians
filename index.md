@@ -1,5 +1,5 @@
 ---
-landscape_banner_path: /new_site/images/backdrops/landscape_banner.jpg
+landscape_banner_path: /site/images/backdrops/landscape_banner.jpg
 landscape_banner_link: https://www.deviantart.com/themefinland/art/The-winding-path-commission-800945478
 landscape_banner_name: The winding path
 landscape_banner_artist: ThemeFinland
@@ -7,7 +7,7 @@ landscape_banner_artist_link: https://www.deviantart.com/themefinland
 landscape_banner_license: CC BY-NC-SA 3.0
 landscape_banner_license_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
-portrait_banner_path: /new_site/images/backdrops/portrait_banner.jpg
+portrait_banner_path: /site/images/backdrops/portrait_banner.jpg
 portrait_banner_link: https://www.deviantart.com/ncorva/art/Call-to-adventure-664775437
 portrait_banner_name: Call to Adventure
 portrait_banner_artist: ncorva
@@ -28,24 +28,30 @@ is a fantasy tabletop roleplaying game (RPG) created for and by a group of
 nerdy friends. It can be dramatic, epic, and meaningful.
 It can also be silly and funny. We think that it is usually pretty fun. 
 
+### How do you play?
+1. [Read The Rulebook](/site/pages/GENERATED/Rulebook.md)  
+
+
 ### Build your Character
-1. [Choose your Race and Class](/new_site/pages/GENERATED/Compendium_of_Character_Creation.md)  
-2. [Choose your Spells](new_site/pages/GENERATED/Tome_of_the_Ancients.md)  
-3. [Choose your Deity](new_site/pages/GENERATED/Book_of_Lore.md)  
-4. [Create your Character Sheet](new_site/pages/character_sheet.html)  
-5. [Choose your Weapon](new_site/pages/weapons.html)
+1. [Choose your Race and Class](/site/pages/GENERATED/Compendium_of_Character_Creation.md)  
+2. [Choose your Spells](site/pages/GENERATED/Tome_of_the_Ancients.md)  
+3. [Choose your Deity](site/pages/GENERATED/Book_of_Lore.md)  
+4. [Create your Character Sheet](site/pages/character_sheet.html)  
+5. [Choose your Weapon](site/pages/weapons.html)
+
 
 ### Run the Game
-1. [Read The Rulebook](/new_site/pages/GENERATED/Rulebook.md)  
-2. [Study the Monsters](new_site/pages/GENERATED/Book_of_Known_Beasts.md)  
-3. [Download Printed Materials](new_site/pages/GENERATED/Printed_Materials.md)  
+1. [Read The Rulebook](/site/pages/GENERATED/Rulebook.md)  
+2. [Study the Monsters](site/pages/GENERATED/Book_of_Known_Beasts.md)  
+3. [Download Printed Materials](site/pages/GENERATED/Printed_Materials.md)  
 
 
 ## Keep up to Date
-1. [View the Changelog](new_site/pages/GENERATED/Changelog.md)  
+1. [View the Changelog](site/pages/GENERATED/Changelog.md)  
+
 
 ## Work in Progress
-1. [Test the Character Creation Helper](new_site/pages/character_creation_helper_page.html)  
+1. [Test the Character Creation Helper](site/pages/character_creation_helper_page.html)  
 
 <!-- ### Why Should You Play Rangers and Ruffians?
 * __Good for Beginners__ 

@@ -3,7 +3,7 @@ skip_header: true
 ---
 
 <script src="../js/nunjucks.js"></script>
-<link rel="stylesheet" href="/new_site/css/iterated_char_sheet.css">
+<link rel="stylesheet" href="/site/css/iterated_char_sheet.css">
 
 <div id="selection_area">
 </div>
@@ -15,9 +15,9 @@ skip_header: true
 <script>
   // Global character data dictionary (so we only have to hit the backend once.)
   var global_json = null;
-  $.getJSON("/new_site/pages/GENERATED/ALT.json", function(json) {
+  $.getJSON("/site/pages/GENERATED/ALT.json", function(json) {
     global_json = json;
-    nunjucks.configure('/new_site/templates', {autoescape: true, web: {async:true}});
+    nunjucks.configure('/site/templates', {autoescape: true, web: {async:true}});
     starting_values = parseGetRequest();
     console.log(starting_values["class"]);
     nunjucks.render('selector_template.html', 

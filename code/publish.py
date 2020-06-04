@@ -9,7 +9,7 @@ from pathlib import Path
 import argparse
 import copy
 
-GENERATED_SITE_DIRECTORY = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'pages', 'GENERATED')
+GENERATED_SITE_DIRECTORY = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'pages', 'GENERATED')
 
 MALE = True
 FEMALE = False
@@ -78,12 +78,12 @@ def copyImages():
 
       male = 'male' if PREFERRED_IMAGES[usable] else 'female'
       source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
-      dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, male, f'{usable}.jpg')
+      dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'images', img_type, male, f'{usable}.jpg')
 
       if not os.path.exists(source):
         print(f"couldn't find {source}")
         source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
-        dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'new_site', 'images', img_type, f'{usable}.jpg')
+        dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'images', img_type, f'{usable}.jpg')
 
       print(f'cp {source} {dest}')
       shutil.copy(source, dest)
@@ -442,7 +442,7 @@ def create_alt_all_race_class_json():
     "charismatic": "Because somebody has to be!",
     "sneaky": "A Sneaky Hider!",
     "good-first-class": "Simple to pick up!",
-    "complicated": "Lots to pay attention to!"
+    "complex": "Easy to play, difficult to master!"
   }
 
   tooltip_present = set(tooltips.keys())

@@ -34,7 +34,7 @@ GLOBAL_INITIAL_SPELL_ABILITIES = dict()
 
 GLOBAL_SPELL_TIER_ABILITIES = dict()
 
-GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'new_site', 'images')
+GLOBAL_ART_PATH = os.path.join(BASE_DIRECTORY, 'site', 'images')
 GLOBAL_SITE_ART_PATH = os.path.join(BASE_DIRECTORY, 'site', 'static', 'images')
 VERSION_NUMBER = None
 
@@ -215,7 +215,7 @@ class rnr_class(rnr_entity):
       tmp = self.abilities
       self.abilities = []
       ret = self.base_markdownify(image_path, image_attribution, handbook=self.handbook, sub=sub) #+ self.markdownify_level_sheet()
-      ret.append(f'\n<a class="btn btn-primary" href="/new_site/pages/level_up_sheet.html?class={self.name}" role="button">Level Up Sheet</a>\n')
+      ret.append(f'\n<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class={self.name}" role="button">Level Up Sheet</a>\n')
       ret.append(f"  \n___\n")
       self.abilities = tmp
       return ret
