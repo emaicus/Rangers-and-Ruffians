@@ -1,5 +1,5 @@
 ---
-portrait_banner_path: /new_site/images/backdrops/portrait_ancients.jpg
+portrait_banner_path: /site/images/backdrops/portrait_ancients.jpg
 portrait_banner_link: https://www.deviantart.com/stevegibson/art/Henrietta-Grimslingers-Art-676407322
 portrait_banner_name: Henrietta - Grimslingers Art
 portrait_banner_artist:  SteveGibson

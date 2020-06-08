@@ -1198,3 +1198,96 @@ the_druid's_guidebook:
         All entities within the blizzard take
         damage each turn, and are considered harried.
       school: "natural-elemental-water"
+the_book_of_healing:
+  Tier_0:
+    Beam of Light:
+      cost: 0
+      target: "enemy"
+      num_targets: 1
+      duration: "instantaneous"
+      combat_duration: 1
+      range: archer
+      description: "Fire a bolt of radiant energy at an enemy."
+      major_damage_dice: 1
+      major_damage_type: "light"
+      balance_type: minor damage
+      action_type: "Action"
+    Beguile:
+      cost: 0
+      target: enemy
+      num_targets: 1
+      duration: save
+      combat_duration: save
+      description: Your holy presence shakes an enemy's constitution. 
+      range: archer
+      effects:
+        - description: "the enemy does one minor dice less of damage on each attack."
+          save: "Spell Power"
+          repeat: "each turn" 
+      action_type: "Action"
+      balance_type: "greater debuff"
+    Bless Water:
+      cost: 1
+      target: object
+      num_targets: 1
+      duration: concentration
+      combat_duration: concentration
+      description: "You may bless water by praying over it, converting it to holy water.
+        This can be done at a rate of one gallon per hour."
+      range: hand to hand
+      balance_type: minor utility
+      casting_time: instantaneous
+      combat_casting_time: 1
+      action_type: Action
+    Detect Evil:
+      cost: 0
+      description: Make a perception check to detect if an evil entity is within 50
+        feet of you.
+    Detect Magic:
+      cost: 0
+      description: Make a perception check to detect magic within 30 feet of you.
+    Extra Weight:
+      cost: 0
+      description: Double the weight of an object. The object must be no larger than
+        a horse.
+    Fake Death:
+      cost: 0
+      description: Touch a willing entity to send them into a catatonic state that
+        is impossible to distinguish from death.
+    Give of Yourself:
+      cost: 0
+      description: Give a teammate up to 20 points of your own health per turn.
+    Lighten Object:
+      cost: 0
+      description: Decrease the weight of an object by half. The object must be no
+        larger than a horse.
+    Mending:
+      cost: 0
+      description: You can magically mend small dents, dings, scratches, and tears
+        in items.
+    Minor Heal:
+      balance_type: healing candidate
+      cost: 1
+      description: Restore 1d6 health to one ally or yourself.
+      major_healing_dice: 1d6d1 6
+    Purify:
+      cost: 0
+      description: Purify a food, drink, or potion to remove ill effects. Purify can
+        be used to remove drunkenness from entities, or to render poison innocuous.
+    Sacred Flame:
+      action_type: Offhand Action Candidate
+      cost: 0
+      description: As an offhand action, summon a sacred flame to your hand. Ash created
+        by the flame is considered sacred. You may melee attack with the flame for
+        1d6 damage. Add an additional 1d6 damage to corrupted entities or the undead.
+    Spare:
+      action_type: Offhand Action Candidate
+      cost: 0
+      description: Offhand. Touch an ally that is on death's door to stabilize them.
+        Stabilized entities immediately return to 0 health. The are still unconcious,
+        but no longer need to make death coin flips.
+    The Face of Good:
+      cost: 0
+      description: Once per rest, the light of your deity shines from you. For five
+        minutes, you gain advantage on charisma checks, and advantage on intimidation
+        checks when attempting to intimidate evil enemies.
