@@ -5,7 +5,7 @@ skip_header: true
 ---
   
 # Print Material for Poohbahs
-_Version 2.3.0_  
+_Version 2.3.1_  
 
   
 ## Recommended Weapon Handouts

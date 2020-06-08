@@ -42,7 +42,7 @@ show_download: false
 
   
 # Rangers and Ruffians Rulebook
-_Version 2.3.0_  
+_Version 2.3.1_  
 
    * [What is Rangers and Ruffians?](#what-is-rangers-and-ruffians)  
      * [What do you need to play?](#what-do-you-need-to-play)  

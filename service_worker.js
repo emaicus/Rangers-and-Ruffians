@@ -404,47 +404,47 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "9b39f05be73532ada76e4fd032e78b31"
+    "revision": "238a62e9062512443dc4680e98405653"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "9962acc620eb38f357ac2b968a62aff0"
+    "revision": "e56a1a5e443ab80a6cac0fe00be27da4"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "92404e5bcc1ce5b94ad7e9f0d8502a8b"
+    "revision": "5e6225239d650c14e31637f458609f50"
   },
   {
     "url": "site/pages/GENERATED/Changelog.html",
-    "revision": "146990794dd450ab56ff0130eb7b802a"
+    "revision": "6443d10ddf2c184aba23f247dae4aaf5"
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "5da55d5b58ea440cd1d97027c4011855"
+    "revision": "3cb7e6aaef1b82d5b0dbb551827b8541"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
-    "revision": "13974dd5d2da76befc8c3dbb1eba260f"
+    "revision": "2149f7593347e768545c3eea1777f58b"
   },
   {
     "url": "site/pages/GENERATED/Examples.md",
-    "revision": "f31fc1f7483675fcb13d69b2f64f7c4c"
+    "revision": "75df1a67d77f1386f57dfc07affa29e1"
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "b9d13ab35dc4224308de9bfa127907be"
+    "revision": "c58b6512ad392026c76b63c8a9303e4a"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
-    "revision": "2036c86111f935797203818ba2a30d8a"
+    "revision": "e05135a7b6bac01257f1fb444019254b"
   },
   {
     "url": "site/pages/GENERATED/Rulebook.html",
-    "revision": "35b6d942a7516afa982a80a63816d276"
+    "revision": "955023b8257810dbcf367bf6e8940319"
   },
   {
     "url": "site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "f38d46dae8244b3721d1a5d18dc6a933"
+    "revision": "910c68a86a5f09067c933ecca7ab5759"
   },
   {
     "url": "site/pages/level_up_sheet.html",
@@ -464,7 +464,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/templates/character_creation_helper_template.html",
-    "revision": "e09aa89cd95cc17afad569e14262734d"
+    "revision": "8ed4e8ec10e151b216f87abddd3324ad"
   },
   {
     "url": "site/templates/character_selection_template.html",

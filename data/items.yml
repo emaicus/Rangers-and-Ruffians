@@ -32,6 +32,8 @@ weapons:
             maximum_damage_dice: 10
             movement_penalty: 5
             range: ten feet
+            drawbacks:
+              Harried: "Take disadvantage against enemies standing adjacent to you."
         Dagger: # Why it's cool: Move more quickly.
             cost: "cheap"
             minimum_damage_dice: 4

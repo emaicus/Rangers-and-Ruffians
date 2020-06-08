@@ -25,18 +25,23 @@ show_download: false
   
 # Changelog
 
-   * [Rangers and Ruffians 2.3.0: The New Class Update](#rangers-and-ruffians-230-the-new-class-update)  
-     * [Overview:](#overview)  
+   * [Rangers and Ruffians 2.3.1: The Weapon Skill Update](#rangers-and-ruffians-231-the-weapon-skill-update)  
+     * [Overview](#overview)  
+   * [Rangers and Ruffians 2.3.0: The Weapon Update](#rangers-and-ruffians-230-the-weapon-update)  
+     * [Overview](#overview-1)  
+     * [Weapon List](#weapon-list)  
+   * [Rangers and Ruffians 2.2.0: The New Class Update](#rangers-and-ruffians-220-the-new-class-update)  
+     * [Overview](#overview-2)  
    * [Rangers and Ruffians 2.1.3: The Combat Update](#rangers-and-ruffians-213-the-combat-update)  
-     * [Overview:](#overview-1)  
+     * [Overview](#overview-3)  
      * [New Rules:](#new-rules)  
      * [Race Balance Changes](#race-balance-changes)  
      * [Class Balance Changes](#class-balance-changes)  
    * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
-     * [Overview:](#overview-2)  
+     * [Overview:](#overview-4)  
      * [Ability Changes](#ability-changes)  
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
-     * [Overview:](#overview-3)  
+     * [Overview:](#overview-5)  
      * [Rule Changes:](#rule-changes)  
      * [Additional Clarifications:](#additional-clarifications)  
      * [Race Balance Changes:](#race-balance-changes-1)  
@@ -50,12 +55,50 @@ show_download: false
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
 
   
-## Rangers and Ruffians 2.3.0: The New Class Update
+## Rangers and Ruffians 2.3.1: The Weapon Skill Update
   
   
 
   
-### Overview:
+### Overview
+Adds a host of new skills that better couple with the new weapon system.
+  
+## Rangers and Ruffians 2.3.0: The Weapon Update
+  
+  
+
+  
+### Overview
+Updates weapons to have abilities and drawbacks, making combat more tactical.
+  
+  
+
+  
+### Weapon List
+1. Shortsword
+2. Shortspear
+3. Dagger
+4. Handaxe
+5. Spear
+6. Katana
+7. Quarterstaff
+8. Great Sword
+9. War Hammer
+10. Greataxe 
+11. Longbow
+12. Shortbow
+13. Crossbow
+14. Pistol 
+15. Carbine Rifle
+16. Long Rifle
+
+  
+## Rangers and Ruffians 2.2.0: The New Class Update
+  
+  
+
+  
+### Overview
 This revision:
 1. Redesigns every class to make them more action oriented and engaging to play.
 2. Tweaks race mechanics to better match new classes.
@@ -68,8 +111,8 @@ This revision:
   
 
   
-### Overview:
-Wip
+### Overview
+A large race and class balance update.
   
   
 

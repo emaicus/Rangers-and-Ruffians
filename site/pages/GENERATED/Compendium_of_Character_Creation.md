@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.3.0_  
+_Version 2.3.1_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
