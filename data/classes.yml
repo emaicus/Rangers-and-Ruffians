@@ -1132,12 +1132,6 @@ Cleric:
     weapons. However, they are powerful spellcasters who are adept at healing, and
     who can make a huge difference in combat. Clerics try to embody the ideals of
     their deity, paying them homage and working to enact their will in the world."
-    # As you design your cleric, ask yourself how they chose this path. When and how
-    # did their deity reach out to them? How did they make their pledge? Under what
-    # circumstances? How often do they pray to their deity? How do they react to people
-    # who don't believe? What do they believe in? What is their moral code, and how
-    # does that interact with that of their deity? How will being a cleric affect the
-    # way that you interact with your party?"
   subclasses:
     Cleric of Beauty:
       base_abilities:
