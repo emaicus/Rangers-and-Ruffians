@@ -404,7 +404,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "238a62e9062512443dc4680e98405653"
+    "revision": "d186529f1a83680d34a2404b56e994a0"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
