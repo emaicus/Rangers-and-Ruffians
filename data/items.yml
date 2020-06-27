@@ -8,6 +8,7 @@
 #   abilities: [A list of special abilities granted by the weapon]
 #   rules: [A list of special rules about the item.]
 #   drawbacks: [A list of bad things that happen as a result of using this weapon (besides the movement penalty.)]
+#   damage_type: <Blunt, Light Blade, Blade, Heavy, Light Ranged, Heavy Ranged>
 
 # # Right now, base movement is 15. Let's up it to 30.
 # On average, players will loose 15 (5 for armor, 5 for right hand, 5 for left hand.)
@@ -24,6 +25,7 @@ Weapons:
             maximum_damage_dice: 10
             movement_penalty: 5
             reach: adjacent
+            damage_type: Blade
             abilities: 
               Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you. If this attack is a critical hit, add an additional dice of damage."
               Sword Parry: "Reaction. Cost 1. If your offhand is free, you may make a contested dex check against an incoming melee light or heavy attack. On success, avoid the attack."
@@ -34,13 +36,15 @@ Weapons:
             range: 30
             reach: adjacent
             movement_penalty: 0
+            damage_type: Light Blade
             abilities:
-              Flurry of Stabs: "Cost 1. Make two stabbing attacks in a single attack action."
+              Flurry of Stabs: "Cost 1. Make two stabbing attacks in a single attack action. Add your relevant modifier only once."
         Handaxe: # Why it's cool: 
             cost: "inexpensive"
             minimum_damage_dice: 4
             maximum_damage_dice: 10
             reach: adjacent
+            damage_type: Blade
             abilities:
               Preserve Momentum: "Cost 1. As an offhand action, immediately follow up an attack with a second attack which deals half damage. If you are not holding a shield, this leaves you exposed, and the next attack against you has advantage."
               Heavy Blow: "Cost 1. Make an attack with your axe which ignores enemy armor. If the attack is a critical hit, add an extra damage dice."
@@ -52,6 +56,7 @@ Weapons:
             maximum_damage_dice: 8
             reach: ten feet
             movement_penalty: 5
+            damage_type: "Blade"
             abilities: 
               Guarded Front: "Reaction. If an enemy moves within your reach in front of you, you may make an attack against them."
               Spear Parry: "Reaction. Cost 1. You may make a contested dex check against an incoming light melee attack. On success, avoid the attack."
@@ -63,6 +68,7 @@ Weapons:
             maximum_damage_dice: 12
             movement_penalty: 5
             reach: adjacent
+            damage_type: Blade
             abilities: 
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
               Slashing Strike: "Cost 1. Make an attack which hits all enemies immediately in front of you."
@@ -73,6 +79,7 @@ Weapons:
             minimum_damage_dice: 4
             maximum_damage_dice: 8
             reach: diagonal
+            damage_type: "Blunt"
             abilities:
               Quarterstaff Parry: "Cost 1. Reaction. Make a Contested dex check against a light melee strike to catch it on your staff, stopping attack."
               Guarding Stance: "As an offhand action, move into a blocking stance. While in a blocking stance you may make an attack against enemies that move within 10 feet of you as a reaction."
@@ -84,6 +91,7 @@ Weapons:
             maximum_damage_dice: 12
             reach: diagonal
             movement_penalty: 5
+            damage_type: "Blade"
             abilities:
               Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you. If this attack is a critical hit, add an additional dice of damage."
               Greatsword Parry: "Reaction. Cost 1. You may make a contested dex check against an incoming melee light or heavy attack. On success, avoid the attack."
@@ -94,10 +102,10 @@ Weapons:
             minimum_damage_dice: 6
             maximum_damage_dice: 12
             reach: adjacent
+            damage_type: Heavy
             drawbacks: 
               Slow to Don: "Donning takes a full action"
             abilities: 
-              Ignore Armor: "Your war hammer ignores enemy armor."
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
             movement_penalty: 10
         Greataxe:
@@ -106,6 +114,7 @@ Weapons:
             movement_penalty: 10
             maximum_damage_dice: 12
             reach: diagonal
+            damage_type: Blade
             drawbacks: 
               Slow to Don: "Donning takes a full action"
             abilities: 
@@ -118,6 +127,7 @@ Weapons:
             maximum_damage_dice: 12
             movement_penalty: 5
             range: far
+            damage_type: "Light Ranged"
             drawbacks:
               Slow to Don: "Donning takes a full action"
         Crossbow:
@@ -191,47 +201,42 @@ Shields:
 Armor:
   Padded Armor:
     cost: inexpensive
-    movement_penalty: 0
-    armor: 1
+    movement_penalty: 5
     abilities:
       Blunt Resistance: "You take half damage from blunt attacks."
-  Light Leather Armor:
+  Leather Armor:
     cost: moderately expensive
     movement_penalty: 0
-    armor: 1
-  Heavy Leather Armor:
-    cost: moderately expensive
-    armor: 2
-    movement_penalty: 0
+    abilities:
+      Blunt Resistance: "You take half damage from blunt attacks."
   Elven Leather Armor:
-    cost: expensive
-    armor: 3
+    cost: very expensive
     movement_penalty: 0
+    abilities:
+      Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
+      Blunt Resistance: "You take half damage from blunt attacks."
   Chainmail:
     cost: expensive
     movement_penalty: 5
-    armor: 2
     abilities:
       Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
       Blunt Resistance: "You take half damage from blunt attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
-  Scalemail:
-    cost: very expensive
-    movement_penalty: 5
-    armor: 3
-    abilities:
-      Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
-      Blunt Resistance: "You take half damage from blunt attacks."
-    drawbacks:
-      Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
+  # Scalemail:
+  #   cost: very expensive
+  #   movement_penalty: 10
+  #   abilities:
+  #     Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
+  #     Blunt Resistance: "You take half damage from blunt attacks."
+  #     Piercing Resistance: "You take half damage from piercing and slashing attacks."
+  #   drawbacks:
+  #     Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
   Plate Armor:
     cost: very expensive
     movement_penalty: 10
-    armor: 4
     abilities:
-      Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
-      Blunt Resistance: "You take half damage from blunt attacks."
+      Damage Resistance: "You take half damage from non-magic attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
       #Dexterity Disadvange: "Make dexterity checks with disadvantage while wearing your armor."
