@@ -436,6 +436,46 @@ def check_descriptions(print_errors=True):
       print(error)
   return errors
 
+def type_check(dictionary, key, t, error, required=False):
+  errors = list()
+  if key in dictionary:
+    if not isinstance(dictionary[key], t):
+      errors.append(f'{error}: {key} is not the correct type, expected is a(n) {type(dictionary[key]).__name__}.')
+  elif required:
+    errors.append(f'{error}: {key} is missing.')
+  return errors
+
+def check_weapons(print_errors=True):
+  errors = list()
+  for weapon_type, weapon_type_data in rnr_utils.GLOBAL_STANDARD_ITEMS['weapons'].items():
+    for weapon, details in weapon_type_data.items():
+      errors += type_check(details, 'cost', str, weapon, True)
+      errors += type_check(details, 'minimum_damage_dice', int, weapon, True)
+      errors += type_check(details, 'maximum_damage_dice', int, weapon, True)
+      errors += type_check(details, 'range', str, weapon, True)
+      errors += type_check(details, 'movement_penalty', int, weapon, True)
+      errors += type_check(details, 'abilities', dict, weapon, False)
+      errors += type_check(details, 'drawbacks', dict, weapon, False)
+
+      known_keys = ['cost', 'minimum_damage_dice', 'maximum_damage_dice', 'range', 'movement_penalty', 'abilities', 'drawbacks']
+      for key in details.keys():
+        if key not in known_keys:
+          errors.append(f"{weapon}: unexpected key {key}")
+
+
+      if 'abilities' in details:
+        for key, val in details['abilities'].items():
+          errors += type_check(details['abilities'], key, str, f'{weapon} abilities, {key}', True)
+
+      if 'drawbacks' in details:
+        for key, val in details['drawbacks'].items():
+          errors += type_check(details['drawbacks'], key, str, f'{weapon} drawbacks, {key}', True)
+
+  if print_errors:
+    for error in errors:
+      print(error)
+  return errors
+
 def is_word_unknown(word, spell, new_words):
   if len(spell.unknown([word,])) == 1 and word not in new_words:
     return True  
@@ -503,8 +543,6 @@ def spell_check_a_file(filename, spell_check_function, spell, rnr_dictionary):
       words.add(word.lower())
 
   return spell_check_function(list(words), spell, rnr_dictionary)
-
-
 
 def spell_check(fix_errors=True, print_errors=True):
 

@@ -8,7 +8,7 @@ const buildSW = () => {
     swDest: 'service_worker.js',
     globDirectory: '.',
     globPatterns: [
-      "new_site/**\/*.{js,css,html,png,pdf,jpg,json,md,ico,svg}",
+      "site/**\/*.{js,css,html,png,pdf,jpg,json,md,ico,svg}",
       "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
       "node_modules/bootstrap/dist/js/bootstrap.min.js",
       "node_modules/jquery/dist/jquery.min.js",

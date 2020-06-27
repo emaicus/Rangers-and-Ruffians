@@ -1,80 +1,51 @@
-{% macro render_spellbook(character_name, rnr_class, spells) -%}
-  {% if character_name != None %}
-    <span class="characterName"> {{ character_name.replace('_', ' ').title() }}'s Spellbook</span><br>
-    <br/>
-  {% else %}
-    <br/>
-    <br/>
-  {% endif %}
-  {% for tier in spells.keys()|sort()%}
-    <h4>{{tier.replace('_',' ').title()}}</h4>
-    <ul>
-    {% for spell in spells[tier].keys()|sort() %}
-      <li><b>{{spell.replace('_',' ').title()}}: 
-      {% if character_name == None %}
-        (Difficulty: {{ spells[tier][spell]["charisma_cost"] }})</b>
-      {% else %}
-        {%- if rnr_class.lower() == "sorcerer" %}
-          (Difficulty: {{ spells[tier][spell]["charisma_cost"] }})
-        {% else %}
-          (Cost: {{ spells[tier][spell]["cost"] }})
-        {% endif -%}
-      {% endif %}
-      </b>
-      {{spells[tier][spell]['description']}}</li>
-    {% endfor %}
-    </ul>
-  {% endfor %}
-{%- endmacro %}
+{% macro stat_square(stat) %}
+  <div class="stat-square" id="{{stat}}">
+    <div style="height:60%; width:60%;">
+      <span class="stat-square-content small-font">{{stat}}</span>
+    </div>
+    <div style="height:40%; width:40%; border-left: 1px solid black; border-top: 1px solid black; float: right;"></div>
+  </div>
+{% endmacro %}
 
-{% macro render_level_up_page(class_name, data) %}
-  <div class="container-fluid h-100" style="padding-left:0px;padding-right: 0px;">
-    <div class="row">
-      <div class="col-12">
-        {% if class_name != None %}
-        <h2>{{class_name}} Level Up Sheet</h2>
-        {% endif %}
-        {% for level in range(0,100) if 'level_{0}'.format(level) in data['levels'] %}
-          <div id={{"level_"+level|string}}>
-            Level {{level}}
-            {% if 'abilities' in data['levels']['level_'+level|string] %}
-              <ul>
-              {% for ability_type, ability_set in data['levels']['level_'+level|string]['abilities'].items() %}
-                {% for ability_name, ability_info in ability_set.items() %}
-                  <li> 
-                    <b> {{ability_name.replace('_',' ').title()}}: 
-                      {% if ability_info["cost"] != None %}
-                        (Cost {{ ability_info['cost'] }})
-                      {% endif %}
-                    </b> 
-                    {{ability_info['description']}} 
-                  </li>
-                {% endfor %}
-              {% endfor %}
-              </ul>
-            {% endif %}
-            {% for key in data['levels']['level_'+level|string].keys() %}
-              {% if 'subclass' in key %}
-                <b>{{key.split('_')[1].title()}} Abilities</b>
-                <ul>
-                  {% for ability_type, ability_set in data['levels']['level_'+level|string][key].items() %}
-                    {% for ability_name, ability_info in ability_set.items() %}
-                      <li> 
-                        <b> {{ability_name.replace('_',' ').title()}}: 
-                          {% if ability_info["cost"] != None %}
-                            (Cost {{ ability_info['cost'] }})
-                          {% endif %}
-                        </b> 
-                        {{ability_info["description"]}} 
-                      </li>
-                    {% endfor %}
-                  {% endfor %}
-                </ul> 
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endfor %}
-      </div>
+{% macro character_data_square(name, img_path, rectangle="false") %}
+  {% set type_class = "rectangle" if rectangle == "true" else "square" %}
+  <div class="character-attribute-{{type_class}}">
+    <div class="character-attribute-name-container half-height full-width">
+      <span class="title small-font">{{name}}</span>
+    </div>
+    <div class="half-height">
+      <img src="/site/icons/{{img_path}}" class="character-attribute-icon">
     </div>
   </div>
-{%- endmacro %}
+{% endmacro %}
+
+{% macro format_ability(ability, ability_info) %}
+<p class="ability">
+  <span class="small-font bold">{{ability}}: 
+    {% if ability_info["cost"] != None and ability_info["cost"] != 0 %}
+      (Cost {{ ability_info['cost'] }})
+    {% endif %}
+  </span>
+  <span class="small-font">
+    {{ability_info['brief']}}
+  </span>
+</p>
+{% endmacro %}
+
+{% macro character_info_column(first, second, third) %}
+  <div class="third-height">
+    <span class="medium-font"> 
+      {{first}}: _________
+    </span>
+  </div>
+  <div class="third-height">
+    <span class="medium-font">
+      {{second}}: _________
+    </span>
+  </div>
+  <div class="third-height">
+    <span class="medium-font">
+      {{third}}: _________
+    </span>
+  </div>
+{% endmacro %}

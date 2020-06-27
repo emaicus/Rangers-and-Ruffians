@@ -159,9 +159,9 @@ Warrior Spirit:
   type: combat
   brief: Gain 1 AP when you kill an enemy.
 Adrenaline: 
-  description: "When you are below 50% health, gain an extra 10 feet of movement."
+  description: "When you are going berserk, you may dash 30 feet rather than 15."
   type: combat
-  brief: "Gain 10ft of movement when below 50% health."
+  brief: "Dash 30 feet when berserk."
 Chain Attack:
   description: "After slaying an enemy, gain an extra 10 feet of movement and a free attack action or Hurl Weapon."
   type: combat
@@ -586,21 +586,21 @@ Hammer of Light:
   type: combat
   brief: You do an additional dice of damage to undead.
 Minor Hand to Hand Combat:
-  description: Your hands are 1d4 weapons.
+  description: Your melee attacks deal 1d4 damage, but are not considered weapon attacks.
   type: general
-  brief: Your hands are 1d6 weapons.
+  brief: Your melee attacks deal 1d4 damage but are not weapon attacks.
 Greater Hand to Hand Combat:
-  description: Your hands are 1d6 weapons.
+  description: Your melee attacks deal 1d6 damage, but are not considered weapon attacks.
   type: general
-  brief: Your hands are 1d8 weapons.
+  brief: Your melee attacks deal 1d6 damage but are not weapon attacks.
 Major Hand to Hand Combat:
-  description: Your hands are 1d8 weapons.
+  description: Your melee attacks deal 1d8 damage, but are not considered weapon attacks.
   type: general
-  brief: Your hands are 1d10 weapons.
+  brief: Your melee attacks deal 1d8 damage but are not weapon attacks.
 Legendary Hand to Hand Combat:
-  description: Your hands are 1d10 weapons.
+  description: Your melee attacks deal 1d10 damage, but are not considered weapon attacks.
   type: general
-  brief: Your hands are 1d4 weapons.
+  brief: Your melee attacks deal 1d10 damage but are not weapon attacks.
 Listen:
   description: "You have advantage on perception checks. Does not include initiative."
   type: advantage
@@ -716,11 +716,11 @@ Ultimate Titan-Slayer Punch:
 Consecutive Normal Punches:
   description: "Your hands and both ends of any staff-like weapon are considered melee weapons for the purposes of dual wielding."
   type: combat
-  brief: "Make two attacks in an action."
+  brief: "Your hands, feet, and both ends of your staff are considered weapons for the sake of dual wielding."
 Consecutive Serious Punches:
   description: "You may make dual wielding attacks as an offhand action."
   type: combat
-  brief: "Consecutive normal punches no longer has a cost."
+  brief: "You may make dual wielding attacks as an offhand action."
 Battlefield Meditation: 
   description: "Concentration. Spend a full turn meditating during combat to restore 1d4 action points."
   type: combat
@@ -1327,7 +1327,7 @@ Old Hand:
   brief: You can attempt to perceive enemy stats.
 Uncanny Perception:
   description: You have uncanny perception, which allows you to sense your way in total darkness,
-    gives you advantage on all perception checks, and let you role initiative with advantage.
+    gives you advantage on all perception checks, and lets you role initiative with advantage.
   type: advantage
   brief: You can see in pitch dark, have PER advantage, and role initiative with advantage.
 Padfoot:

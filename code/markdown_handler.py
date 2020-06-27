@@ -159,7 +159,7 @@ class markdown_handler:
 
     def verify_empty_buffer(self):
       if len(self.BUFFER) > 0:
-        print(f"ERROR: the following elements remained in the buffer. {left}")
+        print(f"ERROR: the following elements remained in the buffer. {self.BUFFER}")
 
     def find_nth(self, needle, n):
       haystack = self.BUFFER

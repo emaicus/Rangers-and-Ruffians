@@ -2,7 +2,6 @@
 #   cost: <very cheap, cheap, inexpensive, moderately expensive, expensive, very expensive>
 #   minimum_damage_dice: 4,6,8,10,12
 #   maximum_damage_dice: 4,6,8,10,12
-#   range: number in increments of 5. None is equivalent to not being able to be thrown/fired.
 #   movement_penatly: The movement penalty for carrying a weapon.
 #   reach: <adjacent, diagonal, two>
 #   abilities: [A list of special abilities granted by the weapon]
@@ -17,7 +16,7 @@
 #   - Using a potion requires you to sheath a weapon.
 #   - You may make a second attack as an offhand action.
 
-Weapons:
+weapons:
     One Handed:
         Shortsword: # Why it's cool: It can parry!
             cost: "moderately expensive"
@@ -27,14 +26,22 @@ Weapons:
             reach: adjacent
             damage_type: Blade
             abilities: 
-              Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you. If this attack is a critical hit, add an additional dice of damage."
+              Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you."
               Sword Parry: "Reaction. Cost 1. If your offhand is free, you may make a contested dex check against an incoming melee light or heavy attack. On success, avoid the attack."
+        Shortspear:
+            cost: "cheap"
+            minimum_damage_dice: 4
+            maximum_damage_dice: 10
+            movement_penalty: 5
+            range: ten feet
+            drawbacks:
+              Harried: "Take disadvantage against enemies standing adjacent to you."
         Dagger: # Why it's cool: Move more quickly.
             cost: "cheap"
             minimum_damage_dice: 4
-            maximum_damage_dice: 6
+            maximum_damage_dice: 8
             range: 30
-            reach: adjacent
+            range: adjacent
             movement_penalty: 0
             damage_type: Light Blade
             abilities:
@@ -46,22 +53,22 @@ Weapons:
             reach: adjacent
             damage_type: Blade
             abilities:
-              Preserve Momentum: "Cost 1. As an offhand action, immediately follow up an attack with a second attack which deals half damage. If you are not holding a shield, this leaves you exposed, and the next attack against you has advantage."
+              Preserve Momentum: "Cost 1. If attacking as an action, immediately follow up an attack with a second attack. Add your relevant modifier only once. If you are not holding a shield, this leaves you exposed, and the next attack against you has advantage."
               Heavy Blow: "Cost 1. Make an attack with your axe which ignores enemy armor. If the attack is a critical hit, add an extra damage dice."
             movement_penalty: 5
     Two Handed:
         Spear: # Why it's cool: Extra 5ft. of reach. Difficult to close with you.
             cost: "cheap"
             minimum_damage_dice: 4
-            maximum_damage_dice: 8
             reach: ten feet
             movement_penalty: 5
             damage_type: "Blade"
+            maximum_damage_dice: 10
             abilities: 
               Guarded Front: "Reaction. If an enemy moves within your reach in front of you, you may make an attack against them."
               Spear Parry: "Reaction. Cost 1. You may make a contested dex check against an incoming light melee attack. On success, avoid the attack."
             drawbacks:
-              - Harried: "Take disadvantage against enemies standing adjacent to you."
+              Harried: "Take disadvantage against enemies standing adjacent to you."
         Katana: # Why it's cool. High crit damage, slashing strikes.
             cost: expensive
             minimum_damage_dice: 6
@@ -73,7 +80,7 @@ Weapons:
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
               Slashing Strike: "Cost 1. Make an attack which hits all enemies immediately in front of you."
             drawbacks:
-              - Slow to Don: "Donning takes a full action"
+              Slow to Don: "Donning takes a full action"
         Quarterstaff:
             cost: "very cheap"
             minimum_damage_dice: 4
@@ -81,15 +88,15 @@ Weapons:
             reach: diagonal
             damage_type: "Blunt"
             abilities:
-              Quarterstaff Parry: "Cost 1. Reaction. Make a Contested dex check against a light melee strike to catch it on your staff, stopping attack."
-              Guarding Stance: "As an offhand action, move into a blocking stance. While in a blocking stance you may make an attack against enemies that move within 10 feet of you as a reaction."
-              Flurry of Blows: "Cost 1. If attacking as an action, make a second attack at half damage."
+              Quarterstaff Parry: "Cost 1. Reaction. Make a contested dexterity check against a light melee strike to catch it on your staff, stopping attack."
+              Guarding Stance: "As an offhand action, move into a guardian stance. While in a guardian stance you may make an attack against enemies that move within 10 feet of you as a reaction."
+              Flurry of Blows: "Cost 1. If attacking as an action, make a second attack. Add your relevant modifier only once."
             movement_penalty: 5
         Great Sword:
             cost: expensive
             minimum_damage_dice: 6
             maximum_damage_dice: 12
-            reach: diagonal
+            range: diagonal
             movement_penalty: 5
             damage_type: "Blade"
             abilities:
@@ -130,6 +137,16 @@ Weapons:
             damage_type: "Light Ranged"
             drawbacks:
               Slow to Don: "Donning takes a full action"
+            abilities: 
+              Superior Power: "When attacking an enemy within 30 feet, your arrows ignore enemy armor."
+        Shortbow:
+            cost: cheap
+            minimum_damage_dice: 4
+            maximum_damage_dice: 10
+            movement_penalty: 5
+            range: archer
+            abilities:
+              Fast Draw: "Cost 1. When attacking as an action, make a second bow attack. Add your relevant modifier only once."
         Crossbow:
           cost: moderately expensive
           minimum_damage_dice: 6
@@ -138,6 +155,8 @@ Weapons:
           range: archer
           drawbacks:
             Slow to Don: "Donning takes a full action"
+          abilities:
+            Superior Power: "When attacking an enemy within 30 feet, your arrows ignore enemy armor."
     Firearm:
         Pistol:
             cost: expensive
@@ -169,8 +188,8 @@ Weapons:
             abilities:
               Armor Penetrating Rounds: "Your rounds ignore enemy armor."
             drawbacks:
-              Very Loud: "Firing your weapon alerts everyone within 1 mile feet of your presence."
-Shields:
+              Very Loud: "Firing your weapon alerts everyone within 1 mile of your presence."
+shields:
   Buckler:
     cost: cheap
     movement_penalty: 0
@@ -198,10 +217,11 @@ Shields:
       Shield Parry: "Cost 1. Reaction. Contested dex against a light melee strike to catch it, stopping attack."
       Shield Bash: "Cost 1. Use an offhand action to shield bash an enemy. If they fail a contested Strength Check, they are stunned, and miss an action and an offhand action on their next turn."
       Greater Shield Up: "You take no damage from non-magic piercing or blunt ranged attacks which come from directly in front of you."
-Armor:
+armor:
   Padded Armor:
     cost: inexpensive
-    movement_penalty: 5
+    movement_penalty: 0
+    armor: 0
     abilities:
       Blunt Resistance: "You take half damage from blunt attacks."
   Leather Armor:
@@ -259,6 +279,8 @@ Armor:
 #             minimum_damage_dice: 4
 #         Whip:
 #             minimum_damage_dice: 4
+#         
+#             
 #     Two Handed:
 #         Bastard Sword:
 #           minimum_damage_dice: 6

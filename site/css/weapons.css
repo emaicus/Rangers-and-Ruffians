@@ -1,0 +1,34 @@
+.weapon {
+  width : 45%;
+  height: 45%;
+  margin: 3px;
+  float: left;
+  border: 2px solid black;
+}
+
+.weapon-header {
+  width: 100%;
+  height: 12%;
+  border-bottom: 2px solid black;
+  padding: 4px;
+}
+
+.weapon-name {
+  font-size: 20pt;
+  font-weight: bold;
+  float: left;
+}
+
+.weapon-icon {
+  float: right;
+  height: 100%;
+}
+
+.weapon-type {
+  float: right;
+}
+
+.small-title {
+  font-size: 14pt;
+  font-weight: bold;
+}
