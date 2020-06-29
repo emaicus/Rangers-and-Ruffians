@@ -404,7 +404,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "d186529f1a83680d34a2404b56e994a0"
+    "revision": "5be0cdbdb0163937713cd4fde8949a9d"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
@@ -420,7 +420,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "3cb7e6aaef1b82d5b0dbb551827b8541"
+    "revision": "998703d5d7a9c9ce75abb0e3f7bbe9af"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",

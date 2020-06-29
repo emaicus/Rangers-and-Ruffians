@@ -38,6 +38,7 @@ Barbarian:
         level_2:
           abilities:
           - Single Out
+          - Meat Shield
         level_3:
           abilities:
           - Hurl Weapon
@@ -78,8 +79,8 @@ Barbarian:
           # - Controlled Rage # No negative effects from being berserk
           - Glory # When you hit low health, double your damage (25%)
         level_14:
-          abilities: 
-          - Greater Chain Attack 
+          abilities:
+          - Greater Chain Attack
         level_15:
           abilities:
           - Fury
@@ -167,7 +168,7 @@ Barbarian:
           abilities:
           - Rouse to Action # Grant someone their full movement and an attack
         level_14:
-          abilities: 
+          abilities:
           - Form Shift # Transform into your infusion.
         level_15:
           abilities:
@@ -193,7 +194,7 @@ Knight:
         Strength: 2
       description: "The Stalwart Knight is a are heavy, armored fighter who should place themselves between
         their party and harm's way. The ideal knight is a bastion of good, a defender
-        of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and 
+        of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and
         are able to deal heavy damage to nearby enemies, and to protect nearby allies."
       health_die_pieces: 6
       levels:
@@ -207,6 +208,7 @@ Knight:
         level_1:
           abilities:
           - Ready Stance
+          - Charge
         level_2:
           abilities:
           - Shield of Men
@@ -219,11 +221,11 @@ Knight:
           - Press the Advantage
         level_5:
           abilities:
-          - Advance
           - Knight's Challenge
+          - Advance
         level_6:
           abilities:
-          - Charge
+          - Defender Aura
         level_7:
           abilities:
           - Mighty
@@ -246,12 +248,12 @@ Knight:
           - Controlled Advance
         level_13:
           abilities:
-          - Defender Aura
+          - Greater Defender Aura
         level_14:
           abilities:
           - Resilient Defense
         level_15:
-          abilities: 
+          abilities:
           - Warrior's Vow
       questions:
       - How did your character get where they are, and where they are going next?
@@ -358,7 +360,7 @@ Paladin:
       - How will being a paladin affect the way they interact with their party?
       standings: Paladins are generally respected. They hate evil, and try to destroy
         it wherever they find it.
-      tag_line: Soldier of Light 
+      tag_line: Soldier of Light
 Ranger:
   subclasses:
     Ranger:
@@ -372,7 +374,7 @@ Ranger:
         Perception: 2
         Strength: -2
       description: "Rangers are the vigilante law keepers and monster hunters of the
-        wilds. Tank-like fighters, Rangers are powerful dexterity based combatants, 
+        wilds. Tank-like fighters, Rangers are powerful dexterity based combatants,
         and are known for their
         ability to dual wield weapons. Rangers are masters of the wilds, and are able
         to easily track enemies, as well as to prepare simple medicines
@@ -589,7 +591,7 @@ Fighter:
           - Greater Telekinesis # 30 feet telekinesis
         level_6:
           abilities:
-          - Telepathic Suggestion # Cost 1. Jedi mind trick 
+          - Telepathic Suggestion # Cost 1. Jedi mind trick
           - Centered Telekinetic Push # Cost 1. Push all enemies around you 10 feet away.
         level_7:
           abilities:
@@ -619,7 +621,7 @@ Fighter:
           - Major Mental Shield # Once invoked, mental shield protects you for one turn (invulnerable)
         level_14:
           abilities:
-          - Telekinetic Flight # Cost 1. Fly. Concentration. 
+          - Telekinetic Flight # Cost 1. Fly. Concentration.
         level_15:
           abilities:
           - Triple Concentration # Concentrate on three things.
@@ -646,7 +648,7 @@ Highborn:
         Luck: 1
         Perception: -3
         Strength: -1
-      description: "The Heroic Highborn is a beacon of fierce nobility, brining hope 
+      description: "The Heroic Highborn is a beacon of fierce nobility, brining hope
                     and inspiration to their people. The Heroic Highborn is a powerful fighter
                     which supports its allies by granting them inspiration. As a Heroic Highborn
                     watches it's allies succeed, it gains Gumption, the force of will needed
@@ -677,7 +679,7 @@ Highborn:
           - Spurred to Movement # Spend 1 Gumption to move 15 feet.
         level_3:
           abilities:
-          - Rally Cry # Offhand. Cost 1. Grant all allies advantage on their next action.        
+          - Rally Cry # Offhand. Cost 1. Grant all allies advantage on their next action.
           - Reposition # Cost 1. Grant an ally 15ft. of movement and advantage on their next attack.
         level_4:
           abilities:
@@ -761,7 +763,7 @@ Monk:
           abilities:
           - Melee Weapon Proficiency
           - Minor Hand to Hand Combat # 1d4 fists.
-          - Inner Eye 
+          - Inner Eye
           - Listen
           - Escape
           - Mantle
@@ -782,7 +784,7 @@ Monk:
           abilities:
           - Combo # Extra attack on critical hit.
           - Reflexes # Catch arrows
-          - Redirecting Dodge # Cost 1 Redirect dodged damage.          
+          - Redirecting Dodge # Cost 1 Redirect dodged damage.
         level_4:
           abilities:
           - Legendary Hand to Hand Combat
@@ -834,7 +836,7 @@ Monk:
             - Ultimate Titan-Slayer Punch
       standings: Monks keep to themselves, which cause some outside of their religion
         to attempt to take advantage of them.
-      tag_line: Brawler/Martial Artist 
+      tag_line: Brawler/Martial Artist
 Rogue:
   subclasses:
     Thief:
@@ -894,7 +896,7 @@ Rogue:
           - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage. Stacks.
           - High Ground # Extra dice on plunging attacks.
         level_7:
-          abilities: 
+          abilities:
           - Offhand Attack
           - Greater Soft Landing # Less fall damage
           - Break Away # Once you have established flanking position, you may break it without provoking exposed attacks.
@@ -923,7 +925,7 @@ Rogue:
           - Major Dodge
         level_15:
           abilities:
-          - Redirecting Dodge # Redirect 
+          - Redirecting Dodge # Redirect
       questions:
       - Does your character have a moral code?
       - Who do they tend to target, and why?
@@ -947,7 +949,7 @@ Rogue:
                     assassins are among the most deadly fighters on the battlefield.
                     With low-health and light armor, the assassin must rely on their
                     cunning to win an outright battle. To this end, assassins learn the
-                    art of magic, using their powers to augment their abilities, and 
+                    art of magic, using their powers to augment their abilities, and
                     even to turn invisible before sinking a poisoned dagger between an
                     enemy's ribs."
       health_die_pieces: 2
@@ -967,33 +969,33 @@ Rogue:
         level_1:
           abilities:
           - Minor Spell of Distraction
-          - Spell of Darkvision
           - Meat Shield
         level_2:
           abilities:
-          - Draining Strike
+          - Spell of Darkvision
           - Poison Creation
         level_3:
           abilities:
-          - Vicious Critical
+          #- Vicious Critical # Extra dice on a critical
           - Flow with the Battle # Move through enemy spaces at a 10ft. movement cost.
+          - Draining Strike
         level_4:
           abilities:
           - Minor Spell of Invisibility
-          - High Ground
+          #- High Ground
         level_5:
           abilities:
           - Spell of Nimbleness
           - Throw Caution to the Wind
         level_6:
           abilities:
-          - Spell of True Sight
+          #- Spell of True Sight
           - Imposter
         level_7:
-          abilities: 
+          abilities:
           - Offhand Attack
+          # - Thick Headed # Hard to enter your mind.
           - Line Them Up
-          - Thick Headed # Hard to enter your mind.
         level_8:
           abilities:
           - Greater Spell of Invisibility
@@ -1004,9 +1006,10 @@ Rogue:
           - Greater Poison Creation
         level_10:
           abilities:
-          - Assassinate
+          #- Assassinate
+          - Vicious Critical # Extra dice on a critical
         level_11:
-          abilities: 
+          abilities:
           - Greater Spell of Distraction
         level_12:
           abilities:
@@ -1053,7 +1056,7 @@ Bard:
         enemies weaker. The bardic guilds have mastered the art of making Spell Coins,
         powerful items which can store magical spells for later use. These coins can
         be used to greatly increase a Bard's arsenal or to give non-casters access to
-        powerful spells." 
+        powerful spells."
         # As you prepare your bard, consider how they chose this way of
         # life. How did they learn magic? How do they perform? Do they play music? Dance?
         # Tell stories? How did they learn to fight? Who did they learn to fight from?
@@ -1167,6 +1170,36 @@ Cleric:
         level_1:
           abilities:
           - Holy Orders
+        level_2:
+          abilities:
+          - Tier One Spells
+          - Lifeline
+        level_3:
+          abilities:
+          - Beautiful
+        level_4:
+          abilities:
+          - Shield of Light
+        level_5:
+          abilities:
+          - Tier Two Spells
+          - Pledge
+          #- Purge the Useless
+          #- Ceremony of Evaluation
+        level_6:
+          abilities:
+          - True Heal
+        level_7:
+          abilities:
+          - Offhand Attack
+          - Offhand Spell
+        level_8:
+          abilities:
+          - Tier Three Spells
+          - Ageless
+        level_9:
+          abilities:
+          - Greater Purge Decay
         level_10:
           abilities:
           - No Mercy for the Weak
@@ -1188,36 +1221,6 @@ Cleric:
         level_15:
           abilities:
           - Brutal Attacks
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Beautiful
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Purge the Useless
-          - Ceremony of Evaluation
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Ageless
-        level_9:
-          abilities:
-          - Greater Purge Decay
       roles:
       - mage
       - spellbooks
@@ -1739,7 +1742,7 @@ Cleric:
           abilities:
           - Holy Orders
         level_10:
-          abilities: 
+          abilities:
           - God of Growing
         level_11:
           abilities:
@@ -1756,7 +1759,7 @@ Cleric:
           abilities:
           - Tier Five Spells
         level_15:
-          abilities: 
+          abilities:
           - Legendary God of Growing
         level_2:
           abilities:
@@ -2360,7 +2363,7 @@ Cleric:
         especially well with Holy Knights, Paladins, and members of their church.
       tag_line: Healer
 Druid:
-  subclasses:   
+  subclasses:
     Elementalist Druid:
       roles: ["mage", "spellbooks", "nature-based", "ranged", "support", "good-first-class"]
       base_abilities:
@@ -2373,7 +2376,7 @@ Druid:
         Luck: 1
         Perception: 1
         Strength: -2
-      description: "Earth, Water, Fire, Air. These are the domain of the 
+      description: "Earth, Water, Fire, Air. These are the domain of the
                     Elementalist. Devotees of the power of the elements,
                     the Elementalist masters the elements one after the other
                     on their journeys. As the Elementalist masters the elements,
@@ -2556,7 +2559,7 @@ Necromancer:
           - Army of the Damned
       standings: Necromancers are feared by most, and are actively hunted by Clerics
         and followers of the light.
-      tag_line: Death Mage 
+      tag_line: Death Mage
 Sorcerer:
   subclasses:
     Sorcerer:
@@ -2666,7 +2669,7 @@ Wizard:
                     the wizard pours over their books to gain understanding over the magic of the
                     world. It is in this study that wizards learn that magic
                     is a form of unevaluated energy, energy which has the potential to become anything
-                    given coercion. Using this knowledge, their mind, an arcane focus, 
+                    given coercion. Using this knowledge, their mind, an arcane focus,
                     and an assortment of magically charged objects, the wizard is able to create wondrous
                     things, and to do mighty deeds."
       health_die_pieces: 2
@@ -2797,7 +2800,7 @@ Archer:
           - Blink Arrows # Cost 2
         level_9:
           abilities:
-          - Uncanny Perception 
+          - Uncanny Perception
         level_10:
           abilities:
           - True Mastery

@@ -42,7 +42,7 @@ Choice of Model:
   type: choice
   brief: Choose +2 to STR or DEX, -2 to the other.
 Animal Companion:
-  description: You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub, 
+  description: You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub,
                from the beasts section or a dragon hatchling from the book of known beasts.
   type: choice
   brief: Choose a companion pup, kid, cub, or hatchling from the book of known beasts.
@@ -87,7 +87,7 @@ Greater Mage Shield:
 Bash:
   description: Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.
   type: combat
-  brief: Stun an enemy on a critical hit. 
+  brief: Stun an enemy on a critical hit.
 # Beast Form:
 #   description: Spend 1 action point to reveal the beast within. Add +1 to strength, dexterity,
 #     and inner fire, and gain your level in temporary hit points. You stay in this form for 3 turns. Gives
@@ -107,13 +107,13 @@ Become Mist:
   brief: Reaction. Become mist to have an attack pass through you.
   cost: 1
 Bellow:
-  description: On your turn, spend one action point to unleash a mighty bellow. 
+  description: On your turn, spend one action point to unleash a mighty bellow.
     All who hear must make an Spell Power save of be frightened.
   type: combat
   brief: Force all in earshot to make an SP Save. Frightened on failure.
   cost: 1
 Berserk:
-  description: Go berserk, giving you +1 effective strength and dexterity. 
+  description: Go berserk, giving you +1 effective strength and dexterity.
     Further, take half damage from any physical attacks.
     Going berserk lasts for 1 hour. Leaving berserk prematurely makes
     you fatigued, and gives you disadvantage on all rolls until you next sleep.
@@ -125,11 +125,11 @@ Mighty:
                  add 1d6 to any strength checks."
   brief: "Add 1d6 to STR checks."
   type: advantage
-# Berserker: 
+# Berserker:
 #   description: You take half damage from physical attacks while going berserk.
 #   type: combat
 #   brief: You take half physical damage while going berserk.
-Warmaster: 
+Warmaster:
   description: Going berserk now gives you an additional +1 strength and inner fire.
   type: combat
   brief: Going berserk now gives you +1 STR and INF.
@@ -141,7 +141,7 @@ Always Angry:
   description: You may now go berserk once per battle.
   type: combat
   brief: You may now go berserk once per battle.
-Blind Rage: 
+Blind Rage:
   description: You make all spell saving throws with advantage while going berserk.
   type: combat
   brief: Make all spell saves with advantage while berserk.
@@ -158,7 +158,7 @@ Warrior Spirit:
   description: "If you slay an enemy, regain one action point."
   type: combat
   brief: Gain 1 AP when you kill an enemy.
-Adrenaline: 
+Adrenaline:
   description: "When you are going berserk, you may dash 30 feet rather than 15."
   type: combat
   brief: "Dash 30 feet when berserk."
@@ -175,7 +175,7 @@ Arching Swing:
   type: combat
   brief: "Make an attack which hits all adjacent enemies."
   cost: 1
-Hurl Weapon: 
+Hurl Weapon:
   description: "Throw your weapon up to 5ft times your Strength or Dexterity. Treat this as a normal attack and then double its damage."
   type: combat
   brief: "Hurl your weapon 5ft x STR or DEX. Attack does 2x damage."
@@ -203,7 +203,7 @@ Born in the Saddle:
   type: combat
   brief: Gain +1d6 to initiative when on horseback.
 Build:
-  description: Once you have a recipe for an item, you can build it. You can attempt to 
+  description: Once you have a recipe for an item, you can build it. You can attempt to
     build one item per rest, or two per sleep.
   type: rule
   brief: If you have a recipe for an item, you can build it. You can attempt to make 1 per rest,
@@ -237,7 +237,7 @@ Repeating Shot:
   brief: Make 2 attacks in your action.
   cost: 1
 Ward of Tracking:
-  description: Costs one action point. Lay your hand on an opponent. For the next forty-eight hours, you 
+  description: Costs one action point. Lay your hand on an opponent. For the next forty-eight hours, you
     know their position within 100 feet.
   type: general
   brief: If you touch someone, you know their position within 100 feet for 48 hours.
@@ -252,25 +252,25 @@ Expert Fletcher:
   brief: Arrows cost 1 less SP.
 Fire and Ice Arrows:
   description: You have mastered the art of crafting fire and ice arrows, and can craft at most 2 per day.
-    Fire arrows do an additional dice of fire damage and deal half as much burn damage to enemies that fail a saving 
-    throw against your spell power. Ice arrows deal an additional dice of ice damage, and cause an enemy to 
+    Fire arrows do an additional dice of fire damage and deal half as much burn damage to enemies that fail a saving
+    throw against your spell power. Ice arrows deal an additional dice of ice damage, and cause an enemy to
     move backward 1d4 spaces in the initiative order of they fail a saving throw against your spell power.
   type: general
   brief: "Additional dice of fire (repeat) or ice (push back in initiative) damage."
   cost: 1
 Shadow and Light Arrows:
   description: You have mastered the art of crafting shadow and light arrows.
-    Shadow arrows do an additional dice of dark damage and cause enemies who fail an inner fire saving throw against 
+    Shadow arrows do an additional dice of dark damage and cause enemies who fail an inner fire saving throw against
     your spell power to go blind until they make a spell power save. This save is repeated
-    at the end of each of  their turns or once every ten minutes. Light arrows deal 
+    at the end of each of  their turns or once every ten minutes. Light arrows deal
     an additional dice of light damage, or twice as much to the undead.
   type: general
   brief: "Additional dice of shadow (blind) or light (double vs undead) damage."
   cost: 1
-Rope Arrows: 
-  description: "You have mastered the art of crafting rope arrows using minor magic. 
+Rope Arrows:
+  description: "You have mastered the art of crafting rope arrows using minor magic.
     As soon as a rope arrow hits its target, a rope instantly appears connecting the target
-    to your hand. This can be used to climb, or to tether enemies. If an enemy is tethered, 
+    to your hand. This can be used to climb, or to tether enemies. If an enemy is tethered,
     you may make a size based contested strength check to stop them from moving away from you. "
   type: general
   brief: When a rope arrow hits, a rope springs from it to you. Size based contested STR check to stop from moving away.
@@ -288,7 +288,7 @@ Delayed Explosive Arrows:
   brief: Fire an explosive arrow which detonates when you say a command word.
   cost: 2
 Blink Arrows:
-  description: After learning more about magic, you have learned how to create blink arrows. 
+  description: After learning more about magic, you have learned how to create blink arrows.
     Blink arrows instantly teleport you to the position that they hit.
   type: general
   brief: You can craft blink arrows, which teleport you to where they hit.
@@ -310,41 +310,41 @@ Anti-Gravity Arrows:
   type: general
   brief: SP save or gravity is reversed for them. Lasts 1 min, 1d4 turns, or till save.
   cost: 2
-Smoke Arrows: 
-  description: You can now craft smoke arrows. When a smoke arrow hits the ground, 
+Smoke Arrows:
+  description: You can now craft smoke arrows. When a smoke arrow hits the ground,
     it creates a smokescreen with a 30 foot radius.
   type: general
   brief: 30 ft radius smokescreen.
   cost: 1
-# Healing Arrows: 
+# Healing Arrows:
 #   description: "You can craft healing arrows. Fire a healing arrow at an
 #                 ally to heal them for half of its damage."
 #   type: general
 #   brief: Fire an arrow at an ally and heal them for half its damage.
 #   cost: 1
-Shock Arrows: 
-  description: You can now craft shock arrows. When a shock arrow hits an enemy, 
+Shock Arrows:
+  description: You can now craft shock arrows. When a shock arrow hits an enemy,
     it deals an additional dice of shock damage. If an affected entity is
     wearing metal armor or is made of or standing in water, they take a second
-    additional dice of damage. The affected 
-    entity must make an inner fire saving throw against your spell power. 
+    additional dice of damage. The affected
+    entity must make an inner fire saving throw against your spell power.
     On failure, they are knocked prone.
   type: general
   brief: Extra dice of shock (prone) damage.
   cost: 2
-Vampiric Arrows: 
+Vampiric Arrows:
   description: You can now craft vampiric arrows. Vampiric arrows
-    do an additional dice of damage to an entity. 
+    do an additional dice of damage to an entity.
     Half of all damage done by the vampiric returns to you as health.
   type: general
   brief: Extra dice of damage. Half of all damage returns as health.
   cost: 2
-Firestorm Arrows: 
-  description: You can now craft firestorm arrows. A firestorm 
+Firestorm Arrows:
+  description: You can now craft firestorm arrows. A firestorm
     arrow does nothing for one turn or one minute after it strikes something. Then,
     it explodes into a massive pillar of flame with a fifteen foot diameter. All entities
     caught in the pillar of flame take 8d10 damage instantly. The pillar of flame stays for 3
-    turns. 
+    turns.
   type: general
   brief: After 1 turn, 15 ft. diameter. pillar of flame for 3 turns. 4d10 dmg.
   cost: 4
@@ -453,8 +453,8 @@ Fear the Light:
   type: disadvantage
   brief: You are considered undead, and take extra damage from holy weapons.
 Born in Darkness:
-  description: You are incredibly light sensitive, and take 1d6 damage per hour spent 
-    with your skin exposed to bright light or to the sun. As a result, you must wear 
+  description: You are incredibly light sensitive, and take 1d6 damage per hour spent
+    with your skin exposed to bright light or to the sun. As a result, you must wear
     protective garments during the day.
   type: disadvantage
   brief: You take 1d6 damage per hour when in sunlight unless shaded.
@@ -512,12 +512,12 @@ Minor Medicine:
   brief: Spend 20 mins to create a salve. Lasts 24 hours.
   cost: 1
 Greater Medicine:
-  description: Spend 20 minutes to create a Minor Health Potion. Potions last 24 hours. 
+  description: Spend 20 minutes to create a Minor Health Potion. Potions last 24 hours.
   type: general
   brief: Spend 20 mins to create 1 Minor Health Potion. Last 24 hours.
   cost: 1
 Major Medicine:
-  description: Spend 20 minutes to create a Greater Health Potion. Potions last 24 hours. 
+  description: Spend 20 minutes to create a Greater Health Potion. Potions last 24 hours.
   type: general
   brief: Spend 20 mins to create 1 Greater Health Potion per day. Last 24 hours.
   cost: 1
@@ -605,7 +605,7 @@ Listen:
   description: "You have advantage on perception checks. Does not include initiative."
   type: advantage
   brief: You have advantage on perception checks.
-Inner Eye: 
+Inner Eye:
   description: "You are able to make perception checks to detect spiritual energy and magic."
   type: general
   brief: "You may make perception checks to detect spiritual energy/magic."
@@ -615,7 +615,7 @@ Escape:
   brief: "Advantage on breaking free of restraints."
 Slowing Blow:
   description: "For one action point, make an attack which deals an additional dice of damage. Force
-                an entity to make a spell power saving throw. On failure, they are pushed back 1d4 turns in 
+                an entity to make a spell power saving throw. On failure, they are pushed back 1d4 turns in
                 initiative."
   type: combat
   cost: 1
@@ -649,7 +649,7 @@ Dodging Stance:
   type: combat
   brief: "Offhand. This turn as a reaction when you are the target of an attack, contested DEX to avoid."
 Greater Dodging Stance:
-  description: "As an Offhand Action, move into a dodging stance. Whenever you are the 
+  description: "As an Offhand Action, move into a dodging stance. Whenever you are the
                 target of a targeted attack
                 before your next turn,
                 make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
@@ -657,24 +657,24 @@ Greater Dodging Stance:
   brief: "Offhand. Before next turn, whenever you are the target of an attack, contested DEX to avoid."
 
 Grappling Dodge:
-  description: "When you successfully dodge an enemy melee attack, you may make a contested strength check to attempt to 
+  description: "When you successfully dodge an enemy melee attack, you may make a contested strength check to attempt to
                 grapple them."
   type: combat
   brief: "When you dodge a melee attack, you may attempt a contested STR check to grapple."
-Targeted Attack: 
+Targeted Attack:
   description: "Add an additional damage dice to an attack. Force the attacked entity to make a size based contested Dexterity check or to be knocked prone."
   type: combat
   cost: 1
   brief: "Extra damage dice. The enemy must make a size based contested DEX check or knocked prone."
-Minor Resting Meditation: 
+Minor Resting Meditation:
   description: "Find center by meditating during rests to regain an additional dice of health."
   type: combat
   brief: "Regain 1 additional dice of healing when resting."
-Greater Resting Meditation: 
+Greater Resting Meditation:
   description: "Find center by meditating during rests to regain 2 additional dice of health and 1 additional action point."
   type: combat
   brief: "Regain 2 additional dice of healing and 1 extra action point when resting."
-Major Resting Meditation: 
+Major Resting Meditation:
   description: "Find center by meditating during rests to regain 3 additional dice of health and two times the action points."
   type: combat
   brief: "Regain 3 additional dice of healing and 2x action points when resting."
@@ -686,7 +686,7 @@ Greater Ready Defense:
   description: "When you land a critical hit or slay an enemy, immediately enter a dodging stance."
   type: combat
   brief: "When you land a crit or slay an enemy, enter a dodging stance."
-Greater Dual Wielding: 
+Greater Dual Wielding:
   description: "You are able to make a dual wielding attack as an offhand action, and may make two two handed attacks as an action."
   type: combat
   brief: "You may make a dual wielding attack as an offhand action, and may make two 2 handed attacks as an action."
@@ -721,7 +721,7 @@ Consecutive Serious Punches:
   description: "You may make dual wielding attacks as an offhand action."
   type: combat
   brief: "You may make dual wielding attacks as an offhand action."
-Battlefield Meditation: 
+Battlefield Meditation:
   description: "Concentration. Spend a full turn meditating during combat to restore 1d4 action points."
   type: combat
   brief: "Concentration. Spend a full turn meditating during combat to restore 1d4 action points."
@@ -735,7 +735,7 @@ Aerial Acrobatics:
   type: general
   brief: "If your feet touch something solid, you can spring from it."
 Pressure Points:
-  description: "Make an attack which deals no damage. Force an enemy to make a spell power save. On failure, they 
+  description: "Make an attack which deals no damage. Force an enemy to make a spell power save. On failure, they
                 are knocked prone and considered paralyzed until their next turn."
   type: combat
   brief: "Make an attack which does no damage. SP save. Fail: prone and paralyzed until next turn."
@@ -798,7 +798,7 @@ Kingsmen:
   brief: You have advantage on charisma with kingsmen.
 Ruffians:
   description: Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.
-  type: advantage  
+  type: advantage
   brief: You have advantage on charisma with common or seedy folk.
 Land on your feet:
   description: Decrease any falling damage by 20 feet.
@@ -853,7 +853,7 @@ Efficient Enchantment:
   type: general
   brief: "Halve the cost of enchanting."
 Spell Invention:
-  description: "Using spells that you know as a template, you are able to 
+  description: "Using spells that you know as a template, you are able to
                 invent new ones at a cost of 100 gold and 1 week of research
                 for a tier 0 spell, 200 and 2 weeks for a tier 1, 400 and 4
                 weeks for a tier 2, 800 and 8 weeks for a tier 3, etc."
@@ -863,7 +863,7 @@ Efficient Spell Invention:
   description: "Halve either the cost or time requirement of creating a new spell."
   type: general
   brief: "Halve either time or cost of new spell creation."
-Magic Resistance: 
+Magic Resistance:
   description: "You take half damage from magic attacks, and make spell power saves
                 with advantage."
   type: general
@@ -891,8 +891,8 @@ Major Homunculus:
   brief: "For 1000 gold and 1 week, attempt to create a Major Wizard's Homunculus."
 Channel Untapped Magic:
   description: "You may attempt to channel untapped magic in the world around you.
-        Make a D15 intelligence check. On a 15 or above, cast a spell of tier 2 or 
-        lower for free. On 
+        Make a D15 intelligence check. On a 15 or above, cast a spell of tier 2 or
+        lower for free. On
         failure, suffer a rebound which deals 1d10 damage which ignores armor."
   type: general
   brief: "Make a D15 INT check. Success, cast a tier 2 or lower spell for free. Fail, 1d10 damage."
@@ -921,7 +921,7 @@ Magic Redirection:
   brief: "When you succeed at Dueling Mages, you may redirect the spell"
 Commit to Memory:
   description: "Spend some time in the evening studying the nuances of one of your
-                spells of tier 2 or higher. Upon waking up the next day, 
+                spells of tier 2 or higher. Upon waking up the next day,
                 that spell costs 1 action point fewer for the day."
   type: general
   brief: "After sleeping, declare a tier 2 or greater spell to have -1 cost for 24 hours."
@@ -993,13 +993,13 @@ Wild Sight:
   cost: 1
 Poison Strike:
   description: Force an enemy to make an inner fire saving throw
-    against your spell power when you attack and deal 1d12 extra damage. 
+    against your spell power when you attack and deal 1d12 extra damage.
     On failure, they are poisoned, and take 1d12 additional damage each turn for two turns.
   type: combat
   brief: Do 1d12 extra damage. Force enemy to make SP save. On failure, 1d12 poison damage for 2 turns.
   cost: 1
 Beast Form:
-  description: Transform yourself into a dire creature of your choosing. For one hour, 
+  description: Transform yourself into a dire creature of your choosing. For one hour,
     you may transform back and forth as an action. While in your beast form,
     you have the physical stats of the chosen creature. If your health falls to zero, you are instantly transformed back
     into your normal form, with the health that you had prior to using beast shape.
@@ -1007,14 +1007,14 @@ Beast Form:
   brief: Transform back and forth into a dire creature for one hour.
   cost: 2
 Finesse Strike:
-  description: "Add an additional dice of damage to an attack of your choosing. If the attack is a critical hit, 
+  description: "Add an additional dice of damage to an attack of your choosing. If the attack is a critical hit,
                double all damage dice."
   type: combat
   brief: Add an additional dice to an attack. If the attack is a critical hit, double all damage dice.
   cost: 1
 Entangling Strike:
-  description: You may attempt to entangle an enemy during one of your attacks using minor magic. 
-    Add an extra dice of damage to your attack and force the enemy to make a spell power save. On a failure, the entity is ensnared, 
+  description: You may attempt to entangle an enemy during one of your attacks using minor magic.
+    Add an extra dice of damage to your attack and force the enemy to make a spell power save. On a failure, the entity is ensnared,
     and cannot move. It may re-attempt the saving throw to escape every turn thereafter. An ensnared enemy may not move, and
     all attacks made against it have advantage.
   type: combat
@@ -1129,7 +1129,7 @@ Telekinetically Augmented Attack:
   cost: 1
   type: combat
   brief: "Make an attack with an extra damage dice. Reduce its critical hit target by 2."
-Empower: 
+Empower:
   description: "Spend an offhand action to increase the power of one of your other abilities twofold."
   type: combat
   brief: "Offhand action. Double the power of one of your other abilities."
@@ -1165,42 +1165,42 @@ My Father's Coffers:
   description: Begin your journey with significant additional funds.
   type: starting_item
   brief: You start with extra money.
-Rally Cry: 
+Rally Cry:
   description: As an offhand action, grant all allies within 30 feet advantage on their next action.
   type: general
   brief: Offhand. Grant all allies within 30ft. advantage on their next action.
   cost: 1
-Inspire: 
+Inspire:
   description: Spend 1 Action Point to grant an ally advantage on a check.
   type: general
   brief: Give advantage on a check.
   cost: 1
-Inspiring Attack: 
+Inspiring Attack:
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d6 inspiration dice.
   type: combat
   brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d6 inspiration.
   cost: 1
-Inspiring Attack: 
+Inspiring Attack:
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally advantage on their next attack.
   type: combat
   brief: Extra dice of damage and grant an ally within 30ft. adv on their next attack.
   cost: 1
-Greater Inspiring Attack: 
+Greater Inspiring Attack:
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d8 inspiration dice.
   type: combat
   brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d8 inspiration.
   cost: 1
-Major Inspiring Attack: 
+Major Inspiring Attack:
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d10 inspiration dice.
   type: combat
   brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d10 inspiration.
   cost: 1
-Legendary Inspiring Attack: 
+Legendary Inspiring Attack:
   description: Make a gallant attack. Add an extra damage dice to an attack and grant an ally within 30 feet a 1d12 inspiration dice.
   type: combat
   brief: Add an extra dice of damage to an attack and grant an ally within 30ft. 1d12 inspiration.
   cost: 1
-Encouraging Presence: 
+Encouraging Presence:
   description: If you stand next to an ally in combat, both you and the adjacent ally gain advantage on attacks.
   type: combat
   brief: Both you and adjacent allies take advantage on attacks.
@@ -1208,12 +1208,12 @@ Gumption:
   description: "You can collect up to ten Gumption, which allow you to perform special feats.
                 You gain 1 gumption when an ally rolls a critical success or critical
                 hit using advantage that you granted them. You also restore 1
-                gumption after resting and 2 after sleeping." 
+                gumption after resting and 2 after sleeping."
   type: rule
   brief:  "You can collect up to ten Gumption, which allow you to perform special feats.
                 You gain 1 gumption when an ally rolls a critical success or critical
                 hit using advantage that you granted them. You also restore 1
-                gumption after resting and 2 after sleeping." 
+                gumption after resting and 2 after sleeping."
 Audacious Attempt:
   description: "Rally yourself via sheer force of will. Spend one gumption to gain advantage
                 on a check."
@@ -1279,12 +1279,12 @@ My People:
   description: "Gain advantage when speaking with guards, respectable individuals, and upper-class merchants."
   type: advantage
   brief: "CHA advantage with guards, respectable individuals, and upper-class merchants."
-Disarming: 
+Disarming:
   description: Reaction. Force an enemy that attacks you to make an inner fire
                saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.
   type: combat
   brief: "Reaction. Force enemy to make INF save VS CHA. Fail: attack disadv."
-Gallant Resolve: 
+Gallant Resolve:
   description: Spend one Gumption to heal yourself for your level in health.
   type: general
   brief: "Spend 1 Gumption to heal yourself for your level in health."
@@ -1292,19 +1292,19 @@ Commanding Presence:
   description: "Add 1d6 to all of your Charisma checks."
   type: advantage
   brief: "Add 1d6 to all CHA checks."
-Bravery: 
+Bravery:
   description: Gain 1d4 Gumption at the start of each battle.
   type: general
   brief: "Gain 1d4 Gumption at the start of each battle."
-Aura of Courage: 
+Aura of Courage:
   description: Allies within 30 feet of you cannot be frightened.
   type: general
   brief: Allies can't be frightened within 30ft. of you.
-Aura of Peace: 
+Aura of Peace:
   description: Passive. All allies near you take heart, and gain 10 health while in your presence.
   type: general
   brief: Passive. All allies gain 10 health when in your presence.
-Fallen: 
+Fallen:
   description: While you are on death's door, all of your allies gain an extra action.
   type: general
   brief: While you are on death's door, your allies gain an extra action.
@@ -1395,7 +1395,7 @@ Shifting Cloak:
   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
     1d10 bonus to stealth checks made while standing still.
   type: starting_item
-  brief: You have a cloak that changes color with your surroundings. Add 1d10 to stealth checks 
+  brief: You have a cloak that changes color with your surroundings. Add 1d10 to stealth checks
     made when standing still.
 Sleepless:
   description: Your can rest without sleeping for one day, allowing you to keep
@@ -1415,11 +1415,11 @@ Soft Bed:
   type: general
   brief: You recover 2d8 additional health when sleeping in a bed.
 Soul Based Magic:
-  description: To fuel your magic, you use the concentrated essence of life, which you 
+  description: To fuel your magic, you use the concentrated essence of life, which you
     are able to harvest from the dead. These "souls" are stored in your soul jar until they
     are expended on a spell or by an ability. At that time, they escape to the hereafter.
   type: rule
-  brief: To fuel your magic you use souls which are stored in your soul jar. When they 
+  brief: To fuel your magic you use souls which are stored in your soul jar. When they
     are used, souls escape to the hereafter.
 Soul Harvest:
   type: rule
@@ -1448,7 +1448,7 @@ Resurrect Ghoul:
   description: "Spend 3 souls to raise a ghoul from a fallen entity. See the book of known beasts for details."
   type: general
   brief: "Spend 3 souls to raise a ghoul from the corpse of a fallen entity. See the Book of Known Beasts for Stats."
-Resurrect Death Knight: 
+Resurrect Death Knight:
   description: "Spend 4 souls to resurrect a Death Knight to aid you. See the book of known beasts for
                 details."
   type: general
@@ -1458,7 +1458,7 @@ Resurrect Abomination:
                 5 corpses. See the book of known beasts for details."
   type: general
   brief: "Spend 5 souls to raise an abomination from the corpses of 5 fallen entities. See the Book of Known Beasts for Stats."
-Soul Detection: 
+Soul Detection:
   description: "You are able to detect life and freshly dead corpses at a range of 30 feet."
   type: general
   brief: "You are able to detect life and fresh corpses at a range of 30ft."
@@ -1546,7 +1546,7 @@ The Book of Healing:
   description: You are able to learn spells from the Book of Healing.
   type: spellbook
   brief: You have access to the Book of Healing.
-The Book of Chi: 
+The Book of Chi:
   description: You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.
   type: spellbook
   brief: You have access to the Book of Chi.
@@ -1608,7 +1608,7 @@ Forceful Shot:
   type: combat
   brief: Additional dice of damage. SP save or pushed back 15 feet.
 Suppressor:
-  description: You can now craft a silencer. Silencers decrease your damage by 1, 
+  description: You can now craft a silencer. Silencers decrease your damage by 1,
     but silence your weapon. The silencer is removable.
   type: general
   brief: You have a removable silencer. -1 damage, but less sound.
@@ -1626,7 +1626,7 @@ Set Up:
   type: combat
   brief: Spend one minutes or 1 round of combat to ensure that your next shot is a crit.
 Called Critical:
-  description: "On critical hit, immediately apply one of the effects from called shot to the enemy. 
+  description: "On critical hit, immediately apply one of the effects from called shot to the enemy.
                 If the critical is on a called shot, apply a second effect."
   type: combat
   brief: "On crit, apply a called shot effect to the enemy."
@@ -1643,7 +1643,7 @@ Scope:
     look through it to identify enemies at a distance. You do not take disadvantage
     on attacks made up to 200 yards.
   type: combat
-  brief: No disadvantage on a shot up to 200 yards. 
+  brief: No disadvantage on a shot up to 200 yards.
 Throw Anything:
   description: You can throw anything up to one size larger than yourself.
   type: general
@@ -1718,21 +1718,21 @@ Stocky:
   type: advantage
   brief:  You have advantage against checks made to knock you over.
 Very Dangerous Over Short Distances:
-  description: If you begin your turn next to an enemy, take advantage on your attack roll. Negates the harried condition.
+  description: If you begin your turn next to an enemy, take advantage on your attack roll. Does not negate the harried condition.
   type: advantage
-  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Negates the harried condition.
+  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Does not negate the harried condition.
 Stone Skin:
   description: You take half damage on blunt force attacks, such as being hit with a club.
   type: general
   brief: Take half damage from blunt force.
-Fix Your Eyes on Me: 
+Fix Your Eyes on Me:
   description: Conversation spell. If the person you are talking with fails an inner fire saving throw against
-    your spell power, the world goes black for them except for you. 
+    your spell power, the world goes black for them except for you.
     Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.
   type: combat
   brief: "Force SP save. Fail: you have advantage on CHA and enemy can only attack you."
   cost: 1
-Sacrificial Rite: 
+Sacrificial Rite:
   description: "At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest."
   type: combat
   brief: At the cost of your level in hp (min 1), make an extra action. Damage cannot be healed until your next long rest.
@@ -1741,8 +1741,8 @@ Brutal Attack:
   type: combat
   brief: "Add an additional dice of damage. Size based contested STR save. Fail: prone."
   cost: 1
-The Opener: 
-  description: If you attack an enemy that has not yet moved in combat, do double damage. 
+The Opener:
+  description: If you attack an enemy that has not yet moved in combat, do double damage.
     If they fail a contested strength saving throw, they are knocked prone.
   type: combat
   brief: "Attack an enemy that hasn't gone, 2x damage, contested STR save. Failure: prone."
@@ -1750,8 +1750,8 @@ The Closer:
   description: "If you attack an enemy that is prone, add two additional dice of damage."
   brief: "Add two dice of damage to prone enemies."
   type: combat
-True Sight: 
-  description: You are able to see invisible entities. 
+True Sight:
+  description: You are able to see invisible entities.
   type: general
   brief: You can see invisible entities.
 Nimble:
@@ -1812,33 +1812,33 @@ Greater Line Them Up:
   description: "When you score a critical hit on an enemy, gain another attack action and 10 feet of movement."
   type: combat
   brief: On crit, gain another attack and 10ft. of movement.
-Shield Up: 
+Shield Up:
   description: Offhand. Hold up your shield. Lose 5 feet of movement but take half damage from non-magic piercing or blunt force ranged attacks if holding a shield. Must be done at the start of a turn.
   type: general
   brief: Offhand. -5ft. Movement. Take half damage from non-magic ranged attacks. Must be done at the start of a turn.
-Charge: 
+Charge:
   description: As an offhand action, charge forward an additional 10 feet. If you run into someone, make a contested Strength Check. The loser is knocked prone.
   type: combat
   brief: Offhand. Charge an extra 10ft. Size based contested STR check if you hit someone. Loser is knocked prone.
   cost: 1
 Greater Charge:
-  description: "Your charge now carries you 15 feet, and may end in an attack."
+  description: "Your charge now carries you 20 feet, and may end in an attack."
   type: combat
-  brief: "Charge now goes 15ft. and ends in an attack."
-Joust: 
+  brief: "Charge now goes 20ft. and ends in an attack."
+Joust:
   description: Add an extra damage dice to an attack if it is performed with a running start.
   type: combat
   brief: Add an extra damage dice if an attack is performed with a running start.
-Throw Caution to the Wind: 
+Throw Caution to the Wind:
   description: On your turn, optionally add an extra damage dice to all of your attacks, but all enemy attacks get advantage on you for a turn.
   type: combat
   brief: +1 damage dice to all attacks for a turn, but enemy attacks get advantage.
-Steel Yourself: 
+Steel Yourself:
   description: Choose to take half damage from an attack.
   type: combat
   brief: Choose to take half damage from an attack.
   cost: 1
-Cleave: 
+Cleave:
   description: Strike up to two adjacent foes when you make a melee attack.
   type: combat
   brief: Hit up to 2 side by side enemies with melee attacks.
@@ -1919,11 +1919,11 @@ Mass Holy Shield:
   type: combat
   brief: "Grant all allies within 30 feet a holy shield."
   cost: 3
-Link Lifeforce: 
+Link Lifeforce:
   description: "As an offhand action, link your life force to an ally with a guardian ward. Until you unlink yourself as a free action on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and neither may go below zero health unless both do."
   type: combat
   brief: Offhand. Link to warded ally/allies. Take/share healing/damage. Free unlink on your turn. All damage must be taken by someone.
-Greater Link Lifeforce: 
+Greater Link Lifeforce:
   description: "Halve any damage taken from linking lifeforce with an ally with a guardian ward."
   type: combat
   brief: "Halve any damage taken via link lifeforce."
@@ -1935,7 +1935,7 @@ Last Hope:
   description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
   type: combat
   brief: "Double healing while an ally is down or has died in this combat."
-Beacon of Hope: 
+Beacon of Hope:
   description: Passive. All allies within 100 feet of you gain +2 to all saving throws.
   type: combat
   brief: Passive. All allies within 100 feet gain +2 to all saving throws.
@@ -1964,8 +1964,8 @@ Ready Stance:
   type: combat
   brief: "Offhand: one time you are attacked before next turn, counterattack."
 Dodging Stance:
-  description: "For 1 Action Point, move into a dodging stance as an Offhand Action. 
-                Whenever you are attacked before your next turn, the enemy must roll a 
+  description: "For 1 Action Point, move into a dodging stance as an Offhand Action.
+                Whenever you are attacked before your next turn, the enemy must roll a
                 contested Dexterity check or miss."
   type: combat
   brief: "Offhand. Move into a dodging stance. Whenever you are attacked before next turn, contested DEX or half damage."
@@ -1979,7 +1979,7 @@ Warrior's Vow:
   description: "You gain an extra attack against an entity you have challenged."
   type: combat
   brief: "Extra attack vs. challenged enemies."
-Glory: 
+Glory:
   description: When your health falls below 25%, add an extra damage dice to all attacks.
   type: combat
   brief: Extra damage dice when health falls below 25%.
@@ -2058,7 +2058,7 @@ Phase Walk:
   type: combat
   brief: If you kill an enemy with Spiritual Strike, you may teleport to their position.
 Greater Phase Walk:
-  description: "You may now spend 1 action point to phase walk to an enemy any time you strike them 
+  description: "You may now spend 1 action point to phase walk to an enemy any time you strike them
                 with a spiritual weapon."
   type: combat
   brief: "Phase walk any time you use a spiritual weapon."
@@ -2084,16 +2084,16 @@ Chain Strike:
   brief: "Attack an adjacent enemy. The attack chains (1st free). 1d20. 10 or greater, chain."
   cost: 2
 Draining Strike:
-  description: "Sap an enemies spirit with an attack. Regain half of the damage as health."
+  description: "Add an additional dice of damage to an attack and regain an equivalent amount of health."
   type: combat
-  brief: "Regain half of the damage you deal as health."
+  brief: "Add a dice of damage to an attack and regain an equivalent amount of health."
   cost: 1
 Spiritual Aid:
   description: "As an offhand action, grant an ally spiritual aid which gives them advantage on their next action or an extra damage dice on their next attack."
   type: combat
   brief: "Offhand. Grant ally adv on next action or extra dmg dice on next attack."
   cost: 1
-Rouse to Action: 
+Rouse to Action:
   description: "As an offhand action, grant an ally their full movement an an action."
   type: combat
   brief: "Offhand. Grant an ally full movement and an action."
@@ -2108,19 +2108,19 @@ Spiritual Blast:
   type: combat
   cost: 1
   brief: "Make an attack which hits all enemies in a 25ft. line in front of you."
-Infuse Other: 
+Infuse Other:
   description: "Grant an ally the benefit of your of your aspects for 1 battle or 1 hour."
   cost: 1
   brief: "Infuse an ally for one hour or 1 battle."
   type: general
-Sword of Honor: 
+Sword of Honor:
   description: Imbue your blade with radiant light. The light lasts for 5 turns, and causes
     your blade to deal an additional 2d6 damage. While your blade is imbued with light, you take advantage
     on all spell saving throws, and cannot be frightened.
   type: combat
   brief: Lasts 5 turns. +2d6 damage, gain advantage on SP saves. Immune to fear.
   cost: 1
-Stay on Your Feet: 
+Stay on Your Feet:
   description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
   brief: If your health hits 0, make a D10 INF save. On success, drop to 1 hp instead.
@@ -2128,25 +2128,25 @@ Too Angry to Die:
   description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
   type: combat
   brief: If your health hits 0, make a D10 INF save. On success, drop to 1 hp instead.
-Last Line of Defense: 
+Last Line of Defense:
   description: If any of your allies are on death's door or have died during this encounter, add an extra damage dice to all of your attacks.
   type: combat
   brief: If your allies are on death's door or have died, add a dmg dice to all attacks.
-Sinner's Bane: 
+Sinner's Bane:
   description: Do an additional 1d6 damage to undead or demonic entities. Stacks with hammer of light.
   type: combat
   brief: Do 1d6 additional damage to undead or demonic enemies. Stacks w/ hammer of light.
-Fires of Heaven: 
+Fires of Heaven:
   description: When you perform a plunging attack, create an explosion dealing 2d10 damage to all entities within a 20 foot radius.
   type: combat
   brief: Create a 20 foot 2d10 explosion on plunging attacks.
   cost: 1
-Winged Jump: 
+Winged Jump:
   description: As an offhand action, leap up to 15 feet using ethereal, angelic wings.
   type: combat
   brief: Offhand. Leap 15 feet using angelic wings.
   cost: 1
-Side by Side: 
+Side by Side:
   description: Gain advantage on attacks if you stand shoulder to shoulder with an ally.
   type: advantage
   brief: Advantage on attacks if adjacent to an ally.
@@ -2159,7 +2159,7 @@ Greater Lionhearted:
   description: Spend 5 Gumption to ignore a spell.
   brief: Spend 5 Gumption to ignore a spell.
   type: general
-Dire Companion: 
+Dire Companion:
   description: Your companion animal is now of Dire size. See the book of known beasts for details.
   type: rule
   brief: Your companion is dire in size.
@@ -2167,21 +2167,26 @@ Grown:
   description: Your companion animal is adult in size. See the book of known beasts for details.
   type: rule
   brief: Your companion animal is small in size.
-Leaping Strike: 
+Leaping Strike:
   description: Leap 5 feet forward to attack an enemy, dealing an additional dice of damage.
-    This distance can be added to your movement, but must be used to land an attack. 
+    This distance can be added to your movement, but must be used to land an attack.
   type: combat
   brief: Leap 5 feet forward to an additional dice of damage.
   cost: 1
-Reduced Critical: 
+Reduced Critical:
   description: Decrease your critical hit target by 1.
   type: combat
   brief: Decrease your critical target by 1.
 Defender Aura:
+  description: Grant all allies within 30 feet of you half damage from physical attacks until your next turn.
+  type: combat
+  brief: Grant allies within 30ft half damage from physical attacks until your next turn.
+  cost: 1
+Greater Defender Aura:
   description: Grant all allies within 30 feet of you half damage from physical attacks for three turns.
   type: combat
   brief: Grant allies within 30ft half damage from physical attacks for 3 turns.
-  cost: 1
+  cost: 2
 Favorite Enemy:
   description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
   type: choice
@@ -2190,18 +2195,18 @@ Monster Slayer:
   description: Whenever you attack a beast classified as a monster, do an additional dice of damage on the attack.
   type: combat
   brief: Do an additional dice of damage to monsters.
-Pickpocket: 
+Pickpocket:
   description: "Add a damage dice to an attack and force the target to make a contested dexterity check.
                 On success, steal something from the enemy."
   type: combat
   brief: "Extra damage dice. Contested Dex Check. On success, steal something from the enemy."
-Flank: 
+Flank:
   description: "If an enemy is harried --one of your allies is adjacent -- gain advantage on attacks made
                 from behind it. You are considered to be hiding from an enemy while flanking it."
   type: combat
   brief: "You have attack advantage vs. and are considered hiding when behind harried enemies."
 Ride the Blindspot:
-  description: "If you are flanking an enemy and it tries to turn to look at you, 
+  description: "If you are flanking an enemy and it tries to turn to look at you,
                 spend an action point to pivot around it."
   type: combat
   cost: 1
@@ -2210,7 +2215,7 @@ Break Away:
   description: "If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks."
   type: combat
   brief: "If you begin a turn flanking an enemy, move away without being exposed."
-Sticky Fingers: 
+Sticky Fingers:
   description: Add 1d4 to any check made to steal something.
   type: general
   brief: Add 1d4 to checks made to steal something.
@@ -2218,12 +2223,12 @@ Greater Mantle:
   description: Add 1d6 to all climbing checks.
   type: general
   brief: Add 1d6 to climbing checks.
-Reflexes: 
-  description: Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount. 
+Reflexes:
+  description: Reaction, attempt to catch a projectile. Roll a d20, and reduce the projectile's damage by that amount.
     If reduced to zero, you catch the projectile.
   type: general
   brief: Reaction. 1/turn, reduce a projectile's damage by 1d20. If reduced to 0, catch.
-Greater Reflexes: 
+Greater Reflexes:
   description: "If you catch a weapon with reflexes, you may immediately make an attack with it."
   type: general
   brief: Reaction. If you catch an arrow, fire it back at the enemy.
@@ -2232,18 +2237,18 @@ Disappear:
                 and not where they would reasonably expect you to be."
   type: combat
   brief: "Offhand. Attempt to hide. Must be out of sight and out of mind."
-Strike From the Shadows: 
+Strike From the Shadows:
   description: Do an additional dice of damage on an attacks made from hiding.
   type: combat
   brief: Do an additional dice of damage on attacks made from hiding.
-Assassinate: 
+Assassinate:
   description: Do two dice of damage on attacks made from hiding. Replaces Strike from the Shadows.
   type: combat
   brief: 2 additional dice of damage on attacks made from hiding.
 Minor Spell of Distraction:
   description: "As an offhand action, you may use magic to create a minor ruckus within 100 feet of yourself. This
                 might include a loud sound or bright light.
-                When used in combat, the enemy must make an inner fire save against your spell power or lose 
+                When used in combat, the enemy must make an inner fire save against your spell power or lose
                 an action on their next turn and have the next attack against them made at advantage."
   type: general
   brief: Offhand. Create a loud noise or bright light. Enemy must make a SP save or lose an action and have the next attack against them at advantage.
@@ -2275,7 +2280,7 @@ Minor Spell of Invisibility:
 Greater Spell of Invisibility:
   description: As an Offhand Action, you may use minor magic to make yourself invisible for 1 hour.
   type: general
-  brief: Offhand. Become invisible for 1 hour or 1 battle. 
+  brief: Offhand. Become invisible for 1 hour or 1 battle.
   cost: 1
 Major Spell of Invisibility:
   description: As an Offhand Action, you may use magic to make yourself invisible.
@@ -2287,7 +2292,7 @@ Radiant Invisibility Break:
   type: general
   brief: "Create a distraction equivalent to Minor Spell of Distraction when you break invisibility."
 Spell of Nimbleness:
-  description: "As an offhand action, cast a spell which makes you even nimbler, giving 
+  description: "As an offhand action, cast a spell which makes you even nimbler, giving
                 targeted ranged attacks take disadvantage against you for one hour or 1 battle."
   type: combat
   brief: "Offhand. Targeted ranged attacks take disadv against you for 1hr. or 1 battle."
@@ -2342,36 +2347,36 @@ Surrounded:
   type: combat
   brief: "Attack all adjacent enemies."
   cost: 1
-Lucky Actions: 
-  description: You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice. 
+Lucky Actions:
+  description: You may use your luck tokens to make an additional action on your turn as well as to re-roll any dice.
     These tokens refill on a long rest.
   type: general
   brief: Luck tokens can be used for an extra action.
-Soundless: 
+Soundless:
   description: Gain an additional 1d6 on stealth checks.
   type: general
   brief: Gain +1d6 on stealth.
-Trap Expert: 
+Trap Expert:
   description: Gain advantage when looking for, disarming, or creating traps.
   type: general
   brief: Gain advantage on anything trap related.
-Party Save: 
+Party Save:
   description: Give all allies 1d10 to role on a stealth check..
   type: general
   brief: Add 1d10 to all allies' stealth check.
   cost: 1
-Imposter: 
+Imposter:
   description: Gain 1d6 on any checks made to imitate someone.
   type: general
   brief: Gain +1d6 on imitation checks.
-Poison Creation: 
+Poison Creation:
   description: "During a rest, you are able to create a vial of poison which may have one of the
                 following effects: add a dice of damage to a blade, slow an enemy to half movement, give an
-                enemy disadvantage on its attacks for 1 turn if it fails an inner fire save against your spell power.
-                You may stockpile at most 2 vials of poison."
+                enemy disadvantage on its attacks for 1 turn, All effects require a spell power save.
+                You may stockpile at most 2 vials of poison. Poisons are single use"
   type: general
   brief: "During a rest, create a vial of poison which either adds a dice of damage to a blade,
-          slows an enemy to 1/2 movement, or SP save or disadvantage on attacks."
+          slows an enemy to 1/2 movement, or gives it disadvantage on attacks on its next turn. Requires SP save."
 Greater Poison Creation:
   description: "You can now create 2 vials of poison during a rest, and may stockpile 4."
   type: general
@@ -2380,17 +2385,17 @@ Focus Energy:
   description: As an offhand action, convert action points into strength or dexterity. 1 action point yields 1 point of strength or dexterity. Lasts for the duration of a battle or for 1 hour.
   type: general
   brief: Offhand. Convert 1 action point into +1 STR or DEX. Lasts 1 battle or 1 hr.
-Transfer Essence: 
+Transfer Essence:
   description: As an action, convert health into action points or vice versa. One action point is equal to 5 health.
   type: combat
   brief: As an action, convert 5 health to 1 action point or vice versa.
-One With Magic: 
+One With Magic:
   description: Once per day, fuse yourself with the essence of magic. The power nearly destroys you, dropping you instantly
     to one health. However, you are able to cast any three spells, free of charge.
   type: general
   brief: 1/day, drop to 1 health, but cast three spells free of charge.
-Ascend: 
-  description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points. 
+Ascend:
+  description: Once per day, you may enter the ascended state. While ascended you immediately gain 5 action points.
     The ascended state lasts for 3
     turns or five minutes. When you fall out of the ascended state, you are fatigued. Immediately take 4d10 damage, and have disadvantage
     in all things until you are able to sleep. If you are killed in the ascended state, you cannot be resurrected.
@@ -2410,16 +2415,16 @@ Ascended Action:
   brief: When ascended, take an action and movement when it is not your turn. Once per turn.
   cost: 1
 True Ascension:
-  description: Ascension no longer has a time limit. While ascended, you make all perception checks and 
+  description: Ascension no longer has a time limit. While ascended, you make all perception checks and
     spell power saves with advantage. You may enter and leave the ascended state as often as you want,
     but only gain the additional spell points once per long rest.
     When you leave the ascended state, make an inner fire saving throw. If it is less than 10, you are fatigued.
   type: combat
   brief: "Ascended: No use limit, adv on PER/INF. When ended, D10 INF save. Fail: fatigued."
-Phylactery: 
+Phylactery:
   description: "You may remove your soul and put it in a box. If the box is destroyed,
-                 you are destroyed with it. If your body dies and you have a thrall, 
-                 your consciousness may be transferred to the thrall. If you have no thralls 
+                 you are destroyed with it. If your body dies and you have a thrall,
+                 your consciousness may be transferred to the thrall. If you have no thralls
                  remaining, your body is regenerated at your phylactery after one day."
   type: general
   brief: Bind soul to phylactery. If body dies, possess thrall or resurrect tomorrow.
@@ -2427,13 +2432,13 @@ Dark Blade:
   description: "Spend a soul to add an additional dice of shadow damage to your weapon."
   type: combat
   brief: "Spend 1 soul to add a dice of shadow damage to your weapon."
-Reap: 
+Reap:
   description: "When you harvest a soul, roll a d20. If you roll 15 or above, harvest 2. If you are
                 currently a vegan, begin to restore 2 souls during any rest."
   type: general
   brief: When you harvest a soul, roll 1d20. If 15 or above, harvest 2. If you are vegan, restore 2 souls on rest.
-Freed from this Mortal Coil: 
-  description: You may bond your consciousness to one of your minions, taking full control of them. 
+Freed from this Mortal Coil:
+  description: You may bond your consciousness to one of your minions, taking full control of them.
     If the minion is destroyed, your soul returns to your primary body, another thrall, or to your phylactery.
   type: general
   brief: You may possess your thralls.
@@ -2469,29 +2474,29 @@ Major Spell Coin:
   description: You have learned the art of storing third tier spells in your spell coins.
   type: general
   brief: You can store tier 3 spells in your spell coins.
-Tome of the Ancients: 
+Tome of the Ancients:
   description: You are now able to learn spells from the tome of the ancients.
   type: spellbook
   brief: You have access to the Tome of the Ancients.
-Spell Invention: 
+Spell Invention:
   description: You are advanced enough in magic that you may begin inventing your own spells. To invent a spell, you must have either encountered something like it, or have a jumping off point in your spellbook. It can take long periods of time to craft a spell, and its success and cost will be determined by multiple rolls and saving throws, depending on complexity.
   type: general
   brief: You can invent your own spells. Attempt once per sleep.
-Aura of Advantage: 
+Aura of Advantage:
   description: Give all party members advantage on their next action.
-  type: combat 
+  type: combat
   brief: Give all party members advantage on their next action.
   cost: 1
-True Mastery: 
+True Mastery:
   description: Every ranged weapon functions as at least a d12 weapon in your hands.
   type: general
   brief: Every ranged weapon is at least 1d12 to you.
-Volley: 
+Volley:
   description: Attack every enemy you can see in a single action.
   type: combat
   brief: Attack all enemies you can see in one action.
   cost: 2
-Arrow Stab: 
+Arrow Stab:
   description: You can stab an enemy with an arrow for 1d4 damage.
   type: combat
   brief: Stab an enemy with an arrow for 1d4 damage.
@@ -2503,11 +2508,11 @@ Quickdraw:
   description: Add 1d4 to your initiative.
   type: combat
   brief: Add 1d4 to your initiative.
-Fastest Gun: 
+Fastest Gun:
   description: Add 1d10 to your initiative.
   type: combat
   brief: Add 1d10 to your initiative.
-Power Core: 
+Power Core:
   description: The source of your power is housed within you. If you are destroyed in combat, you can be rebuilt so long as the power core survives.
   type: rule
   brief: If you die, you can be rebuilt if your power core survives.
@@ -2515,50 +2520,50 @@ Overdrive:
   description: Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.
   type: general
   brief: Spend 2 health per turn/min to gain +1 STR and DEX. Stackable.
-Repair: 
+Repair:
   description: You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.
   type: rule
   brief: You cannot heal using potions or rest. Rather, you must repair. Self-repair counts as rest. Repair with help as sleep.
     Repair with expert as sleep in a bed.
-Self Repair: 
+Self Repair:
   description: During combat, you can self repair as an action.
   type: combat
   brief: Self repair as an action.
-True Sleeplessness: 
+True Sleeplessness:
   description: You cannot grow tired, nor can you sleep.
   type: general
   brief: You cannot grow tired or sleep.
-Gyroscopic Center of Mass: 
+Gyroscopic Center of Mass:
   description: It is difficult to knock you over. Add 5 to any check that involves knocking you prone.
   type: combat
   brief: Add +5 to any check that involves knocking you prone.
-Armored Exterior: 
+Armored Exterior:
   description: "You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice."
   type: general
   brief: You have resistance to piercing, slashing, blunt, fire, and ice attacks.
-Piston Punch: 
+Piston Punch:
   description: "Perform an attack which ignores enemy armor."
   type: combat
   brief: Perform an attack which ignores enemy armor.
   cost: 1
-Upgrades: 
+Upgrades:
   description: A tinker can craft upgrades for you.
   type: rule
   brief: A tinker can craft upgrades for you.
-Photosynthesis: 
+Photosynthesis:
   description: Every turn or once per hour, regain 1d4 health.
   type: general
   brief: 1/turn or 1/hour, regain 1d4 health.
-Blade of Grass: 
+Blade of Grass:
   description: Summon a 1d6 blade of woven plant fiber on command.
   type: general
   brief: You can summon a 1d6 grass blade.
-Scurry: 
+Scurry:
   description: You have advantage on dexterity based athletics checks.
   type: advantage
   brief: Gain advantage on DEX athletics checks.
 Dodge:
-  description: "Once per turn when you are the target of a targeted attack, 
+  description: "Once per turn when you are the target of a targeted attack,
                 the enemy must roll a contested Dexterity check or miss."
   type: combat
   brief: "Once per turn when targeted. Roll a contested DEX check. Success: attack misses."
@@ -2571,6 +2576,10 @@ Major Dodge:
   description: "If an enemy beats your dodge by 2 or less, take half damage."
   type: combat
   brief: "If an enemy beats your dodge by 2 or less, take half damage."
+Long Dash:
+  description: "When you dash, move an additional 5 feet."
+  type: combat
+  brief: "When"
 Greater Dash:
   description: "When you take a dash action, move 30 feet rather than 15."
   type: combat
@@ -2580,12 +2589,12 @@ Redirecting Dodge:
   type: combat
   cost: 1
   brief: "Redirect half of any dodged damage to an enemy within range."
-Harden: 
+Harden:
   description: As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.
   type: general
   brief: As an offhand action, harden or unharden. Gain +2 armor -2 dexterity. Does not stack.
-Small Fry: 
-  description: Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown. 
+Small Fry:
+  description: Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.
   type: general
   brief: Your size is considered tiny.
 Soft Landing:
@@ -2600,7 +2609,7 @@ Commune with Nature:
   description: You are naturally able to speak with plants and animals.
   type: general
   brief: You can naturally speak to plants and animals.
-All Tuckered Out: 
+All Tuckered Out:
   description: "You must sleep once every six hours, or suffer exhaustion."
   type: general
   brief: You have to sleep every six hours or be exhausted.
@@ -2617,7 +2626,7 @@ Tossed Around:
   type: general
   brief: Half blunt damage, tossed 5 feet for every size larger enemy is. Take full damage if you hit something.
 Dig Dig Dig:
-  description: You are able to burrow through earth at a rate of 1 foot per minute. 
+  description: You are able to burrow through earth at a rate of 1 foot per minute.
   type: combat
   brief: You are good at tunneling. 1 foot per minute.
 And this Part Goes Here...:
@@ -2632,11 +2641,11 @@ Action:
   description: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
   type: action
   brief: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
-Second Action: 
+Second Action:
   description: On your turn, you may take a second action. An action may be made up of an attack, spell, ability, or any offhand action.
   type: action
   brief: You have a second action.
-Offhand Action: 
+Offhand Action:
   description: On your turn, you may make an offhand action. Offhand actions include using an item such as a potion.
   type: action
   brief: n your turn, you may make an offhand action. Offhand actions include using an item such as a potion.
@@ -2644,28 +2653,28 @@ Twin Blades:
   description: You are able to wield two weapons. You may attack with both in a single action.
   type: action
   brief: You can attack twice in a single action.
-Twin Blade Parry: 
-  description: Once per round of combat, you may strike back when an enemy attacks you. 
+Twin Blade Parry:
+  description: Once per round of combat, you may strike back when an enemy attacks you.
   type: combat
   brief: Reaction. Strike back when attacked.
   cost: 1
-Offhand Attack: 
+Offhand Attack:
   description: You may use an offhand action to make an attack.
   type: action
   brief: You may attack as an offhand.
-Offhand Spell: 
+Offhand Spell:
   description: You may cast a tier zero and one spells as an offhand action.
   type: action
   brief: You may cast a tier 0 and 1 spells as an offhand action.
-Minor Offhand Spell: 
+Minor Offhand Spell:
   description: You may cast a tier zero spell as an offhand action.
   type: action
   brief: You may cast a tier 0 spell as an offhand.
-Greater Offhand Spell: 
+Greater Offhand Spell:
   description: You may cast a tier one spell as an offhand action.
   type: action
   brief: You may cast a tier 1 spell as an offhand.
-Major Offhand Spell: 
+Major Offhand Spell:
   description: You may cast a tier two spell as an offhand action.
   type: action
   brief:  You may cast a tier 2 spell as an offhand.
@@ -2744,7 +2753,7 @@ Enforce Will Modification:
   description: "Increase the difficulty of a spell by 3 to force an enemy to make any related saves with disadvantage."
   brief: "Increase spell difficulty by 3 to force an enemy to make related saves at disadvantage."
   type: combat
-Influence: 
+Influence:
   description: "You may use action points to increase any charisma roll by 3."
   type: general
   brief: "You can use action points to add +3 to a CHA role."
@@ -2753,15 +2762,15 @@ Prepare Spell:
   description: At the start of each day, choose a spell to have 3 less difficulty.
   type: general
   brief: At the start of the day, choose a spell to have 3 less difficulty.
-Spirits Within: 
-  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit, 
-    make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you. 
-    While you are imbued with a spirit, you have advantage on all charisma checks 
+Spirits Within:
+  description: Wrestle with a spirit, forcing it to fill you with its strength. Every turn that you are imbued with a spirit,
+    make a D10 inner fire saving throw. If you fail, take 2d6 psychic damage. If you critically fail, the spirit escapes you.
+    While you are imbued with a spirit, you have advantage on all charisma checks
     and may add +1 to strength, dexterity, perception, and inner fire.
   type: combat
   brief: Wrestle spirit. 1/turn D10 INF save or 2d6 dmg. 1, escapes. ADV CHA, +1 STR DEX PER INF.
-Light and Shadow: 
-  description: While you possess a spirit, add an extra dice of dark or light damage to any attack that you make. 
+Light and Shadow:
+  description: While you possess a spirit, add an extra dice of dark or light damage to any attack that you make.
     Further, gain the darkvision ability,
     and advantage on any inner fire saving throws, including the one used to keep control of the spirit.
   type: combat
@@ -2865,13 +2874,13 @@ Starting Fighting Techniques:
   type: choice
   brief: You know 2 standard fighting techniques.
 Multi-class Option:
-  description: From this point forward, when you level up, you may choose to take a level in 
+  description: From this point forward, when you level up, you may choose to take a level in
     a class other than your own.
   type: rule
   brief: When you level up, you may level in a class other than your own.
 Vengeful Death:
-  description: When you are reduced to zero hit points, you may make one last retaliatory action.
-    If you take the retaliatory action, you must make your death coin flips with disadvantage.
+  description: When you are reduced to zero hit points, you may make one last retaliatory attack action.
+    If you take the retaliatory attack action, you must make your death coin flips with disadvantage.
   type: combat
   brief: When you hit 0 hp, choose to make an attack. If you do, disadv on death coin.
 Peck:
@@ -2936,30 +2945,30 @@ Greater Empowered Elements:
   description: "Your elemental damage ignores enemy resistances."
   type: combat
   brief: "Your elemental damage ignores enemy resistance."
-Elemental Ascension: 
-  description: "The power of the four elements infuses and empowers you. 
+Elemental Ascension:
+  description: "The power of the four elements infuses and empowers you.
                 When you enter the ascended state, immediately gain 5 action
                 points, which may go past your maximum.
-                The ascended state lasts for 3 turns or fifteen minutes. 
+                The ascended state lasts for 3 turns or fifteen minutes.
                 When you fall out of the ascended state, you are fatigued,
-                immediately take twice your level in damage, 
-                and have disadvantage in all things 
-                until you are able to sleep. If you are killed in the ascended state, 
+                immediately take twice your level in damage,
+                and have disadvantage in all things
+                until you are able to sleep. If you are killed in the ascended state,
                 you cannot be resurrected."
   type: combat
   brief: "Lasts 3 turns/15 mins. Gain 5 action
           points, which may go past your max.
           When you leave the ascended state,
           you are exhausted and
-          immediately take 2x your level in damage. 
-          If you are killed in the ascended state, 
+          immediately take 2x your level in damage.
+          If you are killed in the ascended state,
           you cannot be resurrected."
 Elemental Aura:
-  description: "While in the Ascended State, cast a 30 foot radius of elemental energy. All enemies within the aura take 1 greater dice of 
+  description: "While in the Ascended State, cast a 30 foot radius of elemental energy. All enemies within the aura take 1 greater dice of
           damage of an element of your choice."
   type: combat
   brief: "While Ascended, cast a 30ft. radius aura of elemental energy. 1 major dice of elemental damage to all enemies within."
-Ascended Flight: 
+Ascended Flight:
   description: "When in the ascended state, utilize the power of air to propel yourself through the skies in unaided flight at twice your normal speed."
   type: general
   brief: "You may fly at twice your normal speed while in the ascended state."
@@ -2968,12 +2977,12 @@ Pure Elemental Attack:
   type: combat
   brief: "While Ascended, deal an additional dice of damage on all elemental attacks"
 Marriage:
-  description: You may bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative 
+  description: You may bond two individuals together in marriage. When fighting together, they are able to swap turns in initiative
     order and gain advantage on all checks when the other is critically injured.
   type: general
   brief: You may marry to individual. They may swap initiative and have advantage in all things when the other is on death's door.
 Atonement:
-  description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give 
+  description: An individual can come to you to ask for atonement for evil they have done. After listening, you may give
     the entity a penance of your choice. Upon completion, they are restored to purity.
   type: general
   brief: You may grant forgiveness to an individual in the name of your god.
@@ -2983,8 +2992,8 @@ Funeral:
   type: general
   brief: You may perform a funeral which delivers a soul safely to the other side. The body cannot be resurrected by an evildoer.
 Birthing:
-  description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected 
-    by your diety until they are ten years of age. 
+  description: If you are present for an individual's birth, you gain advantage during delivery. A baby blessed by you is protected
+    by your diety until they are ten years of age.
   type: general
   brief: You have advantage when performing births, and may bless babies in the name of your diety until they are of age.
 Conversion:
@@ -3004,8 +3013,8 @@ Pledge:
     both must recieve a permanent penalty of -1 vitality. If this decreases vitality to zero, instead take a permanent decrease
     of 10 health.
   type: general
-  brief: You are able to bind a willing servant of your diety to you. 
-Guidance: 
+  brief: You are able to bind a willing servant of your diety to you.
+Guidance:
   description: "Spend 1 action point to add a major dice to an ally's check or attack."
   type: general
   brief: "Add a major dice to an ally's check or attack."
@@ -3025,11 +3034,11 @@ Shield of Light:
   type: combat
   cost: 1
   brief: "Stop an enemy attack from harming you."
-True Heal: 
+True Heal:
   description: Re-roll any ones rolled while healing.
   type: general
   brief: Re-roll any ones rolled while healing.
-Greater True Heal: 
+Greater True Heal:
   description: Re-roll any ones or twos rolled while healing.
   type: general
   brief: Re-roll any ones or twos rolled while healing.
@@ -3052,7 +3061,7 @@ Lawbringer:
   description: Followers of Iro have advantage when speaking with lawmen.
   type: advantage
   brief: "You have advantage when speaking with lawmen."
-Minor Resilience: 
+Minor Resilience:
   description: "You gain a permanent +1 armor."
   type: general
   brief: "You have +1 armor."
@@ -3060,11 +3069,11 @@ Minor Guardian of the Realms:
   description: "Add an additional dice of damage when attacking demons and the undead. Stacks with purge decay."
   type: combat
   brief: "Deal an extra dice of damage to demons and undead."
-Greater Resilience: 
+Greater Resilience:
   description: "You gain a permanent +2 armor."
   type: general
   brief: "You have +2 armor"
-Unwavering: 
+Unwavering:
   description: "You are immune to the fear effect."
   type: combat
   brief: "You are immune to fear."
@@ -3080,7 +3089,7 @@ Greater Guardian of the Realms:
   description: "Add 2 additional dice of damage when attacking demons and the undead. Stacks with purge decay."
   type: combat
   brief: "Add 2 dice of damage when attacking demons/undead."
-Major Resilience: 
+Major Resilience:
   description: "You gain a permanent +3 armor."
   type: general
   brief: "You have +3 armor."
@@ -3231,7 +3240,7 @@ God of Growing:
   brief: At the start of each turn during combat or once every hour, regain 1d4 health.
     Stacks with Photosynthesis.
   description: At the start of each turn during combat or once every hour, regain
-    1d4 health. 
+    1d4 health.
   type: general
 God of Marriage:
   brief: Gain an additional 10 health if you are under the effect of a Marriage or
@@ -3284,7 +3293,7 @@ Goddess of the Hunt:
     extra potency when cast on beasts. Depending on the spell, this can add an additional
     dice of damage, healing an extra turn of duration, or give a beast advantage or
     disadvantage on relavant checks.
-  description: Adv on tracking. Spell potency vs beasts. 
+  description: Adv on tracking. Spell potency vs beasts.
     Additional dice of damage/healing, disadv on checks.
   type: advantage
 Goddess of the Icy Depths:

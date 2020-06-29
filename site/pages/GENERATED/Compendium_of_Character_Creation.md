@@ -380,7 +380,7 @@ __Dwarf Abilities:__
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Advantages:__   
   * __Stocky:__ You have advantage against any check that could cause you to go prone.  
-  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Negates the harried condition.  
+  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Does not negate the harried condition.  
   * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
   * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
   * __Forgeborn:__ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
@@ -445,7 +445,7 @@ __High Elf Abilities:__
   * __Inherent Magic:__ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
   * __Detect Magic:__ _(Cost 1)_ Perform a magic detection check.  
 * __Advantages:__   
-  * __Beauty Incarnate:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
+  * __Natural Intellect:__ You have a natural intelligence which grants you advantage on intelligence checks.  
   
   
   
@@ -474,6 +474,8 @@ __Wood Elf Abilities:__
   * __Winged Feet:__ You have advantage on acrobatics checks.  
   * __Padfoot:__ You have advantage on stealth checks.  
   * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+* __Combat Abilities:__   
+  * __Long Dash:__ When you dash, move an additional 5 feet.  
   
   
   
@@ -575,13 +577,13 @@ Tiny and rambunctious, fleetfoot halflings are all high-spirits and fun. Known f
   
 __Fleetfoot Halfling Abilities:__ 
 * __General Abilities:__   
-  * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Starting Items:__   
   * __Sling:__ Your character begins their journey with a 1d4 sling.  
 * __Advantages:__   
   * __Padfoot:__ You have advantage on stealth checks.  
 * __Combat Abilities:__   
+  * __Dodge:__ Once per turn when you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   
   
@@ -780,7 +782,7 @@ __Orc Abilities:__
 * __Combat Abilities:__   
   * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
   * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.  
-  * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
+  * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory attack action. If you take the retaliatory attack action, you must make your death coin flips with disadvantage.  
   
   
   
@@ -1492,10 +1494,11 @@ Many skills have requirements. These are either __stat based__ or __skill based_
 If a skill has a stat based requirement, you must have a certain value for a stat
 before you can learn the skill. If a skill has a skill requirement, you must learn
 the required skill or skills first.
-* __Cook:__ During a rest, you may cook food which heals 1d6 health.  
-* __Master Chef:__ During a rest, you may cook food which heals 3d8 health.  
+* __Cook:__ During a rest, you may cook food which adds a healing dice for all participants.  
+* __Master Chef:__ During a rest, you may cook food which adds a healing dice and increases the size of all healing dice.  
   * Skill Requirements: _Cook_  
-* __Restful Sleeper:__ Roll healing dice with advantage when resting or sleeping.  
+* __Meditative Rest:__ Regain an extra action point from any rest.  
+* __Greater Meditative Rest:__ Regain two extra action points from any rest.  
 * __Shield Master:__ Take 5 feet fewer of movement penalty when using shields.  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  
 * __One Handed Weapon Proficiency:__ You may wield one handed physical weapons without disadvantage.  
@@ -1508,18 +1511,19 @@ the required skill or skills first.
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
 * __Basic Magic:__ You may use tier zero magic from the Novice Spell Book. Each time you level up, gain a tier zero spell.  
   * Stat Requirements: _Intelligence: 3_  
-* __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
+* __Adept Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Tinker:__ You may attempt to make items and contraptions during rests.  
-  * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
+* __Advanced Magic:__ You may use tier two magic. Each time you level up, gain a tier one spell.  
+  * Skill Requirements: _Adept Magic_  
+  * Stat Requirements: _Intelligence: 5_  
 * __Nimble Navigator:__ Don't take penalty from difficult terrain. Stand up for free after being knocked prone.  
   * Stat Requirements: _Dexterity: 3_  
 * __Dodging Stance:__ As an Offhand Action, move into a dodging stance. As a reaction before your next turn, when you are the target of a targeted attack, make a contested Dexterity check against the attacking enemy. On success, you avoid the attack.  
   * Stat Requirements: _Dexterity: 1_  
-* __Shrug it Off:__ Reaction. Once per turn, when attacked, decrease the attack damage by twice your strength.  
+* __Shrug it Off:__ Reaction. When attacked, decrease the attack damage by twice your strength.  
   * Stat Requirements: _Strength: 1_  
-* __Leader:__ Give all allies a 1d6 inspiration dice at the start of each battle.  
+* __Leader:__ Give all allies a 1d4 inspiration dice at the start of each battle.  
   * Stat Requirements: _Inner Fire: 3, Charisma: 3_  
 * __Mage Hunter:__ Gain advantage on breaking enemy concentration and on SP saves.  
   * Stat Requirements: _Inner Fire: 3_  
@@ -1529,25 +1533,27 @@ the required skill or skills first.
   * Stat Requirements: _Inner Fire: 2_  
 * __Battle Mage:__ Gain advantage on concentration checks. Re-roll 1's made on attack spells.  
 * __Ventriloquist:__ You can throw your voice without a skill check.  
-* __Fight from the Shadows:__ You are able to attempt to hide as an offhand action.  
-  * Stat Requirements: _Dexterity: 3_  
 * __Phallanx:__ When you are adjacent to an ally, enemy attacks are at disadvantage.  
 * __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP.  
 * __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1 AP.  
   * Skill Requirements: _Medic_  
   * Stat Requirements: _Inner Fire: 2, Dexterity: 1_  
+* __Major Medic:__ You are able to heal a teammate for 4d6 health for 1 AP.  
+  * Skill Requirements: _Greater Medic_  
 * __Functioning Alcoholic:__ When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks.  
   * Stat Requirements: _Inner Fire: 3_  
 * __Sage:__ Re-roll any ones or twos rolled while casting magic.  
   * Stat Requirements: _Intelligence: 5, Inner Fire: 3_  
-* __Close Quarters Combat:__ Do not take disadvantage with ranged weapons when harried.  
+* __Unharried:__ You cannot be harried.  
 * __Two Handed Weapon Master:__ Carry two handed weapons with one hand.  
   * Stat Requirements: _Strength: 5, Dexterity: 1_  
 * __Master of Concentration:__ Concentrate on two spells at the same time  
   * Stat Requirements: _Inner Fire: 5, Intelligence: 3_  
 * __Duelist:__ When fighting an enemy take advantage on attacks if there are no other combatants within 30 feet.  
 * __Demolitionist:__ Do double damage with non-spell based explosives.  
-* __Controlled Retreat:__ Take half damage when retreating.  
+* __Provocateur:__ Take half damage from attacks of opportunity.  
 * __Pivot:__ Swap positions with an adjacent teammate.  
 * __Tumble:__ Take 20 feet less fall damage.  
+* __Fast Draw:__ You may use your dexterity rather than your perception on initiative roles.  
+  * Stat Requirements: _Dexterity: 0_  
 
