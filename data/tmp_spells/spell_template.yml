@@ -7,12 +7,11 @@ spellbook:
       duration: String
       combat_duration: #, save, battle, concentration
       description: "What the spell does at a high level."
-      major/minor_damage_dice: 0
-      major/major_damage_type: <elemental, poison, fire, force, psychic, ice, dark, light>
-      major/major_healing_dice: 0
+      dice_type: <major, minor>
+      num_dice: 0
+      effect_type: <light damage, moderate damage, heavy damage, healing, elemental, poison, fire, force, psychic, ice, dark, radiant>
+      purpose: <damage, healing, summon, investigate, utility>
       range: Distance at which it can be cast in ft. (Macros subbed on install for balance purposes)
-      balance_type: <minor, greater, major> <utility, buff, debuff, restoration, summoning, curse>
-
       # Effects should be used only for saves and secondary effects. Primary effects go at the outer level.
       effect_radius: # number of feet, defaults to 1
       casting_time: A number. Defaults to instantaneous.

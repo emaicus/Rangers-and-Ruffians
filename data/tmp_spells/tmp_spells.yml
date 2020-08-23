@@ -58,8 +58,8 @@ the_bard's_songbook:
       cost: 0
       description: Magically throw your voice up to fifty feet.
     Trick up Your Sleeve:
-      cost: 0
-      description: Summon up to forty feet of tied together cloths from your sleeve.
+      cost: 1
+      description: Summon up to one hundred feet of tied together cloths from your sleeve.
   Tier_1:
     Belch Fire:
       balance_type: healing candidate

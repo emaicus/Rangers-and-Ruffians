@@ -1,0 +1,752 @@
+{
+    "1": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 0,
+            "expected_avg": 2
+        }
+    ],
+    "2": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 1,
+            "expected_avg": 3
+        },
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 0,
+            "expected_avg": 4
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 0,
+            "expected_avg": 3
+        }
+    ],
+    "3": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 2,
+            "expected_avg": 4
+        },
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 1,
+            "expected_avg": 5
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 1,
+            "expected_avg": 4
+        },
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 0,
+            "expected_avg": 5
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 0,
+            "expected_avg": 4
+        }
+    ],
+    "4": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 3,
+            "expected_avg": 5
+        },
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 2,
+            "expected_avg": 6
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 2,
+            "expected_avg": 5
+        },
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 1,
+            "expected_avg": 6
+        },
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 0,
+            "expected_avg": 6
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 1,
+            "expected_avg": 5
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 0,
+            "expected_avg": 6
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 0,
+            "expected_avg": 5
+        }
+    ],
+    "5": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 4,
+            "expected_avg": 6
+        },
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 3,
+            "expected_avg": 7
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 3,
+            "expected_avg": 6
+        },
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 2,
+            "expected_avg": 7
+        },
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 1,
+            "expected_avg": 7
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 2,
+            "expected_avg": 6
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 1,
+            "expected_avg": 7
+        },
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 0,
+            "expected_avg": 7
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 1,
+            "expected_avg": 6
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 0,
+            "expected_avg": 7
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 0,
+            "expected_avg": 6
+        }
+    ],
+    "6": [
+        {
+            "primary": 4,
+            "secondary": 0,
+            "modifier": 5,
+            "expected_avg": 7
+        },
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 4,
+            "expected_avg": 8
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 4,
+            "expected_avg": 7
+        },
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 3,
+            "expected_avg": 8
+        },
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 2,
+            "expected_avg": 8
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 3,
+            "expected_avg": 7
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 2,
+            "expected_avg": 8
+        },
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 1,
+            "expected_avg": 8
+        },
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 0,
+            "expected_avg": 8
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 2,
+            "expected_avg": 7
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 1,
+            "expected_avg": 8
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 0,
+            "expected_avg": 8
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 1,
+            "expected_avg": 7
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 0,
+            "expected_avg": 8
+        }
+    ],
+    "7": [
+        {
+            "primary": 4,
+            "secondary": 4,
+            "modifier": 5,
+            "expected_avg": 9
+        },
+        {
+            "primary": 6,
+            "secondary": 0,
+            "modifier": 5,
+            "expected_avg": 8
+        },
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 4,
+            "expected_avg": 9
+        },
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 3,
+            "expected_avg": 9
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 4,
+            "expected_avg": 8
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 3,
+            "expected_avg": 9
+        },
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 2,
+            "expected_avg": 9
+        },
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 1,
+            "expected_avg": 9
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 3,
+            "expected_avg": 8
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 2,
+            "expected_avg": 9
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 1,
+            "expected_avg": 9
+        },
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 0,
+            "expected_avg": 9
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 2,
+            "expected_avg": 8
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 1,
+            "expected_avg": 9
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 0,
+            "expected_avg": 9
+        }
+    ],
+    "8": [
+        {
+            "primary": 6,
+            "secondary": 4,
+            "modifier": 5,
+            "expected_avg": 10
+        },
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 4,
+            "expected_avg": 10
+        },
+        {
+            "primary": 8,
+            "secondary": 0,
+            "modifier": 5,
+            "expected_avg": 9
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 4,
+            "expected_avg": 10
+        },
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 3,
+            "expected_avg": 10
+        },
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 2,
+            "expected_avg": 10
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 4,
+            "expected_avg": 9
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 3,
+            "expected_avg": 10
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 2,
+            "expected_avg": 10
+        },
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 1,
+            "expected_avg": 10
+        },
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 0,
+            "expected_avg": 10
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 3,
+            "expected_avg": 9
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 2,
+            "expected_avg": 10
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 1,
+            "expected_avg": 10
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 0,
+            "expected_avg": 10
+        }
+    ],
+    "9": [
+        {
+            "primary": 6,
+            "secondary": 6,
+            "modifier": 5,
+            "expected_avg": 11
+        },
+        {
+            "primary": 8,
+            "secondary": 4,
+            "modifier": 5,
+            "expected_avg": 11
+        },
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 4,
+            "expected_avg": 11
+        },
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 3,
+            "expected_avg": 11
+        },
+        {
+            "primary": 10,
+            "secondary": 0,
+            "modifier": 5,
+            "expected_avg": 10
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 4,
+            "expected_avg": 11
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 3,
+            "expected_avg": 11
+        },
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 2,
+            "expected_avg": 11
+        },
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 1,
+            "expected_avg": 11
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 4,
+            "expected_avg": 10
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 3,
+            "expected_avg": 11
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 2,
+            "expected_avg": 11
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 1,
+            "expected_avg": 11
+        },
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 0,
+            "expected_avg": 11
+        }
+    ],
+    "10": [
+        {
+            "primary": 8,
+            "secondary": 6,
+            "modifier": 5,
+            "expected_avg": 12
+        },
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 4,
+            "expected_avg": 12
+        },
+        {
+            "primary": 10,
+            "secondary": 4,
+            "modifier": 5,
+            "expected_avg": 12
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 4,
+            "expected_avg": 12
+        },
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 3,
+            "expected_avg": 12
+        },
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 2,
+            "expected_avg": 12
+        },
+        {
+            "primary": 12,
+            "secondary": 0,
+            "modifier": 5,
+            "expected_avg": 11
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 4,
+            "expected_avg": 12
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 3,
+            "expected_avg": 12
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 2,
+            "expected_avg": 12
+        },
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 1,
+            "expected_avg": 12
+        },
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 0,
+            "expected_avg": 12
+        }
+    ],
+    "11": [
+        {
+            "primary": 8,
+            "secondary": 8,
+            "modifier": 5,
+            "expected_avg": 13
+        },
+        {
+            "primary": 10,
+            "secondary": 6,
+            "modifier": 5,
+            "expected_avg": 13
+        },
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 4,
+            "expected_avg": 13
+        },
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 3,
+            "expected_avg": 13
+        },
+        {
+            "primary": 12,
+            "secondary": 4,
+            "modifier": 5,
+            "expected_avg": 13
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 4,
+            "expected_avg": 13
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 3,
+            "expected_avg": 13
+        },
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 2,
+            "expected_avg": 13
+        },
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 1,
+            "expected_avg": 13
+        }
+    ],
+    "12": [
+        {
+            "primary": 10,
+            "secondary": 8,
+            "modifier": 5,
+            "expected_avg": 14
+        },
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 4,
+            "expected_avg": 14
+        },
+        {
+            "primary": 12,
+            "secondary": 6,
+            "modifier": 5,
+            "expected_avg": 14
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 4,
+            "expected_avg": 14
+        },
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 3,
+            "expected_avg": 14
+        },
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 2,
+            "expected_avg": 14
+        }
+    ],
+    "13": [
+        {
+            "primary": 10,
+            "secondary": 10,
+            "modifier": 5,
+            "expected_avg": 15
+        },
+        {
+            "primary": 12,
+            "secondary": 8,
+            "modifier": 5,
+            "expected_avg": 15
+        },
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 4,
+            "expected_avg": 15
+        },
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 3,
+            "expected_avg": 15
+        }
+    ],
+    "14": [
+        {
+            "primary": 12,
+            "secondary": 10,
+            "modifier": 5,
+            "expected_avg": 16
+        },
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 4,
+            "expected_avg": 16
+        }
+    ],
+    "15": [
+        {
+            "primary": 12,
+            "secondary": 12,
+            "modifier": 5,
+            "expected_avg": 17
+        }
+    ]
+}

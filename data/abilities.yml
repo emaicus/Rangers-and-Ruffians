@@ -1572,9 +1572,9 @@ The Wizard's Addendum:
   type: spellbook
   brief: You have access to the Wizard's Addendum.
 They're Retractable:
-  description: You have retractable, razor sharp claws which add +1 damage to your punching or kicking attacks.
+  description: You have retractable, razor sharp claws which add +2 damage to your punching or kicking attacks.
   type: combat
-  brief: Your punch and kick attacks deal +1 damage.
+  brief: Your punch and kick attacks deal +2 damage.
 Thick Headed:
   description: You have advantage on any checks involving an enemy breaking into your
     mind or dominating you.
@@ -1871,7 +1871,7 @@ Controlled Advance:
   type: combat
   brief: "When you use Advance, gain either an attack or a Ready Stance."
 Overwhelming Strike:
-  description: "Batter away an enemies defenses. Add a damage dice to your attack and force the enemy to make a size based contested Strength check. On failure, the next attack against the enemy has advantage."
+  description: "Batter away an enemy's defenses. Add a damage dice to your attack and force the enemy to make a size based contested Strength check. On failure, the next attack against the enemy has advantage."
   type: combat
   brief: "Additional damage dice. Size based contested STR check. Fail: Next attack has advantage."
   cost: 1
@@ -2216,9 +2216,9 @@ Break Away:
   type: combat
   brief: "If you begin a turn flanking an enemy, move away without being exposed."
 Sticky Fingers:
-  description: Add 1d4 to any check made to steal something.
+  description: Add 1d6 to any check made to steal something.
   type: general
-  brief: Add 1d4 to checks made to steal something.
+  brief: Add 1d6 to checks made to steal something.
 Greater Mantle:
   description: Add 1d6 to all climbing checks.
   type: general
@@ -2361,10 +2361,15 @@ Trap Expert:
   type: general
   brief: Gain advantage on anything trap related.
 Party Save:
-  description: Give all allies 1d10 to role on a stealth check..
+  description: Give an ally advantage on a stealth check.
   type: general
-  brief: Add 1d10 to all allies' stealth check.
+  brief: Give an ally advantage on a stealth check.
   cost: 1
+Greater Party Save:
+  description: Give all allies advantage on a stealth check.
+  type: general
+  brief: Give all allies advantage on a stealth check.
+  cost: 2
 Imposter:
   description: Gain 1d6 on any checks made to imitate someone.
   type: general
@@ -2579,7 +2584,7 @@ Major Dodge:
 Long Dash:
   description: "When you dash, move an additional 5 feet."
   type: combat
-  brief: "When"
+  brief: "When you dash, move an additional 5 feet."
 Greater Dash:
   description: "When you take a dash action, move 30 feet rather than 15."
   type: combat
@@ -3153,6 +3158,14 @@ Brutal Attacks:
     damage.
   description: When attacking someone Lady Dusk deemed worthless, double damage.
   type: combat
+Brutal Healing:
+  brief: When you heal an ally with a spell, damage an enemy within 30 feet for half of the amount.
+  description: When you heal with a spell, damage an enemy within 30ft for 1/2 the amount.
+  type: combat
+Greater Brutal Healing:
+  brief: When you heal an ally with a spell, damage an enemy within 30 feet for the amount.
+  description: When you heal with a spell, damage an enemy within 30ft for the amount.
+  type: combat
 Burning Bright:
   brief: At will, you can cause your halo to blaze with the same intensity as the
     light spell, dealing a major dice of damage to undead within 30 feet.
@@ -3197,6 +3210,11 @@ Distrusted by Authorities:
 Ever of Use:
   brief: Once per day, channel the power of Lady Dusk to gain advantage on a check.
   description: Once per day, channel the power of Lady Dusk to gain advantage on a
+    check.
+  type: advantage
+Greater Ever of Use:
+  brief: Twice per day, channel the power of Lady Dusk to gain advantage on a check.
+  description: Twice per day, channel the power of Lady Dusk to gain advantage on a
     check.
   type: advantage
 Face of the People:

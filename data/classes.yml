@@ -1184,6 +1184,8 @@ Cleric:
           abilities:
           - Tier Two Spells
           - Pledge
+          - Greater Ever of Use
+          - Brutal Healing
           #- Purge the Useless
           #- Ceremony of Evaluation
         level_6:
@@ -1220,7 +1222,7 @@ Cleric:
           - Tier Five Spells
         level_15:
           abilities:
-          - Brutal Attacks
+          - Greater Brutal Healing
       roles:
       - mage
       - spellbooks

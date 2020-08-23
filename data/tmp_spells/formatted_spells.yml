@@ -41,8 +41,9 @@ the_bard's_songbook:
         duration: instantaneous
         combat_duration: 1
         description: Tell a cruel rhyme, imbued with magic.
-        minor_damage_dice: 1
-        minor_damage_type: psychic
+        dice_type: minor
+        num_dice: 1
+        effect_type: psychic
         range: middling
         effects: 
           - description: "the entity takes Disadvantage on their next action."
@@ -105,7 +106,7 @@ the_bard's_songbook:
         num_targets: 1
         duration: instantaneous
         combat_duration: 1
-        description: "Summon up to forty feet of tied together cloths from your sleeve."
+        description: "Summon up to one hundred feet of tied together cloths from your sleeve."
         range: self
         balance_type: minor utility
       Harsh Note:
@@ -115,8 +116,10 @@ the_bard's_songbook:
         duration: instantaneous
         combat_duration: 1
         description: "Create a harsh noise which damages one enemy."
-        major_damage_dice: 1
-        major_damage_type: psychic
+        balance_type: minor damage
+        dice_type: major
+        num_dice: 1
+        effect_type: psychic
         range: archer
       Discordant Symphony:
         cost: 0
@@ -125,7 +128,9 @@ the_bard's_songbook:
         effect_radius: 30
         duration: instantaneous
         combat_duration: 1
-        minor_damage_dice: 1
+        dice_type: minor
+        num_dice: 1
+        effect_type: psychic
         description: "Create a horrible sound which damages all who hear it."
         range: self
         balance_type: minor damage
@@ -137,8 +142,9 @@ the_bard's_songbook:
         duration: instantaneous
         combat_duration: 1
         description: "Belch a cone of fire."
-        major_damage_dice: 1
-        major_damage_type: fire
+        dice_type: major 
+        num_dice: 1
+        effect_type: fire
         range: self
         balance_type: greater damage
       Blocking Hand:
@@ -150,7 +156,7 @@ the_bard's_songbook:
         description: "Summon an unseen hand to protect you from a attack light melee or ranged attack."
         action_type: Reaction
         range: self
-        utility_type: greater buff
+        balance_type: greater buff
       Courage:
         cost: 1
         target: friendly
@@ -173,7 +179,7 @@ the_bard's_songbook:
             description: "the enemy receives a curse which causes them to weep constantly,
               giving them disadvantage on actions made during combat. 
               The curse does not leave until dispelled."
-            balance_type: greater curse
+        balance_type: greater curse
       Dazzling Lights:
         cost: 1
         target: space
@@ -217,7 +223,7 @@ the_bard's_songbook:
             description: "the entity takes disadvantage on all relevant checks and loses half of their movement"
             repeat:
               - "each turn thereafter"
-            balance_type: greater debuff
+        balance_type: greater debuff
       Gnomish Dream:
         cost: 1
         target: entity
@@ -292,175 +298,180 @@ the_bard's_songbook:
         num_targets: 1
         duration: One Minute
         combat_duration: 2
-        minor_healing_dice: 1
+        dice_type: minor
+        num_dice: 1
+        effect_type: healing
         description: "Play a soothing song which heals an injured ally."
         range: middling
         balance_type: minor healing
-    Tier_2:
-      Counter Magic:
-        cost: 1
-        target: enemy
-        num_targets: 1
-        duration: instantaneous
-        combat_duration: 1
-        action_type: Reaction
-        range: middling
-        balance_type: greater debuff
-        description: "Attempt to stop enemy magic before it takes effect."
-        effects:
-          - save: Spell Power
-            description: "their spell fails as they cast it. Counter Magic 
-              may be cast at a higher tier for an additional cost equal
-              to the tier increase. If the tier of the counter
-              spell is equal to or greater than the opponent's spell, the opponent's spell
-              is instantly dispelled without save. If the difference between
-              your countermagic's tier and the enemy's spell's tier is greater than 1,
-              they make the save with advantage."
-      Swarm of Squirrels:
-        cost: 2
-        target: space
-        num_targets: 1
-        duration: 1 hour
-        combat_duration: battle
-        description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
-          and is capable of doing 1 damage per turn. Squirrels move together in combat, and are
-          attacked as a swarm.
-        range: middling
-        balance_type: minor summoning
-      Greater Conceal Weapons:
-        cost: 2
-        target: friendly
-        num_targets: 7
-        duration: concentration
-        combat_duration: concentration
-        range: middling
-        balance_type: major utility
-        description: Magically conceal up to three weapons on each of up to seven
-          individuals.
-      Invisible Servant:
-        cost: 2
-        target: space
-        num_targets: 1
-        duration: 1 hour
-        combat_duration: battle
-        description: Summon an invisible servant to aid you in a task. The servant is only
-          capable of dealing 1d4 damage and has 20 hit points.
-        range: middling
-        balance_type: minor summoning
-      Kilgore's Thunderous Shout:
-        cost: 2
-        target: enemy
-        num_targets: cone
-        duration: instantaneous
-        combat_duration: 1
-        description: "Unleash a might shout to subdue your enemies."
-        major_damage_dice: 2
-        major_damage_type: force
-        effects: 
-          - save: strength check against your spell power
-            description: the entity is thrown backward 15 feet and take an additional dice of blunt damage
-        range: self
-        balance_type: greater damage
-      Lullaby:
-        cost: 2
-        target: enemy
-        num_targets: aoe
-        effect_radius: 30
-        duration: instantaneous
-        casting_time: 2 minutes
-        combat_casting_time: 2
-        range: self
-        effects: 
-          - save: Spell Power
-            description: on the first failure, the entity becomes dreary, and looses
-                         half it's movement. On a second failure, it falls into a
-                         deep slumber, and cannot be awoken save by damage or a
-                         successful save.
-            repeat:
-              - "Each turn before the entity falls asleep."
-              - "Every hour after the entity has fallen asleep."
-        description: Sing a song which puts all enemies that can hear it to sleep if
-          they fail a spell power save. Each turn thereafter,
-          they can attempt the same saving throw. If harmed, they wake up.
-      Magic Steed:
-        cost: 2
-        target: space
-        num_targets: 1
-        duration: concentration
-        combat_duration: battle
-        description: Summon a steed made of pure magical energy. The stallion has 20
-          health, and may be de-summoned on command.
-        range: middling
-        balance_type: greater utility
-      Marionette:
-        cost: 2
-        target: enemy
-        num_targets: 1
-        duration: Until Save
-        combat_duration: save
-        description: "Attempt to control an enemy like a puppet."
-        range: middling
-        effects: 
-          - save: Spell Power
-            description: you may control them as though they are a puppet and
-              you hold their strings. The entity may attempt an inner fire saving throw
-              each turn thereafter to break your control.
-        balance_type: greater debuff
-      Minor Gate:
-        cost: 2
-        target: self
-        num_targets: 1
-        duration: instantaneous
-        combat_duration: 1
-        description: Create a portal exactly big enough to fit yourself and one other
-          individual of your size and instantly transport through it.
-        range: far
-        balance_type: greater utility
-      Raucous Laughter:
-        cost: 2
-        target: enemy
-        num_targets: aoe
-        effect_radius: 30
-        duration: save
-        combat_duration: save
-        range: self
-        description: "Tell an incredibly funny joke imbued with magical power."
-        effects:
-          - save: Spell Power
-            description: "the entity falls prone, laughing, and cannot stand until
-                          it makes its save."
-            repeat:
-              - "each turn"
-        balance_type: greater debuff
-      Smokescreen:
-        cost: 1
-        target: space
-        num_targets: aoe
-        effect_radius: 30
-        duration: 5 minutes
-        combat_duration: 3
-        range: middling
-        description: "Create a smokescreen. Entities within the smokescreen are considered to be 
-                      in darkness."
-        balance_type: greater utility
-      Tyrone's Ravenous Hunger:
-        cost: 2
-        description: Cause an entity to become ravenously hungry. If they fail a
-          spell power save, they will attempt to eat the nearest entity to them.
-      Wall of Sound:
-        cost: 2
-        description: Create a wall up to 40 feet long and 100 feet wide of pure sonic
-          energy. Any entity that attempts to pass through it must make an inner fire
-          saving throw against your spell power or be thrown back and take 2d10 damage.
-      Sonic Dart:
-        cost: 2
-        description: Fire a blast of pure sound at a target within 15 feet, dealing
-          3d6 damage.
-    Tier_3:
-      Forget:
-        cost: 2
-        description: Force an entity to make a spell power save. On failure, the entity
-          forgets 1d10 minutes of your choosing.
+  # Tier_2:
+    #   Counter Magic:
+    #     cost: 1
+    #     target: enemy
+    #     num_targets: 1
+    #     duration: instantaneous
+    #     combat_duration: 1
+    #     action_type: Reaction
+    #     range: middling
+    #     balance_type: greater debuff
+    #     description: "Attempt to stop enemy magic before it takes effect."
+    #     effects:
+    #       - save: Spell Power
+    #         description: "their spell fails as they cast it. Counter Magic 
+    #           may be cast at a higher tier for an additional cost equal
+    #           to the tier increase. If the tier of the counter
+    #           spell is equal to or greater than the opponent's spell, the opponent's spell
+    #           is instantly dispelled without save. If the difference between
+    #           your countermagic's tier and the enemy's spell's tier is greater than 1,
+    #           they make the save with advantage."
+    #   Swarm of Squirrels:
+    #     cost: 2
+    #     target: space
+    #     num_targets: 1
+    #     duration: 1 hour
+    #     combat_duration: battle
+    #     description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
+    #       and is capable of doing 1 damage per turn. Squirrels move together in combat, and are
+    #       attacked as a swarm.
+    #     range: middling
+    #     balance_type: minor summoning
+    #   Greater Conceal Weapons:
+    #     cost: 2
+    #     target: friendly
+    #     num_targets: 7
+    #     duration: concentration
+    #     combat_duration: concentration
+    #     range: middling
+    #     balance_type: major utility
+    #     description: Magically conceal up to three weapons on each of up to seven
+    #       individuals.
+    #   Invisible Servant:
+    #     cost: 2
+    #     target: space
+    #     num_targets: 1
+    #     duration: 1 hour
+    #     combat_duration: battle
+    #     description: Summon an invisible servant to aid you in a task. The servant is only
+    #       capable of dealing 1d4 damage and has 20 hit points.
+    #     range: middling
+    #     balance_type: minor summoning
+    #   Kilgore's Thunderous Shout:
+    #     cost: 2
+    #     target: enemy
+    #     num_targets: cone
+    #     duration: instantaneous
+    #     combat_duration: 1
+    #     description: "Unleash a might shout to subdue your enemies."
+    #     dice_type: major
+    #     num_dice: 2
+    #     effect_type: force
+    #     effects: 
+    #       - save: strength check against your spell power
+    #         description: the entity is thrown backward 15 feet and take an additional dice of blunt damage
+    #     range: self
+    #     balance_type: greater damage
+    #   Lullaby:
+    #     cost: 2
+    #     target: enemy
+    #     num_targets: aoe
+    #     effect_radius: 30
+    #     duration: instantaneous
+    #     casting_time: 2 minutes
+    #     combat_casting_time: 2
+    #     range: self
+    #     effects: 
+    #       - save: Spell Power
+    #         description: on the first failure, the entity becomes dreary, and looses
+    #                      half it's movement. On a second failure, it falls into a
+    #                      deep slumber, and cannot be awoken save by damage or a
+    #                      successful save.
+    #         repeat:
+    #           - "Each turn before the entity falls asleep."
+    #           - "Every hour after the entity has fallen asleep."
+    #     balance_type: greater debuff
+    #     description: Sing a song which puts all enemies that can hear it to sleep if
+    #       they fail a spell power save. Each turn thereafter,
+    #       they can attempt the same saving throw. If harmed, they wake up.
+    #   Magic Steed:
+    #     cost: 2
+    #     target: space
+    #     num_targets: 1
+    #     duration: concentration
+    #     combat_duration: battle
+    #     description: Summon a steed made of pure magical energy. The stallion has 20
+    #       health, and may be de-summoned on command.
+    #     range: middling
+    #     balance_type: greater utility
+    #   Marionette:
+    #     cost: 2
+    #     target: enemy
+    #     num_targets: 1
+    #     duration: Until Save
+    #     combat_duration: save
+    #     description: "Attempt to control an enemy like a puppet."
+    #     range: middling
+    #     effects: 
+    #       - save: Spell Power
+    #         description: you may control them as though they are a puppet and
+    #           you hold their strings. The entity may attempt an inner fire saving throw
+    #           each turn thereafter to break your control.
+    #     balance_type: greater debuff
+    #   Minor Gate:
+    #     cost: 2
+    #     target: self
+    #     num_targets: 1
+    #     duration: instantaneous
+    #     combat_duration: 1
+    #     description: Create a portal exactly big enough to fit yourself and one other
+    #       individual of your size and instantly transport through it.
+    #     range: far
+    #     balance_type: greater utility
+    #   Raucous Laughter:
+    #     cost: 2
+    #     target: enemy
+    #     num_targets: aoe
+    #     effect_radius: 30
+    #     duration: save
+    #     combat_duration: save
+    #     range: self
+    #     description: "Tell an incredibly funny joke imbued with magical power."
+    #     effects:
+    #       - save: Spell Power
+    #         description: "the entity falls prone, laughing, and cannot stand until
+    #                       it makes its save."
+    #         repeat:
+    #           - "each turn"
+    #     balance_type: greater debuff
+    #   Smokescreen:
+    #     cost: 1
+    #     target: space
+    #     num_targets: aoe
+    #     effect_radius: 30
+    #     duration: 5 minutes
+    #     combat_duration: 3
+    #     range: middling
+    #     description: "Create a smokescreen. Entities within the smokescreen are considered to be 
+    #                   in darkness."
+    #     balance_type: greater utility
+    #   Tyrone's Ravenous Hunger:
+    #     cost: 2
+    #     description: Cause an entity to become ravenously hungry. If they fail a
+    #       spell power save, they will attempt to eat the nearest entity to them.
+    #     balance_type: greater debuff
+    #   Wall of Sound:
+    #     cost: 2
+    #     description: Create a wall up to 40 feet long and 100 feet wide of pure sonic
+    #       energy. Any entity that attempts to pass through it must make an inner fire
+    #       saving throw against your spell power or be thrown back and take 2d10 damage.
+    #   Sonic Dart:
+    #     cost: 2
+    #     description: Fire a blast of pure sound at a target within 15 feet, dealing
+    #       3d6 damage.
+    # Tier_3:
+    #   Forget:
+    #     cost: 2
+    #     description: Force an entity to make a spell power save. On failure, the entity
+    #       forgets 1d10 minutes of your choosing.
 the_druid's_guidebook:
   Tier_0:
     Claws:
@@ -594,7 +605,9 @@ the_druid's_guidebook:
       duration: concentration
       combat_duration: concentration
       cost: 1
-      major_damage_dice: 1
+      dice_type: major 
+      num_dice: 1
+      effect_type: moderate damage
       description: A vine bursts from the ground at an enemies feet, grabbing at them and dealing damage.
       effects:
         - description: "the enemy is held in place, and the damage is repeated. When concentration is
@@ -612,7 +625,9 @@ the_druid's_guidebook:
       duration: instantaneous
       combat_duration: 1
       description: Magically hurl a stone at an enemy.
-      major_damage_dice: 2
+      dice_type: major
+      num_dice: 2
+      effect_type: moderate damage
       effects:
         - description: the enemy is knocked prone.
           save: Spell Power
@@ -637,7 +652,9 @@ the_druid's_guidebook:
       duration: concentration
       combat_duration: concentration
       cost: 1
-      major_damage_dice: 1
+      dice_type: major 
+      num_dice: 1 
+      effect_type: fire
       description: "Become wreathed in flame. During that
         time you are immune to fire or heat based damage, and anything that you touch
         is set aflame and instantly takes fire damage. Your belongings disappear
@@ -683,8 +700,9 @@ the_druid's_guidebook:
       num_targets: 1
       cost: 1
       range: archer
-      major_damage_dice: 2
-      major_damage_type: elemental
+      dice_type: major 
+      num_dice: 2
+      effect_type: elemental
       duration: "instantaneous"
       combat_duration: 1
       description: Hurl forth a concentrated beam of either ice, fire, electricity, or air.
@@ -723,8 +741,9 @@ the_druid's_guidebook:
       target: enemy
       num_targets: 1
       range: middling
-      minor_damage_dice: 4
-      minor_damage_type: poison
+      dice_type: minor 
+      num_dice: 4 
+      effect_type: poison 
       duration: instantaneous
       combat_duration: 1
       description: Hit an enemy with a blast of liquid poison.
@@ -746,8 +765,10 @@ the_druid's_guidebook:
       num_targets: 1
       range: archer
       duration: 1 hour
-      combat_duration: 3
-      major_damage_dice: 1
+      combat_duration: 3 
+      damage_type: major 
+      num_dice: 1 
+      effect_type: summon
       description: Summon an eagle which attacks an enemy.
       effects:
         - description: "The attacked enemy is considered harried."
@@ -768,8 +789,9 @@ the_druid's_guidebook:
       target: space
       num_targets: 5
       range: middling
-      minor_damage_dice: 1
-      duration: 1 hour
+      dice_type: minor
+      num_dice: 1
+      duration: 1 day
       combat_duration: battle
       description: Cast thorn based spikes onto the ground. Anyone moving across them
         will move at half speed and take damage every 5 feet.
@@ -790,8 +812,9 @@ the_druid's_guidebook:
       num_targets: 1
       range: archer
       cost: 0
-      major_damage_dice: 1
-      major_damage_type: fire
+      dice_type: major 
+      num_dice: 1 
+      effect_type: fire
       duration: instantaneous
       combat_duration: 1
       description: "Fire a sizzling bolt of flames at an enemy."
@@ -842,9 +865,9 @@ the_druid's_guidebook:
       cost: 2
       target: enemy
       num_targets: 1
-      balance_type: major damage
-      major_damage_dice: 3
-      major_damage_type: force
+      dice_type: major 
+      num_dice: 3 
+      effect_type: force
       duration: instantaneous
       combat_duration: 1
       description: Hurl a boulder at an enemy.
@@ -861,8 +884,9 @@ the_druid's_guidebook:
       school: "divine"
     Spores:
       cost: 2
-      minor_damage_dice: 2
-      minor_damage_type: poison
+      dice_type: minor
+      num_dice: 2
+      effect_type: poison
       target: enemy
       num_targets: aoe
       effect_radius: 30
@@ -910,8 +934,10 @@ the_druid's_guidebook:
       target: space
       num_targets: 8
       range: middling
-      major_damage_dice: 1
-      duration: eternity
+      dice_type: major 
+      num_dice: 1 
+      effect_type: moderate damage
+      duration: 1 week
       combat_duration: battle
       description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
         them requires 3 dexterity checks against your spell power, each of which results
@@ -986,8 +1012,9 @@ the_druid's_guidebook:
     Nature's Fury:
       balance_type: major damage
       cost: 3
-      major_damage_dice: 4
-      major_damage_type: elemental
+      dice_type: major 
+      num_dice: 4 
+      effect_type: elemental
       target: enemy
       num_targets: line
       range: archer
@@ -1027,8 +1054,9 @@ the_druid's_guidebook:
       target: enemy
       num_targets: 2
       cost: 4
-      major_damage_dice: 2
-      major_damage_type: lightning
+      dice_type: major 
+      num_dice: 2 
+      effect_type: lightning
       description: Create a thunder cloud. Each turn, the
         thundercloud may summon a two lightning strikes which deal which deal damage to
         an entity of your choice.
@@ -1036,8 +1064,9 @@ the_druid's_guidebook:
     Wildfire:
       balance_type: major damage
       cost: 4
-      major_damage_dice: 3
-      major_damage_type: fire
+      dice_type: major 
+      num_dice: 3
+      effect_type: fire
       target: space
       num_targets: 4
       range: archer
@@ -1128,8 +1157,9 @@ the_druid's_guidebook:
     Starfall:
       balance_type: major damage
       cost: 4
-      major_damage_dice: 6
-      major_damage_type: force
+      dice_type: major 
+      num_dice: 6 
+      effect_type: force
       range: archer
       target: enemy
       num_targets: aoe
@@ -1144,8 +1174,9 @@ the_druid's_guidebook:
     Tsunami:
       balance_type: major damage
       cost: 4
-      major_damage_type: force
-      major_damage_dice: 4
+      effect_type: force
+      dice_type: major 
+      num_dice: 4
       range: far
       duration: battle
       target: enemy
@@ -1168,13 +1199,14 @@ the_druid's_guidebook:
     Volcano:
       cost: 6
       balance_type: major damage
-      major_damage_type: fire
       range: archer
       target:  enemy
       num_targets: battle
       duration: until dispelled
       combat_duration: battle
-      major_damage_dice: 4
+      dice_type: major 
+      num_dice: 4 
+      effect_type: fire 
       description: Call forth a volcano with a caldera with a 15 foot radius. 
         Lava bubbles forth, spewing onto the battlefield.
         All standing where the volcano appears must make a dexterity saving throw
@@ -1190,8 +1222,9 @@ the_druid's_guidebook:
       range: sight
       target: enemy
       num_targets: battle
-      minor_damage_dice: 4
-      minor_damage_type: ice
+      dice_type: minor 
+      num_dice: 4 
+      effect_type: ice
       duration: concentration
       combat_duration: concentration
       description: Summon the biting snows of a massive blizzard. 
@@ -1208,8 +1241,9 @@ the_book_of_healing:
       combat_duration: 1
       range: archer
       description: "Fire a bolt of radiant energy at an enemy."
-      major_damage_dice: 1
-      major_damage_type: "light"
+      num_dice: 1
+      dice_type: major
+      effect_type: radiant
       balance_type: minor damage
       action_type: "Action"
     Beguile:
@@ -1233,61 +1267,261 @@ the_book_of_healing:
       duration: concentration
       combat_duration: concentration
       description: "You may bless water by praying over it, converting it to holy water.
-        This can be done at a rate of one gallon per hour."
+          This can be done at a rate of one gallon per hour."
       range: hand to hand
       balance_type: minor utility
       casting_time: instantaneous
       combat_casting_time: 1
       action_type: Action
     Detect Evil:
-      cost: 0
-      description: Make a perception check to detect if an evil entity is within 50
-        feet of you.
+      cost: 1
+      target: space
+      num_targets: aoe
+      duration: instantaneous
+      combat_duration: 1
+      purpose: investigate
+      range: self
+      effect_radius: 100 feet
+      description: Make a perception check to detect if there is evil nearby.
+      action_type: Action
     Detect Magic:
-      cost: 0
-      description: Make a perception check to detect magic within 30 feet of you.
+      cost: 1
+      target: space
+      num_targets: aoe
+      duration: instantaneous
+      combat_duration: 1
+      purpose: investigate
+      range: self
+      effect_radius: 100 feet
+      description: Make a perception check to detect if nearby magic.
+      action_type: Action
     Extra Weight:
       cost: 0
+      target: object
+      num_targets: 1
+      duration: concentration
+      combat_duration: concentration
+      purpose: utility
       description: Double the weight of an object. The object must be no larger than
         a horse.
+      action_type: action
     Fake Death:
       cost: 0
+      target: friendly
+      num_targets: 1
+      duration: 1 day
+      combat_duration: battle
       description: Touch a willing entity to send them into a catatonic state that
         is impossible to distinguish from death.
+      purpose: utility
+      range: hand to hand
     Give of Yourself:
       cost: 0
+      target: friendly
+      num_targets: 1
+      duration: instantaneous
+      combat_duration: 1
       description: Give a teammate up to 20 points of your own health per turn.
+      purpose: healing
+      range: near 
+      casting_time: instantaneous
     Lighten Object:
       cost: 0
+      target: object
+      num_targets: 1
+      duration: concentration
+      combat_duration: concentration
+      purpose: utility
       description: Decrease the weight of an object by half. The object must be no
         larger than a horse.
+      action_type: action      
     Mending:
       cost: 0
+      target: object
+      num_targets: 1
+      duration: instantaneous
+      combat_duration: 1
       description: You can magically mend small dents, dings, scratches, and tears
         in items.
+      purpose: utility
+      casting_time: instantaneous
+      combat_casting_time: 1
     Minor Heal:
-      balance_type: healing candidate
       cost: 1
-      description: Restore 1d6 health to one ally or yourself.
-      major_healing_dice: 1d6d1 6
+      target: friendly
+      num_targets: 1
+      duration: instantaneous
+      combat_duration: 1 
+      description: Restore health to one ally or yourself.
+      dice_type: major 
+      num_dice: 1
+      effect_type: healing 
+      purpose: healing
+      range: middling
+      casting_time: instantaneous
+      combat_casting_time: 1
+      action_type: action 
     Purify:
       cost: 0
+      target: object 
+      num_targets: 1
+      duration: instantaneous
+      combat_duration: 1
       description: Purify a food, drink, or potion to remove ill effects. Purify can
         be used to remove drunkenness from entities, or to render poison innocuous.
+      purpose: utility
+      range: hand to hand
     Sacred Flame:
-      action_type: Offhand Action Candidate
       cost: 0
-      description: As an offhand action, summon a sacred flame to your hand. Ash created
-        by the flame is considered sacred. You may melee attack with the flame for
-        1d6 damage. Add an additional 1d6 damage to corrupted entities or the undead.
+      target: self
+      num_targets: 1
+      duration: concentration
+      purpose: utility
+      combat_duration: concentration
+      description: Summon a sacred flame to your hand. Ash created
+        by the flame is considered sacred. You may melee attack with the flame
+        to damage enemies.
+      range: hand to hand
+      dice_type: major 
+      num_dice: 1
+      effect_type: radiant
+      action_type: Offhand Action
     Spare:
-      action_type: Offhand Action Candidate
       cost: 0
-      description: Offhand. Touch an ally that is on death's door to stabilize them.
+      target: friendly
+      duration: instantaneous
+      combat_duration: 1
+      description: Touch an ally that is on death's door to stabilize them.
         Stabilized entities immediately return to 0 health. The are still unconcious,
-        but no longer need to make death coin flips.
-    The Face of Good:
-      cost: 0
-      description: Once per rest, the light of your deity shines from you. For five
-        minutes, you gain advantage on charisma checks, and advantage on intimidation
-        checks when attempting to intimidate evil enemies.
+        but are no longer at risk of immediately dying.
+      purpose: healing
+      range: hand to hand
+      action_type: Offhand Action
+    Tier_1:
+      Augment Allied Attack:
+        cost: 1
+        target: friendly
+        num_targets: 1
+        duration: instantaneous
+        combat_duration: 1
+        description: Call upon your deity to augment an allies attack.
+        damage_type: major 
+        num_dice: 1
+        effect_type: radiant
+      Beam of Light:
+        balance_type: damage candidate
+        cost: 1
+        description: Fire a beam of light at an enemy within 30 feet, dealing 1d8 damage.
+        major_damage_dice: 1d8d1 8
+      Bulk Up:
+        cost: 1
+        description: Force an entity to make an inner fire saving throw against your
+          spell power. On failure, the entity gains their weight in body fat.
+      Delayed Heal:
+        action_type: Reaction Candidate
+        balance_type: healing candidate
+        cost: 1
+        description: Cast a healing spell on a teammate which does not take effect until
+          you trigger it as a reaction or bonus action. At that time, they are healed
+          for 1d6 health.
+        major_healing_dice: 1d6d1 6
+      Forget Ability:
+        cost: 1
+        description: Concentration. Force an entity to make an inner fire saving throw
+          against your spell power. On failure, you may force the entity to forget one
+          of it's combat or physical abilities. The entity may repeat the check with
+          disadvantage every turn thereafter.
+        duration: concentration Candidate
+      Giant's Strength:
+        cost: 1
+        description: Grant a teammate one additional effective strength. Lasts a number
+          of hours equal to your inner fire.
+      Haste:
+        cost: 1
+        description: Cast a spell which invigorates an ally, allowing them to take an
+          extra action on their turn and to gain 15 feet of movement.
+      Heighten Emotions:
+        cost: 0
+        description: Force an entity to make a spell power save. On failure, the affected
+          entity's emotions are amplified to the extreme. This may cause them to act
+          recklessly or to take actions with disadvantage.
+        effects:
+          candidate: true
+      Hold Weapon:
+        cost: 1
+        description: Concentration. Bind an enemy's weapon to their body. The enemy
+          may attempt a strength check against your spell power to remove it.
+        duration: concentration Candidate
+      Hound's Resolve:
+        cost: 1
+        description: Grant a teammate one additional effective inner fire. Lasts a number
+          of hours equal to your spell power.
+      Light:
+        cost: 1
+        description: Summon a light with a 10ft radius. Evil and undead entities within
+          the light take 1d6 damage every turn that they are in it. Concentration.
+        duration: concentration Candidate
+      Line in the Sand:
+        cost: 1
+        description: Draw a line in the sand. If an enemy crosses, you and a chosen
+          ally have advantage when attacking them.
+      Minor Dispel Magic:
+        cost: 1
+        description: Undo the effects wrought by up to a 2nd tier spell.
+      Minor Holy weapon:
+        cost: 1
+        description: Imbue your weapon with the spirit of righteousness. Your weapon
+          gets +2 damage for a day, and advantage against evil and undead entities.
+      Monkey's Dexterity:
+        cost: 1
+        description: Grant a teammate one additional effective dexterity. Lasts a number
+          of hours equal to your inner fire.
+      Omen:
+        cost: 0
+        description: Once per day, ask your deity for an omen in regards to a decision
+          you will make.
+      Pacify:
+        cost: 1
+        description: If an enemy fails a saving throw against your spell power, it becomes
+          passive and calm. A pacified enemy cannot attack. The entity may make a saving
+          throw every turn thereafter. This effect ends if they entity is attacked.
+      Share Sense:
+        cost: 0
+        description: Concentration. Touch a teammate. For the duration of the spell,
+          you are able to share their senses.
+        duration: concentration Candidate
+      Slow:
+        cost: 1
+        description: Force an entity to make a spell power save. If they fail, they
+          are pushed back 1d4 spots in the initiative order and loose 5 feet of movement.
+        effects:
+          candidate: true
+      Slow Heal:
+        balance_type: healing candidate
+        cost: 1
+        description: Cast a healing spell upon an ally that restores 1d6 health to them
+          per turn. Lasts 2 turns.
+        major_healing_dice: 1d6d1 6
+      Strong Lungs:
+        cost: 1
+        description: Grant a teammate or yourself strong lungs, rendering them immune
+          to airborne toxins and smoke, and allowing them to hold their breath for 10
+          minutes.
+      Truth:
+        cost: 1
+        description: If an entity fails a spell power save, force it to speak only the
+          truth for one hour.
+        effects:
+          candidate: true
+      Ward:
+        cost: 1
+        description: Touch a teammate and place a ward on them. This ward adds 2 armor
+          and magic armor to the touched party member the next 3 times they are successfully
+          attacked.
+      Warmth/Cool:
+        cost: 1
+        description: Warm or cool an area with a 10ft radius.
+      Water Breathing:
+        cost: 1
+        description: Grant a teammate or yourself the ability to breathe underwater.
+          Lasts 1+inner fire hours.

@@ -106,7 +106,7 @@ class rnr_entity:
       serial["stats"] = self.stats
       serial["effective_stats"] = self.effective_stats
       serial["name"] = self.name.replace(' ', underscore_char)
-      serial["abilities"] = filterAbilities(self.abilities, verbose)
+      serial["abilities"] = filterAbilities(self.abilities)
       serial["description"] = self.description
       serial['quote'] = self.quote
       serial['quote_author'] = self.quote_author
