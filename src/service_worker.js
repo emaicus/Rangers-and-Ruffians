@@ -16,8 +16,9 @@
 // in turn trigger the install event again.
 const PRECACHE = 'precache-v0.0.22';
 const RUNTIME = 'runtime-v0.0.22';
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
   console.log(`Workbox loaded.`);
@@ -37,9 +38,17 @@ workbox.precaching.precacheAndRoute([]);
 //   })
 // );
 
-workbox.routing.registerRoute(
-  /\.(?:js|css)$/,
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: 'static-resources',
-  })
-);
+// workbox.routing.registerRoute(
+//   /\.(?:js|css)$/,
+//   new workbox.strategies.StaleWhileRevalidate({
+//     cacheName: 'static-resources',
+//   })
+// );
+
+
+addEventListener('message', (event) => {
+  console.log("message received I  guess.")
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    skipWaiting();
+  }
+});

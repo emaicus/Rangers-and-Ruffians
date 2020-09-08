@@ -51,8 +51,8 @@ class markdown_handler:
       if self.encountered_dict[link] > 1:
         # print(f'We encountered {link} twice, so we will use a special link for it')
         link = f'{link}-{self.encountered_dict[link] - 1}'
-      
-      
+
+
       self.BUFFER.append([heading, level, '', link])
 
     def add_whitespace(self):
@@ -102,7 +102,7 @@ class markdown_handler:
       if heading_pos == -1:
         print(f'ERROR: Bad heading {heading}')
         sys.exit(1)
-      
+
       md_heading = f""
 
       heading, level, content, link = self.BUFFER[heading_pos]
@@ -169,6 +169,7 @@ class markdown_handler:
           found += 1
         if found == n:
           return val
+      print(f'could not find the {n}th occurrence of {needle}')
       return None
 
     def write_toc(self, max_to_include=1000):
@@ -177,7 +178,7 @@ class markdown_handler:
 
       if len(self.ordering) == 0:
         it = keys
-      else: 
+      else:
         it = self.ordering
 
       encountered_dict = dict()
@@ -187,13 +188,13 @@ class markdown_handler:
           encountered_dict[key] = 0
         encountered_dict[key] += 1
         heading, level, content, link = self.find_nth(key, encountered_dict[key])
-        
+
         if level > max_to_include:
           continue
 
         indent = f" {' '* (2*(level-1))}* "
         toc_buffer += f"{indent}[{heading}](#{link})  \n"
-      
+
 
 
       if self.file is None:
@@ -231,4 +232,4 @@ class markdown_handler:
 
       self.topmatter = lines
 
-      
+

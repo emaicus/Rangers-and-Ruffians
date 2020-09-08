@@ -11,7 +11,7 @@ import rnr_descriptions
 from spellchecker import SpellChecker
 import inquirer
 import contractions
-import string 
+import string
 import re
 from pathlib import Path
 
@@ -46,7 +46,7 @@ def rank_classes():
     level_ten  = rnr_utils.load_all_class_objects(level=10)
     level_fifteen  = rnr_utils.load_all_class_objects(level=15)
 
-    
+
     for stat in rnr_utils.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
       level_zero.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
@@ -81,7 +81,7 @@ def rank_characters():
       characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       outfile.write('{}\n'.format(stat))
       for c in characters:
-        outfile.write("  {0}: {1}\n".format(c.name, c.get_stat(stat))) 
+        outfile.write("  {0}: {1}\n".format(c.name, c.get_stat(stat)))
       outfile.write('\n')
     outfile.write('\n')
 
@@ -93,14 +93,6 @@ def dump_characters():
     for c in characters:
       outfile.write('{0}\n'.format(c))
     outfile.write('\n')
-
-# def get_effective_vitality(vit):
-#   if vit <= 3:
-#     return vit
-#   else:
-#     real_vit = 3
-#     vit = vit-3
-#     return real_vit + (vit//2)
 
 '''
 Health binning and vitality chart. Call vitality_chart()
@@ -133,7 +125,7 @@ def vitality_chart(data_packet):
     for mode in ['max', 'min', 'avg', 'rand', 'adv', 'round to half']:
       outfile.write('\n')
       outfile.write('{0}\n'.format(mode.upper()))
-      
+
       outfile.write('{0:<4}'.format('DIE'))
       for i in range(0,16):
         s = 'LV{0}'.format(i)
@@ -235,7 +227,7 @@ def get_all_class_abilities_used():
         for key, value in stats.items():
           if 'abilities' in key and not stats[key] is None:
             abilities += value
-  return abilities 
+  return abilities
 
 def get_non_existent_abilities():
   race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
@@ -274,7 +266,7 @@ def print_header(level, name, file_stream):
   file_stream.write('Level {0} {1}:\n'.format(level,name))
   file_stream.write('\n')
 
-def print_stats(stats, file_stream): 
+def print_stats(stats, file_stream):
   file_stream.write("Stats:\n")
   for stat, value in stats.items():
     file_stream.write("    {0} {1}\n".format(stat, value))
@@ -331,7 +323,7 @@ def game_stats():
     total+=len(lis)
     print('    {0} {1} abilities'.format(len(lis), key))
   print()
-  
+
   total = 0
   all_spellbooks = rnr_utils.get_all_spellbooks()
   spell_counts = {}
@@ -478,7 +470,7 @@ def check_weapons(print_errors=True):
 
 def is_word_unknown(word, spell, new_words):
   if len(spell.unknown([word,])) == 1 and word not in new_words:
-    return True  
+    return True
   else:
     return False
 
@@ -518,7 +510,7 @@ def fix_spelling_errors(words, spell, rnr_dictionary):
         if correct == True:
           rnr_dictionary.add(element)
         else:
-          errors.add(element)   
+          errors.add(element)
   return errors
 
 def just_find_typos(words, spell, rnr_dictionary):
@@ -594,9 +586,9 @@ def spell_check(fix_errors=True, print_errors=True):
   # if len(spell_errors) > 0:
   #   all_errors["spellbooks"] = list(spell_errors)
   # if len(ability_errors) > 0:
-  #   all_errors["abilities"] = list(ability_errors)  
+  #   all_errors["abilities"] = list(ability_errors)
 
-  
+
 
   # ##############################################
   # # ABILITIES
@@ -629,7 +621,7 @@ def spell_check(fix_errors=True, print_errors=True):
       print("The following values are misspelled in {0}".format(file))
       for error in errors:
         print("  {0}".format(error))
-  
+
   return all_errors
 
 # Returns a list of errors found in a description.
@@ -649,14 +641,14 @@ def string_key_check(dictionary, key, err_name, required=True, punctuation_check
 def check_known_beasts():
   all_errors = list()
   for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
-    
+
     # all_errors += string_key_check(category_info, 'description', category)
     # all_errors += string_key_check(category_info, 'tactics', category)
 
     if not 'types' in category_info:
       all_errors.append(f'{category}: no types defined.')
       continue
-    
+
     for beast_class, beasts in category_info['types'].items():
       all_errors += string_key_check(beasts, 'description', beast_class)
       all_errors += string_key_check(beasts, 'tactics', beast_class)
@@ -703,7 +695,7 @@ def check_known_beasts():
               all_errors.append(f'{beast}: bad value for health')
           except Exception as e:
             all_errors.append(f'{beast}: malformed health')
-        
+
         if 'action_spec' in info:
           for key, val in info['action_spec'].items():
             if not isinstance(val, str):
@@ -734,7 +726,7 @@ def check_known_beasts():
                   all_errors.append(f'{beast} {action}: bad damage {a_info["damage"]}')
               except Exception as e:
                 all_errors.append(f'{beast} {action}: (exception) bad damage {a_info["damage"]}')
-            
+
             if not 'description' in a_info:
               all_errors.append(f'{beast} {action}: no description')
             else:
@@ -830,7 +822,7 @@ if __name__ == '__main__':
   print('GENERATING VITALITY CHARTS')
   vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
   print('GENERATING RACE RANKINGS')
-  rank_races() 
+  rank_races()
   print("GENERATING CLASS RANKINGS")
   rank_classes()
   print("GENERATING CHARACTER RANKINGS")

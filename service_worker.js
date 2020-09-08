@@ -16,8 +16,9 @@
 // in turn trigger the install event again.
 const PRECACHE = 'precache-v0.0.22';
 const RUNTIME = 'runtime-v0.0.22';
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
   console.log(`Workbox loaded.`);
@@ -404,11 +405,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "5be0cdbdb0163937713cd4fde8949a9d"
+    "revision": "27b41a71e9a9b62addb4dd5fff8c4ade"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "e56a1a5e443ab80a6cac0fe00be27da4"
+    "revision": "68f9d6d28ffa0cf7a1719e427e8c9925"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
@@ -420,7 +421,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "998703d5d7a9c9ce75abb0e3f7bbe9af"
+    "revision": "088090eccad59e710302781f39e5f564"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
@@ -432,7 +433,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "c58b6512ad392026c76b63c8a9303e4a"
+    "revision": "7c9deddb8a117d7a7da7f8377b4ec496"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
@@ -524,7 +525,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "d54a9bf2d73953055feacee9d45fba79"
+    "revision": "8a900074f8632a1b4bce441380fe9aae"
   },
   {
     "url": "assets/css/style.css",
@@ -542,9 +543,17 @@ workbox.precaching.precacheAndRoute([
 //   })
 // );
 
-workbox.routing.registerRoute(
-  /\.(?:js|css)$/,
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: 'static-resources',
-  })
-);
+// workbox.routing.registerRoute(
+//   /\.(?:js|css)$/,
+//   new workbox.strategies.StaleWhileRevalidate({
+//     cacheName: 'static-resources',
+//   })
+// );
+
+
+addEventListener('message', (event) => {
+  console.log("message received I  guess.")
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    skipWaiting();
+  }
+});

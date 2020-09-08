@@ -8,6 +8,7 @@ import shutil
 from pathlib import Path
 import argparse
 import copy
+import io_handler
 
 GENERATED_SITE_DIRECTORY = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'pages', 'GENERATED')
 
@@ -93,7 +94,7 @@ def publish_character_creation(force_overwrite):
   global PREFERRED_IMAGES
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
-  
+
   md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Compendium_of_Character_Creation.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
@@ -101,15 +102,15 @@ def publish_character_creation(force_overwrite):
   rnr_class_wrappers = rnr_utils.load_all_class_wrappers()
 
   race_lines = []
-  for race in sorted(rnr_race_wrappers, key=lambda x: x.race_name):
-    race_lines += race.markdownify(PREFERRED_IMAGES)
+  for race_wrapper in sorted(rnr_race_wrappers, key=lambda x: x.race_name):
+    race_lines += io_handler.get_rnr_race_wrapper_markdown(race_wrapper, PREFERRED_IMAGES)
 
   class_lines = []
-  for rnr_class in sorted(rnr_class_wrappers, key=lambda x: x.class_name):
-    class_lines += rnr_class.markdownify(PREFERRED_IMAGES)
+  for class_wrapper in sorted(rnr_class_wrappers, key=lambda x: x.class_name):
+    class_lines += io_handler.get_rnr_class_wrapper_markdown(class_wrapper, PREFERRED_IMAGES)
 
-  skills = rnr_utils.markdown_skills()
-  
+  skills = io_handler.markdown_skills()
+
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
@@ -118,7 +119,7 @@ def publish_character_creation(force_overwrite):
   md.slurp_markdown_lines(class_lines)
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'skills_part.md'))
   md.slurp_markdown_lines(skills)
-  
+
   md._write_topmatter()
   md._write_section(f'Compendium of Character Creation')
   md.write_toc()
@@ -127,16 +128,16 @@ def publish_character_creation(force_overwrite):
 def publish_ancients(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
-  
+
   md = markdown_handler.markdown_handler(f'The Tome of the Ancients', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Tome_of_the_Ancients.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
-  spells = rnr_utils.markdown_spellbooks()
-  
+  spells = io_handler.markdown_spellbooks()
+
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'ancients_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'spells_part.md'))
   md.slurp_markdown_lines(spells)
-  
+
   md._write_topmatter()
   md._write_section(f'The Tome of the Ancients')
   md.write_toc()
@@ -145,7 +146,7 @@ def publish_ancients(force_overwrite):
 def publish_examples(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
-  
+
   md = markdown_handler.markdown_handler(f'The Book of Examples', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Examples.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
@@ -171,7 +172,7 @@ def publish_rulebook(force_overwrite):
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'stat_computation.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_redirect.md'))
-  
+
   md._write_topmatter()
   md._write_section(f'Rangers and Ruffians Rulebook')
   md.write_toc(max_to_include=3)
@@ -193,18 +194,18 @@ def publish_book_of_known_beasts(force_overwrite):
   for category in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
     md.start_heading(f"{category.replace('_',' ').title()}:", 2)
     c_info = rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category]
-    
+
     if 'description' in c_info:
       md.paragraph(f">{c_info['description']}")
       md.add_whitespace()
 
     if 'tactics' in c_info:
       md.paragraph(f"___{c_info['tactics']}___")
-    
+
     for beast_class in sorted(c_info['types'].keys()):
       md.start_heading(f"{beast_class.replace('_',' ').title()}:", 3)
       b_info = c_info['types'][beast_class]
-      
+
       if 'description' in b_info:
         md.paragraph(f">{b_info['description']}")
         md.add_whitespace()
@@ -227,15 +228,15 @@ def publish_book_of_known_beasts(force_overwrite):
         md.paragraph(f"* __Health:__ {info['health']}")
 
         # This looks gross, but we're looping through stat names and then putting a nice little +/- effective stat.
-        my_stats = [ f"{info['stats'][x]} ({'+' if int(info['stats'][x]) >= 0 else ''}{rnr_utils.convert_stat_to_effective_stat(int(info['stats'][x]))})" for x in stats ]
+        my_stats = [f"{info['stats'][x]} ({'+' if int(info['stats'][x]) >= 0 else ''}{int(info['stats'][x])})" for x in stats ]
 
-        md.paragraph(f"* __Spell Power:__ { 12 + rnr_utils.convert_stat_to_effective_stat( info['stats']['Inner_Fire'] ) } ")
+        md.paragraph(f"* __Spell Power:__ { 12 + info['stats']['Inner_Fire'] } ")
         md.paragraph(f"* __Movement:__")
         for key, val in info['movement'].items():
           md.paragraph(f"  * __{key.title()}:__ {val} feet")
                 #movement_str = '  '.join([f"{key.title()}: _{val}_" for key, val in info['movement'].items() ])
 
-        
+
         if 'armor' in info:
           md.paragraph(f"* __Armor:__ {info['armor']}")
         if 'magic_armor' in info:
@@ -265,7 +266,7 @@ def publish_book_of_known_beasts(force_overwrite):
         for action, a_info in info['actions'].items():
           action_str = f"* __{action.replace('_', ' ').title()}:__"
           if 'damage' in a_info:
-            damage_addition = rnr_utils.convert_stat_to_effective_stat(info['stats'][a_info['modifier']])
+            damage_addition = info['stats'][a_info['modifier']]
             action_str = f"{action_str} _{a_info['damage']} + {damage_addition} {a_info['modifier'].replace('_', ' ').title()}._"
           action_str = f"{action_str} {a_info['description']}"
           md.paragraph(action_str)
@@ -299,7 +300,7 @@ def publish_pantheon(force_overwrite):
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
-  pantheon = rnr_utils.markdown_pantheon()
+  pantheon = io_handler.markdown_pantheon()
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'pantheon_part.md'))
   md.slurp_markdown_lines(pantheon)
 
@@ -314,7 +315,7 @@ def publish_poohbah_printables(force_overwrite):
 
   md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Poohbah_Printables.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
-  
+
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'poohbah_printables_part.md'))
 
@@ -328,14 +329,14 @@ def publish_printabled_materials(force_overwrite):
 
   md = markdown_handler.markdown_handler(f'Printed Materials', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Printed_Materials.md'))
   md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
-  
+
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'printed_materials.md'))
 
   md._write_topmatter()
   md._write_section(f'Printed Materials')
   md.write_buffer()
-  
+
 def publish_changelog(force_overwrite):
   docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
   parts_directory = os.path.join(docs_directory, 'parts')
@@ -359,7 +360,7 @@ def publish_changelog(force_overwrite):
     header_append = f'-{i}' if i > 0 else ''
     i += 1
     md.slurp_markdown_file(os.path.join(changelog_directory, filename))#, header_append=header_append, prepend=False)
-  
+
   md._write_topmatter()
   md._write_section(f'Changelog')
   md.write_toc(max_to_include=3)
@@ -387,7 +388,7 @@ def create_alt_all_race_class_json():
   for race in all_race_data.keys():
     for subrace in all_race_data[race]['subraces'].keys():
       all_race_data[race]['subraces'][subrace]['abilities'] = rnr_utils.filterAbilities(all_race_data[race]['subraces'][subrace]['abilities'])
-  
+
   for rnr_class in all_class_data.keys():
     for subclass in all_class_data[rnr_class]["subclasses"].keys():
       all_class_data[rnr_class]["subclasses"][subclass]["icons"] = rnr_utils.which_icons('', rnr_class)
@@ -400,8 +401,8 @@ def create_alt_all_race_class_json():
         all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'])
 
   data = {
-    'race_names' : rnr_utils.get_all_subrace_names(), 
-    'class_names' : rnr_utils.get_all_subclass_names(), 
+    'race_names' : rnr_utils.get_all_subrace_names(),
+    'class_names' : rnr_utils.get_all_subclass_names(),
     'races' : all_race_data,
     'classes' : all_class_data,
     'items' : items_data,
@@ -420,7 +421,7 @@ def create_alt_all_race_class_json():
       "roles" : obj.roles
     }
     unique_roles.update(set(obj.roles))
-  
+
   data["roles"]["unique_roles"] = list(unique_roles)
 
   tooltips = {
@@ -487,7 +488,7 @@ if __name__ == "__main__":
   print(f"Yes is {force_overwrite}")
 
 
-  update_version = False  
+  update_version = False
   try:
     new_version = input('Is this a new edition? If so, what is the new number? ')
     major, greater, minor = new_version.split('.')

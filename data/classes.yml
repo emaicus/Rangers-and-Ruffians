@@ -8,20 +8,23 @@ Barbarian:
       - Boozehound
       - Ruffians
       base_stats:
-        Charisma: -2
+        Charisma: -1
         Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: -3
-        Luck: 0
+        Inner_Fire: 1
+        Intelligence: -2
         Perception: 0
         Strength: 2
+      expertise_choices:
+        - Strength
+        - Dexterity
+        - Inner_Fire
       description: Path of Rage Barbarians are hearty, and can dole out a lot of damage, making them
         great tanks for a party of adventurers. They are marked by their berserk ability,
         which allows them to fly into a battle frenzy, gaining extra attacks and health.
         Barbarians cannot use magic, and are much better up close than at a distance.
         They are known for their rugged ways, and usually prefer wide open spaces to
         cities.
-      health_die_pieces: 6
+      health_die_pieces: 10
       levels:
         level_0:
           abilities:
@@ -98,19 +101,22 @@ Barbarian:
       - Boozehound
       - Ruffians
       base_stats:
-        Charisma: -3
+        Charisma: -2
         Dexterity: 2
-        Inner_Fire: -2
-        Intelligence: 0
-        Luck: 0
-        Perception: -1
+        Inner_Fire: 1
+        Intelligence: -1
+        Perception: 0
         Strength: 1
+      expertise_choices:
+        - Inner_Fire
+        - Dexterity
+        - Strength
       description: "The Path of Nature Barbarian is deeply in tune with the power that infuses
                     the beasts of the world. By harnessing and infusing themselves with these
                     powers, Path of Nature Barbarians can take on the aspects of animals,
                     gaining powerful abilities as a result. Path of Nature Barbarians are
                     highly versatile and mobile, and make good support tanks and frontline fighters."
-      health_die_pieces: 6
+      health_die_pieces: 10
       levels:
         level_0:
           abilities:
@@ -186,17 +192,20 @@ Knight:
       roles: ["tank", "area-control", "non-magic", "good-first-class"]
       base_stats:
         Charisma: 0
-        Dexterity: -3
+        Dexterity: -2
         Inner_Fire: 1
-        Intelligence: -1
-        Luck: 0
-        Perception: -2
+        Intelligence: 1
+        Perception: -1
         Strength: 2
+      expertise_choices:
+        - Inner_Fire
+        - Strength
+        - Intelligence
       description: "The Stalwart Knight is a are heavy, armored fighter who should place themselves between
         their party and harm's way. The ideal knight is a bastion of good, a defender
         of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and
         are able to deal heavy damage to nearby enemies, and to protect nearby allies."
-      health_die_pieces: 6
+      health_die_pieces: 10
       levels:
         level_0:
           abilities:
@@ -256,31 +265,32 @@ Knight:
           abilities:
           - Warrior's Vow
       questions:
-      - How did your character get where they are, and where they are going next?
-      - Are they already annointed as a knight, or are they still aspiring to knighthood?
-      - Do they follow the code of chivalry, or consider it to be a guideline?
-      - How will being a knight affect the way that you interact with your party?
-      standings: Knights are loved by kingsmen, and distrusted by hedge knights and
-        rangers. Knights are duty bound to fight the lawless.
+        - How did your character get where they are, and where they are going next?
+        - Are they already annointed as a knight, or are they still aspiring to knighthood?
+        - Do they follow the code of chivalry, or consider it to be a guideline?
+        - How will being a knight affect the way that you interact with your party?
       tag_line: Shield of the Party # DONE
 Paladin:
   subclasses:
     Paladin:
       roles: ["tank", "mage", "spellbooks", "complex", "support", "healer", "ranged", "self-sufficient"]
       base_stats:
-        Charisma: -1
+        Charisma: 1
         Dexterity: 0
         Inner_Fire: 2
-        Intelligence: -2
-        Luck: 0
-        Perception: -3
+        Intelligence: -1
+        Perception: -2
         Strength: 1
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Strength
       description: "Paladins are Soldiers of the Light, and are adept both at hand to
         hand combat and healing magic. Paladins are devoted to their deity, and
         aim to bring their influence into the world. Paladins are especially good at
         taking out evil entities, and are known for their Faithful Weapon ability, which
         lets them summon their weapon to their hand after throwing it."
-      health_die_pieces: 6
+      health_die_pieces: 8
       levels:
         level_0:
           abilities:
@@ -352,27 +362,28 @@ Paladin:
           - Greater Holy Shield #Healing
           - Tier Four Spells
       questions:
-      - What deity does your character worship?
-      - What their relationship is like with their deity? Do they pray to them often?
-      - How did their path lead them to devoting themself to a deity?
-      - What were they like before committing to being a paladin?
-      - How do they react to people who are not of the faith?
-      - How will being a paladin affect the way they interact with their party?
-      standings: Paladins are generally respected. They hate evil, and try to destroy
-        it wherever they find it.
+        - What deity does your character worship?
+        - What their relationship is like with their deity? Do they pray to them often?
+        - How did their path lead them to devoting themself to a deity?
+        - What were they like before committing to being a paladin?
+        - How do they react to people who are not of the faith?
+        - How will being a paladin affect the way they interact with their party?
       tag_line: Soldier of Light
 Ranger:
   subclasses:
     Ranger:
       roles: ["self-sufficient", "good-first-class", "high-damage", "mage", "ranged", "sneaky", "nature-based"]
       base_stats:
-        Charisma: -3
+        Charisma: -1
         Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
-        Luck: 1
+        Inner_Fire: 0
+        Intelligence: 1
         Perception: 2
         Strength: -2
+      expertise_choices:
+        - Dexterity
+        - Intelligence
+        - Perception
       description: "Rangers are the vigilante law keepers and monster hunters of the
         wilds. Tank-like fighters, Rangers are powerful dexterity based combatants,
         and are known for their
@@ -386,7 +397,7 @@ Ranger:
         # at navigating the wilderness? Do they feel the need to protect villagers? What
         # kinds of monsters have they fought? Who trained them, if anyone? How will being
         # a ranger affect the way that you interact with your party?
-      health_die_pieces: 4
+      health_die_pieces: 8
       levels:
         level_0:
           abilities:
@@ -457,7 +468,6 @@ Ranger:
         level_15:
           abilities:
           - Fire and Ice
-      standings: Barbarians are the enemies of law keepers.
       tag_line: "Dual Wielding Tracker"
 # LIGHT FIGHTER
 # Beastmaster:
@@ -544,13 +554,16 @@ Fighter:
     Telepath:
       roles: ["high-damage", "mage", "support", "ranged", "area-control", "complex"]
       base_stats:
-        Charisma: -1
-        Dexterity: 2
-        Inner_Fire: -3
-        Intelligence: -2
-        Luck: 1
-        Perception: 0
-        Strength: 1
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 0
+        Perception: -1
+        Strength: 2
+      expertise_choices:
+        - Dexterity
+        - Inner_Fire
+        - Strength
       description: "Magic suffuses the world, flowing around and through all things.
                     The telepath has learned to harness that flow, manipulating the current of
                     magic to affect the world around them. This ability allows the telepath to
@@ -559,7 +572,7 @@ Fighter:
                     The Telepath Fighter is a powerful combatant, able to push, pull, hoisted
                     and mentally batter their enemies. Telepaths are among the best suited
                     fighters to destroy an enemy mage."
-      health_die_pieces: 4
+      health_die_pieces: 6
       levels:
         level_0:
           abilities:
@@ -626,12 +639,11 @@ Fighter:
           abilities:
           - Triple Concentration # Concentrate on three things.
       questions:
-      - Does your character specialize in strength or dexterity based weapons?
-      - How did they learn to fight, and why are they good at it?
-      - Do they like fighting?
-      - What are their goals?
-      - How will being a fighter affect the way that you interact with your party?
-      standings: Fighters come from all walks of life.
+        - Does your character specialize in strength or dexterity based weapons?
+        - How did they learn to fight, and why are they good at it?
+        - Do they like fighting?
+        - What are their goals?
+        - How will being a fighter affect the way that you interact with your party?
       tag_line: Front-line combatant
 Highborn:
   subclasses:
@@ -641,13 +653,16 @@ Highborn:
       - My Father's Coffers
       - The Family Sword
       base_stats:
-        Charisma: 1
+        Charisma: 2
         Dexterity: 0
-        Inner_Fire: 2
-        Intelligence: -2
-        Luck: 1
-        Perception: -3
-        Strength: -1
+        Inner_Fire: 1
+        Intelligence: -1
+        Perception: -2
+        Strength: 1
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Strength
       description: "The Heroic Highborn is a beacon of fierce nobility, brining hope
                     and inspiration to their people. The Heroic Highborn is a powerful fighter
                     which supports its allies by granting them inspiration. As a Heroic Highborn
@@ -658,7 +673,7 @@ Highborn:
       #   to rally people to their side. While the typical highborn is not as hardened
       #   as a knight or fighter, they are able to call upon their gumption for spurts
       #   of incredible heroism.
-      health_die_pieces: 4
+      health_die_pieces: 8
       levels:
         level_0:
           abilities:
@@ -726,27 +741,28 @@ Highborn:
           abilities:
           - Bravery #: Gain 1d4 Gumption at the start of every battle.
       questions:
-      - Why is your character embarking on their adventure? Are they out to prove themself?
-        Or perhaps they are idealistic and want adventure?
-      - Are they brave?
-      - Do they know what they are getting themselves into?
-      - Where are your character's parents, and what is their relationship with them?
-      - How will being a highborn affect how you interact with others and your party?
-      standings: Of noble birth, your character is loved by their people, but is prone
-        to attacks by thieves and brigands.
+        - Why is your character embarking on their adventure? Are they out to prove themself?
+          Or perhaps they are idealistic and want adventure?
+        - Are they brave?
+        - Do they know what they are getting themselves into?
+        - Where are your character's parents, and what is their relationship with them?
+        - How will being a highborn affect how you interact with others and your party?
       tag_line: Noble Adventurer # DONE
 Monk:
   subclasses:
     Monk:
       roles: ["sneaky", "high-damage", "non-magic", "self-sufficient", "mobile"]
       base_stats:
-        Charisma: -3
+        Charisma: -2
         Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: -2
-        Luck: 1
+        Inner_Fire: 1
+        Intelligence: 0
         Perception: 2
         Strength: -1
+      expertise_choices:
+        - Dexterity
+        - Inner_Fire
+        - Perception
       description: "Monks are masters of hand to hand combat who use their extensive
         control of their bodies to overcome their foes. The monk is a powerful front-line
         combatant, which excels at making multiple rapid attacks against an enemy, chipping
@@ -757,7 +773,7 @@ Monk:
         # gain by doing so? How do they react in stressful situations? How do they interact
         # with other people? Are they quiet and reserved? Confident and sure of themself?
         # How will being a monk affect the way you interact with your party?
-      health_die_pieces: 4
+      health_die_pieces: 6
       levels:
         level_0:
           abilities:
@@ -842,13 +858,16 @@ Rogue:
     Thief:
       roles: ["mobile", "sneaky", "complex", "mobile", "low-health", "non-magic"]
       base_stats:
-        Charisma: 0
+        Charisma: 1
         Dexterity: 2
-        Inner_Fire: -2
-        Intelligence: -1
-        Luck: 2
+        Inner_Fire: -1
+        Intelligence: 0
         Perception: 1
-        Strength: -3
+        Strength: -2
+      expertise_choices:
+        - Charisma
+        - Dexterity
+        - Perception
       description: "Sneaktheives and criminals, Thieves have often fallen in with bad
         company. Thieves are incredibly nimble and stealthy, and are able to clime, sneak,
         and lockpick their way into most anything. They are very weak, however, and
@@ -857,7 +876,7 @@ Rogue:
         from in the shadows, letting their more armored friends soak up the damage.
         Then, after attacking, they disengage from combat, fleeing back to the shadows
         to prepare for their next attack."
-      health_die_pieces: 2
+      health_die_pieces: 4
       levels:
         level_0:
           abilities:
@@ -927,24 +946,26 @@ Rogue:
           abilities:
           - Redirecting Dodge # Redirect
       questions:
-      - Does your character have a moral code?
-      - Who do they tend to target, and why?
-      - Do their crimes involve hurting people? Theivery? Information gathering?
-      - How did they get so good at what they do?
-      - How will being a rogue affect how you interact with your party?
-      - Remember, just because you are a rogue doesn't mean you can't have friends!
-      standings: Thieves hate law keepers and Thief Catchers
+        - Does your character have a moral code?
+        - Who do they tend to target, and why?
+        - Do their crimes involve hurting people? Theivery? Information gathering?
+        - How did they get so good at what they do?
+        - How will being a rogue affect how you interact with your party?
+        - Remember, just because you are a rogue doesn't mean you can't have friends!
       tag_line: Sneak-thief
     Assassin:
       roles: ["mobile", "mage", "sneaky", "good-first-class", "mobile", "low-health", "high-damage", "self-sufficient"]
       base_stats:
-        Charisma: 0
+        Charisma: -1
         Dexterity: 2
-        Inner_Fire: -2
-        Intelligence: -1
-        Luck: 2
+        Inner_Fire: 1
+        Intelligence: 0
         Perception: 1
-        Strength: -3
+        Strength: -2
+      expertise_choices:
+        - Dexterity
+        - Inner_Fire
+        - Perception
       description: "Experts at dealing massive damage to a single target,
                     assassins are among the most deadly fighters on the battlefield.
                     With low-health and light armor, the assassin must rely on their
@@ -952,7 +973,7 @@ Rogue:
                     art of magic, using their powers to augment their abilities, and
                     even to turn invisible before sinking a poisoned dagger between an
                     enemy's ribs."
-      health_die_pieces: 2
+      health_die_pieces: 4
       levels:
         level_0:
           abilities:
@@ -1024,13 +1045,12 @@ Rogue:
           abilities:
           - All-consuming Shadow
       questions:
-      - Does your character have a moral code?
-      - Who do they tend to target, and why?
-      - Do their crimes involve hurting people? Theivery? Information gathering?
-      - How did they get so good at what they do?
-      - How will being a rogue affect how you interact with your party?
-      - Remember, just because you are a rogue doesn't mean you can't have friends!
-      standings: Thieves hate law keepers and Thief Catchers
+        - Does your character have a moral code?
+        - Who do they tend to target, and why?
+        - Do their crimes involve hurting people? Theivery? Information gathering?
+        - How did they get so good at what they do?
+        - How will being a rogue affect how you interact with your party?
+        - Remember, just because you are a rogue doesn't mean you can't have friends!
       tag_line: Sneak-thief #DONE
 # MAGE
 Bard:
@@ -1043,11 +1063,15 @@ Bard:
       base_stats:
         Charisma: 2
         Dexterity: 0
-        Inner_Fire: -1
+        Inner_Fire: 1
         Intelligence: 1
-        Luck: 1
-        Perception: -2
-        Strength: -3
+        Perception: -1
+        Strength: -2
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Dexterity
+        - Intelligence
       description: "Showmen by nature, Bards are known for their skills at performing
         and distracting others from the sorrows of life. Bards are usually at least
         a little bit gaudy and outgoing. They are quick in a fight, and often fight
@@ -1136,21 +1160,24 @@ Cleric:
     who can make a huge difference in combat. Clerics try to embody the ideals of
     their deity, paying them homage and working to enact their will in the world."
   subclasses:
-    Cleric of Beauty:
+    Cleric:
       base_abilities:
       - Spell Choice
       base_stats:
         Charisma: 1
         Dexterity: -1
-        Inner_Fire: 0
+        Inner_Fire: 1
         Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
+        Perception: 0
+        Strength: -2
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Intelligence
       description: Servant of Lady Dusk. Followers of the Pale Lady seek rewards
         from their dark goddess in return for helping her conform the world to her
         ideals.
-      health_die_pieces: 2
+      health_die_pieces: 4
       levels:
         level_0:
           abilities:
@@ -1231,1137 +1258,6 @@ Cleric:
       standings: Clerics are friends to all those who fight for good, and get along
         especially well with Holy Knights, Paladins, and members of their church.
       tag_line: Healer
-    Cleric of Fertility:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Naris. Followers of Naris, aim to spread life and love
-        throughout the world.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Minor Goddess of Rest
-          - Goddess of Growth
-        level_1:
-          abilities:
-          - Holy Orders
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Beautiful
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Greater Goddess of Rest
-          - Ceremony of Growing
-          - Goddess of Animal Husbandry
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Beacon of Growth
-          - Ageless
-        level_9:
-          abilities:
-          - Greater Purge Decay
-        level_10:
-          abilities:
-          - Major Goddess of Rest
-          - Ceremony of Fertility
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Aura of Constitution
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Legendary Goddess of Rest
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Fun:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Juliet. Clerics of Juliet seek to bring fun and chaos
-        to the world.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Minor Goddess of Luck
-          - Goddess of Entertainers
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Always Lucky
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Greater Frenetic Energy
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Major Goddess of Luck
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Winning Smile
-          - Sly
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Greater Goddess of Luck
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Frenetic Energy
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Healing:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Aunora. Followers of Aunora, called the Hands of Aunora,
-        seek to bring peace and healing to the world.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Minor Goddess of Healing
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Halo
-          - Burning Bright
-          - Sparing Presence
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Angelic Wings
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Aura of Healing
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Kind
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Greater Goddess of Healing
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Purity
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Knowledge:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Raghnal. Followers of Raghnal, called the Eyes of Raghnal,
-        seek to gather information to safeguard the realms, and to keep knowledge
-        from evil eyes.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Minor God of Intelligence
-          - Knowledge of the Arcane
-          - Learned
-          - Natural Intellect
-        level_1:
-          abilities:
-          - Holy Orders
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - All the Little Creatures
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Greater God of Intelligence
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Wide Eyes
-        level_9:
-          abilities:
-          - Greater Purge Decay
-        level_10:
-          abilities:
-          - Major God of Intelligence
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Precognition
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Legendary God of Intelligence
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Law:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant of Iro. Followers of Iro, called the Watchers, uphold the
-        word of law.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Lawbringer
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Aura of Courage
-          - Bane of the Unholy
-          - Greater Guardian of the Realms
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Major Resilience
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Major Guardian of the Realms
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Minor Resilience
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Minor Guardian of the Realms
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Greater Resilience
-          - Unwavering
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Nature:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Ronar. Followers of Ronar, called the Ronari, are called
-        to preserve nature and end conflict wherever they find it.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - God of Conflict Resolution
-          - God of the Woods
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - God of Growing
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Major Beast Shape
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Legendary God of Growing
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Lesser Beast Shape
-          - All the Little Creatures
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - God of Marriage
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Greater Beast Shape
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Nothingness:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of The Void Father. Followers of the Void Father aim to
-        aid their master in obliterating existence.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Oblivion
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Lamb to the Slaughter
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Antimagic Essense
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Feed on Life
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Ward of Antimagic
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Ceremony of Sleep
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Shepherd of Darkness
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Sin:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Melekar. Followers of Melekar serve the Lord of Sin
-        by expanding his influence by subjugating the weak.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Lord of Cruelty
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Major Lord of Cruelty
-          - Major Harvester of Souls
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Aura of Pain
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Bound to Service
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Harvester of Souls
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Greater Lord of Cruelty
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Horns
-          - Demonic Strength
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of The Downtrodden:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Eandar. Followers of Eandar, called the Browncloaks,
-        seek to help the common man in whatever way they can.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - God of the Common Man
-          - Distrusted by Authorities
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Greater Helpful God
-          - Face of the People
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Freedom of Movement
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Major Helpful God
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Sly
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Minor Helpful God
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Forgettable
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of The Hunt:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Yilena. Followers of Yilena, called Wardens, are called
-        to protect the wilds from evil, and to keep balance in the natural world.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Goddess of the Woods
-          - Goddess of the Hunt
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Expert Tracker
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - True Sight
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Legendary Warrior Goddess
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Darkvision
-          - All the Little Creatures
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Goddess of Marriage
-          - Warrior Goddess
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Warden of the Woods
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of The Sea:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Hesh. Followers of Hesh are called to the sea.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - Goddess of the Water
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Icy Strike
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Become Mist
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - The Mother of Chaos
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Flows Like Water
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Goddess of Navigation
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Waterbreathing
-          - Goddess of the Icy Depths
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
-    Cleric of Undeath:
-      base_abilities:
-      - Spell Choice
-      base_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 2
-        Luck: 2
-        Perception: -2
-        Strength: -3
-      description: Servant  of Illael. Followers of Illael seek to further their dark
-        god's plans, and thus win necromantic immortality.
-      health_die_pieces: 2
-      levels:
-        level_0:
-          abilities:
-          - Learning Spells
-          - Learn Spells
-          - The Book of Healing
-          - Pledge
-          - Tier Zero Spells
-          - Marriage
-          - Atonement
-          - Funeral
-          - Birthing
-          - Conversion
-          - Purge Decay
-          - Guidance
-          - God of Undeath
-          - Defiled Healing
-        level_1:
-          abilities:
-          - Holy Orders
-        level_10:
-          abilities:
-          - Greater Waste Not
-        level_11:
-          abilities:
-          - Tier Four Spells
-          - Sustained Healing
-        level_12:
-          abilities:
-          - Major Offhand Spell
-        level_13:
-          abilities:
-          - Greater True Heal
-          - Untethered
-          - Feed on the Dying
-        level_14:
-          abilities:
-          - Tier Five Spells
-        level_15:
-          abilities:
-          - Major Waste Not
-        level_2:
-          abilities:
-          - Tier One Spells
-          - Lifeline
-        level_3:
-          abilities:
-          - Resistant to Decay
-        level_4:
-          abilities:
-          - Shield of Light
-        level_5:
-          abilities:
-          - Tier Two Spells
-          - Pledge
-          - Minor Waste Not
-        level_6:
-          abilities:
-          - True Heal
-        level_7:
-          abilities:
-          - Offhand Attack
-          - Offhand Spell
-        level_8:
-          abilities:
-          - Tier Three Spells
-          - Magically Sustained Body
-        level_9:
-          abilities:
-          - Greater Purge Decay
-      roles:
-      - mage
-      - spellbooks
-      - support
-      - healer
-      - low-health
-      - ranged
-      standings: Clerics are friends to all those who fight for good, and get along
-        especially well with Holy Knights, Paladins, and members of their church.
-      tag_line: Healer
 Druid:
   subclasses:
     Elementalist Druid:
@@ -2369,13 +1265,16 @@ Druid:
       base_abilities:
       - Spell Choice
       base_stats:
-        Charisma: -3
-        Dexterity: -1
+        Charisma: -2
+        Dexterity: 0
         Inner_Fire: 2
-        Intelligence: 0
-        Luck: 1
+        Intelligence: 1
         Perception: 1
-        Strength: -2
+        Strength: -1
+      expertise_choices:
+        - Inner_Fire
+        - Intelligence
+        - Perception
       description: "Earth, Water, Fire, Air. These are the domain of the
                     Elementalist. Devotees of the power of the elements,
                     the Elementalist masters the elements one after the other
@@ -2395,7 +1294,7 @@ Druid:
         # How do they feel about eating meat? What are their values? What do they think
         # the place of people is in the world? How will being a druid change the way you
         # interact with your party?"
-      health_die_pieces: 4
+      health_die_pieces: 6
       levels:
         level_0:
           abilities:
@@ -2465,13 +1364,16 @@ Necromancer:
       base_abilities:
       - Spell Choice
       base_stats:
-        Charisma: -3
+        Charisma: -2
         Dexterity: 0
         Inner_Fire: 2
         Intelligence: 1
-        Luck: 2
-        Perception: -2
+        Perception: 1
         Strength: -1
+      expertise_choices:
+        - Inner_Fire
+        - Intelligence
+        - Perception
       description: "Death is not my enemy, nor is it my ally, it is my servant. So say
         Necromancers, mages who study the intricacies of death, and what follows after.
         Often fueled by macabre fascination or a god complex, Necromancy is deeply feared
@@ -2483,7 +1385,7 @@ Necromancer:
         # such horrible magics? Was it out of necessity? Curiosity? What are they hoping
         # to accomplish? How do they rationalize what they do? Do they have any ticks
         # or quirks? How will being a necromancer affect how you interact with your party?"
-      health_die_pieces: 2
+      health_die_pieces: 4
       levels:
         level_0:
           abilities:
@@ -2557,8 +1459,6 @@ Necromancer:
         level_15:
           abilities:
           - Army of the Damned
-      standings: Necromancers are feared by most, and are actively hunted by Clerics
-        and followers of the light.
       tag_line: Death Mage
 Sorcerer:
   subclasses:
@@ -2571,9 +1471,12 @@ Sorcerer:
         Dexterity: -2
         Inner_Fire: 1
         Intelligence: 0
-        Luck: 1
-        Perception: -3
+        Perception: 1
         Strength: -1
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Perception
       description: "The Sorcerer does not learn their magic, but is rather given it either as a gift
                       or by trade. Some Sorcerers bargain with the spirits that inhabit the world,
                       granting them a chance to experience the mortal realm in exchange for magical power.
@@ -2657,13 +1560,16 @@ Wizard:
       base_abilities:
       - Historian
       base_stats:
-        Charisma: 0
+        Charisma: 1
         Dexterity: -2
         Inner_Fire: 1
         Intelligence: 2
-        Luck: 2
-        Perception: -1
-        Strength: -3
+        Perception: 0
+        Strength: -1
+      expertise_choices:
+        - Charisma
+        - Inner_Fire
+        - Intelligence
       description: "The study of magic is the study of potential, or so the wizard discovers
                     during their long hours of research. Unlike other mages who take shortcuts,
                     the wizard pours over their books to gain understanding over the magic of the
@@ -2672,7 +1578,7 @@ Wizard:
                     given coercion. Using this knowledge, their mind, an arcane focus,
                     and an assortment of magically charged objects, the wizard is able to create wondrous
                     things, and to do mighty deeds."
-      health_die_pieces: 2
+      health_die_pieces: 4
       levels:
         level_0:
           abilities:
@@ -2749,11 +1655,14 @@ Archer:
       base_stats:
         Charisma: 0
         Dexterity: 1
-        Inner_Fire: -2
+        Inner_Fire: 1
         Intelligence: -1
-        Luck: 1
         Perception: 2
-        Strength: -3
+        Strength: -2
+      expertise_choices:
+        - Dexterity
+        - Inner_Fire
+        - Perception
       description: "Some of the best marksmen in the world, archers are naturals with
         ranged weapons. They are often attached to their bow, and carry it with them
         everywhere. Masters of the trick-shot, archers learn to utilize simple magics
@@ -2820,28 +1729,30 @@ Archer:
           abilities:
           - Firestorm Arrows
       questions:
-      - Where did your character come from?
-      - How did they get so good at archery?
-      - Who trained them?
-      - How have they used their talent?
-      - What kind of person are they?
-      - What ideals do they have?
-      - What are their goals?
-      - How will being an archer affect how you interact with the rest of your party?
-      standings: Excellent archers, Marksmen come from all walks of life.
-      tag_line: Bow and Arrow Expert     # DONE
+        - Where did your character come from?
+        - How did they get so good at archery?
+        - Who trained them?
+        - How have they used their talent?
+        - What kind of person are they?
+        - What ideals do they have?
+        - What are their goals?
+        - How will being an archer affect how you interact with the rest of your party?
+      tag_line: Bow and Arrow Expert
 Gunslinger:
   subclasses:
     Marksman:
       roles: ["ranged", "high-damage", "non-magic", "good-first-class"]
       base_stats:
-        Charisma: 0
-        Dexterity: -3
-        Inner_Fire: -1
-        Intelligence: 1
-        Luck: 1
+        Charisma: 1
+        Dexterity: 1
+        Inner_Fire: 0
+        Intelligence: -1
         Perception: 2
         Strength: -2
+      expertise_choices:
+        - Charisma
+        - Dexterity
+        - Strength
       description: "Through luck, valor, or perhaps trickery, the Marksman has mastered the
         use of one of the most complicated weapons in the world. As such, they have a close
         bond with their gun, which is usually their primary means of income. Marksmen are long-distance

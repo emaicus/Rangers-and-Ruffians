@@ -21,7 +21,7 @@ Catterwol:
         for climing, more than one Catterwol has turned to the life of a sneak-theif.
         Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
         average mages, but prefer slim, dexterity based weapons.
-      health_die_pieces: 4
+      health_die_pieces: 2
       handbook:
         sections:
           - title: Silent and Dexterous
@@ -53,14 +53,9 @@ Catterwol:
                 text: When building your Catterwol, consider how they came to belong to your party. Remember
                   that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
                   their family now? What members of the party is your character close to?
-      stats:
-        Charisma: 0
-        Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
-        Luck: 1
-        Perception: 1
-        Strength: -1
+      expertise_choices:
+        - Dexterity
+        - Perception
 Elf:
   quote: Elves can be slippery folk. It seems to me that rarely say what they mean,
         and they seldom mean what they say. They're strong mages, though, and too clever
@@ -69,7 +64,7 @@ Elf:
   author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
   subraces:
     Wood Elf:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
         - Sleepless
         - Low-Light Vision
@@ -83,14 +78,9 @@ Elf:
         wood elves often make friends with the men, dwarves, sprouts, and halflings of the world.
         As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters,
         and a welcome addition to any adventuring party."
-      stats:
-        Charisma: 0
-        Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
-        Luck: 1
-        Perception: 1
-        Strength: -1
+      expertise_choices:
+        - Dexterity
+        - Perception
     High Elf:
       health_die_pieces: 2
       abilities:
@@ -106,16 +96,12 @@ Elf:
         High elves are as charming as they are naturally beautiful, and commonly feel as though
         it is their duty to maintain balance in the world. High elves make
         good mages.
-      stats:
-        Charisma: 1
-        Dexterity: 0
-        Inner_Fire: -1
-        Intelligence: 1
-        Luck: 2
-        Perception: 0
-        Strength: -1
+      expertise_choices:
+        - Dexterity
+        - Intelligence
+        - Charisma
     Deep Elf:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
         - Sleepless
         - Darkvision
@@ -127,18 +113,15 @@ Elf:
                     deep underground, dark elves have grown accustomed to the
                     darkness. Stronger than other elves, dark elves are incredible but
                     largely uncharismatic fighters."
-      stats:
-        Charisma: -2
-        Dexterity: 0
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 1
-        Perception: 1
-        Strength: 1
+      expertise_choices:
+        - Intelligence
+        - Strength
+        - Dexterity
+        - Inner_Fire
 Gnome:
   subraces:
     Gnome:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
         - Tinker
         - Build
@@ -153,14 +136,10 @@ Gnome:
         help them deal with difficult situations. Gnomes typically stand about three feet
         in height, and can be recognized by their signature goggles. Gnomes are well rounded
         and are capable of succeeding at anything they put their minds to.
-      stats:
-        Charisma: -1
-        Dexterity: 0
-        Inner_Fire: 1
-        Intelligence: 1
-        Luck: 2
-        Perception: -1
-        Strength: 0
+      expertise_choices:
+        - Inner_Fire
+        - Dexterity
+        - Intelligence
       handbook:
         sections:
           - title: Tinker
@@ -190,7 +169,7 @@ Gnome:
 Goblin:
   subraces:
     Goblin:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
         - Still Warm
         - Mantle
@@ -208,21 +187,16 @@ Goblin:
         their kills and living in the dark, goblins prefer to fight with ranged or short
         weapons. Morally good goblins are rare, and have often been outcast from their clan
         and family. This can be very painful, as goblins are communal creatures by nature.
-      stats:
-        Charisma: -1
-        Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
-        Luck: 2
-        Perception: 1
-        Strength: 0
+      expertise_choices:
+        - Dexterity
+        - Perception
 Halfling:
   quote: Halflings are decent enough, and fun to be around. They have potential as
         rogues since they can see without being seen, but I'm not sure if they're clever enough.
   author: Vasha, Catterwol Thief
   subraces:
     Fleetfoot Halfling:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
         - Dodge
         - Nimble
@@ -234,16 +208,12 @@ Halfling:
                     make great thieves, archers, and fighters. They are naturally tricksters, are and are
                     adept at sqeezing into tight spots. On average, fleetfoot halflings
                     stand at three feet and have warm, chestnut colored eyes and hair."
-      stats:
-        Charisma: 0
-        Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 2
-        Perception: 1
-        Strength: -2
+      expertise_choices:
+        - Dexterity
+        - Charisma
+        - Intelligence
     Hardfoot Halfling:
-      health_die_pieces: 4
+      health_die_pieces: 0
       abilities:
         - Sling
         - Warm Butter
@@ -258,18 +228,14 @@ Halfling:
                     either a true call to adventure or a calamity that wrests them from the comfort of their home.
                     Once they become adventurers, however, hardfoot halflings tend to be courageous,
                     hearty, resilient warriors."
-      stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 1
-        Intelligence: -1
-        Luck: 1
-        Perception: 0
-        Strength: 0
+      expertise_choices:
+        - Inner_Fire
+        - Charisma
+        - Dexterity
 Human:
   subraces:
     Human:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
       - Last Stand
       - Strength of Men
@@ -283,18 +249,13 @@ Human:
         Humans tend to be varied, and have the potential to succeed in all walks of life.
         It is their natural willpower that
         makes them a force to be reckoned with."
-      stats:
-        Charisma: 0
-        Dexterity: -1
-        Inner_Fire: 1
-        Intelligence: 0
-        Luck: 1
-        Perception: -1
-        Strength: 1
+      expertise_choices:
+        - Strength
+        - Inner_Fire
 Lizkin:
   subraces:
     Lizkin:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
       - Color Choice
       - Smokevision
@@ -308,18 +269,15 @@ Lizkin:
                     With the ability to taste scents on the air and to change
                     their color at will, Lizkin make equally dangerous
                     warriors and mages."
-      stats:
-        Charisma: -1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 1
-        Perception: 1
-        Strength: 1
+      expertise_choices:
+        - Dexterity
+        - Strength
+        - Inner_Fire
+        - Perception
 Waterborn:
   subraces:
     Waterborn:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
       - Water Breathing
       - Flows Like Water
@@ -337,18 +295,13 @@ Waterborn:
         ruddy, splotched skin which dries up if it isn't exposed to water regularly.
         Waterborn are powerful magic users, and are naturally adept at charming
         the other races.
-      stats:
-        Charisma: 1
-        Dexterity: 0
-        Inner_Fire: -1
-        Intelligence: 1
-        Luck: 2
-        Perception: 0
-        Strength: -1
+      expertise_choices:
+        - Charisma
+        - Intelligence
 Orc:
   subraces:
     Orc:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
       - Predator
       - Bellow
@@ -361,18 +314,13 @@ Orc:
       author: unattributed folk wisdom
       description: "A brutish and warlike race, orcs stab first and ask questions later.
                     Orcs are often used to living in harsh environments, and living off the land."
-      stats:
-        Charisma: -2
-        Dexterity: 0
-        Inner_Fire: 1
-        Intelligence: 0
-        Luck: 1
-        Perception: 0
-        Strength: 1
+      expertise_choices:
+        - Inner_Fire
+        - Strength
 Dwarf:
   subraces:
     Dwarf:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
       - Stocky
       - Very Dangerous Over Short Distances
@@ -387,18 +335,13 @@ Dwarf:
                     Dwarves prefer low places, and many of their strongholds can be found deep
                     within mountain ranges. Dwarves have a shrewd eye for business, and have
                     been known to drink their adversaries under the table.
-      stats:
-        Charisma: 0
-        Dexterity: -2
-        Inner_Fire: 1
-        Intelligence: 0
-        Luck: 1
-        Perception: 0
-        Strength: 1
+      expertise_choices:
+        - Inner_Fire
+        - Strength
 Daemonspawn:
   subraces:
     Daemonspawn:
-      health_die_pieces: 4
+      health_die_pieces: 2
       abilities:
       - Fix Your Eyes on Me
       - Sacrificial Rite
@@ -412,18 +355,13 @@ Daemonspawn:
       description: The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained.
                    Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
                    vigilant and trusts no one.
-      stats:
-        Charisma: -1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 1
-        Luck: 1
-        Perception: 0
-        Strength: 1
+      expertise_choices:
+        - Intelligence
+        - Charisma
 Sprout:
   subraces:
     Sprout:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
         - Photosynthesis
         - Scurry
@@ -442,18 +380,13 @@ Sprout:
                     fast, and good at sneaking. The wise sprout should avoid the front line of combat, and instead stay in relative hiding,
                     jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see
                     a sprout knight attempting to make a name for themself.
-      stats:
-        Charisma: 0
-        Dexterity: 1
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 2
-        Perception: 1
-        Strength: -2
+      expertise_choices:
+        - Perception
+        - Dexterity
 Automaton:
   subraces:
     Automaton:
-      health_die_pieces: 6
+      health_die_pieces: 2
       abilities:
       - Power Core
       - Overdrive
@@ -473,18 +406,14 @@ Automaton:
       description: The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
                     reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is
                     to be an automaton, and the quest for meaning is a path that all such beings must walk.
-      stats:
-        Charisma: -1
-        Dexterity: -1
-        Inner_Fire: 0
-        Intelligence: 0
-        Luck: 0
-        Perception: 0
-        Strength: 2
+      expertise_choices:
+        - Strength
+        - Inner_Fire
+        - Dexterity
 Hissling:
   subraces:
     Hissling:
-      health_die_pieces: 2
+      health_die_pieces: 0
       abilities:
         - Small Fry
         - All Tuckered Out
@@ -512,18 +441,13 @@ Hissling:
         of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years,
         and can reproduce just a few years after.
         "
-      stats:
-        Charisma: 0
-        Dexterity: 1
-        Inner_Fire: -1
-        Intelligence: 0
-        Luck: 2
-        Perception: 1
-        Strength: -1
+      expertise_choices:
+        - Dexterity
+        - Perception
 Kragraven:
   subraces:
     Kragraven:
-      health_die_pieces: 4
+      health_die_pieces: 0
       abilities:
         - Peck
         - High Jump
@@ -534,11 +458,6 @@ Kragraven:
       author: Old Man Mcuffit, Racist Old Man
       description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive,
                     taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
-      stats:
-        Charisma: -1
-        Dexterity: 0
-        Inner_Fire: -1
-        Intelligence: 1
-        Luck: 1
-        Perception: 1
-        Strength: 0
+      expertise_choices:
+        - Intelligence
+        - Perception
