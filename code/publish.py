@@ -400,6 +400,13 @@ def create_alt_all_race_class_json():
       for level in all_class_data[rnr_class]["subclasses"][subclass]['levels']:
         all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'])
 
+
+  # # Scrub the item data
+  # for weapon_type in items_data['weapons'].keys():
+  #   for weapon, weapon_info in items_data[weapon_type].items():
+  #     r = weapon_info['range']
+  #     if r == ''
+
   data = {
     'race_names' : rnr_utils.get_all_subrace_names(),
     'class_names' : rnr_utils.get_all_subclass_names(),

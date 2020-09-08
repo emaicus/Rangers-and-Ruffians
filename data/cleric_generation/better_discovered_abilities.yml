@@ -1,0 +1,486 @@
+Ageless:
+  brief: Fueled by your deity's power, you no longer age.
+  description: Fueled by your deity's power, you no longer age.
+  type: general
+All the Little Creatures:
+  brief: You are able to speak the tongue of the animals.
+  description: You are able to speak the tongue of the animals.
+  type: general
+Always Lucky:
+  brief: Regain 1d4 luck tokens during a short rest.
+  description: Regain 1d4 luck tokens during a short rest.
+  type: general
+Angelic Wings:
+  brief: For 1 Action Point, summon angelic wings to your back for one hour. These
+    give you an effect identical to the fly spell.
+  description: Summon angelic wings to your back for one hour.
+  cost: 1
+  type: general
+Antimagic Essense:
+  brief: All spells have half potency when used against you.
+  description: All spells have half potency when used against you.
+  type: general
+Aura of Constitution:
+  brief: Allies within 30 feet of you are immune to the effects of poison.
+  description: Allies within 30 feet of you are immune to the effects of poison.
+  type: general
+Aura of Healing:
+  brief: Allies within 30 feet of you restore 1d4 health per turn or 1d4 health every
+    ten minutes when out of combat.
+  description: Allies within 30ft. restore 1d4 health per turn or 10 mins.
+  type: general
+Aura of Pain:
+  brief: Any enemy within 30 feet of you takes a major dice of damage each turn.
+  description: Enemies within 30ft. take a major dice of damage each turn.
+  type: general
+Beacon of Growth:
+  brief: Where you trod, green grass grows, and nature itself makes way for your passing.
+    As a result, you have advantage on checks made when moving through difficult natural
+    terrain.
+  description: Advantage on checks made when moving through difficult natural terrain.
+  type: advantage
+Beautiful:
+  brief: As you have served your deity, you have begun to grow more beautiful. Gain
+    advantage on charisma checks made against races who find you attractive.
+  description: Advantage on charisma checks made against races who find you attractive.
+  type: advantage
+Bound to Service:
+  brief: Any time that you slay an enemy, it is instead converted into an imp, which
+    fights for you.
+  description: When you slay an enemy, it is converted into an imp.
+  type: combat
+Brutal Attacks:
+  brief: When attacking someone who Lady Dusk has deemed to be worthless, double your
+    damage.
+  description: When attacking someone Lady Dusk deemed worthless, double damage.
+  type: combat
+Burning Bright:
+  brief: At will, you can cause your halo to blaze with the same intensity as the
+    light spell, dealing a major dice of damage to undead within 30 feet.
+  description: Cause your halo to blaze with the light spell, dealing a major dice of damage to undead within 30ft.
+  type: general
+Ceremony of Evaluation:
+  brief: As an offhand action, evaluate any entity to gain an understanding of it's
+    significance in Lady Dusk's eyes. If the creature is deemed to be insignificant,
+    gain advantage in all attacks made against it.
+  description: Offhand. Evaluate any entity. If insignificant to Lady dusk, adv on attacks.
+  type: combat
+Ceremony of Fertility:
+  brief: You are able to bless newlyweds and those seeking children to increase their
+    fertility.
+  description: Bless newlyweds and those seeking children to increase their fertility.
+  type: general
+Ceremony of Growing:
+  brief: You may make offerings and prayers to Naris to bless the growth of crops
+    or animals.
+  description: You may make offerings and prayers to Naris to bless the growth of
+    crops or animals.
+  type: general
+Ceremony of Sleep:
+  brief: When you kill an entity, you may make another attack against its soul to
+    destroy it.
+  description: When you kill an entity, you may make another attack against its soul
+    to destroy it.
+  type: general
+Defiled Healing:
+  brief: Any of your healing spells may instead be used to deal damage.
+  description: Any of your healing spells may instead be used to deal damage.
+  type: combat
+Demonic Strength:
+  brief: Gain advantage on strength checks.
+  description: Gain advantage on strength checks.
+  type: advantage
+Distrusted by Authorities:
+  brief: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
+  description: Clerics and Paladins of Eandar take disadvantage when speaking with
+    lawmen.
+  type: disadvantage
+Ever of Use:
+  brief: Once per day, channel the power of Lady Dusk to gain advantage on a check.
+  description: Once per day, channel the power of Lady Dusk to gain advantage on a
+    check.
+  type: advantage
+Face of the People:
+  brief: At will, you are able to take on the appearance of an average person from
+    the region you are in.
+  description: At will,take on the appearance of an average person from the region you are in.
+  type: general
+Feed on Life:
+  brief: When you slay an enemy's soul, immediately regain health equal to half of
+    their total hit points.
+  description: When you slay an enemy's soul, regain health equal to 1/2 their hit points.
+  type: general
+Feed on the Dying:
+  brief: You regain a major dice of health whenever an entity dies near you.
+  description: Regain a major dice of health whenever an entity dies near you.
+  type: general
+Forgettable:
+  brief: For 1 action point, call on Eandar to make it difficult for anyone who has
+    seen you over the past half hour to specifically recall what you look like or
+    what your actions were.
+  cost: 1
+  description: Call on Eandar to make it difficult for anyone who has seen you in the last 1/2 hour to recall you.
+  type: general
+Freedom of Movement:
+  brief: Your form becomes more ethereal as you worship Eandar. You are able to phase
+    through walls of 1 inch thickness, and slip through gaps of up to a finger's breadth.
+  description: Phase through walls of 1 inch thickness, and slip through gaps of up to a finger's
+    breadth.
+  type: general
+Frenetic Energy:
+  brief: You gain a boost of energy while worshiping Juliet. At the cost of 1 action
+    point, you may make a second offhand action.
+  description: Make a second offhand action.
+  cost: 1
+  type: combat
+God of Conflict Resolution:
+  brief: Gain advantage on any charisma checks made to end a fight.
+  description: Gain advantage on any charisma checks made to end a fight.
+  type: general
+God of Growing:
+  brief: At the start of each turn during combat or once every hour, regain 1d4 health.
+    Stacks with Photosynthesis.
+  description: At the start of each turn during combat or once every hour, regain
+    1d4 health. 
+  type: general
+God of Marriage:
+  brief: Gain an additional 10 health if you are under the effect of a Marriage or
+    Pledge ritual.
+  description: Gain an additional 10 health if you are under the effect of a Marriage
+    or Pledge ritual.
+  type: general
+God of Undeath:
+  brief: You have access to the macabre manual.
+  description: You have access to the macabre manual.
+  type: general
+God of the Common Man:
+  brief: Clerics and Paladins of Eandar have advantage on charisma checks when speaking
+    with commonfolk.
+  description: You have advantage on charisma checks when
+    speaking with commonfolk.
+  type: advantage
+God of the Woods:
+  brief: You have access to spells from the Druid's Guidebook.
+  description: You have access to spells from the Druid's Guidebook.
+  type: general
+Goddess of Animal Husbandry:
+  brief: You have advantage on animal handling checks.
+  description: You have advantage on animal handling checks.
+  type: advantage
+Goddess of Entertainers:
+  brief: You have access to the Bard's Songbook.
+  description: You have access to the Bard's Songbook.
+  type: general
+Goddess of Growth:
+  brief: You have advantage on any rolls which involve planting or otherwise growing
+    something.
+  description: You have advantage on any rolls which involve planting or
+    growing something.
+  type: general
+Goddess of Marriage:
+  brief: Gain an additional 10 health if you are under the effect of a Marriage or
+    Pledge ritual.
+  description: Gain an additional 10 health if you are under the effect of a Marriage
+    or Pledge ritual.
+  type: general
+Goddess of Navigation:
+  brief: You have advantage on tracking checks, as well as any roles involving steering,
+    guiding, or working on a ship.
+  description: You have advantage on tracking checks, as well as any roles involving
+    working on a ship.
+  type: advantage
+Goddess of the Hunt:
+  brief: Gain advantage on any tracking and foraging checks. Your spells also have
+    extra potency when cast on beasts. Depending on the spell, this can add an additional
+    dice of damage, healing an extra turn of duration, or give a beast advantage or
+    disadvantage on relavant checks.
+  description: Adv on tracking. Spell potency vs beasts. 
+    Additional dice of damage/healing, disadv on checks.
+  type: advantage
+Goddess of the Icy Depths:
+  brief: You have resistance to ice and water based attacks, and have advantage on
+    relavent saves.
+  description: You have resistance to ice and water based attacks, and have advantage
+    on relavent saves.
+  type: advantage
+Goddess of the Water:
+  brief: You are able to manipulate small amounts of water at will. For example, you
+    may stop rain from falling on your head, or lift water out of a bucket.
+  description: You are able to manipulate small amounts of water at will.
+  type: general
+Goddess of the Woods:
+  brief: You are able to influence plants and vines. For example, if you are falling,
+    vines might reach out to catch you, or if you are making your way through a forest,
+    trees will lean slightly out of your way.
+  description: You are able to influence plants and vines.
+  type: general
+Greater Beast Shape:
+  brief: Freely transform into a beast of up to level 3 heavy.
+  description: Freely transform into a beast of up to level 3 heavy.
+  type: general
+Greater Frenetic Energy:
+  brief: Frenetic Energy no longer comes with a cost.
+  description: Frenetic Energy no longer comes with a cost.
+  type: combat
+Greater God of Intelligence:
+  brief: Gain two effective intelligence, and the corresponding 2 action points.
+  description: Gain two effective intelligence, and the corresponding 2 action points.
+  type: general
+Greater Goddess of Healing:
+  brief: Clerics and Paladins of Aunora may add a major dice to all healing rolls.
+  description: Clerics and Paladins of Aunora may add a major dice to all healing
+    rolls.
+  type: general
+Greater Goddess of Luck:
+  brief: Gain 2 luck tokens above your maximum.
+  description: Gain 2 luck tokens above your maximum.
+  type: general
+Greater Goddess of Rest:
+  brief: As a devoted follower of Naris, you and all allies naturally heal 1d8 more
+    from any rest that you take.
+  description: You and all allies naturally heal 1d8
+    more from any rest that you take.
+  type: general
+Greater Helpful God:
+  brief: Your spells which buff your allies last for twice the regular duration.
+  description: Your spells which buff your allies last for twice the regular duration.
+  type: general
+Greater Lord of Cruelty:
+  brief: Add two additional damage dice to any of your magic attacks.
+  description: Add two additional damage dice to any of your magic attacks.
+  type: combat
+Greater Waste Not:
+  brief: You may instantly resurrect any enemy you kill as a Zombie.
+  description: You may instantly resurrect any enemy you kill as a Zombie.
+  type: combat
+Halo:
+  brief: You can manifest a blazing halo, which grants you advantage when speaking
+    with god-fearing people or intimidating wicked ones.
+  description: You have a halo. Advantage when speaking
+    with god-fearing people or intimidating wicked ones.
+  type: general
+Harvester of Souls:
+  brief: Every time you slay an enemy, regain an action point.
+  description: Every time you slay an enemy, regain an action point.
+  type: combat
+Horns:
+  brief: You begin to grow horns as you continue to serve Melekar.
+  description: You begin to grow horns as you continue to serve Melekar.
+  type: general
+Icy Strike:
+  brief: Spend 1 action point to add a dice of ice damage to any attack.
+  cost: 1
+  description: Spend 1 action point to add a dice of ice damage to any attack.
+  type: combat
+Kind:
+  brief: Your visage and bearing become kinder as you worship Aunora. You have advantage
+    on charisma checks.
+  description: You have advantage on charisma checks.
+  type: general
+Knowledge of the Arcane:
+  brief: You have access to the Novice Spellbook.
+  description: You have access to the Novice Spellbook.
+  type: general
+Lamb to the Slaughter:
+  brief: If an entity's spirit has been broken, have them make a spell power save.
+    On failure, any moves that they make must inflict self harm.
+  description: "If an entity's spirit is broken, force an SP
+    save. Fail: any moves that they make must inflict self harm."
+  type: general
+Legendary God of Growing:
+  brief: At the start of each turn during combat or once every hour, regain 2d4 health.
+    Stacks with Photosynthesis.
+  description: At the start of each turn or 1/hr, regain
+    2d4 health. Stacks with Photosynthesis.
+  type: general
+Legendary God of Intelligence:
+  brief: Gain five effective intelligence, and the corresponding 5 action points.
+  description: Gain five effective intelligence, and the corresponding 5 action points.
+  type: general
+Legendary Goddess of Rest:
+  brief: Regain 2d12 additional health from any rest that you take and cure any status
+    effects.
+  description: Regain 2d12 additional health from any rest that you take and cure
+    any status effects.
+  type: general
+Legendary Warrior Goddess:
+  brief: Add two additional dice of damage to any attack spell that you cast.
+  description: Add two additional dice of damage to any attack spell that you cast.
+  type: combat
+Lesser Beast Shape:
+  brief: Freely transform into a beast of up to level 0 light.
+  description: Freely transform into a beast of up to level 0 light.
+  type: general
+Lord of Cruelty:
+  brief: Add an additional dice of damage to any of your magic attacks.
+  description: Add an additional dice of damage to any of your magic attacks.
+  type: combat
+Magically Sustained Body:
+  brief: Your body passively feeds on the life around it, you now require 1/10th the
+    food, and only 2 hours of sleep.
+  description: Your body passively feeds on the life around it, you now require 1/10th
+    the food, and only 2 hours of sleep.
+  type: general
+Major Beast Shape:
+  brief: Freely transform into a beast of up to level 5 heavy.
+  description: Freely transform into a beast of up to level 5 heavy.
+  type: general
+Major God of Intelligence:
+  brief: Gain three effective intelligence, and the corresponding 3 action points.
+  description: Gain three effective intelligence, and the corresponding 3 action points.
+  type: general
+Major Goddess of Luck:
+  brief: Gain 3 luck tokens above your maximum.
+  description: Gain 3 luck tokens above your maximum.
+  type: general
+Major Goddess of Rest:
+  brief: As a champion of Naris, you and all allies naturally heal 1d12 more from
+    any rest that you take.
+  description: Heal 1d12 more
+    from any rest that you take.
+  type: general
+Major Harvester of Souls:
+  brief: Every time an enemy is slain near you, gain an action point.
+  description: Every time an enemy is slain near you, gain an action point.
+  type: combat
+Major Helpful God:
+  brief: Your spells which buff allies have extra potency. Multiply the effectiveness
+    of any spell which buff an allies stats by 2.
+  description: Multiply the effectiveness
+    of any spell which buff an allies stats by 2.
+  type: general
+Major Lord of Cruelty:
+  brief: Add three additional damage dice to any of your magic attacks.
+  description: Add three additional damage dice to any of your magic attacks.
+  type: combat
+Major Waste Not:
+  brief: You may instantly resurrect any enemy you kill as a Ghoul.
+  description: You may instantly resurrect any enemy you kill as a Ghoul.
+  type: combat
+Minor God of Intelligence:
+  brief: Gain one effective intelligence, and the corresponding action point.
+  description: Gain one effective intelligence, and the corresponding action point.
+  type: general
+Minor Goddess of Healing:
+  brief: Clerics and Paladins of Aunora may add a lesser dice to all healing rolls.
+  description: Clerics and Paladins of Aunora may add a lesser dice to all healing
+    rolls.
+  type: general
+Minor Goddess of Luck:
+  brief: Gain 1 luck token above your maximum.
+  description: Gain 1 luck token above your maximum.
+  type: general
+Minor Goddess of Rest:
+  brief: As a follower of Naris, you and all allies naturally heal 1d4 additional health
+    from any rest you take.
+  description: Heal 1d4 additional health
+    from any rest you take.
+  type: general
+Minor Helpful God:
+  brief: Your spells which buff your allies have extra potency. Depending on the spell,
+    this may mean increasing the effect by one, for example by granting +2 strength
+    instead of +1, or giving them an inspiration dice that is one size larger.
+  description: Add +1 to any spell you cast which buffs an ally.
+  type: general
+Minor Waste Not:
+  brief: You may instantly resurrect any enemy you kill as a skeleton.
+  description: You may instantly resurrect any enemy you kill as a skeleton.
+  type: combat
+No Mercy for the Weak:
+  brief: Any action that you take against an entity on death's door instantly slays
+    the entity.
+  description: Any action that you take against an entity on death's door instantly
+    slays the entity.
+  type: combat
+Oblivion:
+  brief: You do not dream, and you cannot be affected by sleep based spells.
+  description: You do not dream, and you cannot be affected by sleep based spells.
+  type: general
+Perfect:
+  brief: You have slowly been transformed into a perfect version of yourself. Lose
+    any disadvantage you may have and gain advantage on all charisma checks.
+  description: Lose any disadvantage you may have and gain advantage on all charisma checks.
+  type: advantage
+Precognition:
+  brief: You are able to predict a few seconds into the future. All targeted attacks
+    against you must be made with disadvantage.
+  description: All targeted
+    attacks against you must be made with disadvantage.
+  type: combat
+Purge the Useless:
+  brief: You gain advantage on attacks made against any entity that is sick or cursed.
+  description: You gain advantage on attacks made against any entity that is sick
+    or cursed.
+  type: advantage
+Purity:
+  brief: Healing spells cast by a Cleric or Paladin of Aunora remove most status effects
+    from injured individuals.
+  description: Your healing spells remove most status effects.
+  type: general
+Resistant to Decay:
+  brief: You take half damage from necrotic attacks.
+  description: You take half damage from necrotic attacks.
+  type: combat
+Shepherd of Darkness:
+  brief: Force an enemy to make an spell power save. On failure, their spirit is broken,
+    and they take disadvantage in all things until they succeed.
+  description: Force an SP save. On failure, broken spirit. Disadv until save.
+  type: general
+Sly:
+  brief: You become better at evading trouble as you worship your deity. Take advantage
+    on checks made while hiding, lying, or otherwise obfuscating the truth.
+  description: Advantage on checks made while hiding, lying, or otherwise obfuscating the truth.
+  type: advantage
+Sparing Presence:
+  brief: If an ally within 30 feet of you is reduced to less than zero health, it's
+    health immediately returns to zero. The ally remains on death's door, and must
+    continue to make inner fire saves.
+  description: If an ally within 30 feet of you is reduced to less than zero health,
+    it's health immediately returns to zero.
+  type: general
+Still of Use:
+  brief: Once per day, when you would have fallen in combat, instead get to your feet
+    with one quarter health.
+  description: 1/day, when you hit 0 health, instead get to
+    your feet with one quarter health.
+  type: general
+The Mother of Chaos:
+  brief: Gain one free tier 5 spell cast per day.
+  description: Gain one free tier 5 spell cast per day.
+  type: general
+Untethered:
+  brief: You no longer require food or sleep. You are aware of pain, but it does not
+    bother you.
+  description: You no longer require food or sleep. You are aware of pain, but it
+    does not bother you.
+  type: general
+Ward of Antimagic:
+  brief: Once per day, choose to shrug off the effects of a spell.
+  description: Once per day, choose to shrug off the effects of a spell.
+  type: combat
+Warden of the Woods:
+  brief: You are able to commune with all of nature around you for one mile, gaining
+    some level of understanding about the lay of the land, and where enemies may be
+    hiding.
+  description: You are able to commune with all of nature around you for one mile,
+    gaining some level of understanding about the lay of the land, and where enemies
+    may be hiding.
+  type: general
+Warrior Goddess:
+  brief: Add an additional dice of damage to any attack spell that you cast.
+  description: Add an additional dice of damage to any attack spell that you cast.
+  type: combat
+Waterbreathing:
+  brief: You are able to breathe underwater.
+  description: You are able to breathe underwater.
+  type: general
+Wide Eyes:
+  brief: You have advantage on perception checks, including initiative roles.
+  description: You have advantage on perception checks, including initiative roles.
+  type: advantage
+Winning Smile:
+  brief: As you worship Juliet, you become more convincing. Gain advantage on Charisma
+    checks.
+  description: As you worship Juliet, you become more convincing. Gain advantage on
+    Charisma checks.
+  type: advantage

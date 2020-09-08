@@ -24,7 +24,14 @@
         </div>
         <div class="weapon-info">
           <span class="small-title">
-            Movement Penalty
+            Damage Type:
+          </span>
+          <span>
+            {{weapon_data.damage_type | title }}
+          </span>
+          <br>
+          <span class="small-title">
+            Movement Penalty:
           </span>
           <span>
             {{weapon_data.movement_penalty}} feet
@@ -34,7 +41,7 @@
             Range:
           </span>
           <span>
-            {{weapon_data.range}}
+            {{weapon_data.range | title }}
           </span>
           <br>
 
@@ -66,5 +73,99 @@
         </div>
       </div>
     {% endfor %}
+
   {% endfor %}
+  {% for shield, shield_data in data.shields %}
+    <div class="weapon">
+        <div class="weapon-header">
+          <span class="weapon-name">
+            {{ shield }}
+          </span>
+          <img src="/site/icons/shield.svg" class="weapon-icon">
+        </div>
+        <div class="weapon-info">
+          <span class="small-title">
+            Movement Penalty:
+          </span>
+          <span>
+            {{shield_data.movement_penalty}} feet
+          </span>
+          <br>
+
+          {% if shield_data.abilities | length > 0 %}
+            <span class="small-title">
+              Abilities:
+            </span>
+            <ul>
+            {% for ability_name, ability_description in shield_data.abilities %}
+              <li>
+                <span class="small-title">{{ ability_name }}:</span> {{ability_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if shield_data.drawbacks | length > 0 %}
+            <span class="small-title">
+              Drawbacks:
+            </span>
+            <ul>
+            {% for drawback_name, drawback_description in shield_data.drawbacks %}
+              <li>
+                <span class="small-title">{{ drawback_name }}:</span> {{drawback_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+  {% endfor %}
+
+
+  {% for armor, armor_data in data.armor %}
+    <div class="weapon">
+        <div class="weapon-header">
+          <span class="weapon-name">
+            {{ armor }}
+          </span>
+          <img src="/site/icons/shield.svg" class="weapon-icon">
+        </div>
+        <div class="weapon-info">
+          <span class="small-title">
+            Movement Penalty:
+          </span>
+          <span>
+            {{armor_data.movement_penalty}} feet
+          </span>
+          <br>
+
+          {% if armor_data.abilities | length > 0 %}
+            <span class="small-title">
+              Abilities:
+            </span>
+            <ul>
+            {% for ability_name, ability_description in armor_data.abilities %}
+              <li>
+                <span class="small-title">{{ ability_name }}:</span> {{ability_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if armor_data.drawbacks | length > 0 %}
+            <span class="small-title">
+              Drawbacks:
+            </span>
+            <ul>
+            {% for drawback_name, drawback_description in armor_data.drawbacks %}
+              <li>
+                <span class="small-title">{{ drawback_name }}:</span> {{drawback_description}}
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+  {% endfor %}
+
 </div>

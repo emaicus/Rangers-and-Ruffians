@@ -309,7 +309,7 @@ __Catterwol Abilities:__
   * __Darkvision:__ You can see even in perfect darkness.  
   * __Land on your feet:__ Decrease any falling damage by 20 feet.  
 * __Combat Abilities:__   
-  * __They're Retractable:__ You have retractable, razor sharp claws which add +1 damage to your punching or kicking attacks.  
+  * __They're Retractable:__ You have retractable, razor sharp claws which add +2 damage to your punching or kicking attacks.  
   
   
   

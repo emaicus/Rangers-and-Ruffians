@@ -47,8 +47,6 @@ EXPERTISES = {
   'inner_fire': ['Wisdom', 'Willpower']
 }
 
-
-
 class rnr_race():
   #Base constructor
   def __init__(self, name, subrace, abilities, description, quote, quote_author, handbook, health_die_pieces, expertise_choices):
