@@ -4,10 +4,10 @@ spellbook:
       cost: 0
       target: ["friendly", "enemy", "self", "space", "other"]
       num_targets: [1, "many"]
-      duration: #, save, battle, concentration, infinite
+      duration: #, save, battle, # hours, concentration, infinite
       description: "What the spell does at a high level."
       purpose: <damage, healing, buff, debuff, summon, utility>
-      range: <self, hand, near, archer, far>
+      range: <self, hand, close, near, archer, far>
       school: Below.
 
       --------------- COMBAT---------------------------------------
@@ -17,17 +17,17 @@ spellbook:
         - description: "Effect description."
           check_condition: "If present, explains when the check must be made." Effected entities must make a effect.save save
           save: <"spell_power", "strength", ...>
-          repeat: 
+          repeat:
             - first case
             - second case
             - third case (combined with commas then an or)
       -------------------- RARE -------------------------------
       casting_time: A number of turns. Defaults to 1.
-      components: 
+      components:
         - "lowercase thing needed. e.g. a tortoise shell"
       upcast:
         cost: <# or scaling>
-        effect: 
+        effect:
       action_type: <action, offhand_action, reaction, free_action>
       effect_radius: # number of feet, defaults to 1
       charisma_cost: Computed based on 5 + (3 x cost) if not specified.
@@ -35,6 +35,7 @@ spellbook:
 Range Macros:
   self -> a descriptor for targetting oneself.
   hand -> a descriptor for zero.
+  close -> 15ft
   near -> 30 ft.
   archer -> 60ft.
   far -> 300ft.
@@ -68,4 +69,5 @@ potential spell schools:
     - Animist
     - Floral
   - Arcane
+    - Conjuring
   - Necromantic
