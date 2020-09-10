@@ -442,17 +442,6 @@ the_bard's_songbook:
     Zone of Truth:
       cost: 3
       description: Create a zone with a 15 foot radius in which all must speak truthfully.
-  Tier_5:
-    Death Note:
-      balance_type: damage candidate
-      cost: 5
-      description: Play a combination of sounds which instantly deals 8d8 damage everyone
-        within 15 feet of you.
-      major_damage_dice: 8d8d8 8
-    Dominate Person:
-      cost: 5
-      description: An entity must perform an inner fire check against your spell power.
-        If they fail, they are dominated until dispelled, and must do as you command.
     Edmire's Grand Manor:
       cost: 2
       description: Summon a pocket dimension containing a huge mansion, capable of
@@ -464,6 +453,17 @@ the_bard's_songbook:
         etc.). Only individuals that you want to have access to the mansion may enter
         it. The mansion lasts 24 hours. Nothing that originated within the mansion
         may be taken out. However, items brought in may stay.
+  Tier_5:
+    Death Note:
+      balance_type: damage candidate
+      cost: 5
+      description: Play a combination of sounds which instantly deals 8d8 damage everyone
+        within 15 feet of you.
+      major_damage_dice: 8d8d8 8
+    Dominate:
+      cost: 5
+      description: An entity must perform an inner fire check against your spell power.
+        If they fail, they are dominated until dispelled, and must do as you command.
     Guards:
       balance_type: healing candidate
       cost: 5

@@ -6,8 +6,8 @@ spellbook:
       num_targets: [1, "many"]
       duration: #, save, battle, # hours, concentration, infinite
       description: "What the spell does at a high level."
-      purpose: <damage, healing, buff, debuff, summon, utility>
       range: <self, hand, close, near, archer, far>
+      purpose: <damage, healing, buff, debuff, summon, utility>      
       school: Below.
 
       --------------- COMBAT---------------------------------------
@@ -26,8 +26,9 @@ spellbook:
       components:
         - "lowercase thing needed. e.g. a tortoise shell"
       upcast:
-        cost: <# or scaling>
-        effect:
+        cost: <# or scaling> 
+        effect: <each additional action point spent on this spell> 
+                <you may spend N additional action points on this spell to>
       action_type: <action, offhand_action, reaction, free_action>
       effect_radius: # number of feet, defaults to 1
       charisma_cost: Computed based on 5 + (3 x cost) if not specified.
@@ -39,6 +40,33 @@ Range Macros:
   near -> 30 ft.
   archer -> 60ft.
   far -> 300ft.
+
+potential spell schools:
+  - Divine
+  - Necromantic
+  - Natural
+    - Elemental
+      - Fire
+      - Water
+      - Earth
+      - Air
+    - Animist
+    - Floral
+  - Arcane
+    - Conjuring 
+    - Destruction
+    - Transmuatation
+    - Abnegation 
+    - Transportation 
+    - Divination
+    - Illusion
+    - Enchantment
+      - mind 
+      - matter
+    - Somatic (body)
+    # - Invocation
+    - Acoustic
+  - Necromantic
 
 Average damage per tier:
   0: 7
@@ -58,16 +86,4 @@ Components: <list of components>
 Requirements: All spells should have one of description, minor_effect, major_effect.
 
 
-potential spell schools:
-  - Divine
-  - Natural
-    - Elemental
-      - Fire
-      - Water
-      - Earth
-      - Air
-    - Animist
-    - Floral
-  - Arcane
-    - Conjuring
-  - Necromantic
+
