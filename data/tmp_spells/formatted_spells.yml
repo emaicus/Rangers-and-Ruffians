@@ -406,7 +406,7 @@ the_bard's_songbook:
             cost: 2
             target: other
             num_targets: 1
-            duration: concentration
+            duration: infinite
             description: Summon a steed made of pure magical energy. The stallion has 20
               health, and may be de-summoned on command.
             range: near
@@ -452,7 +452,7 @@ the_bard's_songbook:
             duration: 1
             description: Fire a blast of pure sound at a target.
             range: archer
-            purpose: damage 
+            purpose: damage
             school: arcane-acoustic
             dice: 6d8
             effect_type: psychic
@@ -529,34 +529,186 @@ the_bard's_songbook:
                 effect: make the change permanent
         Mass Trickery:
             cost: 2
-            description: Force everyone within a 100 foot radius to make a spell power save.
-                On failure, convice them that they see something that is not there.
+            target: enemy
+            num_targets: many
+            duration: save
+            description: Attempt to convice everyone nearby that they see something that is not there.
+            range: 1
+            effect_radius: 30
+            purpose: debuff
+            school: arcane-enchantment-mind
             effects:
-                candidate: true
+              - save: Spell Power
+                description: "the entity is convinced that it sees something that it does not."
+                repeat:
+                  - at the end of each of their turns
         Power Shriek:
-            balance_type: damage candidate
-            cost: 2
-            description: Let loose a shriek that does 4d6 damage to all that hear it. If
-                those who hear it fail an spell power save, they are rendered deaf, and perform
-                all actions with disadvantage for a turn.
+            cost: 3
+            target: enemy
+            num_targets: many
+            duration: 1
+            range: near
+            purpose: damage
+            description: Let loose a shriek centered on a single enemy.
             effects:
-                candidate: true
-            major_damage_dice: 4d6d4 6
+                - description: they are rendered deaf, and perform all actions with disadvantage for a turn
+                  save: Spell Power
+            school: arcane-acoustic
+            dice: 8d8
+            effect_type: psychic
         Song of Healing:
-            balance_type: healing candidate
-            cost: 2
-            description: Heal an ally for 4d10 health.
-            major_healing_dice: 4d10d4 10
+            cost: 3
+            dice: 3d10
+            effect_type: healing
+            target: friendly
+            num_targets: 1
+            duration: 1
+            description: Play a soothing song embued with magic which heals an ally.
+            range: near
+            purpose: healing
+            school: arcane-somatic
     Tier_4:
-        Song of Aging:
-            action_type: Offhand Action Candidate
+        Get Me Out of Here:
+            cost: 3
+            target: self
+            num_targets: 1
+            duration: 1
+            description: Teleport to a random place in the world that is at least 5 miles
+                from your current position.
+            range: 5 miles
+            purpose: utility
+            school: arcane-transportation
+        Lightning Strike:
+            cost: 3
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Call down a blast of lightning on an enemy.
+            range: archer
+            purpose: damage
+            school:  natural-elemental-air
+            dice: 9d10
+            effect_type: elemental
+        Mass Suggestion:
+            cost: 3
+            description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
+            target: enemy
+            num_targets: many
+            duration: 5
+            range: archer
+            effects:
+              - save: Spell Power
+                description: the entity must follow your orders
+                repeat:
+                    - "if they are asked to do anything that causes themselves or those they care about harm"
+                    - "once per minute, or once per turn in combat"
+            purpose: debuff
+            school: arcane-enchantment-mind
+        Strike Dumb:
+            cost: 3
+            target: enemy
+            num_targets: 1
+            duration: infinite
+            description: Speak a phrase so mindbendingly convoluted that it breaks an entity's mind
+            range: archer
+            purpose: debuff
+            effects:
+                - description: its intelligence is treated
+                    as -5. They lose the ability to speak, read, and otherwise communicate outside
+                    of grunts. This lasts until dispelled.
+                  save: Spell Power
+            school: arcane-enchantment-mind
+        Winged Magic Steed:
             cost: 2
-            description: Force an enemy to make a spell power save. On failure, the enemy
-                begins aging at a rate of 10 years per turn. You may continue this spell as
-                an offhand action each turn. The aging lasts until it is dispelled.
+            target: other
+            num_targets: 1
+            duration: infinite
+            description: Summon a winged steed made of pure magical energy. The stallion
+                has 20 health, and may be de-summoned on command.
+            range: near
+            purpose: summon
+            school: arcane-conjuring
+        Zone of Truth:
+            cost: 2
+            target: space
+            num_targets: 1
+            duration: concentration
+            description: Create a zone in which all must speak truthfully.
+            range: hand
+            effect_radius: 30
+            purpose: utility
+            casting_time: 15
+            school: arcane-enchantment-mind
+        Edmire's Grand Manor:
+            cost: 2
+            target: other
+            num_targets: 1
+            duration: 24 hours
+            purpose: utility
+            school: arcane-conjuring
+            description: Summon a pocket dimension containing a huge mansion, capable of
+                housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
+                fully stocked with extravagant food and drink. The mansion is manned by 100
+                servants, which are at the beck and call of the mansions creator. Upon learning
+                this spell, the bard may design the mansion to have rooms that suit the needs
+                of their party (e.g. a holy sanctum, dungeons, training grounds, a kitchen,
+                etc.). Only individuals that you want to have access to the mansion may enter
+                it. The mansion lasts 24 hours. Nothing that originated within the mansion
+                may be taken out. However, items brought in may stay.
+        Song of Aging:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to sap the life from an enemy.
+            range: near
+            effects:
+                - description: Force an enemy to make a spell power save. On failure, the enemy
+                    begins aging at a rate of 10 years per turn. You may continue this spell as
+                    an offhand action each turn. The aging lasts until it is dispelled.
+                  save: Spell Power
+            purpose: debuff
+            school: arcane-somatic
+    Tier_5:
+        Death Note:
+            balance_type: damage candidate
+            cost: 4
+            description: FIXSpeak a word of incredible power,
+            major_damage_dice: 8d8d8 8
+        Dominate:
+            cost: 5
+            description: An entity must perform an inner fire check against your spell power.
+                If they fail, they are dominated until dispelled, and must do as you command.
+        Guards:
+            balance_type: healing candidate
+            cost: 5
+            description: Summon 1d4 ethereal guardians to aid you. The guardians remain
+                for 12 hours. They each have 50 health, and do 3d8 + 8 damage per attack.
+            major_healing_dice: 1d4d1 4
+        Manifest Will:
+            cost: 5
+            description: Say two words. The thing that you ask for appears. Restrictions
+                apply.
+        Mass Song of Healing:
+            balance_type: healing candidate
+            cost: 5
+            description: Heal all allies in earshot for 4d10 health.
+            major_healing_dice: 4d10d4 10
+        Rewrite History:
+            cost: 5
+            description: Cast on everyone in earshot you wish. If they fail a spell power
+                save, re-write up to one hour of their memory.
             effects:
                 candidate: true
-    Tier_5:
+        Torugar, the Many Tongued Demon:
+            balance_type: damage candidate
+            cost: 5
+            description: Summon a pit, housing an ancient, many tongued demon of the underworld.
+                Every turn for 5 turns, 1d6 tongues will writhe forth from the pit, and attempt
+                to grab individuals within 1000 feet. If an individual is grabbed (fails a
+                dexterity check against your spell power) it sustains 4d8 damage. If the blow
+                kills the creature, it is ripped down into the pit, and is irrecoverable.
+            major_damage_dice: 1d6d1 6
         Curse of the Lowlife:
             cost: 2
             description: Force an enemy to make a spell power save. On failure, they are
