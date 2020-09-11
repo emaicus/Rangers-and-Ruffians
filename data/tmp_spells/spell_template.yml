@@ -2,20 +2,21 @@ spellbook:
   Tier:
     Title:
       cost: 0
-      target: ["friendly", "enemy", "self", "space", "other"]
+      target: ["friendly", "enemy", "friend and foe", "self", "space", "other"]
       num_targets: [1, "many"]
       duration: #, save, battle, # hours, concentration, infinite
       description: "What the spell does at a high level."
-      range: <self, hand, close, near, archer, far>
+      range: <self, hand, close, near, archer, far, infinite>
       purpose: <damage, healing, buff, debuff, summon, utility>      
       school: Below.
 
       --------------- COMBAT---------------------------------------
+      hit: <always, roll, other>
       dice: "xdy"
       effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, radiant>
       effects:
-        - description: "Effect description."
-          check_condition: "If present, explains when the check must be made." Effected entities must make a effect.save save
+        - condition: e.g. once graplled, (empty by default)
+          description: "effected enemies must make a effect.save save or"
           save: <"spell_power", "strength", ...>
           repeat:
             - first case
@@ -44,6 +45,7 @@ Range Macros:
 potential spell schools:
   - Divine
   - Necromantic
+    - summoning
   - Natural
     - Elemental
       - Fire

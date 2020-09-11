@@ -190,22 +190,22 @@ def get_average_weapon_for_level(level):
 
 
 def get_average_magic_weapon_for_level(level):
-  # Levels 0-1, Tier 0
+  # Levels 0-1, Tier 0. 7 damage
   if level < 2:
     return rnr_weapon(2, 6, hit_modifier=0)
-  # Levels 2-4, Tier 1
+  # Levels 2-4, Tier 1, 14 damage
   elif level < 5:
     return rnr_weapon(4, 6, hit_modifier=1)
-  # Levels 5-7, Tier 2
+  # Levels 5-7, Tier 2, 27 damage
   elif level < 8:
     return rnr_weapon(6, 8, hit_modifier=1)
-  # Levels 8-9, Tier 3
+  # Levels 8-9, Tier 3, 36 damage
   elif level < 10:
     return rnr_weapon(8, 8, hit_modifier=2)
-  # Levels 10-12, Tier 4
+  # Levels 10-12, Tier 4, 50 damage
   elif level < 13:
     return rnr_weapon(9, 10, hit_modifier=2)
-  # Levels 13-15, Tier 5
+  # Levels 13-15, Tier 5, 70 damage
   else:
     return rnr_weapon(20, 6, hit_modifier=2)
 
