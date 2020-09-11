@@ -733,7 +733,7 @@ the_bard's_songbook:
             duration: 1
             description: Play a chord of incredible power, with the strength to kill.
             range: archer
-            purpose: damage 
+            purpose: damage
             school: arcane-acoustic
             hit: always
             effects:
@@ -800,21 +800,21 @@ the_bard's_songbook:
             range: far
             dice: 4d8
             effect_type: blunt
-            purpose: damage 
+            purpose: damage
             hit: other
             school: necromantic-summoning
             effects:
                 - description: be grappled by the tongue and begin taking damage
                   save: strength save against your spell power
                 - condition: once grappled
-                  description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.   
+                  description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
     # Tier_3:
     #   Forget:
     #     cost: 2
     #     description: Force an entity to make a spell power save. On failure, the entity
     #       forgets 1d10 minutes of your choosing.
 the_druid's_guidebook:
-  Tier_0:
+    Tier_0:
         Claws:
               cost: 1
               target: self
@@ -905,15 +905,15 @@ the_druid's_guidebook:
               purpose: utility
               school: arcane-transmutation
         Spider Web:
-              cost: 1
-              target: space
-              num_targets: 1
-              range: hand
-              duration: concentration
-              description: "Create incredibly sticky spiderweb, capable of holding a person.
-                    You are able to create it at the rate of five cubic feet per minute."
-              purpose: utility
-              school: "natural-animist"
+            cost: 1
+            target: space
+            num_targets: 1
+            range: hand
+            duration: concentration
+            description: "Create incredibly sticky spiderweb, capable of holding a person.
+                         You are able to create it at the rate of five cubic feet per minute."
+            purpose: utility
+            school: "natural-animist"
         Walk on Water:
               cost: 1
               target: self
@@ -945,7 +945,7 @@ the_druid's_guidebook:
               target: enemy
               num_targets: 1
               range: archer
-              cost: 1
+              cost: 0
               duration: 1
               description: Magically hurl a stone at an enemy.
               dice: 2d6
@@ -959,7 +959,7 @@ the_druid's_guidebook:
                       save: Spell Power
                       balance_type: greater debuff
               school: "natural-elemental-earth"
-  Tier_1:
+    Tier_1:
         Bark Armor:
             cost: 1
             target: friendly
@@ -995,7 +995,7 @@ the_druid's_guidebook:
             target: enemy
             num_targets: 1
             range: archer
-            dice: 2d4
+            dice: 3d6
             effect_type: elemental
             duration: concentration
             description: Focus a concentrated beam of either fire or ice on an enemy.
@@ -1005,7 +1005,7 @@ the_druid's_guidebook:
                   description: "or be pushed back 1d4 turns in initiative"
                 - condition: If the beam is fire
                   save: Spell Power
-                  description: "or take an additional 2d4 damage"
+                  description: "or take an additional 1d6 damage"
             purpose: damage
             school: "natural-elemental"
         Moonlight:
@@ -1024,211 +1024,209 @@ the_druid's_guidebook:
             target: enemy
             num_targets: 1
             range: near
+            dice: 4d4
             effect_type: poison
             duration: 1
             description: Hit an enemy with a blast of liquid poison.
+            effects:
+                - description: become poisoned and take 2d4 damage each turn until a save is made
+                  save: Spell Power
+                  repeat:
+                    - each turn
+            purpose: damage
             school: "natural-animist"
         Purify:
             cost: 1
-            balance_type: minor restoration
             target: friendly
             num_targets: 1
-            range: hand to hand
-            duration: instantaneous
-            combat_duration: 1
+            range: hand
+            duration: 1
             description: Remove poison from an item or person.
-            school: "divine"
-        Summon Eagles:
-            cost: 2
-            balance_type: greater damage
+            range: hand
+            purpose: healing
+            school: divine-healing
+        Summon Eagle:
+            cost: 1
             target: enemy
             num_targets: 1
-            range: archer
             duration: 1 hour
-            combat_duration: 3
-            damage_type: major
-            num_dice: 1
-            effect_type: summon
-            description: Summon an eagle which attacks an enemy.
-            effects:
-              - description: "The attacked enemy is considered harried."
-            school: "natural-animist"
+            description: Summon an eagle to aid you. The eagle is capable of lifting
+              small sized entities, has 20hp, a movement speed of 50ft, and can attack for 1d8
+              damage.
+            range: far
+            purpose: summon
+            school: natural-animist
         Tailwind:
-            balance_type: greater utility
+            cost: 1
             target: self
             num_targets: 1
-            range: hand to hand
+            range: self
             duration: concentration
-            combat_duration: concentration
-            cost: 1
             description: Summon a mighty tailwind or current behind you.
+            purpose: utility
             school: "natural-elemental-air"
         Thorned Caltrops:
-            balance_type: greater utility
             cost: 1
             target: space
             num_targets: 5
-            range: middling
-            dice_type: minor
-            num_dice: 1
             duration: 1 day
+            range: near
+            dice: 2d4
             combat_duration: battle
             description: Cast thorn based spikes onto the ground. Anyone moving across them
               will move at half speed and take damage every 5 feet.
             school: "natural-floral"
         Firebolt:
-            balance_type: greater damage
+            cost: 1
             target: enemy
             num_targets: 1
             range: archer
-            cost: 0
-            dice_type: major
-            num_dice: 1
+            dice: 4d6
             effect_type: fire
-            duration: instantaneous
-            combat_duration: 1
+            hit: roll
+            duration: 1
             description: "Fire a sizzling bolt of flames at an enemy."
             school: "natural-elemental-fire"
-#   Tier_2:
-#     Charm Animal:
-#       cost: 1
-#       target: animal
-#       num_targets: 1
-#       description: Charm an animal or beast to make it friendly towards you.
-#       balance_type: greater utility
-#       range: middling
-#       duration: until save
-#       combat_duration: save
-#       effects:
-#         - description: a hostile animal regards you as friendly.
-#           save: Spell Power
-#           balance_type: greater utility
-#           repeat: every hour
-#       school: "natural-animist"
-#     Freezing Rain:
-#       cost: 2
-#       balance_type: greater debuff
-#       description: "Cause a freezing rain to fall over one mile of terrain, making it difficult to traverse."
-#       range: archer
-#       duration: 1 hour
-#       combat_duration: battle
-#       target: enemy
-#       num_targets: battle
-#       effects:
-#         - description: "they fall prone."
-#           check_condition: "When moving at greater than half their speed across affected terrain"
-#           save: Dexterity Check against your Spell Power
-#           balance_type: greater utility
-#       school: "natural-elemental-water"
-#     Geyser:
-#       cost: 1
-#       target: space
-#       num_targets: 1
-#       balance_type: greater utility
-#       range: far
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: Create a geyser with a 3 foot radius which fires water 40 feet
-#         directly upward into the air.
-#       school: "natural-elemental-earth"
-#     Hurl Boulder:
-#       cost: 2
-#       target: enemy
-#       num_targets: 1
-#       dice_type: major
-#       num_dice: 3
-#       effect_type: force
-#       duration: instantaneous
-#       combat_duration: 1
-#       description: Hurl a boulder at an enemy.
-#       school: "natural-elemental-earth"
-#     Remove Curse:
-#       cost: 2
-#       target: friendly
-#       num_targets: 1
-#       balance_type: greater restoration
-#       duration: instantaneous
-#       combat_duration: battle
-#       description: "Immediately allow an individual to re-make a spell power save against a
-#         curse or other status effect at advantage."
-#       school: "divine"
-#     Spores:
-#       cost: 2
-#       dice_type: minor
-#       num_dice: 2
-#       effect_type: poison
-#       target: enemy
-#       num_targets: aoe
-#       effect_radius: 30
-#       balance_type: greater damage
-#       range: self
-#       duration: 1 minute
-#       combat_duration: 1
-#       description: Release poison spores. Anyone who inhales
-#         them must take damage.
-#       effects:
-#         - description: "must make all actions with disadvantage as well as being poisoned, as mushrooms begin sprouting from their bodies."
-#           save: "Spell Power"
-#           balance_type: minor debuff
-#       school: "natural-floral"
-#     Thieve's Curse:
-#       cost: 2
-#       target: entity
-#       num_targets: 1
-#       duration: eternity
-#       description: "Cast a curse on an enemy."
-#       balance_type: major debuff
-#       duration: eternity
-#       combat_duration: battle
-#       effects:
-#         - description: they are cursed so that they have an irresistible
-#             urge to steal something once per hour. Afterward, they forget their acts of thievery,
-#             and stow the stolen goods in their quarters or a private place. The curse
-#             remains until it is dispelled.
-#           save: Spell Power
-#           balance_type: major debuff
-#       school: "unknown"
-#     Wall of ice:
-#       cost: 2
-#       balance_type: major utility
-#       target: space
-#       num_targets: 8
-#       range: middling
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: Create a wall up to 15 feet high and 40 feet long of solid ice.
-#       school: "natural-elemental-water"
-#     Wall of Brambles:
-#       cost: 2
-#       balance_type: major utility
-#       target: space
-#       num_targets: 8
-#       range: middling
-#       dice_type: major
-#       num_dice: 1
-#       effect_type: moderate damage
-#       duration: 1 week
-#       combat_duration: battle
-#       description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
-#         them requires 3 dexterity checks against your spell power, each of which results
-#         damage on failure. If a check is failed, the entity is stuck in the
-#         brambles until its next turn.
-#       school: "natural-floral"
-#     Tornado:
-#       cost: 2
-#       balance_type: greater debuff
-#       range: middling
-#       target: enemy
-#       num_targets: 1
-#       description: Trap an entity of your choice in a swirling whirlwind.
-#       duration: 15 minutes
-#       combat_duration: 3
-#       effects:
-#         - description: continues to be trapped. If the entity escapes,
-#             it slams to the ground, causing 40 feet of fall damage.
-#           save: dexterity check against your spell power
-#           repeat: at the end of each of each turn
-#       school: "natural-elemental-air"
+    Tier_2:
+        Charm Animal:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: save
+            description: Charm an animal or beast to make it friendly towards you.
+            balance_type: greater utility
+            range: archer
+            combat_duration: save
+            effects:
+                - description: a hostile animal regards you as friendly.
+                  save: Spell Power
+                  balance_type: greater utility
+                  repeat: every hour
+            school: "natural-animist"
+        Freezing Rain:
+            cost: 2
+            balance_type: greater debuff
+            description: "Cause a freezing rain to fall over one mile of terrain, making it difficult to traverse."
+            range: archer
+            duration: 1 hour
+            combat_duration: battle
+            target: enemy
+            num_targets: battle
+            effects:
+                - description: "they fall prone."
+                  check_condition: "When moving at greater than half their speed across affected terrain"
+                  save: Dexterity Check against your Spell Power
+                  balance_type: greater utility
+            school: "natural-elemental-water"
+        Geyser:
+            cost: 1
+            target: space
+            num_targets: 1
+            balance_type: greater utility
+            range: far
+            duration: 1 hour
+            combat_duration: battle
+            description: Create a geyser with a 3 foot radius which fires water 40 feet
+                directly upward into the air.
+            school: "natural-elemental-earth"
+        Hurl Boulder:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            dice_type: major
+            num_dice: 3
+            effect_type: force
+            duration: instantaneous
+            combat_duration: 1
+            description: Hurl a boulder at an enemy.
+            school: "natural-elemental-earth"
+        Remove Curse:
+            cost: 2
+            target: friendly
+            num_targets: 1
+            balance_type: greater restoration
+            duration: instantaneous
+            combat_duration: battle
+            description: "Immediately allow an individual to re-make a spell power save against a
+                curse or other status effect at advantage."
+            school: "divine"
+        Spores:
+            cost: 2
+            dice_type: minor
+            num_dice: 2
+            effect_type: poison
+            target: enemy
+            num_targets: aoe
+            effect_radius: 30
+            balance_type: greater damage
+            range: self
+            duration: 1 minute
+            combat_duration: 1
+            description: Release poison spores. Anyone who inhales
+            them must take damage.
+            effects:
+                - description: "must make all actions with disadvantage as well as being poisoned, as mushrooms begin sprouting from their bodies."
+                  save: "Spell Power"
+                  balance_type: minor debuff
+            school: "natural-floral"
+        Thieve's Curse:
+            cost: 2
+            target: entity
+            num_targets: 1
+            duration: eternity
+            description: "Cast a curse on an enemy."
+            balance_type: major debuff
+            duration: eternity
+            combat_duration: battle
+            effects:
+                - description: they are cursed so that they have an irresistible
+                    urge to steal something once per hour. Afterward, they forget their acts of thievery,
+                    and stow the stolen goods in their quarters or a private place. The curse
+                    remains until it is dispelled.
+            save: Spell Power
+            balance_type: major debuff
+            school: "unknown"
+        Wall of ice:
+            cost: 2
+            balance_type: major utility
+            target: space
+            num_targets: 8
+            range: middling
+            duration: 1 hour
+            combat_duration: battle
+            description: Create a wall up to 15 feet high and 40 feet long of solid ice.
+            school: "natural-elemental-water"
+        Wall of Brambles:
+            cost: 2
+            balance_type: major utility
+            target: space
+            num_targets: 8
+            range: middling
+            dice_type: major
+            num_dice: 1
+            effect_type: moderate damage
+            duration: 1 week
+            combat_duration: battle
+            description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
+                them requires 3 dexterity checks against your spell power, each of which results
+                damage on failure. If a check is failed, the entity is stuck in the
+                brambles until its next turn.
+            school: "natural-floral"
+        Tornado:
+            cost: 2
+            balance_type: greater debuff
+            range: middling
+            target: enemy
+            num_targets: 1
+            description: Trap an entity of your choice in a swirling whirlwind.
+            duration: 15 minutes
+            combat_duration: 3
+            effects:
+                - description: continues to be trapped. If the entity escapes,
+                    it slams to the ground, causing 40 feet of fall damage.
+            save: dexterity check against your spell power
+            repeat: at the end of each of each turn
+            school: "natural-elemental-air"
 #   Tier_3:
 #     Animal Form:
 #       cost: 2

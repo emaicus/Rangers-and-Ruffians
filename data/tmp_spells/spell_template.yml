@@ -7,7 +7,7 @@ spellbook:
       duration: #, save, battle, # hours, concentration, infinite
       description: "What the spell does at a high level."
       range: <self, hand, close, near, archer, far, infinite>
-      purpose: <damage, healing, buff, debuff, summon, utility>      
+      purpose: <damage, healing, buff, debuff, summon, utility>
       school: Below.
 
       --------------- COMBAT---------------------------------------
@@ -27,8 +27,8 @@ spellbook:
       components:
         - "lowercase thing needed. e.g. a tortoise shell"
       upcast:
-        cost: <# or scaling> 
-        effect: <each additional action point spent on this spell> 
+        cost: <# or scaling>
+        effect: <each additional action point spent on this spell>
                 <you may spend N additional action points on this spell to>
       action_type: <action, offhand_action, reaction, free_action>
       effect_radius: # number of feet, defaults to 1
@@ -44,6 +44,7 @@ Range Macros:
 
 potential spell schools:
   - Divine
+    - Healing
   - Necromantic
     - summoning
   - Natural
@@ -55,15 +56,15 @@ potential spell schools:
     - Animist
     - Floral
   - Arcane
-    - Conjuring 
+    - Conjuring
     - Destruction
     - Transmuatation
-    - Abnegation 
-    - Transportation 
+    - Abnegation
+    - Transportation
     - Divination
     - Illusion
     - Enchantment
-      - mind 
+      - mind
       - matter
     - Somatic (body)
     # - Invocation
