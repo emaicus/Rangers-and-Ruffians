@@ -1,817 +1,817 @@
-the_bard's_songbook:
-    Tier_0:
-        Carry on the wind:
-            cost: 0
-            target: friendly
-            num_targets: 1
-            duration: concentration
-            description: "Point at an entity and your voice carries to them as though you are standing next to them."
-            purpose: utility
-            range: far
-            action_type: Free Action
-            school: arcane-acoustic
-        Conceal Weapon:
-            cost: 1
-            target: self
-            num_targets: 1
-            duration: infinite
-            purpose: utility
-            range: self
-            description: "Magically conceal up to three weapons on your person."
-            school: arcane-illusion
-            upcast:
-                cost: scaling
-                effect: "allows you to conceal weapons on two additional individuals"
-        Control Shadows:
-            cost: 0
-            target: space
-            num_targets: 1
-            duration: concentration
-            purpose: utility
-            description: "Influence the movement of shadows."
-            range: archer
-            school: arcane-illusion
-        Create Sound:
-            cost: 1
-            target: self
-            num_targets: 1
-            duration: 1
-            purpose: utility
-            description: "Create any sound you have heard before."
-            range: self
-            school: arcane-acoustic
-        Cruel Limerick:
-            cost: 0
-            target: enemy
-            num_targets: 1
-            duration: 1
-            dice: "2d6"
-            effect_type: psychic
-            hit: roll
-            description: Tell a cruel rhyme, imbued with magic.
-            purpose: damage
-            range: archer
-            effects:
-                  - description: "the entity takes Disadvantage on their next action."
-                    save: Spell Power
-            school: arcane-acoustic
-        Forge Writing:
-            cost: 1
-            target: other
-            num_targets: 1
-            duration: concentration
-            description: "Magically forge the handwriting of anyone you have spoken with."
-            purpose: utility
-            range: self
-            school: arcane-divination
-        Hypnotize:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: battle
-            description: "Attempt to hypnotize an enemy using a swinging trinket."
-            purpose: debuff
-            range: hand
-            hit: always
-            components:
-                - "a swinging trinket"
-            effects:
-                - save: "Spell Power"
-                  description: "be under your control."
-                  repeat:
-                    - "if they are asked to do anything that causes themselves or those they care about harm"
-                    - "once per minute, or once per turn in combat"
-            upcast:
-                cost: 1
-                effect: increase the time between saves to once every five minutes
-            school: arcane-enchantment-mind
-        Steal Voice:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            description: "Attempt to steal an enemy's voice and use it as your own."
-            purpose: utility
-            range: near
-            hit: always
-            effects:
-                 - save: "Spell Power"
-                   description: "you may take an entity's voice and use it as your own."
-                   repeat:
-                        - "every turn or once every ten minutes"
-            school: arcane-somatic
-        Throw Voice:
-            cost: 0
-            target: space
-            num_targets: 1
-            duration: concentration
-            description: "Magically throw your voice."
-            purpose: utility
-            range: archer
-            school: arcane-acoustic
-        Trick up Your Sleeve:
-            cost: 1
-            target: self
-            num_targets: 1
-            duration: 1
-            description: "Summon up to one hundred feet of tied together cloths from your sleeve."
-            purpose: utility
-            range: self
-            school: arcane-conjuring
-        Harsh Note:
-            cost: 0
-            target: enemy
-            num_targets: many
-            duration: 1
-            description: "Create a harsh noise which damages all nearby enemies."
-            purpose: damage
-            range: near
-            effect_radius: 30
-            school: arcane-acoustic
-            dice: 1d6
-            hit: roll
-            effect_type: psychic
-            upcast:
-                cost: scaling
-                effect: increases its damage by 1d6
-    Tier_1:
-        Belch Fire:
-            cost: 1
-            target: enemy
-            num_targets: many
-            duration: 1
-            description: "Belch a cone of fire."
-            purpose: damage
-            range: close
-            dice: 3d4
-            effect_type: fire
-            school: natural-elemental-fire
-            hit: roll
-            upcast:
-                cost: scaling
-                effect: increases its damage by 2d4
-        Blocking Hand:
-            cost: 1
-            target: self
-            num_targets: 1
-            duration: 1
-            description: "Summon an unseen hand to protect you from an incoming targeted light or moderate attack. Increase your defense by 5."
-            action_type: Reaction
-            range: self
-            school: arcane-conjuring
-            purpose: buff
-        Courage:
-            cost: 1
-            target: friendly
-            num_targets: many
-            duration: 1 hours
-            description: "Make allies within range immune to fear and give them advantage on inner fire saves."
-            purpose: buff
-            range: close
-            school: arcane-enchantment-mind
-            effect_radius: 15
-        Curse of Crying:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            description: "Attempt to curse an enemy."
-            range: close
-            school: arcane-enchantment-mind
-            hit: always
-            effects:
-                - save: Spell Power
-                  description: "the enemy receives a curse which causes them to weep constantly,
-                        giving them disadvantage on actions made during combat.
-                        The curse does not leave until dispelled."
-            purpose: debuff
-            casting_time: 2
-        Dazzling Lights:
-            cost: 1
-            target: space
-            num_targets: 1
-            duration: concentration
-            description: "Summon seven dazzling lights to dance about you. You may magically
-                  order them to go anywhere within range."
-            purpose: utility
-            range: self
-            school: arcane-conjuring
-        Disarmor:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            hit: always
-            duration: concentration
-            description: "Reduces an enemy's defense by 5."
-            purpose: debuff
-            range: archer
-            school: arcane-transmutation
-        Disguise:
-            cost: 1
-            target: self
-            num_targets: 1
-            duration: concentration
-            description: "Magically change yourself or someone else that they look like a generic person
-                          from the region you are in."
+# the_bard's_songbook:
+#     Tier_0:
+#         Carry on the wind:
+#             cost: 0
+#             target: friendly
+#             num_targets: 1
+#             duration: concentration
+#             description: "Point at an entity and your voice carries to them as though you are standing next to them."
+#             purpose: utility
+#             range: far
+#             action_type: Free Action
+#             school: arcane-acoustic
+#         Conceal Weapon:
+#             cost: 1
+#             target: self
+#             num_targets: 1
+#             duration: infinite
+#             purpose: utility
+#             range: self
+#             description: "Magically conceal up to three weapons on your person."
+#             school: arcane-illusion
+#             upcast:
+#                 cost: scaling
+#                 effect: "allows you to conceal weapons on two additional individuals"
+#         Control Shadows:
+#             cost: 0
+#             target: space
+#             num_targets: 1
+#             duration: concentration
+#             purpose: utility
+#             description: "Influence the movement of shadows."
+#             range: archer
+#             school: arcane-illusion
+#         Create Sound:
+#             cost: 1
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             purpose: utility
+#             description: "Create any sound you have heard before."
+#             range: self
+#             school: arcane-acoustic
+#         Cruel Limerick:
+#             cost: 0
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             dice: "2d6"
+#             effect_type: psychic
+#             hit: roll
+#             description: Tell a cruel rhyme, imbued with magic.
+#             purpose: damage
+#             range: archer
+#             effects:
+#                   - description: "the entity takes Disadvantage on their next action."
+#                     save: Spell Power
+#             school: arcane-acoustic
+#         Forge Writing:
+#             cost: 1
+#             target: other
+#             num_targets: 1
+#             duration: concentration
+#             description: "Magically forge the handwriting of anyone you have spoken with."
+#             purpose: utility
+#             range: self
+#             school: arcane-divination
+#         Hypnotize:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: battle
+#             description: "Attempt to hypnotize an enemy using a swinging trinket."
+#             purpose: debuff
+#             range: hand
+#             hit: always
+#             components:
+#                 - "a swinging trinket"
+#             effects:
+#                 - save: "Spell Power"
+#                   description: "be under your control."
+#                   repeat:
+#                     - "if they are asked to do anything that causes themselves or those they care about harm"
+#                     - "once per minute, or once per turn in combat"
+#             upcast:
+#                 cost: 1
+#                 effect: increase the time between saves to once every five minutes
+#             school: arcane-enchantment-mind
+#         Steal Voice:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: save
+#             description: "Attempt to steal an enemy's voice and use it as your own."
+#             purpose: utility
+#             range: near
+#             hit: always
+#             effects:
+#                  - save: "Spell Power"
+#                    description: "you may take an entity's voice and use it as your own."
+#                    repeat:
+#                         - "every turn or once every ten minutes"
+#             school: arcane-somatic
+#         Throw Voice:
+#             cost: 0
+#             target: space
+#             num_targets: 1
+#             duration: concentration
+#             description: "Magically throw your voice."
+#             purpose: utility
+#             range: archer
+#             school: arcane-acoustic
+#         Trick up Your Sleeve:
+#             cost: 1
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             description: "Summon up to one hundred feet of tied together cloths from your sleeve."
+#             purpose: utility
+#             range: self
+#             school: arcane-conjuring
+#         Harsh Note:
+#             cost: 0
+#             target: enemy
+#             num_targets: many
+#             duration: 1
+#             description: "Create a harsh noise which damages all nearby enemies."
+#             purpose: damage
+#             range: near
+#             effect_radius: 30
+#             school: arcane-acoustic
+#             dice: 1d6
+#             hit: roll
+#             effect_type: psychic
+#             upcast:
+#                 cost: scaling
+#                 effect: increases its damage by 1d6
+#     Tier_1:
+#         Belch Fire:
+#             cost: 1
+#             target: enemy
+#             num_targets: many
+#             duration: 1
+#             description: "Belch a cone of fire."
+#             purpose: damage
+#             range: close
+#             dice: 3d4
+#             effect_type: fire
+#             school: natural-elemental-fire
+#             hit: roll
+#             upcast:
+#                 cost: scaling
+#                 effect: increases its damage by 2d4
+#         Blocking Hand:
+#             cost: 1
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             description: "Summon an unseen hand to protect you from an incoming targeted light or moderate attack. Increase your defense by 5."
+#             action_type: Reaction
+#             range: self
+#             school: arcane-conjuring
+#             purpose: buff
+#         Courage:
+#             cost: 1
+#             target: friendly
+#             num_targets: many
+#             duration: 1 hours
+#             description: "Make allies within range immune to fear and give them advantage on inner fire saves."
+#             purpose: buff
+#             range: close
+#             school: arcane-enchantment-mind
+#             effect_radius: 15
+#         Curse of Crying:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: save
+#             description: "Attempt to curse an enemy."
+#             range: close
+#             school: arcane-enchantment-mind
+#             hit: always
+#             effects:
+#                 - save: Spell Power
+#                   description: "the enemy receives a curse which causes them to weep constantly,
+#                         giving them disadvantage on actions made during combat.
+#                         The curse does not leave until dispelled."
+#             purpose: debuff
+#             casting_time: 2
+#         Dazzling Lights:
+#             cost: 1
+#             target: space
+#             num_targets: 1
+#             duration: concentration
+#             description: "Summon seven dazzling lights to dance about you. You may magically
+#                   order them to go anywhere within range."
+#             purpose: utility
+#             range: self
+#             school: arcane-conjuring
+#         Disarmor:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             hit: always
+#             duration: concentration
+#             description: "Reduces an enemy's defense by 5."
+#             purpose: debuff
+#             range: archer
+#             school: arcane-transmutation
+#         Disguise:
+#             cost: 1
+#             target: self
+#             num_targets: 1
+#             duration: concentration
+#             description: "Magically change yourself or someone else that they look like a generic person
+#                           from the region you are in."
 
-            purpose: utility
-            range: self
-            school: arcane-illusion
-        Fatigue:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            description: "Attempt to cause an enemy to become exhausted."
-            purpose: debuff
-            range: near
-            hit: always
-            effects:
-                - save: Spell Power
-                  description: "the entity takes disadvantage on all relevant checks and loses half of their movement"
-                  repeat:
-                      - "each turn"
-            school: arcane-somatic
-        Gnomish Dream:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: concentration
-            hit: always
-            description: "Gain line of sight on a sleeping entity. Impart upon them any dream
-                  that you wish, so long as the characters are all gnomes."
-            purpose: debuff
-            range: far
-            school: arcane-enchantment-mind
-        Kiss and Tell:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: 1 week
-            description: "Kiss someone to always know where they are. Know within 10 miles if the
-                  kiss is on the hand, within 5 miles if the kiss is on the cheek or forehead,
-                  within 100 feet if on the mouth. Lasts for 1 week."
-            purpose: utility
-            range: hand
-            school: arcane-divination
-        Liar's Tongue:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: 1
-            range: near
-            hit: always
-            description: "Imbue your words with magic to empower a lie."
-            effects:
-                - save: Spell Power
-                  description: "the entity believes the next thing that you tell them."
-                  repeat:
-                    - "when provided with proof of their newfound belief's fallacy"
-            purpose: debuff
-            school: arcane-enchantment-mind
-        Minor Trickery:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: 5
-            description: "Use your magic to play with an enemy's sense of reality."
-            range: archer
-            hit: always
-            effects:
-              - save: Spell Power
-                description: "the entity is convinced that it sees something that it does not."
-                repeat:
-                  - at the end of each of its turns
-            purpose: debuff
-            school: arcane-enchantment-mind
-        Not So Fast:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: "Force an enemy to remake a roll, or to make a roll with
-                  disadvantage."
-            range: archer
-            purpose: debuff
-            hit: always
-            action_type: Reaction
-            school: arcane-enchantment-mind
-        Song of Haste:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1
-            range: near
-            description:  "Allow a teammate an extra action on their next turn and to move
-                  an extra 15 feet. If out of battle, they may move at double speed for five minutes."
-            purpose: buff
-            school: arcane-somatic
-        Song of Slow Healing:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 2
-            dice: 2d4
-            effect_type: healing
-            purpose: healing
-            upcast:
-                cost: scaling
-                effect: allows you to heal allies for an added 1d4 health per turn
-            description: "Play a soothing song which heals an injured ally for two turns."
-            range: near
-            school: arcane-somatic
-        Raucous Laughter:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            range: near
-            description: "Tell an incredibly funny joke imbued with magical power."
-            hit: always
-            effects:
-                - save: Spell Power
-                  description: "the entity falls prone, laughing, and cannot stand until
-                              it makes its save."
-                  repeat:
-                      - "each turn"
-            purpose: debuff
-            school: arcane-enchantment-mind
-    Tier_2:
-        Minor Song of Mass Healing:
-            cost: 1
-            target: friendly
-            num_targets: many
-            duration: 1
-            dice: 2d4
-            effect_type: healing
-            purpose: healing
-            upcast:
-                cost: scaling
-                effect: allows you to heal allies for an added 1d4 health or increase the range by 30 feet
-            description: "Play a soothing song which heals all allies within range"
-            range: self
-            effect_radius: 30
-            school: arcane-somatic
-        Counter Magic:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: 1
-            action_type: Reaction
-            range: archer
-            purpose: debuff
-            hit: always
-            description: "Attempt to stop enemy magic before it takes effect. Instantly stop spells of level 2 or lower. For higher level spells, the caster must make a spell power save."
-            effects:
-                - save: Spell Power
-                  description: "their spell fails as they cast it."
-            school: arcane-abnegation
-            upcast:
-                cost: scaling
-                effect: increases the level of spells instantly countered by 1
-        Swarm of Squirrels:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 1 hour
-            description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
-              and is capable of doing 2 damage per turn. Squirrels move together in combat, and are
-              attacked as a swarm.
-            purpose: summon
-            range: near
-            school: arcane-conjuring
-        Invisible Servant:
-            cost: 1
-            target: other
-            num_targets: 1
-            duration: 1 hour
-            description: Summon an invisible servant to aid you in a task. The servant is only
-              capable of dealing 1d4 damage and has 20 hit points.
-            purpose: summon
-            range: close
-            school: arcane-conjuring
-        Kilgore's Thunderous Shout:
-            cost: 2
-            target: enemy
-            num_targets: many
-            duration: 1
-            description: "Unleash a might shout to subdue your enemies."
-            purpose: damage
-            range: close
-            school: arcane-acoustic
-            dice: 4d6
-            hit: roll
-            effect_type: blunt
-            effects:
-              - save: strength check against your spell power
-                description: the entity is thrown backward 15 feet and take an additional 1d6 of blunt damage
-            upcast:
-                cost: scaling
-                effect: causes enemies to take an 1d6 dice of damage, and are pushed back 15 feet further and take an extra 1d6 blunt damage on a failed save
-        Lullaby:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            effect_radius: 30
-            duration: 1
-            casting_time: 2
-            range: self
-            purpose: debuff
-            hit: always
-            effects:
-                - save: Spell Power
-                  description: on the first failure, the entity becomes dreary, and looses
-                             half it's movement. On a second failure, it falls into a
-                             deep slumber, and cannot be awoken save by damage or a
-                             successful save.
-                  repeat:
-                      - "Each turn before the entity falls asleep."
-                      - "Every hour after the entity has fallen asleep."
-            description: Sing a song which attempts to put an enemy to sleep.
-            upcast:
-                cost: 1
-                effect: "cause it to affect all enemies within a 30 foot radius"
-            school: arcane-enchantment-mind
-        Magic Steed:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: infinite
-            description: Summon a steed made of pure magical energy. The stallion has 20
-              health, and may be de-summoned on command.
-            range: near
-            purpose: summon
-            school: arcane-conjuring
-        Minor Gate:
-            cost: 2
-            target: self
-            num_targets: 1
-            duration: 1
-            description: Create a portal exactly big enough to fit yourself and one other
-              individual of your size and instantly transport through it. You may transport
-              anywhere within range, regardless of whether or not you can see your destination.
-            range: far
-            purpose: utility
-            school: arcane-transportation
-        Smokescreen:
-            cost: 1
-            target: space
-            num_targets: 1
-            effect_radius: 60
-            duration: 5
-            range: far
-            description: "Create a smokescreen. Entities within the smokescreen are considered to be
-                          in darkness."
-            purpose: utility
-            school: arcane-conjuring
-        Wall of Sound:
-            cost: 2
-            target: space
-            num_targets: 1
-            duration: concentration
-            range: archer
-            description: Create a wall up to 40 feet long and 100 feet tall of pure sonic
-              energy. Any entity that attempts to pass through it must make a spell power
-              save or be thrown back and take 2d10 damage.
-            range: archer
-            purpose: utility
-            school: arcane-acoustic
-        Sonic Dart:
-            cost: 2
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: Fire a blast of pure sound at a target.
-            range: archer
-            purpose: damage
-            hit: roll
-            school: arcane-acoustic
-            dice: 6d8
-            effect_type: psychic
-    Tier_3:
-        Animal Form:
-            cost: 2
-            target: self
-            num_targets: 1
-            duration: 1 day
-            description: "Transform yourself into a beast of of up to your level that is
-                designated as a light or heavy enemy. You gain the hit points of that beast.
-                If the hit points are reduced to zero, you immediately return to your normal
-                form with the same hit points as when the spell began. See the book of known beasts
-                for details on the different beasts of the world."
-            range: self
-            purpose: utility
-            school: natural-animist
-            upcast:
-                cost: 1
-                effect: increase it's effect to last 24 hours
-        Conjure Carriage:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 24 hours
-            description: Summon a carriage capable of seating four individuals with additional
-                seats for two drivers. The carriage comes with two magical steeds, which may
-                not be detached, and with an optional ethereal driver.
-            range: near
-            purpose: utility
-            school: arcane-conjuring
-        Horace's Wholesome Homestead:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 24 hours
-            description: Summon a pocket dimension containing a small homestead, capable
-                of housing 6 people comfortably in two shared bedrooms. The homestead is fully
-                stocked with modest food and drink. Only individuals that you want to have
-                access to the homestead may enter it. Nothing
-                placed in the homestead will stay, and nothing from within may be taken out.
-            purpose: utility
-            range: far
-            school: arcane-conjuring
-        Immovable:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 1
-            description: Make an object immovable. The object must be smaller than a wagon, and cannot be a living entity.
-            range: close
-            purpose: utility
-            school: arcane-enchantment-matter
-        Geodred's Race Dysmorphia:
-            cost: 2
-            target: self
-            num_targets: 1
-            duration: 24 hours
-            description: Transform yourself into another race. You gain the race's
-                stats and abilities, and loose those of your own race.
-            range: self
-            purpose: utility
-            school: arcane-somatic
-            effects:
-                - description: if they are unwilling
-                  save: spell power
-            upcast:
-                cost: 8
-                effect: make the change permanent
-        Mass Trickery:
-            cost: 2
-            target: enemy
-            num_targets: many
-            duration: save
-            description: Attempt to convice everyone nearby that they see something that is not there.
-            range: far
-            effect_radius: 30
-            purpose: debuff
-            hit: always
-            school: arcane-enchantment-mind
-            effects:
-              - save: Spell Power
-                description: "the entity is convinced that it sees something that it does not."
-                repeat:
-                  - at the end of each of their turns
-        Power Shriek:
-            cost: 3
-            target: enemy
-            num_targets: many
-            duration: 1
-            range: self
-            effect_radius: 50
-            purpose: damage
-            hit: roll
-            description: Let loose a shriek which damages all enemies in range.
-            effects:
-                - description: they are rendered deaf, and perform all actions with disadvantage for a turn
-                  save: Spell Power
-            school: arcane-acoustic
-            dice: 6d4
-            effect_type: psychic
-        Song of Healing:
-            cost: 2
-            dice: 3d10
-            effect_type: healing
-            target: friendly
-            num_targets: 1
-            duration: 1
-            description: Play a soothing song embued with magic which heals an ally.
-            range: near
-            purpose: healing
-            school: arcane-somatic
-    Tier_4:
-        Unstoppable:
-            cost: 3
-            target: other
-            num_targets: 1
-            duration: 1
-            description: Make an object or person unstoppable for 1 minute. The object must be smaller than a wagon.
-            range: close
-            purpose: utility
-            school: arcane-enchantment-matter
-        Get Me Out of Here:
-            cost: 3
-            target: self
-            num_targets: 1
-            duration: 1
-            description: Teleport to a random place in the world that is at least 5 miles
-                from your current position.
-            range: 5 miles
-            purpose: utility
-            school: arcane-transportation
-        Lightning Strike:
-            cost: 3
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: Call down a blast of lightning on an enemy.
-            range: archer
-            purpose: damage
-            hit: roll
-            school:  natural-elemental-air
-            dice: 9d10
-            effect_type: elemental
-        Mass Suggestion:
-            cost: 3
-            description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
-            target: enemy
-            num_targets: many
-            duration: 5
-            range: archer
-            hit: always
-            effects:
-              - save: Spell Power
-                description: the entity must follow your orders
-                repeat:
-                    - "if they are asked to do anything that causes themselves or those they care about harm"
-                    - "once per minute, or once per turn in combat"
-            purpose: debuff
-            school: arcane-enchantment-mind
-        Strike Dumb:
-            cost: 3
-            target: enemy
-            num_targets: 1
-            duration: infinite
-            description: Speak a phrase so mindbendingly convoluted that it breaks an entity's mind
-            range: archer
-            purpose: debuff
-            hit: always
-            effects:
-                - description: its intelligence is treated
-                    as -5. They lose the ability to speak, read, and otherwise communicate outside
-                    of grunts. This lasts until dispelled.
-                  save: Spell Power
-            school: arcane-enchantment-mind
-        Winged Magic Steed:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: infinite
-            description: Summon a winged steed made of pure magical energy. The stallion
-                has 20 health, and may be de-summoned on command.
-            range: near
-            purpose: summon
-            school: arcane-conjuring
-        Zone of Truth:
-            cost: 2
-            target: space
-            num_targets: 1
-            duration: concentration
-            description: Create a zone in which all must speak truthfully.
-            range: hand
-            effect_radius: 30
-            purpose: utility
-            casting_time: 15
-            school: arcane-enchantment-mind
-        Edmire's Grand Manor:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 24 hours
-            purpose: utility
-            school: arcane-conjuring
-            description: Summon a pocket dimension containing a huge mansion, capable of
-                housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
-                fully stocked with extravagant food and drink. The mansion is manned by 100
-                servants, which are at the beck and call of the mansions creator. Upon learning
-                this spell, the bard may design the mansion to have rooms that suit the needs
-                of their party (e.g. a holy sanctum, dungeons, training grounds, a kitchen,
-                etc.). Only individuals that you want to have access to the mansion may enter
-                it. The mansion lasts 24 hours. Nothing that originated within the mansion
-                may be taken out. However, items brought in may stay.
-            range: far
-        Song of Aging:
-            cost: 2
-            target: enemy
-            num_targets: 1
-            duration: concentration
-            description: Attempt to sap the life from an enemy.
-            range: near
-            hit: always
-            effects:
-                - description: Force an enemy to make a spell power save. On failure, the enemy
-                    begins aging at a rate of 10 years per turn. You may continue this spell as
-                    an offhand action each turn. The aging lasts until it is dispelled.
-                  save: Spell Power
-            purpose: debuff
-            school: arcane-somatic
-        Mass Song of Healing:
-            cost: 3
-            target: friendly
-            num_targets: many
-            duration: 1
-            dice: 2d8
-            effect_type: healing
-            purpose: healing
-            upcast:
-                cost: scaling
-                effect: allows you to heal allies for an added 1d8 health or increase the range by 30 feet
-            description: "Play a powerful healing melody which restores all allies within range"
-            range: self
-            effect_radius: 30
-            school: arcane-somatic
-    Tier_5:
-        Death Note:
-            cost: 4
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: Play a chord of incredible power, with the strength to kill.
-            range: archer
-            purpose: damage
-            school: arcane-acoustic
-            hit: always
-            effects:
-                - description: take full damage. If the save is successful, the enemy takes half damage.
-                  save: spell power
-            dice: 20d6
-            effect_type: psychic
-        Dominate:
-            cost: 4
-            target: enemy
-            num_targets: 1
-            duration: save
-            description: Attempt to break an enemies mind, forcing them to obey your command.
-            range: near
-            purpose: debuff
-            school: arcane-enchantment-mind
-            hit: always
-            effects:
-                - description: be subject to following your orders mindlessly
-                  save: Spell Power
-                  repeat:
-                    - once per week
-        Guards:
-            cost: 4
-            target: other
-            num_targets: 1
-            duration: 12 hours
-            description: Summon 1d4+1 ethereal guardians to aid you for 12 hours. For stats,
-                          view the book of known beasts.
-            range: near
-            purpose: summon
-            school: arcane-conjuring
-        Manifest Will:
-            cost: 4
-            target: self
-            num_targets: 1
-            duration: 1
-            description: Say two words. If possible, the thing that you ask for appears in your hand.
-            range: infinite
-            purpose: utility
-            school: arcane-conjuring
-        Rewrite History:
-            cost: 4
-            target: enemy
-            num_targets: 1
-            duration: infinite
-            description: Attempt to modify the memory of everyone in earshot.
-            range: far
-            purpose: debuff
-            hit: always
-            school: arcane-enchantment-mind
-            effects:
-                - description: have up to 24 hours of their memory modified
-                  save: spell power
-        Torugar, the Many Tongued Demon:
-            cost: 4
-            target: friend and foe
-            num_targets: many
-            duration: 5
-            description: Summon a pit, housing an ancient, many tongued demon of the underworld.
-                Every turn, 1d6+2 tongues will writhe forth from the pit, and attempt
-                to grab individuals within 1000 feet. Each turn an enemy is grappled by a tongue,
-                it takes damage. If a tongue takes 50 damage on a single turn, it releases its grapple, and returns to the pit.
-            range: far
-            dice: 4d8
-            effect_type: blunt
-            purpose: damage
-            hit: other
-            school: necromantic-summoning
-            effects:
-                - description: be grappled by the tongue and begin taking damage
-                  save: strength save against your spell power
-                - condition: once grappled
-                  description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
-    # Tier_3:
+#             purpose: utility
+#             range: self
+#             school: arcane-illusion
+#         Fatigue:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: save
+#             description: "Attempt to cause an enemy to become exhausted."
+#             purpose: debuff
+#             range: near
+#             hit: always
+#             effects:
+#                 - save: Spell Power
+#                   description: "the entity takes disadvantage on all relevant checks and loses half of their movement"
+#                   repeat:
+#                       - "each turn"
+#             school: arcane-somatic
+#         Gnomish Dream:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: concentration
+#             hit: always
+#             description: "Gain line of sight on a sleeping entity. Impart upon them any dream
+#                   that you wish, so long as the characters are all gnomes."
+#             purpose: debuff
+#             range: far
+#             school: arcane-enchantment-mind
+#         Kiss and Tell:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: 1 week
+#             description: "Kiss someone to always know where they are. Know within 10 miles if the
+#                   kiss is on the hand, within 5 miles if the kiss is on the cheek or forehead,
+#                   within 100 feet if on the mouth. Lasts for 1 week."
+#             purpose: utility
+#             range: hand
+#             school: arcane-divination
+#         Liar's Tongue:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             range: near
+#             hit: always
+#             description: "Imbue your words with magic to empower a lie."
+#             effects:
+#                 - save: Spell Power
+#                   description: "the entity believes the next thing that you tell them."
+#                   repeat:
+#                     - "when provided with proof of their newfound belief's fallacy"
+#             purpose: debuff
+#             school: arcane-enchantment-mind
+#         Minor Trickery:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: 5
+#             description: "Use your magic to play with an enemy's sense of reality."
+#             range: archer
+#             hit: always
+#             effects:
+#               - save: Spell Power
+#                 description: "the entity is convinced that it sees something that it does not."
+#                 repeat:
+#                   - at the end of each of its turns
+#             purpose: debuff
+#             school: arcane-enchantment-mind
+#         Not So Fast:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             description: "Force an enemy to remake a roll, or to make a roll with
+#                   disadvantage."
+#             range: archer
+#             purpose: debuff
+#             hit: always
+#             action_type: Reaction
+#             school: arcane-enchantment-mind
+#         Song of Haste:
+#             cost: 1
+#             target: friendly
+#             num_targets: 1
+#             duration: 1
+#             range: near
+#             description:  "Allow a teammate an extra action on their next turn and to move
+#                   an extra 15 feet. If out of battle, they may move at double speed for five minutes."
+#             purpose: buff
+#             school: arcane-somatic
+#         Song of Slow Healing:
+#             cost: 1
+#             target: friendly
+#             num_targets: 1
+#             duration: 2
+#             dice: 2d4
+#             effect_type: healing
+#             purpose: healing
+#             upcast:
+#                 cost: scaling
+#                 effect: allows you to heal allies for an added 1d4 health per turn
+#             description: "Play a soothing song which heals an injured ally for two turns."
+#             range: near
+#             school: arcane-somatic
+#         Raucous Laughter:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: save
+#             range: near
+#             description: "Tell an incredibly funny joke imbued with magical power."
+#             hit: always
+#             effects:
+#                 - save: Spell Power
+#                   description: "the entity falls prone, laughing, and cannot stand until
+#                               it makes its save."
+#                   repeat:
+#                       - "each turn"
+#             purpose: debuff
+#             school: arcane-enchantment-mind
+#     Tier_2:
+#         Minor Song of Mass Healing:
+#             cost: 1
+#             target: friendly
+#             num_targets: many
+#             duration: 1
+#             dice: 2d4
+#             effect_type: healing
+#             purpose: healing
+#             upcast:
+#                 cost: scaling
+#                 effect: allows you to heal allies for an added 1d4 health or increase the range by 30 feet
+#             description: "Play a soothing song which heals all allies within range"
+#             range: self
+#             effect_radius: 30
+#             school: arcane-somatic
+#         Counter Magic:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             action_type: Reaction
+#             range: archer
+#             purpose: debuff
+#             hit: always
+#             description: "Attempt to stop enemy magic before it takes effect. Instantly stop spells of level 2 or lower. For higher level spells, the caster must make a spell power save."
+#             effects:
+#                 - save: Spell Power
+#                   description: "their spell fails as they cast it."
+#             school: arcane-abnegation
+#             upcast:
+#                 cost: scaling
+#                 effect: increases the level of spells instantly countered by 1
+#         Swarm of Squirrels:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: 1 hour
+#             description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
+#               and is capable of doing 2 damage per turn. Squirrels move together in combat, and are
+#               attacked as a swarm.
+#             purpose: summon
+#             range: near
+#             school: arcane-conjuring
+#         Invisible Servant:
+#             cost: 1
+#             target: other
+#             num_targets: 1
+#             duration: 1 hour
+#             description: Summon an invisible servant to aid you in a task. The servant is only
+#               capable of dealing 1d4 damage and has 20 hit points.
+#             purpose: summon
+#             range: close
+#             school: arcane-conjuring
+#         Kilgore's Thunderous Shout:
+#             cost: 2
+#             target: enemy
+#             num_targets: many
+#             duration: 1
+#             description: "Unleash a might shout to subdue your enemies."
+#             purpose: damage
+#             range: close
+#             school: arcane-acoustic
+#             dice: 4d6
+#             hit: roll
+#             effect_type: blunt
+#             effects:
+#               - save: strength check against your spell power
+#                 description: the entity is thrown backward 15 feet and take an additional 1d6 of blunt damage
+#             upcast:
+#                 cost: scaling
+#                 effect: causes enemies to take an 1d6 dice of damage, and are pushed back 15 feet further and take an extra 1d6 blunt damage on a failed save
+#         Lullaby:
+#             cost: 1
+#             target: enemy
+#             num_targets: 1
+#             effect_radius: 30
+#             duration: 1
+#             casting_time: 2
+#             range: self
+#             purpose: debuff
+#             hit: always
+#             effects:
+#                 - save: Spell Power
+#                   description: on the first failure, the entity becomes dreary, and looses
+#                              half it's movement. On a second failure, it falls into a
+#                              deep slumber, and cannot be awoken save by damage or a
+#                              successful save.
+#                   repeat:
+#                       - "Each turn before the entity falls asleep."
+#                       - "Every hour after the entity has fallen asleep."
+#             description: Sing a song which attempts to put an enemy to sleep.
+#             upcast:
+#                 cost: 1
+#                 effect: "cause it to affect all enemies within a 30 foot radius"
+#             school: arcane-enchantment-mind
+#         Magic Steed:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: infinite
+#             description: Summon a steed made of pure magical energy. The stallion has 20
+#               health, and may be de-summoned on command.
+#             range: near
+#             purpose: summon
+#             school: arcane-conjuring
+#         Minor Gate:
+#             cost: 2
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             description: Create a portal exactly big enough to fit yourself and one other
+#               individual of your size and instantly transport through it. You may transport
+#               anywhere within range, regardless of whether or not you can see your destination.
+#             range: far
+#             purpose: utility
+#             school: arcane-transportation
+#         Smokescreen:
+#             cost: 1
+#             target: space
+#             num_targets: 1
+#             effect_radius: 60
+#             duration: 5
+#             range: far
+#             description: "Create a smokescreen. Entities within the smokescreen are considered to be
+#                           in darkness."
+#             purpose: utility
+#             school: arcane-conjuring
+#         Wall of Sound:
+#             cost: 2
+#             target: space
+#             num_targets: 1
+#             duration: concentration
+#             range: archer
+#             description: Create a wall up to 40 feet long and 100 feet tall of pure sonic
+#               energy. Any entity that attempts to pass through it must make a spell power
+#               save or be thrown back and take 2d10 damage.
+#             range: archer
+#             purpose: utility
+#             school: arcane-acoustic
+#         Sonic Dart:
+#             cost: 2
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             description: Fire a blast of pure sound at a target.
+#             range: archer
+#             purpose: damage
+#             hit: roll
+#             school: arcane-acoustic
+#             dice: 6d8
+#             effect_type: psychic
+#     Tier_3:
+#         Animal Form:
+#             cost: 2
+#             target: self
+#             num_targets: 1
+#             duration: 1 day
+#             description: "Transform yourself into a beast of of up to your level that is
+#                 designated as a light or heavy enemy. You gain the hit points of that beast.
+#                 If the hit points are reduced to zero, you immediately return to your normal
+#                 form with the same hit points as when the spell began. See the book of known beasts
+#                 for details on the different beasts of the world."
+#             range: self
+#             purpose: utility
+#             school: natural-animist
+#             upcast:
+#                 cost: 1
+#                 effect: increase it's effect to last 24 hours
+#         Conjure Carriage:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: 24 hours
+#             description: Summon a carriage capable of seating four individuals with additional
+#                 seats for two drivers. The carriage comes with two magical steeds, which may
+#                 not be detached, and with an optional ethereal driver.
+#             range: near
+#             purpose: utility
+#             school: arcane-conjuring
+#         Horace's Wholesome Homestead:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: 24 hours
+#             description: Summon a pocket dimension containing a small homestead, capable
+#                 of housing 6 people comfortably in two shared bedrooms. The homestead is fully
+#                 stocked with modest food and drink. Only individuals that you want to have
+#                 access to the homestead may enter it. Nothing
+#                 placed in the homestead will stay, and nothing from within may be taken out.
+#             purpose: utility
+#             range: far
+#             school: arcane-conjuring
+#         Immovable:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: 1
+#             description: Make an object immovable. The object must be smaller than a wagon, and cannot be a living entity.
+#             range: close
+#             purpose: utility
+#             school: arcane-enchantment-matter
+#         Geodred's Race Dysmorphia:
+#             cost: 2
+#             target: self
+#             num_targets: 1
+#             duration: 24 hours
+#             description: Transform yourself into another race. You gain the race's
+#                 stats and abilities, and loose those of your own race.
+#             range: self
+#             purpose: utility
+#             school: arcane-somatic
+#             effects:
+#                 - description: if they are unwilling
+#                   save: spell power
+#             upcast:
+#                 cost: 8
+#                 effect: make the change permanent
+#         Mass Trickery:
+#             cost: 2
+#             target: enemy
+#             num_targets: many
+#             duration: save
+#             description: Attempt to convice everyone nearby that they see something that is not there.
+#             range: far
+#             effect_radius: 30
+#             purpose: debuff
+#             hit: always
+#             school: arcane-enchantment-mind
+#             effects:
+#               - save: Spell Power
+#                 description: "the entity is convinced that it sees something that it does not."
+#                 repeat:
+#                   - at the end of each of their turns
+#         Power Shriek:
+#             cost: 3
+#             target: enemy
+#             num_targets: many
+#             duration: 1
+#             range: self
+#             effect_radius: 50
+#             purpose: damage
+#             hit: roll
+#             description: Let loose a shriek which damages all enemies in range.
+#             effects:
+#                 - description: they are rendered deaf, and perform all actions with disadvantage for a turn
+#                   save: Spell Power
+#             school: arcane-acoustic
+#             dice: 6d4
+#             effect_type: psychic
+#         Song of Healing:
+#             cost: 2
+#             dice: 3d10
+#             effect_type: healing
+#             target: friendly
+#             num_targets: 1
+#             duration: 1
+#             description: Play a soothing song embued with magic which heals an ally.
+#             range: near
+#             purpose: healing
+#             school: arcane-somatic
+#     Tier_4:
+#         Unstoppable:
+#             cost: 3
+#             target: other
+#             num_targets: 1
+#             duration: 1
+#             description: Make an object or person unstoppable for 1 minute. The object must be smaller than a wagon.
+#             range: close
+#             purpose: utility
+#             school: arcane-enchantment-matter
+#         Get Me Out of Here:
+#             cost: 3
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             description: Teleport to a random place in the world that is at least 5 miles
+#                 from your current position.
+#             range: 5 miles
+#             purpose: utility
+#             school: arcane-transportation
+#         Lightning Strike:
+#             cost: 3
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             description: Call down a blast of lightning on an enemy.
+#             range: archer
+#             purpose: damage
+#             hit: roll
+#             school:  natural-elemental-air
+#             dice: 9d10
+#             effect_type: elemental
+#         Mass Suggestion:
+#             cost: 3
+#             description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
+#             target: enemy
+#             num_targets: many
+#             duration: 5
+#             range: archer
+#             hit: always
+#             effects:
+#               - save: Spell Power
+#                 description: the entity must follow your orders
+#                 repeat:
+#                     - "if they are asked to do anything that causes themselves or those they care about harm"
+#                     - "once per minute, or once per turn in combat"
+#             purpose: debuff
+#             school: arcane-enchantment-mind
+#         Strike Dumb:
+#             cost: 3
+#             target: enemy
+#             num_targets: 1
+#             duration: infinite
+#             description: Speak a phrase so mindbendingly convoluted that it breaks an entity's mind
+#             range: archer
+#             purpose: debuff
+#             hit: always
+#             effects:
+#                 - description: its intelligence is treated
+#                     as -5. They lose the ability to speak, read, and otherwise communicate outside
+#                     of grunts. This lasts until dispelled.
+#                   save: Spell Power
+#             school: arcane-enchantment-mind
+#         Winged Magic Steed:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: infinite
+#             description: Summon a winged steed made of pure magical energy. The stallion
+#                 has 20 health, and may be de-summoned on command.
+#             range: near
+#             purpose: summon
+#             school: arcane-conjuring
+#         Zone of Truth:
+#             cost: 2
+#             target: space
+#             num_targets: 1
+#             duration: concentration
+#             description: Create a zone in which all must speak truthfully.
+#             range: hand
+#             effect_radius: 30
+#             purpose: utility
+#             casting_time: 15
+#             school: arcane-enchantment-mind
+#         Edmire's Grand Manor:
+#             cost: 2
+#             target: other
+#             num_targets: 1
+#             duration: 24 hours
+#             purpose: utility
+#             school: arcane-conjuring
+#             description: Summon a pocket dimension containing a huge mansion, capable of
+#                 housing up to 80 people comfortably, in up to 20 bedrooms. The mansion is
+#                 fully stocked with extravagant food and drink. The mansion is manned by 100
+#                 servants, which are at the beck and call of the mansions creator. Upon learning
+#                 this spell, the bard may design the mansion to have rooms that suit the needs
+#                 of their party (e.g. a holy sanctum, dungeons, training grounds, a kitchen,
+#                 etc.). Only individuals that you want to have access to the mansion may enter
+#                 it. The mansion lasts 24 hours. Nothing that originated within the mansion
+#                 may be taken out. However, items brought in may stay.
+#             range: far
+#         Song of Aging:
+#             cost: 2
+#             target: enemy
+#             num_targets: 1
+#             duration: concentration
+#             description: Attempt to sap the life from an enemy.
+#             range: near
+#             hit: always
+#             effects:
+#                 - description: Force an enemy to make a spell power save. On failure, the enemy
+#                     begins aging at a rate of 10 years per turn. You may continue this spell as
+#                     an offhand action each turn. The aging lasts until it is dispelled.
+#                   save: Spell Power
+#             purpose: debuff
+#             school: arcane-somatic
+#         Mass Song of Healing:
+#             cost: 3
+#             target: friendly
+#             num_targets: many
+#             duration: 1
+#             dice: 2d8
+#             effect_type: healing
+#             purpose: healing
+#             upcast:
+#                 cost: scaling
+#                 effect: allows you to heal allies for an added 1d8 health or increase the range by 30 feet
+#             description: "Play a powerful healing melody which restores all allies within range"
+#             range: self
+#             effect_radius: 30
+#             school: arcane-somatic
+#     Tier_5:
+#         Death Note:
+#             cost: 4
+#             target: enemy
+#             num_targets: 1
+#             duration: 1
+#             description: Play a chord of incredible power, with the strength to kill.
+#             range: archer
+#             purpose: damage
+#             school: arcane-acoustic
+#             hit: always
+#             effects:
+#                 - description: take full damage. If the save is successful, the enemy takes half damage.
+#                   save: spell power
+#             dice: 20d6
+#             effect_type: psychic
+#         Dominate:
+#             cost: 4
+#             target: enemy
+#             num_targets: 1
+#             duration: save
+#             description: Attempt to break an enemies mind, forcing them to obey your command.
+#             range: near
+#             purpose: debuff
+#             school: arcane-enchantment-mind
+#             hit: always
+#             effects:
+#                 - description: be subject to following your orders mindlessly
+#                   save: Spell Power
+#                   repeat:
+#                     - once per week
+#         Guards:
+#             cost: 4
+#             target: other
+#             num_targets: 1
+#             duration: 12 hours
+#             description: Summon 1d4+1 ethereal guardians to aid you for 12 hours. For stats,
+#                           view the book of known beasts.
+#             range: near
+#             purpose: summon
+#             school: arcane-conjuring
+#         Manifest Will:
+#             cost: 4
+#             target: self
+#             num_targets: 1
+#             duration: 1
+#             description: Say two words. If possible, the thing that you ask for appears in your hand.
+#             range: infinite
+#             purpose: utility
+#             school: arcane-conjuring
+#         Rewrite History:
+#             cost: 4
+#             target: enemy
+#             num_targets: 1
+#             duration: infinite
+#             description: Attempt to modify the memory of everyone in earshot.
+#             range: far
+#             purpose: debuff
+#             hit: always
+#             school: arcane-enchantment-mind
+#             effects:
+#                 - description: have up to 24 hours of their memory modified
+#                   save: spell power
+#         Torugar, the Many Tongued Demon:
+#             cost: 4
+#             target: everyone
+#             num_targets: many
+#             duration: 5
+#             description: Summon a pit, housing an ancient, many tongued demon of the underworld.
+#                 Every turn, 1d6+2 tongues will writhe forth from the pit, and attempt
+#                 to grab individuals within 1000 feet. Each turn an enemy is grappled by a tongue,
+#                 it takes damage. If a tongue takes 50 damage on a single turn, it releases its grapple, and returns to the pit.
+#             range: far
+#             dice: 4d8
+#             effect_type: blunt
+#             purpose: damage
+#             hit: other
+#             school: necromantic-summoning
+#             effects:
+#                 - description: be grappled by the tongue and begin taking damage
+#                   save: strength save against your spell power
+#                 - condition: once grappled
+#                   description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
+#     # Tier_3:
     #   Forget:
     #     cost: 2
     #     description: Force an entity to make a spell power save. On failure, the entity
@@ -933,7 +933,7 @@ the_druid's_guidebook:
               range: near
               duration: concentration
               cost: 0
-              dice: 1d8
+              dice: 1d12
               hit: always
               effect_type: blunt
               description: A vine bursts from the ground at an enemies feet, grabbing at them and dealing damage.
@@ -976,6 +976,7 @@ the_druid's_guidebook:
             cost: 1
             target: self
             num_targets: 1
+            range: self
             duration: concentration
             description: "White hot flames snap and pop as your body disappears in a puff of smoke,
                 leaving an elemental of fire in your place. While you are wreathed in flame,
@@ -1014,7 +1015,7 @@ the_druid's_guidebook:
             school: "natural-elemental"
         Moonlight:
             cost: 1
-            target: friend or foe
+            target: everyone
             num_targets: 1
             range: archer
             purpose: utility
@@ -1028,13 +1029,13 @@ the_druid's_guidebook:
             target: enemy
             num_targets: 1
             range: near
-            dice: 4d4
+            dice: 4d6
             effect_type: poison
             duration: 1
             hit: roll
             description: Hit an enemy with a blast of liquid poison.
             effects:
-                - description: become poisoned and take 2d4 damage each turn until a save is made
+                - description: become poisoned and take 2d6 damage each turn until a save is made
                   save: Spell Power
                   repeat:
                     - each turn
@@ -1048,7 +1049,7 @@ the_druid's_guidebook:
             duration: 1
             description: Remove poison from an item or person.
             range: hand
-            purpose: healing
+            purpose: buff
             school: divine-healing
         Summon Eagle:
             cost: 1
@@ -1067,19 +1068,20 @@ the_druid's_guidebook:
             num_targets: 1
             range: near
             duration: concentration
+            hit: always
             description: Summon a mighty tailwind or current behind you. Medium sized or smaller enemies must move at half speed when approaching you from the front.
             purpose: debuff
             school: "natural-elemental-air"
         Thorned Caltrops:
             cost: 1
+            purpose: utility
+            effect_type: piercing
             target: space
-            num_targets: 5
+            num_targets: many
             duration: 1 day
             range: near
-            dice: 2d4
-            combat_duration: battle
             description: Cast thorn based spikes onto the ground. Anyone moving across them
-              will move at half speed and take damage every 5 feet.
+              will move at half speed and take damage 2d4 damage every 5 feet.
             school: "natural-floral"
         Firebolt:
             cost: 1
@@ -1090,6 +1092,7 @@ the_druid's_guidebook:
             effect_type: fire
             hit: roll
             duration: 1
+            purpose: damage
             description: "Fire a sizzling bolt of flames at an enemy."
             school: "natural-elemental-fire"
     Tier_2:
@@ -1101,6 +1104,7 @@ the_druid's_guidebook:
             description: Charm a hostile animal or beast to make it friendly towards you.
             range: archer
             purpose: debuff
+            hit: always
             effects:
                 - description: a hostile animal regards you as friendly.
                   save: Spell Power
@@ -1109,13 +1113,13 @@ the_druid's_guidebook:
             school: "natural-animist"
         Freezing Rain:
             cost: 2
-            balance_type: greater debuff
             description: "Cause a freezing rain to fall over one mile of terrain, making it difficult to traverse."
             range: archer
             duration: 1 hour
-            combat_duration: battle
             target: enemy
-            num_targets: battle
+            num_targets: many
+            purpose: debuff
+            hit: always
             effects:
                 - description: "they fall prone and lose all further movement"
                   check_condition: "When moving across affected terrain"
@@ -1131,6 +1135,7 @@ the_druid's_guidebook:
             dice: 4d6
             purpose: damage
             hit: always
+            effect_type: blunt
             description: Create a geyser with a 3 foot radius which fires water 40 feet
                 directly upward into the air. The geyser immediately goes off, and may then
                 be re-triggered once per turn as a reaction.
@@ -1149,8 +1154,9 @@ the_druid's_guidebook:
             purpose: damage
             description: As you hold your focus aloft, spores of blackish-green billow forth, filling a radius around you.
               These living parasites heed your whim, entering the lungs of your foes while avoiding your friends.
-            damage: 2d8
+            dice: 2d8
             effect_type: poison
+            hit: always
             effects:
                 - condition: Each turn, enemies who breathe the spores must make a
                   description: "mushrooms begin sprouting from their bodies, causing them to make all moves with disadvantage during their next turn"
@@ -1180,7 +1186,6 @@ the_druid's_guidebook:
             school: "natural-elemental-water"
         Columns of Ice:
             cost: 2
-            balance_type: major utility
             target: space
             num_targets: many
             range: archer
@@ -1196,9 +1201,8 @@ the_druid's_guidebook:
             purpose: utility
             target: space
             num_targets: many
-            range: archer        
+            range: archer
             duration: 1 week
-            combat_duration: battle
             description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
                 them requires 3 dexterity checks against your spell power, each of which results
                 in 2d8 damage on failure. If a check is failed, the entity is stuck in the
@@ -1206,8 +1210,7 @@ the_druid's_guidebook:
             school: "natural-floral"
         Tornado:
             cost: 2
-            balance_type: greater debuff
-            range: middling
+            range: archer
             target: enemy
             num_targets: 1
             description: Trap an entity of your choice in a swirling whirlwind.
@@ -1218,7 +1221,7 @@ the_druid's_guidebook:
                 - description: continues to be trapped. If the entity escapes,
                     it slams to the ground, causing 6d6 falling damage.
                   save: spell power
-                  repeat: 
+                  repeat:
                     - at the end of each of each turn
             school: "natural-elemental-air"
     Tier_3:
@@ -1270,7 +1273,7 @@ the_druid's_guidebook:
             hit: always
             description: Summon hurricane force winds to batter your foes. The winds affect a fifty foot cone in front of you.
             effects:
-                - check_condition: Medium sized or smaller entities that try to move through the wind must make a 
+                - check_condition: Medium sized or smaller entities that try to move through the wind must make a
                   check: strength check against your spell power
                   description: be unable to move and be pushed back 15 feet. On success, they move at half speed.
             school: "natural-elemental-air"
@@ -1299,7 +1302,7 @@ the_druid's_guidebook:
     Tier_4:
         Plant Golem:
             cost: 4
-            purpose: summoning
+            purpose: summon
             target: space
             num_targets: 1
             range: near
@@ -1312,24 +1315,25 @@ the_druid's_guidebook:
             range: far
             duration: 1 hour
             target: enemy
-            num_targets: 2
+            num_targets: many
             dice: 2d10
             hit: roll
-            effect_type: lightning
+            effect_type: elemental
             purpose: damage
             description: Create a thunder cloud. Each turn, the
-                thundercloud may summon a two lightning strikes which deal which deal damage to
+                thundercloud may summon a two lightning strikes which deal damage to
                 an entity of your choice.
             school: "natural-elemental-air"
         Wildfire:
             purpose: damage
             cost: 3
-            dice: 5d10
+            dice: 5d8
             effect_type: fire
             target: space
-            num_targets: 4
+            num_targets: many
             range: archer
-            duration: 5
+            duration: 1
+            hit: always
             description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
                 space with fire, dealing damage to everyone within. The flames remain in place
                 until extinguished, and continue to do 2d10 damage to anyone who passes through
@@ -1348,8 +1352,8 @@ the_druid's_guidebook:
         Awaken Animal:
             cost: 5
             purpose: buff
-            duration: infinity
-            target: animal
+            duration: infinite
+            target: friendly
             num_targets: 1
             range: hand
             casting_time: 24 hours
@@ -1361,10 +1365,10 @@ the_druid's_guidebook:
             school: "natural-animist"
         Bountiful Harvest:
             cost: 2
-            purpose: healing
+            purpose: buff
             range: hand
             target: friendly
-            num_targets: 8
+            num_targets: many
             casting_time: 1 hour
             duration: 24 hours
             components:
@@ -1393,12 +1397,12 @@ the_druid's_guidebook:
             cost: 5
             range: self
             target: space
+            effect_radius: 50 miles
             num_targets: many
             casting_time: 24 hours
-            duration: eternity
-            combat_duration: battle
+            duration: infinite
             components:
-                - 250 gold's worth of crystals.
+                - 250 gold worth of crystals.
                 - the seed of a feywood tree
             description: Find the highest point in a region. Atop this point, create a pillar
                 of rock, at least ten feet tall and with a three foot radius. Spend some time
@@ -1408,78 +1412,73 @@ the_druid's_guidebook:
                 and an area of up to 50 miles will be stuck in the season of your choice.
             school: "natural"
         Starfall:
-            balance_type: major damage
+            purpose: damage
             cost: 4
-            dice_type: major
-            num_dice: 6
-            effect_type: force
-            range: archer
+            dice: 10d6
+            hit: roll
+            effect_type: elemental
+            range: far
             target: enemy
-            num_targets: aoe
-            effect_radius: 30
-            duration: instantaneous
-            combat_duration: 1
+            num_targets: many
+            effect_radius: 15
+            duration: 1
             description: Spend one full round of combat focusing on bringing down a massive
                 meteor. If you are attacked, make a concentration check. On failure, you loose
                 control of the spell. On success, call down a meteor
-                which strikes all enemies in a 10 foot radius for massive damage.
+                which strikes all enemies in a 15 foot radius for massive damage.
             school: "natural-elemental-earth"
         Tsunami:
-            balance_type: major damage
             cost: 4
-            effect_type: force
-            dice_type: major
-            num_dice: 4
-            range: far
-            duration: battle
             target: enemy
-            num_targets: battle
-            duration: instantaneous
-            combat_duration: 1
+            num_targets: many
+            duration: 1
             description: Summon a massive tidal wave to crash down on the battlefield.
                 The tidal wave does damage to all enemies in a cone in front of you.
+            range: archer
+            purpose: damage
+            dice: 10d8
+            effect_type: force
+            hit: always
             effects:
-                - description: are swept away by the tsunami. Entities that are swept
+                - description: they are swept away by the tsunami. Entities that are swept
                     away move until they hit something solid or have moved 50 feet. When they
-                    stop, they take additional damage. After the tsunami has swept across the battlefield,
-                    the battlefield has 2 feet of water on it, and all movement must be taken
+                    stop. After the tsunami has swept across the battlefield,
+                    2 feet of water remains, and all movement must be taken
                     at half speed.
-                save: size based strength check versus your spell power
-            balance_type: major debuff
-            duration: 1 hour
-            combat_duration: battle
+                  save: strength check versus your spell power
             school: "natural-elemental-water"
         Volcano:
-            cost: 6
-            balance_type: major damage
+            cost: 5
             range: archer
-            target:  enemy
-            num_targets: battle
-            duration: until dispelled
-            combat_duration: battle
-            dice_type: major
-            num_dice: 4
+            target: enemy
+            num_targets: many
+            duration: infinite
+            range: far
+            dice: 5d6
+            hit: always
+            purpose: damage
             effect_type: fire
             description: Call forth a volcano with a caldera with a 15 foot radius.
                 Lava bubbles forth, spewing onto the battlefield.
-                All standing where the volcano appears must make a dexterity saving throw
-                against your spell power. On a failure, they are partially submerged in lava,
-                and take damage. On a critical failure, they are fully submerged,
-                and take double damage. Each turn, the volcano spews lava. All creatures on
-                the battlefield must make a dexterity check against your spell power. On failure
-                they take damage. The volcano lasts until it is dispelled.
+                The volcano lasts until it is dispelled.
+            effects:
+                - condition: If an individual is standing over where the caldera forms, it must make a
+                  check: dexterity saving throw
+                  description: fall in, taking 10d6 damage. On success, the entity takes 5d6 damage
+                - condition: Each turn beginning with the first, all entities within 300 feet must make ange
+                  check: dexterity saving throw
+                  description: take damage
             school: "natural-elemental-fire"
         Winter's Fury:
-            cost: 5
-            balance_type: major damage
-            range: sight
+            cost: 4
+            range: 1 mile
             target: enemy
-            num_targets: battle
-            dice_type: minor
-            num_dice: 4
+            num_targets: many
+            dice: 10d4
+            hit: always
             effect_type: ice
-            duration: concentration
-            combat_duration: concentration
+            purpose: damage
+            duration: 1 hour
             description: Summon the biting snows of a massive blizzard.
                 All entities within the blizzard take
                 damage each turn, and are considered harried.
