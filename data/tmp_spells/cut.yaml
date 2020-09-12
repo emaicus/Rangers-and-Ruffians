@@ -71,17 +71,7 @@ Bard:
                 the negative aspects of the individual. The curse takes effect as soon as
                 the individual leaves someone's presence, and lasts until dispelled.
 Druid:
-    Cloud of Fog: # Was tier 1, as good as Bard's tier 2 smokescreen
-        cost: 1
-        target: space
-        num_targets: 1
-        balance_type: greater utility
-        range: sight
-        duration: 1 hour
-          description: Create a heavy fog. The fog may
-            have a radius of up to 50 feet. Entities in the fog make relevant checks with
-            disadvantage.
-        school: "natural-elemental-water"
+   
     Commanding Presence: # Conflicts with other classes
         cost: 2
         target: friendly
@@ -108,4 +98,42 @@ Druid:
                 save: Spell Power
                 balance_type: minor utility
                 repeat: at the start of each of the entity's turns
+        school: "unknown"
+    Hurl Boulder: # Basically a repeat of Hurl stone, which can now upcast 
+        cost: 2
+        target: enemy
+        num_targets: 1
+        dice_type: major
+        num_dice: 3
+        effect_type: force
+        duration: instantaneous
+        combat_duration: 1
+        description: Hurl a boulder at an enemy.
+        school: "natural-elemental-earth"
+    Remove Curse: # Makes more sense for holy classes
+        cost: 2
+        target: friendly
+        num_targets: 1
+        balance_type: greater restoration
+        duration: instantaneous
+        combat_duration: battle
+        description: "Immediately allow an individual to re-make a spell power save against a
+            curse or other status effect at advantage."
+        school: "divine"
+    Thieve's Curse: # Off brand
+        cost: 2
+        target: entity
+        num_targets: 1
+        duration: eternity
+        description: "Cast a curse on an enemy."
+        balance_type: major debuff
+        duration: eternity
+        combat_duration: battle
+        effects:
+            - description: they are cursed so that they have an irresistible
+                urge to steal something once per hour. Afterward, they forget their acts of thievery,
+                and stow the stolen goods in their quarters or a private place. The curse
+                remains until it is dispelled.
+        save: Spell Power
+        balance_type: major debuff
         school: "unknown"

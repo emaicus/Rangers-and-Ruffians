@@ -493,9 +493,12 @@ the_bard's_songbook:
             cost: 2
             target: self
             num_targets: 1
-            duration: 1 hour
-            description: Transform yourself into a beast of of up to your level that is
-                designated as a light or heavy enemy. See the book of known beasts for details.
+            duration: 1 day
+            description: "Transform yourself into a beast of of up to your level that is
+                designated as a light or heavy enemy. You gain the hit points of that beast.
+                If the hit points are reduced to zero, you immediately return to your normal
+                form with the same hit points as when the spell began. See the book of known beasts
+                for details on the different beasts of the world."
             range: self
             purpose: utility
             school: natural-animist
@@ -998,6 +1001,7 @@ the_druid's_guidebook:
             dice: 3d6
             effect_type: elemental
             duration: concentration
+            hit: roll
             description: Focus a concentrated beam of either fire or ice on an enemy.
             effects:
                 - condition: If the beam is ice
@@ -1027,6 +1031,7 @@ the_druid's_guidebook:
             dice: 4d4
             effect_type: poison
             duration: 1
+            hit: roll
             description: Hit an enemy with a blast of liquid poison.
             effects:
                 - description: become poisoned and take 2d4 damage each turn until a save is made
@@ -1060,10 +1065,10 @@ the_druid's_guidebook:
             cost: 1
             target: self
             num_targets: 1
-            range: self
+            range: near
             duration: concentration
-            description: Summon a mighty tailwind or current behind you.
-            purpose: utility
+            description: Summon a mighty tailwind or current behind you. Medium sized or smaller enemies must move at half speed when approaching you from the front.
+            purpose: debuff
             school: "natural-elemental-air"
         Thorned Caltrops:
             cost: 1
@@ -1093,10 +1098,9 @@ the_druid's_guidebook:
             target: friendly
             num_targets: 1
             duration: save
-            description: Charm an animal or beast to make it friendly towards you.
-            balance_type: greater utility
+            description: Charm a hostile animal or beast to make it friendly towards you.
             range: archer
-            combat_duration: save
+            purpose: debuff
             effects:
                 - description: a hostile animal regards you as friendly.
                   save: Spell Power
@@ -1113,103 +1117,91 @@ the_druid's_guidebook:
             target: enemy
             num_targets: battle
             effects:
-                - description: "they fall prone."
-                  check_condition: "When moving at greater than half their speed across affected terrain"
-                  save: Dexterity Check against your Spell Power
+                - description: "they fall prone and lose all further movement"
+                  check_condition: "When moving across affected terrain"
+                  save: dexterity check against your spell power
                   balance_type: greater utility
             school: "natural-elemental-water"
         Geyser:
+            cost: 2
+            target: space
+            num_targets: 1
+            range: archer
+            duration: 1 hour
+            dice: 4d6
+            purpose: damage
+            hit: always
+            description: Create a geyser with a 3 foot radius which fires water 40 feet
+                directly upward into the air. The geyser immediately goes off, and may then
+                be re-triggered once per turn as a reaction.
+            effects:
+                - condition: If an entity sized moderate or smaller is standing on the geyser when it goes off they must
+                  save: dexterity save against your spell power
+                  description: be thrown into the air before crashing down, falling prone, and taking an additional 4d6 damage
+            school: "natural-elemental-earth"
+        Spores:
+            cost: 2
+            target: self
+            num_targets: 1
+            duration: 3
+            effect_radius: 30
+            range: self
+            purpose: damage
+            description: As you hold your focus aloft, spores of blackish-green billow forth, filling a radius around you.
+              These living parasites heed your whim, entering the lungs of your foes while avoiding your friends.
+            damage: 2d8
+            effect_type: poison
+            effects:
+                - condition: Each turn, enemies who breathe the spores must make a
+                  description: "mushrooms begin sprouting from their bodies, causing them to make all moves with disadvantage during their next turn"
+                  save: "Spell Power"
+            school: "natural-floral"
+        Smokescreen:
             cost: 1
             target: space
             num_targets: 1
-            balance_type: greater utility
+            effect_radius: 60
+            duration: 5
             range: far
+            description: "Create a smokescreen. Entities within the smokescreen are considered to be
+                          in darkness."
+            purpose: utility
+            school: arcane-conjuring
+        Cloud of Fog:
+            cost: 1
+            target: space
+            num_targets: 1
+            effect_radius: 1 mile
             duration: 1 hour
-            combat_duration: battle
-            description: Create a geyser with a 3 foot radius which fires water 40 feet
-                directly upward into the air.
-            school: "natural-elemental-earth"
-        Hurl Boulder:
-            cost: 2
-            target: enemy
-            num_targets: 1
-            dice_type: major
-            num_dice: 3
-            effect_type: force
-            duration: instantaneous
-            combat_duration: 1
-            description: Hurl a boulder at an enemy.
-            school: "natural-elemental-earth"
-        Remove Curse:
-            cost: 2
-            target: friendly
-            num_targets: 1
-            balance_type: greater restoration
-            duration: instantaneous
-            combat_duration: battle
-            description: "Immediately allow an individual to re-make a spell power save against a
-                curse or other status effect at advantage."
-            school: "divine"
-        Spores:
-            cost: 2
-            dice_type: minor
-            num_dice: 2
-            effect_type: poison
-            target: enemy
-            num_targets: aoe
-            effect_radius: 30
-            balance_type: greater damage
-            range: self
-            duration: 1 minute
-            combat_duration: 1
-            description: Release poison spores. Anyone who inhales
-            them must take damage.
-            effects:
-                - description: "must make all actions with disadvantage as well as being poisoned, as mushrooms begin sprouting from their bodies."
-                  save: "Spell Power"
-                  balance_type: minor debuff
-            school: "natural-floral"
-        Thieve's Curse:
-            cost: 2
-            target: entity
-            num_targets: 1
-            duration: eternity
-            description: "Cast a curse on an enemy."
-            balance_type: major debuff
-            duration: eternity
-            combat_duration: battle
-            effects:
-                - description: they are cursed so that they have an irresistible
-                    urge to steal something once per hour. Afterward, they forget their acts of thievery,
-                    and stow the stolen goods in their quarters or a private place. The curse
-                    remains until it is dispelled.
-            save: Spell Power
-            balance_type: major debuff
-            school: "unknown"
-        Wall of ice:
+            range: far
+            purpose: utility
+            description: Call upon a heavy fog, which clouds a 1 mile radius, decreasing visibility and
+                giving all ranged attacks disadvantage if made over greater than 30 feet.
+            school: "natural-elemental-water"
+        Columns of Ice:
             cost: 2
             balance_type: major utility
             target: space
-            num_targets: 8
-            range: middling
-            duration: 1 hour
-            combat_duration: battle
-            description: Create a wall up to 15 feet high and 40 feet long of solid ice.
+            num_targets: many
+            range: archer
+            duration: 1 day
+            purpose: utility
+            description: Create 1d6 columns of ice, each up to 30 feet high and with a flat, 5 square foot top.
+            upcast:
+                cost: 1
+                effect: Create an additional 1d6 columns
             school: "natural-elemental-water"
         Wall of Brambles:
             cost: 2
-            balance_type: major utility
+            purpose: utility
             target: space
-            num_targets: 8
-            range: middling
-            dice_type: major
-            num_dice: 1
-            effect_type: moderate damage
+            num_targets: many
+            range: archer        
             duration: 1 week
             combat_duration: battle
             description: Create a wall up to 15 feet high and 40 feet long of bramble bushes. Moving through
                 them requires 3 dexterity checks against your spell power, each of which results
-                damage on failure. If a check is failed, the entity is stuck in the
+                in 2d8 damage on failure. If a check is failed, the entity is stuck in the
                 brambles until its next turn.
             school: "natural-floral"
         Tornado:
@@ -1219,286 +1211,279 @@ the_druid's_guidebook:
             target: enemy
             num_targets: 1
             description: Trap an entity of your choice in a swirling whirlwind.
-            duration: 15 minutes
-            combat_duration: 3
+            duration: save
+            purpose: debuff
+            hit: roll
             effects:
                 - description: continues to be trapped. If the entity escapes,
-                    it slams to the ground, causing 40 feet of fall damage.
-            save: dexterity check against your spell power
-            repeat: at the end of each of each turn
+                    it slams to the ground, causing 6d6 falling damage.
+                  save: spell power
+                  repeat: 
+                    - at the end of each of each turn
             school: "natural-elemental-air"
-#   Tier_3:
-#     Animal Form:
-#       cost: 2
-#       balance_type: major utility
-#       target: self
-#       num_targets: 1
-#       duration: until un-cast
-#       combat_duration: battle
-#       description: Transform yourself into a Light or Heavy beast of up to second
-#         level. See the book of known beasts for more details. You may leave this form as an offhand action.
-#       school: "natural-animist"
-#     Forest Guardians:
-#       cost: 2
-#       balance_type: greater summoning
-#       range: self
-#       target: friendly
-#       num_targets: 2
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: Summon one beast of second level, two beasts of first level, or four beasts of first level.
-#         of known beasts for more details.
-#       school: "natural-animist"
-#     Greater Control Plant Growth:
-#       cost: 2
-#       duration: concentration
-#       combat_duration: concentration
-#       target: space
-#       num_targets: 1
-#       balance_type: major utility
-#       casting_time: 30 seconds
-#       combat_casting_time: 1
-#       description: "Quickly grow plants up to the size of a tree.
-#         After an hour of use, begin making inner fire saving
-#         throws to see if you are too exhausted to continue."
-#       school: "natural-floral"
-#     Hurricane Force Winds:
-#       cost: 2
-#       duration: concentration
-#       combat_duration: concentration
-#       target: enemy
-#       num_targets: cone
-#       effect_radius: 30
-#       balance_type: major debuff
-#       range: self
-#       description: Summon hurricane force winds with up to a 30 foot horizontal diameter.
-#       effects:
-#         - description: cannot move. On success, they move at half speed.
-#           check: size-based strength check against your spell power
-#           check_condition: If they try to move through the wind
-#       school: "natural-elemental-air"
-#     Nature's Fury:
-#       balance_type: major damage
-#       cost: 3
-#       dice_type: major
-#       num_dice: 4
-#       effect_type: elemental
-#       target: enemy
-#       num_targets: line
-#       range: archer
-#       duration: instantaneous
-#       combat_duration: 1
-#       description: Fire a beam of earth, wind, ice, or fire. The unchecked power of this
-#         attack passes through enemies, allowing you to strike multiple if they are in a line.
-#       school: "natural-elemental"
-#     Grant Elemental Resistance:
-#       cost: 2
-#       target: friendly
-#       num_targets: 1
-#       balance_type: greater buff
-#       range: middling
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: Select an element. An entity of your choice takes half damage from
-#         that element.
-#       school: "natural-elemental"
-#   Tier_4:
-#     Plant Golems:
-#       cost: 4
-#       balance_type: major summoning
-#       target: space
-#       num_targets: 2
-#       range: self
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: Summon 2 plant golems to your aid. See the book of known beasts
-#         for details.
-#       school: "natural-floral"
-#     Thunder Cloud:
-#       balance_type: major damage
-#       range: archer
-#       duration: 1 hour
-#       combat_duration: 3
-#       target: enemy
-#       num_targets: 2
-#       cost: 4
-#       dice_type: major
-#       num_dice: 2
-#       effect_type: lightning
-#       description: Create a thunder cloud. Each turn, the
-#         thundercloud may summon a two lightning strikes which deal which deal damage to
-#         an entity of your choice.
-#       school: "natural-elemental-air"
-#     Wildfire:
-#       balance_type: major damage
-#       cost: 4
-#       dice_type: major
-#       num_dice: 3
-#       effect_type: fire
-#       target: space
-#       num_targets: 4
-#       range: archer
-#       duration: 1 hour
-#       combat_duration: battle
-#       description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
-#         space with fire, dealing damage to everyone within. The flames remain in place
-#         until extinguished."
-#       school: "natural-elemental-fire"
-#     Wings:
-#       cost: 2
-#       balance_type: greater buff
-#       duration: 12 hours
-#       combat_duration: battle
-#       target: self
-#       num_targets: 1
-#       range: self
-#       description: Summon an eagles wings to your back, giving you the ability to
-#         fly.
-#       school: "natural-animist"
-#     Awaken Animal:
-#       cost: 5
-#       balance_type: major utility
-#       duration: eternity
-#       combat_duration: battle
-#       target: animal
-#       num_targets: 1
-#       range: hand to hand
-#       casting_time: 24 hours
-#       combat_casting_time: battle
-#       components:
-#         - "1,000 gold worth of gemstones"
-#         - "A seed from a feywood tree"
-#         - "An animal which trusts you completely"
-#       description: Grant an animal sentience.
-#       school: "natural-animist"
-#     Bountiful Harvest:
-#       balance_type: healing candidate
-#       cost: 3
-#       balance_type: major healing
-#       range: hand to hand
-#       target: friendly
-#       num_targets: 8
-#       casting_time: 1 hour
-#       combat_casting_time: battle
-#       duration: 24 hours
-#       combat_duration: battle
-#       components:
-#         - A Chalice worth 100 gold pieces.
-#         - A seed from a feywood tree.
-#       description: Grow a feast. Up to 8 entities may partake of the feast. Each of
-#         these entities fully heal, and gain additional hit points equal to a roll
-#         of your major spell dice for the next 24 hours.
-#       school: "natural-floral"
-#     Control Weather:
-#       cost: 2
-#       balance_type: major utility
-#       range: self
-#       target: region
-#       num_targets: 1
-#       casting_time: 30 minutes
-#       duration: concentration
-#       combat_duration: concentration
-#       description: Changes the weather in a region. Further,
-#         control that weather to accomplish specific tasks. Weather
-#         does not change back when concentration is broken.
-#       school: "natural-elemental-air"
-#   Tier_5:
-#     Fix Season:
-#       balance_type: major utility
-#       cost: 5
-#       range: self
-#       target: region
-#       num_targets: 1
-#       casting_time: 24 hours
-#       duration: eternity
-#       combat_duration: battle
-#       components:
-#         - 250 gold's worth of crystals.
-#         - the seed of a feywood tree
-#       description: Find the highest point in a region. Atop this point, create a pillar
-#         of rock, at least ten feet tall and with a three foot radius. Spend some time
-#         carving symbols significant to you into the stones. Affix crystals valuing
-#         250 gold to the top of the spire. Crush the seed of a feywood tree, and channel
-#         your energy into the crystals. After many hours, the crystals begin to glow,
-#         and an area of up to 50 miles will be stuck in the season of your choice.
-#       school: "natural"
-#     Starfall:
-#       balance_type: major damage
-#       cost: 4
-#       dice_type: major
-#       num_dice: 6
-#       effect_type: force
-#       range: archer
-#       target: enemy
-#       num_targets: aoe
-#       effect_radius: 30
-#       duration: instantaneous
-#       combat_duration: 1
-#       description: Spend one full round of combat focusing on bringing down a massive
-#         meteor. If you are attacked, make a concentration check. On failure, you loose
-#         control of the spell. On success, call down a meteor
-#         which strikes all enemies in a 10 foot radius for massive damage.
-#       school: "natural-elemental-earth"
-#     Tsunami:
-#       balance_type: major damage
-#       cost: 4
-#       effect_type: force
-#       dice_type: major
-#       num_dice: 4
-#       range: far
-#       duration: battle
-#       target: enemy
-#       num_targets: battle
-#       duration: instantaneous
-#       combat_duration: 1
-#       description: Summon a massive tidal wave to crash down on the battlefield.
-#         The tidal wave does damage to all enemies in a cone in front of you.
-#       effects:
-#         - description: are swept away by the tsunami. Entities that are swept
-#             away move until they hit something solid or have moved 50 feet. When they
-#             stop, they take additional damage. After the tsunami has swept across the battlefield,
-#             the battlefield has 2 feet of water on it, and all movement must be taken
-#             at half speed.
-#           save: size based strength check versus your spell power
-#           balance_type: major debuff
-#           duration: 1 hour
-#           combat_duration: battle
-#       school: "natural-elemental-water"
-#     Volcano:
-#       cost: 6
-#       balance_type: major damage
-#       range: archer
-#       target:  enemy
-#       num_targets: battle
-#       duration: until dispelled
-#       combat_duration: battle
-#       dice_type: major
-#       num_dice: 4
-#       effect_type: fire
-#       description: Call forth a volcano with a caldera with a 15 foot radius.
-#         Lava bubbles forth, spewing onto the battlefield.
-#         All standing where the volcano appears must make a dexterity saving throw
-#         against your spell power. On a failure, they are partially submerged in lava,
-#         and take damage. On a critical failure, they are fully submerged,
-#         and take double damage. Each turn, the volcano spews lava. All creatures on
-#         the battlefield must make a dexterity check against your spell power. On failure
-#         they take damage. The volcano lasts until it is dispelled.
-#       school: "natural-elemental-fire"
-#     Winter's Fury:
-#       cost: 5
-#       balance_type: major damage
-#       range: sight
-#       target: enemy
-#       num_targets: battle
-#       dice_type: minor
-#       num_dice: 4
-#       effect_type: ice
-#       duration: concentration
-#       combat_duration: concentration
-#       description: Summon the biting snows of a massive blizzard.
-#         All entities within the blizzard take
-#         damage each turn, and are considered harried.
-#       school: "natural-elemental-water"
+    Tier_3:
+        Animal Form:
+            cost: 2
+            target: self
+            num_targets: 1
+            duration: 1 day
+            description: "Transform yourself into a beast of of up to your level that is
+                designated as a light or heavy enemy. You gain the hit points of that beast.
+                If the hit points are reduced to zero, you immediately return to your normal
+                form with the same hit points as when the spell began. See the book of known beasts
+                for details on the different beasts of the world."
+            range: self
+            purpose: utility
+            school: natural-animist
+            upcast:
+                cost: 1
+                effect: increase it's effect to last 24 hours
+        Forest Guardians:
+            cost: 3
+            target: space
+            num_targets: 1
+            duration: 1 hour
+            description: Summon one beast of second level, two beasts of first level, or four beasts of first level
+                from the book of known beasts to aid you.
+            range: near
+            purpose: summon
+            school: "natural-animist"
+        Minor Control Plant Growth:
+              cost: 2
+              target: space
+              num_targets: 1
+              range: archer
+              duration: concentration
+              description: "Quickly grow plants up to the size of a tree
+                at a rate of one per minute.
+                After an hour of use, begin making inner fire saving
+                throws to see if you are too exhausted to continue."
+              purpose: utility
+              school: "natural-floral"
+        Hurricane Force Winds:
+            cost: 2
+            duration: concentration
+            target: enemy
+            num_targets: many
+            range: self
+            purpose: debuff
+            hit: always
+            description: Summon hurricane force winds to batter your foes. The winds affect a fifty foot cone in front of you.
+            effects:
+                - check_condition: Medium sized or smaller entities that try to move through the wind must make a 
+                  check: strength check against your spell power
+                  description: be unable to move and be pushed back 15 feet. On success, they move at half speed.
+            school: "natural-elemental-air"
+        Nature's Fury:
+            cost: 3
+            target: enemy
+            num_targets: 1
+            duration: 1
+            hit: roll
+            dice: 8d8
+            effect_type: elemental
+            range: far
+            purpose: damage
+            description: Fire a beam of earth, wind, ice, or fire. The unchecked power of this
+                attack passes through enemies, allowing you to strike multiple if they are in a line.
+            school: "natural-elemental"
+        Grant Elemental Resistance:
+            cost: 2
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            range: near
+            purpose: buff
+            description: Select an element. An entity of your choice is resistant to that element.
+            school: "natural-elemental"
+    Tier_4:
+        Plant Golem:
+            cost: 4
+            purpose: summoning
+            target: space
+            num_targets: 1
+            range: near
+            duration: 1 hour
+            description: Summon a plant golems to aid you. See the book of known beasts
+                for details.
+            school: "natural-floral"
+        Thunder Cloud:
+            cost: 4
+            range: far
+            duration: 1 hour
+            target: enemy
+            num_targets: 2
+            dice: 2d10
+            hit: roll
+            effect_type: lightning
+            purpose: damage
+            description: Create a thunder cloud. Each turn, the
+                thundercloud may summon a two lightning strikes which deal which deal damage to
+                an entity of your choice.
+            school: "natural-elemental-air"
+        Wildfire:
+            purpose: damage
+            cost: 3
+            dice: 5d10
+            effect_type: fire
+            target: space
+            num_targets: 4
+            range: archer
+            duration: 5
+            description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
+                space with fire, dealing damage to everyone within. The flames remain in place
+                until extinguished, and continue to do 2d10 damage to anyone who passes through
+                or begins their turn within them."
+            school: "natural-elemental-fire"
+        Wings:
+            cost: 2
+            purpose: buff
+            duration: 1 day
+            target: self
+            num_targets: 1
+            range: self
+            description: Summon an eagles wings to your back, giving you the ability to
+                fly, and a flying speed of 60ft.
+            school: "natural-animist"
+        Awaken Animal:
+            cost: 5
+            purpose: buff
+            duration: infinity
+            target: animal
+            num_targets: 1
+            range: hand
+            casting_time: 24 hours
+            components:
+                - "1,000 gold worth of gemstones"
+                - "A seed from a feywood tree"
+                - "An animal which trusts you completely"
+            description: Grant an animal sentience.
+            school: "natural-animist"
+        Bountiful Harvest:
+            cost: 2
+            purpose: healing
+            range: hand
+            target: friendly
+            num_targets: 8
+            casting_time: 1 hour
+            duration: 24 hours
+            components:
+                - A Chalice worth 100 gold pieces.
+                - A seed from a feywood tree.
+            description: Grow a feast. Up to 8 entities may partake of the feast. Each of
+                these entities fully heal, and gain additional hit points equal to your
+                level plus your inner fire. These hit points last for 24 hours. Bountiful Harvest
+                may be used at most once per day.
+            school: "natural-floral"
+        Control Weather:
+            cost: 2
+            purpose: utility
+            range: self
+            target: space
+            num_targets: many
+            casting_time: 1 hour
+            duration: concentration
+            description: Changes the weather in a region. Further,
+                control that weather to accomplish specific tasks. Weather
+                does not change back when concentration is broken.
+            school: "natural-elemental-air"
+    Tier_5:
+        Fix Season:
+            purpose: utility
+            cost: 5
+            range: self
+            target: space
+            num_targets: many
+            casting_time: 24 hours
+            duration: eternity
+            combat_duration: battle
+            components:
+                - 250 gold's worth of crystals.
+                - the seed of a feywood tree
+            description: Find the highest point in a region. Atop this point, create a pillar
+                of rock, at least ten feet tall and with a three foot radius. Spend some time
+                carving symbols significant to you into the stones. Affix crystals valuing
+                250 gold to the top of the spire. Crush the seed of a feywood tree, and channel
+                your energy into the crystals. After many hours, the crystals begin to glow,
+                and an area of up to 50 miles will be stuck in the season of your choice.
+            school: "natural"
+        Starfall:
+            balance_type: major damage
+            cost: 4
+            dice_type: major
+            num_dice: 6
+            effect_type: force
+            range: archer
+            target: enemy
+            num_targets: aoe
+            effect_radius: 30
+            duration: instantaneous
+            combat_duration: 1
+            description: Spend one full round of combat focusing on bringing down a massive
+                meteor. If you are attacked, make a concentration check. On failure, you loose
+                control of the spell. On success, call down a meteor
+                which strikes all enemies in a 10 foot radius for massive damage.
+            school: "natural-elemental-earth"
+        Tsunami:
+            balance_type: major damage
+            cost: 4
+            effect_type: force
+            dice_type: major
+            num_dice: 4
+            range: far
+            duration: battle
+            target: enemy
+            num_targets: battle
+            duration: instantaneous
+            combat_duration: 1
+            description: Summon a massive tidal wave to crash down on the battlefield.
+                The tidal wave does damage to all enemies in a cone in front of you.
+            effects:
+                - description: are swept away by the tsunami. Entities that are swept
+                    away move until they hit something solid or have moved 50 feet. When they
+                    stop, they take additional damage. After the tsunami has swept across the battlefield,
+                    the battlefield has 2 feet of water on it, and all movement must be taken
+                    at half speed.
+                save: size based strength check versus your spell power
+            balance_type: major debuff
+            duration: 1 hour
+            combat_duration: battle
+            school: "natural-elemental-water"
+        Volcano:
+            cost: 6
+            balance_type: major damage
+            range: archer
+            target:  enemy
+            num_targets: battle
+            duration: until dispelled
+            combat_duration: battle
+            dice_type: major
+            num_dice: 4
+            effect_type: fire
+            description: Call forth a volcano with a caldera with a 15 foot radius.
+                Lava bubbles forth, spewing onto the battlefield.
+                All standing where the volcano appears must make a dexterity saving throw
+                against your spell power. On a failure, they are partially submerged in lava,
+                and take damage. On a critical failure, they are fully submerged,
+                and take double damage. Each turn, the volcano spews lava. All creatures on
+                the battlefield must make a dexterity check against your spell power. On failure
+                they take damage. The volcano lasts until it is dispelled.
+            school: "natural-elemental-fire"
+        Winter's Fury:
+            cost: 5
+            balance_type: major damage
+            range: sight
+            target: enemy
+            num_targets: battle
+            dice_type: minor
+            num_dice: 4
+            effect_type: ice
+            duration: concentration
+            combat_duration: concentration
+            description: Summon the biting snows of a massive blizzard.
+                All entities within the blizzard take
+                damage each turn, and are considered harried.
+            school: "natural-elemental-water"
 # the_book_of_healing:
 #   Tier_0:
 #     Beam of Light:

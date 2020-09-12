@@ -39,8 +39,15 @@ Range Macros:
   hand -> a descriptor for zero.
   close -> 15ft
   near -> 30 ft.
-  archer -> 60ft.
+  archer -> 90ft.
   far -> 300ft.
+
+# Levels 0-1, Tier 0. 7 damage 2d6
+# Levels 2-4, Tier 1, 14 damage 4d6
+# Levels 5-7, Tier 2, 27 damage 6d8
+# Levels 8-9, Tier 3, 36 damage 8d8
+# Levels 10-12, Tier 4, 50 damage 9d10
+# Levels 13-15, Tier 5, 70 damage 20d6
 
 potential spell schools:
   - Divine
@@ -71,13 +78,13 @@ potential spell schools:
     - Acoustic
   - Necromantic
 
-Average damage per tier:
-  0: 7
-  1: 14
-  2: 27
-  3: 36
-  4: 50
-  5: 70
+Needed:
+  Tier_0: 19
+  Tier_1: 14
+  Tier_2: 11
+  Tier_3: 8
+  Tier_4: 6
+  Tier_5: 3
 
 Combined as follows:
 
