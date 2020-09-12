@@ -933,7 +933,7 @@ the_druid's_guidebook:
               range: near
               duration: concentration
               cost: 0
-              dice: 1d10
+              dice: 1d12
               hit: always
               effect_type: blunt
               description: A vine bursts from the ground at an enemies feet, grabbing at them and dealing damage.
@@ -1074,16 +1074,14 @@ the_druid's_guidebook:
             school: "natural-elemental-air"
         Thorned Caltrops:
             cost: 1
-            purpose: damage
+            purpose: utility
             effect_type: piercing
             target: space
             num_targets: many
             duration: 1 day
-            hit: always
             range: near
-            dice: 2d4
             description: Cast thorn based spikes onto the ground. Anyone moving across them
-              will move at half speed and take damage every 5 feet.
+              will move at half speed and take damage 2d4 damage every 5 feet.
             school: "natural-floral"
         Firebolt:
             cost: 1
@@ -1323,18 +1321,18 @@ the_druid's_guidebook:
             effect_type: elemental
             purpose: damage
             description: Create a thunder cloud. Each turn, the
-                thundercloud may summon a two lightning strikes which deal which deal damage to
+                thundercloud may summon a two lightning strikes which deal damage to
                 an entity of your choice.
             school: "natural-elemental-air"
         Wildfire:
             purpose: damage
             cost: 3
-            dice: 5d10
+            dice: 5d8
             effect_type: fire
             target: space
             num_targets: many
             range: archer
-            duration: 5
+            duration: 1
             hit: always
             description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
                 space with fire, dealing damage to everyone within. The flames remain in place
@@ -1416,7 +1414,7 @@ the_druid's_guidebook:
         Starfall:
             purpose: damage
             cost: 4
-            dice: 20d6
+            dice: 10d6
             hit: roll
             effect_type: elemental
             range: far
@@ -1438,7 +1436,7 @@ the_druid's_guidebook:
                 The tidal wave does damage to all enemies in a cone in front of you.
             range: archer
             purpose: damage
-            dice: 12d8
+            dice: 10d8
             effect_type: force
             hit: always
             effects:

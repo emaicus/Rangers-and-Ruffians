@@ -111,14 +111,14 @@ def check_spell_syntax(spell_name, spell_info):
                 encountered_errors = True
     return encountered_errors
 
-def get_expected_value(dice_str, num_targets, duration):
+def get_expected_value(dice_str, num_targets, duration, cost):
     avg_roll = _get_avg_roll_from_dice_string(dice_str)
     num_targets = 2 if num_targets == 'many' else 1
 
     if duration == 'concentration':
-        duration = 1
+        duration = 1 if cost == 0 else 1.5
     elif isinstance(duration, str):
-        duration = 3
+        duration = 2
     else:
         duration = duration
 
@@ -160,14 +160,14 @@ def spell_type_analysis(spellbook_name, spell_tiers):
                 spell_damage[tier_name].append(
                     (
                         spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'])
+                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost'])
                     )
                 )
             elif purpose == 'healing':
                 spell_healing[tier_name].append(
                     (
                         spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'])
+                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost'])
                     )
                 )
 
