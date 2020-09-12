@@ -1,7 +1,7 @@
 import os
 import json
 import yaml
-import statistics 
+import statistics
 
 required_fields = ["cost", "target", "num_targets", "duration", "description", "range", "purpose", "school"]
 all_fields = required_fields + ["dice", "effect_type", "effects", "casting_time", "components", "upcast", "action_type", "effect_radius", "charisma_cost", "hit"]
@@ -11,27 +11,28 @@ conditional_requirements = {
 }
 
 MACRO_LIST = [
-    "INTEGER_MACRO", 
-    "HOURS_MACRO", 
-    "WEEKS_MACRO", 
-    "STRING_MACRO", 
-    "DICE_MACRO", 
+    "INTEGER_MACRO",
+    "HOURS_MACRO",
+    "DAYS_MACRO",
+    "WEEKS_MACRO",
+    "STRING_MACRO",
+    "DICE_MACRO",
     "MILES_MACRO"
 ]
 
 valid_values = {
     "cost" : ["INTEGER_MACRO"],
-    "target": ["friendly", "enemy", "friend and foe", "self", "space", "other"],
+    "target": ["friendly", "enemy", "everyone", "self", "space", "other"],
     "num_targets": [1, "many"],
-    "duration": ["INTEGER_MACRO", "save", "battle", "HOURS_MACRO", "WEEKS_MACRO", "concentration", "infinite"],
+    "duration": ["INTEGER_MACRO", "save", "battle", "HOURS_MACRO", "DAYS_MACRO", "WEEKS_MACRO", "concentration", "infinite"],
     "description": ["STRING_MACRO"],
     "range": ["self", "hand", "close", "near", "archer", "far", "infinite", "MILES_MACRO"],
     "purpose": ["damage", "healing", "buff", "debuff", "summon", "utility"],
     "dice": ["DICE_MACRO"],
-    "effect_type": ['blunt', 'slashing', 'healing', 'elemental', 'poison', 'force', 'psychic', 'ice', 'fire', 'dark', 'radiant'],
-    "casting_time": ["INTEGER_MACRO"],
+    "effect_type": ['blunt', 'slashing', 'piercing', 'healing', 'elemental', 'poison', 'force', 'psychic', 'ice', 'fire', 'dark', 'radiant'],
+    "casting_time": ["INTEGER_MACRO", "HOURS_MACRO"],
     "action_type": ["Action", "Offhand Action", "Reaction", "Free Action"],
-    "effect_radius": ["INTEGER_MACRO"],
+    "effect_radius": ["INTEGER_MACRO", "MILES_MACRO"],
     "charisma_cost": ["INTEGER_MACRO"],
     "hit" : ["always", "roll", "other"]
 }
@@ -41,14 +42,16 @@ def is_macro(value, macro):
         return isinstance(value, int)
     elif macro == 'HOURS_MACRO':
         return 'hour' in value
+    elif macro == 'DAYS_MACRO':
+        return 'day' in value
     elif macro == 'WEEKS_MACRO':
         return 'week' in value
     elif macro == 'MILES_MACRO':
-        return 'miles' in value
+        return 'mile' in value
     elif macro == "STRING_MACRO":
         return isinstance(value, str)
     elif macro == "DICE_MACRO":
-        try: 
+        try:
             parts = value.split('d')
             int(parts[0])
             return len(parts) == 2 and int(parts[1]) in [2,4,6,8,10,20]
@@ -63,7 +66,7 @@ def check_conditional_requirements(spell_name, spell_info):
                 if not req in spell_info:
                     error = True
                     print(f'{spell_name} has {field}, but not {req}')
-    
+
     if 'purpose' in spell_info and spell_info['purpose'] in ['damage', 'debuff']:
         if not 'hit' in spell_info:
             error = True
@@ -90,7 +93,7 @@ def check_spell_syntax(spell_name, spell_info):
             print(f'{spell_name} has unexpected field {field}')
             encountered_errors = True
             continue
-        
+
         # Check to see if there is a requirement on what the value of 'field' can be
         if field in valid_values:
             valid = False
@@ -111,7 +114,14 @@ def check_spell_syntax(spell_name, spell_info):
 def get_expected_value(dice_str, num_targets, duration):
     avg_roll = _get_avg_roll_from_dice_string(dice_str)
     num_targets = 2 if num_targets == 'many' else 1
-    duration = duration if isinstance(duration, int) else 3
+
+    if duration == 'concentration':
+        duration = 1
+    elif isinstance(duration, str):
+        duration = 3
+    else:
+        duration = duration
+
     return avg_roll * duration * num_targets
 
 
@@ -149,14 +159,14 @@ def spell_type_analysis(spellbook_name, spell_tiers):
             if purpose == 'damage':
                 spell_damage[tier_name].append(
                     (
-                        spell_name, 
+                        spell_name,
                         get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'])
                     )
                 )
             elif purpose == 'healing':
                 spell_healing[tier_name].append(
                     (
-                        spell_name, 
+                        spell_name,
                         get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'])
                     )
                 )
@@ -176,7 +186,7 @@ def spell_type_analysis(spellbook_name, spell_tiers):
 
     # Print the statistics
     print(f'{spellbook_name}')
-    for tier_name in spells_by_type.keys(): 
+    for tier_name in spells_by_type.keys():
         print(f'  {tier_name}:')
         print(f'    consists of {spell_counts[tier_name]} spells:')
         for purpose, val in spells_by_type[tier_name].items():
