@@ -10,6 +10,25 @@ conditional_requirements = {
     "effect_type" : ["dice"]
 }
 
+expected_damage = {
+    'single' : {
+        'Tier_0' : 7,
+        'Tier_1' : 14,
+        'Tier_2' : 27,
+        'Tier_3' : 36,
+        'Tier_4' : 50,
+        'Tier_5' : 70
+    },
+    'multi' : {
+        'Tier_0' : 4.5,
+        'Tier_1' : 10,
+        'Tier_2' : 20,
+        'Tier_3' : 30,
+        'Tier_4' : 38,
+        'Tier_5' : 58
+    }
+}
+
 MACRO_LIST = [
     "INTEGER_MACRO",
     "HOURS_MACRO",
@@ -111,16 +130,41 @@ def check_spell_syntax(spell_name, spell_info):
                 encountered_errors = True
     return encountered_errors
 
+def get_balance_value(tier_name, spell_info):
+    multi = spell_info['num_targets'] == 'many'
+
+    # Multi-target spells do 75% single target damage
+    if multi:
+        dmg = expected_damage['multi'][tier_name]
+    else:
+        dmg = expected_damage['single'][tier_name]
+
+    # Concentration spells do 85% damage, >1 duration does 75% damage,
+    # single turn does 100% duration
+    if spell_info['duration'] == 'concentration' and spell_info['cost'] > 0:
+        duration_mod = .85
+    elif spell_info['duration'] == 1 or spell_info['duration'] == 'concentration':
+        duration_mod = 1
+    else:
+        duration_mod = .75
+
+    return dmg * duration_mod
+
+
+
 def get_expected_value(dice_str, num_targets, duration, cost):
     avg_roll = _get_avg_roll_from_dice_string(dice_str)
-    num_targets = 2 if num_targets == 'many' else 1
+    # Now compenstated for in balance value
+    num_targets = 1 #2 if num_targets == 'many' else 1
+    duration = 1
 
-    if duration == 'concentration':
-        duration = 1 if cost == 0 else 1.5
-    elif isinstance(duration, str):
-        duration = 2
-    else:
-        duration = duration
+    # now compensated for in balance value
+    # if duration == 'concentration':
+    #     duration = 1 if cost == 0 else 1.5
+    # elif isinstance(duration, str):
+    #     duration = 2
+    # else:
+    #     duration = duration
 
     return avg_roll * duration * num_targets
 
@@ -160,14 +204,16 @@ def spell_type_analysis(spellbook_name, spell_tiers):
                 spell_damage[tier_name].append(
                     (
                         spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost'])
+                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost']),
+                        get_balance_value(tier_name, spell_info)
                     )
                 )
             elif purpose == 'healing':
                 spell_healing[tier_name].append(
                     (
                         spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost'])
+                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost']),
+                        get_balance_value(tier_name, spell_info)
                     )
                 )
 
@@ -175,10 +221,10 @@ def spell_type_analysis(spellbook_name, spell_tiers):
     avg_damage_per_tier = get_tier_dict(0)
     avg_healing_per_tier = get_tier_dict(0)
     for tier_name in spells_by_type.keys():
-        for spell, avg_damage in spell_damage[tier_name]:
+        for spell, avg_damage, _ in spell_damage[tier_name]:
             avg_damage_per_tier[tier_name] += avg_damage
         avg_damage_per_tier[tier_name] = avg_damage_per_tier[tier_name] / len(spell_damage[tier_name]) if len(spell_damage[tier_name]) > 0 else 0
-        for spell, avg_healing in spell_healing[tier_name]:
+        for spell, avg_healing, _ in spell_healing[tier_name]:
             avg_healing_per_tier[tier_name] += avg_healing
         avg_healing_per_tier[tier_name] = avg_healing_per_tier[tier_name] / len(spell_healing[tier_name]) if len(spell_healing[tier_name]) > 0 else 0
 
@@ -193,13 +239,13 @@ def spell_type_analysis(spellbook_name, spell_tiers):
             print(f'      {val} {purpose} spells')
     print(f'    Damage Spell Breakdown:')
     for tier_name in spells_by_type.keys():
-        print(f'      {tier_name}, average damage {avg_damage_per_tier[tier_name]}')
-        for spell, avg_damage in spell_damage[tier_name]:
-          print(f'        {spell}: {avg_damage}')
+        print(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} (single {expected_damage['single'][tier_name]}, multi {expected_damage['multi'][tier_name]})")
+        for spell, avg_damage, balance_damage in spell_damage[tier_name]:
+          print(f'        {spell}: {avg_damage} / {balance_damage}')
     print(f'    Healing Spell Breakdown:')
     for tier_name in spells_by_type.keys():
         print(f'      {tier_name}, average healing {avg_healing_per_tier[tier_name]}')
-        for spell, avg_healing in spell_healing[tier_name]:
+        for spell, avg_healing, _ in spell_healing[tier_name]:
           print(f'        {spell}: {avg_healing}')
 
 
