@@ -71,7 +71,7 @@ Bard:
                 the negative aspects of the individual. The curse takes effect as soon as
                 the individual leaves someone's presence, and lasts until dispelled.
 Druid:
-   
+
     Commanding Presence: # Conflicts with other classes
         cost: 2
         target: friendly
@@ -99,7 +99,7 @@ Druid:
                 balance_type: minor utility
                 repeat: at the start of each of the entity's turns
         school: "unknown"
-    Hurl Boulder: # Basically a repeat of Hurl stone, which can now upcast 
+    Hurl Boulder: # Basically a repeat of Hurl stone, which can now upcast
         cost: 2
         target: enemy
         num_targets: 1
@@ -137,3 +137,23 @@ Druid:
         save: Spell Power
         balance_type: major debuff
         school: "unknown"
+Cleric:
+    Give of Yourself:
+          cost: 0
+          target: friendly
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: Give a teammate up to 20 points of your own health per turn.
+          purpose: healing
+          range: near
+          casting_time: instantaneous
+    Augment Allied Attack:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: instantaneous
+            description: Call upon your deity to augment an allies attack.
+            damage_type: major
+            num_dice: 1
+            effect_type: radiant
