@@ -1484,171 +1484,171 @@ the_druid's_guidebook:
                 damage each turn, and are considered harried.
             school: "natural-elemental-water"
 the_book_of_healing:
-Tier_0:
-  Beam of Light:
-      cost: 0
-      target: "enemy"
-      num_targets: 1
-      duration: "instantaneous"
-      combat_duration: 1
-      range: archer
-      description: "Fire a bolt of radiant energy at an enemy."
-      num_dice: 1
-      dice_type: major
-      effect_type: radiant
-      balance_type: minor damage
-      action_type: "Action"
-  Beguile:
-      cost: 0
-      target: enemy
-      num_targets: 1
-      duration: save
-      combat_duration: save
-      description: Your holy presence shakes an enemy's constitution.
-      range: archer
-      effects:
-        - description: "the enemy does one minor dice less of damage on each attack."
-          save: "Spell Power"
-          repeat: "each turn"
-      action_type: "Action"
-      balance_type: "greater debuff"
-  Bless Water:
-      cost: 1
-      target: object
-      num_targets: 1
-      duration: concentration
-      combat_duration: concentration
-      description: "You may bless water by praying over it, converting it to holy water.
-          This can be done at a rate of one gallon per hour."
-      range: hand to hand
-      balance_type: minor utility
-      casting_time: instantaneous
-      combat_casting_time: 1
-      action_type: Action
-  Detect Evil:
-      cost: 1
-      target: space
-      num_targets: aoe
-      duration: instantaneous
-      combat_duration: 1
-      purpose: investigate
-      range: self
-      effect_radius: 100 feet
-      description: Make a perception check to detect if there is evil nearby.
-      action_type: Action
-  Detect Magic:
-      cost: 1
-      target: space
-      num_targets: aoe
-      duration: instantaneous
-      combat_duration: 1
-      purpose: investigate
-      range: self
-      effect_radius: 100 feet
-      description: Make a perception check to detect if nearby magic.
-      action_type: Action
-  Extra Weight:
-      cost: 0
-      target: object
-      num_targets: 1
-      duration: concentration
-      combat_duration: concentration
-      purpose: utility
-      description: Double the weight of an object. The object must be no larger than
-        a horse.
-      action_type: action
-  Fake Death:
-      cost: 0
-      target: friendly
-      num_targets: 1
-      duration: 1 day
-      combat_duration: battle
-      description: Touch a willing entity to send them into a catatonic state that
-        is impossible to distinguish from death.
-      purpose: utility
-      range: hand to hand
-  Give of Yourself:
-      cost: 0
-      target: friendly
-      num_targets: 1
-      duration: instantaneous
-      combat_duration: 1
-      description: Give a teammate up to 20 points of your own health per turn.
-      purpose: healing
-      range: near
-      casting_time: instantaneous
-  Lighten Object:
-      cost: 0
-      target: object
-      num_targets: 1
-      duration: concentration
-      combat_duration: concentration
-      purpose: utility
-      description: Decrease the weight of an object by half. The object must be no
-        larger than a horse.
-      action_type: action
-  Mending:
-      cost: 0
-      target: object
-      num_targets: 1
-      duration: instantaneous
-      combat_duration: 1
-      description: You can magically mend small dents, dings, scratches, and tears
-        in items.
-      purpose: utility
-      casting_time: instantaneous
-      combat_casting_time: 1
-  Minor Heal:
-      cost: 1
-      target: friendly
-      num_targets: 1
-      duration: instantaneous
-      combat_duration: 1
-      description: Restore health to one ally or yourself.
-      dice_type: major
-      num_dice: 1
-      effect_type: healing
-      purpose: healing
-      range: middling
-      casting_time: instantaneous
-      combat_casting_time: 1
-      action_type: action
-  Purify:
-      cost: 0
-      target: object
-      num_targets: 1
-      duration: instantaneous
-      combat_duration: 1
-      description: Purify a food, drink, or potion to remove ill effects. Purify can
-        be used to remove drunkenness from entities, or to render poison innocuous.
-      purpose: utility
-      range: hand to hand
-  Sacred Flame:
-      cost: 0
-      target: self
-      num_targets: 1
-      duration: concentration
-      purpose: utility
-      combat_duration: concentration
-      description: Summon a sacred flame to your hand. Ash created
-        by the flame is considered sacred. You may melee attack with the flame
-        to damage enemies.
-      range: hand to hand
-      dice_type: major
-      num_dice: 1
-      effect_type: radiant
-      action_type: Offhand Action
-  Spare:
-      cost: 0
-      target: friendly
-      duration: instantaneous
-      combat_duration: 1
-      description: Touch an ally that is on death's door to stabilize them.
-        Stabilized entities immediately return to 0 health. The are still unconcious,
-        but are no longer at risk of immediately dying.
-      purpose: healing
-      range: hand to hand
-      action_type: Offhand Action
+    Tier_0:
+      Beam of Light:
+          cost: 0
+          target: "enemy"
+          num_targets: 1
+          duration: "instantaneous"
+          combat_duration: 1
+          range: archer
+          description: "Fire a bolt of radiant energy at an enemy."
+          num_dice: 1
+          dice_type: major
+          effect_type: radiant
+          balance_type: minor damage
+          action_type: "Action"
+      Beguile:
+          cost: 0
+          target: enemy
+          num_targets: 1
+          duration: save
+          combat_duration: save
+          description: Your holy presence shakes an enemy's constitution.
+          range: archer
+          effects:
+            - description: "the enemy does one minor dice less of damage on each attack."
+              save: "Spell Power"
+              repeat: "each turn"
+          action_type: "Action"
+          balance_type: "greater debuff"
+      Bless Water:
+          cost: 1
+          target: object
+          num_targets: 1
+          duration: concentration
+          combat_duration: concentration
+          description: "You may bless water by praying over it, converting it to holy water.
+              This can be done at a rate of one gallon per hour."
+          range: hand to hand
+          balance_type: minor utility
+          casting_time: instantaneous
+          combat_casting_time: 1
+          action_type: Action
+      Detect Evil:
+          cost: 1
+          target: space
+          num_targets: aoe
+          duration: instantaneous
+          combat_duration: 1
+          purpose: investigate
+          range: self
+          effect_radius: 100 feet
+          description: Make a perception check to detect if there is evil nearby.
+          action_type: Action
+      Detect Magic:
+          cost: 1
+          target: space
+          num_targets: aoe
+          duration: instantaneous
+          combat_duration: 1
+          purpose: investigate
+          range: self
+          effect_radius: 100 feet
+          description: Make a perception check to detect if nearby magic.
+          action_type: Action
+      Extra Weight:
+          cost: 0
+          target: object
+          num_targets: 1
+          duration: concentration
+          combat_duration: concentration
+          purpose: utility
+          description: Double the weight of an object. The object must be no larger than
+            a horse.
+          action_type: action
+      Fake Death:
+          cost: 0
+          target: friendly
+          num_targets: 1
+          duration: 1 day
+          combat_duration: battle
+          description: Touch a willing entity to send them into a catatonic state that
+            is impossible to distinguish from death.
+          purpose: utility
+          range: hand to hand
+      Give of Yourself:
+          cost: 0
+          target: friendly
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: Give a teammate up to 20 points of your own health per turn.
+          purpose: healing
+          range: near
+          casting_time: instantaneous
+      Lighten Object:
+          cost: 0
+          target: object
+          num_targets: 1
+          duration: concentration
+          combat_duration: concentration
+          purpose: utility
+          description: Decrease the weight of an object by half. The object must be no
+            larger than a horse.
+          action_type: action
+      Mending:
+          cost: 0
+          target: object
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: You can magically mend small dents, dings, scratches, and tears
+            in items.
+          purpose: utility
+          casting_time: instantaneous
+          combat_casting_time: 1
+      Minor Heal:
+          cost: 1
+          target: friendly
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: Restore health to one ally or yourself.
+          dice_type: major
+          num_dice: 1
+          effect_type: healing
+          purpose: healing
+          range: middling
+          casting_time: instantaneous
+          combat_casting_time: 1
+          action_type: action
+      Purify:
+          cost: 0
+          target: object
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: Purify a food, drink, or potion to remove ill effects. Purify can
+            be used to remove drunkenness from entities, or to render poison innocuous.
+          purpose: utility
+          range: hand to hand
+      Sacred Flame:
+          cost: 0
+          target: self
+          num_targets: 1
+          duration: concentration
+          purpose: utility
+          combat_duration: concentration
+          description: Summon a sacred flame to your hand. Ash created
+            by the flame is considered sacred. You may melee attack with the flame
+            to damage enemies.
+          range: hand to hand
+          dice_type: major
+          num_dice: 1
+          effect_type: radiant
+          action_type: Offhand Action
+      Spare:
+          cost: 0
+          target: friendly
+          duration: instantaneous
+          combat_duration: 1
+          description: Touch an ally that is on death's door to stabilize them.
+            Stabilized entities immediately return to 0 health. The are still unconcious,
+            but are no longer at risk of immediately dying.
+          purpose: healing
+          range: hand to hand
+          action_type: Offhand Action
 #     Tier_1:
 #       Augment Allied Attack:
 #         cost: 1
