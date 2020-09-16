@@ -157,3 +157,69 @@ Cleric:
             damage_type: major
             num_dice: 1
             effect_type: radiant
+    Bulk Up:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: Force an entity to make an inner fire saving throw against your
+              spell power. On failure, the entity gains their weight in body fat.
+    Hound's Resolve:
+            cost: 1
+            description: Grant a teammate one additional effective inner fire. Lasts a number
+              of hours equal to your spell power.
+    Minor Holy weapon:
+            cost: 1
+            description: Imbue your weapon with the spirit of righteousness. Your weapon
+              gets +2 damage for a day, and advantage against evil and undead entities.
+    Omen:
+        cost: 0
+        description: Once per day, ask your deity for an omen in regards to a decision
+          you will make.
+    Monkey's Dexterity:
+            cost: 1
+            description: Grant a teammate one additional effective dexterity. Lasts a number
+              of hours equal to your inner fire.
+
+    Babel:
+            cost: 1
+            description: If an enemy of your choice fails a spell power save, it becomes
+                agitated and angry, but is incapable of meaningful communication for 1 hour.
+            effects:
+            candidate: true
+
+
+
+
+
+
+
+    Slow Heal:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 2
+            purpose: healing
+
+            balance_type: healing candidate
+            description: Cast a healing spell upon an ally that restores 1d6 health to them
+              per turn. Lasts 2 turns.
+            major_healing_dice: 1d6d1 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+Turn into a cleric class ability:
+    Line in the Sand:
+            cost: 1
+            description: Draw a line in the sand. If an enemy crosses, you and a chosen
+              ally have advantage when attacking them.

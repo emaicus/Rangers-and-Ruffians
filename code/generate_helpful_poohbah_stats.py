@@ -655,11 +655,11 @@ def potions():
   size_for_level = dict()
 
   potions = [
-              ('Salve', make_dice(fighter_health[15] / 20)),
-              ('Minor Health Potion', make_dice(fighter_health[15] / 12)),
-              ('Greater Health Potion', make_dice(fighter_health[15] / 8)),
-              ('Major Health Potion', make_dice(fighter_health[15] / 4)),
-              ('Epic Health Potion', make_dice(fighter_health[15] / 2))
+              ('Salve', make_dice(fighter_health[1] * .25)),
+              ('Healing Potion', make_dice(fighter_health[3] * .2)),
+              ('Greater Health Potion', make_dice(fighter_health[7] * .2)),
+              ('Major Health Potion', make_dice(fighter_health[13] * .2)),
+              ('Epic Health Potion', make_dice(fighter_health[15] * .4))
             ]
   for potion_name, potion_effect in potions:
     n,d,m = potion_effect
