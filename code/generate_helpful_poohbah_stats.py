@@ -205,7 +205,7 @@ def get_average_magic_weapon_for_level(level):
   # Levels 10-11, Tier 4, 50 damage
   elif level < 13:
     return rnr_weapon(9, 10, hit_modifier=2)
-  # Levels 12-15, Tier 5, 70 damage
+  # Levels 13-15, Tier 5, 70 damage
   else:
     return rnr_weapon(20, 6, hit_modifier=2)
 
@@ -655,11 +655,11 @@ def potions():
   size_for_level = dict()
 
   potions = [
-              ('Salve', make_dice(fighter_health[15] / 20)),
-              ('Minor Health Potion', make_dice(fighter_health[15] / 12)),
-              ('Greater Health Potion', make_dice(fighter_health[15] / 8)),
-              ('Major Health Potion', make_dice(fighter_health[15] / 4)),
-              ('Epic Health Potion', make_dice(fighter_health[15] / 2))
+              ('Salve', make_dice(fighter_health[1] * .25)),
+              ('Healing Potion', make_dice(fighter_health[3] * .2)),
+              ('Greater Health Potion', make_dice(fighter_health[7] * .2)),
+              ('Major Health Potion', make_dice(fighter_health[13] * .2)),
+              ('Epic Health Potion', make_dice(fighter_health[15] * .4))
             ]
   for potion_name, potion_effect in potions:
     n,d,m = potion_effect

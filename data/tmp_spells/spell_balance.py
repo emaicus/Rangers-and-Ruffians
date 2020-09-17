@@ -73,7 +73,7 @@ def is_macro(value, macro):
         try:
             parts = value.split('d')
             int(parts[0])
-            return len(parts) == 2 and int(parts[1]) in [2,4,6,8,10,20]
+            return len(parts) == 2 and int(parts[1]) in [2,4,6,8,10,12,20]
         except Exception:
             return False
 

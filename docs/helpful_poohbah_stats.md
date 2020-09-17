@@ -1,871 +1,737 @@
- * [Poohbah Handbook](#poohbah-handbook)  
-   * [Quick Start](#quick-start)  
-     * [Understanding Your Players](#understanding-your-players)  
-       * [Potion Reference](#potion-reference)  
-       * [Potion Availability by Level](#potion-availability-by-level)  
-     * [Monster Templates](#monster-templates)  
-       * [Example Light Monster Templates](#example-light-monster-templates)  
-       * [Example Medium Monster Templates](#example-medium-monster-templates)  
-       * [Example Heavy Monster Templates](#example-heavy-monster-templates)  
-       * [Example Boss Templates](#example-boss-templates)  
-     * [Roll Difficulty](#roll-difficulty)  
-       * [Difficulty Comparison](#difficulty-comparison)  
-   * [Advanced Understanding](#advanced-understanding)  
-     * [Deeper Dice Roll Probability](#deeper-dice-roll-probability)  
-       * [Difficulty Helper: Straight Roll](#difficulty-helper-straight-roll)  
-       * [Difficulty Helper: Advantage](#difficulty-helper-advantage)  
-       * [Difficulty Helper: Disadvantage](#difficulty-helper-disadvantage)  
-     * [Deeper Player Statistics](#deeper-player-statistics)  
-       * [Average Player Health](#average-player-health)  
-       * [Maximum Player Health](#maximum-player-health)  
-       * [Average Expected Damage Output Per Round](#average-expected-damage-output-per-round)  
-       * [Average Critical Hit Damage Output](#average-critical-hit-damage-output)  
-       * [Health Potions by Player Level](#health-potions-by-player-level)  
-     * [Building Monsters from Scratch](#building-monsters-from-scratch)  
-       * [Boss Survivability](#boss-survivability)  
-       * [Monster Survivability, Action Point Use](#monster-survivability-action-point-use)  
-       * [Player Survivability](#player-survivability)  
-     * [Simulation Results](#simulation-results)  
-       * [Simulated Boss Survivability](#simulated-boss-survivability)  
-       * [Simulated Monster Survivability, Action Point Use](#simulated-monster-survivability-action-point-use)  
+ * [Poohbah Handbook](#poohbah-handbook)
+   * [Quick Start](#quick-start)
+     * [Understanding Your Players](#understanding-your-players)
+       * [Potion Reference](#potion-reference)
+       * [Potion Availability by Level](#potion-availability-by-level)
+     * [Monster Templates](#monster-templates)
+       * [Example Light Monster Templates](#example-light-monster-templates)
+       * [Example Medium Monster Templates](#example-medium-monster-templates)
+       * [Example Heavy Monster Templates](#example-heavy-monster-templates)
+       * [Example Boss Templates](#example-boss-templates)
+     * [Roll Difficulty](#roll-difficulty)
+       * [Difficulty Comparison](#difficulty-comparison)
+   * [Advanced Understanding](#advanced-understanding)
+     * [Deeper Dice Roll Probability](#deeper-dice-roll-probability)
+       * [Difficulty Helper: Straight Roll](#difficulty-helper-straight-roll)
+       * [Difficulty Helper: Advantage](#difficulty-helper-advantage)
+       * [Difficulty Helper: Disadvantage](#difficulty-helper-disadvantage)
+     * [Deeper Player Statistics](#deeper-player-statistics)
+       * [Average Player Health](#average-player-health)
+       * [Maximum Player Health](#maximum-player-health)
+       * [Average Player Damage](#average-player-damage)
+       * [Health Potions by Player Level](#health-potions-by-player-level)
+     * [Building Monsters from Scratch](#building-monsters-from-scratch)
+       * [Boss Survivability](#boss-survivability)
+       * [Monster Survivability](#monster-survivability)
+       * [Player Survivability](#player-survivability)
+     * [Simulation Results](#simulation-results)
+       * [Tuned Boss Survivability](#tuned-boss-survivability)
+       * [Tuned Monster Survivability](#tuned-monster-survivability)
 
-  
+
 # Poohbah Handbook
 
-  
+
 ## Quick Start
 
-  
+
 ### Understanding Your Players
 
-  
+
 #### Potion Reference
-  
-| Potion Name | Potion Effect |  
+
+| Potion Name | Potion Effect |
  | --------|--------|
-| Salve | 1d6 +2 |  
-| Minor Health Potion | 1d12 +3 |  
-| Greater Health Potion | 2d10 +3 |  
-| Major Health Potion | 4d10 +5 |  
-| Epic Health Potion | 8d12 +2 |  
+| Salve | 1d4 +1 |
+| Healing Potion | 2d4 +1 |
+| Greater Health Potion | 2d8 +2 |
+| Major Health Potion | 4d8 +2 |
+| Epic Health Potion | 8d8 +7 |
 
-  
+
 #### Potion Availability by Level
-  
-| Level | Small Potions | Medium Potions | Large Potions |  
- | --------|--------|--------|--------|
-| 0 |  |  | Salve, Minor Health Potion |  
-| 1 |  | Salve | Minor Health Potion, Greater Health Potion |  
-| 2 | Salve | Minor Health Potion | Greater Health Potion |  
-| 3 | Salve | Minor Health Potion, Greater Health Potion | Major Health Potion |  
-| 4 | Salve | Minor Health Potion, Greater Health Potion | Major Health Potion |  
-| 5 | Salve, Minor Health Potion | Greater Health Potion | Major Health Potion |  
-| 6 | Minor Health Potion | Greater Health Potion | Major Health Potion |  
-| 7 | Minor Health Potion | Greater Health Potion, Major Health Potion | Epic Health Potion |  
-| 8 | Minor Health Potion, Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 9 | Minor Health Potion, Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 10 | Minor Health Potion, Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 11 | Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 12 | Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 13 | Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 14 | Greater Health Potion | Major Health Potion | Epic Health Potion |  
-| 15 | Greater Health Potion | Major Health Potion | Epic Health Potion |  
 
-  
+| Level | Small Potions | Medium Potions | Large Potions |
+ | --------|--------|--------|--------|
+| 0 |  | Salve | Healing Potion |
+| 1 |  | Salve | Healing Potion |
+| 2 | Salve | Healing Potion | Greater Health Potion |
+| 3 | Salve, Healing Potion | Greater Health Potion |  |
+| 4 | Healing Potion | Greater Health Potion | Major Health Potion |
+| 5 | Healing Potion | Greater Health Potion | Major Health Potion |
+| 6 | Greater Health Potion | Major Health Potion |  |
+| 7 | Greater Health Potion | Major Health Potion |  |
+| 8 | Greater Health Potion | Major Health Potion | Epic Health Potion |
+| 9 | Greater Health Potion | Major Health Potion | Epic Health Potion |
+| 10 | Greater Health Potion | Major Health Potion | Epic Health Potion |
+| 11 | Greater Health Potion, Major Health Potion |  | Epic Health Potion |
+| 12 | Greater Health Potion, Major Health Potion | Epic Health Potion |  |
+| 13 | Major Health Potion | Epic Health Potion |  |
+| 14 | Major Health Potion | Epic Health Potion |  |
+| 15 | Major Health Potion | Epic Health Potion |  |
+
+
 ### Monster Templates
 
-  
+
 #### Example Light Monster Templates
-All light monsters are built to survive 2 action point hits from a player and to KO a player in 3 hits.  
-It is understood that multiple light monsters should be deployed together against a party.  
-All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.  
-To fight a party of 4, about 6 light monsters should be deployed to challenge them.  
-Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.  
-  
-  
-| Party Level | Light Monster Health | Light Monster Armor | Light Monster Damage | Light Monster NEW DAMAGE | Target Damage |  
- | --------|--------|--------|--------|--------|--------|
-| 0 | 14 | 0 | (4) 1d8 | (4.083333333333333) 1d6 | 3.3333333333333335 |  
-| 1 | 15 | 1 | (8) 2d8 | (7.041666666666667) 1d12 | 6.333333333333333 |  
-| 2 | 16 | 2 | (10) 2d10 | (10.0) 2d8 | 9.333333333333332 |  
-| 3 | 16 | 2 | (18) 2 x 2d8 +1 | (12.0) 2d10 +1 | 11.333333333333334 |  
-| 4 | 17 | 3 | (20) 2 x 2d10 | (14.0) 2d12 | 13.333333333333334 |  
-| 5 | 19 | 3 | (26) 2 x 2d12 +1 | (16.5) 3d10 +0 | 16.333333333333336 |  
-| 6 | 23 | 3 | (28) 2 x 2d12 +2 | (19.5) 3d12 +0 | 18.333333333333336 |  
-| 7 | 22 | 4 | (30) 2 x 3d10 | (20.5) 3d12 | 20.333333333333332 |  
-| 8 | 26 | 4 | (32) 2 x 3d10 +1 | (23.0) 4d10 +1 | 22.333333333333332 |  
-| 9 | 26 | 4 | (40) 2 x 3d10 +5 | (26.0) 4d12 +0 | 25.333333333333332 |  
-| 10 | 38 | 5 | (40) 2 x 3d10 +5 | (28.0) 4d12 +2 | 27.333333333333332 |  
-| 11 | 43 | 4 | (42) 2 x 3d12 +3 | (29.5) 5d10 +2 | 29.333333333333332 |  
-| 12 | 41 | 5 | (66) 3 x 3d12 +4 | (32.5) 5d12 +0 | 31.333333333333332 |  
-| 13 | 41 | 5 | (75) 3 x 4d10 +5 | (34.5) 5d12 +2 | 34.33333333333333 |  
-| 14 | 40 | 5 | (78) 3 x 4d12 +2 | (39.0) 6d12 +0 | 36.33333333333333 |  
-| 15 | 41 | 5 | (81) 3 x 4d12 +3 | (39.0) 6d12 +0 | 38.333333333333336 |  
-  
+All light monsters are built to survive 2 action point hits from a player and to KO a player in 3 hits.
+It is understood that multiple light monsters should be deployed together against a party.
+All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.
+To fight a party of 4, about 6 light monsters should be deployed to challenge them.
+Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.
 
-  
+
+| Party Level | Light Monster Health | Light Monster Defense | Light Monster Damage | Accuracy Bonus | Player Hit Rate |
+ | --------|--------|--------|--------|--------|--------|
+| 0 | 9 | 8.0 | 1d4 +2 (4.5) | 1.0 | 0.75 |
+| 1 | 14 | 8.0 | 1d4 +2 (4.5) | 1.0 | 0.8 |
+| 2 | 11 | 10.0 | 1d6 +3 (6.5) | 1.0 | 0.7 |
+| 3 | 18 | 12.0 | 1d12 +3 (9.5) | 3.0 | 0.7 |
+| 4 | 13 | 12.0 | 2d8 +2 (11.0) | 3.0 | 0.7 |
+| 5 | 19 | 11.0 | 2d10 +2 (13.0) | 4.0 | 0.8 |
+| 6 | 20 | 13.0 | 2d12 +3 (16.0) | 4.0 | 0.7 |
+| 7 | 40 | 13.0 | 3d10 +2 (18.5) | 4.0 | 0.7 |
+| 8 | 47 | 13.0 | 3d12 +1 (20.5) | 6.0 | 0.75 |
+| 9 | 45 | 14.0 | 4d10 +1 (23.0) | 6.0 | 0.7 |
+| 10 | 53 | 12.0 | 4d10 +3 (25.0) | 7.0 | 0.8 |
+| 11 | 47 | 14.0 | 4d12 +1 (27.0) | 7.0 | 0.7 |
+| 12 | 51 | 14.0 | 5d10 +3 (30.5) | 7.0 | 0.75 |
+| 13 | 53 | 14.0 | 7d8 +1 (32.5) | 9.0 | 0.75 |
+| 14 | 51 | 15.0 | 5d12 +2 (34.5) | 9.0 | 0.7 |
+| 15 | 58 | 13.0 | 8d8 +1 (37.0) | 9.0 | 0.8 |
+
+
+
+
 #### Example Medium Monster Templates
-All medium monsters are built to survive 3.5 action point hits from a player and to KO a player in 2.5 hits.  
-It is wise to pair light and medium monsters together as a group.  
-All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.  
-Treat a single medium monster as 2 light monsters, and 1/3 of a villain.  
-  
-  
-| Party Level | Medium Monster Health | Medium Monster Armor | Medium Monster Damage | Medium Monster NEW DAMAGE | Target Damage |  
- | --------|--------|--------|--------|--------|--------|
-| 0 | 21 | 2 | (4) 1d8 | (4.083333333333333) 1d6 | 4.0 |  
-| 1 | 32 | 0 | (8) 2d8 | (7.041666666666667) 1d12 | 7.4 |  
-| 2 | 38 | 0 | (20) 2 x 2d10 | (11.0) 2d10 | 10.8 |  
-| 3 | 38 | 0 | (20) 2 x 2d10 | (14.0) 2d12 | 13.2 |  
-| 4 | 47 | 0 | (22) 2 x 2d10 +1 | (16.5) 3d10 +0 | 15.6 |  
-| 5 | 47 | 0 | (30) 2 x 3d10 | (19.5) 3d12 | 19.0 |  
-| 6 | 57 | 0 | (32) 2 x 3d10 +1 | (22.5) 3d12 +3 | 21.4 |  
-| 7 | 60 | 0 | (34) 2 x 3d10 +2 | (24.0) 4d10 +2 | 23.8 |  
-| 8 | 63 | 0 | (36) 2 x 3d12 | (27.0) 4d12 | 26.2 |  
-| 9 | 66 | 0 | (42) 2 x 3d12 +3 | (30.5) 5d10 +3 | 29.6 |  
-| 10 | 93 | 0 | (69) 3 x 3d12 +5 | (32.5) 5d12 +0 | 32.0 |  
-| 11 | 65 | 10 | (69) 3 x 3d12 +5 | (35.5) 5d12 +3 | 34.4 |  
-| 12 | 98 | 0 | (69) 3 x 3d12 +5 | (39.0) 6d12 +0 | 36.8 |  
-| 13 | 99 | 0 | (116) 4 x 4d12 +5 | (41.0) 6d12 +2 | 40.2 |  
-| 14 | 99 | 0 | (120) 4 x 5d10 +5 | (45.5) 7d12 +0 | 42.6 |  
-| 15 | 99 | 0 | (120) 4 x 5d10 +5 | (45.5) 7d12 +0 | 45.0 |  
-  
+All medium monsters are built to survive 4 action point hits from a player and to KO a player in 2.5 hits.
+It is wise to pair light and medium monsters together as a group.
+All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.
+Treat a single medium monster as 2 light monsters, and 1/3 of a villain.
 
-  
+
+| Party Level | Medium Monster Health | Medium Monster Defense | Medium Monster Damage | Accuracy Bonus | Player Hit Rate |
+ | --------|--------|--------|--------|--------|--------|
+| 0 | 21 | 9.0 | 1d6 +2 (5.5) | 1.0 | 0.7 |
+| 1 | 31 | 9.0 | 1d6 +2 (5.5) | 1.0 | 0.75 |
+| 2 | 28 | 10.0 | 1d8 +3 (7.5) | 1.0 | 0.7 |
+| 3 | 44 | 10.0 | 2d6 +3 (10.0) | 3.0 | 0.8 |
+| 4 | 39 | 11.0 | 2d10 +2 (13.0) | 3.0 | 0.75 |
+| 5 | 51 | 11.0 | 2d12 +3 (16.0) | 4.0 | 0.8 |
+| 6 | 59 | 11.0 | 3d10 +3 (19.5) | 4.0 | 0.8 |
+| 7 | 119 | 11.0 | 3d12 +2 (21.5) | 4.0 | 0.8 |
+| 8 | 120 | 12.0 | 4d10 +2 (24.0) | 6.0 | 0.8 |
+| 9 | 113 | 13.0 | 4d12 +1 (27.0) | 6.0 | 0.75 |
+| 10 | 134 | 12.0 | 5d10 +3 (30.5) | 7.0 | 0.8 |
+| 11 | 125 | 13.0 | 5d12 +1 (33.5) | 7.0 | 0.75 |
+| 12 | 129 | 14.0 | 5d12 +3 (35.5) | 7.0 | 0.75 |
+| 13 | 141 | 13.0 | 8d8 +2 (38.0) | 9.0 | 0.8 |
+| 14 | 129 | 14.0 | 6d12 +2 (41.0) | 9.0 | 0.75 |
+| 15 | 124 | 15.0 | 8d10 (44.0) | 9.0 | 0.7 |
+
+
+
+
 #### Example Heavy Monster Templates
-All heavy monsters are built to survive 8 action point hits from a player and to KO a player in 2 hits.  
-It is wise to pair heavy and heavy monsters together as a group.  
-All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.  
-  
-  
-| Party Level | Heavy Monster Health | Heavy Monster Armor | Heavy Monster Damage | Heavy Monster NEW DAMAGE | Target Damage |  
- | --------|--------|--------|--------|--------|--------|
-| 0 | 57 | 0 | (5) 1d10 | (5.0625) 1d8 | 5.0 |  
-| 1 | 60 | 1 | (10) 2d10 | (9.0) 2d8 | 9.0 |  
-| 2 | 70 | 1 | (20) 2 x 2d10 | (13.0) 2d12 | 13.0 |  
-| 3 | 70 | 1 | (22) 2 x 2d10 +1 | (16.5) 3d10 +0 | 16.0 |  
-| 4 | 107 | 0 | (26) 2 x 2d12 +1 | (19.5) 3d12 +0 | 19.0 |  
-| 5 | 107 | 0 | (32) 2 x 3d10 +1 | (22.0) 4d10 +0 | 23.0 |  
-| 6 | 134 | 1 | (36) 2 x 3d12 | (26.0) 4d12 | 26.0 |  
-| 7 | 120 | 4 | (40) 2 x 3d10 +5 | (30.0) 4d12 +4 | 29.0 |  
-| 8 | 126 | 4 | (60) 3 x 3d10 +5 | (32.5) 5d12 +0 | 32.0 |  
-| 9 | 133 | 4 | (69) 3 x 3d12 +5 | (36.5) 5d12 +4 | 36.0 |  
-| 10 | 157 | 10 | (100) 4 x 4d10 +5 | (39.0) 6d12 +0 | 39.0 |  
-| 11 | 225 | 2 | (104) 4 x 4d12 +2 | (43.0) 6d12 +4 | 42.0 |  
-| 12 | 231 | 2 | (108) 4 x 4d12 +3 | (45.5) 7d12 +0 | 45.0 |  
-| 13 | 226 | 3 | (124) 4 x 5d12 +1 | (49.5) 7d12 +4 | 49.0 |  
-| 14 | 232 | 2 | (128) 4 x 5d12 +2 | (52.0) 8d12 +0 | 52.0 |  
-| 15 | 231 | 2 | (132) 4 x 5d12 +3 | (56.0) 8d12 +4 | 55.0 |  
-  
+All heavy monsters are built to survive 8 action point hits from a player and to KO a player in 2 hits.
+It is wise to pair heavy and heavy monsters together as a group.
+All monsters should also have some cool, unique abilities to make them stand out and be more interesting to fight.
 
-  
+
+| Party Level | Heavy Monster Health | Heavy Monster Defense | Heavy Monster Damage | Accuracy Bonus | Player Hit Rate |
+ | --------|--------|--------|--------|--------|--------|
+| 0 | 49 | 8.0 | 1d6 +3 (6.5) | 1.0 | 0.75 |
+| 1 | 74 | 8.0 | 1d6 +3 (6.5) | 1.0 | 0.8 |
+| 2 | 63 | 10.0 | 1d12 +3 (9.5) | 1.0 | 0.7 |
+| 3 | 82 | 12.0 | 2d10 +2 (13.0) | 3.0 | 0.7 |
+| 4 | 91 | 10.0 | 2d12 +3 (16.0) | 3.0 | 0.8 |
+| 5 | 95 | 13.0 | 3d12 +1 (20.5) | 4.0 | 0.7 |
+| 6 | 115 | 12.0 | 4d10 +1 (23.0) | 4.0 | 0.75 |
+| 7 | 217 | 12.0 | 4d12 +1 (27.0) | 4.0 | 0.75 |
+| 8 | 215 | 14.0 | 5d10 +3 (30.5) | 6.0 | 0.7 |
+| 9 | 213 | 14.0 | 5d12 +2 (34.5) | 6.0 | 0.7 |
+| 10 | 239 | 13.0 | 8d8 +1 (37.0) | 7.0 | 0.75 |
+| 11 | 227 | 14.0 | 6d12 +2 (41.0) | 7.0 | 0.7 |
+| 12 | 231 | 15.0 | 8d10 (44.0) | 7.0 | 0.7 |
+| 13 | 230 | 15.0 | 7d12 +3 (48.5) | 9.0 | 0.7 |
+| 14 | 253 | 15.0 | 9d10 +2 (51.5) | 9.0 | 0.7 |
+| 15 | 273 | 14.0 | 8d12 +3 (55.0) | 9.0 | 0.75 |
+
+
+
+
 #### Example Boss Templates
-All bosses are built to survive 4 rounds of focused combat and to KO a player in 1.5 rounds.  
-It is understood that most bosses should have a number of monster minions.  
-Bosses should also have some cool, unique abilities to make them stand out and be more interesting to fight.  
-  
-  
-| Party Level | Boss Health | Boss Armor | Boss Damage | Boss NEW DAMAGE | Target Damage |  
- | --------|--------|--------|--------|--------|--------|
-| 0 | 111 | 2 | (8) 2d8 | (7.041666666666667) 1d12 | 6.666666666666667 |  
-| 1 | 119 | 3 | (16) 2 x 2d8 | (11.0) 2d10 | 11.666666666666666 |  
-| 2 | 145 | 3 | (24) 2 x 2d12 | (16.5) 3d10 | 16.666666666666664 |  
-| 3 | 145 | 3 | (30) 2 x 3d10 | (19.5) 3d12 | 20.666666666666668 |  
-| 4 | 173 | 4 | (32) 2 x 3d10 +1 | (26.0) 4d12 +0 | 24.666666666666668 |  
-| 5 | 175 | 4 | (54) 3 x 3d12 | (26.0) 4d12 | 29.666666666666668 |  
-| 6 | 210 | 5 | (60) 3 x 3d10 +5 | (32.5) 5d12 +0 | 33.66666666666667 |  
-| 7 | 224 | 5 | (92) 4 x 3d12 +5 | (39.0) 6d12 +0 | 37.666666666666664 |  
-| 8 | 210 | 7 | (92) 4 x 3d12 +5 | (39.0) 6d12 +0 | 41.666666666666664 |  
-| 9 | 237 | 6 | (108) 4 x 4d12 +3 | (45.5) 7d12 +0 | 46.666666666666664 |  
-| 10 | 310 | 10 | (116) 4 x 4d12 +5 | (52.0) 8d12 +0 | 50.666666666666664 |  
-| 11 | 320 | 10 | (116) 4 x 4d12 +5 | (52.0) 8d12 +0 | 54.666666666666664 |  
-| 12 | 330 | 10 | (120) 4 x 5d10 +5 | (58.5) 9d12 +0 | 58.666666666666664 |  
-| 13 | 411 | 4 | (140) 4 x 5d12 +5 | (58.5) 9d12 +0 | 63.666666666666664 |  
-| 14 | 390 | 6 | (144) 4 x 6d12 | (65.0) 10d12 | 67.66666666666666 |  
-| 15 | 390 | 6 | (148) 4 x 6d12 +1 | (71.5) 11d12 +0 | 71.66666666666667 |  
-  
+All bosses are built to survive 3 rounds of focused combat and to KO a player in 1.5 rounds.
+It is understood that most bosses should have a number of monster minions.
+Bosses should also have some cool, unique abilities to make them stand out and be more interesting to fight.
 
-  
+
+| Party Level | Boss Health | Boss Defense | Boss Damage | Accuracy Bonus | Player Hit Rate |
+ | --------|--------|--------|--------|--------|--------|
+| 0 | 83 | 9.0 | 1d8 +3 (7.5) | 1.0 | 0.7 |
+| 1 | 105 | 10.0 | 1d8 +3 (7.5) | 1.0 | 0.7 |
+| 2 | 139 | 9.0 | 2d8 +3 (12.0) | 1.0 | 0.75 |
+| 3 | 149 | 12.0 | 3d10 +1 (17.5) | 3.0 | 0.7 |
+| 4 | 163 | 11.0 | 3d12 +2 (21.5) | 3.0 | 0.75 |
+| 5 | 216 | 13.0 | 4d12 (26.0) | 4.0 | 0.7 |
+| 6 | 231 | 13.0 | 5d10 +4 (31.5) | 4.0 | 0.7 |
+| 7 | 427 | 12.0 | 5d12 +3 (35.5) | 4.0 | 0.75 |
+| 8 | 384 | 14.0 | 6d12 +1 (40.0) | 6.0 | 0.7 |
+| 9 | 383 | 14.0 | 8d10 +1 (45.0) | 6.0 | 0.7 |
+| 10 | 457 | 14.0 | 7d12 +4 (49.5) | 7.0 | 0.7 |
+| 11 | 491 | 12.0 | 8d12 +2 (54.0) | 7.0 | 0.8 |
+| 12 | 474 | 14.0 | 9d12 +1 (59.5) | 7.0 | 0.75 |
+| 13 | 502 | 15.0 | 11d10 +3 (63.5) | 9.0 | 0.7 |
+| 14 | 538 | 15.0 | 10d12 +3 (68.0) | 9.0 | 0.7 |
+| 15 | 544 | 15.0 | 11d12 +2 (73.5) | 9.0 | 0.7 |
+
+
+
+
 ### Roll Difficulty
 
-  
-#### Difficulty Comparison
-Numbers represent the probability of getting __AT LEAST__ the target.  
-  
-| Target | Disadvantage | Straight Roll | Advantage |  
- | --------|--------|--------|--------|
-| -5 | 100% | 100% | 100% |  
-| -4 | 100% | 100% | 100% |  
-| -3 | 100% | 100% | 100% |  
-| -2 | 100% | 100% | 100% |  
-| -1 | 100% | 100% | 100% |  
-| 0 | 100% | 100% | 100% |  
-| 1 | 100% | 100% | 100% |  
-| 2 | 90.25% | 95.0% | 99.75% |  
-| 3 | 81.0% | 90.0% | 99.0% |  
-| 4 | 72.25% | 85.0% | 97.75% |  
-| 5 | 64.0% | 80.0% | 96.0% |  
-| 6 | 56.25% | 75.0% | 93.75% |  
-| 7 | 49.0% | 70.0% | 91.0% |  
-| 8 | 42.25% | 65.0% | 87.75% |  
-| 9 | 36.0% | 60.0% | 84.0% |  
-| 10 | 30.25% | 55.0% | 79.75% |  
-| 11 | 25.0% | 50.0% | 75.0% |  
-| 12 | 20.25% | 45.0% | 69.75% |  
-| 13 | 16.0% | 40.0% | 64.0% |  
-| 14 | 12.25% | 35.0% | 57.75% |  
-| 15 | 9.0% | 30.0% | 51.0% |  
-| 16 | 6.25% | 25.0% | 43.75% |  
-| 17 | 4.0% | 20.0% | 36.0% |  
-| 18 | 2.25% | 15.0% | 27.75% |  
-| 19 | 1.0% | 10.0% | 19.0% |  
-| 20 | 0.25% | 5.0% | 9.75% |  
-  
 
-  
+#### Difficulty Comparison
+Numbers represent the probability of getting __AT LEAST__ the target.
+
+| Target | Disadvantage | Straight Roll | Advantage |
+ | --------|--------|--------|--------|
+| 2 | 90.25% | 95.0% | 99.75% |
+| 3 | 81.0% | 90.0% | 99.0% |
+| 4 | 72.25% | 85.0% | 97.75% |
+| 5 | 64.0% | 80.0% | 96.0% |
+| 6 | 56.25% | 75.0% | 93.75% |
+| 7 | 49.0% | 70.0% | 91.0% |
+| 8 | 42.25% | 65.0% | 87.75% |
+| 9 | 36.0% | 60.0% | 84.0% |
+| 10 | 30.25% | 55.0% | 79.75% |
+| 11 | 25.0% | 50.0% | 75.0% |
+| 12 | 20.25% | 45.0% | 69.75% |
+| 13 | 16.0% | 40.0% | 64.0% |
+| 14 | 12.25% | 35.0% | 57.75% |
+| 15 | 9.0% | 30.0% | 51.0% |
+| 16 | 6.25% | 25.0% | 43.75% |
+| 17 | 4.0% | 20.0% | 36.0% |
+| 18 | 2.25% | 15.0% | 27.75% |
+| 19 | 1.0% | 10.0% | 19.0% |
+| 20 | 0.25% | 5.0% | 9.75% |
+
+
+
 ## Advanced Understanding
 
-  
+
 ### Deeper Dice Roll Probability
 
-  
+
 #### Difficulty Helper: Straight Roll
-Numbers represent the probability of getting __AT LEAST__ the target.  
-  
-| Target | --5 | --4 | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| -5 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -4 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -3 | 95.0% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -2 | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -1 | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 0 | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 1 | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 2 | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% |  
-| 3 | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% |  
-| 4 | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% |  
-| 5 | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% |  
-| 6 | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% |  
-| 7 | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% |  
-| 8 | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% |  
-| 9 | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% |  
-| 10 | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% |  
-| 11 | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% |  
-| 12 | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% |  
-| 13 | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% |  
-| 14 | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% |  
-| 15 | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% |  
-| 16 | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% |  
-| 17 | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% |  
-| 18 | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% |  
-| 19 | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% |  
-| 20 | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% |  
-| 21 | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% |  
-| 22 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% |  
-| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% |  
-| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% |  
-| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% |  
-  
+Numbers represent the probability of getting __AT LEAST__ the target.
 
-  
+| Target | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |
+ | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| 2 | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% | 100% |
+| 3 | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% | 100% |
+| 4 | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% | 100% |
+| 5 | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% | 100% |
+| 6 | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% | 100% |
+| 7 | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% | 95.0% |
+| 8 | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% | 90.0% |
+| 9 | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% | 85.0% |
+| 10 | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% | 80.0% |
+| 11 | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% | 75.0% |
+| 12 | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% | 70.0% |
+| 13 | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% | 65.0% |
+| 14 | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% | 60.0% |
+| 15 | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% | 55.0% |
+| 16 | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% | 50.0% |
+| 17 | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% | 45.0% |
+| 18 | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% | 40.0% |
+| 19 | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% | 35.0% |
+| 20 | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% | 30.0% |
+| 21 | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% | 25.0% |
+| 22 | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% | 20.0% |
+| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% | 15.0% |
+| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% | 10.0% |
+| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 5.0% |
+
+
+
 #### Difficulty Helper: Advantage
-Numbers represent the probability of getting __AT LEAST__ the target.  
-  
-| Target | --5 | --4 | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| -5 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -4 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -3 | 99.75% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -2 | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -1 | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 0 | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 1 | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 2 | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% |  
-| 3 | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% |  
-| 4 | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% |  
-| 5 | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% |  
-| 6 | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% |  
-| 7 | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% |  
-| 8 | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% |  
-| 9 | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% |  
-| 10 | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% |  
-| 11 | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% |  
-| 12 | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% |  
-| 13 | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% |  
-| 14 | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% |  
-| 15 | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% |  
-| 16 | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% |  
-| 17 | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% |  
-| 18 | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% |  
-| 19 | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% |  
-| 20 | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% |  
-| 21 | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% |  
-| 22 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% |  
-| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% |  
-| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% |  
-| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% |  
-  
+Numbers represent the probability of getting __AT LEAST__ the target.
 
-  
+| Target | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |
+ | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| 2 | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% | 100% |
+| 3 | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% | 100% |
+| 4 | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% | 100% |
+| 5 | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% | 100% |
+| 6 | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% | 100% |
+| 7 | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% | 99.75% |
+| 8 | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% | 99.0% |
+| 9 | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% | 97.75% |
+| 10 | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% | 96.0% |
+| 11 | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% | 93.75% |
+| 12 | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% | 91.0% |
+| 13 | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% | 87.75% |
+| 14 | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% | 84.0% |
+| 15 | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% | 79.75% |
+| 16 | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% | 75.0% |
+| 17 | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% | 69.75% |
+| 18 | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% | 64.0% |
+| 19 | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% | 57.75% |
+| 20 | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% | 51.0% |
+| 21 | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% | 43.75% |
+| 22 | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% | 36.0% |
+| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% | 27.75% |
+| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% | 19.0% |
+| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 9.75% |
+
+
+
 #### Difficulty Helper: Disadvantage
-Numbers represent the probability of getting __AT LEAST__ the target.  
-  
-| Target | --5 | --4 | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| -5 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -4 | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -3 | 90.25% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -2 | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| -1 | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 0 | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 1 | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% | 100% |  
-| 2 | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% |  
-| 3 | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% |  
-| 4 | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% |  
-| 5 | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% |  
-| 6 | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% |  
-| 7 | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% |  
-| 8 | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% |  
-| 9 | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% |  
-| 10 | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% |  
-| 11 | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% |  
-| 12 | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% |  
-| 13 | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% |  
-| 14 | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% |  
-| 15 | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% |  
-| 16 | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% |  
-| 17 | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% |  
-| 18 | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% |  
-| 19 | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% |  
-| 20 | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% |  
-| 21 | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% |  
-| 22 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% |  
-| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% |  
-| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% |  
-| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% |  
-  
+Numbers represent the probability of getting __AT LEAST__ the target.
 
-  
+| Target | --3 | --2 | --1 | +0 | +1 | +2 | +3 | +4 | +5 |
+ | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| 2 | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% | 100% |
+| 3 | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% | 100% |
+| 4 | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% | 100% |
+| 5 | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% | 100% |
+| 6 | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% | 100% |
+| 7 | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% | 90.25% |
+| 8 | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% | 81.0% |
+| 9 | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% | 72.25% |
+| 10 | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% | 64.0% |
+| 11 | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% | 56.25% |
+| 12 | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% | 49.0% |
+| 13 | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% | 42.25% |
+| 14 | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% | 36.0% |
+| 15 | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% | 30.25% |
+| 16 | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% | 25.0% |
+| 17 | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% | 20.25% |
+| 18 | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% | 16.0% |
+| 19 | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% | 12.25% |
+| 20 | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% | 9.0% |
+| 21 | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% | 6.25% |
+| 22 | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% | 4.0% |
+| 23 | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% | 2.25% |
+| 24 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% | 1.0% |
+| 25 | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0% | 0.25% |
+
+
+
 ### Deeper Player Statistics
 
-  
+
 #### Average Player Health
-  
-| Level | Sprout Wizard | Human Fighter | Automaton Barbarian |  
- | --------|--------|--------|--------|
-| 0 | 6 | 10 | 14 |  
-| 1 | 10 | 16 | 22 |  
-| 2 | 14 | 22 | 30 |  
-| 3 | 18 | 28 | 38 |  
-| 4 | 22 | 34 | 46 |  
-| 5 | 26 | 40 | 54 |  
-| 6 | 30 | 46 | 62 |  
-| 7 | 34 | 52 | 70 |  
-| 8 | 38 | 58 | 78 |  
-| 9 | 42 | 64 | 86 |  
-| 10 | 46 | 70 | 94 |  
-| 11 | 50 | 76 | 102 |  
-| 12 | 54 | 82 | 110 |  
-| 13 | 58 | 88 | 118 |  
-| 14 | 62 | 94 | 126 |  
-| 15 | 66 | 100 | 134 |  
-  
 
-  
+| Level | Sprout Wizard | Human Fighter | Automaton Barbarian |
+ | --------|--------|--------|--------|
+| 0 | 6.5 | 10.5 | 14.5 |
+| 1 | 6.5 | 10.5 | 14.5 |
+| 2 | 11.5 | 17.5 | 23.5 |
+| 3 | 16.5 | 24.5 | 32.5 |
+| 4 | 21.5 | 31.5 | 41.5 |
+| 5 | 26.5 | 38.5 | 50.5 |
+| 6 | 31.5 | 45.5 | 59.5 |
+| 7 | 36.5 | 52.5 | 68.5 |
+| 8 | 41.5 | 59.5 | 77.5 |
+| 9 | 46.5 | 66.5 | 86.5 |
+| 10 | 51.5 | 73.5 | 95.5 |
+| 11 | 56.5 | 80.5 | 104.5 |
+| 12 | 61.5 | 87.5 | 113.5 |
+| 13 | 66.5 | 94.5 | 122.5 |
+| 14 | 71.5 | 101.5 | 131.5 |
+| 15 | 76.5 | 108.5 | 140.5 |
+
+
+
 #### Maximum Player Health
-  
-| Level | Sprout Wizard | Human Fighter | Automaton Barbarian |  
+
+| Level | Sprout Wizard | Human Fighter | Automaton Barbarian |
  | --------|--------|--------|--------|
-| 0 | 8 | 12 | 16 |  
-| 1 | 16 | 24 | 32 |  
-| 2 | 24 | 36 | 48 |  
-| 3 | 32 | 48 | 64 |  
-| 4 | 40 | 60 | 80 |  
-| 5 | 48 | 72 | 96 |  
-| 6 | 56 | 84 | 112 |  
-| 7 | 64 | 96 | 128 |  
-| 8 | 72 | 108 | 144 |  
-| 9 | 80 | 120 | 160 |  
-| 10 | 88 | 132 | 176 |  
-| 11 | 96 | 144 | 192 |  
-| 12 | 104 | 156 | 208 |  
-| 13 | 112 | 168 | 224 |  
-| 14 | 120 | 180 | 240 |  
-| 15 | 128 | 192 | 256 |  
-  
+| 0 | 0 | 0 | 0 |
+| 1 | 8 | 12 | 16 |
+| 2 | 16 | 24 | 32 |
+| 3 | 24 | 36 | 48 |
+| 4 | 32 | 48 | 64 |
+| 5 | 40 | 60 | 80 |
+| 6 | 48 | 72 | 96 |
+| 7 | 56 | 84 | 112 |
+| 8 | 64 | 96 | 128 |
+| 9 | 72 | 108 | 144 |
+| 10 | 80 | 120 | 160 |
+| 11 | 88 | 132 | 176 |
+| 12 | 96 | 144 | 192 |
+| 13 | 104 | 156 | 208 |
+| 14 | 112 | 168 | 224 |
+| 15 | 120 | 180 | 240 |
 
-  
-#### Average Expected Damage Output Per Round
-Action Points (AP) tend to grant an additional dice of damage.  
-For magic users, please recall that many of their spells deal area of effect damage, or else apply a status effect to an enemy.  
-  
-  
-| Level | Melee 0SP | Melee 1SP | Melee 2SP | Mage 0SP | Mage 1SP | Mage 2SP | Mage 3SP | Mage 4SP | Mage 5SP |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 7 | 10 | 10 | 7 | 10 | 10 | 10 | 10 | 10 |  
-| 1 | 8 | 11 | 11 | 8 | 11 | 11 | 11 | 11 | 11 |  
-| 2 | 9 | 13 | 13 | 9 | 13 | 13 | 13 | 13 | 13 |  
-| 3 | 9 | 13 | 13 | 9 | 13 | 13 | 13 | 13 | 13 |  
-| 4 | 12 | 17 | 17 | 12 | 17 | 17 | 17 | 17 | 17 |  
-| 5 | 12 | 17 | 17 | 12 | 17 | 17 | 17 | 17 | 17 |  
-| 6 | 16 | 21 | 21 | 16 | 21 | 21 | 21 | 21 | 21 |  
-| 7 | 17 | 22 | 22 | 17 | 22 | 22 | 22 | 22 | 22 |  
-| 8 | 18 | 23 | 23 | 18 | 23 | 23 | 23 | 23 | 23 |  
-| 9 | 19 | 24 | 24 | 19 | 24 | 24 | 24 | 24 | 24 |  
-| 10 | 28 | 34 | 34 | 28 | 34 | 34 | 34 | 34 | 34 |  
-| 11 | 29 | 35 | 35 | 29 | 35 | 35 | 35 | 35 | 35 |  
-| 12 | 30 | 36 | 36 | 30 | 36 | 36 | 36 | 36 | 36 |  
-| 13 | 30 | 36 | 36 | 30 | 36 | 36 | 36 | 36 | 36 |  
-| 14 | 30 | 36 | 36 | 30 | 36 | 36 | 36 | 36 | 36 |  
-| 15 | 30 | 36 | 36 | 30 | 36 | 36 | 36 | 36 | 36 |  
-  
 
-  
-#### Average Critical Hit Damage Output
-Critical hits are computed as the first (and heaviest) attack is the critical, and subsequent attacks are normal.  
-For magic users, please recall that many of their spells deal area of effect damage, or else apply a status effect to an enemy.  
-  
-  
-| Level | Melee 0SP | Melee 1SP | Melee 2SP | Mage 0SP | Mage 1SP | Mage 2SP | Mage 3SP | Mage 4SP | Mage 5SP |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 11 | 14 | 14 | 11 | 14 | 14 | 14 | 14 | 14 |  
-| 1 | 12 | 15 | 15 | 12 | 15 | 15 | 15 | 15 | 15 |  
-| 2 | 15 | 19 | 19 | 15 | 19 | 19 | 19 | 19 | 19 |  
-| 3 | 15 | 19 | 19 | 15 | 19 | 19 | 19 | 19 | 19 |  
-| 4 | 20 | 25 | 25 | 20 | 25 | 25 | 25 | 25 | 25 |  
-| 5 | 20 | 25 | 25 | 20 | 25 | 25 | 25 | 25 | 25 |  
-| 6 | 24 | 29 | 29 | 24 | 29 | 29 | 29 | 29 | 29 |  
-| 7 | 25 | 30 | 30 | 25 | 30 | 30 | 30 | 30 | 30 |  
-| 8 | 26 | 31 | 31 | 26 | 31 | 31 | 31 | 31 | 31 |  
-| 9 | 27 | 32 | 32 | 27 | 32 | 32 | 32 | 32 | 32 |  
-| 10 | 37 | 43 | 43 | 37 | 43 | 43 | 43 | 43 | 43 |  
-| 11 | 38 | 44 | 44 | 38 | 44 | 44 | 44 | 44 | 44 |  
-| 12 | 39 | 45 | 45 | 39 | 45 | 45 | 45 | 45 | 45 |  
-| 13 | 39 | 45 | 45 | 39 | 45 | 45 | 45 | 45 | 45 |  
-| 14 | 39 | 45 | 45 | 39 | 45 | 45 | 45 | 45 | 45 |  
-| 15 | 39 | 45 | 45 | 39 | 45 | 45 | 45 | 45 | 45 |  
-  
 
-  
+#### Average Player Damage
+
+| Level | Melee | Melee w/ Action Points | Caster |
+ | --------|--------|--------|--------|
+| 0 | 36.0 | 49.0 | 75.0 |
+| 1 | 36.0 | 49.0 | 75.0 |
+| 2 | 36.0 | 49.0 | 75.0 |
+| 3 | 36.0 | 49.0 | 75.0 |
+| 4 | 36.0 | 49.0 | 75.0 |
+| 5 | 36.0 | 49.0 | 75.0 |
+| 6 | 36.0 | 49.0 | 75.0 |
+| 7 | 36.0 | 49.0 | 75.0 |
+| 8 | 36.0 | 49.0 | 75.0 |
+| 9 | 36.0 | 49.0 | 75.0 |
+| 10 | 36.0 | 49.0 | 75.0 |
+| 11 | 36.0 | 49.0 | 75.0 |
+| 12 | 36.0 | 49.0 | 75.0 |
+| 13 | 36.0 | 49.0 | 75.0 |
+| 14 | 36.0 | 49.0 | 75.0 |
+| 15 | 36.0 | 49.0 | 75.0 |
+
+
+
 #### Health Potions by Player Level
-Small Potions heal on average 1/8th of a players health. Medium restore 1/4th, Large restore 1/2, and Negligible Effect restore less than 1/8th.  
-  
-| Potion | Effect | Small | Medium | Large | Negligible |  
- | --------|--------|--------|--------|--------|--------|
-| Salve | 1d6 +2 | 2, 3, 4, 5 | 1 | 0 | 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 |  
-| Minor Health Potion | 1d12 +3 | 5, 6, 7, 8, 9, 10 | 2, 3, 4 | 0, 1 | 11, 12, 13, 14, 15 |  
-| Greater Health Potion | 2d10 +3 | 8, 9, 10, 11, 12, 13, 14, 15 | 3, 4, 5, 6, 7 | 1, 2 |  |  
-| Major Health Potion | 4d10 +5 |  | 7, 8, 9, 10, 11, 12, 13, 14, 15 | 3, 4, 5, 6 |  |  
-| Epic Health Potion | 8d12 +2 |  |  | 7, 8, 9, 10, 11, 12, 13, 14, 15 |  |  
+Small Potions heal on average 1/8th of a players health. Medium restore 1/4th, Large restore 1/2, and Negligible Effect restore less than 1/8th.
 
-  
+| Potion | Effect | Small | Medium | Large | Negligible |
+ | --------|--------|--------|--------|--------|--------|
+| Salve | 1d4 +1 | 2, 3 | 0, 1 |  | 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 |
+| Healing Potion | 1d4 +3 | 3, 4, 5 | 2 | 0, 1 | 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 |
+| Greater Health Potion | 2d8 +2 | 6, 7, 8, 9, 10, 11, 12 | 3, 4, 5 | 2 | 13, 14, 15 |
+| Major Health Potion | 3d10 +3 | 11, 12, 13, 14, 15 | 6, 7, 8, 9, 10 | 4, 5 |  |
+| Epic Health Potion | 9d8 +3 |  | 12, 13, 14, 15 | 8, 9, 10, 11 |  |
+
+
 ### Building Monsters from Scratch
 
-  
+
 #### Boss Survivability
-Assuming 1 Monster vs 4 Player Combat  
-  
-| Player Level | 0 Rounds Survived | 1 Rounds Survived | 2 Rounds Survived | 3 Rounds Survived | 4 Rounds Survived | 5 Rounds Survived | 6 Rounds Survived | 7 Rounds Survived | 8 Rounds Survived |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 40 | 50 | 57 | 61 | 68 | 75 | 82 | 86 | 93 | 100 |  
-| 1 | 44 | 55 | 66 | 74 | 79 | 87 | 95 | 103 | 108 | 116 |  
-| 2 | 52 | 65 | 78 | 87 | 92 | 101 | 110 | 119 | 124 | 133 |  
-| 3 | 52 | 65 | 78 | 87 | 92 | 101 | 110 | 119 | 124 | 133 |  
-| 4 | 64 | 80 | 96 | 112 | 128 | 139 | 145 | 156 | 167 | 173 |  
-| 5 | 64 | 80 | 96 | 112 | 128 | 139 | 145 | 156 | 167 | 173 |  
-| 6 | 76 | 95 | 114 | 133 | 152 | 171 | 190 | 204 | 213 | 227 |  
-| 7 | 80 | 100 | 120 | 140 | 160 | 180 | 200 | 215 | 225 | 240 |  
-| 8 | 84 | 105 | 126 | 147 | 168 | 189 | 210 | 226 | 237 | 253 |  
-| 9 | 88 | 110 | 132 | 154 | 176 | 198 | 220 | 237 | 249 | 266 |  
-| 10 | 124 | 155 | 186 | 217 | 248 | 279 | 310 | 341 | 366 | 385 |  
-| 11 | 128 | 160 | 192 | 224 | 256 | 288 | 320 | 352 | 378 | 398 |  
-| 12 | 132 | 165 | 198 | 231 | 264 | 297 | 330 | 363 | 390 | 411 |  
-| 13 | 132 | 165 | 198 | 231 | 264 | 297 | 330 | 363 | 390 | 411 |  
-| 14 | 132 | 165 | 198 | 231 | 264 | 297 | 330 | 363 | 390 | 411 |  
-| 15 | 132 | 165 | 198 | 231 | 264 | 297 | 330 | 363 | 390 | 411 |  
-  
+Assuming 1 Monster vs 5 Player Combat
 
-  
-#### Monster Survivability, Action Point Use
-Assuming 1 Monster vs 1 Player Combat  
-  
-| Player Level | 0 Rounds Survived | 1 Rounds Survived | 2 Rounds Survived | 3 Rounds Survived | 4 Rounds Survived | 5 Rounds Survived | 6 Rounds Survived | 7 Rounds Survived | 8 Rounds Survived |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 10 | 20 | 30 | 37 | 44 | 51 | 58 | 65 | 72 | 79 |  
-| 1 | 11 | 22 | 33 | 44 | 52 | 60 | 68 | 76 | 84 | 92 |  
-| 2 | 13 | 26 | 39 | 52 | 61 | 70 | 79 | 88 | 97 | 106 |  
-| 3 | 13 | 26 | 39 | 52 | 61 | 70 | 79 | 88 | 97 | 106 |  
-| 4 | 16 | 32 | 48 | 64 | 80 | 96 | 107 | 118 | 129 | 140 |  
-| 5 | 16 | 32 | 48 | 64 | 80 | 96 | 107 | 118 | 129 | 140 |  
-| 6 | 19 | 38 | 57 | 76 | 95 | 114 | 133 | 152 | 166 | 180 |  
-| 7 | 20 | 40 | 60 | 80 | 100 | 120 | 140 | 160 | 175 | 190 |  
-| 8 | 21 | 42 | 63 | 84 | 105 | 126 | 147 | 168 | 184 | 200 |  
-| 9 | 22 | 44 | 66 | 88 | 110 | 132 | 154 | 176 | 193 | 210 |  
-| 10 | 31 | 62 | 93 | 124 | 155 | 186 | 217 | 248 | 279 | 304 |  
-| 11 | 32 | 64 | 96 | 128 | 160 | 192 | 224 | 256 | 288 | 314 |  
-| 12 | 33 | 66 | 99 | 132 | 165 | 198 | 231 | 264 | 297 | 324 |  
-| 13 | 33 | 66 | 99 | 132 | 165 | 198 | 231 | 264 | 297 | 324 |  
-| 14 | 33 | 66 | 99 | 132 | 165 | 198 | 231 | 264 | 297 | 324 |  
-| 15 | 33 | 66 | 99 | 132 | 165 | 198 | 231 | 264 | 297 | 324 |  
-  
+| Player Level | 0 Rounds Survived | 1 Rounds Survived | 2 Rounds Survived | 3 Rounds Survived | 4 Rounds Survived |
+ | --------|--------|--------|--------|--------|--------|
+| 0 | 31.5 | 37.8 | 44.099999999999994 | 50.39999999999999 | 56.69999999999999 | 62.999999999999986 |
+| 1 | 39.199999999999996 | 47.599999999999994 | 55.99999999999999 | 64.39999999999999 | 72.79999999999998 | 81.19999999999999 |
+| 2 | 50.699999999999996 | 59.099999999999994 | 67.5 | 75.9 | 84.29999999999998 | 92.69999999999999 |
+| 3 | 56.7 | 67.2 | 77.7 | 88.19999999999999 | 98.69999999999999 | 109.19999999999999 |
+| 4 | 56.7 | 67.2 | 77.7 | 88.19999999999999 | 98.69999999999999 | 109.19999999999999 |
+| 5 | 82.6 | 95.19999999999999 | 107.79999999999998 | 120.4 | 133.0 | 145.6 |
+| 6 | 87.85 | 102.19999999999999 | 116.54999999999998 | 130.9 | 145.25 | 159.6 |
+| 7 | 147.6 | 176.29999999999998 | 205.0 | 233.7 | 262.4 | 263.8 |
+| 8 | 147.7 | 177.79999999999998 | 207.89999999999998 | 237.99999999999997 | 268.09999999999997 | 270.9 |
+| 9 | 147.7 | 177.79999999999998 | 207.89999999999998 | 237.99999999999997 | 268.09999999999997 | 270.9 |
+| 10 | 170.79999999999998 | 202.29999999999998 | 233.79999999999998 | 265.29999999999995 | 296.79999999999995 | 300.99999999999994 |
+| 11 | 170.79999999999998 | 202.29999999999998 | 233.79999999999998 | 265.29999999999995 | 296.79999999999995 | 300.99999999999994 |
+| 12 | 169.55 | 202.45000000000002 | 235.35000000000002 | 268.25 | 301.15 | 306.75000000000006 |
+| 13 | 196.20000000000002 | 229.1 | 262.0 | 294.9 | 327.79999999999995 | 333.40000000000003 |
+| 14 | 200.39999999999998 | 234.7 | 269.0 | 303.3 | 337.6 | 344.59999999999997 |
+| 15 | 200.39999999999998 | 234.7 | 269.0 | 303.3 | 337.6 | 344.59999999999997 |
 
-  
+
+
+#### Monster Survivability
+Assuming 1 Monster vs 1 Player Combat
+
+| Player Level | 0 Rounds Survived | 1 Rounds Survived | 2 Rounds Survived | 3 Rounds Survived | 4 Rounds Survived | 5 Rounds Survived | 6 Rounds Survived | 7 Rounds Survived | 8 Rounds Survived | 9 Rounds Survived |
+ | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| 0 | 6.3 | 12.6 | 18.9 | 25.2 | 31.5 | 37.8 | 44.099999999999994 | 47.949999999999996 | 51.8 | 55.65 | 59.5 |
+| 1 | 8.399999999999999 | 16.799999999999997 | 25.199999999999996 | 33.599999999999994 | 41.99999999999999 | 50.39999999999999 | 58.79999999999999 | 67.19999999999999 | 72.44999999999999 | 77.69999999999999 | 82.94999999999999 |
+| 2 | 8.399999999999999 | 16.799999999999997 | 25.199999999999996 | 33.599999999999994 | 41.99999999999999 | 50.39999999999999 | 58.79999999999999 | 67.19999999999999 | 72.44999999999999 | 77.69999999999999 | 82.94999999999999 |
+| 3 | 10.5 | 21.0 | 31.5 | 42.0 | 52.5 | 63.0 | 73.5 | 84.0 | 94.5 | 101.15 | 107.80000000000001 |
+| 4 | 10.5 | 21.0 | 31.5 | 42.0 | 52.5 | 63.0 | 73.5 | 84.0 | 94.5 | 101.15 | 107.80000000000001 |
+| 5 | 12.6 | 25.2 | 37.8 | 50.4 | 63.0 | 75.6 | 88.19999999999999 | 100.79999999999998 | 113.39999999999998 | 125.99999999999997 | 134.04999999999998 |
+| 6 | 14.35 | 28.7 | 43.05 | 57.4 | 71.75 | 86.1 | 100.44999999999999 | 114.79999999999998 | 129.14999999999998 | 143.49999999999997 | 153.29999999999998 |
+| 7 | 28.7 | 57.4 | 86.1 | 114.8 | 143.5 | 163.1 | 182.7 | 202.29999999999998 | 221.89999999999998 | 241.49999999999997 | 261.09999999999997 |
+| 8 | 30.099999999999998 | 60.199999999999996 | 90.3 | 120.39999999999999 | 150.5 | 171.5 | 192.5 | 213.5 | 234.5 | 255.5 | 276.5 |
+| 9 | 30.099999999999998 | 60.199999999999996 | 90.3 | 120.39999999999999 | 150.5 | 171.5 | 192.5 | 213.5 | 234.5 | 255.5 | 276.5 |
+| 10 | 31.499999999999996 | 62.99999999999999 | 94.49999999999999 | 125.99999999999999 | 157.49999999999997 | 179.89999999999998 | 202.29999999999998 | 224.7 | 247.1 | 269.5 | 291.9 |
+| 11 | 31.499999999999996 | 62.99999999999999 | 94.49999999999999 | 125.99999999999999 | 157.49999999999997 | 179.89999999999998 | 202.29999999999998 | 224.7 | 247.1 | 269.5 | 291.9 |
+| 12 | 32.9 | 65.8 | 98.69999999999999 | 131.6 | 164.5 | 188.3 | 212.10000000000002 | 235.90000000000003 | 259.70000000000005 | 283.50000000000006 | 307.30000000000007 |
+| 13 | 32.9 | 65.8 | 98.69999999999999 | 131.6 | 164.5 | 188.3 | 212.10000000000002 | 235.90000000000003 | 259.70000000000005 | 283.50000000000006 | 307.30000000000007 |
+| 14 | 34.3 | 68.6 | 102.89999999999999 | 137.2 | 171.5 | 196.7 | 221.89999999999998 | 247.09999999999997 | 272.29999999999995 | 297.49999999999994 | 322.69999999999993 |
+| 15 | 34.3 | 68.6 | 102.89999999999999 | 137.2 | 171.5 | 196.7 | 221.89999999999998 | 247.09999999999997 | 272.29999999999995 | 297.49999999999994 | 322.69999999999993 |
+
+
+
 #### Player Survivability
-  
-| Level | Character Health | Character Armor | 1 Hits | 2 Hits | 3 Hits | 4 Hits | 5 Hits | 6 Hits |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 10 | 0 | 2d8 +2 | 1d6 +2 | 1d6 +1 | 1d4 +1 | 1d2 +1 | 1d2 +1 |  
-| 1 | 16 | 1 | 2d12 +4 | 1d10 +3 | 1d8 +2 | 1d6 +1 | 1d6 +1 | 1d4 +1 |  
-| 2 | 22 | 2 | 3d12 +4 | 2d8 +3 | 1d10 +3 | 1d8 +2 | 1d6 +2 | 1d6 +1 |  
-| 3 | 28 | 2 | 4d12 +4 | 2d10 +4 | 2d8 +2 | 1d8 +3 | 1d8 +2 | 1d6 +2 |  
-| 4 | 34 | 2 | 5d12 +4 | 3d10 +2 | 2d10 +2 | 1d12 +3 | 1d8 +3 | 1d8 +2 |  
-| 5 | 40 | 3 | 6d12 +4 | 3d10 +5 | 2d10 +4 | 2d8 +2 | 1d10 +3 | 1d8 +3 |  
-| 6 | 46 | 3 | 7d12 +4 | 3d12 +5 | 2d12 +4 | 2d10 +2 | 2d8 +2 | 1d10 +3 |  
-| 7 | 52 | 3 | 8d12 +4 | 4d12 +2 | 3d10 +3 | 2d10 +3 | 2d8 +3 | 1d12 +3 |  
-| 8 | 58 | 3 | 9d12 +4 | 4d12 +5 | 3d10 +5 | 2d12 +3 | 2d10 +2 | 2d8 +2 |  
-| 9 | 64 | 4 | 10d12 +4 | 5d12 +2 | 3d12 +4 | 2d12 +4 | 2d10 +3 | 2d8 +3 |  
-| 10 | 70 | 4 | 11d12 +4 | 5d12 +5 | 4d10 +4 | 3d10 +3 | 2d10 +4 | 2d10 +2 |  
-| 11 | 76 | 4 | 12d12 +4 | 6d12 +2 | 4d12 +2 | 3d10 +4 | 2d12 +4 | 2d10 +3 |  
-| 12 | 82 | 4 | 13d12 +4 | 6d12 +5 | 4d12 +4 | 3d12 +3 | 3d10 +2 | 2d10 +4 |  
-| 13 | 88 | 5 | 14d12 +4 | 7d12 +2 | 5d10 +5 | 3d12 +4 | 3d10 +3 | 2d12 +3 |  
-| 14 | 94 | 5 | 15d12 +4 | 7d12 +5 | 5d12 +2 | 4d10 +4 | 3d10 +4 | 2d12 +4 |  
-| 15 | 100 | 5 | 16d12 +4 | 8d12 +2 | 5d12 +4 | 4d10 +5 | 3d10 +5 | 3d10 +2 |  
-  
 
-  
+| Level | Character Health | 1 Hits | 2 Hits | 3 Hits | 4 Hits | 5 Hits | 6 Hits |
+ | --------|--------|--------|--------|--------|--------|--------|--------|
+| 0 | 10.5 | 2d8 +2 (11.0) | 1d6 +3 (6.5) | 1d4 +2 (4.5) | 1d4 +1 (3.5) | 1d4 +1 (3.5) | 1d2 +1 (2.5) |
+| 1 | 10.5 | 2d8 +2 (11.0) | 1d6 +3 (6.5) | 1d4 +2 (4.5) | 1d4 +1 (3.5) | 1d4 +1 (3.5) | 1d2 +1 (2.5) |
+| 2 | 17.5 | 3d10 +2 (18.5) | 1d12 +3 (9.5) | 1d6 +3 (6.5) | 1d6 +2 (5.5) | 1d4 +2 (4.5) | 1d4 +1 (3.5) |
+| 3 | 24.5 | 4d10 +3 (25.0) | 2d10 +2 (13.0) | 1d12 +3 (9.5) | 1d8 +3 (7.5) | 1d6 +2 (5.5) | 1d6 +2 (5.5) |
+| 4 | 31.5 | 7d8 +1 (32.5) | 2d12 +3 (16.0) | 2d8 +2 (11.0) | 1d10 +3 (8.5) | 1d8 +3 (7.5) | 1d6 +3 (6.5) |
+| 5 | 38.5 | 6d12 (39.0) | 3d12 +1 (20.5) | 2d10 +2 (13.0) | 2d6 +3 (10.0) | 1d10 +3 (8.5) | 1d8 +3 (7.5) |
+| 6 | 45.5 | 7d12 +1 (46.5) | 4d10 +1 (23.0) | 2d12 +3 (16.0) | 2d8 +3 (12.0) | 2d6 +3 (10.0) | 1d10 +3 (8.5) |
+| 7 | 52.5 | 8d12 +1 (53.0) | 4d12 +1 (27.0) | 3d10 +2 (18.5) | 2d10 +3 (14.0) | 2d8 +2 (11.0) | 1d12 +3 (9.5) |
+| 8 | 59.5 | 9d12 +2 (60.5) | 5d10 +3 (30.5) | 3d12 +1 (20.5) | 2d12 +2 (15.0) | 2d8 +3 (12.0) | 2d6 +3 (10.0) |
+| 9 | 66.5 | 10d12 +2 (67.0) | 5d12 +2 (34.5) | 4d10 +1 (23.0) | 3d10 +1 (17.5) | 2d10 +3 (14.0) | 2d8 +3 (12.0) |
+| 10 | 73.5 | 11d12 +3 (74.5) | 8d8 +1 (37.0) | 4d10 +3 (25.0) | 3d10 +3 (19.5) | 2d12 +2 (15.0) | 2d10 +2 (13.0) |
+| 11 | 80.5 | 12d12 +3 (81.0) | 6d12 +2 (41.0) | 4d12 +1 (27.0) | 3d12 +2 (21.5) | 3d10 +1 (17.5) | 2d10 +3 (14.0) |
+| 12 | 87.5 | 13d12 +4 (88.5) | 8d10 (44.0) | 5d10 +3 (30.5) | 3d12 +3 (22.5) | 3d10 +2 (18.5) | 2d12 +2 (15.0) |
+| 13 | 94.5 | 14d12 +4 (95.0) | 7d12 +3 (48.5) | 7d8 +1 (32.5) | 4d10 +2 (24.0) | 3d10 +3 (19.5) | 2d12 +3 (16.0) |
+| 14 | 101.5 | 18d10 +3 (102.0) | 9d10 +2 (51.5) | 5d12 +2 (34.5) | 4d12 (26.0) | 3d12 +2 (21.5) | 3d10 +1 (17.5) |
+| 15 | 108.5 | 16d12 +5 (109.0) | 8d12 +3 (55.0) | 8d8 +1 (37.0) | 4d12 +2 (28.0) | 3d12 +3 (22.5) | 3d10 +3 (19.5) |
+
+
+
 ### Simulation Results
 
-  
-#### Simulated Boss Survivability
-  
-| Party Level | Monster Health | Rounds Survived with 0 Armor | Rounds Survived with 1 Armor | Rounds Survived with 2 Armor | Rounds Survived with 3 Armor | Rounds Survived with 4 Armor | Rounds Survived with 5 Armor | Rounds Survived with 6 Armor | Rounds Survived with 7 Armor | Rounds Survived with 8 Armor | Rounds Survived with 9 Armor | Rounds Survived with 10 Armor |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 40 | 1.324 | 1.632 | 1.776 | 1.944 | 2.008 | 2.3 | 2.74 | 3.588 | 40005.44 | 100000.0 | 100000.0 |  
-| 0 | 50 | 1.864 | 1.94 | 2.008 | 2.124 | 2.408 | 2.856 | 3.532 | 4.98 | 80007.552 | 100000.0 | 100000.0 |  
-| 0 | 57 | 1.968 | 1.996 | 2.116 | 2.344 | 2.664 | 3.208 | 4.152 | 5.936 | 240009.124 | 100000.0 | 100000.0 |  
-| 0 | 61 | 1.988 | 2.028 | 2.184 | 2.5 | 2.872 | 3.544 | 4.532 | 6.624 | 440009.6 | 100000.0 | 100000.0 |  
-| 0 | 68 | 2.024 | 2.128 | 2.44 | 2.836 | 3.204 | 3.928 | 5.324 | 8.176 | 1160010.736 | 100000.0 | 100000.0 |  
-| 0 | 75 | 2.148 | 2.42 | 2.768 | 3.112 | 3.588 | 4.416 | 6.044 | 9.444 | 2280010.24 | 100000.0 | 100000.0 |  
-| 0 | 82 | 2.44 | 2.688 | 2.948 | 3.288 | 3.96 | 5.056 | 6.948 | 200010.232 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 86 | 2.516 | 2.82 | 3.02 | 3.488 | 4.3 | 5.316 | 7.6 | 560010.936 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 93 | 2.796 | 2.96 | 3.208 | 3.844 | 4.736 | 5.884 | 8.232 | 800011.42 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 100 | 2.916 | 3.124 | 3.44 | 4.156 | 5.052 | 6.648 | 9.312 | 1600011.372 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 44 | 1.348 | 1.544 | 1.832 | 1.892 | 2.0 | 2.152 | 2.472 | 2.988 | 3.696 | 5.08 | 80008.42 |  
-| 1 | 55 | 1.884 | 1.928 | 1.976 | 2.048 | 2.284 | 2.608 | 2.948 | 3.568 | 4.728 | 80007.288 | 100000.0 |  
-| 1 | 66 | 1.996 | 2.0 | 2.128 | 2.408 | 2.736 | 3.092 | 3.452 | 4.328 | 5.984 | 480009.144 | 100000.0 |  
-| 1 | 74 | 2.012 | 2.076 | 2.412 | 2.672 | 2.932 | 3.324 | 3.892 | 5.128 | 7.44 | 1240009.7 | 100000.0 |  
-| 1 | 79 | 2.048 | 2.28 | 2.544 | 2.912 | 3.084 | 3.576 | 4.284 | 5.58 | 8.208 | 1880009.984 | 100000.0 |  
-| 1 | 87 | 2.212 | 2.612 | 2.872 | 3.016 | 3.3 | 3.884 | 4.78 | 6.424 | 80009.6 | 100000.0 | 100000.0 |  
-| 1 | 95 | 2.552 | 2.868 | 3.02 | 3.256 | 3.656 | 4.308 | 5.312 | 7.584 | 200010.692 | 100000.0 | 100000.0 |  
-| 1 | 103 | 2.876 | 2.972 | 3.128 | 3.524 | 3.932 | 4.688 | 5.868 | 8.148 | 600011.588 | 100000.0 | 100000.0 |  
-| 1 | 108 | 2.94 | 3.02 | 3.288 | 3.672 | 4.18 | 4.952 | 6.264 | 9.196 | 1320011.396 | 100000.0 | 100000.0 |  
-| 1 | 116 | 3.012 | 3.128 | 3.52 | 3.912 | 4.46 | 5.416 | 7.204 | 10.32 | 2280011.084 | 100000.0 | 100000.0 |  
-| 2 | 52 | 1.38 | 1.564 | 1.756 | 1.864 | 1.968 | 2.036 | 2.184 | 2.456 | 2.912 | 3.356 | 4.296 |  
-| 2 | 65 | 1.884 | 1.956 | 1.984 | 2.012 | 2.176 | 2.416 | 2.692 | 3.052 | 3.452 | 4.276 | 5.724 |  
-| 2 | 78 | 2.0 | 2.016 | 2.088 | 2.252 | 2.592 | 2.808 | 3.032 | 3.588 | 4.136 | 5.564 | 80007.756 |  
-| 2 | 87 | 2.012 | 2.136 | 2.312 | 2.6 | 2.832 | 3.06 | 3.42 | 3.96 | 4.788 | 6.372 | 280009.488 |  
-| 2 | 92 | 2.064 | 2.188 | 2.46 | 2.752 | 2.916 | 3.196 | 3.628 | 4.116 | 5.128 | 7.384 | 600009.98 |  
-| 2 | 101 | 2.216 | 2.492 | 2.752 | 2.936 | 3.08 | 3.44 | 4.004 | 4.696 | 5.904 | 40008.46 | 100000.0 |  
-| 2 | 110 | 2.564 | 2.776 | 2.932 | 3.104 | 3.364 | 3.748 | 4.404 | 5.292 | 6.964 | 40010.144 | 100000.0 |  
-| 2 | 119 | 2.78 | 2.94 | 3.084 | 3.312 | 3.684 | 4.132 | 4.784 | 6.044 | 7.724 | 320010.74 | 100000.0 |  
-| 2 | 124 | 2.904 | 2.968 | 3.112 | 3.424 | 3.768 | 4.276 | 4.992 | 6.328 | 8.324 | 480011.232 | 100000.0 |  
-| 2 | 133 | 2.988 | 3.132 | 3.28 | 3.668 | 4.036 | 4.588 | 5.424 | 6.86 | 9.192 | 1080011.752 | 100000.0 |  
-| 3 | 52 | 1.388 | 1.652 | 1.732 | 1.864 | 1.96 | 2.084 | 2.184 | 2.512 | 2.896 | 3.5 | 4.36 |  
-| 3 | 65 | 1.904 | 1.952 | 1.988 | 2.02 | 2.14 | 2.38 | 2.672 | 3.02 | 3.436 | 4.412 | 5.94 |  
-| 3 | 78 | 2.012 | 2.016 | 2.088 | 2.292 | 2.528 | 2.812 | 3.124 | 3.516 | 4.144 | 5.556 | 120008.024 |  
-| 3 | 87 | 2.012 | 2.104 | 2.32 | 2.576 | 2.836 | 3.064 | 3.392 | 3.992 | 4.684 | 6.468 | 560008.764 |  
-| 3 | 92 | 2.068 | 2.248 | 2.488 | 2.752 | 2.896 | 3.224 | 3.628 | 4.204 | 5.34 | 7.332 | 480009.728 |  
-| 3 | 101 | 2.264 | 2.488 | 2.784 | 2.92 | 3.128 | 3.448 | 3.9 | 4.656 | 6.124 | 8.368 | 1840009.78 |  
-| 3 | 110 | 2.572 | 2.78 | 2.948 | 3.116 | 3.368 | 3.816 | 4.3 | 5.24 | 6.972 | 80009.54 | 100000.0 |  
-| 3 | 119 | 2.752 | 2.932 | 3.048 | 3.26 | 3.64 | 4.196 | 4.772 | 5.84 | 7.7 | 200010.48 | 100000.0 |  
-| 3 | 124 | 2.876 | 2.98 | 3.124 | 3.416 | 3.8 | 4.256 | 5.02 | 6.32 | 8.212 | 440010.948 | 100000.0 |  
-| 3 | 133 | 2.972 | 3.088 | 3.344 | 3.684 | 4.044 | 4.652 | 5.516 | 6.792 | 9.224 | 1240011.588 | 100000.0 |  
-| 4 | 64 | 1.4 | 1.584 | 1.7 | 1.852 | 1.912 | 1.952 | 2.048 | 2.16 | 2.388 | 2.648 | 2.94 |  
-| 4 | 80 | 1.9 | 1.964 | 1.968 | 1.984 | 2.02 | 2.172 | 2.412 | 2.644 | 2.84 | 3.132 | 3.624 |  
-| 4 | 96 | 2.0 | 2.02 | 2.052 | 2.208 | 2.396 | 2.58 | 2.78 | 3.016 | 3.38 | 3.628 | 4.252 |  
-| 4 | 112 | 2.056 | 2.168 | 2.376 | 2.612 | 2.792 | 2.948 | 3.152 | 3.468 | 3.832 | 4.3 | 4.856 |  
-| 4 | 128 | 2.384 | 2.532 | 2.812 | 2.924 | 3.028 | 3.212 | 3.52 | 3.86 | 4.252 | 4.784 | 5.524 |  
-| 4 | 139 | 2.66 | 2.824 | 2.944 | 3.044 | 3.244 | 3.56 | 3.856 | 4.192 | 4.604 | 5.072 | 6.036 |  
-| 4 | 145 | 2.824 | 2.924 | 2.984 | 3.116 | 3.328 | 3.652 | 3.952 | 4.308 | 4.796 | 5.328 | 6.268 |  
-| 4 | 156 | 2.908 | 3.012 | 3.124 | 3.356 | 3.612 | 3.896 | 4.3 | 4.584 | 5.052 | 5.82 | 6.868 |  
-| 4 | 167 | 3.012 | 3.064 | 3.344 | 3.64 | 3.864 | 4.168 | 4.484 | 4.908 | 5.428 | 6.192 | 7.604 |  
-| 4 | 173 | 3.04 | 3.228 | 3.444 | 3.752 | 3.992 | 4.236 | 4.596 | 5.056 | 5.604 | 6.464 | 8.096 |  
-| 5 | 64 | 1.46 | 1.624 | 1.744 | 1.832 | 1.916 | 1.988 | 2.044 | 2.196 | 2.392 | 2.656 | 3.016 |  
-| 5 | 80 | 1.896 | 1.968 | 1.964 | 1.988 | 2.056 | 2.164 | 2.364 | 2.576 | 2.844 | 3.188 | 3.552 |  
-| 5 | 96 | 1.988 | 1.996 | 2.064 | 2.188 | 2.392 | 2.548 | 2.828 | 3.08 | 3.308 | 3.712 | 4.168 |  
-| 5 | 112 | 2.072 | 2.192 | 2.46 | 2.572 | 2.744 | 2.968 | 3.108 | 3.408 | 3.78 | 4.28 | 4.86 |  
-| 5 | 128 | 2.368 | 2.6 | 2.824 | 2.9 | 3.004 | 3.272 | 3.532 | 3.832 | 4.172 | 4.672 | 5.496 |  
-| 5 | 139 | 2.636 | 2.828 | 2.924 | 3.06 | 3.264 | 3.52 | 3.844 | 4.164 | 4.62 | 5.3 | 5.924 |  
-| 5 | 145 | 2.804 | 2.928 | 3.008 | 3.164 | 3.42 | 3.668 | 3.976 | 4.296 | 4.84 | 5.36 | 6.344 |  
-| 5 | 156 | 2.972 | 3.016 | 3.156 | 3.372 | 3.596 | 3.9 | 4.216 | 4.572 | 5.144 | 5.836 | 7.028 |  
-| 5 | 167 | 3.0 | 3.124 | 3.404 | 3.608 | 3.852 | 4.152 | 4.384 | 4.876 | 5.392 | 6.408 | 7.764 |  
-| 5 | 173 | 3.068 | 3.224 | 3.472 | 3.74 | 3.98 | 4.176 | 4.656 | 5.06 | 5.688 | 6.684 | 40008.144 |  
-| 6 | 76 | 1.352 | 1.508 | 1.644 | 1.768 | 1.892 | 1.944 | 1.964 | 1.988 | 2.044 | 2.232 | 2.424 |  
-| 6 | 95 | 1.928 | 1.944 | 1.976 | 1.996 | 2.004 | 2.02 | 2.092 | 2.264 | 2.428 | 2.696 | 2.908 |  
-| 6 | 114 | 1.996 | 2.0 | 2.02 | 2.032 | 2.192 | 2.316 | 2.524 | 2.808 | 2.904 | 3.076 | 3.312 |  
-| 6 | 133 | 2.008 | 2.068 | 2.192 | 2.332 | 2.624 | 2.808 | 2.908 | 3.076 | 3.208 | 3.476 | 3.864 |  
-| 6 | 152 | 2.296 | 2.488 | 2.712 | 2.84 | 2.96 | 3.024 | 3.152 | 3.456 | 3.664 | 3.956 | 4.252 |  
-| 6 | 171 | 2.78 | 2.868 | 2.956 | 3.004 | 3.112 | 3.26 | 3.58 | 3.852 | 4.068 | 4.396 | 4.756 |  
-| 6 | 190 | 2.988 | 3.008 | 3.036 | 3.156 | 3.452 | 3.752 | 3.924 | 4.1 | 4.392 | 4.848 | 5.22 |  
-| 6 | 204 | 3.008 | 3.084 | 3.256 | 3.46 | 3.784 | 3.928 | 4.128 | 4.42 | 4.78 | 5.144 | 5.556 |  
-| 6 | 213 | 3.036 | 3.208 | 3.388 | 3.676 | 3.88 | 4.028 | 4.296 | 4.572 | 4.928 | 5.368 | 5.82 |  
-| 6 | 227 | 3.248 | 3.436 | 3.696 | 3.908 | 4.028 | 4.272 | 4.54 | 4.816 | 5.272 | 5.596 | 6.136 |  
-| 7 | 80 | 1.308 | 1.504 | 1.668 | 1.784 | 1.848 | 1.912 | 1.948 | 1.996 | 2.032 | 2.112 | 2.284 |  
-| 7 | 100 | 1.916 | 1.984 | 1.984 | 1.988 | 2.008 | 2.024 | 2.084 | 2.204 | 2.392 | 2.6 | 2.812 |  
-| 7 | 120 | 1.996 | 2.0 | 2.008 | 2.032 | 2.12 | 2.22 | 2.476 | 2.732 | 2.864 | 2.992 | 3.228 |  
-| 7 | 140 | 2.036 | 2.092 | 2.16 | 2.344 | 2.636 | 2.788 | 2.916 | 3.012 | 3.18 | 3.392 | 3.628 |  
-| 7 | 160 | 2.256 | 2.468 | 2.7 | 2.832 | 2.924 | 2.992 | 3.124 | 3.268 | 3.596 | 3.756 | 4.152 |  
-| 7 | 180 | 2.76 | 2.876 | 2.952 | 3.016 | 3.076 | 3.2 | 3.496 | 3.744 | 3.952 | 4.216 | 4.64 |  
-| 7 | 200 | 2.968 | 3.0 | 3.044 | 3.236 | 3.396 | 3.616 | 3.86 | 4.112 | 4.356 | 4.616 | 5.06 |  
-| 7 | 215 | 3.012 | 3.064 | 3.236 | 3.476 | 3.7 | 3.908 | 4.06 | 4.304 | 4.62 | 5.028 | 5.416 |  
-| 7 | 225 | 3.052 | 3.192 | 3.396 | 3.596 | 3.844 | 4.04 | 4.204 | 4.512 | 4.868 | 5.216 | 5.6 |  
-| 7 | 240 | 3.224 | 3.484 | 3.744 | 3.888 | 4.04 | 4.192 | 4.52 | 4.764 | 5.132 | 5.392 | 5.948 |  
-| 8 | 84 | 1.32 | 1.524 | 1.66 | 1.744 | 1.864 | 1.924 | 1.976 | 1.984 | 2.028 | 2.072 | 2.24 |  
-| 8 | 105 | 1.94 | 1.956 | 1.988 | 1.988 | 2.004 | 2.02 | 2.052 | 2.164 | 2.332 | 2.5 | 2.704 |  
-| 8 | 126 | 2.0 | 2.0 | 2.004 | 2.052 | 2.12 | 2.208 | 2.424 | 2.612 | 2.808 | 2.96 | 3.088 |  
-| 8 | 147 | 2.02 | 2.068 | 2.228 | 2.364 | 2.544 | 2.72 | 2.872 | 3.024 | 3.096 | 3.304 | 3.556 |  
-| 8 | 168 | 2.288 | 2.472 | 2.676 | 2.816 | 2.892 | 2.984 | 3.092 | 3.24 | 3.532 | 3.764 | 4.032 |  
-| 8 | 189 | 2.816 | 2.904 | 2.948 | 3.004 | 3.064 | 3.172 | 3.412 | 3.664 | 3.96 | 4.128 | 4.428 |  
-| 8 | 210 | 2.98 | 3.008 | 3.036 | 3.18 | 3.384 | 3.608 | 3.836 | 3.996 | 4.276 | 4.532 | 4.888 |  
-| 8 | 226 | 3.02 | 3.088 | 3.224 | 3.388 | 3.684 | 3.848 | 4.052 | 4.216 | 4.552 | 4.844 | 5.196 |  
-| 8 | 237 | 3.048 | 3.212 | 3.476 | 3.652 | 3.864 | 3.956 | 4.168 | 4.452 | 4.728 | 5.044 | 5.472 |  
-| 8 | 253 | 3.288 | 3.484 | 3.716 | 3.896 | 3.984 | 4.164 | 4.388 | 4.764 | 4.936 | 5.328 | 5.796 |  
-| 9 | 88 | 1.376 | 1.52 | 1.604 | 1.756 | 1.824 | 1.9 | 1.952 | 1.996 | 2.004 | 2.04 | 2.164 |  
-| 9 | 110 | 1.952 | 1.972 | 1.956 | 2.0 | 2.008 | 2.0 | 2.048 | 2.132 | 2.308 | 2.424 | 2.604 |  
-| 9 | 132 | 1.996 | 2.004 | 2.012 | 2.02 | 2.108 | 2.208 | 2.42 | 2.644 | 2.796 | 2.892 | 3.068 |  
-| 9 | 154 | 2.02 | 2.096 | 2.176 | 2.384 | 2.52 | 2.744 | 2.892 | 2.96 | 3.056 | 3.18 | 3.456 |  
-| 9 | 176 | 2.296 | 2.44 | 2.6 | 2.82 | 2.928 | 2.972 | 3.092 | 3.16 | 3.44 | 3.628 | 3.9 |  
-| 9 | 198 | 2.796 | 2.88 | 2.972 | 3.0 | 3.056 | 3.196 | 3.436 | 3.628 | 3.832 | 4.02 | 4.28 |  
-| 9 | 220 | 2.956 | 3.0 | 3.028 | 3.16 | 3.356 | 3.6 | 3.7 | 3.976 | 4.168 | 4.392 | 4.792 |  
-| 9 | 237 | 3.02 | 3.048 | 3.256 | 3.468 | 3.684 | 3.84 | 4.0 | 4.24 | 4.432 | 4.78 | 5.068 |  
-| 9 | 249 | 3.076 | 3.244 | 3.436 | 3.664 | 3.892 | 3.98 | 4.14 | 4.32 | 4.62 | 4.932 | 5.256 |  
-| 9 | 266 | 3.284 | 3.48 | 3.708 | 3.864 | 4.04 | 4.104 | 4.424 | 4.672 | 4.92 | 5.212 | 5.612 |  
-| 10 | 124 | 1.364 | 1.476 | 1.64 | 1.72 | 1.78 | 1.852 | 1.904 | 1.94 | 1.964 | 1.956 | 1.984 |  
-| 10 | 155 | 1.948 | 1.952 | 1.968 | 1.992 | 2.0 | 1.996 | 2.0 | 2.004 | 2.028 | 2.04 | 2.14 |  
-| 10 | 186 | 2.0 | 2.0 | 2.0 | 2.016 | 2.032 | 2.088 | 2.128 | 2.26 | 2.392 | 2.496 | 2.728 |  
-| 10 | 217 | 2.028 | 2.124 | 2.14 | 2.244 | 2.396 | 2.472 | 2.672 | 2.796 | 2.844 | 2.908 | 2.984 |  
-| 10 | 248 | 2.36 | 2.532 | 2.592 | 2.732 | 2.836 | 2.896 | 2.96 | 2.988 | 3.044 | 3.136 | 3.3 |  
-| 10 | 279 | 2.844 | 2.928 | 2.932 | 2.98 | 3.024 | 3.036 | 3.08 | 3.2 | 3.38 | 3.552 | 3.72 |  
-| 10 | 310 | 2.992 | 3.004 | 3.016 | 3.072 | 3.1 | 3.3 | 3.456 | 3.64 | 3.8 | 3.924 | 4.02 |  
-| 10 | 341 | 3.036 | 3.136 | 3.252 | 3.452 | 3.584 | 3.716 | 3.852 | 3.932 | 4.056 | 4.136 | 4.364 |  
-| 10 | 366 | 3.276 | 3.384 | 3.604 | 3.728 | 3.856 | 3.94 | 4.02 | 4.08 | 4.24 | 4.464 | 4.656 |  
-| 10 | 385 | 3.488 | 3.684 | 3.804 | 3.86 | 3.944 | 4.036 | 4.16 | 4.292 | 4.5 | 4.7 | 4.868 |  
-| 11 | 128 | 1.452 | 1.488 | 1.544 | 1.668 | 1.768 | 1.828 | 1.86 | 1.932 | 1.964 | 1.968 | 1.984 |  
-| 11 | 160 | 1.956 | 1.952 | 1.976 | 1.988 | 1.992 | 1.996 | 2.0 | 1.996 | 2.032 | 2.068 | 2.136 |  
-| 11 | 192 | 2.0 | 1.996 | 2.0 | 2.004 | 2.024 | 2.084 | 2.124 | 2.276 | 2.328 | 2.444 | 2.632 |  
-| 11 | 224 | 2.016 | 2.048 | 2.128 | 2.212 | 2.38 | 2.452 | 2.664 | 2.76 | 2.84 | 2.936 | 2.972 |  
-| 11 | 256 | 2.328 | 2.468 | 2.628 | 2.768 | 2.86 | 2.888 | 2.924 | 3.016 | 3.032 | 3.08 | 3.224 |  
-| 11 | 288 | 2.872 | 2.9 | 2.972 | 2.98 | 2.996 | 3.056 | 3.08 | 3.12 | 3.284 | 3.48 | 3.676 |  
-| 11 | 320 | 2.988 | 3.0 | 3.008 | 3.076 | 3.112 | 3.3 | 3.408 | 3.588 | 3.776 | 3.892 | 3.992 |  
-| 11 | 352 | 3.06 | 3.116 | 3.272 | 3.404 | 3.536 | 3.716 | 3.852 | 3.944 | 4.02 | 4.136 | 4.256 |  
-| 11 | 378 | 3.192 | 3.472 | 3.528 | 3.712 | 3.848 | 3.892 | 4.036 | 4.076 | 4.296 | 4.428 | 4.628 |  
-| 11 | 398 | 3.5 | 3.652 | 3.812 | 3.932 | 3.964 | 4.02 | 4.144 | 4.236 | 4.416 | 4.648 | 4.832 |  
-| 12 | 132 | 1.424 | 1.468 | 1.592 | 1.732 | 1.776 | 1.848 | 1.86 | 1.948 | 1.924 | 1.988 | 1.984 |  
-| 12 | 165 | 1.964 | 1.952 | 1.976 | 1.992 | 2.0 | 2.0 | 2.008 | 2.004 | 2.032 | 2.076 | 2.116 |  
-| 12 | 198 | 2.0 | 2.0 | 2.0 | 2.008 | 2.036 | 2.06 | 2.108 | 2.256 | 2.316 | 2.428 | 2.576 |  
-| 12 | 231 | 2.032 | 2.056 | 2.14 | 2.196 | 2.36 | 2.528 | 2.576 | 2.736 | 2.832 | 2.892 | 2.964 |  
-| 12 | 264 | 2.34 | 2.488 | 2.608 | 2.724 | 2.868 | 2.896 | 2.944 | 2.972 | 3.024 | 3.056 | 3.144 |  
-| 12 | 297 | 2.888 | 2.892 | 2.964 | 2.984 | 3.004 | 3.016 | 3.096 | 3.148 | 3.292 | 3.448 | 3.612 |  
-| 12 | 330 | 3.0 | 3.0 | 3.024 | 3.036 | 3.112 | 3.244 | 3.376 | 3.564 | 3.756 | 3.916 | 3.98 |  
-| 12 | 363 | 3.048 | 3.108 | 3.22 | 3.36 | 3.44 | 3.664 | 3.832 | 3.904 | 3.98 | 4.068 | 4.236 |  
-| 12 | 390 | 3.26 | 3.376 | 3.584 | 3.736 | 3.836 | 3.912 | 3.976 | 4.06 | 4.212 | 4.38 | 4.596 |  
-| 12 | 411 | 3.544 | 3.7 | 3.836 | 3.928 | 3.972 | 4.036 | 4.096 | 4.168 | 4.492 | 4.62 | 4.804 |  
-| 13 | 132 | 1.384 | 1.492 | 1.612 | 1.652 | 1.796 | 1.82 | 1.872 | 1.904 | 1.948 | 1.964 | 1.964 |  
-| 13 | 165 | 1.956 | 1.964 | 1.984 | 1.968 | 1.996 | 2.0 | 2.004 | 2.008 | 2.024 | 2.064 | 2.132 |  
-| 13 | 198 | 2.0 | 2.004 | 2.0 | 2.004 | 2.04 | 2.048 | 2.124 | 2.22 | 2.308 | 2.44 | 2.6 |  
-| 13 | 231 | 2.012 | 2.06 | 2.136 | 2.244 | 2.324 | 2.496 | 2.568 | 2.732 | 2.852 | 2.924 | 2.956 |  
-| 13 | 264 | 2.408 | 2.408 | 2.716 | 2.724 | 2.82 | 2.888 | 2.944 | 2.976 | 3.02 | 3.096 | 3.164 |  
-| 13 | 297 | 2.836 | 2.88 | 2.94 | 2.976 | 2.984 | 3.032 | 3.052 | 3.172 | 3.292 | 3.46 | 3.576 |  
-| 13 | 330 | 2.992 | 2.988 | 3.02 | 3.048 | 3.124 | 3.296 | 3.408 | 3.58 | 3.72 | 3.836 | 3.952 |  
-| 13 | 363 | 3.028 | 3.104 | 3.208 | 3.34 | 3.512 | 3.728 | 3.828 | 3.912 | 3.984 | 4.092 | 4.248 |  
-| 13 | 390 | 3.244 | 3.42 | 3.596 | 3.74 | 3.812 | 3.948 | 3.98 | 4.04 | 4.208 | 4.376 | 4.544 |  
-| 13 | 411 | 3.58 | 3.632 | 3.8 | 3.904 | 3.988 | 4.04 | 4.132 | 4.284 | 4.416 | 4.628 | 4.816 |  
-| 14 | 132 | 1.404 | 1.452 | 1.616 | 1.708 | 1.776 | 1.828 | 1.912 | 1.924 | 1.952 | 1.956 | 1.972 |  
-| 14 | 165 | 1.944 | 1.968 | 1.976 | 1.996 | 1.988 | 2.0 | 2.008 | 2.004 | 2.024 | 2.048 | 2.096 |  
-| 14 | 198 | 2.0 | 2.0 | 2.004 | 2.004 | 2.016 | 2.068 | 2.104 | 2.2 | 2.336 | 2.448 | 2.576 |  
-| 14 | 231 | 2.04 | 2.1 | 2.104 | 2.232 | 2.348 | 2.492 | 2.62 | 2.74 | 2.812 | 2.892 | 2.98 |  
-| 14 | 264 | 2.34 | 2.5 | 2.564 | 2.756 | 2.828 | 2.892 | 2.968 | 2.976 | 3.028 | 3.112 | 3.188 |  
-| 14 | 297 | 2.86 | 2.872 | 2.96 | 2.984 | 2.98 | 3.012 | 3.104 | 3.148 | 3.28 | 3.404 | 3.564 |  
-| 14 | 330 | 2.984 | 3.0 | 3.02 | 3.06 | 3.132 | 3.228 | 3.388 | 3.508 | 3.688 | 3.868 | 3.952 |  
-| 14 | 363 | 3.044 | 3.128 | 3.2 | 3.368 | 3.52 | 3.672 | 3.836 | 3.88 | 4.024 | 4.1 | 4.252 |  
-| 14 | 390 | 3.284 | 3.388 | 3.548 | 3.704 | 3.888 | 3.892 | 4.004 | 4.084 | 4.228 | 4.32 | 4.56 |  
-| 14 | 411 | 3.56 | 3.672 | 3.856 | 3.944 | 3.952 | 4.02 | 4.116 | 4.24 | 4.404 | 4.616 | 4.784 |  
-| 15 | 132 | 1.396 | 1.508 | 1.564 | 1.648 | 1.8 | 1.832 | 1.88 | 1.936 | 1.944 | 1.96 | 1.984 |  
-| 15 | 165 | 1.956 | 1.976 | 1.984 | 1.992 | 1.984 | 2.0 | 2.0 | 2.008 | 2.032 | 2.028 | 2.168 |  
-| 15 | 198 | 2.0 | 2.004 | 2.008 | 2.004 | 2.028 | 2.044 | 2.088 | 2.216 | 2.328 | 2.548 | 2.592 |  
-| 15 | 231 | 2.02 | 2.08 | 2.14 | 2.224 | 2.336 | 2.448 | 2.608 | 2.708 | 2.828 | 2.936 | 2.956 |  
-| 15 | 264 | 2.396 | 2.5 | 2.64 | 2.644 | 2.824 | 2.912 | 2.976 | 2.968 | 3.008 | 3.08 | 3.192 |  
-| 15 | 297 | 2.848 | 2.904 | 2.948 | 2.98 | 3.0 | 3.016 | 3.1 | 3.188 | 3.348 | 3.432 | 3.636 |  
-| 15 | 330 | 3.0 | 3.0 | 3.028 | 3.064 | 3.14 | 3.204 | 3.356 | 3.588 | 3.728 | 3.872 | 3.964 |  
-| 15 | 363 | 3.048 | 3.172 | 3.236 | 3.38 | 3.52 | 3.66 | 3.768 | 3.892 | 4.036 | 4.096 | 4.248 |  
-| 15 | 390 | 3.232 | 3.348 | 3.608 | 3.728 | 3.856 | 3.928 | 4.004 | 4.092 | 4.2 | 4.388 | 4.584 |  
-| 15 | 411 | 3.58 | 3.632 | 3.768 | 3.888 | 3.964 | 4.044 | 4.132 | 4.292 | 4.408 | 4.612 | 4.824 |  
-  
 
-  
-#### Simulated Monster Survivability, Action Point Use
-  
-| Party Level | Monster Health | Rounds Survived with 0 Armor | Rounds Survived with 1 Armor | Rounds Survived with 2 Armor | Rounds Survived with 3 Armor | Rounds Survived with 4 Armor | Rounds Survived with 5 Armor | Rounds Survived with 6 Armor | Rounds Survived with 7 Armor | Rounds Survived with 8 Armor | Rounds Survived with 9 Armor | Rounds Survived with 10 Armor |  
- | --------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-| 0 | 10 | 1.556 | 1.696 | 1.896 | 2.064 | 2.392 | 3.564 | 200004.376 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 20 | 2.62 | 2.848 | 3.268 | 4.076 | 5.732 | 200007.98 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 30 | 3.8 | 4.38 | 5.288 | 7.096 | 80009.52 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 37 | 4.908 | 5.868 | 7.196 | 9.248 | 760011.056 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 44 | 5.984 | 7.06 | 8.608 | 80011.228 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 51 | 7.296 | 8.324 | 10.564 | 800012.088 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 58 | 8.252 | 9.74 | 12.136 | 1440012.632 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 65 | 9.5 | 11.312 | 280013.42 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 72 | 10.692 | 12.592 | 920013.432 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 0 | 79 | 11.928 | 160013.848 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 11 | 1.564 | 1.692 | 1.84 | 1.996 | 2.228 | 2.572 | 3.32 | 40004.692 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 22 | 2.572 | 2.808 | 3.072 | 3.364 | 3.936 | 5.492 | 240007.16 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 33 | 3.564 | 3.944 | 4.524 | 5.34 | 7.1 | 400009.332 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 44 | 4.792 | 5.588 | 6.528 | 8.036 | 40010.6 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 52 | 5.892 | 6.584 | 8.244 | 9.92 | 360012.192 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 60 | 7.052 | 8.024 | 9.788 | 11.86 | 1560012.716 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 68 | 8.148 | 9.324 | 11.148 | 240013.352 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 76 | 9.28 | 10.736 | 12.664 | 1120013.516 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 84 | 10.212 | 12.016 | 14.136 | 2560012.344 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 1 | 92 | 11.472 | 13.136 | 760014.4 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 13 | 1.528 | 1.632 | 1.8 | 1.836 | 2.056 | 2.324 | 2.548 | 3.32 | 40004.44 | 100000.0 | 100000.0 |  
-| 2 | 26 | 2.52 | 2.812 | 2.98 | 3.264 | 3.692 | 4.436 | 5.552 | 200007.472 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 39 | 3.648 | 3.896 | 4.3 | 5.016 | 6.112 | 80007.828 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 52 | 4.86 | 5.26 | 6.252 | 7.456 | 9.1 | 320011.092 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 61 | 5.86 | 6.624 | 7.58 | 9.416 | 11.552 | 1240011.66 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 70 | 7.096 | 7.844 | 9.272 | 10.916 | 600012.316 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 79 | 8.244 | 9.292 | 10.888 | 40012.44 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 88 | 9.18 | 10.332 | 12.32 | 240013.832 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 97 | 10.46 | 11.74 | 13.376 | 1440013.252 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 2 | 106 | 11.564 | 13.192 | 200014.488 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 13 | 1.592 | 1.684 | 1.764 | 1.908 | 2.112 | 2.292 | 2.624 | 3.1 | 40004.092 | 100000.0 | 100000.0 |  
-| 3 | 26 | 2.564 | 2.736 | 2.992 | 3.46 | 3.768 | 4.432 | 5.648 | 200007.46 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 39 | 3.616 | 3.964 | 4.356 | 4.952 | 6.164 | 7.824 | 520009.352 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 52 | 4.82 | 5.484 | 6.288 | 7.288 | 8.916 | 360010.844 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 61 | 5.98 | 6.588 | 7.704 | 9.116 | 11.184 | 1320012.06 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 70 | 6.876 | 7.98 | 9.06 | 10.904 | 320012.784 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 79 | 8.104 | 9.132 | 10.664 | 12.652 | 1400012.984 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 88 | 9.34 | 10.572 | 12.236 | 200013.808 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 97 | 10.36 | 11.904 | 40013.52 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 3 | 106 | 11.452 | 13.004 | 200014.62 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 16 | 1.492 | 1.688 | 1.724 | 1.836 | 1.968 | 2.064 | 2.204 | 2.552 | 2.716 | 3.1 | 3.436 |  
-| 4 | 32 | 2.564 | 2.652 | 2.908 | 3.068 | 3.344 | 3.704 | 4.128 | 4.304 | 5.196 | 40006.188 | 100000.0 |  
-| 4 | 48 | 3.596 | 3.868 | 4.064 | 4.276 | 4.772 | 5.208 | 5.74 | 6.852 | 320008.284 | 100000.0 | 100000.0 |  
-| 4 | 64 | 4.624 | 4.96 | 5.2 | 5.54 | 6.296 | 7.248 | 8.424 | 280010.22 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 80 | 5.648 | 6.16 | 6.592 | 7.476 | 8.48 | 40010.004 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 96 | 6.876 | 7.716 | 8.472 | 9.548 | 11.212 | 520012.104 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 107 | 7.9 | 8.828 | 9.796 | 10.972 | 80012.428 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 118 | 9.016 | 10.004 | 10.928 | 12.668 | 440013.596 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 129 | 10.168 | 11.052 | 12.612 | 80013.9 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 4 | 140 | 11.188 | 12.372 | 13.668 | 920013.972 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 16 | 1.544 | 1.604 | 1.724 | 1.82 | 1.92 | 2.096 | 2.232 | 2.516 | 2.748 | 2.988 | 3.536 |  
-| 5 | 32 | 2.588 | 2.804 | 2.876 | 3.032 | 3.34 | 3.612 | 3.92 | 4.6 | 4.936 | 120006.312 | 100000.0 |  
-| 5 | 48 | 3.612 | 3.764 | 4.064 | 4.408 | 4.652 | 5.216 | 5.968 | 6.644 | 480008.064 | 100000.0 | 100000.0 |  
-| 5 | 64 | 4.6 | 4.948 | 5.252 | 5.728 | 6.212 | 7.108 | 8.764 | 360010.176 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 80 | 5.636 | 6.096 | 6.624 | 7.708 | 8.38 | 10.076 | 160011.712 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 96 | 6.9 | 7.516 | 8.364 | 9.636 | 11.156 | 480012.16 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 107 | 7.864 | 8.892 | 9.916 | 40011.096 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 118 | 9.028 | 10.008 | 10.996 | 40012.524 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 129 | 10.032 | 10.96 | 40012.432 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 5 | 140 | 11.184 | 12.44 | 40013.8 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 6 | 19 | 1.508 | 1.548 | 1.656 | 1.748 | 1.864 | 1.932 | 2.048 | 2.16 | 2.308 | 2.588 | 2.68 |  
-| 6 | 38 | 2.396 | 2.596 | 2.788 | 2.872 | 3.044 | 3.168 | 3.476 | 3.76 | 3.972 | 4.412 | 4.7 |  
-| 6 | 57 | 3.5 | 3.72 | 3.856 | 4.092 | 4.336 | 4.576 | 4.824 | 5.364 | 5.828 | 6.272 | 7.028 |  
-| 6 | 76 | 4.508 | 4.688 | 4.916 | 5.232 | 5.552 | 5.98 | 6.32 | 6.888 | 7.592 | 8.648 | 240009.932 |  
-| 6 | 95 | 5.504 | 5.816 | 6.116 | 6.384 | 6.828 | 7.244 | 7.964 | 8.728 | 10.2 | 240011.416 | 100000.0 |  
-| 6 | 114 | 6.456 | 6.82 | 7.188 | 7.68 | 8.204 | 8.832 | 10.056 | 11.464 | 240012.728 | 100000.0 | 100000.0 |  
-| 6 | 133 | 7.4 | 7.904 | 8.38 | 9.12 | 9.936 | 11.068 | 12.52 | 400013.096 | 100000.0 | 100000.0 | 100000.0 |  
-| 6 | 152 | 8.596 | 9.236 | 9.944 | 10.848 | 11.856 | 12.872 | 320014.132 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 6 | 166 | 9.472 | 10.192 | 11.08 | 12.1 | 13.216 | 200014.504 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 6 | 180 | 10.676 | 11.372 | 12.14 | 13.404 | 120014.58 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 7 | 20 | 1.512 | 1.524 | 1.604 | 1.764 | 1.824 | 1.888 | 1.976 | 2.108 | 2.188 | 2.416 | 2.54 |  
-| 7 | 40 | 2.488 | 2.628 | 2.772 | 2.872 | 2.996 | 3.152 | 3.368 | 3.612 | 3.852 | 4.196 | 4.64 |  
-| 7 | 60 | 3.544 | 3.656 | 3.812 | 4.032 | 4.3 | 4.576 | 4.824 | 5.192 | 5.432 | 5.928 | 6.552 |  
-| 7 | 80 | 4.412 | 4.676 | 4.912 | 5.212 | 5.536 | 5.856 | 6.184 | 6.692 | 7.276 | 8.108 | 9.084 |  
-| 7 | 100 | 5.448 | 5.844 | 6.04 | 6.392 | 6.768 | 7.136 | 7.684 | 8.34 | 9.52 | 10.54 | 680011.452 |  
-| 7 | 120 | 6.452 | 6.768 | 7.216 | 7.62 | 8.068 | 8.888 | 9.452 | 10.616 | 12.4 | 760013.024 | 100000.0 |  
-| 7 | 140 | 7.476 | 7.816 | 8.456 | 8.94 | 9.644 | 10.624 | 11.804 | 80013.052 | 100000.0 | 100000.0 | 100000.0 |  
-| 7 | 160 | 8.584 | 9.232 | 9.784 | 10.648 | 11.292 | 40012.568 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 7 | 175 | 9.428 | 10.22 | 10.964 | 11.852 | 12.996 | 120014.024 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 7 | 190 | 10.62 | 11.164 | 12.208 | 13.292 | 14.34 | 400015.06 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 8 | 21 | 1.448 | 1.516 | 1.668 | 1.688 | 1.796 | 1.896 | 1.944 | 2.056 | 2.14 | 2.336 | 2.536 |  
-| 8 | 42 | 2.512 | 2.62 | 2.716 | 2.84 | 3.008 | 3.156 | 3.312 | 3.536 | 3.796 | 4.072 | 4.348 |  
-| 8 | 63 | 3.516 | 3.596 | 3.8 | 4.0 | 4.128 | 4.492 | 4.772 | 5.084 | 5.3 | 5.744 | 6.256 |  
-| 8 | 84 | 4.496 | 4.74 | 4.924 | 5.084 | 5.468 | 5.812 | 6.212 | 6.58 | 6.964 | 7.716 | 8.604 |  
-| 8 | 105 | 5.452 | 5.788 | 6.008 | 6.308 | 6.676 | 7.076 | 7.644 | 8.108 | 9.224 | 40010.152 | 100000.0 |  
-| 8 | 126 | 6.516 | 6.804 | 7.148 | 7.468 | 8.08 | 8.684 | 9.356 | 10.204 | 40011.612 | 100000.0 | 100000.0 |  
-| 8 | 147 | 7.54 | 7.828 | 8.22 | 8.784 | 9.592 | 10.32 | 11.46 | 80012.412 | 100000.0 | 100000.0 | 100000.0 |  
-| 8 | 168 | 8.572 | 9.136 | 9.6 | 10.48 | 11.484 | 12.388 | 40013.464 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 8 | 184 | 9.6 | 10.212 | 10.912 | 11.744 | 12.628 | 13.792 | 200014.836 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 8 | 200 | 10.6 | 11.24 | 11.992 | 12.972 | 13.84 | 120015.052 | 100000.0 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 9 | 22 | 1.488 | 1.548 | 1.64 | 1.716 | 1.808 | 1.88 | 1.912 | 2.036 | 2.12 | 2.228 | 2.356 |  
-| 9 | 44 | 2.408 | 2.548 | 2.676 | 2.816 | 2.968 | 3.104 | 3.224 | 3.44 | 3.692 | 3.908 | 4.12 |  
-| 9 | 66 | 3.508 | 3.696 | 3.832 | 4.0 | 4.136 | 4.368 | 4.604 | 4.872 | 5.188 | 5.636 | 6.156 |  
-| 9 | 88 | 4.548 | 4.644 | 4.868 | 5.204 | 5.36 | 5.732 | 6.016 | 6.388 | 6.736 | 7.32 | 7.908 |  
-| 9 | 110 | 5.52 | 5.632 | 5.996 | 6.288 | 6.576 | 7.016 | 7.36 | 7.968 | 8.688 | 9.588 | 10.884 |  
-| 9 | 132 | 6.452 | 6.776 | 7.0 | 7.436 | 7.876 | 8.384 | 9.164 | 10.0 | 10.664 | 12.316 | 240013.248 |  
-| 9 | 154 | 7.632 | 7.856 | 8.324 | 8.848 | 9.42 | 10.008 | 11.0 | 11.972 | 160013.104 | 100000.0 | 100000.0 |  
-| 9 | 176 | 8.628 | 9.024 | 9.568 | 10.316 | 10.936 | 12.016 | 13.072 | 160014.052 | 100000.0 | 100000.0 | 100000.0 |  
-| 9 | 193 | 9.584 | 10.048 | 10.752 | 11.576 | 12.348 | 13.424 | 40014.608 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 9 | 210 | 10.572 | 11.2 | 12.068 | 12.7 | 13.744 | 14.888 | 760014.776 | 100000.0 | 100000.0 | 100000.0 | 100000.0 |  
-| 10 | 31 | 1.476 | 1.496 | 1.608 | 1.68 | 1.724 | 1.788 | 1.784 | 1.84 | 1.94 | 1.948 | 2.004 |  
-| 10 | 62 | 2.516 | 2.584 | 2.672 | 2.744 | 2.804 | 2.876 | 2.972 | 3.092 | 3.128 | 3.38 | 3.456 |  
-| 10 | 93 | 3.48 | 3.608 | 3.784 | 3.86 | 4.048 | 4.044 | 4.224 | 4.468 | 4.592 | 4.7 | 5.036 |  
-| 10 | 124 | 4.584 | 4.688 | 4.76 | 4.896 | 5.068 | 5.24 | 5.588 | 5.828 | 5.956 | 6.2 | 6.476 |  
-| 10 | 155 | 5.508 | 5.712 | 5.868 | 6.072 | 6.256 | 6.496 | 6.744 | 6.984 | 7.252 | 7.48 | 7.952 |  
-| 10 | 186 | 6.604 | 6.68 | 6.936 | 7.18 | 7.432 | 7.752 | 7.94 | 8.248 | 8.648 | 8.984 | 9.608 |  
-| 10 | 217 | 7.476 | 7.74 | 7.884 | 8.3 | 8.472 | 8.928 | 9.36 | 9.736 | 10.32 | 10.892 | 11.468 |  
-| 10 | 248 | 8.428 | 8.772 | 9.068 | 9.416 | 9.856 | 10.156 | 10.736 | 11.376 | 11.86 | 12.856 | 13.812 |  
-| 10 | 279 | 9.524 | 9.972 | 10.228 | 10.736 | 11.252 | 11.604 | 12.468 | 13.168 | 13.924 | 80014.656 | 100000.0 |  
-| 10 | 304 | 10.556 | 11.02 | 11.284 | 11.988 | 12.344 | 13.156 | 13.812 | 80014.628 | 100000.0 | 100000.0 | 100000.0 |  
-| 11 | 32 | 1.484 | 1.64 | 1.612 | 1.684 | 1.768 | 1.74 | 1.796 | 1.844 | 1.904 | 1.92 | 2.004 |  
-| 11 | 64 | 2.484 | 2.608 | 2.64 | 2.728 | 2.82 | 2.876 | 3.012 | 3.076 | 3.148 | 3.324 | 3.464 |  
-| 11 | 96 | 3.456 | 3.556 | 3.76 | 3.848 | 3.972 | 4.096 | 4.216 | 4.372 | 4.484 | 4.704 | 4.856 |  
-| 11 | 128 | 4.6 | 4.672 | 4.856 | 4.916 | 5.08 | 5.288 | 5.428 | 5.628 | 5.792 | 5.992 | 6.356 |  
-| 11 | 160 | 5.54 | 5.656 | 5.824 | 5.952 | 6.244 | 6.5 | 6.664 | 6.948 | 7.156 | 7.484 | 7.7 |  
-| 11 | 192 | 6.536 | 6.704 | 6.92 | 7.204 | 7.44 | 7.636 | 7.84 | 8.228 | 8.636 | 8.844 | 9.372 |  
-| 11 | 224 | 7.508 | 7.784 | 7.956 | 8.18 | 8.504 | 8.924 | 9.008 | 9.632 | 9.988 | 10.728 | 11.168 |  
-| 11 | 256 | 8.56 | 8.72 | 9.148 | 9.42 | 9.78 | 10.236 | 10.504 | 11.284 | 11.624 | 12.556 | 40013.34 |  
-| 11 | 288 | 9.564 | 9.928 | 10.316 | 10.692 | 11.204 | 11.724 | 12.336 | 12.848 | 13.484 | 80014.24 | 100000.0 |  
-| 11 | 314 | 10.532 | 10.956 | 11.344 | 11.812 | 12.392 | 12.968 | 13.628 | 40014.216 | 100000.0 | 100000.0 | 100000.0 |  
-| 12 | 33 | 1.508 | 1.54 | 1.576 | 1.7 | 1.668 | 1.74 | 1.78 | 1.816 | 1.896 | 1.952 | 1.984 |  
-| 12 | 66 | 2.492 | 2.548 | 2.644 | 2.696 | 2.728 | 2.92 | 3.008 | 3.048 | 3.272 | 3.252 | 3.428 |  
-| 12 | 99 | 3.448 | 3.612 | 3.712 | 3.876 | 3.896 | 4.12 | 4.152 | 4.312 | 4.508 | 4.572 | 4.812 |  
-| 12 | 132 | 4.564 | 4.54 | 4.812 | 4.944 | 5.024 | 5.196 | 5.432 | 5.6 | 5.752 | 6.048 | 6.4 |  
-| 12 | 165 | 5.444 | 5.648 | 5.876 | 5.996 | 6.208 | 6.448 | 6.596 | 6.836 | 7.072 | 7.328 | 7.704 |  
-| 12 | 198 | 6.532 | 6.592 | 6.832 | 7.08 | 7.432 | 7.512 | 7.868 | 8.196 | 8.452 | 8.776 | 9.272 |  
-| 12 | 231 | 7.488 | 7.748 | 8.024 | 8.172 | 8.46 | 8.72 | 9.056 | 9.46 | 9.984 | 10.504 | 10.972 |  
-| 12 | 264 | 8.468 | 8.744 | 9.0 | 9.448 | 9.632 | 10.14 | 10.524 | 10.976 | 11.62 | 12.244 | 12.86 |  
-| 12 | 297 | 9.524 | 9.848 | 10.232 | 10.696 | 11.004 | 11.464 | 12.112 | 12.6 | 13.26 | 40013.988 | 100000.0 |  
-| 12 | 324 | 10.52 | 10.832 | 11.12 | 11.728 | 12.216 | 12.864 | 13.424 | 40014.008 | 100000.0 | 100000.0 | 100000.0 |  
-| 13 | 33 | 1.464 | 1.524 | 1.58 | 1.628 | 1.728 | 1.792 | 1.772 | 1.796 | 1.884 | 1.944 | 2.068 |  
-| 13 | 66 | 2.508 | 2.544 | 2.7 | 2.736 | 2.824 | 2.94 | 2.956 | 3.1 | 3.292 | 3.304 | 3.372 |  
-| 13 | 99 | 3.504 | 3.616 | 3.664 | 3.752 | 3.908 | 4.092 | 4.2 | 4.388 | 4.44 | 4.652 | 4.928 |  
-| 13 | 132 | 4.516 | 4.628 | 4.808 | 4.936 | 5.108 | 5.232 | 5.44 | 5.632 | 5.728 | 6.176 | 6.272 |  
-| 13 | 165 | 5.488 | 5.7 | 5.872 | 6.08 | 6.196 | 6.464 | 6.592 | 6.796 | 7.124 | 7.464 | 7.756 |  
-| 13 | 198 | 6.484 | 6.68 | 6.896 | 7.148 | 7.284 | 7.624 | 7.796 | 8.208 | 8.444 | 8.812 | 9.296 |  
-| 13 | 231 | 7.536 | 7.852 | 7.864 | 8.12 | 8.564 | 8.832 | 9.124 | 9.468 | 9.9 | 10.284 | 11.024 |  
-| 13 | 264 | 8.572 | 8.736 | 9.076 | 9.388 | 9.728 | 10.128 | 10.472 | 11.156 | 11.516 | 12.192 | 13.032 |  
-| 13 | 297 | 9.492 | 9.844 | 10.184 | 10.62 | 10.988 | 11.524 | 12.144 | 12.776 | 13.396 | 14.2 | 200014.76 |  
-| 13 | 324 | 10.444 | 10.888 | 11.464 | 11.768 | 12.332 | 13.04 | 13.452 | 14.064 | 40014.76 | 100000.0 | 100000.0 |  
-| 14 | 33 | 1.496 | 1.548 | 1.6 | 1.628 | 1.712 | 1.716 | 1.78 | 1.868 | 1.872 | 1.92 | 1.96 |  
-| 14 | 66 | 2.464 | 2.58 | 2.636 | 2.728 | 2.836 | 2.892 | 3.008 | 3.056 | 3.088 | 3.268 | 3.46 |  
-| 14 | 99 | 3.512 | 3.596 | 3.744 | 3.876 | 3.936 | 4.036 | 4.072 | 4.308 | 4.48 | 4.704 | 4.844 |  
-| 14 | 132 | 4.476 | 4.664 | 4.792 | 4.932 | 5.084 | 5.284 | 5.5 | 5.58 | 5.828 | 6.084 | 6.2 |  
-| 14 | 165 | 5.472 | 5.656 | 5.876 | 5.956 | 6.184 | 6.36 | 6.632 | 6.756 | 7.2 | 7.428 | 7.788 |  
-| 14 | 198 | 6.508 | 6.668 | 6.884 | 7.168 | 7.308 | 7.632 | 7.836 | 8.168 | 8.464 | 8.752 | 9.248 |  
-| 14 | 231 | 7.476 | 7.7 | 7.936 | 8.288 | 8.48 | 8.784 | 9.072 | 9.48 | 9.868 | 10.352 | 10.968 |  
-| 14 | 264 | 8.476 | 8.756 | 8.964 | 9.364 | 9.652 | 10.18 | 10.404 | 11.048 | 11.596 | 12.264 | 12.944 |  
-| 14 | 297 | 9.628 | 9.872 | 10.284 | 10.516 | 11.044 | 11.636 | 12.108 | 12.64 | 13.484 | 14.244 | 120014.848 |  
-| 14 | 324 | 10.376 | 10.88 | 11.244 | 12.036 | 12.372 | 12.912 | 13.316 | 14.22 | 40014.648 | 100000.0 | 100000.0 |  
-| 15 | 33 | 1.452 | 1.496 | 1.604 | 1.728 | 1.732 | 1.8 | 1.768 | 1.848 | 1.844 | 1.94 | 1.976 |  
-| 15 | 66 | 2.488 | 2.608 | 2.712 | 2.768 | 2.764 | 2.848 | 2.968 | 3.12 | 3.204 | 3.276 | 3.428 |  
-| 15 | 99 | 3.516 | 3.596 | 3.712 | 3.856 | 3.928 | 4.072 | 4.208 | 4.364 | 4.468 | 4.708 | 4.876 |  
-| 15 | 132 | 4.5 | 4.712 | 4.736 | 4.888 | 5.116 | 5.236 | 5.4 | 5.632 | 5.764 | 5.984 | 6.288 |  
-| 15 | 165 | 5.48 | 5.656 | 5.836 | 5.924 | 6.224 | 6.368 | 6.612 | 6.888 | 7.108 | 7.432 | 7.704 |  
-| 15 | 198 | 6.496 | 6.656 | 6.868 | 7.072 | 7.356 | 7.644 | 7.864 | 8.12 | 8.572 | 8.792 | 9.04 |  
-| 15 | 231 | 7.512 | 7.668 | 7.96 | 8.18 | 8.432 | 8.78 | 9.124 | 9.524 | 9.872 | 10.348 | 10.996 |  
-| 15 | 264 | 8.464 | 8.688 | 9.04 | 9.44 | 9.736 | 10.108 | 10.448 | 11.104 | 11.668 | 12.276 | 12.904 |  
-| 15 | 297 | 9.544 | 9.792 | 10.28 | 10.7 | 11.132 | 11.672 | 12.128 | 12.892 | 13.384 | 14.22 | 160014.696 |  
-| 15 | 324 | 10.636 | 10.844 | 11.34 | 11.82 | 12.436 | 12.816 | 13.4 | 14.044 | 40014.66 | 100000.0 | 100000.0 |  
-  
+#### Tuned Boss Survivability
+
+| Party Level | Target Rounds Survived | Simulated Rounds Survived | Requested Monster Health | Improved Monster Health | Requested Monster Armor | Improved Monster Armor | Expected Hit Rate |
+ | --------|--------|--------|--------|--------|--------|--------|--------|
+| 0 | 1 | 1.0 | 37.8 | 9.799999999999997 | 8.0 | 7.0 | 0.8 |
+| 0 | 2 | 2.0 | 44.099999999999994 | 49.099999999999994 | 8.0 | 8.0 | 0.75 |
+| 0 | 3 | 3.0 | 50.39999999999999 | 82.39999999999999 | 8.0 | 9.0 | 0.7 |
+| 0 | 4 | 4.0 | 56.69999999999999 | 112.69999999999999 | 8.0 | 9.0 | 0.7 |
+| 0 | 5 | 5.0 | 62.999999999999986 | 150.0 | 8.0 | 9.0 | 0.7 |
+| 1 | 1 | 1.0 | 47.599999999999994 | 12.599999999999994 | 9.0 | 8.0 | 0.8 |
+| 1 | 2 | 2.0 | 55.99999999999999 | 61.0 | 9.0 | 9.0 | 0.75 |
+| 1 | 3 | 3.0 | 64.39999999999999 | 104.39999999999999 | 9.0 | 10.0 | 0.7 |
+| 1 | 4 | 4.0 | 72.79999999999998 | 146.79999999999998 | 9.0 | 10.0 | 0.7 |
+| 1 | 5 | 5.0 | 81.19999999999999 | 201.2 | 9.0 | 9.0 | 0.75 |
+| 2 | 1 | 1.0 | 59.099999999999994 | 17.099999999999994 | 9.0 | 8.0 | 0.8 |
+| 2 | 2 | 2.0 | 67.5 | 74.5 | 9.0 | 10.0 | 0.7 |
+| 2 | 3 | 3.0 | 75.9 | 138.9 | 9.0 | 9.0 | 0.75 |
+| 2 | 4 | 4.0 | 84.29999999999998 | 185.29999999999998 | 9.0 | 10.0 | 0.7 |
+| 2 | 5 | 5.0 | 92.69999999999999 | 244.7 | 9.0 | 10.0 | 0.7 |
+| 3 | 1 | 1.0 | 67.2 | 20.200000000000003 | 11.0 | 10.0 | 0.8 |
+| 3 | 2 | 2.0 | 77.7 | 88.7 | 11.0 | 12.0 | 0.7 |
+| 3 | 3 | 3.0 | 88.19999999999999 | 148.2 | 11.0 | 12.0 | 0.7 |
+| 3 | 4 | 4.0 | 98.69999999999999 | 222.7 | 11.0 | 11.0 | 0.75 |
+| 3 | 5 | 5.0 | 109.19999999999999 | 271.2 | 11.0 | 12.0 | 0.7 |
+| 4 | 1 | 1.0 | 67.2 | 12.200000000000003 | 11.0 | 10.0 | 0.8 |
+| 4 | 2 | 2.0 | 77.7 | 102.7 | 11.0 | 10.0 | 0.8 |
+| 4 | 3 | 3.0 | 88.19999999999999 | 162.2 | 11.0 | 11.0 | 0.75 |
+| 4 | 4 | 4.0 | 98.69999999999999 | 202.7 | 11.0 | 12.0 | 0.7 |
+| 4 | 5 | 5.0 | 109.19999999999999 | 264.2 | 11.0 | 12.0 | 0.7 |
+| 5 | 1 | 1.0 | 95.19999999999999 | 43.19999999999999 | 12.0 | 11.0 | 0.8 |
+| 5 | 2 | 2.0 | 107.79999999999998 | 128.79999999999998 | 12.0 | 13.0 | 0.7 |
+| 5 | 3 | 3.0 | 120.4 | 215.4 | 12.0 | 13.0 | 0.7 |
+| 5 | 4 | 4.0 | 133.0 | 306.0 | 12.0 | 13.0 | 0.7 |
+| 5 | 5 | 5.0 | 145.6 | 389.6 | 12.0 | 13.0 | 0.7 |
+| 6 | 1 | 1.0 | 102.19999999999999 | 19.19999999999999 | 12.0 | 11.0 | 0.8 |
+| 6 | 2 | 2.0 | 116.54999999999998 | 145.54999999999998 | 12.0 | 12.0 | 0.75 |
+| 6 | 3 | 3.0 | 130.9 | 230.9 | 12.0 | 13.0 | 0.7 |
+| 6 | 4 | 4.0 | 145.25 | 324.25 | 12.0 | 13.0 | 0.7 |
+| 6 | 5 | 5.0 | 159.6 | 427.6 | 12.0 | 13.0 | 0.7 |
+| 7 | 1 | 1.0 | 176.29999999999998 | 90.29999999999998 | 12.0 | 11.0 | 0.8 |
+| 7 | 2 | 2.0 | 205.0 | 240.0 | 12.0 | 12.0 | 0.75 |
+| 7 | 3 | 3.0 | 233.7 | 426.7 | 12.0 | 12.0 | 0.75 |
+| 7 | 4 | 4.0 | 262.4 | 587.4 | 12.0 | 12.0 | 0.75 |
+| 7 | 5 | 5.0 | 263.8 | 691.8 | 12.0 | 13.0 | 0.7 |
+| 8 | 1 | 1.0 | 177.79999999999998 | 58.79999999999998 | 13.0 | 12.0 | 0.8 |
+| 8 | 2 | 2.0 | 207.89999999999998 | 222.89999999999998 | 13.0 | 14.0 | 0.7 |
+| 8 | 3 | 3.0 | 237.99999999999997 | 384.0 | 13.0 | 14.0 | 0.7 |
+| 8 | 4 | 4.0 | 268.09999999999997 | 545.0999999999999 | 13.0 | 14.0 | 0.7 |
+| 8 | 5 | 5.0 | 270.9 | 754.9 | 13.0 | 13.0 | 0.75 |
+| 9 | 1 | 1.0 | 177.79999999999998 | 77.79999999999998 | 13.0 | 12.0 | 0.8 |
+| 9 | 2 | 2.0 | 207.89999999999998 | 242.89999999999998 | 13.0 | 13.0 | 0.75 |
+| 9 | 3 | 3.0 | 237.99999999999997 | 383.0 | 13.0 | 14.0 | 0.7 |
+| 9 | 4 | 4.0 | 268.09999999999997 | 540.0999999999999 | 13.0 | 14.0 | 0.7 |
+| 9 | 5 | 5.0 | 270.9 | 700.9 | 13.0 | 14.0 | 0.7 |
+| 10 | 1 | 1.0 | 202.29999999999998 | 98.29999999999998 | 13.0 | 12.0 | 0.8 |
+| 10 | 2 | 2.0 | 233.79999999999998 | 254.79999999999995 | 13.0 | 14.0 | 0.7 |
+| 10 | 3 | 3.0 | 265.29999999999995 | 456.29999999999995 | 13.0 | 14.0 | 0.7 |
+| 10 | 4 | 4.0 | 296.79999999999995 | 630.8 | 13.0 | 14.0 | 0.7 |
+| 10 | 5 | 5.0 | 300.99999999999994 | 824.0 | 13.0 | 14.0 | 0.7 |
+| 11 | 1 | 1.0 | 202.29999999999998 | 92.29999999999998 | 13.0 | 12.0 | 0.8 |
+| 11 | 2 | 2.0 | 233.79999999999998 | 280.79999999999995 | 13.0 | 13.0 | 0.75 |
+| 11 | 3 | 3.0 | 265.29999999999995 | 490.29999999999995 | 13.0 | 12.0 | 0.8 |
+| 11 | 4 | 4.0 | 296.79999999999995 | 652.8 | 13.0 | 13.0 | 0.75 |
+| 11 | 5 | 5.0 | 300.99999999999994 | 891.0 | 13.0 | 13.0 | 0.75 |
+| 12 | 1 | 1.0 | 202.45000000000002 | 93.45000000000002 | 14.0 | 13.0 | 0.8 |
+| 12 | 2 | 2.0 | 235.35000000000002 | 282.35 | 14.0 | 14.0 | 0.75 |
+| 12 | 3 | 3.0 | 268.25 | 473.25 | 14.0 | 14.0 | 0.75 |
+| 12 | 4 | 4.0 | 301.15 | 656.15 | 14.0 | 14.0 | 0.75 |
+| 12 | 5 | 5.0 | 306.75000000000006 | 793.75 | 14.0 | 15.0 | 0.7 |
+| 13 | 1 | 1.0 | 229.1 | 74.1 | 14.0 | 14.0 | 0.75 |
+| 13 | 2 | 2.0 | 262.0 | 321.0 | 14.0 | 14.0 | 0.75 |
+| 13 | 3 | 3.0 | 294.9 | 501.9 | 14.0 | 15.0 | 0.7 |
+| 13 | 4 | 4.0 | 327.79999999999995 | 776.8 | 14.0 | 14.0 | 0.75 |
+| 13 | 5 | 5.0 | 333.40000000000003 | 930.4000000000001 | 14.0 | 15.0 | 0.7 |
+| 14 | 1 | 1.0 | 234.7 | 94.69999999999999 | 14.0 | 13.0 | 0.8 |
+| 14 | 2 | 2.0 | 269.0 | 345.0 | 14.0 | 13.0 | 0.8 |
+| 14 | 3 | 3.0 | 303.3 | 537.3 | 14.0 | 15.0 | 0.7 |
+| 14 | 4 | 4.0 | 337.6 | 736.6 | 14.0 | 15.0 | 0.7 |
+| 14 | 5 | 5.0 | 344.59999999999997 | 949.5999999999999 | 14.0 | 15.0 | 0.7 |
+| 15 | 1 | 1.0 | 234.7 | 109.69999999999999 | 14.0 | 13.0 | 0.8 |
+| 15 | 2 | 2.0 | 269.0 | 302.0 | 14.0 | 15.0 | 0.7 |
+| 15 | 3 | 3.0 | 303.3 | 543.3 | 14.0 | 15.0 | 0.7 |
+| 15 | 4 | 4.0 | 337.6 | 738.6 | 14.0 | 15.0 | 0.7 |
+| 15 | 5 | 5.0 | 344.59999999999997 | 947.5999999999999 | 14.0 | 15.0 | 0.7 |
+
+
+
+#### Tuned Monster Survivability
+
+| Party Level | Target Rounds Survived | Simulated Rounds Survived | Requested Monster Health | Improved Monster Health | Requested Monster Armor | Improved Monster Armor | Expected Hit Rate |
+ | --------|--------|--------|--------|--------|--------|--------|--------|
+| 0 | 1 | 1.15 | 12.6 | 1.5999999999999996 | 8.0 | 7.0 | 0.8 |
+| 0 | 2 | 2.0 | 18.9 | 8.899999999999999 | 8.0 | 8.0 | 0.75 |
+| 0 | 3 | 3.0 | 25.2 | 15.2 | 8.0 | 9.0 | 0.7 |
+| 0 | 4 | 4.0 | 31.5 | 20.5 | 8.0 | 9.0 | 0.7 |
+| 0 | 5 | 5.0 | 37.8 | 33.8 | 8.0 | 7.0 | 0.8 |
+| 0 | 6 | 6.0 | 44.099999999999994 | 35.099999999999994 | 8.0 | 9.0 | 0.7 |
+| 0 | 7 | 7.0 | 47.949999999999996 | 44.949999999999996 | 8.0 | 8.0 | 0.75 |
+| 0 | 8 | 8.0 | 51.8 | 48.8 | 8.0 | 8.0 | 0.75 |
+| 0 | 9 | 9.0 | 55.65 | 58.65 | 8.0 | 7.0 | 0.8 |
+| 0 | 10 | 10.0 | 59.5 | 53.5 | 8.0 | 9.0 | 0.7 |
+| 1 | 1 | 1.12 | 16.799999999999997 | 0.7999999999999972 | 9.0 | 8.0 | 0.8 |
+| 1 | 2 | 2.0 | 25.199999999999996 | 13.199999999999996 | 9.0 | 8.0 | 0.8 |
+| 1 | 3 | 3.0 | 33.599999999999994 | 20.599999999999994 | 9.0 | 9.0 | 0.75 |
+| 1 | 4 | 4.0 | 41.99999999999999 | 30.999999999999993 | 9.0 | 9.0 | 0.75 |
+| 1 | 5 | 5.0 | 50.39999999999999 | 38.39999999999999 | 9.0 | 10.0 | 0.7 |
+| 1 | 6 | 6.0 | 58.79999999999999 | 51.79999999999999 | 9.0 | 9.0 | 0.75 |
+| 1 | 7 | 7.0 | 67.19999999999999 | 58.19999999999999 | 9.0 | 10.0 | 0.7 |
+| 1 | 8 | 8.0 | 72.44999999999999 | 73.44999999999999 | 9.0 | 8.0 | 0.8 |
+| 1 | 9 | 9.0 | 77.69999999999999 | 74.69999999999999 | 9.0 | 9.0 | 0.75 |
+| 1 | 10 | 10.0 | 82.94999999999999 | 81.94999999999999 | 9.0 | 9.0 | 0.75 |
+| 2 | 1 | 1.15 | 16.799999999999997 | 1.7999999999999972 | 9.0 | 8.0 | 0.8 |
+| 2 | 2 | 2.0 | 25.199999999999996 | 10.199999999999996 | 9.0 | 10.0 | 0.7 |
+| 2 | 3 | 3.0 | 33.599999999999994 | 20.599999999999994 | 9.0 | 10.0 | 0.7 |
+| 2 | 4 | 4.0 | 41.99999999999999 | 27.999999999999993 | 9.0 | 10.0 | 0.7 |
+| 2 | 5 | 5.0 | 50.39999999999999 | 35.39999999999999 | 9.0 | 10.0 | 0.7 |
+| 2 | 6 | 6.0 | 58.79999999999999 | 45.79999999999999 | 9.0 | 10.0 | 0.7 |
+| 2 | 7 | 7.0 | 67.19999999999999 | 64.19999999999999 | 9.0 | 8.0 | 0.8 |
+| 2 | 8 | 8.0 | 72.44999999999999 | 62.44999999999999 | 9.0 | 10.0 | 0.7 |
+| 2 | 9 | 9.0 | 77.69999999999999 | 73.69999999999999 | 9.0 | 9.0 | 0.75 |
+| 2 | 10 | 10.01 | 82.94999999999999 | 89.94999999999999 | 9.0 | 8.0 | 0.8 |
+| 3 | 1 | 1.13 | 21.0 | 7.0 | 11.0 | 10.0 | 0.8 |
+| 3 | 2 | 2.0 | 31.5 | 17.5 | 11.0 | 12.0 | 0.7 |
+| 3 | 3 | 3.0 | 42.0 | 24.0 | 11.0 | 12.0 | 0.7 |
+| 3 | 4 | 4.0 | 52.5 | 43.5 | 11.0 | 10.0 | 0.8 |
+| 3 | 5 | 5.0 | 63.0 | 48.0 | 11.0 | 12.0 | 0.7 |
+| 3 | 6 | 6.0 | 73.5 | 60.5 | 11.0 | 12.0 | 0.7 |
+| 3 | 7 | 7.0 | 84.0 | 73.0 | 11.0 | 12.0 | 0.7 |
+| 3 | 8 | 8.0 | 94.5 | 81.5 | 11.0 | 12.0 | 0.7 |
+| 3 | 9 | 9.0 | 101.15 | 95.15 | 11.0 | 11.0 | 0.75 |
+| 3 | 10 | 9.99 | 107.80000000000001 | 94.80000000000001 | 11.0 | 12.0 | 0.7 |
+| 4 | 1 | 1.11 | 21.0 | 3.0 | 11.0 | 10.0 | 0.8 |
+| 4 | 2 | 2.0 | 31.5 | 12.5 | 11.0 | 12.0 | 0.7 |
+| 4 | 3 | 3.0 | 42.0 | 28.0 | 11.0 | 11.0 | 0.75 |
+| 4 | 4 | 4.0 | 52.5 | 38.5 | 11.0 | 11.0 | 0.75 |
+| 4 | 5 | 5.0 | 63.0 | 48.0 | 11.0 | 12.0 | 0.7 |
+| 4 | 6 | 6.0 | 73.5 | 65.5 | 11.0 | 10.0 | 0.8 |
+| 4 | 7 | 7.0 | 84.0 | 68.0 | 11.0 | 12.0 | 0.7 |
+| 4 | 8 | 8.0 | 94.5 | 90.5 | 11.0 | 10.0 | 0.8 |
+| 4 | 9 | 9.0 | 101.15 | 94.15 | 11.0 | 11.0 | 0.75 |
+| 4 | 10 | 10.0 | 107.80000000000001 | 96.80000000000001 | 11.0 | 12.0 | 0.7 |
+| 5 | 1 | 1.08 | 25.2 | 0.1999999999999993 | 12.0 | 11.0 | 0.8 |
+| 5 | 2 | 2.0 | 37.8 | 18.799999999999997 | 12.0 | 11.0 | 0.8 |
+| 5 | 3 | 3.0 | 50.4 | 30.4 | 12.0 | 12.0 | 0.75 |
+| 5 | 4 | 4.0 | 63.0 | 51.0 | 12.0 | 11.0 | 0.8 |
+| 5 | 5 | 5.0 | 75.6 | 57.599999999999994 | 12.0 | 13.0 | 0.7 |
+| 5 | 6 | 6.0 | 88.19999999999999 | 76.19999999999999 | 12.0 | 12.0 | 0.75 |
+| 5 | 7 | 7.0 | 100.79999999999998 | 95.79999999999998 | 12.0 | 11.0 | 0.8 |
+| 5 | 8 | 8.0 | 113.39999999999998 | 94.39999999999998 | 12.0 | 13.0 | 0.7 |
+| 5 | 9 | 9.0 | 125.99999999999997 | 118.99999999999997 | 12.0 | 12.0 | 0.75 |
+| 5 | 10 | 10.0 | 134.04999999999998 | 119.04999999999998 | 12.0 | 13.0 | 0.7 |
+| 6 | 1 | 1.14 | 28.7 | 2.6999999999999993 | 12.0 | 11.0 | 0.8 |
+| 6 | 2 | 2.0 | 43.05 | 19.049999999999997 | 12.0 | 13.0 | 0.7 |
+| 6 | 3 | 3.0 | 57.4 | 42.4 | 12.0 | 11.0 | 0.8 |
+| 6 | 4 | 4.0 | 71.75 | 58.75 | 12.0 | 11.0 | 0.8 |
+| 6 | 5 | 5.0 | 86.1 | 62.099999999999994 | 12.0 | 13.0 | 0.7 |
+| 6 | 6 | 6.0 | 100.44999999999999 | 83.44999999999999 | 12.0 | 13.0 | 0.7 |
+| 6 | 7 | 7.0 | 114.79999999999998 | 92.79999999999998 | 12.0 | 13.0 | 0.7 |
+| 6 | 8 | 8.0 | 129.14999999999998 | 114.14999999999998 | 12.0 | 12.0 | 0.75 |
+| 6 | 9 | 9.0 | 143.49999999999997 | 125.49999999999997 | 12.0 | 12.0 | 0.75 |
+| 6 | 10 | 10.0 | 153.29999999999998 | 139.29999999999998 | 12.0 | 13.0 | 0.7 |
+| 7 | 1 | 1.0 | 57.4 | 9.399999999999999 | 12.0 | 11.0 | 0.8 |
+| 7 | 2 | 2.0 | 86.1 | 39.099999999999994 | 12.0 | 13.0 | 0.7 |
+| 7 | 3 | 3.0 | 114.8 | 70.8 | 12.0 | 13.0 | 0.7 |
+| 7 | 4 | 4.0 | 143.5 | 118.5 | 12.0 | 11.0 | 0.8 |
+| 7 | 5 | 5.0 | 163.1 | 135.1 | 12.0 | 13.0 | 0.7 |
+| 7 | 6 | 6.0 | 182.7 | 152.7 | 12.0 | 13.0 | 0.7 |
+| 7 | 7 | 7.0 | 202.29999999999998 | 208.29999999999998 | 12.0 | 11.0 | 0.8 |
+| 7 | 8 | 8.0 | 221.89999999999998 | 216.89999999999998 | 12.0 | 12.0 | 0.75 |
+| 7 | 9 | 9.0 | 241.49999999999997 | 256.5 | 12.0 | 11.0 | 0.8 |
+| 7 | 10 | 10.0 | 261.09999999999997 | 244.09999999999997 | 12.0 | 13.0 | 0.7 |
+| 8 | 1 | 1.0 | 60.199999999999996 | 2.1999999999999957 | 13.0 | 12.0 | 0.8 |
+| 8 | 2 | 2.0 | 90.3 | 46.3 | 13.0 | 13.0 | 0.75 |
+| 8 | 3 | 3.0 | 120.39999999999999 | 82.39999999999999 | 13.0 | 13.0 | 0.75 |
+| 8 | 4 | 4.0 | 150.5 | 119.5 | 13.0 | 12.0 | 0.8 |
+| 8 | 5 | 5.0 | 171.5 | 161.5 | 13.0 | 12.0 | 0.8 |
+| 8 | 6 | 6.0 | 192.5 | 179.5 | 13.0 | 13.0 | 0.75 |
+| 8 | 7 | 7.0 | 213.5 | 187.5 | 13.0 | 14.0 | 0.7 |
+| 8 | 8 | 8.0 | 234.5 | 214.5 | 13.0 | 14.0 | 0.7 |
+| 8 | 9 | 9.0 | 255.5 | 248.5 | 13.0 | 13.0 | 0.75 |
+| 8 | 10 | 10.0 | 276.5 | 261.5 | 13.0 | 14.0 | 0.7 |
+| 9 | 1 | 1.0 | 60.199999999999996 | 0.19999999999999574 | 13.0 | 13.0 | 0.75 |
+| 9 | 2 | 2.0 | 90.3 | 44.3 | 13.0 | 14.0 | 0.7 |
+| 9 | 3 | 3.0 | 120.39999999999999 | 79.39999999999999 | 13.0 | 13.0 | 0.75 |
+| 9 | 4 | 4.0 | 150.5 | 112.5 | 13.0 | 13.0 | 0.75 |
+| 9 | 5 | 5.0 | 171.5 | 152.5 | 13.0 | 13.0 | 0.75 |
+| 9 | 6 | 6.0 | 192.5 | 182.5 | 13.0 | 13.0 | 0.75 |
+| 9 | 7 | 7.0 | 213.5 | 189.5 | 13.0 | 14.0 | 0.7 |
+| 9 | 8 | 8.0 | 234.5 | 212.5 | 13.0 | 14.0 | 0.7 |
+| 9 | 9 | 9.0 | 255.5 | 230.5 | 13.0 | 14.0 | 0.7 |
+| 9 | 10 | 10.0 | 276.5 | 261.5 | 13.0 | 14.0 | 0.7 |
+| 10 | 1 | 1.01 | 62.99999999999999 | 3.999999999999993 | 13.0 | 12.0 | 0.8 |
+| 10 | 2 | 2.0 | 94.49999999999999 | 52.499999999999986 | 13.0 | 12.0 | 0.8 |
+| 10 | 3 | 3.0 | 125.99999999999999 | 89.99999999999999 | 13.0 | 13.0 | 0.75 |
+| 10 | 4 | 4.0 | 157.49999999999997 | 133.49999999999997 | 13.0 | 12.0 | 0.8 |
+| 10 | 5 | 5.0 | 179.89999999999998 | 137.89999999999998 | 13.0 | 14.0 | 0.7 |
+| 10 | 6 | 6.0 | 202.29999999999998 | 168.29999999999998 | 13.0 | 14.0 | 0.7 |
+| 10 | 7 | 7.0 | 224.7 | 212.7 | 13.0 | 13.0 | 0.75 |
+| 10 | 8 | 8.0 | 247.1 | 238.1 | 13.0 | 13.0 | 0.75 |
+| 10 | 9 | 9.0 | 269.5 | 248.5 | 13.0 | 14.0 | 0.7 |
+| 10 | 10 | 10.0 | 291.9 | 288.9 | 13.0 | 13.0 | 0.75 |
+| 11 | 1 | 1.01 | 62.99999999999999 | 2.999999999999993 | 13.0 | 12.0 | 0.8 |
+| 11 | 2 | 2.0 | 94.49999999999999 | 46.499999999999986 | 13.0 | 14.0 | 0.7 |
+| 11 | 3 | 3.0 | 125.99999999999999 | 84.99999999999999 | 13.0 | 13.0 | 0.75 |
+| 11 | 4 | 4.0 | 157.49999999999997 | 124.49999999999997 | 13.0 | 13.0 | 0.75 |
+| 11 | 5 | 5.0 | 179.89999999999998 | 154.89999999999998 | 13.0 | 13.0 | 0.75 |
+| 11 | 6 | 6.0 | 202.29999999999998 | 181.29999999999998 | 13.0 | 13.0 | 0.75 |
+| 11 | 7 | 7.0 | 224.7 | 211.7 | 13.0 | 13.0 | 0.75 |
+| 11 | 8 | 8.0 | 247.1 | 226.1 | 13.0 | 14.0 | 0.7 |
+| 11 | 9 | 9.0 | 269.5 | 263.5 | 13.0 | 13.0 | 0.75 |
+| 11 | 10 | 10.0 | 291.9 | 270.9 | 13.0 | 14.0 | 0.7 |
+| 12 | 1 | 1.0 | 65.8 | 1.7999999999999972 | 14.0 | 13.0 | 0.8 |
+| 12 | 2 | 2.0 | 98.69999999999999 | 50.69999999999999 | 14.0 | 14.0 | 0.75 |
+| 12 | 3 | 3.0 | 131.6 | 91.6 | 14.0 | 14.0 | 0.75 |
+| 12 | 4 | 4.0 | 164.5 | 128.5 | 14.0 | 14.0 | 0.75 |
+| 12 | 5 | 5.0 | 188.3 | 165.3 | 14.0 | 14.0 | 0.75 |
+| 12 | 6 | 6.0 | 212.10000000000002 | 182.10000000000002 | 14.0 | 15.0 | 0.7 |
+| 12 | 7 | 7.0 | 235.90000000000003 | 207.90000000000003 | 14.0 | 15.0 | 0.7 |
+| 12 | 8 | 8.0 | 259.70000000000005 | 230.70000000000005 | 14.0 | 15.0 | 0.7 |
+| 12 | 9 | 9.0 | 283.50000000000006 | 257.50000000000006 | 14.0 | 15.0 | 0.7 |
+| 12 | 10 | 10.0 | 307.30000000000007 | 303.30000000000007 | 14.0 | 14.0 | 0.75 |
+| 13 | 1 | 1.01 | 65.8 | 6.799999999999997 | 14.0 | 13.0 | 0.8 |
+| 13 | 2 | 2.0 | 98.69999999999999 | 52.69999999999999 | 14.0 | 14.0 | 0.75 |
+| 13 | 3 | 3.0 | 131.6 | 89.6 | 14.0 | 14.0 | 0.75 |
+| 13 | 4 | 4.0 | 164.5 | 140.5 | 14.0 | 13.0 | 0.8 |
+| 13 | 5 | 5.0 | 188.3 | 152.3 | 14.0 | 15.0 | 0.7 |
+| 13 | 6 | 6.0 | 212.10000000000002 | 174.10000000000002 | 14.0 | 15.0 | 0.7 |
+| 13 | 7 | 7.0 | 235.90000000000003 | 208.90000000000003 | 14.0 | 15.0 | 0.7 |
+| 13 | 8 | 8.0 | 259.70000000000005 | 229.70000000000005 | 14.0 | 15.0 | 0.7 |
+| 13 | 9 | 9.0 | 283.50000000000006 | 293.50000000000006 | 14.0 | 13.0 | 0.8 |
+| 13 | 10 | 10.0 | 307.30000000000007 | 285.30000000000007 | 14.0 | 15.0 | 0.7 |
+| 14 | 1 | 1.0 | 68.6 | 8.599999999999994 | 14.0 | 13.0 | 0.8 |
+| 14 | 2 | 2.0 | 102.89999999999999 | 50.89999999999999 | 14.0 | 15.0 | 0.7 |
+| 14 | 3 | 3.0 | 137.2 | 84.19999999999999 | 14.0 | 15.0 | 0.7 |
+| 14 | 4 | 4.0 | 171.5 | 128.5 | 14.0 | 14.0 | 0.75 |
+| 14 | 5 | 5.0 | 196.7 | 180.7 | 14.0 | 13.0 | 0.8 |
+| 14 | 6 | 6.0 | 221.89999999999998 | 204.89999999999998 | 14.0 | 14.0 | 0.75 |
+| 14 | 7 | 7.0 | 247.09999999999997 | 220.09999999999997 | 14.0 | 15.0 | 0.7 |
+| 14 | 8 | 8.0 | 272.29999999999995 | 252.29999999999995 | 14.0 | 15.0 | 0.7 |
+| 14 | 9 | 9.0 | 297.49999999999994 | 307.49999999999994 | 14.0 | 13.0 | 0.8 |
+| 14 | 10 | 10.0 | 322.69999999999993 | 295.69999999999993 | 14.0 | 15.0 | 0.7 |
+| 15 | 1 | 1.0 | 68.6 | 2.5999999999999943 | 14.0 | 14.0 | 0.75 |
+| 15 | 2 | 2.0 | 102.89999999999999 | 57.89999999999999 | 14.0 | 13.0 | 0.8 |
+| 15 | 3 | 3.0 | 137.2 | 95.19999999999999 | 14.0 | 14.0 | 0.75 |
+| 15 | 4 | 4.0 | 171.5 | 123.5 | 14.0 | 15.0 | 0.7 |
+| 15 | 5 | 5.0 | 196.7 | 157.7 | 14.0 | 15.0 | 0.7 |
+| 15 | 6 | 6.0 | 221.89999999999998 | 214.89999999999998 | 14.0 | 13.0 | 0.8 |
+| 15 | 7 | 7.0 | 247.09999999999997 | 255.09999999999997 | 14.0 | 13.0 | 0.8 |
+| 15 | 8 | 8.01 | 272.29999999999995 | 272.29999999999995 | 14.0 | 14.0 | 0.75 |
+| 15 | 9 | 9.0 | 297.49999999999994 | 279.49999999999994 | 14.0 | 15.0 | 0.7 |
+| 15 | 10 | 10.0 | 322.69999999999993 | 308.69999999999993 | 14.0 | 15.0 | 0.7 |
+
 

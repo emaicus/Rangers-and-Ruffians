@@ -764,49 +764,54 @@ the_book_of_healing:
       description: Etch a glyph into the ground which makes a 20ft radius around it
         undetectable to evil eyes.
   Tier_3:
-    Death Ward:
-      cost: 1
-      description: Cast a powerful ward on an ally. If they are downed in combat,
-        they immediately return to 1d20 hp.
-    Greater Delayed Heal:
-      action_type: Reaction Candidate
-      balance_type: healing candidate
-      cost: 2
-      description: Cast a healing spell on a teammate which does not take effect until
-        you trigger it as a reaction or bonus action. At that time, they are healed
-        for 3d10 health.
-      major_healing_dice: 3d10d3 10
-    Greater Dispel Magic:
-      cost: 2
-      description: Undo the effects wrought by up to a 4th tier spell.
-    Major Heal:
-      balance_type: healing candidate
-      cost: 2
-      description: Restore 6d10 health to one teammate or yourself
-      major_healing_dice: 6d10d6 10
-    Major Ward:
-      cost: 3
-      description: Touch a teammate and place a ward on them. This ward adds 10 armor
-        and magic armor to the touched party member the next 3 times they are successfully
-        attacked.
-    Mass Heal:
-      balance_type: healing candidate
-      cost: 2
-      description: Restore 3d10 health to all allies in a 30ft radius.
-      major_healing_dice: 3d10d3 10
-    Mass Strong Lungs:
-      cost: 2
-      description: Grant a teammate or yourself strong lungs, rendering them immune
-        to airborne toxins and smoke.
-    Sealed Promise:
-      cost: 1
-      description: The cost for this spell is one action point. Requires a piece of
-        white rope and one ounce of holy water blessed by your deity. Have two individuals
-        wash their hands using the holy water, then tie their clasped hands together.
-        Any promise they make in this state must be kept, or the one who does not
-        follow through will die. If the promise becomes impossible, you may render
-        the promise invalid. If you do this in an evil manner, your deity will punish
-        you.
+        Death Ward:
+            cost: 1
+            description: Cast a powerful ward on an ally. If they are downed in combat,
+              they immediately return to 1d20 hp.
+        Greater Delayed Heal:
+            action_type: Reaction Candidate
+            balance_type: healing candidate
+            cost: 2
+            description: Cast a healing spell on a teammate which does not take effect until
+              you trigger it as a reaction or bonus action. At that time, they are healed
+              for 3d10 health.
+            major_healing_dice: 3d10d3 10
+        Greater Dispel Magic:
+            cost: 2
+            description: Undo the effects wrought by up to a 4th tier spell.
+        Major Heal:
+            balance_type: healing candidate
+            cost: 2
+            description: Restore 6d10 health to one teammate or yourself
+            major_healing_dice: 6d10d6 10
+        Major Ward:
+            cost: 3
+            description: Touch a teammate and place a ward on them. This ward adds 10 armor
+              and magic armor to the touched party member the next 3 times they are successfully
+              attacked.
+        Mass Heal:
+            balance_type: healing candidate
+            cost: 2
+            description: Restore 3d10 health to all allies in a 30ft radius.
+            major_healing_dice: 3d10d3 10
+        Mass Strong Lungs:
+            cost: 2
+            description: Grant a teammate or yourself strong lungs, rendering them immune
+              to airborne toxins and smoke.
+        Sealed Promise:
+            cost: 1
+            description: The cost for this spell is one action point. Requires a piece of
+              white rope and one ounce of holy water blessed by your deity. Have two individuals
+              wash their hands using the holy water, then tie their clasped hands together.
+              Any promise they make in this state must be kept, or the one who does not
+              follow through will die. If the promise becomes impossible, you may render
+              the promise invalid. If you do this in an evil manner, your deity will punish
+              you.
+        Remove Curse:
+            cost: 3
+            description: Remove a curse or dispel a negative enchantment on an individual. This
+                spell may require a check to take affect, and may be cast at most once per day on
+                a given entity.
   Tier_4:
     Hold Your Weapons:
       cost: 3
