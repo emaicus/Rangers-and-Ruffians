@@ -300,10 +300,11 @@ the_bard's_songbook:
             cost: 1
             target: friendly
             num_targets: 1
-            duration: 1
+            duration: 3
             range: near
-            description:  "Allow a teammate an extra action on their next turn and to move
-                  an extra 15 feet. If out of battle, they may move at double speed for five minutes."
+            description:  "Allow a teammate an extra action on and to move
+                an extra 15 feet for the spell's duration. After the spell ends, they
+                must make a D15 spell power save, or be stunned and miss their turn."
             purpose: buff
             school: arcane-somatic
         Song of Slow Healing:
@@ -316,7 +317,7 @@ the_bard's_songbook:
             purpose: healing
             upcast:
                 cost: scaling
-                effect: increases the size of the healing dice by one. 
+                effect: increases the size of the healing dice by one.
                     For example, spending one additional action point increases the healing to 1d6 per turn.
             description: "Play a soothing song which heals an injured ally for two turns."
             range: near
@@ -819,7 +820,7 @@ the_druid's_guidebook:
               target: self
               num_targets: 1
               duration: 1 hour
-              description: "Grow catlike claws from your fingers. Gain advantage on climbing checks and the ability to do 1d6 unarmed strike damage."
+              description: "Grow catlike claws from your fingers. Gain advantage on climbing checks and the ability to do 1d8 unarmed strike damage."
               range: self
               purpose: buff
               school: natural-animist
@@ -886,23 +887,23 @@ the_druid's_guidebook:
               target: self
               num_targets: 1
               cost: 1
-              duration: 1
+              duration: 1 hour
               description: "Let out a nearly inaudible sonic pulse, which allows you to gain a picture of
-                the surrounding area as a perception check."
+                the surrounding area as a perception check. Once cast, you may continue to make such checks
+                for the spell's duration."
               range: archer
               purpose: utility
               school: "natural-animist"
-        Minor Mending:
-              cost: 0
-              target: other
-              num_targets: 1
-              range: hand
-              duration: 1
-              description: "Instantly mend a broken item or object. You must have most of the
-                  pieces and the object must not be too complicated. Make an intelligence check
-                  if repairing a complex object."
-              purpose: utility
-              school: arcane-transmutation
+        Mend:
+            cost: 0
+            target: other
+            num_targets: 1
+            duration: 1
+            description: You can magically mend small dents, dings, scratches, and tears
+              in items.
+            range: hand
+            purpose: utility
+            school: arcane-transmutation
         Spider Web:
             cost: 1
             target: space
@@ -910,7 +911,9 @@ the_druid's_guidebook:
             range: hand
             duration: concentration
             description: "Create incredibly sticky spiderweb, capable of holding a person.
-                         You are able to create it at the rate of five cubic feet per minute."
+                         You are able to create it at the rate of five cubic feet per minute.
+                         Entities that move through the web must make a dexterity save against
+                         your spell power, or be restrained."
             purpose: utility
             school: "natural-animist"
         Walk on Water:
@@ -1037,7 +1040,7 @@ the_druid's_guidebook:
                     - each turn
             purpose: damage
             school: "natural-animist"
-        Purify:
+        Remove Poison:
             cost: 1
             target: friendly
             num_targets: 1
@@ -1053,8 +1056,8 @@ the_druid's_guidebook:
             num_targets: 1
             duration: 1 hour
             description: Summon an eagle to aid you. The eagle is capable of lifting
-              small sized entities, has 20hp, a movement speed of 50ft, and can attack for 1d8
-              damage.
+              small sized entities, has 20hp, a movement speed of 50ft, can attack for 1d8
+              damage, and acts on your initiative.
             range: far
             purpose: summon
             school: natural-animist
@@ -1157,17 +1160,6 @@ the_druid's_guidebook:
                   description: "mushrooms begin sprouting from their bodies, causing them to make all moves with disadvantage during their next turn"
                   save: "Spell Power"
             school: "natural-floral"
-        Smokescreen:
-            cost: 1
-            target: space
-            num_targets: 1
-            effect_radius: 60
-            duration: 5
-            range: far
-            description: "Create a smokescreen. Entities within the smokescreen are considered to be
-                          in darkness."
-            purpose: utility
-            school: arcane-conjuring
         Cloud of Fog:
             cost: 1
             target: space
@@ -1246,7 +1238,7 @@ the_druid's_guidebook:
             range: near
             purpose: summon
             school: "natural-animist"
-        Minor Control Plant Growth:
+        Greater Control Plant Growth:
               cost: 2
               target: space
               num_targets: 1
@@ -1492,7 +1484,7 @@ the_book_of_healing:
             hit: roll
             purpose: damage
             school: divine-purification
-            upcast: 
+            upcast:
               cost: scaling
               effect: allows it to deal an additional 1d6 radiant damage.
         Beguile:
@@ -1509,16 +1501,6 @@ the_book_of_healing:
               - description: "make all attack rolls with disadvantage"
                 save: "spell power"
                 repeat: "each turn"
-        Bless Water:
-            cost: 1
-            target: other
-            num_targets: 1
-            duration: 1
-            description: "You may bless water by praying over it, converting it to holy water.
-                This can be done at a rate of one gallon per hour."
-            range: hand
-            purpose: utility
-            school: divine-purification
         Detect Evil:
             cost: 1
             target: other
@@ -1534,17 +1516,17 @@ the_book_of_healing:
             target: other
             num_targets: 1
             duration: 1
-            description: Make a perception check to detect if nearby magic.
+            description: Make a perception check to detect if there is magic nearby.
             purpose: utility
             range: self
             effect_radius: 100
             school: divine-purification
-        Extra Weight:
+        Change Weight:
             cost: 0
             target: other
             num_targets: 1
             duration: concentration
-            description: Double the weight of an object. The object must be no larger than
+            description: Double or halve the weight of an object. The object must be no larger than
               a horse.
             range: archer
             purpose: utility
@@ -1559,17 +1541,7 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: arcane-somatic
-        Lighten Object:
-            cost: 0
-            target: other
-            num_targets: 1
-            duration: concentration
-            description: Decrease the weight of an object by half. The object must be no
-              larger than a horse.
-            range: archer
-            purpose: utility
-            school: arcane-transmutation
-        Mending:
+        Mend:
             cost: 0
             target: other
             num_targets: 1
@@ -1590,7 +1562,7 @@ the_book_of_healing:
             purpose: healing
             range: near
             school: divine-restoration
-            upcast: 
+            upcast:
               cost: scaling
               effect: allows it to grant 1d4 additional healing.
         Purify:
@@ -1600,7 +1572,8 @@ the_book_of_healing:
             range: hand
             duration: 1
             description: Purify a food, drink, or potion to remove ill effects. Purify can
-              be used to remove drunkenness from entities, or to render poison innocuous.
+              be used to remove drunkenness from entities, to render poisons innocuous,
+              or to convert water to holy water at a rate of one gallon per hour.
             range: hand
             purpose: utility
             school: divine-purification
@@ -1612,7 +1585,7 @@ the_book_of_healing:
             purpose: utility
             description: Summon a sacred flame to your hand. Ash created
               by the flame is considered sacred. You may melee attack with the flame
-              which deal 2d4 fire damage.
+              which deal 2d6 fire damage.
             range: hand
             school: divine-purification
         Spare:
@@ -1661,6 +1634,19 @@ the_book_of_healing:
             effect_radius: 30
             purpose: utility
             school: arcane-elemental-fire
+        Hold Weapon:
+            cost: 0
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to bind an enemy's weapon in place.
+            range: archer
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-matter
+            effects:
+              - save: spell power
+                description: their weapon is bound to their side, and cannot be drawn
     Tier_1:
         Delayed Heal:
             cost: 1
@@ -1702,26 +1688,14 @@ the_book_of_healing:
             num_targets: 1
             duration: 1
             description: Cast a spell which invigorates an ally, allowing them to take an
-              extra attack action on their next turn and to gain 15 feet of movement.
+              extra attack action and to gain 15 feet of movement for the spell's duration.
+              After the spell ends, they must make a D15 spell power save, or be stunned and miss their turn."
             range: near
             purpose: buff
             school: arcane-somatic
             upcast:
               cost: 1
               effect: cause the effect to last for 3 turns.
-        Hold Weapon:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: concentration
-            description: Attempt to bind an enemy's weapon in place.
-            range: archer
-            purpose: debuff
-            hit: always
-            school: arcane-enchantment-matter
-            effects:
-              - save: spell power
-                description: their weapon is bound to their side, and cannot be drawn
         Pacify:
             cost: 1
             target: enemy
@@ -1738,7 +1712,7 @@ the_book_of_healing:
                   description: they become passive and calm. A pacified enemy cannot attack or act against anyone.
                   repeat:
                     - each turn
-                    - "if an ally spends an action pleaing with them"
+                    - "if an ally spends an action to plea with them"
         Share Sense:
             cost: 0
             target: friendly
@@ -1761,7 +1735,9 @@ the_book_of_healing:
             school: arcane-enchantment-mind
             effects:
               save: spell power
-              description: they are pushed back 1d4 spots in the initiative order and loose 15 feet of movement
+              description: they are pushed back 1d4 spots in the initiative order and loose 15 feet of movement until they make a save
+              repeat:
+                - each turn
         Strong Lungs:
             cost: 1
             target: friendly
@@ -1799,18 +1775,6 @@ the_book_of_healing:
             range: hand
             purpose: buff
             school: divine-guardian
-        Water Breathing:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1 hour
-            description: Grant yourself or an ally the ability to breathe underwater.
-            range: hand
-            purpose: utility
-            school: arcane-somatic
-            upcast:
-                cost: 1
-                effect: grant the effect to up to six nearby allies
     Tier_2:
         Blind:
             cost: 2
@@ -1824,8 +1788,8 @@ the_book_of_healing:
             effects:
               - save: spell power
                 description: be struck blind. Blind enemies must make all checks and
-                    attack rolls with disadvantage.
-            school: divine-guardian 
+                    attack rolls with disadvantage. Blindness lasts until dispelled.
+            school: divine-guardian
         Chains of Light:
             cost: 1
             target: enemy
@@ -1859,7 +1823,7 @@ the_book_of_healing:
               cost: scaling
               effect: allows it to grant 1d8 additional healing.
         Greater Purify:
-            cost: 1
+            cost: 2
             target: other
             num_targets: many
             range: hand
@@ -1881,7 +1845,7 @@ the_book_of_healing:
             hit: always
             dice: 6d6
             effect_type: radiant
-            effect_radius: 30
+            effect_radius: 15
             description: Create an aura of positive energy. Undead or evil entities that
               enter the area take damage each turn.
         Speak Tongues:
@@ -1892,7 +1856,7 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: divine-enhancement
-            description: Your deity touches your tongue or that of an ally to allow you 
+            description: Your deity touches your tongue or that of an ally to allow you
                 to communicate its word to others. You are able to speak any language for 1 hour.
         Ward of Light:
             cost: 1
@@ -1913,7 +1877,7 @@ the_book_of_healing:
             range: hand
             purpose: buff
             school: divine-restoration
-            upcast: 
+            upcast:
                 - cost: scaling
                   effect: Increase the spell tier affected by 1.
 the_macabre_manual:
@@ -1935,6 +1899,8 @@ the_macabre_manual:
             duration: 1 hour
             range: near
             school: arcane-enchantment-mind
+            purpose: debuff
+            hit: roll
             description: Steal 1 point of an enemies inner fire and add it to your own.
               If an entity reaches -10 inner fire, it instantly dies.
         Ghastly Visage:
@@ -1947,7 +1913,7 @@ the_macabre_manual:
             range: self
             purpose: utility
             school: arcane-illusion
-        Minor Death Coil:
+        Death Coil:
             cost: 0
             target: enemy
             num_targets: 1
@@ -1956,168 +1922,266 @@ the_macabre_manual:
             range: archer
             purpose: damage
             hit: roll
-            damage: 2d6
+            dice: 2d6
+            effect_type: necrotic
+            upcast:
+                cost: 1
+                effect: add an additional 1d6 damage
+            school: necromantic-necrotic
         Night Terror:
             cost: 0
-            description: Force a sleeping entity to make a disadvantaged inner fire saving
-              throw against your spell power. On failure, impose your will on them by manifesting
-              yourself in their dreams.
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to force your way into a sleeping entities dreams.
+            range: near
+            purpose: debuff
+            hit: always
+            effects:
+                - save: spell power
+                  description: you enter their dreams, and may shape them as you wish.
+            school: arcane-enchantment-mind
         Rot:
-            balance_type: damage candidate
             cost: 0
-            description: Cause an item to rot or deal 1d6 damage. Must touch the item.
-            major_damage_dice: 1d6d1 6
-        Sentient Shadow:
-            balance_type: damage candidate
-            cost: 0
-            description: Bring to life a sentient shadow. The shadow lasts for one minute
-              or three turns, and will follow your orders. The shadow is capable of influencing
-              objects by manipulating their shadows. The shadow is capable of attacking
-              for 1d2 damage, and has a strength of -3. It can be killed by being exposed
-              to bright light.
-            major_damage_dice: 1d2d1 2
-        Shadow:
-            cost: 0
-            description: Move like shadow through the darkness. Gain advantage on stealth
-              checks when in shadow.
-        Vampiric Touch:
-            balance_type: healing candidate
-            cost: 0
-            description: Touch an enemy and deal 1d4 damage. Increase your health by the
-              damage dealt.
-            major_healing_dice: 1d4d1 4
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Cause an item to rot in your hands.
+            range: hand
+            dice: 3d4
+            hit: roll
+            effect_type: necrotic
+            purpose: damage
+            school: necromantic-necrotic
+        Shadow-step:
+            cost: 1
+            target: self
+            num_targets: 1
+            duration: 1
+            description: Step from one shadow to another within range.
+            range: near
+            purpose: utility
+            school: arcane-transportation
+            upcast:
+                cost: 1
+                effect: increase the distance that you may step to 100 feet.
         Vivify:
             cost: 0
+            target: other
+            num_targets: 1
+            duration: concentration
+            range: near
+            purpose: utility
+            school: arcane-illusion
             description: Make something rotten or dead appear living.
+            upcast:
+                cost: 1
+                effect: make everything dead within 100 feet appear living
     Tier_1:
+        Sentient Shadow:
+            cost: 1
+            target: other
+            num_targets: 1
+            duration: concentration
+            range: close
+            purpose: utility
+            school: arcane-conjuring
+            description: Bring to life a sentient shadow. Use your concentration to
+                see using it's eyes, and your will to command its movements. It's
+                range is limited to within 1000 feet of you, and it is instantly
+                destroyed by bright light.
         Bloodlust:
             cost: 1
-            description: Cast a spell of an ally which sends them into a frenzy. Their intelligence
-              and perception is decreased by 3 for the duration, but they are granted an
-              additional attack action on their turn.
+            target: friendly
+            num_targets: 1
+            duration: 3
+            description: Veins run black on an ally as a dark blood fury
+                flows through them. They are granted an additional attack action
+                and 15 feet of movement on their turn. After the spell ends, they
+                must make a D15 spell power save, or be stunned and miss their turn.
+            range: near
+            purpose: buff
+            school: arcane-somatic
         Cripple:
-            balance_type: damage candidate
             cost: 1
-            description: Force an enemy to make an inner fire saving throw against your
-              spell power and deal 1d8 damage. On a failure, the enemy misses an action
-              on their next turn.
-            major_damage_dice: 1d8d1 8
-        Disease:
-            balance_type: healing candidate
-            cost: 1
-            description: Force an entity to make an inner fire saving throw against your
-              spell power. If the entity fails, it is cursed with a disease which deals
-              1d6 damage per day. Any damage dealt by the disease cannot be healed until
-              the disease is cured. The disease does not go go away until cured or dispelled.
-              Any entity that comes into physical contact with a diseased entity must make
-              an inner fire saving throw against your spell power, and become diseased on
-              failure.
-            major_healing_dice: 1d6d1 6
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: An enemies joints pop and snap as your spell
+                attempts to take hold.
+            range: archer
+            purpose: debuff
+            hit: always
+            school: necromantic-necrotic
+            effects:
+                - save: spell power
+                  description: "be crippled. Crippled entities have their speed reduced
+                    by half, and must make all actions at disadvantage"
+                  repeat:
+                    - each turn
         Ectoplasmic Discharge:
-            balance_type: damage candidate
             cost: 1
-            description: Release a torrent of screaming ghosts which damages all enemies
-              in a 15 foot cone in front of you. Does 1d6 damage.
-            major_damage_dice: 1d6d1 6
-        Haunt:
+            target: enemy
+            num_targets: many
+            duration: 1
+            range: close
+            purpose: damage
+            hit: roll
+            effect_type: necrotic
+            dice: 3d6
+            description: A torrent of screaming ghosts flies from your
+              hand, damaging all enemies in a cone in front of you
+            school: necromantic-necrotic
+        Death Bolt:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Necrotic energy screams forth, green and crackling
+               as it rushes to smite an enemy.
+            range: archer
+            purpose: damage
+            dice: 4d6
+            hit: roll
+            effect_type: necrotic
+            school: necromantic-necrotic
+        Darkness:
             cost: 1
-            description: Summon forth a spirit to haunt an individual. The spirit lasts
-              for one week, at which time it returns to you briefly to report its actions
-              before disappearing.
-        Major Death Coil:
-            balance_type: healing candidate
+            target: self
+            num_targets: 1
+            duration: 1 hour
+            range: self
+            purpose: utility
+            effect_radius: 30
+            description: Clouds of inky darkness billow from you, filling a radius
+                and leaving everyone within in pitch blackness. You may dispel the darkness
+                as an offhand action.
+            upcast:
+                cost: 1
+                effect: increase the spell's radius to 100 feet.
+            school: arcane-conjuring
+        Sentry Skull:
             cost: 1
-            description: Fire a ball of pure death from your hand. Deals 1d8 damage. Heals
-              undead.
-            major_healing_dice: 1d8d1 8
-        Minor Through the Eyes of the Little Ones:
+            target: other
+            num_targets: 1
+            duration: 1 day
+            description: Take the skull of a fallen entity and infuse it with the power
+                of a soul to link yourself to it. For the spell's duration, you may
+                 see through the eyes of the skull.
+            range: hand
+            purpose: utility
+            school: arcane-enchantment-matter
+            upcast:
+                cost: 2
+                description: cause the spell to last for 1 week.
+        Siphon:
+            cost: 0
+            hit: roll
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Eat the life-force of a wounded enemy, dealing damage and
+                healing yourself for that amount. An enemy may only be siphoned once, and
+                You cannot harvest a soul from an entity that you have siphoned.
+            purpose: damage
+            dice: 2d4
+            effect_type: necrotic
+            range: near
+            school: necromantic-necrotic
+        Surrogate:
+            action_type: Reaction
             cost: 1
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: As an attack comes towards you, link your life-force
+                to that of an enemy within range.
+            range: near
+            purpose: debuff
+            hit: always
+            effects:
+                - save: spell power
+                  description: be forced to take the damage in your place. On success, they take half damage.
+            school: arcane-enchantment-mind
+        Through the Eyes of the Little Ones:
+            cost: 1
+            target: other
+            num_targets: 1
+            duration: 1 hour
+            range: near
+            purpose: utility
+            school: arcane-enchantment-mind
             description: Take control of a nearby small animal such as a rat or crow. You
               lose control after 1 hour or after the animal moves 1 mile away. For the duration,
               your consciousness can inhabit the creature's.
-        Minor darkness:
-            cost: 1
-            description: Fill a 15 square foot area with pitch darkness. Entities within
-              the darkness must roll a perception check against your spell power to act
-              effectively on their turn. If they pass, they act with disadvantage.
-        Pain:
-            balance_type: damage candidate
-            cost: 1
-            description: Cause an enemy to feel incredible pain, dealing 1d6 damage. Force
-              the entity to make an inner fire saving throw against your spell power. On
-              failure, they are partially incapacitated, and must make their next action
-              with disadvantage.
-            major_damage_dice: 1d6d1 6
-        Painless:
-            cost: 1
-            description: Remove an entities ability to feel pain. Pain does not cause disadvantage
-              for the entity for the duration of the spell. Lasts 1 hour.
-        Sentry Skull:
-            cost: 1
-            description: Take the skull of a fallen entity and infuse it with the power
-              of a soul to link yourself to it. From this point on, you may see through
-              the eyes of the skull.
-        Shadow-step:
-            cost: 1
-            description: Teleport from one shadow to another over a maximum distance of
-              50 feet.
-        Siphon:
-            balance_type: healing candidate
-            cost: 1
-            description: Eat the life-force of a wounded enemy, dealing 1d6 damage, and
-              healing yourself for that amount. An enemy may only be siphoned once, and
-              You cannot harvest a soul from an entity that you have siphoned.
-            major_healing_dice: 1d6d1 6
-        Skeleton:
-            cost: 1
-            description: Raise a skeletal minion from a fallen entity. See the book of known
-              beasts for details.
-        Surrogate:
-            action_type: Reaction Candidate
-            cost: 1
-            description: Reaction. Force the nearest entity to make an inner fire saving
-              throw against your spell power. On failure, they dive in front of you to save
-              you from an attack.
-            effects:
-              candidate: true
-        Vampiric Blade:
-            balance_type: healing candidate
-            cost: 1
-            description: Enchant any blade so that it does an additional 1d4 damage. You
-              heal an amount equivalent to this damage. This spell lasts for 3 turns or
-              one hour.
-            major_healing_dice: 1d4d1 4
     Tier_2:
         Constricting Shadow:
-            balance_type: damage candidate
             cost: 2
-            description: Summon forth a dozen shadowy hands which deal 3d6 damage and attempt
-              to grapple an entity. Force the entity to make a dexterity check against your
-              spell power. On failure, the entity is grappled. Each turn that the entity
-              is grappled, it takes an additional 1d6 damage. Each turn, the entity may
-              make a strength check against your spell power to attempt to break the grapple.
-            major_damage_dice: 3d6d3 6
-        Major Vivify:
-            cost: 2
-            description: Make everything rotten or dead in 100 foot radius appear living.
+            target: enemy
+            num_targets: 1
+            duration: save
+            range: mid
+            purpose: damage
+            hit: always
+            dice: 4d10
+            effect_type: blunt
+            effect_radius: 15
+            description: A hundred shadowy hands spring forth within from the ground
+                clawing at anyone nearby.
+            effects:
+                - save: dexterity save versus your spell power
+                  description: be grappled and take damage
+                  repeat:
+                    - at the start of each turn
+            school: necromantic-summoning
         Murder of Crows:
-            balance_type: damage candidate
             cost: 2
-            description: Summon a murder of crows to attack an enemy. Does 1d10 damage per
-              turn, lasts 3 turns.
-            major_damage_dice: 1d10d1 10
+            target: enemy
+            num_targets: 1
+            duration: 3
+            description: Feathers fly as a murder of red-eyed crows
+              decend upon an enemy of your choosing. The crows circle
+              back and make an attack against its target once per turn for the duration
+              of this spell.
+            range: mid
+            purpose: damage
+            school: necromantic-summoning
+            hit: roll
+            effect_type: slashing
+            dice: 4d8
+            school: necromantic-summoning
         Spikes of Blood:
             cost: 2
-            description: Form any blood on the ground into spiked daggers which are hurled
-              at the enemy. More blood causes more damage for a maximum of 6d6 damage.
+            target: enemy
+            num_targets: many
+            duration: 1
+            description: Crimson gore flies forth, hardening into brick red blades ast
+                it shreds through a cone of your enemies.
+            range: near
+            hit: roll
+            dice: 6d6
+            effect_type: slashing
+            purpose: damage
+            school: necromantic-necrotic
         Steal Senses:
             cost: 2
-            description: Cover an entity's eyes, ears, and/or mouth with your hand to remove
-              them. Lasts until dispelled.
+            target: enemy
+            num_targets: 1
+            duration: infinite
+            description: Your hand stretches towards an enemy as you attempt to steal their senses.
+            range: hand
+            purpose: debuff
+            hit: roll
+            effects:
+                - save: spell power
+                  description: have have their eyes, ears, or mouth removed and replaced by smooth skin.
+            school: arcane-somatic
         Wall of Bone:
             cost: 2
+            purpose: utility
+            target: space
+            num_targets: many
+            range: archer
+            duration: 1 week
             description: Create a wall up to 40 feet high and 100 feet long of solid bone.
-        Zombie:
-            cost: 2
-            description: Raise a zombie minion from a fallen entity. See the book of known
-              beasts for details.
+            school: arcane-summoning

@@ -45,10 +45,10 @@ valid_values = {
     "num_targets": [1, "many"],
     "duration": ["INTEGER_MACRO", "save", "battle", "HOURS_MACRO", "DAYS_MACRO", "WEEKS_MACRO", "concentration", "infinite"],
     "description": ["STRING_MACRO"],
-    "range": ["self", "hand", "close", "near", "archer", "far", "infinite", "MILES_MACRO"],
+    "range": ["self", "hand", "close", "near", "mid", "archer", "far", "infinite", "MILES_MACRO"],
     "purpose": ["damage", "healing", "buff", "debuff", "summon", "utility"],
     "dice": ["DICE_MACRO"],
-    "effect_type": ['blunt', 'slashing', 'piercing', 'healing', 'elemental', 'poison', 'force', 'psychic', 'ice', 'fire', 'dark', 'radiant'],
+    "effect_type": ['blunt', 'slashing', 'piercing', 'healing', 'elemental', 'poison', 'force', 'psychic', 'ice', 'fire', 'dark', 'radiant', 'necrotic'],
     "casting_time": ["INTEGER_MACRO", "HOURS_MACRO"],
     "action_type": ["Action", "Offhand Action", "Reaction", "Free Action"],
     "effect_radius": ["INTEGER_MACRO", "MILES_MACRO"],
@@ -59,6 +59,8 @@ valid_values = {
 def is_macro(value, macro):
     if macro == 'INTEGER_MACRO':
         return isinstance(value, int)
+    elif not isinstance(value, str):
+        return False
     elif macro == 'HOURS_MACRO':
         return 'hour' in value
     elif macro == 'DAYS_MACRO':
@@ -95,7 +97,6 @@ def check_conditional_requirements(spell_name, spell_info):
 def check_spell_syntax(spell_name, spell_info):
     ''' Checks that a spell has required fields, and that all fields are typed correctly'''
     encountered_errors = False
-
     # Look for required fields
     for field in required_fields:
         if not field in spell_info:
