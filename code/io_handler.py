@@ -233,18 +233,112 @@ def markdown_spellbooks():
     lines = []
     spellbooks = rnr_utils.get_all_spellbooks()
     for spellbook, chapters in spellbooks.items():
-        lines.append(f'### {string.capwords(spellbook.replace("_"," "))}  \n')
+        lines.append(f'## {string.capwords(spellbook.replace("_"," "))}  \n')
         for chapter, spell_list in chapters.items():
-            lines.append(f'  \n__{string.capwords(chapter.replace("_"," "))}:__  \n')
+            lines.append(f'  \n### {string.capwords(chapter.replace("_"," "))}  \n')
             for spell, spell_data in spell_list.items():
-                if not 'charisma_cost' in spell_data:
-                    if 'cost' in spell_data and spell_data['cost'] not in [None, 0]:
-                        lines.append(f"* __{spell.replace('_',' ')}:__ _(Cost: {spell_data['cost']})_ {spell_data['description']}  \n")
-                    else:
-                        lines.append(f"* __{spell}:__ {spell_data['description']}  \n")
-                else:
-                  lines.append(f"* __{spell}:__ _(Cost: {spell_data['cost']}, Charisma Cost: {spell_data['charisma_cost']})_ {spell_data['description']}  \n")
+                lines += markdown_spell(spell, spell_data)
     return lines
+
+def format_spell_duration(duration):
+    if duration in ['infinite', 'save']:
+        return ''
+    elif isinstance(duration, int):
+        return f' __Duration:__ {duration} minute(s)'
+    elif duration == 'concentration':
+        return f' __Duration:__ {duration}'
+    else:
+        return f' __Duration:__ {duration}'
+
+def format_effect(effect):
+    s = ' '
+    if 'condition' in effect:
+        s += effect['condition']
+    else:
+        s += 'Effected enemies must make a'
+    if 'save' in effect:
+        s += f' {effect["save"]} or'
+    s += f' {effect["description"]}'
+
+    if 'repeat' in effect:
+        s += 'The save may be repeated '
+        s += ', or '.join(effect['repeat'])
+    s += '.'
+    return s
+
+def convert_range(spell_range):
+    if spell_range == 'self':
+        return 'Self'
+    elif spell_range == 'hand':
+        return 'Hand to Hand'
+    elif spell_range == 'close':
+        return '15 feet'
+    elif spell_range == 'near':
+        return '30 feet'
+    elif spell_range == 'mid':
+        return '60 feet'
+    elif spell_range == 'archer':
+        return '90 feet'
+    elif spell_range == 'far':
+        return '300 feet'
+    elif spell_range == 'infinite':
+        return 'infinite'
+    else:
+        return 'UNKNOWN RANGE'
+
+
+def markdown_spell(spell_name, spell_data):
+    lines = []
+
+    lines.append(f'#### {spell_name.title()}  \n')
+    first_line = f'__Cost:__ {spell_data["cost"]} '
+
+    if 'dice' in spell_data:
+        if spell_data['purpose'] == 'healing':
+            first_line += f' __Healing:__ {spell_data["dice"]}'
+        else:
+            first_line += f' __Damage:__ {spell_data["dice"]}'
+
+    if 'range' in spell_data:
+        first_line += f' __Range:__ {convert_range(spell_data["range"])}'
+
+    first_line += format_spell_duration(spell_data['duration'])
+
+    second_line = ''
+
+    if 'hit' in spell_data:
+        if spell_data['hit'] == 'roll':
+            second_line += '__Roll to hit__'
+        else:
+            second_line += '__Always hits__'
+
+    if 'casting_time' in spell_data:
+        if isinstance(spell_data['casting_time'], int):
+            second_line += f' __{spell_data["casting_time"]} minute casting time__'
+        else:
+            second_line += f' __{spell_data["casting_time"]} casting time__'
+    # second_line = f'{spell_data["school"]}'
+
+    description_line = spell_data['description']
+    if 'effects' in spell_data:
+        for effect in spell_data['effects']:
+            description_line += format_effect(effect)
+
+    print(spell_name)
+    if 'upcast' in spell_data:
+        print(spell_data['upcast'])
+        if spell_data['upcast']['cost'] == 'scaling':
+            description_line += ' Each additional action point spent on this spell'
+        else:
+            description_line += f" You may spend {spell_data['upcast']['cost']} additional action points on this spell to"
+
+        description_line += f" {spell_data['upcast']['effect']}."
+
+    lines.append(f'{first_line}  \n')
+    lines.append(f'{second_line}  \n')
+    lines.append(f'{description_line}  \n')
+    return lines
+
 
 def markdown_skills():
 

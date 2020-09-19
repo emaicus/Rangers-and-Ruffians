@@ -140,7 +140,7 @@ def publish_ancients(force_overwrite):
 
   md._write_topmatter()
   md._write_section(f'The Tome of the Ancients')
-  md.write_toc()
+  md.write_toc(max_to_include=2)
   md.write_buffer()
 
 def publish_examples(force_overwrite):

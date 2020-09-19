@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.3.1_  
+_Version 2.4.0_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -257,11 +257,11 @@ __Automaton Abilities:__
 * __General Abilities:__   
   * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
   * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
-  * __Armored Exterior:__ You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice.  
+  * __Armored Exterior:__ You naturally have resistance to piercing, slashing, and blunt damage.  
 * __Combat Abilities:__   
   * __Self Repair:__ During combat, you can self repair as an action.  
   * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
-  * __Piston Punch:__ _(Cost 1)_ Perform an attack which ignores enemy armor.  
+  * __Piston Punch:__ Your unarmed attacks deal 1d8 damage.  
   
   
   
@@ -343,11 +343,10 @@ Daemonspawns have expertise in one of the following checks:
 __Daemonspawn Abilities:__ 
 * __General Abilities:__   
   * __True Sight:__ You are able to see invisible entities.  
-  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 2), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest.  
   
   
   
@@ -599,7 +598,7 @@ __Fleetfoot Halfling Abilities:__
 * __General Abilities:__   
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
-  * __Dodge:__ Once per turn when you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
+  * __Dodge:__ As a reaction, increase your armor by 5.  
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   
   
@@ -823,8 +822,8 @@ __Orc Abilities:__
 * __General Abilities:__   
   * __Still Warm:__ You can eat raw meat without penalty.  
 * __Combat Abilities:__   
-  * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
-  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.  
+  * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an spell power save of be frightened.  
+  * __Thunderous Blow:__ On a critical hit, knock the enemy back 10 feet.  
   * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory attack action. If you take the retaliatory attack action, you must make your death coin flips with disadvantage.  
   
   
@@ -866,7 +865,7 @@ __Sprout Abilities:__
   * __Blade of Grass:__ Summon a 1d6 blade of woven plant fiber on command.  
   * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.  
 * __Combat Abilities:__   
-  * __Dodge:__ Once per turn when you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
+  * __Dodge:__ As a reaction, increase your armor by 5.  
   
   
   
@@ -904,6 +903,7 @@ __Waterborn Abilities:__
   * __Water Healing:__ When you sleep in water, it is as if you are in a bed.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
+  * __Become Mist:__ _(Cost 1)_ As a reaction, spend one action point to flow like mist, increasing your armor by 5.  
   * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed, and you gain advantage on charisma checks with them.  
   
   

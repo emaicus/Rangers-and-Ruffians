@@ -36,13 +36,13 @@ skip_header: true
     nunjucks.configure('/site/templates', {autoescape: true });
     starting_values = parseGetRequest();
     var content = nunjucks.render('character_selection_template.html', {
-                                                                        "chosen_race" : starting_values["race"], 
+                                                                        "chosen_race" : starting_values["race"],
                                                                         "chosen_class": starting_values["class"],
                                                                         "race_names"  : json["race_names"],
                                                                         "class_names" : json["class_names"]
                                                                       } );
     $( "#selection_area" ).html( content );
-  
+
     $(function () {
         $('select').selectpicker();
     });
@@ -62,7 +62,7 @@ skip_header: true
       $("#levelUpSheetCharacterName").text($( "#chosen_class" ).val() + " Level Up Sheet");
     }else{
       $("#levelUpSheetCharacterName").text(name + "'s Level Up Sheet");
-    }  
+    }
   }
 
   // merges new_dict into base
@@ -118,7 +118,7 @@ skip_header: true
     data["class"] = rnr_class;
     data["subclass"] = rnr_subclass;
     data["name"] = name;
-    data["stats"] = mergeStats(race_data["stats"], class_data["base_stats"]);
+    data["stats"] = class_data["base_stats"];
     data["abilities"] = mergeAbilities(race_data["abilities"], class_data["base_abilities"]);
     data["icons"] = class_data["icons"];
 
@@ -147,6 +147,8 @@ skip_header: true
     tmp_icons["gold"] = "swap-bag.svg"
     tmp_icons["platinum"] = "shiny-purse.svg"
     tmp_icons["level"] = data["icons"][5][0];
+    tmp_icons["luck"] = "horseshoe.svg";
+    tmp_icons["health_dice"] = "heart-plus.svg";
 
     data["tmp_icons"] = tmp_icons;
     console.log(tmp_icons);
@@ -155,7 +157,7 @@ skip_header: true
       character_sheet = nunjucks.render('character_sheet_template.html', data );
     } else if(sheet_type == "v2"){
       character_sheet = nunjucks.render('two_sided_character_sheet.html', data );
-    } 
+    }
     else{
       console.log("in else with " + sheet_type)
       character_sheet = nunjucks.render('updated_character_sheet.html', data );

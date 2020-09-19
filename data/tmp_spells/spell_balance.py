@@ -251,7 +251,7 @@ def spell_type_analysis(spellbook_name, spell_tiers):
 
 
 def main():
-    with open('formatted_spells.yml') as infile:
+    with open('../spells.yml') as infile:
         rnr_spell_data = yaml.load(infile)
 
     encountered_errors = False

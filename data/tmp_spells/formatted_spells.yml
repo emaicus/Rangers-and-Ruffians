@@ -68,7 +68,7 @@ the_bard's_songbook:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: battle
+            duration: save
             description: "Attempt to hypnotize an enemy using a swinging trinket."
             purpose: debuff
             range: hand
@@ -164,7 +164,7 @@ the_bard's_songbook:
             cost: 1
             target: friendly
             num_targets: many
-            duration: 1 hours
+            duration: 1 hour
             description: "Make allies within range immune to fear and give them advantage on inner fire saves."
             purpose: buff
             range: close
@@ -954,7 +954,7 @@ the_druid's_guidebook:
               hit: roll
               effect_type: blunt
               upcast:
-                    - cost: 1
+                      cost: 1
                       effect: hurl a second stone. This stone is treated as a separate attack.
               effects:
                     - description: be knocked prone

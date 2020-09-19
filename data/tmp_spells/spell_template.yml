@@ -4,7 +4,7 @@ spellbook:
       cost: 0
       target: ["friendly", "enemy", "friend and foe", "self", "space", "other"]
       num_targets: [1, "many"]
-      duration: #, save, battle, # hours, concentration, infinite
+      duration: #, save, # hours, concentration, infinite
       description: "What the spell does at a high level."
       range: <self, hand, close, near, archer, far, infinite>
       purpose: <damage, healing, buff, debuff, summon, utility>
@@ -39,6 +39,7 @@ Range Macros:
   hand -> a descriptor for zero.
   close -> 15ft
   near -> 30 ft.
+  mid  -> 60
   archer -> 90ft.
   far -> 300ft.
 

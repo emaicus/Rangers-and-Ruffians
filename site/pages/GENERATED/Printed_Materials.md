@@ -5,7 +5,7 @@ skip_header: true
 ---
   
 # Printed Materials
-_Version 2.3.1_  
+_Version 2.4.0_  
 
   
 ## Printed Materials

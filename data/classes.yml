@@ -2,6 +2,8 @@
 Barbarian:
   subclasses:
     Path of Rage Barbarian:
+      base_armor: 5
+      caster: no
       roles: ["tank","good-first-class", "high-damage", "mobile", "non-magic"]
       base_abilities:
       - Colossal
@@ -95,6 +97,8 @@ Barbarian:
       standings: Barbarians are the enemies of law keepers.
       tag_line: Heavy Hitter
     Path of Nature Barbarian:
+      base_armor: 5
+      caster: no
       roles: ["complex", "tank", "self-sufficient", "mage", "support", "mobile", "nature-based"]
       base_abilities:
       - Colossal
@@ -189,6 +193,8 @@ Barbarian:
 Knight:
   subclasses:
     Stalwart Knight:
+      caster: no
+      base_armor: 7
       roles: ["tank", "area-control", "non-magic", "good-first-class"]
       base_stats:
         Charisma: 0
@@ -273,6 +279,8 @@ Knight:
 Paladin:
   subclasses:
     Paladin:
+      caster: half
+      base_armor: 7
       roles: ["tank", "mage", "spellbooks", "complex", "support", "healer", "ranged", "self-sufficient"]
       base_stats:
         Charisma: 1
@@ -295,13 +303,9 @@ Paladin:
         level_0:
           abilities:
           - The Book of Healing
-          - Learning Spells
-          - Learn Spells
-          - Minor Spell Choice
           - Melee Weapon Proficiency
           - Thrown Weapon Proficiency
           - Pledge
-          - Tier Zero Spells # Attack Heal
           - Hammer of Light # Attack
           - Faithful Weapon # Attack
           - Pivot # Mobile
@@ -320,7 +324,6 @@ Paladin:
         level_4:
           abilities:
           - Enhanced Healing # Tank
-          - Tier One Spells
         level_5:
           abilities:
           - Greater Guardian Ward
@@ -334,13 +337,11 @@ Paladin:
         level_8:
           abilities:
           - Blessing of Protection # Healing
-          - Tier Two Spells
         level_9:
           abilities:
           - Beacon of Hope # Buff
         level_10:
           abilities:
-          - Major Guardian Ward
           - Second Guardian Ward # Healing
         level_11:
           abilities:
@@ -348,7 +349,6 @@ Paladin:
         level_12:
           abilities:
           - Guardian Spirit # Replenish
-          - Tier Three Spells
         level_13:
           abilities:
           - Ward Conversion # Healing
@@ -358,9 +358,8 @@ Paladin:
           - Major Offhand Spell
         level_15:
           abilities:
-          # - Legendary Guardian Ward # This is too much.
+          - Major Guardian Ward
           - Greater Holy Shield #Healing
-          - Tier Four Spells
       questions:
         - What deity does your character worship?
         - What their relationship is like with their deity? Do they pray to them often?
@@ -372,6 +371,8 @@ Paladin:
 Ranger:
   subclasses:
     Ranger:
+      base_armor: 5
+      caster: no
       roles: ["self-sufficient", "good-first-class", "high-damage", "mage", "ranged", "sneaky", "nature-based"]
       base_stats:
         Charisma: -1
@@ -397,7 +398,7 @@ Ranger:
         # at navigating the wilderness? Do they feel the need to protect villagers? What
         # kinds of monsters have they fought? Who trained them, if anyone? How will being
         # a ranger affect the way that you interact with your party?
-      health_die_pieces: 8
+      health_die_pieces: 6
       levels:
         level_0:
           abilities:
@@ -552,6 +553,8 @@ Ranger:
 Fighter:
   subclasses:
     Telepath:
+      caster: off
+      base_armor: 5
       roles: ["high-damage", "mage", "support", "ranged", "area-control", "complex"]
       base_stats:
         Charisma: -2
@@ -576,7 +579,6 @@ Fighter:
       levels:
         level_0:
           abilities:
-          - Chosen Weapon Proficiency
           - Telekinetic Lift # Lift 10 pounds
           - Minor Telekinesis # Cost 1. You may make any hand to hand dex or STR check at a distance of 15 feet.
           - Thick Headed # Advantage against enemies breaking into your mind.
@@ -648,6 +650,8 @@ Fighter:
 Highborn:
   subclasses:
     Heroic Highborn:
+      caster: no
+      base_armor: 5
       roles: ["charismatic", "complex", "support", "non-magic", "mobile", "self-sufficient", "non-magic"]
       base_abilities:
       - My Father's Coffers
@@ -751,6 +755,8 @@ Highborn:
 Monk:
   subclasses:
     Monk:
+      caster: no
+      base_armor: 5
       roles: ["sneaky", "high-damage", "non-magic", "self-sufficient", "mobile"]
       base_stats:
         Charisma: -2
@@ -838,7 +844,6 @@ Monk:
         level_12:
           abilities:
           - Major Resting Meditation
-          - Greater Dodging Stance
         level_13:
           abilities:
           - Greater Combo # No cost for combo-ed attack.
@@ -856,6 +861,8 @@ Monk:
 Rogue:
   subclasses:
     Thief:
+      caster: no
+      base_armor: 5
       roles: ["mobile", "sneaky", "complex", "mobile", "low-health", "non-magic"]
       base_stats:
         Charisma: 1
@@ -908,8 +915,8 @@ Rogue:
           - Flank # If an enemy is harried, get behind them to hide and gain advantage.
         level_5:
           abilities:
-          - Greater Dodge
           - Ride the Blindspot # If flanked enemy tries to turn to look at you, spend an action point to pivot around behind them.
+          - Greater Dodge
         level_6:
           abilities:
           - Assisted Strike # If an ally gives you adv on an attack, instead add a dice of damage. Stacks.
@@ -941,7 +948,6 @@ Rogue:
           - Greater Flow with the Battle # No movement cost from moving through enemy spaces
         level_14:
           abilities:
-          - Major Dodge
         level_15:
           abilities:
           - Redirecting Dodge # Redirect
@@ -954,6 +960,8 @@ Rogue:
         - Remember, just because you are a rogue doesn't mean you can't have friends!
       tag_line: Sneak-thief
     Assassin:
+      caster: no
+      base_armor: 5
       roles: ["mobile", "mage", "sneaky", "good-first-class", "mobile", "low-health", "high-damage", "self-sufficient"]
       base_stats:
         Charisma: -1
@@ -1056,6 +1064,8 @@ Rogue:
 Bard:
   subclasses:
     Bard:
+      caster: full
+      base_armor: 5
       roles: ["good-first-class", "mage", "spellbooks", "support", "healer", "ranged", "charismatic", "self-sufficient"]
       base_abilities:
       - Spell Choice
@@ -1161,6 +1171,8 @@ Cleric:
     their deity, paying them homage and working to enact their will in the world."
   subclasses:
     Cleric:
+      caster: full
+      base_armor: 5
       base_abilities:
       - Spell Choice
       base_stats:
@@ -1263,6 +1275,8 @@ Cleric:
 Druid:
   subclasses:
     Elementalist Druid:
+      caster: full
+      base_armor: 5
       roles: ["mage", "spellbooks", "nature-based", "ranged", "support", "good-first-class"]
       base_abilities:
       - Spell Choice
@@ -1300,11 +1314,7 @@ Druid:
       levels:
         level_0:
           abilities:
-          - Learning Spells
-          - Learn Spells
-          - Melee Weapon Proficiency
           - The Druid's Field Guide
-          - Tier Zero Spells
           - Chosen Element # Choose an element from the list to be your primary element. Fire, Water, Earth, Air.
           - Empowered Elements # Enemies must make spell power saves against elements you have chosen with disadvantage
         level_1:
@@ -1313,7 +1323,6 @@ Druid:
         level_2:
           abilities:
           - Elemental Strike
-          - Tier One Spells
         level_3:
           abilities:
           - Second Element
@@ -1322,17 +1331,15 @@ Druid:
           - Elemental Resistance # You gain resistance to damage from your chosen elements.
         level_5:
           abilities:
-          - Tier Two Spells
         level_6:
           abilities:
           - Third Element
         level_7:
           abilities:
           - Offhand Spell
-          - Greater Empowered Elements
         level_8:
           abilities:
-          - Tier Three Spells
+          - Greater Empowered Elements
         level_9:
           abilities:
           - Final Element
@@ -1341,7 +1348,6 @@ Druid:
           - Elemental Ascension
         level_11:
           abilities:
-          - Tier Four Spells
           - Pure Elemental Attack
         level_12:
           abilities:
@@ -1353,7 +1359,6 @@ Druid:
           - Elemental Aura
         level_14:
           abilities:
-          - Tier Five Spells
           - Stay on Your Feet
         level_15:
           abilities:
@@ -1362,9 +1367,9 @@ Druid:
 Necromancer:
   subclasses:
     Necromancer:
+      caster: full
+      base_armor: 5
       roles: ["mage", "low-health", "spellbooks", "high-damage", "undead", "ranged", "companion-creature"]
-      base_abilities:
-      - Spell Choice
       base_stats:
         Charisma: -2
         Dexterity: 0
@@ -1391,14 +1396,10 @@ Necromancer:
       levels:
         level_0:
           abilities:
-          - Learning Spells
-          - Learn Spells
           - The Macabre Manual
-          - Tier Zero Spells
           - Soul Jar
           - Soul Harvest
           - Soul Based Magic
-          - Soul Detection
           - Mortal Coil
           - Vegan
           - Minor Undead Minions
@@ -1406,11 +1407,10 @@ Necromancer:
         level_1:
           abilities:
           - Infusion of Life # Consume a soul to add +1 to a stat or gain 1d10 health. If 4 in a day, mortal coil 1/day for 3 days.
-          - Dark Blade
+          # - Dark Blade
           - Resurrect Zombie
         level_2:
           abilities:
-          - Tier One Spells
           - Greater Undead Minions
         level_3:
           abilities:
@@ -1422,7 +1422,6 @@ Necromancer:
           - Eyes of the Others
         level_5:
           abilities:
-          - Tier Two Spells
           - Major Undead Minions
         level_6:
           abilities:
@@ -1434,7 +1433,6 @@ Necromancer:
           - Offhand Spell
         level_8:
           abilities:
-          - Tier Three Spells
           - Reap
         level_9:
           abilities:
@@ -1445,7 +1443,6 @@ Necromancer:
           - Phylactery
         level_11:
           abilities:
-          - Tier Four Spells
           - Resurrect Death Knight
         level_12:
           abilities:
@@ -1465,6 +1462,8 @@ Necromancer:
 Sorcerer:
   subclasses:
     Sorcerer:
+      caster: full
+      base_armor: 5
       roles: ["mage", "spellbooks", "companion-creature", "charismatic", "ranged"]
       base_abilities:
       - Spell Choice
@@ -1558,6 +1557,8 @@ Sorcerer:
 Wizard:
   subclasses:
     Wizard:
+      caster: full
+      base_armor: 5
       roles: ["mage", "spellbooks", "low-health", "ranged", "companion-creature", "good-first-class"]
       base_abilities:
       - Historian
@@ -1584,16 +1585,11 @@ Wizard:
       levels:
         level_0:
           abilities:
-          - Spell Choice
-          - Learn Spells
-          - Learning Spells
           - Novice Spellbook
           - The Wizard's Addendum
-          - Tier Zero Spells
           - Natural Intellect # Adv on INT checks.
         level_1:
           abilities:
-          - Tier One Spells
           - Looming Presence # Adv when intimidating lower int.
         level_2:
           abilities:
@@ -1604,7 +1600,6 @@ Wizard:
           - Minor Homunculus
         level_4:
           abilities:
-          - Tier Two Spells
           - Channel Untapped Magic
         level_5:
           abilities:
@@ -1615,7 +1610,6 @@ Wizard:
         level_7:
           abilities:
           - Offhand Spell
-          - Tier Three Spells
           - Deadman's Contingency
           - Efficient Enchantment
         level_8:
@@ -1627,7 +1621,6 @@ Wizard:
           - Greater Channel Untapped Magic
         level_10:
           abilities:
-          - Tier Four Spells
           - Spell Invention
         level_11:
           abilities:
@@ -1638,7 +1631,6 @@ Wizard:
           - Major Channel Untapped Magic
         level_13:
           abilities:
-          - Tier Five Spells
           - Magic Redirection
         level_14:
           abilities:
@@ -1653,6 +1645,8 @@ Wizard:
 Archer:
   subclasses:
     Archer:
+      caster: off
+      base_armor: 5
       roles: ["ranged", "mage", "good-first-class"]
       base_stats:
         Charisma: 0
@@ -1743,6 +1737,8 @@ Archer:
 Gunslinger:
   subclasses:
     Marksman:
+      caster: no
+      base_armor: 5
       roles: ["ranged", "high-damage", "non-magic", "good-first-class"]
       base_stats:
         Charisma: 1

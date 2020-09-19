@@ -282,7 +282,7 @@ Waterborn:
       - Water Breathing
       - Flows Like Water
       - Water Healing
-      # - Become Mist
+      - Become Mist
       - Charm
       - Lightweight
       quote: Most Waterborn I've seen have been dried up and dying. Their need
@@ -346,7 +346,6 @@ Daemonspawn:
       - Fix Your Eyes on Me
       - Sacrificial Rite
       - True Sight
-      - Sleepless
       - Incombustible
       quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
         to use their dark and terrible magicks as to give you a passing smile. I've never met

@@ -1,7 +1,3 @@
-Light Sleeper:
-  description: "Make perception checks without disadvantage while sleeping"
-  type: advantage
-  brief: "Make PER checks while sleeping without disadvantage."
 A Thief's Gear:
   description: You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and
     a hidden 1d6 dagger.
@@ -85,9 +81,9 @@ Greater Mage Shield:
   brief: Reaction. For 3 action points, stop an enemy's attack.
   cost: 1
 Bash:
-  description: Stun an enemy on a critical hit, causing them to miss an action and an offhand action on their next turn.
+  description: Stun an enemy on a critical hit. They must make a spell power save or miss an action and an offhand action on their next turn.
   type: combat
-  brief: Stun an enemy on a critical hit.
+  brief: "Stun an enemy on a critical hit. SP save. Fail: miss an action and offhand on their next turn"
 # Beast Form:
 #   description: Spend 1 action point to reveal the beast within. Add +1 to strength, dexterity,
 #     and inner fire, and gain your level in temporary hit points. You stay in this form for 3 turns. Gives
@@ -95,20 +91,14 @@ Bash:
 #   type: combat
 #   brief: Lasts 3 turns, add +1 to STR, DEX, VIT and INF. Advantage on intimidation.
 #   cost: 1
-Beauty Incarnate:
-  description: Due to your beauty, you have advantage on charisma checks when dealing
-    with races that find you attractive.
-  type: advantage
-  brief: You have advantage when dealing with races that find you attractive.
 Become Mist:
-  description: Spend one action point to become mist to have an attack pass right through
-    you as a reaction.
+  description: As a reaction, spend one action point to flow like mist, increasing your armor by 5.
   type: combat
-  brief: Reaction. Become mist to have an attack pass through you.
+  brief: Reaction. Become mist increasing your armor by 5.
   cost: 1
 Bellow:
   description: On your turn, spend one action point to unleash a mighty bellow.
-    All who hear must make an Spell Power save of be frightened.
+    All who hear must make an spell power save of be frightened.
   type: combat
   brief: Force all in earshot to make an SP Save. Frightened on failure.
   cost: 1
@@ -120,11 +110,6 @@ Berserk:
   type: combat
   brief: +1 STR, DEX. ADV on SP saves. Half physical dmg. 1 hour. Fatigue if ended early.
   cost: 1
-Mighty:
-  description: "Through arduous physical training, you have become immensely strong
-                 add 1d6 to any strength checks."
-  brief: "Add 1d6 to STR checks."
-  type: advantage
 # Berserker:
 #   description: You take half damage from physical attacks while going berserk.
 #   type: combat
@@ -193,11 +178,6 @@ Boot Knife:
   description: You carry a hidden d6 knife in your boot.
   type: starting_item
   brief: You start with a 1d6 knife.
-Boozehound:
-  description: You have a very high tolerance for alcohol. Do not take disadvantage
-    when drunk.
-  type: advantage
-  brief: Don't take disadvantage when drunk.
 Born in the Saddle:
   description: Gain +1d6 to initiative when on horseback.
   type: combat
@@ -208,20 +188,12 @@ Build:
   type: rule
   brief: If you have a recipe for an item, you can build it. You can attempt to make 1 per rest,
     2 per sleep.
-Sleight of Hand:
-  description: You have advantage when performing sleight of hand actions.
-  type: advantage
-  brief: "You have advantage on sleight of hand."
 Carry a Tune:
   description: Offhand. You know a song which, when sung, grants all members of your party
    +1 to a stat of your choice. Concentration.
   type: general
   brief: Offhand. Concentration. Sing a song which gives teammates +1 to a stat.
   cost: 1
-Cartwheel:
-  description: Gain advantage on acrobatics checks.
-  type: advantage
-  brief: Gain advantage on acrobatics.
 Disarming Blow:
   description: "Add an extra dice of damage. If the attacked enemy fails a spell power save, they must drop an item they are holding of your choice."
   type: combat
@@ -277,10 +249,10 @@ Rope Arrows:
   cost: 1
 Explosive Arrows:
   description: After much experimentation, you have finally mastered the art of crafting
-    explosive arrows. Explosive arrows do 4d10 damage to all enemies
+    explosive arrows. Explosive arrows do 4d8 damage to all enemies
     in a twenty foot radius.
   type: general
-  brief: 4d10 explosion with a 20 foot radius.
+  brief: 4d8 explosion with a 15 foot radius.
   cost: 2
 Delayed Explosive Arrows:
   description: Fire an explosive arrow which detonates when you speak a command word.
@@ -359,13 +331,6 @@ Cheap Blow:
   description: On a critical hit, knock an enemy prone.
   type: combat
   brief: On a crit, knock an enemy prone.
-Color Choice:
-  description: You may choose what color your scales are. Scales may
-    hold only three colors at a time unless Camouflage is being used.
-    This may be used to gain advantage on a stealth check.
-  type: advantage
-  brief: Change scales' color. Advantage on stealth checks.
-  cost: 1
 Commit to Memory:
   description: At the beginning of a day, you may commit one spell to memory of tier 2 or greater.
     For the remainder of the day, that spell costs 1 fewer action points.
@@ -417,11 +382,13 @@ Infusion of Life:
     1d10 health. If you consume more than 3 in a day, decrease the time limit on Mortal
     Coil to once per day for three days.
   type: general
-  brief: Eat a soul. +1 to stat or d10 heal. If 4/day eaten, Mortal Coil 1/day 3 days.
+  cost: 1
+  brief: Eat a soul. +1 to stat or 1d10 heal. If 4/day eaten, Mortal Coil 1/day 3 days.
 Army of the Damned:
   description: As an action, resurrect every entity within 100 feet as a zombie
     at the cost of 5 souls.
   type: general
+  cost: 5
   brief: Resurrect every entity within 100 feet as a zombie for 5 souls.
 Eyes of the Others:
   description: You are able to see through the eyes of your minions, though you may not command them in this way.
@@ -443,21 +410,6 @@ Favorite Terrain:
   type: choice
   brief: Select a favorite terrain. When you are on it, you have advantage on checks related to it,
     and gain advantage on every third turn during combat.
-Fear of Water:
-  description: You have disadvantage when soaked through.
-  type: disadvantage
-  brief: You have disadvantage when wet.
-Fear the Light:
-  description: You are considered undead, and therefore take extra damage from holy
-    weapons.
-  type: disadvantage
-  brief: You are considered undead, and take extra damage from holy weapons.
-Born in Darkness:
-  description: You are incredibly light sensitive, and take 1d6 damage per hour spent
-    with your skin exposed to bright light or to the sun. As a result, you must wear
-    protective garments during the day.
-  type: disadvantage
-  brief: You take 1d6 damage per hour when in sunlight unless shaded.
 Feint:
   description: You may roll a d20 against an enemy attack. Reduce
     the attack by the amount rolled.
@@ -476,10 +428,6 @@ Lighter Gear:
   description: You spend time crafting lighter gear for yourself and gain +2 on dexterity checks.
   type: general
   brief:  You gain +2 on dex checks
-Predator:
-  description: When tracking, you have advantage on perception checks.
-  type: advantage
-  brief: When tracking, advantage on perception.
 Mending:
   description: Given a few hours, you can repair most steel made items.
   type: general
@@ -582,7 +530,7 @@ Fire and Ice:
   brief: Imbue 1 weapon with fire and another with ice (or only one weapon for 1 cost). Extra dice of damage for 1 battle.
   cost: 2
 Hammer of Light:
-  description: Any weapon that you wield does an additional dice of damage to undead.
+  description: Any weapon that you wield does an additional 1d6 damage to undead.
   type: combat
   brief: You do an additional dice of damage to undead.
 Minor Hand to Hand Combat:
@@ -601,10 +549,6 @@ Legendary Hand to Hand Combat:
   description: Your melee attacks deal 1d10 damage, but are not considered weapon attacks.
   type: general
   brief: Your melee attacks deal 1d10 damage but are not weapon attacks.
-Listen:
-  description: "You have advantage on perception checks. Does not include initiative."
-  type: advantage
-  brief: You have advantage on perception checks.
 Inner Eye:
   description: "You are able to make perception checks to detect spiritual energy and magic."
   type: general
@@ -645,17 +589,9 @@ Keep Close:
 Dodging Stance:
   description: "As an Offhand Action, move into a dodging stance. As a reaction before your next
                 turn, when you are the target of a targeted attack,
-                make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
+                increase your armor by 5."
   type: combat
-  brief: "Offhand. This turn as a reaction when you are the target of an attack, contested DEX to avoid."
-Greater Dodging Stance:
-  description: "As an Offhand Action, move into a dodging stance. Whenever you are the
-                target of a targeted attack
-                before your next turn,
-                make a contested Dexterity check against the attacking enemy. On success, you avoid the attack."
-  type: combat
-  brief: "Offhand. Before next turn, whenever you are the target of an attack, contested DEX to avoid."
-
+  brief: "Offhand. This turn as a reaction when you are the target of an attack, increase your armor by 5."
 Grappling Dodge:
   description: "When you successfully dodge an enemy melee attack, you may make a contested strength check to attempt to
                 grapple them."
@@ -759,15 +695,6 @@ High Ground:
   description: You have advantage on plunging attacks.
   type: combat
   brief: You have advantage on plunging attacks
-Historian:
-  description: You have a deep knowledge of the land in which your adventure takes
-    place. You gave advantage on any history or geography checks.
-  type: advantage
-  brief: You have advantage on history or geography checks.
-Natural Intellect:
-  description: "You have a natural intelligence which grants you advantage on intelligence checks."
-  type: advantage
-  brief: Advantage on intelligence checks.
 Hobble:
   description: You are capable of quickly tying very strong knots without a check. If you have an entity grappled,
     you may hobble them with an action. Hobbled entities may attempt a strength saving throw against your spell power each turn to
@@ -788,18 +715,6 @@ Huntsman:
   description: You have advantage when attacking beasts.
   type: combat
   brief: You have advantage when attacking beasts.
-Intimidate:
-  description: "You have advantage on intimidation checks."
-  type: advantage
-  brief:  You have advantage on intimidation.
-Kingsmen:
-  description: Gain advantage on charisma checks when speaking with kingsmen.
-  type: advantage
-  brief: You have advantage on charisma with kingsmen.
-Ruffians:
-  description: Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.
-  type: advantage
-  brief: You have advantage on charisma with common or seedy folk.
 Land on your feet:
   description: Decrease any falling damage by 20 feet.
   type: general
@@ -825,10 +740,6 @@ Learned:
   description: You are fluent in an extra language of your choosing.
   type: choice
   brief: You are fluent in 1 extra language.
-Lightfoot:
-  description: Gain advantage on stealth checks.
-  type: advantage
-  brief: Gain advantage on stealth.
 Lightweight:
   description: Any cup of alcohol affects you like two.
   type: general
@@ -837,11 +748,6 @@ Longbow:
   description: You begin your journey with a d6 longbow.
   type: starting_item
   brief: You have a 1d6 longbow.
-Looming Presence:
-  description: Gain advantage when attempting to intimidate anything of lower intelligence
-    than yourself.
-  type: advantage
-  brief: Gain advantage when intimidating entities with lower INT.
 Enchanting:
   description: "You may store a cost 0 spell within a crystal valued at 10 gold.
                   cost 1 in a gem valued at 100 gold, cost 2 in a crystal valued at 1,000 gold, etc.
@@ -932,32 +838,10 @@ Deadman's Contingency:
                 by an ethereal entity which acts as your proxy, and which exists for sixty seconds."
   type: general
   brief: "Plan for when you hit zero health. Can use 3 spells. Requires power source."
-
-Camouflage:
-  description: If you stay absolutely still, you can take on the color of your surroundings.
-    This gives you advantage on stealth checks while camouflaged.
-  type: advantage
-  brief: Stealth advantage when still.
-Loose Skin:
-  description: You have advantage when breaking grapples.
-  type: advantage
-  brief: Gain advantage on breaking grapples.
 Low-Light Vision:
   description: You can see in low light.
   type: general
   brief:  You can see in low light.
-Mantle:
-  description: You have advantage on dexterity checks when climbing.
-  type: advantage
-  brief: Gain advantage on climbing.
-Master of Disguise:
-  description: You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.
-  type: advantage
-  brief: Gain advantage when crafting disguises.
-Forgeborn:
-  description: When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.
-  type: advantage
-  brief: Gain advantage when appraising or mending stone or steel.
 Incombustible:
   description: You take half damage from heat and fire.
   type: general
@@ -1153,10 +1037,6 @@ Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
   type: choice
   brief: You know an extra tier 0 spell.
-Born in the Saddle:
-  description: You have advantage on all dexterity checks made while on horseback, and on any checks made to control or guide your animal.
-  type: advantage
-  brief: You have advantage on dexterity and animal handling when on horseback.
 Mounted Warrior:
   description: You begin your journey with a well trained horse.
   type: starting_item
@@ -1275,10 +1155,6 @@ Parry:
   description: As a reaction, spend a Gumption to parry an incoming physical attack. Role a contested Dexterity check against an enemy. On success, take no damage..
   type: combat
   brief: Reaction. Spend 1 Gumption. Contested DEX check. On success, no damage.
-My People:
-  description: "Gain advantage when speaking with guards, respectable individuals, and upper-class merchants."
-  type: advantage
-  brief: "CHA advantage with guards, respectable individuals, and upper-class merchants."
 Disarming:
   description: Reaction. Force an enemy that attacks you to make an inner fire
                saving throw against 12 + your charisma. If they fail, their attack must be made with disadvantage.
@@ -1288,10 +1164,6 @@ Gallant Resolve:
   description: Spend one Gumption to heal yourself for your level in health.
   type: general
   brief: "Spend 1 Gumption to heal yourself for your level in health."
-Commanding Presence:
-  description: "Add 1d6 to all of your Charisma checks."
-  type: advantage
-  brief: "Add 1d6 to all CHA checks."
 Bravery:
   description: Gain 1d4 Gumption at the start of each battle.
   type: general
@@ -1312,10 +1184,6 @@ My Father's Oboe:
   description: You are proficient and start with two instruments of your choice.
   type: choice
   brief: You are proficient with 2 instruments.
-Nimble Fingers:
-  description: You have advantage on dexterity and stealth checks made while stealing.
-  type: advantage
-  brief: Gain advantage on DEX when stealing.
 Novice Spellbook:
   description: You are able to learn spells from the Novice Spellbook.
   type: spellbook
@@ -1325,15 +1193,6 @@ Old Hand:
     You can role a perception check as an offhand action to get an idea of an enemy's remaining health.
   type: combat
   brief: You can attempt to perceive enemy stats.
-Uncanny Perception:
-  description: You have uncanny perception, which allows you to sense your way in total darkness,
-    gives you advantage on all perception checks, and lets you role initiative with advantage.
-  type: advantage
-  brief: You can see in pitch dark, have PER advantage, and role initiative with advantage.
-Padfoot:
-  description: You have advantage on stealth checks.
-  type: advantage
-  brief: Gain advantage on stealth.
 Pledge:
   description: At the start of your journey, you may select a deity to pledge yourself
     to.
@@ -1359,14 +1218,6 @@ Rally:
   type: combat
   brief: Give all allies a 1d8 insp dice.
   cost: 1
-Regular Patron:
-  description: You may add 1d6 to charisma checks made in a tavern.
-  type: advantage
-  brief: Add 1d6 to CHA checks made in a tavern.
-Resist Magic:
-  description: You make any rolls against an enemy's spell power with advantage.
-  type: advantage
-  brief: Make checks against an enemy's spell power with advantage.
 See and Remember:
   description: Once you see something, you will probably remember it.
   type: general
@@ -1406,10 +1257,6 @@ Sling:
   description: Your character begins their journey with a 1d4 sling.
   type: starting_item
   brief: You have a 1d4 sling.
-Smokevision:
-  description: Your double eyelids allows you to see well when underwater or in smoke.
-  type: advantage
-  brief: You can see when underwater or in smoke.
 Soft Bed:
   description: You recover two extra health dice from sleeping in a real bed.
   type: general
@@ -1439,14 +1286,17 @@ Larger Soul Jar:
 Resurrect Skeleton:
   description: "Spend 1 soul to raise a skeletal minion from a fallen entity. See the book of known beasts for details."
   type: general
+  cost: 1
   brief: "Spend 1 soul to raise a skeleton from the corpse of a fallen entity. See the Book of Known Beasts for Stats."
 Resurrect Zombie:
   description: "Spend 2 souls to raise a zombie minion from a fallen entity. See the book of known beasts for details."
   type: general
+  cost: 2
   brief: "Spend 2 souls to raise a zombie from the corpse of a fallen entity. See the Book of Known Beasts for Stats."
 Resurrect Ghoul:
   description: "Spend 3 souls to raise a ghoul from a fallen entity. See the book of known beasts for details."
   type: general
+  cost: 3
   brief: "Spend 3 souls to raise a ghoul from the corpse of a fallen entity. See the Book of Known Beasts for Stats."
 Resurrect Death Knight:
   description: "Spend 4 souls to resurrect a Death Knight to aid you. See the book of known beasts for
@@ -1457,6 +1307,7 @@ Resurrect Abomination:
   description: "Spend 5 souls to knit together a monstrous abomination to fight for you. Requires
                 5 corpses. See the book of known beasts for details."
   type: general
+  cost: 5
   brief: "Spend 5 souls to raise an abomination from the corpses of 5 fallen entities. See the Book of Known Beasts for Stats."
 Soul Detection:
   description: "You are able to detect life and freshly dead corpses at a range of 30 feet."
@@ -1482,10 +1333,6 @@ Spell Choice:
   description: At the start of your journey, you know 2 extra tier zero spells.
   type: choice
   brief: You know 2 extra tier 0 spells.
-Steady:
-  description: Do not take disadvantage when being jostled about.
-  type: advantage
-  brief: No disadvantage when being jostled.
 Still Warm:
   description: You can eat raw meat without penalty.
   type: general
@@ -1505,11 +1352,6 @@ Sword and Spell:
   description: Once every three turns, combine a spell and a physical attack into one attack action.
   type: combat
   brief: 1/3 turns, combine a spell and a physical attack in one attack action.
-Tackle:
-  description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
-    strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.
-  type: advantage
-  brief: Advantage when grappling. Choose STR or DEX contested save.
 Adaptable:
   description: Once affected by an effect or spell, gain advantage on saves against it for the remainder
     of the day.
@@ -1575,11 +1417,6 @@ They're Retractable:
   description: You have retractable, razor sharp claws which add +2 damage to your punching or kicking attacks.
   type: combat
   brief: Your punch and kick attacks deal +2 damage.
-Thick Headed:
-  description: You have advantage on any checks involving an enemy breaking into your
-    mind or dominating you.
-  type: advantage
-  brief: You have advantage when enemies try to break into your mind.
 This is my Weapon:
   description: Your gun is the only friend you need. Make sure to give it a name.
   type: choice
@@ -1649,21 +1486,15 @@ Throw Anything:
   type: general
   brief: You can throw anything up to one size larger than yourself.
 Thunderous Blow:
-  description: Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.
+  description: On a critical hit, knock the enemy back 10 feet.
   type: combat
-  brief: Add an extra dice to an attack. On a crit, knock the target prone or back 10 feet.
-  cost: 1
+  brief: On a crit, knock the back 10 feet.
 Tinker:
   description: Every night, you can attempt to to create a device. Once you create
     one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs,
     firebombs, and saddles. (Tinkering requires an intelligence check)
   type: general
   brief: 1/night, attempt to invent a recipe. Begin with smoke bomb, firebomb, saddle.
-Tracker:
-  description: You are an excellent tracker, and have advantage when looking for trails
-    and sign of passage.
-  type: advantage
-  brief: You have advantage when tracking.
 Expert Tracker:
   description: Add 1d6 to any checks made to track an individual.
   type: general
@@ -1704,23 +1535,6 @@ Water Healing:
   description: When you sleep in water, it is as if you are in a bed.
   type: general
   brief: Sleep in water is like sleep in a bed.
-Winged Feet:
-  description: You have advantage on acrobatics checks.
-  type: advantage
-  brief: You have advantage on acrobatics.
-Wink Wink, Nudge Nudge:
-  description: Due to your beauty, you have advantage on charisma checks when dealing
-    with races that find you attractive.
-  type: advantage
-  brief: You have advantage when dealing with races that find you attractive.
-Stocky:
-  description: You have advantage against any check that could cause you to go prone.
-  type: advantage
-  brief:  You have advantage against checks made to knock you over.
-Very Dangerous Over Short Distances:
-  description: If you begin your turn next to an enemy, take advantage on your attack roll. Does not negate the harried condition.
-  type: advantage
-  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Does not negate the harried condition.
 Stone Skin:
   description: You take half damage on blunt force attacks, such as being hit with a club.
   type: general
@@ -1733,9 +1547,9 @@ Fix Your Eyes on Me:
   brief: "Force SP save. Fail: you have advantage on CHA and enemy can only attack you."
   cost: 1
 Sacrificial Rite:
-  description: "At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest."
+  description: "At the cost of your level in health (minimum 2), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest."
   type: combat
-  brief: At the cost of your level in hp (min 1), make an extra action. Damage cannot be healed until your next long rest.
+  brief: At the cost of your level in hp (min 2), make an extra action. Damage cannot be healed until your next long rest.
 Brutal Attack:
   description: "Add an additional dice of damage to an attack and force your enemy to make a contested Strength check. The enemy takes advantage if they are larger than you, or disadvantage if they are smaller. On failure, they are knocked prone."
   type: combat
@@ -1891,11 +1705,7 @@ Greater Guardian Ward:
 Major Guardian Ward:
   description: "Your guardian wards now grant +3 armor"
   type: combat
-  brief: "Guardian wards now grant +3 armor."
-Legendary Guardian Ward:
-  description: "Your guardian wards now grant +5 armor"
-  type: combat
-  brief: "Guardian wards now grant +5 armor."
+  brief: "Guardian wards now grant +2 armor."
 Second Guardian Ward:
   description: "You may now place guardian wards on two allies."
   type: combat
@@ -1932,9 +1742,9 @@ Enhanced Healing:
   type: combat
   brief: "Add an extra dice of healing to allies with a guardian ward."
 Last Hope:
-  description: Double any healing that you do while an ally has fallen in this combat or is currently at death's door.
+  description: Add an additional dice to any healing that you do while an ally has fallen in this combat or is currently at death's door.
   type: combat
-  brief: "Double healing while an ally is down or has died in this combat."
+  brief: "Add an additional dice to any healing while an ally is down or has died in this combat."
 Beacon of Hope:
   description: Passive. All allies within 100 feet of you gain +2 to all saving throws.
   type: combat
@@ -1963,13 +1773,6 @@ Ready Stance:
   description: "As an offhand action, ready your stance. One time you are attacked before your next turn, counterattack."
   type: combat
   brief: "Offhand: one time you are attacked before next turn, counterattack."
-Dodging Stance:
-  description: "For 1 Action Point, move into a dodging stance as an Offhand Action.
-                Whenever you are attacked before your next turn, the enemy must roll a
-                contested Dexterity check or miss."
-  type: combat
-  brief: "Offhand. Move into a dodging stance. Whenever you are attacked before next turn, contested DEX or half damage."
-  cost: 1
 Knight's Challenge:
   description: "As an offhand action, issue a challenge to one of your enemies. The enemy must make an spell power save or be forced to attack only you. Regardless, you have advantage when attacking a challenged enemy."
   cost: 1
@@ -2146,15 +1949,6 @@ Winged Jump:
   type: combat
   brief: Offhand. Leap 15 feet using angelic wings.
   cost: 1
-Side by Side:
-  description: Gain advantage on attacks if you stand shoulder to shoulder with an ally.
-  type: advantage
-  brief: Advantage on attacks if adjacent to an ally.
-  cost: 1
-Lionhearted:
-  description: Spend 1 Gumption to make a spell power save with advantage.
-  type: advantage
-  brief: Spend 1 Gumption to make a spell power save with advantage.
 Greater Lionhearted:
   description: Spend 5 Gumption to ignore a spell.
   brief: Spend 5 Gumption to ignore a spell.
@@ -2257,7 +2051,7 @@ Greater Spell of Distraction:
   description: "As an offhand action, you may use magic to create a large distraction within 100 feet of yourself. This can
                 include a moderately sized illusion,
                 very loud noise or bright light, or the sound of someone's voice that you have heard. When in
-                combat, all enemies within 30 feet of your target must make an spell power saving throw or loose
+                combat, all enemies within 30 feet of your target must make an spell power saving throw or lose
                 an action on their next turn and have the next attack against them be made at advantage."
   type: general
   brief: Offhand. Create a loud noise or bright light. Enemies within 30ft. make an SP save or lose an action and have the next attack against them at advantage.
@@ -2543,14 +2337,13 @@ Gyroscopic Center of Mass:
   type: combat
   brief: Add +5 to any check that involves knocking you prone.
 Armored Exterior:
-  description: "You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice."
+  description: "You naturally have resistance to piercing, slashing, and blunt damage."
   type: general
-  brief: You have resistance to piercing, slashing, blunt, fire, and ice attacks.
+  brief: You have resistance to piercing, slashing, and blunt damage.
 Piston Punch:
-  description: "Perform an attack which ignores enemy armor."
+  description: "Your unarmed attacks deal 1d8 damage."
   type: combat
-  brief: Perform an attack which ignores enemy armor.
-  cost: 1
+  brief: Your unarmed attacks deal 1d8 damage.
 Upgrades:
   description: A tinker can craft upgrades for you.
   type: rule
@@ -2563,21 +2356,11 @@ Blade of Grass:
   description: Summon a 1d6 blade of woven plant fiber on command.
   type: general
   brief: You can summon a 1d6 grass blade.
-Scurry:
-  description: You have advantage on dexterity based athletics checks.
-  type: advantage
-  brief: Gain advantage on DEX athletics checks.
 Dodge:
-  description: "Once per turn when you are the target of a targeted attack,
-                the enemy must roll a contested Dexterity check or miss."
+  description: "As a reaction, increase your armor by 5."
   type: combat
-  brief: "Once per turn when targeted. Roll a contested DEX check. Success: attack misses."
+  brief: "As a reaction, increase your armor by 5"
 Greater Dodge:
-  description: "Every time you are the target of a targeted attack, the enemy
-                must succeed a contested Dexterity check or miss."
-  type: combat
-  brief: "Whenever targeted. Roll a contested DEX check. Success: attack misses."
-Major Dodge:
   description: "If an enemy beats your dodge by 2 or less, take half damage."
   type: combat
   brief: "If an enemy beats your dodge by 2 or less, take half damage."
@@ -2969,7 +2752,7 @@ Elemental Ascension:
           If you are killed in the ascended state,
           you cannot be resurrected."
 Elemental Aura:
-  description: "While in the Ascended State, cast a 30 foot radius of elemental energy. All enemies within the aura take 1 greater dice of
+  description: "While in the Ascended State, cast a 30 foot radius of elemental energy. All enemies within the aura take 2d6 dice of
           damage of an element of your choice."
   type: combat
   brief: "While Ascended, cast a 30ft. radius aura of elemental energy. 1 major dice of elemental damage to all enemies within."
@@ -3062,10 +2845,6 @@ Sustained Healing:
   brief: "Have a healing spell heal half as much on the following turn."
 # CLERIC ABILITIES
 # IRO:
-Lawbringer:
-  description: Followers of Iro have advantage when speaking with lawmen.
-  type: advantage
-  brief: "You have advantage when speaking with lawmen."
 Minor Resilience:
   description: "You gain a permanent +1 armor."
   type: general
@@ -3137,17 +2916,6 @@ Aura of Pain:
   brief: Any enemy within 30 feet of you takes a major dice of damage each turn.
   description: Enemies within 30ft. take a major dice of damage each turn.
   type: general
-Beacon of Growth:
-  brief: Where you trod, green grass grows, and nature itself makes way for your passing.
-    As a result, you have advantage on checks made when moving through difficult natural
-    terrain.
-  description: Advantage on checks made when moving through difficult natural terrain.
-  type: advantage
-Beautiful:
-  brief: As you have served your deity, you have begun to grow more beautiful. Gain
-    advantage on charisma checks made against races who find you attractive.
-  description: Advantage on charisma checks made against races who find you attractive.
-  type: advantage
 Bound to Service:
   brief: Any time that you slay an enemy, it is instead converted into an imp, which
     fights for you.
@@ -3198,25 +2966,6 @@ Defiled Healing:
   brief: Any of your healing spells may instead be used to deal damage.
   description: Any of your healing spells may instead be used to deal damage.
   type: combat
-Demonic Strength:
-  brief: Gain advantage on strength checks.
-  description: Gain advantage on strength checks.
-  type: advantage
-Distrusted by Authorities:
-  brief: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
-  description: Clerics and Paladins of Eandar take disadvantage when speaking with
-    lawmen.
-  type: disadvantage
-Ever of Use:
-  brief: Once per day, channel the power of Lady Dusk to gain advantage on a check.
-  description: Once per day, channel the power of Lady Dusk to gain advantage on a
-    check.
-  type: advantage
-Greater Ever of Use:
-  brief: Twice per day, channel the power of Lady Dusk to gain advantage on a check.
-  description: Twice per day, channel the power of Lady Dusk to gain advantage on a
-    check.
-  type: advantage
 Face of the People:
   brief: At will, you are able to take on the appearance of an average person from
     the region you are in.
@@ -3270,20 +3019,10 @@ God of Undeath:
   brief: You have access to the macabre manual.
   description: You have access to the macabre manual.
   type: general
-God of the Common Man:
-  brief: Clerics and Paladins of Eandar have advantage on charisma checks when speaking
-    with commonfolk.
-  description: You have advantage on charisma checks when
-    speaking with commonfolk.
-  type: advantage
 God of the Woods:
   brief: You have access to spells from the Druid's Guidebook.
   description: You have access to spells from the Druid's Guidebook.
   type: general
-Goddess of Animal Husbandry:
-  brief: You have advantage on animal handling checks.
-  description: You have advantage on animal handling checks.
-  type: advantage
 Goddess of Entertainers:
   brief: You have access to the Bard's Songbook.
   description: You have access to the Bard's Songbook.
@@ -3300,26 +3039,6 @@ Goddess of Marriage:
   description: Gain an additional 10 health if you are under the effect of a Marriage
     or Pledge ritual.
   type: general
-Goddess of Navigation:
-  brief: You have advantage on tracking checks, as well as any roles involving steering,
-    guiding, or working on a ship.
-  description: You have advantage on tracking checks, as well as any roles involving
-    working on a ship.
-  type: advantage
-Goddess of the Hunt:
-  brief: Gain advantage on any tracking and foraging checks. Your spells also have
-    extra potency when cast on beasts. Depending on the spell, this can add an additional
-    dice of damage, healing an extra turn of duration, or give a beast advantage or
-    disadvantage on relavant checks.
-  description: Adv on tracking. Spell potency vs beasts.
-    Additional dice of damage/healing, disadv on checks.
-  type: advantage
-Goddess of the Icy Depths:
-  brief: You have resistance to ice and water based attacks, and have advantage on
-    relavent saves.
-  description: You have resistance to ice and water based attacks, and have advantage
-    on relavent saves.
-  type: advantage
 Goddess of the Water:
   brief: You are able to manipulate small amounts of water at will. For example, you
     may stop rain from falling on your head, or lift water out of a bucket.
@@ -3513,22 +3232,12 @@ Oblivion:
   brief: You do not dream, and you cannot be affected by sleep based spells.
   description: You do not dream, and you cannot be affected by sleep based spells.
   type: general
-Perfect:
-  brief: You have slowly been transformed into a perfect version of yourself. Lose
-    any disadvantage you may have and gain advantage on all charisma checks.
-  description: Lose any disadvantage you may have and gain advantage on all charisma checks.
-  type: advantage
 Precognition:
   brief: You are able to predict a few seconds into the future. All targeted attacks
     against you must be made with disadvantage.
   description: All targeted
     attacks against you must be made with disadvantage.
   type: combat
-Purge the Useless:
-  brief: You gain advantage on attacks made against any entity that is sick or cursed.
-  description: You gain advantage on attacks made against any entity that is sick
-    or cursed.
-  type: advantage
 Purity:
   brief: Healing spells cast by a Cleric or Paladin of Aunora remove most status effects
     from injured individuals.
@@ -3543,11 +3252,6 @@ Shepherd of Darkness:
     and they take disadvantage in all things until they succeed.
   description: Force an SP save. On failure, broken spirit. Disadv until save.
   type: general
-Sly:
-  brief: You become better at evading trouble as you worship your deity. Take advantage
-    on checks made while hiding, lying, or otherwise obfuscating the truth.
-  description: Advantage on checks made while hiding, lying, or otherwise obfuscating the truth.
-  type: advantage
 Sparing Presence:
   brief: If an ally within 30 feet of you is reduced to less than zero health, it's
     health immediately returns to zero. The ally remains on death's door, and must
@@ -3591,6 +3295,260 @@ Waterbreathing:
   brief: You are able to breathe underwater.
   description: You are able to breathe underwater.
   type: general
+# Advantages
+Light Sleeper:
+  description: "Make perception checks without disadvantage while sleeping"
+  type: advantage
+  brief: "Make PER checks while sleeping without disadvantage."
+Beauty Incarnate:
+  description: Due to your beauty, you have advantage on charisma checks when dealing
+    with races that find you attractive.
+  type: advantage
+  brief: You have advantage when dealing with races that find you attractive.
+Mighty:
+  description: "Through arduous physical training, you have become immensely strong
+                 add 1d6 to any strength checks."
+  brief: "Add 1d6 to STR checks."
+  type: advantage
+Boozehound:
+  description: You have a very high tolerance for alcohol. Do not take disadvantage
+    when drunk.
+  type: advantage
+  brief: Don't take disadvantage when drunk.
+Sleight of Hand:
+  description: You have advantage when performing sleight of hand actions.
+  type: advantage
+  brief: "You have advantage on sleight of hand."
+Cartwheel:
+  description: Gain advantage on acrobatics checks.
+  type: advantage
+  brief: Gain advantage on acrobatics.
+Color Choice:
+  description: You may choose what color your scales are. Scales may
+    hold only three colors at a time unless Camouflage is being used.
+    This may be used to gain advantage on a stealth check.
+  type: advantage
+  brief: Change scales' color. Advantage on stealth checks.
+  cost: 1
+Predator:
+  description: When tracking, you have advantage on perception checks.
+  type: advantage
+  brief: When tracking, advantage on perception.
+Listen:
+  description: "You have advantage on perception checks. Does not include initiative."
+  type: advantage
+  brief: You have advantage on perception checks.
+Historian:
+  description: You have a deep knowledge of the land in which your adventure takes
+    place. You gave advantage on any history or geography checks.
+  type: advantage
+  brief: You have advantage on history or geography checks.
+Natural Intellect:
+  description: "You have a natural intelligence which grants you advantage on intelligence checks."
+  type: advantage
+  brief: Advantage on intelligence checks.
+Intimidate:
+  description: "You have advantage on intimidation checks."
+  type: advantage
+  brief:  You have advantage on intimidation.
+Kingsmen:
+  description: Gain advantage on charisma checks when speaking with kingsmen.
+  type: advantage
+  brief: You have advantage on charisma with kingsmen.
+Ruffians:
+  description: Gain advantage on charisma checks when speaking with seedy individuals, townspeople, or bandits.
+  type: advantage
+  brief: You have advantage on charisma with common or seedy folk.
+Lightfoot:
+  description: Gain advantage on stealth checks.
+  type: advantage
+  brief: Gain advantage on stealth.
+Looming Presence:
+  description: Gain advantage when attempting to intimidate anything of lower intelligence
+    than yourself.
+  type: advantage
+  brief: Gain advantage when intimidating entities with lower INT.
+Camouflage:
+  description: If you stay absolutely still, you can take on the color of your surroundings.
+    This gives you advantage on stealth checks while camouflaged.
+  type: advantage
+  brief: Stealth advantage when still.
+Loose Skin:
+  description: You have advantage when breaking grapples.
+  type: advantage
+  brief: Gain advantage on breaking grapples.
+Mantle:
+  description: You have advantage on dexterity checks when climbing.
+  type: advantage
+  brief: Gain advantage on climbing.
+Master of Disguise:
+  description: You can easily fashion disguises to hide yourself with. Gain advantage when crafting disguises.
+  type: advantage
+  brief: Gain advantage when crafting disguises.
+Forgeborn:
+  description: When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.
+  type: advantage
+  brief: Gain advantage when appraising or mending stone or steel.
+Born in the Saddle:
+  description: You have advantage on all dexterity checks made while on horseback, and on any checks made to control or guide your animal.
+  type: advantage
+  brief: You have advantage on dexterity and animal handling when on horseback.
+My People:
+  description: "Gain advantage when speaking with guards, respectable individuals, and upper-class merchants."
+  type: advantage
+  brief: "CHA advantage with guards, respectable individuals, and upper-class merchants."
+Commanding Presence:
+  description: "Add 1d6 to all of your Charisma checks."
+  type: advantage
+  brief: "Add 1d6 to all CHA checks."
+Nimble Fingers:
+  description: You have advantage on dexterity and stealth checks made while stealing.
+  type: advantage
+  brief: Gain advantage on DEX when stealing.
+Uncanny Perception:
+  description: You have uncanny perception, which allows you to sense your way in total darkness,
+    gives you advantage on all perception checks, and lets you role initiative with advantage.
+  type: advantage
+  brief: You can see in pitch dark, have PER advantage, and role initiative with advantage.
+Padfoot:
+  description: You have advantage on stealth checks.
+  type: advantage
+  brief: Gain advantage on stealth.
+Regular Patron:
+  description: You may add 1d6 to charisma checks made in a tavern.
+  type: advantage
+  brief: Add 1d6 to CHA checks made in a tavern.
+Resist Magic:
+  description: You make any rolls against an enemy's spell power with advantage.
+  type: advantage
+  brief: Make checks against an enemy's spell power with advantage.
+Smokevision:
+  description: Your double eyelids allows you to see well when underwater or in smoke.
+  type: advantage
+  brief: You can see when underwater or in smoke.
+Steady:
+  description: Do not take disadvantage when being jostled about.
+  type: advantage
+  brief: No disadvantage when being jostled.
+Tackle:
+  description: You can tackle an enemy up to one size larger than you to the ground. Attempt either a dexterity or
+    strength contested throw against the enemy, on which you have advantage. If they fail, you grapple them.
+  type: advantage
+  brief: Advantage when grappling. Choose STR or DEX contested save.
+Thick Headed:
+  description: You have advantage on any checks involving an enemy breaking into your
+    mind or dominating you.
+  type: advantage
+  brief: You have advantage when enemies try to break into your mind.
+Tracker:
+  description: You are an excellent tracker, and have advantage when looking for trails
+    and sign of passage.
+  type: advantage
+  brief: You have advantage when tracking.
+Winged Feet:
+  description: You have advantage on acrobatics checks.
+  type: advantage
+  brief: You have advantage on acrobatics.
+Wink Wink, Nudge Nudge:
+  description: Due to your beauty, you have advantage on charisma checks when dealing
+    with races that find you attractive.
+  type: advantage
+  brief: You have advantage when dealing with races that find you attractive.
+Stocky:
+  description: You have advantage against any check that could cause you to go prone.
+  type: advantage
+  brief:  You have advantage against checks made to knock you over.
+Very Dangerous Over Short Distances:
+  description: If you begin your turn next to an enemy, take advantage on your attack roll. Does not negate the harried condition.
+  type: advantage
+  brief: If you begin your turn next to an enemy, gain advantage when attacking them. Does not negate the harried condition.
+Side by Side:
+  description: Gain advantage on attacks if you stand shoulder to shoulder with an ally.
+  type: advantage
+  brief: Advantage on attacks if adjacent to an ally.
+  cost: 1
+Lionhearted:
+  description: Spend 1 Gumption to make a spell power save with advantage.
+  type: advantage
+  brief: Spend 1 Gumption to make a spell power save with advantage.
+Scurry:
+  description: You have advantage on dexterity based athletics checks.
+  type: advantage
+  brief: Gain advantage on DEX athletics checks.
+Lawbringer:
+  description: Followers of Iro have advantage when speaking with lawmen.
+  type: advantage
+  brief: "You have advantage when speaking with lawmen."
+Beacon of Growth:
+  brief: Where you trod, green grass grows, and nature itself makes way for your passing.
+    As a result, you have advantage on checks made when moving through difficult natural
+    terrain.
+  description: Advantage on checks made when moving through difficult natural terrain.
+  type: advantage
+Beautiful:
+  brief: As you have served your deity, you have begun to grow more beautiful. Gain
+    advantage on charisma checks made against races who find you attractive.
+  description: Advantage on charisma checks made against races who find you attractive.
+  type: advantage
+Demonic Strength:
+  brief: Gain advantage on strength checks.
+  description: Gain advantage on strength checks.
+  type: advantage
+Ever of Use:
+  brief: Once per day, channel the power of Lady Dusk to gain advantage on a check.
+  description: Once per day, channel the power of Lady Dusk to gain advantage on a
+    check.
+  type: advantage
+Greater Ever of Use:
+  brief: Twice per day, channel the power of Lady Dusk to gain advantage on a check.
+  description: Twice per day, channel the power of Lady Dusk to gain advantage on a
+    check.
+  type: advantage
+God of the Common Man:
+  brief: Clerics and Paladins of Eandar have advantage on charisma checks when speaking
+    with commonfolk.
+  description: You have advantage on charisma checks when
+    speaking with commonfolk.
+  type: advantage
+Goddess of Animal Husbandry:
+  brief: You have advantage on animal handling checks.
+  description: You have advantage on animal handling checks.
+  type: advantage
+Goddess of Navigation:
+  brief: You have advantage on tracking checks, as well as any roles involving steering,
+    guiding, or working on a ship.
+  description: You have advantage on tracking checks, as well as any roles involving
+    working on a ship.
+  type: advantage
+Goddess of the Hunt:
+  brief: Gain advantage on any tracking and foraging checks. Your spells also have
+    extra potency when cast on beasts. Depending on the spell, this can add an additional
+    dice of damage, healing an extra turn of duration, or give a beast advantage or
+    disadvantage on relavant checks.
+  description: Adv on tracking. Spell potency vs beasts.
+    Additional dice of damage/healing, disadv on checks.
+  type: advantage
+Goddess of the Icy Depths:
+  brief: You have resistance to ice and water based attacks, and have advantage on
+    relavent saves.
+  description: You have resistance to ice and water based attacks, and have advantage
+    on relavent saves.
+  type: advantage
+Perfect:
+  brief: You have slowly been transformed into a perfect version of yourself. Lose
+    any disadvantage you may have and gain advantage on all charisma checks.
+  description: Lose any disadvantage you may have and gain advantage on all charisma checks.
+  type: advantage
+Purge the Useless:
+  brief: You gain advantage on attacks made against any entity that is sick or cursed.
+  description: You gain advantage on attacks made against any entity that is sick
+    or cursed.
+  type: advantage
+Sly:
+  brief: You become better at evading trouble as you worship your deity. Take advantage
+    on checks made while hiding, lying, or otherwise obfuscating the truth.
+  description: Advantage on checks made while hiding, lying, or otherwise obfuscating the truth.
+  type: advantage
 Wide Eyes:
   brief: You have advantage on perception checks, including initiative roles.
   description: You have advantage on perception checks, including initiative roles.
@@ -3601,3 +3559,23 @@ Winning Smile:
   description: As you worship Juliet, you become more convincing. Gain advantage on
     Charisma checks.
   type: advantage
+Fear of Water:
+  description: You have disadvantage when soaked through.
+  type: disadvantage
+  brief: You have disadvantage when wet.
+Fear the Light:
+  description: You are considered undead, and therefore take extra damage from holy
+    weapons.
+  type: disadvantage
+  brief: You are considered undead, and take extra damage from holy weapons.
+Born in Darkness:
+  description: You are incredibly light sensitive, and take 1d6 damage per hour spent
+    with your skin exposed to bright light or to the sun. As a result, you must wear
+    protective garments during the day.
+  type: disadvantage
+  brief: You take 1d6 damage per hour when in sunlight unless shaded.
+Distrusted by Authorities:
+  brief: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
+  description: Clerics and Paladins of Eandar take disadvantage when speaking with
+    lawmen.
+  type: disadvantage
