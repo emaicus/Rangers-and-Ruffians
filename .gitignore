@@ -18,3 +18,5 @@ Gemfile.lock
 .DS_Store
 site/static/images
 data/wip
+data/tmp_spells
+code/legacy

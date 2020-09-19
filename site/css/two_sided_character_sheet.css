@@ -1,6 +1,6 @@
 .new-print-region {
   height:1200px;
-  width: 927px; /* Should be close to 3:2 which is close enough to 8.5 x 11*/  
+  width: 927px; /* Should be close to 3:2 which is close enough to 8.5 x 11*/
   margin: 0 auto;
   background: #fff;
   margin-top:30px !important;
@@ -100,6 +100,7 @@
 .stat-square-content {
   line-height: 1;
   display: inline-block;
+  text-decoration: underline;
 }
 
 .character-attribute-square {
@@ -235,6 +236,10 @@
   height: 10%;
 }
 
+.fifteen-height {
+  height: 15%;
+}
+
 .twenty-height {
   height: 20%;
 }
@@ -285,7 +290,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
     .tiny-font {
-      font-size: 5pt;     
+      font-size: 5pt;
     }
 
     .small-font {
@@ -298,7 +303,7 @@
 
     .new-print-region {
       height:800px;
-      width: 618px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      width: 618px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/
       margin-top:30px !important;
       padding: 20px;
     }
@@ -326,13 +331,13 @@
       line-height: 0.5;
     }
 
-} 
+}
 
 
 /* Large devices (laptops/desktops, 768px and up) */
 @media only screen and (min-width: 768px) {
     .tiny-font {
-      font-size: 8pt;     
+      font-size: 8pt;
     }
 
     .small-font {
@@ -349,7 +354,7 @@
 
     .new-print-region {
       height:1000px;
-      width: 773px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      width: 773px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/
       margin-top:30px !important;
       padding: 20px;
     }
@@ -368,13 +373,13 @@
       width: 67px;
       height: 67px;
     }
-} 
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
   .tiny-font {
-    font-size: 8pt;     
+    font-size: 8pt;
   }
 
   .small-font {
@@ -391,7 +396,7 @@
 
   .new-print-region {
       height:1200px;
-      width: 927px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/  
+      width: 927px; /* Should be close to 3:2 which is close enough to 9.5 x 11*/
       margin-top:30px !important;
       padding: 20px;
     }
@@ -423,7 +428,7 @@
 @media print {
 
     @page {
-       size: 10.5in 13in; 
+       size: 10.5in 13in;
     }
 
     .body{
@@ -437,7 +442,7 @@
       display:none;
     }
 
-    .new-print-region 
+    .new-print-region
     {
       break-inside: avoid;
       break-after: always;
@@ -453,7 +458,7 @@
     }
 
     .tiny-font {
-      font-size: 8pt;     
+      font-size: 8pt;
     }
 
     .small-font {

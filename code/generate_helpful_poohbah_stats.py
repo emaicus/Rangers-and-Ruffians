@@ -9,77 +9,118 @@ import rnr_utils
 rnr_utils.load_Rangers_And_Ruffians_Data()
 
 STAT_STEPS = {
-  0 : 0,
-  1 : 1,
-  2 : 1,
-  3 : 1,
-  4 : 3,
-  5 : 3,
+  0 : 2,
+  1 : 3,
+  2 : 3,
+  3 : 4,
+  4 : 4,
+  5 : 5,
   6 : 5,
   7 : 5,
   8 : 5,
   9 : 5,
-  10: 7,
-  11: 7,
-  12: 7,
-  13: 7,
-  14: 7,
-  15: 7
-}
-
-
-
-RECOMMENDED_MAX_ARMOR = {
-  0 : 0,
-  1 : 1,
-  2 : 2,
-  3 : 2,
-  4 : 2, # 
-  5 : 3,
-  6 : 3,
-  7 : 3,
-  8 : 3,
-  9 : 4,
-  10: 4,
-  11: 4,
-  12: 4,
+  10: 5,
+  11: 5,
+  12: 5,
   13: 5,
   14: 5,
   15: 5
 }
 
-MAGIC_DAMAGE = {
-  0 : {
-    'dice' : '1d4',
-    'damage' : 4,
-    'cost' : 0
-    },
-  1 : {
-    'dice' : '1d8',
-    'damage' : 8,
-    'cost' : 1
-    },
-  2 : {
-    'dice' : '3d6',
-    'damage' : 18,
-    'cost' : 2
-    },
-  3 : {
-    'dice' : '3d10',
-    'damage' : 30,
-    'cost' : 2
-    },
-  4 : {
-    'dice' : '4d12',
-    'damage' : 48,
-    'cost' : 3
-    },
-  5 : {
-    'dice' : '8d8',
-    'damage' : 64,
-    'cost' : 5
-    }
-}
+# Best descriptive title I could come up with :P
+PLAYERS_MISS_RATE = .25
+MONSTERS_MISS_RATE = .25
+
+class rnr_weapon():
+  #Base constructor
+  def __init__(self, num_primary_dice, type_primary_dice, num_magic_dice=0, type_magic_dice=0, hit_modifier=0):
+    self.num_primary_dice = num_primary_dice
+    self.type_primary_dice = type_primary_dice
+    self.num_magic_dice  = num_magic_dice
+    self.type_magic_dice = type_magic_dice
+    self.hit_modifier = hit_modifier
+
+  def get_average_damage(self, use_action_point=False):
+    dmg = 0
+    for dice_num, dice_type in [(self.num_primary_dice, self.type_primary_dice),(self.num_magic_dice, self.type_magic_dice)]:
+      for i in range(dice_num):
+        dmg += (dice_type // 2) + .5
+    if use_action_point:
+      dmg += (self.type_primary_dice // 2) + .5
+    return dmg
+
+  def make_attack(self, use_action_point=False):
+    dmg = 0
+    for dice_num, dice_type in [(self.num_primary_dice, self.type_primary_dice),(self.num_magic_dice, self.type_magic_dice)]:
+      dmg += rnr_utils.roll_dice(dice_num, dice_type)
+
+    if use_action_point:
+      dmg += rnr_utils.roll_dice(1, self.type_primary_dice)
+
+    return dmg
+
+class rnr_combatant():
+  def __init__(self, level, race_name, subrace_name, class_name, subclass_name, weapon=None):
+    global STAT_STEPS
+
+    self.character = rnr_utils.rnr_character('', race_name, subrace_name, class_name, subclass_name, level)
+    self.level = level
+
+    self.max_health = self.character.get_average_health()
+    self.current_health = self.max_health
+
+    self.caster = rnr_utils.is_casting_class(self.character.rnr_class_obj)
+    self.action_points = 5 + STAT_STEPS[level]
+    self.current_action_points = self.action_points
+
+    my_class = self.character.rnr_class_obj
+    self.damage_stat = STAT_STEPS[level]
+
+    if weapon is None:
+      if self.caster:
+        self.weapon = get_average_magic_weapon_for_level(level)
+      else:
+        self.weapon = get_average_weapon_for_level(level)
+    else:
+      self.weapon = weapon
+
+  # Makes all attacks available. Returns damage.
+  def make_attacks(self, enemy_defense, average=False):
+    damage = 0
+
+    if self.caster:
+      num_attacks = 1
+    else:
+      num_attacks = 1 if self.level < 7 else 2
+
+    chance_to_hit = 1 - ((enemy_defense - self.damage_stat - self.weapon.hit_modifier) / 20)
+    if chance_to_hit > 1:
+      chance_to_hit = 1
+    if chance_to_hit < 0:
+      chance_to_hit = 0
+
+    for attack in range(num_attacks):
+      use_action_point = False
+      # Don't allow "action point use" if the combatant is a caster
+      if self.current_action_points > 0 and self.caster is False:
+        self.current_action_points -= 1
+        use_action_point = True
+
+      if average:
+        weapon_damage = self.weapon.get_average_damage(use_action_point=use_action_point)
+        # Reduce damage by the chance of missing
+        damage += ((weapon_damage + self.damage_stat) * chance_to_hit)
+      else:
+        weapon_damage = self.weapon.make_attack(use_action_point=use_action_point) + self.damage_stat
+        attack_roll = rnr_utils.roll_dice(1,20)
+        if attack_roll == 20:
+          #print("It's a crit!")
+          damage += (weapon_damage * 2)
+        elif attack_roll + self.damage_stat + self.weapon.hit_modifier >= enemy_defense:
+            damage += weapon_damage
+    #print(f'Dealt {damage} damage!')
+    return damage
+
 
 MONSTER_PROPERTIES = {
   'Monsters' : {
@@ -88,7 +129,7 @@ MONSTER_PROPERTIES = {
       'rounds_to_KO_player' : 3
     },
     'Medium Monster' : {
-      'hits_to_survive' : 3.5,
+      'hits_to_survive' : 4,
       'rounds_to_KO_player' : 2.5
     },
     'Heavy Monster' : {
@@ -98,202 +139,139 @@ MONSTER_PROPERTIES = {
   },
   'Villains' : {
     'Villain' : {
-      'rounds_to_survive' : 4,
+      'rounds_to_survive' : 3,
       'rounds_to_KO_player' : 1.5
     }
   }
 }
 
-SPROUT_WIZARD = rnr_utils.load_combos_given_list([('Sprout','Sprout')], [('Wizard', 'Wizard'),], 0)[0]
-HUMAN_FIGHTER = rnr_utils.load_combos_given_list([('Human','Human')], [('Fighter','Telepath')], 0)[0]
-AUTOMATON_BARBARIAN = rnr_utils.load_combos_given_list([('Automaton','Automaton')], [('Barbarian','Path of Rage Barbarian')], 0)[0]
-
-
-STARTING_HEALTH = {
-  'Sprout Wizard' : SPROUT_WIZARD.health_dice,
-  'Human Fighter' : HUMAN_FIGHTER.health_dice,
-  'Automaton Barbarian' : AUTOMATON_BARBARIAN.health_dice
-}
+COMMON_CLASSES = None
 
 SPELL_CADENCE = {
   0 : [0,], # Level 0, 1d6
-  1 : [1,], # Level 1, 2d4, 1d6 with effect, 1d8
+  1 : [0,], # Level 1, 2d4, 1d6 with effect, 1d8
   2 : [1,], # Level 1, 2d4, 1d6 with effect, 1d8
-  3 : [1, 0], # Minor offhand spell brings us up a step.
-  4 : [2, 0], # Level 2 Spells. 2d8 damage, 3d6
-  5 : [2, 0], 
-  6 : [2, 1], # Level 1 Offhand Spells
-  7 : [3, 1], # Level 3 spells. 2d12, 3d8
-  8 : [3, 1], 
-  9 : [3, 1],
+  3 : [1], # Minor offhand spell brings us up a step.
+  4 : [1], # Level 2 Spells. 2d8 damage, 3d6
+  5 : [2, 0],
+  6 : [2, 0], # Level 1 Offhand Spells
+  7 : [3, 0], # Level 3 spells. 2d12, 3d8
+  8 : [3, 0],
+  9 : [3, 0],
   10 : [4, 1], # 3d12, 4d8
   11 : [4, 1], # 3d12, 4d8
-  12 : [4, 2],
+  12 : [5, 2],
   13 : [5, 2],
   14 : [5, 2],
   15 : [5, 2]
 }
 
-# Generated. Taking Critical hits into account.
-AVG_WEAPON_DMG = {
-    "1d2 + 0": 2.2395,
-    "1d2 + 1": 3.2567,
-    "1d2 + 2": 4.2612,
-    "1d2 + 3": 5.2514,
-    "1d2 + 4": 6.2592,
-    "1d2 + 5": 7.2325,
-    "1d4 + 0": 3.1398,
-    "1d4 + 1": 4.1115,
-    "1d4 + 2": 5.0658,
-    "1d4 + 3": 6.1137,
-    "1d4 + 4": 7.1241,
-    "1d4 + 5": 8.1344,
-    "1d6 + 0": 4.1246,
-    "1d6 + 1": 5.0984,
-    "1d6 + 2": 6.1329,
-    "1d6 + 3": 7.129,
-    "1d6 + 4": 8.0804,
-    "1d6 + 5": 9.0355,
-    "1d8 + 0": 5.0215,
-    "1d8 + 1": 6.0409,
-    "1d8 + 2": 7.07,
-    "1d8 + 3": 8.0992,
-    "1d8 + 4": 9.0772,
-    "1d8 + 5": 10.0937,
-    "1d10 + 0": 6.045,
-    "1d10 + 1": 6.9946,
-    "1d10 + 2": 8.0187,
-    "1d10 + 3": 9.0076,
-    "1d10 + 4": 10.0096,
-    "1d10 + 5": 11.0798,
-    "1d12 + 0": 7.124,
-    "1d12 + 1": 7.9786,
-    "1d12 + 2": 9.0369,
-    "1d12 + 3": 10.1178,
-    "1d12 + 4": 11.0003,
-    "1d12 + 5": 12.1188
-}
 
 
-# DMG_STEPS = {
-#   0 : [{'dice' : 4, 'mod' : 1 } ],
-#   1 : [{'dice' : 6, 'mod' : 0 } ], # rare 1d4 + 1 weapons
-#   2 : [{'dice' : 4, 'mod' : 2 } ], # 1d6 weapons and rare 1d4 +2 weapons
-#   3 : [{'dice' : 6, 'mod' : 1 } ], # 1d6 + 1 weapons rare 1d4 + 3 weapons
-#   4 : [{'dice' : 8, 'mod' : 0 } ], # 1d8 weapons
-#   5 : [{'dice' : 6, 'mod' : 2 } ], # 1d8 weapons rare 1d6 + 2 weapons
-#   6 : [{'dice' : 8, 'mod' : 1 } ], # 1d8 weapons + 1 rare 1d6 + 3 weapons
-#   7 : [{'dice' : 10,'mod' : 0 }, {'dice' : 10,'mod': 0}], # 1d8 + 1  weapons rare 1d6 + 3 weapons
-#   8 : [{'dice' : 8, 'mod' : 2 }, {'dice' : 8,'mod' : 2}], # 1d10 weapons. Rare 1d8 + 2 weapons.
-#   9 : [{'dice' : 10,'mod' : 0 }, {'dice' : 8,'mod' : 3}], # 1d10 + 1 weapons. Rare 1d8 + 3 weapons
-#   10: [{'dice' : 10,'mod' : 2},{'dice' : 10,'mod' : 2}], # 1d12 weapons, rare 1d10 + 2 weapons.
-#   11: [{'dice' : 12,'mod' : 1},{'dice' : 12,'mod' : 1}], # 1d12 + 1 weapons. Rare 1d10 + 3 weapons
-#   12: [{'dice' : 10,'mod' : 3},{'dice' : 10,'mod' : 3}], # 1d12 + 2 weapons
-#   13: [{'dice' : 12,'mod' : 2},{'dice' : 12,'mod' : 2}], # 1d12 + 3 weapons
-#   14: [{'dice' : 12,'mod' : 3},{'dice' : 12,'mod' : 3}], # 1d12 + 3 weapons
-#   15: [{'dice' : 12,'mod' : 4},{'dice' : 12,'mod' : 4}]  # 1d12 + 3 weapons
-# }
-
-NEW_DMG_STEPS = {
-  0 : [{'primary_die' : 6,  'secondary_die' : 0} ],
-  1 : [{'primary_die' : 6,  'secondary_die' : 0} ], # rare 1d4 + 1 weapons
-  2 : [{'primary_die' : 8,  'secondary_die' : 0} ], # 1d6 weapons and rare 1d4 +2 weapons
-  3 : [{'primary_die' : 8,  'secondary_die' : 0} ], # 1d6 + 1 weapons rare 1d4 + 3 weapons
-  4 : [{'primary_die' : 10, 'secondary_die' : 0} ], # 1d8 weapons
-  5 : [{'primary_die' : 10, 'secondary_die' : 0} ], # 1d8 weapons rare 1d6 + 2 weapons
-  6 : [{'primary_die' : 10, 'secondary_die' : 4} ], # 1d8 weapons + 1 rare 1d6 + 3 weapons
-  7 : [{'primary_die' : 10, 'secondary_die' : 6} ], # 1d8 + 1  weapons rare 1d6 + 3 weapons
-  8 : [{'primary_die' : 10, 'secondary_die' : 8} ], # 1d10 weapons. Rare 1d8 + 2 weapons.
-  9 : [{'primary_die' : 10, 'secondary_die' : 10} ], # 1d10 + 1 weapons. Rare 1d8 + 3 weapons
-  10: [{'primary_die' : 12, 'secondary_die' : 8} ], # 1d12 weapons, rare 1d10 + 2 weapons.
-  11: [{'primary_die' : 12, 'secondary_die' : 10} ], # 1d12 + 1 weapons. Rare 1d10 + 3 weapons
-  12: [{'primary_die' : 12, 'secondary_die' : 12} ], # 1d12 + 2 weapons
-  13: [{'primary_die' : 12, 'secondary_die' : 12} ], # 1d12 + 3 weapons
-  14: [{'primary_die' : 12, 'secondary_die' : 12} ], # 1d12 + 3 weapons
-  15: [{'primary_die' : 12, 'secondary_die' : 12} ]  # 1d12 + 3 weapons
-}
+def get_average_weapon_for_level(level):
+  if level == 0:
+    return rnr_weapon(1,6, hit_modifier=0)
+  elif level == 1 or level == 2:
+    return rnr_weapon(1,8, hit_modifier=0)
+  elif level == 3 or level == 4:
+    return rnr_weapon(1,10, hit_modifier=1)
+  elif level == 5:
+    return rnr_weapon(1,12, hit_modifier=1)
+  elif level == 6 or level == 7:
+    return rnr_weapon(1,12, 1, 4, hit_modifier=1)
+  elif level == 8 or level == 9:
+    return rnr_weapon(1,12, 1, 6, hit_modifier=2)
+  elif level == 10 or level == 11:
+    return rnr_weapon(1,12, 1, 8, hit_modifier=2)
+  elif level == 12 or level == 13:
+    return rnr_weapon(1,12, 1, 10, hit_modifier=3)
+  elif level == 14 or level == 15:
+    return rnr_weapon(1,12, 1, 12, hit_modifier=3)
 
 
-
-# Mod is applied once.
-def roll_many_dice(number, dice, advantage= False, disadvantage= False, mod=0, mage_crit = False):
-  first_total = 0
-  second_total = 0
-  for i in range(number):
-    first_total += roll_dice(dice,crit_allowed = False)
-  for i in range(number):
-    second_total += roll_dice(dice,crit_allowed = False)
-  
-  if advantage and not disadvantage:
-    total = max(first_total, second_total)
-  elif disadvantage and not advantage:
-    total = min(first_total, second_total)
+def get_average_magic_weapon_for_level(level):
+  # Levels 0-1, Tier 0. 7 damage
+  if level < 2:
+    return rnr_weapon(2, 6, hit_modifier=0)
+  # Levels 2-4, Tier 1, 14 damage
+  elif level < 5:
+    return rnr_weapon(4, 6, hit_modifier=1)
+  # Levels 5-6, Tier 2, 27 damage
+  elif level < 7:
+    return rnr_weapon(6, 8, hit_modifier=1)
+  # Levels 7-9, Tier 3, 36 damage
+  elif level < 10:
+    return rnr_weapon(8, 8, hit_modifier=2)
+  # Levels 10-11, Tier 4, 50 damage
+  elif level < 13:
+    return rnr_weapon(9, 10, hit_modifier=2)
+  # Levels 13-15, Tier 5, 70 damage
   else:
-    total = first_total
+    return rnr_weapon(20, 6, hit_modifier=2)
 
-  total += mod
 
-  if mage_crit:
-    if roll_dice(20, crit_allowed = False) == 20:
-      total *= 2
-  return total
+def get_average_armor_for_level(level, include_base_armor=False):
+  base_armor=5 if include_base_armor else 0
+  # Levels 0-2
+  if level in range(0,3):
+    return base_armor + 1
+  # 3-4
+  elif level in range(3,5):
+    return base_armor + 3
+  # Levels 5-7
+  elif level in range(5,8):
+    return base_armor + 4
+  # Levels 7-9
+  elif level in range(7,10):
+    return base_armor + 6
+  # Levels 10-12
+  elif level in range(10, 13):
+    return base_armor + 7
+  # Levels 12-15
+  else:
+    return base_armor + 9
 
-def roll_dice(dice, crit_allowed=True, advantage=False, disadvantage = False, mod=0):
-  if dice <= 0:
-    return 0
+def get_average_armor_for_monster(level):
+  global PLAYERS_MISS_RATE, STAT_STEPS
+  hit_modifier = get_average_weapon_for_level(level).hit_modifier
+  # +1 is necessary due to "meet or exceed" rule
+  return (PLAYERS_MISS_RATE * 20) + hit_modifier + STAT_STEPS[level] + 1
 
-  first_roll  = random.randint(1, dice)
-  second_roll = random.randint(1, dice)
-  selected_roll = first_roll
+def get_average_monster_attack_bonus_for_level(level):
+  global MONSTERS_MISS_RATE
+  player_armor = get_average_armor_for_level(level, include_base_armor=True)
+  # -1 SHOULD be necessary due to "meet or exceed" rule, but player armor already takes it into account.
+  return -(MONSTERS_MISS_RATE * 20) + player_armor
 
-  if advantage and not disadvantage:
-    selected_roll = max(first_roll, second_roll)
-  elif disadvantage and not advantage:
-    selected_roll = min(first_roll, second_roll)
+def get_hit_rate(bonus, armor):
+  # +.05 is necessary due to "meet or exceed" rule
+  return round(1 - ((armor-bonus) / 20) + .05, 2)
 
-  if crit_allowed:
-    if selected_roll == dice:
-      selected_roll += random.randint(1, dice)
-  return selected_roll + mod
-
-def run_game(players, level, required_health, armor, chatty= False, use_action_points=True, max_rounds=20):
-  global STAT_STEPS, BUFFER  
-  curr_health = required_health
-  combatants = list()
-  for character in players:
-    action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level]) if use_action_points else 0
-    caster = rnr_utils.is_casting_class(character.rnr_class_obj)
-    if caster:
-      stat_mod = get_real_stat_value(character.get_stat('Inner_Fire') + STAT_STEPS[level])
-    else:
-      stat_mod = max(character.get_stat('Strength') + STAT_STEPS[level], character.get_stat('Dexterity') + STAT_STEPS[level])
-      stat_mod = get_real_stat_value(stat_mod)
-    combatants.append({
-        'action_points' : action_points,
-        'caster' : caster,
-        'stat_mod' : stat_mod, 
-      })
+def run_game(players, level, required_health, armor, chatty= False, max_rounds=20):
+  monster_curr_health = required_health
+  combatants = []
+  for race_name, subrace_name, class_name, subclass_name in players:
+    combatants.append(rnr_combatant(level, race_name, subrace_name, class_name, subclass_name))
 
   rounds_survived = 0
-  while curr_health > 0 and rounds_survived < max_rounds:
+  while monster_curr_health > 0 and rounds_survived < max_rounds:
     if chatty:
       print('#####################################')
       print(f'Round {rounds_survived + 1}')
-      print(f'Monster Health: {curr_health} Monster Armor {armor}')
+      print(f'Monster Health: {monster_curr_health} Monster Armor {armor}')
     for combatant in combatants:
-      damage, ap_spent = choose_attacks(level, combatant['caster'], action_points_to_spend=combatant['action_points'], compute_average=False, stat_mod = stat_mod, enemy_armor=armor, actually_role=True)
-      combatant['action_points'] -= ap_spent
-      curr_health -= damage
+      damage = combatant.make_attacks(average=False, enemy_defense=armor)
+      monster_curr_health -= damage
       if chatty:
-        print(f'Combatant dealt {damage} damage to the enemy ({curr_health} remaining)')
-      if curr_health <= 0:
+        print(f'Combatant dealt {damage} damage to the enemy ({monster_curr_health} remaining)')
+      if monster_curr_health <= 0:
         break
     rounds_survived += 1
   return rounds_survived if rounds_survived < max_rounds else 10000000
 
-def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_armor_bonus=5,use_action_points=True):
+def theoretical_survivability(title, players, num_rounds_to_simulate=5):
   global STAT_STEPS, BUFFER
-  
+
   BUFFER.start_heading(f'{title}', 4)
   BUFFER.paragraph(f'Assuming 1 Monster vs {len(players)} Player Combat')
 
@@ -301,267 +279,166 @@ def survivability(title, players, num_rounds_to_simulate=5, num_games=100, max_a
   rounds_survived_strings = [f'{x-1} Rounds Survived' for x in rounds_survived]
 
   BUFFER.chart_title(['Player Level',] + rounds_survived_strings)
-  dat = dict()
+  ret = dict()
   for level in range(15+1):
-    dat[level] = [0 for i in range(num_rounds_to_simulate + 1)]
+    ret[level] = [0 for i in range(num_rounds_to_simulate + 1)]
 
-    for character in players:
-      action_points = 5 + get_real_stat_value(character.get_stat('Intelligence') + STAT_STEPS[level]) if use_action_points else 0
-      caster = rnr_utils.is_casting_class(character.rnr_class_obj)
-      if caster:
-        stat_mod = get_real_stat_value(character.get_stat('Inner_Fire') + STAT_STEPS[level])
-      else:
-        stat_mod = max(character.get_stat('Strength') + STAT_STEPS[level], character.get_stat('Dexterity') + STAT_STEPS[level])
-        stat_mod = get_real_stat_value(stat_mod)
+    for race_name, subrace_name, class_name, subclass_name in players:
+      combatant = rnr_combatant(level, race_name, subrace_name, class_name, subclass_name)
       for r in range(num_rounds_to_simulate + 1):
-        dmg, action_points_spent = choose_attacks(level, caster=caster, action_points_to_spend=action_points, compute_average=True, stat_mod=stat_mod)
-        action_points -= action_points_spent
-        if r > 0 and dat[level][r] == 0:
-          dat[level][r] += dat[level][r-1]
-        dat[level][r] += dmg
-        #print(f'level {level} {character.name}: choose_attacks returned {dmg} ({dat[level][r]})')
-
-
-  
-    BUFFER.chart_row([level,] + dat[level])
+        dmg =  combatant.make_attacks(get_average_armor_for_monster(level), average=True)
+        if r > 0 and ret[level][r] == 0:
+          ret[level][r] += ret[level][r-1]
+        ret[level][r] += dmg
+    BUFFER.chart_row([level,] + ret[level])
   BUFFER.add_whitespace()
+  return ret
 
+def simulated_survivability_tuning(title, players, theoretical_survivability_data, num_rounds_to_simulate=5):
+  global PLAYERS_MISS_RATE
+  ret = {}
+  # Optimal is around 500 (will terminate early in most cases)
+  tuning_iterations = 500
+  # optimal is around 100
+  num_games_per_tuning = 100
 
-  stats = dict()
-  armor_bonus = [x for x in range(max_armor_bonus+1)]
-  armor_bonus_str = [f'Rounds Survived with {x} Armor' for x in armor_bonus]
-  
-  for level, round_data in dat.items():
-    print(f"{level} {round_data}")
-    stats[level] = dict()
-    for rounds_to_survive in range(len(round_data)):
-      required_health = round_data[rounds_to_survive]
-      stats[level][required_health] = dict()
-      for armor in armor_bonus:
-        stats[level][required_health][armor] = list()
-        if armor > 0:
-          if sum(stats[level][required_health][armor-1]) / len(stats[level][required_health][armor-1]) > 15:
-            stats[level][required_health][armor].append(100000)
-            continue
-        for i in range(num_games):
-          # print("#############################################################")
-          # print(f"LEVEL {level} party VS {required_health}hp {armor} armor")
-          # print("#############################################################")
+  BUFFER.start_heading(f'Tuned {title}', 4)
+  BUFFER.chart_title(['Party Level', 'Target Rounds Survived', 'Simulated Rounds Survived', 'Requested Monster Health', 'Improved Monster Health', 'Requested Monster Armor', 'Improved Monster Armor', 'Expected Hit Rate'])
 
-          rounds_survived = run_game(players, level, required_health, armor, chatty = False, use_action_points=use_action_points)
-          stats[level][required_health][armor].append(rounds_survived)
+  for level in range(15+1):
+    ret[level] = {}
+    leveled_combatant = rnr_combatant(level, 'Human', 'Human', 'Fighter', 'Telepath')
+    attack_bonus = leveled_combatant.damage_stat + leveled_combatant.weapon.hit_modifier
+    for r in range(1, num_rounds_to_simulate+1):
+      starting_health = theoretical_survivability_data[level][r]
+      starting_defense = get_average_armor_for_monster(level)
+      health = theoretical_survivability_data[level][r]
+      defense = get_average_armor_for_monster(level)
+      common_weapon = get_average_weapon_for_level(level)
 
-  BUFFER.start_heading(f'Simulated {title}', 4)
-  BUFFER.chart_title(['Party Level', 'Monster Health'] + armor_bonus_str)
-  
-  for level, round_data in stats.items():
-    for health, armor_info in round_data.items():
-      armor_survivability = list()
-      for armor in armor_bonus:
-        rounds_survived = armor_info[armor]
-        avg_rounds = sum(rounds_survived) / len(rounds_survived)
-        armor_survivability.append(avg_rounds)
-      BUFFER.chart_row([level, health] + armor_survivability)
-  BUFFER.add_whitespace()
-  return stats
+      closest_round_count_distance = 100000
+      closest_round_count = 1000000
+      closest_health = health
+      closest_defense = defense
+      defense_change = 0
+      # For 10 tuning iterations, run 100 games, then tweak then tweak the armor/damage of the monster
+      for i in range(tuning_iterations):
+        survivability = list()
+        for game in range(num_games_per_tuning):
+          survivability.append(run_game(players, level, health, defense))
 
-def better_make_dice(target, upper_bound=None, lower_bound=None, use_pos_mod=False, use_neg_mod=False, can_crit=False, use_twenty=False):
-  dice = [2,4,6,8,10,12,20] if use_twenty else [2,4,6,8,10,12]
-  avg_roll_vals = {
-    2: 1.5,
-    4: 2.5,
-    6: 3.5,
-    8: 4.5,
-    10: 5.5,
-    12: 6.5,
-    20: 10.5
-  }
-  max_roll_vals = dict()
-  max_crit_roll_vals = dict()
-  avg_crit_roll_vals = dict()
+        average_rounds_survived = sum(survivability) / len(survivability)
+        difference = r - average_rounds_survived
+        if abs(difference) < closest_round_count_distance:
+          closest_round_count_distance = abs(difference)
+          closest_round_count = average_rounds_survived
+          closest_health = health
+          closest_defense = defense
+        # We need to survive less
 
-  for die in dice:
-    avg = 0
-    for i in range(1,die):
-      avg += (i / die)
-    for i in range(die+1, (die*2)+1):
-      avg += (i / (die*die))
-    avg_crit_roll_vals[die] = avg
-  print(json.dumps(avg_crit_roll_vals, indent=4))
-
-  for d in dice:
-    max_roll_vals[d] = d 
-    max_crit_roll_vals[d] = d * 2
-
-
-  # find the best dice to make the target.
-  best_values = dict()
-  for die in dice:
-    num_dice = 0
-    while num_dice * avg_roll_vals[die] < target * 1.5:
-      num_dice += 1
-      damage = num_dice * avg_roll_vals[die] if num_dice > 1 or can_crit == False else avg_crit_roll_vals[die]
-      max_roll = num_dice * max_roll_vals[die] if num_dice > 1 or can_crit == False else max_crit_roll_vals[die]
-      if die not in best_values or (abs( damage - target ) < best_values[die]['accuracy'] and (upper_bound is None or max_roll < upper_bound)):
-        if lower_bound is None or damage >= lower_bound:
-          if not die in best_values:
-            best_values[die] = dict()
-          best_values[die]['accuracy'] = abs( (num_dice * avg_roll_vals[die]) - target )
-          best_values[die]['num_dice'] = num_dice
-
-  best_score = 10000000000
-  best_die = None
-  num_best_die = 0
-  for die, vals in best_values.items():
-    simple_score = (vals['accuracy'] ** 2) + (vals['num_dice'] ** 2)
-    if simple_score < best_score:
-      best_score = simple_score
-      best_die = die
-      num_best_die = vals['num_dice']
-
-  mod = 0
-  best_val = avg_roll_vals[best_die] * num_best_die if num_best_die > 1 or can_crit == False else avg_crit_roll_vals[best_die]
-  best_val_max = max_roll_vals[best_die] * num_best_die if num_best_die > 1 or can_crit == False else max_crit_roll_vals[best_die]
-  print(f"({best_val}) {num_best_die}d{best_die}. TARGET {target} Max {best_val_max} target max {upper_bound}")
-  if use_pos_mod:
-    while True:
-      if best_val + mod > target + 0.1:
-        print('Adding 1 would raise us above the target')
-        break
-      if best_val_max + mod + 1 > upper_bound:
-        print('Adding 1 would move us above our max.')
-        break
-      mod += 1
-  if use_neg_mod:
-    while True:
-      if best_val - mod - 1 < target - 0.1:
-        break
-      if num_best_die - mod - 1 <= 0:
-        break
-      mod -= 1
-  return num_best_die, best_die, mod, best_val + mod
-
-
-
-
-
-def make_dice(target, negative_mod = 0, min_mod=100):
-  dice = [2,4,6,8,10,12]
-
-  # From low to high, see how many dice it takes.
-  dmg = 0
-  mult = 1
-
-  while dmg < target:
-    for die in dice:
-      dmg = (mult * (die / 2)) - negative_mod
-      if dmg >= target:
-        return mult, die, 0
-      elif dmg + 1 >= target and 1 <= min_mod:
-        return mult, die, 1
-      elif dmg + 2 >= target and die not in [2, 4] and 2 <= min_mod:
-        return mult, die, 2
-      elif dmg + 3 >= target and die not in [2,4,6] and 3 <= min_mod:
-        return mult, die, 3
-      elif target > 12 and dmg + 4 >= target and die not in [2,4,6] and 4 <= min_mod:
-        return mult, die, 4
-      elif target > 18 and dmg + 5 >= target and die not in [2,4,6]:
-        return mult, die, 5
-    mult += 1
-  return mult, die
-
-# If compute_average is false, compute max instead
-def choose_attacks(character_level, caster=False, action_points_to_spend=0, compute_average=True, stat_mod = None, enemy_armor=0, actually_role=False):
-  global STAT_STEPS, NEW_DMG_STEPS, SPELL_CADENCE, MAGIC_DAMAGE, AVG_WEAPON_DMG
-  
-  # CASTER OVERRIDE! REMOVE
-  caster = False
-
-  if stat_mod is None:
-    stat_mod = 2 + STAT_STEPS[character_level]
-  damage = 0
-  action_points_spent = 0
-  have_crit = False
-
-  if caster:
-    chosen = list()
-    available_spell_levels = SPELL_CADENCE[character_level]
-    for attack in range(len(available_spell_levels)):
-      chosen_spell_level = available_spell_levels[attack]
-      for lvl in range(chosen_spell_level, 0-1, -1):
-        if MAGIC_DAMAGE[lvl]['cost'] <= action_points_to_spend:
-          act_dmg = 0
-          if actually_role:
-            #print('actually rolling.')
-            num_str, dice_str = MAGIC_DAMAGE[lvl]['dice'].split('d')
-            act_dmg = roll_many_dice(int(num_str), int(dice_str), mage_crit = True)
-            #print(f"Caster rolled {act_dmg} damage")
+        hit_rate = get_hit_rate(attack_bonus, defense)
+        epsilon = 0
+        if difference > epsilon:
+          # Clamp hit rate between 55 and 85% 75 = 15
+          if (rnr_utils.roll_dice(1,4) <= 2 or hit_rate > .8) and hit_rate > .7:
+            defense += 1
+            defense_change += 1
           else:
-            #print('not actually rolling')
-            if compute_average or have_crit:
-              #print('critting.')
-              act_dmg = MAGIC_DAMAGE[lvl]['damage'] / 2
-            else:
-              #print('not critting.')
-              act_dmg = MAGIC_DAMAGE[lvl]['damage']
-              have_crit = True
-          #print(f'damage is {act_dmg} + {stat_mod} - {enemy_armor}')
-          damage += max(0, (act_dmg + stat_mod) - enemy_armor)
-          action_points_to_spend -= MAGIC_DAMAGE[lvl]['cost']
-          action_points_spent += MAGIC_DAMAGE[lvl]['cost']
-          break
-  else:
-    for info in NEW_DMG_STEPS[character_level]:
-      primary_die = info['primary_die']
-      secondary_die = info['secondary_die']
-
-      if actually_role:
-        dice_damage = roll_dice(primary_die, crit_allowed=True, mod=0) + roll_dice(secondary_die, crit_allowed=False, mod=0)
-        # Assume level 10 characters will find a way to get an extra damage dice in.
-      else:
-        crit = False if compute_average or have_crit else True
-        dice_damage = primary_die + primary_die/2 + secondary_die/2 if crit else AVG_WEAPON_DMG[f'1d{primary_die} + 0'] + secondary_die/2
-
-        if crit:
-          have_crit = True
-      
-      if character_level >= 10:
-        if actually_role:
-          dice_damage += roll_dice(primary_die, crit_allowed=True, mod=0)
+            health += common_weapon.make_attack()
+        # We need to survive longer
+        elif difference < -epsilon:
+          # Clamp hit rate between 55 and 85%
+          if (rnr_utils.roll_dice(1,4) == 4 or hit_rate < .7 ) and hit_rate < .8:
+            defense -= 1
+            defense_change -= 1
+          else:
+            health -= common_weapon.make_attack()
         else:
-          dice_damage += primary_die/2  if crit else AVG_WEAPON_DMG[f'1d{primary_die} + 0']
+          break
+      expected_miss_rate =  get_hit_rate(attack_bonus, closest_defense)# PLAYERS_MISS_RATE + (.05 * defense_change)
+      ret[level][r] = {'health' : closest_health, 'defense' : closest_defense, 'expected_player_miss_rate' : expected_miss_rate}
+      BUFFER.chart_row([level, r, closest_round_count, starting_health, closest_health, starting_defense, closest_defense, expected_miss_rate])
+      print(f'Tuned level {level} round {r} in {i} iterations')
+    print(f'Finished tuning level {level}')
+  BUFFER.add_whitespace()
+  return ret
 
-      if action_points_to_spend > 0:
-        action_points_to_spend -= 1
-        action_points_spent += 1
-        action_point_damage = roll_dice(primary_die, crit_allowed=False, mod=0) if actually_role else primary_die / 2
-        dice_damage += action_point_damage
-      # Max to zero in case armor is high.
-      #print(f'damage is {dice_damage} + {stat_mod} + {weapon_mod} - {enemy_armor}')
-      damage += max(0, (dice_damage + stat_mod) - enemy_armor)
+# DON'T CALL, HELPER
+def monster_template(monster_name, rounds_to_survive, rounds_to_ko_player, tuned_survivability):
+  global BUFFER, COMMON_CLASSES
+  fighter = COMMON_CLASSES['Human Fighter']
+  BUFFER.chart_title(['Party Level', f'{monster_name} Health', f'{monster_name} Defense', f'{monster_name} Damage', 'Accuracy Bonus', 'Player Hit Rate'])
 
-  return math.ceil(damage), action_points_spent
+  for level in range(15+1):
+    leveled_combatant = rnr_combatant(level, 'Human', 'Human', 'Fighter', 'Telepath')
+    attack_bonus = leveled_combatant.damage_stat + leveled_combatant.weapon.hit_modifier
 
-def get_real_stat_value(stat):
-  if stat > 0:
-    if  stat <= 3:
-      return stat
-    else:
-      stat = stat - 3
-      return 3 + (stat // 2)
-  else:
-    if stat >= -3:
-      return stat
-    else:
-      stat = stat + 3
-      return -3 - (stat // 2)
+    survivability = tuned_survivability[level][rounds_to_survive]
+    health = math.ceil(survivability['health'])
+    defense = survivability['defense']
+    accuracy_bonus = get_average_monster_attack_bonus_for_level(level)
+
+    player_health = rnr_utils.get_average_health_to_level(fighter.character.health_dice, level)
+    target = math.ceil(player_health / rounds_to_ko_player)
+
+    num,dice,mod = make_dice(target, use_two=True)
+    atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
+    attack_str = f'{atk} ({num * (dice//2 + .5) + mod})'
+
+    BUFFER.chart_row([level, health, defense, attack_str, accuracy_bonus, get_hit_rate(attack_bonus, defense)])
+  BUFFER.add_whitespace()
+
+
+# By default, this function maximizes accuracy
+def make_dice(target, use_twenty=False, use_two=False, allow_mods=True):
+  dice = [4, 6, 8, 10, 12]
+
+  if use_two:
+    dice.append(2)
+
+  if use_twenty:
+    dice.append(20)
+
+  best_accuracy = 100000
+  best_num = best_die = best_mod = 0
+  for die in dice:
+    n, m = meet_target_using_dice(target, die)
+    if not allow_mods:
+      m = 0
+    difference_cost = abs(target - (n* ((die // 2) + .5) + m))
+    dice_cost = n if n > 0 else 10
+    mod_cost = 0
+    if m > 3:
+      mod_cost = 2 ** (m-3)
+    accuracy = dice_cost + difference_cost + mod_cost
+
+    # print(f'Target: {n}d{die} ({n*((die//2) + .5)} vs target, {target}) COST: {difference_cost} + {dice_cost} = {accuracy}')
+    # We want to use few dice
+    # We want to be reasonably accurate.
+
+    # We want a balance of these things.
+    # Cost is N for number of dice.
+    # difference * 10
+
+    if accuracy < best_accuracy:
+      best_accuracy = accuracy
+      best_num = n
+      best_die = die
+      best_mod = m
+  return best_num, best_die, best_mod
+
+def meet_target_using_dice(target, dice):
+  avg_roll = (dice // 2) + .5
+  num = math.floor(target / avg_roll)
+  modifier =  math.ceil(target - (num*avg_roll))
+  return num, modifier
 
 def generate_dc_matrix(dice_size=20):
   matrix = dict()
   adv_matrix = dict()
   dis_matrix = dict()
   modifiers = [x for x in range(-3, 6)]
-  
+
   for modifier in modifiers:
     for target in range(2, 26):
       for mat in (matrix, adv_matrix, dis_matrix):
@@ -570,7 +447,7 @@ def generate_dc_matrix(dice_size=20):
 
       max_roll = target - modifier - 1
       probability = min(1,max(0,max_roll / dice_size))
-      
+
       matrix[target][modifier] = round(1 - probability, 4)
       adv_matrix[target][modifier] = round(1 - (probability * probability), 4)
 
@@ -580,7 +457,6 @@ def generate_dc_matrix(dice_size=20):
 
   return matrix, adv_matrix, dis_matrix
 
-
 ################################################
 #
 # MARKDOWN GENERATION FUNCTIONS
@@ -588,303 +464,104 @@ def generate_dc_matrix(dice_size=20):
 ###############################################
 
 def avg_player_health():
-  global STARTING_HEALTH, BUFFER
-  sprout_wizard = ['Sprout Wizard', STARTING_HEALTH['Sprout Wizard']]
-  human_fighter = ['Human Fighter', STARTING_HEALTH['Human Fighter']]
-  automaton_barbarian = ['Automaton Barbarian', STARTING_HEALTH['Automaton Barbarian']]
+  global BUFFER, COMMON_CLASSES
+  sprout_wizard = COMMON_CLASSES['Sprout Wizard'].character.health_dice
+  human_fighter = COMMON_CLASSES['Human Fighter'].character.health_dice
+  automaton_barbarian = COMMON_CLASSES['Automaton Barbarian'].character.health_dice
 
   BUFFER.start_heading('Average Player Health', 4)
-  health_data = dict()
-  running_health = dict(STARTING_HEALTH)
-  for key in running_health.keys():
-    running_health[key] += 2
-  BUFFER.chart_title(["Level", sprout_wizard[0], human_fighter[0], automaton_barbarian[0] ])
+  BUFFER.chart_title(["Level", 'Sprout Wizard', 'Human Fighter', 'Automaton Barbarian' ])
   for level in range(15 + 1):
-
     health_vals = list()
-    for character, health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
-
-      if not character in health_data:
-        health_data[character] = dict()
-      health_data[character][level] = running_health[character]
-
-      health_vals.append(running_health[character])
-      running_health[character] += (health_dice // 2) + 2
+    for health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
+      health_vals.append(rnr_utils.get_average_health_to_level(health_dice, level))
     BUFFER.chart_row([level,] + health_vals)
 
   BUFFER.add_whitespace()
 
 def max_player_health():
-  global STARTING_HEALTH, BUFFER
-
-  sprout_wizard = ['Sprout Wizard', STARTING_HEALTH['Sprout Wizard']]
-  human_fighter = ['Human Fighter', STARTING_HEALTH['Human Fighter']]
-  automaton_barbarian = ['Automaton Barbarian', STARTING_HEALTH['Automaton Barbarian']]
+  global BUFFER, COMMON_CLASSES
+  sprout_wizard = COMMON_CLASSES['Sprout Wizard'].character.health_dice
+  human_fighter = COMMON_CLASSES['Human Fighter'].character.health_dice
+  automaton_barbarian = COMMON_CLASSES['Automaton Barbarian'].character.health_dice
 
   BUFFER.start_heading('Maximum Player Health', 4)
-  running_health = dict(STARTING_HEALTH)
-  for key in running_health.keys():
-    running_health[key] += 4
-
-  BUFFER.chart_title(["Level", sprout_wizard[0], human_fighter[0], automaton_barbarian[0] ])
+  BUFFER.chart_title(["Level", 'Sprout Wizard', 'Human Fighter', 'Automaton Barbarian' ])
   for level in range(15 + 1):
-
     health_vals = list()
-    for character, health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
-      health_vals.append(running_health[character])
-      running_health[character] += health_dice  + 4
+    for health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
+      health_vals.append(rnr_utils.get_max_health_to_level(health_dice, level))
     BUFFER.chart_row([level,] + health_vals)
 
   BUFFER.add_whitespace()
 
-# def recommended_weapon_handouts():
-#   global RECOMMENDED_WEAPONS, BUFFER
-#   BUFFER.start_heading('Recommended Weapon Handouts', 4)
-#   BUFFER.paragraph('Note: we use +X weapons here, but remember that a +1d4 is on average ~+2, 1d6 is ~+3 etc.')
-#   BUFFER.chart_title(["Level", "Recommended Weapon Handout"])
-#   for i in range(15 + 1):
-#     BUFFER.chart_row([i, RECOMMENDED_WEAPONS[i]])
-
-#   BUFFER.add_whitespace()
-
 def average_damage_output(crit=False):
-  global STAT_STEPS, BUFFER
+  global COMMON_CLASSES, BUFFER
 
   compute_average = not crit
 
-  if not crit:
-    BUFFER.start_heading('Average Expected Damage Output Per Round', 4)
-    BUFFER.paragraph('Action Points (AP) tend to grant an additional dice of damage.')
-    BUFFER.paragraph('For magic users, please recall that many of their spells deal area of effect damage, or else apply a status effect to an enemy.')
-  else:
-    BUFFER.start_heading('Average Critical Hit Damage Output', 4)
-    BUFFER.paragraph('Critical hits are computed as the first (and heaviest) attack is the critical, and subsequent attacks are normal.')
-    BUFFER.paragraph('For magic users, please recall that many of their spells deal area of effect damage, or else apply a status effect to an enemy.')
-  BUFFER.add_whitespace()
-
-  BUFFER.chart_title(['Level', 'Melee 0SP', 'Melee 1SP', 'Melee 2SP', 'Mage 0SP', 'Mage 1SP', 'Mage 2SP', 'Mage 3SP', 'Mage 4SP', 'Mage 5SP'])
+  # TODO: Add mages back
+  BUFFER.start_heading('Average Player Damage',4)
+  BUFFER.chart_title(['Level', 'Melee', 'Melee w/ Action Points', 'Caster'])
   for level in range(15+1):
-    dmg = 0
-    action_points = STAT_STEPS[level] + 5
+    fighter = COMMON_CLASSES['Human Fighter']
+    wizard = COMMON_CLASSES['Sprout Wizard']
+    fighter.current_action_points = 0
     attack_list = list()
-    attack_list.append(choose_attacks(level, caster=False, action_points_to_spend=0, compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=False, action_points_to_spend=1, compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=False, action_points_to_spend=2, compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 0) , compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 1) , compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 2) , compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 3) , compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 4) , compute_average=compute_average)[0] )
-    attack_list.append(choose_attacks(level, caster=True,  action_points_to_spend=min(action_points, 5) , compute_average=compute_average)[0] )
+    attack_list.append(fighter.make_attacks(0, average=True) )
+    fighter.current_action_points = fighter.action_points
+    attack_list.append(fighter.make_attacks(0, average=True) )
+    attack_list.append(wizard.make_attacks(0, average=True))
     BUFFER.chart_row([level,] + attack_list)
 
   BUFFER.add_whitespace()
 
-# DON'T CALL, HELPER
-def generate_health(health_dice):
-  global BUFFER
-  global STARTING_HEALTH
-  ret = dict()
-  health = health_dice + 2
-
-  for level in range(15 + 1):
-    ret[level] = health
-    health += (health_dice // 2) + 2
-  return ret
-
 def player_survivability():
-  global BUFFER, RECOMMENDED_MAX_ARMOR, STARTING_HEALTH
+  global BUFFER, COMMON_CLASSES
 
   rounds = [1,2,3,4,5,6]
   round_strs = [f'{x} Hits' for x in rounds ]
 
   BUFFER.start_heading("Player Survivability",4)
-  BUFFER.chart_title(['Level', 'Character Health', 'Character Armor'] + round_strs )
+  BUFFER.chart_title(['Level', 'Character Health'] + round_strs )
 
-  wizard_health = generate_health(STARTING_HEALTH['Human Fighter'])
   # For every level
   for level in range(15 + 1):
     round_list = list()
-    health = wizard_health[level]
+    health = rnr_utils.get_average_health_to_level(COMMON_CLASSES['Human Fighter'].character.health_dice, level)
     for num_rounds in rounds:
-      # Add 10% to the characters health so that our attack is a little overpowered.
-      target = health / num_rounds
-      multi_atk = 1
-      target = target / multi_atk
+      # Round up so our attack is a little overpowered.
+      target = math.ceil(health / num_rounds)
 
-      # Armor comes in  through multiattack
-      num,dice,mod = make_dice(target + (multi_atk - 1), 0)
+      num,dice,mod = make_dice(target, use_two=True)
       atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
-      
-      append_str = atk if multi_atk == 1 else f'{multi_atk} x {atk}'
+      append_str = f'{atk} ({num * (dice//2 + .5) + mod})'
       round_list.append(append_str)
-    BUFFER.chart_row([level, health, RECOMMENDED_MAX_ARMOR[level]] + round_list)
+    BUFFER.chart_row([level, health] + round_list)
 
   BUFFER.add_whitespace()
-
-# DON'T CALL, HELPER
-def compute_avg_damage(num, dice, mod):
-  avg_roll = dice / 2
-  avg_damage = math.floor(avg_roll * num)
-  return int(avg_damage + mod)
-
-# DON'T CALL, HELPER
-def monster_template(monster_name, rounds_to_survive, rounds_to_ko_player, monster_stats, armor_thresholds, players, use_action_points = True):
-  global BUFFER, RECOMMENDED_MAX_ARMOR, STARTING_HEALTH, RECOMMENDED_MAX_ARMOR
-  BUFFER.chart_title(['Party Level', f'{monster_name} Health', f'{monster_name} Armor', f'{monster_name} Damage', f'{monster_name} NEW DAMAGE', 'Target Damage'])
-
-  rnr_class = generate_health(STARTING_HEALTH['Human Fighter'])
-  print(json.dumps(rnr_class, indent=4))
-
-  near_spec = dict()
-  print()
-  print()
-  print(monster_name)
-  for level in range(15 + 1):
-    near_spec[level] = list()
-    stats = monster_stats[level]
-    nearest_val = 1000000
-    nearest_health = -1
-    nearest_armor = -1
-    nearest_survivability = None
-    for health, armor_vals in stats.items():
-      for armor, survivability_list in armor_vals.items():
-
-        armor_threshold = armor_thresholds[level]
-        if armor > armor_threshold:
-          continue
-
-        avg_survivability = sum(survivability_list) / len(survivability_list)
-        if abs(avg_survivability - rounds_to_survive) <  nearest_val:
-          nearest_survivability = avg_survivability
-          nearest_val = abs(avg_survivability - rounds_to_survive)
-          nearest_health = health
-          nearest_armor = armor
-        if abs(avg_survivability - rounds_to_survive) <  0.5:
-          near_spec[level].append((health, armor, avg_survivability))
-
-
-
-    # Tunnel towards a better output
-    min_health = nearest_health // 2
-    curr_health = 0
-    max_health = nearest_health * 2
-    curr_survivability = 0
-
-    best_health = 0
-    best_survivability = 100000
-    # Binary Search
-    print(f"START LEVEL {level}")
-    while min_health < max_health and curr_survivability != rounds_to_survive:
-      
-      # If I am not survivable enough
-      if curr_survivability < rounds_to_survive:
-        min_health = curr_health + 1
-        curr_health = min_health + ((max_health - min_health) // 2)
-      # I am too survivable
-      elif curr_survivability > rounds_to_survive:
-        max_health = curr_health - 1
-        curr_health = max_health - ((max_health - min_health) // 2)
-
-      # print(f"start {nearest_health} min {min_health} curr {curr_health} max {max_health}")
-      # print(f"curr {curr_survivability} target {rounds_to_survive}")
-
-      rounds_to_play = 500
-      rounds_survived = 0
-      for i in range(rounds_to_play):
-        rounds_survived += run_game(players, level, curr_health, nearest_armor, chatty= False, use_action_points=use_action_points, max_rounds=rounds_to_survive+5)
-      curr_survivability = rounds_survived / rounds_to_play
-
-      if abs(curr_survivability - rounds_to_survive) <  best_survivability:
-        best_survivability = curr_survivability
-        best_health = curr_health
-
-
-    print(f'Survivability Before {nearest_survivability} After {best_survivability}')
-    print(f"Health Before {nearest_health} After {best_health}")
-    if abs(best_survivability - rounds_to_survive) < abs(nearest_survivability - rounds_to_survive):
-      print("IMPROVEMENT")
-      nearest_health = best_health
-    else:
-      print("NO OPTIMIZATION FOUND")
-    char_health = rnr_class[level]
-    target = char_health / rounds_to_ko_player
-    multi_atk = 1
-    original_target = target
-    if target > 34:
-      multi_atk = 4
-    elif target > 26:
-      multi_atk = 3
-    elif target > 8:
-      multi_atk = 2
-    target = target / multi_atk
-    # armor is computed in multi_atk
-    num, dice, mod = make_dice(target + (multi_atk * RECOMMENDED_MAX_ARMOR[level] ), 0, min_mod=level // 3)
-    new_num, new_dice, new_mod, new_avg_dmg = better_make_dice(original_target + RECOMMENDED_MAX_ARMOR[level], upper_bound=char_health, lower_bound=original_target-1, use_pos_mod=True, use_neg_mod=False, can_crit=True, use_twenty=False)
-    avg_damage = compute_avg_damage(num, dice, mod)
-
-    atk = f'{num}d{dice}' if mod == 0 else f'{num}d{dice} +{mod}'
-    new_atk = f'{new_num}d{new_dice}' if mod == 0 else f'{new_num}d{new_dice} +{new_mod}'
-
-    append_str = f'({avg_damage}) {atk}' if multi_atk == 1 else f'({avg_damage*multi_atk}) {multi_atk} x {atk}'
-    new_append_str = f'({new_avg_dmg}) {new_atk}'
-    BUFFER.chart_row([level, nearest_health, nearest_armor, append_str,new_append_str, original_target + RECOMMENDED_MAX_ARMOR[level] ])
-
-  with open(f'{monster_name}.txt', 'w') as outfile:
-    for level in range(15 + 1):
-      outfile.write(f"Viable Level {level} {monster_name}'s\n")
-      for health, armor, survivability in sorted(near_spec[level], key=lambda x: x[2], reverse=True):
-        outfile.write(f"  Health: {health} Armor: {armor} Survivability {survivability}\n")
-
-
-# Fills empty entries in an armor dictionary.
-# If 0 is not a key, assumes the max armor is 0.
-def fill_armor(to_fill):
-
-  max_armor = 0
-  for i in range(16):
-    if not i in to_fill:
-      to_fill[i] = max_armor
-    else:
-      max_armor = to_fill[i]
-  return to_fill
-
 
 def all_monster_info():
   global BUFFER, MONSTER_PROPERTIES
   # survivability prints and also runs simulation.
-  boss_stats = survivability('Boss Survivability', players=[HUMAN_FIGHTER, HUMAN_FIGHTER, SPROUT_WIZARD, AUTOMATON_BARBARIAN], num_rounds_to_simulate=9, num_games=250, max_armor_bonus=10, use_action_points=True)
-  #monster_stats_no_ap = survivability('Monster Survivability, No Action Point Use', players=[HUMAN_FIGHTER,], num_rounds_to_simulate=9, num_games=1000, max_armor_bonus=5, use_action_points=False)
-  monster_stats_ap = survivability('Monster Survivability, Action Point Use', players=[HUMAN_FIGHTER,], num_rounds_to_simulate=9, num_games=250, max_armor_bonus=10, use_action_points=True)
+  large_player_group = [
+    ('Human', 'Human', 'Fighter', 'Telepath'),
+    ('Human', 'Human', 'Fighter', 'Telepath'),
+    ('Sprout', 'Sprout', 'Wizard', 'Wizard'),
+    ('Sprout', 'Sprout', 'Wizard', 'Wizard'),
+    ('Automaton', 'Automaton', 'Barbarian', 'Path of Rage Barbarian')
+  ]
 
-  boss_armor_thresholds = {
-    0 : 2,
-    1 : 3,
-    4 : 5,
-    7 : 10,
-    9 : 15,
-    12 : 20
-  }
+  small_player_group = [
+    ('Human', 'Human', 'Fighter', 'Telepath')
+  ]
 
-  light_monster_armor_thresholds = {
-    1 : 1,
-    2 : 2,
-    4 : 3,
-    7 : 4,
-    10 : 5
-  }
+  boss_stats_raw = theoretical_survivability('Boss Survivability', large_player_group, num_rounds_to_simulate=5)
+  monster_stats_raw = theoretical_survivability('Monster Survivability', small_player_group, num_rounds_to_simulate=10)
 
-  heavy_monster_armor_thresholds = {
-    0 : 2,
-    4 : 4,
-    8 : 6,
-    10 : 10,
-    13 : 15
-  }
+  boss_stats_refined = simulated_survivability_tuning('Boss Survivability', large_player_group, boss_stats_raw, num_rounds_to_simulate=5)
+  monster_stats_refined = simulated_survivability_tuning('Monster Survivability', small_player_group, monster_stats_raw, num_rounds_to_simulate=10)
 
-  boss_armor_thresholds          = fill_armor(boss_armor_thresholds)
-  light_monster_armor_thresholds = fill_armor(light_monster_armor_thresholds)
-  heavy_monster_armor_thresholds = fill_armor(heavy_monster_armor_thresholds)
 
   rounds_to_survive = MONSTER_PROPERTIES['Villains']['Villain']['rounds_to_survive']
   rounds_to_KO_player = MONSTER_PROPERTIES['Villains']['Villain']['rounds_to_KO_player']
@@ -893,7 +570,7 @@ def all_monster_info():
   BUFFER.paragraph('It is understood that most bosses should have a number of monster minions.')
   BUFFER.paragraph('Bosses should also have some cool, unique abilities to make them stand out and be more interesting to fight.')
   BUFFER.add_whitespace()
-  monster_template("Boss", rounds_to_survive, rounds_to_KO_player, boss_stats, boss_armor_thresholds, players=[HUMAN_FIGHTER, HUMAN_FIGHTER, SPROUT_WIZARD, AUTOMATON_BARBARIAN])
+  monster_template("Boss", rounds_to_survive, rounds_to_KO_player, boss_stats_refined)
   BUFFER.add_whitespace()
 
   hits_to_survive = MONSTER_PROPERTIES['Monsters']['Light Monster']['hits_to_survive']
@@ -905,7 +582,7 @@ def all_monster_info():
   BUFFER.paragraph('To fight a party of 4, about 6 light monsters should be deployed to challenge them.')
   BUFFER.paragraph('Remember, however, not every combat has to be life or death. In fact, light monster encounters can be used to wear down a party before a boss fight.')
   BUFFER.add_whitespace()
-  monster_template("Light Monster", hits_to_survive, rounds_to_KO_player, monster_stats_ap, light_monster_armor_thresholds, players=[HUMAN_FIGHTER,])
+  monster_template("Light Monster", hits_to_survive, rounds_to_KO_player, monster_stats_refined)
   BUFFER.add_whitespace()
 
   hits_to_survive = MONSTER_PROPERTIES['Monsters']['Medium Monster']['hits_to_survive']
@@ -917,7 +594,7 @@ def all_monster_info():
   BUFFER.paragraph('Treat a single medium monster as 2 light monsters, and 1/3 of a villain.')
   # BUFFER.paragraph('To fight a party of 4, about 3 heavy monsters should be deployed to challenge them.')
   BUFFER.add_whitespace()
-  monster_template("Medium Monster", hits_to_survive, rounds_to_KO_player, monster_stats_ap, heavy_monster_armor_thresholds, players=[HUMAN_FIGHTER,])
+  monster_template("Medium Monster", hits_to_survive, rounds_to_KO_player, monster_stats_refined)
   BUFFER.add_whitespace()
 
   hits_to_survive = MONSTER_PROPERTIES['Monsters']['Heavy Monster']['hits_to_survive']
@@ -929,14 +606,14 @@ def all_monster_info():
   # BUFFER.paragraph('Treat a single heavy monster as 2 heavy monsters, and 1/3 of a boss.')
   # BUFFER.paragraph('To fight a party of 4, about 3 heavy monsters should be deployed to challenge them.')
   BUFFER.add_whitespace()
-  monster_template("Heavy Monster", hits_to_survive, rounds_to_KO_player, monster_stats_ap, heavy_monster_armor_thresholds, players=[HUMAN_FIGHTER,])
+  monster_template("Heavy Monster", hits_to_survive, rounds_to_KO_player, monster_stats_refined)
   BUFFER.add_whitespace()
 
 def dice_info():
   global BUFFER
   matrix, adv_matrix, dis_matrix = generate_dc_matrix()
   mods = [f'+{x}' if x >= 0 else f'-{x}' for x in range(-3,6)]
-  
+
   for title, mat in [('Difficulty Helper: Straight Roll', matrix), ('Difficulty Helper: Advantage', adv_matrix), ('Difficulty Helper: Disadvantage', dis_matrix)]:
     BUFFER.start_heading(title, 4)
     BUFFER.paragraph('Numbers represent the probability of getting __AT LEAST__ the target.')
@@ -964,22 +641,25 @@ def dice_info():
   BUFFER.add_whitespace()
 
 def potions():
-  global BUFFER, STARTING_HEALTH
+  global BUFFER, COMMON_CLASSES
 
   BUFFER.start_heading('Potion Reference',4)
   BUFFER.chart_title(['Potion Name', 'Potion Effect'])
-  
-  fighter = generate_health(STARTING_HEALTH['Human Fighter'])
-  target = fighter[15]
+
+  fighter = COMMON_CLASSES['Human Fighter']
+
+  fighter_health = {}
+  for i in range(15+1):
+    fighter_health[i] = rnr_utils.get_average_health_to_level(fighter.character.health_dice, i)
 
   size_for_level = dict()
 
-  potions = [ 
-              ('Salve',make_dice(target / 20)), 
-              ('Minor Health Potion', make_dice(target / 12)),
-              ('Greater Health Potion', make_dice(target / 8)),
-              ('Major Health Potion', make_dice(target / 4)),
-              ('Epic Health Potion', make_dice(target / 2))
+  potions = [
+              ('Salve', make_dice(fighter_health[1] * .25)),
+              ('Healing Potion', make_dice(fighter_health[3] * .2)),
+              ('Greater Health Potion', make_dice(fighter_health[7] * .2)),
+              ('Major Health Potion', make_dice(fighter_health[13] * .2)),
+              ('Epic Health Potion', make_dice(fighter_health[15] * .4))
             ]
   for potion_name, potion_effect in potions:
     n,d,m = potion_effect
@@ -1001,15 +681,15 @@ def potions():
         size_for_level[level]['medium'] = list()
         size_for_level[level]['large']  = list()
 
-      if ((effect[0] * effect[1]) / 2) + effect[2] > fighter[level]:
+      if (effect[0] * ((effect[1]//2) + .5)) + effect[2] > fighter_health[level] * .75:
         continue
-      if ((effect[0] * effect[1]) / 2) + effect[2] >= fighter[level] / 2:
+      if (effect[0] * ((effect[1]//2) + .5)) + effect[2] >= fighter_health[level] * .5:
         size_for_level[level]['large'].append((health_potion, effect))
         half_health.append(f'{level}')
-      elif ((effect[0] * effect[1]) / 2) + effect[2] >= fighter[level] / 4:
+      elif (effect[0] * ((effect[1]//2) + .5)) + effect[2] >= fighter_health[level] * .25:
         size_for_level[level]['medium'].append((health_potion, effect))
         quarter_health.append(f'{level}')
-      elif ((effect[0] * effect[1]) / 2) + effect[2] >= fighter[level] / 8:
+      elif (effect[0] * ((effect[1]//2) + .5)) + effect[2] >= fighter_health[level] * .125:
         size_for_level[level]['small'].append((health_potion, effect))
         eighth_health.append(f'{level}')
       else:
@@ -1039,16 +719,19 @@ def potions():
 
 
 def main():
-  global AVG_WEAPON_DMG
+  global COMMON_CLASSES
 
-
-  
+  COMMON_CLASSES = {
+    'Sprout Wizard' : rnr_combatant(15, 'Sprout', 'Sprout', 'Wizard', 'Wizard'),
+    'Human Fighter' : rnr_combatant(15, 'Human', 'Human', 'Fighter', 'Telepath'),
+    'Automaton Barbarian' : rnr_combatant(15, 'Automaton', 'Automaton', 'Barbarian', 'Path of Rage Barbarian')
+  }
 
   avg_player_health()
   max_player_health()
   #recommended_weapon_handouts()
   average_damage_output()
-  average_damage_output(crit=True)
+  #average_damage_output(crit=True)
   player_survivability()
   all_monster_info()
   dice_info()
@@ -1071,9 +754,9 @@ def main():
   #################################################################
 
   BUFFER.order_next('Poohbah Handbook')
-  
+
   BUFFER.order_next('Quick Start')
-  
+
   BUFFER.order_next('Understanding Your Players')
   # BUFFER.order_next('Recommended Weapon Handouts')
   # BUFFER.order_next('Player Survivability')
@@ -1098,19 +781,18 @@ def main():
   BUFFER.order_next('Deeper Player Statistics')
   BUFFER.order_next('Average Player Health')
   BUFFER.order_next('Maximum Player Health')
-  BUFFER.order_next('Average Expected Damage Output Per Round')
-  BUFFER.order_next('Average Critical Hit Damage Output')
+  BUFFER.order_next('Average Player Damage')
   BUFFER.order_next('Health Potions by Player Level')
 
   BUFFER.order_next('Building Monsters from Scratch')
   BUFFER.order_next('Boss Survivability')
-  BUFFER.order_next('Monster Survivability, Action Point Use')
+  BUFFER.order_next('Monster Survivability')
   #BUFFER.order_next('Monster Survivability, No Action Point Use')
   BUFFER.order_next('Player Survivability')
 
   BUFFER.order_next('Simulation Results')
-  BUFFER.order_next('Simulated Boss Survivability')
-  BUFFER.order_next('Simulated Monster Survivability, Action Point Use')
+  BUFFER.order_next('Tuned Boss Survivability')
+  BUFFER.order_next('Tuned Monster Survivability')
   #BUFFER.order_next('Simulated Monster Survivability, No Action Point Use')
 
   BUFFER.write_toc()
@@ -1118,14 +800,6 @@ def main():
   BUFFER.verify_empty_buffer()
 
   potions()
-
-
-
-
-  
-
-
- 
 
 
 if __name__ == '__main__':

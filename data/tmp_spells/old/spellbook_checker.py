@@ -18,6 +18,7 @@ DURATION_MAPPINGS = {
 TARGET_MAPPINGS = {
   'aoe' : 2,
   'line' : 2,
+  'cone' : 2,
   'battle' : 4
 }
 # A damage multiplier or the string debuff.
@@ -29,7 +30,8 @@ DAMAGE_TYPE_MAPPINGS = {
   'ice' :  'debuff',
   'dark' :  'debuff',
   'light' : 1.5,
-  'lightning' : 'debuff'
+  'lightning' : 'debuff',
+  'psychic' : 'debuff'
 }
 
 
@@ -227,6 +229,7 @@ def balance_damage_spells(data):
   for spellbook, tiers in data.items():
     for tier, spells in tiers.items():
       for name, info in spells.items():
+        print(name)
         if 'damage' not in info['balance_type']:
           continue
         cost = info['cost']
@@ -269,7 +272,7 @@ if __name__ == '__main__':
   with open("formatted_spells.yml", 'r') as infile:
     data = yaml.load(infile)
 
-  for spellbook in ["the_druid's_guidebook",]:
+  for spellbook in ["the_bard's_songbook","the_book_of_healing"]:
     if len(validate_spellbook(data[spellbook])) == 0:
       spellbook_statistics(spellbook, data[spellbook])
       balance_spellbook(data[spellbook])

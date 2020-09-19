@@ -16,8 +16,9 @@
 // in turn trigger the install event again.
 const PRECACHE = 'precache-v0.0.22';
 const RUNTIME = 'runtime-v0.0.22';
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
   console.log(`Workbox loaded.`);
@@ -44,11 +45,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/css/two_sided_character_sheet.css",
-    "revision": "7d8516af9857ee1ed9b320ff842eb2c9"
+    "revision": "5651ff04089e9134238011ad4d0a58bf"
   },
   {
     "url": "site/css/weapons.css",
-    "revision": "048a0d14787ad278cc6aae00582327db"
+    "revision": "d6ef295c6a0f418fa837160634e50ec3"
   },
   {
     "url": "site/icons/bolt-shield.svg",
@@ -119,8 +120,16 @@ workbox.precaching.precacheAndRoute([
     "revision": "78b50894a514de0ff5d61a5c454b4d5d"
   },
   {
+    "url": "site/icons/heart-plus.svg",
+    "revision": "cd3d5ee936fd58667b97c3d08a0a72bb"
+  },
+  {
     "url": "site/icons/hearts.svg",
     "revision": "034a48b95c54e76616dc0e042b79cace"
+  },
+  {
+    "url": "site/icons/horseshoe.svg",
+    "revision": "77ec4c52b8c7e8bbba0c79c5fd722148"
   },
   {
     "url": "site/icons/ink-swirl.svg",
@@ -400,51 +409,51 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/character_sheet.html",
-    "revision": "fd2334d5784a144fc28fc2da951d5a7f"
+    "revision": "23d3532ae2e752933fb924bb8785d731"
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "238a62e9062512443dc4680e98405653"
+    "revision": "d8d5f41d7f9597f34c332d711b66e5a5"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "e56a1a5e443ab80a6cac0fe00be27da4"
+    "revision": "b84785fb5d01d6237df8682f915cb0d5"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "5e6225239d650c14e31637f458609f50"
+    "revision": "3f8ba34c31caa7a7376ea7b0162e0e3c"
   },
   {
     "url": "site/pages/GENERATED/Changelog.html",
-    "revision": "6443d10ddf2c184aba23f247dae4aaf5"
+    "revision": "29bfa65a1194fd6f89fd1d864b906690"
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "3cb7e6aaef1b82d5b0dbb551827b8541"
+    "revision": "f7fe6232b68bb0bbf09bc9d2238d4e6e"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
-    "revision": "2149f7593347e768545c3eea1777f58b"
+    "revision": "b7b929a22f74e65430ee0268bc2e94a7"
   },
   {
     "url": "site/pages/GENERATED/Examples.md",
-    "revision": "75df1a67d77f1386f57dfc07affa29e1"
+    "revision": "4ba1ca542020eae3117d0a5eeadba172"
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "c58b6512ad392026c76b63c8a9303e4a"
+    "revision": "9c67a94a36e923b7b015bbc99729efd4"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
-    "revision": "e05135a7b6bac01257f1fb444019254b"
+    "revision": "b0626075c66b45c6b991e2d4d233430e"
   },
   {
     "url": "site/pages/GENERATED/Rulebook.html",
-    "revision": "955023b8257810dbcf367bf6e8940319"
+    "revision": "ce1e565a07318d7d3eec4cd6131f3820"
   },
   {
     "url": "site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "910c68a86a5f09067c933ecca7ab5759"
+    "revision": "3e3f98071309bed02462e4fae64e09b9"
   },
   {
     "url": "site/pages/level_up_sheet.html",
@@ -480,7 +489,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/templates/macros.html",
-    "revision": "19bbc80a739eaf8b299b377413783fd6"
+    "revision": "756030b9b3370fac41efafb1a0663f14"
   },
   {
     "url": "site/templates/role_selection_template.html",
@@ -500,7 +509,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/templates/weapons_page.html",
-    "revision": "c46a4afa0865fbfb01d379a1bc1932bc"
+    "revision": "b067ce9cd227482cc59734cbd7aefc08"
   },
   {
     "url": "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
@@ -524,7 +533,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "d54a9bf2d73953055feacee9d45fba79"
+    "revision": "db8a4545f30e695023e32f694beb8cc9"
   },
   {
     "url": "assets/css/style.css",
@@ -542,9 +551,17 @@ workbox.precaching.precacheAndRoute([
 //   })
 // );
 
-workbox.routing.registerRoute(
-  /\.(?:js|css)$/,
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: 'static-resources',
-  })
-);
+// workbox.routing.registerRoute(
+//   /\.(?:js|css)$/,
+//   new workbox.strategies.StaleWhileRevalidate({
+//     cacheName: 'static-resources',
+//   })
+// );
+
+
+addEventListener('message', (event) => {
+  console.log("message received I  guess.")
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    skipWaiting();
+  }
+});

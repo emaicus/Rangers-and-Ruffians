@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.3.1_  
+_Version 2.4.0_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -53,9 +53,9 @@ _Version 2.3.1_
      * [Daemonspawn](#daemonspawn)  
      * [Dwarf](#dwarf)  
      * [Elf](#elf)  
-       * [Deep Elf](#deep-elf)  
-       * [High Elf](#high-elf)  
        * [Wood Elf](#wood-elf)  
+       * [High Elf](#high-elf)  
+       * [Deep Elf](#deep-elf)  
      * [Gnome](#gnome)  
      * [Goblin](#goblin)  
      * [Halfling](#halfling)  
@@ -71,23 +71,10 @@ _Version 2.3.1_
    * [Classes](#classes)  
      * [Archer](#archer)  
      * [Barbarian](#barbarian)  
-       * [Path of Nature Barbarian](#path-of-nature-barbarian)  
        * [Path of Rage Barbarian](#path-of-rage-barbarian)  
+       * [Path of Nature Barbarian](#path-of-nature-barbarian)  
      * [Bard](#bard)  
      * [Cleric](#cleric)  
-       * [Cleric of Beauty](#cleric-of-beauty)  
-       * [Cleric of Fertility](#cleric-of-fertility)  
-       * [Cleric of Fun](#cleric-of-fun)  
-       * [Cleric of Healing](#cleric-of-healing)  
-       * [Cleric of Knowledge](#cleric-of-knowledge)  
-       * [Cleric of Law](#cleric-of-law)  
-       * [Cleric of Nature](#cleric-of-nature)  
-       * [Cleric of Nothingness](#cleric-of-nothingness)  
-       * [Cleric of Sin](#cleric-of-sin)  
-       * [Cleric of The Downtrodden](#cleric-of-the-downtrodden)  
-       * [Cleric of The Hunt](#cleric-of-the-hunt)  
-       * [Cleric of The Sea](#cleric-of-the-sea)  
-       * [Cleric of Undeath](#cleric-of-undeath)  
      * [Elementalist Druid](#elementalist-druid)  
      * [Telepath](#telepath)  
      * [Marksman](#marksman)  
@@ -98,8 +85,8 @@ _Version 2.3.1_
      * [Paladin](#paladin)  
      * [Ranger](#ranger)  
      * [Rogue](#rogue)  
-       * [Assassin](#assassin)  
        * [Thief](#thief)  
+       * [Assassin](#assassin)  
      * [Sorcerer](#sorcerer)  
      * [Wizard](#wizard)  
    * [Skills](#skills)  
@@ -253,24 +240,28 @@ class, though some pairings will start out slightly stronger than others. That's
 The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is to be an automaton, and the quest for meaning is a path that all such beings must walk.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|0|0|0|-1|0|-1|6|  
+  
+  
+  
+__Expertise:__  
+Automatons have expertise in one of the following checks:  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
   
   
 __Automaton Abilities:__ 
-* __Rules:__   
-  * __Power Core:__ The source of your power is housed within you. If you are destroyed in combat, you can be rebuilt so long as the power core survives.  
-  * __Repair:__ You cannot heal using potions or rest. Rather, you must perform repairs. Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum of 6 hours.  
-  * __Upgrades:__ A tinker can craft upgrades for you.  
 * __General Abilities:__   
   * __Overdrive:__ Spend 2 health per minute or turn to increase strength and dexterity by 1. Can be stacked to a maximum of +5 STR and DEX.  
   * __True Sleeplessness:__ You cannot grow tired, nor can you sleep.  
-  * __Armored Exterior:__ You naturally have resistance to the following types of damage: piercing, slashing, blunt, fire, and ice.  
+  * __Armored Exterior:__ You naturally have resistance to piercing, slashing, and blunt damage.  
 * __Combat Abilities:__   
   * __Self Repair:__ During combat, you can self repair as an action.  
   * __Gyroscopic Center of Mass:__ It is difficult to knock you over. Add 5 to any check that involves knocking you prone.  
-  * __Piston Punch:__ _(Cost 1)_ Perform an attack which ignores enemy armor.  
+  * __Piston Punch:__ Your unarmed attacks deal 1d8 damage.  
   
   
   
@@ -302,23 +293,23 @@ When building your Catterwol, consider how they came to belong to your party. Re
 Catterwol are among the most lithe and dexterous of the races, and are adept at passign unseen and unheard. With padded feet and strong claws for climing, more than one Catterwol has turned to the life of a sneak-theif. Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make average mages, but prefer slim, dexterity based weapons.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|0|1|1|1|-1|0|4|  
+  
+  
+  
+__Expertise:__  
+Catterwols have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 __Catterwol Abilities:__ 
 * __General Abilities:__   
   * __Darkvision:__ You can see even in perfect darkness.  
   * __Land on your feet:__ Decrease any falling damage by 20 feet.  
-* __Advantages:__   
-  * __Predator:__ When tracking, you have advantage on perception checks.  
-  * __Loose Skin:__ You have advantage when breaking grapples.  
-  * __Mantle:__ You have advantage on dexterity checks when climbing.  
-* __Disadvantages:__   
-  * __Fear of Water:__ You have disadvantage when soaked through.  
 * __Combat Abilities:__   
-  * __They're Retractable:__ You have retractable, razor sharp claws which add +1 damage to your punching or kicking attacks.  
+  * __They're Retractable:__ You have retractable, razor sharp claws which add +2 damage to your punching or kicking attacks.  
   
   
   
@@ -338,19 +329,24 @@ ___
 The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained. Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always vigilant and trusts no one.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|1|0|1|-1|0|-1|4|  
+  
+  
+  
+__Expertise:__  
+Daemonspawns have expertise in one of the following checks:  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
   
   
 __Daemonspawn Abilities:__ 
 * __General Abilities:__   
   * __True Sight:__ You are able to see invisible entities.  
-  * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Incombustible:__ You take half damage from heat and fire.  
 * __Combat Abilities:__   
   * __Fix Your Eyes on Me:__ _(Cost 1)_ Conversation spell. If the person you are talking with fails an inner fire saving throw against your spell power, the world goes black for them except for you. Make charisma and intimidation checks with advantage for the remainder of the conversation. In combat, force the enemy to attack only you.  
-  * __Sacrificial Rite:__ At the cost of your level in health (minimum 1), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest.  
+  * __Sacrificial Rite:__ At the cost of your level in health (minimum 2), make a second action during combat. Any damage taken as a result of sacrificial rite cannot be healed until your next long rest.  
   
   
   
@@ -370,20 +366,20 @@ ___
 A stocky, brooding people, many dwarves are natural craftsman and artisans. Dwarves prefer low places, and many of their strongholds can be found deep within mountain ranges. Dwarves have a shrewd eye for business, and have been known to drink their adversaries under the table.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|0|1|-2|1|0|4|  
+  
+  
+  
+__Expertise:__  
+Dwarfs have expertise in one of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 __Dwarf Abilities:__ 
 * __General Abilities:__   
   * __Incombustible:__ You take half damage from heat and fire.  
-* __Advantages:__   
-  * __Stocky:__ You have advantage against any check that could cause you to go prone.  
-  * __Very Dangerous Over Short Distances:__ If you begin your turn next to an enemy, take advantage on your attack roll. Negates the harried condition.  
-  * __Boozehound:__ You have a very high tolerance for alcohol. Do not take disadvantage when drunk.  
-  * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
-  * __Forgeborn:__ When dealing with minerals or works made of stone, gain advantage on any checks made to assess or manipulate them.  
   
   
   
@@ -393,29 +389,32 @@ ___
 ### Elf
 
   
-#### Deep Elf
-<img src='../../images/race/female/deep_elf.jpg' class="raceClassImage" />
+#### Wood Elf
+<img src='../../images/race/female/wood_elf.jpg' class="raceClassImage" />
 
-"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-Sons and daughters of the dark gods, the deep elves have suffered much hardship for their origin. Pushed deep underground, dark elves have grown accustomed to the darkness. Stronger than other elves, dark elves are incredible but largely uncharismatic fighters.
+True to their common name, wood elves are forest-dwellers. Stronger and more down to earth than their high elven cousins, wood elves often make friends with the men, dwarves, sprouts, and halflings of the world. As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters, and a welcome addition to any adventuring party.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|1|1|0|0|-2|4|  
   
   
-__Deep Elf Abilities:__ 
+  
+__Expertise:__  
+Wood Elfs have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
+  
+  
+__Wood Elf Abilities:__ 
 * __General Abilities:__   
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Darkvision:__ You can see even in perfect darkness.  
-* __Advantages:__   
-  * __Winged Feet:__ You have advantage on acrobatics checks.  
-  * __Padfoot:__ You have advantage on stealth checks.  
-* __Disadvantages:__   
-  * __Born in Darkness:__ You are incredibly light sensitive, and take 1d6 damage per hour spent with your skin exposed to bright light or to the sun. As a result, you must wear protective garments during the day.  
+  * __Low-Light Vision:__ You can see in low light.  
+* __Combat Abilities:__   
+  * __Long Dash:__ When you dash, move an additional 5 feet.  
   
   
   
@@ -431,49 +430,59 @@ ___
 High elves are among the most magical of the races. Reclusive by nature, high elves often confine themselves to gleaming costal cities. When a high elf does venture out into the world at large, it is often in a diplomatic capacity. High elves are as charming as they are naturally beautiful, and commonly feel as though it is their duty to maintain balance in the world. High elves make good mages.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|1|0|2|0|-1|1|2|  
+  
+  
+  
+__Expertise:__  
+High Elfs have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
   
   
 __High Elf Abilities:__ 
-* __Choices:__   
-  * __Learned:__ You are fluent in an extra language of your choosing.  
 * __General Abilities:__   
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
   * __Low-Light Vision:__ You can see in low light.  
   * __Inherent Magic:__ You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.  
   * __Detect Magic:__ _(Cost 1)_ Perform a magic detection check.  
-* __Advantages:__   
-  * __Beauty Incarnate:__ Due to your beauty, you have advantage on charisma checks when dealing with races that find you attractive.  
   
   
   
 ___
 
   
-#### Wood Elf
-<img src='../../images/race/female/wood_elf.jpg' class="raceClassImage" />
+#### Deep Elf
+<img src='../../images/race/female/deep_elf.jpg' class="raceClassImage" />
 
-"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
+"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-True to their common name, wood elves are forest-dwellers. Stronger and more down to earth than their high elven cousins, wood elves often make friends with the men, dwarves, sprouts, and halflings of the world. As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters, and a welcome addition to any adventuring party.
+Sons and daughters of the dark gods, the deep elves have suffered much hardship for their origin. Pushed deep underground, dark elves have grown accustomed to the darkness. Stronger than other elves, dark elves are incredible but largely uncharismatic fighters.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|0|1|1|1|-1|0|4|  
   
   
-__Wood Elf Abilities:__ 
+  
+__Expertise:__  
+Deep Elfs have expertise in one of the following checks:  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  
+  
+__Deep Elf Abilities:__ 
 * __General Abilities:__   
   * __Sleepless:__ Your can rest without sleeping for one day, allowing you to keep watch long into the night.  
-  * __Low-Light Vision:__ You can see in low light.  
-* __Advantages:__   
-  * __Winged Feet:__ You have advantage on acrobatics checks.  
-  * __Padfoot:__ You have advantage on stealth checks.  
-  * __Tracker:__ You are an excellent tracker, and have advantage when looking for trails and sign of passage.  
+  * __Darkvision:__ You can see even in perfect darkness.  
   
   
   
@@ -500,23 +509,24 @@ Most consider gnomes to be eccentric at best, and obtuse at worse.
 Tinkerers by nature, Gnomes are known to craft miraculous inventions to help them deal with difficult situations. Gnomes typically stand about three feet in height, and can be recognized by their signature goggles. Gnomes are well rounded and are capable of succeeding at anything they put their minds to.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|1|-1|2|0|1|-1|2|  
+  
+  
+  
+__Expertise:__  
+Gnomes have expertise in one of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 __Gnome Abilities:__ 
-* __Rules:__   
-  * __Build:__ Once you have a recipe for an item, you can build it. You can attempt to build one item per rest, or two per sleep.  
 * __General Abilities:__   
   * __Tinker:__ Every night, you can attempt to to create a device. Once you create one, you get its recipe. Must have ingredients. You begin with recipes for smokebombs, firebombs, and saddles. (Tinkering requires an intelligence check)  
   * __See and Remember:__ Once you see something, you will probably remember it.  
   * __Gather:__ You passively collect ingredients for your tinkering.  
-* __Starting Items:__   
-  * __Grapple Gun:__ You carry a retractable grappling gun. The gun carries 40 feet of rope.  
-* __Advantages:__   
-  * __Resist Magic:__ You make any rolls against an enemy's spell power with advantage.  
-  * __Natural Intellect:__ You have a natural intelligence which grants you advantage on intelligence checks.  
   
   
   
@@ -536,18 +546,21 @@ ___
 Small and wicked, most goblins are tricksters and thieves. Known for eating their kills and living in the dark, goblins prefer to fight with ranged or short weapons. Morally good goblins are rare, and have often been outcast from their clan and family. This can be very painful, as goblins are communal creatures by nature.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|0|1|2|1|-1|-1|2|  
+  
+  
+  
+__Expertise:__  
+Goblins have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 __Goblin Abilities:__ 
 * __General Abilities:__   
   * __Still Warm:__ You can eat raw meat without penalty.  
   * __Darkvision:__ You can see even in perfect darkness.  
-* __Advantages:__   
-  * __Mantle:__ You have advantage on dexterity checks when climbing.  
-  * __Padfoot:__ You have advantage on stealth checks.  
 * __Combat Abilities:__   
   * __Cheap Blow:__ On a critical hit, knock an enemy prone.  
   
@@ -568,20 +581,24 @@ ___
 Tiny and rambunctious, fleetfoot halflings are all high-spirits and fun. Known for their precocious daring, fleetfoot halflings make great thieves, archers, and fighters. They are naturally tricksters, are and are adept at sqeezing into tight spots. On average, fleetfoot halflings stand at three feet and have warm, chestnut colored eyes and hair.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|1|2|1|0|0|2|  
+  
+  
+  
+__Expertise:__  
+Fleetfoot Halflings have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 __Fleetfoot Halfling Abilities:__ 
 * __General Abilities:__   
-  * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
-* __Starting Items:__   
-  * __Sling:__ Your character begins their journey with a 1d4 sling.  
-* __Advantages:__   
-  * __Padfoot:__ You have advantage on stealth checks.  
 * __Combat Abilities:__   
+  * __Dodge:__ As a reaction, increase your armor by 5.  
   * __Nimble:__ Targeted ranged attacks take disadvantage against you.  
   
   
@@ -598,9 +615,17 @@ ___
 Taller but squatter than their fleetfoot cousins, the average hardfoot halfling would rather be drinking tea and eating toast in their home than adventuring. For a hardfoot halfing to venture out-of-doors, and become an adventurer, something truly earthshaking must happen to them: either a true call to adventure or a calamity that wrests them from the comfort of their home. Once they become adventurers, however, hardfoot halflings tend to be courageous, hearty, resilient warriors.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|-1|0|1|-1|1|1|4|  
+  
+  
+  
+__Expertise:__  
+Hardfoot Halflings have expertise in one of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
   
   
 __Hardfoot Halfling Abilities:__ 
@@ -608,10 +633,6 @@ __Hardfoot Halfling Abilities:__
   * __Warm Butter:__ Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.  
   * __Soft Bed:__ You recover two extra health dice from sleeping in a real bed.  
   * __Carry a Tune:__ _(Cost 1)_ Offhand. You know a song which, when sung, grants all members of your party +1 to a stat of your choice. Concentration.  
-* __Starting Items:__   
-  * __Sling:__ Your character begins their journey with a 1d4 sling.  
-* __Advantages:__   
-  * __Thick Headed:__ You have advantage on any checks involving an enemy breaking into your mind or dominating you.  
 * __Combat Abilities:__   
   * __Courageous Blow:__ _(Cost 1)_ Add twice your Inner Fire to an attack.  
   
@@ -633,14 +654,18 @@ ___
 Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hisslings try their very best to be ferocious. While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years, and can reproduce just a few years after. 
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|0|1|2|1|-1|0|2|  
+  
+  
+  
+__Expertise:__  
+Hisslings have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 __Hissling Abilities:__ 
-* __Choices:__   
-  * __I'm a Red One!:__ At the start of your journey, choose your color. This choice affects elemental resistances.  
 * __General Abilities:__   
   * __Small Fry:__ Your size is considered tiny. You can fit into small spaces, be easily carried, and be easily thrown.  
   * __All Tuckered Out:__ You must sleep once every six hours, or suffer exhaustion.  
@@ -668,14 +693,18 @@ ___
 Humans are quick to learn, and are one of the most adaptable of the races. They pick up new skills quickly, and are known as industrious and intelligent individuals. Humans tend to be varied, and have the potential to succeed in all walks of life. It is their natural willpower that makes them a force to be reckoned with.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|-1|1|-1|1|0|4|  
+  
+  
+  
+__Expertise:__  
+Humans have expertise in one of the following checks:  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
   
   
 __Human Abilities:__ 
-* __Choices:__   
-  * __Skilled:__ Begin your journey with one extra skill.  
 * __General Abilities:__   
   * __Adaptable:__ Once affected by an effect or spell, gain advantage on saves against it for the remainder of the day.  
 * __Combat Abilities:__   
@@ -701,14 +730,18 @@ ___
 Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive, taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|0|1|1|1|0|-1|-1|4|  
+  
+  
+  
+__Expertise:__  
+Kragravens have expertise in one of the following checks:  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 __Kragraven Abilities:__ 
-* __Choices:__   
-  * __Peck:__ _(Cost 1)_ As an offhand action, peck an enemy, dealing 1d6 damage. On a critical hit, blind them until they succeed a SP save.  
 * __General Abilities:__   
   * __High Jump:__ Flap your vestigial wings to jump twice your height directly upward.  
   * __Coast:__ Use your wings to coast from great heights.  
@@ -733,9 +766,19 @@ ___
 Tall and lizard-like, Lizkin are powerful fighters. With the ability to taste scents on the air and to change their color at will, Lizkin make equally dangerous warriors and mages.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|1|1|-1|0|-1|4|  
+  
+  
+  
+__Expertise:__  
+Lizkins have expertise in one of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 __Lizkin Abilities:__ 
@@ -743,9 +786,6 @@ __Lizkin Abilities:__
   * __Poison Resist:__ You are resistant to most poisons. You have advantage on any poison related checks, and take half damage at worst.  
   * __Shed Tail:__ Once per week, you can shed your tail to escape a grapple.  
   * __Taste Air:__ Gain advantage on tracking perception checks by tasting the air. Works in all environments.  
-* __Advantages:__   
-  * __Color Choice:__ _(Cost 1)_ You may choose what color your scales are. Scales may hold only three colors at a time unless Camouflage is being used. This may be used to gain advantage on a stealth check.  
-  * __Smokevision:__ Your double eyelids allows you to see well when underwater or in smoke.  
 * __Combat Abilities:__   
   * __Poison Bite:__ _(Cost 1)_ You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are poisoned and take an additional 1d6 damage at the start of each turn until they pass a D14 inner fire saving throw. At level 5, increase this damage to 1d12. At level 8, increase it to 10, increase it to 2d12.  
   
@@ -767,20 +807,24 @@ ___
 A brutish and warlike race, orcs stab first and ask questions later. Orcs are often used to living in harsh environments, and living off the land.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|0|1|0|1|-2|4|  
+  
+  
+  
+__Expertise:__  
+Orcs have expertise in one of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 __Orc Abilities:__ 
 * __General Abilities:__   
   * __Still Warm:__ You can eat raw meat without penalty.  
-* __Advantages:__   
-  * __Predator:__ When tracking, you have advantage on perception checks.  
 * __Combat Abilities:__   
-  * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an Spell Power save of be frightened.  
-  * __Thunderous Blow:__ _(Cost 1)_ Roll an extra dice for your attack. On a critical hit, knock the enemy prone or knock them back 10 feet.  
-  * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory action. If you take the retaliatory action, you must make your death coin flips with disadvantage.  
+  * __Bellow:__ _(Cost 1)_ On your turn, spend one action point to unleash a mighty bellow. All who hear must make an spell power save of be frightened.  
+  * __Thunderous Blow:__ On a critical hit, knock the enemy back 10 feet.  
+  * __Vengeful Death:__ When you are reduced to zero hit points, you may make one last retaliatory attack action. If you take the retaliatory attack action, you must make your death coin flips with disadvantage.  
   
   
   
@@ -800,9 +844,15 @@ ___
 Sprouts are among the smallest of the races, standing at about 2 feet. As a result, they are very weak, but are fast, and good at sneaking. The wise sprout should avoid the front line of combat, and instead stay in relative hiding, jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see a sprout knight attempting to make a name for themself.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|1|2|1|0|0|2|  
+  
+  
+  
+__Expertise:__  
+Sprouts have expertise in one of the following checks:  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
   
   
 __Sprout Abilities:__ 
@@ -814,10 +864,8 @@ __Sprout Abilities:__
   * __Lightweight:__ Any cup of alcohol affects you like two.  
   * __Blade of Grass:__ Summon a 1d6 blade of woven plant fiber on command.  
   * __Harden:__ As an offhand action, harden or unharden yourself. While hardened, gain 2 armor but lose 2 dexterity. Does not stack with other armor.  
-* __Advantages:__   
-  * __Scurry:__ You have advantage on dexterity based athletics checks.  
 * __Combat Abilities:__   
-  * __Dodge:__ Once per turn when you are the target of a targeted attack, the enemy must roll a contested Dexterity check or miss.  
+  * __Dodge:__ As a reaction, increase your armor by 5.  
   
   
   
@@ -837,9 +885,15 @@ ___
 Alien among the other races, Waterborn hail from the depths of oceans, lakes, and rivers. Waterborn come in a pleathora of colors, and have ruddy, splotched skin which dries up if it isn't exposed to water regularly. Waterborn are powerful magic users, and are naturally adept at charming the other races.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|1|0|2|0|-1|1|2|  
+  
+  
+  
+__Expertise:__  
+Waterborns have expertise in one of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 __Waterborn Abilities:__ 
@@ -849,6 +903,7 @@ __Waterborn Abilities:__
   * __Water Healing:__ When you sleep in water, it is as if you are in a bed.  
   * __Lightweight:__ Any cup of alcohol affects you like two.  
 * __Combat Abilities:__   
+  * __Become Mist:__ _(Cost 1)_ As a reaction, spend one action point to flow like mist, increasing your armor by 5.  
   * __Charm:__ _(Cost 1)_ As an action, you may cast a charm spell on an entity. If the entity fails an inner fire saving throw against your spell power, they cannot attack you until you attack them or they succeed, and you gain advantage on charisma checks with them.  
   
   
@@ -875,11 +930,24 @@ to have a good time!
 Some of the best marksmen in the world, archers are naturals with ranged weapons. They are often attached to their bow, and carry it with them everywhere. Masters of the trick-shot, archers learn to utilize simple magics to craft their many specialized arrows.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|-1|2|1|1|-2|0|4|  
   
   
+The following starting stats are recommended for a Archer  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|-1|2|1|1|0|  
+  
+  
+  
+__Expertise:__  
+Archers have expertise in three of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
@@ -894,40 +962,66 @@ ___
 "[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 
   
-#### Path of Nature Barbarian
-  
-  
-The Path of Nature Barbarian is deeply in tune with the power that infuses the beasts of the world. By harnessing and infusing themselves with these powers, Path of Nature Barbarians can take on the aspects of animals, gaining powerful abilities as a result. Path of Nature Barbarians are highly versatile and mobile, and make good support tanks and frontline fighters.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|0|-1|0|2|-2|-3|6|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Path of Nature Barbarian" role="button">Level Up Sheet</a>
-  
-___
-
-  
 #### Path of Rage Barbarian
   
   
 Path of Rage Barbarians are hearty, and can dole out a lot of damage, making them great tanks for a party of adventurers. They are marked by their berserk ability, which allows them to fly into a battle frenzy, gaining extra attacks and health. Barbarians cannot use magic, and are much better up close than at a distance. They are known for their rugged ways, and usually prefer wide open spaces to cities.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|-3|0|0|1|-1|-2|6|  
   
   
+The following starting stats are recommended for a Path of Rage Barbarian  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|2|-2|0|1|1|-1|  
+  
+  
+  
+__Expertise:__  
+Path of Rage Barbarians have expertise in three of the following checks:  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Path of Rage Barbarian" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Barbarian" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Path of Nature Barbarian
+  
+  
+The Path of Nature Barbarian is deeply in tune with the power that infuses the beasts of the world. By harnessing and infusing themselves with these powers, Path of Nature Barbarians can take on the aspects of animals, gaining powerful abilities as a result. Path of Nature Barbarians are highly versatile and mobile, and make good support tanks and frontline fighters.
+  
+  
+  
+  
+The following starting stats are recommended for a Path of Nature Barbarian  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|1|-1|0|2|1|-2|  
+  
+  
+  
+__Expertise:__  
+Path of Nature Barbarians have expertise in three of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  
+  
+
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Barbarian" role="button">Level Up Sheet</a>
   
 ___
 
@@ -941,17 +1035,36 @@ ___
 Showmen by nature, Bards are known for their skills at performing and distracting others from the sorrows of life. Bards are usually at least a little bit gaudy and outgoing. They are quick in a fight, and often fight with dexterity based weapons such a shortswords or knives. Bards are powerful spellcasters, and are excellent at providing support to their party and at making enemies weaker. The bardic guilds have mastered the art of making Spell Coins, powerful items which can store magical spells for later use. These coins can be used to greatly increase a Bard's arsenal or to give non-casters access to powerful spells.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|1|-2|1|0|-1|2|4|  
   
   
+The following starting stats are recommended for a Bard  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|1|-1|0|1|2|  
+  
+  
+  
+__Expertise:__  
+Bards have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 
 <a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Bard" role="button">Level Up Sheet</a>
   
 ___
+  
+  
+After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. Clerics are weak, and do not fight with physical weapons. However, they are powerful spellcasters who are adept at healing, and who can make a huge difference in combat. Clerics try to embody the ideals of their deity, paying them homage and working to enact their will in the world.  
+  
 
   
 ### Cleric
@@ -960,253 +1073,31 @@ ___
 "[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
   
   
-After pledging their allegiance to their deity, Clerics have made it their duty to follow their will. Clerics are weak, and do not fight with physical weapons. However, they are powerful spellcasters who are adept at healing, and who can make a huge difference in combat. Clerics try to embody the ideals of their deity, paying them homage and working to enact their will in the world.  
-  
-
-  
-#### Cleric of Beauty
-  
-  
 Servant of Lady Dusk. Followers of the Pale Lady seek rewards from their dark goddess in return for helping her conform the world to her ideals.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
+  
+  
+The following starting stats are recommended for a Cleric  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|2|0|-1|1|1|  
   
   
   
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Beauty" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Fertility
-  
-  
-Servant  of Naris. Followers of Naris, aim to spread life and love throughout the world.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
+__Expertise:__  
+Clerics have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Fertility" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Fun
-  
-  
-Servant  of Juliet. Clerics of Juliet seek to bring fun and chaos to the world.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Fun" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Healing
-  
-  
-Servant  of Aunora. Followers of Aunora, called the Hands of Aunora, seek to bring peace and healing to the world.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Healing" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Knowledge
-  
-  
-Servant  of Raghnal. Followers of Raghnal, called the Eyes of Raghnal, seek to gather information to safeguard the realms, and to keep knowledge from evil eyes.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Knowledge" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Law
-  
-  
-Servant of Iro. Followers of Iro, called the Watchers, uphold the word of law.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Law" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Nature
-  
-  
-Servant  of Ronar. Followers of Ronar, called the Ronari, are called to preserve nature and end conflict wherever they find it.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Nature" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Nothingness
-  
-  
-Servant  of The Void Father. Followers of the Void Father aim to aid their master in obliterating existence.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Nothingness" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Sin
-  
-  
-Servant  of Melekar. Followers of Melekar serve the Lord of Sin by expanding his influence by subjugating the weak.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Sin" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of The Downtrodden
-  
-  
-Servant  of Eandar. Followers of Eandar, called the Browncloaks, seek to help the common man in whatever way they can.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Downtrodden" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of The Hunt
-  
-  
-Servant  of Yilena. Followers of Yilena, called Wardens, are called to protect the wilds from evil, and to keep balance in the natural world.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Hunt" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of The Sea
-  
-  
-Servant  of Hesh. Followers of Hesh are called to the sea.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of The Sea" role="button">Level Up Sheet</a>
-  
-___
-
-  
-#### Cleric of Undeath
-  
-  
-Servant  of Illael. Followers of Illael seek to further their dark god's plans, and thus win necromantic immortality.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-2|2|-1|0|1|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric of Undeath" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Cleric" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1217,15 +1108,28 @@ ___
 Earth, Water, Fire, Air. These are the domain of the Elementalist. Devotees of the power of the elements, the Elementalist masters the elements one after the other on their journeys. As the Elementalist masters the elements, they unlock their potential, unleashing greater and more powerful magic. The elementalist druid is a powerful combat caster, but may also be used to support a party.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|1|1|-1|2|-3|4|  
   
   
+The following starting stats are recommended for a Elementalist Druid  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-1|1|1|0|2|-2|  
+  
+  
+  
+__Expertise:__  
+Elementalist Druids have expertise in three of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Elementalist Druid" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Druid" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1236,15 +1140,28 @@ ___
 Magic suffuses the world, flowing around and through all things. The telepath has learned to harness that flow, manipulating the current of magic to affect the world around them. This ability allows the telepath to project their thoughts like inaudible sounds through the ripples of magic, and even to change the flow of magic to affect the material world. The Telepath Fighter is a powerful combatant, able to push, pull, hoisted and mentally batter their enemies. Telepaths are among the best suited fighters to destroy an enemy mage.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|-2|0|1|2|-3|-1|4|  
   
   
+The following starting stats are recommended for a Telepath  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|2|0|-1|1|1|-2|  
+  
+  
+  
+__Expertise:__  
+Telepaths have expertise in three of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Telepath" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Fighter" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1255,15 +1172,28 @@ ___
 Through luck, valor, or perhaps trickery, the Marksman has mastered the use of one of the most complicated weapons in the world. As such, they have a close bond with their gun, which is usually their primary means of income. Marksmen are long-distance snipers, and excel at dealing massive damage to single targets. They are weak, however, against enemies that get in close, and require a good party to stand between themselves and their enemies.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|1|2|1|-3|-1|0|4|  
   
   
+The following starting stats are recommended for a Marksman  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|-1|2|1|0|1|  
+  
+  
+  
+__Expertise:__  
+Marksmans have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Marksman" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Gunslinger" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1274,15 +1204,28 @@ ___
 The Heroic Highborn is a beacon of fierce nobility, brining hope and inspiration to their people. The Heroic Highborn is a powerful fighter which supports its allies by granting them inspiration. As a Heroic Highborn watches it's allies succeed, it gains Gumption, the force of will needed to perform heroic feats in combat.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|-2|-3|1|0|2|1|4|  
   
   
+The following starting stats are recommended for a Heroic Highborn  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|1|-1|-2|0|1|2|  
+  
+  
+  
+__Expertise:__  
+Heroic Highborns have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Heroic Highborn" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Highborn" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1293,15 +1236,28 @@ ___
 The Stalwart Knight is a are heavy, armored fighter who should place themselves between their party and harm's way. The ideal knight is a bastion of good, a defender of the innocent and the embodiment of chivalry. Stalwart Knights excel at area control, and are able to deal heavy damage to nearby enemies, and to protect nearby allies.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|2|-1|-2|0|-3|1|0|6|  
   
   
+The following starting stats are recommended for a Stalwart Knight  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|2|1|-1|-2|1|0|  
+  
+  
+  
+__Expertise:__  
+Stalwart Knights have expertise in three of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Stalwart Knight" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Knight" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1315,11 +1271,24 @@ ___
 Monks are masters of hand to hand combat who use their extensive control of their bodies to overcome their foes. The monk is a powerful front-line combatant, which excels at making multiple rapid attacks against an enemy, chipping away at their defenses with well placed blows. Monks do well against humanoid enemies and beasts, but have to use their wits to overcome massive, heavily armed creatures.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|-2|2|1|1|0|-3|4|  
   
   
+The following starting stats are recommended for a Monk  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-1|0|2|1|1|-2|  
+  
+  
+  
+__Expertise:__  
+Monks have expertise in three of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
@@ -1337,11 +1306,24 @@ ___
 Death is not my enemy, nor is it my ally, it is my servant. So say Necromancers, mages who study the intricacies of death, and what follows after. Often fueled by macabre fascination or a god complex, Necromancy is deeply feared and considered taboo by almost everyone. Clerics and Paladins, in particular, may despise or hunt necromancers. Necromancers utilize the power inherent in living souls to perform their magic, and are masters of raising an army of undead thralls to serve them.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|1|-2|2|0|2|-3|2|  
   
   
+The following starting stats are recommended for a Necromancer  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-1|1|1|0|2|-2|  
+  
+  
+  
+__Expertise:__  
+Necromancers have expertise in three of the following checks:  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
@@ -1359,11 +1341,24 @@ ___
 Paladins are Soldiers of the Light, and are adept both at hand to hand combat and healing magic. Paladins are devoted to their deity, and aim to bring their influence into the world. Paladins are especially good at taking out evil entities, and are known for their Faithful Weapon ability, which lets them summon their weapon to their hand after throwing it.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|1|-2|-3|0|0|2|-1|6|  
   
   
+The following starting stats are recommended for a Paladin  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|1|-1|-2|0|2|1|  
+  
+  
+  
+__Expertise:__  
+Paladins have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Brawn _(Str)_  
+  * Endurance _(Str)_  
   
   
 
@@ -1381,11 +1376,24 @@ ___
 Rangers are the vigilante law keepers and monster hunters of the wilds. Tank-like fighters, Rangers are powerful dexterity based combatants, and are known for their ability to dual wield weapons. Rangers are masters of the wilds, and are able to easily track enemies, as well as to prepare simple medicines in times of need. Rangers are often known by common folk to be quiet and mysterious, however, they are well loved, as it is understood that they are the thin line that stands between many villages and an onslaught of monsters.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-2|0|2|1|1|-1|-3|4|  
   
   
+The following starting stats are recommended for a Ranger  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|1|2|1|0|-1|  
+  
+  
+  
+__Expertise:__  
+Rangers have expertise in three of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
@@ -1400,40 +1408,66 @@ ___
 "[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 
   
-#### Assassin
-  
-  
-Experts at dealing massive damage to a single target, assassins are among the most deadly fighters on the battlefield. With low-health and light armor, the assassin must rely on their cunning to win an outright battle. To this end, assassins learn the art of magic, using their powers to augment their abilities, and even to turn invisible before sinking a poisoned dagger between an enemy's ribs.
-  
-  
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|-1|1|2|2|-2|0|2|  
-  
-  
-  
-  
-
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Assassin" role="button">Level Up Sheet</a>
-  
-___
-
-  
 #### Thief
   
   
 Sneaktheives and criminals, Thieves have often fallen in with bad company. Thieves are incredibly nimble and stealthy, and are able to clime, sneak, and lockpick their way into most anything. They are very weak, however, and will have better luck running away than fighting if caught. When they have to fight, Rogues often pick daggers or shortswords, and strike from on high or from in the shadows, letting their more armored friends soak up the damage. Then, after attacking, they disengage from combat, fleeing back to the shadows to prepare for their next attack.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|-1|1|2|2|-2|0|2|  
   
   
+The following starting stats are recommended for a Thief  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|0|1|2|-1|1|  
+  
+  
+  
+__Expertise:__  
+Thiefs have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
-<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Thief" role="button">Level Up Sheet</a>
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Rogue" role="button">Level Up Sheet</a>
+  
+___
+
+  
+#### Assassin
+  
+  
+Experts at dealing massive damage to a single target, assassins are among the most deadly fighters on the battlefield. With low-health and light armor, the assassin must rely on their cunning to win an outright battle. To this end, assassins learn the art of magic, using their powers to augment their abilities, and even to turn invisible before sinking a poisoned dagger between an enemy's ribs.
+  
+  
+  
+  
+The following starting stats are recommended for a Assassin  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-2|0|1|2|1|-1|  
+  
+  
+  
+__Expertise:__  
+Assassins have expertise in three of the following checks:  
+  * Sleight of Hand _(Dex)_  
+  * Agility _(Dex)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
+  
+  
+
+<a class="btn btn-primary" href="/site/pages/level_up_sheet.html?class=Rogue" role="button">Level Up Sheet</a>
   
 ___
 
@@ -1447,11 +1481,24 @@ ___
 The Sorcerer does not learn their magic, but is rather given it either as a gift or by trade. Some Sorcerers bargain with the spirits that inhabit the world, granting them a chance to experience the mortal realm in exchange for magical power. Others make a pact with one of the Old Ones, half formed gods, powerful demons, or natural beasts of awe-inspiring power. In these pacts, the Sorcerer must act as a vassal to their new lord in exchange for rewards. By definition, the Sorcerer must be charismatic to strike and maintain such deals, and must ask their sponsor for aid each time they cast a spell. While this means that their borrowed magic sometimes fails them, it also means that the sorcerer has access to far more power than other mortals.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-1|0|-3|1|-2|1|2|4|  
   
   
+The following starting stats are recommended for a Sorcerer  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-1|0|1|-2|1|2|  
+  
+  
+  
+__Expertise:__  
+Sorcerers have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Investigation _(Per)_  
+  * Alertness _(Per)_  
   
   
 
@@ -1469,11 +1516,24 @@ ___
 The study of magic is the study of potential, or so the wizard discovers during their long hours of research. Unlike other mages who take shortcuts, the wizard pours over their books to gain understanding over the magic of the world. It is in this study that wizards learn that magic is a form of unevaluated energy, energy which has the potential to become anything given coercion. Using this knowledge, their mind, an arcane focus, and an assortment of magically charged objects, the wizard is able to create wondrous things, and to do mighty deeds.
   
   
-|STR|INT|PER|LUK|DEX|INF|CHA|HD|  
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|  
-|-3|2|-1|2|-2|1|0|2|  
   
   
+The following starting stats are recommended for a Wizard  
+  
+|STR|INT|PER|DEX|INF|CHA|  
+|:---:|:---:|:---:|:---:|:---:|:---:|  
+|-1|2|0|-2|1|1|  
+  
+  
+  
+__Expertise:__  
+Wizards have expertise in three of the following checks:  
+  * Performance _(Chr)_  
+  * Insight _(Chr)_  
+  * Wisdom _(Inf)_  
+  * Willpower _(Inf)_  
+  * Street Smarts _(Int)_  
+  * Book Smarts _(Int)_  
   
   
 
@@ -1492,10 +1552,11 @@ Many skills have requirements. These are either __stat based__ or __skill based_
 If a skill has a stat based requirement, you must have a certain value for a stat
 before you can learn the skill. If a skill has a skill requirement, you must learn
 the required skill or skills first.
-* __Cook:__ During a rest, you may cook food which heals 1d6 health.  
-* __Master Chef:__ During a rest, you may cook food which heals 3d8 health.  
+* __Cook:__ During a rest, you may cook food which adds a healing dice for all participants.  
+* __Master Chef:__ During a rest, you may cook food which adds a healing dice and increases the size of all healing dice.  
   * Skill Requirements: _Cook_  
-* __Restful Sleeper:__ Roll healing dice with advantage when resting or sleeping.  
+* __Meditative Rest:__ Regain an extra action point from any rest.  
+* __Greater Meditative Rest:__ Regain two extra action points from any rest.  
 * __Shield Master:__ Take 5 feet fewer of movement penalty when using shields.  
 * __Hearty:__ When you level up, you may roll your health dice with advantage.  
 * __One Handed Weapon Proficiency:__ You may wield one handed physical weapons without disadvantage.  
@@ -1508,18 +1569,19 @@ the required skill or skills first.
   * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
 * __Basic Magic:__ You may use tier zero magic from the Novice Spell Book. Each time you level up, gain a tier zero spell.  
   * Stat Requirements: _Intelligence: 3_  
-* __Advanced Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
+* __Adept Magic:__ You may use tier one magic. Each time you level up, gain a tier one spell.  
   * Skill Requirements: _Basic Magic_  
   * Stat Requirements: _Intelligence: 5_  
-* __Tinker:__ You may attempt to make items and contraptions during rests.  
-  * Stat Requirements: _Intelligence: 3, Dexterity: 1_  
+* __Advanced Magic:__ You may use tier two magic. Each time you level up, gain a tier one spell.  
+  * Skill Requirements: _Adept Magic_  
+  * Stat Requirements: _Intelligence: 5_  
 * __Nimble Navigator:__ Don't take penalty from difficult terrain. Stand up for free after being knocked prone.  
   * Stat Requirements: _Dexterity: 3_  
 * __Dodging Stance:__ As an Offhand Action, move into a dodging stance. As a reaction before your next turn, when you are the target of a targeted attack, make a contested Dexterity check against the attacking enemy. On success, you avoid the attack.  
   * Stat Requirements: _Dexterity: 1_  
-* __Shrug it Off:__ Reaction. Once per turn, when attacked, decrease the attack damage by twice your strength.  
+* __Shrug it Off:__ Reaction. When attacked, decrease the attack damage by twice your strength.  
   * Stat Requirements: _Strength: 1_  
-* __Leader:__ Give all allies a 1d6 inspiration dice at the start of each battle.  
+* __Leader:__ Give all allies a 1d4 inspiration dice at the start of each battle.  
   * Stat Requirements: _Inner Fire: 3, Charisma: 3_  
 * __Mage Hunter:__ Gain advantage on breaking enemy concentration and on SP saves.  
   * Stat Requirements: _Inner Fire: 3_  
@@ -1529,25 +1591,27 @@ the required skill or skills first.
   * Stat Requirements: _Inner Fire: 2_  
 * __Battle Mage:__ Gain advantage on concentration checks. Re-roll 1's made on attack spells.  
 * __Ventriloquist:__ You can throw your voice without a skill check.  
-* __Fight from the Shadows:__ You are able to attempt to hide as an offhand action.  
-  * Stat Requirements: _Dexterity: 3_  
 * __Phallanx:__ When you are adjacent to an ally, enemy attacks are at disadvantage.  
 * __Medic:__ You can stabilize a teammate as an action, and heal a teammate for 1d6 health for 1 AP.  
 * __Greater Medic:__ You are able to heal a teammate for 2d6 health for 1 AP.  
   * Skill Requirements: _Medic_  
   * Stat Requirements: _Inner Fire: 2, Dexterity: 1_  
+* __Major Medic:__ You are able to heal a teammate for 4d6 health for 1 AP.  
+  * Skill Requirements: _Greater Medic_  
 * __Functioning Alcoholic:__ When intoxicated, gain advantage on charisma, strength, inner fire, and luck checks.  
   * Stat Requirements: _Inner Fire: 3_  
 * __Sage:__ Re-roll any ones or twos rolled while casting magic.  
   * Stat Requirements: _Intelligence: 5, Inner Fire: 3_  
-* __Close Quarters Combat:__ Do not take disadvantage with ranged weapons when harried.  
+* __Unharried:__ You cannot be harried.  
 * __Two Handed Weapon Master:__ Carry two handed weapons with one hand.  
   * Stat Requirements: _Strength: 5, Dexterity: 1_  
 * __Master of Concentration:__ Concentrate on two spells at the same time  
   * Stat Requirements: _Inner Fire: 5, Intelligence: 3_  
 * __Duelist:__ When fighting an enemy take advantage on attacks if there are no other combatants within 30 feet.  
 * __Demolitionist:__ Do double damage with non-spell based explosives.  
-* __Controlled Retreat:__ Take half damage when retreating.  
+* __Provocateur:__ Take half damage from attacks of opportunity.  
 * __Pivot:__ Swap positions with an adjacent teammate.  
 * __Tumble:__ Take 20 feet less fall damage.  
+* __Fast Draw:__ You may use your dexterity rather than your perception on initiative roles.  
+  * Stat Requirements: _Dexterity: 0_  
 

@@ -42,7 +42,7 @@ show_download: false
 
   
 # Book of Known Beasts
-_Version 2.3.1_  
+_Version 2.4.0_  
 
    * [Beasts:](#beasts)  
      * [Bears:](#bears)  
@@ -114,13 +114,13 @@ ___A player will almost certainly not see a bear attack coming. Consider having 
 #### Dire Bear Cub:
 * ___Level 0 Light Enemy___  
 * __Health:__ 8  
-* __Spell Power:__ 7   
+* __Spell Power:__ 5   
 * __Movement:__  
   * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 (+1) | -3 (-3) | 0 (+0) | -7 (-5) | 0 (+0) | 0 (+0) | 0 (+0) |  
+| 1 (+1) | -3 (-3) | 0 (+0) | -7 (-7) | 0 (+0) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Climb:__ A bear cub can quickly climb surfaces if their are any handholds  
@@ -142,7 +142,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 (+3) | -5 (-4) | 0 (+0) | -3 (-3) | 0 (+0) | 1 (+1) | 0 (+0) |  
+| 3 (+3) | -5 (-5) | 0 (+0) | -3 (-3) | 0 (+0) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Mother Bear:__ If a dire bear's cubs are in danger, her movement speed is doubled and she can make both a bite and a claw attack in a single action.  
@@ -166,13 +166,13 @@ ___Big cats almost always hunt alone, and are too intelligent to risk attacking 
 #### Panther Cub:
 * ___Level 0 Light Enemy___  
 * __Health:__ 6  
-* __Spell Power:__ 7   
+* __Spell Power:__ 5   
 * __Movement:__  
   * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 (-1) | 1 (+1) | 0 (+0) | -7 (-5) | 0 (+0) | 1 (+1) | 0 (+0) |  
+| -1 (-1) | 1 (+1) | 0 (+0) | -7 (-7) | 0 (+0) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Climb:__ Panther cubs can climb nearly anything.  
@@ -217,13 +217,13 @@ ___Wolves hunt in packs, so it should be rare to face one alone. Characters may 
 #### Dire Wolf Pup:
 * ___Level 0 Light Enemy___  
 * __Health:__ 6  
-* __Spell Power:__ 7   
+* __Spell Power:__ 5   
 * __Movement:__  
   * __Land:__ 15 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 0 (+0) | -2 (-2) | 0 (+0) | -7 (-5) | 0 (+0) | 0 (+0) | 0 (+0) |  
+| 0 (+0) | -2 (-2) | 0 (+0) | -7 (-7) | 0 (+0) | 0 (+0) | 0 (+0) |  
   
 __Actions:__  
 * __Nip:__ _1d4 + 0 Strength._ The pup bites, dealing piercing damage.  
@@ -236,13 +236,13 @@ ___
 #### Forest Wolf:
 * ___Level 0 Light Enemy___  
 * __Health:__ 14  
-* __Spell Power:__ 8   
+* __Spell Power:__ 7   
 * __Movement:__  
   * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 (+1) | 1 (+1) | 0 (+0) | -5 (-4) | 0 (+0) | 3 (+3) | 0 (+0) |  
+| 1 (+1) | 1 (+1) | 0 (+0) | -5 (-5) | 0 (+0) | 3 (+3) | 0 (+0) |  
   
 __Abilities:__  
 * __Pack Strength:__ If multiple wolves are attacking the same enemy, they gain advantage.  
@@ -328,7 +328,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -11 (-7) | 0 (+0) | 0 (+0) | -3 (-3) | -3 (-3) | -3 (-3) | 0 (+0) |  
+| -11 (-11) | 0 (+0) | 0 (+0) | -3 (-3) | -3 (-3) | -3 (-3) | 0 (+0) |  
   
 __Actions:__  
 * __Scratch:__ _1d2 + 0 Dexterity._ The homunculus scratches at an enemy with needle-like fingers.  
@@ -346,7 +346,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -7 (-5) | 1 (+1) | 1 (+1) | 0 (+0) | -3 (-3) | 0 (+0) | 0 (+0) |  
+| -7 (-7) | 1 (+1) | 1 (+1) | 0 (+0) | -3 (-3) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Utilize Spell Gem:__ If a homunculus has a spell gem in it's possession, it is able to use it as an action.  
@@ -486,7 +486,7 @@ ___
 #### Adult Red Dragon:
 * ___Level 10 Villain Enemy___  
 * __Health:__ 366  
-* __Spell Power:__ 17   
+* __Spell Power:__ 19   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Air:__ 90 feet  
@@ -495,7 +495,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 7 (+5) | 5 (+4) | 2 (+2) | 7 (+5) | 3 (+3) | 3 (+3) | 0 (+0) |  
+| 7 (+7) | 5 (+5) | 2 (+2) | 7 (+7) | 3 (+3) | 3 (+3) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Multi-Attack:__ An adult dragon can make 2 claw attacks and 1 devour attack as an action.  
@@ -503,12 +503,12 @@ __Special Action Rules:__
 * __Villain Immunity:__ 3 times during a battle, an Adult Red Dragon can roll a spell power save with advantage.  
   
 __Actions:__  
-* __Devour:__ _2d12 + 5 Strength._ The dragon bites at an enemy with swordlike teeth. If a creature's size is small, they must make a contested dexterity check or be consumed by the dragon. A consumed entity takes 6d6 damage per turn. If the dragon takes 20 damage in one turn from without (or 15 from within) it must succeed a D14 INF save, or spit up the consumed entity.  
-* __Claw:__ _1d12 + 5 Strength._ The dragon pierces its foe with foot-long claws.  
-* __Fire Breath:__ _6d12 + 5 Inner Fire._ The dragon unleashes a maelstrom of fire, causing the air to crackle and pop. The fire makes a 50 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
-* __Fireball:__ _4d12 + 5 Inner Fire._ The dragon belches a fireball at a targeted spot, which deals damage to everyone within a 20 foot radius.  
-* __Grab:__ _1d12 + 5 Strength._ The dragon snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on.  
-* __Tail Strike:__ _4d12 + 5 Strength._ The dragons tail whistles as it hurtles towards its enemies. The tail strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
+* __Devour:__ _2d12 + 7 Strength._ The dragon bites at an enemy with swordlike teeth. If a creature's size is small, they must make a contested dexterity check or be consumed by the dragon. A consumed entity takes 6d6 damage per turn. If the dragon takes 20 damage in one turn from without (or 15 from within) it must succeed a D14 INF save, or spit up the consumed entity.  
+* __Claw:__ _1d12 + 7 Strength._ The dragon pierces its foe with foot-long claws.  
+* __Fire Breath:__ _6d12 + 7 Inner Fire._ The dragon unleashes a maelstrom of fire, causing the air to crackle and pop. The fire makes a 50 foot cone, damaging all enemies within. Once used, must be recharged (roll 1d10 each turn. On a 10, it is recharged).  
+* __Fireball:__ _4d12 + 7 Inner Fire._ The dragon belches a fireball at a targeted spot, which deals damage to everyone within a 20 foot radius.  
+* __Grab:__ _1d12 + 7 Strength._ The dragon snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on.  
+* __Tail Strike:__ _4d12 + 7 Strength._ The dragons tail whistles as it hurtles towards its enemies. The tail strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail.  
   
 __Conditional Actions:__  
 * __Turn 1:__ Roar: All enemies must make a Spell Power save. On failure, they are frightened, and additionally have disadvantage on saves.  
@@ -608,7 +608,7 @@ ______
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 (+1) | -2 (-2) | 1 (+1) | 1 (+1) | -5 (-4) | -2 (-2) | 0 (+0) |  
+| 1 (+1) | -2 (-2) | 1 (+1) | 1 (+1) | -5 (-5) | -2 (-2) | 0 (+0) |  
   
 __Abilities:__  
 * __Held Breath:__ Bog hoppers can hold their breath for up to an hour.  
@@ -760,7 +760,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 0 (+0) | -1 (-1) | -1 (-1) | -1 (-1) | -5 (-4) | 0 (+0) | 0 (+0) |  
+| 0 (+0) | -1 (-1) | -1 (-1) | -1 (-1) | -5 (-5) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If an adlet is at less than half health, it can make a bite attack as an offhand action.  
@@ -783,7 +783,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 (-1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-4) | 0 (+0) | 0 (+0) |  
+| -1 (-1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-5) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If an adlet is at less than half health, it can make a bite attack as an offhand action.  
@@ -806,7 +806,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 (+1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-4) | 0 (+0) | 0 (+0) |  
+| 1 (+1) | -1 (-1) | 1 (+1) | 1 (+1) | -5 (-5) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Cornered Animal:__ If a adlet is at less than half health, it can make a bite attack as an offhand action.  
@@ -1087,7 +1087,7 @@ ___Ogres are strong, and they know it. When goaded to action, ogres will rush he
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 (+3) | -3 (-3) | -7 (-5) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
+| 3 (+3) | -3 (-3) | -7 (-7) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
   
 __Actions:__  
 * __Hurl Goblin:__ _2d6 + 3 Strength._ If there is a goblin within 10 feet, the ogre can snatch it up and throw it at an enemy. Deals damage to both the goblin and the target.  
@@ -1111,7 +1111,7 @@ ___The Ogre Lord will charge a threat head on, and will make heavy use of its gr
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 3 (+3) | -3 (-3) | -7 (-5) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
+| 3 (+3) | -3 (-3) | -7 (-7) | 2 (+2) | -2 (-2) | -3 (-3) | 0 (+0) |  
   
 __Special Action Rules:__  
 * __Villain:__ If the Ogre Lord is being used as a villain, it may make one out of turn villain action per round.  
@@ -1170,7 +1170,7 @@ ___
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| 1 (+1) | -2 (-2) | -7 (-5) | -3 (-3) | -7 (-5) | 0 (+0) | 0 (+0) |  
+| 1 (+1) | -2 (-2) | -7 (-7) | -3 (-3) | -7 (-7) | 0 (+0) | 0 (+0) |  
   
 __Abilities:__  
 * __Smell Blood:__ If a nearby zombie successfully bites an enemy, all nearby zombies double their speed.  

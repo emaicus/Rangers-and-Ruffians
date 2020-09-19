@@ -2,46 +2,93 @@ spellbook:
   Tier:
     Title:
       cost: 0
-      target: ["friendly", "enemy", "entity (friendly, enemy, etc.)", "object", "self", "space", "animal", "region"]
-      num_targets: #, aoe, battle, line, cone
-      duration: String
-      combat_duration: #, save, battle, concentration
+      target: ["friendly", "enemy", "friend and foe", "self", "space", "other"]
+      num_targets: [1, "many"]
+      duration: #, save, # hours, concentration, infinite
       description: "What the spell does at a high level."
-      major/minor_damage_dice: 0
-      major/major_damage_type: <elemental, poison, fire, force, psychic, ice, dark, light>
-      major/major_healing_dice: 0
-      range: Distance at which it can be cast in ft. (Macros subbed on install for balance purposes)
-      balance_type: <minor, greater, major> <utility, buff, debuff, restoration, summoning, curse>
+      range: <self, hand, close, near, archer, far, infinite>
+      purpose: <damage, healing, buff, debuff, summon, utility>
+      school: Below.
 
-      # Effects should be used only for saves and secondary effects. Primary effects go at the outer level.
-      effect_radius: # number of feet, defaults to 1
-      casting_time: A number. Defaults to instantaneous.
-      combat_casting_time: # of turns, defaults to 1
+      --------------- COMBAT---------------------------------------
+      hit: <always, roll, other>
+      dice: "xdy"
+      effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, radiant>
       effects:
-        - description: "Effect description."
-          check_condition: "If present, explains when the check must be made." effect.check_description entities must make a effect.save save
-          save: "Spell Power"
-          balance_type: <minor, greater, major> <utility, buff, debuff, damage reduction, healing>
-          repeat: 
+        - condition: e.g. once graplled, (empty by default)
+          description: "effected enemies must make a effect.save save or"
+          save: <"spell_power", "strength", ...>
+          repeat:
             - first case
             - second case
             - third case (combined with commas then an or)
-      action_type: <Action, Offhand Action, Reaction, Free Action>
-      charisma_cost: Computed based on 8 + (3 x cost) if not specified.
-      components: 
+      -------------------- RARE -------------------------------
+      casting_time: A number of turns. Defaults to 1.
+      components:
         - "lowercase thing needed. e.g. a tortoise shell"
-      school: Below.
+      upcast:
+        cost: <# or scaling>
+        effect: <each additional action point spent on this spell>
+                <you may spend N additional action points on this spell to>
+      action_type: <action, offhand_action, reaction, free_action>
+      effect_radius: # number of feet, defaults to 1
+      charisma_cost: Computed based on 5 + (3 x cost) if not specified.
+      --------------------------------------------------------------------
 Range Macros:
   self -> a descriptor for targetting oneself.
-  hand to hand -> a descriptor for zero.
-  near -> 15 ft.
-  middling -> 30ft.
-  archer -> 50ft.
-  far -> 100ft.
-  very far -> 1000ft.
-  sight -> line of sight
+  hand -> a descriptor for zero.
+  close -> 15ft
+  near -> 30 ft.
+  mid  -> 60
+  archer -> 90ft.
+  far -> 300ft.
 
-  Shapes: <cone, line>
+# Levels 0-1, Tier 0. 7 damage 2d6
+# Levels 2-4, Tier 1, 14 damage 4d6
+# Levels 5-7, Tier 2, 27 damage 6d8
+# Levels 8-9, Tier 3, 36 damage 8d8
+# Levels 10-12, Tier 4, 50 damage 9d10
+# Levels 13-15, Tier 5, 70 damage 20d6
+
+potential spell schools:
+  - Divine
+    - Restoration
+    - Purification
+    - Guardian
+    - Enhancement
+  - Necromantic
+    - summoning
+  - Natural
+    - Elemental
+      - Fire
+      - Water
+      - Earth
+      - Air
+    - Animist
+    - Floral
+  - Arcane
+    - Conjuring
+    - Destruction
+    - Transmuatation
+    - Abnegation
+    - Transportation
+    - Divination
+    - Illusion
+    - Enchantment
+      - mind
+      - matter
+    - Somatic (body)
+    # - Invocation
+    - Acoustic
+  - Necromantic
+
+Needed:
+  Tier_0: 19
+  Tier_1: 14
+  Tier_2: 11
+  Tier_3: 8
+  Tier_4: 6
+  Tier_5: 3
 
 Combined as follows:
 
@@ -53,16 +100,4 @@ Components: <list of components>
 Requirements: All spells should have one of description, minor_effect, major_effect.
 
 
-potential spell schools:
-  - Divine
-  - Natural
-    - Elemental
-      - Fire
-      - Water
-      - Earth
-      - Air
-    - Animist
-    - Floral
-  - Arcane
-  - Necromantic
-  - Social
+

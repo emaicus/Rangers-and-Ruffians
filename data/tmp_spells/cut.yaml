@@ -1,0 +1,311 @@
+Bard:
+      Discordant Symphony: # Multiple similar bard spells
+            cost: 0
+            target: enemy
+            num_targets: aoe
+            effect_radius: 30
+            duration: instantaneous
+            combat_duration: 1
+            dice_type: minor
+            num_dice: 1
+            effect_type: psychic
+            description: "Create a horrible sound which damages all who hear it."
+            range: self
+            balance_type: minor damage
+      Marionette:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: Until Save
+            combat_duration: save
+            description: "Attempt to control an enemy like a puppet."
+            range: middling
+            effects:
+              - save: Spell Power
+                description: you may control them as though they are a puppet and
+                  you hold their strings. The entity may attempt an inner fire saving throw
+                  each turn thereafter to break your control.
+            balance_type: greater debuff
+      Tyrone's Ravenous Hunger:
+            cost: 2
+            description: Cause an entity to become ravenously hungry. If they fail a
+              spell power save, they will attempt to eat the nearest entity to them.
+            balance_type: greater debuff
+      Ecstasy: # Inappropriate
+            cost: 2
+            description: Force an enemy to make a spell power save. On failure, they fall
+                into a fit of overwhelming pleasure, and miss their turn. They may repeat
+                the saving throw on their own turn every turn after the first.
+            effects:
+                candidate: true
+      Song of Rage: # Makes barbarians pointless
+            cost: 2
+            description: Play a song which sends one of your teammates into a rage. See
+                the barbarian's 'Berserk' ability for details on the affects.
+      Prison of Ice: #Very cool, should come back as a wizard spell
+            cost: 2
+            description: Force an enemy to make a dexterity saving throw against your spell
+                power. On failure, they are surrounded by ten foot tall walls of ice, lined
+                with sharpened icicles.
+      Harbinger of Doom: # Again, similar to other bard spells
+            cost: 2
+            description: Utter a word that hurts all that can hear it for 3d8 damage. Anyone
+                who hears must make a spell power save or move as far away as possible.
+            effects:
+                candidate: true
+      Little Guardian: # Could be brought back if there's time
+            cost: 2
+            description: Create a small familiar to aid you. The familiar may be any beast
+                from the book of known beasts of level 1 or lower excluding villain monsters.
+      Matchmaker: # Could be brought back if there's time
+            cost: 2
+            description: Point at two individuals and speak their names. Both must make
+                a spell power save, or fall madly in love.
+            effects:
+                candidate: true
+      Curse of the Lowlife: # Cool, but mass suggestion is pretty similar.
+            cost: 2
+            description: Force an enemy to make a spell power save. On failure, they are
+                cursed so that everyone they have ever met begins to forgets all positive
+                memories associated with them. Within a week, everyone will remember only
+                the negative aspects of the individual. The curse takes effect as soon as
+                the individual leaves someone's presence, and lasts until dispelled.
+Druid:
+
+    Commanding Presence: # Conflicts with other classes
+        cost: 2
+        target: friendly
+        num_targets: aoe
+        effect_radius: 30
+        balance_type: greater buff
+        range: self
+        duration: concentration
+        description: Create an aura which grants all nearby allies advantage on spell power
+            saving throws.
+        school: "social"
+    Fool the Senses: # Conflicts with Bard
+        cost: 1
+        balance_type: greater utility
+        target: entity
+        num_targets: 1
+        range: archer
+        duration: until a successful save
+        combat_duration: save
+        description: Cast a charm to attempt to fool an enemy's senses.
+        effects:
+              - description: convince them that they see, hear, or smell something
+                  that they do not.
+                save: Spell Power
+                balance_type: minor utility
+                repeat: at the start of each of the entity's turns
+        school: "unknown"
+    Hurl Boulder: # Basically a repeat of Hurl stone, which can now upcast
+        cost: 2
+        target: enemy
+        num_targets: 1
+        dice_type: major
+        num_dice: 3
+        effect_type: force
+        duration: instantaneous
+        combat_duration: 1
+        description: Hurl a boulder at an enemy.
+        school: "natural-elemental-earth"
+    Remove Curse: # Makes more sense for holy classes
+        cost: 2
+        target: friendly
+        num_targets: 1
+        balance_type: greater restoration
+        duration: instantaneous
+        combat_duration: battle
+        description: "Immediately allow an individual to re-make a spell power save against a
+            curse or other status effect at advantage."
+        school: "divine"
+    Thieve's Curse: # Off brand
+        cost: 2
+        target: entity
+        num_targets: 1
+        duration: eternity
+        description: "Cast a curse on an enemy."
+        balance_type: major debuff
+        duration: eternity
+        combat_duration: battle
+        effects:
+            - description: they are cursed so that they have an irresistible
+                urge to steal something once per hour. Afterward, they forget their acts of thievery,
+                and stow the stolen goods in their quarters or a private place. The curse
+                remains until it is dispelled.
+        save: Spell Power
+        balance_type: major debuff
+        school: "unknown"
+Cleric:
+    Give of Yourself:
+          cost: 0
+          target: friendly
+          num_targets: 1
+          duration: instantaneous
+          combat_duration: 1
+          description: Give a teammate up to 20 points of your own health per turn.
+          purpose: healing
+          range: near
+          casting_time: instantaneous
+    Augment Allied Attack:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: instantaneous
+            description: Call upon your deity to augment an allies attack.
+            damage_type: major
+            num_dice: 1
+            effect_type: radiant
+    Bulk Up:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: Force an entity to make an inner fire saving throw against your
+              spell power. On failure, the entity gains their weight in body fat.
+    Hound's Resolve:
+            cost: 1
+            description: Grant a teammate one additional effective inner fire. Lasts a number
+              of hours equal to your spell power.
+    Minor Holy weapon:
+            cost: 1
+            description: Imbue your weapon with the spirit of righteousness. Your weapon
+              gets +2 damage for a day, and advantage against evil and undead entities.
+    Omen:
+        cost: 0
+        description: Once per day, ask your deity for an omen in regards to a decision
+          you will make.
+    Monkey's Dexterity:
+        cost: 1
+        description: Grant a teammate one additional effective dexterity. Lasts a number
+          of hours equal to your inner fire.
+    Babel:
+        cost: 1
+        description: If an enemy of your choice fails a spell power save, it becomes
+            agitated and angry, but is incapable of meaningful communication for 1 hour.
+        effects:
+        candidate: true
+    Detect Life:
+        cost: 1
+        description: Make a check to see if you can detect life nearby. You may also
+            check to see whether you can detect a particular entity or entity type nearby.
+    Greater Mending:
+        cost: 1
+        description: Instantly repair up to a moderately sized or broken object such
+            as a wagon wheel or broken sword.
+    Greater Ward:
+        cost: 2
+        description: Touch a teammate and place a ward on them. This ward adds 4 armor
+            and magic armor to the touched party member the next 3 times they are successfully
+            attacked.
+    Radiant Light:
+        cost: 2
+        description: Create a beacon of holy light. Enemies who gaze into it must make
+            a spell power save. On failure, they are blinded for 3 turns, and are knocked
+            prone. Undead and evil enemies have disadvantage. The beacon stays at your
+            side for 1 battle or 1 hour unless dispelled.
+        effects:
+            candidate: true
+    Wall of Light:
+        cost: 2
+        description: Create a wall up to 40 feet high and 100 feet long of solid light.
+Necromancer:
+    Vampiric Touch:
+        cost: 0
+        description: Touch an enemy and deal 1d4 damage. Increase your health by the
+          damage dealt.
+        major_healing_dice: 1d4d1 4
+    Disease:
+        balance_type: healing candidate
+        cost: 1
+        description: Force an entity to make an inner fire saving throw against your
+          spell power. If the entity fails, it is cursed with a disease which deals
+          1d6 damage per day. Any damage dealt by the disease cannot be healed until
+          the disease is cured. The disease does not go go away until cured or dispelled.
+          Any entity that comes into physical contact with a diseased entity must make
+          an inner fire saving throw against your spell power, and become diseased on
+          failure.
+        major_healing_dice: 1d6d1 6
+    Haunt:
+        cost: 1
+        description: Summon forth a spirit to haunt an individual. The spirit lasts
+          for one week, at which time it returns to you briefly to report its actions
+          before disappearing.
+    Minor Through the Eyes of the Little Ones:
+            cost: 1
+            description: Take control of a nearby small animal such as a rat or crow. You
+              lose control after 1 hour or after the animal moves 1 mile away. For the duration,
+              your consciousness can inhabit the creature's.
+    Pain:
+            balance_type: damage candidate
+            cost: 1
+            description: Cause an enemy to feel incredible pain, dealing 1d6 damage. Force
+              the entity to make an inner fire saving throw against your spell power. On
+              failure, they are partially incapacitated, and must make their next action
+              with disadvantage.
+            major_damage_dice: 1d6d1 6
+    Painless:
+            cost: 1
+            description: Remove an entities ability to feel pain. Pain does not cause disadvantage
+              for the entity for the duration of the spell. Lasts 1 hour.
+    Vampiric Blade:
+            balance_type: healing candidate
+            cost: 1
+            description: Enchant any blade so that it does an additional 1d4 damage. You
+              heal an amount equivalent to this damage. This spell lasts for 3 turns or
+              one hour.
+            major_healing_dice: 1d4d1 4
+
+
+
+
+    Slow Heal:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 2
+            purpose: healing
+
+            balance_type: healing candidate
+            description: Cast a healing spell upon an ally that restores 1d6 health to them
+              per turn. Lasts 2 turns.
+            major_healing_dice: 1d6d1 6
+
+
+
+
+Water Breathing:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            description: Grant yourself or an ally the ability to breathe underwater.
+            range: hand
+            purpose: utility
+            school: arcane-somatic
+            upcast:
+                cost: 1
+                effect: grant the effect to up to six nearby allies
+
+
+
+
+
+
+
+
+Turn into a cleric class ability:
+    Line in the Sand:
+            cost: 1
+            description: Draw a line in the sand. If an enemy crosses, you and a chosen
+              ally have advantage when attacking them.
+
+Turn into a death knight class ability:
+    Isolate:
+        cost: 0
+        description: Force an entity to make an inner fire saving throw against your
+          spell power. On failure, sever any magical or psychic connections that they
+          maintain with other entities. Such connections can not be re-established so
+          long as you maintain concentration.
+        duration: concentration Candidate

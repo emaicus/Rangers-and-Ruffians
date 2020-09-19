@@ -32,3 +32,10 @@
   font-size: 14pt;
   font-weight: bold;
 }
+
+@media print  
+{
+    .weapon{
+        page-break-inside: avoid;
+    }
+}
