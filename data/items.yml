@@ -25,7 +25,7 @@ weapons:
             movement_penalty: 5
             range: adjacent
             damage_type: moderate
-            abilities: 
+            abilities:
               Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you."
               Sword Parry: "Reaction. Cost 1. If your offhand is free, you may make a contested dex check against an incoming melee light or heavy attack. On success, avoid the attack."
         Shortspear:
@@ -45,8 +45,8 @@ weapons:
             movement_penalty: 0
             damage_type: light
             abilities:
-              Flurry of Stabs: "Cost 1. Make two stabbing attacks in a single attack action. Add you relevant modifier only once."
-        Handaxe: # Why it's cool: 
+              Flurry of Stabs: "Cost 1. Make two stabbing attacks in a single attack action. Add your relevant modifier only once."
+        Handaxe: # Why it's cool:
             cost: "inexpensive"
             minimum_damage_dice: 4
             maximum_damage_dice: 10
@@ -60,11 +60,14 @@ weapons:
         Spear: # Why it's cool: Extra 5ft. of reach. Difficult to close with you.
             cost: "cheap"
             minimum_damage_dice: 4
+            reach: ten feet
+            movement_penalty: 5
+            damage_type: "Blade"
             maximum_damage_dice: 10
             range: ten feet
             damage_type: moderate
             movement_penalty: 10
-            abilities: 
+            abilities:
               Guarded Front: "Reaction. If an enemy moves within your reach in front of you, you may make an attack against them."
               Spear Parry: "Reaction. Cost 1. You may make a contested dex check against an incoming light melee attack. On success, avoid the attack."
             drawbacks:
@@ -76,7 +79,7 @@ weapons:
             movement_penalty: 5
             range: adjacent
             damage_type: moderate
-            abilities: 
+            abilities:
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
               Slashing Strike: "Cost 1. Make an attack which hits all enemies immediately in front of you."
             drawbacks:
@@ -102,7 +105,7 @@ weapons:
             abilities:
               Thrusting Strike: "Cost 1. Attack an enemy 10 feet in front of you. If this attack is a critical hit, add an additional dice of damage."
               Greatsword Parry: "Reaction. Cost 1. You may make a contested dex check against an incoming melee light or heavy attack. On success, avoid the attack."
-            drawbacks: 
+            drawbacks:
               Slow to Don: "Donning takes a full action"
         War Hammer:
             cost: expensive
@@ -110,10 +113,9 @@ weapons:
             maximum_damage_dice: 12
             range: adjacent
             damage_type: heavy
-            drawbacks: 
+            drawbacks:
               Slow to Don: "Donning takes a full action"
-            abilities: 
-              Ignore Armor: "Your war hammer ignores enemy armor."
+            abilities:
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
             movement_penalty: 10
         Greataxe:
@@ -123,12 +125,12 @@ weapons:
             maximum_damage_dice: 12
             range: diagonal
             damage_type: moderate
-            drawbacks: 
+            drawbacks:
               Slow to Don: "Donning takes a full action"
-            abilities: 
+            abilities:
               Heavy Blow: "Cost 1. Make an attack with your axe which ignores enemy armor. If the attack is a critical hit, add an extra damage dice."
               Bleeding Critical: "On a critical hit, repeat half as much damage at the start of the next turn."
-    Ranged:    
+    Ranged:
         Longbow:
             cost: moderately expensive
             minimum_damage_dice: 6
@@ -138,7 +140,7 @@ weapons:
             damage_type: moderate
             drawbacks:
               Slow to Don: "Donning takes a full action"
-            abilities: 
+            abilities:
               Superior Power: "When attacking an enemy within 30 feet, your arrows ignore enemy armor."
         Shortbow:
             cost: cheap
@@ -178,7 +180,7 @@ weapons:
             minimum_damage_dice: 4
             maximum_damage_dice: 12
             damage_type: moderate
-            abilities: 
+            abilities:
               Repeating: "Cost 1: You may make two attacks with your carbine in a single attack action at disadvantage."
             movement_penalty: 5
             range: 100 feet
@@ -225,15 +227,22 @@ shields:
       Major Shield Up: "When targeted by a light, moderate, or heavy ranged attack coming from in front of you, role a contested dexterity check. On success, block the attack."
 armor:
   Padded Armor:
-    cost: moderately expensive
-    movement_penalty: 5
+    cost: inexpensive
+    movement_penalty: 0
+    armor: 0
     abilities:
-      Minor Damage Resistance: "You take half damage from light attacks."
+      Blunt Resistance: "You take half damage from blunt attacks."
   Leather Armor:
-    cost: expensive
+    cost: moderately expensive
     movement_penalty: 0
     abilities:
-      Minor Damage Resistance: "You take half damage from light attacks."
+      Blunt Resistance: "You take half damage from blunt attacks."
+  Elven Leather Armor:
+    cost: very expensive
+    movement_penalty: 0
+    abilities:
+      Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
+      Blunt Resistance: "You take half damage from blunt attacks."
   Chainmail:
     cost: expensive
     movement_penalty: 5
@@ -241,12 +250,21 @@ armor:
       Greater Damage Resistance: "You take half damage from light attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
-      Heavy: "If your strength is below 3, move at half speed while wearing this armor."
+
+  # Scalemail:
+  #   cost: very expensive
+  #   movement_penalty: 10
+  #   abilities:
+  #     Ranged Resistance: "You take half damage from non-magic piercing or blunt ranged attacks."
+  #     Blunt Resistance: "You take half damage from blunt attacks."
+  #     Piercing Resistance: "You take half damage from piercing and slashing attacks."
+  #   drawbacks:
+  #     Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
   Plate Armor:
     cost: very expensive
     movement_penalty: 10
     abilities:
-      Major Damage Resistance: "You take half damage from moderate attacks."
+      Damage Resistance: "You take half damage from non-magic attacks."
     drawbacks:
       Stealth Disadvantage: "Take disadvantage on stealth checks while wearing your armor."
       Heavy: "If your strength is below 4, move at half speed while wearing this armor."
@@ -270,8 +288,8 @@ armor:
 #             minimum_damage_dice: 4
 #         Whip:
 #             minimum_damage_dice: 4
-#         
-#             
+#
+#
 #     Two Handed:
 #         Bastard Sword:
 #           minimum_damage_dice: 6
