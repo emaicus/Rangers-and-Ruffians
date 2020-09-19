@@ -93,7 +93,6 @@ It can also be silly and funny. We think that it is usually pretty fun.
 2. [Choose your Spells](site/pages/GENERATED/Tome_of_the_Ancients.md)
 3. [Choose your Deity](site/pages/GENERATED/Book_of_Lore.md)
 4. [Create your Character Sheet](site/pages/character_sheet.html)
-5. [Choose your Weapon](site/pages/weapons.html)
 
 
 ### Run the Game

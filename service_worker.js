@@ -413,7 +413,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "f8eb2c1f6a0d4d7e22ee0f68d7082736"
+    "revision": "efd7e715950e6260fe7b2e598419b32f"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
@@ -425,7 +425,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Changelog.html",
-    "revision": "6443d10ddf2c184aba23f247dae4aaf5"
+    "revision": "29bfa65a1194fd6f89fd1d864b906690"
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
@@ -533,7 +533,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "b29a75c42e2f08a8ae2fadb38cf876ce"
+    "revision": "db8a4545f30e695023e32f694beb8cc9"
   },
   {
     "url": "assets/css/style.css",
