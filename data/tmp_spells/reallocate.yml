@@ -1,0 +1,62 @@
+Tier_0:
+Tier_1:
+    Freeze or Unfreeze Water:
+        charisma_cost: 8
+        cost: 1
+        description: Freeze or unfreeze up to a 40 square foot area of water.
+    Heat or Cool Air:
+      charisma_cost: 12
+      cost: 1
+      description: Heat or cool the air in a room to an uncomfortable or extreme temperature.
+        After a turn of focus, all entities in the room that are not acclimated to
+        the temperature begin taking 1d4 damage per turn.
+    Jet of Water:
+      charisma_cost: 12
+      cost: 1
+      description: Fire a get of water from the source of your spell power. The blast
+        of water travels 40 feet, and strikes all entities in a line. Affected entities
+        take 1d6 damage, and must make an inner fire saving throw against your spell
+        power and be knocked prone on failure. You may maintain the stream of water
+        for up to 10 seconds, or two turns, dumping 300 gallons of water per minute.
+Tier_2:
+  Enlarge:
+      charisma_cost: 14
+      cost: 2
+      description: Grow an object or entity to up to double its size. Unwilling entities
+        can attempt a saving throw against your spell power each turn. Enlarged entities
+        gain +3 to all strength checks, but -2 to all dexterity checks, and gain 5
+        feet of movement. Concentration.
+      duration: concentration Candidate
+  Enter Mind:
+      charisma_cost: 12
+      cost: 2
+      description: Force an entity to make an inner fire saving throw against your
+        spell power. On failure, you may break into other entities mind, viewing their
+        memories.
+  Mark:
+      charisma_cost: 14
+      cost: 2
+      description: Lay your hands on something or someone so that you always know
+        in what direction it is. This spell lasts for 1d6 days, or until the affected
+        entity dispels it.
+  Loathing:
+      charisma_cost: 14
+      cost: 2
+      description: Force an entity to make an inner fire saving throw against your
+        spell power. On failure, you may instill that entity with a deep hatred for
+        an individual of your choosing. This hatred stays present until dispelled.
+Tier_3:
+Tier_4:
+  Illusory Terrain:
+      charisma_cost: 12
+      cost: 2
+      description: Make 100x100 yards of terrain look any way you choose.
+
+
+
+Add magic alarm to the new wizard class.
+Magic Alarm:
+        charisma_cost: 10
+        cost: 1
+        description: Create a magic alarm that triggers on a physical event of your
+          choice.
