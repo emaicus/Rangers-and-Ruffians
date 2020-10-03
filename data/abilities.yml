@@ -56,11 +56,6 @@ Singing Blade:
   description: When you make a melee weapon attack, you may add your charisma rather than your strength or dexterity.
   type: combat
   brief: "Add you charisma rather than DEX or STR when you make a melee weapon attack."
-Song of Inspiration:
-  description: "Grant an ally a major dice of inspiration."
-  type: general
-  brief: "Give an ally a major inspiration dice."
-  cost: 1
 Inherent Magic:
   description: You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.
   type: general
