@@ -51,36 +51,30 @@ Range Macros:
 # Levels 13-15, Tier 5, 70 damage 20d6
 
 potential spell schools:
-  - Divine
-    - Restoration
-    - Purification
-    - Guardian
-    - Enhancement
+  - Divine # Calling upon the magic of a deity
   - Necromantic
-    - summoning
-  - Natural
-    - Elemental
-      - Fire
-      - Water
-      - Earth
-      - Air
-    - Animist
-    - Floral
-  - Arcane
-    - Conjuring
-    - Destruction
-    - Transmuatation
-    - Abnegation
-    - Transportation
-    - Divination
+  - Eldrich
+  - Arcane # Harnessing the flow of untapped magic
+  -------------------------------------------------
+  - Alchemy # Dealing with matter
+    - Creation # Create
+    - Destruction # Destroy
+    - Transmutation # Change
+  - Somatic # Dealing with the body
+    - Restoration # Make someone healthier
+    - Necrotic # Make someone less healthy
+    - Transformation # Change someone's form
+  - Elementalism # Create/modify/utilize the 4 elements
+  - Thaumaturgy # Dealing with magic itself
+    - Abnegation # Remove magic from something
+    - Imbue
+    - Transportation # Move something
+    - Protection # Safeguard something
+  - Enchantment #   Dealing with the mind
     - Illusion
-    - Enchantment
-      - mind
-      - matter
-    - Somatic (body)
-    # - Invocation
-    - Acoustic
-  - Necromantic
+    - Hypnotism
+  - Divination # Dealing with Knowledge
+  - Summoning # Summon someone
 
 Needed:
   Tier_0: 19
@@ -98,6 +92,213 @@ Components: <list of components>
 <description>. The target/targets must perform a effect.save save. On failure, the entity/entities effect.description
 
 Requirements: All spells should have one of description, minor_effect, major_effect.
+
+
+
+Paladin
+Bard
+Cleric
+Druid
+Necromancer
+Sorcerer
+Wizard
+
+7 * 54 = 378 cards
+35$ in cards
+
+
+
+
+18 + 11 + 6 = 35 total spells
+
+
+
+35 spells to saturate.
+But then, you want there to be choice.
+Double saturation is 70 spells, but that's silly.
+Let's run with 1.5 * saturation
+
+27 + 17 + 10 = 54
+
+0-1: 27
+2-3: 17
+4-5: 10
+
+0: 14
+1: 13
+2: 9
+3: 8
+4: 6
+5: 4
+
+Wizard:
+  Tier 0:
+    Firecrackers: utility
+    Summoning Spell: utility
+    Candlelight: utility
+    Thaumaturgy_EQUIVALENT: utility
+    Unseen hand: utility
+    Conjure Illusion: utility
+    Detect Magic: utility
+
+    Magic Shield: buff
+    Blur: buff
+
+    Eat slugs: debuff
+
+    Flare: utility
+    Drain: damage, targeted, less
+    Rapid Fire Snowballs: damage, targeted, full
+    Acrid Mist: damage, mass
+  Tier 1:
+    Become Slime: utility
+    Bubble of Air: utility
+    Mirror Image: utility
+    Animate Weapon: utility
+    Bull Rush: utility
+    Create Pit: utility
+
+    Restrict Movement: debuff
+    Sleep: debuff
+
+    Strike True: buff
+    Statue: buff
+
+    Jet of Frost: damage, cone
+    Energy Shots: damage, targeted
+    Rain of Arrows: damage, mass
+  Tier 2:
+    Door Step: utility
+    Invisibility: utility
+    Featherfall: utility
+    Scry: utility
+    Platform: utility
+    Message: utility
+
+    Dispell Magic: buff
+
+    Ice Spear: damage
+    Fireball: damage
+  Tier_3:
+    Octahedral Barrier: utility
+    Cage: utility
+    Pocket Dimension: utility
+    Clone: utility
+
+    Polymorph: debuff
+    Reverse Gravity: debuff
+
+    Rainbows: Damage
+    Chain Lightning: damage
+  Tier_4:
+    Gate: utility
+    Fly: utility
+
+    Invulnerability: buff
+
+    Banish: debuff
+
+    Tri-beam: damage
+    Stop-Time: debuff
+  Tier_5:
+    Summon Bleck: utility
+
+    Anti-magic ring: debuff
+    Black Hole: debuff
+
+    Pillar Arcanum: damage
+
+
+Bard:
+0: N/14
+1: N/13
+2: N/9
+3: N/8
+4: N/6
+5: N/4
+
+Bard:
+  Tier_0:
+    Trick Up Your Sleave: utility
+    Imitate: utility
+    Control Shadows: utility
+    Throw Voice: utility
+    Carry on the Wind: utility
+    Conceal Weapon: utility
+    Conjure Illusion: utility
+
+    song of slow healing: healing
+
+    Song of Inspiration: buff
+
+    Hypnotize: debuff
+    charm: debuff
+
+    Harsh Note: damage, aoe
+    Cruel Limerick: damage, targeted
+  Tier_1:
+    dazzling lights: utility
+    disguise: utility
+    Kiss and tell: utility
+
+    Blocking Hand: buff
+    #Song of haste: buff
+    #take courage: buff
+
+
+    #slow: debuff
+    #raucous laughter: debuff
+    disarmor: debuff
+    #not so fast: debuff
+
+    #Belch Fire: damage
+  Tier_2:
+    invisible servant: utility
+    minor gate: utility
+    smokescreen: utility
+    horace's wholesome homestead: utility
+
+    counter magic: debuff
+
+    song of mass healing: healing
+
+    kilgore's thunderous shout: damage
+    sonic dart: damage
+  Tier_3:
+    conjure carriage: utility
+    immovable: utility
+    geodred's race dysmorphia: utility
+
+    song of healing: healing
+
+    power shriek: damage
+  Tier_4:
+    winged magic steed: utility
+    edmire's grand manor: utility
+
+    greater song of mass healing: healing
+
+    strike dumb: debuff
+  Tier_5:
+    guards: summon
+
+    dominate: debuff
+
+    torugar, the many tongued demon: damage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

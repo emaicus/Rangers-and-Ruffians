@@ -85,20 +85,23 @@ the_bard's_songbook:
                 cost: 1
                 effect: increase the time between saves to once every five minutes
             school: arcane-enchantment-mind
-        Steal Voice:
+        Collect Voice:
             cost: 1
             target: enemy
             num_targets: 1
             duration: save
-            description: "Attempt to steal an enemy's voice and use it as your own."
+            description: "Attempt to steal an enemy's voice"
             purpose: utility
             range: near
             hit: always
             effects:
                  - save: spell power save
-                   description: "you may take an entity's voice and use it as your own."
+                   description: "have their voice stolen. They may not speak again until
+                       they make a save, but you have a copy of their voice, which you
+                       may speak in at any time you wish. The copy lasts forever, or until
+                       someone casts dispel magic on you."
                    repeat:
-                        - "every turn or once every ten minutes"
+                    - each turn
             school: arcane-somatic
         Throw Voice:
             cost: 0
@@ -269,7 +272,7 @@ the_bard's_songbook:
                     - "when provided with proof of their newfound belief's fallacy"
             purpose: debuff
             school: arcane-enchantment-mind
-        Minor Trickery:
+        Trickery:
             cost: 1
             target: enemy
             num_targets: 1
@@ -1855,7 +1858,7 @@ the_book_of_healing:
             duration: 1 hour
             range: hand
             purpose: utility
-            school: divine-enhancement
+            school: divine-augmentation
             description: Your deity touches your tongue or that of an ally to allow you
                 to communicate its word to others. You are able to speak any language for 1 hour.
         Ward of Light:
@@ -2185,39 +2188,8 @@ the_macabre_manual:
             duration: 1 week
             description: Create a wall up to 40 feet high and 100 feet long of solid bone.
             school: arcane-summoning
-the_novice_spellbook:
-    Tier_0:
-        Drain:
-            cost: 0
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: "Drain the spirit from an enemy and take it for yourself.
-              If the spell hits, your enemy loses one action point, which is
-              transfered to you."
-            range: mid
-            purpose: damage
-            dice: 2d4
-            hit: roll
-            effect_type: necrotic
-            school: arcane-somatic
-        Rapid-Fire Snowballs of Fury:
-            cost: 0
-            target: enemy
-            num_targets: 1
-            duration: 1
-            description: A torrent of snowballs fly forth, blistering your enemies
-                with icy snow! Roll damage. Fire that many snowballs at up to as many targets. Each
-                snowball does 1 damage. Targets must be declared before the dice are rolled.
-            range: mid
-            purpose: damage
-            effect_type: blunt
-            hit: roll
-            dice: 2d6
-            school: natural-elemental-water
-            upcast:
-                cost: 1
-                effect: "embed rocks in the snowballs, causing them to deal 2 damage each"
+the_wizard's_addendum:
+    Tier_0: # 14 / 14
         Firecrackers:
             cost: 0
             target: other
@@ -2238,80 +2210,456 @@ the_novice_spellbook:
             description: Summon an object of up to 20 pounds to you. The object must be
                 within range, you must have a rough idea of where it is, and you must have
                 seen it before. The object will fly to you, as if guided by an unseen force.
-    Tier_1:
-        Jelly Arms:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            range: mid
-            purpose: debuff
-            school: arcane-somatic
-            hit: always
-            description: Speak arcane incantation which causes an enemy's arms
-                to fail them.
-            effects:
-                - save: spell power save
-                  description: lose control of its arms, which fall
-                        limp to its sides.
-                  repeat:
-                    - each turn
-        Lock or Unlock:
-            cost: 1
-            target: other
-            num_targets: 1
-            duration: 1
-            range: close
-            purpose: utility
-            school: arcane-transmutation
-            description: Lock or unlock an easy lock, tie or untie a knot, or seal something
-                with magic for 24 hours. For difficult locks, you may make a lockpicking check
-                with intelligence rather than dexterity.
-        Melon Headed Wanderer:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: save
-            purpose: debuff
-            range: archer
-            school: arcane-somatic
-            hit: always
-            description: Orange sparks fly from your fingertips as you
-                attempt to warp the world in your image -- an image of melons!
-            effect:
-                - save: spell power save
-                  description: "their is replaced with a
-                        melon. While an entity's head is a melon, it makes all actions with disadvantage,
-                        and is considered blind and deaf."
-                  repeat:
-                    - each turn
-        Strike True:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 2
-            purpose: buff
-            range: near
-            school: arcane-enchantment-mind
-            description: Enchant an ally's mind, giving them clarity of thought.
-                For the spell's duration, they have advantage on all checks and attack rolls that
-                they make.
-    Tier_2:
-        Rainbows:
+        Candlelight:
+                cost: 0
+                target: other
+                num_targets: 1
+                duration: concentration
+                description: Summon a dim candlelight that floats near to you
+                  and obeys your subconscious commands. The candlelight must stay
+                  within this spell's range, or be dispelled.
+                range: mid
+                purpose: utility
+                school: arcane-conjuring
+        Thaumaturgy_EQUIVALENT:
+          Blot Text:
+              cost: 0
+              target: other
+              num_targets: 1
+              duration: infinite
+              description: "Enchant a written message so that the ink becomes blotted
+                  and illegible 10 seconds after being read."
+                  Blot:
+                    charisma_cost: 10
+                    cost: 1
+                    description: Instantly destroy the text within any parchment or book your are
+                      holding.
+              range: hand
+              purpose: utility
+              school: arcane-enchantment-matter
+          Thunderous Voice:
+              cost: 0
+              description: Magically magnify your voice so that it can be heard clearly at
+                up to 100 yards.
+          Summon sparks: it can do this
+          Rend Fabric:
+            cost: 0
+            description: Shred a piece of fabric within one hundred feet of yourself into
+              a million tiny pieces.
+          Scourge:
+              cost: 0
+              description: Instantly clean an object by pointing at it. The object must be
+                within ten feet of you.
+          Minor Move Air:
+                      cost: 0
+                      description: Create a small gust of air, capable of pushing objects up to 20
+                        pounds away from you and slowing the advance of approaching enemies.
+          Minor Levitation:
+                cost: 0
+                description: Levitate an object up to 20 pounds. Concentration.
+        Unseen hand:
+          charisma_cost: 10
+          cost: 1
+          description: Conjure an unseen hand which can manipulate objects up to 50 feet
+            away.
+        Conjure Illusion:
+          charisma_cost: 10
+          cost: 1
+          description: Create an illusory object which cannot move and cannot be bigger
+            than a horse. You must have seen the object you are attempting to create.
+            Concentration.
+          duration: concentration Candidate
+          Conjure major illusion:
+            charisma_cost: 14
             cost: 2
-            description: With a mighty explosion, a blinding beam of light flares from your
-                fingertips or mouth, as the light moves further from you, it separates into
-                bands of color, a rainbow!
+            description: Create an illusory object which can move/speak if you tell it to
+              but cannot be bigger than a house. Concentration.
+            duration: concentration Candidate
+        Detect Magic:
+          detect: magic
+          is: also a cleric spell
+        Magic Shield:
+          action_type: Reaction Candidate
+          charisma_cost: 8
+          cost: 1
+          description: Reaction. Make a contested dexterity check against an enemy that
+            is targeting you with an attack. On a success, reduce the attack by your spell
+            power.
+        Blur_RENAME:
+          blur: yourself or an ally that enemies have disadvantage
+          it: is pretty good
+        Eat Slugs:
+            cost: 0
+            description: Fill a person's mouth with slugs. If they fail an inner fire saving
+              throw against your spell power, they are staggered, and make their next action
+              with disadvantage.
+        Flare:
+            cost: 0
             target: enemy
             num_targets: 1
             duration: 1
-            range: archer
-            purpose: damage
-            school: arcane-destruction
-            dice: 6d8
+            description: "Fire a colored flare from the source of your magic. The
+                flare burns as brightly as daylight, leaving a lingering trail behind
+                it."
             hit: roll
+            dice: 1d12
             effect_type: fire
+            purpose: damage
+            range: archer
+            school: arcane-elemental-fire
+        Drain:
+            cost: 0
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: "Drain the spirit from an enemy and take it for yourself.
+              If the spell hits, your enemy loses one action point, which is
+              transfered to you."
+            range: mid
+            purpose: damage
+            dice: 2d4
+            hit: roll
+            effect_type: necrotic
+            school: arcane-somatic
+            Greater Drain:
+                  balance_type: damage candidate
+                  charisma_cost: 12
+                  cost: 1
+                  description: Take 3 action points from an enemy and do 1d12 damage.
+                  major_damage_dice: 1d12d1 12
+        Rapid-Fire Snowballs of Fury:
+            cost: 0
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: A torrent of snowballs fly forth, blistering your enemies
+                with icy snow! Roll damage. Fire that many snowballs at up to as many targets. Each
+                snowball does 1 damage. Targets must be declared before the dice are rolled.
+            range: mid
+            purpose: damage
+            effect_type: blunt
+            hit: roll
+            dice: 2d6
+            school: natural-elemental-water
+            upcast:
+                cost: 1
+                effect: "embed rocks in the snowballs, causing them to an additional 1d6 damage."
+        Acrid Mist:
+            cost: 0
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: "As you mutter an arcane incantation, a cloud of noxious green
+                gas swirls around an enemies head, choking them."
+            range: mid
+            purpose: damage
+            school: arcane-conjuring
+            hit: always
+            damage: 2d4
+            effect_type: poison
+            upcast:
+                cost: 1
+                effect: increase the spell's radius to 15 feet.
+    Tier_1: # 13 / 13
+        Become Slime:
+            charisma_cost: 12
+            cost: 1
+            description: Transform into a green slime with a radius of one foot. See the
+              book of known beasts for details.
+        Bubble of Air:
+            charisma_cost: 10
+            cost: 1
+            description: Creates a bubble of breathable air around an entity's head. Lasts
+              1 hour.
+            Greater Bubble of Air:
+              charisma_cost: 15
+              cost: 2
+              description: Create bubbles of breathable air around up to 8 entities heads.
+                Lasts 6 hours.
+        Mirror Image:
+          charisma_cost: 12
+          cost: 1
+          description: Summon 1d4 false images of yourself that stand near you at an offset.
+            The mirror images copy your actions exactly, but are incapable of interacting
+            with the world in any way.
+        Animate Weapon:
+          make: this work exactly like the telepath
+          okey: doke?
+        Bull Rush_RENAME:
+            balance_type: damage candidate
+            charisma_cost: 10
+            cost: 1
+            description: Burst forward ten feet, knocking back all entities in front of
+              you and dealing 1d10 damage. Any affected entities must make an inner fire
+              saving throw against your spell power. On failure, they are knocked prone.
+            major_damage_dice: 1d10d1 10
+        Create Pit:
+            charisma_cost: 12
+            cost: 1
+            description: Summon a 40 foot deep pit with a 5 foot radius to a location anywhere
+              within 30 feet of you. If the pit is summoned beneath an entity, the entity
+              may make a dexterity saving throw against your spell power to avoid falling.
+        Restrict Movement_GIVE_MULTIPLE_EFFECTS_JELLY_ARMS:
+                Magic Chains:
+                    do: give this options like jelly arms, magic chains, etc.
+                    charisma_cost: 14
+                    cost: 2
+                    description: Force an entity to make a dexterity saving throw against your spell
+                      power. On failure, chains large enough to subdue the entity crackle into existence,
+                      grappling it. The entity may make a strength saving throw against your spell
+                      power at the start of each of its turns to attempt to break the grapple.
+                cost: 1
+                target: enemy
+                num_targets: 1
+                duration: save
+                range: mid
+                purpose: debuff
+                school: arcane-somatic
+                hit: always
+                description: Speak arcane incantation which causes an enemy's arms
+                    to fail them.
+                effects:
+                    - save: spell power save
+                      description: lose control of its arms, which fall
+                            limp to its sides.
+                      repeat:
+                        - each turn
+        Sleep:
+            charisma_cost: 12
+            cost: 2
+            description: If an enemy fails a saving throw against your spell power, put
+              them into a deep sleep. They are awakened if attacked, or if they pass a dc
+              17 perception check.
+        Strike True:
+          cost: 1
+          target: friendly
+          num_targets: 1
+          duration: 2
+          purpose: buff
+          range: near
+          school: arcane-enchantment-mind
+          description: Enchant an ally's mind, giving them clarity of thought.
+              For the spell's duration, they have advantage on all checks and attack rolls that
+              they make.
+        Statue:
+            charisma_cost: 12
+            cost: 2
+            description: Harden to become a statue. While you are a statue, you take one
+              quarter damage from any attacks. On your next turn, you may revert from being
+              a statue at the cost of your movement.
+        Jet of Frost:
+            balance_type: damage candidate
+            charisma_cost: 12
+            cost: 1
+            description: With a pop and a hiss, a torrent of frozen air sprays forth from
+              the origin of your magic. This arctic blast hits all entities in the cone. Affected entities must make an
+              inner fire saving throw against your spell power, or be slowed. Slowed entities
+              move at half speed, and are forced back one position in the initiative order.
+            major_damage_dice: 1d6d1 6
+        Energy Shots:
+            balance_type: damage candidate
+            charisma_cost: 12
+            cost: 2
+            description: Three balls of crackling yellow energy swirl about you. You may
+              fire them at up to 3 enemies, doing 1d8 damage on each impact. Armor affects
+              each shot separately.
+            major_damage_dice: 1d8d1 8
+        Rain of Arrows:
+            balance_type: damage candidate
+            charisma_cost: 12
+            cost: 2
+            description: With a chorus of twangs, a flight of arrows streak past and around
+              you, targeting all entities within a 20 foot radius of your choosing and dealing
+              2d10 damage.
+            major_damage_dice: 2d10d2 10
+    Tier_2: # 9 / 9
+        Door Step:
+          charisma_cost: 14
+          cost: 2
+          description: As you place your hand on a door handle or walk through an archway, magic flows through you,
+            opening a portal to another door within 100 feet of you.
+        Invisibility:
+          cost: 2
+          description: Make yourself or another entity or object completely invisible.
+            Gives advantage on stealth checks. Concentration.
+          duration: concentration Candidate
+        Featherfall:
+            charisma_cost: 14
+            cost: 1
+            description: Concentration. Lasts 6 seconds or 1 turn after concentration breaks.
+              The entity on which you cast this falls as though it is a feather.
+            duration: concentration Candidate
+        Scry:
+          cost: 2
+          description: Using a mirror, pool or water, or other reflective surface, view
+            a person or place that you know as if through a one way window. Concentration.
+          duration: concentration Candidate
+        Platform:
+            charisma_cost: 12
+            cost: 2
+            description: Summon a circular platform 15 feet in radius at a point of your
+              choosing within 100 feet.
+        Message:
+            charisma_cost: 14
+            cost: 2
+            description: Concentrate on an entity that you have met. You are able to telepathically
+              send them a message of up to 14 words, regardless of distance.
+            duration: concentration Candidate
+        Dispell Magic:
+          removes: stuff
+          and: is good
+        Ice Spear:
+            charisma_cost: 14
+            cost: 2
+            description: Spear an enemy with a lance of ice for 2d10 damage.
+        Fireball:
+            balance_type: damage candidate
+            charisma_cost: 12
+            cost: 1
+            description: Hurl a fireball which does 1d10 damage on all enemies within 15
+              feet of the point of impact.
+            major_damage_dice: 1d10d1 10
+    Tier_3: # 8 / 8
+        Octahedral Barrier:
+          action_type: Reaction Candidate
+          charisma_cost: 14
+          cost: 2
+          description: Reaction. In a rush of energy, a barrier with up to a 20 foot radius
+            forms around you and any allies in close proximity, protecting you from an
+            attack.
+        Cage:
+          charisma_cost: 16
+          cost: 2
+          description: Create a 30 cubic foot magical cage around yourself which no one
+            can exit.
+        Pocket Dimension:
+          charisma_cost: 15
+          cost: 2
+          description: Create a door into your own, private pocket dimension. The dimension
+            is 30x30x30 feet, and persists over time. Once you are in the pocket dimension,
+            you can always exit. For every 10 minutes you are in the pocket dimension,
+            Make a D8 inner fire saving throw. If you fail, you are ejected from the pocket
+            dimension.
+        Clone:
+          charisma_cost: 14
+          cost: 2
+          description: Split a person in two. The clones share a pool of hit points, but
+            each gets its own turn, and acts autonomously. The duplicates remain until
+            both agree to be merged once more or until the magic is dispelled.
+        Polymorph:
+          charisma_cost: 15
+          cost: 3
+          description: Transform an entity into a medium or small creature of your choice
+            if they fail an inner fire saving throw against your spell power. They can
+            attempt a saving throw every turn thereafter.
+        Chain Lightning:
+            charisma_cost: 15
+            cost: 2
+            description: Fire lighting at an enemy for a guaranteed 1d10 damage. Roll a
+              d20, and if 5 or above, chain to an enemy of your choice. Continue until you
+              roll below 5. Lightning may only strike the same entity twice in succession.
+        Rainbows:
+                cost: 2
+                description: With a mighty explosion, a blinding beam of light flares from your
+                    fingertips or mouth, as the light moves further from you, it separates into
+                    bands of color, a rainbow!
+                target: enemy
+                num_targets: 1
+                duration: 1
+                range: archer
+                purpose: damage
+                school: arcane-destruction
+                dice: 6d8
+                hit: roll
+                effect_type: fire
+                effects:
+                    - save: spell power
+                      description: instantly begins vomiting rainbows, and makes all moves with disadvantage
+                        on it's next turn.
+        Reverse Gravity:
+          cost: 3
+          description: Reverse gravity on somebody
+          upcast:
+            cost: n
+            effect: on more than one person
+    Tier_4: # 6 / 6
+        Banish:
+          cost: 3
+          description: If the target fails an inner fire saving throw against your spell
+            power, it is banished to a pocket dimension. The affected enemy may repeat
+            the saving throw after each turn, or, if out of combat, every 10 minutes.
+        Gate_INTER_REALM:
+              charisma_cost: 15
+              cost: 2
+              description: Create a doorway from one location to another within 300 feet.
+                Both ends must be in view for the spell to be cast. Concentration.
+              duration: concentration Candidate
+        Fly:
+          charisma_cost: 14
+          cost: 2
+          description: Allow yourself or another entity to fly. Concentration.
+          duration: concentration Candidate
+        Invulnerability:
+          cost: 3
+          description: Make yourself or another entity invulnerable to damage for 3 turns.
+        Tri-beam:
+            balance_type: damage candidate
+            charisma_cost: 17
+            cost: 3
+            description: Three beams of crackling energy fire forth from the source of your
+              magic. Each of the beam may target an entity of your choice. Roll a d6 for
+              each beam. On 1, the beam is a beam of fire, which deals 4d10 damage and sets
+              the entity aflame. On 2, it is a ray of frost, which deals 3d12 damage and
+              slows the entity if it fails its save, moving it back 1d4 spaces in the initiative
+              order. On a 3, it is a ray of weakness, and causes the entity's strength to
+              decrease by 1d8 until its next rest if it fails its save. On a 4, it is a
+              ray of electricity, and does 3d10 damage and causes the entity to go prone
+              if they fail a save. On a d5, it is a beam of discord, and causes the entity
+              to spontaneously change gender on a failed save. On a 6, it is a ray of death,
+              and causes the entity to take 6d10 damage.
             effects:
-                - save: spell power
-                  description: instantly begins vomiting rainbows, and makes all moves with disadvantage
-                    on it's next turn.
+              candidate: true
+            major_damage_dice: d6dNone 6
+        Stop Time:
+            charisma_cost: 18
+            cost: 5
+            description: Freeze time for everyone but you for 1d4 + Inner Fire turns or
+              1d20 minutes if out of battle. Tapping a party member returns them to the
+              normal flow of time. Attacking an entity returns it to the normal flow of
+              time.
+    Tier_5: # 4 / 4
+        Anti magic ring:
+            charisma_cost: 18
+            cost: 5
+            description: Create a 50 foot diameter sphere around yourself in which magic,
+              potions, and divine attacks have no effect.
+        Summon Bleck:
+            charisma_cost: 14
+            cost: 2
+            description: Summon a mighty bleck to fight for you! A bleck is a gooey, little
+              creature with a one inch diameter. Bleck have 1 hit point, and are incapable
+              of attacking. They move at a rate of one foot per minute. Bleck cannot be
+              damaged by crushing force or blades, as they will merely be split and then
+              reform. After five seconds, a bleck splits into two blecks. Each of these
+              blecks wait for five seconds, and then split into two more. The weight of a
+              million bleck is enough to kill a bleck. Bleck that are killed remain for 1 minute
+              before disolving into nothingness.
+        Black Hole:
+          charisma_cost: 18
+          cost: 5
+          description: Lasts 3 turns. Summon a black hole at any point within 100 feet
+            of yourself on the battlefield. Any entity within 50 feet of the black hole
+            must make a strength saving throw or be dragged 10 feet towards it. At the
+            start of its turn, each entity in the black hole's radius must repeat this
+            check. On success, the entity may move five feet away from the black hole.
+            Entities that touch the black hole take 4d20 damage at the start of each turn.
+            A black hole may not be summoned on a space occupied by an enemy.
+        Pillar Arcanum:
+            balance_type: damage candidate
+            charisma_cost: 17
+            cost: 3
+            description: Create a Pillar of flame with a radius of 10 feet and up to 100
+              feet in height. The pillar does 4d10 damage to any enemies caught inside.
+              Concentration, disappears if you move more than 100 feet away.
+            duration: concentration Candidate
+            major_damage_dice: 4d10d4 10
