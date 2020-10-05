@@ -132,6 +132,13 @@ Let's run with 1.5 * saturation
 5: 4
 
 Wizard:
+
+  Add magic alarm to the new wizard class.
+  Magic Alarm:
+      charisma_cost: 10
+      cost: 1
+      description: Create a magic alarm that triggers on a physical event of your
+        choice.
   Tier 0:
     Firecrackers: utility
     Summoning Spell: utility
@@ -218,6 +225,14 @@ Bard:
 5: N/4
 
 Bard:
+  What is a Bard?
+    A minstrel, playing at an inn, enthralling everyone.
+    A magician, playing tricks on a crowd
+    An ancient crone, reading palms
+    A soothsayer, whispering into the ear of a king
+    A court minstrel, well versed in the lore of the world
+
+    Midirection, wit, lore and destiny
   Tier_0:
     Trick Up Your Sleave: utility
     Imitate: utility
