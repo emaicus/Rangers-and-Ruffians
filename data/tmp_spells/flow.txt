@@ -1,0 +1,58 @@
+
+Special: movement, dash, defense, attacks
+
+
+Melee:
+00: SETUP: Two advantages. Class ability. Subclass ability, Subclass ability
+01: 
+02: 
+03: 
+04: 
+05: TIER UP! <Extra movement, better dash, or extra attack>
+06: 
+07: 
+08: 
+09: 
+10: TIER UP! <Extra movement, better dash, or extra attack>
+11: 
+12: 
+13: 
+14: 
+15: CAPSTONE!
+
+Caster:
+00: tier 0 access, Three spells, 2 advantages, core class feature, core subclass feature
+01: One spell
+02: tier 1 access, One spell
+03: One spell
+04: One spell
+05: tier 2 access, Two spells
+06: Two spells
+07: tier 3 access, Two spells
+08: Two spells
+09: Two spells
+10: tier 4 access, Three spells
+11: Three spells
+12: Three spells
+13: tier 5 access, Three spells
+14: Three spells
+15: Three spells
+
+
+Off Caster
+00: Tier 0 access, two spells, 2 advantages, core class feature, core subclass feature
+01: One spell
+02: One spell
+03: Tier 1 access, One spell
+04: One spell
+05: Tier 2 access, One spell
+06: One spell
+07: One spell
+08: One spell
+09: One spell
+10: Tier 3 access, One spell
+11: One spell
+12: One spell
+13: One spell
+14: One spell
+15: One spell

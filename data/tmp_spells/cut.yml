@@ -263,6 +263,15 @@ Necromancer:
             major_healing_dice: 1d6d1 6
 Wizard:
     Tier_0:
+        Sticky:
+            cost: 0
+            description: Force an entity to make an inner fire saving throw against your
+              spell power. On failure, the entity is rendered uncomfortably sticky. This
+              effect lasts until the entity washes itself or the magic is dispelled.
+        Transcribe Memory:
+            cost: 0
+            description: Given a piece of parchment or paper, instantly render a sketch
+              of a scene that you witnessed.
         Cold Hands:
           cost: 0
           description: Render your hands so cold that they freeze water on contact. While
@@ -285,6 +294,11 @@ Wizard:
           cost: 1
           description: Imitate the voice of a person you have met. Lasts for one hour.
     Tier_1:
+        Paint:
+            charisma_cost: 10
+            cost: 1
+            description: Instantly paint up to a 100x100 area any way you desire. Roll a
+              dexterity check to determine the quality of the painting.
         Remove Footprints:
               cost: 1
               description: Remove all footprints you and those with you have made over the
@@ -296,6 +310,24 @@ Wizard:
                 Concentration. Can be used as a reaction. To use as a reaction, you must succeed
                 in a contested dexterity check.
               duration: concentration Candidate
+        Freeze or Unfreeze Water:
+            charisma_cost: 8
+            cost: 1
+            description: Freeze or unfreeze up to a 40 square foot area of water.
+        Heat or Cool Air:
+          charisma_cost: 12
+          cost: 1
+          description: Heat or cool the air in a room to an uncomfortable or extreme temperature.
+            After a turn of focus, all entities in the room that are not acclimated to
+            the temperature begin taking 1d4 damage per turn.
+        Jet of Water:
+          charisma_cost: 12
+          cost: 1
+          description: Fire a get of water from the source of your spell power. The blast
+            of water travels 40 feet, and strikes all entities in a line. Affected entities
+            take 1d6 damage, and must make an inner fire saving throw against your spell
+            power and be knocked prone on failure. You may maintain the stream of water
+            for up to 10 seconds, or two turns, dumping 300 gallons of water per minute.
     Tier_2:
         Suppress Item:
               charisma_cost: 12
@@ -312,6 +344,47 @@ Wizard:
               description: With a chorus of clangs, every inanimate object within twenty feet
                 comes to life to fight for you, throwing themselves at any enemies in close
                 proximity for 4d12 damage.
+        Greater Animate Object:
+            charisma_cost: 14
+            cost: 2
+            description: Bring an object to life to fight for you. See the animated armor
+              and animated weapon entries in the book of known beasts for details.
+        Prison of Ice: #Very cool, should come back as a wizard spell
+            cost: 2
+            description: Force an enemy to make a dexterity saving throw against your spell
+                power. On failure, they are surrounded by ten foot tall walls of ice, lined
+                with sharpened icicles.
+        Enlarge:
+            charisma_cost: 14
+            cost: 2
+            description: Grow an object or entity to up to double its size. Unwilling entities
+              can attempt a saving throw against your spell power each turn. Enlarged entities
+              gain +3 to all strength checks, but -2 to all dexterity checks, and gain 5
+              feet of movement. Concentration.
+            duration: concentration Candidate
+        Enter Mind:
+            charisma_cost: 12
+            cost: 2
+            description: Force an entity to make an inner fire saving throw against your
+              spell power. On failure, you may break into other entities mind, viewing their
+              memories.
+        Mark:
+            charisma_cost: 14
+            cost: 2
+            description: Lay your hands on something or someone so that you always know
+              in what direction it is. This spell lasts for 1d6 days, or until the affected
+              entity dispels it.
+        Loathing:
+            charisma_cost: 14
+            cost: 2
+            description: Force an entity to make an inner fire saving throw against your
+              spell power. On failure, you may instill that entity with a deep hatred for
+              an individual of your choosing. This hatred stays present until dispelled.
+    Tier_4:
+        Illusory Terrain:
+            charisma_cost: 12
+            cost: 2
+            description: Make 100x100 yards of terrain look any way you choose.
 Sorcerer:
     Tier_0:
         Hologram:
