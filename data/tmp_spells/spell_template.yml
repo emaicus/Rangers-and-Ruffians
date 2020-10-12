@@ -257,16 +257,16 @@ Bard:
     Kiss and tell: utility
 
     Blocking Hand: buff
-    #Song of haste: buff
-    #take courage: buff
+    Song of haste: buff
+    take courage: buff
 
 
-    #slow: debuff
-    #raucous laughter: debuff
+    slow: debuff
+    raucous laughter: debuff
     disarmor: debuff
-    #not so fast: debuff
+    not so fast: debuff
 
-    #Belch Fire: damage
+    Belch Fire: damage
   Tier_2:
     invisible servant: utility
     minor gate: utility
