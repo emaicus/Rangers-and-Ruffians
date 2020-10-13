@@ -6,7 +6,7 @@ spellbook:
       num_targets: [1, "many"]
       duration: #, save, # hours, concentration, infinite
       description: "What the spell does at a high level."
-      range: <self, hand, close, near, archer, far, infinite>
+      range: <self, hand, close, near, mid, archer, far, infinite>
       purpose: <damage, healing, buff, debuff, summon, utility>
       school: Below.
 
@@ -67,14 +67,15 @@ potential spell schools:
   - Elementalism # Create/modify/utilize the 4 elements
   - Thaumaturgy # Dealing with magic itself
     - Abnegation # Remove magic from something
-    - Imbue
+    - Imbue # Add magic to something
     - Transportation # Move something
     - Protection # Safeguard something
+    - Disruption # Attacks, basically
   - Enchantment #   Dealing with the mind
     - Illusion
     - Hypnotism
   - Divination # Dealing with Knowledge
-  - Summoning # Summon someone
+  - Summoning # Summon someone or something
 
 Needed:
   Tier_0: 19

@@ -100,7 +100,10 @@ def check_spell_syntax(spell_name, spell_info):
     # Look for required fields
     for field in required_fields:
         if not field in spell_info:
-            print(f"{spell_name} is missing {field}")
+            if field == 'purpose':
+                print(f"{spell_name} lacks {field}")
+            else:
+                print(f"{spell_name} is missing {field}")
             encountered_errors = True
 
     # Check that conditional requirements are met (e.g., if you have a, you also need b)
@@ -144,7 +147,7 @@ def get_balance_value(tier_name, spell_info):
     # single turn does 100% duration
     if spell_info['duration'] == 'concentration' and spell_info['cost'] > 0:
         duration_mod = .85
-    elif spell_info['duration'] == 1 or spell_info['duration'] == 'concentration':
+    elif spell_info['duration'] in [0,1] or spell_info['duration'] == 'concentration':
         duration_mod = 1
     else:
         duration_mod = .75

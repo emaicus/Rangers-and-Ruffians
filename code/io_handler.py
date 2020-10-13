@@ -244,11 +244,14 @@ def format_spell_duration(duration):
     if duration in ['infinite', 'save']:
         return ''
     elif isinstance(duration, int):
-        return f' __Duration:__ {duration} minute(s)'
+        if duration == 0:
+            return f' __Duration:__ Instantaneous'
+        else:
+            return f' __Duration:__ {duration} minute(s)'
     elif duration == 'concentration':
-        return f' __Duration:__ {duration}'
+        return f' __Duration:__ {duration.title()}'
     else:
-        return f' __Duration:__ {duration}'
+        return f' __Duration:__ {duration.title()}'
 
 def format_effect(effect):
     s = ' '

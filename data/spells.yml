@@ -35,7 +35,7 @@ the_bard's_songbook:
             cost: 1
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             purpose: utility
             description: "Create any sound you have heard before."
             range: self
@@ -44,7 +44,7 @@ the_bard's_songbook:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             dice: "2d6"
             effect_type: psychic
             hit: roll
@@ -116,7 +116,7 @@ the_bard's_songbook:
             cost: 1
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             description: "Summon up to one hundred feet of tied together cloths from your sleeve."
             purpose: utility
             range: self
@@ -125,7 +125,7 @@ the_bard's_songbook:
             cost: 0
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             description: "Create a harsh noise which damages all nearby enemies."
             purpose: damage
             range: near
@@ -142,7 +142,7 @@ the_bard's_songbook:
             cost: 1
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             description: "Belch a cone of fire."
             purpose: damage
             range: close
@@ -157,8 +157,8 @@ the_bard's_songbook:
             cost: 1
             target: self
             num_targets: 1
-            duration: 1
-            description: "Summon an unseen hand to protect you from an incoming targeted light or moderate attack. Increase your defense by 5."
+            duration: 0
+            description: "Summon an unseen hand to protect you from an incoming targeted attack. Increase your defense by 5."
             action_type: Reaction
             range: self
             school: arcane-conjuring
@@ -291,7 +291,7 @@ the_bard's_songbook:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: "Force an enemy to remake a roll, or to make a roll with
                   disadvantage."
             range: archer
@@ -346,7 +346,7 @@ the_bard's_songbook:
             cost: 2
             target: friendly
             num_targets: many
-            duration: 1
+            duration: 0
             dice: 2d6
             effect_type: healing
             purpose: healing
@@ -361,7 +361,7 @@ the_bard's_songbook:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             action_type: Reaction
             range: archer
             purpose: debuff
@@ -399,7 +399,7 @@ the_bard's_songbook:
             cost: 2
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             description: "Unleash a might shout to subdue your enemies."
             purpose: damage
             range: close
@@ -418,7 +418,7 @@ the_bard's_songbook:
             target: enemy
             num_targets: 1
             effect_radius: 30
-            duration: 1
+            duration: 0
             casting_time: 2
             range: self
             purpose: debuff
@@ -451,7 +451,7 @@ the_bard's_songbook:
             cost: 2
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Create a portal exactly big enough to fit yourself and one other
               individual of your size and instantly transport through it. You may transport
               anywhere within range, regardless of whether or not you can see your destination.
@@ -485,7 +485,7 @@ the_bard's_songbook:
             cost: 2
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Fire a blast of pure sound at a target.
             range: archer
             purpose: damage
@@ -538,7 +538,7 @@ the_bard's_songbook:
             cost: 2
             target: other
             num_targets: 1
-            duration: 1
+            duration: 15
             description: Make an object immovable. The object must be smaller than a wagon, and cannot be a living entity.
             range: close
             purpose: utility
@@ -579,7 +579,7 @@ the_bard's_songbook:
             cost: 3
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             range: self
             effect_radius: 50
             purpose: damage
@@ -597,7 +597,7 @@ the_bard's_songbook:
             effect_type: healing
             target: friendly
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Play a soothing song embued with magic which heals an ally.
             range: near
             purpose: healing
@@ -616,7 +616,7 @@ the_bard's_songbook:
             cost: 3
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Teleport to a random place in the world that is at least 5 miles
                 from your current position.
             range: 5 miles
@@ -626,7 +626,7 @@ the_bard's_songbook:
             cost: 3
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Call down a blast of lightning on an enemy.
             range: archer
             purpose: damage
@@ -722,7 +722,7 @@ the_bard's_songbook:
             cost: 3
             target: friendly
             num_targets: many
-            duration: 1
+            duration: 0
             dice: 4d8
             effect_type: healing
             purpose: healing
@@ -738,7 +738,7 @@ the_bard's_songbook:
             cost: 4
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Play a chord of incredible power, with the strength to kill.
             range: archer
             purpose: damage
@@ -778,7 +778,7 @@ the_bard's_songbook:
             cost: 4
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Say two words. If possible, the thing that you ask for appears in your hand.
             range: infinite
             purpose: utility
@@ -901,7 +901,7 @@ the_druid's_guidebook:
             cost: 0
             target: other
             num_targets: 1
-            duration: 1
+            duration: 0
             description: You can magically mend small dents, dings, scratches, and tears
               in items.
             range: hand
@@ -951,7 +951,7 @@ the_druid's_guidebook:
               num_targets: 1
               range: archer
               cost: 0
-              duration: 1
+              duration: 0
               description: Magically hurl a stone at an enemy.
               dice: 2d6
               hit: roll
@@ -1033,7 +1033,7 @@ the_druid's_guidebook:
             range: near
             dice: 4d6
             effect_type: poison
-            duration: 1
+            duration: 0
             hit: roll
             description: Hit an enemy with a blast of liquid poison.
             effects:
@@ -1048,7 +1048,7 @@ the_druid's_guidebook:
             target: friendly
             num_targets: 1
             range: hand
-            duration: 1
+            duration: 0
             description: Remove poison from an item or person.
             range: hand
             purpose: buff
@@ -1092,7 +1092,7 @@ the_druid's_guidebook:
             dice: 4d6
             effect_type: fire
             hit: roll
-            duration: 1
+            duration: 0
             purpose: damage
             description: "Fire a sizzling bolt of flames at an enemy."
             school: "natural-elemental-fire"
@@ -1271,7 +1271,7 @@ the_druid's_guidebook:
             cost: 3
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             hit: roll
             dice: 8d8
             effect_type: elemental
@@ -1322,10 +1322,10 @@ the_druid's_guidebook:
             target: space
             num_targets: many
             range: archer
-            duration: 1
+            duration: 5
             hit: always
             description: "Create a swirling inferno of flames. The flames fill a 20x20 foot
-                space with fire, dealing damage to everyone within. The flames remain in place
+                space with fire, dealing damage to everyone within. The flames remain in place for the spell's duration or
                 until extinguished, and continue to do 4d6 damage to anyone who passes through
                 or begins their turn within them."
             school: "natural-elemental-fire"
@@ -1411,7 +1411,7 @@ the_druid's_guidebook:
             target: enemy
             num_targets: many
             effect_radius: 15
-            duration: 1
+            duration: 0
             description: Spend one full round of combat focusing on bringing down a massive
                 meteor. If you are attacked, make a concentration check. On failure, you lose
                 control of the spell. On success, call down a meteor
@@ -1421,7 +1421,7 @@ the_druid's_guidebook:
             cost: 4
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             description: Summon a massive tidal wave to crash down on the battlefield.
                 The tidal wave does damage to all enemies in a cone in front of you.
             range: archer
@@ -1479,7 +1479,7 @@ the_book_of_healing:
             cost: 0
             target: "enemy"
             num_targets: 1
-            duration: 1
+            duration: 0
             range: archer
             description: "Fire a bolt of radiant energy at an enemy."
             dice: 2d6
@@ -1508,8 +1508,8 @@ the_book_of_healing:
             cost: 1
             target: other
             num_targets: 1
-            duration: 1
-            description: Make a perception check to detect if there is evil nearby.
+            duration: 10
+            description: Make a perception check to detect if there is evil nearby. You may continue to make such checks for the spell's duration.
             purpose: utility
             range: self
             effect_radius: 100
@@ -1518,8 +1518,8 @@ the_book_of_healing:
             cost: 1
             target: other
             num_targets: 1
-            duration: 1
-            description: Make a perception check to detect if there is magic nearby.
+            duration: 10
+            description: Make a perception check to detect if there is magic nearby. You may continue to make such checks for the spell's duration.
             purpose: utility
             range: self
             effect_radius: 100
@@ -1548,7 +1548,7 @@ the_book_of_healing:
             cost: 0
             target: other
             num_targets: 1
-            duration: 1
+            duration: 0
             description: You can magically mend small dents, dings, scratches, and tears
               in items.
             range: hand
@@ -1558,7 +1558,7 @@ the_book_of_healing:
             cost: 1
             target: friendly
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Restore health to one ally or yourself.
             dice: 2d4
             effect_type: healing
@@ -1573,7 +1573,7 @@ the_book_of_healing:
             target: friendly
             num_targets: 1
             range: hand
-            duration: 1
+            duration: 0
             description: Purify a food, drink, or potion to remove ill effects. Purify can
               be used to remove drunkenness from entities, to render poisons innocuous,
               or to convert water to holy water at a rate of one gallon per hour.
@@ -1594,7 +1594,7 @@ the_book_of_healing:
         Spare:
             cost: 0
             target: friendly
-            duration: 1
+            duration: 0
             num_targets: 1
             description: Channel divine magic to stabilize a downed ally. Stabilized
               entities immediately return to 1 health.
@@ -1655,7 +1655,7 @@ the_book_of_healing:
             cost: 1
             target: friendly
             num_targets: 1
-            duration: 1
+            duration: 1 day
             dice: 1d10
             effect_type: healing
             range: hand
@@ -1815,7 +1815,7 @@ the_book_of_healing:
             cost: 2
             target: friendly
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Restore health to one ally or yourself.
             dice: 4d6
             effect_type: healing
@@ -1830,7 +1830,7 @@ the_book_of_healing:
             target: other
             num_targets: many
             range: hand
-            duration: 1
+            duration: 0
             range: hand
             purpose: utility
             school: divine-purification
@@ -1874,7 +1874,7 @@ the_book_of_healing:
         Dispel Magic:
             cost: 1
             target: friendly
-            num_targets: 1
+            num_targets: 0
             duration: 1
             description: End the effects wrought by up to a 2nd tier spell. Does not work on curses or heal damage.
             range: hand
@@ -1889,8 +1889,8 @@ the_macabre_manual:
             cost: 0
             target: self
             num_targets: 1
-            duration: 1
-            description: Make a perception check to detect nearby corpses.
+            duration: 10
+            description: Make a perception check to detect nearby corpses. You may continue to make such checks for the spell's duration.
             range: self
             purpose: utility
             school: arcane-somatic
@@ -1920,7 +1920,7 @@ the_macabre_manual:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Winds howl and necrotic energy crackles as you fire a ball of pure death from your hand.
             range: archer
             purpose: damage
@@ -1948,7 +1948,7 @@ the_macabre_manual:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Cause an item to rot in your hands.
             range: hand
             dice: 3d4
@@ -1960,7 +1960,7 @@ the_macabre_manual:
             cost: 1
             target: self
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Step from one shadow to another within range.
             range: near
             purpose: utility
@@ -2026,7 +2026,7 @@ the_macabre_manual:
             cost: 1
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             range: close
             purpose: damage
             hit: roll
@@ -2039,7 +2039,7 @@ the_macabre_manual:
             cost: 2
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Necrotic energy screams forth, green and crackling
                as it rushes to smite an enemy.
             range: archer
@@ -2082,7 +2082,7 @@ the_macabre_manual:
             hit: roll
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: Eat the life-force of a wounded enemy, dealing damage and
                 healing yourself for that amount. An enemy may only be siphoned once, and
                 You cannot harvest a soul from an entity that you have siphoned.
@@ -2096,7 +2096,7 @@ the_macabre_manual:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: As an attack comes towards you, link your life-force
                 to that of an enemy within range.
             range: near
@@ -2157,7 +2157,7 @@ the_macabre_manual:
             cost: 2
             target: enemy
             num_targets: many
-            duration: 1
+            duration: 0
             description: Crimson gore flies forth, hardening into brick red blades ast
                 it shreds through a cone of your enemies.
             range: near
@@ -2211,93 +2211,109 @@ the_wizard's_addendum:
                 within range, you must have a rough idea of where it is, and you must have
                 seen it before. The object will fly to you, as if guided by an unseen force.
         Candlelight:
-                cost: 0
-                target: other
-                num_targets: 1
-                duration: concentration
-                description: Summon a dim candlelight that floats near to you
-                  and obeys your subconscious commands. The candlelight must stay
-                  within this spell's range, or be dispelled.
-                range: mid
-                purpose: utility
-                school: arcane-conjuring
-        Thaumaturgy_EQUIVALENT:
-          Blot Text:
-              cost: 0
-              target: other
-              num_targets: 1
-              duration: infinite
-              description: "Enchant a written message so that the ink becomes blotted
-                  and illegible 10 seconds after being read."
-                  Blot:
-                    charisma_cost: 10
-                    cost: 1
-                    description: Instantly destroy the text within any parchment or book your are
-                      holding.
-              range: hand
-              purpose: utility
-              school: arcane-enchantment-matter
-          Thunderous Voice:
-              cost: 0
-              description: Magically magnify your voice so that it can be heard clearly at
-                up to 100 yards.
-          Summon sparks: it can do this
-          Rend Fabric:
             cost: 0
-            description: Shred a piece of fabric within one hundred feet of yourself into
-              a million tiny pieces.
-          Scourge:
-              cost: 0
-              description: Instantly clean an object by pointing at it. The object must be
-                within ten feet of you.
-          Minor Move Air:
-                      cost: 0
-                      description: Create a small gust of air, capable of pushing objects up to 20
-                        pounds away from you and slowing the advance of approaching enemies.
-          Minor Levitation:
-                cost: 0
-                description: Levitate an object up to 20 pounds. Concentration.
+            target: other
+            num_targets: 1
+            duration: concentration
+            description: Summon a dim candlelight that floats near to you
+              and obeys your subconscious commands. The candlelight must stay
+              within this spell's range, or be dispelled.
+            range: mid
+            purpose: utility
+            school: arcane-conjuring
+        Wonderworking:
+          cost: 0
+          target: other
+          num_targets: 1
+          duration: concentration
+          description: "Use your magic to perform a minor wonder. 
+                        You may: blot the text
+                        of a written message, amplify your voice so that
+                        it can be heard at 100 yards, rend a piece
+                        of fabric within range, clean an object of dust
+                        or dirt, create sparks, create a small gust of air, or
+                        cause flames to flicker, grow slightly larger,
+                        or to go out."
+          range: near
+          purpose: utility
+          school: alchemy-transmutation
         Unseen hand:
-          charisma_cost: 10
           cost: 1
-          description: Conjure an unseen hand which can manipulate objects up to 50 feet
-            away.
+          target: other
+          num_targets: 1
+          duration: concentration
+          range: mid
+          purpose: utility
+          description: Conjure an unseen hand which can manipulate objects within range.
+            The hand's strength score is equivalent to your inner fire, and the hand may not
+            move out of the spell's range.
+          purpose: utility
+          school: summoning
         Conjure Illusion:
-          charisma_cost: 10
           cost: 1
-          description: Create an illusory object which cannot move and cannot be bigger
-            than a horse. You must have seen the object you are attempting to create.
-            Concentration.
-          duration: concentration Candidate
-          Conjure major illusion:
-            charisma_cost: 14
-            cost: 2
-            description: Create an illusory object which can move/speak if you tell it to
-              but cannot be bigger than a house. Concentration.
-            duration: concentration Candidate
+          target: other
+          num_targets: 1
+          duration: concentration
+          range: mid
+          purpose: utility
+          school: enchantment-illusion
+          description: "Conjure a static image of the size of a horse or smaller. To all those
+            who see the image, it appears to be present, though upon further inspection it is ethereal."
+          upcast: 
+            cost: 1
+            effect: create a programmed illusion, which can move and speak. When you create such an illusion,
+              you may establish up to five responses that it is capable of making, and must give it a script
+              for where it will move.
         Detect Magic:
-          detect: magic
-          is: also a cleric spell
+            cost: 1
+            target: other
+            num_targets: 1
+            duration: 10
+            description: Make a perception check to detect if there is magic nearby. You may continue to make such checks for the spell's duration.
+            purpose: utility
+            range: self
+            effect_radius: 100
+            school: divine-purification
         Magic Shield:
-          action_type: Reaction Candidate
-          charisma_cost: 8
+          action_type: Reaction
           cost: 1
-          description: Reaction. Make a contested dexterity check against an enemy that
-            is targeting you with an attack. On a success, reduce the attack by your spell
-            power.
-        Blur_RENAME:
-          blur: yourself or an ally that enemies have disadvantage
-          it: is pretty good
+          target: self
+          num_targets: 1
+          duration: 0
+          description: "As an enemy bears down on you, use your magic to summon
+            a magical shield with a blueish hue. Add +5 to your defense."
+          range: self
+          purpose: buff
+          effect_radius: 100
+          school: thaumaturgy-protection
+        Blur:
+          cost: 1
+          target: friendly
+          num_targets: 1
+          duration: concentration
+          description: "As you mutter an arcane incantation, you or an entity of your choice
+            becomes blurred, as if many copies of them exist, offset by inches. All
+            attacks against that entity."
+          range: near
+          purpose: buff
+          school: thaumaturgy-illusion
         Eat Slugs:
             cost: 0
-            description: Fill a person's mouth with slugs. If they fail an inner fire saving
-              throw against your spell power, they are staggered, and make their next action
-              with disadvantage.
+            target: enemy
+            num_targets: 1
+            duration: 0
+            hit: roll
+            description: "A cloud of vile green smoke flies from you towards an enemy."
+            effects:
+              - condition: If the enemy is hit
+                description: "their mouth is filled with fat, slithering slugs, and they must
+                  make their next action with disadvantage."
+            school: summoning
         Flare:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: "Fire a colored flare from the source of your magic. The
                 flare burns as brightly as daylight, leaving a lingering trail behind
                 it."
@@ -2311,7 +2327,7 @@ the_wizard's_addendum:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: "Drain the spirit from an enemy and take it for yourself.
               If the spell hits, your enemy loses one action point, which is
               transfered to you."
@@ -2331,7 +2347,7 @@ the_wizard's_addendum:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: A torrent of snowballs fly forth, blistering your enemies
                 with icy snow! Roll damage. Fire that many snowballs at up to as many targets. Each
                 snowball does 1 damage. Targets must be declared before the dice are rolled.
@@ -2348,7 +2364,7 @@ the_wizard's_addendum:
             cost: 0
             target: enemy
             num_targets: 1
-            duration: 1
+            duration: 0
             description: "As you mutter an arcane incantation, a cloud of noxious green
                 gas swirls around an enemies head, choking them."
             range: mid
@@ -2360,76 +2376,108 @@ the_wizard's_addendum:
             upcast:
                 cost: 1
                 effect: increase the spell's radius to 15 feet.
-    Tier_1: # 13 / 13
+    Tier_1: # 12 / 13
         Become Slime:
-            charisma_cost: 12
             cost: 1
-            description: Transform into a green slime with a radius of one foot. See the
-              book of known beasts for details.
+            target: self
+            num_targets: 1
+            duration: 1 day
+            description: Transform yourself into a green slime. See the
+              book of known beasts for details. You may convert back as an action.
+            range: self
+            purpose: utility
+            school: somatic-transformation
         Bubble of Air:
-            charisma_cost: 10
             cost: 1
-            description: Creates a bubble of breathable air around an entity's head. Lasts
-              1 hour.
-            Greater Bubble of Air:
-              charisma_cost: 15
-              cost: 2
-              description: Create bubbles of breathable air around up to 8 entities heads.
-                Lasts 6 hours.
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            range: close
+            description: Creates a bubble of breathable air around an entity's head which lasts for the spell's duration.
+            purpose: utility
+            school: elementalism-air
+            upcast:
+              cost: 1
+              effect: create bubbles of air around the heads of up to 6 entities.
         Mirror Image:
-          charisma_cost: 12
-          cost: 1
-          description: Summon 1d4 false images of yourself that stand near you at an offset.
-            The mirror images copy your actions exactly, but are incapable of interacting
-            with the world in any way.
+            cost: 1
+            target: self
+            num_targets: 1
+            duration: 1 day
+            range: self
+            description: "Summon a number of false images of yourself equal to your spellpower.
+              These mirror images copy your actions exactly, but are incapable of interacting
+              with the world in any way. Each has a single hit point, and shares your defense."
+            purpose: utility
+            school: enchantment-illusion 
         Animate Weapon:
-          make: this work exactly like the telepath
-          okey: doke?
-        Bull Rush_RENAME:
-            balance_type: damage candidate
-            charisma_cost: 10
+          cost: 1
+          target: other
+          num_targets: 1
+          duration: concentration
+          range: near
+          description: "Cause a weapon to float a few feet from you. It can make its own exposed attacks, 
+            and you may attack with it as a free action once per turn."
+          school: thaumaturgy-imbue
+        Mage Charge:
             cost: 1
-            description: Burst forward ten feet, knocking back all entities in front of
-              you and dealing 1d10 damage. Any affected entities must make an inner fire
-              saving throw against your spell power. On failure, they are knocked prone.
-            major_damage_dice: 1d10d1 10
-        Create Pit:
-            charisma_cost: 12
+            target: space
+            num_targets: many
+            duration: 0
+            range: 15
+            description: "Magic crackles around you as you burst forward
+              with incredible speed, traveling the spell's range in a heartbeat.
+              roll an attack against each enemy struck by your passing."
+            hit: roll
+            dice: 3d6
+            effects:
+              - condition: Any enemy struck by your charge must make a
+                save: spell power
+                description: be knocked prone. Entities two sizes larger than you
+                  or bigger are instead knocked to the side.
+            purpose: damage
+            school: thaumaturgy-imbue
+            upcast:
+              cost: 1
+              effect: travel an additional 10 feet.
+        # Create Pit:
+        #     cost: 1
+        #     num_targets: many
+        #     target: space
+        #     duration: infinite
+        #     description: Summon a 20x20 pit which is 40 feet deep to a location anywhere
+        #       within range. If the pit is summoned beneath an entity, the entity
+        #       may make a dexterity saving throw against your spell power to avoid falling.
+        Jelly Arms:
             cost: 1
-            description: Summon a 40 foot deep pit with a 5 foot radius to a location anywhere
-              within 30 feet of you. If the pit is summoned beneath an entity, the entity
-              may make a dexterity saving throw against your spell power to avoid falling.
-        Restrict Movement_GIVE_MULTIPLE_EFFECTS_JELLY_ARMS:
-                Magic Chains:
-                    do: give this options like jelly arms, magic chains, etc.
-                    charisma_cost: 14
-                    cost: 2
-                    description: Force an entity to make a dexterity saving throw against your spell
-                      power. On failure, chains large enough to subdue the entity crackle into existence,
-                      grappling it. The entity may make a strength saving throw against your spell
-                      power at the start of each of its turns to attempt to break the grapple.
-                cost: 1
-                target: enemy
-                num_targets: 1
-                duration: save
-                range: mid
-                purpose: debuff
-                school: arcane-somatic
-                hit: always
-                description: Speak arcane incantation which causes an enemy's arms
-                    to fail them.
-                effects:
-                    - save: spell power save
-                      description: lose control of its arms, which fall
-                            limp to its sides.
-                      repeat:
-                        - each turn
+            target: enemy
+            num_targets: 1
+            duration: save
+            range: mid
+            purpose: debuff
+            school: somatic-transformation
+            hit: always
+            description: Speak arcane incantation which causes an enemy's arms
+                to fail them.
+            effects:
+                - save: spell power save
+                  description: lose control of its arms, which fall
+                        limp to its sides.
+                  repeat:
+                    - each turn
         Sleep:
-            charisma_cost: 12
-            cost: 2
-            description: If an enemy fails a saving throw against your spell power, put
-              them into a deep sleep. They are awakened if attacked, or if they pass a dc
-              17 perception check.
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: Use the power of your magic to attempt to force an entity into a deep slumber.
+            range: mid
+            purpose: debuff
+            effect: 
+              - save: spell power
+                description: "be forced to sleep until attacked, or a save is made."
+                repeat: 
+                  - at the end of each of their turns
         Strike True:
           cost: 1
           target: friendly
@@ -2442,36 +2490,61 @@ the_wizard's_addendum:
               For the spell's duration, they have advantage on all checks and attack rolls that
               they make.
         Statue:
-            charisma_cost: 12
-            cost: 2
-            description: Harden to become a statue. While you are a statue, you take one
-              quarter damage from any attacks. On your next turn, you may revert from being
-              a statue at the cost of your movement.
-        Jet of Frost:
-            balance_type: damage candidate
-            charisma_cost: 12
             cost: 1
-            description: With a pop and a hiss, a torrent of frozen air sprays forth from
-              the origin of your magic. This arctic blast hits all entities in the cone. Affected entities must make an
-              inner fire saving throw against your spell power, or be slowed. Slowed entities
-              move at half speed, and are forced back one position in the initiative order.
-            major_damage_dice: 1d6d1 6
+            target: self
+            num_targets: 1
+            duration: concentration
+            description: With a crackle, your skin hardens as you are turned to stone. Your
+              defense is increased by ten as you become a statue. On your next turn, you may revert from being
+              a statue at the cost of your movement.
+            purpose: buff
+            school: somatic-transformation
+        Jet of Frost:
+            cost: 1
+            num_targets: many
+            target: enemy
+            purpose: damage
+            duration: 0
+            description: With howl, a torrent of frozen air rushes forth from
+              the origin of your magic. This arctic blast hits all entities in the cone."
+            hit: roll
+            damage: 3d8
+            effects:
+              - condition: "Affected entities must make a"
+                save: "spell power save"
+                effect: be slowed. Slowed entities must move at half speed
+                  on their next turn, and move back 1d4 spots in initiative.
+            school: elemental-water
         Energy Shots:
-            balance_type: damage candidate
-            charisma_cost: 12
-            cost: 2
+            cost: 1
+            target: enemy
+            num_targets: many
+            duration: 0
+            range: archer
+            hit: roll
+            damage: 3d6
+            purpose: damage
             description: Three balls of crackling yellow energy swirl about you. You may
-              fire them at up to 3 enemies, doing 1d8 damage on each impact. Armor affects
-              each shot separately.
-            major_damage_dice: 1d8d1 8
+              fire them at up to 3 enemies. Each ball is treated as a separate attack,
+              but your attack bonuses may apply only to one.
+            school: thaumaturgy-disruption
+            upcast: 
+              cost: scaling
+              effect: "allows you to fire an additional orb"
         Rain of Arrows:
-            balance_type: damage candidate
-            charisma_cost: 12
-            cost: 2
-            description: With a chorus of twangs, a flight of arrows streak past and around
-              you, targeting all entities within a 20 foot radius of your choosing and dealing
-              2d10 damage.
-            major_damage_dice: 2d10d2 10
+            cost: 1
+            target: space
+            num_targets: many
+            range: archer
+            effect_radius: 15
+            duration: 0
+            description: With a chorus of twangs, a thicket of arrows streak past and around
+              you, arching overhead to hit all enemies within a radius.
+            hit: roll
+            damage: 3d6
+            effect_type: piercing
+            purpose: damage
+            school: alchemy-creation
     Tier_2: # 9 / 9
         Door Step:
           charisma_cost: 14
@@ -2565,7 +2638,7 @@ the_wizard's_addendum:
                     bands of color, a rainbow!
                 target: enemy
                 num_targets: 1
-                duration: 1
+                duration: 0
                 range: archer
                 purpose: damage
                 school: arcane-destruction
