@@ -1,0 +1,12 @@
+swordsworn:
+  base_armor: 5
+  caster: no
+  roles: []
+  base_stats:
+    -2, -1, 0, 1, 1, 2
+    Charisma: -1
+    Dexterity: 1
+    Inner_Fire: 1
+    Intelligence: 0
+    Perception: -2
+    Strength: 2
