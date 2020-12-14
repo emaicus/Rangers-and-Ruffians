@@ -4,20 +4,20 @@ Special: movement, dash, defense, attacks
 
 Melee:
 00: SETUP: Two advantages. Class ability. Subclass ability, Subclass ability
-01: 
-02: 
-03: 
-04: 
-05: TIER UP! <Extra movement, better dash, or extra attack>
-06: 
-07: 
-08: 
-09: 
-10: TIER UP! <Extra movement, better dash, or extra attack>
-11: 
-12: 
-13: 
-14: 
+01:
+02:
+03:
+04:
+05: TIER UP! <Extra movement, better dash, more armor, extra attack>
+06:
+07:
+08:
+09:
+10: TIER UP! <Extra movement, better dash, more armor, extra attack>
+11:
+12:
+13:
+14:
 15: CAPSTONE!
 
 Caster:

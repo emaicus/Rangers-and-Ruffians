@@ -2,6 +2,7 @@ import os
 import json
 import yaml
 import statistics
+import sys
 
 required_fields = ["cost", "target", "num_targets", "duration", "description", "range", "purpose", "school"]
 all_fields = required_fields + ["dice", "effect_type", "effects", "casting_time", "components", "upcast", "action_type", "effect_radius", "charisma_cost", "hit"]
@@ -254,17 +255,35 @@ def spell_type_analysis(spellbook_name, spell_tiers):
 
 
 def main():
+    deck_vals = {
+        'Tier_0': 14,
+        'Tier_1': 13,
+        'Tier_2': 9,
+        'Tier_3': 8,
+        'Tier_4': 6,
+        'Tier_5': 4
+    }
+    decks = {}
     with open('../spells.yml') as infile:
         rnr_spell_data = yaml.load(infile)
 
     encountered_errors = False
     for spellbook, spell_tiers in rnr_spell_data.items():
+        decks[spellbook] = {}
         print(f'processing {spellbook}')
         for tier_name, tier_spells in spell_tiers.items():
+            decks[spellbook][tier_name] = 0
             for spell_name, spell_info in tier_spells.items():
-                encountered_errors = check_spell_syntax(spell_name, spell_info) and encountered_errors
-    # print(json.dumps(rnr_spell_data, indent=4))
-
+                decks[spellbook][tier_name] += 1
+                encountered_errors = check_spell_syntax(spell_name, spell_info) or encountered_errors
+    print()
+    for deck, deck_info in decks.items():
+        print(f'Deck stats for {deck}: perform operation on decks')
+        for tier, tier_num in deck_info.items():
+            if tier_num > deck_vals[tier]:
+                print(f'    -{tier_num - deck_vals[tier]} {tier}')
+            else:# tier_num < deck_vals[tier]:
+                print(f'    +{deck_vals[tier]-tier_num} {tier}')
     if encountered_errors:
         sys.exit(1)
     for spellbook, spell_tiers in rnr_spell_data.items():
