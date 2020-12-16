@@ -36,7 +36,7 @@ spellbook:
       --------------------------------------------------------------------
 Range Macros:
   self -> a descriptor for targetting oneself.
-  hand -> a descriptor for zero.
+  hand -> a descriptor for 5ft.
   close -> 15ft
   near -> 30 ft.
   mid  -> 60
@@ -49,6 +49,12 @@ Range Macros:
 # Levels 8-9, Tier 3, 36 damage 8d8
 # Levels 10-12, Tier 4, 50 damage 9d10
 # Levels 13-15, Tier 5, 70 damage 20d6
+
+Healing:
+  Cost 1: 2d4  = 05
+  Cost 2: 4d6  = 14
+  Cost 3: 7d6  = 24
+  Cost 4: 8d10 = 44
 
 potential spell schools:
   - Divine # Calling upon the magic of a deity
@@ -152,91 +158,6 @@ Booster:
 5: 1
 
 
-Wizard:
-
-  Add magic alarm to the new wizard class.
-  Magic Alarm:
-      charisma_cost: 10
-      cost: 1
-      description: Create a magic alarm that triggers on a physical event of your
-        choice.
-  Tier 0:
-    Firecrackers: utility
-    Summoning Spell: utility
-    Candlelight: utility
-    Thaumaturgy_EQUIVALENT: utility
-    Unseen hand: utility
-    Conjure Illusion: utility
-    Detect Magic: utility
-
-    Magic Shield: buff
-    Blur: buff
-
-    Eat slugs: debuff
-
-    Flare: utility
-    Drain: damage, targeted, less
-    Rapid Fire Snowballs: damage, targeted, full
-    Acrid Mist: damage, mass
-  Tier 1:
-    Become Slime: utility
-    Bubble of Air: utility
-    Mirror Image: utility
-    Animate Weapon: utility
-    Bull Rush: utility
-    Create Pit: utility
-
-    Restrict Movement: debuff
-    Sleep: debuff
-
-    Strike True: buff
-    Statue: buff
-
-    Jet of Frost: damage, cone
-    Energy Shots: damage, targeted
-    Rain of Arrows: damage, mass
-  Tier 2:
-    Door Step: utility
-    Invisibility: utility
-    Featherfall: utility
-    Scry: utility
-    Platform: utility
-    Message: utility
-
-    Dispell Magic: buff
-
-    Ice Spear: damage
-    Fireball: damage
-  Tier_3:
-    Octahedral Barrier: utility
-    Cage: utility
-    Pocket Dimension: utility
-    Clone: utility
-
-    Polymorph: debuff
-    Reverse Gravity: debuff
-
-    Rainbows: Damage
-    Chain Lightning: damage
-  Tier_4:
-    Gate: utility
-    Fly: utility
-
-    Invulnerability: buff
-
-    Banish: debuff
-
-    Tri-beam: damage
-    Stop-Time: debuff
-  Tier_5:
-    Summon Bleck: utility
-
-    Anti-magic ring: debuff
-    Black Hole: debuff
-
-    Pillar Arcanum: damage
-
-
 Bard:
   What is a Bard?
     A minstrel, playing at an inn, enthralling everyone.
@@ -247,86 +168,181 @@ Bard:
 
     Midirection, wit, lore and destiny
   Tier_0: # 14/14
-    Trick Up Your Sleave: utility
-      Conceal Weapon: utility
-    Imitate: utility
-    Control Shadows: utility
-    Throw Voice: utility
-      Carry on the Wind: utility
-    Conjure Illusion: utility
-      Illusory Script
-    Werelight: utility
-    Animal Friendship: utility (rename)
+    X Trick Up Your Sleave: utility
+      X Conceal Weapon: utility
+    X Imitate: utility
+    X  Ambiance: utility
+    X Throw Voice: utility
+      X Carry on the Wind: utility
+    X Conjure Illusion: utility
+      X Illusory Script
+    X Dazzling Lights: utility
+    X Animal Aptitude: utility (rename)
 
-    Song of slow healing: healing
+    X Song of slow healing: healing
 
-    Languages: buff
+    X swarm of squirrels: summon
 
-    Hypnotize: debuff
-    Charm: debuff
-    Dissonant Melody: debuff grant all enemies diadvantage
+    X Languages: buff
 
-    Harsh Note: damage, aoe
-    Cruel Limerick: damage, targeted
+    X Hypnotize: debuff
+    X Dissonant Melody: debuff grant all enemies diadvantage
+
+    X Harsh Note: damage, aoe
+    X Cruel Limerick: damage, targeted
   Tier_1: # 13/13
-    dazzling lights: utility
-    disguise: utility
-    Kiss and tell: utility
-    Commune with the Dead: utility
-    Silence: utility
+    X disguise: utility
+    X Kiss and tell: utility
+    X Commune with the Dead: utility
+    X Silence: utility
 
-    Blocking Hand: buff
-    Song of haste: buff
-    take courage: buff
+    X Blocking Hand: buff
+    X Song of haste: buff
+    X Courage: buff
 
 
-    slow: debuff
-    raucous laughter: debuff
-    disarmor: debuff
-    not so fast: debuff
+    X slow: debuff
+    X raucous laughter: debuff
+    X Rend Defenses: debuff
+    X Distract: debuff
 
-    Belch Fire: damage
+    X Belch Fire: damage
+    X Inanimate Aid: damage
   Tier_2: # 9/9
-    invisible servant: utility
-    minor gate: utility
-    smokescreen: utility
-    horace's wholesome homestead: utility
-    Featherfall: utility
+    X invisible servant: utility
+    X minor gate: utility
+    X smokescreen: utility
+    X horace's wholesome homestead: utility
+    X Featherfall: utility
 
-    counter magic: debuff
+    X counter magic: debuff
 
-    song of mass healing: healing
+    X song of mass healing: healing
 
-    kilgore's thunderous shout: damage
-    sonic dart: damage
+    X kilgore's thunderous shout: damage
+    X sonic dart: damage
   Tier_3: # 8/8
-    Conjure Carriage: utility
-    Immovable: utility
-    Geodred's race dysmorphia: utility
-    Modify Memory: utility
-    Polymorph: utility
+    X Immovable: utility
+    X Conjure Carriage: utility
+    X Modify Memory: utility
+    X Polymorph: utility
+    X Zone of Truth: utility
 
-    Corvo's Contagious Waltz: debuff (mass slow)
+    X Corvo's Contagious Waltz: debuff (mass slow)
 
-    Song of Healing: healing
+    X Song of Healing: healing
 
-    Power Shriek: damage
+    X Power Shriek: damage
   Tier_4: # 6/6
-    winged magic steed: utility
-    edmire's grand manor: utility
-    Mass Mirage: utility
+    X winged magic steed: utility
+    X edmire's grand manor: utility
+    X Irresistible Charm: utility
     Nothing but Unicorns: utility
 
-    greater song of mass healing: healing
+    X greater song of mass healing: healing
 
-    strike dumb: debuff
+    X strike dumb: debuff
   Tier_5: # 4/4
-    guards: summon
+    X guards: summon
 
-    dominate: debuff
+    X dominate: debuff
 
-    torugar, the many tongued demon: damage
-    Death Note: damage
+    X torugar, the many tongued demon: damage
+    X Death Note: damage
+
+Druid:
+
+  Tier_0: 14/14
+    Constricting Vine: damage
+    Hurl Stone: damage
+    Poison Jet: damage
+    Spiders: damage
+
+    Absorb Elements:
+      Cold Resistance: buff
+      Fire Resistance: buff
+      Lightning Resistance: buff
+    Grant Animal Aspect: buff # Gills, Catseye/claws, Quills
+
+    Natural Remedy: healing, upcast
+
+    Druidcraft equivalent:
+
+    Control Plant Growth: utility
+    Crown of Fireflies: utility
+    Echolocate: utility
+    Mend: utility
+    Animal Aptitude: utility
+    # Walk on Water: utility
+
+    Spider Web: debuff
+
+  Tier_1: 13/13
+    Whirlwind: damage
+    Bolt of Frost: damage
+    Explosive Acorns: damage
+
+    Carapace of Vines: buff (enemy disadvantage on attacks or bonus hp)
+    Protection: buff (advantage on saves)
+
+    Tremors: debuff
+
+    #Faithful hound: utility
+    Warg: utility
+    Speak with Animals: utility
+    #Become Flame: utility
+    Speak with Nature: utility
+    Moonlight: utility
+    Cure: utility
+      Remove Poison: utility
+    Tailwind: utility
+    Thorned Caltrops: utility
+
+    #Summon Eagle: damage
+  Tier_2: # 9/9
+    Geyser: damage
+    Aura of Spores: damage
+
+    Charm Animal: utility
+    Geyser: utility
+    Columns of Ice: utility
+    Wall of Brambles: utility
+
+    Freezing Rain: debuff
+    Cloud of Fog: debuff
+    Tornado: debuff
+  Tier_3: # 8/8
+    Nature's Fury: damage
+    Tanglethorn Vine: damage
+
+    Snowblind: debuff
+    Prison of Ice: debuff
+
+    Animal Form: buff
+    #Wings: buff
+    Grant Elemental Resistance: buff
+
+    Forest Guardians: Summon
+
+    Hurricane Force Winds: debuff
+  Tier_4: 6/6
+    Thunder Cloud: damage
+    #Wildfire: damage
+
+    Bountiful Harvest: buff
+
+    Plane Step: utility
+    Control Weather: utility
+    Awaken Animal: utility
+
+    Plant Golem: summon
+  Tier_5: # 3/4
+    Starfall: damage
+    #Tsunami: damage
+    #Volcano: damage
+    shapeshift: buff
+    Winter's Fury: damage
+    Fix Season: utility
 
 Cleric:
   0: N/14
@@ -418,100 +434,89 @@ Cleric:
 
     Lay Bare # Debuff (guaranteed crits)
 
-Druid:
+Wizard:
 
-  Tier_0: 14/14
-    Constricting Vine: damage
-    Hurl Stone: damage
-    Poison Jet: damage
-    Spiders: damage
+  Add magic alarm to the new wizard class.
+  Magic Alarm:
+      charisma_cost: 10
+      cost: 1
+      description: Create a magic alarm that triggers on a physical event of your
+        choice.
+  Tier 0:
+    Firecrackers: utility
+    Summoning Spell: utility
+    Candlelight: utility
+    Thaumaturgy_EQUIVALENT: utility
+    Unseen hand: utility
+    Conjure Illusion: utility
+    Detect Magic: utility
 
-    Absorb Elements:
-      Cold Resistance: buff
-      Fire Resistance: buff
-      Lightning Resistance: buff
-    Grant Animal Aspect: buff # Gills, Catseye/claws, Quills
+    Magic Shield: buff
+    Blur: buff
 
-    Natural Remedy: healing, upcast
+    Eat slugs: debuff
 
-    Druidcraft equivalent:
+    Flare: utility
+    Drain: damage, targeted, less
+    Rapid Fire Snowballs: damage, targeted, full
+    Acrid Mist: damage, mass
+  Tier 1:
+    Become Slime: utility
+    Bubble of Air: utility
+    Mirror Image: utility
+    Animate Weapon: utility
+    Bull Rush: utility
+    Create Pit: utility
 
-    Control Plant Growth: utility
-    Crown of Fireflies: utility
-    Echolocate: utility
-    Mend: utility
-    Walk on Water: utility
+    Restrict Movement: debuff
+    Sleep: debuff
 
-    Spider Web: debuff
+    Strike True: buff
+    Statue: buff
 
-  Tier_1: 13/13
-    Whirlwind: damage
-    Bolt of Frost: damage
-    Explosive Acorns: damage
+    Jet of Frost: damage, cone
+    Energy Shots: damage, targeted
+    Rain of Arrows: damage, mass
+  Tier 2:
+    Door Step: utility
+    Invisibility: utility
+    Featherfall: utility
+    Scry: utility
+    Platform: utility
+    Message: utility
 
-    Carapace of Vines: buff (enemy disadvantage on attacks or bonus hp)
-    Protection: buff (advantage on saves)
+    Dispell Magic: buff
 
-    Tremors: debuff
+    Ice Spear: damage
+    Fireball: damage
+  Tier_3:
+    Octahedral Barrier: utility
+    Cage: utility
+    Pocket Dimension: utility
+    Clone: utility
 
-    #Faithful hound: utility
-    Warg: utility
-    Speak with Animals: utility
-    #Become Flame: utility
-    Speak with Nature: utility
-    Moonlight: utility
-    Cure: utility
-      Remove Poison: utility
-    Tailwind: utility
-    Thorned Caltrops: utility
+    Polymorph: debuff
+    Reverse Gravity: debuff
 
-    #Summon Eagle: damage
-  Tier_2: # 9/9
-    Geyser: damage
-    Aura of Spores: damage
+    Rainbows: Damage
+    Chain Lightning: damage
+  Tier_4:
+    Gate: utility
+    Fly: utility
 
-    Charm Animal: utility
-    Geyser: utility
-    Columns of Ice: utility
-    Wall of Brambles: utility
+    Invulnerability: buff
 
-    Freezing Rain: debuff
-    Cloud of Fog: debuff
-    Tornado: debuff
-  Tier_3: # 8/8
-    Nature's Fury: damage
-    Tanglethorn Vine: damage
+    Banish: debuff
 
-    Snowblind: debuff
-    Prison of Ice: debuff
+    Tri-beam: damage
+    Stop-Time: debuff
+  Tier_5:
+    Summon Bleck: utility
 
-    Animal Form: buff
-    #Wings: buff
-    Grant Elemental Resistance: buff
+    Anti-magic ring: debuff
+    Black Hole: debuff
 
-    Forest Guardians: Summon
-
-    Hurricane Force Winds: debuff
-  Tier_4: 6/6
-    Thunder Cloud: damage
-    #Wildfire: damage
-
-    Bountiful Harvest: buff
-
-    Plane Step: utility
-    Control Weather: utility
-    Awaken Animal: utility
-
-    Plant Golem: summon
-  Tier_5: # 3/4
-    Starfall: damage
-    #Tsunami: damage
-    #Volcano: damage
-    shapeshift: buff
-    Winter's Fury: damage
-    Fix Season: utility
-
-
+    Pillar Arcanum: damage
 
 
 For publication:
