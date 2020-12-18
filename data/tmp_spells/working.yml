@@ -1,0 +1,233 @@
+the_bard's_songbook:
+    Tier_0:
+    Tier_1:
+        Curse of Crying:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: "Attempt to curse an enemy."
+            range: close
+            school: arcane-enchantment-mind
+            hit: always
+            effects:
+                - save: spell power save
+                  description: "the enemy receives a curse which causes them to weep constantly,
+                        giving them disadvantage on actions made during combat.
+                        The curse does not leave until dispelled."
+            purpose: debuff
+            casting_time: 2
+        Gnomish Dream:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            hit: always
+            description: "Gain line of sight on a sleeping entity. Impart upon them any dream
+                  that you wish, so long as the characters are all gnomes."
+            purpose: debuff
+            range: far
+            school: arcane-enchantment-mind
+    Tier_2:
+        Swarm of Squirrels:
+            cost: 2
+            target: other
+            num_targets: 1
+            duration: 1 hour
+            description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
+              and is capable of doing 2 damage per turn. Squirrels move together in combat, and are
+              attacked as a swarm.
+            purpose: summon
+            range: near
+            school: arcane-conjuring
+        Lullaby:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            effect_radius: 30
+            duration: 1
+            casting_time: 2
+            range: self
+            purpose: debuff
+            hit: always
+            effects:
+                - save: spell power save
+                  description: on the first failure, the entity becomes dreary, and loses
+                             half it's movement. On a second failure, it falls into a
+                             deep slumber, and cannot be awoken save by damage or a
+                             successful save.
+                  repeat:
+                      - "Each turn before the entity falls asleep."
+                      - "Every hour after the entity has fallen asleep."
+            description: Sing a song which attempts to put an enemy to sleep.
+            upcast:
+                cost: 1
+                effect: "cause it to affect all enemies within a 30 foot radius"
+            school: arcane-enchantment-mind
+        Magic Steed:
+            cost: 2
+            target: other
+            num_targets: 1
+            duration: infinite
+            description: Summon a steed made of pure magical energy. The stallion has 20
+              health, and may be de-summoned on command.
+            range: near
+            purpose: summon
+            school: arcane-conjuring
+        Wall of Sound:
+            cost: 2
+            target: space
+            num_targets: 1
+            duration: concentration
+            range: archer
+            description: Create a wall up to 40 feet long and 100 feet tall of pure sonic
+              energy. Any entity that attempts to pass through it must make a spell power
+              save or be thrown back and take 2d10 damage.
+            range: archer
+            purpose: utility
+            school: arcane-acoustic
+    Tier_3:
+        Animal Form:
+            cost: 2
+            target: self
+            num_targets: 1
+            duration: 1 day
+            description: "Transform yourself into a beast of of up to your level that is
+                designated as a light or heavy enemy. You gain the hit points of that beast.
+                If the hit points are reduced to zero, you immediately return to your normal
+                form with the same hit points as when the spell began. See the book of known beasts
+                for details on the different beasts of the world."
+            range: self
+            purpose: utility
+            school: natural-animist
+            upcast:
+                cost: 1
+                effect: increase it's effect to last 24 hours
+        Mass Trickery:
+            cost: 2
+            target: enemy
+            num_targets: many
+            duration: save
+            description: Attempt to convice everyone nearby that they see something that is not there.
+            range: far
+            effect_radius: 30
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-mind
+            effects:
+              - save: spell power save
+                description: "the entity is convinced that it sees something that it does not."
+                repeat:
+                  - at the end of each of their turns
+    Tier_4:
+        Unstoppable:
+            cost: 3
+            target: other
+            num_targets: 1
+            duration: 1
+            description: Make an object or person unstoppable for 1 minute. The object must be smaller than a wagon.
+            range: close
+            purpose: utility
+            school: arcane-enchantment-matter
+        Get Me Out of Here:
+            cost: 3
+            target: self
+            num_targets: 1
+            duration: 1
+            description: Teleport to a random place in the world that is at least 5 miles
+                from your current position.
+            range: 5 miles
+            purpose: utility
+            school: arcane-transportation
+        Lightning Strike:
+            cost: 3
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Call down a blast of lightning on an enemy.
+            range: archer
+            purpose: damage
+            hit: roll
+            school:  natural-elemental-air
+            dice: 9d10
+            effect_type: elemental
+        Mass Suggestion:
+            cost: 3
+            description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
+            target: enemy
+            num_targets: many
+            duration: 5
+            range: archer
+            hit: always
+            effects:
+              - save: spell power save
+                description: the entity must follow your orders
+                repeat:
+                    - "if they are asked to do anything that causes themselves or those they care about harm"
+                    - "once per minute, or once per turn in combat"
+            purpose: debuff
+            school: arcane-enchantment-mind
+        Zone of Truth:
+            cost: 2
+            target: space
+            num_targets: 1
+            duration: concentration
+            description: Create a zone in which all must speak truthfully.
+            range: hand
+            effect_radius: 30
+            purpose: utility
+            casting_time: 15
+            school: arcane-enchantment-mind
+        Song of Aging:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to sap the life from an enemy.
+            range: near
+            hit: always
+            effects:
+                - description: Force an enemy to make a spell power save. On failure, the enemy
+                    begins aging at a rate of 10 years per turn. You may continue this spell as
+                    an offhand action each turn. The aging lasts until it is dispelled.
+                  save: spell power save
+            purpose: debuff
+            school: arcane-somatic
+    Tier_5:
+        Death Note:
+            cost: 4
+            target: enemy
+            num_targets: 1
+            duration: 1
+            description: Play a chord of incredible power, with the strength to kill.
+            range: archer
+            purpose: damage
+            school: arcane-acoustic
+            hit: always
+            effects:
+                - description: take full damage. If the save is successful, the enemy takes half damage.
+                  save: spell power save
+            dice: 20d6
+            effect_type: psychic
+        Manifest Will:
+            cost: 4
+            target: self
+            num_targets: 1
+            duration: 1
+            description: Say two words. If possible, the thing that you ask for appears in your hand.
+            range: infinite
+            purpose: utility
+            school: arcane-conjuring
+        Rewrite History:
+            cost: 4
+            target: enemy
+            num_targets: 1
+            duration: infinite
+            description: Attempt to modify the memory of everyone in earshot.
+            range: far
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-mind
+            effects:
+                - description: have up to 24 hours of their memory modified
+                  save: spell power save

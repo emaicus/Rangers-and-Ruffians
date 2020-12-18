@@ -653,9 +653,6 @@ Highborn:
       caster: no
       base_armor: 5
       roles: ["charismatic", "complex", "support", "non-magic", "mobile", "self-sufficient", "non-magic"]
-      base_abilities:
-      - My Father's Coffers
-      - The Family Sword
       base_stats:
         Charisma: 2
         Dexterity: 0
@@ -1110,7 +1107,6 @@ Bard:
           - Regular Patron
           - Sleight of Hand
           - Cartwheel
-          - Song of Inspiration
           - Tier Zero Spells
           - Minor Restful Melody
         level_1:
@@ -1315,7 +1311,7 @@ Druid:
         level_0:
           abilities:
           - The Druid's Field Guide
-          - Chosen Element # Choose an element from the list to be your primary element. Fire, Water, Earth, Air.
+          - Elemental Mastery # Choose an element from the list to be your primary element. Fire, Water, Earth, Air.
           - Empowered Elements # Enemies must make spell power saves against elements you have chosen with disadvantage
         level_1:
           abilities:
@@ -1325,7 +1321,7 @@ Druid:
           - Elemental Strike
         level_3:
           abilities:
-          - Second Element
+          - Elemental Mastery
         level_4:
           abilities:
           - Elemental Resistance # You gain resistance to damage from your chosen elements.
@@ -1333,7 +1329,7 @@ Druid:
           abilities:
         level_6:
           abilities:
-          - Third Element
+          - Elemental Mastery
         level_7:
           abilities:
           - Offhand Spell
@@ -1342,7 +1338,7 @@ Druid:
           - Greater Empowered Elements
         level_9:
           abilities:
-          - Final Element
+          - Elemental Mastery
         level_10:
           abilities:
           - Elemental Ascension
@@ -1761,7 +1757,6 @@ Gunslinger:
         level_0:
           abilities:
           - Proficient With Firearms
-          - This is my Weapon
           - Natural Intellect
           #- Firearm Creation and Modification
           - Called Shot

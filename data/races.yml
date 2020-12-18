@@ -201,7 +201,7 @@ Halfling:
         - Dodge
         - Nimble
         - Padfoot
-        - Sling
+        # - Sling
         - Lightweight
       description: "Tiny and rambunctious, fleetfoot halflings are all high-spirits
                     and fun. Known for their precocious daring, fleetfoot halflings
@@ -215,7 +215,7 @@ Halfling:
     Hardfoot Halfling:
       health_die_pieces: 0
       abilities:
-        - Sling
+        # - Sling
         - Warm Butter
         - Soft Bed
         - Carry a Tune

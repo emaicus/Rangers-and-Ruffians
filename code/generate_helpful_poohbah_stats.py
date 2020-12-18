@@ -339,16 +339,16 @@ def simulated_survivability_tuning(title, players, theoretical_survivability_dat
         hit_rate = get_hit_rate(attack_bonus, defense)
         epsilon = 0
         if difference > epsilon:
-          # Clamp hit rate between 55 and 85% 75 = 15
-          if (rnr_utils.roll_dice(1,4) <= 2 or hit_rate > .8) and hit_rate > .7:
+          # Upper bound hit rate: 80%, Only increased defense if hit rate > 65%
+          if (rnr_utils.roll_dice(1,4) <= 2 or hit_rate > .75) and hit_rate > .65:
             defense += 1
             defense_change += 1
           else:
             health += common_weapon.make_attack()
         # We need to survive longer
         elif difference < -epsilon:
-          # Clamp hit rate between 55 and 85%
-          if (rnr_utils.roll_dice(1,4) == 4 or hit_rate < .7 ) and hit_rate < .8:
+          # Lower bound hit rate 60%. Only decrease defense if hit rate <= 75%
+          if (rnr_utils.roll_dice(1,4) == 4 or hit_rate < .65 ) and hit_rate <= .75:
             defense -= 1
             defense_change -= 1
           else:

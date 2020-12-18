@@ -1,12 +1,12 @@
-A Thief's Gear:
-  description: You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and
-    a hidden 1d6 dagger.
-  brief: You have 100 feet of rope, a lockpick, a smoke-bomb, a 1d6 dagger.
-  type: starting_item
-Armored:
-  description: You begin your journey with a suit of chainmail.
-  type: starting_item
-  brief: You have a suit of chainmail.
+# A Thief's Gear:
+#   description: You begin with 100 feet of rope, a lock-picking kit, a smoke-bomb, and
+#     a hidden 1d6 dagger.
+#   brief: You have 100 feet of rope, a lockpick, a smoke-bomb, a 1d6 dagger.
+#   type: starting_item
+# Armored:
+#   description: You begin your journey with a suit of chainmail.
+#   type: starting_item
+#   brief: You have a suit of chainmail.
 Bull Rush:
   description: "Spend 1 action point to rush forward 10 feet. This rush may end in a melee attack
     which does an additional dice of damage to your target. The target must win at a contested
@@ -18,10 +18,10 @@ Greater Bull Rush:
   description: "Bull rush now carries you 20 feet."
   type: combat
   brief: "Bull rush now carries you 20 feet."
-Chainmail:
-  description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
-  type: starting_item
-  brief: +1 armor when worn.
+# Chainmail:
+#   description: You begin your journey with a suit of chainmail plate. Take -1 damage on attacks while wearing it.
+#   type: starting_item
+#   brief: +1 armor when worn.
 Courageous Blow:
   description: Add twice your Inner Fire to an attack.
   type: combat
@@ -33,15 +33,15 @@ Elemental Weapon:
   type: combat
   brief: Change the primary damage die for your weapon to deal elemental damage. Lasts until dispelled.
   cost: 1
-Choice of Model:
-  description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
-  type: choice
-  brief: Choose +2 to STR or DEX, -2 to the other.
-Animal Companion:
-  description: You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub,
-               from the beasts section or a dragon hatchling from the book of known beasts.
-  type: choice
-  brief: Choose a companion pup, kid, cub, or hatchling from the book of known beasts.
+# Choice of Model:
+#   description: At the start of your journey, add +2 to either strength or dexterity, and -2 to the other.
+#   type: choice
+#   brief: Choose +2 to STR or DEX, -2 to the other.
+# Animal Companion:
+#   description: You may choose a companion animal. Choose a level 0 light creature denoted as a pup, kid, or cub,
+#                from the beasts section or a dragon hatchling from the book of known beasts.
+#   type: choice
+#   brief: Choose a companion pup, kid, cub, or hatchling from the book of known beasts.
 Animal Magnetism:
   description: Most animals inherently understand you on some level. You can attempt
     to persuade the actions of animals.
@@ -56,11 +56,6 @@ Singing Blade:
   description: When you make a melee weapon attack, you may add your charisma rather than your strength or dexterity.
   type: combat
   brief: "Add you charisma rather than DEX or STR when you make a melee weapon attack."
-Song of Inspiration:
-  description: "Grant an ally a major dice of inspiration."
-  type: general
-  brief: "Give an ally a major inspiration dice."
-  cost: 1
 Inherent Magic:
   description: You are able to cast tier zero spells naturally, and begin with 2 extra tier zero spells from any spellbook.
   type: general
@@ -174,10 +169,10 @@ Terrify:
   description: "Singled out or Marked enemies must make a spell power save or be frightened."
   type: combat
   brief: "Singled out or Marked enemies must make an SP save. Fail: frightened."
-Boot Knife:
-  description: You carry a hidden d6 knife in your boot.
-  type: starting_item
-  brief: You start with a 1d6 knife.
+# Boot Knife:
+#   description: You carry a hidden d6 knife in your boot.
+#   type: starting_item
+#   brief: You start with a 1d6 knife.
 Born in the Saddle:
   description: Gain +1d6 to initiative when on horseback.
   type: combat
@@ -403,13 +398,13 @@ Fast Paws:
   description: Gain an additional offhand action.
   type: general
   brief: Gain an extra offhand action.
-Favorite Terrain:
-  description: At the beginning of your journey, pick a favorite terrain. Whenever
-    you are on it, you have advantage on any check related to the terrain, and may take
-    advantage on an action every third turn during combat.
-  type: choice
-  brief: Select a favorite terrain. When you are on it, you have advantage on checks related to it,
-    and gain advantage on every third turn during combat.
+# Favorite Terrain:
+#   description: At the beginning of your journey, pick a favorite terrain. Whenever
+#     you are on it, you have advantage on any check related to the terrain, and may take
+#     advantage on an action every third turn during combat.
+#   type: choice
+#   brief: Select a favorite terrain. When you are on it, you have advantage on checks related to it,
+#     and gain advantage on every third turn during combat.
 Feint:
   description: You may roll a d20 against an enemy attack. Reduce
     the attack by the amount rolled.
@@ -744,10 +739,10 @@ Lightweight:
   description: Any cup of alcohol affects you like two.
   type: general
   brief: A drink of alcohol affects you like 2.
-Longbow:
-  description: You begin your journey with a d6 longbow.
-  type: starting_item
-  brief: You have a 1d6 longbow.
+# Longbow:
+#   description: You begin your journey with a d6 longbow.
+#   type: starting_item
+#   brief: You have a 1d6 longbow.
 Enchanting:
   description: "You may store a cost 0 spell within a crystal valued at 10 gold.
                   cost 1 in a gem valued at 100 gold, cost 2 in a crystal valued at 1,000 gold, etc.
@@ -904,10 +899,10 @@ Entangling Strike:
   type: combat
   brief: "Add an additional dice of damage to an attack. Force enemy SP save. Fail: ensnared. Repeat check each turn."
   cost: 1
-Chosen Weapon Proficiency:
-  description: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
-  type: choice
-  brief: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
+# Chosen Weapon Proficiency:
+#   description: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
+#   type: choice
+#   brief: "Choose two weapon types to be proficient in from the following list: One Handed, Two Handed, Firearm, Ranged."
 Read Mind:
   description: "Attempt to enter an entity's mind to gain an idea of its throughts. The entity must make a spell power save."
   type: general
@@ -1035,16 +1030,16 @@ Greater Mental Assault:
   brief: "Mental Assault also halves an enemy's movement."
 Minor Spell Choice:
   description: At the start of your journey, you know 1 extra tier zero spells.
-  type: choice
+  type: rule
   brief: You know an extra tier 0 spell.
-Mounted Warrior:
-  description: You begin your journey with a well trained horse.
-  type: starting_item
-  brief: You have a well trained horse.
-My Father's Coffers:
-  description: Begin your journey with significant additional funds.
-  type: starting_item
-  brief: You start with extra money.
+# Mounted Warrior:
+#   description: You begin your journey with a well trained horse.
+#   type: starting_item
+#   brief: You have a well trained horse.
+# My Father's Coffers:
+#   description: Begin your journey with significant additional funds.
+#   type: starting_item
+#   brief: You start with extra money.
 Rally Cry:
   description: As an offhand action, grant all allies within 30 feet advantage on their next action.
   type: general
@@ -1182,7 +1177,7 @@ Fallen:
   brief: While you are on death's door, your allies gain an extra action.
 My Father's Oboe:
   description: You are proficient and start with two instruments of your choice.
-  type: choice
+  type: rule
   brief: You are proficient with 2 instruments.
 Novice Spellbook:
   description: You are able to learn spells from the Novice Spellbook.
@@ -1196,7 +1191,7 @@ Old Hand:
 Pledge:
   description: At the start of your journey, you may select a deity to pledge yourself
     to.
-  type: choice
+  type: rule
   brief: Pledge yourself to a deity.
 Poison Bite:
   description: You may make a bite attack for 1d6 damage. If your enemy fails a D10 inner fire saving throw, they are
@@ -1242,21 +1237,21 @@ Shield of Men:
   type: combat
   brief: Reaction. Take a teammates damage for them. Damage is halved. 30ft rad.
   cost: 1
-Shifting Cloak:
-  description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
-    1d10 bonus to stealth checks made while standing still.
-  type: starting_item
-  brief: You have a cloak that changes color with your surroundings. Add 1d10 to stealth checks
-    made when standing still.
+# Shifting Cloak:
+#   description: You possess a unique cloak, which takes on the color of your surroundings, giving you a
+#     1d10 bonus to stealth checks made while standing still.
+#   type: starting_item
+#   brief: You have a cloak that changes color with your surroundings. Add 1d10 to stealth checks
+#     made when standing still.
 Sleepless:
   description: Your can rest without sleeping for one day, allowing you to keep
     watch long into the night.
   type: general
   brief: You can rest without sleeping for 1 day.
-Sling:
-  description: Your character begins their journey with a 1d4 sling.
-  type: starting_item
-  brief: You have a 1d4 sling.
+# Sling:
+#   description: Your character begins their journey with a 1d4 sling.
+#   type: starting_item
+#   brief: You have a 1d4 sling.
 Soft Bed:
   description: You recover two extra health dice from sleeping in a real bed.
   type: general
@@ -1331,7 +1326,7 @@ Legendary Undead Minions:
   brief: "You may control up to 100 undead thralls at a time."
 Spell Choice:
   description: At the start of your journey, you know 2 extra tier zero spells.
-  type: choice
+  type: rule
   brief: You know 2 extra tier 0 spells.
 Still Warm:
   description: You can eat raw meat without penalty.
@@ -1359,7 +1354,7 @@ Adaptable:
   brief: Gain advantage on subsequent saves for 1 day after a failure.
 Skilled:
   description: Begin your journey with one extra skill.
-  type: choice
+  type: rule
   brief: Begin with an extra skill.
 Tactics:
   description: Declare before an attack that you wish to double it's damage.
@@ -1392,11 +1387,11 @@ The Book of Chi:
   description: You may select 2 combat techniques and 2 general techniques from the Book of Chi at the start of your journey.
   type: spellbook
   brief: You have access to the Book of Chi.
-The Family Sword:
-  description: Begin your journey with a better than average sword with a ruby on its hilt and an engraving
-    of your family's sigil.
-  type: starting_item
-  brief: You have an expensive sword.
+# The Family Sword:
+#   description: Begin your journey with a better than average sword with a ruby on its hilt and an engraving
+#     of your family's sigil.
+#   type: starting_item
+#   brief: You have an expensive sword.
 The Macabre Manual:
   description: You are able to learn spells from the Macabre Manual.
   type: spellbook
@@ -1405,10 +1400,10 @@ The Sorcerer's Scrolls:
   description: You are able to learn spells from the Sorcerer's Scrolls.
   type: spellbook
   brief: You have access to the Sorcerer's Scrolls
-The Sword and the Satchel:
-  description: You begin your adventure with a bottomless satchel.
-  type: starting_item
-  brief: You have a bottomless satchel.
+# The Sword and the Satchel:
+#   description: You begin your adventure with a bottomless satchel.
+#   type: starting_item
+#   brief: You have a bottomless satchel.
 The Wizard's Addendum:
   description: You are able to learn spells from the Wizard's Addendum.
   type: spellbook
@@ -1417,10 +1412,10 @@ They're Retractable:
   description: You have retractable, razor sharp claws which add +2 damage to your punching or kicking attacks.
   type: combat
   brief: Your punch and kick attacks deal +2 damage.
-This is my Weapon:
-  description: Your gun is the only friend you need. Make sure to give it a name.
-  type: choice
-  brief: Don't forget to name your gun.
+# This is my Weapon:
+#   description: Your gun is the only friend you need. Make sure to give it a name.
+#   type: choice
+#   brief: Don't forget to name your gun.
 Firearm Creation and Modification:
   description: "You are able to create and modify your firearms as detailed in the rulebook."
   type: general
@@ -1523,10 +1518,10 @@ Mortal Coil:
     begins to rot away, causing fear and horror in those who see you.
   type: general
   brief: 1/week, consume a soul to avoid rotting.
-Walking Stick:
-  description: You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.
-  type: starting_item
-  brief: You have a wizards staff that adds +1 to spell damage.
+# Walking Stick:
+#   description: You begin your adventure with a wizard's staff which gives you +1 additional damage to all spells.
+#   type: starting_item
+#   brief: You have a wizards staff that adds +1 to spell damage.
 Warm Butter:
   description: Your are naturally talented chef. You may cook food which heals allies for an extra dice of health while resting.
   type: general
@@ -1981,10 +1976,10 @@ Greater Defender Aura:
   type: combat
   brief: Grant allies within 30ft half damage from physical attacks for 3 turns.
   cost: 2
-Favorite Enemy:
-  description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
-  type: choice
-  brief: Declare a favorite class of enemy. Gain advantage whenever attacking them.
+# Favorite Enemy:
+#   description: Declare a favorite class of enemy (monster, fiend, undead, etc.). Gain advantage whenever attacking this type of enemy.
+#   type: choice
+#   brief: Declare a favorite class of enemy. Gain advantage whenever attacking them.
 Monster Slayer:
   description: Whenever you attack a beast classified as a monster, do an additional dice of damage on the attack.
   type: combat
@@ -2423,7 +2418,7 @@ And this Part Goes Here...:
   brief: 1/rest, craft something from junk.
 I'm a Red One!:
   description: "At the start of your journey, choose your color. This choice affects elemental resistances."
-  type: choice
+  type: rule
   brief: Choose your color at the start of your journey. Affects elemental resistances.
 Action:
   description: On your turn, you may take an action. An action may be made up of an attack, spell, ability, or any offhand action.
@@ -2657,10 +2652,10 @@ Tier Five Spells:
   description: "You have achieved the highest form of magic, and are a mage to be reckoned with. You can now learn tier five spells from any of your spellbooks."
   type: general
   brief: You can learn tier 5 spells.
-Starting Fighting Techniques:
-  description: Begin your journey with two standard fighting techniques.
-  type: choice
-  brief: You know 2 standard fighting techniques.
+# Starting Fighting Techniques:
+#   description: Begin your journey with two standard fighting techniques.
+#   type: choice
+#   brief: You know 2 standard fighting techniques.
 Multi-class Option:
   description: From this point forward, when you level up, you may choose to take a level in
     a class other than your own.
@@ -2673,7 +2668,7 @@ Vengeful Death:
   brief: When you hit 0 hp, choose to make an attack. If you do, disadv on death coin.
 Peck:
   description: As an offhand action, peck an enemy, dealing 1d6 damage. On a critical hit, blind them until they succeed a SP save.
-  type: choice
+  type: combat
   brief: Offhand. 1d6 damage. On crit, blind until SP save.
   cost: 1
 High Jump:
@@ -2692,31 +2687,19 @@ Mimic:
   description: "You can mimic any voice you've heard."
   type: general
   brief: "Mimic any voice you've heard."
-Minor Stat Increase:
-  description: You gain one stat point to add to a stat of your choosing.
-  brief: You gain one stat point to add to a stat of your choosing.
-  type: choice
-Major Stat Increase:
-  description: You gain two stat points to add to a stat or stats of your choosing.
-  brief: You gain two stat points to add to a stat or stats of your choosing.
-  type: choice
-Chosen Element:
-  description: "Choose a starting element from the following list: Fire, Water, Earth, Air.
+# Minor Stat Increase:
+#   description: You gain one stat point to add to a stat of your choosing.
+#   brief: You gain one stat point to add to a stat of your choosing.
+#   type: choice
+# Major Stat Increase:
+#   description: You gain two stat points to add to a stat or stats of your choosing.
+#   brief: You gain two stat points to add to a stat or stats of your choosing.
+#   type: choice
+Elemental Mastery:
+  description: "Choose an element from the following list: Fire, Water, Earth, Air.
                 You are a natural at manipulating and utilizing elemental magic of that type."
-  type: choice
+  type: rule
   brief: "Choose an element from Fire, Water, Earth, Air to be proficient in."
-Second Element:
-  description: "Choose a second element from Fire, Water, Earth, and Air to be adept in."
-  type: choice
-  brief: "Choose a second element from Fire, Water, Earth, Air to be adept in."
-Third Element:
-  description: "Choose a third element from Fire, Water, Earth, and Air to be adept in."
-  type: choice
-  brief: "Choose a third element from Fire, Water, Earth, Air to be adept in."
-Final Element:
-  description: "Choose a forth element from Fire, Water, Earth, and Air to be adept in."
-  type: choice
-  brief: "Choose a forth element from Fire, Water, Earth, Air to be adept in."
 Elemental Resistance:
   description: "You are resistant to damage from any of your chosen elements."
   type: combat

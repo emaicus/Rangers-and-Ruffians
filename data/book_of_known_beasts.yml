@@ -54,7 +54,7 @@ beasts:
           health: 24
           average_damage_per_round: 6
           actions:
-            bite: 
+            bite:
               damage: "1d8"
               modifier: "Strength"
               description: "The young dire wolf tears at its target with its teeth. Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone."
@@ -81,7 +81,7 @@ beasts:
             Multi-Attack: An Alpha Wolf can make 2 bite attacks as an action.
             Villain: If an Alpha Wolf is being used as a Villain, it can make one out of turn attack as a villain action per round.
           actions:
-            bite: 
+            bite:
               damage: "1d6"
               modifier: "Strength"
               description: "The Alpha Wolf tears at its target with its teeth. Whenever a player is bitten, they must make a D8 Dexterity or Strength Save or be pulled prone."
@@ -107,16 +107,16 @@ beasts:
             Luck: 0
             Perception: 3
             Strength: 2
-      description: "Wolves are common in the wilds, and can make travel very dangerous for commoners 
-        and low level parties. Delving into a wolf den can make a good first adventure for a level 
+      description: "Wolves are common in the wilds, and can make travel very dangerous for commoners
+        and low level parties. Delving into a wolf den can make a good first adventure for a level
         zero party. Wolves come in a number of varieties, including Forest and Dire. Dire Wolves are one
-        of Companion Animal options that can be taken by a Beastmaster. A companion wolf will likely be more 
+        of Companion Animal options that can be taken by a Beastmaster. A companion wolf will likely be more
         domesticated than a wild wolf. However, common folk may still be apprehensive around a wolf, tame or
         otherwise. Wolves are incredibly loyal companions, and may hunt for the party."
       make_it_your_own: "Wolves can be re-skinned for the many locations in your world. Is your party
                         beginning in the tundra? Modify the Forest Wolf to create a Frost Wolf!"
-      tactics: "Wolves hunt in packs, so it should be rare to face one alone. Characters may see signs 
-               of wolf activity before ever seeing a wolf itself. For example, they may find tracks, 
+      tactics: "Wolves hunt in packs, so it should be rare to face one alone. Characters may see signs
+               of wolf activity before ever seeing a wolf itself. For example, they may find tracks,
                or the half-eaten carcass of a fresh kill. At night, players may be ambushed by wolves,
                or a character taking watch may see wolf eyes in the darkness."
     bears:
@@ -160,7 +160,7 @@ beasts:
             Maul:
               modifier: "Strength"
               damage: "2d6"
-              description: "If an enemy is prone, the bear may maul it, throwing it around on the ground with its massive jaws."        
+              description: "If an enemy is prone, the bear may maul it, throwing it around on the ground with its massive jaws."
           abilities:
             Mother Bear: "If a dire bear's cubs are in danger, her movement speed is doubled and she can make both a bite and a claw attack in a single action."
             Companion Trait: "If a dire bear is the companion of an adventurer and the adventurer falls below half health, the bear gains access the Mother Bear ability."
@@ -182,7 +182,7 @@ beasts:
                     than a Wild Bear, but will still likely strike fear into the hearts of common folk. Bears
                     make loyal companions, and a companion bear will usually come to treat it's Beastmaster as its Cub."
       make_it_your_own: "Bears can be easily re-skinned for different terrains and climate types."
-      tactics: "A player will almost certainly not see a bear attack coming. Consider having your characters roll 
+      tactics: "A player will almost certainly not see a bear attack coming. Consider having your characters roll
                a difficult perception check before being mauled by a bear. Bears will be reluctant to attack a full party.
                If players are hunting a bear, they will almost certainly see signs of it before the actual bear, including
                scratch marks on trees, prints, and even freshly mauled kills. Bears tend to live in darkened dens."
@@ -236,7 +236,7 @@ beasts:
             Intelligence: 1
             Luck: 1
             Perception: 3
-            Strength: 0  
+            Strength: 0
       description: "While common enough in the wilds, Big Cats tend to keep clear of travelers, so spotting one
                    during travel is rare. If a big cat chooses to attack an adventurer, however, they will likely never
                    see it coming; big cats tend to slink in the shadows, and attack lone travelers via a pounce from on-high.
@@ -244,22 +244,22 @@ beasts:
                    big cats will be slightly aloof, and will spend much of their time exploring on their own. This will
                    sometimes lead to trouble. However, Big Cats can be quite affectionate to their Beastmaster, and may
                    even bring them kills as gifts. They may be slow to warm to the rest of a party, however."
-      make_it_your_own: "Big cats can be modified to suite any campaign setting. For example, is your campaign set 
+      make_it_your_own: "Big cats can be modified to suite any campaign setting. For example, is your campaign set
                         in the mountains? Consider modifying the panther to be a Saber Cat!"
       tactics: "Big cats almost always hunt alone, and are too intelligent to risk attacking a party of adventurers in the
-               open. Instead, they are likely to bide their time, watching from the trees until a foolish adventurer 
+               open. Instead, they are likely to bide their time, watching from the trees until a foolish adventurer
                leaves camp, before pouncing from above."
 dragons:
   description: "There are many types of dragon in the world, and all are unique in their own way. Some seek gold, and horde
                 it in mountain lairs. Others are deeply intelligent, and seek power and influence. A dragon's color generally
-                specifies its breed and characteristics. While all dragons are rare, the Red Dragon is the most common, 
+                specifies its breed and characteristics. While all dragons are rare, the Red Dragon is the most common,
                 and most individuals' understanding of dragons as incredibly dangerous, greedy, fire breathing animals comes
-                from the actions of red dragons. Dragons make good campaign villains at later levels of play. 
-                Dragon hatchlings are one of the companion animals that may be chosen by a 
+                from the actions of red dragons. Dragons make good campaign villains at later levels of play.
+                Dragon hatchlings are one of the companion animals that may be chosen by a
                 Beastmaster. A young dragon is incredibly difficult to care for, as it cannot yet fly or truly control its
                 breath attack. Dragonscales are worth more than their weight in gold, so it is likely that poachers may
                 attempt to steal a hatchling while a beastmaster is unawares. Villagers may attempt to kill a dragon hatchling
-                to prevent it from growing up to become a 'monster.' However, if a dragon survives its infancy, it can become 
+                to prevent it from growing up to become a 'monster.' However, if a dragon survives its infancy, it can become
                 a deeply loving, powerful, and useful companion. Dragons grow more slowly than most other companion animals."
   types:
     red_dragons:
@@ -274,7 +274,7 @@ dragons:
                 the importance of surprise. A Red Dragon attack will likely come with little warning, and will be devastating.
                 Red Dragons will target dangerous enemies first, and will show no mercy to their prey. In an outoor environment,
                 Red Dragons will make strafing runs with their fire against adventurers, before flying out of reach of all but
-                the most well-trained marksmen. In their den, a Red Dragon will fight to the death, defending a corner and using 
+                the most well-trained marksmen. In their den, a Red Dragon will fight to the death, defending a corner and using
                 its fire and wings to keep adventurers at bay."
       types:
         red_dragon_hatchling:
@@ -365,7 +365,7 @@ dragons:
               damage: "1d8"
               modifier: "Strength"
               description: "The drake snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the drake grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D14 strength check to hang on."
-            Tail Strike: 
+            Tail Strike:
               damage: "4d8"
               modifier: "Strength"
               description: "The drake swings its treelike tail at its enemies. Strikes all enemies up to 10 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail."
@@ -422,7 +422,7 @@ dragons:
               damage: "1d12"
               modifier: "Strength"
               description: "The dragon snatches at an enemy with its claws. An enemy must attempt a contested DEX check. On failure, the dragon grapples them. As an offhand action, it can drop them. If dropped, a player can attempt a D16 strength check to hang on."
-            Tail Strike: 
+            Tail Strike:
               damage: "4d12"
               modifier: "Strength"
               description: "The dragons tail whistles as it hurtles towards its enemies. The tail strikes all enemies up to 20 feet behind the drake as it spins. Affected enemies can make a contested DEX check to try to avoid the incoming tail."
@@ -452,7 +452,7 @@ humanoids:
                 a place among civilization despite often being intelligent enough. Sometimes, this divide
                 is caused by the bestial bloodthirst of a group, as with goblins, ogres, and adlet. At other
                 times, differences are fueled by old prejudices or religious differences, as with the Orcs.
-                While usually rare across the realms, it is not unheard of for a member of one of the 
+                While usually rare across the realms, it is not unheard of for a member of one of the
                 humanoid races to leave their own and instead try to integrate among the fairer races."
   types:
     goblins:
@@ -463,9 +463,9 @@ humanoids:
                     hunting and fishing within caves in darkened mountains to gain their sustenance. Before long,
                     this is no longer sustainable, and they venture out into a local area to steal, kill,
                     and capture what they need to survive. Goblins are unscrupulous when it comes to choosing their
-                    dinner, and it is quite common that they will capture and eat travelers. Many is the shepherd who 
-                    has found themselves suddenly riddled with arrows as they stand, watching for wolves. Goblins 
-                    are greedy and clever. An imposing or courageous enough individual can buy help from goblins 
+                    dinner, and it is quite common that they will capture and eat travelers. Many is the shepherd who
+                    has found themselves suddenly riddled with arrows as they stand, watching for wolves. Goblins
+                    are greedy and clever. An imposing or courageous enough individual can buy help from goblins
                     in exchange for gold and shiny trinkets. When a goblin tribe gets too large and all of the
                     local commoners have been eaten, it will fracture, and goblins will go by night to nearby mountains
                     to begin the process anew. Goblins have a symbiotic relationship with Ogres;
@@ -474,7 +474,7 @@ humanoids:
                     though this is rare due to Ogres' dimwitted and slothful nature."
       tactics: "In the early days of a goblin tribe, commoners likely won't notice that anything has changed. As
                 numbers increase, animals will start disappearing, followed by people living outside of town.
-                Goblins fight intelligently, and rarely for conquest. They will not stage an open battle unless 
+                Goblins fight intelligently, and rarely for conquest. They will not stage an open battle unless
                 pressed to do so by circumstance or taskmasters. Instead, goblins will fortify their cavernous homes,
                 will can consist of extensive networks of tunnels. Goblins know enough to post sentries and to have patrols.
                 Most goblins are cowards, and will flee as soon as they are in significant danger or have been greatly injured."
@@ -601,7 +601,7 @@ humanoids:
           action_spec:
             Villain: "If the goblin chieftain is being used as a villain, it may take one out of turn villain action per round. This action may be either a call for aid or an attack."
           actions:
-            Hurl Poison Spear: 
+            Hurl Poison Spear:
               modifier: "Dexterity"
               damage: "1d8"
               description: "The chieftain hurls a knobby spear at an enemy within 30 feet. The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage."
@@ -612,7 +612,7 @@ humanoids:
           conditional_actions:
             First Turn: "Protect Me: The goblin Chieftain immediately grants all allies up to their maximum movement, which must be used to get between the chieftan and danger."
             Second Turn: "Kill That One!: The goblin Chieftain grants all nearby goblin archers the ability to make an attack on a single enemy of its choice."
-            Third Turn: "Release the Dogs!: The goblin shaman summons 2 forest wolves to its aid."    
+            Third Turn: "Release the Dogs!: The goblin shaman summons 2 forest wolves to its aid."
             One Quarter Health: "Smoke Bomb: The goblin Chieftain hurls a smoke bomb at the ground, and moves it's maximum movement away from combat."
           villain_actions:
             Summon Allies: "Each turn, the Goblin Chieftain may roll 1d20. On a 18, a goblin swordsman is summoned, on a 19 a goblin archer, on a 20, a goblin shaman."
@@ -671,7 +671,7 @@ humanoids:
         Goblin Ogre Rider:
           description: "This goblin has befriended an ogre, usually in exchange for extra food and comfort.
                         An Ogre rider sits atop a howdah (a walled carriage) strapped to the ogre's shoulders."
-          tactics: "An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly 
+          tactics: "An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly
                     begins attacking enemies, while the rider picks off mages and ranged enemies at a distance."
           type: "Level 2 Villain"
           health: 133
@@ -696,7 +696,7 @@ humanoids:
               damage: "2d6"
               modifier: "Strength"
               description: "In place of its movement, the ogre runs a full 15 feet in a straight line, trampling anyone in its path. Players may make a D14 dexterity check to jump out of the way. If the ogre stops in a space occupied by an entity, the entity is pushed to the side."
-            Throw Netted Enemy: 
+            Throw Netted Enemy:
               damage: 2d6
               modifier: "Strength"
               description: "If a netted enemy is within reach of the Ogre, it may pick the enemy up, spin it as if spinning a sling, and throw it at a target within 15 feet.
@@ -720,7 +720,7 @@ humanoids:
             Perception: 1
             Strength: 3
     ogres:
-      description: "Ogres stand at about 15 feet tall, with dark grey skin and beady eyes. They are usually 
+      description: "Ogres stand at about 15 feet tall, with dark grey skin and beady eyes. They are usually
                     hairless, and have overlong arms that are perfect for swinging long clubs.
                     Massive, lazy brutes, Ogres try not to do anything that they don't have to. While generally
                     fairly dimwitted, ogres can be crafty when it suites them, and may lay deadly but simple traps
@@ -736,7 +736,7 @@ humanoids:
           magic_armor: 2
           average_damage_per_round: 7
           actions:
-            Hurl Goblin: 
+            Hurl Goblin:
               damage: "2d6"
               modifier: "Strength"
               description: "If there is a goblin within 10 feet, the ogre can snatch it up and throw it at an enemy. Deals damage to both the goblin and the target."
@@ -756,7 +756,7 @@ humanoids:
             Strength: 3
         Ogre Lord:
           description: "Ogre Lords have clawed their way to the top of a clan's hierarchy,
-                        usually via bloody combat. Ogre Lords are the rare exception to 
+                        usually via bloody combat. Ogre Lords are the rare exception to
                         the usual rule that Ogre's are slothful. Instead, the Ogre Lord
                         desires two things above all others; power and servitude. Rather than
                         eating their enemies, Ogre Lords often press them into slavery or servitude
@@ -800,7 +800,7 @@ humanoids:
           conditional_actions:
             First Turn: "CHARGE: All nearby allies, including the Ogre Lord, get to move their full movement towards the enemy."
             Second Turn: "SPIN ATTACK: The Ogre Lord spins in a circle, hitting everything within 10 feet with its club for 1d8 damage, before throwing the club at an enemy within 15 feet."
-            Third Turn: "WAR CRY: The Ogre Lord gives out a Hideous Bellow. All nearby enemies must make a Spell Power save or be frightened by it." 
+            Third Turn: "WAR CRY: The Ogre Lord gives out a Hideous Bellow. All nearby enemies must make a Spell Power save or be frightened by it."
           reactions:
             Exposed Grab: If an enemy runs past the Ogre Lord, it can make a grab attack instead of a regular strike."
           stats:
@@ -816,7 +816,7 @@ humanoids:
                     backs so that they look closer to five. Their pelts vary based on climate, and can be
                     black, grey, or even pure white. Adlet have razor sharp fangs, and padded paws that
                     they use to wield blunt weapons. Adlet are often mistaken for werewolves and other fiends of the night.
-                    The truth is not much better. Adlet travel in roving, warlike tribes, laying waste to 
+                    The truth is not much better. Adlet travel in roving, warlike tribes, laying waste to
                     villages in their path, stealing anything of use and eating the inhabitants."
       types:
         Lesser Adlet:
@@ -933,7 +933,7 @@ humanoids:
           conditional_actions:
             First Turn: "Reposition: All adlet on the field may move 10 feet."
             Second Turn: "Fireball!: The Witch Doctor throws a vial of red liquid which does the equivalent damage of a fireball spell, but leaves the area burning until it is extinguished."
-            Third Turn: "Get Up: All dead adlet raise as undead with 1hp."    
+            Third Turn: "Get Up: All dead adlet raise as undead with 1hp."
             One Quarter Health: "Smoke Bomb: The goblin Chieftain hurls a smoke bomb at the ground, and moves it's maximum movement away from combat."
           stats:
             Charisma: 0
@@ -1060,7 +1060,7 @@ humanoids:
               modifier: "Strength"
               damage: "1d8"
               description: "The Bog King takes a massive leap to a position up to 30 feet away. All enemies within 5 feet of its landing point take damage."
-            Deafening Croak: 
+            Deafening Croak:
               damage: "1d6"
               modifier: "Inner_Fire"
               description: "The Bog King unleashes a earsplitting croak. All enemies must make a Spell Power save or take damage and be deafened, giving them disadvantage on their next action. "
@@ -1263,7 +1263,7 @@ constructs:
               modifier: "Dexterity"
               damage: "1d6"
               description: "The homunculus slashes at an enemy with a blade-like protrusion."
-          abilities: 
+          abilities:
             Utilize Spell Gem: "If a homunculus has a spell gem in it's possession, it is able to use it as an action."
           movement:
             land: 30
@@ -1287,7 +1287,7 @@ constructs:
               modifier: "Dexterity"
               damage: "1d12"
               description: "The homunculus slashes at an enemy with a blade-like protrusion."
-          abilities: 
+          abilities:
             Utilize Spell Gem: "If a homunculus has a spell gem in it's possession, it is able to use it as an action."
           movement:
             land: 30

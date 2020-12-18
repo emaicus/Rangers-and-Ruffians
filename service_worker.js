@@ -405,63 +405,63 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/character_creation_helper_page.html",
-    "revision": "6675c0dae4ba6403c5309ea5e7129de1"
+    "revision": "8f6e1ab8c5c6d7eb4d3eddf8f02afe45"
   },
   {
     "url": "site/pages/character_sheet.html",
-    "revision": "23d3532ae2e752933fb924bb8785d731"
+    "revision": "4affead1d35f2366a6822ef6372cd2a7"
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "d8d5f41d7f9597f34c332d711b66e5a5"
+    "revision": "e94969fd23b6b3908d3c9d83b81e19e7"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "b84785fb5d01d6237df8682f915cb0d5"
+    "revision": "454b0ab46ed1e68d57776529a079c98c"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "3f8ba34c31caa7a7376ea7b0162e0e3c"
+    "revision": "a58cc96e6f0c96fb8692ae735f83e958"
   },
   {
     "url": "site/pages/GENERATED/Changelog.html",
-    "revision": "29bfa65a1194fd6f89fd1d864b906690"
+    "revision": "b206c14f92262febd529021c8b486c61"
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "f7fe6232b68bb0bbf09bc9d2238d4e6e"
+    "revision": "41819216c39e7a418c7f5ebcc087c5a1"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
-    "revision": "b7b929a22f74e65430ee0268bc2e94a7"
+    "revision": "3d09aba2deaeb3492760e81a17f7ee95"
   },
   {
     "url": "site/pages/GENERATED/Examples.md",
-    "revision": "4ba1ca542020eae3117d0a5eeadba172"
+    "revision": "18119a93572a91f6107e4c458aa8d141"
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "9c67a94a36e923b7b015bbc99729efd4"
+    "revision": "e6ed641b95c5104e20b435cd7dfbb1e5"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
-    "revision": "b0626075c66b45c6b991e2d4d233430e"
+    "revision": "4ccc75d26650a82b0391a455b6590c06"
   },
   {
     "url": "site/pages/GENERATED/Rulebook.html",
-    "revision": "ce1e565a07318d7d3eec4cd6131f3820"
+    "revision": "dfa69b2744bcd63fbf5795c498dc55a8"
   },
   {
     "url": "site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "3e3f98071309bed02462e4fae64e09b9"
+    "revision": "dbd4392ca49d1e69eb5f9b445fae457b"
   },
   {
     "url": "site/pages/level_up_sheet.html",
-    "revision": "92c4e0b952bacb74922d462c089919ae"
+    "revision": "caa986df1397413bfc09412cad6b5e53"
   },
   {
     "url": "site/pages/weapons.html",
-    "revision": "8b3dd7610bc06a5b91c5d2ed8ade1946"
+    "revision": "52b3d652745a4f5b6975a73c54e9d41c"
   },
   {
     "url": "site/printed_materials/standard_character_sheet.pdf",
@@ -533,7 +533,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "db8a4545f30e695023e32f694beb8cc9"
+    "revision": "6460dc085c149994d17c900caa875afd"
   },
   {
     "url": "assets/css/style.css",

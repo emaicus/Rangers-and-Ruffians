@@ -363,7 +363,7 @@ def publish_changelog(force_overwrite):
 
   md._write_topmatter()
   md._write_section(f'Changelog')
-  md.write_toc(max_to_include=3)
+  md.write_toc(max_to_include=2)
   md.write_buffer()
 
 def archive_past_versions():
