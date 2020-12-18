@@ -106,6 +106,7 @@ the_bard's_songbook:
             num_targets: 1
             range: hand
             duration: concentration
+            purpose: utility
             description: "Grant yourself or another the ability to speak and understand all languages for the spell's duration."
             school: arcane-acoustic
         Hypnotize:
@@ -139,7 +140,6 @@ the_bard's_songbook:
             effect_radius: 30
             purpose: debuff
             school: arcane-somatic
-            effect: psychic
             hit: always
             effects:
                 - condition: All enemies who hear it must make a
@@ -265,7 +265,6 @@ the_bard's_songbook:
             range: self
             effect_radius: 30
             school: arcane-enchantment-mind
-            effect_radius: near
         Slow:
             cost: 1
             target: enemy
@@ -491,18 +490,20 @@ the_bard's_songbook:
             purpose: utility
             school: arcane-conjuring
         Polymorph:
-            cost: 1
+            cost: 2
             target: entity
             num_targets: 1
             duration: save
             description: Transform an entity or yourself into a creature of your level or less.
             range: mid
             purpose: debuff
+            hit: always
             effects:
               - condition: If the entity is hostile, it must make a
                 save: spell power save
                 description: be transformed
-                repeat: each turn
+                repeat: 
+                    - each turn
         Modify Memory:
             cost: 1
             target: entity
@@ -510,6 +511,7 @@ the_bard's_songbook:
             duration: save
             description: Your magic infects and invades a creatures mind.
             range: mid
+            hit: always
             purpose: debuff
             effects:
               - save: spell power save
@@ -726,7 +728,7 @@ the_bard's_songbook:
                     - once per week
         Torugar, the Many Tongued Demon:
             cost: 4
-            target: everyone
+            target: entity
             num_targets: many
             duration: 5
             description: Summon a pit, housing an ancient, many tongued demon of the underworld.
@@ -741,8 +743,9 @@ the_bard's_songbook:
             school: necromantic-summoning
             effects:
                 - description: be grappled by the tongue and begin taking damage
-                  save: strength save against your spell power
+                  save: dexterity save against your spell power
                 - condition: once grappled, an enemy must make a
+                  save: strength save against your spell power
                   description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
 the_druid's_guidebook:
     Tier_0:
@@ -871,7 +874,8 @@ the_druid's_guidebook:
                 - description: "be held in place. Damage is repeated at the start of each of the enemy's turns.
                                 When concentration is broken, the damage stops, but the entity is still held."
                   save: spell power save
-                  repeat: at the start of each turn
+                  repeat: 
+                    - at the start of each turn
               school: "natural-floral"
         Hurl Stone:
               purpose: damage
@@ -890,7 +894,6 @@ the_druid's_guidebook:
               effects:
                     - description: be knocked prone
                       save: spell power save
-                      balance_type: greater debuff
               school: "natural-elemental-earth"
     Tier_1:
         Bark Armor:
@@ -945,7 +948,7 @@ the_druid's_guidebook:
             school: "natural-elemental"
         Moonlight:
             cost: 1
-            target: everyone
+            target: entity
             num_targets: 1
             range: archer
             purpose: utility
@@ -1037,8 +1040,8 @@ the_druid's_guidebook:
             effects:
                 - description: a hostile animal regards you as friendly.
                   save: spell power save
-                  balance_type: greater utility
-                  repeat: every hour
+                  repeat: 
+                    - every hour
             school: "natural-animist"
         Freezing Rain:
             cost: 2
@@ -1053,7 +1056,6 @@ the_druid's_guidebook:
                 - description: "they fall prone and lose all further movement"
                   condition: "When moving across affected terrain, enemies must make a"
                   save: dexterity check against your spell power
-                  balance_type: greater utility
             school: "natural-elemental-water"
         Geyser:
             cost: 2
@@ -1192,7 +1194,7 @@ the_druid's_guidebook:
             description: Summon hurricane force winds to batter your foes. The winds affect a fifty foot cone in front of you.
             effects:
                 - condition: Medium sized or smaller entities that try to move through the wind must make a
-                  check: strength check against your spell power
+                  save: strength check against your spell power
                   description: be unable to move and be pushed back 15 feet. On success, they move at half speed.
             school: "natural-elemental-air"
         Nature's Fury:
@@ -1217,11 +1219,11 @@ the_druid's_guidebook:
             purpose: buff
             description: Select an element. An entity of your choice is resistant to that element.
             school: "natural-elemental"
-        Prison of Ice: #Very cool, should come back as a wizard spell
-            cost: 2
-            description: Force an enemy to make a dexterity saving throw against your spell
-                power. On failure, they are surrounded by ten foot tall walls of ice, lined
-                with sharpened icicles.
+        # Prison of Ice: #Very cool, should come back as a wizard spell
+        #     cost: 2
+        #     description: Force an enemy to make a dexterity saving throw against your spell
+        #         power. On failure, they are surrounded by ten foot tall walls of ice, lined
+        #         with sharpened icicles.
     Tier_4:
         Plant Golem:
             cost: 4
@@ -1386,10 +1388,10 @@ the_druid's_guidebook:
                 The volcano lasts until it is dispelled.
             effects:
                 - condition: If an individual is standing over where the caldera forms, it must make a
-                  check: dexterity saving throw
+                  save: dexterity saving throw
                   description: fall in, taking 10d8 damage. On success, the entity takes 5d8 damage
                 - condition: Each turn beginning after the first, all entities within 300 feet must make a
-                  check: dexterity saving throw
+                  save: dexterity saving throw
                   description: take damage
             school: "natural-elemental-fire"
         Winter's Fury:
@@ -1423,6 +1425,47 @@ the_book_of_healing:
             upcast:
               cost: scaling
               effect: allows it to deal an additional 1d6 radiant damage.
+        Purifying Flame:
+            cost: 0
+            target: self
+            num_targets: many
+            duration: concentration
+            purpose: damage
+            description: Summon a burst of holy flame, centered on yourself,
+                which damages all enemies within the spell's radius. After the
+                spell ends, flame lingers in your hands, and may be used to
+                produce sacred ash.
+            range: self
+            effect_radius: 15
+            hit: roll
+            dice: 2d4
+            effect_type: radiant
+            upcast: 
+                cost: scaling
+                effect: may be used to either increase its range by 15 feet or
+                    to add an additional 2d4 damage. 
+            school: divine-purification
+        Holy Shield:
+          action_type: Reaction
+          cost: 1
+          target: friendly
+          num_targets: 1
+          duration: 0
+          description: "As an enemy attacks, radiant light bursts forth from
+            you. Add +5 to either your defense or one of your allies'."
+          range: self
+          purpose: buff
+          school: thaumaturgy-protection
+        Ward:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            description: Touch a teammate and place a ward on them. This ward grants 3 defense
+              to the touched entity for the duration of the spell.
+            range: hand
+            purpose: buff
+            school: divine-guardian
         Beguile:
             cost: 0
             target: enemy
@@ -1436,13 +1479,15 @@ the_book_of_healing:
             effects:
               - description: "make all attack rolls with disadvantage"
                 save: spell power save
-                repeat: "each turn"
-        Detect Evil:
+                repeat: 
+                    - "each turn" 
+        Detect Life:
             cost: 1
             target: other
             num_targets: 1
             duration: 10
-            description: Make a perception check to detect if there is evil nearby. You may continue to make such checks for the spell's duration.
+            description: Make a perception check to detect if there is life nearby. You may continue to make such checks for the spell's duration.
+                Additionally, this spell may be used to detect the type of life that is nearby.
             purpose: utility
             range: self
             effect_radius: 100
@@ -1457,16 +1502,6 @@ the_book_of_healing:
             range: self
             effect_radius: 100
             school: divine-purification
-        Change Weight:
-            cost: 0
-            target: other
-            num_targets: 1
-            duration: concentration
-            description: Double or halve the weight of an object. The object must be no larger than
-              a horse.
-            range: archer
-            purpose: utility
-            school: arcane-enchantment-matter
         Fake Death:
             cost: 0
             target: friendly
@@ -1477,30 +1512,6 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: arcane-somatic
-        Mend:
-            cost: 0
-            target: other
-            num_targets: 1
-            duration: 0
-            description: You can magically mend small dents, dings, scratches, and tears
-              in items.
-            range: hand
-            purpose: utility
-            school: arcane-transmutation
-        Minor Heal:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 0
-            description: Restore health to one ally or yourself.
-            dice: 2d4
-            effect_type: healing
-            purpose: healing
-            range: near
-            school: divine-restoration
-            upcast:
-              cost: scaling
-              effect: allows it to grant 1d4 additional healing.
         Purify:
             cost: 1
             target: friendly
@@ -1513,17 +1524,57 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: divine-purification
-        Sacred Flame:
+        Mend:
             cost: 0
-            target: self
+            target: other
+            num_targets: 1
+            duration: 0
+            description: You can magically mend small dents, dings, scratches, and tears
+              in items.
+            range: hand
+            purpose: utility
+            school: arcane-transmutation
+            upcast:
+                cost: 1
+                effect: increase it's power, mending larger items such as broken walls, wheels, or armor.
+        Holy Light:
+            cost: 1
+            target: other
             num_targets: 1
             duration: concentration
+            description: In a blaze of holy light, an object you are holding illuminates,
+              casting light within the spell's radius. Additionally, undead or evil entities within
+              the light must make all actions at disadvantage.
+            range: self
+            effect_radius: 50
             purpose: utility
-            description: Summon a sacred flame to your hand. Ash created
-              by the flame is considered sacred. You may melee attack with the flame
-              which deal 2d6 fire damage.
-            range: hand
             school: divine-purification
+        Make Habitable:
+            cost: 1
+            target: space
+            num_targets: many
+            duration: concentration
+            description: The area within the spell's radius becomes habitable and
+                comfortable for all within. Snow becomes warm to the touch, rain
+                ceases to fall, and puddles instantly evaporate.
+            range: self
+            effect_radius: 30
+            purpose: utility
+            school: arcane-elemental
+        Minor Heal:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 0
+            description: Restore health to one ally or yourself.
+            dice: 2d6
+            effect_type: healing
+            purpose: healing
+            range: near
+            school: divine-restoration
+            upcast:
+              cost: scaling
+              effect: allows it to grant 1d6 additional healing.
         Spare:
             cost: 0
             target: friendly
@@ -1534,90 +1585,79 @@ the_book_of_healing:
             purpose: utility
             range: near
             school: divine-restoration
-        Heighten Emotions:
-            cost: 0
-            target: friendly
-            num_targets: 1
-            duration: save
-            description: Attempt to amplify an entity's emotions.
-            range: near
-            purpose: debuff
-            hit: always
-            school: arcane-enchantment-mind
-            effects:
-              - save: spell power save
-                description: their emotions are amplified to the extreme.
-                repeat:
-                  - each turn
-        Holy Light:
+        Alter Emotions:
             cost: 1
-            target: other
-            num_targets: 1
-            duration: concentration
-            description: Summon a light magic light to attack to an item you are holding.
-              Evil and undead entities within the light take 1d6 damage every turn that
-              they begin within it.
-            range: self
-            purpose: utility
-            school: divine-purification
-        Warm or Cool:
-            cost: 0
-            target: space
-            num_targets: many
-            duration: concentration
-            description: Warm or cool an area to a tolerable level.
-            range: self
-            effect_radius: 30
-            purpose: utility
-            school: arcane-elemental-fire
-        Hold Weapon:
-            cost: 0
             target: enemy
             num_targets: 1
-            duration: concentration
-            description: Attempt to bind an enemy's weapon in place.
+            duration: save
+            description: Call upon the power of your deity to change an entity's emotional state.
             range: archer
-            purpose: debuff
             hit: always
-            school: arcane-enchantment-matter
+            purpose: debuff
+            school: arcane-somatic
             effects:
-              - save: spell power save
-                description: their weapon is bound to their side, and cannot be drawn
+                - save: spell power save
+                  description: you are able to select which emotion they feel for the spell's duration.
+                  repeat:
+                    - each turn
+                    - "if an ally spends an action to plea with them"
     Tier_1:
+        Guardian Blade:
+            cost: 1
+            target: self
+            num_targets: 1
+            duration: 3
+            description: "Summon a holy blade to float in the air beside you. The blade makes an attack against
+                any enemy that comes within melee range of you. It is capable of dealing 1d12 damage, and uses your
+                inner fire for attack roles and as its damage modifier."
+            purpose: buff
+            range: self
+            school: divine-purification
+        Sap Life:
+            cost: 1
+            target: "enemy"
+            num_targets: 1
+            duration: 0
+            range: mid
+            description: "Sap the vitality of an enemy, and heal for the same amount"
+            dice: 2d4
+            effect_type: dark
+            hit: roll
+            purpose: damage
+            school: divine-purification
+            upcast:
+              cost: scaling
+              effect: allows it to deal an additional 2d4 damage.
         Delayed Heal:
             cost: 1
             target: friendly
             num_targets: 1
             duration: 1 day
-            dice: 1d10
+            dice: 2d4
             effect_type: healing
             range: hand
             purpose: healing
             school: divine-restoration
             description: Cast a healing spell on a teammate which does not take effect until
               you trigger it as a reaction or offhand action.
-        Forget Ability:
+            upcast:
+                cost: 1
+                effect: add an additional 2d4 healing.
+        Compelled Truth:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: concentration
-            description: Attempt to make an enemy forget one of its abilities.
-            range: archer
-            purpose: debuff
-            school: arcane-enchantment-mind
-            hit: always
-            effects:
-              - description: be forced to to forget one of it's combat abilities.
-                save: spell power save
-        Giant's Strength:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1 hour
+            duration: save
             range: near
-            description: Grant an ally advantage on strength checks.
-            purpose: buff
-            school: arcane-somatic
+            description: Attempt to compell an enemy to be truthful.
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-mind
+            effects:
+              - save: spell power save
+                description: become incapable of telling lies.
+                repeat:
+                  - each turn
         Haste:
             cost: 1
             target: friendly
@@ -1632,28 +1672,74 @@ the_book_of_healing:
             upcast:
               cost: 1
               effect: cause the effect to last for 3 turns.
-        Pacify:
+        Guidance:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1
+            description: Augment an ally's abilities, allowing them to add your inner
+                fire to all checks and attack rolls for the spell's duration."
+            range: near
+            purpose: buff
+            school: arcane-somatic
+            upcast:
+              cost: 1
+              effect: cause the effect to last for 3 turns.
+        Strong Lungs:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            range: near
+            purpose: buff
+            school: arcane-somatic
+            description: Grant a teammate or yourself strong lungs, rendering them immune
+              to airborne toxins and smoke, and allowing them to hold their breath for 10
+              minutes.
+            upcast:
+                cost: 1
+                effect: grant the effect to up to six nearby allies
+        Enlarge:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 3
+            description: Channel your magic to cause an ally to grow to twice their size.
+              For the duration, they double the number of primary weapon dice."
+            range: near
+            purpose: buff
+            school: arcane-somatic
+        Forget Ability:
             cost: 1
             target: enemy
             num_targets: 1
-            duration: save
-            description: Call upon the power of your deity to drain the
-                hostility from an enemy.
+            duration: concentration
+            description: Attempt to make an enemy forget one of its abilities.
             range: archer
-            hit: always
             purpose: debuff
-            school: arcane-somatic
+            school: arcane-enchantment-mind
+            hit: always
             effects:
-                - save: spell power save
-                  description: they become passive and calm. A pacified enemy cannot attack or act against anyone.
-                  repeat:
-                    - each turn
-                    - "if an ally spends an action to plea with them"
+              - description: be forced to to forget one of it's combat abilities.
+                save: spell power save
+        Hold Weapon:
+            cost: 0
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to bind an enemy's weapon in place.
+            range: archer
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-matter
+            effects:
+              - save: spell power save
+                description: their weapon is bound to their side, and cannot be drawn
         Share Sense:
             cost: 0
-            target: friendly
+            target: entity
             num_targets: 1
-            description: Touch a teammate. For the duration of the spell,
+            description: Touch an ally or entity. Enemies are able to make an inner fire save. For the duration of the spell,
                 you are able to share their senses.
             duration: concentration
             range: hand
@@ -1674,56 +1760,61 @@ the_book_of_healing:
                 description: they are pushed back 1d4 spots in the initiative order and lose 15 feet of movement until they make a save
                 repeat:
                   - each turn
-        Strong Lungs:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1 hour
-            range: near
-            purpose: buff
-            school: arcane-somatic
-            description: Grant a teammate or yourself strong lungs, rendering them immune
-              to airborne toxins and smoke, and allowing them to hold their breath for 10
-              minutes.
-            upcast:
-                cost: 1
-                effect: grant the effect to up to six nearby allies
-        Forced Truth:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1 hour
-            description: Attempt to force an entity to be truthful.
-            purpose: debuff
-            school: arcane-enchantment-mind
-            range: near
-            hit: always
-            effects:
-              - save: spell power save
-                description: they are forced to speak only the truth for the duration of the spell
-        Ward:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1 hour
-            description: Touch a teammate and place a ward on them. This ward grants 2 defense
-              to the touched entity for the duration of the spell.
-            range: hand
-            purpose: buff
-            school: divine-guardian
     Tier_2:
+        Greater Heal:
+            cost: 2
+            target: friendly
+            num_targets: 1
+            duration: 0
+            description: Restore health to one ally or yourself.
+            dice: 4d6
+            effect_type: healing
+            purpose: healing
+            range: near
+            school: divine-restoration
+            upcast:
+              cost: scaling
+              effect: allows it to grant 1d6 additional healing.
+        Spirit Bomb:
+            cost: 2
+            target: enemy
+            num_targets: many
+            duration: 0
+            range: archer
+            purpose: damage
+            hit: roll
+            dice: 6d6
+            effect_type: radiant
+            effect_radius: 15
+            description: With a radiant crash, a radius explodes with
+              holy light, dealing damage to all entities within.      
+        Excoriate:
+            cost: 2
+            target: "enemy"
+            num_targets: many
+            duration: 0
+            range: mid
+            description: "A beam of energy flies from you, damaging all enemies between you and the spell's target."
+            dice: 4d8
+            effect_type: radiant
+            hit: roll
+            purpose: damage
+            school: divine-purification
+            upcast:
+              cost: scaling
+              effect: allows the beam to pass through cover.
         Blind:
             cost: 2
             target: enemy
             num_targets: 1
             duration: 3
-            description: Call upon the power of your deity in an attempt to strike an enemy blind.
+            description: Attempt to strike an enemy blind.
             range: archer
             purpose: debuff
             hit: always
             effects:
               - save: spell power save
-                description: be struck blind. Blind enemies must make all checks and
+                description: be blinded. Blind enemies must make all checks and
                     attack rolls with disadvantage. Blindness lasts until dispelled.
             school: divine-guardian
         Chains of Light:
@@ -1744,46 +1835,18 @@ the_book_of_healing:
                   any of its actions. If the entity is corrupt or undead, it takes 2d6 damage
                   each turn while restrained.
             school: divine-guardian
-        Greater Heal:
-            cost: 2
+        Dispel Magic:
+            cost: 1
             target: friendly
             num_targets: 1
-            duration: 0
-            description: Restore health to one ally or yourself.
-            dice: 4d6
-            effect_type: healing
-            purpose: healing
-            range: near
+            duration: 1
+            description: End the effects wrought by up to a 2nd tier spell or curse. Does not heal damage.
+            range: hand
+            purpose: buff
             school: divine-restoration
             upcast:
-              cost: scaling
-              effect: allows it to grant 1d8 additional healing.
-        Greater Purify:
-            cost: 2
-            target: other
-            num_targets: many
-            range: hand
-            duration: 0
-            range: hand
-            purpose: utility
-            school: divine-purification
-            description: Purify all food, drink, or potions in a 100 foot area to remove
-                ill effects. Greater purify can be used to remove drunkenness from entities,
-                to render poison innocuous, or to make spoiled food fresh again.
-        Purge Decay:
-            cost: 2
-            target: enemy
-            num_targets: many
-            duration: 1 hour
-            range: archer
-            purpose: damage
-            school: divine-guardian
-            hit: always
-            dice: 6d6
-            effect_type: radiant
-            effect_radius: 15
-            description: Create an aura of positive energy. Undead or evil entities that
-              enter the area take damage each turn.
+                cost: scaling
+                effect: Increase the spell tier affected by 1.
         Speak Tongues:
             cost: 1
             target: friendly
@@ -1804,18 +1867,6 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: divine-guardian
-        Dispel Magic:
-            cost: 1
-            target: friendly
-            num_targets: 1
-            duration: 1
-            description: End the effects wrought by up to a 2nd tier spell. Does not work on curses or heal damage.
-            range: hand
-            purpose: buff
-            school: divine-restoration
-            upcast:
-                cost: scaling
-                effect: Increase the spell tier affected by 1.
 the_macabre_manual:
     Tier_0:
         Detect Death:
@@ -2217,7 +2268,6 @@ the_wizard's_addendum:
             a magical shield with a blueish hue. Add +5 to your defense."
           range: self
           purpose: buff
-          effect_radius: 100
           school: thaumaturgy-protection
         Blur:
           cost: 1
@@ -2241,6 +2291,7 @@ the_wizard's_addendum:
             description: "A cloud of vile green smoke flies from you towards an enemy."
             effects:
               - condition: If the enemy is hit
+                save: ""
                 description: "their mouth is filled with fat, slithering slugs, and they must
                   make their next action with disadvantage."
             school: summoning
@@ -2448,7 +2499,7 @@ the_wizard's_addendum:
             effects:
               - condition: "Affected entities must make a"
                 save: "spell power save"
-                effect: be slowed. Slowed entities must move at half speed
+                description: be slowed. Slowed entities must move at half speed
                   on their next turn, and move back 1d4 spots in initiative.
             school: elemental-water
         Energy Shots:
@@ -2517,7 +2568,7 @@ the_wizard's_addendum:
           target: other
           num_targets: 1
           duration: 5
-          range: Within this realm
+          range: infinite
           purpose: utility
           school: divination
           description: Using a mirror, pool or water, or other reflective surface, attempt to view
@@ -2541,7 +2592,7 @@ the_wizard's_addendum:
             target: entity
             num_targets: 1
             duration: 0
-            range: Within this Realm
+            range: infinite
             description: "Concentrate on an entity that you have met.
               You are able to telepathically send them a message of up
               to 14 words, regardless of distance. The entity then has
@@ -2574,7 +2625,7 @@ the_wizard's_addendum:
             description: As you hold your focus aloft, a four foot
               long spear of crystaline ice materializes, flying towards an enemy.
         Fireball:
-            cost: 1
+            cost: 2
             target: enemy
             num_targets: many
             duration: 0
@@ -2588,7 +2639,7 @@ the_wizard's_addendum:
               explodes, damaging all enemies in a radius.
     Tier_3: # 8 / 8
         Octahedral Barrier:
-            action_type: reaction
+            action_type: Reaction
             cost: 2
             target: friendly
             num_targets: many
@@ -2609,6 +2660,7 @@ the_wizard's_addendum:
             purpose: debuff
             school: arcane-disruption
             effect_radius: 15
+            hit: always
             description: In a flash, a magical cage appears around you, which no one can exit.
         Pocket Dimension:
             cost: 2
@@ -2641,10 +2693,12 @@ the_wizard's_addendum:
           description: Attempt to transform an entity into a medium or small creature of your choice.
           range: mid
           purpose: debuff
+          hit: always
           effects:
             - save: spell power save
               description: be transformed
-              repeat: each turn
+              repeat: 
+                - each turn
         Chain Lightning:
             cost: 2
             target: enemy
@@ -2655,6 +2709,8 @@ the_wizard's_addendum:
               roll below 6. Lightning may only strike the same entity twice.
             dice: 4d8
             hit: always
+            range: mid
+            purpose: damage
             effect_type: elemental
         Rainbows:
             cost: 2
@@ -2682,6 +2738,7 @@ the_wizard's_addendum:
             effect_radius: 300
             range: self
             purpose: debuff
+            hit: always
             description: Your magic warps the very fabric of reality.
             effects:
               - condition: All entities within the spell's radius must make a
@@ -2728,9 +2785,8 @@ the_wizard's_addendum:
           school: elementalism-air
           duration: concentration
           upcast:
-            upcast:
                 cost: scaling
-                effect: you may grant two additional entities the power of flight
+                effect: you may grant three additional entities the power of flight
         Invulnerability:
           cost: 2
           target: friendly
@@ -2742,23 +2798,23 @@ the_wizard's_addendum:
           upcast:
             cost: scaling
             effect: the affected entity gains one additional minute of invulnerability
-        Tri-beam:
-            balance_type: damage candidate
-            charisma_cost: 17
-            cost: 3
-            hit: roll
-            purpose: damage
-            description: Three beams of crackling energy fire forth from the source of your
-              magic. Each beam may target an entity of your choice. Roll a d6 for
-              each beam. On 1, the beam does nothing. On a 2, the beam is a beam of fire, which deals 4d10 damage.
-              On 3, it is a ray of frost, which deals 3d10 damage. The affected
-              entity must make a spell power save or be slowed, losing 1d4 spaces in initiative and
-              half its movement. On a 4, it is a ray of weakness. The entity must make
-              a spell power save or lose 1d4 strength until its next rest.
-              On a 5, it is a ray of electricity which deals 3d10 damage. The affected
-              entity must make a spell power save or be stunned, losing an action, offhand
-              action, and movement on its next turn. On a 6, it is a ray of death,
-              and causes the entity to take 8d10 damage.
+        # Tri-beam:
+        #     balance_type: damage candidate
+        #     charisma_cost: 17
+        #     cost: 3
+        #     hit: roll
+        #     purpose: damage
+        #     description: Three beams of crackling energy fire forth from the source of your
+        #       magic. Each beam may target an entity of your choice. Roll a d6 for
+        #       each beam. On 1, the beam does nothing. On a 2, the beam is a beam of fire, which deals 4d10 damage.
+        #       On 3, it is a ray of frost, which deals 3d10 damage. The affected
+        #       entity must make a spell power save or be slowed, losing 1d4 spaces in initiative and
+        #       half its movement. On a 4, it is a ray of weakness. The entity must make
+        #       a spell power save or lose 1d4 strength until its next rest.
+        #       On a 5, it is a ray of electricity which deals 3d10 damage. The affected
+        #       entity must make a spell power save or be stunned, losing an action, offhand
+        #       action, and movement on its next turn. On a 6, it is a ray of death,
+        #       and causes the entity to take 8d10 damage.
         Stop Time:
             cost: 3
             description: As you mutter an incantation, time around you begins
@@ -2766,7 +2822,8 @@ the_wizard's_addendum:
             target: entity
             num_targets: many
             duration: 3
-            range: radius
+            range: self
+            effect_radius: 100
             purpose: debuff
             hit: always
             effects:
@@ -2785,10 +2842,10 @@ the_wizard's_addendum:
               begin to take damage once per turn at the beginning of your turn."
             dice: 10d10
             hit: always
-            range: radius
+            range: self
+            effect_radius: 100
             purpose: debuff
             effect_type: radiant
-            effect_radius: 100
             upcast:
               cost: 1
               effect: 'triple its radius'
@@ -2827,6 +2884,7 @@ the_wizard's_addendum:
           range: archer
           hit: always
           purpose: damage
+          effect_type: blunt
           dice: 10d8
         Pillar Arcane:
             cost: 4
@@ -2843,6 +2901,7 @@ the_wizard's_addendum:
             purpose: damage
             hit: always
             dice: 8d12
+            effect_type: elemental
             effects:
                 - condition: Entities that fall within the spell's radius must make a
                   save: dexterity save versus your spell power

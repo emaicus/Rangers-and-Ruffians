@@ -25,39 +25,92 @@ show_download: false
   
 # Changelog
 
+   * [Rangers and Ruffians 2.4.1: Spell Patch 1](#rangers-and-ruffians-241-spell-patch-1)  
    * [Rangers and Ruffians 2.4.0: The Simplification Update](#rangers-and-ruffians-240-the-simplification-update)  
-     * [System Changes:](#system-changes)  
-     * [Balance Changes:](#balance-changes)  
-     * [Website Update:](#website-update)  
-   * [Miscellaneous](#miscellaneous)  
+   * [Miscellaneous](#miscellaneous-1)  
    * [Rangers and Ruffians 2.3.1: The Weapon Skill Update](#rangers-and-ruffians-231-the-weapon-skill-update)  
-     * [Overview](#overview)  
    * [Rangers and Ruffians 2.3.0: The Weapon Update](#rangers-and-ruffians-230-the-weapon-update)  
-     * [Overview](#overview-1)  
-     * [Weapon List](#weapon-list)  
    * [Rangers and Ruffians 2.2.0: The New Class Update](#rangers-and-ruffians-220-the-new-class-update)  
-     * [Overview](#overview-2)  
    * [Rangers and Ruffians 2.1.3: The Combat Update](#rangers-and-ruffians-213-the-combat-update)  
-     * [Overview](#overview-3)  
-     * [New Rules:](#new-rules)  
-     * [Race Balance Changes](#race-balance-changes)  
-     * [Class Balance Changes](#class-balance-changes)  
    * [Rangers and Ruffians 2.1.2: The Action Point Economy Update. December 4, 2019](#rangers-and-ruffians-212-the-action-point-economy-update-december-4-2019)  
-     * [Overview:](#overview-4)  
-     * [Ability Changes](#ability-changes)  
    * [Rangers and Ruffians 2.1.1: The Rogues and Rangers Update. November 23, 2019](#rangers-and-ruffians-211-the-rogues-and-rangers-update-november-23-2019)  
-     * [Overview:](#overview-5)  
-     * [Rule Changes:](#rule-changes)  
-     * [Additional Clarifications:](#additional-clarifications)  
-     * [Race Balance Changes:](#race-balance-changes-1)  
-     * [Class Balance Changes:](#class-balance-changes-1)  
    * [Rangers and Ruffians 2.1.0: The Skills Update. November 19, 2019](#rangers-and-ruffians-210-the-skills-update-november-19-2019)  
-     * [New Features:](#new-features)  
-     * [Rule Changes:](#rule-changes-1)  
-     * [All Races and Classes:](#all-races-and-classes)  
-     * [Race Balance Changes:](#race-balance-changes-2)  
-     * [Class Balance Changes:](#class-balance-changes-2)  
    * [Pre- Rangers and Ruffians 2.1.0 (Pre- November 2019)](#pre--rangers-and-ruffians-210-pre--november-2019)  
+
+  
+## Rangers and Ruffians 2.4.1: Spell Patch 1
+  
+  
+  
+  
+
+  
+### System Changes:
+* __None__
+  
+  
+
+  
+### Balance Changes:
+  
+  
+__Spell Balance:__ This is the first of a number of updates that will be coming to the spells of Rangers and Ruffians with the following goals. This spell affects the `Bard` and `Cleric`.
+1. Increase the utility of spells.
+2. Decrease spell redundancy
+3. Increase the mechanical specificity of spells. Spells can include
+    *  __Cost:__ A number of action points required to cast a spell.
+    * __Target:__ For internal balance, the type of entity the spell targets (e.g., friend or foe)
+    * __Number of targets:__ For internal balance, whether a spell targets one or many entities.
+    * __Duration:__ The amount of time that the spell lasts in minutes. Zero duration indicates that the spell is instantaneous.
+    * __Description:__ A (hopefully interesting) description of what the spell does.
+    * __Range:__ The distance at which the spell may be cast.
+    * __Purpose:__ One of `utility`, `buff`, `debuff`, `summon`, `healing` or `damage`.
+    * __Dice:__ The amount of damage or healing done by the spell.
+    * __Effect Type:__ The damage type of the spell.
+    * __Casting Time:__ The length of time a spell requires to cast. Zero indicates that the spell is cast instantaneously.
+    * __Components:__ Any physical materials needed to cast the spell.
+    * __Upcast:__ Defines if additional action points can be spent on the spell to lend it extra power.
+    * __Action Type:__ Whether the spell requires an `Action`, `Offhand Action`, `Free Action`, or `Reaction` to cast.
+    * __Effect Radius:__ The radius that the spell effects.
+    * __Hit:__ Whether the spell requires a roll to hit.
+    * __School:__ The spell's school of magic.
+  
+  
+To do this, spellbooks are being converted to `Spell Decks`, each of which contains `54` spells. These come in the form of
+* `14` Tier 0 spells
+* `13` Tier 1 spells
+* `9` Tier 2 spells
+* `8` Tier 3 spells
+* `6` Tier 4 spells
+* `4` Tier 5 spells.
+  
+  
+This means that the overall _number_ of spells in the game is being decreased, while the _usefulness_ and _power_ of spells should be increasing overall.
+  
+  
+
+  
+#### Bard
+Completed the Bard's `Spell Deck`.
+  
+  
+
+  
+#### Cleric
+Finished tier 0-3 of the Cleric's `Spell Deck`.
+  
+  
+
+  
+### Website Updates:
+* Spellbook pages have been updated.
+* Fixed an error which sometimes caused spell `Effects` to be rendered incorrectly.
+  
+  
+
+  
+### Miscellaneous
+None
 
   
 ## Rangers and Ruffians 2.4.0: The Simplification Update

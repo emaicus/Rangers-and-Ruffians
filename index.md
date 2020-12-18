@@ -75,7 +75,7 @@ if ('serviceWorker' in navigator) {
 </script>
 
 # Rangers and Ruffians
-_Version 2.4.0_
+_Version 2.4.1_
 
 
 ## What is Rangers and Ruffians?

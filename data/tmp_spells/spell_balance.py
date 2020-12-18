@@ -4,8 +4,8 @@ import yaml
 import statistics
 import sys
 
-required_fields = ["cost", "target", "num_targets", "duration", "description", "range", "purpose", "school"]
-all_fields = required_fields + ["dice", "effect_type", "effects", "casting_time", "components", "upcast", "action_type", "effect_radius", "charisma_cost", "hit"]
+required_fields = ["cost", "target", "num_targets", "duration", "description", "range", "purpose"]#, "school"]
+all_fields = required_fields + ["dice", "effect_type", "effects", "casting_time", "components", "upcast", "action_type", "effect_radius",  "hit", "school"]
 conditional_requirements = {
     "dice" : ["effect_type"],
     "effect_type" : ["dice"]
@@ -36,13 +36,14 @@ MACRO_LIST = [
     "DAYS_MACRO",
     "WEEKS_MACRO",
     "STRING_MACRO",
+    "STRING_LIST_MACRO",
     "DICE_MACRO",
     "MILES_MACRO"
 ]
 
 valid_values = {
     "cost" : ["INTEGER_MACRO"],
-    "target": ["friendly", "enemy", "everyone", "self", "space", "other"],
+    "target": ["friendly", "enemy", "entity", "self", "space", "other"],
     "num_targets": [1, "many"],
     "duration": ["INTEGER_MACRO", "save", "battle", "HOURS_MACRO", "DAYS_MACRO", "WEEKS_MACRO", "concentration", "infinite"],
     "description": ["STRING_MACRO"],
@@ -57,9 +58,45 @@ valid_values = {
     "hit" : ["always", "roll", "other"]
 }
 
+required_effect_fields = ['description', 'save']
+all_effect_fields = required_effect_fields + ['condition', 'repeat'] 
+valid_effect_values = {
+    "condition" : ["STRING_MACRO"],
+    "description" : ["STRING_MACRO"],
+    "save" : ["STRING_MACRO"],
+    "repeat" : ["STRING_LIST_MACRO"]
+}
+
+# Log levels are WARN, DANGER, and 
+LOG_LEVELS = {
+  'INFO' : 0,
+  'WARN' : 1,
+  'DANGER': 2
+}
+GLOBAL_LOG_LEVEL = LOG_LEVELS['INFO']
+
+def log(message, log_level='INFO'):
+    global LOG_LEVELS, GLOBAL_LOG_LEVEL
+
+    level = LOG_LEVELS.get(log_level, None)
+    if level is None:
+        print(f'ERROR: Bad log level {log_level}')
+    elif level >= GLOBAL_LOG_LEVEL:
+        print(message)
+
+
+
 def is_macro(value, macro):
     if macro == 'INTEGER_MACRO':
         return isinstance(value, int)
+    elif macro == "STRING_LIST_MACRO":
+        if not isinstance(value, list):
+            return False
+        else:
+            for item in value:
+                if not isinstance(item, str):
+                    return False
+            return True
     elif not isinstance(value, str):
         return False
     elif macro == 'HOURS_MACRO':
@@ -87,13 +124,28 @@ def check_conditional_requirements(spell_name, spell_info):
             for req in conditional_requirements[field]:
                 if not req in spell_info:
                     error = True
-                    print(f'{spell_name} has {field}, but not {req}')
+                    log(f'{spell_name} has {field}, but not {req}', 'DANGER')
 
     if 'purpose' in spell_info and spell_info['purpose'] in ['damage', 'debuff']:
         if not 'hit' in spell_info:
             error = True
-            print(f'{spell_name} has purpose {spell_info["purpose"]} but does not have a "hit" value')
+            log(f'{spell_name} has purpose {spell_info["purpose"]} but does not have a "hit" value', 'DANGER')
     return error
+
+# Cheks to see if val is a valid value for key per the valid_dict.
+def check_equality(key, val, valid_dict, descriptive_name):
+    if key not in valid_dict:
+        log(f'ERROR: no valid values listed for {key}', 'DANGER')
+        return False
+    else:
+        for valid_value in valid_dict[key]:
+            if valid_value in MACRO_LIST:
+                if is_macro(val, valid_value):
+                    return True
+            else:
+                if val == valid_value:
+                    return True
+        return False
 
 def check_spell_syntax(spell_name, spell_info):
     ''' Checks that a spell has required fields, and that all fields are typed correctly'''
@@ -102,9 +154,9 @@ def check_spell_syntax(spell_name, spell_info):
     for field in required_fields:
         if not field in spell_info:
             if field == 'purpose':
-                print(f"{spell_name} lacks {field}")
+                log(f"{spell_name} lacks {field}", 'DANGER')
             else:
-                print(f"{spell_name} is missing {field}")
+                log(f"{spell_name} is missing {field}", 'DANGER')
             encountered_errors = True
 
     # Check that conditional requirements are met (e.g., if you have a, you also need b)
@@ -114,25 +166,50 @@ def check_spell_syntax(spell_name, spell_info):
     for field, val in spell_info.items():
         # Look for bad fields
         if field not in all_fields:
-            print(f'{spell_name} has unexpected field {field}')
+            log(f'{spell_name} has unexpected field {field}', 'WARN')
             encountered_errors = True
             continue
 
         # Check to see if there is a requirement on what the value of 'field' can be
         if field in valid_values:
-            valid = False
-            for valid_value in valid_values[field]:
-                if valid_value in MACRO_LIST:
-                    valid = is_macro(val, valid_value)
-                    if valid:
-                        break
-                else:
-                    if val == valid_value:
-                        valid = True
-                        break
+            valid = check_equality(field, val, valid_values, spell_name)
             if not valid:
-                print(f'{spell_name} invalid value for {field}: {val}')
+                log(f'{spell_name} invalid value for {field}: {val}', 'DANGER')
                 encountered_errors = True
+
+    if 'effects' in spell_info:
+        if not isinstance(spell_info['effects'], list):
+            log(f'{spell_name} Spell effects must be a list.', 'DANGER')
+            encountered_errors = True
+        else:
+            for effect in spell_info['effects']:
+                for field in required_effect_fields:
+                    if not field in effect:
+                        log(f'{spell_name}: Effect is missing {field}', 'DANGER')
+                        encountered_errors = True
+                for key, val in effect.items():
+                    if key not in all_effect_fields:
+                        log(f'{spell_name} bad effect field {key}', 'DANGER')
+                        encountered_errors = True
+                    else:
+                        valid = check_equality(key, val, valid_effect_values, spell_name)
+                        if not valid:
+                            log(f'{spell_name} invalid value for {key}: {val}', 'DANGER')
+                            encountered_errors = True
+
+    if 'upcast' in spell_info:
+        if 'cost' in spell_info['upcast']:
+            if not is_macro(spell_info['upcast']['cost'], 'INTEGER_MACRO') and spell_info['upcast']['cost'] != 'scaling':
+                log(f"{spell_name} invalid upcast cost, {spell_info['upcast']}", 'DANGER')
+        else:
+            log(f"{spell_name} upcast does not have a cost", 'DANGER')
+
+        if 'effect' in spell_info['upcast']:
+            if not is_macro(spell_info['upcast']['effect'], 'STRING_MACRO'):
+                log(f"{spell_name} invalid upcast effect, {spell_info['upcast']['effect']}", 'DANGER')
+        else:
+            log(f"{spell_name} upcast does not have an effect", 'DANGER')
+
     return encountered_errors
 
 def get_balance_value(tier_name, spell_info):
@@ -236,22 +313,25 @@ def spell_type_analysis(spellbook_name, spell_tiers):
 
 
     # Print the statistics
-    print(f'{spellbook_name}')
+    log(f'{spellbook_name}', 'WARN')
     for tier_name in spells_by_type.keys():
-        print(f'  {tier_name}:')
-        print(f'    consists of {spell_counts[tier_name]} spells:')
+        log(f'  {tier_name}:')
+        log(f'    consists of {spell_counts[tier_name]} spells:')
         for purpose, val in spells_by_type[tier_name].items():
-            print(f'      {val} {purpose} spells')
-    print(f'    Damage Spell Breakdown:')
+            log(f'      {val} {purpose} spells')
+    log(f'    Damage Spell Breakdown:', 'WARN')
     for tier_name in spells_by_type.keys():
-        print(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} (single {expected_damage['single'][tier_name]}, multi {expected_damage['multi'][tier_name]})")
+        log(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} (expect single {expected_damage['single'][tier_name]}, multi {expected_damage['multi'][tier_name]})")
         for spell, avg_damage, balance_damage in spell_damage[tier_name]:
-          print(f'        {spell}: {avg_damage} / {balance_damage}')
-    print(f'    Healing Spell Breakdown:')
+            log_level = 'INFO' 
+            if avg_damage < balance_damage - 2.5 or avg_damage > balance_damage + 2.5:
+                log_level = 'WARN'
+            log(f'        {spell}: {avg_damage} / {balance_damage}', log_level)
+    log(f'    Healing Spell Breakdown:')
     for tier_name in spells_by_type.keys():
-        print(f'      {tier_name}, average healing {avg_healing_per_tier[tier_name]}')
+        log(f'      {tier_name}, average healing {avg_healing_per_tier[tier_name]}')
         for spell, avg_healing, _ in spell_healing[tier_name]:
-          print(f'        {spell}: {avg_healing}')
+            log(f'        {spell}: {avg_healing}')
 
 
 def main():
@@ -270,20 +350,22 @@ def main():
     encountered_errors = False
     for spellbook, spell_tiers in rnr_spell_data.items():
         decks[spellbook] = {}
-        print(f'processing {spellbook}')
+        log(f'processing {spellbook}')
         for tier_name, tier_spells in spell_tiers.items():
             decks[spellbook][tier_name] = 0
             for spell_name, spell_info in tier_spells.items():
                 decks[spellbook][tier_name] += 1
                 encountered_errors = check_spell_syntax(spell_name, spell_info) or encountered_errors
-    print()
+    log('')
     for deck, deck_info in decks.items():
-        print(f'Deck stats for {deck}: perform operation on decks')
+        log(f'Deck stats for {deck}:', 'WARN')
         for tier, tier_num in deck_info.items():
             if tier_num > deck_vals[tier]:
-                print(f'    -{tier_num - deck_vals[tier]} {tier}')
-            else:# tier_num < deck_vals[tier]:
-                print(f'    +{deck_vals[tier]-tier_num} {tier}')
+                log(f'    -{tier_num - deck_vals[tier]} {tier}', 'WARN')
+            elif tier_num < deck_vals[tier]:
+                log(f'    +{deck_vals[tier]-tier_num} {tier}', 'WARN')
+            else:
+                log(f'    +{deck_vals[tier]-tier_num} {tier}')
     if encountered_errors:
         sys.exit(1)
     for spellbook, spell_tiers in rnr_spell_data.items():
@@ -291,4 +373,5 @@ def main():
 
 
 if __name__ == '__main__':
+    GLOBAL_LOG_LEVEL = LOG_LEVELS['WARN']
     main()

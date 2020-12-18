@@ -445,10 +445,10 @@ Gather:
   description: You passively collect ingredients for your tinkering.
   type: general
   brief: You passively collect tinkering ingredients.
-# Grapple Gun:
-#   description: You carry a retractable grappling gun. The gun carries 40 feet of rope.
-#   type: starting_item
-#   brief: You have a grapple gun and 40 feet of hooked-rope.
+Grapple Gun:
+  description: You carry a retractable grappling gun. The gun carries 40 feet of rope.
+  type: starting_item
+  brief: You have a grapple gun and 40 feet of hooked-rope.
 Minor Medicine:
   description: Spend 20 minutes to create a salve. Salves keep for 24 hours.
   type: general
@@ -731,10 +731,10 @@ Last Stand:
   description: When your health is below 25%, you can take an extra action on your turn.
   type: combat
   brief: When you are below 25% health, gain an extra action.
-# Learned:
-#   description: You are fluent in an extra language of your choosing.
-#   type: choice
-#   brief: You are fluent in 1 extra language.
+Learned:
+  description: You are fluent in an extra language of your choosing.
+  type: choice
+  brief: You are fluent in 1 extra language.
 Lightweight:
   description: Any cup of alcohol affects you like two.
   type: general
@@ -1268,12 +1268,12 @@ Soul Harvest:
   description: You may harvest 1 soul from a sentient entity that has died within
     twenty four hours.
   brief: You can harvest 1 soul from a sentient entity that has died within 24 hours.
-# Soul Jar:
-#   description: You have a soul jar, which produces 1d6 souls each day at midnight, the jar
-#     can produce 2 souls at maximum. Your soul jar is capable of holding a number of souls equal to your action points.
-#   type: starting_item
-#   brief: You have a soul jar which produces 1d6 souls at midnight (max 2). Your soul jar
-#     can hold a number of souls equal to your action points.
+Soul Jar:
+  description: You have a soul jar, which produces 1d6 souls each day at midnight, the jar
+    can produce 2 souls at maximum. Your soul jar is capable of holding a number of souls equal to your action points.
+  type: starting_item
+  brief: You have a soul jar which produces 1d6 souls at midnight (max 2). Your soul jar
+    can hold a number of souls equal to your action points.
 Larger Soul Jar:
   description: Your soul jar can produce at maximum 1 more soul per day.
   type: rule
@@ -1371,10 +1371,10 @@ Taunt:
   type: combat
   brief: SP save. On failure, force all within 30ft. to attack only you. Repeat each turn.
   cost: 1
-# The Bard's Songbook:
-#   description: You can learn spells from the Bard's Songbook.
-#   type: starting_item
-#   brief: You have access to the Bard's Songbook.
+The Bard's Songbook:
+  description: You can learn spells from the Bard's Songbook.
+  type: starting_item
+  brief: You have access to the Bard's Songbook.
 The Druid's Field Guide:
   description: You can learn spells from the Druid's Field Guide.
   type: spellbook

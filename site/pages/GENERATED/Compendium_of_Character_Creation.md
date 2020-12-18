@@ -42,7 +42,7 @@ show_download: false
 
   
 # Compendium of Character Creation
-_Version 2.4.0_  
+_Version 2.4.1_  
 
    * [Building a Character](#building-a-character)  
      * [Personality and Background](#personality-and-background)  
@@ -747,6 +747,8 @@ __Kragraven Abilities:__
   * __Coast:__ Use your wings to coast from great heights.  
   * __Carrion:__ You can eat raw and rotten meat without penalty.  
   * __Mimic:__ You can mimic any voice you've heard.  
+* __Combat Abilities:__   
+  * __Peck:__ _(Cost 1)_ As an offhand action, peck an enemy, dealing 1d6 damage. On a critical hit, blind them until they succeed a SP save.  
   
   
   

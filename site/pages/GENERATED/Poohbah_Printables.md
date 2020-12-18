@@ -5,7 +5,7 @@ skip_header: true
 ---
   
 # Print Material for Poohbahs
-_Version 2.4.0_  
+_Version 2.4.1_  
 
   
 ## Loot

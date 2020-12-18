@@ -42,7 +42,7 @@ Bard:
             description: "Create a horrible sound which damages all who hear it."
             range: self
             balance_type: minor damage
-      Marionette:
+      --> Marionette:
             cost: 2
             target: enemy
             num_targets: 1
@@ -161,17 +161,6 @@ Bard:
                 - at the end of each of its turns
           purpose: debuff
           school: arcane-enchantment-mind
-      Swarm of Squirrels:
-            cost: 2
-            target: other
-            num_targets: 1
-            duration: 1 hour
-            description: Summon a mob of 1d20 squirrels to fight for you. Each squirrel has 1 hp
-              and is capable of doing 2 damage per turn. Squirrels move together in combat, and are
-              attacked as a swarm.
-            purpose: summon
-            range: near
-            school: arcane-conjuring
       Lullaby:
           cost: 1
           target: enemy
@@ -272,17 +261,6 @@ Bard:
           school:  natural-elemental-air
           dice: 9d10
           effect_type: elemental
-      Zone of Truth:
-          cost: 2
-          target: space
-          num_targets: 1
-          duration: concentration
-          description: Create a zone in which all must speak truthfully.
-          range: hand
-          effect_radius: 30
-          purpose: utility
-          casting_time: 15
-          school: arcane-enchantment-mind
       Song of Aging:
             cost: 2
             target: enemy
@@ -387,6 +365,41 @@ Druid:
         balance_type: major debuff
         school: "unknown"
 Cleric:
+    Giant's Strength:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
+            range: near
+            description: Grant an ally advantage on strength checks.
+            purpose: buff
+            school: arcane-somatic
+
+    Change Weight:
+            cost: 0
+            target: other
+            num_targets: 1
+            duration: concentration
+            description: Double or halve the weight of an object. The object must be no larger than
+              a horse.
+            range: archer
+            purpose: utility
+            school: arcane-enchantment-matter    
+    Heighten Emotions:
+        cost: 0
+        target: friendly
+        num_targets: 1
+        duration: save
+        description: Attempt to amplify an entity's emotions.
+        range: near
+        purpose: debuff
+        hit: always
+        school: arcane-enchantment-mind
+        effects:
+          - save: spell power save
+            description: their emotions are amplified to the extreme.
+            repeat:
+              - each turn
     Give of Yourself:
           cost: 0
           target: friendly
@@ -459,6 +472,33 @@ Cleric:
     Wall of Light:
         cost: 2
         description: Create a wall up to 40 feet high and 100 feet long of solid light.
+    Purge Decay:
+            cost: 2
+            target: enemy
+            num_targets: many
+            duration: 1 hour
+            range: archer
+            purpose: damage
+            school: divine-guardian
+            hit: always
+            dice: 6d6
+            effect_type: radiant
+            effect_radius: 15
+            description: Create an aura of positive energy. Undead or evil entities that
+              enter the area take damage each turn.
+    Greater Purify:
+            cost: 2
+            target: other
+            num_targets: many
+            range: hand
+            duration: 0
+            range: hand
+            purpose: utility
+            school: divine-purification
+            description: Purify all food, drink, or potions in a 100 foot area to remove
+                ill effects. Greater purify can be used to remove drunkenness from entities,
+                to render poison innocuous, or to make spoiled food fresh again.
+
 Necromancer:
     Vampiric Touch:
         cost: 0
@@ -593,12 +633,6 @@ Wizard:
         Greater Imitate:
               cost: 2
               description: Imitate the voice of someone or something you haven't met.
-        Inanimate Aid:
-              charisma_cost: 16
-              cost: 3
-              description: With a chorus of clangs, every inanimate object within twenty feet
-                comes to life to fight for you, throwing themselves at any enemies in close
-                proximity for 4d12 damage.
         Greater Animate Object:
             charisma_cost: 14
             cost: 2

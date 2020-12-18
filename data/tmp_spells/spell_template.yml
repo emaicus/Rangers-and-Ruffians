@@ -353,55 +353,56 @@ Cleric:
   5: N/4
 
   Tier_0: #14/14
-    Beam of Light # Damage. Upcast to fire more.
-    Sacred Flame # Damage anyone nearby.
+    X Beam of Light # Damage. Upcast to fire more.
+    X Sacred Flame # Damage anyone nearby.
 
-    Holy Shield # Buff
-    Guidance # Buff - crit target or advantage
-    Ward # Buff
+    X Holy Shield # Buff
+    X Ward # Buff
+    
+    X Beguile # debuff
+    X Alter Emotions
 
-    Detect Life #Utility
-    Detect Magic #Utility
-    Fake Death #Utility
-    Purify #Utility
-      - Bless Water
-    Mending #Utility
-    Light # Utility
-    Warth/Cool/Make Livable # Utility
+    X Detect Life #Utility
+    X Detect Magic #Utility
+    X Fake Death #Utility
+    X Purify #Utility
+      X - Bless Water
+    X Mending #Utility
+    X Holy Light # Utility
+    X Make Habitable # Utility
 
-    Minor Heal # Healing
-    Spare # Healing
-  Tier_1: #13/13
-    Spiritual Weapon # RENAME Damage
-    Sap Life # Damage
+    X Minor Heal # Healing
+    X Spare # Healing
+  Tier_1: #12/13
+    X Spiritual Weapon # RENAME Damage
+    X Sap Life # Damage
 
-    Slow Heal # Healing
-    Delayed Heal # Healing
+    #Slow Heal # Healing
+    X Delayed Heal # Healing
 
-    Truth # Utility
+    X Truth # Utility
+    X Share Senses
 
-    Enlarge # Buff
-    Haste # Buff
-    Augment Ability # Buff
-    Strong Lungs # Buff
+    X Enlarge # Buff
+    X Haste # Buff
+    X Guidance # Buff
+    X Strong Lungs # Buff
 
-    Forget Ability # Debuff
-    Alter Emotions # Debuff
-    Hold Weapon #Debuff
-    Slow # Debuff
-  Tier_2: 9/9
-    Greater Heal # Healing
+    X Forget Ability # Debuff
+    X Hold Weapon #Debuff
+    X Slow # Debuff
+  Tier_2: 8/9
+    X Greater Heal # Healing
 
-    Purge Decay # Damage
-    Spirit Bomb # Damage
+    X Excoriate # Damage (line)
+    X Spirit Bomb # Damage (fireball)
 
-    Blind # Debuff
-    Chains of Light #Debuff
+    X Blind # Debuff
+    X Chains of Light #Debuff
 
-    Dispell Magic #Utility
-    Remove Curse # Utility
-    Speak Tongues # Utility
-    Ward of Light # Utility
+    X Dispell Magic #Utility
+    X Speak Tongues # Utility
+    X Ward of Light # Utility
   Tier_3: #8/8
     Mass Heal #Healing
 
