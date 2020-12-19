@@ -54,7 +54,7 @@ show_download: false
 ### Balance Changes:
   
   
-__Spell Balance:__ This is the first of a number of updates that will be coming to the spells of Rangers and Ruffians with the following goals. This spell affects the `Bard` and `Cleric`.
+__Spell Balance:__ This is the first of a number of updates that will be coming to the spells of Rangers and Ruffians with the following goals. This spell affects the `Bard`, `Cleric`, and `Wizard`.
 1. Increase the utility of spells.
 2. Decrease spell redundancy
 3. Increase the mechanical specificity of spells. Spells can include
@@ -98,6 +98,12 @@ Completed the Bard's `Spell Deck`.
   
 #### Cleric
 Finished tier 0-3 of the Cleric's `Spell Deck`.
+  
+  
+
+  
+#### Wizard
+Finished tier 0-5 of the Wizard's `Spell Deck`.
   
   
 

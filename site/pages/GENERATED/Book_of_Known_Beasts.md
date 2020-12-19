@@ -45,6 +45,8 @@ show_download: false
 _Version 2.4.1_  
 
    * [Beasts:](#beasts)  
+     * [Apes:](#apes)  
+       * [Gragoon:](#gragoon)  
      * [Bears:](#bears)  
        * [Dire Bear Cub:](#dire-bear-cub)  
        * [Young Dire Bear:](#young-dire-bear)  
@@ -87,9 +89,11 @@ _Version 2.4.1_
        * [Goblin Archer:](#goblin-archer)  
        * [Goblin Shaman:](#goblin-shaman)  
        * [Goblin Cleric:](#goblin-cleric)  
+       * [Goblin High Shaman:](#goblin-high-shaman)  
        * [Goblin Chieftain:](#goblin-chieftain)  
        * [Goblin Wolf Rider:](#goblin-wolf-rider)  
        * [Goblin Ogre Rider:](#goblin-ogre-rider)  
+       * [Hobgoblin Brute:](#hobgoblin-brute)  
      * [Ogres:](#ogres)  
        * [Ogre:](#ogre)  
        * [Ogre Lord:](#ogre-lord)  
@@ -103,6 +107,38 @@ _Version 2.4.1_
 ## Beasts:
 >Animals with minimal magic properties, beasts are common across the many realms. Despite minimal magic, beasts can be intensely dangerous. Rogue beasts are common marks of Monster-Hunter Rangers.  
   
+
+  
+### Apes:
+
+  
+#### Gragoon:
+>A four armed ape.  
+  
+* ___Level 3 Heavy Enemy___  
+* __Health:__ 75  
+* __Armor:__ 13  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 45 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | -2 (-2) | 0 (+0) | 0 (+0) |  
+  
+__Abilities:__  
+* __Rush:__ The gragoon may move 30 feet as an offhand action.  
+  
+__Special Action Rules:__  
+* __Multi Attack:__ The gragoon may make four pummel attacks or one hurl object or trample attack.  
+  
+__Actions:__  
+* __Pummel:__ _1d6 + 2 Strength._ The gragoon pummels its enemy with one off its four arms.  
+* __Hurl Object:__ _4d8 + 1 Dexterity._ The gragoon hurls a nearby object at its enemies.  
+* __Trample:__ _4d8 + 2 Strength._ The gragoon attempts to trample over an enemy.  
+  
+  
+___  
 
   
 ### Bears:
@@ -361,10 +397,10 @@ ___
 #### Major Wizard'S Homunculus:
 * ___Level 2 Light Enemy___  
 * __Health:__ 24  
+* __Armor:__ 2  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
-* __Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -397,10 +433,10 @@ ___While Red Dragons lack the true sentience of some other breeds, they are by n
 #### Red Dragon Hatchling:
 * ___Level 0 Light Enemy___  
 * __Health:__ 10  
+* __Armor:__ 1  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 15 feet  
-* __Armor:__ 1  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -418,11 +454,11 @@ ___
 #### Red Dragon Whelp:
 * ___Level 3 Heavy Enemy___  
 * __Health:__ 61  
+* __Armor:__ 2  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 15 feet  
   * __Air:__ 30 feet  
-* __Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -444,11 +480,11 @@ ___
 #### Red Drake:
 * ___Level 5 Villain Enemy___  
 * __Health:__ 173  
+* __Armor:__ 4  
 * __Spell Power:__ 15   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Air:__ 60 feet  
-* __Armor:__ 4  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -486,12 +522,12 @@ ___
 #### Adult Red Dragon:
 * ___Level 10 Villain Enemy___  
 * __Health:__ 366  
+* __Armor:__ 6  
+* __Magic Armor:__ 6  
 * __Spell Power:__ 19   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Air:__ 90 feet  
-* __Armor:__ 6  
-* __Magic Armor:__ 6  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -627,11 +663,11 @@ ___
 ______  
 * ___Level 3 Villain Enemy___  
 * __Health:__ 145  
+* __Armor:__ 3  
 * __Spell Power:__ 15   
 * __Movement:__  
   * __Land:__ 30 feet  
   * __Water:__ 40 feet  
-* __Armor:__ 3  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -865,20 +901,21 @@ ___In the early days of a goblin tribe, commoners likely won't notice that anyth
   
 ___Goblin swordsmen know enough to defend their archers if at all possible. They will gang up on a single target if they can. Above all, however, they are cowards. If they feel that they cannot win, they will flee to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 14  
+* __Health:__ 12  
+* __Armor:__ 11  
 * __Spell Power:__ 10   
 * __Movement:__  
   * __Land:__ 30 feet  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -1 (-1) | 1 (+1) | 1 (+1) | -2 (-2) | -2 (-2) | 1 (+1) | 0 (+0) |  
+| -1 (-1) | 2 (+2) | 1 (+1) | -2 (-2) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
   
 __Actions:__  
-* __Crude Sword:__ _1d4 + 1 Dexterity._ The goblin lunges forth with a brittle sword. On a natural 1, the sword may break, causing the goblin to flee.  
+* __Crude Sword:__ _1d4 + 2 Dexterity._ The goblin lunges forth with a brittle sword. On a natural 1, the sword may break, causing the goblin to flee.  
   
   
 ___  
@@ -889,7 +926,8 @@ ___
   
 ___Goblin archers will try to stay away from combat, fleeing as far as they can and then taking shots from a distance. If they feel that they cannot win, goblin archers will flee from combat to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 12  
+* __Health:__ 9  
+* __Armor:__ 10  
 * __Spell Power:__ 10   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -913,7 +951,8 @@ ___
   
 ___A goblin shaman is very intelligent, and will dole out its spells to best help its allies succeed. When a battle begins, a shaman will use Hasten to get swordsmen into position. If an enemy is particularly dangerous, a shaman will Hex them. If a battle is lost, a shaman will cast Hasten on an ally to help them escape to get help.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* __Health:__ 9  
+* __Armor:__ 8  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -939,7 +978,8 @@ ___
   
 ___First and foremost, a goblin cleric will act as a healer, trying to keep its front line alive. Goblin clerics know to keep away from enemies, and will use Burst of Light to blind anyone who gets too near.___  
 * ___Level 0 Light Enemy___  
-* __Health:__ 8  
+* __Health:__ 10  
+* __Armor:__ 8  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
@@ -959,20 +999,50 @@ __Actions:__
 ___  
 
   
+#### Goblin High Shaman:
+>A goblin high shaman is the inventor and medicine man of its  tribe. Versed in magic and spells, the high shaman will use its relentless wit to thwart its foes.  
+  
+___The goblin high shaman is intelligent. It will make its attacks from a distance, and work to outsmart its foes.___  
+* ___Level 1 Heavy Enemy___  
+* __Health:__ 80  
+* __Armor:__ 3  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -3 (-3) | 3 (+3) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
+  
+__Actions:__  
+* __Hurl Acid Vial:__ _1d8 + 3 Dexterity._ The shaman throws a vial of acid, which corrodes armor, decreasing its effectiveness by 1.  
+* __Hurl Firebomb:__ _1d6 + 3 Dexterity._ The shaman hurls a firebomb, which deals damage to all enemies in a fifteen foot radius.  
+* __Hurl Frost Potion:__ _1d6 + 3 Dexterity._ The shaman hurls a frost potion. The enemy must make an inner fire save or be pushed back 1d4 slots in initiative.  
+* __Hurl Potionn Of Darkness:__ Fills a 30 foot area with darkness.  
+* __Crude Knife:__ _1d4 + 3 Dexterity._ The shaman lunges with a crooked knife.  
+* __Drink Health Potion:__ The shaman drinks a health potion, restoring 2d6 + 2 health.  
+  
+  
+___  
+
+  
 #### Goblin Chieftain:
 >A goblin chieftain is a leader of a tribe, and will reside deep within a network of caves. the death of a chieftain means the end of a tribe, so the chieftain will keep many allies close to it.  
   
 ___A chieftain puts its own survival first. It attacks from a distance, hurling spears at its enemies from a safe distance. If a chieftain is injured too heavily, it will drink its health potion, and if all seems lost, it will use a smoke-bomb to try to escape. The goblin chieftain will keep its minions between it and a party of adventurers.___  
 * ___Level 1 Villain Enemy___  
-* __Health:__ 80  
+* __Health:__ 97  
+* __Armor:__ 3  
 * __Spell Power:__ 13   
 * __Movement:__  
   * __Land:__ 30 feet  
-* __Armor:__ 3  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
-| -3 (-3) | 1 (+1) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
+| -3 (-3) | 3 (+3) | 2 (+2) | 1 (+1) | -2 (-2) | 1 (+1) | 0 (+0) |  
   
 __Abilities:__  
 * __Spider Climb:__ Goblins can scurry up walls containing even the smallest handholds.  
@@ -981,7 +1051,7 @@ __Special Action Rules:__
 * __Villain:__ If the goblin chieftain is being used as a villain, it may take one out of turn villain action per round. This action may be either a call for aid or an attack.  
   
 __Actions:__  
-* __Hurl Poison Spear:__ _1d8 + 1 Dexterity._ The chieftain hurls a knobby spear at an enemy within 30 feet. The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage.  
+* __Hurl Poison Spear:__ _1d8 + 3 Dexterity._ The chieftain hurls a knobby spear at an enemy within 30 feet. The attacked entity must pass a D8 Inner Fire save or take 1d4 additional poison damage.  
   
 __Offhand Actions:__  
 * __Drink Minor Health Potion:__ The Goblin Chieftain begins with 1 minor health potion.  
@@ -1005,10 +1075,10 @@ ___
 ___Wolf Riders can move further than other goblins, so they are often used to chase down enemies. Riders will move their full movement and then throw nets at fleeing enemies, giving swordsmen time to catch up.___  
 * ___Level 1 Heavy Enemy___  
 * __Health:__ 52  
+* __Armor:__ 2  
 * __Spell Power:__ 11   
 * __Movement:__  
   * __Land:__ 40 feet  
-* __Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -1037,11 +1107,11 @@ ___
 ___An Ogre Rider will charge its Ogre into battle to deal maximum damage. The Ogre then single mindedly begins attacking enemies, while the rider picks off mages and ranged enemies at a distance.___  
 * ___Level 2 Villain Enemy___  
 * __Health:__ 133  
+* __Armor:__ 5  
+* __Magic Armor:__ 5  
 * __Spell Power:__ 12   
 * __Movement:__  
   * __Land:__ 35 feet  
-* __Armor:__ 5  
-* __Magic Armor:__ 5  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -1071,6 +1141,32 @@ __Conditional Actions:__
 ___  
 
   
+#### Hobgoblin Brute:
+>With heavyset brows and furry hides, hobgoblins stand waist, shoulders, and head above their goblin counterparts. Hobgoblins are lazy and slothful, but are also strong, and dangerous if angered.  
+  
+___Not particularly bright, a hobgoblin will rush into the fray more often than not. Once enraged, it will continue to attack until either it or its foe has been destroyed.___  
+* ___Level 2 Medium Enemy___  
+* __Health:__ 30  
+* __Armor:__ 11  
+* __Spell Power:__ 13   
+* __Movement:__  
+  * __Land:__ 30 feet  
+  
+| STR | DEX | INT | INF | CHR | PER | LUK |  
+ | --------|--------|--------|--------|--------|--------|--------|
+| -1 (-1) | -2 (-2) | 1 (+1) | 1 (+1) | -4 (-4) | 1 (+1) | 0 (+0) |  
+  
+__Abilities:__  
+* __Rage:__ A hobgoblin may take an action to fly into a rage. For the remainder of the battle, it makes two attacks per turn.  
+* __Charge:__ A hobgoblin may spend an action charging thirty feet at an enemy.  
+  
+__Actions:__  
+* __Club:__ _1d8 + -1 Strength._ Hobgoblin takes a swing with its massive club.  
+  
+  
+___  
+
+  
 ### Ogres:
 >Ogres stand at about 15 feet tall, with dark grey skin and beady eyes. They are usually hairless, and have overlong arms that are perfect for swinging long clubs. Massive, lazy brutes, Ogres try not to do anything that they don't have to. While generally fairly dimwitted, ogres can be crafty when it suites them, and may lay deadly but simple traps which deal deadly damage to adventurers. Ogres and goblins have a mutual agreement, in which goblins bring ogres food, an in return the ogres smash and eat the goblins' enemies, rather than the goblins themselves.  
   
@@ -1080,10 +1176,10 @@ ___
 ___Ogres are strong, and they know it. When goaded to action, ogres will rush headlong into battle, and only realize they are in danger when it is too late.___  
 * ___Level 1 Heavy Enemy___  
 * __Health:__ 52  
+* __Magic Armor:__ 2  
 * __Spell Power:__ 14   
 * __Movement:__  
   * __Land:__ 30 feet  
-* __Magic Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
@@ -1103,11 +1199,11 @@ ___
 ___The Ogre Lord will charge a threat head on, and will make heavy use of its grab attack. Once an enemy is grabbed, the Ogre Lord will mercilessly slam the entity into its comrades, the ground, or even hurl it into a wall or off of a cliff.___  
 * ___Level 1 Villain Enemy___  
 * __Health:__ 116  
+* __Armor:__ 5  
+* __Magic Armor:__ 2  
 * __Spell Power:__ 14   
 * __Movement:__  
   * __Land:__ 30 feet  
-* __Armor:__ 5  
-* __Magic Armor:__ 2  
   
 | STR | DEX | INT | INF | CHR | PER | LUK |  
  | --------|--------|--------|--------|--------|--------|--------|
