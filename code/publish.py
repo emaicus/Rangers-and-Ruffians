@@ -227,6 +227,11 @@ def publish_book_of_known_beasts(force_overwrite):
         md.paragraph(f"* ___{info['type']} Enemy___")
         md.paragraph(f"* __Health:__ {info['health']}")
 
+        if 'armor' in info:
+          md.paragraph(f"* __Armor:__ {info['armor']}")
+        if 'magic_armor' in info:
+          md.paragraph(f"* __Magic Armor:__ {info['magic_armor']}")
+
         # This looks gross, but we're looping through stat names and then putting a nice little +/- effective stat.
         my_stats = [f"{info['stats'][x]} ({'+' if int(info['stats'][x]) >= 0 else ''}{int(info['stats'][x])})" for x in stats ]
 
@@ -235,12 +240,6 @@ def publish_book_of_known_beasts(force_overwrite):
         for key, val in info['movement'].items():
           md.paragraph(f"  * __{key.title()}:__ {val} feet")
                 #movement_str = '  '.join([f"{key.title()}: _{val}_" for key, val in info['movement'].items() ])
-
-
-        if 'armor' in info:
-          md.paragraph(f"* __Armor:__ {info['armor']}")
-        if 'magic_armor' in info:
-          md.paragraph(f"* __Magic Armor:__ {info['magic_armor']}")
 
         md.chart_title(abbreviations)
         md.chart_row(my_stats)

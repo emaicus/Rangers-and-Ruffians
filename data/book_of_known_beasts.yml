@@ -249,6 +249,42 @@ beasts:
       tactics: "Big cats almost always hunt alone, and are too intelligent to risk attacking a party of adventurers in the
                open. Instead, they are likely to bide their time, watching from the trees until a foolish adventurer
                leaves camp, before pouncing from above."
+    apes:
+      types:
+        Gragoon:
+          type: "Level 3 Heavy"
+          description: "A four armed ape."
+          health: 75
+          armor: 13
+          action_spec:
+            multi_attack: "The gragoon may make four pummel attacks or one hurl object or trample attack."
+          actions:
+            pummel:
+              modifier: "Strength"
+              damage: 1d6
+              description: "The gragoon pummels its enemy with one off its four arms."
+            hurl object:
+              modifier: "Dexterity"
+              damage: 4d8
+              description: "The gragoon hurls a nearby object at its enemies."
+            trample:
+              modifier: "Strength"
+              damage: 4d8
+              description: "The gragoon attempts to trample over an enemy."
+          abilities:
+            Rush: "The gragoon may move 30 feet as an offhand action."
+          movement:
+            land: 45
+          stats:
+            Charisma: -2
+            Dexterity: 1
+            Inner_Fire: 1
+            Intelligence: -2
+            Luck: 0
+            Perception: 0
+            Strength: 2
+
+
 dragons:
   description: "There are many types of dragon in the world, and all are unique in their own way. Some seek gold, and horde
                 it in mountain lairs. Others are deeply intelligent, and seek power and influence. A dragon's color generally
@@ -485,7 +521,8 @@ humanoids:
           tactics: "Goblin swordsmen know enough to defend their archers if at all possible. They will gang up on a single target
                     if they can. Above all, however, they are cowards. If they feel that they cannot win, they will flee to get help."
           type: "Level 0 Light"
-          health: 14
+          health: 12
+          armor: 11
           average_damage_per_round: 3
           actions:
             Crude Sword:
@@ -498,7 +535,7 @@ humanoids:
             land: 30
           stats:
             Charisma: -2
-            Dexterity: 1
+            Dexterity: 2
             Inner_Fire: -2
             Intelligence: 1
             Luck: 0
@@ -509,7 +546,8 @@ humanoids:
           tactics: "Goblin archers will try to stay away from combat, fleeing as far as they can and then taking
                     shots from a distance. If they feel that they cannot win, goblin archers will flee from combat to get help."
           type: "Level 0 Light"
-          health: 12
+          health: 9
+          armor: 10
           average_damage_per_round: 3
           actions:
             Bow:
@@ -535,7 +573,8 @@ humanoids:
                     dangerous, a shaman will Hex them. If a battle is lost, a shaman will cast Hasten on an ally to help them
                     escape to get help."
           type: "Level 0 Light"
-          health: 8
+          health: 9
+          armor: 8
           average_damage_per_round: 4
           actions:
             Hex:
@@ -564,7 +603,8 @@ humanoids:
           tactics: "First and foremost, a goblin cleric will act as a healer, trying to keep its front line alive.
                     Goblin clerics know to keep away from enemies, and will use Burst of Light to blind anyone who gets too near."
           type: "Level 0 Light"
-          health: 8
+          health: 10
+          armor: 8
           average_damage_per_round: 3
           actions:
             Heal:
@@ -584,6 +624,51 @@ humanoids:
             Intelligence: 2
             Luck: 0
             Perception: 1
+            Strength: -3          
+        Goblin High Shaman:
+          description: "A goblin high shaman is the inventor and medicine man of its  tribe.
+                        Versed in magic and spells, the high shaman will use its relentless
+                        wit to thwart its foes."
+          tactics: "The goblin high shaman is intelligent. It will make its attacks from a distance,
+                    and work to outsmart its foes."
+          type: "Level 1 Heavy"
+          health: 80
+          armor: 10
+          armor: 3
+          average_damage_per_round: 5
+          average_villain_damage_per_round: 10
+          actions:
+            Hurl Acid Vial:
+              modifier: "Dexterity"
+              damage: "1d8"
+              description: "The shaman throws a vial of acid, which corrodes armor, decreasing its effectiveness by 1."
+            Hurl Firebomb:
+              modifier: "Dexterity"
+              damage: 1d6
+              description: "The shaman hurls a firebomb, which deals damage to all enemies in a fifteen foot radius."
+            Hurl Frost Potion:
+              modifier: "Dexterity"
+              damage: 1d6
+              description: "The shaman hurls a frost potion. The enemy must make an inner fire save or be pushed back 1d4 slots in initiative."
+            Hurl Potionn of Darkness:
+              description: "Fills a 30 foot area with darkness."
+            Crude Knife:
+              modifier: Dexterity
+              damage: 1d4
+              description: "The shaman lunges with a crooked knife."
+            Drink Health Potion:
+              description: "The shaman drinks a health potion, restoring 2d6 + 2 health."
+          abilities:
+            Spider Climb: "Goblins can scurry up walls containing even the smallest handholds."
+          movement:
+            land: 30
+          stats:
+            Charisma: -2
+            Dexterity: 3
+            Inner_Fire: 1
+            Intelligence: 2
+            Luck: 0
+            Perception: 1
             Strength: -3
         Goblin Chieftain:
           description: "A goblin chieftain is a leader of a tribe, and will reside deep within a network of caves.
@@ -594,7 +679,8 @@ humanoids:
                     if all seems lost, it will use a smoke-bomb to try to escape. The goblin chieftain will keep its
                     minions between it and a party of adventurers."
           type: "Level 1 Villain"
-          health: 80
+          health: 97
+          armor: 11
           armor: 3
           average_damage_per_round: 5
           average_villain_damage_per_round: 10
@@ -622,7 +708,7 @@ humanoids:
             land: 30
           stats:
             Charisma: -2
-            Dexterity: 1
+            Dexterity: 3
             Inner_Fire: 1
             Intelligence: 2
             Luck: 0
@@ -719,6 +805,33 @@ humanoids:
             Luck: 0
             Perception: 1
             Strength: 3
+        Hobgoblin Brute:
+          description: "With heavyset brows and furry hides, hobgoblins stand waist, shoulders,
+              and head above their goblin counterparts. Hobgoblins are lazy and slothful, but
+              are also strong, and dangerous if angered."
+          tactics: "Not particularly bright, a hobgoblin will rush into the fray more often than not.
+                    Once enraged, it will continue to attack until either it or its foe has been destroyed."
+          type: "Level 2 Medium"
+          health: 30
+          armor: 11
+          actions:
+            Club:
+              modifier: "Strength"
+              damage: "1d8"
+              description: "Hobgoblin takes a swing with its massive club."
+          abilities:
+            Rage: "A hobgoblin may take an action to fly into a rage. For the remainder of the battle, it makes two attacks per turn."
+            Charge: "A hobgoblin may spend an action charging thirty feet at an enemy."
+          movement:
+            land: 30
+          stats:
+            Charisma: -4
+            Dexterity: -2
+            Inner_Fire: 1
+            Intelligence: 1
+            Luck: 0
+            Perception: 1
+            Strength: -1
     ogres:
       description: "Ogres stand at about 15 feet tall, with dark grey skin and beady eyes. They are usually
                     hairless, and have overlong arms that are perfect for swinging long clubs.
