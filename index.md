@@ -107,6 +107,7 @@ It can also be silly and funny. We think that it is usually pretty fun.
 
 ## Work in Progress
 1. [Test the Character Creation Helper](site/pages/character_creation_helper_page.html)
+2. [Test the Character Store](site/pages/character_store.md)
 
 <!-- ### Why Should You Play Rangers and Ruffians?
 * __Good for Beginners__
