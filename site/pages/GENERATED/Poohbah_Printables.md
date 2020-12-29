@@ -205,6 +205,8 @@ things become only moderately difficult, or even easy for a player.
 | Difficult      | 15-19                 |
 | Epic           | 20-25                 |
 | Impossible     | 25+                   |
+  
+  
 ___
   
   

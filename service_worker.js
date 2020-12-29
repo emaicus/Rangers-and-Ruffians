@@ -413,7 +413,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
-    "revision": "ae34ba929f7ed90fa8a12cf281bacef3"
+    "revision": "49eca12503e85accf8e062d480f4ae86"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
@@ -441,7 +441,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "99a8c5a5cab535ffc5ae63609852d3cd"
+    "revision": "fb98bd3d60d7067ae70548b075d8d579"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
