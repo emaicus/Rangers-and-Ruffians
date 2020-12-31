@@ -194,7 +194,7 @@ Bard:
             health, and may be de-summoned on command.
           range: near
           purpose: summon
-          school: arcane-conjuring   
+          school: arcane-conjuring
       Wall of Sound:
           cost: 2
           target: space
@@ -297,7 +297,7 @@ Bard:
           school: arcane-enchantment-mind
           effects:
               - description: have up to 24 hours of their memory modified
-                save: spell power save     
+                save: spell power save
 Druid:
     Commanding Presence: # Conflicts with other classes
         cost: 2
@@ -384,7 +384,7 @@ Cleric:
               a horse.
             range: archer
             purpose: utility
-            school: arcane-enchantment-matter    
+            school: arcane-enchantment-matter
     Heighten Emotions:
         cost: 0
         target: friendly
@@ -498,7 +498,6 @@ Cleric:
             description: Purify all food, drink, or potions in a 100 foot area to remove
                 ill effects. Greater purify can be used to remove drunkenness from entities,
                 to render poison innocuous, or to make spoiled food fresh again.
-
 Necromancer:
     Vampiric Touch:
         cost: 0

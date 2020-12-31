@@ -27,7 +27,7 @@ the_bard's_songbook:
             num_targets: 1
             duration: concentration
             purpose: utility
-            description: "While concentrating on this spell you may influence the movement of shadows, 
+            description: "While concentrating on this spell you may influence the movement of shadows,
                 cause torches to flicker, make yourself appear up to one size larger, make your voice
                 echo or boom, or create another
                 impressive embellishment to your words or appearance."
@@ -58,7 +58,7 @@ the_bard's_songbook:
             effect: "create a programmed illusion which has both weight and texture, and which may be capable of
               movement and speech. When you create such an illusion,
               you may establish up to five responses that it is capable of making, and must give it a script
-              for where it will move."    
+              for where it will move."
         Dazzling Lights:
             cost: 1
             target: space
@@ -84,7 +84,7 @@ the_bard's_songbook:
                     to trail someone, attempt to open a door, go for help, or any other reasonable
                     task that can be performed in one hour or less and is in line with the intelligence
                     and skill of the animal.
-            school: natural-animist  
+            school: natural-animist
         Song of Slow Healing:
             cost: 1
             target: friendly
@@ -181,7 +181,7 @@ the_bard's_songbook:
             target: other
             num_targets: 1
             duration: 1 hour
-            description: Summon a mob of squirrels to fight for you. See the "minor swarm" entry 
+            description: Summon a mob of squirrels to fight for you. See the "minor swarm" entry
               in the book of known beasts for stats and details.
             purpose: summon
             range: near
@@ -502,7 +502,7 @@ the_bard's_songbook:
               - condition: If the entity is hostile, it must make a
                 save: spell power save
                 description: be transformed
-                repeat: 
+                repeat:
                     - each turn
         Modify Memory:
             cost: 1
@@ -526,7 +526,7 @@ the_bard's_songbook:
           effect_radius: 30
           purpose: utility
           casting_time: 15
-          upcast: 
+          upcast:
             cost: 1
             effect: "speed the casting time to 3 minutes."
           school: arcane-enchantment-mind
@@ -645,7 +645,7 @@ the_bard's_songbook:
             hit: always
             effects:
                 - save: spell power save
-                  description: "have their mind broken. Their intelligence is treated as -5 and 
+                  description: "have their mind broken. Their intelligence is treated as -5 and
                                they lose the ability to use magic or to speak. They retain their allegiances."
                   repeat:
                     - "once per day"
@@ -679,7 +679,7 @@ the_bard's_songbook:
                   description: "or have their mind addled. The caster of
                     the spell takes the form of a giant, jet black unicorn
                     with blazing red eyes and a bloody horn. The entity becomes
-                    frightened. Meanwhile, the rest of the world begins to 
+                    frightened. Meanwhile, the rest of the world begins to
                     shimmer as sparkles emanate from objects randomly, and the
                     ground begins to undulate. Whenever the entity moves more than
                     half of its movement, it must make a dexterity save versus
@@ -710,7 +710,7 @@ the_bard's_songbook:
                 - description: take full damage. If the save is successful, the enemy takes half damage.
                   save: spell power save
             dice: 20d6
-            effect_type: psychic  
+            effect_type: psychic
         Dominate:
             cost: 4
             target: enemy
@@ -874,7 +874,7 @@ the_druid's_guidebook:
                 - description: "be held in place. Damage is repeated at the start of each of the enemy's turns.
                                 When concentration is broken, the damage stops, but the entity is still held."
                   save: spell power save
-                  repeat: 
+                  repeat:
                     - at the start of each turn
               school: "natural-floral"
         Hurl Stone:
@@ -1040,7 +1040,7 @@ the_druid's_guidebook:
             effects:
                 - description: a hostile animal regards you as friendly.
                   save: spell power save
-                  repeat: 
+                  repeat:
                     - every hour
             school: "natural-animist"
         Freezing Rain:
@@ -1418,7 +1418,7 @@ the_book_of_healing:
             range: archer
             description: "Fire a bolt of radiant energy at an enemy."
             dice: 2d6
-            effect_type: radiant
+            effect_type: holy
             hit: roll
             purpose: damage
             school: divine-purification
@@ -1439,11 +1439,11 @@ the_book_of_healing:
             effect_radius: 15
             hit: roll
             dice: 2d4
-            effect_type: radiant
-            upcast: 
+            effect_type: holy
+            upcast:
                 cost: scaling
                 effect: may be used to either increase its range by 15 feet or
-                    to add an additional 2d4 damage. 
+                    to add an additional 2d4 damage.
             school: divine-purification
         Holy Shield:
           action_type: Reaction
@@ -1479,8 +1479,8 @@ the_book_of_healing:
             effects:
               - description: "make all attack rolls with disadvantage"
                 save: spell power save
-                repeat: 
-                    - "each turn" 
+                repeat:
+                    - "each turn"
         Detect Life:
             cost: 1
             target: other
@@ -1784,10 +1784,10 @@ the_book_of_healing:
             purpose: damage
             hit: roll
             dice: 6d6
-            effect_type: radiant
+            effect_type: holy
             effect_radius: 15
             description: With a radiant crash, a radius explodes with
-              holy light, dealing damage to all entities within.      
+              holy light, dealing damage to all entities within.
         Excoriate:
             cost: 2
             target: "enemy"
@@ -1796,7 +1796,7 @@ the_book_of_healing:
             range: mid
             description: "A beam of energy flies from you, damaging all enemies between you and the spell's target."
             dice: 4d8
-            effect_type: radiant
+            effect_type: holy
             hit: roll
             purpose: damage
             school: divine-purification
@@ -1867,6 +1867,109 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: divine-guardian
+    Tier_3:
+        Mass Heal:
+            cost: 2
+            num_targets: many
+            duration: 0
+            description: "An aura of golden light pulses from you and your allies' flesh begins to knit
+                 back together as you call upon your deity to heal all allies within a radius."
+            range: self
+            effect_radius: 30
+            purpose: healing
+            dice: 2d4
+            effect_type: healing
+            upcast:
+                cost: scaling
+                effect: adds 2d4 healing to the spell.
+            purpose: healing
+        Sealed Promise:
+            cost: 1
+            target: entity
+            num_targets: many
+            duration: infinite
+            description: Have two individuals
+              wash their hands using the holy water, then tie their clasped hands together.
+              Any promise they make in this state must be kept, or the one who does not
+              follow through will die. If the promise becomes impossible, you may render
+              it invalid.
+            range: hand
+            purpose: utility
+            components:
+                - a piece of rope
+                - holy water blessed by your deity
+        Change of Heart:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: save
+            description: "Attempt to change an enemies heart, causing them to
+                see the error of their ways."
+            range: mid
+            purpose: debuff
+            hit: always
+            effect_type: holy
+            effects:
+                - save: spell power save
+                  description: become aligned with you, and willing to help you achieve your goals.
+                  repeat:
+                    - if forced to do anything that harms itself or its close friends
+                    - once per day, unless you spend 1 action point to maintain it
+        Holy Guardian:
+            cost: 3
+            target: other
+            num_targets: 1
+            duration: 12 hours
+            description: Summon an angel to aid you in combat. For stats, view the book of known beasts.
+            range: near
+            purpose: summon
+        Sanctum:
+        Death Ward:
+            cost: 1
+            description: Cast a powerful ward on an ally. If they are downed in combat,
+              they immediately return to 1d20 hp.
+        Elemental Ward
+        Invigorate
+    Tier_4:
+        Major Heal:
+            balance_type: healing candidate
+            cost: 2
+            description: Restore 6d10 health to one teammate or yourself
+            major_healing_dice: 6d10d6 10
+        Resurrection:
+            cost: 5
+            description: Requires holy water, holy oil (optional), and a sacred flame. Takes
+                six hours to cast. If an individual has suffered an incurable injury or has
+                died, wash them in holy water and and oil. Burn wood using your sacred flame,
+                and draw the mark of your deity on their brow. After six hours of prayer,
+                make an inner fire saving throw. If holy oil was used, you have advantage.
+                If the roll is 15 or higher, the entity is resurrected.
+        Mass Stun:
+        Holy Avatar:
+            cost: 3
+            description: Summon a radiant projection of yourself within 15 feet of an ally,
+                regardless of where they are in the world. The projection has your stats,
+                and you may share its senses. The projection may attack, cast spells, and
+                perform any of your abilities, but can not be healed. You may not act in any
+                way while controlling the projection, and loose track of your surroundings.
+        Divine Intervention:
+            cost: 0
+            description: Roll 1d20. On a critical success, call upon your deity and ask
+                of them a favor. Can be attempted once per day. Success can happen at most
+                once per week.
+        Major Holy weapon:
+            cost: 3
+            description: Imbue a weapon with the spirit of righteousness. Your weapon gets
+                +6 damage for a day, and advantage against evil and undead entities.
+    Tier_5:
+        Cleansing Flame:
+            cost: 5
+            description: Tongues of white flame spiral around you, enveloping any enemies
+                within a twenty foot radius. Evil or undead enemies take 5d20 damage, other
+                enemies take 5d10.
+        Saving Grace:
+        Mass Ward:
+        Lay Bare:
 the_macabre_manual:
     Tier_0:
         Detect Death:
@@ -2697,7 +2800,7 @@ the_wizard's_addendum:
           effects:
             - save: spell power save
               description: be transformed
-              repeat: 
+              repeat:
                 - each turn
         Chain Lightning:
             cost: 2
@@ -2845,7 +2948,7 @@ the_wizard's_addendum:
             range: self
             effect_radius: 100
             purpose: debuff
-            effect_type: radiant
+            effect_type: holy
             upcast:
               cost: 1
               effect: 'triple its radius'

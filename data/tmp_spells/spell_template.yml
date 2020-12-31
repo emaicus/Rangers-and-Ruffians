@@ -13,7 +13,7 @@ spellbook:
       --------------- COMBAT---------------------------------------
       hit: <always, roll, other>
       dice: "xdy"
-      effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, radiant>
+      effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, holy>
       effects:
         - condition: e.g. once graplled, (empty by default)
           description: "effected enemies must make a effect.save save or"
@@ -103,16 +103,21 @@ Requirements: All spells should have one of description, minor_effect, major_eff
 
 
 
-Paladin
+#Paladin
 Bard
 Cleric
 Druid
 Necromancer
-Sorcerer
+#Sorcerer
 Wizard
 
-7 * 54 = 378 cards
-35$ in cards
+$5 for 54 cards
+$2.79 for a tuck box
+$7.79 per deck
+
+$25 in cards
+$14 in boxes
+$39 total
 
 
 
@@ -358,7 +363,7 @@ Cleric:
 
     X Holy Shield # Buff
     X Ward # Buff
-    
+
     X Beguile # debuff
     X Alter Emotions
 
@@ -391,7 +396,7 @@ Cleric:
     X Forget Ability # Debuff
     X Hold Weapon #Debuff
     X Slow # Debuff
-  Tier_2: 8/9
+  Tier_2: #8/9
     X Greater Heal # Healing
 
     X Excoriate # Damage (line)
@@ -412,7 +417,7 @@ Cleric:
 
     Holy Guardian # Summon
 
-    Sanctuary # Buff - hide from damage
+    Sanctum # Buff - hide from damage
     Death Ward # Buff
     Elemental Ward # Buff
     Invigorate # Buff Grant all allies bonus health takes time.
