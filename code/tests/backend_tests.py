@@ -1,6 +1,5 @@
 import unittest
-from ..code import rnr_utils
-
+import code.rnr_utils
 class rnrTests(unittest.TestCase):
     def test_load_files(self):
         try:
