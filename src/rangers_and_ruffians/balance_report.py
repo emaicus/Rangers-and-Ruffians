@@ -3,17 +3,19 @@ import sys
 import os
 import yaml
 import traceback
-import rnr_utils
 from operator import attrgetter
 import collections
 import csv
-import rnr_descriptions
 from spellchecker import SpellChecker
 import inquirer
 import contractions
 import string
 import re
 from pathlib import Path
+
+from rangers_and_ruffians import core
+#from rangers_and_ruffians import rnr_descriptions
+
 
 STAT_OUTPUT = 'reports'
 
@@ -22,12 +24,12 @@ Rank races and classes by their stats. call rank_races() and rank_classes()
 '''
 #Generate the race by race rankings.
 def rank_races():
-  races = rnr_utils.load_all_race_objects()
+  races = core.load_all_race_objects()
   if not os.path.exists(STAT_OUTPUT):
     os.mkdir(STAT_OUTPUT)
 
   with open(os.path.join(STAT_OUTPUT, 'race_rankings.txt'), 'w') as outfile:
-    for stat in rnr_utils.get_all_stat_names():
+    for stat in core.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
       #races.sort(key = attrgetter(stat.lower()), reverse = True)
       races.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
@@ -41,13 +43,13 @@ def rank_classes():
     os.mkdir(STAT_OUTPUT)
   with open(os.path.join(STAT_OUTPUT, 'class_rankings.txt'), 'w') as outfile:
 
-    level_zero  = rnr_utils.load_all_class_objects(level=0)
-    level_five = rnr_utils.load_all_class_objects(level=5)
-    level_ten  = rnr_utils.load_all_class_objects(level=10)
-    level_fifteen  = rnr_utils.load_all_class_objects(level=15)
+    level_zero  = core.load_all_class_objects(level=0)
+    level_five = core.load_all_class_objects(level=5)
+    level_ten  = core.load_all_class_objects(level=10)
+    level_fifteen  = core.load_all_class_objects(level=15)
 
 
-    for stat in rnr_utils.get_all_stat_names():
+    for stat in core.get_all_stat_names():
       outfile.write("SORT BY: {0}\n".format(stat))
       level_zero.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       level_five.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
@@ -62,22 +64,22 @@ def rank_classes():
 #load_combos_given_list
 def rank_characters():
   #rank race vs all classes.
-  rnr_classes = rnr_utils.get_all_class_names(underscore=False)
-  rnr_races = rnr_utils.get_all_race_names(underscore=False)
+  rnr_classes = core.get_all_class_names(underscore=False)
+  rnr_races = core.get_all_race_names(underscore=False)
   with open(os.path.join(STAT_OUTPUT, 'character_rankings.txt'), 'w') as outfile:
     for r_class in rnr_classes:
       outfile.write('{0}:\n'.format(r_class))
-      for stat in rnr_utils.get_all_stat_names():
+      for stat in core.get_all_stat_names():
         outfile.write('  {0}:\n'.format(stat))
-        characters = rnr_utils.load_combos_given_list(rnr_races, [r_class,], level=0)
+        characters = core.load_combos_given_list(rnr_races, [r_class,], level=0)
         characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
         for c in characters:
           outfile.write("    {0}: {1}\n".format(c.name, c.get_stat(stat)))
         outfile.write('\n')
       outfile.write('\n')
     outfile.write('NOW, IT GETS REAL!\n')
-    characters = rnr_utils.load_all_characters(level=0)
-    for stat in rnr_utils.get_all_stat_names():
+    characters = core.load_all_characters(level=0)
+    for stat in core.get_all_stat_names():
       characters.sort(key = lambda k:k.get_stat(stat.lower()), reverse=True)
       outfile.write('{}\n'.format(stat))
       for c in characters:
@@ -89,7 +91,7 @@ def rank_characters():
 def dump_characters():
   #rank race vs all classes.
   with open(os.path.join(STAT_OUTPUT, 'all_characters.txt'), 'w') as outfile:
-    characters = rnr_utils.load_all_characters()
+    characters = core.load_all_characters()
     for c in characters:
       outfile.write('{0}\n'.format(c))
     outfile.write('\n')
@@ -105,11 +107,11 @@ def quick_health(old_health, new_level, health_dice, mode):
   elif mode == 'min':
     bonus = 1
   elif mode == 'rand':
-    bonus = rnr_utils.roll_dice(sides=health_dice)
+    bonus = core.roll_dice(sides=health_dice)
   elif mode == 'adv':
-    bonus = rnr_utils.roll_dice(sides=health_dice, advantage=True)
+    bonus = core.roll_dice(sides=health_dice, advantage=True)
   elif mode == 'round to half':
-    bonus = max(rnr_utils.roll_dice(sides=health_dice), health_dice//2)
+    bonus = max(core.roll_dice(sides=health_dice), health_dice//2)
 
   if new_level == 0:
     bonus = health_dice
@@ -120,7 +122,7 @@ def vitality_chart(data_packet):
   if not os.path.exists(STAT_OUTPUT):
     os.mkdir(STAT_OUTPUT)
   with open(os.path.join(STAT_OUTPUT, 'vitality_chart.txt'), 'w') as outfile:
-    outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rnr_utils.\nHEALTH COMPUTATIONS COULD BE INACCURATE\n')
+    outfile.write('NOTE: Vitality is computed using a function housed in rnr_balance_reports which is decoupled from rangers_and_ruffians.core.\nHEALTH COMPUTATIONS COULD BE INACCURATE\n')
     outfile.write('\n')
     for mode in ['max', 'min', 'avg', 'rand', 'adv', 'round to half']:
       outfile.write('\n')
@@ -155,7 +157,7 @@ def vitality_chart(data_packet):
         #   outfile.write('\n')
 
     outfile.write('\n')
-    all_characters = rnr_utils.load_all_characters()
+    all_characters = core.load_all_characters()
     health_dice_dict = dict()
     for c in all_characters:
       h_d = c.health_dice
@@ -174,7 +176,7 @@ def vitality_chart(data_packet):
 Spell output function. Call spell_stats()
 '''
 def spell_stats():
-  wizard = rnr_utils.get_subclass_data_with_name('Wizard')
+  wizard = core.get_subclass_data_with_name('Wizard')
   print(json.dumps(wizard, indent=4))
 
   print('Assuming classes start with 2 spells, and wizard spell gaining cadence')
@@ -211,14 +213,14 @@ def spell_stats():
 Check for bad abilities. Call ability_check()
 '''
 def get_all_race_abilities_used():
-  races = rnr_utils.load_all_race_objects()
+  races = core.load_all_race_objects()
   abilities = list()
   for race in races:
     abilities += race.abilities
   return abilities
 
 def get_all_class_abilities_used():
-  rnr_classes = rnr_utils.get_rnr_class_dict()
+  rnr_classes = core.get_rnr_class_dict()
   abilities = list()
   for rnr_class, info in rnr_classes.items():
     for subclass, subclass_info in info["subclasses"].items():
@@ -231,16 +233,16 @@ def get_all_class_abilities_used():
 
 def get_non_existent_abilities():
   race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
-  all_abilities = set(rnr_utils.get_all_rnr_abilities().keys())
+  all_abilities = set(core.get_all_rnr_abilities().keys())
   return race_class_abilities - all_abilities
 
 def get_unused_abilities():
   race_class_abilities = set(get_all_race_abilities_used() + get_all_class_abilities_used())
-  all_abilities = set(rnr_utils.get_all_rnr_abilities().keys())
+  all_abilities = set(core.get_all_rnr_abilities().keys())
   return all_abilities - race_class_abilities
 
 def ability_check():
-  rnr_utils.load_Rangers_And_Ruffians_Data()
+  core.load_Rangers_And_Ruffians_Data()
   print()
 
   non_existent = get_non_existent_abilities()
@@ -296,21 +298,21 @@ def evaluate(num, target):
 
 def game_stats():
   store_data = dict()
-  rnr_utils.load_Rangers_And_Ruffians_Data()
+  core.load_Rangers_And_Ruffians_Data()
 
-  all_races = rnr_utils.load_all_race_objects()
+  all_races = core.load_all_race_objects()
 
   target_spell_counts = {'Level_0':11,'Level_1':10,'Level_2':8,'Level_3':6,'Level_4':4,'Level_5':2}
 
-  #rnr_utils.printLogo()
+  #core.printLogo()
   print('RANGERS AND RUFFIANS STAT TRACKER')
   print('R&R CONSISTS OF:')
   print('{0} Races'.format(len(all_races)))
-  print('{0} Classes consisting of:'.format(len(rnr_utils.load_all_class_objects())))
+  print('{0} Classes consisting of:'.format(len(core.load_all_class_objects())))
 
   ability_counts = {}
   total = 0
-  for key, value in rnr_utils.get_all_rnr_abilities().items():
+  for key, value in core.get_all_rnr_abilities().items():
     ability_type = value['type']
     if not ability_type in ability_counts:
       ability_counts[ability_type] = list()
@@ -325,7 +327,7 @@ def game_stats():
   print()
 
   total = 0
-  all_spellbooks = rnr_utils.get_all_spellbooks()
+  all_spellbooks = core.get_all_spellbooks()
   spell_counts = {}
   for spell_book, levels in all_spellbooks.items():
     print(spell_book)
@@ -338,8 +340,8 @@ def game_stats():
   print('TOTAL SPELLS: {0}'.format(total))
 
 def evaluate_spells_for_failures(print_errors=True):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  all_spellbooks = rnr_utils.get_all_spellbooks()
+  core.load_Rangers_And_Ruffians_Data()
+  all_spellbooks = core.get_all_spellbooks()
   # Get new spell tier at levels 0, 1, 5, 8, 11, 14
   target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
@@ -358,8 +360,8 @@ def evaluate_spells_for_failures(print_errors=True):
   return offenders
 
 def evaluate_spells_for_doubling(print_errors=True):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  all_spellbooks = rnr_utils.get_all_spellbooks()
+  core.load_Rangers_And_Ruffians_Data()
+  all_spellbooks = core.get_all_spellbooks()
   target_spell_counts = {'Tier_0':16,'Tier_1':15,'Tier_2':10,'Tier_3':8,'Tier_4':5,'Tier_5':2}
   offenders = list()
   running_total = 0
@@ -380,7 +382,7 @@ def evaluate_spells_for_doubling(print_errors=True):
 def check_brief_abilities(print_errors=True):
   target_length = 100
   errors = list()
-  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+  for ability_name, ability_info in core.get_all_rnr_abilities().items():
     if not 'type' in ability_info:
       errors.append(f'ERROR: No type in {ability_name}')
 
@@ -399,7 +401,7 @@ def check_brief_abilities(print_errors=True):
 
 def check_ability_types(print_errors=True):
   errors = list()
-  for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+  for ability_name, ability_info in core.get_all_rnr_abilities().items():
     if not 'type' in ability_info:
       errors.append(f'ERROR: No type in {ability_name}')
       continue
@@ -410,23 +412,23 @@ def check_ability_types(print_errors=True):
       print(error)
   return errors
 
-def check_descriptions(print_errors=True):
-  errors = list()
-  for gender in ['male', 'female']:
-    for outer, inner in rnr_utils.GLOBAL_DESCRIPTIONS_DATABASE.items():
-      if isinstance(inner, str):
-        tmp = rnr_descriptions.gender_word_replacement(inner, gender)
-        if '<' in tmp or '>' in tmp:
-          errors.append('ERROR: {0}'.format(tmp))
-      else:
-        for inner_inner in inner:
-          tmp = rnr_descriptions.gender_word_replacement(inner_inner, gender)
-          if '<' in tmp or '>' in tmp:
-            errors.append('ERROR: {0}'.format(tmp))
-  if print_errors:
-    for error in errors:
-      print(error)
-  return errors
+# def check_descriptions(print_errors=True):
+#   errors = list()
+#   for gender in ['male', 'female']:
+#     for outer, inner in core.GLOBAL_DESCRIPTIONS_DATABASE.items():
+#       if isinstance(inner, str):
+#         tmp = rnr_descriptions.gender_word_replacement(inner, gender)
+#         if '<' in tmp or '>' in tmp:
+#           errors.append('ERROR: {0}'.format(tmp))
+#       else:
+#         for inner_inner in inner:
+#           tmp = rnr_descriptions.gender_word_replacement(inner_inner, gender)
+#           if '<' in tmp or '>' in tmp:
+#             errors.append('ERROR: {0}'.format(tmp))
+#   if print_errors:
+#     for error in errors:
+#       print(error)
+#   return errors
 
 def type_check(dictionary, key, t, error, required=False):
   errors = list()
@@ -439,7 +441,7 @@ def type_check(dictionary, key, t, error, required=False):
 
 def check_weapons(print_errors=True):
   errors = list()
-  for weapon_type, weapon_type_data in rnr_utils.GLOBAL_STANDARD_ITEMS['weapons'].items():
+  for weapon_type, weapon_type_data in core.GLOBAL_STANDARD_ITEMS['weapons'].items():
     for weapon, details in weapon_type_data.items():
       errors += type_check(details, 'cost', str, weapon, True)
       errors += type_check(details, 'minimum_damage_dice', int, weapon, True)
@@ -556,17 +558,17 @@ def spell_check(fix_errors=True, print_errors=True):
 
 
   directories_to_check = [
-                           Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'data')),
-                           Path(os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')),
+                           Path(os.path.join(core.BASE_DIRECTORY, 'data')),
+                           Path(os.path.join(core.BASE_DIRECTORY, 'docs')),
                          ]
 
   directories_to_skip = [
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "wip"),
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "legacy"),
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "scratch.txt"),
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "art.yml"),
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "description_database.yml"),
-    os.path.join(rnr_utils.BASE_DIRECTORY, "data", "helper_scripts"),
+    os.path.join(core.BASE_DIRECTORY, "data", "wip"),
+    os.path.join(core.BASE_DIRECTORY, "data", "legacy"),
+    os.path.join(core.BASE_DIRECTORY, "data", "scratch.txt"),
+    os.path.join(core.BASE_DIRECTORY, "data", "art.yml"),
+    os.path.join(core.BASE_DIRECTORY, "data", "description_database.yml"),
+    os.path.join(core.BASE_DIRECTORY, "data", "helper_scripts"),
   ]
   testable_extensions = ['.txt', '.yml', '.json', '.md']
 
@@ -593,7 +595,7 @@ def spell_check(fix_errors=True, print_errors=True):
   # ##############################################
   # # ABILITIES
   # ###############################################
-  # for ability_name, ability_info in rnr_utils.get_all_rnr_abilities().items():
+  # for ability_name, ability_info in core.get_all_rnr_abilities().items():
   #   title_words = ability_name.split(' ')
   #   spell_check_function(title_words, spell, rnr_dictionary, ability_errors)
 
@@ -603,7 +605,7 @@ def spell_check(fix_errors=True, print_errors=True):
   # ##############################################
   # # Spells
   # ###############################################
-  # for spell_name, spell_info in rnr_utils.GLOBAL_COMPENDIUM_OF_SPELLS.items():
+  # for spell_name, spell_info in core.GLOBAL_COMPENDIUM_OF_SPELLS.items():
   #   title_words = spell_name.split(' ')
   #   spell_errors.update(spell_check_function(title_words, spell, rnr_dictionary, spell_errors))
 
@@ -640,7 +642,7 @@ def string_key_check(dictionary, key, err_name, required=True, punctuation_check
 
 def check_known_beasts():
   all_errors = list()
-  for category, category_info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
+  for category, category_info in core.GLOBAL_BOOK_OF_KNOWN_BEATS.items():
 
     # all_errors += string_key_check(category_info, 'description', category)
     # all_errors += string_key_check(category_info, 'tactics', category)
@@ -761,7 +763,7 @@ def check_known_beasts():
           all_errors.append(f'{beast}: does not have stats')
         else:
           for stat, val in info['stats'].items():
-            if not stat in rnr_utils.get_all_stat_names():
+            if not stat in core.get_all_stat_names():
               all_errors.append(f'{beast}: bad stat name {stat}')
             if not isinstance(val, int):
               all_errors.append(f'{beast}: bad {stat} value {val}')
@@ -779,7 +781,7 @@ def check_known_beasts():
 
 def check_pantheon():
   all_errors = list()
-  for deity, info in rnr_utils.GLOBAL_PANTHEON.items():
+  for deity, info in core.GLOBAL_PANTHEON.items():
     if 'evil' in info:
       if not isinstance(info['evil'], bool):
         all_errors.append(f'{deity}: evil is not a boolean')
@@ -820,7 +822,7 @@ if __name__ == '__main__':
   game_stats()
   print()
   print('GENERATING VITALITY CHARTS')
-  vitality_chart((rnr_utils.load_all_race_objects(), rnr_utils.load_all_class_objects(level=5)))
+  vitality_chart((core.load_all_race_objects(), core.load_all_class_objects(level=5)))
   print('GENERATING RACE RANKINGS')
   rank_races()
   print("GENERATING CLASS RANKINGS")
@@ -834,9 +836,9 @@ if __name__ == '__main__':
   print()
   check_brief_abilities()
   print()
-  print('CHECKING DESCRIPTIONS')
-  check_descriptions()
-  print()
+  # print('CHECKING DESCRIPTIONS')
+  # check_descriptions()
+  # print()
   # print('RUNNING CUSTOM SPELL CHECK')
   # spell_check()
   # print()

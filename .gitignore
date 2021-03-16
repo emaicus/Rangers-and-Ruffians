@@ -5,7 +5,7 @@ data/deprecated
 latex_files/
 INSTALLED_DATA/
 **/__pycache__/
-code/reports
+src/reports
 tests/log.txt
 data/legacy
 _site/
@@ -18,5 +18,5 @@ Gemfile.lock
 .DS_Store
 site/static/images
 data/wip
-code/legacy
-code/OLD_GARBAGE
+src/legacy
+src/rangers_and_ruffians/OLD_GARBAGE

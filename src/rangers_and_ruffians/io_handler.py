@@ -1,14 +1,13 @@
-import rnr_utils
 import string
 import os
-
+from rangers_and_ruffians import core
 
 def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
     gender = "male" if male else "female"
 
-    absolute_art_folder = os.path.join(rnr_utils.GLOBAL_ART_PATH, 'class')
+    absolute_art_folder = os.path.join(core.GLOBAL_ART_PATH, 'class')
     relative_art_folder = os.path.join('..', '..', 'images', 'class')
-    image_path, image_attribution = rnr_utils.get_gendered_art(
+    image_path, image_attribution = core.get_gendered_art(
         relative_art_folder,
         absolute_art_folder,
         rnr_class_obj.subclass.replace(' ','_').lower(),
@@ -19,7 +18,7 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
     description = rnr_class_obj.description
     # # The 100 should future proof us.
     # abilities = rnr_class_obj.get_abilities_to_level(100)
-    # abilities = rnr_utils.filterAbilities(rnr_class_obj.abilities)
+    # abilities = core.filterAbilities(rnr_class_obj.abilities)
 
     indent = '####' if sub_heading else '###'
     ret.append(f"{indent} {rnr_class_obj.subclass_name} \n")
@@ -53,8 +52,8 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
     ret.append("  \n__Expertise:__  \n")
     ret.append(f"{rnr_class_obj.subclass_name}s have expertise in three of the following checks:  \n")
     for expertise_stat in rnr_class_obj.expertise_choices:
-        for expertise in rnr_utils.get_expertises_for_stat(expertise_stat):
-            ret.append(f"  * {expertise} _({rnr_utils.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
+        for expertise in core.get_expertises_for_stat(expertise_stat):
+            ret.append(f"  * {expertise} _({core.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
 
 
 
@@ -78,7 +77,7 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
 
 def get_level_up_sheet_markdown(rnr_class_obj):
     ret = []
-    all_data = rnr_utils.get_subclass_data_with_name(rnr_class_obj.subclass)
+    all_data = core.get_subclass_data_with_name(rnr_class_obj.subclass)
     level_data = all_data['levels']
     for i in range(0,100):
         level = f'level_{i}'
@@ -87,7 +86,7 @@ def get_level_up_sheet_markdown(rnr_class_obj):
         ret.append( f"__{string.capwords(level.replace('_',' '))} {string.capwords(rnr_class_obj.subclass_name.replace('_', ' '))}__\n\n")
 
         if 'abilities' in level_data[level]:
-            level_abilities = rnr_utils.filterAbilities(level_data[level]['abilities'])
+            level_abilities = core.filterAbilities(level_data[level]['abilities'])
             for key in ('general', 'combat'):
                 if not key in level_abilities:
                     continue
@@ -103,10 +102,10 @@ def get_level_up_sheet_markdown(rnr_class_obj):
 
 def get_rnr_race_markdown(rnr_race_obj, male=False, sub_heading=False):
 
-    absolute_art_folder = os.path.join(rnr_utils.GLOBAL_ART_PATH, 'race')
+    absolute_art_folder = os.path.join(core.GLOBAL_ART_PATH, 'race')
     relative_art_folder = os.path.join('..', '..', 'images', 'race')
 
-    image_path, image_attribution = rnr_utils.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_race_obj.subrace_name.replace(' ','_').lower(), male)
+    image_path, image_attribution = core.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_race_obj.subrace_name.replace(' ','_').lower(), male)
 
     gender = "male" if male else "female"
 
@@ -140,12 +139,12 @@ def get_rnr_race_markdown(rnr_race_obj, male=False, sub_heading=False):
     ret.append("  \n__Expertise:__  \n")
     ret.append(f"{rnr_race_obj.subrace_name}s have expertise in one of the following checks:  \n")
     for expertise_stat in rnr_race_obj.expertise_choices:
-        for expertise in rnr_utils.get_expertises_for_stat(expertise_stat):
-            ret.append(f"  * {expertise} _({rnr_utils.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
+        for expertise in core.get_expertises_for_stat(expertise_stat):
+            ret.append(f"  * {expertise} _({core.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
     ret.append('  \n  ')
 
 
-    abilities = rnr_utils.filterAbilities(rnr_race_obj.abilities)
+    abilities = core.filterAbilities(rnr_race_obj.abilities)
 
     if len(abilities) > 0:
         ret.append(f"__{string.capwords(rnr_race_obj.subrace_name)} Abilities:__ \n")
@@ -169,10 +168,10 @@ def get_rnr_class_wrapper_markdown(rnr_class_wrapper, gender_mappings):
 
     male = 'male' if preferred_image else 'female'
 
-    absolute_art_folder = os.path.join(rnr_utils.GLOBAL_ART_PATH, 'class')
+    absolute_art_folder = os.path.join(core.GLOBAL_ART_PATH, 'class')
     relative_art_folder = os.path.join('..', '..', 'images', 'class')
 
-    image_path, attribution = rnr_utils.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_class_wrapper.class_name.lower(), male)
+    image_path, attribution = core.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_class_wrapper.class_name.lower(), male)
 
     ret = []
 
@@ -201,9 +200,9 @@ def get_rnr_race_wrapper_markdown(rnr_race_wrapper, gender_mappings):
     preferred_image = gender_mappings.get(rnr_race_wrapper.race_name.lower().replace(" ", "_"), None)
     male = 'male' if preferred_image else 'female'
 
-    absolute_art_folder = os.path.join(rnr_utils.GLOBAL_ART_PATH, 'race')
+    absolute_art_folder = os.path.join(core.GLOBAL_ART_PATH, 'race')
     relative_art_folder = os.path.join('..', '..', 'images', 'race')
-    image_path, attribution = rnr_utils.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_race_wrapper.race_name.replace(' ','_').lower(), male)
+    image_path, attribution = core.get_gendered_art(relative_art_folder, absolute_art_folder, rnr_race_wrapper.race_name.replace(' ','_').lower(), male)
 
 
     ret = []
@@ -231,7 +230,7 @@ def get_rnr_race_wrapper_markdown(rnr_race_wrapper, gender_mappings):
 
 def markdown_spellbooks():
     lines = []
-    spellbooks = rnr_utils.get_all_spellbooks()
+    spellbooks = core.get_all_spellbooks()
     for spellbook, chapters in spellbooks.items():
         lines.append(f'## {string.capwords(spellbook.replace("_"," "))}  \n')
         for chapter, spell_list in chapters.items():
@@ -346,7 +345,7 @@ def markdown_spell(spell_name, spell_data):
 def markdown_skills():
 
     lines = []
-    for skill, info in rnr_utils.GLOBAL_SKILL_DATA.items():
+    for skill, info in core.GLOBAL_SKILL_DATA.items():
         lines.append(f'* __{skill}:__ { info["description"] }  \n')
         if 'requirements' in info:
             if 'skills' in info['requirements']:
@@ -363,7 +362,7 @@ def markdown_pantheon():
 
     for deity_type, evil_val in [('Light', False), ('Darkness', True)]:
         lines.append(f'### Gods of {deity_type}  \n')
-        for deity, info in rnr_utils.GLOBAL_PANTHEON.items():
+        for deity, info in core.GLOBAL_PANTHEON.items():
             if info['evil'] != evil_val:
                 continue
             lines.append(f'#### {deity.title()}  \n  \n')
