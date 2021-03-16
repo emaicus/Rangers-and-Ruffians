@@ -1,5 +1,6 @@
 import unittest
-import code.rnr_utils
+from rangers_and_ruffians import data
+
 class rnrTests(unittest.TestCase):
     def test_load_files(self):
         try:

@@ -1,0 +1,290 @@
+Beacon of Growth:
+  brief: Where you trod, green grass grows, and nature itself makes way for your passing.
+    As a result, you have advantage on checks made when moving through difficult natural
+    terrain.
+  description: Advantage on checks made when moving through difficult natural terrain.
+  type: advantage
+Beautiful:
+  brief: As you have served your deity, you have begun to grow more beautiful. Gain
+    advantage on charisma checks made against races who find you attractive.
+  description: Advantage on charisma checks made against races who find you attractive.
+  type: advantage
+Beauty Incarnate:
+  brief: You have advantage when dealing with races that find you attractive.
+  description: Due to your beauty, you have advantage on charisma checks when dealing
+    with races that find you attractive.
+  type: advantage
+Boozehound:
+  brief: Don't take disadvantage when drunk.
+  description: You have a very high tolerance for alcohol. Do not take disadvantage
+    when drunk.
+  type: advantage
+Born in Darkness:
+  brief: You take 1d6 damage per hour when in sunlight unless shaded.
+  description: You are incredibly light sensitive, and take 1d6 damage per hour spent
+    with your skin exposed to bright light or to the sun. As a result, you must wear
+    protective garments during the day.
+  type: disadvantage
+Born in the Saddle:
+  brief: You have advantage on dexterity and animal handling when on horseback.
+  description: You have advantage on all dexterity checks made while on horseback,
+    and on any checks made to control or guide your animal.
+  type: advantage
+Camouflage:
+  brief: Stealth advantage when still.
+  description: If you stay absolutely still, you can take on the color of your surroundings.
+    This gives you advantage on stealth checks while camouflaged.
+  type: advantage
+Cartwheel:
+  brief: Gain advantage on acrobatics.
+  description: Gain advantage on acrobatics checks.
+  type: advantage
+Color Choice:
+  brief: Change scales' color. Advantage on stealth checks.
+  cost: 1
+  description: You may choose what color your scales are. Scales may hold only three
+    colors at a time unless Camouflage is being used. This may be used to gain advantage
+    on a stealth check.
+  type: advantage
+Commanding Presence:
+  brief: Add 1d6 to all CHA checks.
+  description: Add 1d6 to all of your Charisma checks.
+  type: advantage
+Demonic Strength:
+  brief: Gain advantage on strength checks.
+  description: Gain advantage on strength checks.
+  type: advantage
+Distrusted by Authorities:
+  brief: Clerics and Paladins of Eandar take disadvantage when speaking with lawmen.
+  description: Clerics and Paladins of Eandar take disadvantage when speaking with
+    lawmen.
+  type: disadvantage
+Ever of Use:
+  brief: Once per day, channel the power of Lady Dusk to gain advantage on a check.
+  description: Once per day, channel the power of Lady Dusk to gain advantage on a
+    check.
+  type: advantage
+Fear of Water:
+  brief: You have disadvantage when wet.
+  description: You have disadvantage when soaked through.
+  type: disadvantage
+Fear the Light:
+  brief: You are considered undead, and take extra damage from holy weapons.
+  description: You are considered undead, and therefore take extra damage from holy
+    weapons.
+  type: disadvantage
+Forgeborn:
+  brief: Gain advantage when appraising or mending stone or steel.
+  description: When dealing with minerals or works made of stone, gain advantage on
+    any checks made to assess or manipulate them.
+  type: advantage
+God of the Common Man:
+  brief: Clerics and Paladins of Eandar have advantage on charisma checks when speaking
+    with commonfolk.
+  description: You have advantage on charisma checks when speaking with commonfolk.
+  type: advantage
+Goddess of Animal Husbandry:
+  brief: You have advantage on animal handling checks.
+  description: You have advantage on animal handling checks.
+  type: advantage
+Goddess of Navigation:
+  brief: You have advantage on tracking checks, as well as any roles involving steering,
+    guiding, or working on a ship.
+  description: You have advantage on tracking checks, as well as any roles involving
+    working on a ship.
+  type: advantage
+Goddess of the Hunt:
+  brief: Gain advantage on any tracking and foraging checks. Your spells also have
+    extra potency when cast on beasts. Depending on the spell, this can add an additional
+    dice of damage, healing an extra turn of duration, or give a beast advantage or
+    disadvantage on relavant checks.
+  description: Adv on tracking. Spell potency vs beasts. Additional dice of damage/healing,
+    disadv on checks.
+  type: advantage
+Goddess of the Icy Depths:
+  brief: You have resistance to ice and water based attacks, and have advantage on
+    relavent saves.
+  description: You have resistance to ice and water based attacks, and have advantage
+    on relavent saves.
+  type: advantage
+Historian:
+  brief: You have advantage on history or geography checks.
+  description: You have a deep knowledge of the land in which your adventure takes
+    place. You gave advantage on any history or geography checks.
+  type: advantage
+Intimidate:
+  brief: You have advantage on intimidation.
+  description: You have advantage on intimidation checks.
+  type: advantage
+Kingsmen:
+  brief: You have advantage on charisma with kingsmen.
+  description: Gain advantage on charisma checks when speaking with kingsmen.
+  type: advantage
+Lawbringer:
+  brief: You have advantage when speaking with lawmen.
+  description: Followers of Iro have advantage when speaking with lawmen.
+  type: advantage
+Light Sleeper:
+  brief: Make PER checks while sleeping without disadvantage.
+  description: Make perception checks without disadvantage while sleeping
+  type: advantage
+Lightfoot:
+  brief: Gain advantage on stealth.
+  description: Gain advantage on stealth checks.
+  type: advantage
+Lionhearted:
+  brief: Spend 1 Gumption to make a spell power save with advantage.
+  description: Spend 1 Gumption to make a spell power save with advantage.
+  type: advantage
+Listen:
+  brief: You have advantage on perception checks.
+  description: You have advantage on perception checks. Does not include initiative.
+  type: advantage
+Looming Presence:
+  brief: Gain advantage when intimidating entities with lower INT.
+  description: Gain advantage when attempting to intimidate anything of lower intelligence
+    than yourself.
+  type: advantage
+Loose Skin:
+  brief: Gain advantage on breaking grapples.
+  description: You have advantage when breaking grapples.
+  type: advantage
+Mantle:
+  brief: Gain advantage on climbing.
+  description: You have advantage on dexterity checks when climbing.
+  type: advantage
+Master of Disguise:
+  brief: Gain advantage when crafting disguises.
+  description: You can easily fashion disguises to hide yourself with. Gain advantage
+    when crafting disguises.
+  type: advantage
+Mighty:
+  brief: Add 1d6 to STR checks.
+  description: Through arduous physical training, you have become immensely strong
+    add 1d6 to any strength checks.
+  type: advantage
+My People:
+  brief: CHA advantage with guards, respectable individuals, and upper-class merchants.
+  description: Gain advantage when speaking with guards, respectable individuals,
+    and upper-class merchants.
+  type: advantage
+Natural Intellect:
+  brief: Advantage on intelligence checks.
+  description: You have a natural intelligence which grants you advantage on intelligence
+    checks.
+  type: advantage
+Nimble Fingers:
+  brief: Gain advantage on DEX when stealing.
+  description: You have advantage on dexterity and stealth checks made while stealing.
+  type: advantage
+Padfoot:
+  brief: Gain advantage on stealth.
+  description: You have advantage on stealth checks.
+  type: advantage
+Perfect:
+  brief: You have slowly been transformed into a perfect version of yourself. Lose
+    any disadvantage you may have and gain advantage on all charisma checks.
+  description: Lose any disadvantage you may have and gain advantage on all charisma
+    checks.
+  type: advantage
+Predator:
+  brief: When tracking, advantage on perception.
+  description: When tracking, you have advantage on perception checks.
+  type: advantage
+Purge the Useless:
+  brief: You gain advantage on attacks made against any entity that is sick or cursed.
+  description: You gain advantage on attacks made against any entity that is sick
+    or cursed.
+  type: advantage
+Regular Patron:
+  brief: Add 1d6 to CHA checks made in a tavern.
+  description: You may add 1d6 to charisma checks made in a tavern.
+  type: advantage
+Resist Magic:
+  brief: Make checks against an enemy's spell power with advantage.
+  description: You make any rolls against an enemy's spell power with advantage.
+  type: advantage
+Ruffians:
+  brief: You have advantage on charisma with common or seedy folk.
+  description: Gain advantage on charisma checks when speaking with seedy individuals,
+    townspeople, or bandits.
+  type: advantage
+Scurry:
+  brief: Gain advantage on DEX athletics checks.
+  description: You have advantage on dexterity based athletics checks.
+  type: advantage
+Side by Side:
+  brief: Advantage on attacks if adjacent to an ally.
+  cost: 1
+  description: Gain advantage on attacks if you stand shoulder to shoulder with an
+    ally.
+  type: advantage
+Sleight of Hand:
+  brief: You have advantage on sleight of hand.
+  description: You have advantage when performing sleight of hand actions.
+  type: advantage
+Sly:
+  brief: You become better at evading trouble as you worship your deity. Take advantage
+    on checks made while hiding, lying, or otherwise obfuscating the truth.
+  description: Advantage on checks made while hiding, lying, or otherwise obfuscating
+    the truth.
+  type: advantage
+Smokevision:
+  brief: You can see when underwater or in smoke.
+  description: Your double eyelids allows you to see well when underwater or in smoke.
+  type: advantage
+Steady:
+  brief: No disadvantage when being jostled.
+  description: Do not take disadvantage when being jostled about.
+  type: advantage
+Stocky:
+  brief: You have advantage against checks made to knock you over.
+  description: You have advantage against any check that could cause you to go prone.
+  type: advantage
+Tackle:
+  brief: Advantage when grappling. Choose STR or DEX contested save.
+  description: You can tackle an enemy up to one size larger than you to the ground.
+    Attempt either a dexterity or strength contested throw against the enemy, on which
+    you have advantage. If they fail, you grapple them.
+  type: advantage
+Thick Headed:
+  brief: You have advantage when enemies try to break into your mind.
+  description: You have advantage on any checks involving an enemy breaking into your
+    mind or dominating you.
+  type: advantage
+Tracker:
+  brief: You have advantage when tracking.
+  description: You are an excellent tracker, and have advantage when looking for trails
+    and sign of passage.
+  type: advantage
+Uncanny Perception:
+  brief: You can see in pitch dark, have PER advantage, and role initiative with advantage.
+  description: You have uncanny perception, which allows you to sense your way in
+    total darkness, gives you advantage on all perception checks, and lets you role
+    initiative with advantage.
+  type: advantage
+Very Dangerous Over Short Distances:
+  brief: If you begin your turn next to an enemy, gain advantage when attacking them.
+    Does not negate the harried condition.
+  description: If you begin your turn next to an enemy, take advantage on your attack
+    roll. Does not negate the harried condition.
+  type: advantage
+Wide Eyes:
+  brief: You have advantage on perception checks, including initiative roles.
+  description: You have advantage on perception checks, including initiative roles.
+  type: advantage
+Winged Feet:
+  brief: You have advantage on acrobatics.
+  description: You have advantage on acrobatics checks.
+  type: advantage
+Wink Wink, Nudge Nudge:
+  brief: You have advantage when dealing with races that find you attractive.
+  description: Due to your beauty, you have advantage on charisma checks when dealing
+    with races that find you attractive.
+  type: advantage
+Winning Smile:
+  brief: As you worship Juliet, you become more convincing. Gain advantage on Charisma
+    checks.
+  description: As you worship Juliet, you become more convincing. Gain advantage on
+    Charisma checks.
+  type: advantage

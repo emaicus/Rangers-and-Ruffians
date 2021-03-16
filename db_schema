@@ -1,0 +1,93 @@
+{
+    "games" : {
+          $id : {
+              "name": "Aerilon",
+              "game_version": "2.4.1",
+              "players": {
+                  "Evan": {
+                      "role": "poohbah",
+                      "characters": []
+                  },
+                  "Emily": {
+                      "role": "player",
+                      "characters": {
+                          "Hava": $id
+                      }
+                  }
+              }
+          }
+    },
+    "users" : {
+        $id: {
+            "name": "Evan",
+            "games": {
+                $id: {
+                    "name": "Aerilon",
+                    "role": "poohbah"
+                    "characters": []
+                },
+                $id: {
+                  "name": "The Abyss",
+                  "role": "player",
+                  "characters": [
+                      "Archibold": $id
+                  ]
+                }
+            }
+        }
+    },
+    "characters": {
+        $id: {
+            "owner": {
+                "id": $id,
+                "name": "Evan"
+            },
+            "poohbah": {
+                "id": $id,
+                "name": "Jeremy"
+            },
+            "game_version": "2.4.1",
+            "name": "Archibold",
+            "race": "Human",
+            "subrace": "Human",
+            "class": "Wizard",
+            "subclass": "Wizard",
+            "background": "student",
+            "details": {
+                "hair": "grey",
+                "eyes": "blue"
+            }
+            "level": 5,
+            "health": {
+                "current": 10,
+                "max": 10
+            },
+            "action_points": {
+                "current": 4,
+                "max": 6
+            },
+            "stats": {
+              "Dexterity": 3,
+              "Strength": 2
+            },
+            "skills": [
+                "skill1"
+            ],
+            custom_abilities : {
+              "custom_1": {
+                "type" : "advantage",
+                "description": "what it does",
+                "cost" : 0
+              }
+            }
+            "items": {
+                $id : {
+                    "name": "sword",
+                    "type": "weapon"
+                    "description": ""
+                }
+            }
+            "notes": ""
+        }
+    }
+}
