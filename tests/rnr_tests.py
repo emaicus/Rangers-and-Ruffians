@@ -1,21 +1,10 @@
 import unittest
 import os
 import sys
-import json
-sys.path.append(os.path.abspath('../code'))
 import rnr_utils
-import rnr_descriptions
 import balance_report
 
-def log_output(test, errors, sort=False):
-  log_path = 'log.txt'
 
-  with open(log_path, 'a') as logfile:
-    logfile.write('{0}\n'.format(test))
-    if sort:
-      errors = sorted(errors)
-    for error in errors:
-      logfile.write("  {0}\n".format(error))
 
 class rnrTests(unittest.TestCase):
 
@@ -23,12 +12,6 @@ class rnrTests(unittest.TestCase):
     # empty the log file before tests begin.
     with open('log.txt', 'w') as outfile:
       pass
-
-  def test_load_files(self):
-    try:
-      rnr_utils.load_Rangers_And_Ruffians_Data()
-    except:
-      self.fail("ERROR: Could not load RNR Data")
 
   def test_ability_existence(self):
     rnr_utils.load_Rangers_And_Ruffians_Data()
