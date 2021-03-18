@@ -1,11 +1,8 @@
 docs/archive/**/*
 stat_output/
-images/DONT_CHECK_IN/
 data/deprecated
-latex_files/
 INSTALLED_DATA/
 **/__pycache__/
-src/reports
 tests/log.txt
 data/legacy
 _site/
