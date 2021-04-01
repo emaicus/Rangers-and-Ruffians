@@ -5,8 +5,8 @@ import math
 import json
 import random
 import markdown_handler
-import rnr_utils
-rnr_utils.load_Rangers_And_Ruffians_Data()
+from rangers_and_ruffians import core
+core.load_Rangers_And_Ruffians_Data()
 
 STAT_STEPS = {
   0 : 2,
@@ -52,10 +52,10 @@ class rnr_weapon():
   def make_attack(self, use_action_point=False):
     dmg = 0
     for dice_num, dice_type in [(self.num_primary_dice, self.type_primary_dice),(self.num_magic_dice, self.type_magic_dice)]:
-      dmg += rnr_utils.roll_dice(dice_num, dice_type)
+      dmg += core.roll_dice(dice_num, dice_type)
 
     if use_action_point:
-      dmg += rnr_utils.roll_dice(1, self.type_primary_dice)
+      dmg += core.roll_dice(1, self.type_primary_dice)
 
     return dmg
 
@@ -63,13 +63,13 @@ class rnr_combatant():
   def __init__(self, level, race_name, subrace_name, class_name, subclass_name, weapon=None):
     global STAT_STEPS
 
-    self.character = rnr_utils.rnr_character('', race_name, subrace_name, class_name, subclass_name, level)
+    self.character = core.rnr_character('', race_name, subrace_name, class_name, subclass_name, level)
     self.level = level
 
     self.max_health = self.character.get_average_health()
     self.current_health = self.max_health
 
-    self.caster = rnr_utils.is_casting_class(self.character.rnr_class_obj)
+    self.caster = core.is_casting_class(self.character.rnr_class_obj)
     self.action_points = 5 + STAT_STEPS[level]
     self.current_action_points = self.action_points
 
@@ -112,7 +112,7 @@ class rnr_combatant():
         damage += ((weapon_damage + self.damage_stat) * chance_to_hit)
       else:
         weapon_damage = self.weapon.make_attack(use_action_point=use_action_point) + self.damage_stat
-        attack_roll = rnr_utils.roll_dice(1,20)
+        attack_roll = core.roll_dice(1,20)
         if attack_roll == 20:
           #print("It's a crit!")
           damage += (weapon_damage * 2)
@@ -340,7 +340,7 @@ def simulated_survivability_tuning(title, players, theoretical_survivability_dat
         epsilon = 0
         if difference > epsilon:
           # Upper bound hit rate: 80%, Only increased defense if hit rate > 65%
-          if (rnr_utils.roll_dice(1,4) <= 2 or hit_rate > .75) and hit_rate > .65:
+          if (core.roll_dice(1,4) <= 2 or hit_rate > .75) and hit_rate > .65:
             defense += 1
             defense_change += 1
           else:
@@ -348,7 +348,7 @@ def simulated_survivability_tuning(title, players, theoretical_survivability_dat
         # We need to survive longer
         elif difference < -epsilon:
           # Lower bound hit rate 60%. Only decrease defense if hit rate <= 75%
-          if (rnr_utils.roll_dice(1,4) == 4 or hit_rate < .65 ) and hit_rate <= .75:
+          if (core.roll_dice(1,4) == 4 or hit_rate < .65 ) and hit_rate <= .75:
             defense -= 1
             defense_change -= 1
           else:
@@ -378,7 +378,7 @@ def monster_template(monster_name, rounds_to_survive, rounds_to_ko_player, tuned
     defense = survivability['defense']
     accuracy_bonus = get_average_monster_attack_bonus_for_level(level)
 
-    player_health = rnr_utils.get_average_health_to_level(fighter.character.health_dice, level)
+    player_health = core.get_average_health_to_level(fighter.character.health_dice, level)
     target = math.ceil(player_health / rounds_to_ko_player)
 
     num,dice,mod = make_dice(target, use_two=True)
@@ -474,7 +474,7 @@ def avg_player_health():
   for level in range(15 + 1):
     health_vals = list()
     for health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
-      health_vals.append(rnr_utils.get_average_health_to_level(health_dice, level))
+      health_vals.append(core.get_average_health_to_level(health_dice, level))
     BUFFER.chart_row([level,] + health_vals)
 
   BUFFER.add_whitespace()
@@ -490,7 +490,7 @@ def max_player_health():
   for level in range(15 + 1):
     health_vals = list()
     for health_dice in [sprout_wizard, human_fighter, automaton_barbarian]:
-      health_vals.append(rnr_utils.get_max_health_to_level(health_dice, level))
+      health_vals.append(core.get_max_health_to_level(health_dice, level))
     BUFFER.chart_row([level,] + health_vals)
 
   BUFFER.add_whitespace()
@@ -528,7 +528,7 @@ def player_survivability():
   # For every level
   for level in range(15 + 1):
     round_list = list()
-    health = rnr_utils.get_average_health_to_level(COMMON_CLASSES['Human Fighter'].character.health_dice, level)
+    health = core.get_average_health_to_level(COMMON_CLASSES['Human Fighter'].character.health_dice, level)
     for num_rounds in rounds:
       # Round up so our attack is a little overpowered.
       target = math.ceil(health / num_rounds)
@@ -650,7 +650,7 @@ def potions():
 
   fighter_health = {}
   for i in range(15+1):
-    fighter_health[i] = rnr_utils.get_average_health_to_level(fighter.character.health_dice, i)
+    fighter_health[i] = core.get_average_health_to_level(fighter.character.health_dice, i)
 
   size_for_level = dict()
 
@@ -803,6 +803,6 @@ def main():
 
 
 if __name__ == '__main__':
-  BUFFER = markdown_handler.markdown_handler("Poohbah Handbook",file=os.path.join(rnr_utils.BASE_DIRECTORY,'docs','helpful_poohbah_stats.md'))
+  BUFFER = markdown_handler.markdown_handler("Poohbah Handbook",file=os.path.join(core.BASE_DIRECTORY,'docs','helpful_poohbah_stats.md'))
   main()
 

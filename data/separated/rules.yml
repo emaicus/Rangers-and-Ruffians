@@ -1,0 +1,84 @@
+Build:
+  brief: If you have a recipe for an item, you can build it. You can attempt to make
+    1 per rest, 2 per sleep.
+  description: Once you have a recipe for an item, you can build it. You can attempt
+    to build one item per rest, or two per sleep.
+  type: rule
+Charisma Based Spellcaster:
+  brief: To cast spells, make a CHA check and beat the spell's difficulty.
+  description: To succeed at casting spells, you must convince your familiar to perform
+    it for you. To do this, roll a d20 and add your charisma. The result must beat
+    the difficulty of the spell.
+  type: rule
+Dire Companion:
+  brief: Your companion is dire in size.
+  description: Your companion animal is now of Dire size. See the book of known beasts
+    for details.
+  type: rule
+Falling Damage:
+  brief: After a 20 foot fall, take 1d6 damage for every 10 feet.
+  description: After a 20 foot fall, you take 1d6 damage for every 10 feet.
+  type: rule
+Grown:
+  brief: Your companion animal is small in size.
+  description: Your companion animal is adult in size. See the book of known beasts
+    for details.
+  type: rule
+Gumption:
+  brief: You can collect up to ten Gumption, which allow you to perform special feats.
+    You gain 1 gumption when an ally rolls a critical success or critical hit using
+    advantage that you granted them. You also restore 1 gumption after resting and
+    2 after sleeping.
+  description: You can collect up to ten Gumption, which allow you to perform special
+    feats. You gain 1 gumption when an ally rolls a critical success or critical hit
+    using advantage that you granted them. You also restore 1 gumption after resting
+    and 2 after sleeping.
+  type: rule
+Larger Soul Jar:
+  brief: Your soul jar can produce at maximum 1 more soul per day.
+  description: Your soul jar can produce at maximum 1 more soul per day.
+  type: rule
+Learning Spells:
+  brief: You can learn new spells from spellbooks or when you level up.
+  description: New spells or techniques are obtained by leveling up or by finding
+    spellbooks or scrolls in the world. A spellbook may contain a specific spell,
+    or a maximum spell tier. Spellbooks with a maximum spell tier contain one spell
+    of your choice from the spellbooks that you can learn from with a tier up to the
+    spellbook's maximum spell tier.
+  type: rule
+Multi-class Option:
+  brief: When you level up, you may level in a class other than your own.
+  description: From this point forward, when you level up, you may choose to take
+    a level in a class other than your own.
+  type: rule
+Power Core:
+  brief: If you die, you can be rebuilt if your power core survives.
+  description: The source of your power is housed within you. If you are destroyed
+    in combat, you can be rebuilt so long as the power core survives.
+  type: rule
+Repair:
+  brief: You cannot heal using potions or rest. Rather, you must repair. Self-repair
+    counts as rest. Repair with help as sleep. Repair with expert as sleep in a bed.
+  description: You cannot heal using potions or rest. Rather, you must perform repairs.
+    Self repair counts as rest. Repair with help counts as sleep. Repair with a tinker
+    or blacksmith's help counts as sleep in a bed. Blacksmith's must have access to
+    a forge, and tinkers to their tools. Tinker and blacksmith repairs take a minimum
+    of 6 hours.
+  type: rule
+Soul Based Magic:
+  brief: To fuel your magic you use souls which are stored in your soul jar. When
+    they are used, souls escape to the hereafter.
+  description: To fuel your magic, you use the concentrated essence of life, which
+    you are able to harvest from the dead. These "souls" are stored in your soul jar
+    until they are expended on a spell or by an ability. At that time, they escape
+    to the hereafter.
+  type: rule
+Soul Harvest:
+  brief: You can harvest 1 soul from a sentient entity that has died within 24 hours.
+  description: You may harvest 1 soul from a sentient entity that has died within
+    twenty four hours.
+  type: rule
+Upgrades:
+  brief: A tinker can craft upgrades for you.
+  description: A tinker can craft upgrades for you.
+  type: rule

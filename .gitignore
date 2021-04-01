@@ -1,11 +1,8 @@
 docs/archive/**/*
 stat_output/
-images/DONT_CHECK_IN/
 data/deprecated
-latex_files/
 INSTALLED_DATA/
 **/__pycache__/
-code/reports
 tests/log.txt
 data/legacy
 _site/
@@ -18,4 +15,5 @@ Gemfile.lock
 .DS_Store
 site/static/images
 data/wip
-code/legacy
+src/legacy
+src/rangers_and_ruffians/OLD_GARBAGE

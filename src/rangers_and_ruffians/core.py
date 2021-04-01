@@ -11,9 +11,11 @@ from tqdm import tqdm
 import random
 import string
 import traceback
+import pathlib
 
-CODE_DIRECTORY = os.path.dirname(__file__)
-BASE_DIRECTORY = os.path.split(CODE_DIRECTORY)[0]
+CODE_DIRECTORY = pathlib.Path(__file__).resolve()
+BASE_DIRECTORY = CODE_DIRECTORY.parent.parent.parent
+print(BASE_DIRECTORY)
 INSTALL_DIRECTORY = os.path.join(BASE_DIRECTORY, 'INSTALLED_DATA')
 DATA_DIRECTORY = os.path.join(BASE_DIRECTORY, 'data')
 
@@ -310,7 +312,7 @@ def which_icons(rnr_race, rnr_class):
 
 
   # #Necromancers, Monks, and Sorcerers don't have spell_points. Cleric and paladin get special.
-  # if rnr_class in rnr_utils.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
+  # if rnr_class in core.magical_classes and rnr_class not in ['necromancer', 'sorcerer', 'monk','cleric', 'paladin']:
 
   #Clerics and Paladins get special action points.
   if rnr_class.lower() in ['cleric', 'paladin']:
@@ -745,6 +747,24 @@ def mergeAbilities(dictionary, abilities):
       values["abilities"][i] += ": " + abilities[ability]["description"]
     dictionary[key] = values
   return dictionary
+
+def get_full_abilities(abilities, brief = False):
+  global GLOBAL_ABILITY_DICT
+
+  ret = []
+  for ability in abilities:
+    name = ability
+    cost = GLOBAL_ABILITY_DICT[ability].get('cost', 0)
+    description = GLOBAL_ABILITY_DICT[ability]['brief'] if brief else GLOBAL_ABILITY_DICT[ability]['description']
+
+    if cost <= 0:
+      ret.append(f'{ability}: {description}')
+    else:
+      ret.append(f'{ability} (cost {cost}): {description}')
+
+  return ret
+
+
 
 def get_all_spellbooks():
   global GLOBAL_SPELL_BOOKS

@@ -1,9 +1,9 @@
-import rnr_utils
-import generate_helpful_poohbah_stats
 import json
 import os
+from rangers_and_ruffians import core
 
-HUMAN_FIGHTER = rnr_utils.load_combos_given_list([('Human','Human')], [('Fighter','Telepath')], 0)[0]
+
+HUMAN_FIGHTER = core.load_combos_given_list([('Human','Human')], [('Fighter','Telepath')], 0)[0]
 HEALTH = generate_health(HUMAN_FIGHTER.health_dice)
 
 def generate_health(health_dice):
@@ -26,19 +26,19 @@ def validate_creature(monster, health, average_damage_output, expected_type):
 
   for level in range(0,16):
     # First determine how many action point hits it takes the player to kill the monster
-    attacks = rnr_utils.NEW_DMG_STEPS[level]
+    attacks = core.NEW_DMG_STEPS[level]
 
     for attack in attacks:
-      primary_die = 
+      primary_die =
     # Then determine how many hits it takes the monster to kill the player.
 
     # See if they fall into any of the specifications.
 
 
 if __name__ == '__main__':
-  rnr_utils.INSTALL_RANGERS_AND_RUFFIANS()
-  rnr_utils.printLogo()
-  with open(os.path.join(rnr_utils.INSTALL_DIRECTORY, 'book_of_known_beasts.json'), 'r') as infile:
+  core.INSTALL_RANGERS_AND_RUFFIANS()
+  core.printLogo()
+  with open(os.path.join(core.INSTALL_DIRECTORY, 'book_of_known_beasts.json'), 'r') as infile:
     data = json.load(infile)
 
   for monster_type, monster_type_data in data.items():

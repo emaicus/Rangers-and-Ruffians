@@ -1,16 +1,23 @@
 import json
 import sys
 import os
-import rnr_utils
-import markdown_handler
 import traceback
 import shutil
-from pathlib import Path
 import argparse
 import copy
-import io_handler
+import pathlib
 
-GENERATED_SITE_DIRECTORY = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'pages', 'GENERATED')
+from pathlib import Path
+
+CODE_DIRECTORY = pathlib.Path(__file__).resolve()
+BASE_DIRECTORY = CODE_DIRECTORY.parent.parent.parent.parent
+GENERATED_SITE_DIRECTORY = os.path.join(BASE_DIRECTORY, 'site', 'pages', 'GENERATED')
+CODE_DIRECTORY = os.path.join(BASE_DIRECTORY, 'src')
+sys.path.append(CODE_DIRECTORY)
+
+from rangers_and_ruffians import core
+from rangers_and_ruffians import markdown_handler
+from rangers_and_ruffians import io_handler
 
 MALE = True
 FEMALE = False
@@ -57,8 +64,8 @@ PREFERRED_IMAGES = {
 }
 
 def copyImages():
-  races = ('race', rnr_utils.get_all_race_names())
-  classes = ('class', rnr_utils.get_all_class_names())
+  races = ('race', core.get_all_race_names())
+  classes = ('class', core.get_all_class_names())
 
   visited = set()
 
@@ -78,13 +85,13 @@ def copyImages():
         sys.exit(1)
 
       male = 'male' if PREFERRED_IMAGES[usable] else 'female'
-      source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
-      dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'images', img_type, male, f'{usable}.jpg')
+      source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
+      dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, male, f'{usable}.jpg')
 
       if not os.path.exists(source):
         print(f"couldn't find {source}")
-        source = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
-        dest   = os.path.join(rnr_utils.BASE_DIRECTORY, 'site', 'images', img_type, f'{usable}.jpg')
+        source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
+        dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, f'{usable}.jpg')
 
       print(f'cp {source} {dest}')
       shutil.copy(source, dest)
@@ -92,14 +99,14 @@ def copyImages():
 
 def publish_character_creation(force_overwrite):
   global PREFERRED_IMAGES
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
   md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Compendium_of_Character_Creation.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
-  rnr_race_wrappers  = rnr_utils.load_all_race_wrappers()
-  rnr_class_wrappers = rnr_utils.load_all_class_wrappers()
+  rnr_race_wrappers  = core.load_all_race_wrappers()
+  rnr_class_wrappers = core.load_all_class_wrappers()
 
   race_lines = []
   for race_wrapper in sorted(rnr_race_wrappers, key=lambda x: x.race_name):
@@ -126,11 +133,11 @@ def publish_character_creation(force_overwrite):
   md.write_buffer()
 
 def publish_ancients(force_overwrite):
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
   md = markdown_handler.markdown_handler(f'The Tome of the Ancients', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Tome_of_the_Ancients.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   spells = io_handler.markdown_spellbooks()
 
@@ -144,11 +151,11 @@ def publish_ancients(force_overwrite):
   md.write_buffer()
 
 def publish_examples(force_overwrite):
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
   md = markdown_handler.markdown_handler(f'The Book of Examples', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Examples.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
 
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'explanations_part.md'))
@@ -158,7 +165,7 @@ def publish_examples(force_overwrite):
   md.write_buffer()
 
 def publish_rulebook(force_overwrite):
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
   if not os.path.exists(docs_directory):
@@ -166,7 +173,7 @@ def publish_rulebook(force_overwrite):
     sys.exit(1)
 
   md = markdown_handler.markdown_handler(f'Rangers and Ruffians Rulebook', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Rulebook.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'rulebook_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'player_handbook_start.md'))
@@ -179,21 +186,21 @@ def publish_rulebook(force_overwrite):
   md.write_buffer()
 
 def publish_book_of_known_beasts(force_overwrite):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  core.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Book_of_Known_Beasts.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
 
-  stats = rnr_utils.standard_stat_order()
-  abbreviations = [rnr_utils.abbreviate_stat(stat).upper() for stat in stats]
+  stats = core.standard_stat_order()
+  abbreviations = [core.abbreviate_stat(stat).upper() for stat in stats]
 
   lines = []
-  for category in sorted(rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
+  for category in sorted(core.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
     md.start_heading(f"{category.replace('_',' ').title()}:", 2)
-    c_info = rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category]
+    c_info = core.GLOBAL_BOOK_OF_KNOWN_BEATS[category]
 
     if 'description' in c_info:
       md.paragraph(f">{c_info['description']}")
@@ -213,7 +220,7 @@ def publish_book_of_known_beasts(force_overwrite):
       if 'tactics' in b_info:
         md.paragraph(f"___{b_info['tactics']}___")
 
-      for beast, info in rnr_utils.GLOBAL_BOOK_OF_KNOWN_BEATS[category]['types'][beast_class]['types'].items():
+      for beast, info in core.GLOBAL_BOOK_OF_KNOWN_BEATS[category]['types'][beast_class]['types'].items():
         md.start_heading(f"{beast.replace('_',' ').title()}:", 4)
 
         if 'description' in info:
@@ -292,11 +299,11 @@ def publish_book_of_known_beasts(force_overwrite):
   md.write_buffer()
 
 def publish_pantheon(force_overwrite):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  core.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Book of Lore', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Book_of_Lore.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'lore_topmatter.md'))
   pantheon = io_handler.markdown_pantheon()
@@ -309,11 +316,11 @@ def publish_pantheon(force_overwrite):
   md.write_buffer()
 
 def publish_poohbah_printables(force_overwrite):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  core.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Print Material for Poohbahs', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Poohbah_Printables.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'poohbah_printables_part.md'))
@@ -323,11 +330,11 @@ def publish_poohbah_printables(force_overwrite):
   md.write_buffer()
 
 def publish_printabled_materials(force_overwrite):
-  rnr_utils.load_Rangers_And_Ruffians_Data()
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  core.load_Rangers_And_Ruffians_Data()
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 
   md = markdown_handler.markdown_handler(f'Printed Materials', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Printed_Materials.md'))
-  md.paragraph(f'_Version {rnr_utils.VERSION_NUMBER}_')
+  md.paragraph(f'_Version {core.VERSION_NUMBER}_')
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
   md.slurp_markdown_file(os.path.join(docs_directory, 'parts', 'printed_materials.md'))
@@ -337,7 +344,7 @@ def publish_printabled_materials(force_overwrite):
   md.write_buffer()
 
 def publish_changelog(force_overwrite):
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   parts_directory = os.path.join(docs_directory, 'parts')
   changelog_directory = os.path.join(parts_directory, 'changelog_parts')
 
@@ -366,10 +373,10 @@ def publish_changelog(force_overwrite):
   md.write_buffer()
 
 def archive_past_versions():
-  docs_directory = os.path.join(rnr_utils.BASE_DIRECTORY, 'docs')
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
   archve_directory = os.path.join(docs_directory, 'archive')
 
-  old_version = rnr_utils.VERSION_NUMBER.replace('.', '_')
+  old_version = core.VERSION_NUMBER.replace('.', '_')
 
   print(f'searching {docs_directory} for markdown files')
   for file in Path(docs_directory).glob('*.md'):
@@ -379,25 +386,25 @@ def archive_past_versions():
     shutil.move(file, os.path.join(archve_directory, name))
 
 def create_alt_all_race_class_json():
-  all_race_data = copy.deepcopy(rnr_utils.GLOBAL_RACE_DATA)
-  all_class_data = copy.deepcopy(rnr_utils.GLOBAL_CLASS_DATA)
-  ability_data = rnr_utils.GLOBAL_ABILITY_DICT
-  items_data = copy.deepcopy(rnr_utils.GLOBAL_STANDARD_ITEMS)
+  all_race_data = copy.deepcopy(core.GLOBAL_RACE_DATA)
+  all_class_data = copy.deepcopy(core.GLOBAL_CLASS_DATA)
+  ability_data = core.GLOBAL_ABILITY_DICT
+  items_data = copy.deepcopy(core.GLOBAL_STANDARD_ITEMS)
 
   for race in all_race_data.keys():
     for subrace in all_race_data[race]['subraces'].keys():
-      all_race_data[race]['subraces'][subrace]['abilities'] = rnr_utils.filterAbilities(all_race_data[race]['subraces'][subrace]['abilities'])
+      all_race_data[race]['subraces'][subrace]['abilities'] = core.filterAbilities(all_race_data[race]['subraces'][subrace]['abilities'])
 
   for rnr_class in all_class_data.keys():
     for subclass in all_class_data[rnr_class]["subclasses"].keys():
-      all_class_data[rnr_class]["subclasses"][subclass]["icons"] = rnr_utils.which_icons('', rnr_class)
+      all_class_data[rnr_class]["subclasses"][subclass]["icons"] = core.which_icons('', rnr_class)
 
       if 'base_abilities' in all_class_data[rnr_class]["subclasses"][subclass]:
-        all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'])
+        all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'] = core.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['base_abilities'])
       else:
         all_class_data[rnr_class]["subclasses"][subclass]['base_abilities']   = {}
       for level in all_class_data[rnr_class]["subclasses"][subclass]['levels']:
-        all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'] = rnr_utils.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'])
+        all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'] = core.filterAbilities(all_class_data[rnr_class]["subclasses"][subclass]['levels'][level]['abilities'])
 
 
   # # Scrub the item data
@@ -407,8 +414,8 @@ def create_alt_all_race_class_json():
   #     if r == ''
 
   data = {
-    'race_names' : rnr_utils.get_all_subrace_names(),
-    'class_names' : rnr_utils.get_all_subclass_names(),
+    'race_names' : core.get_all_subrace_names(),
+    'class_names' : core.get_all_subclass_names(),
     'races' : all_race_data,
     'classes' : all_class_data,
     'items' : items_data,
@@ -421,7 +428,7 @@ def create_alt_all_race_class_json():
   data["roles"] = dict()
   data["roles"]["class_roles"] = dict()
   unique_roles = set()
-  class_objs = rnr_utils.load_all_class_objects()
+  class_objs = core.load_all_class_objects()
   for obj in class_objs:
     data["roles"]["class_roles"][obj.name] = {
       "roles" : obj.roles
@@ -465,23 +472,22 @@ def create_alt_all_race_class_json():
     json.dump(data, outfile)
 
 def setup_service_worker():
-  intended_service_worker_path = os.path.join(rnr_utils.BASE_DIRECTORY, 'service_worker.js')
-  code_path = os.path.join(rnr_utils.BASE_DIRECTORY, 'code')
+  intended_service_worker_path = os.path.join(core.BASE_DIRECTORY, 'service_worker.js')
 
-  site_path = os.path.join(rnr_utils.BASE_DIRECTORY, '_site')
+  site_path = os.path.join(core.BASE_DIRECTORY, '_site')
   site_service_worker_path = os.path.join(site_path, 'service_worker.js')
 
-  os.chdir(rnr_utils.BASE_DIRECTORY)
+  os.chdir(core.BASE_DIRECTORY)
   os.system("bundle exec jekyll build")
   os.chdir(site_path)
   os.system("node build.js")
   shutil.copy(site_service_worker_path, intended_service_worker_path)
-  os.chdir(code_path)
+  os.chdir(CODE_DIRECTORY)
 
 
 if __name__ == "__main__":
-  rnr_utils.printLogo()
-  rnr_utils.load_Rangers_And_Ruffians_Data()
+  core.printLogo()
+  core.load_Rangers_And_Ruffians_Data()
 
   if not os.path.exists(GENERATED_SITE_DIRECTORY):
     os.mkdir(GENERATED_SITE_DIRECTORY)
@@ -506,8 +512,8 @@ if __name__ == "__main__":
   if update_version:
     print('Archiving past versions...')
     archive_past_versions()
-    rnr_utils.update_version(new_version)
-    print(f"The Version Number is now {rnr_utils.VERSION_NUMBER}")
+    core.update_version(new_version)
+    print(f"The Version Number is now {core.VERSION_NUMBER}")
 
   copyImages()
   publish_rulebook(force_overwrite)

@@ -1,0 +1,59 @@
+cost: 0
+target: ["friendly", "enemy", "friend and foe", "self", "space", "other"]
+num_targets: [1, "many"]
+duration: #, save, # hours, concentration, infinite
+description: "What the spell does at a high level."
+range: <self, hand, close, near, mid, archer, far, infinite>
+purpose: <damage, healing, buff, debuff, summon, utility>
+hit: <always, roll, other>
+dice: "xdy"
+effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, radiant>
+effects:
+  - condition: e.g. once graplled, (empty by default)
+    description: "effected enemies must make a effect.save save or"
+    save: <"spell_power", "strength", ...>
+    result: <frigtened, debuff,
+    repeat:
+      - first case
+      - second case
+      - third case (combined with commas then an or)
+casting_time: A number of turns. Defaults to 1.
+components:
+  - "lowercase thing needed. e.g. a tortoise shell"
+upcast:
+  cost: <# or scaling>
+  effect: <each additional action point spent on this spell>
+          <you may spend N additional action points on this spell to>
+action_type: <action, offhand_action, reaction, free_action>
+effect_radius: # number of feet, defaults to 1
+charisma_cost: Computed based on 5 + (3 x cost) if not specified.
+--------------------------------------------------------------------
+
+# effects occur in order.
+effects:
+  trigger: "always, save, hit"
+  target: <self, entity, enemy, ally, object>
+  radius: <int>
+  entity_modification:
+      - type: movement
+        distance: <int>
+        direction: <forward, backward, left, right, random>
+      - type: teleport
+        max_distance: <int>
+        tethered_to_realm: <true, false>
+      - type: damage
+        dice: <xdy>
+        damage_type: <piercing, slashing, etc.>
+        healable: <true, false>
+      - type: healing
+        dice: <xdy>
+      - type: restoration
+      - type: control
+        can_self_injure: <true, false>
+        can_injure_allies: <true, false>
+      - type: mute
+
+
+
+
+
