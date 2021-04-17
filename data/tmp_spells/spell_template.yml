@@ -3,7 +3,7 @@ spellbook:
     Title:
       cost: 0
       target: ["friendly", "enemy", "entity", "self", "space", "other"]
-      num_targets: [1, "many"]
+      num_targets: [1, "aoe", "multi"] # Aoe = can hit allies, multi = targeted
       duration: #, save, # hours, concentration, infinite
       description: "What the spell does at a high level."
       range: <self, hand, close, near, mid, archer, far, infinite>
@@ -24,8 +24,6 @@ spellbook:
             - third case (combined with commas then an or)
       -------------------- RARE -------------------------------
       casting_time: A number of turns. Defaults to 1.
-      components:
-        - "lowercase thing needed. e.g. a tortoise shell"
       upcast:
         cost: <# or scaling>
         effect: <each additional action point spent on this spell>
@@ -363,6 +361,7 @@ Cleric:
 
     X Holy Shield # Buff
     X Ward # Buff
+    Sanctum # Buff - hide from damage
 
     X Beguile # debuff
     X Alter Emotions
@@ -377,7 +376,7 @@ Cleric:
     X Make Habitable # Utility
 
     X Minor Heal # Healing
-    X Spare # Healing
+    #X Spare # Healing
   Tier_1: #12/13
     X Spiritual Weapon # RENAME Damage
     X Sap Life # Damage
@@ -386,7 +385,7 @@ Cleric:
     X Delayed Heal # Healing
 
     X Truth # Utility
-    X Share Senses
+    X Share Sense
 
     X Enlarge # Buff
     X Haste # Buff
@@ -408,7 +407,7 @@ Cleric:
     X Dispell Magic #Utility
     X Speak Tongues # Utility
     X Ward of Light # Utility
-  Tier_3: #8/8
+  Tier_3: #7/8
     Mass Heal #Healing
 
     Sealed Promise #Utility
@@ -417,7 +416,6 @@ Cleric:
 
     Holy Guardian # Summon
 
-    Sanctum # Buff - hide from damage
     Death Ward # Buff
     Elemental Ward # Buff
     Invigorate # Buff Grant all allies bonus health takes time.
@@ -438,7 +436,7 @@ Cleric:
 
     Mass Ward # Buff
 
-    Lay Bare # Debuff (guaranteed crits)
+    Lay Bare # Debuff (guaranteed hits)
 
 Wizard:
 
@@ -473,6 +471,8 @@ Wizard:
     Animate Weapon: utility
     Bull Rush: utility
     Create Pit: utility
+
+    Shrink: utility/debuff
 
     Restrict Movement: debuff
     Sleep: debuff
@@ -549,7 +549,7 @@ For publication:
       Kragraven
       Hissling
       Goblin
-      Minotaur - Taur
+      Minotaur - Oxoloff
     NEW:
       Jotun
 
@@ -560,11 +560,11 @@ For publication:
       Path of Nature
     Knight:
       Stalwart Knight
-      Death Knight
       Paladin
     Ranger:
       Warden of the Wilds
       Magic Archer
+      Monster Hunter
     Fighter:
       Telepath
       Battlemaster (Archer)
@@ -587,19 +587,21 @@ For publication:
     Wizard:
       Sorcerer
       Arcanist
-    Necromancer:
     Gunslinger:
       Marksman
       Gunslinger
-    Tinker:
-      Augmentation
-      Build an Automaton
+    
 
 Cut:
   Highborn
       Heroic Highborn
+  Necromancer:
 
-
+Not making the cut:
+  Death Knight
+  Tinker:
+      Augmentation
+      Build an Automaton
 
 
 

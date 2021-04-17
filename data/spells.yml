@@ -114,12 +114,10 @@ the_bard's_songbook:
             target: enemy
             num_targets: 1
             duration: save
-            description: "Attempt to hypnotize an enemy using a swinging trinket."
+            description: "Attempt to hypnotize an enemy and bend them to your will"
             purpose: debuff
             range: hand
             hit: always
-            components:
-                - "a swinging trinket"
             effects:
                 - save: spell power save
                   description: "be under your control."
@@ -603,22 +601,22 @@ the_bard's_songbook:
                 it. The mansion lasts 24 hours. Nothing that originated within the mansion
                 may be taken out. However, items brought in may stay.
             range: far
-        Irresistible Charm:
-            cost: 3
-            description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
-            target: enemy
-            num_targets: many
-            duration: 5
-            range: archer
-            hit: always
-            effects:
-              - save: spell power save
-                description: the entity must follow your orders
-                repeat:
-                    - "if they are asked to do anything that causes themselves or those they care about harm"
-                    - "once per minute, or once per turn in combat"
-            purpose: debuff
-            school: arcane-enchantment-mind
+        # Irresistible Charm:
+        #     cost: 3
+        #     description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
+        #     target: enemy
+        #     num_targets: many
+        #     duration: 5
+        #     range: archer
+        #     hit: always
+        #     effects:
+        #       - save: spell power save
+        #         description: the entity must follow your orders
+        #         repeat:
+        #             - "if they are asked to do anything that causes themselves or those they care about harm"
+        #             - "once per minute, or once per turn in combat"
+        #     purpose: debuff
+        #     school: arcane-enchantment-mind
         Greater Song of Mass Healing:
             cost: 3
             target: friendly
@@ -655,7 +653,7 @@ the_bard's_songbook:
             target: other
             num_targets: 1
             duration: 1
-            description: Make an object or person unstoppable for 1 minute. The object must be smaller than a wagon.
+            description: Make an object or person unstoppable for 1 minute. The object must be the size of a wagon or smaller.
             range: close
             purpose: utility
             school: arcane-enchantment-matter
@@ -1282,11 +1280,7 @@ the_druid's_guidebook:
             num_targets: 1
             range: hand
             casting_time: 24 hours
-            components:
-                - "1,000 gold worth of gemstones"
-                - "A seed from a feywood tree"
-                - "An animal which trusts you completely"
-            description: Grant an animal sentience.
+            description: Perform a ritual which grants an animal sentience.
             school: "natural-animist"
         Bountiful Harvest:
             cost: 2
@@ -1296,9 +1290,6 @@ the_druid's_guidebook:
             num_targets: many
             casting_time: 1 hour
             duration: 24 hours
-            components:
-                - A Chalice worth 100 gold pieces.
-                - A seed from a feywood tree.
             description: Grow a feast. Up to 8 entities may partake of the feast. Each of
                 these entities fully heal, and gain additional hit points equal to your
                 level plus your inner fire. These hit points last for 24 hours. Bountiful Harvest
@@ -1326,14 +1317,10 @@ the_druid's_guidebook:
             num_targets: many
             casting_time: 24 hours
             duration: infinite
-            components:
-                - 250 gold worth of crystals.
-                - the seed of a feywood tree
             description: Find the highest point in a region. Atop this point, create a pillar
                 of rock, at least ten feet tall and with a three foot radius. Spend some time
-                carving symbols significant to you into the stones. Affix crystals valuing
-                250 gold to the top of the spire. Crush the seed of a feywood tree, and channel
-                your energy into the crystals. After many hours, the crystals begin to glow,
+                carving symbols significant to you into the stones. Perform a ritual and channel
+                your energy into the pilar. After many hours, the symbol will begin to glow,
                 and an area of up to 50 miles will be stuck in the season of your choice.
             school: "natural"
         Starfall:
@@ -1409,7 +1396,7 @@ the_druid's_guidebook:
                 damage each turn, and are considered harried.
             school: "natural-elemental-water"
 the_book_of_healing:
-    Tier_0:
+    Tier_0: # 14/14
         Beam of Light:
             cost: 0
             target: "enemy"
@@ -1465,7 +1452,7 @@ the_book_of_healing:
               to the touched entity for the duration of the spell.
             range: hand
             purpose: buff
-            school: divine-guardian
+            school: divine-guardian            
         Beguile:
             cost: 0
             target: enemy
@@ -1575,16 +1562,16 @@ the_book_of_healing:
             upcast:
               cost: scaling
               effect: allows it to grant 1d6 additional healing.
-        Spare:
-            cost: 0
-            target: friendly
-            duration: 0
-            num_targets: 1
-            description: Channel divine magic to stabilize a downed ally. Stabilized
-              entities immediately return to 1 health.
-            purpose: utility
-            range: near
-            school: divine-restoration
+        # Spare:
+            #     cost: 0
+            #     target: friendly
+            #     duration: 0
+            #     num_targets: 1
+            #     description: Channel divine magic to stabilize a downed ally. Stabilized
+            #       entities immediately return to 1 health.
+            #     purpose: utility
+            #     range: near
+            #     school: divine-restoration
         Alter Emotions:
             cost: 1
             target: enemy
@@ -1601,7 +1588,7 @@ the_book_of_healing:
                   repeat:
                     - each turn
                     - "if an ally spends an action to plea with them"
-    Tier_1:
+    Tier_1: # 13/13
         Guardian Blade:
             cost: 1
             target: self
@@ -1709,19 +1696,6 @@ the_book_of_healing:
             range: near
             purpose: buff
             school: arcane-somatic
-        Forget Ability:
-            cost: 1
-            target: enemy
-            num_targets: 1
-            duration: concentration
-            description: Attempt to make an enemy forget one of its abilities.
-            range: archer
-            purpose: debuff
-            school: arcane-enchantment-mind
-            hit: always
-            effects:
-              - description: be forced to to forget one of it's combat abilities.
-                save: spell power save
         Hold Weapon:
             cost: 0
             target: enemy
@@ -1760,7 +1734,31 @@ the_book_of_healing:
                 description: they are pushed back 1d4 spots in the initiative order and lose 15 feet of movement until they make a save
                 repeat:
                   - each turn
-    Tier_2:
+        Sanctum:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1
+            range: mid
+            description: As an enemy makes an attack against you or an ally, channel your magic
+              to protect them. The attack's target disappears into a pocket dimension momentarily.
+            purpose: buff
+            school: thaumaturgy-transportation
+            upcast:
+                cost: 1
+                effect: cause the target to disappear until either it's next turn or your next turn,
+                  protecting it from more than one attack.
+            action_type: Reaction
+        Restore:
+            cost: 2
+            target: friendly
+            num_targets: 1
+            duration: 0
+            description: Remove a minor curse or status effect from an ally.
+            purpose: healing
+            range: near
+            school: divine-restoration
+    Tier_2: # 9/9
         Greater Heal:
             cost: 2
             target: friendly
@@ -1867,9 +1865,23 @@ the_book_of_healing:
             range: hand
             purpose: utility
             school: divine-guardian
-    Tier_3:
+        Forget Ability:
+            cost: 1
+            target: enemy
+            num_targets: 1
+            duration: concentration
+            description: Attempt to make an enemy forget one of its abilities.
+            range: archer
+            purpose: debuff
+            school: arcane-enchantment-mind
+            hit: always
+            effects:
+              - description: be forced to to forget one of it's combat abilities.
+                save: spell power save
+    Tier_3: #8/8
         Mass Heal:
             cost: 2
+            target: friendly
             num_targets: many
             duration: 0
             description: "An aura of golden light pulses from you and your allies' flesh begins to knit
@@ -1894,10 +1906,6 @@ the_book_of_healing:
               follow through will die. If the promise becomes impossible, you may render
               it invalid.
             range: hand
-            purpose: utility
-            components:
-                - a piece of rope
-                - holy water blessed by your deity
         Change of Heart:
             cost: 2
             target: enemy
@@ -1916,60 +1924,193 @@ the_book_of_healing:
                     - if forced to do anything that harms itself or its close friends
                     - once per day, unless you spend 1 action point to maintain it
         Holy Guardian:
-            cost: 3
+            cost: 2
             target: other
             num_targets: 1
-            duration: 12 hours
+            duration: 1 hours
             description: Summon an angel to aid you in combat. For stats, view the book of known beasts.
             range: near
             purpose: summon
-        Sanctum:
+            school: summoning
+        Greater Protection:
+            cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1
+            description: Cast a spell which grants an ally immunity to 
+              status effects for the duration."
+            range: near
+            purpose: buff
+            school: arcane-somatic
+            upcast:
+              cost: 1
+              effect: cause the effect to last for 3 turns.
+        # Sanctum:
+        #     cost: 1
         Death Ward:
             cost: 1
+            target: friendly
+            num_targets: 1
+            duration: 1 hour
             description: Cast a powerful ward on an ally. If they are downed in combat,
               they immediately return to 1d20 hp.
-        Elemental Ward
-        Invigorate
-    Tier_4:
+            range: mid
+            purpose: buff
+            school: somatic-restoration
+        Invigorate:
+            cost: 1
+            target: friendly
+            num_targets: many
+            duration: 1 hour
+            description: Grant all allies within range bonus health equal to your level.
+            range: mid
+            purpose: buff
+            school: somatic-restoration
+            upcast:
+                cost: 1
+                effect: grant your allies twice as much health.
+        Greater Restore:
+            cost: 3
+            target: friendly
+            num_targets: 1
+            duration: 0
+            description: Remove a major curse or ailment from an ally.
+            purpose: healing
+            range: near
+            school: divine-restoration
+    Tier_4: # 6/6
         Major Heal:
-            balance_type: healing candidate
-            cost: 2
-            description: Restore 6d10 health to one teammate or yourself
-            major_healing_dice: 6d10d6 10
+            cost: 3
+            target: friendly
+            num_targets: 1
+            duration: 0
+            description: Restore health to one ally or yourself.
+            dice: 7d6
+            effect_type: healing
+            purpose: healing
+            range: near
+            school: divine-restoration
+            upcast:
+              cost: 1
+              effect: grant the entity 3d6 additional healing.
         Resurrection:
-            cost: 5
-            description: Requires holy water, holy oil (optional), and a sacred flame. Takes
-                six hours to cast. If an individual has suffered an incurable injury or has
-                died, wash them in holy water and and oil. Burn wood using your sacred flame,
+            cost: 3
+            target: entity
+            num_targets: 1
+            description: Lay out the body of an entity that has died within the past
+                month. Wash them in holy water and and oil. Burn wood using sacred flame,
                 and draw the mark of your deity on their brow. After six hours of prayer,
                 make an inner fire saving throw. If holy oil was used, you have advantage.
-                If the roll is 15 or higher, the entity is resurrected.
+                If the roll is 15 or higher, the entity is resurrected. This ritual may
+                be attempted only once on an entity.
+            duration: infinite
+            range: hand
+            purpose: utility
+            school: arcane-somatic
+            upcast:
+                cost: 5
+                effect: attempt to use it on an entity that has died within the past year
         Mass Stun:
+            cost: 2
+            target: enemy
+            num_targets: many
+            duration: 1
+            description: "Radiant light dazzles all enemies within range."
+            range: mid
+            purpose: debuff
+            school: thaumaturgy-disruption
+            effects:
+                - save: spell_power
+                  description: be stunned, losing their next turn.
         Holy Avatar:
             cost: 3
+            target: other
+            num_targets: 1
+            duration: 1 days
+            range: infinite
             description: Summon a radiant projection of yourself within 15 feet of an ally,
                 regardless of where they are in the world. The projection has your stats,
                 and you may share its senses. The projection may attack, cast spells, and
                 perform any of your abilities, but can not be healed. You may not act in any
-                way while controlling the projection, and loose track of your surroundings.
+                way while controlling the projection, and lose track of your surroundings. When
+                the projection dies or when the spell ends, you are returned to your own surroundings.
+            purpose: utility
+            school: thaumaturgy-manifestation
         Divine Intervention:
             cost: 0
+            target: other
+            num_targets: 1
+            duration: 1
             description: Roll 1d20. On a critical success, call upon your deity and ask
                 of them a favor. Can be attempted once per day. Success can happen at most
                 once per week.
-        Major Holy weapon:
-            cost: 3
-            description: Imbue a weapon with the spirit of righteousness. Your weapon gets
-                +6 damage for a day, and advantage against evil and undead entities.
-    Tier_5:
+            range: self
+            purpose: utility
+            school: arcane-conjuring
+        Holy weapon:
+            cost: 2
+            target: friendly
+            num_targets: 1
+            duration: 1 hours
+            description: Imbue a weapon with the spirit of righteousness. The weapon gains
+                         a +5 bonus to attack rolls and damage.
+            range: touch
+            purpose: mid
+            school: thaumaturgy-imbue
+    Tier_5: # 4/4
         Cleansing Flame:
-            cost: 5
-            description: Tongues of white flame spiral around you, enveloping any enemies
-                within a twenty foot radius. Evil or undead enemies take 5d20 damage, other
-                enemies take 5d10.
+            cost: 3
+            target: enemy
+            num_targets: many
+            duration: 1
+            description: "Tongues of white flame spiral around you, enveloping any enemies
+                within range but leaving allies unscathed."
+            range: mid
+            purpose: damage
+            school: thaumaturgy-manifestation
+            hit: roll
+            dice: 20d6
+            effect_type: radiant
         Saving Grace:
-        Mass Ward:
+            cost: 3
+            target: friendly
+            num_targets: many
+            duration: 0
+            description: "An aura of golden light pulses from you and your allies' flesh begins to knit
+                 back together as you call upon your deity to heal all allies within range."
+            range: near
+            purpose: healing
+            dice: 5d6
+            effect_type: healing
+            purpose: healing
+        Mass Sanctum:
+            cost: 2
+            target: friendly
+            num_targets: many
+            duration: 1
+            range: mid
+            description: As an enemy makes an attack against your allies, channel your magic
+              to protect them. The attack's targets disappears into a pocket dimension momentarily.
+              Affects all allies within the spell's radius.
+            effect_radius: 30
+            purpose: buff
+            school: thaumaturgy-transportation
+            action_type: Reaction  
         Lay Bare:
+            cost: 2
+            target: enemy
+            num_targets: 1
+            duration: save
+            range: near
+            description: Attempt to render an enemy defenseless.
+            purpose: debuff
+            hit: always
+            school: arcane-enchantment-mind
+            effects:
+              - save: spell power save
+                description: their defense is treated as 0
+                repeat:
+                  - each turn
 the_wizard's_addendum:
     Tier_0: # 14 / 14
         Firecrackers:
@@ -2154,7 +2295,7 @@ the_wizard's_addendum:
             upcast:
                 cost: 1
                 effect: increase the spell's radius to 15 feet.
-    Tier_1: # 12 / 13
+    Tier_1: # 13 / 13
         Become Slime:
             cost: 1
             target: self
@@ -2220,14 +2361,30 @@ the_wizard's_addendum:
             upcast:
               cost: 1
               effect: travel an additional 10 feet.
+        Shrink:
+            cost: 1
+            target: entity
+            num_targets: 1
+            duration: concentration
+            hit: always
+            description: "Attempt to shrink an entity. If the entity is willing, you may 
+              shrink to any size of your choosing, so long as it is larger than an ant.
+              Allies shrunk in such a way take damage commensurate with their size."
+            effect:
+                - description: "be shrunk to up to half of their original size.
+                  Shrunk enemies have disadvantage on strength checks, and lose
+                  half their speed."
+            range: near
+            purpose: debuff
+            school: somatic-transformation
         # Create Pit:
-        #     cost: 1
-        #     num_targets: many
-        #     target: space
-        #     duration: infinite
-        #     description: Summon a 20x20 pit which is 40 feet deep to a location anywhere
-        #       within range. If the pit is summoned beneath an entity, the entity
-        #       may make a dexterity saving throw against your spell power to avoid falling.
+            #     cost: 1
+            #     num_targets: many
+            #     target: space
+            #     duration: infinite
+            #     description: Summon a 20x20 pit which is 40 feet deep to a location anywhere
+            #       within range. If the pit is summoned beneath an entity, the entity
+            #       may make a dexterity saving throw against your spell power to avoid falling.
         Jelly Arms:
             cost: 1
             target: enemy
@@ -2597,8 +2754,6 @@ the_wizard's_addendum:
             cost: scaling
             effect: the affected entity gains one additional minute of invulnerability
         # Tri-beam:
-        #     balance_type: damage candidate
-        #     charisma_cost: 17
         #     cost: 3
         #     hit: roll
         #     purpose: damage
@@ -2613,6 +2768,21 @@ the_wizard's_addendum:
         #       entity must make a spell power save or be stunned, losing an action, offhand
         #       action, and movement on its next turn. On a 6, it is a ray of death,
         #       and causes the entity to take 8d10 damage.
+        Explosion!:
+            cost: 3
+            target: enemy
+            num_targets: many
+            hit: roll
+            effect_type: fire
+            purpose: damage
+            dice: 10d10
+            duration: 0
+            range: archer
+            effect_radius: 30
+            description: "Darker than dark, blacker than black, explosion magic is the 
+              grandest and most noble of all of the types of magic. Wield it to deal
+              massive damage to your enemies. After casting explosion magic, you must
+              make a D14 inner fire save or collapse and miss your next turn."
         Stop Time:
             cost: 3
             description: As you mutter an incantation, time around you begins
