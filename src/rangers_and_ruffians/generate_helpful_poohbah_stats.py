@@ -4,7 +4,7 @@ import json
 import math
 import json
 import random
-import markdown_handler
+from rangers_and_ruffians import markdown_handler
 from rangers_and_ruffians import core
 core.load_Rangers_And_Ruffians_Data()
 

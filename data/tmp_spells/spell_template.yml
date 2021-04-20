@@ -83,12 +83,12 @@ potential spell schools:
   - Summoning # Summon someone or something
 
 Needed:
-  Tier_0: 19
-  Tier_1: 14
-  Tier_2: 11
+  Tier_0: 14
+  Tier_1: 13
+  Tier_2: 9
   Tier_3: 8
   Tier_4: 6
-  Tier_5: 3
+  Tier_5: 4
 
 Combined as follows:
 
@@ -105,7 +105,7 @@ Requirements: All spells should have one of description, minor_effect, major_eff
 Bard
 Cleric
 Druid
-Necromancer
+#Necromancer
 #Sorcerer
 Wizard
 
@@ -113,9 +113,9 @@ $5 for 54 cards
 $2.79 for a tuck box
 $7.79 per deck
 
-$25 in cards
-$14 in boxes
-$39 total
+$20 in cards
+$11.16 in boxes
+$31 total
 
 
 
@@ -174,7 +174,7 @@ Bard:
     X Trick Up Your Sleave: utility
       X Conceal Weapon: utility
     X Imitate: utility
-    X  Ambiance: utility
+    X Ambiance: utility
     X Throw Voice: utility
       X Carry on the Wind: utility
     X Conjure Illusion: utility
@@ -240,11 +240,12 @@ Bard:
     X winged magic steed: utility
     X edmire's grand manor: utility
     X Irresistible Charm: utility
-    Nothing but Unicorns: utility
 
     X greater song of mass healing: healing
 
     X strike dumb: debuff
+
+    X Nothing but Unicorns: damage
   Tier_5: # 4/4
     X guards: summon
 
@@ -256,112 +257,105 @@ Bard:
 Druid:
 
   Tier_0: 14/14
-    Constricting Vine: damage
-    Hurl Stone: damage
-    Poison Jet: damage
-    Spiders: damage
+    X Constricting Vine: damage
+    X Hurl Stone: damage
+    X Poison Jet: damage
+    #Spiders: damage
+    X Control the elements
 
-    Absorb Elements:
-      Cold Resistance: buff
-      Fire Resistance: buff
-      Lightning Resistance: buff
-    Grant Animal Aspect: buff # Gills, Catseye/claws, Quills
+    X Resist Elements:
 
-    Natural Remedy: healing, upcast
+    X Grant Animal Aspect: buff # Gills, Catseye/claws, Quills
 
-    Druidcraft equivalent:
+    X Natural Remedy: healing, upcast
 
-    Control Plant Growth: utility
-    Crown of Fireflies: utility
-    Echolocate: utility
-    Mend: utility
-    Animal Aptitude: utility
+    X Nature's Wonders: utility
+    X Animal Aptitude: utility
+    X Control Plant Growth: utility
+    X Crown of Fireflies: utility
+    X Echolocate: utility
+    X Mend: utility
     # Walk on Water: utility
 
-    Spider Web: debuff
-
+    X Spider Web: debuff
   Tier_1: 13/13
-    Whirlwind: damage
-    Bolt of Frost: damage
-    Explosive Acorns: damage
+    X Bolt of Frost: damage
+    X Explosive Acorns: damage
+    X Igna Bokak: Damage
 
-    Carapace of Vines: buff (enemy disadvantage on attacks or bonus hp)
-    Protection: buff (advantage on saves)
+    X Carapace of Bark: buff (enemy disadvantage on attacks or bonus hp)
+    X Spellguard: buff (advantage on saves)
 
-    Tremors: debuff
+    X Tremors: debuff
 
     #Faithful hound: utility
-    Warg: utility
-    Speak with Animals: utility
+    X Warg: utility
+    X Speak with Nature: utility
     #Become Flame: utility
-    Speak with Nature: utility
-    Moonlight: utility
-    Cure: utility
-      Remove Poison: utility
-    Tailwind: utility
-    Thorned Caltrops: utility
+    X Moonlight: utility
+    X Minor Restore: utility
+    X Tailwind: utility
+    X Thorned Caltrops: utility
+    X Leave No Trace: utility
 
     #Summon Eagle: damage
-  Tier_2: # 9/9
-    Geyser: damage
-    Aura of Spores: damage
+  Tier_2: 9/9
+    X Geyser: damage
+    X Aura of Spores: damage
+    X Incinerate: damage
 
-    Charm Animal: utility
-    Geyser: utility
-    Columns of Ice: utility
-    Wall of Brambles: utility
+    X Greater Grant Animal Aspect: buff
 
-    Freezing Rain: debuff
-    Cloud of Fog: debuff
-    Tornado: debuff
-  Tier_3: # 8/8
-    Nature's Fury: damage
-    Tanglethorn Vine: damage
+    X Charm Animal: utility
+    X Columns of Ice: utility
+    X Wall of Brambles: utility
 
-    Snowblind: debuff
-    Prison of Ice: debuff
+    # Freezing Rain: debuff
+    #X Cloud of Fog: debuff
+    X Snowblind: debuff
+    X Tornado: debuff
+  Tier_3: # 7/8
+    X Nature's Fury: damage
+    X Wildfire: damage
 
-    Animal Form: buff
+    X Prison of Ice: debuff
+
+    Greater Natural Remedy: healing
+
+    X Animal Form: buff
     #Wings: buff
-    Grant Elemental Resistance: buff
+    X Grant Elemental Resistance: buff
 
-    Forest Guardians: Summon
+    X Forest Guardians: Summon
+    X Tanglethorn Vine: summon
 
-    Hurricane Force Winds: debuff
-  Tier_4: 6/6
-    Thunder Cloud: damage
-    #Wildfire: damage
+    #Hurricane Force Winds: debuff
+  Tier_4: #6/6
+    X Thunder Cloud: damage
 
-    Bountiful Harvest: buff
+    X Bountiful Harvest: buff
 
-    Plane Step: utility
-    Control Weather: utility
-    Awaken Animal: utility
+    X Plane Step: utility
+    X Control Weather: utility
+    X Awaken Animal: utility
 
-    Plant Golem: summon
+    X Plant Golem: summon
   Tier_5: # 4/4
     Starfall: damage
     #Tsunami: damage
     #Volcano: damage
-    shapeshift: buff
+    Shapeshift: buff
     Winter's Fury: damage
     Fix Season: utility
 
 Cleric:
-  0: N/14
-  1: N/13
-  2: N/9
-  3: N/8
-  4: N/6
-  5: N/4
 
   Tier_0: #14/14
     X Beam of Light # Damage. Upcast to fire more.
-    X Sacred Flame # Damage anyone nearby.
+    X Purifying Flame # Damage anyone nearby.
 
     X Holy Shield # Buff
     X Ward # Buff
-    Sanctum # Buff - hide from damage
 
     X Beguile # debuff
     X Alter Emotions
@@ -378,28 +372,29 @@ Cleric:
     X Minor Heal # Healing
     #X Spare # Healing
   Tier_1: #12/13
-    X Spiritual Weapon # RENAME Damage
+    X Guardian Blade # RENAME Damage
     X Sap Life # Damage
 
     #Slow Heal # Healing
     X Delayed Heal # Healing
+    X Minor Restore
 
-    X Truth # Utility
+    X Compelled Truth # Utility
     X Share Sense
 
     X Enlarge # Buff
     X Haste # Buff
     X Guidance # Buff
     X Strong Lungs # Buff
+    X Sanctum # Buff
 
-    X Forget Ability # Debuff
     X Hold Weapon #Debuff
     X Slow # Debuff
   Tier_2: #8/9
     X Greater Heal # Healing
 
-    X Excoriate # Damage (line)
     X Spirit Bomb # Damage (fireball)
+    X Excoriate # Damage (line)
 
     X Blind # Debuff
     X Chains of Light #Debuff
@@ -407,36 +402,38 @@ Cleric:
     X Dispell Magic #Utility
     X Speak Tongues # Utility
     X Ward of Light # Utility
-  Tier_3: #7/8
-    Mass Heal #Healing
+    X Forget Ability # Debuff
+  Tier_3: #8/8
+    X Mass Heal #Healing
 
-    Sealed Promise #Utility
+    X Sealed Promise #Utility
 
-    Change of Heart # Debuff
+    X Change of Heart # Debuff
 
-    Holy Guardian # Summon
+    X Holy Guardian # Summon
 
-    Death Ward # Buff
-    Elemental Ward # Buff
-    Invigorate # Buff Grant all allies bonus health takes time.
+    X Greater Protection #Buff
+    X Death Ward # Buff
+    X Invigorate # Buff Grant all allies bonus health takes time.
+    X Greater Restore
   Tier_4: #6/6
-    Major Heal # Healing
-    Resurrection # Healing
+    X Major Heal # Healing
+    X Resurrection # Healing
 
-    Mass Stun # Debuff
+    X Mass Stun # Debuff
 
-    Holy Avatar # Utility
-    Divine Intervention # Utility
+    X Holy Avatar # Utility
+    X Divine Intervention # Utility
 
-    Holy Weapon # Buff
+    X Holy Weapon # Buff
   Tier_5: # 4/4
-    Cleansing Flame # Damage
+    X Cleansing Flame # Damage
 
-    Saving Grace # Healing (everyone)
+    X Saving Grace # Healing (everyone)
 
-    Mass Ward # Buff
+    X Mass Sanctum # Buff
 
-    Lay Bare # Debuff (guaranteed hits)
+    X Lay Bare # Debuff (guaranteed hits)
 
 Wizard:
 
@@ -450,7 +447,7 @@ Wizard:
     Firecrackers: utility
     Summoning Spell: utility
     Candlelight: utility
-    Thaumaturgy_EQUIVALENT: utility
+    Wonderworks: utility
     Unseen hand: utility
     Conjure Illusion: utility
     Detect Magic: utility
@@ -513,16 +510,16 @@ Wizard:
     Invulnerability: buff
 
     Banish: debuff
+    Stop-Time: debuff
 
     Tri-beam: damage
-    Stop-Time: debuff
   Tier_5:
     Summon Bleck: utility
 
     Anti-magic ring: debuff
     Black Hole: debuff
 
-    Pillar Arcanum: damage
+    Pillar Arcane: damage
 
 
 For publication:
@@ -549,8 +546,8 @@ For publication:
       Kragraven
       Hissling
       Goblin
-      Minotaur - Oxoloff
     NEW:
+      Minotaur - Oxoloff
       Jotun
 
 
@@ -582,7 +579,7 @@ For publication:
       Healer
     Druid:
       Elementalist
-      Beastmaster
+      Animist --  get's permanent animal aspects
       Naturalist
     Wizard:
       Sorcerer

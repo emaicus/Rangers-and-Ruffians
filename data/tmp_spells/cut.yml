@@ -593,10 +593,6 @@ Wizard:
             cost: 1
             description: Instantly paint up to a 100x100 area any way you desire. Roll a
               dexterity check to determine the quality of the painting.
-        Remove Footprints:
-              cost: 1
-              description: Remove all footprints you and those with you have made over the
-                past 6 hours.
         Unburnt:
               action_type: Reaction Candidate
               cost: 1

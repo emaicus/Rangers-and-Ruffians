@@ -234,7 +234,7 @@ def get_balance_value(tier_name, spell_info):
 
 
 
-def get_expected_value(dice_str, num_targets, duration, cost):
+def get_expected_value(dice_str, num_targets, duration):
     avg_roll = _get_avg_roll_from_dice_string(dice_str)
     # Now compenstated for in balance value
     num_targets = 1 #2 if num_targets == 'many' else 1
@@ -276,28 +276,32 @@ def spell_type_analysis(spellbook_name, spell_tiers):
 
     for tier_name, tier_spells in spell_tiers.items():
         for spell_name, spell_info in tier_spells.items():
-            spell_counts[tier_name] += 1
-            purpose = spell_info['purpose']
-            if not purpose in spells_by_type[tier_name]:
-                spells_by_type[tier_name][purpose] = 0
-            spells_by_type[tier_name][purpose] += 1
+            try:
+                spell_counts[tier_name] += 1
+                purpose = spell_info['purpose']
+                if not purpose in spells_by_type[tier_name]:
+                    spells_by_type[tier_name][purpose] = 0
+                spells_by_type[tier_name][purpose] += 1
 
-            if purpose == 'damage':
-                spell_damage[tier_name].append(
-                    (
-                        spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost']),
-                        get_balance_value(tier_name, spell_info)
+                if purpose == 'damage':
+                    spell_damage[tier_name].append(
+                        (
+                            spell_name,
+                            get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration']),
+                            get_balance_value(tier_name, spell_info)
+                        )
                     )
-                )
-            elif purpose == 'healing':
-                spell_healing[tier_name].append(
-                    (
-                        spell_name,
-                        get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration'], spell_info['cost']),
-                        get_balance_value(tier_name, spell_info)
+                elif purpose == 'healing':
+                    spell_healing[tier_name].append(
+                        (
+                            spell_name,
+                            get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration']),
+                            get_balance_value(tier_name, spell_info)
+                        )
                     )
-                )
+            except Exception:
+                print(f'failed processing {spellbook_name} {tier_name} {spell_name}')
+                raise
 
     # Get the averages
     avg_damage_per_tier = get_tier_dict(0)
@@ -323,15 +327,104 @@ def spell_type_analysis(spellbook_name, spell_tiers):
     for tier_name in spells_by_type.keys():
         log(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} (expect single {expected_damage['single'][tier_name]}, multi {expected_damage['multi'][tier_name]})")
         for spell, avg_damage, balance_damage in spell_damage[tier_name]:
-            log_level = 'INFO' 
-            if avg_damage < balance_damage - 2.5 or avg_damage > balance_damage + 2.5:
+            log_level = 'INFO'
+            warn = '' 
+            if avg_damage < balance_damage - (balance_damage * .1) or avg_damage > balance_damage + (balance_damage * .1):
+                warn = '(WARNING)'
                 log_level = 'WARN'
-            log(f'        {spell}: {avg_damage} / {balance_damage}', log_level)
+            log(f'{warn}        {spell}: {avg_damage} / {balance_damage}', log_level)
     log(f'    Healing Spell Breakdown:')
     for tier_name in spells_by_type.keys():
         log(f'      {tier_name}, average healing {avg_healing_per_tier[tier_name]}')
         for spell, avg_healing, _ in spell_healing[tier_name]:
             log(f'        {spell}: {avg_healing}')
+
+
+def yield_all_damage_spells(spellbooks):
+    ret = get_tier_dict('dictionary')
+    num = 0
+
+    for spellbook, tiers in spellbooks.items():
+        print(spellbook)
+        for tier, spells in tiers.items():
+            if 'aoe' not in ret[tier]:
+                ret[tier]['aoe'] = dict()
+            if 'single' not in ret[tier]:
+                ret[tier]['single'] = dict()
+            for spell, spell_info in spells.items():
+                if spell_info['purpose'] != 'damage':
+                    continue
+                num += 1
+                if spell_info['num_targets'] != 1:
+                    ret[tier]['aoe'][spell] = spell_info
+                else:
+                    ret[tier]['single'][spell] = spell_info
+    return ret, num
+
+def analyze_global_damage(spellbooks):
+    tiers, num = yield_all_damage_spells(spellbooks)
+    print(f'There are {num} damage spells')
+    aoe_values = get_tier_dict('list')
+    single_values = get_tier_dict('list')
+    aoe_stats = get_tier_dict('dictionary')
+    single_stats = get_tier_dict('dictionary')
+
+    for damage_type, stat_list in [('aoe', aoe_values), ('single', single_values)]:
+        for tier, tier_breakdown in tiers.items():
+            for spell, spell_info in tier_breakdown[damage_type].items():
+                stat_list[tier].append(
+                    (
+                        spell, 
+                        get_expected_value(
+                            spell_info['dice'],
+                            spell_info['num_targets'],
+                            spell_info['duration']
+                        )
+                    )
+                )
+        
+
+    for damage_values, stat_dict in [(aoe_values, aoe_stats), (single_values, single_stats)]:
+        for tier, damage_list in damage_values.items():
+            if len(damage_list) == 0:
+                stat_dict[tier]['avg'] = stat_dict[tier]['stdev'] = 0
+            else:
+                stat_dict[tier]['avg'] = sum(n for _, n in damage_list) / len(damage_list)
+                stat_dict[tier]['stdev'] = statistics.stdev(n for _, n in damage_list)
+
+    for damage_type, stats, values in [('aoe', aoe_stats, aoe_values), ('single', single_stats, single_values)]:
+        print(f'{damage_type.upper()}:')
+        for tier in stats.keys():
+            print(f'  {tier} avg: {stats[tier]["avg"]} stdev {stats[tier]["stdev"]}')
+        print()
+        for tier, tier_breakdown in tiers.items():
+            for spell, spell_info in tier_breakdown[damage_type].items():
+                stdev = stats[tier]['stdev']
+                avg = stats[tier]['avg']
+                expected_damage = get_expected_value(
+                        spell_info['dice'],
+                        spell_info['num_targets'],
+                        spell_info['duration']
+                    )
+                if expected_damage > avg + stdev:
+                    print(f'  WARNING!  {spell} is powerful! actual: {expected_damage} vs {avg}-{avg+stdev}')
+                elif expected_damage < avg - stdev:
+                    print(f'  WARNING!  {spell} is weak! actual: {expected_damage} vs {avg-stdev}-{avg}')
+        print()
+
+
+        for tier, damage_list in values.items():
+            print(f'  Tier {tier}')
+            damage_list.sort(key=lambda x:x[1])
+            for spell, damage in damage_list:
+                print(f'    {spell} ({damage})')
+        print()
+
+
+
+
+
+
 
 
 def main():
@@ -370,6 +463,8 @@ def main():
         sys.exit(1)
     for spellbook, spell_tiers in rnr_spell_data.items():
         spell_type_analysis(spellbook, spell_tiers)
+
+    analyze_global_damage(rnr_spell_data)
 
 
 if __name__ == '__main__':
