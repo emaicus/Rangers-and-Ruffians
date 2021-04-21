@@ -539,7 +539,7 @@ the_bard's_songbook:
             purpose: healing
             school: arcane-somatic
         Power Shriek:
-            cost: 3
+            cost: 2
             target: enemy
             num_targets: many
             duration: 0
@@ -693,7 +693,7 @@ the_bard's_songbook:
             purpose: summon
             school: arcane-conjuring
         Death Note:
-            cost: 4
+            cost: 3
             target: enemy
             num_targets: 1
             duration: 0
@@ -723,7 +723,7 @@ the_bard's_songbook:
                   repeat:
                     - once per week
         Torugar, the Many Tongued Demon:
-            cost: 4
+            cost: 3
             target: entity
             num_targets: many
             duration: 5
@@ -1508,7 +1508,7 @@ the_druid's_guidebook:
     Tier_5: # 4/4
         Starfall:
             purpose: damage
-            cost: 4
+            cost: 3
             dice: 10d10
             hit: roll
             effect_type: elemental
@@ -1576,7 +1576,7 @@ the_druid's_guidebook:
         #           description: take damage
         #     school: "natural-elemental-fire"
         Winter's Fury:
-            cost: 4
+            cost: 3
             range: 1 mile
             target: enemy
             num_targets: many
@@ -3041,7 +3041,7 @@ the_wizard's_addendum:
               million bleck is enough to kill a bleck. Bleck that are killed remain for 1 minute
               before dissolving into nothingness. After the spell's duration, all bleck are destroyed."
         Black Hole:
-          cost: 4
+          cost: 3
           target: space
           num_targets: 1
           duration: 3
@@ -3063,7 +3063,7 @@ the_wizard's_addendum:
           effect_type: blunt
           dice: 10d10
         Pillar Arcane:
-            cost: 4
+            cost: 3
             target: enemy
             num_targets: many
             duration: concentration
@@ -3082,308 +3082,308 @@ the_wizard's_addendum:
                 - condition: Entities that fall within the spell's radius must make a
                   save: dexterity save versus your spell power
                   description: or take full damage. On a success, they take half.
-the_macabre_manual:
-        Tier_0:
-            Detect Death:
-                cost: 0
-                target: self
-                num_targets: 1
-                duration: 10
-                description: Make a perception check to detect nearby corpses. You may continue to make such checks for the spell's duration.
-                range: self
-                purpose: utility
-                school: arcane-somatic
-                effect_radius: 60
-            Drain Spirit:
-                cost: 0
-                target: enemy
-                num_targets: 1
-                duration: 1 hour
-                range: near
-                school: arcane-enchantment-mind
-                purpose: debuff
-                hit: roll
-                description: Steal 1 point of an enemies inner fire and add it to your own.
-                  If an entity reaches -10 inner fire, it instantly dies.
-            Ghastly Visage:
-                cost: 0
-                target: self
-                num_targets: 1
-                duration: concentration
-                description: Make yourself look like a horrible monster. Gain advantage on intimidation
-                    checks.
-                range: self
-                purpose: utility
-                school: arcane-illusion
-            Death Coil:
-                cost: 0
-                target: enemy
-                num_targets: 1
-                duration: 0
-                description: Winds howl and necrotic energy crackles as you fire a ball of pure death from your hand.
-                range: archer
-                purpose: damage
-                hit: roll
-                dice: 2d6
-                effect_type: necrotic
-                upcast:
-                    cost: 1
-                    effect: add an additional 1d6 damage
-                school: necromantic-necrotic
-            Night Terror:
-                cost: 0
-                target: enemy
-                num_targets: 1
-                duration: concentration
-                description: Attempt to force your way into a sleeping entities dreams.
-                range: near
-                purpose: debuff
-                hit: always
-                effects:
-                    - save: spell power save
-                      description: you enter their dreams, and may shape them as you wish.
-                school: arcane-enchantment-mind
-            Rot:
-                cost: 0
-                target: enemy
-                num_targets: 1
-                duration: 0
-                description: Cause an item to rot in your hands.
-                range: hand
-                dice: 3d4
-                hit: roll
-                effect_type: necrotic
-                purpose: damage
-                school: necromantic-necrotic
-            Shadow-step:
-                cost: 1
-                target: self
-                num_targets: 1
-                duration: 0
-                description: Step from one shadow to another within range.
-                range: near
-                purpose: utility
-                school: arcane-transportation
-                upcast:
-                    cost: 1
-                    effect: increase the distance that you may step to 100 feet.
-            Vivify:
-                cost: 0
-                target: other
-                num_targets: 1
-                duration: concentration
-                range: near
-                purpose: utility
-                school: arcane-illusion
-                description: Make something rotten or dead appear living.
-                upcast:
-                    cost: 1
-                    effect: make everything dead within 100 feet appear living
-        Tier_1:
-            Sentient Shadow:
-                cost: 1
-                target: other
-                num_targets: 1
-                duration: concentration
-                range: close
-                purpose: utility
-                school: arcane-conjuring
-                description: Bring to life a sentient shadow. Use your concentration to
-                    see using it's eyes, and your will to command its movements. It's
-                    range is limited to within 1000 feet of you, and it is instantly
-                    destroyed by bright light.
-            Bloodlust:
-                cost: 1
-                target: friendly
-                num_targets: 1
-                duration: 3
-                description: Veins run black on an ally as a dark blood fury
-                    flows through them. They are granted an additional attack action
-                    and 15 feet of movement on their turn. After the spell ends, they
-                    must make a D15 spell power save, or be stunned and miss their turn.
-                range: near
-                purpose: buff
-                school: arcane-somatic
-            Cripple:
-                cost: 1
-                target: enemy
-                num_targets: 1
-                duration: save
-                description: An enemies joints pop and snap as your spell
-                    attempts to take hold.
-                range: archer
-                purpose: debuff
-                hit: always
-                school: necromantic-necrotic
-                effects:
-                    - save: spell power save
-                      description: "be crippled. Crippled entities have their speed reduced
-                        by half, and must make all actions at disadvantage"
-                      repeat:
-                        - each turn
-            Ectoplasmic Discharge:
-                cost: 1
-                target: enemy
-                num_targets: many
-                duration: 0
-                range: close
-                purpose: damage
-                hit: roll
-                effect_type: necrotic
-                dice: 3d6
-                description: A torrent of screaming ghosts flies from your
-                  hand, damaging all enemies in a cone in front of you
-                school: necromantic-necrotic
-            Death Bolt:
-                cost: 2
-                target: enemy
-                num_targets: 1
-                duration: 0
-                description: Necrotic energy screams forth, green and crackling
-                   as it rushes to smite an enemy.
-                range: archer
-                purpose: damage
-                dice: 4d6
-                hit: roll
-                effect_type: necrotic
-                school: necromantic-necrotic
-            Darkness:
-                cost: 1
-                target: self
-                num_targets: 1
-                duration: 1 hour
-                range: self
-                purpose: utility
-                effect_radius: 30
-                description: Clouds of inky darkness billow from you, filling a radius
-                    and leaving everyone within in pitch blackness. You may dispel the darkness
-                    as an offhand action.
-                upcast:
-                    cost: 1
-                    effect: increase the spell's radius to 100 feet.
-                school: arcane-conjuring
-            Sentry Skull:
-                cost: 1
-                target: other
-                num_targets: 1
-                duration: 1 day
-                description: Take the skull of a fallen entity and infuse it with the power
-                    of a soul to link yourself to it. For the spell's duration, you may
-                     see through the eyes of the skull.
-                range: hand
-                purpose: utility
-                school: arcane-enchantment-matter
-                upcast:
-                    cost: 2
-                    effect: cause the spell to last for 1 week.
-            Siphon:
-                cost: 0
-                hit: roll
-                target: enemy
-                num_targets: 1
-                duration: 0
-                description: Eat the life-force of a wounded enemy, dealing damage and
-                    healing yourself for that amount. An enemy may only be siphoned once, and
-                    You cannot harvest a soul from an entity that you have siphoned.
-                purpose: damage
-                dice: 2d4
-                effect_type: necrotic
-                range: near
-                school: necromantic-necrotic
-            Surrogate:
-                action_type: Reaction
-                cost: 1
-                target: enemy
-                num_targets: 1
-                duration: 0
-                description: As an attack comes towards you, link your life-force
-                    to that of an enemy within range.
-                range: near
-                purpose: debuff
-                hit: always
-                effects:
-                    - save: spell power save
-                      description: be forced to take the damage in your place. On success, they take half damage.
-                school: arcane-enchantment-mind
-            Through the Eyes of the Little Ones:
-                cost: 1
-                target: other
-                num_targets: 1
-                duration: 1 hour
-                range: near
-                purpose: utility
-                school: arcane-enchantment-mind
-                description: Take control of a nearby small animal such as a rat or crow. You
-                  lose control after 1 hour or after the animal moves 1 mile away. For the duration,
-                  your consciousness can inhabit the creature's.
-        Tier_2:
-            Constricting Shadow:
-                cost: 2
-                target: enemy
-                num_targets: 1
-                duration: save
-                range: mid
-                purpose: damage
-                hit: always
-                dice: 4d10
-                effect_type: blunt
-                effect_radius: 15
-                description: A hundred shadowy hands spring forth within from the ground
-                    clawing at anyone nearby.
-                effects:
-                    - save: dexterity save versus your spell power
-                      description: be grappled and take damage
-                      repeat:
-                        - at the start of each turn
-                school: necromantic-summoning
-            Murder of Crows:
-                cost: 2
-                target: enemy
-                num_targets: 1
-                duration: 3
-                description: Feathers fly as a murder of red-eyed crows
-                  decend upon an enemy of your choosing. The crows circle
-                  back and make an attack against its target once per turn for the duration
-                  of this spell.
-                range: mid
-                purpose: damage
-                school: necromantic-summoning
-                hit: roll
-                effect_type: slashing
-                dice: 4d8
-                school: necromantic-summoning
-            Spikes of Blood:
-                cost: 2
-                target: enemy
-                num_targets: many
-                duration: 0
-                description: Crimson gore flies forth, hardening into brick red blades ast
-                    it shreds through a cone of your enemies.
-                range: near
-                hit: roll
-                dice: 6d6
-                effect_type: slashing
-                purpose: damage
-                school: necromantic-necrotic
-            Steal Senses:
-                cost: 2
-                target: enemy
-                num_targets: 1
-                duration: infinite
-                description: Your hand stretches towards an enemy as you attempt to steal their senses.
-                range: hand
-                purpose: debuff
-                hit: roll
-                effects:
-                    - save: spell power save
-                      description: have have their eyes, ears, or mouth removed and replaced by smooth skin.
-                school: arcane-somatic
-            Wall of Bone:
-                cost: 2
-                purpose: utility
-                target: space
-                num_targets: many
-                range: archer
-                duration: 1 week
-                description: Create a wall up to 40 feet high and 100 feet long of solid bone.
-                school: arcane-summoning
+# the_macabre_manual:
+#         Tier_0:
+#             Detect Death:
+#                 cost: 0
+#                 target: self
+#                 num_targets: 1
+#                 duration: 10
+#                 description: Make a perception check to detect nearby corpses. You may continue to make such checks for the spell's duration.
+#                 range: self
+#                 purpose: utility
+#                 school: arcane-somatic
+#                 effect_radius: 60
+#             Drain Spirit:
+#                 cost: 0
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 1 hour
+#                 range: near
+#                 school: arcane-enchantment-mind
+#                 purpose: debuff
+#                 hit: roll
+#                 description: Steal 1 point of an enemies inner fire and add it to your own.
+#                   If an entity reaches -10 inner fire, it instantly dies.
+#             Ghastly Visage:
+#                 cost: 0
+#                 target: self
+#                 num_targets: 1
+#                 duration: concentration
+#                 description: Make yourself look like a horrible monster. Gain advantage on intimidation
+#                     checks.
+#                 range: self
+#                 purpose: utility
+#                 school: arcane-illusion
+#             Death Coil:
+#                 cost: 0
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 0
+#                 description: Winds howl and necrotic energy crackles as you fire a ball of pure death from your hand.
+#                 range: archer
+#                 purpose: damage
+#                 hit: roll
+#                 dice: 2d6
+#                 effect_type: necrotic
+#                 upcast:
+#                     cost: 1
+#                     effect: add an additional 1d6 damage
+#                 school: necromantic-necrotic
+#             Night Terror:
+#                 cost: 0
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: concentration
+#                 description: Attempt to force your way into a sleeping entities dreams.
+#                 range: near
+#                 purpose: debuff
+#                 hit: always
+#                 effects:
+#                     - save: spell power save
+#                       description: you enter their dreams, and may shape them as you wish.
+#                 school: arcane-enchantment-mind
+#             Rot:
+#                 cost: 0
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 0
+#                 description: Cause an item to rot in your hands.
+#                 range: hand
+#                 dice: 3d4
+#                 hit: roll
+#                 effect_type: necrotic
+#                 purpose: damage
+#                 school: necromantic-necrotic
+#             Shadow-step:
+#                 cost: 1
+#                 target: self
+#                 num_targets: 1
+#                 duration: 0
+#                 description: Step from one shadow to another within range.
+#                 range: near
+#                 purpose: utility
+#                 school: arcane-transportation
+#                 upcast:
+#                     cost: 1
+#                     effect: increase the distance that you may step to 100 feet.
+#             Vivify:
+#                 cost: 0
+#                 target: other
+#                 num_targets: 1
+#                 duration: concentration
+#                 range: near
+#                 purpose: utility
+#                 school: arcane-illusion
+#                 description: Make something rotten or dead appear living.
+#                 upcast:
+#                     cost: 1
+#                     effect: make everything dead within 100 feet appear living
+#         Tier_1:
+#             Sentient Shadow:
+#                 cost: 1
+#                 target: other
+#                 num_targets: 1
+#                 duration: concentration
+#                 range: close
+#                 purpose: utility
+#                 school: arcane-conjuring
+#                 description: Bring to life a sentient shadow. Use your concentration to
+#                     see using it's eyes, and your will to command its movements. It's
+#                     range is limited to within 1000 feet of you, and it is instantly
+#                     destroyed by bright light.
+#             Bloodlust:
+#                 cost: 1
+#                 target: friendly
+#                 num_targets: 1
+#                 duration: 3
+#                 description: Veins run black on an ally as a dark blood fury
+#                     flows through them. They are granted an additional attack action
+#                     and 15 feet of movement on their turn. After the spell ends, they
+#                     must make a D15 spell power save, or be stunned and miss their turn.
+#                 range: near
+#                 purpose: buff
+#                 school: arcane-somatic
+#             Cripple:
+#                 cost: 1
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: save
+#                 description: An enemies joints pop and snap as your spell
+#                     attempts to take hold.
+#                 range: archer
+#                 purpose: debuff
+#                 hit: always
+#                 school: necromantic-necrotic
+#                 effects:
+#                     - save: spell power save
+#                       description: "be crippled. Crippled entities have their speed reduced
+#                         by half, and must make all actions at disadvantage"
+#                       repeat:
+#                         - each turn
+#             Ectoplasmic Discharge:
+#                 cost: 1
+#                 target: enemy
+#                 num_targets: many
+#                 duration: 0
+#                 range: close
+#                 purpose: damage
+#                 hit: roll
+#                 effect_type: necrotic
+#                 dice: 3d6
+#                 description: A torrent of screaming ghosts flies from your
+#                   hand, damaging all enemies in a cone in front of you
+#                 school: necromantic-necrotic
+#             Death Bolt:
+#                 cost: 2
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 0
+#                 description: Necrotic energy screams forth, green and crackling
+#                    as it rushes to smite an enemy.
+#                 range: archer
+#                 purpose: damage
+#                 dice: 4d6
+#                 hit: roll
+#                 effect_type: necrotic
+#                 school: necromantic-necrotic
+#             Darkness:
+#                 cost: 1
+#                 target: self
+#                 num_targets: 1
+#                 duration: 1 hour
+#                 range: self
+#                 purpose: utility
+#                 effect_radius: 30
+#                 description: Clouds of inky darkness billow from you, filling a radius
+#                     and leaving everyone within in pitch blackness. You may dispel the darkness
+#                     as an offhand action.
+#                 upcast:
+#                     cost: 1
+#                     effect: increase the spell's radius to 100 feet.
+#                 school: arcane-conjuring
+#             Sentry Skull:
+#                 cost: 1
+#                 target: other
+#                 num_targets: 1
+#                 duration: 1 day
+#                 description: Take the skull of a fallen entity and infuse it with the power
+#                     of a soul to link yourself to it. For the spell's duration, you may
+#                      see through the eyes of the skull.
+#                 range: hand
+#                 purpose: utility
+#                 school: arcane-enchantment-matter
+#                 upcast:
+#                     cost: 2
+#                     effect: cause the spell to last for 1 week.
+#             Siphon:
+#                 cost: 0
+#                 hit: roll
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 0
+#                 description: Eat the life-force of a wounded enemy, dealing damage and
+#                     healing yourself for that amount. An enemy may only be siphoned once, and
+#                     You cannot harvest a soul from an entity that you have siphoned.
+#                 purpose: damage
+#                 dice: 2d4
+#                 effect_type: necrotic
+#                 range: near
+#                 school: necromantic-necrotic
+#             Surrogate:
+#                 action_type: Reaction
+#                 cost: 1
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 0
+#                 description: As an attack comes towards you, link your life-force
+#                     to that of an enemy within range.
+#                 range: near
+#                 purpose: debuff
+#                 hit: always
+#                 effects:
+#                     - save: spell power save
+#                       description: be forced to take the damage in your place. On success, they take half damage.
+#                 school: arcane-enchantment-mind
+#             Through the Eyes of the Little Ones:
+#                 cost: 1
+#                 target: other
+#                 num_targets: 1
+#                 duration: 1 hour
+#                 range: near
+#                 purpose: utility
+#                 school: arcane-enchantment-mind
+#                 description: Take control of a nearby small animal such as a rat or crow. You
+#                   lose control after 1 hour or after the animal moves 1 mile away. For the duration,
+#                   your consciousness can inhabit the creature's.
+#         Tier_2:
+#             Constricting Shadow:
+#                 cost: 2
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: save
+#                 range: mid
+#                 purpose: damage
+#                 hit: always
+#                 dice: 4d10
+#                 effect_type: blunt
+#                 effect_radius: 15
+#                 description: A hundred shadowy hands spring forth within from the ground
+#                     clawing at anyone nearby.
+#                 effects:
+#                     - save: dexterity save versus your spell power
+#                       description: be grappled and take damage
+#                       repeat:
+#                         - at the start of each turn
+#                 school: necromantic-summoning
+#             Murder of Crows:
+#                 cost: 2
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: 3
+#                 description: Feathers fly as a murder of red-eyed crows
+#                   decend upon an enemy of your choosing. The crows circle
+#                   back and make an attack against its target once per turn for the duration
+#                   of this spell.
+#                 range: mid
+#                 purpose: damage
+#                 school: necromantic-summoning
+#                 hit: roll
+#                 effect_type: slashing
+#                 dice: 4d8
+#                 school: necromantic-summoning
+#             Spikes of Blood:
+#                 cost: 2
+#                 target: enemy
+#                 num_targets: many
+#                 duration: 0
+#                 description: Crimson gore flies forth, hardening into brick red blades ast
+#                     it shreds through a cone of your enemies.
+#                 range: near
+#                 hit: roll
+#                 dice: 6d6
+#                 effect_type: slashing
+#                 purpose: damage
+#                 school: necromantic-necrotic
+#             Steal Senses:
+#                 cost: 2
+#                 target: enemy
+#                 num_targets: 1
+#                 duration: infinite
+#                 description: Your hand stretches towards an enemy as you attempt to steal their senses.
+#                 range: hand
+#                 purpose: debuff
+#                 hit: roll
+#                 effects:
+#                     - save: spell power save
+#                       description: have have their eyes, ears, or mouth removed and replaced by smooth skin.
+#                 school: arcane-somatic
+#             Wall of Bone:
+#                 cost: 2
+#                 purpose: utility
+#                 target: space
+#                 num_targets: many
+#                 range: archer
+#                 duration: 1 week
+#                 description: Create a wall up to 40 feet high and 100 feet long of solid bone.
+#                 school: arcane-summoning

@@ -13,20 +13,60 @@ conditional_requirements = {
 
 expected_damage = {
     'single' : {
-        'Tier_0' : 7,
-        'Tier_1' : 14,
-        'Tier_2' : 27,
-        'Tier_3' : 36,
-        'Tier_4' : 50,
-        'Tier_5' : 70
+        0 : {
+            "novice_min" : 2.5,
+            "novice_max" : 4.5,
+            "intermediate_min" : 7.5,
+            "intermediate_max" : 9,
+            "master_min" : 12.5,
+            "master_max" : 13.5,
+        },
+        1 : {
+            "novice_min" : 5.5,
+            "novice_max" : 7,
+            "intermediate_min" : 11,
+            "intermediate_max" : 14,
+            "master_min" : 16.5,
+            "master_max" : 21,
+        },
+        2 : {
+            "intermediate_min" : 22.5,
+            "intermediate_max" : 27,
+            "master_min" : 26,
+            "master_max" : 32.5,
+        },
+        3 : {
+            "master_min" : 36,
+            "master_max" : 42,
+        }
     },
     'multi' : {
-        'Tier_0' : 4.5,
-        'Tier_1' : 10,
-        'Tier_2' : 20,
-        'Tier_3' : 30,
-        'Tier_4' : 38,
-        'Tier_5' : 58
+        0 : {
+            "novice_min" : 2.5,
+            "novice_max" : 3.5,
+            "intermediate_min" : 5,
+            "intermediate_max" : 7,
+            "tier_3_min" : 7.5,
+            "tier_3_max" : 10.5,
+        },
+        1 : {
+            "novice_min" : 4.5,
+            "novice_max" : 5,
+            "intermediate_min" : 9,
+            "intermediate_max" : 10,
+            "master_min" : 13.5,
+            "master_max" : 15,
+        },
+        2 : {
+            "intermediate_min" : 16.5,
+            "intermediate_max" : 21,
+            "master_min" : 22,
+            "master_max" : 24.5,
+        },
+        3 : {
+            "master_min" : 27,
+            "master_max" : 35,
+        }
     }
 }
 
@@ -212,14 +252,31 @@ def check_spell_syntax(spell_name, spell_info):
 
     return encountered_errors
 
+def mage_level_mapping(tier_name):
+    if tier_name in ['Tier_0', 'Tier_1']:
+        return 'novice'
+    elif tier_name in ['Tier_2', 'Tier_3']:
+        return 'intermediate'
+    elif tier_name in ['Tier_4', 'Tier_5']:
+        return 'master'
+    else:
+        raise Exception(f"Bad tier {tier_name}")
+
 def get_balance_value(tier_name, spell_info):
+
+    if spell_info['purpose'] == 'healing':
+        return 0
+
     multi = spell_info['num_targets'] == 'many'
+    mage_level = mage_level_mapping(tier_name)
+    cost = spell_info['cost']
 
     # Multi-target spells do 75% single target damage
-    if multi:
-        dmg = expected_damage['multi'][tier_name]
-    else:
-        dmg = expected_damage['single'][tier_name]
+    aoe_str = 'multi' if multi else 'single'
+    print(aoe_str, tier_name, cost, mage_level)
+    lower = expected_damage[aoe_str][cost][f'{mage_level}_min']
+    upper = expected_damage[aoe_str][cost][f'{mage_level}_max']
+    avg = (lower + upper) / 2
 
     # Concentration spells do 85% damage, >1 duration does 75% damage,
     # single turn does 100% duration
@@ -230,7 +287,7 @@ def get_balance_value(tier_name, spell_info):
     else:
         duration_mod = .75
 
-    return dmg * duration_mod
+    return (avg * duration_mod), (lower * duration_mod), (upper * duration_mod)
 
 
 
@@ -296,7 +353,7 @@ def spell_type_analysis(spellbook_name, spell_tiers):
                         (
                             spell_name,
                             get_expected_value(spell_info['dice'], spell_info['num_targets'], spell_info['duration']),
-                            get_balance_value(tier_name, spell_info)
+                            False
                         )
                     )
             except Exception:
@@ -325,14 +382,22 @@ def spell_type_analysis(spellbook_name, spell_tiers):
             log(f'      {val} {purpose} spells')
     log(f'    Damage Spell Breakdown:', 'WARN')
     for tier_name in spells_by_type.keys():
-        log(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} (expect single {expected_damage['single'][tier_name]}, multi {expected_damage['multi'][tier_name]})")
-        for spell, avg_damage, balance_damage in spell_damage[tier_name]:
+        mage_level = mage_level_mapping(tier_name)
+        min_str = f'{mage_level}_min'
+        max_str = f'{mage_level}_max'
+        print(tier_name)
+        log(f"      {tier_name}, average damage {avg_damage_per_tier[tier_name]} "
+            # f"(expect single {expected_damage['single'][min_str]}-{expected_damage['single'][max_str]}, "
+            # f"multi {expected_damage['multi'][min_str]}-{expected_damage['multi'][max_str]})"
+        )
+        for spell, avg_damage, damage_tuple in spell_damage[tier_name]:
+            avg, lower, upper = damage_tuple
             log_level = 'INFO'
             warn = '' 
-            if avg_damage < balance_damage - (balance_damage * .1) or avg_damage > balance_damage + (balance_damage * .1):
+            if avg_damage < lower - (lower * .1) or avg_damage > upper + (upper * .1):
                 warn = '(WARNING)'
                 log_level = 'WARN'
-            log(f'{warn}        {spell}: {avg_damage} / {balance_damage}', log_level)
+            log(f'{warn}        {spell}: {avg_damage} (bounds {lower}-{upper})', log_level)
     log(f'    Healing Spell Breakdown:')
     for tier_name in spells_by_type.keys():
         log(f'      {tier_name}, average healing {avg_healing_per_tier[tier_name]}')
@@ -392,35 +457,52 @@ def analyze_global_damage(spellbooks):
                 stat_dict[tier]['avg'] = sum(n for _, n in damage_list) / len(damage_list)
                 stat_dict[tier]['stdev'] = statistics.stdev(n for _, n in damage_list)
 
-    for damage_type, stats, values in [('aoe', aoe_stats, aoe_values), ('single', single_stats, single_values)]:
-        print(f'{damage_type.upper()}:')
-        for tier in stats.keys():
-            print(f'  {tier} avg: {stats[tier]["avg"]} stdev {stats[tier]["stdev"]}')
-        print()
-        for tier, tier_breakdown in tiers.items():
-            for spell, spell_info in tier_breakdown[damage_type].items():
-                stdev = stats[tier]['stdev']
-                avg = stats[tier]['avg']
-                expected_damage = get_expected_value(
-                        spell_info['dice'],
-                        spell_info['num_targets'],
-                        spell_info['duration']
-                    )
-                if expected_damage > avg + stdev:
-                    print(f'  WARNING!  {spell} is powerful! actual: {expected_damage} vs {avg}-{avg+stdev}')
-                elif expected_damage < avg - stdev:
-                    print(f'  WARNING!  {spell} is weak! actual: {expected_damage} vs {avg-stdev}-{avg}')
-        print()
+    # for damage_type, stats, values in [('aoe', aoe_stats, aoe_values), ('single', single_stats, single_values)]:
+    #     print(f'{damage_type.upper()}:')
+    #     for tier in stats.keys():
+    #         print(f'  {tier} avg: {stats[tier]["avg"]} stdev {stats[tier]["stdev"]}')
+    #     print()
+    #     for tier, tier_breakdown in tiers.items():
+    #         for spell, spell_info in tier_breakdown[damage_type].items():
+    #             stdev = stats[tier]['stdev']
+    #             avg = stats[tier]['avg']
+    #             expected_damage = get_expected_value(
+    #                     spell_info['dice'],
+    #                     spell_info['num_targets'],
+    #                     spell_info['duration']
+    #                 )
+    #             if expected_damage > avg + stdev:
+    #                 print(f'  WARNING!  {spell} is powerful! actual: {expected_damage} vs {avg}-{avg+stdev}')
+    #             elif expected_damage < avg - stdev:
+    #                 print(f'  WARNING!  {spell} is weak! actual: {expected_damage} vs {avg-stdev}-{avg}')
+    #     print()
 
 
-        for tier, damage_list in values.items():
-            print(f'  Tier {tier}')
-            damage_list.sort(key=lambda x:x[1])
-            for spell, damage in damage_list:
-                print(f'    {spell} ({damage})')
-        print()
+    #     for tier, damage_list in values.items():
+    #         print(f'  Tier {tier}')
+    #         damage_list.sort(key=lambda x:x[1])
+    #         for spell, damage in damage_list:
+    #             print(f'    {spell} ({damage})')
+    #     print()
 
+def check_for_value_errors(tier, spell_name, spell_info):
+    if spell_info['purpose'] == 'damage':
+        cost = spell_info['cost']
+        mage_level = mage_level_mapping(tier)
+        found = False
+        for level, max_cost in [('novice', 1), ('intermediate', 2), ('master', 3)]:
+            if mage_level == level:
+                if cost > max_cost:
+                    log(f'ERROR: {spell_name} is a {level} damage spell, but it costs {cost} (max is {max_cost})', log_level='DANGER')
+                    return True
+                else: 
+                    found = True
+                    break
 
+        if found == False:
+            log(f'ERROR: Bad spell tier {mage_level}', log_level='DANGER')
+            return True
+        return False
 
 
 
@@ -461,6 +543,15 @@ def main():
                 log(f'    +{deck_vals[tier]-tier_num} {tier}')
     if encountered_errors:
         sys.exit(1)
+
+    for spellbook, spell_tiers in rnr_spell_data.items():
+        for tier_name, tier_spells in spell_tiers.items():
+            for spell_name, spell_info in tier_spells.items():
+                encountered_errors = check_for_value_errors(tier_name, spell_name, spell_info) or encountered_errors
+
+    if encountered_errors:
+        sys.exit(1)
+
     for spellbook, spell_tiers in rnr_spell_data.items():
         spell_type_analysis(spellbook, spell_tiers)
 

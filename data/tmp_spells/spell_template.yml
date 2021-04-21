@@ -41,12 +41,44 @@ Range Macros:
   archer -> 90ft.
   far -> 300ft.
 
-# Levels 0-1, Tier 0. 7 damage 2d6
-# Levels 2-4, Tier 1, 14 damage 4d6
-# Levels 5-7, Tier 2, 27 damage 6d8
-# Levels 8-9, Tier 3, 36 damage 8d8
-# Levels 10-12, Tier 4, 50 damage 9d10
-# Levels 13-15, Tier 5, 70 damage 20d6
+
+# OLD Levels 0-1, Tier 0. 7 damage 2d6
+# OLD Levels 2-4, Tier 1, 14 damage 4d6
+# OLD Levels 5-7, Tier 2, 27 damage 6d8
+# OLD Levels 8-9, Tier 3, 36 damage 8d8
+# OLD Levels 10-12, Tier 4, 50 damage 9d10
+# OLD Levels 13-15, Tier 5, 70 damage 20d6
+
+Non AOE:
+  AP 0 Progressions:
+    Weak: 1d4, 3d4, 5d4
+    Moderate: 1d8, 2d8, 3d8
+  AP 1 Progressions:
+    Weak: 1d10, 2d10, 3d10
+    Moderate: 2d6, 4d6, 6d6 
+  AP 2 Progressions:
+    Weak: 5d8, 6d8
+    Moderate: 4d12, 5d12
+  AP 3 Progression:
+    Weak: 8d8, 
+    Moderate: 7d12, 12d6 
+AOE:
+  AP 0 Progression:
+    Weak: 1d4, 2d4, 3d4
+    Moderate: 1d6, 2d6, 3d6
+  AP 1 Progression:
+    Weak: 1d8, 2d8, 3d8
+    Moderate: 2d4, 4d4, 6d4
+  AP 2 Progression:
+    Weak: 3d10, 4d10
+    Moderate: 6d6, 7d6
+  AP 3 Progression:
+    Weak: 6d8
+    Moderate: 10d6
+
+
+
+
 
 Healing:
   Cost 1: 2d4  = 05
@@ -530,6 +562,8 @@ For publication:
           High
           Wood
           Deep
+          Fire ------- NEW
+          Sea ------- NEW
       Gnome
       Halfling:
         Fleetfoot
@@ -542,13 +576,15 @@ For publication:
       Daemonspawn
       Sprout
       Automaton
+      Jotun ------- NEW
+      Half-Orc ------- NEW
+      Half-Elf ------- NEW
     Monsterous Races:
       Kragraven
       Hissling
       Goblin
-    NEW:
-      Minotaur - Oxoloff
-      Jotun
+      Minotaur - Oxoloff ------- NEW
+
 
 
   Classes:
@@ -559,20 +595,19 @@ For publication:
       Stalwart Knight
       Paladin
     Ranger:
-      Warden of the Wilds
-      Magic Archer
-      Monster Hunter
+      Warden of the Wilds ------- NEW
+      Magic Archer ------- NEW
+      Monster Hunter ------- NEW
     Fighter:
       Telepath
-      Battlemaster (Archer)
-      Swordsworn
+      Battlemaster (Archer) ------- NEW
+      Swordsworn ------- NEW
     Monk:
-      Elementalist
-      Chi-blocker?
+      Elementalist ------- NEW
+      Chi-blocker? ------- NEW
     Rogue:
       Thief
       Assassin
-      Healing Rogue
     Bard:
     Cleric:
       War Priest
@@ -599,7 +634,7 @@ Not making the cut:
   Tinker:
       Augmentation
       Build an Automaton
-
+  Healing Rogue
 
 
 
