@@ -147,10 +147,15 @@ the_bard's_songbook:
             target: enemy
             num_targets: 1
             duration: 0
-            dice: "2d6"
+            damage: {
+                "novice": "1d8",
+                "intermediate": "2d8",
+                "master": "3d8"
+            }
             effect_type: psychic
             hit: roll
-            description: Tell a cruel rhyme, imbued with magic.
+            description: "Tell a cruel rhyme, imbued with magic and targeted at a single enemy.
+                          The psychological damage from your dreadful diss harms the enemy."
             purpose: damage
             range: archer
             effects:
@@ -162,12 +167,17 @@ the_bard's_songbook:
             target: enemy
             num_targets: many
             duration: 0
-            description: "Create a harsh noise which damages all nearby enemies."
+            description: "Imbue a note with the power to assault the ears of any
+                          enemies within the spell's radius, dealing damage."
             purpose: damage
             range: self
             effect_radius: 30
             school: arcane-acoustic
-            dice: 1d8
+            damage: {
+                "novice": "1d4",
+                "intermediate": "2d4",
+                "master": "3d4" 
+            }
             hit: roll
             effect_type: psychic
             upcast:
@@ -320,10 +330,17 @@ the_bard's_songbook:
             target: enemy
             num_targets: many
             duration: 0
-            description: "Belch a cone of fire."
+            description: "You such in a deep breath, then belch out a crackling
+                         inferno which latches onto any entity in a cone in front
+                         of you that isn't fast enough to dodge out of the way."
             purpose: damage
             range: close
             dice: 4d4
+            damage: {
+                "novice": "2d4",
+                "intermediate": "4d4",
+                "master": "6d4"
+            }
             effect_type: fire
             school: natural-elemental-fire
             hit: roll
@@ -332,15 +349,19 @@ the_bard's_songbook:
                 effect: increases its damage by 2d4
         Inanimate Aid:
             cost: 1
-            description: With a chorus of clangs, every inanimate object within 15 feet of you
-              comes to life to fight for you, throwing themselves at enemies in a radius off your choosing.
+            description: "Dishes, plates, stones, or any other inanimate object nearby
+                          begins to rattle, as they come to life. All at once, every small
+                          inanimate object nearby throws itself at an enemy of your choosing."
             target: enemy
-            num_targets: many
+            num_targets: 1
             duration: 0
             purpose: damage
-            range: mid
-            effect_radius: 15
-            dice: 4d4
+            range: near
+            damage: {
+                "novice": "2d6",
+                "intermediate": "4d6",
+                "master": "6d6"
+            }
             effect_type: blunt
             school: thaumaturgy-transportation
             hit: roll
@@ -435,35 +456,47 @@ the_bard's_songbook:
             range: self
             effect_radius: 30
             school: arcane-somatic
-        Kilgore's Thunderous Shout:
+        Power Shriek:
             cost: 2
             target: enemy
             num_targets: many
             duration: 0
-            description: "Unleash a might shout to subdue your enemies."
+            range: self
+            effect_radius: 50
             purpose: damage
-            range: close
-            school: arcane-acoustic
-            dice: 6d6
             hit: roll
-            effect_type: blunt
+            description: "For a moment, rage fills your heart, and you 
+                         let loose a powerful shriek, the most shameful
+                         for of magic, which targets all enemies in the
+                         spell's radius."
             effects:
-              - save: strength check against your spell power
-                description: the entity is thrown backward 15 feet and take an additional 1d6 of blunt damage
-            upcast:
-                cost: scaling
-                effect: causes enemies to take an 1d6 dice of damage, and are pushed back 15 feet further and take an extra 1d6 blunt damage on a failed save
+                - description: they are rendered deaf, and perform all actions with disadvantage for a turn
+                  save: spell power save
+            school: arcane-acoustic
+            damage: {
+                "intermediate": 3d10,
+                "master": 4d10
+            }
+            effect_type: psychic
         Sonic Dart:
             cost: 2
             target: enemy
             num_targets: 1
             duration: 0
-            description: Fire a blast of pure sound at a target.
+            description: "You purse your lips to whistle, but no sound 
+                         comes forth. Instead, a dart of sonic energy
+                         begins to form before you, spinning and
+                         shimmering as it hangs in the air. All at once,
+                         it shoots forth, faster than an arrow and
+                         aimed at a target of your choice."
             range: archer
             purpose: damage
             hit: roll
             school: arcane-acoustic
-            dice: 6d8
+            damage: {
+                "intermediate": 5d8,
+                "master": 6d8
+            }
             effect_type: psychic
     Tier_3:
         Immovable:
@@ -538,22 +571,29 @@ the_bard's_songbook:
             range: near
             purpose: healing
             school: arcane-somatic
-        Power Shriek:
+        Kilgore's Thunderous Shout:
             cost: 2
             target: enemy
             num_targets: many
             duration: 0
-            range: self
-            effect_radius: 50
+            description: "With unrelenting force, you unleash a shout with
+                          such volume that it damages anyone in
+                          a cone in front of you"
             purpose: damage
-            hit: roll
-            description: Let loose a shriek which damages all enemies in range.
-            effects:
-                - description: they are rendered deaf, and perform all actions with disadvantage for a turn
-                  save: spell power save
+            range: near
             school: arcane-acoustic
-            dice: 6d8
-            effect_type: psychic
+            damage: {
+                "intermediate": 6d6,
+                "master": 7d6
+            }
+            hit: roll
+            effect_type: blunt
+            effects:
+              - save: strength check against your spell power
+                description: the entity is thrown backward 30 feet and take an additional 1d6 of blunt damage
+            upcast:
+                cost: scaling
+                effect: causes enemies to take an 1d6 dice of damage, and are pushed back 15 feet further and take an extra 1d6 blunt damage on a failed save
         Corvo's Contagious Waltz:
             cost: 2
             target: enemy
@@ -600,21 +640,21 @@ the_bard's_songbook:
                 may be taken out. However, items brought in may stay.
             range: far
         # Irresistible Charm:
-        #     cost: 3
-        #     description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
-        #     target: enemy
-        #     num_targets: many
-        #     duration: 5
-        #     range: archer
-        #     hit: always
-        #     effects:
-        #       - save: spell power save
-        #         description: the entity must follow your orders
-        #         repeat:
-        #             - "if they are asked to do anything that causes themselves or those they care about harm"
-        #             - "once per minute, or once per turn in combat"
-        #     purpose: debuff
-        #     school: arcane-enchantment-mind
+            #     cost: 3
+            #     description: Embue your words with powerful magic and make an irresistible suggestion to all who can hear.
+            #     target: enemy
+            #     num_targets: many
+            #     duration: 5
+            #     range: archer
+            #     hit: always
+            #     effects:
+            #       - save: spell power save
+            #         description: the entity must follow your orders
+            #         repeat:
+            #             - "if they are asked to do anything that causes themselves or those they care about harm"
+            #             - "once per minute, or once per turn in combat"
+            #     purpose: debuff
+            #     school: arcane-enchantment-mind
         Greater Song of Mass Healing:
             cost: 3
             target: friendly
@@ -657,21 +697,24 @@ the_bard's_songbook:
             school: arcane-enchantment-matter
         Nothing but Unicorns:
             cost: 3
-            description: Rainbows erupt from your mouth and fingertips, streaming
+            description: "Rainbows erupt from your mouth and fingertips, streaming
               in all directions towards your foes. As they streak forth,
-              the colors tangle and combine into the forms of unicorns!
+              the colors tangle and combine into the forms of unicorns! The 
+              beam is ten feet wide, and can pass through enemies and cover."
             target: enemy
             num_targets: many
             duration: 0
             range: archer
             purpose: damage
             school: arcane-destruction
-            dice: 6d12
+            damage: {
+                "master": 6d8
+            }
             hit: roll
             effect_type: fire
             effects:
                 - condition: Struck enemies must make a
-                  save: spell power
+                  save: spell power save
                   description: "or have their mind addled. The caster of
                     the spell takes the form of a giant, jet black unicorn
                     with blazing red eyes and a bloody horn. The entity becomes
@@ -697,7 +740,9 @@ the_bard's_songbook:
             target: enemy
             num_targets: 1
             duration: 0
-            description: Play a chord of incredible power, with the strength to kill.
+            description: "Play a chord of incredible power, tuned to the frequency
+                          of the magic that resides within a living being. The chord
+                          disrupts that frequency, dealing massive damage."
             range: archer
             purpose: damage
             school: arcane-acoustic
@@ -705,7 +750,7 @@ the_bard's_songbook:
             effects:
                 - description: take full damage. If the save is successful, the enemy takes half damage.
                   save: spell power save
-            dice: 20d6
+            dice: 12d6
             effect_type: psychic
         Dominate:
             cost: 4
@@ -728,21 +773,24 @@ the_bard's_songbook:
             num_targets: many
             duration: 5
             description: Summon a pit, housing an ancient, many tongued demon of the underworld.
-                Every turn, 1d6+2 tongues will writhe forth from the pit, and attempt
-                to grab individuals within 1000 feet. Each turn an enemy is grappled by a tongue,
-                it takes damage. If a tongue takes 50 damage on a single turn, it releases its grapple, and returns to the pit.
+                Every turn, 1d4+1 tongues will writhe forth from the pit, and attempt
+                to grab individuals within 100 feet. Each turn an enemy is grappled by a tongue,
+                it takes damage. If a tongue takes 30 damage on a single turn, it releases its grapple, and returns to the pit.
+                Torugar attacks friends and foes alike.
             range: far
-            dice: 6d12
+            damage: {
+                "master": 6d8
+            }
             effect_type: blunt
             purpose: damage
             hit: other
             school: necromantic-summoning
             effects:
-                - description: be grappled by the tongue and begin taking damage
+                - description: "be grappled by the tongue and begin taking damage. Grabbed entities are considered grappled and cannot move unless the tongue is killed."
                   save: dexterity save against your spell power
                 - condition: once grappled, an enemy must make a
                   save: strength save against your spell power
-                  description: be pulled 1d4 spaces towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
+                  description: be pulled 15 feet towards the pit. Enemies that enter the pit die, and are irrecoverable. The tongue then returns to the battlefield.
 the_druid's_guidebook:
     Tier_0: # 14/14
         Constricting Vine:
@@ -790,7 +838,7 @@ the_druid's_guidebook:
             effect_type: poison
             duration: 0
             hit: roll
-            description: "Purple ichor splashes forth from the source of you magic, spraying
+            description: "Poisonous acid splashes forth from the source of you magic, spraying
               onto all enemies in a cone in front of you."
             effects:
                 - description: "become poisoned and take 1d6 damage each turn until a save is made"

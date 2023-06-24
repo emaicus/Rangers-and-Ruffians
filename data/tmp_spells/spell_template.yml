@@ -4,7 +4,7 @@ spellbook:
       cost: 0
       target: ["friendly", "enemy", "entity", "self", "space", "other"]
       num_targets: [1, "aoe", "multi"] # Aoe = can hit allies, multi = targeted
-      duration: #, save, # hours, concentration, infinite
+      duration: #instantaneous, # minutes (1/round of combat), save, # hours, concentration, infinite
       description: "What the spell does at a high level."
       range: <self, hand, close, near, mid, archer, far, infinite>
       purpose: <damage, healing, buff, debuff, summon, utility>
@@ -13,7 +13,9 @@ spellbook:
       --------------- COMBAT---------------------------------------
       hit: <always, roll, other>
       dice: "xdy"
-      effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, holy>
+      damage_type: <magic, projectile, melee>
+      status_effect: <Fire, Ice, Poison, Force, Radiant, Vampiric, Necrotic, Chi Block>
+      #effect_type: <blunt, slashing, healing, elemental, poison, fire, force, psychic, ice, dark, holy>
       effects:
         - condition: e.g. once graplled, (empty by default)
           description: "effected enemies must make a effect.save save or"

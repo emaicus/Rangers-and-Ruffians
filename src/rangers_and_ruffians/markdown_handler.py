@@ -1,7 +1,7 @@
 import sys
 import os
 
-# Some global cariables for dealing with the buffer tuples
+# Some global variables for dealing with the buffer tuples
 HEADING = 0
 LEVEL = 1
 CONTENT = 2
