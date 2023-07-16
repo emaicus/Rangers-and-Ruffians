@@ -1,462 +1,516 @@
-Catterwol:
-  subraces:
-    Catterwol:
-      abilities:
-        - Darkvision
-        - Predator
-        - They're Retractable
-        - Land on your feet
-        - Loose Skin
-        - Fear of Water
-        - Mantle
-      quote: Ah, yes, well... It was then that we stumbled upon an encampment of
-        cat-folk. They seemed a nice enough sort, so we bought some of their wares,
-        beads and knives and potions, that sort of thing. After that, we supped with them.
-        Well, before we knew it, we were all unconcious; they drugged the food,
-        no doubt. They made off with everything; my staff, my hat, and even my
-        sandles!
-      author: Archibold, the Wizard
-      description: Catterwol are among the most lithe and dexterous of the races,
-        and are adept at passign unseen and unheard. With padded feet and strong claws
-        for climing, more than one Catterwol has turned to the life of a sneak-theif.
-        Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
-        average mages, but prefer slim, dexterity based weapons.
-      health_die_pieces: 2
-      handbook:
+Catterwol: #Done
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Low-Light Vision:
+            cost: 0
+            description: "So long as there is a little light, you can see. However, colors are muted."
+        They're Retractable: 
+            cost: 0
+            description: "You use your sharp claws when attacking hand-to-hand. Increase the dice of your hand to hand attacks by one."
+        Loose Skin:
+            cost: 0
+            description: "You are naturally difficult to grab. Add your expertise to any checks made to physically restrain you."
+        Fear of Water:
+            cost: 0
+            description: Take distadvantage on all checks when you are soaked through.
+        Lithe and Dextrous:
+            cost: 0
+            description: "Add your expertise to checks made to climb or fall. When falling, take half damage."
+    handbook:
+        quote: Ah, yes, well... It was then that we stumbled upon an encampment of
+            cat-folk. They seemed a nice enough sort, so we bought some of their wares,
+            beads and knives and potions, that sort of thing. After that, we supped with them.
+            Well, before we knew it, we were all unconcious; they drugged the food,
+            no doubt. They made off with everything; my staff, my hat, and even my
+            sandles!
+        author: Archibold, the Wizard
+        description: Catterwol are among the most lithe and dexterous of the races,
+            and are adept at passign unseen and unheard. With padded feet and strong claws
+            for climing, more than one Catterwol has turned to the life of a sneak-theif.
+            Catterwol hail from dense, thicketed jungles and dry, dusty deserts. They make
+            average mages, but prefer slim, dexterity based weapons.
         sections:
-          - title: Silent and Dexterous
-            subsections:
-              - title: ""
-                text: Stalking on padded feet, the Catterwol Rouge makes her way carefully across
-                  the rooves of the city of Linth. Her target is simple, information and nothing more.
-                  Unfortunately, the information that she needs is buried inside of a chest locked
-                  in the room of Lord Edmire himself. Far below, her party waits with baited breath,
-                  as she hops from roof to roof, and then slips into Edmire's quarters. *Roll a
-                  Stealth Check!*
-          - title: Perceptive
-            subsections:
-              - title: ""
-                text: Needlelike teeth show in a sharp smile as the Catterwol Bard steps forward.
-                  "Hold on, surely we can work something out?" Isak, the kingpin of the city's thieves'
-                  guild, scoffs. "Not this time." From the corner of his eye, the Bard just notices two shadowy
-                  figures slip into view. His smile grows, and with a flash, he whips around and
-                  slings a throwing knife at one of the figures. *Roll for initiative!*
-          - title: Tribal
-            subsections:
-              - title: ""
-                text: Cattterwol tend to live in loose, nomadic tribes. As a general rule, they are
-                  deeply distrustful of outsiders, and are known to act in their own self-interest
-                  more often than not.
-          - title: Building a Cattwol Character
-            subsections:
-              - title: ""
-                text: When building your Catterwol, consider how they came to belong to your party. Remember
-                  that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
-                  their family now? What members of the party is your character close to?
-      expertise_choices:
-        - Dexterity
-        - Perception
-Elf:
-  quote: Elves can be slippery folk. It seems to me that rarely say what they mean,
-        and they seldom mean what they say. They're strong mages, though, and too clever
-        for their own good. If you're dealing with elves, try to appeal to their pride,
-        but be careful about it. They can see through simple flattery.
-  author: Ser Gillthunder, Human Knight, Leader of the Hetzer Company (Mercenaries)
-  subraces:
-    Wood Elf:
-      health_die_pieces: 2
-      abilities:
-        - Sleepless
-        - Low-Light Vision
-        - Winged Feet
-        - Padfoot
-        #- Counter Attack
-        - Tracker
-        - Long Dash
-      description: "True to their common name, wood elves are forest-dwellers.
-        Stronger and more down to earth than their high elven cousins,
-        wood elves often make friends with the men, dwarves, sprouts, and halflings of the world.
-        As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters,
-        and a welcome addition to any adventuring party."
-      expertise_choices:
-        - Dexterity
-        - Perception
-    High Elf:
-      health_die_pieces: 2
-      abilities:
-        - Sleepless
-        - Low-Light Vision
-        - Inherent Magic
-        - Detect Magic
-        - Learned
-        - Natural Intellect
-      description: High elves are among the most magical of the races. Reclusive by nature,
-        high elves often confine themselves to gleaming costal cities. When a high elf does
-        venture out into the world at large, it is often in a diplomatic capacity.
-        High elves are as charming as they are naturally beautiful, and commonly feel as though
-        it is their duty to maintain balance in the world. High elves make
-        good mages.
-      expertise_choices:
-        - Dexterity
-        - Intelligence
-        - Charisma
-    Deep Elf:
-      health_die_pieces: 2
-      abilities:
-        - Sleepless
-        - Darkvision
-        - Winged Feet
-        - Padfoot
-        - Born in Darkness
+            - title: Silent and Dexterous
+              subsections:
+                - title: ""
+                  text: Stalking on padded feet, the Catterwol Rouge makes her way carefully across
+                    the rooves of the city of Linth. Her target is simple, information and nothing more.
+                    Unfortunately, the information that she needs is buried inside of a chest locked
+                    in the room of Lord Edmire himself. Far below, her party waits with baited breath,
+                    as she hops from roof to roof, and then slips into Edmire's quarters. *Roll a
+                    Stealth Check!*
+            - title: Perceptive
+              subsections:
+                - title: ""
+                  text: Needlelike teeth show in a sharp smile as the Catterwol Bard steps forward.
+                    "Hold on, surely we can work something out?" Isak, the kingpin of the city's thieves'
+                    guild, scoffs. "Not this time." From the corner of his eye, the Bard just notices two shadowy
+                    figures slip into view. His smile grows, and with a flash, he whips around and
+                    slings a throwing knife at one of the figures. *Roll for initiative!*
+            - title: Tribal
+              subsections:
+                - title: ""
+                  text: Cattterwol tend to live in loose, nomadic tribes. As a general rule, they are
+                    deeply distrustful of outsiders, and are known to act in their own self-interest
+                    more often than not.
+            - title: Building a Cattwol Character
+              subsections:
+                - title: ""
+                  text: When building your Catterwol, consider how they came to belong to your party. Remember
+                    that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
+                    their family now? What members of the party is your character close to?
+Wood Elf: # Done
+    parent_class: "Elf"
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Sleepless:
+            cost: 0
+            description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
+        Natural Tracker:
+            cost: 0
+            description: "You are naturally adept at tracking your foes. Add your expertise to checks made to track enemies or perceive their passing."
+        Meditative Rest: 
+            cost: 0
+            description: "Whenever you rest, you can focus to regain one extra action point."
+        Natural Agility:
+            cost: 0
+            description: "Your elven heritage has gifted you with supernatural agility. Add your expertise to any checks related to your movement."
+        Hasten: 
+            cost: 1
+            condition: "Hastened" 
+            description: "Channel the magic within you to spur yourself to great speeds. Become affected by Haste for 5 minutes. Afterward, immediately take one level of exhaustion."
+    handbook:
+        description: "True to their common name, wood elves are forest-dwellers.
+            Stronger and more down to earth than their high elven cousins,
+            wood elves often make friends with the men, dwarves, sprouts, and halflings of the world.
+            As comfortable with a blade as a bow, wood elves are adept fighters and spellcasters,
+            and a welcome addition to any adventuring party."
+High Elf: #Done
+    parent_class: "Elf"
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Sleepless:
+            cost: 0
+            description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
+        Inherent Magic:
+            cost: 0
+            description: "Begin your adventure with two tier zero spells from any spellbook. If you are a casting class, these spells are considered a bonus." 
+        Detect Magic:
+            cost: 1
+            description: "Make a perception check to identify sources of nearby magic."
+        Natural Intellect:
+            cost: 0
+            description: "Add your expertise to intelligence checks."
+    handbook:
+        description: "High elves are among the most magical of the races. Reclusive by nature,
+            high elves often confine themselves to gleaming costal cities. When a high elf does
+            venture out into the world at large, it is often in a diplomatic capacity.
+            High elves are as charming as they are naturally beautiful, and commonly feel as though
+            it is their duty to maintain balance in the world. High elves make
+            good mages."
+Deep Elf: # Done
+    parent_class: "Elf"
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Sleepless:
+            cost: 0
+            description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
+        Poison Resist:
+            cost: 0
+            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
+        Born in Darkness:
+            cost: 0
+            description: "The effects of light and darkness are reversed for you; you can see perfectly in pitch darkness, but cannot see in total light. When wearing mesh over your eyes, you can see normally in total light."
+        Survivor:
+            cost: 0
+            description: "You may add your expertise to survival checks."
+  handbook:
       description: "Sons and daughters of the dark gods, the deep elves
-                    have suffered much hardship for their origin. Pushed
-                    deep underground, dark elves have grown accustomed to the
-                    darkness. Stronger than other elves, dark elves are incredible but
-                    largely uncharismatic fighters."
-      expertise_choices:
-        - Intelligence
-        - Strength
-        - Dexterity
-        - Inner_Fire
-Gnome:
-  subraces:
-    Gnome:
-      health_die_pieces: 0
-      abilities:
-        - Tinker
-        - Build
-        - See and Remember
-        - Gather
-        - Grapple Gun
-        - Resist Magic
-        - Natural Intellect
-      quote: Gnomes are tiny. They make things, sometimes. I can crush them.
-      author: Throgar, Barbarian and Sheriff
-      description: Tinkerers by nature, Gnomes are known to craft miraculous inventions to
-        help them deal with difficult situations. Gnomes typically stand about three feet
-        in height, and can be recognized by their signature goggles. Gnomes are well rounded
-        and are capable of succeeding at anything they put their minds to.
-      expertise_choices:
-        - Inner_Fire
-        - Dexterity
-        - Intelligence
-      handbook:
+          have suffered much hardship for their origin. Pushed
+          deep underground, dark elves have grown accustomed to the
+          darkness. Stronger than other elves, dark elves are incredible but
+          largely uncharismatic fighters."
+Gnome: # Done
+    health_dice_bonus: 0
+    base_movement: 30
+    abilities:
+        Tinker: 
+            cost: 0
+            description: "You are able to create simple contraptions using your tools and the world around you. Use the rules for 'informal magic.'"
+        Perfect Recall: 
+            cost: 0
+            description: "You have an incredible memory, and can recall anything you spend one minute looking at."
+        Natural Intellect:
+            cost: 0
+            description: "Add your expertise to intelligence checks."
+        Little One:
+                cost: 0
+                description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+    handbook:
+        quote: Gnomes are tiny. They make things, sometimes. I can crush them.
+        author: Throgar, Barbarian and Sheriff
+        description: Tinkerers by nature, Gnomes are known to craft miraculous inventions to
+            help them deal with difficult situations. Gnomes typically stand about three feet
+            in height, and can be recognized by their signature goggles. Gnomes are well rounded
+            and are capable of succeeding at anything they put their minds to.
         sections:
-          - title: Tinker
-            subsections:
-              - title: ""
-                text: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
-                  is coming along quite well, better than expected, actually. Not far away, the
-                  rest of her party snores as they sleep. She should be sleeping as well; tomorrow
-                  is the big day. But then, that's why she needs a spring loaded spear-thrower
-                  in the first place. For a moment, she considers lying down, but then pulls her
-                  goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin,
-                  she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
-          # - title: Magic Resistant
-          #   subsections:
-          #     - title: ""
-          #       text:
-          - title:
-            subsections:
-              - title: Eccentric
-                text: Most consider gnomes to be eccentric at best, and obtuse at worse.
-          # - title: Building a Cattwol Character
-          #   subsections:
-          #     - title: ""
-          #       text: When building your Catterwol, consider how they came to belong to your party. Remember
-          #         that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
-          #         their family now? What members of the party is your character close to?
-Goblin:
-  subraces:
-    Goblin:
-      health_die_pieces: 0
-      abilities:
-        - Still Warm
-        - Mantle
-        - Darkvision
-        - Padfoot
-        # - Seek Gold
-        - Cheap Blow
-      quote: It is a rarity to find a kindly goblin, but when I have, I have found
-        them to be most agreeable companions. Mind you, their penchant for raw
-        flesh can be most off-putting... As can their little yellow eyes. Still, though,
-        if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious
-        ally.
-      author: Tamberdoodle, Bard Extraordinare
-      description: Small and wicked, most goblins are tricksters and thieves. Known for eating
-        their kills and living in the dark, goblins prefer to fight with ranged or short
-        weapons. Morally good goblins are rare, and have often been outcast from their clan
-        and family. This can be very painful, as goblins are communal creatures by nature.
-      expertise_choices:
-        - Dexterity
-        - Perception
-Halfling:
-  quote: Halflings are decent enough, and fun to be around. They have potential as
-        rogues since they can see without being seen, but I'm not sure if they're clever enough.
-  author: Vasha, Catterwol Thief
-  subraces:
-    Fleetfoot Halfling:
-      health_die_pieces: 0
-      abilities:
-        - Dodge
-        - Nimble
-        - Padfoot
-        # - Sling
-        - Lightweight
-      description: "Tiny and rambunctious, fleetfoot halflings are all high-spirits
-                    and fun. Known for their precocious daring, fleetfoot halflings
-                    make great thieves, archers, and fighters. They are naturally tricksters, are and are
-                    adept at sqeezing into tight spots. On average, fleetfoot halflings
-                    stand at three feet and have warm, chestnut colored eyes and hair."
-      expertise_choices:
-        - Dexterity
-        - Charisma
-        - Intelligence
-    Hardfoot Halfling:
-      health_die_pieces: 0
-      abilities:
-        # - Sling
-        - Warm Butter
-        - Soft Bed
-        - Carry a Tune
-        - Thick Headed
-        - Courageous Blow
-      description: "Taller but squatter than their fleetfoot cousins, the average hardfoot
-                    halfling would rather be drinking tea and eating toast
-                    in their home than adventuring. For a hardfoot halfing to venture out-of-doors,
-                    and become an adventurer, something truly earthshaking must happen to them:
-                    either a true call to adventure or a calamity that wrests them from the comfort of their home.
-                    Once they become adventurers, however, hardfoot halflings tend to be courageous,
-                    hearty, resilient warriors."
-      expertise_choices:
-        - Inner_Fire
-        - Charisma
-        - Dexterity
-Human:
-  subraces:
-    Human:
-      health_die_pieces: 2
-      abilities:
-      - Last Stand
-      - Strength of Men
-      - Rally
-      - Adaptable
-      - Skilled
-      quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
-      author: Orkensheild, Orc Archer
-      description: "Humans are quick to learn, and are one of the most adaptable of the races.
-        They pick up new skills quickly, and are known as industrious and intelligent individuals.
-        Humans tend to be varied, and have the potential to succeed in all walks of life.
-        It is their natural willpower that
-        makes them a force to be reckoned with."
-      expertise_choices:
-        - Strength
-        - Inner_Fire
-Lizkin:
-  subraces:
-    Lizkin:
-      health_die_pieces: 2
-      abilities:
-      - Color Choice
-      - Smokevision
-      - Poison Bite
-      - Poison Resist
-      - Shed Tail
-      - Taste Air
-      quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
-      author: Mister Li, Gnomeish Monk
-      description: "Tall and lizard-like, Lizkin are powerful fighters.
-                    With the ability to taste scents on the air and to change
-                    their color at will, Lizkin make equally dangerous
-                    warriors and mages."
-      expertise_choices:
-        - Dexterity
-        - Strength
-        - Inner_Fire
-        - Perception
-Waterborn:
-  subraces:
-    Waterborn:
-      health_die_pieces: 0
-      abilities:
-      - Water Breathing
-      - Flows Like Water
-      - Water Healing
-      - Become Mist
-      - Charm
-      - Lightweight
-      quote: Most Waterborn I've seen have been dried up and dying. Their need
-        for water is their undoing, out here in the desert. Once they've been
-        wetted down a bit, they perk right up. It's then that you have to watch
-        yourself; Waterborn are liable to charm you when you're not looking.
-      author: Leaf, Gnome Rogue from the Wild Desert
-      description: Alien among the other races, Waterborn hail from the depths of
-        oceans, lakes, and rivers. Waterborn come in a pleathora of colors, and have
-        ruddy, splotched skin which dries up if it isn't exposed to water regularly.
-        Waterborn are powerful magic users, and are naturally adept at charming
-        the other races.
-      expertise_choices:
-        - Charisma
-        - Intelligence
-Orc:
-  subraces:
-    Orc:
-      health_die_pieces: 2
-      abilities:
-      - Predator
-      - Bellow
-      - Still Warm
-      - Thunderous Blow
-      - Vengeful Death
-      quote: The full-orc is a dangerous specimen. Known to hunt and eat the other races,
-        it is difficult to domesticate them. As the saying goes, you can take the orc out
-        of the wilderness, but you can't stop him from trying to eat you.
-      author: unattributed folk wisdom
-      description: "A brutish and warlike race, orcs stab first and ask questions later.
-                    Orcs are often used to living in harsh environments, and living off the land."
-      expertise_choices:
-        - Inner_Fire
-        - Strength
-Dwarf:
-  subraces:
-    Dwarf:
-      health_die_pieces: 2
-      abilities:
-      - Stocky
-      - Very Dangerous Over Short Distances
-      - Boozehound
-      - Thick Headed
-      - Forgeborn
-      - Incombustible
-      quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be
-        well placed if you want to bring one down.
-      author: Orkinshield, Orc Gunslinger
-      description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
-                    Dwarves prefer low places, and many of their strongholds can be found deep
-                    within mountain ranges. Dwarves have a shrewd eye for business, and have
-                    been known to drink their adversaries under the table.
-      expertise_choices:
-        - Inner_Fire
-        - Strength
-Daemonspawn:
-  subraces:
-    Daemonspawn:
-      health_die_pieces: 2
-      abilities:
-      - Fix Your Eyes on Me
-      - Sacrificial Rite
-      - True Sight
-      - Incombustible
-      quote: Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
-        to use their dark and terrible magicks as to give you a passing smile. I've never met
-        one though; I've been careful to avoid them.
-      author: Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
-      description: The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained.
-                   Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
-                   vigilant and trusts no one.
-      expertise_choices:
-        - Intelligence
-        - Charisma
-Sprout:
-  subraces:
-    Sprout:
-      health_die_pieces: 0
-      abilities:
-        - Photosynthesis
-        - Scurry
-        - Dodge
-        - Small Fry
-        - Soft Landing
-        - Commune with Nature
-        - Lightweight
-        - Blade of Grass
-        - Harden
-      quote: And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my
-              hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
-              dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way.
-      author: Harley, Elf Paladin
-      description: Sprouts are among the smallest of the races, standing at about 2 feet. As a result, they are very weak, but are
-                    fast, and good at sneaking. The wise sprout should avoid the front line of combat, and instead stay in relative hiding,
-                    jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see
-                    a sprout knight attempting to make a name for themself.
-      expertise_choices:
-        - Perception
-        - Dexterity
-Automaton:
-  subraces:
-    Automaton:
-      health_die_pieces: 2
-      abilities:
-      - Power Core
-      - Overdrive
-      - Repair
-      - Self Repair
-      - True Sleeplessness
-      - Gyroscopic Center of Mass
-      - Armored Exterior
-      - Piston Punch
-      - Upgrades
-      quote: "Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
-              The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things
-              going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
-              it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does
-              the automaton."
-      author: Simon, Gnome Tinker
-      description: The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
-                    reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is
-                    to be an automaton, and the quest for meaning is a path that all such beings must walk.
-      expertise_choices:
-        - Strength
-        - Inner_Fire
-        - Dexterity
-Hissling:
-  subraces:
-    Hissling:
-      health_die_pieces: 0
-      abilities:
-        - Small Fry
-        - All Tuckered Out
-        - Chomp Chomp
-        - Riding High
-        - Dig Dig Dig
-        - I'm a Red One!
-        - Tossed Around
-      quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently,
-        things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't
-        have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend
-        a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there.
-        Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows.
-        So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw?
-        An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks.
-        All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder
-        approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken
-        speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
-        if they're still down there."
-      author: Gillthunder, Human Knight
-      description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hisslings try their very best to be ferocious.
-        While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is
-        often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature
-        and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing
-        of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years,
-        and can reproduce just a few years after.
-        "
-      expertise_choices:
-        - Dexterity
-        - Perception
-Kragraven:
-  subraces:
-    Kragraven:
-      health_die_pieces: 0
-      abilities:
-        - Peck
-        - High Jump
-        - Coast
-        - Carrion
-        - Mimic
-      quote: "I don't trust them, those bird-men that live to the west. Don't trust them one bit."
-      author: Old Man Mcuffit, Racist Old Man
-      description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive,
-                    taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
-      expertise_choices:
-        - Intelligence
-        - Perception
+            - title: Tinker
+                subsections:
+                    - title: ""
+                      text: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
+                        is coming along quite well, better than expected, actually. Not far away, the
+                        rest of her party snores as they sleep. She should be sleeping as well; tomorrow
+                        is the big day. But then, that's why she needs a spring loaded spear-thrower
+                        in the first place. For a moment, she considers lying down, but then pulls her
+                        goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin,
+                        she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
+                    # - title: Magic Resistant
+                    #   subsections:
+                    #     - title: ""
+                    #       text:
+                    - title:
+                      subsections:
+                        - title: Eccentric
+                          text: Most consider gnomes to be eccentric at best, and obtuse at worse.
+                    # - title: Building a Cattwol Character
+                    #   subsections:
+                    #     - title: ""
+                    #       text: When building your Catterwol, consider how they came to belong to your party. Remember
+                    #         that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
+                    #         their family now? What members of the party is your character close to?
+Goblin: # Done
+    health_dice_bonus: 0
+    base_movement: 30
+    abilities:
+        Still Warm:
+            cost: 0
+            damage_progression: Minor heal
+            description: "Regain health by consuming raw flesh. This can be done once per day."
+        Mantle:
+            cost: 0
+            description: "You are an excellent climber. Add your expertise to checks made to climb or traverse high places."
+        Sneak:
+            cost: 0
+            description: "Add your expertise to checks made to hide or sneak."
+        Low-Light Vision:
+            cost: 0
+            description: "So long as there is a little light, you can see. However, colors are muted."
+        One of the Pack:
+            cost: 0
+            description: "So long as you have at least one ally within 30ft, you are immune to the frightened condition. If you have no allies within 100 feet in combat, you are immediately frightened."
+    handbook:
+        quote: It is a rarity to find a kindly goblin, but when I have, I have found
+            them to be most agreeable companions. Mind you, their penchant for raw
+            flesh can be most off-putting... As can their little yellow eyes. Still, though,
+            if ever you are in a pinch, a loyal goblin-ling can be a fierce, nay, a vicious
+            ally.
+        author: Tamberdoodle, Bard Extraordinare
+        description: Small and wicked, most goblins are tricksters and thieves. Known for eating
+            their kills and living in the dark, goblins prefer to fight with ranged or short
+            weapons. Morally good goblins are rare, and have often been outcast from their clan
+            and family. This can be very painful, as goblins are communal creatures by nature.
+Halfling: # Done
+    health_dice_bonus: 0
+    base_movement: 35
+    abilities:
+        Scurry:
+            cost: 0
+            description: "You are naturally quick on your feet. Any time an attack misses you, move 5ft without provoking exposed attacks."
+        Hamstring: 
+            cost: 0
+            description: "The bigger they are, the harder they fall! When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them, causing them to instantly lose half of their movement on their next turn."
+        Hide Underfoot:
+            cost: 0
+            description: "You are able to bob and weave around the larger races. When you have two or more entities adjacent to you, attacks against you are at distadvantage."
+        Warm Butter:
+            cost: 0
+            description: "You are a naturally talented chef. Whenever you rest, prepare food which heals all allies for an additional 1d6 health."
+        Soft Bed:
+            cost: 0
+            description: "The comforts of home beckon you. Whenever you sleep in a real bed, regain all of your lost health."
+        Little One:
+            cost: 0
+            description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+    handbook:
+        description: "Tiny and rambunctious, halflings are all high-spirits
+            and fun. Known for their precocious daring, halflings
+            make great thieves, archers, and fighters. They are naturally tricksters, are and are
+            adept at sqeezing into tight spots. On average, halflings
+            stand at three feet and have warm, chestnut colored eyes and hair."
+Human: #Needs another abilitiy
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Human Endurance: 
+            cost: 0
+            description: "Your dash carries you a distance equal to your full movement. You may dash at most once per turn."
+        Adaptable:
+            cost: 0
+            description: "If you are affected by a status effect, take advantage on saves against it for the remainder of the day."
+        Rally Cry: 
+            cost: 1
+            description: "Human perseverance is infectious. As an action, grant all allies within a 25ft radius a point of inspiration."
+
+    handbook:
+        quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
+        author: Orkensheild, Orc Archer
+        description: "Humans are quick to learn, and are one of the most adaptable of the races.
+            They pick up new skills quickly, and are known as industrious and intelligent individuals.
+            Humans tend to be varied, and have the potential to succeed in all walks of life.
+            It is their natural willpower that
+            makes them a force to be reckoned with."
+Lizkin: # Done
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Membraned Eyes:
+            cost: 0
+            description: "Your vision cannot be reduced by water, smoke, or other particles."
+        Shed Tail:
+            cost: 0
+            description: "Once per day, shed your tail to immediately break a grapple."
+        Poison Resist:
+            cost: 0
+            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
+        Armored Scales:
+            cost: 0
+            description: "Add +2 to your total armor."
+        Taste Air:
+            cost: 1
+            description: "Roll a perception check of a 100ft radius that is not based on vision."
+    handbook:
+        quote: Skin changes like mist. Poisoned teeth lurking within. A Lizkin fighter.
+        author: Mister Li, Gnomeish Monk
+        description: "Tall and lizard-like, Lizkin are powerful fighters.
+            With the ability to taste scents on the air and to change
+            their color at will, Lizkin make equally dangerous
+            warriors and mages."
+Waterborn: #Done
+    health_dice_bonus: 0
+    base_movement: 30
+    abilities:
+        Water Breathing:
+            cost: 0
+            description: "You can hold your breath for up to one week. However, to breathe, you must be submerged underwater."
+        Dried Out:
+            cost: 0
+            description: "When you are in an arid climate, gain one level of exhaustion for any day you cannot submerge in water."
+        Flows Like Water:
+            cost: 0
+            description: "Your swimming speed is equal to twice your walking speed."
+        Become Mist:
+            cost: 1
+            description: "Attempt to become mist before an attack hits you. Before you are attacked, declare that you will become mist to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely."
+        Natural Charisma:
+            cost: 0
+            description: "You may add your expertise to charisma checks."
+    handbook:
+        quote: Most Waterborn I've seen have been dried up and dying. Their need
+            for water is their undoing, out here in the desert. Once they've been
+            wetted down a bit, they perk right up. It's then that you have to watch
+            yourself; Waterborn are liable to charm you when you're not looking.
+        author: Leaf, Gnome Rogue from the Wild Desert
+        description: Alien among the other races, Waterborn hail from the depths of
+            oceans, lakes, and rivers. Waterborn come in a pleathora of colors, and have
+            ruddy, splotched skin which dries up if it isn't exposed to water regularly.
+            Waterborn are powerful magic users, and are naturally adept at charming
+            the other races.
+Orc: #Done
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Predator:
+            cost: 0
+            description: "Add your expertise to checks made to follow or detect the passage of an entity."
+        Natural Strength:
+            cost: 0
+            description: "Add your expertise to your strength checks."
+        Bellow:
+            cost: 1
+            description: "Loose a terrible battle cry. Enemies within 30ft must make an inner fire save or be frightened."
+        Still Warm:
+            cost: 0
+            damage_progression: Minor heal
+            description: "Regain health by consuming raw flesh. This can be done once per day."
+        Vengeful Death:
+            cost: 0
+            description: "When you fall to death's door, you may immediately make an attack."
+    handbook:
+        quote: The full-orc is a dangerous specimen. Known to hunt and eat the other races,
+            it is difficult to domesticate them. As the saying goes, you can take the orc out
+            of the wilderness, but you can't stop him from trying to eat you.
+        author: unattributed folk wisdom
+        description: "A brutish and warlike race, orcs stab first and ask questions later.
+            Orcs are often used to living in harsh environments, and living off the land."
+Dwarf: #Done
+    health_dice_bonus: 4
+    base_movement: 25
+    abilities:
+        Stocky Build:
+            cost: 0
+            description: "You’re built hearty, with a low center of gravity. Roll with advantage against any checks which could cause you to fall prone. If you are pushed, move only half the intended distance."
+        Hearty: 
+            cost: 0
+            description: "You are of naturally hearty stock. When you level up, roll your health dice with advantage."
+        Appraiser's Eye: 
+            cost: 0
+            description: "You have a knack for evaluating an object’s worth -- and at getting your hands on it for even less. Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering."
+        Very Dangerous over Short Distances:
+            cost: 0
+            description: "If you begin your turn next to an enemy, deal an extra 1d6 damage on any attacks that you make against them."
+        Dwarven Momentum:
+            cost: 0
+            description: "Whenever an effect or item calls for your speed to be decreased, halve the amount, rounding down to the nearest 5ft. If two separate effects impose a speed penalty, add them together before halving and rounding the total."
+    quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be
+        well placed if you want to bring one down."
+    author: Orkinshield, Orc Gunslinger
+    description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
+        Dwarves prefer low places, and many of their strongholds can be found deep
+        within mountain ranges. Dwarves have a shrewd eye for business, and have
+        been known to drink their adversaries under the table.
+Daemonspawn: #Done
+    health_dice_bonus: 2
+    base_movement: 30
+    abilities:
+        Charm:
+            cost: 1
+            condition: Charmed
+            description: "Force an enemy to make a spell power save. On a failure, they are Charmed."
+        Incombustible:
+            cost: 0
+            description: "You are resistant to fire damage."
+        Detect Good or Evil:
+            cost: 1
+            description: "Make a inner fire check to detect the presence of nearby good or evil, relative to your point of view. Add your expertise to the check."
+        Firebolt:
+            cost: 1
+            damage_scaling: fix this later
+            description: "Launch a bolt of crackling fire up to sixty feet at an enemy."
+        Natural Charisma:
+            cost: 0
+            description: "You may add your expertise to charisma checks."
+    handbook:
+        quote: "Never trust a daemonspawn, that's what I've alwasy been told. They're as liable
+            to use their dark and terrible magicks as to give you a passing smile. I've never met
+            one though; I've been careful to avoid them."
+        author: Miss Maribel Merkland, Busybody and Baker of Exquisite Pies.
+        description: "The daemonspawn were born of an unholy union between elves and the demons of old. When the demons were thrown down and destroyed, the daemonspawn remained.
+            Now, the daemonspawn are left in a world that at best doesn't understand them, and at worst fears and persecutes them. As such, the wise daemonspawn is always
+            vigilant and trusts no one."
+Sprout: # Done
+    health_dice_bonus: 0
+    base_movement: 35
+    abilities:
+        Woodland Home:
+            cost: 0
+            description: "When traversing the forest, add  your expertise to stealth and tracking checks."
+        Regrowth: 
+            cost: 1
+            damage_progression:
+                tier_1: 1d4
+                tier_2: 1d6
+                tier_3: 1d8
+            description: "Green sap oozes from your wounds, slowly sealing them. Restore health every minute for five minutes."
+        Riding High: 
+            cost: 0
+            description: "As an action, clamber atop a teammate to ride them. While you are riding, you and your ally get advantage on accuracy checks while targeting the same enemy, and enemies must target you at disadvantage."
+        Forest Aid: 
+            cost: 1
+            description: "All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check."
+        Compost: 
+            cost: 0
+            damage_progression:
+                tier_1: 1d4
+                tier_2: 2d4
+                tier_3: 3d4
+            description: "When you take your rest, you may consume nearby plants to aid in your healing. Regain additional health when resting."
+        Little One:
+            cost: 0
+            description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+    handbook:    
+        quote: "And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my
+            hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite
+            dexterous, and spoke the language of my people. I spent some time among their woodland village before continuing on my way."
+        author: Harley, Elf Paladin
+        description: "Sprouts are among the smallest of the races, standing at about 2 feet. As a result, they are very weak, but are
+            fast, and good at sneaking. The wise sprout should avoid the front line of combat, and instead stay in relative hiding,
+            jumping out to attack at opportune moments. Sprouts are not necessarily wise, however, and it is not strange to see
+            a sprout knight attempting to make a name for themself."
+# Automaton:
+#     health_dice_bonus: 2
+#     base_movement: 30
+#     abilities:
+#         - Power Core
+#         - Overdrive
+#         - Repair
+#         - Self Repair
+#         - True Sleeplessness
+#         - Gyroscopic Center of Mass
+#         - Armored Exterior
+#         - Piston Punch
+#         - Upgrades
+#     handbook:
+        quote: "Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
+            The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things
+            going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
+            it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does
+            the automaton."
+        author: Simon, Gnome Tinker
+        description: "The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
+            reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is
+            to be an automaton, and the quest for meaning is a path that all such beings must walk."
+# Hissling:
+#   subraces:
+#     Hissling:
+#       health_die_pieces: 0
+#       abilities:
+#         - Small Fry
+#         - All Tuckered Out
+#         - Chomp Chomp
+#         - Riding High
+#         - Dig Dig Dig
+#         - I'm a Red One!
+#         - Tossed Around
+#       quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently,
+#         things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't
+#         have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend
+#         a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there.
+#         Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows.
+#         So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw?
+#         An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks.
+#         All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder
+#         approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken
+#         speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
+#         if they're still down there."
+#       author: Gillthunder, Human Knight
+#       description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hisslings try their very best to be ferocious.
+#         While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is
+#         often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature
+#         and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing
+#         of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years,
+#         and can reproduce just a few years after.
+#         "
+#       expertise_choices:
+#         - Dexterity
+#         - Perception
+# Kragraven:
+#   subraces:
+#     Kragraven:
+#       health_die_pieces: 0
+#       abilities:
+#         - Peck
+#         - High Jump
+#         - Coast
+#         - Carrion
+#         - Mimic
+#       quote: "I don't trust them, those bird-men that live to the west. Don't trust them one bit."
+#       author: Old Man Mcuffit, Racist Old Man
+#       description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive,
+#                     taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
+#       expertise_choices:
+#         - Intelligence
+#         - Perception

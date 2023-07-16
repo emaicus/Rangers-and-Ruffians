@@ -3,3 +3,4 @@ names
 contractions
 pyspellchecker
 textsearch
+inquirer
