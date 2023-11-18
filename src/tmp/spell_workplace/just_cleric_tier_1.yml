@@ -1,0 +1,219 @@
+the_book_of_healing:
+    Tier_0: # 27 / 27
+        Beam of Light:
+            cost: 0
+            duration: instantaneous
+            range: 60
+            description: "Your outstretched hand becomes a conduit for blinding light. A targeted beam bursts forth, burning your foe."
+            damage: 
+              hit: "roll"
+              damage_type: "radiant"
+              steps:
+                  - 1d8 # 4.5
+                  - 1d10 # 5.5
+                  - 1d12 # 6.5
+            upcast: "For each additional action point spent on this spell, deal an additional dice of damage."
+        Purifying Flame:
+            cost: 0
+            duration: concentration
+            range: 5
+            description: "White hot flames fill the space around you as you call on your deity for protection, damaging everyone in the spell's radius."
+            damage: 
+              hit: "always"
+              damage_type: "arcane"
+              steps:
+                  - 1d6
+                  - 2d6
+                  - 3d6
+            radius: 15
+            upcast: "For each additional action point spent on this spell, either increase its range by 15 feet or increase damage by 2d4." 
+        Block Attack:
+            cost: 1
+            duration: instantaneous
+            range: 5
+            description: "Your focus blazes and a shimmering barrier materializes between an attack and its target, causing it to miss entirely."
+            action_type: Reaction
+        Ward of Protection:
+            cost: 1
+            duration: 60
+            range: 5
+            description: "You trace a holy symbol on an ally. For the spell's duration, whenever they are attacked the ward flares with light, granting them +3 evasion."
+        Beguile:
+            cost: 1
+            duration: save
+            range: 60
+            description: "Radiance envelops you and spreads in waves, shaking an enemy's constitution."
+            effect:
+                description: "They must make a spell power save or become weakened."
+                type: debuff
+                effect: weakened
+        Detect Evil:
+            cost: 1
+            duration: 10
+            range: 5
+            description: "Your deity grants you a view into the hearts of others. For the spell's duration, evil entities are surrounded 
+              by an aura of darkness in your vision, while good entities with an aura of light. The definition of good and evil corresponds
+              to the deity that you worship."
+            radius: 100
+        Purify:
+            cost: 1
+            duration: instantaneous
+            range: 5
+            description: "With a gentle touch, you dive impurity from a food, drink, potion, or person. You may use this spell to render poisons innocuous, 
+              heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour."
+        Mend:
+            cost: 0
+            duration: instantaneous
+            range: 5
+            description: "Your hands glow as you magically mend small dents, dings, scratches, and tears in items."
+            upcast: "Spend an additional action point on this spell to increase it's power, mending larger items such as broken walls, wheels, or armor."
+        Holy Light:
+            cost: 1
+            duration: concentration
+            range: 5
+            description: "With a muttered prayer, you raise an object aloft and it illuminates,
+              casting light within the spell's radius. Additionally, undead or evil entities within
+              the light must make all actions at disadvantage."
+            radius: 50
+        Make Habitable:
+            cost: 1
+            duration: concentration
+            description: "As you say a prayer for comfort, the area within the spell's power becomes
+                comfortable for all within. Snow becomes warm to the touch, rain
+                ceases to fall, and puddles instantly evaporate."
+            range: 5
+            radius: 30
+        Prayer of Healing:
+            cost: 1
+            duration: instantaneous
+            description: "Your voice resonates with profound compassion. Echoing waves of healing energy knit your target's wounds shut.
+                 If you physically touch your target, double the number of dice rolled."
+            damage: 
+              hit: "always"
+              damage_type: "healing"
+              steps:
+                  - 1d8
+                  - 2d8
+                  - 4d8
+            range: 30
+            upcast: "Each additional action point spent on this spell grants an additional dice of healing."
+        Spare:
+            cost: 0
+            duration: instantaneous
+            range: 30
+            description: "Channel divine magic to stabilize a downed ally, immediately returning them to 1 health."
+        Guardian Blade:
+            cost: 1
+            duration: 3
+            range: 5
+            description: "You summon a holy blade to float in the air beside you. The blade is able to make its own reactions,cleric_spells.txt
+              and may attack an enemy that moves past it. On your turn, you may move the blade 20ft and attack with it. 
+              The blade's damage scales with your inner fire modifier: if your inner fire is 0 or less, it deals 1d4 damage.
+              For each point of inner fire past that, its damage dice increases by one step until you reach 5 inner fire, at which point the
+              blade deals 2d12 damage."
+        Sap Life:
+            cost: 1
+            duration: instantaneous
+            range: 60
+            description: "Dark tendrils writhe from your outstretched hand as you sap an enemy's vitality and heal yourself for an equivalent amount."
+            damage: 
+              hit: "roll"
+              damage_type: "arcane"
+              steps:
+                  - 1d6 # 4.5
+                  - 1d8 # 5.5
+                  - 1d10 # 6.5
+            upcast: "For each additional action point, deal an additional dice of damage."
+        Delayed Heal:
+            cost: 1
+            duration: 60
+            range: 5
+            description: "You infuse a chosen ally with a delayed healing ward, allowing them to call upon
+                its rejuvenating energies when most needed, mending their wounds at the opportune moment.
+                They may trigger it as a reaction or free action."
+            damage: 
+              hit: "always"
+              damage_type: "healing"
+              steps:
+                  - 1d8
+                  - 2d8
+                  - 4d8
+            upcast: "For each additional action point spent on this spell, deal an additional dice of healing."
+        Compelled Truth:
+            cost: 1
+            duration: save
+            range: 30
+            description: "Your eyes flash with holy light as you apply divine pressure against your target."
+            effect:
+                description: "They must make a spell power save or become incapable of lying for the spell's duration."
+                type: "debuff"
+                effect: "custom"
+        Guidance:
+            cost: 1
+            duration: 1
+            range: 30
+            description: Augment an ally's abilities, allowing them to add your inner
+                fire to all checks and attack rolls for the spell's duration."
+            upcast: "Spend an additional action point spent on this spell to cause the effect to last for 3 turns."
+        Enlarge:
+            cost: 1
+            duration: 3
+            range: 30
+            description: Channel your magic to cause an ally to grow one size larger.
+              For the duration, they double the number of primary weapon dice."
+        Forget Ability:
+            cost: 1
+            duration: concentration
+            range: 60
+            description: Attempt to make an enemy forget one of its abilities."
+            effect:
+                description: "They must make a spell power save or lose an ability of your choice. For example, a dragon may forget how to breathe fire."
+                type: "debuff"
+                effect: "custom"
+        Hold Weapon:
+            cost: 0
+            duration: concentration
+            range: 60
+            description: Attempt to bind an enemy's weapon in place.
+            effect:
+                description: "They must make a spell power save or lose access to their weapon."
+                type: "debuff"
+                effect: "custom"
+        Share Sense:
+            cost: 0
+            duration: concentration
+            range: 5
+            description: Touch an ally or entity. Enemies are able to make an inner fire save. For the duration of the spell,
+                you are able to share their senses.
+        Slow:
+            cost: 1
+            duration: save
+            range: 30
+            description: Attempt to steal the vigor from an enemy.
+            effect:
+                description: "They must make a spell power save or be slowed."
+                type: "debuff"
+                effect: "slowed"
+        #Critical Aid:
+        #    when an ally rolls one below their critical hit target, declare that the attack was a critical hit. Or, if an ally rolls a critical hit, allow them to add an extra 2d6 + your INF damage.
+        Blind:
+            cost: 1
+            duration: 3
+            range: 60
+            description: Attempt to strike an enemy blind.
+            effect:
+                description: "They must make a spell power save or be blinded."
+                type: "debuff"
+                effect: "blinded"
+        #Careful Retreat: Move without provoking opportunity attacks.
+        #Sustained Heal: (orb)
+        Haste:
+            cost: 1
+            duration: 3
+            range: 30
+            description: "Cast a spell which grants an ally vigor."
+            effect:
+                description: "They are granted the benefits of the Hastened condition."
+                type: "buff"
+                effect: "hastened"
+            upcast: For an additional action point, increase the duration of the spell to 10 minutes.

@@ -1,0 +1,1081 @@
+Tier_1:
+    Single_Target:
+        0_AP:
+            Biting Words: #Bard
+                cost: 0
+                range: 60
+                duration: concentration
+                requirements:
+                    movement: true 
+                    verbal: true 
+                damage_scaling: 
+                    #damage_type: "psychic"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+                description: "You utter an insult laced with magical power, and a set of ethereal
+                             teeth appear beside your enemy and attempt to bite them."
+                effect:
+                    description: "If your target is fully struck, they must make a spell power saving throw
+                                  or be Grappled regardless of size. You must use concentration to maintain this
+                                  grapple. Damage is repeated at the end of any of the target's
+                                  turns in which it is still grappled."
+                    type: debuff
+                    save: "The spell's victim may spend an action on their turn to repeat their save and attempt to break the grapple."
+                    conditions: 
+                        - grappled
+                upcast: "For every action point spent on this spell, increase its range by 60ft."
+            Frost Bite: # Druid
+                cost: 0
+                range: 60
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling: 
+                    #damage_type: "piercing"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+                description: "A latticework of frost spreads across your focus, then wraps around one of your enemies."
+                effect:
+                    description: On a critical hit, the enemy is Slowed until the end of their next turn.
+                    conditions: 
+                        - slowed
+                    type: debuff
+                    save: null
+            Constricting Vine: # Druid
+                range: 30
+                cost: 0
+                duration: save
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling: 
+                    #damage_type: "blunt"
+                    tier_1: 1d4 #(2.5 + 3.5f = 6)
+                    tier_2: 2d4 #(5 + 7f = 12.5)
+                    tier_3: 3d4 #(13 + 10.5f = 23.5)
+                description: "Snare-like vines writhe and grasp at an your target's feet in an attempt to entangle them."
+                effect:
+                    description: "Average sized targets or smaller must make a spell power saving throw or be Grappled.
+                                  Large enemies must make a spell power saving throw or be Hindered."
+                    conditions:
+                        - hindered
+                        - grappled
+                    type: debuff
+            Beam of Light: # Cleric
+                cost: 0
+                duration: instantaneous
+                range: 60
+                description: "You raise your hand and a blinding beam of white-hot light streaks towards your target."
+                effect: 
+                    type: debuff
+                    description: "On a critical hit, your target is Blinded until the end of their next turn."
+                    conditions:
+                        - blinded
+                    save: false
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling: 
+                    #damage_type: "radiant"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+                upcast: "For each additional action point spent on this spell, deal an additional dice of damage."
+            Flare: # Wizard
+                type: single target damage
+                cost: 0
+                duration: instantaneous
+                range: 60
+                requirements: 
+                    movement: true 
+                    verbal: true 
+                    components: 
+                        - Phosphorus
+                        - A pebble
+                    # optional_components:
+                    #     - component: "Flame Bladder"
+                    #       effect: "You may add a flame bladder to give the enemy disadvantage on their spell power save."
+                description: "You smear a streak of phosphorus upon a pebble and hold your hand aloft. 
+                             A mote of scorching flame crackles toward a target of your choosing.
+                             The flare burns as brightly as daylight and leaves a lingering trail behind it."
+                effect:
+                    type: debuff
+                    description: "Your target becomes Vulnerable until the end of their next turn. On a critical hit, they begin Burning."
+                    conditions:
+                        - vulnerable
+                        - burning
+                    save: null
+                damage_scaling: 
+                    #damage_type: "piercing"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+            Drain: # Wizard
+                type: "single target damage"
+                cost: 0
+                duration: instantaneous
+                requirements:
+                    verbal: true 
+                    movement: true
+                description: "Shadowy tendrils claw at your target. Necrotic energy tears 
+                              at your enemy, breaking down their essence and transferring
+                              it to you. If your attack is not glancing, regain one action point."
+                range: 60
+                damage_scaling: 
+                    #damage_type: "blunt"
+                    tier_1: 1d4 #(2.5 + 3.5f = 6)
+                    tier_2: 2d4 #(5 + 7f = 12.5)
+                    tier_3: 3d4 #(13 + 10.5f = 23.5)
+            Mind Whip: # Warlock
+                type: single target damage
+                cost: 0
+                duration: "instantaneous"
+                range: 30
+                requirements: 
+                    verbal: false
+                    movement: false
+                description: "Raising your fingers to your temples, you channel your energy and slice an enemy with a psychic whip."
+                damage_scaling:
+                    #damage_type: "piercing"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+                effect:
+                    type: debuff 
+                    description: "If you score a critical hit, your target is Stunned until the end of their next turn."
+                    conditions:
+                        - stunned
+                    save: null
+            Eldritch Blast: # Warlock
+                type: single target damage
+                cost: 0
+                duration: "instantaneous"
+                range: 60
+                requirements: 
+                    verbal: true
+                    movement: true 
+                description: "A screaming bolt of green energy leaps from your hand, decaying your enemy where it touches them."
+                damage_scaling: 
+                    #damage_type: "necrotic"
+                    tier_1: 1d8 #(4.5 + 3.5f = 8)
+                    tier_2: 2d8 #(9 + 7f = 16)
+                    tier_3: 3d8 #(13.5 + 10.5f = 24)
+        1AP:
+            Sap Life: # Cleric and Warlock
+                type: single target damage
+                cost: 1
+                duration: instantaneous
+                range: 60
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "Dark tendrils writhe from your outstretched hand and pierce your enemy. They pulse like veins as they sap your target's vitality."
+                effect:
+                    type: debuff
+                    description: "Any damage dealt by this spell is Leeched."
+                    conditions:
+                        - leeched
+                damage_scaling:
+                    #damage_type: "necrotic"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 2d6 #(7 + 7f = 14)
+                    tier_3: 3d6 #(10.5 + 10.5f = 21)
+                upcast: "For each additional action point, deal an additional dice of damage."
+            Arcane Blow: # Wizard
+                cost: 1
+                duration: instantaneous
+                range: touch
+                requirements:
+                    verbal: false 
+                    movement: true
+                description: "With a sound like a thunderclap, you punch your foe with a fist instilled with arcane power.
+                              If they are one size larger than you or smaller, they must make a spell power saving throw
+                              or be knocked back fifteen feet."
+                damage_scaling:
+                    tier_1: 3d6 #(10.5 + 3.5f = 14)
+                    tier_2: 4d6 #(14 + 7f = 21)
+                    tier_3: 5d6 #(17.5 + 10.5f = 28)
+            Pindigae's Arcane Orbs: # Wizard
+                type: multi-attack damage
+                cost: 1
+                duration: instantaneous
+                range: 100
+                requirements:
+                    verbal: true 
+                    movement: true
+                description: "Two multicolored orbs of crackling energy swirl about you before streaking towards as many targets.
+                              Make one attack per orb. The orbs do not need to target a single creature."
+                damage_scaling: 
+                    multi_attack: 2
+                    tier_1: 1 #(1 + 3.5f + 3inf x 2 = 7.5 x 2 = 15)
+                    tier_2: 1 #(1 + 7f + 4inf x 2 = 12 x 2 = 24)
+                    tier_3: 1 #(1 + 10.5f + 5inf x 2 = 16.5 x 2 = 33) 
+                upcast: "For each additional action point spent on this spell, fire an additional orb."
+    AOE:
+        0_AP:
+            Firey Rebuke: # Cleric
+                type: aoe damage
+                cost: 0
+                duration: concentration
+                range: self
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "White hot flames fill the space around you as you call on your deity for protection, damaging everyone in the spell's radius."
+                damage_scaling: 
+                    tier_1: 1
+                    tier_2: 1
+                    tier_3: 1
+                radius: 15
+                upcast: "For each additional action point spent on this spell, either increase its radius by 10 feet." 
+        1_AP:
+            Inanimate Aid: # Bard
+                type: aoe damage
+                cost: 1
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: In a clattering chorus, every inanimate object within range of you
+                  comes to life. As one, they throw themselves at enemies in a radius of your choosing.
+                duration: instantaneous
+                range: 60
+                radius: 15
+                damage_scaling:
+                    #damage_type: "blunt"
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                upcast: "For each additional action point spent on this spell, increases its damage by 2d4"
+            Bees!: # Druid
+                type: aoe damage
+                range: 60
+                radius: 15
+                cost: 1
+                duration: 3
+                requirements:
+                    movement: true 
+                    verbal: true
+                    components: 
+                        - A piece of honeycomb
+                description: "A swarm of bees pour forth from your focus. The air hums as they fill an area of your choosing. On each of your turns,
+                              the spell deals damage to anyone in the radius. Swarm damage is not affected by focus modifiers. An entity may be
+                              harmed at most one time by a swarm of bees per round of combat"
+                damage_scaling: 
+                    scaled_by:
+                        weapon: false
+                    #damage_type: "poison"
+                    tier_1: 1d4 # (2.5 + 3inf x 2 = 5.5 each x 2 = 11 overall)
+                    tier_2: 2d4 # (5 + 4inf x 2 = 9 each x2 = 18 overall)
+                    tier_3: 3d4 # (7.5 + 5inf x 2 = 12.5 each x 2 = 25 overall)
+                effect:
+                    description: Enemies who start their turn or who move into the spell's radius must make a spell power saving
+                    throw or become Distracted until they leave the swarm.
+                    conditions: 
+                        - distracted
+                    type: debuff
+                    save: null
+            Spores: # Druid 
+                type: aoe damage
+                cost: 1
+                duration: concentration
+                radius: 15
+                range: self
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling:
+                    #damage_type: "poison"
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                description: "As you hold your focus aloft, spores of blackish-green billow out, filling a radius around you.
+                  These living parasites heed your whim, entering the lungs of your foes while avoiding your friends."
+                effect:
+                    description: Enemies who begins their turn within the spell's radius must make a spell power saving
+                                 or be Leeched for the spell's primary damage, not including inner fire,
+                                 magic items, or other modifiers. On success, they are not leeched and they take half damage.
+                    conditions: 
+                        - leeched
+                    type: debuff
+                upcast: For each additional action point spent on this spell, increase the radius by 15 feet.
+            Elemental Beam: # Druid
+                type: aoe damage
+                cost: 1
+                range: 90
+                damage_scaling: 
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "Tracing a glyph in the air, you send a helix of fire and ice howling towards your enemies.The beam strikes all enemies in a line up to the spell’s range."
+                effect:
+                    type: debuff
+                    description: "Targets must make a spell power saving throw or be either Burning or Slowed."
+                    conditions: 
+                        - slowed
+                        - burning
+                    save: "Burned enemies may use an action to extinguish themselves. Slowed targets remain so until the end of their next turn."
+            Acrid Mist: # Wizard
+                type: aoe damage
+                cost: 1
+                duration: 3
+                range: 60
+                radius: 15
+                requirements: 
+                    verbal: true 
+                    movement: true 
+                description: "A billowing cloud of stinking green gas fills an area of your choosing. It lingers there
+                              for the spell's duration, burning the lungs of anyone who breathes it."
+                effect: 
+                    type: debuff
+                    description: "Enemies who pass through or begin their turn within the fumes must make a spell power saving throw
+                                  or be damaged and Staggered. On a successful save, they take half damage."
+                    conditions:
+                        - staggered  
+                    save: null  
+                damage_scaling: 
+                    #damage_type: "poison"
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+            Mage Charge: # Wizard
+                cost: 1
+                duration: instantaneous
+                range: 15
+                requirements:
+                    verbal: false
+                    movement: true 
+                description: "Magic crackles around you as you burst forward
+                  with incredible speed, traveling the spell's range in a heartbeat.
+                  Roll an attack against each enemy struck by your passing. You are not
+                  considered exposed while moving using this spell."
+                damage_scaling: 
+                    tier_1: 2d4 #(5 + 3.5f + 3inf x2 = 11.5 each x 2 = 22.5 overall)
+                    tier_2: 3d4 #(7.5 + 7f + 4inf x2 = 18.5 each x 2 = 37 overall)
+                    tier_3: 4d4 #(10 + 10.5f +5inf x2 = 26 each x2 = 52 overall)
+                effect:
+                    type: debuff
+                    description: Any enemy struck by you must make a spell power saving throw or be knocked Prone.
+                    conditions:
+                        - prone
+                    save: null
+                upcast: "For each additional action point spent on this spell, travel 15 feet further."       
+    Cone:
+        1_AP:
+            Belch Flame: # Bard
+                type: aoe damage
+                cost: 1
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                    components: 
+                        - A mouthful of oil
+                description: "Magical warmth floods into your stomach before bubbling up and out. 
+                              You belch a cone of fire, igniting anything before you."
+                range: 15
+                damage_scaling:
+                    #damage_type: fire
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                effect:
+                    description: "Anyone touched by your flames must make a spell power save or begin Burning."
+                    type: debuff
+                    conditions: 
+                        - burning
+                    save: null
+                upcast: "For each additional action point spent on this spell, increase its range by 10 feet."
+            Poison Jet: # Druid
+                type: aoe damage
+                cost: 1
+                range: 15
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling: 
+                    #damage_type: poison
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                duration: instantaneous
+                description: "Putrid purple liquid bubbles and hisses as it sprays from your focus, bathing enemies in a cone in front of you."
+                effect:
+                    description: Targets must make a spell power saving throw or be Poisoned.
+                    conditions: 
+                        - poisoned
+                    type: debuff
+                    save: "The spell's victims may reattempt their save at the end of each of their turns."
+            Jet of Frost: #Wizard
+                cost: 1
+                duration: instantaneous
+                range: 15
+                requirements:
+                    verbal: true 
+                    movement: true
+                description: "Frigid air howls from your focus, biting at the enemies in a cone before you."
+                damage_scaling: 
+                    #damage_type: fire
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                effect:
+                    type: debuff
+                    description: "Targets must make a spell power saving throw or begin to freeze under the icy blast and be Slowed."
+                    conditions:
+                        - slowed
+                    save: "The spell's victims may reattempt their save at the end of each of their turns."
+            Tide of Shadow: #Warlock
+                type: aoe damage
+                cost: 1
+                duration: "instantaneous"
+                range: 15 
+                requirements: 
+                    verbal: true
+                    movement: true 
+                description: "Release a powerful, short-range blast of psychic energy. The blast deals damage to all enemies in a cone in front of you."
+                effect: 
+                    type: debuff
+                    description: "Targets must make a spell power saving throw or begin to Rot."
+                    conditions:
+                        - rot
+                    save: "The spell's victims may reattempt their saving throw at the end of each of their turns."
+                damage_scaling: 
+                    #damage_type: psychic
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+Tier_2:
+    Single_Target:    
+        2_AP:
+            Lightning Strike: # Druid
+                type: single target damage
+                cost: 2
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - A piece of metal
+                description: "White-hot energy fills you until you feel that you might be reduced to cinder.
+                              Just before you immolate, you direct it outward, through your focus, and towards an unlucky enemy.
+                              With a peal of thunder, lightning arcs between you and your target."
+                range: 60
+                effect:
+                    type: debuff
+                    description: "They must make a spell power saving throw or fall Prone."
+                    conditions:
+                        - prone
+                    save: null
+                damage_scaling: 
+                    # damage_type: lightning
+                    tier_1: 5d6 #(17.5 + 3.5f + 3inf = 24)
+                    tier_2: 6d6 #(21 + 7f + 4inf = 32)
+                    tier_3: 7d6 #(24.5 + 10.5f + 5 inf = 40)
+            # Combust: # CUT Druid 
+                #     cost: 2
+                #     range: 90
+                #     duration: instantaneous
+                #     requirements:
+                #         movement: true 
+                #         verbal: false
+                #     description: "Glowing cinders cascade from your fingertips as you lock eyes on an enemy.
+                #                   At once, they combust, wrapped in a roaring inferno."
+                #     damage_scaling: 
+                #         tier_1: "1"
+                #         tier_2: "2"
+                #         tier_3: "3"
+                #     effect:
+                #         type: debuff
+                #         description: "Your target must make an spell power saving throw or begin Burning."
+                #         conditions:
+                #             - burning
+            Ice Spear: # Wizard
+                type: single target damage
+                cost: 2
+                duration: instantaneous
+                range: 100
+                requirements:
+                    verbal: true 
+                    movement: true
+                description: "As you hold your focus aloft, a four foot
+                            spear of crystalline ice materializes, then hurtles towards your target."
+                damage_scaling:
+                    # damage_type: lightning
+                    tier_1: 5d6 #(17.5 + 3.5f + 3inf = 24)
+                    tier_2: 6d6 #(21 + 7f + 4inf = 32)
+                    tier_3: 7d6 #(24.5 + 10.5f + 5 inf = 40)
+                upcast: "You may spend an additional action point on this spell to add 2d6 damage."
+            Hurl Through Hell: # Warlock
+                type: single target damage
+                cost: 2
+                duration: "instantaneous"
+                range: 30
+                requirements: 
+                    verbal: true
+                    movement: true 
+                description: "A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss."
+                effect: 
+                    type: debuff
+                    description: "They must make a spell power saving throw or spend 1d4-1 minimum 1 turns falling through the hells.
+                                  On success, they take half damage and are not sucked into the portal.
+                                  When they return from the abyss, they reappear, they slam to the earth.
+                                  They must make spell power saving throws or be Burning and Prone."
+                    conditions: 
+                        - burning
+                        - prone
+                    save: false
+                damage_scaling:
+                    tier_1: 4d6 #(14 + 3.5f + 3inf = 20.5)
+                    tier_2: 5d6 #(17.5 + 7f + 4inf = 28.5)
+                    tier_3: 6d6 #(21 + 10.5f + 5 inf = 36.5)
+            Wilting Touch: # Warlock 
+                type: single target damage
+                cost: 2
+                range: touch
+                requirements: 
+                    verbal: true
+                    movement: true 
+                duration: 1
+                description: "Black veins creep down your arms as you grip an enemy and channel
+                              powerful necrotic energy into them."
+                effects:
+                    type: debuff
+                    description: "They must make a spell power saving throw or be affected by Rot."
+                    conditions:
+                        - rot
+                    save: The spell's victim may reattempt their saving throw at the end of each of their turns.
+                damage_scaling:
+                    tier_1: 5d8 #(17.5 + 3.5f + 3inf = 24)
+                    tier_2: 6d8 #(21 + 7f + 4inf = 32)
+                    tier_3: 7d8 #(24.5 + 10.5f + 5 inf = 40)
+            Cthulian Tentacles: # Warlock
+                type: single target damage
+                cost: 2
+                duration: 3
+                range: 60
+                requirements: 
+                    verbal: true
+                    movement: true
+                description: "At your command, shadows converge into hideous tentacles and burst from the ground.
+                              Together, they converge on one of your foes."
+                damage_scaling: 
+                    # damage_type: lightning
+                    tier_1: 5d6 #(17.5 + 3.5f + 3inf = 24)
+                    tier_2: 6d6 #(21 + 7f + 4inf = 32)
+                    tier_3: 7d6 #(24.5 + 10.5f + 5 inf = 40)
+                effect:
+                    description: "Your target must make a spell power saving throw or be Grappled. They may repeat their save each turn."
+                    conditions:
+                        - grappled
+                    type: debuff
+                    save 
+                upcast: You smay spend an action point to create two additional tentacles, attacking two additional creatures in range.
+    AOE:
+        1_AP:
+            Whirlpool: # Druid 
+                type: aoe damage
+                cost: 1
+                duration: concentration
+                range: 60
+                requirements:
+                    movement: true 
+                    verbal: false
+                damage_scaling: 
+                    tier_1: 1d6
+                    tier_2: 2d6
+                    tier_3: 3d6
+                description: "You raise your focus aloft and sway with it as though stirring the air. 
+                              In moments, a swirling riptide or whirlwind appears at a point within range."
+                effect:
+                    type: debuff
+                    description: Everyone within the spell's radius must make a spell power save or take damage and 
+                                be pulled 15 feet towards the spell's center. Anyone within the spell's radius is Hindered.
+                                Each turn, you must spend an action to maintain the whirlpool."
+                    conditions:
+                        - hindered
+                    save: null
+        2_AP:
+            Flaming Orb: # Druid
+                type: aoe damage
+                cost: 2
+                range: touch
+                duration: concentration
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - Tinder
+                description: "As you channel your magic, a point of fire appears on your hand. You toss it to the ground before 
+                              you, and it rapidly grows to a white-hot sphere of up to five feet in diameter. Each turn,
+                              you may use an action to cause the sphere to roll up to thirty feet. The sphere is capable of
+                              rolling over obstacles up to two and a half feet tall."
+                damage_scaling:
+                    tier_2: 2d4 # SUSTAINED (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 3d4 # SUSTAINED (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                effect:
+                    type: debuff
+                    description: "Anyone who is struck by the sphere or who begins their turn next to it must make
+                                  a spell power saving throw or take damage and begin Burning. On a success, they take half damage."
+                    conditions:
+                        - burning
+                    save: null
+            Power Shriek: #Bard 
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                range: 30
+                requirements:
+                    movement: false 
+                    verbal: true 
+                description: "Inhale, exhale, inhale again, then release the most shameful of all magics: a power shriek. The attack passes through all enemies in a line before you."
+                damage_scaling:
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+                effect:
+                    description: "The target must make a spell power save or be Deafened and Bleeding."
+                    conditions: 
+                        - deafened
+                        - bleeding
+                    type: debuff
+                    save: "This spell's victims may repeat their save at the end of each of their turns."
+                upcast: "You can spend an additional action point on this spell to double its range."
+            # Spirit Bomb: # Cleric
+                #     cost: 2
+                #     duration: instantaneous
+                #     range: 60
+                #     radius: 15
+                #     requirements:
+                #         verbal: true 
+                #         movement: true 
+                #     description: "Gripping your holy sigil, you weave a prayer of pain and healing. 
+                #                   Golden light explodes from a point of your choosing, damaging your enemies while miraculously healing your allies."      
+                #     damage_scaling:
+                #         tier_1: "2d4"
+                #         tier_2: "4d4"
+                #         tier_3: "4d10"
+            Excoriating Beam: # Cleric
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                range: 100
+                requirements: 
+                    movement: true 
+                    verbal: true
+                description: "A blinding beam of light streaks from you, ringed with halos. The blast 
+                              harms everyone in a line before you, but is stopped by objects with a 
+                              width greater than one foot."
+                effect:
+                    type: debuff
+                    description: "Anyone struck by the spell must make a spell power saving throw or be Blinded until the end of their next turn."
+                    save: null
+                    conditions: 
+                        - blinded
+                damage_scaling:
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+                upcast: "You may spend an additional action point on this spell to allow it to pass through obejcts
+                        with a width up to five feet."
+            Guardians of Faith: # Cleric 
+                type: aoe damage
+                cost: 2
+                range: self
+                radius: 15
+                duration: concentration
+                description: "Holy spirits fill the space around you in a swirling tide of light."
+                effect: 
+                    type: debuff
+                    description: "Enemies within the spell's radius are Entangled. When they move into the spell's 
+                                  radius or begin their turn within it, they must make a spell power saving throw 
+                                  or take damage. On success, they take half damage."
+                    conditions:
+                        - entangled
+                    save: null
+                damage_scaling: 
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+            Fireball: # Wizard 
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                range: 100
+                radius: 15
+                requirements:
+                    verbal: true 
+                    movement: true 
+                    components:
+                        - A ball of guano
+                        - Sulfur
+                description: "Darkness, blacker than black, darker than dark! Channel your magic into a 
+                              dried ball of bat guano and sulfur to turn it into a bead of sizzling light. 
+                              It streaks towards your target before erupting into a massive ball of flames."
+                damage_scaling:
+                    tier_2: 6d4 #(15 + 7f + 4inf x 2 = 26 each x2 = 52 total)
+                    tier_3: 8d4 #(20 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+                # upcast: More damage!
+            Chain Lightning: # Wizard 
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                range: 60
+                requirements: 
+                    movement: true
+                    verbal: true
+                description: "Thunder roars over and over again as your lightning leaps from target to target.
+                  After the lightning hits your first target, roll 1d4. If the roll is greater than 1, 
+                  the lightning chains to another enemy of your choice. Continue until you
+                  roll a 1. Lightning may only strike the same entity twice and may leap a maximum of eight times."
+                damage_scaling:
+                    damage_type: lightning
+                    tier_2: "1d6" # (3.5 + 7f + 4inf = 14.5 each x 3 jumps = 42.5 )
+                    tier_3: "2d4" # (5 + 10.5f + 5inf = 20.5 each x 3 jumps = 61.5 )
+            Rainbows: # Wizard 
+                type: aoe damage
+                cost: 2
+                range: 100
+                duration: instantaneous
+                description: "With the sound of trumpets, a blinding beam of light flares from your
+                    fingertips or mouth. As the light moves further from you, it separates into
+                    bands of color; a rainbow! The beam passes through enemies in a line before it."
+                effect:
+                    type: debuff
+                    description: "Anyone struck by the beam must make a spell power saving throw or begin vomiting rainbows,
+                        rendering them Vulnerable."
+                    conditions:
+                        - vulnerable
+                    save: "The spell's victims may reattempt their save at the end of each of their turns."
+                damage_scaling:
+                    damage_type: arcane
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+            Murder of Crows: # Warlock 
+                type: aoe damage
+                cost: 2
+                duration: 3
+                range: 90
+                requirements: 
+                    verbal: true
+                    movement: true 
+                radius: 10
+                description: "With a sound like a rush of wind, a murder of crows streaks past you and to a location of your choice,
+                              dealing damage as it goes. For the spell's duration, any enemy who begins their turn within the swarm
+                              or who passes through it takes damage. As an offhand action on your turn, you may command the murder
+                              of crows to move up to 30 feet. Swarm damage is not affected by focus modifiers. An entity may be
+                              harmed at most one time by a swarm of crows per round of combat."
+                damage_scaling:
+                    damage_type: piercing
+                    tier_2: 3d6 #(10.5 + 4inf x 2 = 14.5 each x2 = 29 total)
+                    tier_3: 4d6 #(14 + 5inf x 2 = 19 each x2 = 38 total)
+            Radiant Darkness: # Warlock
+                type: aoe damage
+                cost: 2
+                duration: 3
+                range: 90
+                requirements: 
+                    verbal: true
+                    movement: true 
+                radius: 10
+                description: "A bead of greenish light explodes at a point of your choosing and rapidly expanding, 
+                              filling a sphere with blinding light."
+                damage_scaling: #lower than normal because its just area control.
+                    damage_type: radiant
+                    tier_2: 2d6 #(7 + 7f + 4inf x 2 = 18 each x2 = 36 total)
+                    tier_3: 3d6 #(10.5 + 10.5f + 5inf x 2 = 26 each x2 = 52 total)
+                effect:
+                    type: debuff
+                    description: "Anyone who begins a turn within the sphere or who moves through it takes damage.
+                                  They must also make a spell power saving throw or be Blinded. 
+                                  Entities can avoid this save by moving at half speed."
+                    conditions: 
+                        - blinded 
+                    save: "Blinded entities may reattempt their save at the end of each of their turns."
+            Death Bolt: # Warlock
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                range: 100
+                requirements: 
+                    verbal: true
+                    movement: true 
+                description: "You loose a screaming bolt of green necrotic energy, harming all enemies in a line before you."
+                damage_scaling:
+                    damage_type: necrotic
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+    Cone:
+        2_AP:
+            Kilgore's Thunderous Shout: # Bard
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: "Sucking in a breath, you channel the fearsome energy of Kilgore, barbarian minstrel of the realm of cheese and mead.
+                              The shout that you release is mighty, and wounds all enemies in a cone before you."
+                range: 20
+                damage_scaling:
+                    damage_type: acoustic
+                    scaled_by:
+                        weapon: false
+                    #damage_type: "blunt"
+                    tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
+                effect:
+                    type: debuff
+                    conditions: 
+                        - prone
+                    description: "Anyone struck by the shout must make a spell power saving throw or take damage, be thrown back 15 feet, and be knocked prone. 
+                                  On success, enemies take half damage."
+                    save: null
+                upcast: "For each additional action point spent on this spell, enemies suffer an additional 1d6
+                         damage and are pushed back 15 feet further."            
+Tier_3:
+	single_target:
+        Psychic Spear: #Warlock
+            type: single target damage
+            cost: 3
+            range: 100
+            duration: instantaneous
+            requirements: 
+                verbal: false
+                movement: false
+            description: "Amid the chaos of battle, your willpower coalesces into a shimmering,
+                          translucent spear of pure psychic energy. With a focused gesture,
+                          you hurl it toward your chosen adversary. The spear streaks through
+                          the air, a swift and ethereal missile, unerring in its aim.
+                          Upon impact, it tears into the target's psyche with an explosive
+                          force, inflicting profound mental anguish. The victim's thoughts
+                          unravel, their senses distort, and their very consciousness
+                          trembles under the psychic onslaught."
+            damage_scaling:
+                damage_type: psychic
+                tier_3: "10d6"
+    AOE:
+        Nothing but Unicorns: #Bard
+            type: aoe damage
+            cost: 3
+            description: "Glitter dances in the air as rainbows erupt from your mouth and fingertips, streaming
+              in three lines towards your foes. As they streak forth, each
+              the colors tangle and combine into the form of a stampede of unicorns!"
+            duration: instantaneous
+            range: 120
+            requirements:
+                movement: true 
+                verbal: true
+            damage_scaling:
+                damage_type: arcane
+                tier_3: "5d6"
+            effect:
+                description: "Enemies struck by the stampede must make a spell power
+                                saving throw or have their perception of reality distorted. 
+                                To them, you appear to take the form of a giant,
+                                jet black unicorn with blazing red eyes and a bloody horn.
+                                Meanwhile, the rest of the world begins to 
+                                shimmer as sparkles emanate from objects randomly, and the
+                                ground begins to undulate. They are Frightened of you
+                                and are Distracted and Hindered."
+                conditions: 
+                    - frightened
+                    - distracted
+                    - hindered
+                type: debuff
+                save: "The spell's victims may repeat their save at the end of each of their turns."
+        Torugar the Many Tongued Demon: # Warlock
+            type: aoe damage
+            cost: 3
+            duration: 5
+            range: 90
+            requirements:
+                verbal: true 
+                movement: true
+                components: 
+                    - Demonic Eye (200gp)
+            radius: 1000
+            damage_scaling:
+                damage_type: blunt
+                scaled_by:
+                    weapon: false
+                tier_3: "4d6" #(17.5 + 5inf = 22.5 per turn.)
+            description: "A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss.
+                Each turn, 1d6 pitch-black tongues (max 6) writhe forth from the pit and 
+                attempt to grapple an individual within the spell's radius. Torugar does not distinguish friend from foe.
+                If a tongue takes 50 
+                damage on a single turn, it releases its grapple, and returns to the pit.
+                Each turn an enemy is grappled by a tongue, it takes damage and is pulled 
+                2d4 spaces towards the pit. Anyone who enters the pit is transported to 
+                Torugar's Realm, deep within the sixth layer of the Abyss. The tongues'
+                damage is not modified by your casting focus."
+            effects:
+                type: debuff 
+                description: "Affected entities must make a spell power saving throw or be grappled."
+                condition:
+                    - grappled
+                save: "The spell's victims may repeat their save against being grappled as an action on their turn."
+        Starfall: # Druid
+            type: aoe damage
+            cost: 3
+            range: 300
+            radius: 15
+            casting_time: 1 minute
+            duration: instantaneous
+            requirements:
+                movement: true 
+                verbal: false
+            damage_scaling:
+                damage_type: fire
+                tier_3: "6d6"
+            description: "You raise your hand aloft and reach beyond the sky and up into the 
+                            realms above. Spend one full round of combat focusing on bringing down four massive
+                            meteors. If you are attacked, make a concentration check. On failure, you lose
+                            control of the spell, and only 1d4 meteors fall from the sky. On success, call down all four meteors.
+                            The fallen stars deal damage to all enemies in their radius. Enemies can be damaged by at most one meteor."
+        # Quake: # Druid # I THINK THERE'S A STATUS EFFECT FOR THIS!
+            #     cost: 3
+            #     duration: concentration
+            #     radius: 300
+            #     range: 1000
+            #     requirements:
+            #         movement: true 
+            #         verbal: false
+            #     description: "You stomp once on the ground and create a thunderous earthquake
+            #                   capable of greatly weakening structures. All movement within 
+            #                   the spell's radius is halved. Anyone within must make a spell power
+            #                   saving throw at the start of each turn or be knocked prone." 
+        Prison of Ice: #Druid
+            cost: 3
+            range: self
+            radius: 50
+            duration: save
+            requirements:
+                movement: true 
+                verbal: false
+            damage_scaling: 
+                damage_type: cold
+                tier_3: "6d6" #
+            description: "A black wind swirls around you as the air  
+                          plummets to hundreds of degrees below zero. Your
+                          allies watch on, unharmed as all enemies within the spell's
+                          radius are bitten by merciless frost."
+            effect:
+                type: debuff
+                description: "Affected enemies must make a spell power saving throw or take full damage and become Frozen.
+                              On success, they take half damage. Frozen enemies are not damaged by the spell until unfrozen."
+                save: "The spell's victims may repeat their save at the end of each of their turns or whenever they are damaged."
+                conditions:
+                    - frozen
+        Pillar of Dawn: # Cleric
+            type: aoe damage
+            cost: 3
+            range: 1 mile
+            duration: instantaneous
+            radius: 25
+            requirements: 
+                verbal: true 
+                movement: true 
+            description: "Spread your hands wide as you summon forth the glory of your deity. A pillar of fire falls
+                          from the heavens and envelops a radius of your choosing. The fire crackles and spreads,
+                          reducing your target to cinders."
+            damage_scaling: 
+                damage_type: radiant
+                tier_3: "5d6"
+            effect:
+                type: debuff 
+                description: "Anyone struck by the beam is instantly set ablaze and begins Burning. 
+                             They must also make a spell power saving throw or be rendered Blind."
+                conditions:
+                    - burning
+                    - blinded 
+                save: "The spell's victims may repeat their save at the end of each turn."
+        Tri-beam: # Wizard
+            type: multi-attack damage
+            cost: 3
+            range: 100 
+            duration: instantaneous
+            requirements:
+                movement: true 
+                verbal: true
+            description: "Three beams of crackling energy fire forth from the source of your
+                magic. Each beam may target an enemy of your choice."
+            effect:
+                type: debuff
+                description: "Roll a d6 for each beam."
+                options:  
+                    - On a 1, it is a ray of weakness and the entity must make a spell power save or be rendered Weakened and Vulnerable.
+                    - On a 2, it is a ray of fire which deals tier 2 damage and causes the enemy to begin Burning without a save.
+                    - On a 3, it is a ray of frost which deals tier 2 damage and causes the enemy to be Slowed without a save.
+                    - On a 4, it is a ray of disruption, and the enemy is Dumbstruck without a save.
+                    - On a 5, it is a ray of electricity which deals tier 2 damage and causes the enemy to be Stunned without a save.
+                    - On a 6, it is a ray of death, and the affected entity takes an additional 4d6 damage.
+                conditions:
+                    - weakened
+                    - vulnerable
+                    - burning
+                    - slowed
+                    - dumbstruck 
+                    - stunned
+                save: "The spell's victims may repeat their save at the end of each of their turns."
+            damage_scaling: 
+                damage_type: arcane
+                multi_attack: 3
+                tier_3: "6d6"
+        Black Hole: # Wizard
+            type: aoe damage
+            cost: 3
+            duration: 3
+            range: 90
+            radius: 100
+            description: "There is a moment of silence as a black speck,
+                smaller than a gnome's fingernail, appears, hanging
+                at a point of your choosing. Then, there is a scream of air as
+                all inanimate objects within the spell's radius are pulled 25 feet towards
+                the newly summoned black hole. The black hole instantly swells
+                to the size of a halfling as debris reaches it."
+            effect:
+                type: debuff
+                description: "Each turn, everyone within the spell's radius must make a spell power
+                    save or be pulled 1d6 x 5 feet towards the black hole. All entities that begin their turn within
+                    50 feet of the black hole are Slowed. Anyone who touches the black hole takes the spell's damage."
+                conditions: 
+                    - slowed
+                save: null
+            damage_scaling:
+                damage_type: blunt
+                tier_3: "10d6"
+    cone:
+        Sorris' Decay: #Warlock
+            type: aoe damage
+            cost: 3
+            range: 60
+            duration: instantaneous
+            requirements:
+                verbal: false 
+                movement: true
+            damage_scaling:
+                damage_type: necrotic
+                tier_3: "8d6"
+            description: "Your outstretched hand beckons forth the essence of the abyss,
+                        a roiling tide of inky darkness. Like a dragon's breath, decay 
+                        rolls forward, washing over everyone in a cone before you."
+            effect: 
+                type: debuff
+                description: "Targets must make a spell power saving throw or take full damage and begin to Rot.
+                              On success, they take half damage."
+                conditions: 
+                    - rot
+                save: "The spell's victims can repeat their save at the end of each of their turns."
+    
+    
+	
+	
+	
+    
+    
+    
+    
