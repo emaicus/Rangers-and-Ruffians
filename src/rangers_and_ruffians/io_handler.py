@@ -10,18 +10,15 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
     image_path, image_attribution = core.get_gendered_art(
         relative_art_folder,
         absolute_art_folder,
-        rnr_class_obj.subclass.replace(' ','_').lower(),
+        rnr_class_obj.name.replace(' ','_').lower(),
         male
     )
 
     ret = []
-    description = rnr_class_obj.description
-    # # The 100 should future proof us.
-    # abilities = rnr_class_obj.get_abilities_to_level(100)
-    # abilities = core.filterAbilities(rnr_class_obj.abilities)
+    #description = rnr_class_obj.description
 
     indent = '####' if sub_heading else '###'
-    ret.append(f"{indent} {rnr_class_obj.subclass_name} \n")
+    ret.append(f"{indent} {rnr_class_obj.name} \n")
 
     if image_path is not None and image_attribution is not None:
         ret.append(f"<img src='{image_path}' class=\"raceClassImage\" />\n\n")
@@ -37,37 +34,23 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
                 ret.append('\n\n')
 
 
-    ret.append(f"\n")
-    ret.append(f"{description}\n")
-    ret.append(f"\n")
+    #ret.append(f"\n")
+    #ret.append(f"{description}\n")
+    #ret.append(f"\n")
 
     ret.append(f"\n")
-    ret.append(f"The following starting stats are recommended for a {rnr_class_obj.subclass_name}")
+    ret.append(f"The following starting stats are recommended for a {rnr_class_obj.name}")
     ret.append(f"\n  ")
     ret.append(f"|STR|INT|PER|DEX|INF|CHA|  \n")
     ret.append(f"|:---:|:---:|:---:|:---:|:---:|:---:|  \n")
     ret.append(f"|{rnr_class_obj.get_stat('strength')}|{rnr_class_obj.get_stat('intelligence')}|{rnr_class_obj.get_stat('perception')}|{rnr_class_obj.get_stat('dexterity')}|{rnr_class_obj.get_stat('inner_fire')}|{rnr_class_obj.get_stat('charisma')}|  \n")
     ret.append(f"\n")
 
-    ret.append("  \n__Expertise:__  \n")
-    ret.append(f"{rnr_class_obj.subclass_name}s have expertise in three of the following checks:  \n")
-    for expertise_stat in rnr_class_obj.expertise_choices:
-        for expertise in core.get_expertises_for_stat(expertise_stat):
-            ret.append(f"  * {expertise} _({core.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
-
-
-
-    # if len(abilities) > 0:
-    #   ret.append(f"__{string.capwords(rnr_class_obj.class_name)} Abilities:__ \n")
-    #   for key in ('rule', 'spellbook', 'choice','general', 'starting_item', 'advantage', 'disadvantage', 'combat'):
-    #     if not key in abilities:
-    #       continue
-    #     ret.append(f"* __{mapAbilityType(key)}:__   \n")
-    #     for ability, info in abilities[key].items():
-    #       if 'cost' in info and info['cost'] not in [None, 0]:
-    #         ret.append(f"  * __{ability}:__ _(Cost {info['cost']})_ {info['verbose']}  \n")
-    #       else:
-    #         ret.append(f"  * __{ability}:__ {info['verbose']}  \n")
+    # ret.append("  \n__Expertise:__  \n")
+    # ret.append(f"{rnr_class_obj.subclass_name}s have expertise in three of the following checks:  \n")
+    # for expertise_stat in rnr_class_obj.expertise_choices:
+    #     for expertise in core.get_expertises_for_stat(expertise_stat):
+    #         ret.append(f"  * {expertise} _({core.abbreviate_stat(expertise_stat, capitalize_first=True)})_  \n")
 
     ret.append('  \n')
 
@@ -77,26 +60,9 @@ def get_class_markdown(rnr_class_obj, male=False, sub_heading=False):
 
 def get_level_up_sheet_markdown(rnr_class_obj):
     ret = []
-    all_data = core.get_subclass_data_with_name(rnr_class_obj.subclass)
-    level_data = all_data['levels']
-    for i in range(0,100):
-        level = f'level_{i}'
-        if not level in level_data:
-            continue
-        ret.append( f"__{string.capwords(level.replace('_',' '))} {string.capwords(rnr_class_obj.subclass_name.replace('_', ' '))}__\n\n")
 
-        if 'abilities' in level_data[level]:
-            level_abilities = core.filterAbilities(level_data[level]['abilities'])
-            for key in ('general', 'combat'):
-                if not key in level_abilities:
-                    continue
-                ret.append(f"* __{mapAbilityType(key)}:__   \n")
-                for ability, info in level_abilities[key].items():
-                    if 'cost' in info and info['cost'] not in [None, 0]:
-                        ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['verbose']}  \n")
-                    else:
-                        ret.append( f"  * __{ability}:__ {info['verbose']}  \n")
-                ret.append('\n\n')
+    for ability, ability_info in rnr_class_obj.abilities:
+        ret.append( f"  * __{ability}:__ _(Cost {info['cost']})_ {info['description']}  \n")
 
     return ret
 
@@ -343,7 +309,6 @@ def markdown_spell(spell_name, spell_data):
 
 
 def markdown_skills():
-
     lines = []
     for skill, info in core.GLOBAL_SKILL_DATA.items():
         lines.append(f'* __{skill}:__ { info["description"] }  \n')
@@ -357,7 +322,6 @@ def markdown_skills():
     return lines
 
 def markdown_pantheon():
-
     lines = []
 
     for deity_type, evil_val in [('Light', False), ('Darkness', True)]:

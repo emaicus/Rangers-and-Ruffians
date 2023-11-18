@@ -2,19 +2,19 @@ Catterwol: #Done
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Low-Light Vision:
+        -   name: Low-Light Vision
             cost: 0
             description: "So long as there is a little light, you can see. However, colors are muted."
-        They're Retractable: 
+        -   name: They're Retractable 
             cost: 0
             description: "You use your sharp claws when attacking hand-to-hand. Increase the dice of your hand to hand attacks by one."
-        Loose Skin:
+        -   name: Loose Skin
             cost: 0
             description: "You are naturally difficult to grab. Add your expertise to any checks made to physically restrain you."
-        Fear of Water:
+        -   name: Fear of Water
             cost: 0
-            description: Take distadvantage on all checks when you are soaked through.
-        Lithe and Dextrous:
+            description: Take disadvantage on all checks when you are soaked through.
+        -   name: Lithe and Dextrous
             cost: 0
             description: "Add your expertise to checks made to climb or fall. When falling, take half damage."
     handbook:
@@ -65,21 +65,21 @@ Wood Elf: # Done
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Sleepless:
+        -   name: Sleepless
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
-        Natural Tracker:
+        -   name: Natural Tracker
             cost: 0
             description: "You are naturally adept at tracking your foes. Add your expertise to checks made to track enemies or perceive their passing."
-        Meditative Rest: 
+        -   name: Meditative Rest 
             cost: 0
             description: "Whenever you rest, you can focus to regain one extra action point."
-        Natural Agility:
+        -   name: Natural Agility
             cost: 0
             description: "Your elven heritage has gifted you with supernatural agility. Add your expertise to any checks related to your movement."
-        Hasten: 
+        -   name: Hasten 
             cost: 1
-            condition: "Hastened" 
+            condition: "hastened" 
             description: "Channel the magic within you to spur yourself to great speeds. Become affected by Haste for 5 minutes. Afterward, immediately take one level of exhaustion."
     handbook:
         description: "True to their common name, wood elves are forest-dwellers.
@@ -92,18 +92,24 @@ High Elf: #Done
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Sleepless:
+        -   name: Sleepless
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
-        Inherent Magic:
+        -   name: Inherent Magic
             cost: 0
             description: "Begin your adventure with two tier zero spells from any spellbook. If you are a casting class, these spells are considered a bonus." 
-        Detect Magic:
+        -   name: Detect Magic
             cost: 1
             description: "Make a perception check to identify sources of nearby magic."
-        Natural Intellect:
+        -   name: Natural Intellect
             cost: 0
             description: "Add your expertise to intelligence checks."
+        -   name: Upper Class
+            cost: 0
+            description: "Add your expertise to charisma checks made with people of high station."
+        -   name: Font of Magic
+            cost: 0
+            description: "Add one to your maximum number of action points."
     handbook:
         description: "High elves are among the most magical of the races. Reclusive by nature,
             high elves often confine themselves to gleaming costal cities. When a high elf does
@@ -113,43 +119,52 @@ High Elf: #Done
             good mages."
 Deep Elf: # Done
     parent_class: "Elf"
+    health_dice_bonus: 4
+    base_movement: 25
+    abilities:
+        -   name: Sleepless
+            cost: 0
+            description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
+        -   name: Poison Resist
+            cost: 0
+            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
+        -   name: Born in Darkness
+            cost: 0
+            description: "The effects of light and darkness are reversed for you; you can see perfectly in pitch darkness, but cannot see in total light. When wearing mesh over your eyes, you can see normally in total light."
+        -   name: Survivor
+            cost: 0
+            description: "You may add your expertise to survival checks."
+        -   name: Vicious Critical
+            cost: 0
+            description: When you land a critical hit, optionally add an extra dice of damage.
+    handbook:
+        description: "Sons and daughters of the dark gods, the deep elves
+            have suffered much hardship for their origin. Pushed
+            deep underground, dark elves have grown accustomed to the
+            darkness. Stronger than other elves, dark elves are incredible but
+            largely uncharismatic fighters."
+Gnome: # Done
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Sleepless:
+        -   name: Tinker 
             cost: 0
-            description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
-        Poison Resist:
-            cost: 0
-            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
-        Born in Darkness:
-            cost: 0
-            description: "The effects of light and darkness are reversed for you; you can see perfectly in pitch darkness, but cannot see in total light. When wearing mesh over your eyes, you can see normally in total light."
-        Survivor:
-            cost: 0
-            description: "You may add your expertise to survival checks."
-  handbook:
-      description: "Sons and daughters of the dark gods, the deep elves
-          have suffered much hardship for their origin. Pushed
-          deep underground, dark elves have grown accustomed to the
-          darkness. Stronger than other elves, dark elves are incredible but
-          largely uncharismatic fighters."
-Gnome: # Done
-    health_dice_bonus: 0
-    base_movement: 30
-    abilities:
-        Tinker: 
-            cost: 0
-            description: "You are able to create simple contraptions using your tools and the world around you. Use the rules for 'informal magic.'"
-        Perfect Recall: 
+            description: "Add your expertise to checks made with Tinker's tools."
+        -   name: Perfect Recall 
             cost: 0
             description: "You have an incredible memory, and can recall anything you spend one minute looking at."
-        Natural Intellect:
+        -   name: Natural Intellect
             cost: 0
             description: "Add your expertise to intelligence checks."
-        Little One:
-                cost: 0
-                description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+        -   name: Little One
+            cost: 0
+            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
+        -   name: Single Minded
+            cost: 0
+            description: "Your focus is so intense that you are immune to the charmed and controlled conditions."
+        -   name: Spirit of Fun
+            cost: 0
+            description: "Add your expertise to any checks made to play or compete."
     handbook:
         quote: Gnomes are tiny. They make things, sometimes. I can crush them.
         author: Throgar, Barbarian and Sheriff
@@ -158,48 +173,46 @@ Gnome: # Done
             in height, and can be recognized by their signature goggles. Gnomes are well rounded
             and are capable of succeeding at anything they put their minds to.
         sections:
-            - title: Tinker
-                subsections:
-                    - title: ""
-                      text: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
-                        is coming along quite well, better than expected, actually. Not far away, the
-                        rest of her party snores as they sleep. She should be sleeping as well; tomorrow
-                        is the big day. But then, that's why she needs a spring loaded spear-thrower
-                        in the first place. For a moment, she considers lying down, but then pulls her
-                        goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin,
-                        she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
-                    # - title: Magic Resistant
-                    #   subsections:
-                    #     - title: ""
-                    #       text:
-                    - title:
-                      subsections:
-                        - title: Eccentric
-                          text: Most consider gnomes to be eccentric at best, and obtuse at worse.
-                    # - title: Building a Cattwol Character
-                    #   subsections:
-                    #     - title: ""
-                    #       text: When building your Catterwol, consider how they came to belong to your party. Remember
-                    #         that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
-                    #         their family now? What members of the party is your character close to?
+            title: Tinker
+            subsections:
+                - mytitleone: Moonlight paints the room as the Gnomish Tinker bites her lip. Her project
+                    is coming along quite well, better than expected, actually. Not far away, the
+                    rest of her party snores as they sleep. She should be sleeping as well; tomorrow
+                    is the big day. But then, that's why she needs a spring loaded spear-thrower
+                    in the first place. For a moment, she considers lying down, but then pulls her
+                    goggles over her eyes. Hopefully, her party is sleeping heavily. With a grin,
+                    she lights her acetaline torch, and sparks begin to fly. *Roll an intelligence check!*
+                # - title: Magic Resistant
+                #   subsections:
+                #     - title: ""
+                #       text:
+                - mytitletwo:
+                    subsections:
+                        - Eccentric: Most consider gnomes to be eccentric at best, and obtuse at worse.
+                # - title: Building a Cattwol Character
+                #   subsections:
+                #     - title: ""
+                #       text: When building your Catterwol, consider how they came to belong to your party. Remember
+                #         that, while Catterwol are tribal, they are deeply protective of those close to them. Is the party
+                #         their family now? What members of the party is your character close to?
 Goblin: # Done
     health_dice_bonus: 0
-    base_movement: 30
+    base_movement: 35
     abilities:
-        Still Warm:
+        -   name: Still Warm
             cost: 0
             damage_progression: Minor heal
             description: "Regain health by consuming raw flesh. This can be done once per day."
-        Mantle:
+        -   name: Mantle
             cost: 0
             description: "You are an excellent climber. Add your expertise to checks made to climb or traverse high places."
-        Sneak:
+        -   name: Sneak
             cost: 0
             description: "Add your expertise to checks made to hide or sneak."
-        Low-Light Vision:
+        -   name: Low-Light Vision
             cost: 0
             description: "So long as there is a little light, you can see. However, colors are muted."
-        One of the Pack:
+        -   name: One of the Pack
             cost: 0
             description: "So long as you have at least one ally within 30ft, you are immune to the frightened condition. If you have no allies within 100 feet in combat, you are immediately frightened."
     handbook:
@@ -217,24 +230,24 @@ Halfling: # Done
     health_dice_bonus: 0
     base_movement: 35
     abilities:
-        Scurry:
+        -   name: Scurry
             cost: 0
             description: "You are naturally quick on your feet. Any time an attack misses you, move 5ft without provoking exposed attacks."
-        Hamstring: 
+        -   name: Hamstring 
             cost: 0
             description: "The bigger they are, the harder they fall! When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them, causing them to instantly lose half of their movement on their next turn."
-        Hide Underfoot:
+        -   name: Hide Underfoot
             cost: 0
-            description: "You are able to bob and weave around the larger races. When you have two or more entities adjacent to you, attacks against you are at distadvantage."
-        Warm Butter:
+            description: "You are able to bob and weave around the larger races. When you have two or more entities adjacent to you, attacks against you are at disadvantage."
+        -   name: Warm Butter
             cost: 0
             description: "You are a naturally talented chef. Whenever you rest, prepare food which heals all allies for an additional 1d6 health."
-        Soft Bed:
+        -   name: Soft Bed
             cost: 0
             description: "The comforts of home beckon you. Whenever you sleep in a real bed, regain all of your lost health."
-        Little One:
+        -   name: Little One
             cost: 0
-            description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
     handbook:
         description: "Tiny and rambunctious, halflings are all high-spirits
             and fun. Known for their precocious daring, halflings
@@ -245,16 +258,21 @@ Human: #Needs another abilitiy
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Human Endurance: 
+        -   name: Human Endurance 
             cost: 0
             description: "Your dash carries you a distance equal to your full movement. You may dash at most once per turn."
-        Adaptable:
+        -   name: Adaptable
             cost: 0
             description: "If you are affected by a status effect, take advantage on saves against it for the remainder of the day."
-        Rally Cry: 
+        -   name: Rally Cry 
             cost: 1
             description: "Human perseverance is infectious. As an action, grant all allies within a 25ft radius a point of inspiration."
-
+        -   name: Resourceful
+            cost: 1
+            description: "Choose a type of ability check. You may add your expertise to all checks of that type for one hour."
+        -   name: Team Player
+            cost: 0
+            description: "When you take the 'Help' action, grant your ally an additional +1 to their check."
     handbook:
         quote: Humans are good, but a little bit tough. That's why you have to eat them raw.
         author: Orkensheild, Orc Archer
@@ -264,22 +282,22 @@ Human: #Needs another abilitiy
             It is their natural willpower that
             makes them a force to be reckoned with."
 Lizkin: # Done
-    health_dice_bonus: 2
-    base_movement: 30
+    health_dice_bonus: 4
+    base_movement: 25
     abilities:
-        Membraned Eyes:
+        -   name: Membraned Eyes
             cost: 0
             description: "Your vision cannot be reduced by water, smoke, or other particles."
-        Shed Tail:
+        -   name: Shed Tail
             cost: 0
             description: "Once per day, shed your tail to immediately break a grapple."
-        Poison Resist:
+        -   name: Poison Resist
             cost: 0
             description: "You are resistant to poison and make checks against the poisoned condition at advantage."
-        Armored Scales:
+        -   name: Armored Scales
             cost: 0
             description: "Add +2 to your total armor."
-        Taste Air:
+        -   name: Taste Air
             cost: 1
             description: "Roll a perception check of a 100ft radius that is not based on vision."
     handbook:
@@ -290,22 +308,22 @@ Lizkin: # Done
             their color at will, Lizkin make equally dangerous
             warriors and mages."
 Waterborn: #Done
-    health_dice_bonus: 0
+    health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Water Breathing:
+        -   name: Water Breathing
             cost: 0
             description: "You can hold your breath for up to one week. However, to breathe, you must be submerged underwater."
-        Dried Out:
+        -   name: Dried Out
             cost: 0
             description: "When you are in an arid climate, gain one level of exhaustion for any day you cannot submerge in water."
-        Flows Like Water:
+        -   name: Flows Like Water
             cost: 0
             description: "Your swimming speed is equal to twice your walking speed."
-        Become Mist:
+        -   name: Become Mist
             cost: 1
             description: "Attempt to become mist before an attack hits you. Before you are attacked, declare that you will become mist to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely."
-        Natural Charisma:
+        -   name: Natural Charisma
             cost: 0
             description: "You may add your expertise to charisma checks."
     handbook:
@@ -320,23 +338,23 @@ Waterborn: #Done
             Waterborn are powerful magic users, and are naturally adept at charming
             the other races.
 Orc: #Done
-    health_dice_bonus: 2
-    base_movement: 30
+    health_dice_bonus: 4
+    base_movement: 25
     abilities:
-        Predator:
+        -   name: Predator
             cost: 0
             description: "Add your expertise to checks made to follow or detect the passage of an entity."
-        Natural Strength:
+        -   name: Natural Strength
             cost: 0
             description: "Add your expertise to your strength checks."
-        Bellow:
+        -   name: Bellow
             cost: 1
             description: "Loose a terrible battle cry. Enemies within 30ft must make an inner fire save or be frightened."
-        Still Warm:
+        -   name: Still Warm
             cost: 0
             damage_progression: Minor heal
             description: "Regain health by consuming raw flesh. This can be done once per day."
-        Vengeful Death:
+        -   name: Vengeful Death
             cost: 0
             description: "When you fall to death's door, you may immediately make an attack."
     handbook:
@@ -350,47 +368,51 @@ Dwarf: #Done
     health_dice_bonus: 4
     base_movement: 25
     abilities:
-        Stocky Build:
+        -   name: Stocky Build
             cost: 0
             description: "You’re built hearty, with a low center of gravity. Roll with advantage against any checks which could cause you to fall prone. If you are pushed, move only half the intended distance."
-        Hearty: 
+        -   name: Hearty 
             cost: 0
             description: "You are of naturally hearty stock. When you level up, roll your health dice with advantage."
-        Appraiser's Eye: 
+        -   name: Appraiser's Eye 
             cost: 0
             description: "You have a knack for evaluating an object’s worth -- and at getting your hands on it for even less. Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering."
-        Very Dangerous over Short Distances:
+        -   name: Very Dangerous over Short Distances
             cost: 0
             description: "If you begin your turn next to an enemy, deal an extra 1d6 damage on any attacks that you make against them."
-        Dwarven Momentum:
+        -   name: Dwarven Momentum
             cost: 0
             description: "Whenever an effect or item calls for your speed to be decreased, halve the amount, rounding down to the nearest 5ft. If two separate effects impose a speed penalty, add them together before halving and rounding the total."
-    quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be
-        well placed if you want to bring one down."
-    author: Orkinshield, Orc Gunslinger
-    description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
-        Dwarves prefer low places, and many of their strongholds can be found deep
-        within mountain ranges. Dwarves have a shrewd eye for business, and have
-        been known to drink their adversaries under the table.
+    handbook:
+        quote: Dwarves are difficult to hunt. They're thick, and sturdy; your shot has to be
+            well placed if you want to bring one down."
+        author: Orkinshield, Orc Gunslinger
+        description: A stocky, brooding people, many dwarves are natural craftsman and artisans.
+            Dwarves prefer low places, and many of their strongholds can be found deep
+            within mountain ranges. Dwarves have a shrewd eye for business, and have
+            been known to drink their adversaries under the table.
 Daemonspawn: #Done
     health_dice_bonus: 2
     base_movement: 30
     abilities:
-        Charm:
+        -   name: Charm
             cost: 1
-            condition: Charmed
+            condition: charmed
             description: "Force an enemy to make a spell power save. On a failure, they are Charmed."
-        Incombustible:
+        -   name: Incombustible
             cost: 0
             description: "You are resistant to fire damage."
-        Detect Good or Evil:
+        -   name: Detect Good or Evil
             cost: 1
             description: "Make a inner fire check to detect the presence of nearby good or evil, relative to your point of view. Add your expertise to the check."
-        Firebolt:
+        -   name: Firebolt
             cost: 1
-            damage_scaling: fix this later
+            damage_scaling: 
+                tier_1: 2d6 # 7
+                tier_2: 3d6 # 10.5
+                tier_3: 4d6
             description: "Launch a bolt of crackling fire up to sixty feet at an enemy."
-        Natural Charisma:
+        -   name: Natural Charisma
             cost: 0
             description: "You may add your expertise to charisma checks."
     handbook:
@@ -405,32 +427,32 @@ Sprout: # Done
     health_dice_bonus: 0
     base_movement: 35
     abilities:
-        Woodland Home:
+        -   name: Woodland Home
             cost: 0
             description: "When traversing the forest, add  your expertise to stealth and tracking checks."
-        Regrowth: 
+        -   name: Regrowth 
             cost: 1
             damage_progression:
                 tier_1: 1d4
                 tier_2: 1d6
                 tier_3: 1d8
             description: "Green sap oozes from your wounds, slowly sealing them. Restore health every minute for five minutes."
-        Riding High: 
+        -   name: Riding High 
             cost: 0
             description: "As an action, clamber atop a teammate to ride them. While you are riding, you and your ally get advantage on accuracy checks while targeting the same enemy, and enemies must target you at disadvantage."
-        Forest Aid: 
+        -   name: Forest Aid 
             cost: 1
             description: "All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check."
-        Compost: 
+        -   name: Compost 
             cost: 0
             damage_progression:
                 tier_1: 1d4
                 tier_2: 2d4
                 tier_3: 3d4
             description: "When you take your rest, you may consume nearby plants to aid in your healing. Regain additional health when resting."
-        Little One:
+        -   name: Little One
             cost: 0
-            description: "You are able to move through the space of any entity that is larger than you. You are still vunerable to exposed attacks."
+            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
     handbook:    
         quote: "And as I walked through the forest, I heard a sound, like the laughter of children. Fearing some trick, I summoned forth my
             hammer of light. To my shock, the sound came from a race of tree folk, smaller even than the smallest halfling. They were quite

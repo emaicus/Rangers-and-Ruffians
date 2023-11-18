@@ -81,7 +81,7 @@ class markdown_handler:
       self.BUFFER[self.current_heading][CONTENT] += f'{p}\n'
 
     def heading_exists(self, heading):
-      return True if get_heading_pos(heading) != -1 else False
+      return True if self.get_heading_pos(heading) != -1 else False
 
     def get_heading_pos(self, heading):
       for i in range(len(self.BUFFER)):

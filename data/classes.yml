@@ -1,97 +1,101 @@
+#Check anything marked #Flag
+
 # HEAVY FIGHTER
 Barbarian:
-    base_evasion: 5
     recommended_stats:
-        Charisma: 
-        Dexterity: 
-        Inner_Fire: 
-        Intelligence: 
-        Perception: 
-        Strength: 
-    health_dice_bonus: 
+        Charisma: -1
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: -2 
+        Perception: 0 
+        Strength: 2
+    expertise: "As a barbarian, you have expertise in raw feats of strength. Raw feats of strength include breaking the iron bars of a cell,
+                bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
+    health_dice: "1d10"
     abilities: #24 / 25
-        Berserk:
+        -   name: Berserk
             cost: 1
-            description: Fly into a rage. For 15 minutes gain advantage on strength and exterity checks and resistance to physical damage. When beserk ends, take one level of exhaustion.
-        Relentless Rage:
+            description: Fly into a rage. For 15 minutes, take resistance to physical damage. Additionally,
+                         add 1d4 to all damage rolls. This amount increases to 1d6 in tier 2 and 1d8 in tier 3.
+                         When beserk ends, take one level of exhaustion.
+        -   name: Relentless Rage
             cost: 0
-            description: Your rage is single minded. You cannot be slowed, frightened, or charmed while beserk.
-        Blood for Blood: 
+            description: Your rage is single minded. While you are going berserk, you cannot be slowed, frightened, or charmed.
+        -   name: Blood for Blood
             cost: 0
             action_type: Reaction
             description: When you are going berserk and an enemy harms you, you may use your reaction to make one counterattack.
-        Adrenaline:
+        -   name: Adrenaline
             cost: 0
             description: When you are going berserk, gain 15 feet of movement.
-        Throw Anything: 
+        -   name: Throw Anything
             cost: 0
             description: Add 1d6 damage to thrown weapon attacks. If a weapon has the thrown property, you may throw it twice as far. If it does not, you may throw it up to 30 feet.
-        Taunt: 
+        -   name: Taunt
             cost: 1
-            condition: Fixated
+            condition: fixated
             description: Taunt any enemies of your choice within a 50ft radius. They must make a spell power saving throw or become Fixated on you.
-        Single Out: 
+        -   name: Single Out
             cost: 1
-            description: Single out an enemy. You gain 15ft of movement on any turn when you move towards them and advantage on all attacks made against them.
-        Terrify: 
+            description: Single out an enemy. You gain 15ft of movement on any turn when you move towards them and may add your expertise to accuracy checks made against them.
+        -   name: Terrify
             cost: 0
-            condition: Frightened
+            condition: frightened
             description: Singled out enemies must make a spell power saving throw or be Frightened.
-        Stay on Your Feet:
+        -   name: Stay on Your Feet
             cost: 0
             description: If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
-        Blaze of Glory: 
+        -   name: Blaze of Glory
             cost: 0
-            description: When you fall below half health and an enemy wings you, take no damage.
-        Meat Shield:
+            description: When you fall below one quarter health and an enemy lands a glancing blow on you you, take no damage.
+        -   name: Meat Shield
             cost: 1
             action_type: Reaction
-            description: When you are attacked, you may shield yourself with an adjacent enemy. They must make a spell power save or be pulled into the attacks way. If they die, you may immediately make an attack using them as a thrown weapon.
-        Brutal Attack:
+            description: When you are attacked, you may shield yourself with an adjacent enemy. They must make a spell power save or be pulled into the attack's way. If they die, you may immediately make an attack using them as a thrown weapon.
+        -   name: Brutal Attack
             cost: 1
-            condition: Prone
-            damage_scaling: true
+            condition: prone
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Land a particularly heavy blow. The enemy takes bonus damage, and must make a spell power save or be knocked Prone.
-        The Opener: 
+        -   name: The Opener
             cost: 0
-            description: If you attack an enemy that has not yet had their turn in combat, use Brutal Attack at no cost. 
-        Throw Caution to the Wind: 
+            description: If you attack an enemy that has not yet taken a turn in combat, use Brutal Attack at no cost. 
+        -   name: Throw Caution to the Wind
             cost: 0
-            description: When you make an attack, you may optionally ad 1d6 damage to it. However all enemy attacks against you gain advantage until your next turn.
-        The Closer:
+            description: When you make an attack, you may optionally add 1d6 damage to it. However all enemy attacks against you gain advantage until the start of your next turn.
+        -   name: The Closer
             cost: 0
             description: If you attack an enemy that is prone, add 1d6 damage.
-        Terrifying Damage:
+        -   name: Terrifying Damage
             cost: 0
             condition: frightened
             description: Add 1d6 damage to attacks made against frightened enemies.
-        Chain Attack:
+        -   name: Chain Attack
             cost: 0
             description: After slaying an enemy, gain an extra 15 feet of movement and an attack.
-        Savage Critical: 
+        -   name: Savage Critical
             cost: 0
-            condition: Frightened
+            condition: frightened
             description: On a critical hit, all enemies within 30 feet of you must make a spell power save or be Frightened.
-        Corner: 
+        -   name: Corner
             cost: 1
-            description: If an enemy moves to pass you within 15 feet to either side, move to block them. Their movement is reduced to zero unless they knock you unconcious.
-        Furious Blows: 
-            cost: 0
-            description: Attack twice with a single attack action while going berserk.  This may be used in conjunction with other abilities.
-        Intimidate:
+            description: If an enemy moves to pass you within 15 feet to either side, you may spend a reaction to block them. Their movement is reduced to zero unless they knock you unconcious.
+        -   name: Intimidate
             cost: 0
             description: Take advantage on intimidation checks.
-        Every Wall is a Door:
+        -   name: Every Wall is a Door
             cost: 1
-            description: Use your strength to blast through an obstacle that is two feet thick or less, climb solid stone, or leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks.
-        I cast 'Fist': 
+            description: Use your strength to blast through an obstacle that is two feet thick or less, to climb solid stone, or to leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks.
+        -   name: I cast 'Fist'
             cost: 1
-            description: Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent of simple magic, so long as you can explain how the shear power of your movements are causing the effects to occur. Spend an action point and follow the rules for informal magic.
-        A Little Terror:
+            description: Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur. Spend an action point and follow the rules for informal magic.
+        -   name: A Little Terror
             cost: 1
             description: "Use your intimidating presense to force an enemy to do your will. They must make a spell power saving throw or either follow one short command or answer three of your questions truthfully."
 Knight:
-    base_evasion: 7
     recommended_stats:
         Charisma: 0
         Dexterity: -2
@@ -99,223 +103,276 @@ Knight:
         Intelligence: 1
         Perception: -1
         Strength: 2
-    health_dice_bonus: 
+    expertise: "As a knight, you have expertise in raw feats of strength. Raw feats of strength include breaking the iron bars of a cell,
+                bursting through a locked door, or rolling a heavy boulder. You also take expertise in charisma when speaking with 
+                men-at-arms and law-abiding common folk."
+    health_dice: "1d10"
     abilities: #28 / 25
-        Faithful Weapon:
+        -   name: Faithful Weapon
             cost: 1
-            damage_scaling: true
-            description: After you bond with a weapon, you can feel a faint tether connecting it to you. When you throw your weapon, it deals bonus damage. So long as you are within 50 feet of your weapon, you may recall it to yourself as an offhand action or reaction. The weapon flies directly to you, striking any enemy in its way as though you had made an attack with your inner fire as its modifier.
-        Charge:
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: After you bond with a weapon, you can feel a faint tether connecting it to you. When you throw your weapon, it deals damage. So long as you are within 50 feet of your weapon, you may recall it to yourself as an offhand action or reaction. The weapon flies directly to you, striking any enemy in its way as though you had made an attack with your inner fire as its modifier.
+        -   name: Charge
             cost: 1
-            condition: Prone 
-            description: Rush forward a distance equal to your dash. For the length, you are immune to exposed attacks and deal bonus damage to any enemy that you hit into. Hit enemies must make a spell power save or be knocked prone.
-        Healing Blow:
+            condition: prone 
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: Rush forward a distance equal to your dash. For the length, you are immune to exposed attacks and deal damage to any enemy whose space you move through. Any struck enemy must make a spell power save or be knocked Prone.
+        -   name: Healing Blow
             cost: 1
-            damage_scaling: smaller_true
+            damage_scaling: #Flag
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Your weapon radiates light as you slam it into your foe. Deal bonus damage and immediately restore as much health to yourself and all allies within 30ft.
-        Healing Hands:
+        -   name: Healing Hands
             cost: 1
-            damage_scalling: minor_heal
-            description: A prayer on your lips, you reach out to touch an injured ally. You perform an act of minor healing, staving off the worst of their injury.
-        Last Hope:
+            description: A prayer on your lips, you reach out to touch an injured ally and perform an act of minor healing, staving off the worst of their injury.
+            damage_scaling: #FLAG HEALING    
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Last Hope
             cost: 0 
-            description: You reach out to your deity for aid as your allies lay dying on the ground. Whenever an ally has fallen in a combat or is on death's door, add 2d6 to any healing you perform.
-        Holy Shield:
+            description: You reach out to your deity for aid as your allies lay dying on the ground. Whenever an ally has fallen in a combat or is on death's door, add a bonus to any healing you perform.
+            damage_scaling:
+                tier_1: 2d4
+                tier_2: 2d6
+                tier_3: 2d8
+        -   name: Holy Shield
             cost: 1
-            damage_scaling: true
+            damage_scaling: #Flag
+                tier_1: "1d4"
+                tier_2: "2d4"
+                tier_3: "3d4"
             description: A shield of light shimmers around a chosen ally, granting them temporary hit points equal to the amount rolled plus your inner fire and expertise.
-        Ward Conversion:
+        -   name: Ward Conversion
             cost: 1
             action_type: Reaction
             description: Convert any guardian wards to Holy Shields.
-        Aura of Hope:
+        -   name: Aura of Hope
             cost: 0
-            description: Your presence protects your allies from despair and hardens them against status effects. If an ally stands within 30ft of you, they gain +2 to all saving throws.
-        Guardian Ward:
+            description: Your presence protects your allies from despair and hardens them against status effects. If an ally stands within 30ft of you, they may add your expertise to all saving throws.
+        -   name: Guardian Ward
             cost: 1
-            description: Choose an ally and a blazing mark burns above their head before disappearing. While the ally remains within 100 feet of you, they gain +2 evasion. At most one ally may have a guardian ward at a time. The effects of a guardian ward fade after one hour.
-        Link Lifeforce:
+            description: Choose an ally and a blazing mark burns above their head before disappearing. While the ally remains within 100ft of you, they gain evasion equal to your expertise. At most one ally may have a guardian ward at a time. The effects of a guardian ward fade after one hour.
+        -   name: Link Lifeforce
             cost: 0
             description: You may choose to magically bind your life force to that of an ally with a guardian ward. Until you use a free action to unlink yourself on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and none may go below zero health unless all do. Any damage that you take through the connection is halved.
-        Enhanced Healing:
+        -   name: Enhanced Healing
             cost: 0
-            description: If an ally has a guardian ward, add +1d6 to any healing that you grant them.
-        Second Guardian Ward:
+            description: If an ally has a guardian ward, add 1d6 to any healing that you grant them.
+        -   name: Second Guardian Ward
             cost: 0
             description: You may now maintain two guardian wards at a time.
-        Shield Of Men:
+        -   name: Shield Of Men
             cost: 1
             action_type: Reaction
             description: Dash to throw yourself in front of a party member and become the target of an attack aimed at them. The range is up to the length of your dash.
-        Single-minded Bravery: 
+        -   name: Single-minded Bravery
             cost: 0
             description: You are immune to the frightened, charmed, controlled, and distracted conditions.
-        Steel Yourself:
+        -   name: Steel Yourself
             cost: 1
             action_type: Reaction
             description: Harden yourself against an incoming attack, halving its damage.
-        Stay On Your Feet:
+        -   name: Stay On Your Feet
             cost: 0
             description: You are able to keep on going past a point where others would surely fall. If you reach zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.
-        Resilient Defense:
+        -   name: Resilient Defense
             cost: 1
-            description: You have become so hardened by combat that a single attack can deal at most damage equal to half of your maximum health.
-        None Shall Pass:
+            description: You have become so hardened by combat that a single attack can deal at most damage equal to one half of your maximum health.
+        -   name: None Shall Pass
             cost: 0
             description: Enemies cannot easily move past you in combat. If you hit an enemy with your exposed attack, they must make a spell power save or be stopped in their tracks. On success, their speed is halved.
-        Controlled Advance:
+        -   name: Controlled Advance
             cost: 0
-            description: If you slay an enemy with a melee attack, you may step forward into the space that they occupied. Further, you may either attack again or ready your stance.If you slay an enemy with a melee attack, you may step forward into the space that they occupied. Further, you may either attack again or ready your stance.
-        Hold The Line:
+            description: If you slay an enemy with a melee attack, you may step forward into the space that they occupied. Further, you may either attack again or ready your stance.
+        -   name: Hold The Line
             cost: 0
             description: You have become a master of reading the battlefield and are able to take a second reaction on your turn.
-        Pivot:
+        -   name: Pivot
             cost: 0
             description: Once per turn as a free action, trade spaces with an adjacent ally.
-        Ready Stance:
+        -   name: Ready Stance
             cost: 0
             description: As an action, prepare yourself for an attack. The first time you are attacked before your next turn, counterattack as a free action.
-        Overwhelming Strike:
+        -   name: Overwhelming Strike
             cost: 1
-            damage_scaling: true
+            condition: staggered
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Use your strength to overwhelm an enemy. Deal bonus damage and force them to make a spell power saving throw. On failure, they are Staggered.
-        Slowing Strike:
+        -   name: Slowing Strike
             cost: 1
-            damage_scaling: true
+            condition: slowed
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: You use your combat prowess to hinder an enemy's movement. Make an attack that bonus damage. The enemy must make a spell power save or be Slowed.
-        Last Line Of Defense:
+        -   name: Last Line Of Defense
             cost: 0
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Rage fills you as your allies begin to fall. Add bonus damage to your attacks if an ally has fallen in this combat or is on death's door.
-        Goading Attack:
+        -   name: Goading Attack
             cost: 1
-            action_type: Spell Power Save
+            condition: fixated
             description: With a bloody grin, make a goading strike against an enemy. They take bonus damage and must make a spell power save or become Fixated.
-        Inspiring Critical:
+        -   name: Inspiring Critical
             cost: 0
             description: The sight of you landing an incredible blow fills one of your allies with determination. Grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities.
-        Lionhearted:
+        -   name: Lionhearted
             cost: 1
-            description: Your presence soothes your allies, guarding them against fear. Grant all allies within 30ft advantage on their next roll and render them immune to the Frightened condition for one hour.
+            description: Your presence soothes your allies, guarding them against fear. Grant all allies within 30ft of you a 1d6 inspiration dice. For the next hour, any allies who are within 30ft of you are immune to the Frightened condition.
 Ranger:
-    base_evasion:
     recommended_stats:
         Charisma: -1
-        Dexterity: 1
+        Dexterity: 2
         Inner_Fire: 0
         Intelligence: 1
-        Perception: 2
+        Perception: 1
         Strength: -2
-    health_dice_bonus: 
+    expertise: "As a ranger, you gain expertise in Perception. Add your expertise to both active and passive perception checks, including initiative."
+    health_dice: "1d8"
     abilities: #26 / 25
-        Absorb Elemental Damage:
+        -   name: Absorb Elemental Damage
             cost: 1
             action_type: Reaction
-            description: "As a reaction, when you are targeted by an elemental attack, absorb up to half of your health in damage. Immediately make an attack which redirects the damage towards an enemy within 50ft of you."
-        Blast of Air:
+            description: "As a reaction, absorb up to half of your health in damage when you are targeted by an elemental attack. Roll 1d6. On a 5 or 6, immediately make an attack which redirects the damage towards an enemy within 50ft of you."
+        -   name: Blast of Air
             cost: 1
-            damage_scaling: true
-            condition: Prone
-            description: "Wind howls and batters everything before you as you summon a 25ft cone of air. Enemies in the spell’s area must make a spell power save or be pushed back 25ft. Large enemies move half as far, and massive enemies are immune. On a critical failure, the enemy falls prone. If an enemy is pushed into an object, they take damage."
-        Charm:
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: prone
+            description: "Wind howls and batters everything before you as you summon a 25ft cone of air. Enemies in the spell's area must make a spell power save or be pushed to the cone's edge. Large enemies move half as far, and massive enemies are immune. On a critical failure, the enemy falls prone. If an enemy is pushed into an object, they take damage."
+        -   name: Charm
             cost: 1
-            condition: Charmed
+            condition: charmed
             description: "Attempt to beguile an enemy within 30ft of you, ingratiating yourself to them with your magic. The target must make a spell power save or become Charmed."
-        Combat Awareness:
+        -   name: Combat Awareness
             cost: 0
-            description: "You are unnaturally hard to sneak up on. Add your expertise to your passive perception. Additionally, you are immune to sneak attacks during combat, and are immune to the Surprised condition."        
+            description: "You are unnaturally hard to sneak up on. You are immune to sneak attacks during combat and are immune to the Surprised condition."        
         #Counter:
             #  cost: 1
             #  action_type: Reaction
             #  description: "When an enemy misses you, you may use your reaction to attack them. If you have declared a dodge, the counterattack may be made at no action point cost."
-        Disarming Blow:
+        -   name: Disarming Blow
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Make an attack meant to free an object of an enemy's grasp. Deal bonus damage and force them to make a spell power saving throw. On failure, they drop an item of your choice. The item must be held by or bound to them, and you must be able to describe how your blow causes them to relinquish it.        
-        Earthen Armor:
+        -   name: Earthen Armor
             cost: 1
             description: "Sheets of hardened stone wrap themselves around you, providing protection from harm. Add your expertise to your evasion for 3 turns, but lose the ability to dash."
-        Embers:
+        -   name: Embers
             cost: 1
-            damage_scaling: true
-            condition: Burning
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: burning
             description: "Make an attack embued with the power of flame. The attack deals bonus damage, and your target must make a spell power save or begin Burning."
-        Entangling Strike:
+        -   name: Entangling Strike
             cost: 1
-            condition: Entangled
+            condition: entangled
             description: "As your blow lands, vines burst from the site of impact, tangling about your enemy. The attack deals bonus damage, and the enemy must make a spell power save or become Entangled. If they fail by five or more, they are instead Grappled and can repeat their save as an action."
-        Fade into Nature:
+        -   name: Fade into Nature
             cost: 1
-            description: "Use minor magic to cause shadows, plants, and even dust to hide you from sight and cover signs of your passing. For the a number of minutes equal to five times your expertise, your stealth checks are at advantage."
-        Force Barrier:
+            description: "Use minor magic to cause shadows, plants, and even dust to hide you from sight and cover signs of your passing. For a number of minutes equal to five times your expertise, your stealth checks are at advantage."
+        -   name: Force Barrier
             cost: 1
             description: "A wall of semi-translucent force bursts into existence at a point within 30ft of you. It may be up to 10ft high, 15ft long, and 5ft wide. The barrier is solid, and cannot be passed through. It dissipates at the start of your next turn."
-        Hunter’s Sight
+        -   name: Hunter's Sight
             cost: 1
-            description: "For one hour, your vision is enhanced. You see a faint glow where an entity has stepped, and are able to perform tracking checks even in terrain where they would be otherwise impossible. Take advantage on all tracking checks for the spell’s duration."
-        Ice Bolt:
+            description: "For one hour, your vision is enhanced. You see a faint glow where an entity has stepped, and are able to perform tracking checks even in terrain where they would be otherwise impossible. Take advantage on all tracking checks for the spell's duration."
+        -   name: Ice Bolt
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: slowed
             description: "A spear of ice hurtles from your palm. The spear can travel at most 50ft, and deals damage. The enemy must make a spell power save or be Slowed."
-        Know your Enemy:
+        -   name: Know your Enemy
             cost: 1
             description: "Spend an action to learn if an enemy has any vulnerabilities or resistances. Additionally, you glean one piece of information about the enemy. This can include information about its motives during the battle or its abilities."
-        Leaping Strike:
+        -   name: Leaping Strike
             cost: 1
-            damage_scaling: true
-            condition: Staggered
-            description: "Make a lunging attack. The attack deals bonus damage, and the enemy must make a spell power saving throw or be staggered."
-        Line them Up:
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: staggered
+            description: "Make a lunging attack. The attack deals bonus damage, and the enemy must make a spell power saving throw or be Staggered."
+        -   name: Line them Up
             cost: 0
             description: "If you slay an enemy, immediately gain an additional attack action."
-        Field Medicine:
+        -   name: Field Medicine
             cost: 1
-            damage_scaling: true
             description: "Your time in the wilds has taught you how to use simple healing poltices to field dress a wound. Perform a feat of minor healing and remove any non-curse status effects. Alternatively, spend an hour to perform a feat of greater healing."
-        Create Difficult Terrain:
+            damage_scaling: # Minor Healing
+        -   name: Create Difficult Terrain
             cost: 1
             description: "Use your magic to awaken the elements in a 25ft radius somewhere within 100ft of you. For enemies, this space is considered difficult terrain."
-        Poisoned Strike:
+        -   name: Poisoned Strike
             cost: 1
-            damage_scaling: true
-            condition: Poisoned
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: poisoned
             description: "Make an attack laced with poison. The attack deals bonus damage, and the enemy must make a spell power save or be Poisoned."
-        Ranger’s Weapon Mastery:
+        -   name: Ranger's Weapon Mastery
+            cost: 0
             description: "You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects."
             options:
-              - Twin Blade Master:
-                  description: "You can use two weapons to deflect attacks. While dual wielding hand-to-hand weapons, increase your evasion by 2. The weapons may give you no other benefit to your evasion."
-              - Empowered Critical:
-                  description: "When you land a critical hit, use an ability at zero cost."
-              - Shield Master:
-                  description: "Create space with your shield. When you are holding a shield and are attacked, you may immediately move 5ft."
-              - Ranged:
-                  description: "Your shots fly true. When using a ranged weapon, your shots ignore half-cover."
-        Ready Defense:
+              - name: "Twin Blade Master"
+                description: "You can use two weapons to deflect attacks. While dual wielding hand-to-hand weapons, increase your evasion by 2. The weapons may give you no other benefit to your evasion."
+              - name: Empowered Critical
+                description: "When you land a critical hit, use an ability at zero cost."
+              - name: Shield Master
+                description: "Create space with your shield. When you are holding a shield and are attacked, you may immediately move 5ft."
+              - name: "Ranged"
+                description: "Your shots fly true. When using a ranged weapon, your shots ignore half-cover."
+        -   name: Ready Defense
             cost: 0
             description: "When you slay an enemy or land a critical hit, immediately activate Dodging Stance."
-        Dodging Stance:
+        -   name: Dodging Stance
             cost: 0
-            description: As an action, enter a dodging stance. Until your next turn, add your expertise to your armor. Any attacks which wing you instead miss you entirely.
-        Reflexes:
+            description: As an action, enter a dodging stance. Until your next turn, add your expertise to your evassion. Any attacks which glance you instead miss you entirely.
+        -   name: Reflexes
             cost: 1
             action_type: Reaction
             description: "As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile. Increase the size of the dice to 1d10 then 2d8 in gameplay tiers 2 and 3."
-        Smokescreen:
-          cost: 1
-          description: "Make an attack imbued with magic. Wherever the attack lands, a 50ft radius fills with smoke. Creatures inside are considered to be in magical darkness."
-        Strider:
+        -   name: Smokescreen
+            cost: 1
+            description: "Make an attack imbued with magic. Wherever the attack lands, a 50ft radius fills with smoke. Creatures inside are considered to be in magical darkness."
+        -   name: Strider
             cost: 0
-            description: "You have become used to traveling quickly across inhospitable lands. Gain 10ft of base movement. Difficult terrain has no effect on you. When out of combat, your party makes any travel-related checks at advantage, so long as you are with them."
-        Trap:
+            description: "You have become used to traveling quickly across inhospitable lands. Gain 10ft of base movement. Difficult terrain has no effect on you. When out of combat, your party makes any travel-related checks at advantage so long as you are with them."
+        -   name: Trap
             cost: 1
             condition: stunned
             description: "Construct a 5x5 magical trap on the ground within 30 feet of yourself. Enemies that enter its space must make a spell power saving throw or be Stunned."
-        Unnaturally Perceptive:
+        -   name: Unnaturally Perceptive
             cost: 0
             description: "Your perception has reached preternatural perfection. You are able to perceive invisible objects."
 Fighter:
-    base_evasion: 5
     recommended_stats:
         Charisma: 0
         Dexterity: -2
@@ -323,106 +380,122 @@ Fighter:
         Intelligence: 1
         Perception: -1
         Strength: 2
-    health_dice_bonus: 
+    expertise: "As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, or climbing a rope, and other such checks. 
+                It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing."
+    health_dice: "1d8"
     abilities: #24 /25
-        Backpedal:
+        -   name: Backpedal
             cost: 0
             action_type: Free Action
-            description: Use your enemies' attacks to maneuver yourself. Whenever you suffer a glancing blow, move 5ft without provoking opportunity attacks as a Free Action.
-        Command:
+            description: Use your enemies' attacks to maneuver yourself. Whenever you suffer a glancing blow, move 5ft without provoking exposed attacks as a free action.
+        -   name: Command
             cost: 1
-            description: Spur an ally onward. As an action, to allow an ally to make an attack or to move up to their base movement speed.
-        Counter:
+            description: Spur an ally onward. As an action, allow an ally to make an attack or to move up to their base movement speed.
+        -   name: Counter
             cost: 1
             action_type: Reaction
             description: Strike back at an enemy. When you suffer a glancing blow, you may use your reaction to counterattack.
-        Critical Combo:
+        -   name: Critical Combo
             cost: 0
             description: Quickly follow up on a heavy blow. When you land a critical hit, you may optionally gain an additional attack action.
-        Dashing Strike:
+        -   name: Dashing Strike
             cost: 0
             description: Your dash may end in an attack.
-        Determination:
+        -   name: Determination
             cost: 1
             action_type: Free Action
             description: Steel yourself as a Free Action to gain advantage in all things for one minute.
-        Dodge:
+        -   name: Dodge
             cost: 1
             action_type: Free Action
             description: Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.
-        Fallen:
+        -   name: Fallen
             cost: 0
             description: Inspire your allies to save you when you are in peril. While you are on death's door, all allies gain an additional action.
-        Feint:
+        -   name: Feint
             cost: 0
             description: Prepare yourself for an enemy attack. Hold an action, and the next enemy who attacks you does so at disadvantage. You may immediately counterattack as a free action. Feint does not stack with Counter.
-        Final Resolve:
+        -   name: Final Resolve
             cost: 0
             description: Even when you are down, you aren't out. When you are on death's door, you may crawl up to 15ft per turn without invoking exposed attacks.
-        Follow Up:
+        -   name: Follow Up
             cost: 0
             description: Press the advantage against a specific enemy. If you attack an enemy, subsequent attacks deal extra damage if you don't choose another target. Extra damage starts at 1d4 and grows with each hit, capping at 1d12.
-        Forceful Blow:
+        -   name: Forceful Blow
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Make a heavy blow, aimed at pushing an enemy back. The attack does bonus damage, and the enemy must make a spell power save or be knocked back a distance of your choice up to 15ft. You may follow behind the enemy without invoking exposed attacks.
-        Goading Attack:
+        -   name: Goading Attack
             cost: 1
-            damage_scaling: true
-            condition: Fixated
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: fixated
             description: Make an attack with the goal of enraging an enemy. The attack deals bonus damage, and the enemy must make a spell power save or become Fixated on you. The enemy may repeat the save at the end of their turns.
-        Grappling Attack:
+        -   name: Grappling Attack
             cost: 1
-            damage_scaling: true
-            condition: Fixated
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: grappled
             description: Make an attack with the goal of grabbing hold of an enemy. The attack deals bonus damage, and the enemy must make a spell power save or be Grappled.
-        Guard-Break:
+        -   name: Guard-Break
             cost: 1
-            damage_scaling: true
-            condition: Vulnerable
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: vulnerable
             description: Make an attack with the goal of taking an enemy off their guard. The attack deals bonus damage, and the enemy must make a spell power save or become Vulnerable.
-        Guard:
+        -   name: Guard
             cost: 0
             description: You are a master of ranged weapons and can quickly take shots. When using ranged weapons, enemies moving within 30ft of you are considered Exposed.
-        Lead the Way:
+        -   name: Lead the Way
             cost: 0
             description: You rush into battle. Add your expertise to your initiative roll.
-        Mass Command:
+        -   name: Mass Command
             cost: 1
-            description: Allow all allies within 50ft of you to move 5ft times your proficiency without provoking exposed attacks.
-        Prepare for Combat:
+            description: Allow all allies within 50ft of you to move 5ft times your expertise without provoking exposed attacks.
+        -   name: Prepare for Combat
             cost: 0
             description: Quickly give orders as combat begins. Grant all allies 15ft of movement before the fighting starts. This ability does not go into effect if you are surprised by combat.
-        Rally Cry:
+        -   name: Rally Cry
             cost: 1
             description: Call out encouragement to your allies. Remove all non-curse status effects from allies within 30ft and render them immune to the Frightened condition for one hour.
-        Self-Sufficient:
+        -   name: Self-Sufficient
             cost: 1
-            damage_scaling: Minor Heal
             description: Perform a quick feat of combat medicine on yourself equivalent to a minor heal.
-        Staggering Strike:
+            damage_scaling: minor heal
+        -   name: Staggering Strike
             cost: 1
-            condition: Staggered 
-            damage_scaling: true
+            condition: staggered 
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Make a heavy attack, aimed at knocking an enemy off balance. The attack deals bonus damage, and the enemy must make a spell power save or be Staggered.
-        Wasting Critical:
+        -   name: Wasting Critical
             cost: 0
-            condition: Weakened
+            condition: weakened
             description: Use a well-placed blow to leave an enemy enfeebled. When you land a critical hit, choose to make an enemy Weakened.
-        Weapon Master:
+        -   name: Weapon Master
             cost: 0
-            description: You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects:
+            description: "You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects:"
             options:
-                - Dual Weapon Master:
-                    description: When dual wielding, if you use an action point on the first attack and miss, make the same move with the second attack at no cost.
-                - Ranged Weapon Master:
-                    description: You are immune to the harried status effect.
-                - Shield Master:
-                    description: Gain +2 evasiveness when carrying a shield.
-                - Heavy Weapon Master:
-                    description: Any attack you make with a two-handed weapon deals an additional 1d6 damage.
+                - name: "Dual Weapon Master"
+                  description: When dual wielding, if you use an action point on your first attack and miss, make the same move with the second attack at no cost.
+                - name: "Ranged Weapon Master"
+                  description: You are immune to the harried status effect.
+                - name: "Shield Master"
+                  description: Gain an additional +1 evasion when carrying a shield.
+                - name: "Heavy Weapon Master"
+                  description: "Any attack you make with a two-handed weapon deals an additional 1d6 damage."
 Monk:
-    base_evasion: 5
     recommended_stats:
         Charisma: -2
         Dexterity: 1
@@ -430,92 +503,114 @@ Monk:
         Intelligence: 0
         Perception: 2
         Strength: -1
-    health_dice_bonus: 6
+    expertise: "As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in
+                insight, which includes gleaning information about someone's motives or thoughts."
+    health_dice: "1d8"
     abilities: #23/25
-        Hand to Hand Expert:
+        -   name: Hand to Hand Expert
             cost: 0
             description: Your unarmed attacks are especially deadly. Increase the damage dice of your unarmed attacks by one step. For the sake of abilities, simple blunt weapons including quarterstaffs are considered unarmed weapons.
-        Slowing Blow:
-              cost: 1
-              damage_scaling: true
-              condition: Slowed
-              description: Strike at the chi moving within your oponent. Do bonus damage and force them to make a spell power saving throw. On failure, they are Slowed.
-        Make Space:
+        -   name: Slowing Blow
             cost: 1
-            damage_scaling: true
-            condition: Staggered
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: slowed
+            description: Strike at the chi moving within your oponent. Do bonus damage and force them to make a spell power saving throw. On failure, they are Slowed.
+        -   name: Make Space
+            cost: 1
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: staggered
             description: Land a powerful blow against an enemy. Do bonus damage and force them to make a spell power saving throw. On failure, they are thrown back 15 feet. If they strike something as a result, they are Staggered. When Make Space is triggered, you may choose to follow after the enemy without provoking exposed attacks.
-        Disarming Blow:
+        -   name: Disarming Blow
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Make an attack meant to free an object of an enemy's grasp. Deal bonus damage and force them to make a spell power saving throw. On failure, they drop an item of your choice. The item must be held by or bound to them, and you must be able to describe how your blow causes them to relinquish it.        
-        Consecutive Punches:
+        -   name: Consecutive Punches
             cost: 0
             description: When you are making unarmed attacks, you may attack twice with a single attack action. This may be used in conjunction with other abilities.
-        Follow-up:
+        -   name: Follow-up
             cost: 0
             description: Once per turn when you land a critical hit, immediately make another unarmed attack.
-        Flow with the Battle:
+        -   name: Flow with the Battle
             cost: 0
             description: "You may pass through an enemy's space in combat. Further, you do not provoke exposed attacks when moving through an enemy's space unless you also benefit from the 'Little One' ability."
-        Flurry of Blows:
+        -   name: Flurry of Blows
             cost: 1
             description: Make unarmed attacks against all enemies adjacent to you.
-        Extreme Speed:
+        -   name: Extreme Speed
             cost: 0
             description: Increase your base movement speed by ten feet plus five feet times your dexterity modifier.
-        Disengage:
+        -   name: Disengage
             cost: 1
             description: Focus your energy on avoiding combat. For the remainder of your turn, you are immune to exposed attacks.
-        Reduced Critical:
+        -   name: Reduced Critical
             cost: 0
             description: Your critical hit target is permanently decreased by one.
-        Dodging Stance:
+        -   name: Dodging Stance
             cost: 0
             description: As an action, enter a dodging stance. Until your next turn, add your expertise to your armor. Any glancing blows that you suffer instead miss you entirely.
-        Counterattack Dodge:
+        -   name: Counterattack Dodge
             cost: 0
             action_type: Free Action
             description: When an attack misses you as a result of your dodging stance, you may immediately make an unarmed attack as a free action.
-        Reflexes:
+        -   name: Reflexes
             cost: 1
             action_type: Reaction
             description: "As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile. Increase the size of the dice to 1d10 then 2d8 in gameplay tiers 2 and 3."
-        Chi Block:
+        -   name: Chi Block
             cost: 1
-            damage_scaling: true
-            condition: Blocked
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: blocked
             description: Make an attack aimed at an enemy's chi. They take bonus damage and must make a spell power saving throw. On a failure, they are Blocked.
-        Spiritual Projection:
+        -   name: Spiritual Projection
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Channel your chi to project an astral version of yourself next to an enemy within 50 feet. The projection lasts for your turn, and may make actions as your proxy.
-        Phase Walk:
+        -   name: Phase Walk
             cost: 0
             description: If you harm an enemy with a spiritual projection, you may instantly trade spaces with it.
-        Spiritual Aid:
+        -   name: Spiritual Aid
             cost: 1
-            damage_scaling: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
             description: Grant an ally spiritual aid, which gives them advantage on their next action and bonus damage on their next attack.
-        Warrior Spirit:
+        -   name: Warrior Spirit
             cost: 0
             description: If you slay an enemy, regain one action point.
-        Spiritual Blast:
+        -   name: Spiritual Blast
             cost: 1
-            damage_scaling: true
-            description:
-        Chain Strike:
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: Placeholder text #Flag
+        -   name: Chain Strike
             cost: 1
             description: When you make an attack with a spiritual projection and hit, you may spend another action point to immediately create another spiritual projection within range and attack with it. This continues until an attack misses.
-        Resting Meditation:
+        -   name: Resting Meditation
             cost: 0
             description: Whenever you take rest, regain an additional 1d6 health for each gameplay tier that you have reached.
-        Find Center:
-            action_type: Free action
+        -   name: Find Center
+            action_type: Free Action
             cost: 1
             description: At the start of your turn, center yourself in the world around you. For the remainder of the turn, take advantage in all things.  
 Rogue:
-      base_evasion: 5
       recommended_stats:
           Charisma: 1
           Dexterity: 2
@@ -523,100 +618,110 @@ Rogue:
           Intelligence: 0
           Perception: 1
           Strength: -2
-      health_dice_bonus: 4
+      expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to sneak, hide, pickpocket, and to pick locks."
+      health_dice: "1d6"
       abilities: # 27/25
-          All-consuming Shadow:
-              cost: 1
-              description: Inky blackness fills the area around you, leaving a 25ft radius of magical darkness.
-          Assisted Strike:
-              cost: 0
-              description: Use any opportunity to deal extra damage to an enemy. If you have advantage on an attack, you may instead add 1d6 damage to it.
-          Controlled Descent:
-              cost: 0
-              description: You have fallen enough times to become good at it. Reduce any falling damage by half.
-          Disarming Blow:
-              cost: 1
-              damage_scaling: true
-              description: Attempt to knock something from an enemy’s grasp. Deal bonus damage and force them to make a Spell Power save or drop an item they are holding.
-          Disengage:
-              cost: 1
-              description: Focus your energy to flow through combat effortlessly. Avoid provoking exposed attacks until the end of your turn.
-          Dodge:
-              cost: 1
-              description: Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.
-          Extraordinary Dodge:
-              cost: 1
-              description: Employ every trick at your disposal in an attempt to avoid an explosion or other area of effect attack. As a reaction, make a spell power saving throw against your the source of the attack. On failure, you take half damage. On success, avoid the attack entirely.
-          Finesse Strike:
-              cost: 1
-              condition: Bleeding
-              damage_scaling: true
-              description: Attempt to score a deep wound on an enemy. Deal bonus damage and force the enemy to make a spell power save or become affected by the Bleeding condition.
-          Flank:
-              cost: 0
-              description: If an enemy is harried, you are considered to be hiding when attacking from behind them. If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.
-          Flow With The Battle:
-              cost: 0
-              description: You are able to move through spaces occupied by your enemies. You still provoke exposed attacks.
-          Line Them Up:
-              cost: 0
-              description: Follow up after a kill. If you slay an enemy, gain another attack action and 15 feet of movement.
-          Theives Mark:
-              cost: 1
-              condition: Harried
-              description: Use magic to mark an enemy that you can see. While marked, the enemy is considered harried. For 1 day, you always know which direction to go to find them. At most one entity may be marked at a time.
-          Radiant Invisibility Break:
-              cost: 0
-              condition: Blinded
-              description: Optionally, when your invisibility ends, create a blinding light. Enemies within 15ft must make a SP save or be Blinded.
-          Reduced Critical:
-              cost: 0
-              description: Decrease your critical hit target by 1.
-          Ride The Blindspot:
-              cost: 1
-              description: Stay behind a flanked enemy, even if they try to turn on you. If a flanked enemy tries to look at you, pivot around them as a reaction.
-          Shared Stealth:
-              cost: 1
-              description: You are able to pick up on and help fix flaws in your party's stealth. Add your proficiency to their rolls on all stealtch checks made over the next hour, so long as they are within 30 feet of you.
-          Slip Away:
-              cost: 0
-              description: Streak in, deal damage, then disappear. When you slay an enemy, you may immediately disengage at no cost and gain 5 feet of movement.
-          Spell Of Darkvision:
-              cost: 1
-              description: Your pupils expand to cover your eye as magic courses through you. For one hour, you benefit from darkvision.
-          Spell Of Distraction:
-              cost: 1
-              condition: Distracted
-              description: Use magic to create a minor ruckus, illusion, or voice at a position you can see within 100ft. Entities within 25ft of the sound must make a Spell Power save or become Distracted.
-          Spell Of Invisibility:
-              cost: 1
-              condition: Invisible
-              description: As you channel your magic, you vanish from sight. For one hour, you are invisible.
-          Spell Of Nimbleness:
-              cost: 1
-              condition: Nimble
-              description: Magic courses through you in time with your heartbeat, quickening your reflexes. For 1 hour, you are Nimble.
-          Strike From The Shadows:
-              cost: 0
-              description: You are especially lethal when striking from the shadows. Add 1d6 damage to attacks made from hiding.
-          Tether:
-              cost: 1
-              description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
-          Thieve's Critical:
-              cost: 0
-              description: When you land a heavy blow, use the opening to pick your target's pockets. Whenever you land a critical hit with a hand-to-hand weapon, choose to steal one object from your target.
-          Throw Caution To The Wind:
-              cost: 0
-              condition: Vulnerable
-              description: Recklessly engage with your opponent. On your turn, you may choose to add 1d6 damage to your attacks, but you become Vulnerable until the start of your next turn.
-          Unseen Hand:
-              cost: 1
-              description: By your will, an ethereal hand manifests itself. While you concentrate on it, the hand acts as an extension of your will. The hand has a flying speed of 25 feet and may not leave the spell's 100ft radius. Its strength score is equivalent to your Inner Fire modifier.
-          Wasting Blow:
-              cost: 1
-              damage_scaling: true
-              condition: Weakened
-              description: Make a targeted attack against the source of an enemy's strength. Deal bonus damage and force the enemy to make a spell power save or be Weakened.
+        -   name:   All-consuming Shadow
+            cost: 1
+            description: Inky blackness fills the area around you, leaving a 25ft radius of magical darkness.
+        -   name:   Assisted Strike
+            cost: 0
+            description: Use any opportunity to deal extra damage to an enemy. If you have advantage on an attack, you may instead add 1d6 damage to it.
+        -   name:   Controlled Descent
+            cost: 0
+            description: You have fallen enough times to become good at it. Reduce any falling damage by half.
+        -   name:   Disarming Blow
+            cost: 1
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: Attempt to knock something from an enemy's grasp. Deal bonus damage and force them to make a Spell Power save or drop an item they are holding.
+        -   name:   Disengage
+            cost: 1
+            description: Focus your energy to flow through combat effortlessly. Avoid provoking exposed attacks until the end of your turn.
+        -   name:   Dodge
+            cost: 1
+            description: Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.
+        -   name:   Extraordinary Dodge
+            cost: 1
+            description: Employ every trick at your disposal in an attempt to avoid an explosion or other area of effect attack. As a reaction, make a spell power saving throw against your the source of the attack. On failure, you take half damage. On success, avoid the attack entirely.
+        -   name:   Finesse Strike
+            cost: 1
+            condition: bleeding
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: Attempt to score a deep wound on an enemy. Deal bonus damage and force the enemy to make a spell power save or become affected by the Bleeding condition.
+        -   name:   Flank
+            cost: 0
+            description: If an enemy is harried, you are considered to be hiding when attacking from behind them. If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.
+        -   name:   Flow With The Battle
+            cost: 0
+            description: You are able to move through spaces occupied by your enemies. You still provoke exposed attacks.
+        -   name:   Line Them Up
+            cost: 0
+            description: Follow up after a kill. If you slay an enemy, gain another attack action and 15 feet of movement.
+        -   name:   Theives Mark
+            cost: 1
+            condition: harried
+            description: Use magic to mark an enemy that you can see. While marked, the enemy is considered harried. For 1 day, you always know which direction to go to find them. At most one entity may be marked at a time.
+        -   name:   Radiant Invisibility Break
+            cost: 0
+            condition: blinded
+            description: Optionally, when your invisibility ends, create a blinding light. Enemies within 15ft must make a SP save or be Blinded.
+        -   name:   Reduced Critical
+            cost: 0
+            description: Decrease your critical hit target by 1.
+        -   name:   Ride The Blindspot
+            cost: 1
+            description: Stay behind a flanked enemy, even if they try to turn on you. If a flanked enemy tries to look at you, pivot around them as a reaction.
+        -   name:   Shared Stealth
+            cost: 1
+            description: You are able to pick up on and help fix flaws in your party's stealth. Add your proficiency to their rolls on all stealtch checks made over the next hour, so long as they are within 30 feet of you.
+        -   name:   Slip Away
+            cost: 0
+            description: Streak in, deal damage, then disappear. When you slay an enemy, you may immediately disengage at no cost and gain 5 feet of movement.
+        -   name:   Spell Of Darkvision
+            cost: 1
+            description: Your pupils expand to cover your eye as magic courses through you. For one hour, you benefit from darkvision.
+        -   name:   Spell Of Distraction
+            cost: 1
+            condition: distracted
+            description: Use magic to create a minor ruckus, illusion, or voice at a position you can see within 100ft. Entities within 25ft of the sound must make a Spell Power save or become Distracted.
+        -   name:   Spell Of Invisibility
+            cost: 1
+            condition: invisible
+            description: As you channel your magic, you vanish from sight. For one hour, you are invisible.
+        -   name:   Spell Of Nimbleness
+            cost: 1
+            condition: nimble
+            description: Magic courses through you in time with your heartbeat, quickening your reflexes. For 1 hour, you are Nimble.
+        -   name:   Strike From The Shadows
+            cost: 0
+            description: You are especially lethal when striking from the shadows. Add 1d6 damage to attacks made from hiding.
+        -   name:   Tether
+            cost: 1
+            description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
+        -   name:   Thieve's Critical
+            cost: 0
+            description: When you land a heavy blow, use the opening to pick your target's pockets. Whenever you land a critical hit with a hand-to-hand weapon, choose to steal one object from your target.
+        -   name:   Throw Caution To The Wind
+            cost: 0
+            condition: vulnerable
+            description: Recklessly engage with your opponent. On your turn, you may choose to add 1d6 damage to your attacks, but you become Vulnerable until the start of your next turn.
+        -   name:   Unseen Hand
+            cost: 1
+            description: By your will, an ethereal hand manifests itself. While you concentrate on it, the hand acts as an extension of your will. The hand has a flying speed of 25 feet and may not leave the spell's 100ft radius. Its strength score is equivalent to your Inner Fire modifier.
+        -   name:   Wasting Blow
+            cost: 1
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            condition: weakened
+            description: Make a targeted attack against the source of an enemy's strength. Deal bonus damage and force the enemy to make a spell power save or be Weakened.
 # MAGE
 # Bard:
 #   subclasses:
