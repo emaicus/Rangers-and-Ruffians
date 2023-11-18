@@ -1,0 +1,116 @@
+## Catterwol  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Low-Light Vision__: So long as there is a little light, you can see. However, colors are muted.   
+* __They're Retractable__: You use your sharp claws when attacking hand-to-hand. Increase the dice of your hand to hand attacks by one.   
+* __Loose Skin__: You are naturally difficult to grab. Add your expertise to any checks made to physically restrain you.   
+* __Fear of Water__: Take disadvantage on all checks when you are soaked through.   
+* __Lithe and Dextrous__: Add your expertise to checks made to climb or fall. When falling, take half damage.   
+  
+## Wood Elf  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Sleepless__: When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.   
+* __Natural Tracker__: You are naturally adept at tracking your foes. Add your expertise to checks made to track enemies or perceive their passing.   
+* __Meditative Rest__: Whenever you rest, you can focus to regain one extra action point.   
+* __Natural Agility__: Your elven heritage has gifted you with supernatural agility. Add your expertise to any checks related to your movement.   
+* __Hasten__: (_Cost:_ 1) Channel the magic within you to spur yourself to great speeds. Become affected by Haste for 5 minutes. Afterward, immediately take one level of exhaustion.   
+  
+## High Elf  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Sleepless__: When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.   
+* __Inherent Magic__: Begin your adventure with two tier zero spells from any spellbook. If you are a casting class, these spells are considered a bonus.   
+* __Detect Magic__: (_Cost:_ 1) Make a perception check to identify sources of nearby magic.   
+* __Natural Intellect__: Add your expertise to intelligence checks.   
+* __Upper Class__: Add your expertise to charisma checks made with people of high station.   
+* __Font of Magic__: Add one to your maximum number of action points.   
+  
+## Deep Elf  
+__Health Dice Bonus:__ 4 __Movement:__ 25ft  
+* __Sleepless__: When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.   
+* __Poison Resist__: You are resistant to poison and make checks against the poisoned condition at advantage.   
+* __Born in Darkness__: The effects of light and darkness are reversed for you; you can see perfectly in pitch darkness, but cannot see in total light. When wearing mesh over your eyes, you can see normally in total light.   
+* __Survivor__: You may add your expertise to survival checks.   
+* __Vicious Critical__: When you land a critical hit, optionally add an extra dice of damage.   
+  
+## Gnome  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Tinker__: Add your expertise to checks made with Tinker's tools.   
+* __Perfect Recall__: You have an incredible memory, and can recall anything you spend one minute looking at.   
+* __Natural Intellect__: Add your expertise to intelligence checks.   
+* __Little One__: You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks.   
+* __Single Minded__: Your focus is so intense that you are immune to the charmed and controlled conditions.   
+* __Spirit of Fun__: Add your expertise to any checks made to play or compete.   
+  
+## Goblin  
+__Health Dice Bonus:__ 0 __Movement:__ 35ft  
+* __Still Warm__: Regain health by consuming raw flesh. This can be done once per day.   
+* __Mantle__: You are an excellent climber. Add your expertise to checks made to climb or traverse high places.   
+* __Sneak__: Add your expertise to checks made to hide or sneak.   
+* __Low-Light Vision__: So long as there is a little light, you can see. However, colors are muted.   
+* __One of the Pack__: So long as you have at least one ally within 30ft, you are immune to the frightened condition. If you have no allies within 100 feet in combat, you are immediately frightened.   
+  
+## Halfling  
+__Health Dice Bonus:__ 0 __Movement:__ 35ft  
+* __Scurry__: You are naturally quick on your feet. Any time an attack misses you, move 5ft without provoking exposed attacks.   
+* __Hamstring__: The bigger they are, the harder they fall! When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them, causing them to instantly lose half of their movement on their next turn.   
+* __Hide Underfoot__: You are able to bob and weave around the larger races. When you have two or more entities adjacent to you, attacks against you are at disadvantage.   
+* __Warm Butter__: You are a naturally talented chef. Whenever you rest, prepare food which heals all allies for an additional 1d6 health.   
+* __Soft Bed__: The comforts of home beckon you. Whenever you sleep in a real bed, regain all of your lost health.   
+* __Little One__: You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks.   
+  
+## Human  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Human Endurance__: Your dash carries you a distance equal to your full movement. You may dash at most once per turn.   
+* __Adaptable__: If you are affected by a status effect, take advantage on saves against it for the remainder of the day.   
+* __Rally Cry__: (_Cost:_ 1) Human perseverance is infectious. As an action, grant all allies within a 25ft radius a point of inspiration.   
+* __Resourceful__: (_Cost:_ 1) Choose a type of ability check. You may add your expertise to all checks of that type for one hour.   
+* __Team Player__: When you take the 'Help' action, grant your ally an additional +1 to their check.   
+  
+## Lizkin  
+__Health Dice Bonus:__ 4 __Movement:__ 25ft  
+* __Membraned Eyes__: Your vision cannot be reduced by water, smoke, or other particles.   
+* __Shed Tail__: Once per day, shed your tail to immediately break a grapple.   
+* __Poison Resist__: You are resistant to poison and make checks against the poisoned condition at advantage.   
+* __Armored Scales__: Add +2 to your total armor.   
+* __Taste Air__: (_Cost:_ 1) Roll a perception check of a 100ft radius that is not based on vision.   
+  
+## Waterborn  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Water Breathing__: You can hold your breath for up to one week. However, to breathe, you must be submerged underwater.   
+* __Dried Out__: When you are in an arid climate, gain one level of exhaustion for any day you cannot submerge in water.   
+* __Flows Like Water__: Your swimming speed is equal to twice your walking speed.   
+* __Become Mist__: (_Cost:_ 1) Attempt to become mist before an attack hits you. Before you are attacked, declare that you will become mist to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.   
+* __Natural Charisma__: You may add your expertise to charisma checks.   
+  
+## Orc  
+__Health Dice Bonus:__ 4 __Movement:__ 25ft  
+* __Predator__: Add your expertise to checks made to follow or detect the passage of an entity.   
+* __Natural Strength__: Add your expertise to your strength checks.   
+* __Bellow__: (_Cost:_ 1) Loose a terrible battle cry. Enemies within 30ft must make an inner fire save or be frightened.   
+* __Still Warm__: Regain health by consuming raw flesh. This can be done once per day.   
+* __Vengeful Death__: When you fall to death's door, you may immediately make an attack.   
+  
+## Dwarf  
+__Health Dice Bonus:__ 4 __Movement:__ 25ft  
+* __Stocky Build__: You’re built hearty, with a low center of gravity. Roll with advantage against any checks which could cause you to fall prone. If you are pushed, move only half the intended distance.   
+* __Hearty__: You are of naturally hearty stock. When you level up, roll your health dice with advantage.   
+* __Appraiser's Eye__: You have a knack for evaluating an object’s worth -- and at getting your hands on it for even less. Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering.   
+* __Very Dangerous over Short Distances__: If you begin your turn next to an enemy, deal an extra 1d6 damage on any attacks that you make against them.   
+* __Dwarven Momentum__: Whenever an effect or item calls for your speed to be decreased, halve the amount, rounding down to the nearest 5ft. If two separate effects impose a speed penalty, add them together before halving and rounding the total.   
+  
+## Daemonspawn  
+__Health Dice Bonus:__ 2 __Movement:__ 30ft  
+* __Charm__: (_Cost:_ 1) Force an enemy to make a spell power save. On a failure, they are Charmed.   
+* __Incombustible__: You are resistant to fire damage.   
+* __Detect Good or Evil__: (_Cost:_ 1) Make a inner fire check to detect the presence of nearby good or evil, relative to your point of view. Add your expertise to the check.   
+* __Firebolt__: (_Cost:_ 1) Launch a bolt of crackling fire up to sixty feet at an enemy. This ability deals 2d6 damage at character levels 0-4, 3d6 at levels 5-9, and 4d6 at levels 10-15.  
+* __Natural Charisma__: You may add your expertise to charisma checks.   
+  
+## Sprout  
+__Health Dice Bonus:__ 0 __Movement:__ 35ft  
+* __Woodland Home__: When traversing the forest, add  your expertise to stealth and tracking checks.   
+* __Regrowth__: (_Cost:_ 1) Green sap oozes from your wounds, slowly sealing them. Restore health every minute for five minutes.   
+* __Riding High__: As an action, clamber atop a teammate to ride them. While you are riding, you and your ally get advantage on accuracy checks while targeting the same enemy, and enemies must target you at disadvantage.   
+* __Forest Aid__: (_Cost:_ 1) All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check.   
+* __Compost__: When you take your rest, you may consume nearby plants to aid in your healing. Regain additional health when resting.   
+* __Little One__: You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks.   
+  

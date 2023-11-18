@@ -1,0 +1,696 @@
+# Barbarian  
+## Recommended Stats  
+*  __Strength:__ 2  
+*  __Dexterity:__ 1  
+*  __Intelligence:__ -2  
+*  __Inner Fire:__ 1  
+*  __Perception:__ 0  
+*  __Charisma:__ -1  
+  
+## Health and Expertise  
+Members of the Barbarian class have a 1d10 health dice. As a barbarian, you have expertise in raw feats of strength. Raw feats of strength include breaking the iron bars of a cell, bursting through a locked door, or rolling a heavy boulder. You also take expertise in intimidation.  
+## Abilities  
+### A Little Terror  
+__Cost:__ 1.   
+Use your intimidating presense to force an enemy to do your will. They must make a spell power saving throw or either follow one short command or answer three of your questions truthfully.  
+  
+### Adrenaline  
+  
+When you are going berserk, gain 15 feet of movement.  
+  
+### Berserk  
+__Cost:__ 1.   
+Fly into a rage. For 15 minutes gain advantage on strength and exterity checks and resistance to physical damage. When beserk ends, take one level of exhaustion.  
+  
+### Blaze of Glory  
+  
+When you fall below half health and an enemy wings you, take no damage.  
+  
+### Blood for Blood  
+__Reaction__  
+When you are going berserk and an enemy harms you, you may use your reaction to make one counterattack.  
+  
+### Brutal Attack  
+__Cost:__ 1.   
+Land a particularly heavy blow. The enemy takes bonus damage, and must make a spell power save or be knocked Prone.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Chain Attack  
+  
+After slaying an enemy, gain an extra 15 feet of movement and an attack.  
+  
+### Corner  
+__Cost:__ 1.   
+If an enemy moves to pass you within 15 feet to either side, move to block them. Their movement is reduced to zero unless they knock you unconcious.  
+  
+### Every Wall is a Door  
+__Cost:__ 1.   
+Use your strength to blast through an obstacle that is two feet thick or less, climb solid stone, or leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks.  
+  
+### Furious Blows  
+  
+Attack twice with a single attack action while going berserk.  This may be used in conjunction with other abilities.  
+  
+### I cast 'Fist'  
+__Cost:__ 1.   
+Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent of simple magic, so long as you can explain how the shear power of your movements are causing the effects to occur. Spend an action point and follow the rules for informal magic.  
+  
+### Intimidate  
+  
+Take advantage on intimidation checks.  
+  
+### Meat Shield  
+__Cost:__ 1. __Reaction__  
+When you are attacked, you may shield yourself with an adjacent enemy. They must make a spell power save or be pulled into the attacks way. If they die, you may immediately make an attack using them as a thrown weapon.  
+  
+### Relentless Rage  
+  
+Your rage is single minded. You cannot be slowed, frightened, or charmed while beserk.  
+  
+### Savage Critical  
+  
+On a critical hit, all enemies within 30 feet of you must make a spell power save or be Frightened.  
+  
+### Single Out  
+__Cost:__ 1.   
+Single out an enemy. You gain 15ft of movement on any turn when you move towards them and advantage on all attacks made against them.  
+  
+### Stay on Your Feet  
+  
+If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
+  
+### Taunt  
+__Cost:__ 1.   
+Taunt any enemies of your choice within a 50ft radius. They must make a spell power saving throw or become Fixated on you.  
+  
+### Terrify  
+  
+Singled out enemies must make a spell power saving throw or be Frightened.  
+  
+### Terrifying Damage  
+  
+Add 1d6 damage to attacks made against frightened enemies.  
+  
+### The Closer  
+  
+If you attack an enemy that is prone, add 1d6 damage.  
+  
+### The Opener  
+  
+If you attack an enemy that has not yet had their turn in combat, use Brutal Attack at no cost.  
+  
+### Throw Anything  
+  
+Add 1d6 damage to thrown weapon attacks. If a weapon has the thrown property, you may throw it twice as far. If it does not, you may throw it up to 30 feet.  
+  
+### Throw Caution to the Wind  
+  
+When you make an attack, you may optionally ad 1d6 damage to it. However all enemy attacks against you gain advantage until your next turn.  
+  
+  
+# Knight  
+## Recommended Stats  
+*  __Strength:__ 2  
+*  __Dexterity:__ -2  
+*  __Intelligence:__ 1  
+*  __Inner Fire:__ 1  
+*  __Perception:__ -1  
+*  __Charisma:__ 0  
+  
+## Health and Expertise  
+Members of the Knight class have a 1d10 health dice. As a knight, you have expertise in raw feats of strength. Raw feats of strength include breaking the iron bars of a cell, bursting through a locked door, or rolling a heavy boulder. You also take expertise in charisma when speaking with men-at-arms and law-abiding common folk.  
+## Abilities  
+### Aura of Hope  
+  
+Your presence protects your allies from despair and hardens them against status effects. If an ally stands within 30ft of you, they gain +2 to all saving throws.  
+  
+### Charge  
+__Cost:__ 1.   
+Rush forward a distance equal to your dash. For the length, you are immune to exposed attacks and deal bonus damage to any enemy that you hit into. Hit enemies must make a spell power save or be knocked prone.  
+  
+### Controlled Advance  
+  
+If you slay an enemy with a melee attack, you may step forward into the space that they occupied. Further, you may either attack again or ready your stance.If you slay an enemy with a melee attack, you may step forward into the space that they occupied. Further, you may either attack again or ready your stance.  
+  
+### Enhanced Healing  
+  
+If an ally has a guardian ward, add +1d6 to any healing that you grant them.  
+  
+### Faithful Weapon  
+__Cost:__ 1.   
+After you bond with a weapon, you can feel a faint tether connecting it to you. When you throw your weapon, it deals bonus damage. So long as you are within 50 feet of your weapon, you may recall it to yourself as an offhand action or reaction. The weapon flies directly to you, striking any enemy in its way as though you had made an attack with your inner fire as its modifier.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Goading Attack  
+__Cost:__ 1.   
+With a bloody grin, make a goading strike against an enemy. They take bonus damage and must make a spell power save or become Fixated.  
+  
+### Guardian Ward  
+__Cost:__ 1.   
+Choose an ally and a blazing mark burns above their head before disappearing. While the ally remains within 100 feet of you, they gain +2 evasion. At most one ally may have a guardian ward at a time. The effects of a guardian ward fade after one hour.  
+  
+### Healing Blow  
+__Cost:__ 1.   
+Your weapon radiates light as you slam it into your foe. Deal bonus damage and immediately restore as much health to yourself and all allies within 30ft.  
+This ability deals 1d4 damage at character levels 0-4, 2d4 at levels 5-9, and 3d4 at levels 10-15.  
+### Healing Hands  
+__Cost:__ 1.   
+A prayer on your lips, you reach out to touch an injured ally. You perform an act of minor healing, staving off the worst of their injury.  
+  
+### Hold The Line  
+  
+You have become a master of reading the battlefield and are able to take a second reaction on your turn.  
+  
+### Holy Shield  
+__Cost:__ 1.   
+A shield of light shimmers around a chosen ally, granting them temporary hit points equal to the amount rolled plus your inner fire and expertise.  
+This ability deals 1d4 damage at character levels 0-4, 2d4 at levels 5-9, and 3d4 at levels 10-15.  
+### Inspiring Critical  
+  
+The sight of you landing an incredible blow fills one of your allies with determination. Grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities.  
+  
+### Last Hope  
+  
+You reach out to your deity for aid as your allies lay dying on the ground. Whenever an ally has fallen in a combat or is on death's door, add 2d6 to any healing you perform.  
+  
+### Last Line Of Defense  
+  
+Rage fills you as your allies begin to fall. Add bonus damage to your attacks if an ally has fallen in this combat or is on death's door.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Link Lifeforce  
+  
+You may choose to magically bind your life force to that of an ally with a guardian ward. Until you use a free action to unlink yourself on your turn, you may take all or a portion of the damage dealt to them. All damage done must be taken by one of the recipients, and none may go below zero health unless all do. Any damage that you take through the connection is halved.  
+  
+### Lionhearted  
+__Cost:__ 1.   
+Your presence soothes your allies, guarding them against fear. Grant all allies within 30ft advantage on their next roll and render them immune to the Frightened condition for one hour.  
+  
+### None Shall Pass  
+  
+Enemies cannot easily move past you in combat. If you hit an enemy with your exposed attack, they must make a spell power save or be stopped in their tracks. On success, their speed is halved.  
+  
+### Overwhelming Strike  
+__Cost:__ 1.   
+Use your strength to overwhelm an enemy. Deal bonus damage and force them to make a spell power saving throw. On failure, they are Staggered.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Pivot  
+  
+Once per turn as a free action, trade spaces with an adjacent ally.  
+  
+### Ready Stance  
+  
+As an action, prepare yourself for an attack. The first time you are attacked before your next turn, counterattack as a free action.  
+  
+### Resilient Defense  
+__Cost:__ 1.   
+You have become so hardened by combat that a single attack can deal at most damage equal to half of your maximum health.  
+  
+### Second Guardian Ward  
+  
+You may now maintain two guardian wards at a time.  
+  
+### Shield Of Men  
+__Cost:__ 1. __Reaction__  
+Dash to throw yourself in front of a party member and become the target of an attack aimed at them. The range is up to the length of your dash.  
+  
+### Single-minded Bravery  
+  
+You are immune to the frightened, charmed, controlled, and distracted conditions.  
+  
+### Slowing Strike  
+__Cost:__ 1.   
+You use your combat prowess to hinder an enemy's movement. Make an attack that bonus damage. The enemy must make a spell power save or be Slowed.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Stay On Your Feet  
+  
+You are able to keep on going past a point where others would surely fall. If you reach zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.  
+  
+### Steel Yourself  
+__Cost:__ 1. __Reaction__  
+Harden yourself against an incoming attack, halving its damage.  
+  
+### Ward Conversion  
+__Cost:__ 1. __Reaction__  
+Convert any guardian wards to Holy Shields.  
+  
+  
+# Ranger  
+## Recommended Stats  
+*  __Strength:__ -2  
+*  __Dexterity:__ 2  
+*  __Intelligence:__ 1  
+*  __Inner Fire:__ 0  
+*  __Perception:__ 1  
+*  __Charisma:__ -1  
+  
+## Health and Expertise  
+Members of the Ranger class have a 1d8 health dice. As a ranger, you gain expertise in Perception. Add your expertise to both active and passive perception checks, including initiative.  
+## Abilities  
+### Absorb Elemental Damage  
+__Cost:__ 1. __Reaction__  
+As a reaction, when you are targeted by an elemental attack, absorb up to half of your health in damage. Immediately make an attack which redirects the damage towards an enemy within 50ft of you.  
+  
+### Blast of Air  
+__Cost:__ 1.   
+Wind howls and batters everything before you as you summon a 25ft cone of air. Enemies in the spell's area must make a spell power save or be pushed back 25ft. Large enemies move half as far, and massive enemies are immune. On a critical failure, the enemy falls prone. If an enemy is pushed into an object, they take damage.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Charm  
+__Cost:__ 1.   
+Attempt to beguile an enemy within 30ft of you, ingratiating yourself to them with your magic. The target must make a spell power save or become Charmed.  
+  
+### Combat Awareness  
+  
+You are unnaturally hard to sneak up on. Add your expertise to your passive perception. Additionally, you are immune to sneak attacks during combat, and are immune to the Surprised condition.  
+  
+### Create Difficult Terrain  
+__Cost:__ 1.   
+Use your magic to awaken the elements in a 25ft radius somewhere within 100ft of you. For enemies, this space is considered difficult terrain.  
+  
+### Disarming Blow  
+__Cost:__ 1.   
+Make an attack meant to free an object of an enemy's grasp. Deal bonus damage and force them to make a spell power saving throw. On failure, they drop an item of your choice. The item must be held by or bound to them, and you must be able to describe how your blow causes them to relinquish it.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Dodging Stance  
+  
+As an action, enter a dodging stance. Until your next turn, add your expertise to your armor. Any attacks which wing you instead miss you entirely.  
+  
+### Earthen Armor  
+__Cost:__ 1.   
+Sheets of hardened stone wrap themselves around you, providing protection from harm. Add your expertise to your evasion for 3 turns, but lose the ability to dash.  
+  
+### Embers  
+__Cost:__ 1.   
+Make an attack embued with the power of flame. The attack deals bonus damage, and your target must make a spell power save or begin Burning.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Entangling Strike  
+__Cost:__ 1.   
+As your blow lands, vines burst from the site of impact, tangling about your enemy. The attack deals bonus damage, and the enemy must make a spell power save or become Entangled. If they fail by five or more, they are instead Grappled and can repeat their save as an action.  
+  
+### Fade into Nature  
+__Cost:__ 1.   
+Use minor magic to cause shadows, plants, and even dust to hide you from sight and cover signs of your passing. For the a number of minutes equal to five times your expertise, your stealth checks are at advantage.  
+  
+### Field Medicine  
+__Cost:__ 1.   
+Your time in the wilds has taught you how to use simple healing poltices to field dress a wound. Perform a feat of minor healing and remove any non-curse status effects. Alternatively, spend an hour to perform a feat of greater healing.  
+  
+### Force Barrier  
+__Cost:__ 1.   
+A wall of semi-translucent force bursts into existence at a point within 30ft of you. It may be up to 10ft high, 15ft long, and 5ft wide. The barrier is solid, and cannot be passed through. It dissipates at the start of your next turn.  
+  
+### Hunter's Sight  
+__Cost:__ 1.   
+For one hour, your vision is enhanced. You see a faint glow where an entity has stepped, and are able to perform tracking checks even in terrain where they would be otherwise impossible. Take advantage on all tracking checks for the spell's duration.  
+  
+### Ice Bolt  
+__Cost:__ 1.   
+A spear of ice hurtles from your palm. The spear can travel at most 50ft, and deals damage. The enemy must make a spell power save or be Slowed.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Know your Enemy  
+__Cost:__ 1.   
+Spend an action to learn if an enemy has any vulnerabilities or resistances. Additionally, you glean one piece of information about the enemy. This can include information about its motives during the battle or its abilities.  
+  
+### Leaping Strike  
+__Cost:__ 1.   
+Make a lunging attack. The attack deals bonus damage, and the enemy must make a spell power saving throw or be staggered.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Line them Up  
+  
+If you slay an enemy, immediately gain an additional attack action.  
+  
+### Poisoned Strike  
+__Cost:__ 1.   
+Make an attack laced with poison. The attack deals bonus damage, and the enemy must make a spell power save or be Poisoned.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Ranger's Weapon Mastery  
+  
+You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects.  
+*  {'name': 'Twin Blade Master', 'description': 'You can use two weapons to deflect attacks. While dual wielding hand-to-hand weapons, increase your evasion by 2. The weapons may give you no other benefit to your evasion.'}  
+*  {'name': 'Empowered Critical', 'description': 'When you land a critical hit, use an ability at zero cost.'}  
+*  {'name': 'Shield Master', 'description': 'Create space with your shield. When you are holding a shield and are attacked, you may immediately move 5ft.'}  
+*  {'name': 'Ranged', 'description': 'Your shots fly true. When using a ranged weapon, your shots ignore half-cover.'}  
+  
+  
+### Ready Defense  
+  
+When you slay an enemy or land a critical hit, immediately activate Dodging Stance.  
+  
+### Reflexes  
+__Cost:__ 1. __Reaction__  
+As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile. Increase the size of the dice to 1d10 then 2d8 in gameplay tiers 2 and 3.  
+  
+### Smokescreen  
+__Cost:__ 1.   
+Make an attack imbued with magic. Wherever the attack lands, a 50ft radius fills with smoke. Creatures inside are considered to be in magical darkness.  
+  
+### Strider  
+  
+You have become used to traveling quickly across inhospitable lands. Gain 10ft of base movement. Difficult terrain has no effect on you. When out of combat, your party makes any travel-related checks at advantage, so long as you are with them.  
+  
+### Trap  
+__Cost:__ 1.   
+Construct a 5x5 magical trap on the ground within 30 feet of yourself. Enemies that enter its space must make a spell power saving throw or be Stunned.  
+  
+### Unnaturally Perceptive  
+  
+Your perception has reached preternatural perfection. You are able to perceive invisible objects.  
+  
+  
+# Fighter  
+## Recommended Stats  
+*  __Strength:__ 2  
+*  __Dexterity:__ -2  
+*  __Intelligence:__ 1  
+*  __Inner Fire:__ 1  
+*  __Perception:__ -1  
+*  __Charisma:__ 0  
+  
+## Health and Expertise  
+Members of the Fighter class have a 1d8 health dice. As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, or climbing a rope, and other such checks. It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing.  
+## Abilities  
+### Backpedal  
+__Free Action__  
+Use your enemies' attacks to maneuver yourself. Whenever you suffer a glancing blow, move 5ft without provoking opportunity attacks as a Free Action.  
+  
+### Command  
+__Cost:__ 1.   
+Spur an ally onward. As an action, to allow an ally to make an attack or to move up to their base movement speed.  
+  
+### Counter  
+__Cost:__ 1. __Reaction__  
+Strike back at an enemy. When you suffer a glancing blow, you may use your reaction to counterattack.  
+  
+### Critical Combo  
+  
+Quickly follow up on a heavy blow. When you land a critical hit, you may optionally gain an additional attack action.  
+  
+### Dashing Strike  
+  
+Your dash may end in an attack.  
+  
+### Determination  
+__Cost:__ 1. __Free Action__  
+Steel yourself as a Free Action to gain advantage in all things for one minute.  
+  
+### Dodge  
+__Cost:__ 1. __Free Action__  
+Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.  
+  
+### Fallen  
+  
+Inspire your allies to save you when you are in peril. While you are on death's door, all allies gain an additional action.  
+  
+### Feint  
+  
+Prepare yourself for an enemy attack. Hold an action, and the next enemy who attacks you does so at disadvantage. You may immediately counterattack as a free action. Feint does not stack with Counter.  
+  
+### Final Resolve  
+  
+Even when you are down, you aren't out. When you are on death's door, you may crawl up to 15ft per turn without invoking exposed attacks.  
+  
+### Follow Up  
+  
+Press the advantage against a specific enemy. If you attack an enemy, subsequent attacks deal extra damage if you don't choose another target. Extra damage starts at 1d4 and grows with each hit, capping at 1d12.  
+  
+### Forceful Blow  
+__Cost:__ 1.   
+Make a heavy blow, aimed at pushing an enemy back. The attack does bonus damage, and the enemy must make a spell power save or be knocked back a distance of your choice up to 15ft. You may follow behind the enemy without invoking exposed attacks.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Goading Attack  
+__Cost:__ 1.   
+Make an attack with the goal of enraging an enemy. The attack deals bonus damage, and the enemy must make a spell power save or become Fixated on you. The enemy may repeat the save at the end of their turns.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Grappling Attack  
+__Cost:__ 1.   
+Make an attack with the goal of grabbing hold of an enemy. The attack deals bonus damage, and the enemy must make a spell power save or be Grappled.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Guard  
+  
+You are a master of ranged weapons and can quickly take shots. When using ranged weapons, enemies moving within 30ft of you are considered Exposed.  
+  
+### Guard-Break  
+__Cost:__ 1.   
+Make an attack with the goal of taking an enemy off their guard. The attack deals bonus damage, and the enemy must make a spell power save or become Vulnerable.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Lead the Way  
+  
+You rush into battle. Add your expertise to your initiative roll.  
+  
+### Mass Command  
+__Cost:__ 1.   
+Allow all allies within 50ft of you to move 5ft times your proficiency without provoking exposed attacks.  
+  
+### Prepare for Combat  
+  
+Quickly give orders as combat begins. Grant all allies 15ft of movement before the fighting starts. This ability does not go into effect if you are surprised by combat.  
+  
+### Rally Cry  
+__Cost:__ 1.   
+Call out encouragement to your allies. Remove all non-curse status effects from allies within 30ft and render them immune to the Frightened condition for one hour.  
+  
+### Self-Sufficient  
+__Cost:__ 1.   
+Perform a quick feat of combat medicine on yourself equivalent to a minor heal.  
+  
+### Staggering Strike  
+__Cost:__ 1.   
+Make a heavy attack, aimed at knocking an enemy off balance. The attack deals bonus damage, and the enemy must make a spell power save or be Staggered.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Wasting Critical  
+  
+Use a well-placed blow to leave an enemy enfeebled. When you land a critical hit, choose to make an enemy Weakened.  
+  
+### Weapon Master  
+  
+You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects:  
+*  {'name': 'Dual Weapon Master', 'description': 'When dual wielding, if you use an action point on the first attack and miss, make the same move with the second attack at no cost.'}  
+*  {'name': 'Ranged Weapon Master', 'description': 'You are immune to the harried status effect.'}  
+*  {'name': 'Shield Master', 'description': 'Gain +2 evasiveness when carrying a shield.'}  
+*  {'name': 'Heavy Weapon Master', 'description': 'Any attack you make with a two-handed weapon deals an additional 1d6 damage.'}  
+  
+  
+  
+# Monk  
+## Recommended Stats  
+*  __Strength:__ -1  
+*  __Dexterity:__ 1  
+*  __Intelligence:__ 0  
+*  __Inner Fire:__ 1  
+*  __Perception:__ 2  
+*  __Charisma:__ -2  
+  
+## Health and Expertise  
+Members of the Monk class have a 1d8 health dice. As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in insight, which includes gleaning information about someone's motives or thoughts.  
+## Abilities  
+### Chain Strike  
+__Cost:__ 1.   
+When you make an attack with a spiritual projection and hit, you may spend another action point to immediately create another spiritual projection within range and attack with it. This continues until an attack misses.  
+  
+### Chi Block  
+__Cost:__ 1.   
+Make an attack aimed at an enemy's chi. They take bonus damage and must make a spell power saving throw. On a failure, they are Blocked.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Consecutive Punches  
+  
+When you are making unarmed attacks, you may attack twice with a single attack action. This may be used in conjunction with other abilities.  
+  
+### Counterattack Dodge  
+__Free Action__  
+When an attack misses you as a result of your dodging stance, you may immediately make an unarmed attack as a free action.  
+  
+### Disarming Blow  
+__Cost:__ 1.   
+Make an attack meant to free an object of an enemy's grasp. Deal bonus damage and force them to make a spell power saving throw. On failure, they drop an item of your choice. The item must be held by or bound to them, and you must be able to describe how your blow causes them to relinquish it.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Disengage  
+__Cost:__ 1.   
+Focus your energy on avoiding combat. For the remainder of your turn, you are immune to exposed attacks.  
+  
+### Dodging Stance  
+  
+As an action, enter a dodging stance. Until your next turn, add your expertise to your armor. Any glancing blows that you suffer instead miss you entirely.  
+  
+### Extreme Speed  
+  
+Increase your base movement speed by ten feet plus five feet times your dexterity modifier.  
+  
+### Find Center  
+__Cost:__ 1. __Free Action__  
+At the start of your turn, center yourself in the world around you. For the remainder of the turn, take advantage in all things.  
+  
+### Flow with the Battle  
+  
+You may pass through an enemy's space in combat. Further, you do not provoke exposed attacks when moving through an enemy's space unless you also benefit from the 'Little One' ability.  
+  
+### Flurry of Blows  
+__Cost:__ 1.   
+Make unarmed attacks against all enemies adjacent to you.  
+  
+### Follow-up  
+  
+Once per turn when you land a critical hit, immediately make another unarmed attack.  
+  
+### Hand to Hand Expert  
+  
+Your unarmed attacks are especially deadly. Increase the damage dice of your unarmed attacks by one step. For the sake of abilities, simple blunt weapons including quarterstaffs are considered unarmed weapons.  
+  
+### Make Space  
+__Cost:__ 1.   
+Land a powerful blow against an enemy. Do bonus damage and force them to make a spell power saving throw. On failure, they are thrown back 15 feet. If they strike something as a result, they are Staggered. When Make Space is triggered, you may choose to follow after the enemy without provoking exposed attacks.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Phase Walk  
+  
+If you harm an enemy with a spiritual projection, you may instantly trade spaces with it.  
+  
+### Reduced Critical  
+  
+Your critical hit target is permanently decreased by one.  
+  
+### Reflexes  
+__Cost:__ 1. __Reaction__  
+As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile. Increase the size of the dice to 1d10 then 2d8 in gameplay tiers 2 and 3.  
+  
+### Resting Meditation  
+  
+Whenever you take rest, regain an additional 1d6 health for each gameplay tier that you have reached.  
+  
+### Slowing Blow  
+__Cost:__ 1.   
+Strike at the chi moving within your oponent. Do bonus damage and force them to make a spell power saving throw. On failure, they are Slowed.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Spiritual Aid  
+__Cost:__ 1.   
+Grant an ally spiritual aid, which gives them advantage on their next action and bonus damage on their next attack.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Spiritual Blast  
+__Cost:__ 1.   
+Placeholder text  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Spiritual Projection  
+__Cost:__ 1.   
+Channel your chi to project an astral version of yourself next to an enemy within 50 feet. The projection lasts for your turn, and may make actions as your proxy.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Warrior Spirit  
+  
+If you slay an enemy, regain one action point.  
+  
+  
+# Rogue  
+## Recommended Stats  
+*  __Strength:__ -2  
+*  __Dexterity:__ 2  
+*  __Intelligence:__ 0  
+*  __Inner Fire:__ -1  
+*  __Perception:__ 1  
+*  __Charisma:__ 1  
+  
+## Health and Expertise  
+Members of the Rogue class have a 1d6 health dice. As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to sneak, hide, pickpocket, and to pick locks.  
+## Abilities  
+### All-consuming Shadow  
+__Cost:__ 1.   
+Inky blackness fills the area around you, leaving a 25ft radius of magical darkness.  
+  
+### Assisted Strike  
+  
+Use any opportunity to deal extra damage to an enemy. If you have advantage on an attack, you may instead add 1d6 damage to it.  
+  
+### Controlled Descent  
+  
+You have fallen enough times to become good at it. Reduce any falling damage by half.  
+  
+### Disarming Blow  
+__Cost:__ 1.   
+Attempt to knock something from an enemy's grasp. Deal bonus damage and force them to make a Spell Power save or drop an item they are holding.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Disengage  
+__Cost:__ 1.   
+Focus your energy to flow through combat effortlessly. Avoid provoking exposed attacks until the end of your turn.  
+  
+### Dodge  
+__Cost:__ 1.   
+Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.  
+  
+### Extraordinary Dodge  
+__Cost:__ 1.   
+Employ every trick at your disposal in an attempt to avoid an explosion or other area of effect attack. As a reaction, make a spell power saving throw against your the source of the attack. On failure, you take half damage. On success, avoid the attack entirely.  
+  
+### Finesse Strike  
+__Cost:__ 1.   
+Attempt to score a deep wound on an enemy. Deal bonus damage and force the enemy to make a spell power save or become affected by the Bleeding condition.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+### Flank  
+  
+If an enemy is harried, you are considered to be hiding when attacking from behind them. If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.  
+  
+### Flow With The Battle  
+  
+You are able to move through spaces occupied by your enemies. You still provoke exposed attacks.  
+  
+### Line Them Up  
+  
+Follow up after a kill. If you slay an enemy, gain another attack action and 15 feet of movement.  
+  
+### Radiant Invisibility Break  
+  
+Optionally, when your invisibility ends, create a blinding light. Enemies within 15ft must make a SP save or be Blinded.  
+  
+### Reduced Critical  
+  
+Decrease your critical hit target by 1.  
+  
+### Ride The Blindspot  
+__Cost:__ 1.   
+Stay behind a flanked enemy, even if they try to turn on you. If a flanked enemy tries to look at you, pivot around them as a reaction.  
+  
+### Shared Stealth  
+__Cost:__ 1.   
+You are able to pick up on and help fix flaws in your party's stealth. Add your proficiency to their rolls on all stealtch checks made over the next hour, so long as they are within 30 feet of you.  
+  
+### Slip Away  
+  
+Streak in, deal damage, then disappear. When you slay an enemy, you may immediately disengage at no cost and gain 5 feet of movement.  
+  
+### Spell Of Darkvision  
+__Cost:__ 1.   
+Your pupils expand to cover your eye as magic courses through you. For one hour, you benefit from darkvision.  
+  
+### Spell Of Distraction  
+__Cost:__ 1.   
+Use magic to create a minor ruckus, illusion, or voice at a position you can see within 100ft. Entities within 25ft of the sound must make a Spell Power save or become Distracted.  
+  
+### Spell Of Invisibility  
+__Cost:__ 1.   
+As you channel your magic, you vanish from sight. For one hour, you are invisible.  
+  
+### Spell Of Nimbleness  
+__Cost:__ 1.   
+Magic courses through you in time with your heartbeat, quickening your reflexes. For 1 hour, you are Nimble.  
+  
+### Strike From The Shadows  
+  
+You are especially lethal when striking from the shadows. Add 1d6 damage to attacks made from hiding.  
+  
+### Tether  
+__Cost:__ 1.   
+Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.  
+  
+### Theives Mark  
+__Cost:__ 1.   
+Use magic to mark an enemy that you can see. While marked, the enemy is considered harried. For 1 day, you always know which direction to go to find them. At most one entity may be marked at a time.  
+  
+### Thieve's Critical  
+  
+When you land a heavy blow, use the opening to pick your target's pockets. Whenever you land a critical hit with a hand-to-hand weapon, choose to steal one object from your target.  
+  
+### Throw Caution To The Wind  
+  
+Recklessly engage with your opponent. On your turn, you may choose to add 1d6 damage to your attacks, but you become Vulnerable until the start of your next turn.  
+  
+### Unseen Hand  
+__Cost:__ 1.   
+By your will, an ethereal hand manifests itself. While you concentrate on it, the hand acts as an extension of your will. The hand has a flying speed of 25 feet and may not leave the spell's 100ft radius. Its strength score is equivalent to your Inner Fire modifier.  
+  
+### Wasting Blow  
+__Cost:__ 1.   
+Make a targeted attack against the source of an enemy's strength. Deal bonus damage and force the enemy to make a spell power save or be Weakened.  
+This ability deals 1d8 damage at character levels 0-4, 1d10 at levels 5-9, and 1d12 at levels 10-15.  
+  

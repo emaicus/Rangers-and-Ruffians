@@ -1,0 +1,179 @@
+-   name: Blinded
+    balance: strong
+    about: A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.
+-   name: Bleeding
+    balance: good
+    about: "Bleeding damage is repeated at the start of an enemy's next turn."
+-   name: Burning
+    balance: good
+    about: "A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves."
+-   name: Charmed
+    balance: strong
+    about: "A Charmed creature must act in a way that benefits its charmer and has disadvantage on checks and saves made against
+            them. If a charmed creature is harmed by its charmer or their allies, the effect immediately ends."
+-   name: Controlled
+    balance: very strong
+    about: "A Controlled creature must fight for its controller and act as they instruct. The creature automatically fails
+           checks and saves made against its controller except for saves made against being controlled. If the controller or
+           its allies harm a controlled creature, the controlled creature may remake its save at advantage."
+-   name: Distracted
+    balance: good
+    about: "Distracted creatures must make perception and accuracy checks at disadvantage."
+-   name: Diminished
+    balance: good
+    about: A Diminished creature must subtract 1d4 from all checks and saves.
+-   name: Deafened
+    balance: weak
+    about: A Deafened creature fails all auditory checks and makes perception checks at disadvantage.
+-   name: Dumbstruck
+    balance: very strong
+    about: "A Dumbstruck creature's intelligence is treated as -5. It is incapable of speech or complex planning.
+            Dumbstruck creatures can speak using only broken language and cannot cast spells. They maintain their allegiances."
+-   name: Elemental Resistance
+    balance: strong
+    about: "Creatures with Elemental Resistance take half damage from attacks with the corresponding damage type and 
+            are immune to conditions caused by that type. For example, creatures with fire resistance take half damage
+            from fire and are immune to the Burning condition."
+-   name: Ethereal
+    balance: very strong
+    about: "Ethereal creatures exist on the ethereal plane. They are visible but translucent, and cannot be 
+            affected by physical attacks. They are able to pass through any substance less than one inch thick.
+            An ethereal creature cannot attack or cast spells that affect targets that are not also bound to the ethereal plane."
+-   name: Empowered
+    balance: good
+    about: "An Empowered creature adds 1d4 to all checks and saves."
+-   name: Enlarged
+    balance: strong
+    about: "Enlarged creatures grow to massive size. They deal 1d6 bonus damage on physical attacks,
+            are resistant to physical damage, and have advantage on strength checks. However, Accuracy
+            checks made against an enlarged target are at advantage."
+-   name: Hindered
+    balance: strong
+    about: A Hindered creature loses half its movement.
+-   name: Hoisted
+    balance: very strong
+    about: Hoisted creatures are unable to move and attacks made against them are at advantage."
+-   name: Estranged
+    balance: strong
+    about: An Estranged creature acts as though everyone is its enemy.
+-   name: Fearless
+    balance: weak
+    about: Fearless creatures are immune to the Frightened condition.
+-   name: Fixated
+    balance: good
+    about: Fixated creatures are interested only in the item of their fixation. The nature of this fixation is left to the Grand Poohbah.
+-   name: Frenzied
+    balance: strong
+    about: FIXME I wrote this up in the other document.
+-   name: Frightened
+    balance: good
+    about: A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.
+-   name: Frozen
+    balance: very strong
+    about: A Frozen creature’s body has been magically hardened. As such they are resistant to physical damage, but cannot move or act."
+-   name: Grappling
+    balance: neutral
+    about: "A Grappling creature is applying the Grappled condition to another target. While a creature is grappling, their movement speed 
+           is halved and they cannot make physical attacks except for hand-to-hand attacks against the creature they have grappled."
+-   name: Grappled
+    balance: neutral
+    about: "Grappled creatures make all physical checks
+          and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature
+          may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple."
+-   name: Hastened
+    balance: strong
+    about: "A Hastened creature can move twice its ordinary speed and gains one extra action on their turn. When a creature
+           loses the hastened condition, they immediately take a level of Exhaustion."
+-   name: Harried
+    balance: weak
+    about: A Harried creature makes ranged accuracy checks at disadvantage.
+-   name: Infused
+    balance: good
+    about: "An Infused object deals bonus damage when used as a weapon. The damage starts at 1d6,
+            and increases to 1d8 then 1d10 in gameplay tiers 2 and 3."
+-   name: Immune
+    balance: very strong
+    about: Immune creatures cannot be affected by status effects.
+-   name: Invisible
+    balance: strong
+    about: "Invisible creatures cannot be seen. They make stealth checks with advantage and accuracy checks made against them are at disadvantage."
+-   name: Invincible
+    balance: very strong
+    about: Invincible creatures are immune to all damage.
+-   name: Incapacitated
+    balance: very strong
+    about: "An Incapacitated creature cannot move or act. Hand-to-hand accuracy checks against them result in an automatic critical hit."
+-   name: Isolated
+    balance: neutral
+    about: FIXME I wrote this up in the other document.
+-   name: Lured
+    balance: strong
+    about: "A Lured creature immediately moves a distance equal to half their speed towards the object that is luring them. The creature maintains its intelligence and will act accordingly to avoid danger as they move."
+-   name: Leeched
+    balance: good
+    about: A portion of the damage taken by a Leeched creature is returned to the attacker as health.
+-   name: Muted 
+    balance: neutral 
+    about: Muted creatures cannot make sound and cannot cast spells with verbal components.
+-   name: Nimble
+    balance: neutral
+    about: Targetted ranged attacks against Nimble creatures are at disadvantage.
+-   name: Physical Resistance
+    balance: strong
+    about: Creatures with Physical Resistance take half damage from piercing and blunt attacks.
+-   name: Rot
+    balance: strong
+    about: "Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. 
+           This continues until they have rested or been healed."
+-   name: Shrunk
+    balance: good
+    about: "Shrunk creatures have been greatly reduced in size. They can move only half their normal speed,
+            and can pass through spaces occupied by other creatures. Targeted accuracy checks made against them are
+            at disadvantage, but they take 1d6 extra damage from any physical attack."
+-   name: Staggered
+    balance: neutral
+    about: A Staggered creature makes their next action at disadvantage.
+-   name: Transformed
+    balance: very strong
+    about: "Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed 
+           of the creature that they have turned into. They cannot use the abilities of their original state,
+           except for those which allow them to transform back into that form. If a transformed creature reaches
+           zero health, they immediately revert to their original form and lose an amount of health equal to the
+           maximum health of the creature they transformed into. Creatures which cast a spell or use an ability
+           to voluntarily transform may spend an action to transform back to their original state,
+           unless otherwise stated by a rule or by the Grand Poohbah."
+-   name: Truesight 
+    balance: weak
+    about: Fixme I wrote this up in the other document.
+-   name: Lycanthropy
+    balance: strong
+    about: Fixme I wrote this up in the other document.
+-   name: Poisoned
+    balance: strong
+    about: "Poisoned creatures must make a D15 inner fire save at the start of each turn
+           or take one level of exhaustion and 2d6 damage."
+-   name: Prone
+    balance: strong
+    about: "A prone creature has been knocked to the ground, and can move only by crawling. 
+           The maximum distance crawled is one quarter of their ordinary speed. Prone creatures 
+           make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made 
+           against a prone entity are at advantage, except for targeted ranged attacks, which are
+           at disadvantage. A prone creature may spend an action and half their movement to stand up."
+-   name: Quickened
+    balance: good
+    about: A Quickened creature gains fifteen feet of movement and ignores difficult terrain.
+-   name: Slowed
+    balance: strong
+    about: "A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative."
+-   name: Stunned
+    balance: strong
+    about: A Stunned creature loses one action on its next turn and attacks made against them before their next turn are at advantage.
+-   name: Weakened
+    balance: very strong
+    about: A Weakened creature's attacks deal half damage.
+-   name: Vulnerable
+    balance: strong
+    about: All accuracy checks made against Vulnerable creatures are at advantage.
+-   name: Halted
+    balance: strong
+    about: Halted creatures immediately lose the remainder of their movement for a turn.
