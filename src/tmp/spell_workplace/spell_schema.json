@@ -2,19 +2,33 @@
 	"description": "Definition of a single spell.",
 	"type": "object",
 	"additionalProperties": false,
-	"required": ["type", "cost", "range", "duration", "description", "requirements"],
+	"if": {
+		"properties": { "ability_type": { "const": "spell" } }
+	  },
+	  "then": {
+		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description", "requirements"]
+	  },
+	  "else": {
+		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description"]
+	  },
 	"properties": {
+		"ability_type": {
+			"type": "string",
+			"enum": ["ability", "spell"]
+		},
 		"name": {
 			"type": "string"
 		},
 		"type": {
 			"type": "string",
-			"enum": ["damage", "aoe damage", "multi-attack damage", "healing", "aoe healing", "debuff", "aoe debuff", "buff", "aoe buff", "utility", "summoning", "transformation"]
+			"enum": ["damage", "aoe damage", "multi-attack damage", "healing", "aoe healing", "debuff",
+			          "aoe debuff", "buff", "aoe buff", "utility", "summoning", "transformation", "combat option",
+					  "critical hit enhancement", "reaction"]
 		},	
 		"cost": {
 			"type": "integer",
 			"minimum": 0,
-			"maximum": 3
+			"maximum": 5
 		},
 		"duration": {
 				"anyOf": [
@@ -24,7 +38,8 @@
 				}, 
 				{
 					"type": "string",
-					"enum": ["concentration", "save", "instantaneous", "1 hour", "12 hours", "1 day", "infinite"]
+					"enum": ["concentration", "save", "instantaneous", "1 hour", "12 hours", "1 day", "infinite", "1 week", "5 minutes", 
+					          "until dispelled", "passive", "inherited"]
 				}
 			]
 		},
@@ -40,7 +55,7 @@
 				}, 
 				{
 					"type": "string",
-					"enum": ["self", "touch", "infinite", "1 mile"]
+					"enum": ["self", "touch", "infinite", "1 mile", "100 miles", "dash", "inherited", "base speed"]
 				}
 			]
 		},
@@ -79,6 +94,9 @@
 						}
 				}
 		},
+		"passive_damage_source": {
+			"type": "boolean"
+		},
 		"damage_scaling": {
 			"type": "object",
 			"required": ["damage_type", "tier_3"],
@@ -89,7 +107,8 @@
 				},
 				"damage_type" : {
 					"type": "string",
-					"enum":  ["healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", "necrotic", "blunt", "piercing", "acoustic", "poison"]
+					"enum":  ["healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", 
+					          "necrotic", "blunt", "piercing", "acoustic", "poison", "temporary health", "inherited"]
 				},
 				"scaled_by": {
 					"type": "object",
@@ -105,13 +124,16 @@
 					"enum": ["cone", "line", "chain"]
 				},
 				"tier_1": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
 				},
 				"tier_2": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
 				},
 				"tier_3": {
-					"type": "string"
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
 				}
 			}
 		},
@@ -138,7 +160,10 @@
 		},
 		"action_type": {
 			"type": "string",
-			"enum": ["Action", "Reaction", "Free Action"]
+			"enum": ["Action", "Reaction", "Free Action", "modifies_ability"]
+		},
+		"ability_modified": {
+			"type": "string"
 		},
 		"effect": {
 			"type": "object",
@@ -150,7 +175,7 @@
 				},
 				"type": {
 					"type": "string",
-					"enum": ["buff", "debuff", "damage"]
+					"enum": ["buff", "debuff", "damage", "self-debuff"]
 				},
 				"options": {
 					"type": "array",
@@ -162,14 +187,14 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed", "controlled", "diminished", "distracted",
-						"deafened", "dumbstruck", "elemental resistance", "empowered", "enlarged", "entangled", "ethereal",
+						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed", "controlled", "darkvision", "diminished", "distracted",
+						"disarmed", "deafened", "dodging", "dumbstruck", "elemental resistance", "elusive", "empowered", "enlarged", "entangled", "ethereal",
 						"estranged", "fearless", "fixated", "frenzied", "frightened",
-						"frozen", "grappled", "halted", "hastened", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
-						"incapacitated", "invincible",
-						"isolated", "leeched", "lured", "lycanthropy", "muted", "nimble", "physical resistance", 
+						"frozen", "grappled", "guarded", "halted", "hastened", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
+						"incapacitated", "inspired", "invincible",
+						"isolated", "leeched", "lured", "lycanthropy", "muted", "nimble", "physical resistance", "psychic resistance",
 						"quickened", "rot", "shrunk", "transformed", "truesight",
-						"staggered", "poisoned", 
+						"spurred to action", "spurred to movement", "staggered", "poisoned", 
 						"prone", "slowed", "stunned", "weakened", "vulnerable"]
 					}
 				},

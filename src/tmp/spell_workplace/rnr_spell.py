@@ -4,16 +4,17 @@ import rnr_balance
 RNR Spell object.
 '''
 class rnr_spell():
-  def __init__(self, name, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
+  def __init__(self, name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
                summoned_creature, action_type, effect, options, dict_data=None):
     self.name = name
+    self.spellbook = spellbook
     self.type = spell_type
     self.cost = cost
     self.duration = duration if isinstance(duration, int) else duration.title()
     self.casting_time = casting_time if casting_time is None or isinstance(casting_time, int) else casting_time.title()
     self.range = spell_range if isinstance(spell_range, int) else spell_range.title()
     self.radius = radius
-    self.is_aoe = self.radius is not None
+    self.is_aoe = self.radius is not None and self.type not in ['summoning', 'transformation']
 
     self.description = description
     
@@ -52,10 +53,11 @@ class rnr_spell():
 
   #simple constructor
   @classmethod
-  def dict_constructor(cls, spell_name, dict_data):
+  def dict_constructor(cls, spell_name, spellbook, dict_data):
     dict_data = dict_data
     
     name = spell_name
+    spellbook = spellbook
     spell_type = dict_data['type']
     cost = dict_data['cost']
     duration = dict_data['duration']
@@ -71,7 +73,7 @@ class rnr_spell():
     effect = dict_data.get('effect', None)
     options = dict_data.get('options', None)
 
-    return cls(name, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
+    return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
                summoned_creature, action_type, effect, options, dict_data=dict_data)
 
 
@@ -187,14 +189,14 @@ class rnr_spell():
 
     return intuited_type
   
-  def estimated_damage(self, tier):
+  def estimated_damage(self, tier, single_target=False):
     tier = tier.lower()
 
     if self.damage is None:
-        return 0
+      return 0, 0, 0, 0, 0, 0
     
     if tier not in self.damage:
-      return 0
+      return 0, 0, 0, 0, 0, 0
     aoe = 2 if self.is_aoe else 1
     max_damage = 0
     avg_damage = 0
@@ -212,13 +214,13 @@ class rnr_spell():
       focus = rnr_balance.get_balance_weapon_at_tier(tier, False, 'magic')
       
       inner_fire = rnr_balance.get_balance_value('balance_stat_value')[tier]['max'] if self.damage['scaled_by']['stat'] else 0
-      single_attack_avg_damage += focus.max_dmg() + inner_fire
-      single_attack_max_damage += focus.avg_dmg() + inner_fire
+      single_attack_avg_damage += focus.avg_dmg() + inner_fire
+      single_attack_max_damage += focus.max_dmg() + inner_fire
 
-      max_damage += single_attack_max_damage * aoe
       avg_damage += single_attack_avg_damage * aoe      
+      max_damage += single_attack_max_damage * aoe
 
-    return avg_damage, max_damage, self.type, self.cost, self.damage['damage_type']
+    return avg_damage, max_damage, single_attack_avg_damage, self.type, self.cost, self.damage['damage_type']
   
   def get_max_condition_value(self):
     if self.effect is None:

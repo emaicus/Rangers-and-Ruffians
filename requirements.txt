@@ -4,3 +4,4 @@ contractions
 pyspellchecker
 textsearch
 inquirer
+jsonschema

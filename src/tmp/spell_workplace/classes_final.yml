@@ -1,0 +1,2121 @@
+Barbarian:
+    recommended_stats:
+        Charisma: -1
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: -2 
+        Perception: 0 
+        Strength: 2
+    expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
+                bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
+    health_dice: "1d10"
+    abilities: #25 / 25
+        -   name: Berserk
+            type: buff
+            passive_damage_source: true
+            cost: 1
+            range: self
+            duration: 15
+            type: buff
+            damage_scaling:
+                damage_type: inherited
+                tier_1: 1d4
+                tier_2: 1d6
+                tier_3: 1d8
+            description: "Rage fills you until it threatens to overflow and consume you. For the ability's duration, deal bonus damage on every blow you strike."
+            effect:
+                type: buff
+                description: "Further, take resistance to physical damage. When berserk ends, take a level of exhaustion."
+                conditions:
+                    - physical resistance
+                save: null
+        -   name: Relentless Rage
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: modifies_ability
+            ability_modified: Berserk
+            description: "Blood thunders in your ears as you rage, blocking out attacks against your mind."
+            effect:
+                type: buff 
+                description: "When you are going berserk, you are resistant to psychic damage and immune to conditions of the mind."
+                conditions:
+                    - psychic resistance 
+                    - mental immunity
+                save: null
+        -   name: Blood for Blood
+            type: reaction
+            cost: 0
+            range: self 
+            duration: passive
+            action_type: Reaction
+            description: When you are going berserk and an enemy harms you, you may use your reaction to make a counterattack.
+        -   name: Adrenaline
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: modifies_ability
+            ability_modified: Berserk
+            description: "A bloody grin spreads across your face as you hurtle towards your foes."
+            effect:
+                type: buff 
+                description: "When you go berserk, you are Quickened."
+                conditions:
+                    - quickened 
+                save: null
+        -   name: Throw Anything
+            type: buff
+            cost: 0
+            range: inherited 
+            duration: passive
+            passive_damage_source: true
+            range: 30
+            action_type: modifies_ability
+            ability_modified: thrown attack
+            description: "Sometimes, you can't get close enough to punch. That makes you angry, so you've developed a technique to fix the problem: throw things!
+                          Add 1d6 damage to any thrown weapon attacks that you make. If a weapon has the thrown property, you may throw it twice as far.
+                          If it does not, you may throw it up to 30 feet."
+            damage_scaling:
+                damage_type: inherited
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+        -   name: Taunt
+            type: aoe debuff
+            cost: 1
+            range: self
+            radius: 50
+            duration: save
+            description: "A glint in your eye and a bloody smile on your face, you scream a challenge to the world around you!"
+            effect:
+                type: debuff 
+                description: "All enemies in the ability's radius must make a spell power saving throw or become Fixated on you."
+                conditions:
+                    - fixated 
+                save: "They may reattempt their save at the end of each of their turns."
+        -   name: Single Out
+            type: debuff
+            cost: 1
+            range: 60
+            duration: 10
+            description: "Survey the battlefield and pick out an enemy that you hate in particular."
+                          #Maybe it's their face, maybe its the shine of their armor, or maybe they just have 
+                          #a dumb name. Regardless, you're going to kill them.                     
+            effect: 
+                type: debuff 
+                description: "You gain 15ft of movement on any turn when you move towards them and they are considered Vulnerable to your attacks."
+                conditions: 
+                    - vulnerable 
+                save: null 
+        -   name: Terrify
+            type: debuff
+            cost: 0
+            range: 60
+            duration: save
+            action_type: modifies_ability
+            ability_modified: Single Out
+            description: "As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes."
+            effect:
+                type: debuff 
+                description: They must make a spell power save or become Frightened of you.
+                conditions: 
+                    - frightened 
+                save: "They may repeat their save at the end of each of their turns, or once every five minutes when out of combat."
+        -   name: Stay on Your Feet
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: Free Action
+            description: "Even battered and bloodied, you fight on.
+                          If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead."
+        -   name: Blaze of Glory
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: Free Action
+            description: "As you take injuries, your resolve only strengthens. If you fall below one quarter health and an enemy lands a glancing blow on you you, take no damage."
+        -   name: Meat Shield
+            type: reaction
+            cost: 1
+            range: touch 
+            duration: instantaneous
+            action_type: Reaction
+            description: "When you see an incoming attack, you may attempt to shield yourself with an adjacent enemy." 
+            effect:
+                type: debuff 
+                description: "They must make a spell power save or be pulled into the attack's way. If they die and you have the Throw Anything ability, you may immediately make an attack using them as a thrown weapon."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Brutal Attack
+            type: combat option
+            cost: 1
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "Your muscles buldge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw or be knocked Prone."
+                conditions: 
+                    - prone
+                save: null
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Frightening Blow
+            type: combat option
+            cost: 1
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "Spittle flies from your mouth and your eyes roll back as you strike at a foe."
+            effect:
+                type: debuff 
+                description: "A dark aura surrounds you, and everyone within 30ft of your target must make a spell power save or become Frightened of you."
+                conditions: 
+                    - frightened
+                save: null
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: The Opener
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: modifies_ability
+            ability_modified: Brutal Attack
+            description: "If you move quickly at the start of combat, you're able to get the drop on your foes.
+                          If you attack an enemy that has not yet taken a turn, use Brutal Attack at no cost."
+        -   name: Throw Caution to the Wind
+            type: buff
+            cost: 0
+            range: self 
+            action_type: Free Action
+            duration: 1
+            ability_modified: standard attack
+            description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
+            effect: 
+                type: self-debuff
+                description: "At any time, you may declare that your attacks deal extra damage. 
+                              However, when you make such an attack, you become Vulnerable until the start of your next turn."
+                conditions: 
+                    - vulnerable
+                save: null
+            passive_damage_source: true
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d6
+                tier_2: 1d8 
+                tier_3: 1d10
+        -   name: Guard-Break
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            cost: 1
+            description: "Swing high and fast in an effort to batter away your opponent's defenses."
+            effect:
+                type: debuff 
+                description: "They must make a spell power save or become Vulnerable."
+                conditions:
+                    - vulnerable
+                save: "They may repeat their save at the end of each of their turns."
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Rending Strike
+            type: combat option
+            cost: 2
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "With a hiss of air, you slash your opponent with your weapon."
+            effect:
+                type: debuff 
+                description: "As your attack tears your enemy asunder, they must make a spell power saving throw or treat this ability's bonus damage as Bleeding."
+                conditions: 
+                    - bleeding
+                save: null
+            damage_scaling:
+                tier_1: "2d8"
+                tier_2: "2d10"
+                tier_3: "2d12"
+        -   name: The Closer
+            type: buff
+            cost: 0
+            duration: passive 
+            range: inherited 
+            action_type: modifies_ability
+            ability_modified: standard attack
+            passive_damage_source: true
+            damage_scaling: 
+                type: inherited
+                tier_1: 1d6
+                tier_2: 1d6
+                tier_3: 1d6
+            description: "You use every opening to prove your glory. If you attack an enemy that is prone, deal bonus damage."
+        -   name: Terrifying Damage
+            type: buff
+            cost: 0
+            duration: passive 
+            range: inherited
+            action_type: modifies_ability 
+            ability_modified: standard attack 
+            passive_damage_source: true
+            damage_scaling: 
+                type: inherited
+                tier_1: 1d6
+                tier_2: 1d6
+                tier_3: 1d6
+            description: "You've learned to use your enemies' terror to your advantage. When you attack an enemy that is Frightened of you, deal bonus damage."
+        -   name: Chain Attack
+            cost: 0
+            type: buff
+            duration: instantaneous
+            range: self 
+            action_type: Free Action
+            ability_modified: slayed enemy
+            description: "As your foes' bodies fall around you, a fiendish energy courses through your veins."
+            effect:
+                type: buff 
+                description: "Whenever you slay an enemy, you are Spurred to Action." 
+                conditions:
+                    - spurred to action
+                save: null
+        -   name: Savage Critical
+            cost: 0
+            type: "critical hit enhancement"
+            range: inherited
+            action_type: modifies_ability 
+            ability_modified: critical hit
+            radius: 30
+            duration: 1
+            description: "As you lay an enemy low, an aura of wild brutality swirls about you."
+            effect:
+                type: debuff 
+                save: null
+                conditions: frightened
+                description: "Whenever you land a critical hit, all enemies the ability's radius must make a spell power save or be Frightened until the end of your next turn."
+        -   name: Corner
+            type: reaction
+            cost: 1
+            range: 15
+            duration: instantaneous
+            action_type: Reaction 
+            description: "They won't get away that easy! If an enemy moves to pass you within 15 feet to either side,
+                          you may spend a reaction to block them."
+            effect:
+                type: debuff 
+                description: "If they are one size larger than you or smaller, they are immediately Halted unless they are flying. Otherwise, they may make a spell power save."
+                conditions: 
+                    - halted
+                save: null
+        -   name: Every Wall is a Door
+            type: utility
+            range: base speed
+            duration: 1
+            cost: 1
+            description: "Use your strength to blast through an obstacle that is two feet thick or less, to climb solid stone,
+                          or to leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks."
+        -   name: I cast 'Fist'
+            cost: 1
+            type: utility 
+            range: self
+            duration: 1
+            description: "Don your pointy hat and grab your stick, you've become a wizard!
+                          Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent
+                          of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur.
+                          Follow the rules for informal magic, but always spend an action point."
+        -   name: A Little Terror
+            type: debuff
+            cost: 1
+            range: 30 
+            duration: 1
+            description: "Use your intimidating presense to force an enemy to do your will."
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw or either be Controlled for one turn or answer three of your questions truthfully."
+                conditions:
+                    - controlled 
+                save: null
+Knight:
+    recommended_stats:
+        Charisma: 0
+        Dexterity: -2
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: -1
+        Strength: 2
+    handbook:
+        - Intro: "Bulwark against evil. Knights stand tall on the front-line of an adventuring party.
+                  All but unkillable, it is their duty
+                  to protect their less resilient companions, standing in the way of blows that
+                  would slay wizards and rogues where they stand. While many knights work for coin or
+                  glory, others are called by a higher purpose. Such paladins can learn divine magic
+                  and use it to heal their allies and burn their foes with radiant light. Whether
+                  serving as bastion or healer, knights are a shield, holding their party together
+                  and standing strong against any foe."
+        - Adventuring: "Knights are strong of body and spirit. Whether bending the bars of a prison
+                        cell, charging through a locked door, or putting enemies in their place,
+                        a knight's superior strength is of great use to their adventuring party.
+                        When things look grim, a party's knight can be counted on to keep going,
+                        no matter what. Vile curses, hazardous weather, and incredible fatigue
+                        can do little to cause a knight to flag."
+        - Socializing: "Many knights have a special affinity for speaking with other men-at-arms,
+                        using the bond of battle to forge fast friendships. Gleaming plate can be
+                        intimidating to the peasantry, though it tends to inspire awe rather than fear."
+        - Combat:      "A knight can be counted on to stand at the front line, using their abilities
+                        to focus the attention of enemies and stop them from attacking a party's ranged
+                        combatants and mages. If a knight invests in their Paladin tree, they gain
+                        the ability to bolster their allies' defenses and can become a viable party healer.
+                        Regardless of the path that you take, your role as a knight will be to defend
+                        your party and to punish any enemy that would try to harm them."
+    expertise: "As a knight, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
+                bursting through a locked door, or rolling a heavy boulder. You also take expertise in charisma when speaking with 
+                men-at-arms and law-abiding common folk."
+    starting_items:
+        - Your choice of a common war hammer, shortsword, flail, or greatsword
+        - A common shield
+        - Your choice of chainmail (common moderate armor) or heavy plate (common heavy armor).
+        - A tier appropriate minor healing potion
+    health_dice: "1d10"
+    abilities: #25 / 25
+        #-   name: Faithful Weapon
+            #    cost: 1
+            #    damage_scaling:
+            #        tier_1: "1d8"
+            #        tier_2: "1d10"
+            #        tier_3: "1d12"
+            #    description: After you bond with a weapon, you can feel a faint tether connecting it to you. When you throw your weapon, it deals damage. So long as you are within 50 feet of your weapon, you may recall it to yourself as an offhand action or reaction. The weapon flies directly to you, striking any enemy in its way as though you had made an attack with your inner fire as its modifier.
+        -   name: Charge
+            type: combat option
+            cost: 1
+            duration: instantaneous
+            range: dash
+            modifies_ability: dash
+            damage_scaling:
+                damage_type: blunt
+                tier_1: "?"
+                tier_2: "?"
+                tier_3: "?"
+            description: "With a mighty cry, you barrel forward into the fray. 
+                          Rush ahead a distance equal to your dash. For the length, you are immune to exposed attacks and deal damage
+                          to any enemy whose space you move through."
+            effect:
+                type: debuff 
+                description: "Enemies struck by your passing must make a spell power save or be knocked Prone."
+                conditions:
+                    - prone 
+                save: null
+        -   name: Healing Blow
+                type: combat option 
+                cost: 2
+                duration: instantaneous
+                range: inherited 
+                radius: 30
+                ability_modified: standard attack
+                description: "Your weapon radiates light as you slam it into your foe. Deal bonus damage to an enemy. All allies 
+                              within the ability's radius immediately restore an amount of health equal to the bonus damage dealt."
+                damage_scaling: #Flag
+                    damage_type: radiant 
+                    tier_1: "2d6"
+                    tier_2: "2d8"
+                    tier_3: "2d10"
+        -   name: Healing Hands
+            type: healing
+            cost: 1
+            range: touch 
+            duration: instantaneous
+            description: "Golden light shines from your hand as you reach out to an injured ally, staving off the worst of their injury."
+            damage_scaling: #FLAG HEALING
+                damage_type: healing
+                tier_1: "2d4"
+                tier_2: "4d4"
+                tier_3: "4d10"
+        -   name: Last Hope
+            type: buff
+            cost: 0
+            duration: passive
+            range: self
+            ability_modified: healing
+            description: "You are steadfast in the face of despair. Whenever an ally has fallen in a combat or is on death's door,
+                          add a bonus to any healing you perform."
+            damage_scaling:
+                damage_type: healing
+                tier_1: 1d4
+                tier_2: 2d4
+                tier_3: 2d10
+        -   name: Guardian Ward
+            type: buff
+            cost: 1
+            range: 30
+            radius: 100
+            duration: 1 hour
+            description: "As you focus on an ally, a blazing sigil burns above their head.
+            effect:
+                type: buff 
+                description: "While they remain within the ability's radius, they gain +2 evasion.
+                              At most one ally may have a guardian ward at a time. Guardian wards disappear 
+                              if their bearer falls unconcious."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Holy Shield
+            type: buff
+            cost: 1
+            range: 30
+            duration: 1 hour
+            damage_scaling: #Flag
+                type: "temporary health"
+                tier_1: "2d4"
+                tier_2: "4d4"
+                tier_3: "4d10"
+            description: "As you raise your hand, a shield of golden light shimmers around a chosen ally. They are granted
+                          temporary hit points for the spell's duration."
+        -   name: Ward Conversion
+            cost: 1
+            type: buff 
+            range: inherited 
+            duration: instantaneous
+            ability_modified: Guardian Ward
+            action_type: Free Action 
+            description: As danger closes in about your allies, use your power to convert any Guardian Wards you've deployed into 
+                         Holy Shields. This may be done as a free action at any time, including out of turn in combat, so long as
+                         an attack is not currently being resolved."
+        -   name: Aura of Hope
+            type: passive aoe buff
+            cost: 0
+            range: self 
+            radius: 15
+            duration: infinite
+            description: "You have grown strong enough that you exude a powerful aura of holy energy. 
+                          This bolstering effect protects your allies from despair and hardens them against the abilities of your foes.
+            effect:
+                type: buff 
+                description: "If an ally stands within the effect's radius, they may add +2 to all saving throws
+                              and make death coin flips at advantage."
+                conditions:                
+                    - custom 
+                save: null
+            upcast: "You can spend one action point to increase this ability's radius to 30ft for one hour."
+        -   name: Link Lifeforce
+            cost: 0
+            type: buff
+            range: inherited 
+            duration: 1 hour
+            description: "A sparkling weave of light binds you to an ally who bears a Guardian Ward before fading into invisibility."
+            effect:
+                type: buff 
+                description: "For the ability's duration, your life force is magically bound to that of one or more allies with a guardian ward. 
+                              Until you use a free action to unlink yourself on your turn, you may take all or a portion."
+                conditions: 
+                    - custom 
+                save: null
+        #-   name: Enhanced Healing
+            #cost: 0
+            #description: If an ally has a guardian ward, add 1d6 to any healing that you grant them.
+        -   name: Second Guardian Ward
+            type: combat option
+            cost: 0
+            range: inherited 
+            duration: inherited 
+            action_type: modifies_ability
+            ability_modified: Guardian Ward
+            description: "Your divine power is growing. You have gained the ability to maintian two guardian wards at a time."
+        -   name: Shield Of Men
+            type: combat option
+            cost: 1
+            range: dash
+            duration: instantaneous
+            modified_action: dash
+            action_type: Reaction
+            description: "Burst forward to save somone from harm. As a reaction, jump in front of an ally to become the target of a physical attack aimed at them.
+                          Any damage you recieve as a result of this ability is halved."
+        #-   name: Single-minded Bravery
+                #cost: 0
+                #description: You are immune to the frightened, charmed, controlled, and distracted conditions.
+        -   name: Steel Yourself
+            type: buff 
+            cost: 1
+            range: self 
+            duration: instantaneous
+            action_type: Free Action
+            description: "Prepare for an attack as it hurtless towards you, hardening yourself against its damanage. 
+                          As a Free Action, halve the damage of an attack made against you. You may declare this after seeing its outcome."
+        -   name: Stay on Your Feet
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: Free Action
+            description: "Even battered and bloodied, you fight on.
+                          If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead."
+        #-   name: Resilient Defense
+            #cost: 1
+            #description: You have become so hardened by combat that a single attack can deal at most damage equal to one half of your maximum health.
+        -   name: None Shall Pass
+            type: debuff
+            cost: 0
+            range: inherited 
+            duration: instantaneous
+            action_type: modifies_ability
+            ability_modified: exposed attack
+            description: "You are a bulwark of steel, hindering any enemy advance."
+            effect:
+                type: debuff 
+                description: "When you make your exposed attack, your enemy must make a spell power save or be Halted. On success, their remaining movement is Hindered."
+                conditions:
+                    - halted 
+                    - hindered 
+                save: null
+        -   name: Controlled Advance
+            cost: 0
+            type: buff
+            duration: instantaneous
+            range: self 
+            action_type: Free Action
+            ability_modified: slayed enemy
+            description: "As a foe falls to your blade, use the oportunity to push into their ranks. 
+                          Whenever you slay an enemy with a melee attack, you may step forward
+                          into the space that they occupied. You are immune to exposed attacks 
+                          during this movement. Once you've moved, you may either attack again or Ready your Stance."
+        -   name: Sentinel's Reaction
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive
+            description: "You have developed a supernatural ability to read the battlefield and to be where you are needed."
+            effect:
+                type: buff 
+                description: "Each turn, you are able to take a second reaction."
+                conditions: 
+                    - custom 
+                save: null
+        -   name: Pivot
+            cost: 0
+            type: combat option 
+            duration: instantaneous
+            range: self  
+            radius: 15
+            action_type: Action
+            description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
+        -   name: Phalanx:
+            cost: 0
+            type: passive aoe buff 
+            duration: infinite 
+            range: self 
+            radius: 10ft 
+            action_type: Free Action
+            description: "Adopt a defensive stance, granting all allies within five feet your protection."
+            effect:
+                type: buff 
+                description: "Adjacent allies are BLANK"
+                conditions:
+                    - BLANK
+                save: null
+        #-   name: Ready Stance
+                #cost: 0
+                #description: As an action, prepare yourself for an attack. The first time you are attacked before your next turn, counterattack as a free action.
+        -   name: Overwhelming Strike
+            type: combat option
+            cost: 1
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: "With a blow like the fall of a hammer, you batter your enemy a devestating attack."
+            effect:
+                type: debuff 
+                description: "They must make a spell power save, or be Stunned until the end of their next turn."
+                conditions: 
+                    - stunned 
+                save: null                
+        -   name: Slowing Strike
+            cost: 2
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "You slice at your enemy's legs in an attempt to hinder their movement."
+            conditions: 
+                type: debuff 
+                description: "They must make a spell power saving throw or be Slowed until the end of their next turn."
+                conditions:
+                    - slowed 
+                save: null
+            damage_scaling:
+                tier_1: "2d8"
+                tier_2: "2d10"
+                tier_3: "2d12"
+        -   name: Last Line Of Defense
+            type: buff
+            cost: 0
+            passive_damage_source: true
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: "Rage fills you as your allies begin to fall."
+            effect:
+                type: buff 
+                description: "Add bonus damage to your attacks if an ally has fallen in this combat or is on death's door."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Goading Attack
+            cost: 1
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "A bloody grin fixed upon your face, you make an attack meant to get your enemy's attention."
+            effect:
+                type: debuff 
+                description: "Your target must make a spell power save or become Fixated on you."
+                conditions:
+                    - fixated 
+                save: "They may repeat their saving throw at the end of each of their turns."
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Inspiring Critical
+            cost: 0
+            type: critical hit buff
+            range: inherited
+            duration: instantaneous
+            action_type: modifies_ability 
+            ability_modified: critical hit
+            description: "The sight of you landing an incredible blow fills one of your allies
+                          with determination."
+            effect:
+                type: buff 
+                description: "Grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities."
+                conditions: 
+                    - inspired 
+                save: null
+        -   name: Lionhearted
+            cost: 1
+            type: aoe buff 
+            range: self 
+            radius: 30ft
+            description: "Your presence soothes your allies, guarding them against fear."
+            effect:
+                type: buff 
+                description: "Inspire all allies within the ability's radius. Furthermore, for the next hour, any friendly creaturess who are within 30ft of you are immune to the Frightened condition."
+                conditions:
+                    - fearless
+                    - inspired 
+                save: null
+        -   name: Very Dangerous over Short Distances 
+            type: buff
+            range: touch
+            duration: passive
+            modified_action: advantaged attack
+            passive_damage_source: true
+            description: "Once you've closed with an enemy, you are able to deal massive damage."
+            effect:
+                type: buff
+                description: "If you begin your turn next to a creature, deal an extra 1d6 damage on any attacks that you make against them."
+                conditions: 
+                    - custom 
+                save: null
+            damage_scaling: 
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+Fighter:
+    recommended_stats:
+        Charisma: -2
+        Dexterity: 2
+        Inner_Fire: -1
+        Intelligence: 0
+        Perception: 1
+        Strength: 1
+    expertise: "As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, climbing a rope, and other such checks. 
+                It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing."
+    health_dice: "1d8"
+    abilities: #25 /25
+        -   name: Backpedal
+            cost: 0
+            type: buff
+            duration: instantaneous
+            range: self 
+            action_type: Free Action
+            ability_modified: incoming miss/glance
+            description: "As an attack skates off of your armor, use the opportunity to reposition yourself.  
+                          Whenever you suffer a glancing blow or an attack misses entirely, move 5ft without provoking exposed attacks as a free action."
+        -   name: Counter
+            cost: 1
+            type: reaction
+            range: self
+            duration: passive
+            action_type: Reaction
+            description: "As battle rages, you find an opening in your enemies' mistakes. When you suffer a glancing blow, you may use your reaction to counterattack."
+        -   name: Feint
+            cost: 0
+            type: combat option 
+            duration: 1
+            range: inherited
+            description: "Take up a defensive position as enemies circle. Hold an action, and the next enemy who attacks you does so at disadvantage.
+                          You may immediately counterattack as a free action. Feint does not stack with Counter."
+        -   name: Self-Sufficient
+            cost: 1
+            type: self heal
+            duration: instantaneous
+            range: self
+            description: "Gritting your teeth, you quickly field dress your wounds. No time for dying, you've got to get back in there!" 
+            damage_scaling: 
+                damage_type: healing
+                tier_1: 2d4
+                tier_2: 4d4
+                tier_3: 4d10
+        -   name: Command
+            type: combat option
+            cost: 1
+            range: 30
+            duration: instantaneous
+            description: "You survey the battlefield with a trained eye and spot an opportunity. Quickly, you shout an order to one of your allies."
+            effect:
+                type: buff 
+                description: "Your target is Spurred to Action."
+                conditions: 
+                    - spurred to action 
+                save: null
+        
+        -   name: Lead the Way
+            cost: 0
+            type: buff 
+            duration: passive 
+            range: self 
+            ability_modified: initiative
+            description: "You spring into action before others can think. Whenever you roll initiative for combat, add your expertise to the result."
+        -   name: Move!
+            type: aoe buff
+            cost: 2
+            duration: instantaneous
+            range: self
+            radius: 50
+            effect:
+                type: buff
+                description: "You can call out a quick order to your allies to Spur them to Movement and allow them to reposition themselves."
+                conditions:
+                    - spurred to movement 
+                save: null
+            description: "Through years of experience, you are able to read a battlefield in moments and to see where your party's formation is failing."
+        -   name: Prepare for Combat
+            type: aoe buff 
+            cost: 0
+            radius: 30 
+            duration: instantaneous
+            range: self 
+            ability_modified: pre-combat 
+            description: "As combat begins, you are able to quickly give orders to the allies around you."
+            effect: 
+                type: buff 
+                description: "Everyone within the ability's radius is Spurred to Movement before the fighting starts. This ability does not go into effect if you are surprised by combat."
+                conditions:
+                    - spurred to movement 
+                save: null
+        -   name: Critical Onslaught
+            cost: 0
+            type: "critical hit enhancement"
+            range: inherited
+            duration: instantaneous
+            action_type: modifies_ability 
+            ability_modified: critical hit
+            description: "Quickly follow up when you score a heavy blow."
+            effect: 
+                type: buff
+                description: "Whenever you land a critical hit, you are Spurred to Action. This effect can occur once per round of combat."
+                conditions:
+                    - spurred to action 
+                save: null
+        -   name: Resurgence
+            type: buff 
+            range: self 
+            duration: passive 
+            ability_modified: slay enemy 
+            description: "Take heart as your foes fall before you. Whenever you slay an enemy, regain one action point.
+                          You can benefit from this ability at most once per turn. The enemy that you slay must pose a 
+                          threat to you or your party as determined by the Grand Poohbah."
+        -   name: Reduced Critical
+            cost: 0
+            type: "critical hit enhancement" 
+            range: self 
+            duration: infinite 
+            action_type: modifies_ability
+            ability_modified: standard attack 
+            description: Your critical hit target is permanently decreased by one.
+        -   name: Determination
+            type: buff
+            cost: 1
+            range: self 
+            duration: 1
+            action_type: Free Action
+            description: "As battle rages about you, take a moment to find your inner focus."
+            effect:
+                type: buff 
+                description: "For the ability's duration, add your expertise to all checks."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Final Blow 
+            type: combat option 
+            cost: 0
+            range: inherited
+            duration: infinite 
+            ability_modified: falling unconcious 
+            description: "When you fall to zero health, you may make one last, desperate attack. If the attack fells the enemy that struck you,
+                          remain standing at one hit point."
+        #-   name: Dodge
+            #cost: 1
+            #action_type: Free Action
+            #description: Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.
+        #-   name: Fallen
+            #cost: 0
+            #description: Inspire your allies to save you when you are in peril. While you are on death's door, all allies gain an additional action.
+        #-   name: Final Resolve
+            #cost: 0
+            #description: Even when you are down, you aren't out. When you are on death's door, you may crawl up to 15ft per turn without invoking exposed attacks.
+        -   name: Dashing Strike
+            type: buff
+            cost: 0
+            duration: instantaneous
+            range: dash
+            ability_modified: dash
+            description: "You sprint towards your enemey, weapon aloft and ready to strike. Your dash action may end in an attack."
+        -   name: Follow Up
+            cost: 0
+            type: buff
+            passive_damage_source: true
+            range: inherited 
+            duration: subsequent_hits 
+            ability_modified: standard attack
+            description: "Blow after blow, you wear your target down. If you attack an enemy,
+                          subsequent attacks deal extra damage if you don't choose another target.
+                          Extra damage starts at 1d4 and grows with each hit, capping at 1d12."
+        -   name: Make Space
+            cost: 1
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "You slam into your enemy with oppressive force."
+            effect:
+                type: debuff
+                description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
+                              If they strike something as a result, they are Staggered until the end of their next turn. When Make Space is triggered,
+                              you may choose to follow after the enemy without provoking exposed attacks."
+                conditions: 
+                    - staggered 
+                save: null
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Goading Attack
+            cost: 1
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "A bloody grin fixed upon your face, you make an attack meant to get your enemy's attention."
+            effect:
+                type: debuff 
+                description: "They must make a spell power save or become Fixated on you."
+                conditions:
+                    - fixated 
+                save: "They may repeat their saving throw at the end of each of their turns."
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        #-   name: Grappling Attack
+               # cost: 1
+               # damage_scaling:
+               #     tier_1: "1d8"
+               #     tier_2: "1d10"
+               #     tier_3: "1d12"
+               # description: Make an attack with the goal of grabbing hold of an enemy."
+               # effect:
+               #     type: debuff 
+               #     description: "Your target must make a spell power save or be Grappled."
+               #     conditions:
+               #         - grappled
+               #     save: "They may repeat their save at the end of each of their turns."
+        -   name: Guard-Break
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            cost: 1
+            description: "Swing high and fast in an effort to batter away your opponent's defenses."
+            effect:
+                type: debuff 
+                description: "They must make a spell power save or become Vulnerable."
+                conditions:
+                    - vulnerable
+                save: "They may repeat their save at the end of each of their turns."
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Lunge
+            type: combat option 
+            cost: 0
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack 
+            description: "You are able to extend your reach to make lunging attacks. You can make melee attacks at a 5ft extended range at disadvantage."
+        -   name: Cleave
+            type: combat option 
+            cost: 1
+            range: self 
+            radius: 10
+            ability_modified: standard_attack
+            descripiton: "Swing your weapon in a wide arc, targetting all enemies within 5ft. of you. Make a separate accuracy check against each target."
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Precision Strike 
+            type: combat option 
+            cost: 2
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack 
+            description: "With a hiss of air, you effortlessly slice through your enemy."
+            effect:
+                type: debuff 
+                description: "Your target must make a spell power saving throw or the damage dealt by this attack is considered Bleeding."
+                conditions:
+                    - Bleeding 
+                save: null 
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 2d8
+                tier_2: 2d10
+                tier_3: 2d12
+        -   name: Hindering Blow 
+            type: combat option 
+            cost: 2
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack 
+            description: "You aim a carefully placed attack against your target to slow their advance."
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw or be Hindered."
+                conditions:
+                    - hindered 
+                save: null 
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 2d8
+                tier_2: 2d10
+                tier_3: 2d12
+        -   name: Rally Cry
+            type: combat option
+            cost: 1
+            duration: 1 hour 
+            range: self 
+            radius: 100
+            description: "Holding your weapon aloft, you shout encouragement to your party."
+            effect:
+                type: buff 
+                description: "All allies within the ability's radius are Inspired."
+                conditions:
+                    - inspired 
+                save: null
+        -   name: Assisted Strike
+            type: combat option 
+            cost: 1
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack 
+            description: "As you strike your opponent, you batter away their defenses and deal bonus damage."
+            effect:
+                type: debuff 
+                description: "If an ally attacks that opponent before the start of your next turn, they also deal bonus damage per this ability."
+                conditions:
+                    - custom 
+                save: null 
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        #-   name: Wasting Critical
+            #description: "As you land a particularly well placed blow, you slice into your opponents vitals and sap their strength."
+            #effect:
+                #type: "critical hit enhancement" 
+                #description: "When you land a critical hit, you may choose to Weaken your target until the end of their next turn."
+                #conditions: 
+                #    - weakened 
+                #save: null
+        
+        -   name: Weapon Master
+            check: should this be handled better?
+            passive_damage_source: true
+            cost: 0
+            type: buff 
+            range: self
+            duration: passive
+            description: "You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effect:"
+            options:
+                - name: "Dual Weapon Master"
+                  description: When dual wielding, if you use an action point on your first attack and miss, make the same move with the second attack at no cost.
+                - name: "Ranged Weapon Master"
+                  description: When using ranged weapons, enemies moving within 30ft of you are considered Exposed.
+                - name: "Shield Master"
+                  description: Gain an additional +1 evasion when carrying a shield.
+                - name: "Heavy Weapon Master"
+                  description: "Any attack you make with a two-handed weapon deals an additional 1d6 damage."
+Monk:
+    recommended_stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: 0
+        Perception: 2
+        Strength: -1
+    expertise: "As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in
+                insight, which includes gleaning information about someone's motives or thoughts."
+    health_dice: "1d8"
+    abilities: #25/25
+        -   name: Hand to Hand Expert
+            type: buff
+            cost: 0
+            range: self
+            duration: passive 
+            ability_modified: unarmed attack
+            description: "You don't need weapons to be deadly."
+            effect:
+                type: buff 
+                description: "Whenever you make an unarmed attack, increase the damage dice by one step. 
+                              For the sake of abilities, simple blunt weapons including quarterstaffs are considered unarmed weapons.
+                              Further, you may use either strength or dexterity as the accuracy and damage modifier for 
+                              unarmed attacks."
+                conditions:
+                    - custom
+                save: null
+        -   name: Unarmored Defense 
+            type: buff 
+            cost: 0
+            range: self 
+            duration: passive
+            description: "Through constant training, you have hardened your body to physical damage."
+            effect: 
+                type: buff
+                description: "You are considered to be resistant to physical damage."
+                conditions: 
+                    - physical resistance 
+                save: null
+        -   name: Slowing Blow # Attack
+            type: combat option
+            cost: 2
+            range: inherited 
+            duration: instantaneous
+            ability_modified: unarmed attack
+            description: "In a flurry of quick blows, you strike at your opponent's pressure points and sap their energy."
+            effect:
+                type: debuff
+                description: "They must make a spell power save or be Slowed until the end of their next turn."
+                conditions: 
+                    - slowed 
+                save: null
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "2d8"
+                tier_2: "2d10"
+                tier_3: "2d12"
+        -   name: Make Space # Attack
+            cost: 1
+            type: combat option
+            range: inherited
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "You slam into your enemy with oppressive force."
+            effect:
+                type: debuff
+                description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
+                              If they strike something as a result, they are Staggered until the end of their next turn. When Make Space is triggered,
+                              you may choose to follow after the enemy without provoking exposed attacks."
+                conditions: 
+                    - staggered 
+                save: null
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Disarming Strike # Attack
+            type: combat option
+            cost: 1
+            range: inherited 
+            duration: instantaneous
+            description: "With deft precision, you make a targetted strike meant to free an object from an enemy's grasp."         
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw. On failure, they are Disarmed."
+                conditions: 
+                    - disarmed 
+                save: null
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Critical Onslaught
+            cost: 0
+            type: "critical hit enhancement"
+            range: inherited
+            duration: instantaneous
+            action_type: modifies_ability 
+            ability_modified: critical hit
+            description: "You are able to quickly follow up when you land a heavy blow."
+            effect: 
+                type: buff
+                description: "When you land a critical hit, you are Spurred to Action. This effect can occur once per round."
+                conditions:
+                    - spurred to action 
+                save: null
+        -   name: Flow with the Battle
+            type: buff 
+            cost: 0
+            range: self 
+            duration: passive
+            ability_modified: movement
+            description: "You are a master of pivoting around your foes,"
+            effect:
+                type: buff 
+                description: "and are able to pass through an enemy's space in combat."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Flurry of Blows # Attack
+            type: combat option 
+            cost: 1
+            range: self 
+            radius: 10
+            ability_modified: standard_attack
+            descripiton: "In rapid succession, make unarmed attacks against all enemies adjacent to you. Make a separate accuracy check against each target."
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Extreme Speed
+            type: buff
+            cost: 0
+            duration: passive
+            range: self
+            ability_modified: base movement
+            description: "Your mastery over your body extends to your movement."
+            effect:
+                type: buff 
+                description: "You are permanently considered to be Quickened."
+                conditions:
+                    - quickened 
+                save: null
+        -   name: Freedom of Movement
+            cost: 0
+            type: utility 
+            range: self
+            duration: passive
+            description: "You've gained such mastery over your physical movement that it appears to be magic.
+                          You are able to quickly break free of restraints, to run across water, and 
+                          to free-run up even the most difficult to traverse surfaces. For most feats of movement,
+                          you are able to simply accomplish them. When you attempt something more significant, 
+                          follow the rules for simple magic, so long as you can explain how you are able to 
+                          manipulate your body to accomplish a feat. In cases when a check is required, you
+                          must spend an action point. Additionally, you are immune to difficult terrain."
+        -   name: Disengage
+            type: buff 
+            range: self 
+            duration: 1
+            cost: 1
+            ability_modified: movement
+            description: "You dodge and weave between your foes, focusing your energy on avoiding combat."
+            effect:
+                type: buff
+                description: "For the remainder of your turn, you are Elusive."
+                conditions: 
+                    - elusive
+        -   name: Reduced Critical
+            cost: 0
+            type: "critical hit enhancement" 
+            range: self 
+            duration: infinite 
+            action_type: modifies_ability
+            ability_modified: standard attack 
+            description: Your critical hit target is permanently decreased by one.   
+        -   name: Dodging Stance
+            cost: 0
+            type: buff 
+            duration: 1
+            range: self
+            description: "Spend a moment to enter a defensive stance."
+            effect: 
+                type: buff
+                description: "Until the end of your next turn, you are Dodging."
+                conditions: 
+                    - dodging
+        -   name: Defensive Dodge 
+            cost: 0
+            type: buff 
+            action_type: modifies_ability
+            duration: passive 
+            range: inherited 
+            ability_modified: Dodging Stance 
+            description: "When an attack misses you as a result of your Dodging Stance, you may immediately make an unarmed attack as a free action."
+        -   name: Reflexes
+            type: reaction 
+            cost: 1
+            duration: instantaneous 
+            range: self
+            action_type: Reaction
+            description: "As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile, and can immediately make a counterattack with it. Increase to 2d6 then 4d6 in gameplay tiers 2 and 3."
+        -   name: Chi Block # Attack
+            cost: 2
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "2d8"
+                tier_2: "2d10"
+                tier_3: "2d12"
+            conditions: blocked
+            description: "With a quick jab of your fist, you strike at the flow of chi within your target."
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw. On a failure, they are Blocked."
+                conditions:
+                    - blocked 
+                save: "Affected enemies may repeat their save at the each of their turns."
+        -   name: Spiritual Projection #Attack
+            cost: 1
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            range: 30
+            action_type: Free Action
+            description: "Channel your chi to project an astral version of yourself at a point within the ability's range.
+                          The projection lasts for your turn, and may make actions as your proxy. Any damage taken by the astral 
+                          entity is transferred to you."
+        -   name: Phase Walk
+            cost: 1
+            description: "You are tethered to your astral form. If your Spiritual Projection harms an enemy, you may instantly change places with it."
+        -   name: Spiritual Aid
+            cost: 1
+            description: "Lay your hands on an ally who is suffering. Your peace of mind flows into them,
+                          removing any status effects that ail them. Spiritual Aid does not affect curses 
+                          or some powerful abilities as determined by the Grand Poohbah."
+        #-   name: Warrior Spirit
+            #    cost: 0
+            #    description: If you slay an enemy, regain one action point.
+            #-   name: Spiritual Blast
+            #    cost: 1
+            #    damage_scaling:
+            #        tier_1: "1d8"
+            #        tier_2: "1d10"
+            #        tier_3: "1d12"
+            #    description: Placeholder text #Flag
+        -   name: Stunning Critical
+            cost: 0
+            type: "critical hit enhancement"
+            range: inherited
+            action_type: modifies_ability 
+            ability_modified: critical hit
+            duration: 1
+            description: "As you land a heavy strike against your enemy, knock them off their guard."
+            effect:
+                type: debuff 
+                save: null
+                conditions: stunned
+                description: "Whenever you land a critical hit, your target is Stunned."
+        -   name: Chain Strike # This may be overpowered.
+            cost: 1
+            description: "When you make an attack with a spiritual projection and hit, you may spend another action point
+                          to immediately create another spiritual projection within range of the first and attack with it."
+        -   name: Resting Meditation
+            type: buff 
+            range: self 
+            duration: passive
+            ability_modified: rest
+            cost: 0
+            description: "Given a moment to rest, you are able to quickly enter a state of deep meditation. As you focus, you command your wounds to heal."
+            damage_scaling:
+                damage_type: healing 
+                tier: "1d6"
+                tier_2: "2d6"
+                tier_3: "3d6"
+        -   name: Find Center
+            action_type: Free Action
+            cost: 1
+            description: "Take a moment to center yourself in the world around you. For the remainder of the turn, add your expertise to all checks."
+        -   name: High Ground
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive
+            modified_action: plunging attack
+            passive_damage_source: true
+            description: "Using your superior mobility, you are able to strike you foes from unexpected directions."
+            effect:
+                type: buff 
+                description: "Whenever you use free-running or a plunging attack to strike an enemy, deal bonus damage."
+                conditions: 
+                    - custom 
+                save: null
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+        -   name: Resurgence
+            type: buff 
+            range: self 
+            duration: passive 
+            ability_modified: slay enemy 
+            description: "Take heart as your foes fall before you. Whenever you slay an enemy, regain one action point.
+                          You can benefit from this ability at most once per turn. The enemy that you slay must pose a 
+                          threat to you or your party as determined by the Grand Poohbah."    
+Rogue:
+    recommended_stats:
+        Charisma: 1
+        Dexterity: 2
+        Inner_Fire: -1
+        Intelligence: 0
+        Perception: 1
+        Strength: -2
+    handbook:
+        - Intro: "Knives in the dark, rogues are famously stealthy and perceptive. They blend into a crowd
+                 like shadow, gathering information or relieving a mark of their life or possessions.
+                 Rogues have little health, and as such, it can be disastrous if they are struck by an
+                 enemy attack. Thankfully, their stealth and abilities make them among the most slippery
+                 of combatants. While others tackle their challenges head on, rogues wait to find 
+                 openings—when life gives you a guarded door, a rogue is the first to go in through a window."
+        - Adventuring: "Incredibly dexterous, rogues are skilled at mantling buildings, lurking in the shadows,
+                        disarming traps and picking locks. As a rogue, you will often go in first to make
+                        certain the way is safe, using your abilities to clear a path for the 
+                        less-nimble members of your adventuring party."
+        - Socializing: "While some rogues stand back silently, others are charming and deceptive. With their
+                        nimble fingers, rogues are skilled at pocketing items that aren't theirs, though the
+                        wise rogue won't target their party with such exploits."
+        - Combat:      "Rogues have low health but deal heavy damage to their foes. In combat, they spend
+                        much of their time skirting the edges of the fray, looking for opportunities to dash in, land
+                        a critical blow, and then disappear into the shadows. Rogues are adept at fighting
+                        with daggers, hurling them at opponents and slashing multiple times to deal quick,
+                        repeated damage. If a rogue invests in magic, they can use their abilities to avoid
+                        damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
+    expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
+    starting_items:
+        - Your choice of two common daggers or a rapier and buckler
+        - Your choice of a shortbow or a hand crossbow
+        - A leather jerkin (common light armor)
+        - A salve
+        - A traveling cloak
+    health_dice: "1d6"
+    abilities: # 25/25
+        -   not_in_tree_name: Leap 
+            type: utility
+            cost: 1 
+            duration: instantaneous
+            range: self 
+            description: "As you speak the magic word for 'Ascent' you suddenly launch thirty feet into the air.
+                          By angling your body, you are able to turn this into an arc."
+        -   name: Summon Darkness
+            type: debuff
+            cost: 1
+            duration: concentration
+            range: 100
+            radius: 25
+            requirements: 
+                verbal: false
+                movement: true 
+            description: "Fill an area with billowing darkness. The darkness is considered magical, and is not affected by darkvision."
+            effect:
+                description: Anyone in the darkness is considered Blinded unless they have Blindsight, Truesight, or another equivalent ability.
+                type: debuff
+                conditions: 
+                    - blinded
+                save: null
+        -   name: Assisted Strike
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive
+            modified_action: advantaged attack
+            passive_damage_source: true
+            description: "When striking at an enemy, you use every opportunity to your advantage."
+            effect:
+                type: buff 
+                description: "If you have advantage on an attack, you may instead add 1d6 damage to it."
+                conditions: 
+                    - custom 
+                save: null
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+        -   name: Controlled Descent
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive 
+            description: "The moment before you strike the earth, release a burst of magic to slow yourself."
+            effect:
+                type: buff 
+                description: "Reduce any falling damage to zero."
+                conditions: 
+                    - custom
+                save: null
+            upcast: ""
+        #-   name: Disarming Strike # Attack
+            #type: combat option
+            #cost: 1
+            #range: inherited 
+            #duration: instantaneous
+            #description: "In the blink of an eye, you make a targeted strike meant to free an object from an enemy's grasp."         
+            #effect:
+                #type: debuff 
+                #description: "They must make a spell power saving throw. On failure, they are Disarmed."
+                #conditions: 
+                    #- disarmed 
+                #save: null
+            #damage_scaling:
+                #tier_1: "1d8"
+                #tier_2: "1d10"
+                #tier_3: "1d12"
+        -   name: Disengage
+            type: buff 
+            range: self 
+            duration: 1
+            cost: 1
+            ability_modified: movement
+            description: "You dodge and weave between your foes, focusing your energy on avoiding combat."
+            effect:
+                type: buff
+                description: "For the remainder of your turn, you are Elusive."
+                conditions: 
+                    - elusive
+        -   name: Dodge
+            cost: 1
+            range: self 
+            duration: instantaneous
+            type: reaction
+            action_type: Free Action
+            description: "Attempt to pivot out of the way of an incoming attack."
+            effect:
+                type: buff 
+                description: "As a reactive Free Action, declare that you are Dodging."
+                conditions:
+                    - dodging
+        -   name: Evasion
+            cost: 0
+            range: self 
+            duration: passive 
+            type: buff
+            description: "Use your uncanny knack for survival to avoid an explosion or other area of effect attack."
+            effect: 
+                type: buff
+                description: "When an area of effect attack calls for you to make a spell power saving throw or take half damage, 
+                              you instead take half damage on a failure, or no damage on a success."
+                conditions: 
+                    - custom 
+                save: null
+        -   tree_name: Precision Strike 
+            type: combat option 
+            cost: 1
+            range: inherited
+            duration: 1
+            ability_modified: standard attack 
+            description: "With a hiss of air, your blade effortlessly slices through an enemy."
+            effect:
+                type: debuff 
+                description: "Your target must make a spell power save or the damage dealt by this attack is considered Bleeding."
+                conditions:
+                    - Bleeding 
+                save: null
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Flank
+            cost: 0
+            type: buff 
+            duration: passive 
+            range: self
+            description: "When your allies are near an enemy, you are able to avoid that foe's sight."
+            effect: 
+                type: buff 
+                description: "If a creature is Harried, you are considered to be hiding when attacking from behind them.
+                              If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks."
+                conditions: 
+                    - custom 
+                save: null
+        -   name: Flow with the Battle
+            type: buff 
+            cost: 0
+            range: self 
+            duration: passive
+            ability_modified: movement
+            description: "You are a master of pivoting around your foes,"
+            effect:
+                type: buff 
+                description: "and are able to pass through an enemy's space in combat."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Chain Attack
+            cost: 0
+            type: buff
+            duration: instantaneous
+            range: self 
+            action_type: Free Action
+            ability_modified: slayed enemy
+            description: "As your foes' bodies fall around you, a fiendish energy courses through your veins."
+            effect:
+                type: buff 
+                description: "Whenever you slay an enemy, you are Spurred to Action." 
+                conditions:
+                    - spurred to action
+                save: null
+        -   name: Thief's Mark
+            passive_damage_source: true
+            cost: 1
+            description: "As you lay a hand on a creature, a small brand glows on their skin."
+            effect:
+                type: debuff
+                description: "For the spell's duration, you always know in which direction the creature lies. Attacks 
+                              that you make against the creature deal 1d6 additional damage."
+                save: null 
+                conditions: 
+                    - custom
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+        -   name: Radiant Invisibility Break
+            cost: 0
+            type: aoe debuff
+            radius: 15
+            range: self
+            duration: instantaneous
+            description: "When your Spell of Invisibility ends, you may optionally create a flash of blinding light."
+            effect: 
+                type: debuff
+                description: "Beams of radiance wash over everyone nearby, and anyone within the ability's radius must
+                              make a spell power save or be Blinded until the end of their next turn or for ten seconds while out of combat."
+                conditions:
+                    - blinded
+                save: null
+        -   name: Reduced Critical
+            cost: 0
+            type: critical hit enhancement 
+            range: self 
+            duration: infinite 
+            action_type: modifies_ability
+            ability_modified: standard attack 
+            description: Your critical hit target is permanently decreased by one.
+        -   name: Ride The Blindspot
+            cost: 1
+            type: buff 
+            range: self 
+            duration: instantaneous
+            ability_modified: Flank
+            description: "You have learned to stay behind a flanked enemy, even if they try to turn on you."
+            effect:
+                type: buff 
+                description: "If an enemy you have flanked tries to look at you, you may spend an action point to 
+                              pivot around them as a reaction. Ride the Blindspot continues until the end of the enemy's
+                              turn."
+                conditions: 
+                    - custom 
+                save: null
+        -   name: Shared Stealth
+            type: aoe buff 
+            cost: 1
+            duration: 1 hour 
+            range: self 
+            radius: 30 
+            description: "Your stealth is so great that you are able to make up for your parties' shortcomings." 
+            effect:
+                type: debuff
+                description: "For the next hour, add your proficiency to any friendly stealth rolls made within the ability's radius.
+                             If a party member already benefits from proficiency on stealth rolls, they may instead add an additional +1."
+                conditions: 
+                    - custom 
+                save: null
+        -   name: Slip Away
+            cost: 0
+            type: passive debuff
+            ability_modified: standard attack 
+            range: self 
+            duration: passive
+            description: "You are able to streak in, harm a foe, and then retreat again."
+            effect:
+                type: debuff
+                description: "Whenever you strike an enemy, you are considered Elusive to them until the end of your turn."
+                conditions:
+                    - elusive 
+                save: null
+        -   name: Spell Of Darkvision # Might cut
+            cost: 1
+            requirements: 
+                verbal: true
+                movement: false 
+            type: buff 
+            range: self 
+            duration: 1 hour
+            description: "Your pupil's expand to cover your eyes, leaving them pools of inky darkness. If light strikes them at the right angle, 
+                          they glow like those of a beast in the night."
+            effect:
+                type: buff 
+                description: "For the spell's duration, you benefit from Darkvision."
+                conditions: 
+                    - darkvision 
+                save: null
+        -   name: Spell Of Distraction
+            type: aoe debuff 
+            requirements: 
+                verbal: true
+                movement: true 
+            radius: 25 
+            range: 100
+            duration: concentration 
+            cost: 1
+            description: "Call upon your magic to create a minor ruckus, illusion, or voice at a position you can see within range."
+            effect:
+                type: debuff 
+                description: "When in combat, entities the spell's radius must make a spell sower save or become Distracted until the end of their next turn."
+                conditions: 
+                    - distracted 
+                save: null
+        -   name: Spell Of Invisibility
+            cost: 1
+            requirements: 
+                verbal: true
+                movement: true 
+            type: buff 
+            range: self 
+            duration: 1 hour 
+            description: "With a muttered breath, you touch your magic and you cloak yourself in an ethereal shroud." 
+            effect:
+                type: buff 
+                description: "For the spell's duration, you are Invisible to the mortal eye, a wraith among the living."
+                conditions: 
+                    - invisible 
+                save: null
+        #-   name: Spell Of Nimbleness
+            #cost: 1
+            #effect:
+                #type: buff 
+                #description: "For ten minutes, you are Nimble."
+                #conditions: 
+                #    - nimble 
+                #save: null
+            # description: Magic courses through you in time with your heartbeat, quickening your reflexes."
+        -   name: Strike From The Shadows
+            passive_damage_source: true
+            cost: 0
+            type: buff
+            duration: passive 
+            range: inherited 
+            ability_modified: attack from hiding 
+            description: "Silent as a shadow, you slip behind a foe and take them unawares."
+            effect:
+                type: buff 
+                description: "Add 1d6 damage to attacks made from hiding."
+                conditions: 
+                    - custom 
+                save: null
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d6 
+                tier_2: 1d6
+                tier_3: 1d6
+        #-   name: Tether
+            #cost: 1
+            #description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
+        -   name: Thieve's Strike
+            type: combat option 
+            cost: 1
+            range: inherited
+            duration: 1
+            ability_modified: martial attack 
+            description: "While you stab an enemy with one hand, you attempt to rob them blind with the other."
+            effect:
+                type: debuff 
+                description: "Your target must make a spell power saving throw or you are able to steal one object from them.
+                              If your attack is ranged, you may instead declare that an object is knocked free of their grasp. 
+                              The object must be held by or tethered to them, and you must be able to explain how you manage to steal it
+                              in a way that is acceptable to the Grand Poohbah."
+                conditions:
+                    - custom 
+                save: null
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d8
+                tier_2: 1d10
+                tier_3: 1d12
+        -   name: Throw Caution to the Wind
+            type: buff
+            cost: 0
+            range: self 
+            action_type: Free Action
+            duration: 1
+            ability_modified: standard attack
+            description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
+            effect: 
+                type: self-debuff
+                description: "At any time, you may declare that your attacks deal extra damage. 
+                              However, when you make such an attack, you become Vulnerable until the start of your next turn."
+                conditions: 
+                    - vulnerable
+                save: null
+            passive_damage_source: true
+            damage_scaling:
+                damage_type: inherited 
+                tier_1: 1d6
+                tier_2: 1d6 
+                tier_3: 1d6
+        -   name: Unseen Hand
+            type: utility
+            cost: 1
+            duration: concentration
+            range: self 
+            radius: 100
+            requirements:
+                verbal: true
+                movement: false
+            description: "Mutter a spell to will an ethereal hand into existence. While you concentrate on it,
+                          the hand acts as an extension of your will. The hand has a flying speed of 25 feet
+                          and may not leave the spell's radius. Its strength score is equivalent to your
+                          inner fire modifier."
+        -   name: Wasting Blow
+            cost: 2
+            range: inherited 
+            duration: instantaneous
+            ability_modified: standard attack
+            description: "As you land a particularly well placed blow, you slice into your opponents vitals and sap their strength."
+            effect: 
+                type: debuff
+                description: "They must make a spell power saving throw or become weakened until the end of their next turn."
+                conditions:
+                    - weakened 
+                save: null
+            damage_scaling:
+                damage_type: inherited
+                tier_1: "2d8"
+                tier_2: "2d10"
+                tier_3: "2d12"
+Ranger:
+    recommended_stats:
+        Charisma: -1
+        Dexterity: 2
+        Inner_Fire: 0
+        Intelligence: 1
+        Perception: 1
+        Strength: -2
+    expertise: "As a ranger, you gain expertise in perception. Add your expertise to both active and passive perception checks, including initiative."
+    health_dice: "1d8"
+    abilities: #20 / 25
+        -   name: Elemental Shield
+            cost: 1
+            type: buff 
+            duration: 3
+            range: self
+            action_type: Reaction
+            description: "A shield of swirling fire and ice rushes around you, granting protection from elemental damage." 
+            effect:
+                type: buff 
+                description: "For the ability's duration, you have Elemental Resistance."
+                conditions: 
+                    - elemental resistance
+                save: null
+        -   name: Blast of Air
+            cost: 1
+            damage_scaling: 
+                tier_1: "1d8 check"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: "Wind howls and batters everything before you as you summon a 25ft cone of air.
+                          Enemies in the spell's area must make a spell power save or be pushed to the cone's edge.
+                          Large enemies move half as far, and massive enemies are immune.
+                          If an enemy is pushed into an object, they take damage."
+            effect:
+                type: debuff 
+                description: "On a critical failure, the enemy falls prone."
+                conditions: 
+                    - prone 
+                save: null
+        #-   name: Charm
+            #cost: 1
+            #description: "Attempt to beguile an enemy within 30ft of you, ingratiating yourself to them with your magic."
+            #effect: 
+                #type: debuff
+                #description: "The target must make a spell power save or become Charmed."
+                #conditions: 
+                    #- charmed 
+                #save: "Affected targets may repeat their saving throw at the end of each of their turns or once every ten minutes when out of combat."
+        #-   name: Earthen Armor
+         #   cost: 1
+         #   description: "Sheets of hardened stone wrap themselves around you, providing protection from harm.
+         #                 Add your expertise to your evasion for 3 turns, but lose the ability to dash."
+        -   name: Embers
+            cost: 1
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            conditions: burning
+            description: "Make an attack embued with the power of flame. The attack deals bonus damage, and your target must make a spell power save or begin Burning."
+        
+        -   name: Entangling Strike
+            cost: 1
+            description: "As your blow lands, vines burst from the site of impact, tangling about your enemy."
+            effect:
+                type: debuff 
+                description: "Your target must make a spell power save or become Hindered until the end of their next turn. 
+                          If they fail by five or more, they are instead Grappled."
+                conditions: 
+                    - hindered 
+                    - grappled
+                save: null 
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Combat Awareness
+            type: buff 
+            cost: 0
+            range: self 
+            duration: passive
+            description: "From the smallest sound to the subtlest movement, you take in everything."
+            effect:
+                type: debuff 
+                description: "Whenever you are concious, you are considered Vigilant."
+                conditions: 
+                    - vigilant
+                save: null
+        -   name: Disarming Strike # Attack
+            type: combat option
+            cost: 1
+            range: inherited 
+            duration: instantaneous
+            description: "With deft precision, you make a targetted strike meant to free an object from an enemy's grasp."         
+            effect:
+                type: debuff 
+                description: "They must make a spell power saving throw. On failure, they are Disarmed."
+                conditions: 
+                    - disarmed 
+                save: null
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+        -   name: Ice Bolt
+            cost: 1
+            type: combat option 
+            duration: instantaneous
+            range: 100 
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: "Calling upon elemental magic, you send a spear of ice hurtling from your palm."
+            effect:
+                type: debuff
+                description: "On a critical hit, the enemy is Slowed until the end of its next turn."
+                conditions: 
+                    - slowed 
+                save: null
+        -   name: Camouflage
+            type: buff 
+            cost: 1
+            duration: 1 hour 
+            range: self 
+            description: "Use minor magic to cause shadows, plants, and even dust to hide you from sight and cover signs of your passing."
+            effect:
+                type: buff 
+                description: "For the spell's duration, your are Inconspicuous."
+                conditions:
+                    - inconspicuous
+                save: null    
+        -   name: Force Barrier
+            cost: 1
+            type: utility 
+            duration: 1
+            range: 30 
+            description: "As you raise your hand in a sweeping motion, a wall of semi-translucent force bursts into existence at a point within range.
+                          The wall is 10ft high, 15ft long, and 5ft wide. The barrier is solid, and cannot be passed through. It dissipates at the start of your next turn."
+        -   name: Smokescreen
+            todo: use bard's.
+            cost: 1
+            description: "Make an attack imbued with magic. Wherever the attack lands, a 50ft radius fills with smoke. Creatures inside are considered to be in magical darkness."
+        -   name: Hunter's Sight
+            cost: 1
+            type: buff 
+            target: self 
+            duration: 1 hour
+            description: "Your eyes flash as you attune yourself to the world around you. 
+                          For the spell's duration, you see a faint glow where creatures have stepped,
+                          and are able to perform tracking checks even in terrain where they would be otherwise impossible."
+            effect: 
+                type: buff 
+                description: "The effects are such that you benefit from Truesight."
+                conditions: 
+                    - truesight 
+                save: null
+        -   name: Know your Enemy
+            cost: 1
+            type: buff 
+            duration: 1 hour 
+            range: self 
+            passive_damage_source: true 
+            damage_scaling: 
+                tier_1: 1d6
+                tier_2: 1d6
+                tier_3: 1d6 
+            description: "The world slows as you grip your weapon and take a moment to scan your enemy. 
+                          You take in the way that they move, the intent in their eyes, and every subtle tell. As a result, you glean if a
+                          creature has any vulnerabilities or resistances, and one additional piece of information of your choosing.
+                          This can include details regarding its motives or abilities. For the next hour, deal an additional 1d6 damage 
+                          against the creature or other identical monsters."
+        #-   name: Leaping Strike
+            #cost: 1
+            #damage_scaling:
+                #tier_1: "1d8"
+                #tier_2: "1d10"
+                #tier_3: "1d12"
+            #description: "With a flying leap, you use momentum to lay low your opponent."
+            #effect:
+                #type: debuff 
+                #description: "Your target must make a spell power saving throw or be Staggered until the end of their next turn."
+                #conditions:
+                    #- staggered 
+                #save: null
+        #-   name: Line them Up
+            #cost: 0
+            #description: "If you slay an enemy, immediately gain an additional attack action."
+        -   name: Field Medicine
+            todo: grab the druid ability
+            cost: 1
+            blep: blep
+            description: "Your time in the wilds has taught you how to use simple healing poltices to field dress a wound. Perform a feat of minor healing and remove any non-curse status effects. Alternatively, spend an hour to perform a feat of greater healing."
+            damage_scaling: # Minor Healing
+        -   name: Poisoned Strike
+            type: combat option 
+            range: inherited 
+            duration: instantaneous
+            cost: 1
+            damage_scaling:
+                tier_1: "1d8"
+                tier_2: "1d10"
+                tier_3: "1d12"
+            description: "Make an attack imbued with a potent toxin."
+            effect:
+                type: debuff
+                conditions: 
+                    - poisoned
+                description: "The enemy must make a spell power save or be Poisoned."
+                save: "Affected targets may repeat their save at the end of each of their turns."
+        -   name: Ranger's Weapon Mastery
+            check: should this be handled better?
+            passive_damage_source: true
+            cost: 0
+            type: buff 
+            range: self
+            duration: passive
+            description: "You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effects."
+            options:
+              - name: "Twin Blade Master"
+                description: "You can use two weapons to deflect attacks. While dual wielding hand-to-hand weapons, increase your evasion by 2. The weapons may give you no other benefit to your evasion."
+              - name: Empowered Critical
+                description: "When you land a critical hit, use an ability at zero cost."
+              - name: Shield Master
+                description: "Create space with your shield. When you are holding a shield and are attacked, you may immediately move 5ft."
+              - name: "Ranged Weapon Master"
+                description: "Your shots fly true. When using a ranged weapon, your shots ignore half-cover."
+        -   name: Ready Defense
+            type:  buff
+            duration: passive
+            action_type: modifies_ability
+            ability_modified: Dodging Stance
+            cost: 0
+            description: "When you slay an enemy or land a critical hit, immediately activate Dodging Stance."
+        -   name: Dodging Stance
+            cost: 0
+            type: buff 
+            duration: 1
+            range: self
+            description: "As your foes circle, you raise your weapon aloft and asume a defensive stance."
+            effect: 
+                type: buff
+                description: "Until the end of your next turn, you are Dodging."
+                conditions: 
+                    - dodging
+        -   name: Reflexes
+            type: reaction 
+            cost: 1
+            duration: instantaneous 
+            range: self
+            action_type: Reaction
+            description: "As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount.
+                          If the damage is reduced to zero, you catch the projectile, and can immediately make a counterattack with it.
+                          Increase to 2d6 then 4d6 in gameplay tiers 2 and 3."
+        -   name: Strider
+            type: buff
+            cost: 0
+            range: self
+            duration: passive
+            action_type: modifies_ability
+            ability_modified: movement
+            description: "You are a master of traveling quickly across inhospitable lands."
+            effect:
+                type: buff 
+                description: "At all times, you are considered Quickened. Furthermore, you may add your expertise to all travel based checks 
+                              made by you or your party members. If a party member also benefits from expertise on a check, instead add an 
+                              additional +1."
+                conditions:
+                    - quickened 
+                    - ignore difficult terrain
+                save: null
+        -   name: Trap
+            type: debuff
+            cost: 1
+            duration: 1 hour 
+            range: touch  
+            description: "With deft hands, you quickly construct a 5x5 trap at a location you can touch."
+            effect:
+                type: debuff
+                description: "The next person who enters the trap's space must make a spell power saving throw or
+                              be Stunned until the end of their next turn. Once the trap goes off, it is broken
+                              but can be reset for no cost as a hand-to-hand action."
+                conditions:
+                    - stunned 
+                save: null
+        #-   name: "Burst forward and slice a bunch of enemies."
+        

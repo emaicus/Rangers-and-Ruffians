@@ -22,6 +22,9 @@
 -   name: Diminished
     balance: good
     about: A Diminished creature must subtract 1d4 from all checks and saves.
+-   name: Darkvision 
+    balance: good 
+    about: "A creature with Darkvision is able to see up to 100 feet even in pitch darkness. In low light, they are able to see as though it is day."
 -   name: Deafened
     balance: weak
     about: A Deafened creature fails all auditory checks and makes perception checks at disadvantage.
@@ -47,6 +50,10 @@
     about: "Enlarged creatures grow to massive size. They deal 1d6 bonus damage on physical attacks,
             are resistant to physical damage, and have advantage on strength checks. However, Accuracy
             checks made against an enlarged target are at advantage."
+-   name: Guarded
+    balance: good
+    about: "Creatures that are being guarded gain +2 evasion. If a creature is being guarded by more than one 
+            source, they take +3 evasion, regardless of the number of sources."
 -   name: Hindered
     balance: strong
     about: A Hindered creature loses half its movement.

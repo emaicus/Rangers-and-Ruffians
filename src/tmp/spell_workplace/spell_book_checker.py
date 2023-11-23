@@ -24,9 +24,9 @@ def summoned_creature_check(all_spells):
   print("\nChecking Summoned Creatures...")
   for spell in all_spells:
     if spell.summoned_creature is not None:
-      print(f"{spell.name}:")
+      #print(f"{spell.name}:")
       for key, value in spell.summoned_creature.items():
-        print(f"  {key}: {value}")
+        print(f"  {value}")
 
 def print_balance_values():
   print('Average Attack Damage -- No Misses')
@@ -90,6 +90,19 @@ def print_balance_values():
     print(rnr_balance.get_balance_health(level), end=', ')
   print()
 
+def spell_damage_check(rnr_spells):
+  print('unimplemented')
+  #all_types.add(spell.type)
+  
+  # if 'damage' in spell.type:
+  #   if not spell.cost in damage_spells:
+  #     damage_spells[spell.cost] = list()
+
+  #   damage_spells[spell.cost].append(spell)
+
+  # if args.loud:
+  #   print(f"{spell_text}  \n")
+
 def goblin_battle_oh_ha_ha():
   
   goblin_stats = {
@@ -117,6 +130,94 @@ def goblin_battle_oh_ha_ha():
   print(rnr_balance.find_ideal_creature_level(gobbo, 'minion', 1, False))
   print(gobbo.greedy_turn_damage(5, 5))
 
+def gather_all_ability_objects(rnr_classes, schema, validate=True):
+  
+  print(f'Gathering ability objects. Validation is {"On" if validate else "Off"}')
+
+  all_abilities = list()
+  for class_name, rnr_class in rnr_classes.items():
+    skill_tree_info = rnr_class.get('skill_tree', None)
+
+    if skill_tree_info is None: 
+      continue
+    print(f'Processing {class_name}')
+
+    abilities_by_type = dict()
+    for ability_def in skill_tree_info['abilities']:
+      # Tell the schema to evaluate this as an ability.
+      ability_def['ability_type'] = 'ability'
+      try:
+        if validate:
+          jsonschema.validate(ability_def, schema=schema)
+      except jsonschema.exceptions.ValidationError as e:
+        print(f"ERROR: {ability_def.get('name', '')} {e.schema_path}, {e.message}")
+        sys.exit(1)
+      except Exception:
+        traceback.print_exc()
+        sys.exit(1)
+      
+      # try:
+      #   spell = rnr_spell.dict_constructor(spell_def['name'], class_name, spell_def)
+      # except Exception:
+      #   traceback.print_exc()
+      #   sys.exit(1)
+      
+      #all_spells.append(spell)
+
+      #abilities_by_type[spell.type] = spells_by_type.get(spell.type, 0) +1
+
+    print(f"{len(skill_tree_info['abilities'])} / 25\n")
+  return all_spells
+
+def gather_all_spell_objects(rnr_classes, schema, validate=True):
+  
+  print(f'Gathering spell objects. Validation is {"On" if validate else "Off"}')
+  required_spells = {'tier_1': 27, 'tier_2': 17, 'tier_3': 8}
+
+  all_spells = list()
+  for class_name, rnr_class in rnr_classes.items():
+    spellbook = rnr_class.get('spells', None)
+
+    if spellbook is None: 
+      continue
+    print(f'Processing {class_name}')
+
+    spells_by_type = dict()
+    spell_counts = dict()
+    for tier, tier_spells in spellbook.items():
+      spell_counts[tier] = len(tier_spells)
+      for spell_def in tier_spells:
+        # Tell the schema to evaluate this as a spell.
+        spell_def['ability_type'] = 'spell'
+        try:
+          if validate:
+            jsonschema.validate(spell_def, schema=schema)
+        except jsonschema.exceptions.ValidationError as e:
+          print(f"ERROR: {spell_def.get('name', '')} {e.schema_path}, {e.message}")
+          sys.exit(1)
+        except Exception:
+          traceback.print_exc()
+          sys.exit(1)
+        
+        try:
+          spell = rnr_spell.dict_constructor(spell_def['name'], class_name, spell_def)
+        except Exception:
+          traceback.print_exc()
+          sys.exit(1)
+        
+        all_spells.append(spell)
+
+        spells_by_type[spell.type] = spells_by_type.get(spell.type, 0) +1
+
+    count_spells_in_spellbook = 0        
+    for _, spell_count in spell_counts.items():
+      print(f"{spell_count} / {required_spells[tier.lower()]}")
+      count_spells_in_spellbook += spell_count
+    print(f"{count_spells_in_spellbook}\n")
+  return all_spells
+
+
+
 if __name__ == '__main__':
   print('Parser booting...')
 
@@ -125,6 +226,7 @@ if __name__ == '__main__':
   
   parser=argparse.ArgumentParser(description="Utility to check spell balance and optionally publish spells.")
   parser.add_argument('--loud', action='store_true',help="Write to command line.")
+  parser.add_argument('--skip_validation', action='store_true',help="Write to command line.")
   args = parser.parse_args()
 
   schema = dict()
@@ -148,7 +250,7 @@ if __name__ == '__main__':
 
   try:
     with open(SPELLBOOK_PATH, 'r') as spellbook_file:
-      spellbooks = yaml.load(spellbook_file, Loader=Loader)
+      rnr_classes = yaml.load(spellbook_file, Loader=Loader)
   except yaml.YAMLError as exc:
     if hasattr(exc, 'problem_mark'):
       print(f"ERROR: Could not load spells.yml. Line: {exc.problem_mark.line} Column: {exc.problem_mark.column}")
@@ -160,83 +262,111 @@ if __name__ == '__main__':
   print('Spellbooks loaded from file...')
   print()
 
-  required_spells = {'tier_1': 27, 'tier_2': 17, 'tier_3': 8}
 
-  all_spells = list()
-  with open('spell_output.md', 'w') as outfile:
-    all_types = set()
-    damage_spells = dict()
-    for spellbook_name, tiers in spellbooks.items():
-      count_spells_in_spellbook = 0
-      print(f"Checking: {spellbook_name}")
-      num_spells = 0
-      spells_by_type = dict()
-      for tier, tier_spells in tiers.items():
+  all_spells = gather_all_spell_objects(rnr_classes, schema, validate=True)
+  all_abilities = gather_all_ability_objects(rnr_classes, schema, validate=True)
+  # with open('spell_output.md', 'w') as outfile:
+  #   all_types = set()
+  #   damage_spells = dict()
+    
+  #   for class_name, rnr_class in rnr_classes.items():
+  #     spellbook = rnr_class['spells']
+  #     count_spells_in_spellbook = 0
+  #     print(f"Checking: {class_name}")
+  #     num_spells = 0
+  #     spells_by_type = dict()
+  #     for tier, tier_spells in spellbook.items():
+  #       count_spells_in_tier = 0
+  #       atk = 0
+  #       for spell_def in tier_spells:
+  #         spell = spell_def['name']
+  #         count_spells_in_spellbook += 1
+  #         count_spells_in_tier += 1
+  #         try:
+  #           if not args.skip_validation:
+  #             jsonschema.validate(spell_def, schema=schema)
 
-        if tier not in damage_spells:
-          damage_spells[tier] = dict()
+  #           spell = rnr_spell.dict_constructor(spell, class_name, spell_def)
+  #           all_spells.append(spell)
+  #           spell_text = spell.get_markdown()
+  #           outfile.write(f"{spell_text}  \n")
+  #           spell.validate_type(loud=True)
 
-        count_spells_in_tier = 0
-        atk = 0
-        for spell, spell_def in tier_spells.items():
-          count_spells_in_spellbook += 1
-          count_spells_in_tier += 1
-          try:
-            jsonschema.validate(spell_def, schema=schema)
-            spell = rnr_spell.dict_constructor(spell, spell_def)
-            all_spells.append(spell)
-            spell_text = spell.get_markdown()
-            outfile.write(f"{spell_text}  \n")
-            spell.validate_type(loud=True)
-
-            spells_by_type[spell.type] = spells_by_type.get(spell.type, 0) +1
-            all_types.add(spell.type)
+  #           spells_by_type[spell.type] = spells_by_type.get(spell.type, 0) +1
+  #           all_types.add(spell.type)
             
-            if 'damage' in spell.type:
-              if not spell.cost in damage_spells[tier]:
-                damage_spells[tier][spell.cost] = list()
+  #           if 'damage' in spell.type:
+  #             if not spell.cost in damage_spells:
+  #               damage_spells[spell.cost] = list()
 
-              damage_spells[tier][spell.cost].append(spell)
+  #             damage_spells[spell.cost].append(spell)
 
-            if args.loud:
-              print(f"{spell_text}  \n")
-          except jsonschema.exceptions.ValidationError as e:
-            print(f"ERROR: {e.schema_path}, {e.message}")
-            sys.exit(1)
-        print(f"{count_spells_in_tier} / {required_spells[tier.lower()]}")
-      print(count_spells_in_spellbook)
-      total = 0
+  #           if args.loud:
+  #             print(f"{spell_text}  \n")
+  #         except jsonschema.exceptions.ValidationError as e:
+  #           print(f"ERROR: {spell} {e.schema_path}, {e.message}")
+  #           sys.exit(1)
+  #       print(f"{count_spells_in_tier} / {required_spells[tier.lower()]}")
+  #     print(count_spells_in_spellbook)
+  #     total = 0
 
-      for spell_type, count in spells_by_type.items():
-        print(f"  {spell_type}: {count}")
-        total += count 
-      print(f"  TOTAL: {total}")
-    for t in sorted(all_types):
-      print(t)
+  #     for spell_type, count in spells_by_type.items():
+  #       print(f"  {spell_type}: {count}")
+  #       total += count 
+  #     print(f"  TOTAL: {total}")
+    
+  #   for t in sorted(all_types):
+  #     print(t)
 
-    loud = False
+  #   loud = False
 
-    print('\nDamage Check!')
-    for tier, cost_list in damage_spells.items():
-      for cost, spell_list in sorted(cost_list.items()):
-        avg_dmg = statistics.mean(list(obj.estimated_damage(tier)[0] for obj in spell_list))
-        stdev_dmg = statistics.stdev([obj.estimated_damage(tier)[0] for obj in spell_list]) 
+  #   print('\nDamage Check!')
 
-        print(f"{tier} Cost: {cost} -- Count: {len(spell_list)}, Mean: {round(avg_dmg, 2)}, Stdev: {round(stdev_dmg,2)}")
-        for spell in sorted(
-          spell_list, 
-          key=lambda spell: (spell.estimated_damage(tier), spell.get_max_condition_value()),
-          reverse=True
-        ):
-          expected_damage = rnr_balance.get_expected_damage_at_tier(tier.lower(), False, 'magic', cost, spell.is_aoe)
-          warning = ""
-          estimated_damage = spell.estimated_damage(tier)[0]
-          if estimated_damage > (avg_dmg + (2*stdev_dmg)) or estimated_damage > expected_damage * 1.25:
-              warning = f"WARNING - HIGH DAMAGE {estimated_damage} vs {expected_damage}"
-          elif estimated_damage < (avg_dmg - (2*stdev_dmg)) or estimated_damage < expected_damage * 0.75:
-              warning = "WARNING - LOW DAMAGE"
+    
 
-          if loud or warning != '':
-            print(f"  {spell.name}: {spell.estimated_damage(tier)} {warning}, {spell.get_condition_names()}")
+  #   for cost, spell_list in sorted(damage_spells.items()):
+  #     avg_dmg_dict = dict()
+  #     stdev_dmg_dict = dict()
+  #     for tier in ['tier_1', 'tier_2', 'tier_3']:
+  #       avg_dmg_at_cost = statistics.mean(list(obj.estimated_damage(tier)[0] for obj in spell_list if obj.estimated_damage(tier) != 0))
+  #       stdev_dmg_at_cost = statistics.stdev( [obj.estimated_damage(tier)[0] for obj in spell_list if obj.estimated_damage(tier) != 0]) 
+  #       avg_dmg_dict[tier] = avg_dmg_at_cost
+  #       stdev_dmg_dict[tier] = stdev_dmg_at_cost
+  #       print(f"{tier} Cost: {cost} -- Count: {len(spell_list)}, Mean: {round(avg_dmg_at_cost, 2)}, Stdev: {round(stdev_dmg_at_cost,2)}")
+        
+  #     # for spell in sorted(
+  #     #   filter(lambda spell: spell.estimated_damage(tier)[0] > 0, spell_list),
+  #     #   key=lambda spell: (spell.estimated_damage(tier)[0], spell.get_max_condition_value()),
+  #     #   reverse=True
+  #     # ):
+  #     for spell in spell_list:
+  #       for tier in ['tier_1', 'tier_2', 'tier_3']:
+  #         if tier not in spell.damage:
+  #           continue
 
-    summoned_creature_check(all_spells)
+  #         avg_dmg = avg_dmg_dict[tier]
+  #         stdev_dmg = stdev_dmg_dict[tier]
+  #         expected_damage = rnr_balance.get_expected_damage_at_tier(tier.lower(), False, 'magic', cost, spell.is_aoe)
+  #         warning = ""
+  #         estimated_damage = spell.estimated_damage(tier)[0]
+  #         if estimated_damage > (avg_dmg + (2*stdev_dmg)) or estimated_damage > expected_damage * 1.25:
+  #             warning = f"WARNING - HIGH DAMAGE {tier} actual: {estimated_damage} expected: {expected_damage} stdev rule: {round(avg_dmg + (2*stdev_dmg), 2)} 125% rule: {round(expected_damage * 1.25,2)}"
+  #         elif estimated_damage < (avg_dmg - (2*stdev_dmg)) or estimated_damage < expected_damage * 0.85:
+  #             warning = f"WARNING - LOW DAMAGE {tier} actual: {estimated_damage} expected: {expected_damage} stdev rule: {round(avg_dmg - (2*stdev_dmg),2)} 85% rule: {round(expected_damage * 0.85,2)}"
+
+  #         if loud or warning != '':
+  #           print(f"  {spell.name}: {spell.estimated_damage(tier)} {warning}, {spell.get_condition_names()}")
+
+  #   print('\n\nSPELL RANKING:')
+  #   for cost, spell_list in sorted(damage_spells.items()):
+  #     for tier in ['tier_1', 'tier_2', 'tier_3']:
+  #       print(f'Cost: {cost} Tier: {tier}')
+  #       for spell in sorted(
+  #         filter(lambda spell: spell.estimated_damage(tier)[0] > 0, spell_list),
+  #         key=lambda spell: (spell.estimated_damage(tier), spell.get_max_condition_value()),
+  #         reverse=True
+  #       ):
+  #         estimated_damage = spell.estimated_damage(tier)[0]
+  #         print(f"  {spell.name} - {spell.spellbook} - {'aoe' if spell.is_aoe else 'single target'}: {spell.estimated_damage(tier)[0]} {spell.get_condition_names()}")
+
+  #   summoned_creature_check(all_spells)
