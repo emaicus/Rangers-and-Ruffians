@@ -156,18 +156,18 @@ def gather_all_ability_objects(rnr_classes, schema, validate=True):
         traceback.print_exc()
         sys.exit(1)
       
-      # try:
-      #   spell = rnr_spell.dict_constructor(spell_def['name'], class_name, spell_def)
-      # except Exception:
-      #   traceback.print_exc()
-      #   sys.exit(1)
+      try:
+        ability = rnr_spell.dict_constructor(ability_def['name'], class_name, ability_def)
+      except Exception:
+        traceback.print_exc()
+        sys.exit(1)
       
-      #all_spells.append(spell)
+      all_abilities.append(ability)
 
-      #abilities_by_type[spell.type] = spells_by_type.get(spell.type, 0) +1
+      abilities_by_type[ability.type] = abilities_by_type.get(ability.type, 0) +1
 
     print(f"{len(skill_tree_info['abilities'])} / 25\n")
-  return all_spells
+  return all_abilities
 
 def gather_all_spell_objects(rnr_classes, schema, validate=True):
   
@@ -263,8 +263,12 @@ if __name__ == '__main__':
   print()
 
 
-  all_spells = gather_all_spell_objects(rnr_classes, schema, validate=True)
+  #all_spells = gather_all_spell_objects(rnr_classes, schema, validate=False)
   all_abilities = gather_all_ability_objects(rnr_classes, schema, validate=True)
+
+  with open('ability_output.md', 'w') as outfile:
+    for ability in all_abilities:
+      outfile.write(ability.get_markdown())
   # with open('spell_output.md', 'w') as outfile:
   #   all_types = set()
   #   damage_spells = dict()

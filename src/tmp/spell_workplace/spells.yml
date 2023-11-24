@@ -2249,7 +2249,7 @@ Monk:
                     description: "They must make a spell power saving throw. On a failure, they are Blocked."
                     conditions:
                         - blocked 
-                    save: "Affected enemies may repeat their save at the each of their turns."
+                    save: "Affected enemies may repeat their save at the end of each of their turns."
             -   name: Spiritual Projection #Attack
                 cost: 1
                 type: combat option

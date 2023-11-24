@@ -80,12 +80,22 @@ class rnr_spell():
   def get_markdown(self):
 
     spell_text = f"### {self.name}\n"
-    spell_text += f"__{self.type.title()} Spell{', ' + self.action_type if self.action_type is not None and self.action_type is not 'Action' else ''}__  \n"
-    ap_string = 'Action Point' if self.cost == 1 else 'Action Points'
-    range_str = 'Feet' if isinstance(self.range, int) else ''
-    cost_str = f"{self.cost} {ap_string}" if self.cost != 0 else "None"
-    duration_str = 'Turns' if isinstance(self.duration, int) else ''
-    spell_text += f"__Cost:__ {cost_str} __Duration:__ {self.duration} {duration_str} __Range:__ {self.range} {range_str}  \n"
+    spell_text += f"__{self.type.title()} Spell{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited'] else ''}__  \n"
+    
+    # Determine range display, don't print 'inherited'
+    range_unit = 'Feet' if isinstance(self.range, int) else ''
+    range_string =  f' __Range:__ {self.range} {range_unit}' if self.range != 'Inherited' else ''
+    
+    # Determine action point display. Properly print 'Action Point' or 'Action Points'
+    cost_unit = 'Action Point' if self.cost == 1 else 'Action Points'
+    cost_str = f"{self.cost} {cost_unit}" if self.cost != 0 else "None"
+
+    # Determine distance string. Properly print 'Turns' if a number of turns was specified. Don't print inherited.
+    duration_unit = 'Turns' if isinstance(self.duration, int) else ''
+    duration_str = f' __Duration:__ {self.duration} {duration_unit}' if self.duration != 'Inherited' else ''
+    
+    # Build the next line of the spell_text.
+    spell_text += f"__Cost:__ {cost_str}{duration_str}{range_string}  \n"
 
     if self.radius is not None or self.casting_time is not None:
       spell_text += f"__Casting Time:__ {self.casting_time} " if self.casting_time is not None else ""
