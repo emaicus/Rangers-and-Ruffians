@@ -23,7 +23,7 @@
 			"type": "string",
 			"enum": ["damage", "aoe damage", "multi-attack damage", "healing", "aoe healing", "debuff",
 			          "aoe debuff", "buff", "aoe buff", "utility", "summoning", "transformation", "combat option",
-					  "critical hit enhancement", "reaction"]
+					  "critical hit enhancement"]
 		},	
 		"cost": {
 			"type": "integer",

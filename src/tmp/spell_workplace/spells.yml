@@ -1363,7 +1363,7 @@ Barbarian:
                         - psychic resistance 
                     save: null
             -   name: Blood for Blood
-                type: reaction
+                type: combat option
                 cost: 0
                 range: self 
                 duration: passive
@@ -1457,7 +1457,7 @@ Barbarian:
                 action_type: Free Action
                 description: "As you take injuries, your resolve only strengthens. If you fall below one quarter health and an enemy lands a glancing blow on you you, take no damage."
             -   name: Meat Shield
-                type: reaction
+                type: combat option
                 cost: 1
                 range: touch 
                 duration: instantaneous
@@ -1629,7 +1629,7 @@ Barbarian:
                         - frightened
                     description: "Whenever you land a critical hit, all enemies the ability's radius must make a spell power save or be Frightened until the end of your next turn."
             -   name: Corner
-                type: reaction
+                type: combat option
                 cost: 1
                 range: 15
                 duration: instantaneous
@@ -1695,7 +1695,7 @@ Fighter:
                             Whenever you suffer a glancing blow or an attack misses entirely, move 5ft without provoking exposed attacks as a free action."
             -   name: Counter
                 cost: 1
-                type: reaction
+                type: combat option
                 range: self
                 duration: passive
                 action_type: Reaction
@@ -2227,7 +2227,7 @@ Monk:
                 ability_modified: Dodging Stance 
                 description: "When an attack misses you as a result of your Dodging Stance, you may immediately make an unarmed attack as a free action."
             -   name: Reflexes
-                type: reaction 
+                type: combat option 
                 cost: 1
                 duration: instantaneous 
                 range: self
@@ -2485,7 +2485,7 @@ Rogue:
                 cost: 1
                 range: self 
                 duration: instantaneous
-                type: reaction
+                type: combat option
                 action_type: Free Action
                 description: "Attempt to pivot out of the way of an incoming attack."
                 effect:

@@ -76,11 +76,10 @@ class rnr_spell():
     return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
                summoned_creature, action_type, effect, options, dict_data=dict_data)
 
-
   def get_markdown(self):
 
     spell_text = f"### {self.name}\n"
-    spell_text += f"__{self.type.title()} Spell{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited'] else ''}__  \n"
+    spell_text += f"__{self.type.title()}{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited', 'modifies_ability'] else ''}__  \n"
     
     # Determine range display, don't print 'inherited'
     range_unit = 'Feet' if isinstance(self.range, int) else ''
@@ -91,7 +90,10 @@ class rnr_spell():
     cost_str = f"{self.cost} {cost_unit}" if self.cost != 0 else "None"
 
     # Determine distance string. Properly print 'Turns' if a number of turns was specified. Don't print inherited.
-    duration_unit = 'Turns' if isinstance(self.duration, int) else ''
+    duration_unit = ''
+    if isinstance(self.duration, int):
+      duration_unit = 'Turn' if self.duration == 1 else 'Turns'
+
     duration_str = f' __Duration:__ {self.duration} {duration_unit}' if self.duration != 'Inherited' else ''
     
     # Build the next line of the spell_text.
