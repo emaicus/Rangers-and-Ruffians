@@ -78,6 +78,9 @@ def INSTALL_RANGERS_AND_RUFFIANS() -> None:
       print(f'{data_file} passed validation.')
     except jsonschema.exceptions.ValidationError as e:
       print(f"ERROR IN {data_file}")
+      print(e.relative_path)
+      print(e.json_path)
+      print(e.cause)
       print(f"{e.schema_path}, {e.message}")
       sys.exit(1)
     except Exception:

@@ -1,3 +1,4 @@
 {
-    "classes.yml": "class_schema.json"
+    "classes.yml": "class_schema.json",
+    "races.yml": "race_schema.json"
 }

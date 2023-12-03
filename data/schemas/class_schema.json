@@ -84,8 +84,23 @@
                 }
             },
             "handbook": {
-                "type": "object",
-                "additionalProperties": true
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["title", "display_title", "text"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "display_title": {
+                            "type": "boolean"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    }
+                }
             },
             "starting_items": {
                 "type": "array"

@@ -5,7 +5,7 @@ class RnRRace():
   #Base constructor
   def __init__(self, race_data):
     self.name = race_data['name']
-    self.health_dice_bonus = race_data['health_dice_bonus']
+    self.health_dice = race_data['health_dice']
     self.base_movement = race_data['base_movement']
     self.handbook = race_data['handbook']
     self.is_a = race_data.get('is_a', None)

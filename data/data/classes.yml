@@ -6,28 +6,39 @@
         Intelligence: 1
         Perception: -1
         Strength: -2
-    expertise: ""
+    expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
+                take expertise in any checks made to perform for others and in all attempts at sleight of hand."
     handbook:
-        Intro: "Weaver of tales. With their magical melodies, Bards are the heart and soul of every adventure. 
+        -   title: Intro
+            display_title: false
+            text: "Weaver of tales. With their magical melodies, Bards are the heart and soul of every adventure. 
                   While wizards use hard-won knowledge and Druids use the power of nature, Bard's channel
                   the power of pure charisma to author the world around them. Bards take the roll of support caster,
                   shaking the resolve of enemies and shaping the face of the battlefield. Many bards are the face
                   of their adventuring party, using their wit and tact to expertly navigate social situations."
-        Adventuring: "A bard's magic can be invaluable when adventuring. Spells like Conjure Illusion and Disguise, and Hypnotize
-                        can help a party get out of sticky situations, while Commune with the Dead can provide important answers.
-                        Like most mages, many bards leave feats of strength to the martial classes, but it is not out of the ordinary 
-                        for a highly dextrous bard to sneak into danger alongside the party rogue."
-        Socializing: "Bards shine in social situations. With their expertise in charisma, and arsenal of spells such as 
-                        Suggestion and Languages, they are able to glean important information and cut to the heart of the matter.
-                        Some bards travel town to town and leave a string of heartbroken lovers in their wake, while others climb to the highest echelons of society."
-        Combat:      "Bards are capable support casters. Spells like Dissonant Melody, Slow, and Rend Defenses allow them to weaken their enemies,
-                        while Song of Haste, and Take Courage empower their allies. They also make adept healers when a cleric isn't available, casting spells like
-                        Song of Slow Healing and Song of Mass Healing. While their damage output may not match wizards or warlocks, spells like Biting Words 
-                        and Belch Flame are still formidable, and the Bard's versitility is second to none."
-        Charisma Caster: "Bards are showman at heart, dashing and quick of wit. At the start of your journey,
-                            you can declare that you are a Charisma Caster. From that 
-                            point on, Charisma rather than Intelligence affects your maximum action points and 
-                            informal magic."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "A bard's magic can be invaluable when adventuring. Spells like Conjure Illusion and Disguise, and Hypnotize
+                can help a party get out of sticky situations, while Commune with the Dead can provide important answers.
+                Like most mages, many bards leave feats of strength to the martial classes, but it is not out of the ordinary 
+                for a highly dextrous bard to sneak into danger alongside the party rogue."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Bards shine in social situations. With their expertise in charisma, and arsenal of spells such as 
+                    Suggestion and Languages, they are able to glean important information and cut to the heart of the matter.
+                    Some bards travel town to town and leave a string of heartbroken lovers in their wake, while others climb to the highest echelons of society."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Bards are capable support casters. Spells like Dissonant Melody, Slow, and Rend Defenses allow them to weaken their enemies,
+                    while Song of Haste, and Take Courage empower their allies. They also make adept healers when a cleric isn't available, casting spells like
+                    Song of Slow Healing and Song of Mass Healing. While their damage output may not match wizards or warlocks, spells like Biting Words 
+                    and Belch Flame are still formidable, and the Bard's versitility is second to none."
+        -   title: "Charisma Caster"
+            display_title: true 
+            text: "Bards are showman at heart, dashing and quick of wit. At the start of your journey,
+                    you can declare that you are a Charisma Caster. From that 
+                    point on, Charisma rather than Intelligence affects your maximum action points and 
+                    informal magic."
     health_dice: 1d6
     spells:
         Tier_1: #27/ 27
@@ -921,7 +932,9 @@
         Perception: -1
         Strength: 2
     handbook:
-        Intro: "Bulwark against evil. Knights stand tall on the front-line of an adventuring party.
+        -   title: Intro
+            display_title: false 
+            text: "Bulwark against evil. Knights stand tall on the front-line of an adventuring party.
                   All but unkillable, it is their duty
                   to protect their less resilient companions, standing in the way of blows that
                   would slay wizards and rogues where they stand. While many knights work for coin or
@@ -929,16 +942,22 @@
                   and use it to heal their allies and burn their foes with radiant light. Whether
                   serving as bastion or healer, knights are a shield, holding their party together
                   and standing strong against any foe."
-        Adventuring: "Knights are strong of body and spirit. Whether bending the bars of a prison
+        -   title: When Adventuring
+            display_title: true
+            text:  "Knights are strong of body and spirit. Whether bending the bars of a prison
                         cell, charging through a locked door, or putting enemies in their place,
                         a knight's superior strength is of great use to their adventuring party.
                         When things look grim, a party's knight can be counted on to keep going,
                         no matter what. Vile curses, hazardous weather, and incredible fatigue
                         can do little to cause a knight to flag."
-        Socializing: "Many knights have a special affinity for speaking with other men-at-arms,
+        -   title: "When Socializing"
+            display_title: true 
+            text:  "Many knights have a special affinity for speaking with other men-at-arms,
                         using the bond of battle to forge fast friendships. Gleaming plate can be
                         intimidating to the peasantry, though it tends to inspire awe rather than fear."
-        Combat:      "A knight can be counted on to stand at the front line, using their abilities
+        -   title: "When in Combat"
+            display_title: true 
+            text: "A knight can be counted on to stand at the front line, using their abilities
                         to focus the attention of enemies and stop them from attacking a party's ranged
                         combatants and mages. If a knight invests in their Paladin tree, they gain
                         the ability to bolster their allies' defenses and can become a viable party healer.
@@ -1337,6 +1356,31 @@
     expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
                 bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
     health_dice: "1d10"
+    handbook:
+        -   title: "Intro"
+            display_title: false
+            text: "All muscle and rage, the Barbarian is a powerful frontline fighter. With their exceptional 
+                    health and resileince, the Barbarian is able to shrug off blows that would level their allies.
+                    Once a Barbarian closes with an enemy they deal massive damage, laying low anyone that dares stand in their way.
+                    Out of combat, the Barbarian is among the strongest of the races, and they use that strength 
+                    to overcome their problems. The Barbarian's main weakness is their lack of arcane knowledge; 
+                    for this reason, they are best backed up by a Bard, Cleric, or other support mage."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "The Barbarians great strength can be vital while adventuring. Whether they are bursting through walls
+                    or heaving great boulders, members of the Barbarian's party will stand on in awe as they use their strength 
+                    to perform feats that look like magic."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "While many Barbarians are at home among ruffians and thieves, others are gentle giants.
+                    Regardless, any Barbarian is able to use their demeanor to intimidate if necessary. 
+                    When questioning someone, the party may deploy their Barbarian to learn the truth."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Because of their strength and resilience, a party's Barbarian is usually found on the front line of combat.
+                    They are expert at both offense and defense. As a Barbarian grows in strength, their abilities
+                    layer atop one another, until even a normal attack deals massive damage. Barbarians are weak against
+                    magical attacks, however, and need a solid back line to support them."
     skill_tree:
         tree_path: "tmp"
         abilities: #25 / 25
@@ -1692,6 +1736,39 @@
     expertise: "As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, climbing a rope, and other such checks. 
                 It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing."
     health_dice: "1d8"
+    starting_items:
+        - Choose any two common weapons 
+        - A common roundshield
+        - Chainmail (common moderate armor)
+    handbook:
+        -   title: "Intro"
+            display_title: false
+            text: "A master of combat, the fighter is a force to be reckoned with.
+                   Some are tactical masterminds, improving their allies' resolve
+                   and granting them powerful bonuses in combat. Others rush in,
+                   using their superior evasion and combat prowess to overwhelm their enemies.
+                   Outside combat, fighters are versatile members of an adventuring party, 
+                   using their athletic abilities to overcome all manner of obstacles."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Whether cool and calculated or brash and forthright, fighters are
+                   often front and center in any challenge. Because they are hearty
+                   and self-sufficient, a fighter doesn't mind taking a few blows
+                   to protect their party."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "It is not out of the ordinary for a fighter to be the face of the
+                    party, especially when dealing with other combat-minded individuals.
+                    Fighters may use their combat prowess to intimidate others when
+                    necessary. However, it is the fighter's personality rather than
+                    their class that defines how they behave in social settings."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Many fighters charge into the fray, weapon and shield in hand.
+                    Others hang back, using ranged weapons to pick off their foes.
+                    Fighters can specialize in damage, evasion, or command, though 
+                    many will choose a balance between the three, making them to be
+                    versatile and deadly opponents."
     skill_tree:
         tree_path: "tmp"
         abilities: #25 /25
@@ -2043,8 +2120,40 @@
         Perception: 2
         Strength: -1
     expertise: "As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in
-                insight, which includes gleaning information about someone's motives or thoughts."
+                insight, which includes gleaning information about someone's motives or thoughts, and in history checks."
     health_dice: "1d8"
+    handbook:
+        -   title: "Intro"
+            display_title: false
+            text: "Faithful servants of an order, Monks have been trained in martial combat to protect its teachings.
+                    Some such orders are religious, while others, like the Ordo Liborum, serve a concept like 
+                    the protection of knowledge. Monks are powerful hand-to-hand fighters, and are among the 
+                    most agile of the classes. They are especially adept at taking a single enemy out of the equation.
+                    A Monk often holds valuable answers about the world at large, and is
+                    able to help their party navigate complex situations."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Among the most dexterous of the classes, Monks have unique freedom of movement.
+                    Whether they are climbing sheer walls or leaping across rooftops, a party's monk
+                    can often gain access to locations that others cannot. This is useful for everything 
+                    from performing reconniasance to tying a rope to a hard to reach place. 
+                    A Monk's training and connection to the spiritual also means that they often
+                    have insight into ancient ruins, strange symbols, and other traces of ancient lore."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Monks are a peculiar breed of creature. Depending on their order, they may be stoic, 
+                boisterous, or even constantly sleepy. The lifestyle of a Monk is not for everyone, 
+                and most pick up a few quirks along the way. Monks have a deep sense of loyalty and purpose,
+                and it is not rare to find a monk with a mission given to them by their order. The way that a given 
+                Monk will behave in social interactions is deeply linked to the stances of their order, and their 
+                relationship to them."
+        -   title: "When in Combat"
+            display_title: true
+            text: "Monks excel at one-on-one combat, and are quickly able to overpower single foes. 
+                Only rogues rival monks in mobility; monks are able to free-run across the battlefeild, 
+                leaping from ledge to wall before scoring a plunging attack on their foe. If a monk finds themselves
+                surrounded, they can assume a Dodging Stance and counter missed attacks. Perhaps the monks greatest
+                ability, however, is their ability to block a mage's Chi and stop them from casting."
     skill_tree:
         tree_path: "tmp"
         abilities: #25/25
@@ -2378,25 +2487,33 @@
         Perception: 1
         Strength: -2
     handbook:
-        Intro: "Knives in the dark, rogues are famously stealthy and perceptive. They blend into a crowd
+        -   title: Intro
+            display_title: false 
+            text: "Knives in the dark, rogues are famously stealthy and perceptive. They blend into a crowd
                  like shadow, gathering information or relieving a mark of their life or possessions.
                  Rogues have little health, and as such, it can be disastrous if they are struck by an
                  enemy attack. Thankfully, their stealth and abilities make them among the most slippery
                  of combatants. While others tackle their challenges head on, rogues wait to find 
                  openings—when life gives you a guarded door, a rogue is the first to go in through a window."
-        Adventuring: "Incredibly dexterous, rogues are skilled at mantling buildings, lurking in the shadows,
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Incredibly dexterous, rogues are skilled at mantling buildings, lurking in the shadows,
                         disarming traps and picking locks. As a rogue, you will often go in first to make
                         certain the way is safe, using your abilities to clear a path for the 
                         less-nimble members of your adventuring party."
-        Socializing: "While some rogues stand back silently, others are charming and deceptive. With their
-                        nimble fingers, rogues are skilled at pocketing items that aren't theirs, though the
-                        wise rogue won't target their party with such exploits."
-        Combat:      "Rogues have low health but deal heavy damage to their foes. In combat, they spend
-                        much of their time skirting the edges of the fray, looking for opportunities to dash in, land
-                        a critical blow, and then disappear into the shadows. Rogues are adept at fighting
-                        with daggers, hurling them at opponents and slashing multiple times to deal quick,
-                        repeated damage. If a rogue invests in magic, they can use their abilities to avoid
-                        damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
+        -   title: "When Socializing"
+            display_title: true
+            text: "While some rogues stand back silently, others are charming and deceptive. With their
+                    nimble fingers, rogues are skilled at pocketing items that aren't theirs, though the
+                    wise rogue won't target their party with such exploits."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Rogues have low health but deal heavy damage to their foes. In combat, they spend
+                    much of their time skirting the edges of the fray, looking for opportunities to dash in, land
+                    a critical blow, and then disappear into the shadows. Rogues are adept at fighting
+                    with daggers, hurling them at opponents and slashing multiple times to deal quick,
+                    repeated damage. If a rogue invests in magic, they can use their abilities to avoid
+                    damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
     expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
     starting_items:
         - Your choice of two common daggers or a rapier and buckler
@@ -2822,19 +2939,27 @@
         Perception: 1
         Strength: -1
     handbook:
-        Intro: "Guardians of nature, druids are forged in lightning, shaped by root and spore, and raised by the creatures of the wilds. 
-                  Druids can be found in even the most unforgiving climbs. They thrive atop craggy, frozen peaks and deserts of driving sand.
-                  They employ powerful natural magics, allowing them to shape both the world and themselves. Fledgling druids can transform
-                  themselves into the form of a chosen animal, conjure swarms of bees to distract and harm their foes, and speak to plants
-                  and growing things. Unlike wizards, druids learn from each other and from the world around them rather than from dusty
-                  tomes. As such, a druid quickly forms a deep communion with nature, and will preserve the natural order, no matter the cost."
-        Adventuring: "Druidic magic presents nature-based solutions to many problems encountered while adventuring. The ability to transform
-                        into birds, beasts, and fish allows druids to go and survive most anywhere."
-        Socializing: "Many druids have a spirit animal that they hold dear to their heart, and it is not abnormal for them to take on the
-                        characteristics of that animal. Lone wolves, patient spiders, cunning foxes, and others can be found among the druids,
-                        coloring their social interactions."
-        Combat:      "In combat, druids are masters of controlling the battlefield with spells that shape the landscape and move their enemies.
-                        Druids are also capable of dealing heavy damage and of healing their allies in a pinch, making them well rounded combatants."    
+        -   title: Intro
+            display_title: false 
+            text: "Guardians of nature, druids are forged in lightning, shaped by root and spore, and raised by the creatures of the wilds. 
+                    Druids can be found in even the most unforgiving climbs. They thrive atop craggy, frozen peaks and deserts of driving sand.
+                    They employ powerful natural magics, allowing them to shape both the world and themselves. Fledgling druids can transform
+                    themselves into the form of a chosen animal, conjure swarms of bees to distract and harm their foes, and speak to plants
+                    and growing things. Unlike wizards, druids learn from each other and from the world around them rather than from dusty
+                    tomes. As such, a druid quickly forms a deep communion with nature, and will preserve the natural order, no matter the cost."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Druidic magic presents nature-based solutions to many problems encountered while adventuring.
+                     The ability to transform into birds, beasts, and fish allows druids to go and survive most anywhere."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Many druids have a spirit animal that they hold dear to their heart, and it is not abnormal for them to take on the
+                    characteristics of that animal. Lone wolves, patient spiders, cunning foxes, and others can be found among the druids,
+                    coloring their social interactions."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "In combat, druids are masters of controlling the battlefield with spells that shape the landscape and move their enemies.
+                    Druids are also capable of dealing heavy damage and of healing their allies in a pinch, making them well rounded combatants."    
     starting_items:
         - "An arcane amulet or conjurer's idol"
         - Your choice of a padded robe (common light armor) or leather jerkin (common light armor)
@@ -3797,19 +3922,27 @@
         Perception: 0
         Strength: -2
     handbook:
-        Intro: "Servant of the divine. A cleric has given themselves over to the worship of a deity or deities. For some, 
+        -   title: Intro
+            display_title: false
+            text: "Servant of the divine. A cleric has given themselves over to the worship of a deity or deities. For some, 
                 this means a life spent at a temple, while for others, it means wandering the realms and preaching the good word.
                 As an adventurer, your deity has chosen you for something special and has granted you the power to carry out their will.
                 Clerics are practitioners of divine magic, and are known for their ability to bring healing to the sick and dying."
-        Adventuring: "Clerics use divine magic to overcome their problems. When adventuring you may call back the soul of a departed 
+        -   title: When Adventuring
+            display_title: true
+            text:  "Clerics use divine magic to overcome their problems. When adventuring you may call back the soul of a departed 
                       person for questioning, force an enemy's blade to disobey them, or project yourself across the realms to aid 
                       a distant ally. Unlike most other classes, the cleric always has someone in their corner. As they reach higher levels,
                       a Cleric's deity or their servants may reach out, giving guidance and providing marching orders."
-        Socializing: "Clerics are welcome most everywhere, and it is not out of the ordinary for commonfolk to approach them for 
+        -   title: When Socializing
+            display_title: true 
+            text: "Clerics are welcome most everywhere, and it is not out of the ordinary for commonfolk to approach them for 
                       blessings or healing. Temples can be found scattered throughout the realms, and can serve as a friendly place 
                       for practitioners a given faith. Indeed, the only people who generally dislike Clerics are those of competing faiths,
                       or followers of dark gods in opposition to a cleric's deity."
-        Combat: "Clerics often take a supporting role in combat, granting powerful boons to their allies and weakening their enemies.
+        -   title: When in Combat
+            display_title: true 
+            text: "Clerics often take a supporting role in combat, granting powerful boons to their allies and weakening their enemies.
                  Healing magic is at the core of a cleric's arsenal; when a party's barbarian launches themselves headlong into a horde 
                  of skeletons, it is often the cleric that keeps them standing long enough to emerge victorious. Clerics are not without
                  the ability to fight, however. With beams of scouring light, they are able to blind their foes and push them back into the 
@@ -4653,25 +4786,36 @@
                         - diminished
                     save: null  
 -   name: Wizard
-    expertise: ""
+    expertise: "As a Wizard, you are marked by your raw intellect. Take expertise in all intelligence checks, including
+                checks made to cast informal magic. Further, take expertise in history checks made to uncover lore 
+                about a location or item."
     health_dice: 1d6
     handbook:
-        Intro: "Students of the arcane, wizards are practitioners of world-bending magics.
+        -   title: Intro
+            display_title: false
+            text: "Students of the arcane, wizards are practitioners of world-bending magics.
                   Advanced wizards can take flight, smite their foes with balls of fire,
                   and bend time to their whim. Even fledgling wizards can bring mundane objects
                   to life, send messages to distant allies, and fill their foes mouths’ with slithering slugs.
                   These advanced magics come at a price -- wizards must study diligently to gain their power,
                   standing on the shoulders of giants as they strive to become legends in their own right."
-        Adventuring: "A wizard's arsenal of spells is of great use when adventuring. The ability to summon objects,
-                        shrink or grow objects, and teleport are of immense value to any adventuring party.
-                        With their great intelligence, wizards are also of use whenever questions of history,
-                        geography, or intuition are encountered."
-        Socializing: "Some wizards are scatterbrained, others stoic, and some are merely excited to see the world.
-                        While a wizard might have trouble being the party’s face when dealing with common folk,
-                        they can be of enormous value whenever speaking with the intelligentsia of a region."
-        Combat: "A wizard’s spells can shape the face of combat, taking powerful enemies out of play through
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "A wizard's arsenal of spells is of great use when adventuring. The ability to summon objects,
+                    shrink or grow objects, and teleport are of immense value to any adventuring party.
+                    With their great intelligence, wizards are also of use whenever questions of history,
+                    geography, or intuition are encountered."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Some wizards are scatterbrained, others stoic, and some are merely excited to see the world.
+                    While a wizard might have trouble being the party’s face when dealing with common folk,
+                    they can be of enormous value whenever speaking with the intelligentsia of a region."
+        -   title: When in Combat 
+            display_title: true 
+            text: "A wizard’s spells can shape the face of combat, taking powerful enemies out of play through
                    a combination of serious damage and status effects. However, wizards are notorious for their frail
-                   forms and low health. As such, wizards must boost their defense with magic, or hide behind their more resilient allies."         
+                   forms and low health. As such, wizards must boost their defense with magic, or hide behind
+                   their more resilient allies."         
     starting_items:
         - A common magic wand or mage's staff 
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
@@ -5649,7 +5793,9 @@
                     damage_type: blunt
                     tier_3: "6d6"
 -   name: Warlock
-    expertise: ""
+    expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
+                trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
+                or the motives of a villain."
     health_dice: 1d8
     recommended_stats:
         Charisma: -2
@@ -5659,22 +5805,32 @@
         Perception: 1
         Strength: -1
     handbook:
-            Intro: "Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force.
+            -   title: Intro 
+                display_title: false
+                text: "Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force.
                       This being grants them incredible magics, but at a cost; every pact has it's price. This price be anything
                       from gathering information for your patron to performing tasks for them. Regardless, your pact and your 
                       patron will greatly color your adventuring career."
-            Adventuring: "Warlocks have access to a vast array of useful magics which can aid any adventuring party.
+            -   title: When Adventuring
+                display_title: true 
+                text: "Warlocks have access to a vast array of useful magics which can aid any adventuring party.
                             In particular, Warlocks are masters of gathering information; spells like Eyes of Uriel and
                             Summon Familiar allow you to easily scout the world around you. Like other casters, Warlocks
                             have low health, and often stand back and watch as other party members throw themselves into harm's way."
-            Socializing: "Known for their Charisma, a warlock can easily become the face of an adventuring party. And when 
+            -   title: When Socializing
+                display_title: true 
+                text: "Known for their Charisma, a warlock can easily become the face of an adventuring party. And when 
                             force of personality fails, magic can intervene. The powerful Convince and Mask of Shadows spells
                             can be used to impersonate enemies or magically manipulate particularly troublesome individuals."
-            Combat:      "Warlock's shine in combat with one of the most aggressive spell lists in the realms. Eldritch blast is the heart
+            -   title: When in Combat
+                display_title: true 
+                text: "Warlock's shine in combat with one of the most aggressive spell lists in the realms. Eldritch blast is the heart
                             of the Warlock's arsenal, allowing them to deal impressive damage to single targets.
                             Beyond that, the Warlock has a number of crowd control spells which shape the battlefield.
                             Beckon allows the Warlock to move their, and Mire makes terrain difficult to navigate."
-            Charisma Caster: "Warlocks leverage their charisma when dealing with the patron and using their magic.
+            -   title: Charisma Caster
+                display_title: true
+                text: "Warlocks leverage their charisma when dealing with the patron and using their magic.
                                 At the start of your journey, you can declare that you are a Charisma Caster. From that 
                                 point on, Charisma rather than Intelligence affects your maximum action points and 
                                 informal magic."

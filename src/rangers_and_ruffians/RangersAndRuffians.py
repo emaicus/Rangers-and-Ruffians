@@ -13,9 +13,8 @@ class RangersAndRuffians():
   
   def load_races(self, race_data : dict) -> dict:
     races = dict()
-    for race_name, race_data in race_data.items():
-       race_data['name'] = race_name
-       races[race_name] = RnRRace(race_data)
+    for race_data in race_data:
+       races[race_data['name']] = RnRRace(race_data)
     return races
   
   def load_classes(self, class_data: list) -> dict:

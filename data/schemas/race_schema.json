@@ -1,65 +1,143 @@
 {
-	"description": "Definition of a single race.",
-	"type": "object",
-	"required": ["health_dice_bonus", "base_movement", "abilities", "handbook"],
-	"additionalProperties": false,
-	"properties": {
-		"health_dice_bonus": {
+	"description": "Definition of the RnR race.yml file.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["name", "health_dice", "base_movement", "abilities", "handbook"],
+		"additionalProperties": false,
+		"properties": {
+			"name": {
+				"type": "string"
+			},
+			"health_dice": {
+					"type": "string",
+					"enum": ["1d4", "1d6", "1d8"]
+			},
+			"base_movement": {
 				"type": "integer",
-				"minimum": 0,
-				"maximum": 4
-		},
-		"base_movement": {
-			"type": "integer",
-			"minimum": 25,
-			"maximum": 35
-		},
-		"handbook": {
-			"type": "object",
-			"additionalProperties": true
-		},
-		"abilities": {
-			"type": "array",
-			"items": {
-			"type": "object",
-			"required": ["name", "cost", "description"],
-			"properties": {
-					"name": {
-						"type": "string"
+				"minimum": 25,
+				"maximum": 35
+			},
+			"handbook": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["introduction", "you_may", "assumptions", "looks"],
+				"properties": {
+					"introduction": {
+						"type": "array",
+						"items":{
+							"type": "string"
+						}
 					},
-					"cost": {
-						"type": "integer",
-						"minimum": 0,
-						"maximum": 3
-					},
-					"damage_scaling": {
+					"you_may": {
 						"type": "object",
-						"required": ["tier_1", "tier_2", "tier_3"],
 						"additionalProperties": false,
+						"required": ["title", "options"],
 						"properties": {
-							"tier_1": {
+							"title" : {
 								"type": "string"
 							},
-							"tier_2": {
-								"type": "string"
-							},
-							"tier_3": {
-								"type": "string"
+							"options": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
 							}
 						}
-					}, 
-					"condition": {
-						"type": "string",
-						"enum": ["blinded", "bleeding", "burning", "charmed", "controlled", "distracted", "deafened", "enlarged", "entangled", "estranged", "fixated", "frightened", "frozen", "grappled", "hastened", "harried", "invisible", "incapacitated", "numble", "shrunk", "staggered", "transformed", "staggered", "poisoned", "prone", "slowed", "stunned", "weakened", "vulnerable"]
 					},
-					"description": {
-						"type": "string"
+					"assumptions": {
+						"type": "object",
+						"additionalProperties": false,
+						"required": ["title", "options"],
+						"properties": {
+							"title" : {
+								"type": "string"
+							},
+							"options": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"looks": {
+						"type": "array",
+						"items": {
+							"type": "object",
+								"additionalProperties": false,
+								"required": ["title", "options"],
+								"properties": {
+									"title" : {
+										"type": "string"
+									},
+									"options": {
+										"type": "string"
+									}
+								}
+						}
+					},
+					"tips": {
+						"type": "array",
+						"items": {
+							"type": "object",
+								"additionalProperties": false,
+								"required": ["name", "text"],
+								"properties": {
+									"name" : {
+										"type": "string"
+									},
+									"text": {
+										"type": "string"
+									}
+								}
+						}
+					}			
+				}
+			},
+			"abilities": {
+				"type": "array",
+				"items": {
+				"type": "object",
+				"required": ["name", "cost", "description"],
+				"properties": {
+						"name": {
+							"type": "string"
+						},
+						"cost": {
+							"type": "integer",
+							"minimum": 0,
+							"maximum": 3
+						},
+						"damage_scaling": {
+							"type": "object",
+							"required": ["tier_1", "tier_2", "tier_3"],
+							"additionalProperties": false,
+							"properties": {
+								"tier_1": {
+									"type": "string"
+								},
+								"tier_2": {
+									"type": "string"
+								},
+								"tier_3": {
+									"type": "string"
+								}
+							}
+						}, 
+						"condition": {
+							"type": "string",
+							"enum": ["blinded", "bleeding", "burning", "charmed", "controlled", "distracted", "deafened", "enlarged", "entangled", "estranged", "fixated", "frightened", "frozen", "grappled", "hastened", "harried", "invisible", "incapacitated", "numble", "shrunk", "staggered", "transformed", "staggered", "poisoned", "prone", "slowed", "stunned", "weakened", "vulnerable"]
+						},
+						"description": {
+							"type": "string"
+						}
 					}
 				}
+			},
+			"parent_class": {
+				"type": "string"
 			}
-		},
-		"parent_class": {
-			"type": "string"
 		}
 	}
 }
