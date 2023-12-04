@@ -19,6 +19,8 @@ from rangers_and_ruffians import core
 #from src.rangers_and_ruffians import markdown_handler
 #from src.rangers_and_ruffians import io_handler
 from rangers_and_ruffians import RangersAndRuffians
+from rangers_and_ruffians import RnRClass
+from rangers_and_ruffians import RnRClass
 
 # MALE = True
 # FEMALE = False
@@ -489,6 +491,14 @@ from rangers_and_ruffians import RangersAndRuffians
 if __name__ == "__main__":
   core.printLogo()
   rnr_game = core.load_Rangers_And_Ruffians()
+
+  with open('races.md', 'w') as outfile:
+    for race_name, race_obj in rnr_game.races.items():
+      outfile.write(race_obj.get_markdown())
+
+  with open('classes.md', 'w') as outfile:
+    for class_name, class_obj in rnr_game.classes.items():
+      outfile.write(class_obj.get_markdown())
 
   # if not os.path.exists(GENERATED_SITE_DIRECTORY):
   #   os.mkdir(GENERATED_SITE_DIRECTORY)

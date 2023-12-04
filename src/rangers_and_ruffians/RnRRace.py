@@ -45,8 +45,31 @@ class RnRRace():
 
   def get_markdown(self):
     race_text = f'## {self.name}  \n'
-    race_text += f'__Health Dice Bonus:__ {self.health_dice_bonus} __Movement:__ {self.base_movement}ft  \n'
+
+    for para in self.handbook['introduction']:
+      race_text += f"{para}  \n"
+    race_text += '  \n'
+
+    race_text += f"### {self.handbook['you_may']['title']}  \n"
+    for option in self.handbook['you_may']['options']:
+      race_text += f"* {option}  \n"
+    race_text += '  \n'
+    
+    race_text += f"### {self.handbook['assumptions']['title']}  \n"
+    for option in self.handbook['assumptions']['options']:
+      race_text += f"* {option}  \n"
+    race_text += '  \n'
+
+    race_text += f"### Physical Features  \n"
+    for feature in self.handbook['looks']:
+      title = feature['title']
+      options = feature['options']
+      race_text += f"* __{title}__ {options}  \n"
+    race_text += '  \n'
+
+    race_text += '### Stats and Abilities  \n'
+    race_text += f'__Health Dice:__ {self.health_dice} __Movement:__ {self.base_movement}ft   \n'
     for ability_obj in self.abilities:
-      race_text += ability_obj.get_markdown() + '  /n'
+      race_text += ability_obj.get_markdown() + '   \n'
         
     return race_text

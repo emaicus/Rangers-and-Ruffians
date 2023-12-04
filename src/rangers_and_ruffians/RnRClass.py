@@ -7,7 +7,7 @@ class RnRClass():
 
     self.name = rnr_classdata['name']
     self.stat_recommendation = rnr_classdata['recommended_stats']
-    self.handbook = rnr_classdata.get('handbook', {})
+    self.handbook = rnr_classdata['handbook']
     self.health_dice = rnr_classdata['health_dice']
     self.expertise = rnr_classdata['expertise']
     self.is_mage = 'skill_tree' not in rnr_classdata
@@ -58,8 +58,15 @@ class RnRClass():
   #   return serial
   
   def get_markdown(self):
-    class_text = f'# {self.name}  \n'
-    class_text += "## Recommended Stats  \n"
+    class_text = f'## {self.name}  \n'
+    
+    for section in self.handbook:
+      if section['display_title']:
+        class_text += f"### {section['title']}  \n"
+      class_text += f"{section['text']}  \n"
+      class_text += "  \n"
+
+    class_text += "### Recommended Stats  \n"
     for stat in ["Strength", "Dexterity", "Intelligence","Inner_Fire",  "Perception", "Charisma"]:
       class_text += f"*  __{stat.replace('_', ' ')}:__ {self.stat_recommendation[stat]}  \n"
 
@@ -72,4 +79,14 @@ class RnRClass():
     class_text += "## Abilities  \n"
     for ability in sorted(self.abilities, key=lambda a: a.name):
       class_text += ability.get_markdown()
+    class_text+= '  \n'
+
+    class_text += "## Spells  \n"
+    for tier, spells in self.spells.items():
+      class_text += f"### {tier}  \n"
+      for spell in spells:
+        class_text += f'{spell.get_markdown()}  \n'
+      class_text += '  \n'
+    class_text+= '  \n'
+
     return class_text

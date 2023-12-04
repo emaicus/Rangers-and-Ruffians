@@ -5,8 +5,8 @@ class RangersAndRuffians():
   ''' Takes in classname and json object, instantiates class.'''
   def __init__(self, version: str, race_data: dict, class_data: list, attribution_data: dict, monster_data: dict, pantheon_data: dict)-> None:
     self.version = version
-    self.load_races(race_data)
-    self.load_classes(class_data)
+    self.races = self.load_races(race_data)
+    self.classes = self.load_classes(class_data)
     self.attributions = self.load_attributions(attribution_data)
     self.monsters = self.load_monsters(monster_data)
     self.pantheon = self.load_pantheon(pantheon_data)
