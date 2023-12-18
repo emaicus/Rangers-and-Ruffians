@@ -21,6 +21,7 @@ from rangers_and_ruffians import core
 from rangers_and_ruffians import RangersAndRuffians
 from rangers_and_ruffians import RnRClass
 from rangers_and_ruffians import RnRClass
+from rangers_and_ruffians import RnRAbility
 
 # MALE = True
 # FEMALE = False
@@ -499,6 +500,12 @@ if __name__ == "__main__":
   with open('classes.md', 'w') as outfile:
     for class_name, class_obj in rnr_game.classes.items():
       outfile.write(class_obj.get_markdown())
+  
+  for class_name, class_obj in rnr_game.classes.items():
+    for ability in class_obj.get_all_abilities():
+      if ability.summoned_creature is not None:
+        print(f"{class_name} {ability.summoned_creature}")
+
 
   # if not os.path.exists(GENERATED_SITE_DIRECTORY):
   #   os.mkdir(GENERATED_SITE_DIRECTORY)

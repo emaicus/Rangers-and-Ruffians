@@ -881,7 +881,7 @@
                 description: "As you raise your hand, four spectral knights materialize about you, sworn to protect and serve
                             with unwavering loyalty. The knights cannot leave the spell's radius."
                 summoned_creature: 
-                    all_tiers: Elemental Guardian
+                    all_tiers: Spectral Guardian
                 range: 30 
                 radius: 100
             -   name: Summon Bleck

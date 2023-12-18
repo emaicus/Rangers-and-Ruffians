@@ -26,6 +26,15 @@ class RnRClass():
       self.skill_tree = rnr_classdata['skill_tree']['tree_path']
       for ability in rnr_classdata['skill_tree']['abilities']:
         self.abilities.append(RnRAbility(ability))
+  
+  def get_all_abilities(self) -> list: 
+    all_abilities = list()
+    if self.is_mage:
+      for _, spells in self.spells.items():
+        all_abilities += spells
+    else:  
+      all_abilities += self.abilities
+    return all_abilities
 
 
   # def serialize(self, male=False, verbose=False, skip_art=False):

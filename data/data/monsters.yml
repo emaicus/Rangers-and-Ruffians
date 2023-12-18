@@ -1,0 +1,501 @@
+
+# Druid {'all_tiers': 'transformed'}
+# Cleric {'all_tiers': 'Celestial Guardian'}
+# Wizard {'tier_1': 'Lesser Slime', 'tier_2': 'Greater Slime', 'tier_3': 'Black Slime'}
+# Wizard {'tier_1': 'Arcane Construct', 'tier_2': 'Clockwork Soldier', 'tier_3': 'Clockwork Knight'}
+# Wizard {'tier_2': 'firebird', 'tier_3': 'phoneix'}
+
+# Warlock {'all_tiers': 'Familiar'}
+# Warlock {'tier_1': 'Undead Thrall', 'tier_2': 'Greater Undead Thrall', 'tier_3': 'Undead Champion'}
+# Warlock {'all_tiers': 'Eye of Uriel'}
+# Warlock {'tier_2': 'Pit Fiend', 'tier_3': 'Pronged Devil'}
+# Warlock {'all_tiers': 'Elder God'}
+# Warlock {'all_tiers': 'Eldritch Vessel -- give it cannons'}
+
+
+# Tier 1
+# | Minion            | Expected Health                      | 21   | 36   |
+# | Minion            | Expected Evasiveness                 | 10   | 11   |
+# | Minion            | Expected Damage Per Round            | 5    | 17   |
+# | Heavy             | Expected Health                      | 70   | 118  |
+# | Heavy             | Expected Evasiveness                 | 10   | 11   |
+# | Heavy             | Expected Damage Per Round            | 6    | 22   |
+# | Villain           | Expected Health                      | 253  | 406  |
+# | Villain           | Expected Evasiveness                 | 12   | 13   |
+# | Villain           | Expected Damage Per Round            | 9    | 33   |
+# | Hit Bonus         | Hit bonus                            | 1    | 4    |
+# | Easy SP           | Easy SP                              | 12   | 13   |
+# | Difficult SP      | Difficult SP                         | 16   | 17   |
+# | Saving Throw      | Saving Throw                         | 0    | 1    |
+
+# | Minion            | Expected Health                      | 43   | 50   |
+# | Minion            | Expected Evasiveness                 | 12   | 12   |
+# | Minion            | Expected Damage Per Round            | 20   | 35   |
+# | Heavy             | Expected Health                      | 143  | 166  |
+# | Heavy             | Expected Evasiveness                 | 12   | 12   |
+# | Heavy             | Expected Damage Per Round            | 26   | 46   |
+# | Villain           | Expected Health                      | 491  | 563  |
+# | Villain           | Expected Evasiveness                 | 14   | 14   |
+# | Villain           | Expected Damage Per Round            | 39   | 68   |
+# | Hit Bonus         | Hit bonus                            | 4    | 7    |
+# | Easy SP           | Easy SP                              | 14   | 14   |
+# | Difficult SP      | Difficult SP                         | 18   | 18   |
+# | Saving Throw      | Saving Throw                         | 2    | 2    |
+
+
+# | Minion            | Expected Health                      | 60   | 67   |
+# | Minion            | Expected Evasiveness                 | 13   | 13   |
+# | Minion            | Expected Damage Per Round            | 38   | 50   |
+# | Heavy             | Expected Health                      | 200  | 223  |
+# | Heavy             | Expected Evasiveness                 | 13   | 13   |
+# | Heavy             | Expected Damage Per Round            | 50   | 66   |
+# | Villain           | Expected Health                      | 678  | 750  |
+# | Villain           | Expected Evasiveness                 | 15   | 15   |
+# | Villain           | Expected Damage Per Round            | 74   | 97   |
+# | Hit Bonus         | Hit bonus                            | 7    | 10   |
+# | Easy SP           | Easy SP                              | 15   | 15   |
+# | Difficult SP      | Difficult SP                         | 19   | 19   |
+# | Saving Throw      | Saving Throw                         | 3    | 3    |
+
+
+# Druid {'tier_1': 'Elemental Spark', 'tier_2': 'Elemental', 'tier_3': 'Force of Nature'}
+# Druid {'all_tiers': 'Werewolf'}
+# Druid {'tier_2': 'Dire Bear', 'tier_3': 'Ursa'}
+
+- name: Test Gobbo
+  type: Minion
+  tier: Tier 1
+  health: 20
+  evasion: 12
+  speed: 
+    base_speed: 30
+  stat_bonus: 1
+  actions_per_turn: 1
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Pokey Stick
+      damage: 1d4
+      description: "Stick them with the pointy end!"
+      effects: null
+      range: touch 
+- name: Swarm
+  type: Minion
+  tier: Tier 1
+  health: 20
+  evasion: 10
+  speed:
+    base_speed: 25 
+  stat_bonus: 0
+  actions_per_turn: 1
+  size: 10
+  passive:
+    - name: Freedom of Movement
+      type: passive buff
+      duration: passive
+      range: self
+      description: "The swarm is able to move freely throughout the battlefield."
+      effect:
+        type: buff
+        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+        conditions:
+          - custom
+        save: null
+    - name: "Toe Nibbler"
+      type: passive damage
+      duration: passive 
+      range: touch
+      passive_damage_source: true
+      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+      monster_damage:
+        damage_type: "piercing"
+        damage: 1d4
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Vicious Consumption
+      range: touch 
+      damage: 1d4
+      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
+      effects:
+        type: "debuff"
+        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+        conditions:
+          - distracted
+        save: null
+- name: Greater Swarm
+  type: Minion
+  tier: Tier 2
+  health: 43
+  evasion: 12
+  speed:
+    base_speed: 25 
+  stat_bonus: 4
+  actions_per_turn: 1
+  size: 10
+  passive:
+    - name: Freedom of Movement
+      type: passive buff
+      duration: passive
+      range: self
+      description: "The swarm is able to move freely throughout the battlefield."
+      effect:
+        type: buff
+        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+        conditions:
+          - custom
+        save: null
+    - name: "Great Chomps"
+      type: passive damage
+      duration: passive 
+      range: touch
+      passive_damage_source: true
+      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+      monster_damage:
+        damage_type: "piercing"
+        damage: 2d6
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Vicious Consumption
+      range: touch 
+      damage: 1d4
+      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
+      monster_damage:
+        damage_type: piercing
+        damge: 4d6
+      effects:
+        type: "debuff"
+        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+        conditions:
+          - distracted
+        save: null
+- name: Zounds
+  type: Minion
+  tier: Tier 3
+  health: 60
+  evasion: 13
+  speed:
+    base_speed: 25 
+  stat_bonus: 7
+  actions_per_turn: 2
+  size: 15
+  passive:
+    - name: Freedom of Movement
+      type: passive buff
+      duration: passive
+      range: self
+      description: "The swarm is able to move freely throughout the battlefield."
+      effect:
+        type: buff
+        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+        conditions:
+          - custom
+        save: null
+    - name: "Great Chomps"
+      type: passive damage
+      duration: passive 
+      range: touch
+      passive_damage_source: true
+      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+      monster_damage:
+        damage_type: "piercing"
+        damage: 4d6
+  moveset:
+    - attacks_made: 1
+      limit: 2
+      name: Vicious Consumption
+      range: touch 
+      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
+      monster_damage:
+        damage_type: piercing
+        damge: 4d6
+      effects:
+        type: "debuff"
+        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+        conditions:
+          - distracted
+        save: null
+- name: Invisible Servant
+  type: Minion
+  tier: Tier 1
+  health: 10
+  evasion: 12
+  speed: 
+    base_speed: 25
+  passive:
+    - name: Invisibility
+      type: passive buff
+      duration: passive
+      range: self
+      description: ""
+      effect:
+        type: buff
+        description: ""
+        conditions:
+          - invisible
+        save: null
+  stat_bonus: 1
+  actions_per_turn: 1
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Hamper
+      damage: 0
+      description: "The Invisible Servant grabs at an enemy, attempting to hamper them."
+      effects: 
+        - type: debuff 
+          description: "They must make a spell power saving throw or be Hindered."
+          conditions: 
+            - Hindered
+          save: null
+      range: touch 
+- name: Winged Steed
+  type: Minion
+  tier: Tier 3
+  health: 60
+  evasion: 13
+  speed: 
+    flying_speed: 120
+  stat_bonus: 3
+  actions_per_turn: 0
+  size: 5
+  moveset: null
+- name: Tamberdoodle's Hand
+  type: Heavy
+  tier: Tier 2
+  health: 250
+  evasiveness: 12
+  speed: 
+    flying: 30
+  stat_bonus: 5
+  actions_per_turn: 1
+  size: 10
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Grab
+      duration: instantaneous
+      damage: 4d6
+      range: touch
+      description: "The hand sweeps towards an enemy in an attempt to grab them."
+      effect: 
+        type: debuff
+        description: "The target must make a spell power save or be Grappled."
+        conditions: 
+          - grappled
+        save: null
+    - attacks_made: 1
+      limit: 1
+      name: Slam
+      range: touch
+      duration: instantaneous
+      damage: 6d6
+      description: "The hand balls into a fist and lashes out an a foe."
+    - attacks_made: 1
+      limit: 1
+      name: Toss
+      range: 30
+      duration: instantaneous
+      description: "If the hand is adjacent to an ally or is grappling a foe, it can toss them as an action. If it is a foe, they take damage."
+      damage: 4d6
+- name: Spectral Guardian
+  type: Minion
+  tier: Tier 3
+  health: 66
+  evasion: 14
+  speed: 
+    base_speed: 30
+  stat_bonus: 5
+  actions_per_turn: 2
+  size: 5
+  passive:
+    - name: Spectral Movement
+      type: utility
+      duration: passive
+      range: self
+      description: "When the spectral guardian moves, it vanishes and then instantly appears at its destination.
+                    The spectral guardian does not provoke exposed attacks."
+  moveset:
+    - attacks_made: 1
+      limit: 2
+- name: Treeling
+  type: Minion
+  tier: Tier 1
+  health: 24
+  evasion: 10
+  speed: 
+    base_speed: 25
+  stat_bonus: 2
+  actions_per_turn: 2
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Swiping Claw
+      damage: 1d6
+      description: "The treeling takes a swipe at its foe with hardened, spearlike fingers."
+      effects: null
+      range: touch 
+- name: Sap Knight
+  type: Minion
+  tier: Tier 2
+  health: 44
+  evasion: 12
+  passive: 
+    -   name: "Shield"
+        type: buff 
+        cost: 0
+        range: self
+        description: "The sap knight carries a shield of oak."
+        effect:
+          type: buff
+          description: "It is considered to be Shielded."
+          conditions: 
+            - shielded
+          save: null
+  speed: 
+    base_speed: 25
+  stat_bonus: 5
+  actions_per_turn: 2
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Sap Strike
+      damage: 2d6
+      description: "As the knight slashes an enemy with its sword, strands of sticky sap flow over them."
+      effects: 
+        type: debuff
+        description: "They must make a spell power save of be Hindered."
+        conditions:
+          - hindered
+        save: null
+      range: touch 
+- name: Woad Warrior
+  type: Minion
+  tier: Tier 3
+  health: 60
+  evasion: 13
+  passive: 
+    -   name: "Shield"
+        type: buff 
+        cost: 0
+        range: self
+        description: "The woad warrior carries a wall shield of Ironwood."
+        effect:
+          type: buff
+          description: "It is immune to ranged attacks from the front, and gains +3 evasion while it is holding the shield."
+          conditions: 
+            - custom
+          save: null
+  speed: 
+    base_speed: 25
+  stat_bonus: 5
+  actions_per_turn: 2
+  size: 5
+  moveset:
+    - attacks_made: 2
+      limit: 1
+      name: Furious Strike
+      damage: 2d6
+      description: "The woad warrior makes two furious strikes against it's foe."
+      effects: 
+        type: debuff
+        description: "They must make a spell power save of be Hindered."
+        conditions:
+          - hindered
+        save: null
+      range: touch 
+    - attacks_made: 1
+      name: Heavy Blow
+      damage: 3d6
+      description: "The woad warrior makes a slash through the air which is so heavy that it cuts everything in a fifteen foot arc before it."
+      effect: null
+      range: 15 
+    - attacks_made: 1
+      name: Shield Bash
+      damage: 4d4
+      description: "The woad warrior slams its shield into an enemy with its shield."
+      effect: 
+        type: debuff
+        description: "The target must make a spell power save or be Shoved."
+        custom:
+          - shoved 
+        save: null
+      range: 15 
+- name: Elemental Spark
+  type: Minion
+  tier: Tier 1
+  health: 24
+  evasion: 11
+  speed: 
+    base_speed: 25
+  passive: 
+    - name: Elemental Affinity
+      type: utility
+      range: self
+      duration: passive
+      cost: 0
+      description: "When an Elemental comes into existence its creator may choose its
+                    elemental affinity from fire, ice, water, and air. All of the 
+                    elemental's damage is of that type, and it has the associated resistance."
+  stat_bonus: 2
+  actions_per_turn: 1
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Elemental Burst
+      range: self
+      radius: 5
+      damage: 1d4
+      description: "With a flash of energy, the Elemental Spark makes an attack against all creatures adjacent to them."
+      effects: null
+- name: Elemental
+  type: Minion
+  tier: Tier 1
+  health: 45
+  evasion: 12
+  speed: 
+    base_speed: 25
+  passive:
+    - name: Elemental Affinity
+      type: utility
+      range: self
+      duration: passive
+      cost: 0
+      description: "When an Elemental comes into existence its creator may choose its
+                    elemental affinity from fire, ice, water, and air. All of the 
+                    elemental's damage is of that type, and it has the associated resistance."
+  stat_bonus: 4
+  actions_per_turn: 1
+  size: 5
+  moveset:
+    - attacks_made: 1
+      limit: 1
+      name: Elemental Blaze
+      range: self
+      radius: 5
+      damage: 2d6
+      description: "With a flash of energy, the Elemental makes an attack against all creatures adjacent to them."
+    - attacks_made: 2
+      limit: 1
+      name: Elemental Strike
+      range: self
+      radius: 5
+      damage: 2d6
+      description: "The Elemental makes two strikes in rapid succession against its foe."
+      effect:
+        type: debuff
+        description: "They must make a spell power save or be Burned if it has fire affinity, 
+                      Hindered if it has ice affinity, Knocked Back if it has water affinity
+                      or Hoisted if it has air affinity."
+        conditions:
+          - burned
+          - hindered
+          - knocked back
+          - hoisted
+        save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
