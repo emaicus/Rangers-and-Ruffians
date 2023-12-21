@@ -88,12 +88,71 @@ def INSTALL_RANGERS_AND_RUFFIANS() -> None:
       sys.exit(1)
 
   # Run validation over all abilities
-  rnr_classes = None
-  with open(DATA_DIRECTORY.joinpath('classes.yml'), 'r') as infile:
-    rnr_classes = yaml.safe_load(infile)
   ability_schema = None 
   with open(SCHEMA_DIRECTORY.joinpath('ability_schema.json'), 'r') as infile:
     ability_schema = json.load(infile)
+
+  rnr_classes = None
+  with open(DATA_DIRECTORY.joinpath('classes.yml'), 'r') as infile:
+    rnr_classes = yaml.safe_load(infile)
+  
+  rnr_races = None 
+  with open(DATA_DIRECTORY.joinpath('races.yml'), 'r') as infile:
+    rnr_races = yaml.safe_load(infile)
+  
+  rnr_weapons = None 
+  with open(DATA_DIRECTORY.joinpath('weapons.yml'), 'r') as infile:
+    rnr_weapons = yaml.safe_load(infile)
+  
+  monsters = None 
+  with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
+    monsters = yaml.safe_load(infile)
+  
+  # for rnr_race in rnr_races:
+  #   abilities = rnr_race.get('abilities')
+  #   for ability in abilities:
+  #     ability['ability_type'] = 'ability'
+  #     try:
+  #       jsonschema.validate(ability, schema=ability_schema)
+  #     except jsonschema.exceptions.ValidationError as e:
+  #       print(f"ERROR: {ability.get('name', '')} {e.schema_path}, {e.message}")
+  #       sys.exit(1)
+  #     except Exception:
+  #       traceback.print_exc()
+  #       sys.exit(1)
+  
+  # for weapon in rnr_weapons:
+  #   for ability in weapon['abilities']:
+  #     ability['ability_type'] = 'ability'
+  #     try:
+  #       jsonschema.validate(ability, schema=ability_schema)
+  #     except jsonschema.exceptions.ValidationError as e:
+  #       print(e.relative_path)
+  #       print(e.json_path)
+  #       print(e.cause)
+  #       print(f"{e.schema_path}, {e.message}")
+  #       print(f"ERROR: {weapon.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
+  #       sys.exit(1)
+  #     except Exception:
+  #       traceback.print_exc()
+  #       sys.exit(1)
+  
+  # for monster in monsters:
+  #   for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
+  #     for ability in monster['moveset'].get(action_type, []):
+  #       ability['ability_type'] = 'ability'
+  #       try:
+  #         jsonschema.validate(ability, schema=ability_schema)
+  #       except jsonschema.exceptions.ValidationError as e:
+  #         print(e.relative_path)
+  #         print(e.json_path)
+  #         print(e.cause)
+  #         print(f"{e.schema_path}, {e.message}")
+  #         print(f"ERROR: {monster.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
+  #         sys.exit(1)
+  #       except Exception:
+  #         traceback.print_exc()
+  #         sys.exit(1)
 
   # for rnr_class in rnr_classes:
   #   if 'skill_tree' not in rnr_class:
@@ -223,8 +282,10 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
   class_path = INSTALL_DIRECTORY.joinpath('classes.json')
   race_path = INSTALL_DIRECTORY.joinpath('races.json')
   pantheon_path = INSTALL_DIRECTORY.joinpath('pantheon.json')
+  background_path = INSTALL_DIRECTORY.joinpath('backgrounds.json')
+  weapon_path = INSTALL_DIRECTORY.joinpath('weapons.json')
+  monster_path = INSTALL_DIRECTORY.joinpath('monsters.json')
   art_path = INSTALL_DIRECTORY.joinpath('art.json')
-  known_beasts_path = INSTALL_DIRECTORY.joinpath('book_of_known_beasts.json')
   version_number_path = BASE_DIRECTORY.joinpath('meta.json')
 
   with open(version_number_path, 'r') as infile:
@@ -233,7 +294,14 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
 
   with open(race_path, 'r') as data_file:
     race_data = json.load(data_file)
-    # TODO: complete conditions
+
+    for rnr_race in race_data:
+      for ability in rnr_race['abilities']:
+        if 'effect' in ability:
+          conditions = list()
+          for condition in ability['effect']['conditions']:
+            pass 
+          ability['effect']['conditions'] = conditions
 
   with open(class_path, 'r') as data_file:
     class_data = json.load(data_file)
@@ -257,19 +325,22 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
   with open(art_path, 'r') as data_file:
     attribution_data = json.load(data_file)
 
-  with open(known_beasts_path, 'r') as data_file:
-    monster_data = json.load(data_file)
-
   with open(pantheon_path, 'r') as data_file:
     pantheon_data = json.load(data_file)
   
+  with open(background_path, 'r') as data_file:
+    background_data = json.load(data_file)
   
-    #simple constructor
+  with open(weapon_path, 'r') as data_file:
+    weapon_data = json.load(data_file)    
+  
+  with open(monster_path, 'r') as data_file:
+    monster_data = json.load(data_file)
 
   finish = time.time()
   print(f'LOAD TIME: {finish - start}(s)')
 
-  return RangersAndRuffians(version, race_data, class_data, attribution_data, monster_data, pantheon_data)
+  return RangersAndRuffians(version, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data)
 
 ####################################################################################
 #

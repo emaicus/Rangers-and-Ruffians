@@ -15,6 +15,10 @@
     balance: strong
     about: "A Charmed creature must act in a way that benefits its charmer and has disadvantage on checks and saves made against
             them. If a charmed creature is harmed by its charmer or their allies, the effect immediately ends."
+-   name: Cold Resistance
+    balance: good 
+    about: "Creatures with cold resistance take half damage from frigid attacks. They are immune to status effects 
+            imparted by those attacks."
 -   name: Controlled
     balance: very strong
     about: "A Controlled creature must fight for its controller and act as they instruct. The creature automatically fails
@@ -69,6 +73,9 @@
 -   name: Fearless
     balance: weak
     about: Fearless creatures are immune to the Frightened condition.
+-   name: Elemental Resistance
+    balance: good
+    about: "Creatures with Fire Resistance take half damage from fire based attacks and are immune to the Burned condition."
 -   name: Fixated
     balance: good
     about: Fixated creatures are interested only in the item of their fixation. The nature of this fixation is left to the Grand Poohbah.
@@ -96,6 +103,9 @@
     balance: good
     about: "Creatures that are being guarded gain +2 evasion. If a creature is being guarded by more than one 
             source, they take +3 evasion, regardless of the number of sources."
+-   name: Hard to Move
+    balance: good 
+    about: "Creatures that are hard to move have advantage on any saves which could cause them to fall prone. If they are pushed, they move only half the intended distance."
 -   name: Hindered
     balance: strong
     about: A Hindered creature loses half its movement.
@@ -134,6 +144,9 @@
 -   name: Isolated
     balance: neutral
     about: An isolated creature cannot be affected by friendly magic or healing.
+-   name: Lightweight
+    balance: good 
+    about: "Anyone who wields a lightweight item gains five feet of movement. If they wield two, they gain 15 feet of movement."
 -   name: Lured
     balance: strong
     about: "A Lured creature immediately moves a distance equal to half their speed towards the object that is luring them. The creature maintains its intelligence and will act accordingly to avoid danger as they move."
@@ -146,6 +159,9 @@
 -   name: Nimble
     balance: neutral
     about: Targetted ranged attacks against Nimble creatures are at disadvantage.
+-   name: Poison Resistance
+    balance: neutral
+    about: Creatures with Poison Resistance take half damage from poison attacks and are immune to the Poisoned status effect.
 -   name: Physical Resistance
     balance: strong
     about: Creatures with Physical Resistance take half damage from piercing and blunt attacks.
@@ -170,6 +186,9 @@
 -   name: Staggered
     balance: neutral
     about: A Staggered creature makes their next action at disadvantage.
+-   name: Total Resistance 
+    balance: strong 
+    about: "Creatures with total resistance take half damage from all attacks."
 -   name: Transformed
     balance: very strong
     about: "Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed 

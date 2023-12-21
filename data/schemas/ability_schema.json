@@ -43,6 +43,12 @@
 				}
 			]
 		},
+		"attacks_made": {
+			"type": ["integer", "null"]
+		},
+		"limit": {
+			"type": ["integer", "null"]
+		},
 		"casting_time": {
 			"type": "string",
 			"minLength": 5
@@ -99,7 +105,7 @@
 		},
 		"damage_scaling": {
 			"type": "object",
-			"required": ["damage_type", "tier_3"],
+			"required": ["damage_type"],
 			"additionalProperties": false,
 			"properties": {
 				"multi_attack" : {
@@ -107,7 +113,7 @@
 				},
 				"damage_type" : {
 					"type": "string",
-					"enum":  ["healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", 
+					"enum":  ["acid", "healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", 
 					          "necrotic", "blunt", "piercing", "acoustic", "poison", "temporary health", "inherited"]
 				},
 				"scaled_by": {
@@ -132,6 +138,10 @@
 					"pattern": "^\\d+d\\d+$"
 				},
 				"tier_3": {
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
+				},
+				"all_tiers": {
 					"type": "string",
 					"pattern": "^\\d+d\\d+$"
 				}
@@ -187,13 +197,14 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed", "controlled", "darkvision", "diminished", "distracted",
+						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed","cold resistance",
+						"controlled", "darkvision", "diminished", "distracted",
 						"disarmed", "deafened", "dodging", "dumbstruck", "elemental resistance", "elusive", "empowered", "enlarged", "entangled", "ethereal",
-						"estranged", "fearless", "fixated", "frenzied", "frightened",
-						"frozen", "grappled", "guarded", "halted", "hastened", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
-						"incapacitated", "inspired", "invincible",
-						"isolated", "leeched", "lured", "lycanthropy", "muted", "nimble", "physical resistance", "psychic resistance",
-						"quickened", "rot", "shrunk", "transformed", "truesight",
+						"estranged", "fearless", "fire resistance", "fixated", "frenzied", "frightened",
+						"frozen", "grappled", "guarded", "halted", "hastened", "hard to move", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
+						"incapacitated", "inconspicuous", "inspired", "invincible",
+						"isolated", "lightweight", "leeched", "lured", "lycanthropy", "muted", "nimble", "poison resistance", "physical resistance", "psychic resistance",
+						"quickened", "rot", "shrunk", "total resistance", "transformed", "truesight",
 						"spurred to action", "spurred to movement", "staggered", "poisoned", 
 						"prone", "slowed", "stunned", "weakened", "vulnerable"]
 					}

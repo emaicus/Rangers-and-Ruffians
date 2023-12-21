@@ -66,8 +66,9 @@ class RnRClass():
   #     serial["path_to_image"] = image_path
   #   return serial
   
-  def get_markdown(self):
-    class_text = f'## {self.name}  \n'
+  def get_markdown(self, level=None):
+    class_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    ability_level = None if level is None else level + 1
     
     for section in self.handbook:
       if section['display_title']:
@@ -87,14 +88,14 @@ class RnRClass():
 
     class_text += "## Abilities  \n"
     for ability in sorted(self.abilities, key=lambda a: a.name):
-      class_text += ability.get_markdown()
+      class_text += ability.get_markdown(ability_level)
     class_text+= '  \n'
 
     class_text += "## Spells  \n"
     for tier, spells in self.spells.items():
       class_text += f"### {tier}  \n"
       for spell in spells:
-        class_text += f'{spell.get_markdown()}  \n'
+        class_text += f'{spell.get_markdown(ability_level)}  \n'
       class_text += '  \n'
     class_text+= '  \n'
 

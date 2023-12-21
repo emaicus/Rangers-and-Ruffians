@@ -1,18 +1,3 @@
-
-# Druid {'all_tiers': 'transformed'}
-# Cleric {'all_tiers': 'Celestial Guardian'}
-# Wizard {'tier_1': 'Lesser Slime', 'tier_2': 'Greater Slime', 'tier_3': 'Black Slime'}
-# Wizard {'tier_1': 'Arcane Construct', 'tier_2': 'Clockwork Soldier', 'tier_3': 'Clockwork Knight'}
-# Wizard {'tier_2': 'firebird', 'tier_3': 'phoneix'}
-
-# Warlock {'all_tiers': 'Familiar'}
-# Warlock {'tier_1': 'Undead Thrall', 'tier_2': 'Greater Undead Thrall', 'tier_3': 'Undead Champion'}
-# Warlock {'all_tiers': 'Eye of Uriel'}
-# Warlock {'tier_2': 'Pit Fiend', 'tier_3': 'Pronged Devil'}
-# Warlock {'all_tiers': 'Elder God'}
-# Warlock {'all_tiers': 'Eldritch Vessel -- give it cannons'}
-
-
 # Tier 1
 # | Minion            | Expected Health                      | 21   | 36   |
 # | Minion            | Expected Evasiveness                 | 10   | 11   |
@@ -58,444 +43,1795 @@
 # | Saving Throw      | Saving Throw                         | 3    | 3    |
 
 
-# Druid {'tier_1': 'Elemental Spark', 'tier_2': 'Elemental', 'tier_3': 'Force of Nature'}
-# Druid {'all_tiers': 'Werewolf'}
-# Druid {'tier_2': 'Dire Bear', 'tier_3': 'Ursa'}
+# Cleric {'all_tiers': 'Celestial Guardian'}
+# Druid - 3 spiders, 3 Birds, 3 fish
+# 25 / 37
 
-- name: Test Gobbo
-  type: Minion
-  tier: Tier 1
-  health: 20
-  evasion: 12
-  speed: 
-    base_speed: 30
-  stat_bonus: 1
-  actions_per_turn: 1
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Pokey Stick
-      damage: 1d4
-      description: "Stick them with the pointy end!"
-      effects: null
-      range: touch 
-- name: Swarm
-  type: Minion
-  tier: Tier 1
-  health: 20
-  evasion: 10
-  speed:
-    base_speed: 25 
-  stat_bonus: 0
-  actions_per_turn: 1
-  size: 10
-  passive:
-    - name: Freedom of Movement
-      type: passive buff
-      duration: passive
-      range: self
-      description: "The swarm is able to move freely throughout the battlefield."
-      effect:
-        type: buff
-        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
-        conditions:
-          - custom
-        save: null
-    - name: "Toe Nibbler"
-      type: passive damage
-      duration: passive 
-      range: touch
-      passive_damage_source: true
-      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
-      monster_damage:
-        damage_type: "piercing"
-        damage: 1d4
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Vicious Consumption
-      range: touch 
-      damage: 1d4
-      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
-      effects:
-        type: "debuff"
-        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
-        conditions:
-          - distracted
-        save: null
-- name: Greater Swarm
-  type: Minion
-  tier: Tier 2
-  health: 43
-  evasion: 12
-  speed:
-    base_speed: 25 
-  stat_bonus: 4
-  actions_per_turn: 1
-  size: 10
-  passive:
-    - name: Freedom of Movement
-      type: passive buff
-      duration: passive
-      range: self
-      description: "The swarm is able to move freely throughout the battlefield."
-      effect:
-        type: buff
-        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
-        conditions:
-          - custom
-        save: null
-    - name: "Great Chomps"
-      type: passive damage
-      duration: passive 
-      range: touch
-      passive_damage_source: true
-      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
-      monster_damage:
-        damage_type: "piercing"
-        damage: 2d6
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Vicious Consumption
-      range: touch 
-      damage: 1d4
-      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
-      monster_damage:
-        damage_type: piercing
-        damge: 4d6
-      effects:
-        type: "debuff"
-        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
-        conditions:
-          - distracted
-        save: null
-- name: Zounds
-  type: Minion
-  tier: Tier 3
-  health: 60
-  evasion: 13
-  speed:
-    base_speed: 25 
-  stat_bonus: 7
-  actions_per_turn: 2
-  size: 15
-  passive:
-    - name: Freedom of Movement
-      type: passive buff
-      duration: passive
-      range: self
-      description: "The swarm is able to move freely throughout the battlefield."
-      effect:
-        type: buff
-        description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
-        conditions:
-          - custom
-        save: null
-    - name: "Great Chomps"
-      type: passive damage
-      duration: passive 
-      range: touch
-      passive_damage_source: true
-      description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
-      monster_damage:
-        damage_type: "piercing"
-        damage: 4d6
-  moveset:
-    - attacks_made: 1
-      limit: 2
-      name: Vicious Consumption
-      range: touch 
-      description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
-      monster_damage:
-        damage_type: piercing
-        damge: 4d6
-      effects:
-        type: "debuff"
-        description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
-        conditions:
-          - distracted
-        save: null
-- name: Invisible Servant
-  type: Minion
-  tier: Tier 1
-  health: 10
-  evasion: 12
-  speed: 
-    base_speed: 25
-  passive:
-    - name: Invisibility
-      type: passive buff
-      duration: passive
-      range: self
-      description: ""
-      effect:
-        type: buff
-        description: ""
-        conditions:
-          - invisible
-        save: null
-  stat_bonus: 1
-  actions_per_turn: 1
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Hamper
-      damage: 0
-      description: "The Invisible Servant grabs at an enemy, attempting to hamper them."
-      effects: 
-        - type: debuff 
-          description: "They must make a spell power saving throw or be Hindered."
-          conditions: 
-            - Hindered
-          save: null
-      range: touch 
-- name: Winged Steed
-  type: Minion
-  tier: Tier 3
-  health: 60
-  evasion: 13
-  speed: 
-    flying_speed: 120
-  stat_bonus: 3
-  actions_per_turn: 0
-  size: 5
-  moveset: null
-- name: Tamberdoodle's Hand
-  type: Heavy
-  tier: Tier 2
-  health: 250
-  evasiveness: 12
-  speed: 
-    flying: 30
-  stat_bonus: 5
-  actions_per_turn: 1
-  size: 10
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Grab
-      duration: instantaneous
-      damage: 4d6
-      range: touch
-      description: "The hand sweeps towards an enemy in an attempt to grab them."
-      effect: 
-        type: debuff
-        description: "The target must make a spell power save or be Grappled."
-        conditions: 
-          - grappled
-        save: null
-    - attacks_made: 1
-      limit: 1
-      name: Slam
-      range: touch
-      duration: instantaneous
-      damage: 6d6
-      description: "The hand balls into a fist and lashes out an a foe."
-    - attacks_made: 1
-      limit: 1
-      name: Toss
-      range: 30
-      duration: instantaneous
-      description: "If the hand is adjacent to an ally or is grappling a foe, it can toss them as an action. If it is a foe, they take damage."
-      damage: 4d6
-- name: Spectral Guardian
-  type: Minion
-  tier: Tier 3
-  health: 66
-  evasion: 14
-  speed: 
-    base_speed: 30
-  stat_bonus: 5
-  actions_per_turn: 2
-  size: 5
-  passive:
-    - name: Spectral Movement
-      type: utility
-      duration: passive
-      range: self
-      description: "When the spectral guardian moves, it vanishes and then instantly appears at its destination.
-                    The spectral guardian does not provoke exposed attacks."
-  moveset:
-    - attacks_made: 1
-      limit: 2
-- name: Treeling
-  type: Minion
-  tier: Tier 1
-  health: 24
-  evasion: 10
-  speed: 
-    base_speed: 25
-  stat_bonus: 2
-  actions_per_turn: 2
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Swiping Claw
-      damage: 1d6
-      description: "The treeling takes a swipe at its foe with hardened, spearlike fingers."
-      effects: null
-      range: touch 
-- name: Sap Knight
-  type: Minion
-  tier: Tier 2
-  health: 44
-  evasion: 12
-  passive: 
-    -   name: "Shield"
-        type: buff 
-        cost: 0
-        range: self
-        description: "The sap knight carries a shield of oak."
-        effect:
-          type: buff
-          description: "It is considered to be Shielded."
-          conditions: 
-            - shielded
-          save: null
-  speed: 
-    base_speed: 25
-  stat_bonus: 5
-  actions_per_turn: 2
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Sap Strike
-      damage: 2d6
-      description: "As the knight slashes an enemy with its sword, strands of sticky sap flow over them."
-      effects: 
-        type: debuff
-        description: "They must make a spell power save of be Hindered."
-        conditions:
-          - hindered
-        save: null
-      range: touch 
-- name: Woad Warrior
-  type: Minion
-  tier: Tier 3
-  health: 60
-  evasion: 13
-  passive: 
-    -   name: "Shield"
-        type: buff 
-        cost: 0
-        range: self
-        description: "The woad warrior carries a wall shield of Ironwood."
-        effect:
-          type: buff
-          description: "It is immune to ranged attacks from the front, and gains +3 evasion while it is holding the shield."
-          conditions: 
-            - custom
-          save: null
-  speed: 
-    base_speed: 25
-  stat_bonus: 5
-  actions_per_turn: 2
-  size: 5
-  moveset:
-    - attacks_made: 2
-      limit: 1
-      name: Furious Strike
-      damage: 2d6
-      description: "The woad warrior makes two furious strikes against it's foe."
-      effects: 
-        type: debuff
-        description: "They must make a spell power save of be Hindered."
-        conditions:
-          - hindered
-        save: null
-      range: touch 
-    - attacks_made: 1
-      name: Heavy Blow
-      damage: 3d6
-      description: "The woad warrior makes a slash through the air which is so heavy that it cuts everything in a fifteen foot arc before it."
-      effect: null
-      range: 15 
-    - attacks_made: 1
-      name: Shield Bash
-      damage: 4d4
-      description: "The woad warrior slams its shield into an enemy with its shield."
-      effect: 
-        type: debuff
-        description: "The target must make a spell power save or be Shoved."
-        custom:
-          - shoved 
-        save: null
-      range: 15 
-- name: Elemental Spark
-  type: Minion
-  tier: Tier 1
-  health: 24
-  evasion: 11
-  speed: 
-    base_speed: 25
-  passive: 
-    - name: Elemental Affinity
-      type: utility
-      range: self
-      duration: passive
-      cost: 0
-      description: "When an Elemental comes into existence its creator may choose its
-                    elemental affinity from fire, ice, water, and air. All of the 
-                    elemental's damage is of that type, and it has the associated resistance."
-  stat_bonus: 2
-  actions_per_turn: 1
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Elemental Burst
-      range: self
-      radius: 5
-      damage: 1d4
-      description: "With a flash of energy, the Elemental Spark makes an attack against all creatures adjacent to them."
-      effects: null
-- name: Elemental
-  type: Minion
-  tier: Tier 1
-  health: 45
-  evasion: 12
-  speed: 
-    base_speed: 25
-  passive:
-    - name: Elemental Affinity
-      type: utility
-      range: self
-      duration: passive
-      cost: 0
-      description: "When an Elemental comes into existence its creator may choose its
-                    elemental affinity from fire, ice, water, and air. All of the 
-                    elemental's damage is of that type, and it has the associated resistance."
-  stat_bonus: 4
-  actions_per_turn: 1
-  size: 5
-  moveset:
-    - attacks_made: 1
-      limit: 1
-      name: Elemental Blaze
-      range: self
-      radius: 5
-      damage: 2d6
-      description: "With a flash of energy, the Elemental makes an attack against all creatures adjacent to them."
-    - attacks_made: 2
-      limit: 1
-      name: Elemental Strike
-      range: self
-      radius: 5
-      damage: 2d6
-      description: "The Elemental makes two strikes in rapid succession against its foe."
-      effect:
-        type: debuff
-        description: "They must make a spell power save or be Burned if it has fire affinity, 
-                      Hindered if it has ice affinity, Knocked Back if it has water affinity
-                      or Hoisted if it has air affinity."
-        conditions:
-          - burned
-          - hindered
-          - knocked back
-          - hoisted
-        save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
+-   name: Swarm
+    metadata:
+        monster_class: Beast
+        monster_family: swarm
+        type: Minion
+        tier: Tier 1
+    summons:
+        wildshape: false
+    stats:
+        health: 20
+        evasion: 10
+        speed:
+            Base Speed: 25 
+        stat_bonus: 0
+        size: 10
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Freedom of Movement
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "The swarm is able to move freely throughout the battlefield."
+                effect:
+                    type: buff
+                    description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+                    conditions:
+                      - custom
+                    save: null
+            -   name: "Toe Nibbler"
+                type: damage
+                cost: 0
+                duration: passive 
+                range: touch
+                passive_damage_source: true
+                description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+                damage_scaling:
+                    damage_type: "piercing"
+                    all_tiers: 1d4
+        combat_actions:   
+            -   name: Vicious Consumption
+                attacks_made: 1
+                limit: null
+                type: combat option
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 1d4
+                description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
+                effect:
+                    type: "debuff"
+                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    conditions:
+                        - distracted
+                    save: null
+-   name: Greater Swarm
+    metadata:
+        monster_class: Beast
+        monster_family: Swarm
+        type: Minion
+        tier: Tier 2    
+    summons:
+        wildshape: false  
+    stats:
+        health: 43
+        evasion: 12
+        speed:
+            Base Speed: 25 
+        stat_bonus: 4
+        size: 10
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Freedom of Movement
+                cost: 0
+                type: buff
+                duration: passive
+                range: self
+                description: "The swarm is able to move freely throughout the battlefield."
+                effect:
+                    type: buff
+                    description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+                    conditions:
+                        - custom
+                    save: null
+            -   name: "Great Chomps"
+                type: damage
+                cost: 0
+                duration: passive 
+                range: touch
+                passive_damage_source: true
+                description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+                damage_scaling:
+                    damage_type: "piercing"
+                    all_tiers: 2d6
+        combat_actions:
+            -   name: Vicious Consumption
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                duration: instantaneous
+                range: touch 
+                description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows over them."
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 4d6
+                effect:
+                    type: "debuff"
+                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    conditions:
+                        - distracted
+                    save: null
+-   name: Zounds
+    metadata:
+        monster_class: Beast
+        monster_family: swarm
+        type: Minion
+        tier: Tier 3
+    summons:
+        wildshape: false     
+    stats:
+        health: 60
+        evasion: 13
+        speed:
+            Base Speed: 25 
+        stat_bonus: 7
+        size: 15
+    moveset:
+        actions_per_turn: 2 
+        passive_abilities:
+            -   name: Freedom of Movement
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "The swarm is able to move freely throughout the battlefield."
+                effect:
+                    type: buff
+                    description: "It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks."
+                    conditions:
+                        - custom
+                    save: null
+            -   name: "Great Chomps"
+                type: damage
+                cost: 0
+                duration: passive 
+                range: touch
+                passive_damage_source: true
+                description: "Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels."
+                damage_scaling:
+                    damage_type: "piercing"
+                    all_tiers: 4d6
+        combat_actions:
+            -   name: Vicious Consumption
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                range: touch 
+                duration: instantaneous
+                description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 4d6
+                effect:
+                    type: "debuff"
+                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    conditions:
+                        - distracted
+                    save: null
+-   name: Tamberdoodle's Hand
+    metadata:
+        monster_class: Arcane Construct
+        type: Heavy
+        tier: Tier 2
+    summons:
+        wildshape: false
+    stats:
+        health: 250
+        evasion: 12
+        speed: 
+            Flying Speed: 30
+        stat_bonus: 5
+        size: 10
+    moveset:
+        actions_per_turn: 1
+        combat_actions:
+            -   name: Grab
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                range: touch
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 4d6
+                description: "The hand sweeps towards an enemy in an attempt to grab them."
+                effect: 
+                    type: debuff
+                    description: "The target must make a spell power save or be Grappled."
+                    conditions: 
+                      - grappled
+                    save: null
+            -   name: Slam
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 6d6
+                description: "The hand balls into a fist and lashes out an a foe."
+            -   name: Toss
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0 
+                range: 30
+                duration: instantaneous
+                description: "If the hand is adjacent to an ally or is grappling a foe, it can toss them as an action. If it is a foe, they and anyone they hit take damage."
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 4d6
+-   name: Treeling
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Treeling"
+        type: Minion
+        tier: Tier 1
+    summons:
+        wildshape: false
+    stats:
+        health: 24
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        combat_actions:
+            -   name: Swiping Claw
+                attacks_made: 1
+                limit: null
+                type: combat option
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 1d6
+                description: "The treeling takes a swipe at its foe with hardened, spearlike fingers."
+-   name: Sap Knight
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Treeling"
+        type: Minion
+        tier: Tier 2
+    summons:
+        wildshape: false
+    stats:
+        health: 44
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities:
+            -   name: "Oaken Shield"
+                type: buff 
+                cost: 0
+                range: self
+                duration: instantaneous
+                description: "The sap knight carries a shield of oak."
+                effect:
+                  type: buff
+                  description: "So long as it wields it, it is considered Guarded."
+                  conditions: 
+                    - guarded
+                  save: null
+        combat_actions:        
+            -   name: Sap Strike
+                type: combat option 
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                attacks_made: 1
+                limit: null
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "As the knight slashes an enemy with its sword, strands of sticky sap flow over them."
+                effect: 
+                    type: debuff
+                    description: "They must make a spell power save of be Hindered."
+                    conditions:
+                        - hindered
+                    save: null
+-   name: Woad Warrior
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Treeling"
+        type: Minion
+        tier: Tier 3
+    summons:
+        wildshape: false
+    stats:
+        health: 60
+        evasion: 13
+        speed: 
+            Base Speed: 25
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: "Shield"
+                type: buff 
+                cost: 0
+                range: self
+                duration: passive 
+                description: "The woad warrior carries a wall shield of Ironwood."
+                effect:
+                    type: buff
+                    description: "It is immune to ranged attacks from the front, and gains +3 evasion while it is holding the shield."
+                    conditions: 
+                        - custom
+                    save: null
+        combat_actions:
+            -   name: "Furious Strike"
+                attacks_made: 2
+                type: combat option
+                limit: null
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The woad warrior makes two furious strikes against it's foe."
+                effect: 
+                    type: debuff
+                    description: "They must make a spell power save of be Hindered."
+                    conditions:
+                        - hindered
+                    save: null 
+            -   name: "Heavy Blow"
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                range: 15 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 3d6
+                description: "The woad warrior makes a slash through the air which is so heavy that it cuts everything in a fifteen foot arc before it."
+            -   name: Shield Bash
+                attacks_made: 1
+                type: combat option
+                limit: null
+                cost: 0
+                range: self 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 4d4
+                description: "The woad warrior slams its shield into an enemy with its shield."
+                effect: 
+                    type: debuff
+                    description: "The target must make a spell power save or be pushed back fifteen feet. If they strike a solid object, they take 1d6 damage. If they strike another creature, that creature takes the same amount of damage."
+                    conditions:
+                        - custom 
+                    save: null
+-   name: Elemental Spark
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Elemental"
+        type: Minion
+        tier: Tier 1
+    summons:
+        wildshape: false
+    stats:
+        health: 24
+        evasion: 11
+        speed: 
+            Base Speed: 25  
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Elemental Affinity
+                type: utility
+                range: self
+                duration: passive
+                cost: 0
+                description: "When an Elemental comes into existence its creator may choose its
+                            elemental affinity from fire, ice, water, and air. All of the 
+                            elemental's damage is of that type, and it has the associated resistance."
+        combat_actions:
+            -   attacks_made: 1
+                limit: null
+                name: Elemental Burst
+                type: combat option
+                cost: 0
+                range: self
+                radius: 10
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 1d4
+                description: "With a flash of energy, the Elemental Spark makes an attack against all creatures adjacent to them."
+-   name: Elemental
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Elemental"
+        type: Minion
+        tier: Tier 2
+    summons:
+        wildshape: false
+    stats:
+        health: 45
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Elemental Affinity
+                type: utility
+                range: self
+                duration: passive
+                cost: 0
+                description: "When an Elemental comes into existence its creator may choose its
+                            elemental affinity from fire, ice, water, and air. All of the 
+                            elemental's damage is of that type, and it has the associated resistance."
+        combat_actions:
+            -   name: "Elemental Blaze"
+                attacks_made: 1
+                type: combat option
+                limit: null
+                cost: 0
+                range: self
+                radius: 10
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 2d6
+                description: "With a flash of energy, the Elemental makes an attack against all creatures adjacent to them."
+            -   name: "Elemental Strike"
+                attacks_made: 2
+                type: combat option
+                limit: null
+                cost: 0
+                range: touch
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 2d6
+                description: "The Elemental makes two strikes in rapid succession against its foe."
+                effect:
+                    type: debuff
+                    description: "They must make a spell power save or be Burned if it has fire affinity, 
+                                  Hindered if it has ice affinity, pushed back 15 feet if it has water affinity
+                                  or Hoisted if it has air affinity."
+                    conditions:
+                        - burning
+                        - hindered
+                        - hoisted
+                    save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
+-   name: Greater Elemental
+    metadata:
+        monster_class: Arcane Construct
+        monster_family: "Elemental"
+        type: Minion
+        tier: Tier 3
+    summons:
+        wildshape: false 
+    stats:
+        health: 65
+        evasion: 13
+        speed: 
+            Base Speed: 25
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Elemental Affinity
+                type: utility
+                range: self
+                duration: passive
+                cost: 0
+                description: "When an Elemental comes into existence its creator may choose its
+                            elemental affinity from fire, ice, water, and air. All of the 
+                            elemental's damage is of that type, and it has the associated resistance."
+        combat_actions:
+            -   name: Elemental Fury
+                attacks_made: 1
+                type: combat option
+                cost: 0
+                limit: null
+                range: self
+                radius: 10
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 4d6
+                description: "With blazing energy, the Elemental makes an attack against all creatures adjacent to them."
+            -   name: Elemental Strike
+                attacks_made: 2
+                limit: null
+                type: combat option
+                cost: 0
+                range: touch
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 4d6
+                description: "The Elemental makes two strikes in rapid succession against its foe."
+                effect:
+                    type: debuff
+                    description: "They must make a spell power save or be Burned if it has fire affinity, 
+                                  Hindered if it has ice affinity, pushed back 15 feet if it has water affinity
+                                  or Hoisted if it has air affinity."
+                    conditions:
+                      - burning
+                      - hindered
+                      - hoisted
+                    save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
+-   name: Young Dire Bear
+    metadata: 
+        monster_class: Beast
+        monster_family: Dire Bear
+        type: Heavy
+        tier: Tier 1
+    summons: 
+        wildshape: true
+    stats:
+        health: 74
+        evasion: 8
+        speed: 
+            Base Speed: 25
+        stat_bonus: 2
+        size: 5        
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Mother Bear
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                effect:
+                    type: buff 
+                    description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
+                    conditions:
+                        - hastened 
+                    save: null
+            -   name: Cold Resistance
+                type: buff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Dire bears have thick hides and warm pelts."
+                effect:
+                    type: buff 
+                    description: "They are Resistant to Cold."
+                    conditions:
+                        - cold resistance
+                    save: null
+        combat_actions:
+            -   name: Claw 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The bear swats at its foe with a massive claw."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be knocked Prone."
+                    conditions:
+                        - prone 
+                    save: null 
+            -   name: Maul 
+                limit: 1
+                attacks_made: 1
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 4d6
+                description: "If a bear's target is prone, they may maul it, thrashing them about with fearsome jaws."
+-   name: Dire Bear
+    metadata: 
+        monster_class: Beast
+        monster_family: Dire Bear
+        type: Heavy
+        tier: Tier 2
+    summons: 
+        wildshape: true
+    stats:
+        health: 140
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Mother Bear
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                effect:
+                    type: buff 
+                    description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
+                    conditions:
+                        - hastened 
+                    save: null
+            -   name: Cold Resistance
+                type: buff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Dire bears have thick hides and warm pelts."
+                effect:
+                    type: buff 
+                    description: "They are Resistant to Cold."
+                    conditions:
+                        - cold resistance
+                    save: null
+        combat_actions: 
+            -   name: Claw
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6              
+                description: "The bear swats at its foe with a massive claw."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be knocked Prone."
+                    conditions:
+                        - prone 
+                    save: null 
+            -   name: Maul 
+                limit: 1
+                attacks_made: 1
+                type: combat option
+                cost: 0 
+                range: touch
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 4d6
+                description: "If a bear's target is prone, they may maul it, thrashing them about with fearsome jaws."
+-   name: Ursa
+    metadata: 
+        monster_class: Beast
+        monster_family: Dire Bear
+        type: Heavy
+        tier: Tier 3
+    summons: 
+        wildshape: true
+    stats:
+        health: 200
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 7
+        size: 10
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Mother Bear
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                effect:
+                    type: buff 
+                    description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
+                    conditions:
+                        - hastened 
+                    save: null
+            -   name: Cold Resistance
+                type: buff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Dire bears have thick hides and warm pelts."
+                effect:
+                    type: buff 
+                    description: "They are Resistant to Cold."
+                    conditions:
+                        - cold resistance
+                    save: null
+        combat_actions:
+            -   name: Claw
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The bear swats at its foe with a massive claw."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be knocked Prone."
+                    conditions:
+                        - prone 
+                    save: null 
+            -   name: Maul 
+                limit: 1
+                attacks_made: 1
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous  
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 8d6
+                description: "If a bear's target is prone, they may maul it, thrashing them about with fearsome jaws."      
+-   name: Lesser Green Slime
+    metadata:
+        monster_class: Slime
+        monster_family: Green Slime
+        type: Minion
+        tier: Tier 1
+    summons: 
+        wildshape: false
+    stats:
+        health: 20
+        evasion: 6
+        speed: 
+            Base Speed: 20
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Gelatinous Form 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Slimes are made of a viscous ooze which displaces when struck."
+                effect:
+                    type: buff 
+                    description: "Martial attacks are of little use against them, as they have Physical Resistance."
+                    conditions:
+                        - physical resistance 
+                    save: null
+            -   name: Distributed Nervous System 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Slimes have no organs or other internal structures as most understand them."
+                effect:
+                    type: buff 
+                    description: "As such, they are not affected by fear, magics, or other conditions like the races of the realms, and are Immune."
+                    conditions:
+                        - immune 
+                    save: null
+            -   name: Corrosive Touch
+                type: damage
+                cost: 0
+                passive_damage_source: true
+                range: self 
+                duration: instantaneous 
+                description: "Slimes are able to move into the same space as the creature's they are trying to devour."
+                damage_scaling:
+                    damage_type: acid 
+                    all_tiers: 2d6
+                effect:
+                    type: debuff 
+                    description: "If a creature begins its turn covered in slime, they take damage. They must then 
+                                  make a spell power save or be Halted. On success, they are instead Hindered for the rest of their turn."
+                    conditions:
+                        - halted 
+                        - hindered 
+                    save: null
+            -   name: Creeping Movement
+                type: utility 
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Slimes move soundlessly, and can creep through spaces the size of a pinhole, though it takes them longer to move through small gaps."
+        combat_actions:
+            -   name: Devouring Slime
+                attacks_made: 1
+                limit: null
+                type: combat option
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: acid
+                    all_tiers: 2d6
+                description: "The green slime oozes up and onto a creature, corroding and eating at them with its acid."
+-   name: Green Slime
+    metadata:
+        monster_class: Slime
+        monster_family: Green Slime
+        type: Minion
+        tier: Tier 2
+    summons: 
+        wildshape: false
+    stats:
+        health: 40
+        evasion: 8
+        speed: 
+            Base Speed: 25
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Gelatinous Form 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Slimes are made of a viscous ooze which displaces when struck."
+                effect:
+                    type: buff 
+                    description: "Martial attacks are of little use against them, as they have Physical Resistance."
+                    conditions:
+                        - physical resistance 
+                    save: null
+            -   name: Distributed Nervous System 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Slimes have no organs or other internal structures as most understand them."
+                effect:
+                    type: buff 
+                    description: "As such, they are not affected by fear, magics, or other conditions like the races of the realms, and are Immune."
+                    conditions:
+                        - immune 
+                    save: null
+            -   name: Greater Corrosive Touch
+                type: damage
+                cost: 0
+                passive_damage_source: true
+                range: self 
+                duration: instantaneous 
+                description: "Slimes are able to move into the same space as the creature's they are trying to devour."
+                damage_scaling:
+                    damage_type: acid 
+                    all_tiers: 4d6
+                effect:
+                    type: debuff 
+                    description: "If a creature begins its turn covered in slime, they take damage. They must then 
+                                  make a spell power save or be Halted. On success, they are instead Hindered for the rest of their turn."
+                    conditions:
+                        - halted 
+                        - hindered 
+                    save: null
+            -   name: Creeping Movement
+                type: utility 
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Slimes move soundlessly, and can creep through spaces the size of a pinhole, though it takes them longer to move through small gaps."
+        combat_actions:
+            -   name: Greater Devouring Slime
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0 
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: acid
+                    all_tiers: 4d6
+                description: "The green slime oozes up and onto a creature, corroding and eating at them with its acid."               
+-   name: Black Slime
+    metadata:
+        monster_class: Slime
+        monster_family: Green Slime
+        type: Minion
+        tier: Tier 3
+    summons:
+        wildshape: false
+    stats:
+        health: 80
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 7
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Greater Gelatinous Form 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Black slimes are terrifyingly resilient against all damage."
+                effect:
+                    type: buff 
+                    description: "They benefit from Total Resistance."
+                    conditions:
+                        - total resistance 
+                    save: null
+            -   name: Distributed Nervous System 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive 
+                description: "Slimes have no organs or other internal structures as most understand them."
+                effect:
+                    type: buff 
+                    description: "As such, they are not affected by fear, magics, or other conditions like the races of the realms, and are Immune."
+                    conditions:
+                        - immune 
+                    save: null
+            -   name: Greater Corrosive Touch
+                type: damage
+                cost: 0
+                passive_damage_source: true
+                range: self 
+                duration: instantaneous 
+                description: "Slimes are able to move into the same space as the creature's they are trying to devour."
+                damage_scaling:
+                    damage_type: acid 
+                    all_tiers: 6d6
+                effect:
+                    type: debuff 
+                    description: "If a creature begins its turn covered in slime, they take damage. They must then 
+                                  make a spell power save or be Halted. On success, they are instead Hindered for the rest of their turn."
+                    conditions:
+                        - halted 
+                        - hindered 
+                    save: null
+            -   name: Creeping Movement
+                type: utility 
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Slimes move soundlessly, and can creep through spaces the size of a pinhole, though it takes them longer to move through small gaps."
+        combat_actions:
+            -   name: Deadly Devouring Slime
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                range: touch  
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: acid
+                    all_tiers: 6d6
+                description: "The black slime oozes up and onto a creature, corroding and eating at them with its acid."
+-   name: Arcane Construct
+    metadata:
+        type: Minion
+        tier: Tier 1
+        monster_class: Arcane Construct 
+        monster_family: Arcane Construct
+    summons:
+        wildshape: false
+    stats:
+        health: 24
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Overdrive 
+                cost: 0
+                type: buff 
+                range: self 
+                duration: concentration 
+                description: "Gears clank and churn and the smell of heated metal fills the air as the construct forces itself into overdrive."
+                effect:
+                    type: buff
+                    description: "For as long as it wishes, the construct is affected by the Hastened condition, but it takes 1d6 damage per turn."
+                    conditions:
+                        - hastened 
+                        - custom 
+                    save: null
+            -   name: Detonate
+                cost: 0 
+                type: combat option
+                range: self 
+                radius: 15
+                duration: instantaneous
+                description: "When the construct reaches zero health, it explodes in a hail of shrapnel. The construct may also choose to self destruct at any time."
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+        combat_actions:
+            -   name: Slashing Strike
+                attacks_made: 1
+                limit: null
+                range: self 
+                duration: instantaneous
+                cost: 0
+                type: combat option
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d4
+                description: "The construct swings at its foe with an arm pronged with bits of sharpened metal."
+            -   name: Self Repair
+                attacks_made: 1
+                limit: 1
+                range: self 
+                duration: instantaneous
+                cost: 0
+                type: healing 
+                damage_scaling:
+                    damage_type: healing 
+                    all_tiers: 2d6
+                description: "In the heat of battle, the construct takes a moment to tend to its wounds, hastily grafting metal or wood over the holes in its frame."
+-   name: Clockwork Soldier
+    metadata:
+        type: Minion
+        tier: Tier 2
+        monster_class: Arcane Construct 
+        monster_family: Arcane Construct
+    summons:
+        wildshape: false
+    stats:
+        health: 46
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Overdrive 
+                cost: 0
+                type: buff 
+                range: self 
+                duration: concentration 
+                description: "Gears clank and churn and the smell of heated metal fills the air as the construct forces itself into overdrive."
+                effect:
+                    type: buff
+                    description: "For as long as it wishes, the construct is affected by the Hastened condition, but it takes 2d6 damage per turn."
+                    conditions:
+                        - hastened 
+                        - custom 
+                    save: null
+            -   name: Detonate
+                cost: 0 
+                type: combat option
+                range: self 
+                radius: 15
+                duration: instantaneous
+                description: "When the construct reaches zero health, it explodes in a hail of shrapnel. The construct may also choose to self destruct at any time."
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+        combat_actions:
+            -   name: Slashing Strike
+                attacks_made: 2
+                limit: null
+                cost: 0
+                type: combat option
+                range: self 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d4
+                description: "The construct swings at its foe with an arm pronged with bits of sharpened metal."
+            -   name: Arcane Slingshot
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                range: 60 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The construct chitters and churns as it quickly lines up and looses a projectile at its target."
+            -   name: Self Repair
+                attacks_made: 1
+                limit: 1
+                cost: 0
+                type: healing 
+                range: self 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: healing 
+                    all_tiers: 3d6
+                description: "In the heat of battle, the construct takes a moment to tend to its wounds, hastily grafting metal or wood over the holes in its frame."
+-   name: Arcane Automaton
+    metadata:
+        type: Minion
+        tier: Tier 3
+        monster_class: Arcane Construct 
+        monster_family: Arcane Construct
+    summons:
+        wildshape: false
+    stats:
+        health: 64
+        evasion: 14
+        speed: 
+            Base Speed: 25
+        stat_bonus: 7
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Overdrive 
+                cost: 0
+                type: buff 
+                range: self 
+                duration: concentration 
+                description: "Gears clank and churn and the smell of heated metal fills the air as the construct forces itself into overdrive."
+                effect:
+                    type: buff
+                    description: "For as long as it wishes, the construct is affected by the Hastened condition, but it takes 2d6 damage per turn."
+                    conditions:
+                        - hastened 
+                        - custom 
+                    save: null
+            -   name: Detonate
+                cost: 0 
+                type: combat option
+                range: self 
+                radius: 15
+                duration: instantaneous
+                description: "When the construct reaches zero health, it explodes in a hail of shrapnel. The construct may also choose to self destruct at any time."
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 6d6
+        combat_actions:
+            -   name: Slashing Strike
+                attacks_made: 2
+                limit: null
+                cost: 0
+                type: combat option
+                range: self 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The construct swings at its foe with an arm pronged with bits of sharpened metal."
+            -   name: Arcane Slingshot
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                range: 60 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The construct chitters and churns as it quickly lines up and looses a projectile at its target."
+            -   name: Self Repair
+                attacks_made: 1
+                limit: 1
+                cost: 0
+                type: healing 
+                range: self 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: healing 
+                    all_tiers: 4d6
+                description: "In the heat of battle, the construct takes a moment to tend to its wounds, hastily grafting metal or wood over the holes in its frame."
+-   name: Lesser Undead Thrall 
+    metadata:
+        type: Minion
+        tier: Tier 1
+        monster_class: Undead 
+        monster_family: Thrall
+    summons:
+        wildshape: false
+    stats:
+        health: 20
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        combat_actions:
+            -   name: Grappling Strike 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option 
+                range: touch 
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 1d6
+                description: "The thrall latches onto its target, gripping tightly as it attempts to drag them to the ground." 
+                effect:
+                    type: debuff 
+                    description: "The creature must make a spell power save or become Grappled by the thrall."
+                    conditions:
+                        - grappled 
+                    save: null 
+            -   name: Gnashing Bite 
+                attacks_made: 1
+                limit: null 
+                type: combat option
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6 
+                description: "If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth."
+-   name: Undead Thrall 
+    metadata:
+        type: Minion
+        tier: Tier 2
+        monster_class: Undead 
+        monster_family: Thrall
+    summons:
+        wildshape: false
+    stats:
+        health: 40
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Blood Frenzy 
+                type: buff 
+                range: self 
+                duration: 3 
+                cost: 0 
+                description: "The scent of blood whips the thrall into a wild frenzy."
+                effect:
+                    type: buff 
+                    description: "As soon as any thrall has made a Gnashing Bite attack against a hostile creature, they all are affected by the Frenzied condition for the ability's duration."
+                    conditions:
+                        - frenzied 
+                    save: null
+        combat_actions:
+            -   name: Grappling Strike 
+                attacks_made: 2
+                limit: null
+                cost: 0
+                type: combat option 
+                range: touch
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 1d8
+                description: "The thrall latches onto its target, gripping tightly as it attempts to drag them to the ground." 
+                effect:
+                    type: debuff 
+                    description: "The creature must make a spell power save or become Grappled by the thrall."
+                    conditions:
+                        - grappled 
+                    save: null 
+            -   name: Gnashing Bite 
+                attacks_made: 1 
+                limit: null 
+                cost: 0
+                type: combat option 
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d8 
+                description: "If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth."
+                effect:
+                    type: debuff 
+                    description: "The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot."
+                    conditions:
+                        - rot 
+                    save: null
+-   name: Greater Undead Thrall 
+    metadata:
+        type: Minion
+        tier: Tier 3
+        monster_class: Undead 
+        monster_family: Thrall
+    summons:
+        wildshape: false
+    stats:
+        health: 40
+        evasion: 14
+        speed: 
+            Base Speed: 25
+        stat_bonus: 7
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Blood Frenzy 
+                type: buff 
+                cost: 0
+                range: self 
+                duration: 3  
+                description: "The scent of blood whips the thrall into a wild frenzy."
+                effect:
+                    type: buff 
+                    description: "As soon as any thrall has made a Gnashing Bite attack against a hostile creature, they all are affected by the Frenzied condition for the ability's duration."
+                    conditions:
+                        - frenzied 
+                    save: null
+        combat_actions:
+            -   name: Grappling Strike   
+                attacks_made: 2
+                limit: null
+                type: combat option 
+                cost: 0
+                range: touch 
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: blunt 
+                    all_tiers: 2d8
+                description: "The thrall latches onto its target, gripping tightly as it attempts to drag them to the ground." 
+                effect:
+                    type: debuff 
+                    description: "The creature must make a spell power save or become Grappled by the thrall."
+                    conditions:
+                        - grappled 
+                    save: null 
+            -   name: Gnashing Bite 
+                attacks_made: null 
+                limit: null 
+                type: combat option 
+                cost: 0
+                range: touch 
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 8d6 
+                description: "If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth."  
+                effect:
+                    type: debuff 
+                    description: "The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot."
+                    conditions:
+                        - rot 
+                    save: null
+-   name: Forest Wolf 
+    metadata: 
+        monster_class: Beast
+        monster_family: Wolf
+        type: Minion
+        tier: Tier 1
+    summons: 
+        wildshape: true
+    stats:
+        health: 25
+        evasion: 11
+        speed: 
+            Base Speed: 35
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Pack Strength
+                type: buff 
+                cost: 0
+                range: self 
+                duration: passive
+                passive_damage_source: true 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 1d6
+                description: "Wolves hunt better in packs."
+                effect:
+                    type: buff 
+                    description: "If two wolves are attacking the same target, they deal additional damage on each strike."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Fear of Fire
+                type: debuff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Wolves have a natural fear of fire."
+                effect:
+                    type: buff 
+                    description: "If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened."
+                    conditions:
+                        - frightened
+                    save: This does not affect sentient creatures in wolf form.
+        combat_actions:
+            -   name: Grappling Bite
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The wolf tears at its foe with sharp teeth."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered on their next turn."
+                    conditions:
+                        - hindered 
+                    save: null
+            -   name: Howl
+                limit: 1 
+                attacks_made: 1
+                type: debuff 
+                cost: 0
+                range: self 
+                radius: 120
+                duration: instantaneous
+                description: "The wolf lets a fearsome howl."
+                effect:
+                    type: debuff 
+                    description: "All creatures within the howl's radius must make a spell power save or be Frightened."
+                    conditions:
+                        - frightened 
+                    save: Affected creatures may repeat their save at the end of each of their turns.
+-   name: Dire Wolf 
+    metadata: 
+        monster_class: Beast
+        monster_family: Wolf
+        type: Minion
+        tier: Tier 2
+    summons: 
+        wildshape: true
+    stats:
+        health: 50
+        evasion: 12
+        speed: 
+            Base Speed: 35
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Pack Strength
+                type: buff 
+                duration: passive
+                cost: 0
+                passive_damage_source: true 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                range: self 
+                description: "Wolves hunt better in packs."
+                effect:
+                    type: buff 
+                    description: "If two wolves are attacking the same target, they deal additional damage on each strike."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Fear of Fire
+                type: debuff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Wolves have a natural fear of fire."
+                effect:
+                    type: buff 
+                    description: "If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened."
+                    conditions:
+                        - frightened
+                    save: This does not affect sentient creatures in wolf form.
+        combat_actions:
+            -   name: Grappling Bite 
+                attacks_made: 1
+                limit: null
+                type: combat option
+                cost: 0
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The wolf tears at its foe with sharp teeth."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered on their next turn."
+                    conditions:
+                        - hindered 
+                    save: null
+            -   name: Howl
+                limit: 1 
+                attacks_made: 1
+                type: debuff 
+                cost: 0
+                range: self 
+                duration: instantaneous
+                radius: 120
+                description: "The wolf lets a fearsome howl."
+                effect:
+                    type: debuff 
+                    description: "All creatures within the howl's radius must make a spell power save or be Frightened."
+                    conditions:
+                        - frightened 
+                    save: Affected creatures may repeat their save at the end of each of their turns.
+-   name: Elder Wolf 
+    metadata: 
+        monster_class: Beast
+        monster_family: Wolf
+        type: Heavy
+        tier: Tier 3
+    summons: 
+        wildshape: true
+    stats:
+        health: 140
+        evasion: 13
+        speed: 
+            Base Speed: 45
+        stat_bonus: 7
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities:
+            -   name: Pack Strength
+                type: buff 
+                cost: 0
+                duration: passive
+                passive_damage_source: true 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                range: self 
+                description: "Wolves hunt better in packs."
+                effect:
+                    type: buff 
+                    description: "If two wolves are attacking the same target, they deal additional damage on each strike."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Fear of Fire
+                type: debuff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Wolves have a natural fear of fire."
+                effect:
+                    type: buff 
+                    description: "If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened."
+                    conditions:
+                        - frightened
+                    save: This does not affect sentient creatures in wolf form.
+        combat_actions:
+            -   name: Grappling Bite
+                attacks_made: 1
+                limit: null
+                type: combat option
+                cost: 0
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The wolf tears at its foe with sharp teeth."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered on their next turn."
+                    conditions:
+                        - hindered 
+                    save: null
+            -   name: Howl
+                attacks_made: 1
+                limit: 1 
+                cost: 0
+                type: debuff 
+                range: self
+                duration: instantaneous
+                radius: 120
+                cost: 0 
+                description: "The wolf lets a fearsome howl."
+                effect:
+                    type: debuff 
+                    description: "All creatures within the howl's radius must make a spell power save or be Frightened."
+                    conditions:
+                        - frightened 
+                    save: Affected creatures may repeat their save at the end of each of their turns.
+-   name: Werewolf
+    metadata: 
+        monster_class: Beast
+        monster_family: Wolf
+        type: Heavy
+        tier: Tier 2
+    summons: 
+        wildshape: false
+    stats:
+        health: 155
+        evasion: 13
+        speed: 
+            Base Speed: 35
+        stat_bonus: 4
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities:
+            -   name: Pack Strength
+                type: buff
+                cost: 0
+                duration: passive
+                passive_damage_source: true 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                range: self 
+                description: "Wolves hunt better in packs."
+                effect:
+                    type: buff 
+                    description: "If two wolves are attacking the same target, they deal additional damage on each strike."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Fear of Fire
+                type: debuff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Wolves have a natural fear of fire."
+                effect:
+                    type: buff 
+                    description: "If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened."
+                    conditions:
+                        - frightened
+                    save: This does not affect a werewolf that has retained its humanity.
+            -   name: Vulnerable to Silver
+                type: debuff
+                cost: 0
+                range: self 
+                duration: passive
+                description: "Werewolves are weak against silver."
+                effect:
+                    type: buff 
+                    description: "Attacks made with silvered weapons deal an additional 2d6 damage to a werewolf."
+                    conditions:
+                        - custom
+                    save: null
+        combat_actions:
+            -   name: Grappling Bite
+                attacks_made: 1
+                limit: null
+                type: combat option 
+                cost: 0
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                duration: instantaneous       
+                range: touch
+                description: "The werewolf tears at its foe with sharp teeth."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered on their next turn."
+                    conditions:
+                        - hindered 
+                    save: null
+            -   name: Howl
+                limit: 1
+                attacks_made: 1
+                type: debuff 
+                cost: 0
+                range: self 
+                radius: 120
+                duration: instantaneous
+                description: "The werewolf lets a fearsome howl."
+                effect:
+                    type: debuff 
+                    description: "All creatures within the howl's radius must make a spell power save or be Frightened."
+                    conditions:
+                        - frightened 
+                    save: Affected creatures may repeat their save at the end of each of their turns.
+#- name: Spectral Guardian # NOT FINISHED
+#  transformed: false
+#  type: Minion
+#  tier: Tier 3
+#  health: 66
+#  evasion: 14
+#  speed: 
+#    Base Speed: 30
+#  stat_bonus: 5
+#  actions_per_turn: 2
+#  size: 5
+#  passive:
+#    - name: Spectral Movement
+#      type: utility
+#      duration: passive
+#      range: self
+#      description: "When the spectral guardian moves, it vanishes and then instantly appears at its destination.
+#                    The spectral guardian does not provoke exposed attacks."
+#  moveset:
+#    - attacks_made: 1
+#      limit: 2
+#halp!
+      
+      
+      
+      
+#- name: Invisible Servant
+#  transformed: false
+#  type: Minion
+#  tier: Tier 1
+#  health: 10
+#  evasion: 12
+#  speed: 
+#    Base Speed: 25
+#  passive:
+#    - name: Invisibility
+#      type: passive
+#      duration: passive
+#      range: self
+#      description: ""
+#      effect:
+#        type: buff
+#        description: ""
+#        conditions:
+#          - invisible
+#        save: null
+#  stat_bonus: 1
+#  actions_per_turn: 1
+#  size: 5
+#  moveset:
+#    - attacks_made: 1
+#      limit: null
+#      name: Hamper
+#      description: "The Invisible Servant grabs at an enemy, attempting to hamper them."
+#      effect: 
+#        - type: debuff 
+#          description: "They must make a spell power saving throw or be Hindered."
+#          conditions: 
+#            - Hindered
+#          save: null
+#      range: touch 
+
+#- name: Winged Steed
+#  transformed: false
+#  type: Minion
+#  tier: Tier 3
+#  health: 60
+#  evasion: 13
+#  speed: 
+#    flying_speed: 120
+#  stat_bonus: 3
+#  actions_per_turn: 0
+#  size: 5
+#  moveset: null  
+      
+      
+      
+      
+      
+      

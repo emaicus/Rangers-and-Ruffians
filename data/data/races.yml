@@ -2,41 +2,72 @@
     health_dice: 1d6
     base_movement: 30
     abilities:
-        -   name: Low-Light Vision
+        -   name: Darkvision
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "So long as there is a little light, you can see. However, colors are muted."
+            description: "You have incredible night vision."
+            effect:
+                type: buff 
+                description: "You are permanently under the effects of Darvision."
+                conditions:
+                    - darkvision 
+                save: null
         -   name: They're Retractable 
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "You use your sharp claws when attacking hand-to-hand. Increase the dice of your hand to hand attacks by one."
+            description: "You have razor sharp, retractable claws."
+            effect:
+                type: buff 
+                description: "Whenever you make an unarmed attack, increase the damage dice by one step."
+                conditions: 
+                    - custom 
+                save: null
         -   name: Loose Skin
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "You are naturally difficult to grab. Add your expertise to any checks made to physically restrain you."
+            description: "You are able to twist and turn to free yourself when grabbed."
+            effect:
+                type: buff 
+                description: "Add your expertise to any checks or saves against being physically restrained."
+                conditions:
+                    - custom 
+                save: null
         -   name: Fear of Water
             type: debuff
             range: self
             duration: passive
             cost: 0
-            description: Take disadvantage on all checks when you are soaked through.
-        -   name: Lithe and Dextrous
+            description: "You have a deep distaste for be being wet."
+            effect:
+                type: debuff 
+                description: "Take disadvantage on all checks when you are soaked through."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Mantle
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "Add your expertise to checks made to climb or fall. When falling, take half damage."
+            description: "You are able to easily scale to great heights."
+            effect:
+                type: buff
+                description: "Add your expertise to checks made to climb."
+                conditions:
+                    - custom 
+                save: null 
+            #When falling, take half damage."
     handbook:
         introduction:
             - "Catterwol, sometimes called catfolk, are a bipedal race that has retained the grace of their feline ancestors. 
                 With sharp claws and tails to help them keep their balance, catterwol easily leap from tree to tree or rooftop
-                to rooftop. While some “wild” catterwol live in small tribal units, others have made their home in the great
+                to rooftop. While some \"wild\" catterwol live in small tribal units, others have made their home in the great
                 cities of the realms. Wild catterwol tend to have short, bristly fur in dark colors while city-catterwol often
                 have long, soft coats."
             - "By nature, Catterwol are secluded and keep their own council. They are native to tropical jungles and arid 
@@ -58,7 +89,7 @@
             title: "People who don't know you might assume"
             options:
                 - "That you are unpleasant. Because catterwol don't mirror emotions, it can be hard to determine what they are thinking."
-                - "That you are untrustworthy. Catterwol have a knack for “second-story work,” so people may guard their coinpurse when you are around."
+                - "That you are untrustworthy. Catterwol have a knack for \"second-story work,\" so people may guard their coinpurse when you are around."
                 - "That you are more catlike than you are. From saucers of milk to scratches between the ears, some people may not understand that you are not a housecat."
         looks:
             -   title: "Height"
@@ -73,27 +104,60 @@
                 options: "Wide, slender, pointed"
             -   title: "Tail"
                 options: "Bushy, slender"
--   name: Wood Elf # Done
+-   name: Wood Elf #Done
     parent_class: "Elf"
     health_dice: 1d6
     base_movement: 30
     abilities:
         -   name: Sleepless
             cost: 0
+            type: utility 
+            range: self 
+            duration: passive
+            cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
         -   name: Natural Tracker
+            type: buff
             cost: 0
-            description: "You are naturally adept at tracking your foes. Add your expertise to checks made to track enemies or perceive their passing."
-        -   name: Meditative Rest 
+            range: self 
+            duration: passive 
+            description: "You are naturally adept at tracking your foes."
+            effect:
+                type: buff 
+                description: "Add your expertise to checks made to track enemies or perceive their passing."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Meditative Rest
+            type: utility 
+            range: self 
+            duration: passive
             cost: 0
             description: "Whenever you rest, you can focus to regain one extra action point."
         -   name: Natural Agility
             cost: 0
-            description: "Your elven heritage has gifted you with supernatural agility. Add your expertise to any checks related to your movement."
-        -   name: Hasten 
+            type: buff
+            range: self
+            duration: passive
+            description: "Your elven heritage has gifted you with supernatural agility."
+            effect:
+                type: buff
+                description: "Add your expertise to checks made to move quickly."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Hasten
+            type: buff 
+            range: self 
+            duration: 5
             cost: 1
-            condition: "hastened" 
-            description: "Channel the magic within you to spur yourself to great speeds. Become affected by Haste for 5 minutes. Afterward, immediately take one level of exhaustion."
+            description: "Channel the magic within you to spur yourself to great speeds."
+            effect:
+                type: buff 
+                description: "For the ability's duration, you are Hastened."
+                conditions:
+                    - hastened 
+                save: null
     handbook:
         introduction: 
             - "The most common type of elf, wood elves flourish in the verdant glades of ancient forests.
@@ -138,29 +202,61 @@
                 options: "Wood elves have pointed ears, though they aren't much longer than those of a human"
             -   title: "Other Features"
                 options: "Some wood elves have beastlike features."
--   name: High Elf #Done
+-   name: High Elf # Done
     parent_class: "Elf"
-    health_dice: 1d6
+    health_dice: 1d4
     base_movement: 30
     abilities:
         -   name: Sleepless
+            type: utility 
+            cost: 0
+            range: self 
+            duration: passive
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
         -   name: Inherent Magic
+            type: utility 
             cost: 0
-            description: "Begin your adventure with two tier zero spells from any spellbook. If you are a casting class, these spells are considered a bonus." 
+            range: self 
+            duration: passive 
+            description: "You were born with inherent magical ability. Begin your adventure with two tier zero spells from any spellbook.
+                          If you are a casting class, these spells are considered a bonus." 
         -   name: Detect Magic
+            type: utility
             cost: 1
-            description: "Make a perception check to identify sources of nearby magic."
+            duration: concentration
+            range: self
+            radius: 100
+            requirements:
+                verbal: false
+                movement: false
+            description: As you blink your eyes, the flows of magic become visible to you.
+                        While you are in this state, sources of magic appear to glow,
+                        and you may make perception checks to detect neaby magic.
         -   name: Natural Intellect
             cost: 0
-            description: "Add your expertise to intelligence checks."
-        -   name: Upper Class
-            cost: 0
-            description: "Add your expertise to charisma checks made with people of high station."
+            type: buff 
+            range: self
+            duration: passive 
+            description: "You naturally retain and understand information."
+            effect:
+                type: buff
+                description: "Add you expertise to intelligence checks made to recall lore or to understand the world around you."
+                conditions:
+                    - custom 
+                save: null 
         -   name: Font of Magic
             cost: 0
-            description: "Add one to your maximum number of action points."
+            type: buff 
+            duration: passive 
+            range: self
+            description: "Magic flows through you as surely as blood, guiding you and granting you power."
+            effect:
+                type: buff 
+                description: "Add one to your maximum number of action points."
+                conditions:
+                    - custom 
+                save: null
     handbook:
         introduction: 
             - "Fairest of the elves, the high elves are the least changed from their original form.
@@ -216,19 +312,53 @@
     abilities:
         -   name: Sleepless
             cost: 0
+            type: utility 
+            range: self 
+            duration: passive
+            cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
-        -   name: Poison Resist
+        -   name: Poison Resistance
             cost: 0
-            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
+            type: buff
+            range: self
+            duration:  passive
+            description: "Your heritage has given you a strong constitution."
+            effect:
+                type: buff
+                description: "You are always considered to have Poison Resistance."
+                conditions: 
+                    - poison resistance 
+                save: null
         -   name: Born in Darkness
+            type: utility 
+            range: self 
+            duration: passive
             cost: 0
-            description: "The effects of light and darkness are reversed for you; you can see perfectly in pitch darkness, but cannot see in total light. When wearing mesh over your eyes, you can see normally in total light."
+            description: "Your abyssal heritage has changed the way that you percieve light. You can see perfectly in pitch darkness, but cannot see in total light unless you wear a mesh over your eyes."
         -   name: Survivor
             cost: 0
-            description: "You may add your expertise to survival checks."
-        -   name: Vicious Critical
+            range: self 
+            duration: passive
+            type: buff 
+            description: "The struggle of living in the abyss is in your blood."
+            effect:
+                type: buff 
+                description: "You may add your expertise to checks made to survive the nonmagical elements of nature."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Cruel Critical
             cost: 0
-            description: When you land a critical hit, optionally add an extra dice of damage.
+            range: self 
+            duration: instantaneous
+            type: critical hit enhancement 
+            passive_damage_source: true 
+            damage_scaling: 
+                damage_type: inherited
+                tier_1: 1d6
+                tier_2: 1d6
+                tier_3: 1d6
+            description: "Make the most of a well placed blow. Whenever you land a critical hit, add an extra 1d6 damage."
     handbook:
         introduction: 
             - "The deep elves have adapted to the dark, perilous caverns of the Abyss. Danger is always present
@@ -277,22 +407,71 @@
     abilities:
         -   name: Tinker 
             cost: 0
-            description: "Add your expertise to checks made with Tinker's tools."
+            range: self 
+            duration: passive 
+            type: buff 
+            description: "You have a mind for crafting."
+            effect:
+                description: "Add your expertise to all checks made with Tinker's Tools."
+                type: buff 
+                conditions:
+                    - custom
+                save: null
         -   name: Perfect Recall 
+            type: utility 
+            range: self 
+            duration: passive 
             cost: 0
-            description: "You have an incredible memory, and can recall anything you spend one minute looking at."
-        -   name: Natural Intellect
+            description: "You have an incredible memory, and can recall anything you spend one minute looking at in perfect detail."
+        -   name: A Mind for Mechanics 
             cost: 0
-            description: "Add your expertise to intelligence checks."
+            range: self 
+            duration: passive 
+            type: buff 
+            description: "You have a deep natural grasp of systems and mechanics."
+            effect:
+                description: "Add your expertise to any intelligence check made to understand the purpose, intention,
+                              or design of something, or to determine by what process a goal might be achieved."
+                type: buff 
+                conditions:
+                    - custom
+                save: null
         -   name: Little One
+            type: buff 
             cost: 0
-            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
+            range: self 
+            duration: passive 
+            description: "Your small size helps you to easily manuever through a battlefield."
+            effect:
+                type: buff 
+                description: "You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks."
+                conditions:
+                    - custom
+                save: null
         -   name: Single Minded
             cost: 0
-            description: "Your focus is so intense that you are immune to the charmed and controlled conditions."
+            range: self 
+            duration: passive
+            type: buff
+            description: "You are able to shut out everything but the task at hand."
+            effect:
+                type: buff 
+                description: "Your focus is so intense that you gain Psycic Resistance."
+                conditions:
+                    - psychic resistance
+                save: null
         -   name: Spirit of Fun
             cost: 0
-            description: "Add your expertise to any checks made to play or compete."
+            range: self 
+            duration: passive 
+            type: buff 
+            description: "You might work hard, but you play hard, too!"
+            effect:
+                description: "Add your expertise to any checks made to play or compete."
+                type: buff 
+                conditions:
+                    - custom
+                save: null
     handbook:
         introduction: 
             - "Tinkerers by nature, gnomes are two parts chaos, one part wonder. 
@@ -304,7 +483,7 @@
                 play as they do their work."
             - "While many gnomes live the industrial districts of cities, others can be found deep in the forest. 
                 These make their homes in great mushrooms, or high in forest canopies. Spotting a gnome is easy;
-                they stand shorter than a halfling -- three feet at the tallest -- and have bright hair and wide eyes.
+                they stand shorter than a halfling—three feet at the tallest—and have bright hair and wide eyes.
                 A gnome in an adventuring party is a great asset, as they are natural problem solvers with a knack 
                 for thinking of out-of-the-box solutions."
         you_may:
@@ -337,21 +516,67 @@
     base_movement: 35
     abilities:
         -   name: Still Warm
+            type: combat option 
+            range: touch 
+            duration: instantaneous
             cost: 0
-            damage_progression: Minor heal
-            description: "Regain health by consuming raw flesh. This can be done once per day."
+            damage_scaling: 
+                damage_type: healing
+                tier_1: 2d4
+                tier_2: 4d4
+                tier_3: 4d10
+            description: "A bit of warm meat does you wonders. Once per day, you may restore health by consuming raw meat."
         -   name: Mantle
+            type: buff
+            range: self
+            duration: passive
             cost: 0
-            description: "You are an excellent climber. Add your expertise to checks made to climb or traverse high places."
-        -   name: Sneak
+            description: "You are able to easily scale to great heights."
+            effect:
+                type: buff
+                description: "Add your expertise to checks made to climb."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Natural Sneak
             cost: 0
-            description: "Add your expertise to checks made to hide or sneak."
-        -   name: Low-Light Vision
+            type: buff
+            range: self
+            duration: passive
             cost: 0
-            description: "So long as there is a little light, you can see. However, colors are muted."
+            description: "You naturally meld into the shadows, and are able to move unseen."
+            effect:
+                type: buff
+                description: "You are considered Inconspicuous."
+                conditions:
+                    - inconspicuous
+                save: null 
+        -   name: Darkvision
+            type: buff
+            range: self
+            duration: passive
+            cost: 0
+            description: "You have incredible night vision."
+            effect:
+                type: buff 
+                description: "You are permanently under the effects of Darvision."
+                conditions:
+                    - darkvision 
+                save: null
         -   name: One of the Pack
             cost: 0
-            description: "So long as you have at least one ally within 30ft, you are immune to the frightened condition. If you have no allies within 100 feet in combat, you are immediately frightened."
+            type: buff
+            range: self 
+            duration: passive
+            description: "You are used to fighting as a member of a pack."
+            effect:
+                type: buff
+                description: "So long as you have at least one ally within 30ft, you are Fearless. 
+                  If you have no allies within 100 feet in combat, you are immediately Frightened."
+                conditions:
+                    - frightened 
+                    - fearless 
+                save: null
     handbook:
         introduction: 
             - "Wherever the peoples of the world gather, warpacks of goblins can be found,
@@ -388,9 +613,9 @@
         you_may:
             title: "As a Goblin, you may"
             options: 
-                - "Love shiny things. It doesn't matter what it is, if it's shiny you want it -- no matter the cost."
+                - "Love shiny things. It doesn't matter what it is, if it's shiny you want it—no matter the cost."
                 - "Be surprisingly loyal. It's rare for a goblin to give its loyalty freely, but once you swear allegiance you make an extremely trusting and loyal companion."
-                - "Be distrusting of the other races -- some of them view goblins as dangerous, and hunt your people down."
+                - "Be distrusting of the other races—some of them view goblins as dangerous, and hunt your people down."
         assumptions:
             title: "People who don't know you might assume"
             options: 
@@ -418,24 +643,58 @@
     health_dice: 1d4
     base_movement: 35
     abilities:
-        -   name: Scurry
-            cost: 0
-            description: "You are naturally quick on your feet. Any time an attack misses you, move 5ft without provoking exposed attacks."
         -   name: Hamstring 
             cost: 0
-            description: "The bigger they are, the harder they fall! When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them, causing them to instantly lose half of their movement on their next turn."
+            type: critical hit enhancement 
+            range: inherited 
+            duration: instantaneous 
+            description: "The bigger they are, the harder they fall!"
+            effect:
+                type: debuff 
+                description: "When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them. They must make a spell power save or be Hindered on their next turn."
+                conditions: 
+                    - hindered 
+                save: null
         -   name: Hide Underfoot
             cost: 0
-            description: "You are able to bob and weave around the larger races. When you have two or more entities adjacent to you, attacks against you are at disadvantage."
+            range: self 
+            type: buff 
+            duration: passive
+            description: "You are able to bob and weave around the larger races."
+            effect:
+                type: buff 
+                description: "When you have two or more creatures adjacent to you, you are considered to be Dodging."
+                conditions:
+                    - dodging 
+                save: null
         -   name: Warm Butter
             cost: 0
-            description: "You are a naturally talented chef. Whenever you rest, prepare food which heals all allies for an additional 1d6 health."
+            type: healing 
+            range: touch 
+            duration: instantaneous
+            damage_scaling:
+                damage_type: healing
+                all_tiers: 1d6
+            description: "You are a naturally talented chef. Whenever you rest, you may choose to prepare food which heals all allies."
         -   name: Soft Bed
+            type: utility 
+            range: self
+            duration: instantaneous
             cost: 0
-            description: "The comforts of home beckon you. Whenever you sleep in a real bed, regain all of your lost health."
+            description: "You sleep very deeply. Whenever you sleep, you may choose to restore all of your health, action points,
+                          and luck, but for the full duration you are completely oblivious unless shaken awake."
         -   name: Little One
+            type: buff 
             cost: 0
-            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
+            range: self 
+            duration: passive 
+            description: "Your small size helps you to easily manuever through a battlefield."
+            effect:
+                type: buff 
+                description: "You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks."
+                conditions:
+                    - custom
+                save: null
     handbook:
         introduction:
             -   "Small enough to avoid notice, most halflings are content to live in peace and to watch the 
@@ -479,25 +738,73 @@
                 options: "Black, brown, blonde which gets paler in the sumertime"
             -   title: "Other Features"
                 options: "Hardfoot halflings are known for their stout stomachs. Most halfings have hair on the tops of their feet and thick skin on the bottom which helps them avoid injury when walking barefoot."
--   name: Human #Needs another abilitiy
+-   name: Human #Done
     health_dice: 1d6
     base_movement: 30
     abilities:
-        -   name: Human Endurance 
+        -   name: Human Endurance #Done
             cost: 0
-            description: "Your dash carries you a distance equal to your full movement. You may dash at most once per turn."
-        -   name: Adaptable
+            range: self 
+            duration: passive 
+            type: buff
+            description: "You are relentless when you set your mind to something."
+            effect:
+                type: buff 
+                description: "When you fail at a feat of strength or endurance, choose to instead succeed in twice the time, but take a level of exhaustion."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Adaptable # Done
+            type: buff 
             cost: 0
-            description: "If you are affected by a status effect, take advantage on saves against it for the remainder of the day."
-        -   name: Rally Cry 
+            range: self 
+            duration: passive 
+            description: "After a condition has afflicted them, humans are uniquely able to steel themselves against it in the future."
+            effect:
+                type: buff 
+                description: "If you are affected by a status effect, take advantage on saves against it until your next rest."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Rally Cry # Done 
             cost: 1
-            description: "Human perseverance is infectious. As an action, grant all allies within a 25ft radius a point of inspiration."
-        -   name: Resourceful
+            type: buff
+            duration: instantaneous
+            range: self 
+            radius: 30
+            description: "Loose a rallying cry, filled with all the hope and ambition of man."
+            effect:
+                type: buff 
+                description: "All allies within the ability's radius are Inspired."
+                conditions:
+                    - inspired 
+                save: null
+        -   name: Specialized #Done
             cost: 1
-            description: "Choose a type of ability check. You may add your expertise to all checks of that type for one hour."
-        -   name: Team Player
+            type: buff 
+            range: self
+            duration: passive 
+            description: "Humans are a far-flung species, and no two are quite the same. Choose one of the following areas of expertise:"
+            options:
+                -   name: "Free-Runner"
+                    description: "You are skilled at movement. Add your expertise to checks made to leap, run, climb, or otherwise traverse the world in an acrobatic way."
+                -   name: "Athletic"
+                    description: "You are physically strong. Add your expertise to feats of raw strength such as lifting something heavy or bending iron bars."
+                -   name: "Bookish"
+                    description: "You are highly intelligent. Add your expertise to intelligence checks made to understand the world around you, to recall lore, or to perform informal magic if you are a mage."
+        -   name: One of Many # Done
             cost: 0
-            description: "When you take the 'Help' action, grant your ally an additional +1 to their check."
+            type: buff 
+            range: self
+            duration: instantaneous
+            ability_modified: Help Action 
+            description: "Regardless of your personality, you are naturally adept when you choose to step in to help."
+            effect:
+                type: buff 
+                description: "Whenever you take the 'Help' action, grant your ally an additional +1 to their check."
+                conditions:
+                    - custom 
+                save: null
     handbook:
         introduction:
             -   "Humans are quick to learn and are one of the most adaptable of the races. 
@@ -513,7 +820,7 @@
                     situations. It should also be noted that humans are not particularly far minded. They 
                     frequently overestimate the impact a decision will have in the short term and underestimate 
                     its long term implications. Despite these pitfalls, their mental fortitude and dogged 
-                    willpower makes humans a force to be reckoned with. "
+                    willpower make humans a force to be reckoned with. "
             -   "Both male and female humans grow hair on the top of their heads, though males are capable 
                     of growing a beard and mustache. Male human beings are typically stronger and taller than 
                     their female counterparts with males ranging between five to seven feet tall and females 
@@ -521,7 +828,7 @@
                     strong, and many put great effort into improving their physique. Generally speaking, the 
                     strength of a typical male human is equitable to that of a young deep elf. That said,
                     humans are capable of achieving incredible levels of strength depending on societal and 
-                    environmental conditions. Coupled with their notable endurance, this makes them well rounded fighters. "
+                    environmental conditions. Coupled with their notable endurance, this makes them well rounded fighters."
         you_may:
             title: "As a Human, you may"
             options:
@@ -550,20 +857,57 @@
     base_movement: 25
     abilities:
         -   name: Membraned Eyes
+            type: buff 
             cost: 0
-            description: "Your vision cannot be reduced by water, smoke, or other particles."
+            range: self 
+            duration: passive
+            description: "Your eyes have a thin, transparent second lid."
+            effect:
+                type: buff 
+                description: "As such, your vision cannot be reduced by water, smoke, or other particles."
+                conditions:
+                    - custom
+                save: null
         -   name: Shed Tail
+            type: utility 
+            range: self
+            duration: instantaneous
             cost: 0
-            description: "Once per day, shed your tail to immediately break a grapple."
-        -   name: Poison Resist
+            description: "Your tail is detatchable and grows back in about a week's time. 
+                          Once per week, you may shed your tail to immediately break a grapple."
+        -   name: Poison Resistance
             cost: 0
-            description: "You are resistant to poison and make checks against the poisoned condition at advantage."
+            type: buff
+            range: self
+            duration:  passive
+            description: "Your heritage has given you a strong constitution."
+            effect:
+                type: buff
+                description: "You are always considered to have Poison Resistance."
+                conditions: 
+                    - poison resistance 
+                save: null
         -   name: Armored Scales
             cost: 0
-            description: "Add +2 to your total armor."
+            range: self 
+            duration: passive 
+            type: buff
+            description: "Gleaming scales as hard as steel cover you from snout to foot."
+            effect:
+                type: buff 
+                description: "Add +2 to your base evasion."
+                conditions:
+                    - custom
+                save: null
         -   name: Taste Air
-            cost: 1
-            description: "Roll a perception check of a 100ft radius that is not based on vision."
+            cost: 0
+            type: utility 
+            range: 100 
+            ability_modified: Perception Check
+            duration: instantaneous 
+            description: "Your tounge is keen enough that you can taste the world around you on the wind. 
+                          You are able to make perception checks within this ability's radius that are not 
+                          based on vision, so long as there is a free flow of air."
     handbook:
         introduction:
             -   "Noble and proud, the Lizkin race commands great respect throughout the realms.
@@ -607,25 +951,66 @@
                 options: "Double lidded, sandy yellow, crimson, orange, brown"
             -   title: "Scales"
                 options: "Emerald green, fire red, saphire blue, violet, dark black, bright white"    
--   name: Waterborn #Done
+-   name: Waterborn # Done
     health_dice: 1d6
     base_movement: 30
     abilities:
         -   name: Water Breathing
             cost: 0
-            description: "You can hold your breath for up to one week. However, to breathe, you must be submerged underwater."
+            type: utility 
+            range: self 
+            duration: passive 
+            description: "You are able to breathe water like air, and can hold your breath for far longer than most.
+                          So long as you do not speak, you may stay concious without breathing for up to a full day."
         -   name: Dried Out
             cost: 0
-            description: "When you are in an arid climate, gain one level of exhaustion for any day you cannot submerge in water."
-        -   name: Flows Like Water
+            type: debuff 
+            range: self 
+            duration: passive 
+            description: "You must periodically submerge yourself in water to stay healthy."
+            effect:
+                type: debuff
+                description: "For every week that you do not submerge yourself in water for at least one long rest, 
+                          take a level of exhuastion which cannot be removed by normal rest. 
+                          When you are in an arid climate, this occurrs once per day unless you are able to rest in 
+                          a suitably cool and wet environment."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Flow Like Water
             cost: 0
-            description: "Your swimming speed is equal to twice your walking speed."
-        -   name: Become Mist
-            cost: 1
-            description: "Attempt to become mist before an attack hits you. Before you are attacked, declare that you will become mist to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely."
+            range: self 
+            duration: passive
+            type: buff 
+            ability_modified: Swimming Speed 
+            description: "Your anatomy allows you to move very quickly in water." 
+            effect:
+                type: buff 
+                description: "With webbed hands and feet, you are able to achieve a swimming speed equal to twice your base movement speed."
+                conditions:
+                    - custom 
+                save: null
         -   name: Natural Charisma
             cost: 0
-            description: "You may add your expertise to charisma checks."
+            type: buff 
+            duration: passive 
+            range: self 
+            description: "Like your forebearer's, the sirens, you have a natural affinity for winning people over."
+            effect:
+                type: buff 
+                description: "Add your expertise to any charisma check made to convince or beguile someone."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Control Water 
+            cost: 0
+            range: self 
+            type: utility 
+            duration: passive
+            description: "You linked to the sea, and have a natural command over the waters around you.
+                          Even if you are not a caster, you are able to perform simple feats of water magic 
+                          using the rules for Informal Magic. If you are a caster, add your expertise to  
+                          such checks."
     handbook:
         introduction:
             -   "A subaquatic race, most waterborn live near the surface. Sisters to the sirens of legend, 
@@ -642,9 +1027,9 @@
                     unwitting sailors down and into a deep, dark grave."
             -   "Waterborn stand taller than most, with thin limbs that end in webbed fingers. They have fine features. Their skin is
                     often blue, though pale grey or green waterborn have been seen in frigid or tropical oceans.
-                    Because waterborn breathe through gills at the sides of their neck, it is a struggle for many to learn 
-                    to speak above water. To combat this, some wear tight neckbands to stop the escape of air. Waterborn
-                    suffer greatly in arid climates and must breathe underwater once per week."
+                    Waterborn have unique lungs which are able to extract the oxygen from water but which can also breathe air. 
+                    However, even though they can breathe on land, a waterborn will slowly dry out over time, and must 
+                    periodically submerge themselves for their health."
         you_may:
             title: "As a Waterborn, you may"
             options:
@@ -669,27 +1054,66 @@
             -   title: "Hair"
                 options: "Abyssal black, silt grey, algea green, deep blue"
             -   title: "Other Features"
-                options: "Many waterborn have webbed fingers or toes and all have gills at the sides of their neck."
--   name: Orc #Done
+                options: "Many waterborn have webbed fingers or toes."
+-   name: Orc # Done
     health_dice: 1d6
     base_movement: 30
     abilities:
         -   name: Predator
             cost: 0
-            description: "Add your expertise to checks made to follow or detect the passage of an entity."
-        -   name: Natural Strength
+            type: buff 
+            range: self 
+            duration: passive
+            description: "You are naturally adept at tracking prey."
+            effect:
+                type: buff 
+                description: "Add your expertise to checks made to follow or detect the passage of an creature."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Brutish Strength
             cost: 0
-            description: "Add your expertise to your strength checks."
+            type: buff 
+            range: self 
+            duration: passive
+            description: "Orc are known for their vicious strength, which puts other creatures to shame."
+            effect:
+                type: buff 
+                description: "You may add your expertise to feats of raw strength."
+                conditions:
+                    - custom 
+                save: null
         -   name: Bellow
             cost: 1
-            description: "Loose a terrible battle cry. Enemies within 30ft must make an inner fire save or be frightened."
+            type: debuff
+            range: self 
+            radius: 60
+            duration: save
+            description: "Spittle flies from your mouth as you loose a terrible battle cry."
+            effect:
+                type: debuff 
+                description: "As the bellow echoes in the air, enemies within the ability's radius must make a spell power save or become frightened."
+                conditions:
+                    - frightened 
+                save: "They may re-attempt their save at the end of each of their turns."
         -   name: Still Warm
+            type: combat option 
+            range: touch 
+            duration: instantaneous
             cost: 0
-            damage_progression: Minor heal
-            description: "Regain health by consuming raw flesh. This can be done once per day."
+            damage_scaling: 
+                damage_type: healing
+                tier_1: 2d4
+                tier_2: 4d4
+                tier_3: 4d10
+            description: "A bit of warm meat does you wonders. Once per day, you may restore health by consuming the raw meat of a fresh kill."
         -   name: Vengeful Death
             cost: 0
-            description: "When you fall to death's door, you may immediately make an attack."
+            type: combat option 
+            range: inherited 
+            duration: instantaneous
+            ability_modified: Fall to Zero Health
+            description: "Orcs don't go down easily. When you fall to death's door, you may immediately make an attack."
     handbook:
         introduction:
             -   "Orcs are a brutal race that range across the world. They can be found almost anywhere, from 
@@ -707,7 +1131,7 @@
             - "Orc adventurers often have a complicated past. Some are half-orc, the union of an
                 orc and a human or elf. Others have a friendlier dispostion, and were ostracized
                 from a warpack. Still others are lone-wolves, travelers, or members of hunter-gather
-                tribes. The transition to a more 'civilized' lifestyle--even that of an adventurer--can 
+                tribes. The transition to a more 'civilized' lifestyle—even that of an adventurer—can 
                 be difficult for an orc who is used to eating their kills raw and settling disputes by violence.
                 They quickly form deep bonds with their party members, forging a bond in the blood
                 of battle."
@@ -740,25 +1164,74 @@
                 options: "Depending on the wealth of their pack, some orcs are large and muscular while others are 
                            stunted and small. It is not abnormal to see an orc with scars, either from battle or 
                            self-inflicted during rituals."    
--   name: Dwarf #Done
+-   name: Dwarf # Done
     health_dice: 1d8
     base_movement: 25
     abilities:
         -   name: Stocky Build
+            type: buff 
             cost: 0
-            description: "You’re built hearty, with a low center of gravity. Roll with advantage against any checks which could cause you to fall prone. If you are pushed, move only half the intended distance."
+            range: self 
+            duration: passive
+            description: "You're built hearty, with a low center of gravity."
+            effect:
+                type: buff 
+                description: "As such, you are quite Hard to Move."
+                conditions:
+                    - hard to move 
+                save: null
         -   name: Hearty 
             cost: 0
-            description: "You are of naturally hearty stock. When you level up, roll your health dice with advantage."
-        -   name: Appraiser's Eye 
+            type: buff 
+            range: self 
+            duration: passive 
+            ability_modified: level up
+            description: "You are of naturally hearty stock."
+            effect:
+                type: buff 
+                description: "When you level up, roll your health dice with advantage."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Appraiser's Eye
+            type: buff 
             cost: 0
-            description: "You have a knack for evaluating an object’s worth -- and at getting your hands on it for even less. Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering."
+            range: self 
+            duration: passive
+            description: "You have a knack for evaluating an object's worth—and at getting your hands on it for even less."
+            effect:
+                type: buff 
+                description: "Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering."
+                conditions:
+                    - custom 
+                save: null
         -   name: Very Dangerous over Short Distances
             cost: 0
-            description: "If you begin your turn next to an enemy, deal an extra 1d6 damage on any attacks that you make against them."
+            type: buff 
+            passive_damage_source: true 
+            range: inherited
+            duration: passive 
+            ability_modified: martial attack 
+            description: "You may not be the fastest, but once you close with an enemy, they're in trouble!"
+            effect:
+                type: buff 
+                description: "If you begin your turn within melee range of an enemy, deal an extra 1d6 damage on any attacks that you make against them before you take your movement."
+                conditions:
+                    - custom 
+                save: null
         -   name: Dwarven Momentum
             cost: 0
-            description: "Whenever an effect or item calls for your speed to be decreased, halve the amount, rounding down to the nearest 5ft. If two separate effects impose a speed penalty, add them together before halving and rounding the total."
+            type: buff 
+            range: self 
+            duration: passive
+            description: "Once you start moving, you are very hard to stop."
+            effect:
+                type: buff 
+                description: "Whenever an effect or item calls for your speed to be decreased but not reduced to zero, halve the amount and round down to the nearest 5ft. 
+                              If an ability calls for you to be halted, roll any saves at advantage."
+                conditions:
+                    - custom 
+                save: null
     handbook:
         introduction:
             -   "A stocky, brooding people, dwarves are known to be incredible craftsmen, and shrewd businessmen. \"Stubborn as a dwarf\"
@@ -811,34 +1284,70 @@
                           dwarves wear some jewelry in their clan's color. Powerful merchants might wear multiple rings
                           on each finger, chains about their throat, or even have multiple piercings, each set with 
                           precious gems."
--   name: Daemonspawn #Done
+-   name: Daemonspawn # Done
     health_dice: 1d6
     base_movement: 30
     abilities:
         -   name: Charm
             cost: 1
-            condition: charmed
-            description: "Force an enemy to make a spell power save. On a failure, they are Charmed."
+            type: debuff 
+            range: 30 
+            duration: instantaneous
+            description: "A dark light surrounds you as you impose your will upon another, and for a moment you are radiant in their eyes."
+            effect:
+                type: debuff 
+                description: "The affected creature must make a spell power save or bend to your will and become Charmed."
+                conditions:
+                    - charmed 
+                save: "They may repeat their save at the end of each of their turns."
         -   name: Incombustible
             cost: 0
-            description: "You are resistant to fire damage."
-        -   name: Detect Good or Evil
+            type: buff 
+            range: self 
+            duration: passive 
+            description: "Your infernal heritage has left you acclimated to heat."
+            effect: 
+                type: buff 
+                description: "At all times, you are considered to have Fire Resistance."
+                conditions:
+                    - fire resistance 
+                save: null
+        -   name: Peer Within
+            type: utility
             cost: 1
-            description: "Make a inner fire check to detect the presence of nearby good or evil, relative to your point of view. Add your expertise to the check."
+            duration: 10
+            range: self
+            radius: 100
+            description: "Your demonic heritage grants you a view into the hearts of others. For the spell's duration, evil creatures are surrounded 
+                by an aura of darkness in your vision, while good creatures with an aura of light. The definition of good and evil corresponds
+                to the way that you have aligned yourself within the world."
         -   name: Firebolt
             cost: 1
+            type: combat option 
+            range: 60
+            duration: instantaneous
             damage_scaling: 
-                tier_1: 2d6 # 7
-                tier_2: 3d6 # 10.5
-                tier_3: 4d6
-            description: "Launch a bolt of crackling fire up to sixty feet at an enemy."
-        -   name: Natural Charisma
+                damage_type: "fire"
+                tier_1: 3d6 #(10.5 + 3.5f = 14)
+                tier_2: 4d6 #(14 + 7f = 21)
+                tier_3: 5d6 #(17.5 + 10.5f = 28)
+            description: "Use your inherent magic to launch a bolt of crackling fire at an enemy."
+        -   name: Child of Dread 
             cost: 0
-            description: "You may add your expertise to charisma checks."
+            type: buff
+            duration: passive 
+            range: self 
+            description: "While the people of the realms may distrust you due to your heritage, the fiends of the abyss may find you easier to parley with."
+            effect:
+                type: buff 
+                description: "Add your expertise to any charisma check made against a demon or fiend."
+                conditions:
+                    - custom 
+                save: null
     handbook:
         introduction:
-            -   "Long ago, during an age before mankind first walked the earth, a race of deep elves that inhabited
-                    the bowels of the earth intermarried with demons. When the demons were overthrown, their 
+            -   "Long ago, during an age before mankind walked the earth, a race of deep elves that inhabited
+                    the bowels of the abyss intermarried with demons. When the demons were overthrown, their 
                     children remained; the first of the daemonspawn."
             -   "Daemonspawn are relatively few in number and are largely ostracized. Their largest concentrations
                     are found in small villages at the fringes of society. These settlements rarely last long before 
@@ -849,15 +1358,14 @@
                     deepen the prejudice against them."
             -   "Most daemonspawn have skin that is red in color. However, some are grey skinned and a rare few possess 
                     skin that is blue or black in color. Both female and male daemonspawn grow horns. Some choose to 
-                    decorate themselves by carving elaborate designs into their horns. Despite these peculiarities, 
-                    daemonspawn are typically alarmingly beautiful with pointed, elflike ears. While most daemonspawn 
+                    decorate themselves by carving elaborate designs in them. Despite these peculiarities, 
+                    many daemonspawn are alarmingly beautiful with pointed, elflike ears. While most daemonspawn 
                     are the descendents of the original pact between elves and demons, a small number of new 
                     daemonspawn are created by dark magic, curses, or rituals each year."
         you_may:
             title: "As a Daemonspawn, you may"
             options:
                 - "Hide or openly flaunt your horns based on your personality."
-                - "Have an eye for architecture, stonework, and craftsmanship."
                 - "Keep your friends close at hand and be distrusting of outsiders."
                 - "Be drawn to a line of work that forces others to respect you."
         assumptions:
@@ -894,36 +1402,70 @@
     base_movement: 35
     abilities:
         -   name: Woodland Home
+            type: buff 
             cost: 0
-            description: "When traversing the forest, add  your expertise to stealth and tracking checks."
+            range: self 
+            duration: passive
+            description: "You are deeply at home in the forests and glades of the world. So long as you are surrounded by plants, add your expertise to stealth and tracking checks."
         -   name: Regrowth 
             cost: 1
-            damage_progression:
+            type: healing 
+            duration: 5
+            range: self 
+            damage_scaling:
+                damage_type: healing 
                 tier_1: 1d4
                 tier_2: 1d6
                 tier_3: 1d8
-            description: "Green sap oozes from your wounds, slowly sealing them. Restore health every minute for five minutes."
+            description: "Green sap oozes from your wounds, slowly sealing them. Restore health every minute or turn for the ability's duration."
         -   name: Riding High 
             cost: 0
-            description: "As an action, clamber atop a teammate to ride them. While you are riding, you and your ally get advantage on accuracy checks while targeting the same enemy, and enemies must target you at disadvantage."
+            type: buff 
+            range: self 
+            duration: inherited 
+            description: "As an action, clamber atop a teammate to ride them. While you are riding, both you and your ally 
+                          gain advantage on accuracy checks while targeting the same enemy."
+            effect:
+                type: buff 
+                description: "Furthermore, you are considered to be Guarded while riding a party member."
+                conditions:
+                    - guarded
+                save: null    
         -   name: Forest Aid 
             cost: 1
-            description: "All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check."
-        -   name: Compost 
+            type: utility 
+            range: self 
+            duration: 1 hour
+            description: "All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, 
+                          or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check."
+        -   name: Compost
             cost: 0
-            damage_progression:
+            type: healing 
+            range: self 
+            duration: instantaneous
+            damage_scaling:
+                damage_type: healing
                 tier_1: 1d4
                 tier_2: 2d4
                 tier_3: 3d4
-            description: "When you take your rest, you may consume nearby plants to aid in your healing. Regain additional health when resting."
+            description: "When you take your rest, you may consume nearby plants to aid in your healing. Restore extra health equal to the amount rolled."
         -   name: Little One
+            type: buff 
             cost: 0
-            description: "You are able to move through the space of any entity that is larger than you. You are still vulnerable to exposed attacks."
+            range: self 
+            duration: passive 
+            description: "Your small size helps you to easily manuever through a battlefield."
+            effect:
+                type: buff 
+                description: "You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks."
+                conditions:
+                    - custom
+                save: null
     handbook:    
         introduction:
             -   "Sprouts are among the smallest races, and have an average height of just two and a half feet. 
                     Shy, bipedal beings with soft faces and childlike voices, it is easy to mistake them for
-                    children lost in the woods -- if they are even spotted in the first place. Sprouts have 
+                    children lost in the woods—if they are even spotted in the first place. Sprouts have 
                     skin of olive green, or tree-bark brown, or sunkist yellow. They wear hair only on their
                     heads, which is usually long and left to hang freely about their shoulders. Sprouts move 
                     unseen and unheard through the underbrush of their forest homes, watching travelers
@@ -932,7 +1474,7 @@
                     and it will begin testing you to see if you are hiding secret aggression by 
                     playing harmless tricks."
             -   "Most sprout communities keep to themselves, hidden away in the secluded reaches of ancient woods.
-                    There, they tend the trees and cultivate the forest -- healing rot, clearing fallen branches,
+                    There, they tend the trees and cultivate the forest—healing rot, clearing fallen branches,
                     and helping new saplings to find the sun. While sprouts can be mistaken for halflings or children,
                     they are put together in a far different manner. Thin, greenish sap flows through a sprout's body
                     in place of blood, quickly sealing any injuries that it sustains. Sprouts reject meat by nature,
@@ -1018,7 +1560,7 @@
 #         speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
 #         if they're still down there."
 #       author: Gillthunder, Human Knight
-#       description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike entities, Hisslings try their very best to be ferocious.
+#       description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike creatures, Hisslings try their very best to be ferocious.
 #         While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is
 #         often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature
 #         and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing

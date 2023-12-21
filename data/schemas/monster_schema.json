@@ -1,0 +1,127 @@
+{
+	"description": "Definition of the RnR weapons.yml file.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["name", "metadata", "summons", "stats", "moveset"],
+		"additionalProperties": false,
+		"properties": {
+			"name": {
+				"type": "string"
+			},
+			"metadata": {
+				"type": "object",
+				"required": ["type", "tier", "monster_class"],
+				"additionalProperties": false,
+				"properties": {
+					"type": {
+						"type": "string",
+						"enum": ["Minion", "Heavy", "Villain"]
+					},
+					"tier": {
+						"type": "string",
+						"enum": ["Tier 1", "Tier 2", "Tier 3"]
+					},
+					"monster_class": {
+						"type": "string",
+						"enum": ["Beast", "Arcane Construct", "Wolf", "Dire Bear", "Slime", "Undead"]
+					}, 
+					"monster_family": {
+						"type": "string"
+					}
+				}
+			},
+			"summons": {
+				"type": "object",
+				"required": ["wildshape"],
+				"additionalProperties": false,
+				"properties":{
+					"wildshape": {
+						"type": "boolean"
+					} 
+				}
+			},
+			"stats": {
+				"type": "object",
+				"required": ["health", "evasion", "speed", "stat_bonus", "size"],
+				"additionalProperties": false,
+				"properties": {
+					"health": {
+						"type": "integer", 
+						"exclusiveMinimum": 0
+					},
+					"evasion": {
+						"type": "integer", 
+						"minimum": 5 
+					},
+					"speed": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"Base Speed": {
+								"type": "integer",
+								"minimum": 5
+							},
+							"Flying Speed": {
+								"type": "integer",
+								"minimum": 5
+							},
+							"Swimming Speed": {
+								"type": "integer",
+								"minimum": 5
+							}
+						}
+					},
+					"stat_bonus": {
+						"type": "integer"
+					},
+					"size": {
+						"type": "integer",
+						"minimum": 5
+					}
+				}
+			},
+			"moveset": {
+				"type": "object",
+				"required": ["actions_per_turn", "combat_actions"],
+				"additionalProperties": false,
+				"properties": {
+					"actions_per_turn": {
+						"type": "integer",
+						"minimum": 1
+					},
+					"passive_abilities": {
+						"type": "array",
+						"items": {
+							"type": "object"
+						}
+					},
+					"combat_actions": {
+						"type": "array",
+						"items": {
+							"type": "object"
+						}
+					},
+					"villain_actions": {
+						"type": "array",
+						"items": {
+							"type": "object"
+						}
+					},
+					"lair_actions": {
+						"type": "array",
+						"items": {
+							"type": "object"
+						}
+					},
+					"dynamic_actions": {
+						"type": "array",
+						"items": {
+							"type": "object"
+						}
+					}
+				}
+			}
+		}
+	}
+}

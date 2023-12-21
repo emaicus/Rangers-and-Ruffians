@@ -98,41 +98,7 @@
 			"abilities": {
 				"type": "array",
 				"items": {
-				"type": "object",
-				"required": ["name", "cost", "description"],
-				"properties": {
-						"name": {
-							"type": "string"
-						},
-						"cost": {
-							"type": "integer",
-							"minimum": 0,
-							"maximum": 3
-						},
-						"damage_scaling": {
-							"type": "object",
-							"required": ["tier_1", "tier_2", "tier_3"],
-							"additionalProperties": false,
-							"properties": {
-								"tier_1": {
-									"type": "string"
-								},
-								"tier_2": {
-									"type": "string"
-								},
-								"tier_3": {
-									"type": "string"
-								}
-							}
-						}, 
-						"condition": {
-							"type": "string",
-							"enum": ["blinded", "bleeding", "burning", "charmed", "controlled", "distracted", "deafened", "enlarged", "entangled", "estranged", "fixated", "frightened", "frozen", "grappled", "hastened", "harried", "invisible", "incapacitated", "numble", "shrunk", "staggered", "transformed", "staggered", "poisoned", "prone", "slowed", "stunned", "weakened", "vulnerable"]
-						},
-						"description": {
-							"type": "string"
-						}
-					}
+					"type": "object"
 				}
 			},
 			"parent_class": {

@@ -137,28 +137,40 @@ class RnRAbility():
     return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
                summoned_creature, action_type, effect, options, dict_data=dict_data)
 
-  def get_markdown(self):
-
-    spell_text = f"### {self.name}\n"
-    spell_text += f"__{self.type.title()}{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited', 'modifies_ability'] else ''}__  \n"
+  def get_markdown(self, level=None, succinct=False):
+    spell_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    if succinct and self.action_type in ['Action', 'Inherited', 'modifies_ability']:
+      pass 
+    else:
+      spell_text += f"__{self.type.title()}{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited', 'modifies_ability'] else ''}__  \n"
     
     # Determine range display, don't print 'inherited'
     range_unit = 'Feet' if isinstance(self.range, int) else ''
-    range_string =  f' __Range:__ {self.range} {range_unit}' if self.range != 'Inherited' else ''
+    range_string =  '' if self.range == 'Inherited' or (self.range == 'Self' and succinct) else f' __Range:__ {self.range} {range_unit}' 
     
     # Determine action point display. Properly print 'Action Point' or 'Action Points'
     cost_unit = 'Action Point' if self.cost == 1 else 'Action Points'
-    cost_str = f"{self.cost} {cost_unit}" if self.cost != 0 else "None"
-
+    if self.cost != 0:
+      cost_str = f"__Cost:__ {self.cost} {cost_unit}" 
+    elif succinct:
+      cost_str = '' 
+    else: 
+      cost_str = '__Cost:__ None'
+    
     # Determine distance string. Properly print 'Turns' if a number of turns was specified. Don't print inherited.
     duration_unit = ''
     if isinstance(self.duration, int):
       duration_unit = 'Turn' if self.duration == 1 else 'Turns'
 
-    duration_str = f' __Duration:__ {self.duration} {duration_unit}' if self.duration != 'Inherited' else ''
+    if self.duration == 'Inherited' or (self.duration in ['Passive', 'Instantaneous'] and succinct):
+      duration_str = ''
+    else:
+      duration_str = f' __Duration:__ {self.duration} {duration_unit}'
     
     # Build the next line of the spell_text.
-    spell_text += f"__Cost:__ {cost_str}{duration_str}{range_string}  \n"
+    full_str = cost_str + duration_str + range_string
+    if full_str != '':
+      spell_text += f"{cost_str}{duration_str}{range_string}  \n"
 
     if self.radius is not None or self.casting_time is not None:
       spell_text += f"__Casting Time:__ {self.casting_time} " if self.casting_time is not None else ""
@@ -204,12 +216,13 @@ class RnRAbility():
         weapon_scaling = self.damage['scaled_by'].get('weapon', False)
         if weapon_scaling == False:
           spell_text += '__This spell is not affected by Focus damage bonuses.__  \n'
-  
+
       i = 0
-      for tier in ['tier_1', 'tier_2', 'tier_3']:
+      for tier in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
         if tier in self.damage:
           dmg_str = 'Healing' if self.damage['damage_type'] == 'healing' else 'Damage'
-          spell_text += f"__{tier.replace('_', ' ').title()} {dmg_str}:__ {self.damage[tier]} {self.damage['damage_type'].title() if dmg_str != 'Healing' else ''}   \n"
+          tier_text = f"{tier.replace('_', ' ').title()} " if tier != 'all_tiers' else ''
+          spell_text += f"__{tier_text}{dmg_str}:__ {self.damage[tier]} {self.damage['damage_type'].title() if dmg_str != 'Healing' else ''}   \n"
       spell_text += '\n'
 
       

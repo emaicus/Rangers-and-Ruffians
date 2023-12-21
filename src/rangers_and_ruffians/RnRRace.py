@@ -43,8 +43,9 @@ class RnRRace():
   #   return serial
   
 
-  def get_markdown(self):
-    race_text = f'## {self.name}  \n'
+  def get_markdown(self, level=None):
+    race_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    ability_level = None if level is None else level + 1
 
     for para in self.handbook['introduction']:
       race_text += f"{para}  \n"
@@ -70,6 +71,6 @@ class RnRRace():
     race_text += '### Stats and Abilities  \n'
     race_text += f'__Health Dice:__ {self.health_dice} __Movement:__ {self.base_movement}ft   \n'
     for ability_obj in self.abilities:
-      race_text += ability_obj.get_markdown() + '   \n'
+      race_text += ability_obj.get_markdown(ability_level) + '   \n'
         
     return race_text

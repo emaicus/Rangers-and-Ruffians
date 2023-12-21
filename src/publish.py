@@ -495,12 +495,25 @@ if __name__ == "__main__":
 
   with open('races.md', 'w') as outfile:
     for race_name, race_obj in rnr_game.races.items():
-      outfile.write(race_obj.get_markdown())
+      outfile.write(race_obj.get_markdown(level=2))
 
   with open('classes.md', 'w') as outfile:
     for class_name, class_obj in rnr_game.classes.items():
-      outfile.write(class_obj.get_markdown())
+      outfile.write(class_obj.get_markdown(level=2))
   
+  with open('backgrounds.md', 'w') as outfile:
+    for background_name, background_obj in rnr_game.backgrounds.items():
+      outfile.write(background_obj.get_markdown(level=2))
+  
+  with open('weapons.md', 'w') as outfile:
+    for weapon_name, weapon_obj in rnr_game.weapons.items():
+      outfile.write(weapon_obj.get_markdown(level=2))
+  
+  with open('monsters.md', 'w') as outfile:
+    for monster_name, monster_obj in rnr_game.monsters.items():
+      outfile.write(monster_obj.get_markdown(level=2))
+
+
   for class_name, class_obj in rnr_game.classes.items():
     for ability in class_obj.get_all_abilities():
       if ability.summoned_creature is not None:

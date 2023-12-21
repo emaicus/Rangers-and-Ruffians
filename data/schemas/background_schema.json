@@ -1,0 +1,57 @@
+{
+	"description": "Definition of the RnR backgrounds.yml file.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["name", "description", "options", "starting_equiptment"],
+		"additionalProperties": false,
+		"properties": {
+			"name": {
+				"type": "string"
+			},
+			"description": {
+				"type": "string"
+			},
+			"options": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"required": ["question", "answers"],
+					"additionalProperties": false,
+					"properties": {
+						"question": {
+							"type": "string"
+						},
+						"answers": { 
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			},
+			"starting_equiptment": {
+				"type": "array",
+				"items": {
+					"type": "string"
+				}
+			},
+			"tips": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"required": ["name", "text"],
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"text": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	}
+}

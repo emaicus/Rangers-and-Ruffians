@@ -844,8 +844,8 @@
                 type: aoe damage
                 cost: 3
                 description: "Glitter dances in the air as rainbows erupt from your mouth and fingertips, streaming
-                in three lines towards your foes. As they streak forth, each
-                the colors tangle and combine into the form of a stampede of unicorns!"
+                    in three lines towards your foes. As they streak forth, each
+                    the colors tangle and combine into the form of a stampede of unicorns!"
                 duration: instantaneous
                 range: 120
                 requirements:
