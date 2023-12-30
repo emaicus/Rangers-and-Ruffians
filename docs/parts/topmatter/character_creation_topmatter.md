@@ -15,7 +15,7 @@ portrait_banner_artist_link: https://www.deviantart.com/zezhou
 portrait_banner_license: CC BY-NC-ND 3.0
 portrait_banner_license_link: https://creativecommons.org/licenses/by-nc-nd/3.0/
 
-title: The Compendium of Character Creation
+title: Character Creation
 description: Everything you need to build your character!
 show_download: false
 ---

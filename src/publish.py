@@ -6,135 +6,120 @@ import shutil
 import argparse
 import copy
 import pathlib
+import shutil
+
 
 from pathlib import Path
 
-CODE_DIRECTORY = pathlib.Path(__file__).resolve()
-BASE_DIRECTORY = CODE_DIRECTORY.parent.parent.parent.parent
-GENERATED_SITE_DIRECTORY = os.path.join(BASE_DIRECTORY, 'site', 'pages', 'GENERATED')
-CODE_DIRECTORY = os.path.join(BASE_DIRECTORY, 'src')
-sys.path.append(CODE_DIRECTORY)
+# CODE_DIRECTORY = pathlib.Path(__file__).resolve()
+# BASE_DIRECTORY = CODE_DIRECTORY.parent.parent.parent.parent
+# CODE_DIRECTORY = os.path.join(BASE_DIRECTORY, 'src')
+# sys.path.append(CODE_DIRECTORY)
 
 from rangers_and_ruffians import core
-#from src.rangers_and_ruffians import markdown_handler
+from rangers_and_ruffians import markdown_handler
 #from src.rangers_and_ruffians import io_handler
 from rangers_and_ruffians import RangersAndRuffians
 from rangers_and_ruffians import RnRClass
 from rangers_and_ruffians import RnRClass
 from rangers_and_ruffians import RnRAbility
 
+GENERATED_SITE_DIRECTORY = core.BASE_DIRECTORY.joinpath('site', 'pages', 'GENERATED')
+
+
 # MALE = True
 # FEMALE = False
 # UNDEFINED = True
 
-# # True means male
-# PREFERRED_IMAGES = {
-#   'automaton' : UNDEFINED,
-#   'catterwol' : FEMALE,
-#   'daemonspawn' : MALE,
-#   'deep_elf' : FEMALE,
-#   'dwarf' : MALE,
-#   'fleetfoot_halfling' : FEMALE,
-#   'gnome' : FEMALE,
-#   'goblin' : MALE,
-#   'hardfoot_halfling' : FEMALE,
-#   'high_elf' : FEMALE,
-#   'hissling' : UNDEFINED,
-#   'human' : MALE,
-#   'kragraven' : UNDEFINED,
-#   'lizkin' : MALE,
-#   'orc' : FEMALE,
-#   'sprout' : FEMALE,
-#   'waterborn' : FEMALE,
-#   'wood_elf' : FEMALE,
+def copyImages(rnr_game : RangersAndRuffians) -> None:
+  races = ('race', rnr_game.races)
+  classes = ('class', rnr_game.classes)
 
-#   'archer' : FEMALE,
-#   'barbarian' : FEMALE,
-#   'bard' : FEMALE,
-#   'beastmaster' : FEMALE,
-#   'cleric' : FEMALE,
-#   'druid' : MALE,
-#   'fighter' : FEMALE,
-#   'gunslinger' : MALE,
-#   'highborn' : MALE,
-#   'knight' : MALE,
-#   'monk' : MALE,
-#   'necromancer' : FEMALE,
-#   'paladin' : MALE,
-#   'ranger' : MALE,
-#   'rogue' : MALE,
-#   'sorcerer' : MALE,
-#   'wizard' : MALE,
-# }
+  print('Installing Images')
+  for img_type, races_or_classes in (races, classes):
+    for rnr_obj in races_or_classes:
+      name = rnr_obj.name.lower().replace(' ', '_')
 
-# def copyImages():
-#   races = ('race', core.get_all_race_names())
-#   classes = ('class', core.get_all_class_names())
+      source = core.BASE_DIRECTORY.joinpath('docs', 'images', img_type, f'{name}.jpg')
+      dest   = core.BASE_DIRECTORY.joinpath('site', 'images', img_type, f'{name}.jpg')
 
-#   visited = set()
+      if source.exists():
+        source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, f'{name}.jpg')
+        dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, f'{name}.jpg')
+      else:
+        print(f"couldn't find {str(source)}")
 
-#   for img_type, items in (races, classes):
-#     for (item, sub_item) in items:
-#       usable_item = item.lower().replace(' ', '_')
-#       usable = sub_item.lower().replace(' ', '_')
+      shutil.copy(str(source), str(dest))
 
-#       if not usable in PREFERRED_IMAGES:
-#         usable = usable_item
+      skill_tree_path = core.BASE_DIRECTORY.joinpath('docs', 'images', 'skill_trees', f'{name}.jpg')
+      skill_tree_dest = core.BASE_DIRECTORY.joinpath('site', 'images', 'skill_trees', f'{name}.jpg')
 
-#       if usable in visited:
-#         continue
+      if skill_tree_path.exists():
+        print(f"Found a skill tree for {rnr_obj.name}")
+        shutil.copy(str(skill_tree_path), str(skill_tree_dest))
 
-#       if not usable in PREFERRED_IMAGES:
-#         print(f"No preferred image for {usable}!")
-#         sys.exit(1)
 
-#       male = 'male' if PREFERRED_IMAGES[usable] else 'female'
-#       source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, male, f'{usable}.jpg')
-#       dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, male, f'{usable}.jpg')
+  source = core.BASE_DIRECTORY.joinpath('docs', 'images', 'under_construction', 'under_construction.jpg')
+  dest   = core.BASE_DIRECTORY.joinpath('site', 'images', 'under_construction', 'under_construction.jpg')
+  shutil.copy(str(source), str(dest))
 
-#       if not os.path.exists(source):
-#         print(f"couldn't find {source}")
-#         source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, f'{usable}.jpg')
-#         dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, f'{usable}.jpg')
 
-#       print(f'cp {source} {dest}')
-#       shutil.copy(source, dest)
-#       visited.add(usable)
+def publish_character_creation(rnr_game, force_overwrite):
+  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+  docs_parts_directory = docs_directory.joinpath('parts')
+  file_path = GENERATED_SITE_DIRECTORY.joinpath('Compendium_of_Character_Creation.md')
 
-# def publish_character_creation(force_overwrite):
-#   global PREFERRED_IMAGES
-#   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
-#   docs_parts_directory = os.path.join(docs_directory, 'parts')
+  md = markdown_handler.markdown_handler(f'Character Creation', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
-#   md = markdown_handler.markdown_handler(f'Compendium of Character Creation', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Compendium_of_Character_Creation.md'))
-#   md.paragraph(f'_Version {core.VERSION_NUMBER}_')
+  background_lines = []
+  for rnr_background in sorted(rnr_game.backgrounds, key=lambda x: x.name):
+    list_of_lines = rnr_background.get_markdown(level=3).split('\n')
+    list_of_lines = [line + '\n' for line in list_of_lines]
+    list_of_lines += '---  \n  \n'
+    background_lines += list_of_lines
 
-#   rnr_race_wrappers  = core.load_all_race_wrappers()
-#   rnr_class_wrappers = core.load_all_class_wrappers()
+  race_lines = []
+  for rnr_race in sorted(rnr_game.races, key=lambda x: (x.parent_class, x.name)):
+    art_data = dict()
+    escaped_name = rnr_race.name.replace(' ', '_').lower()
+    art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
+    art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('race', f'{escaped_name}.jpg')}"
 
-#   race_lines = []
-#   for race_wrapper in sorted(rnr_race_wrappers, key=lambda x: x.race_name):
-#     race_lines += io_handler.get_rnr_race_wrapper_markdown(race_wrapper, PREFERRED_IMAGES)
+    list_of_lines = rnr_race.get_markdown(level=3, art_data=art_data).split('\n')
+    list_of_lines = [line + '\n' for line in list_of_lines]
+    list_of_lines += '---  \n  \n'
+    race_lines += list_of_lines
 
-#   class_lines = []
-#   for class_wrapper in sorted(rnr_class_wrappers, key=lambda x: x.class_name):
-#     class_lines += io_handler.get_rnr_class_wrapper_markdown(class_wrapper, PREFERRED_IMAGES)
+  class_lines = []
+  for rnr_class in sorted(rnr_game.classes, key=lambda x: x.name):
+    art_data = dict()
+    escaped_name = rnr_class.name.replace(' ', '_').lower()
+    art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
+    art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('class', f'{escaped_name}.jpg')}"
+    art_data['skill_tree_path'] = f"/{core.GLOBAL_ART_PATH.joinpath('skill_trees', f'{escaped_name}.jpg')}"
 
-#   skills = io_handler.markdown_skills()
+    list_of_lines = rnr_class.get_markdown(level=3, art_data=art_data).split('\n')
+    list_of_lines = [line + '\n' for line in list_of_lines]
+    list_of_lines += '---  \n  \n'
+    class_lines += list_of_lines
 
-#   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
-#   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
-#   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
-#   md.slurp_markdown_lines(race_lines)
-#   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
-#   md.slurp_markdown_lines(class_lines)
-#   md.slurp_markdown_file(os.path.join(docs_parts_directory, 'skills_part.md'))
-#   md.slurp_markdown_lines(skills)
 
-#   md._write_topmatter()
-#   md._write_section(f'Compendium of Character Creation')
-#   md.write_toc()
-#   md.write_buffer()
+  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
+  #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
+  md.start_heading("Backgrounds", 2)
+  md.slurp_markdown_lines(background_lines)
+  # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
+  md.start_heading("Races", 2)
+  md.slurp_markdown_lines(race_lines)
+  # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
+  md.start_heading("Classes", 2)
+  md.slurp_markdown_lines(class_lines)
+
+  md._write_topmatter()
+  md._write_section(f'Character Creation')
+  md.write_toc(max_to_include=3)
+  md.write_buffer()
 
 # def publish_ancients(force_overwrite):
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
@@ -168,7 +153,9 @@ from rangers_and_ruffians import RnRAbility
 #   md.write_toc()
 #   md.write_buffer()
 
-# def publish_rulebook(force_overwrite):
+#def publish_rulebook(rnr_game, force_overwrite):
+
+
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 #   docs_parts_directory = os.path.join(docs_directory, 'parts')
 
@@ -188,120 +175,57 @@ from rangers_and_ruffians import RnRAbility
 #   md._write_section(f'Rangers and Ruffians Rulebook')
 #   md.write_toc(max_to_include=3)
 #   md.write_buffer()
+  
+def publish_monsters(rnr_game : RangersAndRuffians, force_overwrite):
+  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+  file_path = GENERATED_SITE_DIRECTORY.joinpath('Book_of_Known_Beasts.md')
 
-# def publish_book_of_known_beasts(force_overwrite):
-#   core.load_Rangers_And_Ruffians_Data()
-#   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
+  md = markdown_handler.markdown_handler(f'The Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
-#   md = markdown_handler.markdown_handler(f'Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=os.path.join(GENERATED_SITE_DIRECTORY, 'Book_of_Known_Beasts.md'))
-#   md.paragraph(f'_Version {core.VERSION_NUMBER}_')
-
-#   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
-
-#   stats = core.standard_stat_order()
-#   abbreviations = [core.abbreviate_stat(stat).upper() for stat in stats]
-
-#   lines = []
-#   for category in sorted(core.GLOBAL_BOOK_OF_KNOWN_BEATS.keys()):
-#     md.start_heading(f"{category.replace('_',' ').title()}:", 2)
-#     c_info = core.GLOBAL_BOOK_OF_KNOWN_BEATS[category]
-
-#     if 'description' in c_info:
-#       md.paragraph(f">{c_info['description']}")
-#       md.add_whitespace()
-
-#     if 'tactics' in c_info:
-#       md.paragraph(f"___{c_info['tactics']}___")
-
-#     for beast_class in sorted(c_info['types'].keys()):
-#       md.start_heading(f"{beast_class.replace('_',' ').title()}:", 3)
-#       b_info = c_info['types'][beast_class]
-
-#       if 'description' in b_info:
-#         md.paragraph(f">{b_info['description']}")
-#         md.add_whitespace()
-
-#       if 'tactics' in b_info:
-#         md.paragraph(f"___{b_info['tactics']}___")
-
-#       for beast, info in core.GLOBAL_BOOK_OF_KNOWN_BEATS[category]['types'][beast_class]['types'].items():
-#         md.start_heading(f"{beast.replace('_',' ').title()}:", 4)
-
-#         if 'description' in info:
-#           md.paragraph(f">{info['description']}")
-#           md.add_whitespace()
-
-#         if 'tactics' in info:
-#           md.paragraph(f"___{info['tactics']}___")
+  monster_lines = []
+  current_monster_class = None
+  for rnr_monster in sorted(rnr_game.monsters, key=lambda x: (x.monster_class, x.monster_family, x.tier, x.name)):
+    list_of_lines = list()
+    if rnr_monster.monster_class != current_monster_class:
+      current_monster_class = rnr_monster.monster_class
+      list_of_lines.append(f'## {current_monster_class}  \n')
+    list_of_lines += rnr_monster.get_markdown(level=3).split('\n')
+    list_of_lines = [line + '\n' for line in list_of_lines]
+    monster_lines += list_of_lines
 
 
-#         md.paragraph(f"* ___{info['type']} Enemy___")
-#         md.paragraph(f"* __Health:__ {info['health']}")
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
+  md.start_heading("Monsters", 2)
+  md.slurp_markdown_lines(monster_lines)
 
-#         if 'armor' in info:
-#           md.paragraph(f"* __Armor:__ {info['armor']}")
-#         if 'magic_armor' in info:
-#           md.paragraph(f"* __Magic Armor:__ {info['magic_armor']}")
+  md._write_topmatter()
+  md._write_section(f'Monsters')
+  md.write_toc(max_to_include=3)
+  md.write_buffer()
 
-#         # This looks gross, but we're looping through stat names and then putting a nice little +/- effective stat.
-#         my_stats = [f"{info['stats'][x]} ({'+' if int(info['stats'][x]) >= 0 else ''}{int(info['stats'][x])})" for x in stats ]
+def publish_weapons(rnr_game : RangersAndRuffians, force_overwrite : bool):
+  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+  file_path = GENERATED_SITE_DIRECTORY.joinpath('Items.md')
 
-#         md.paragraph(f"* __Spell Power:__ { 12 + info['stats']['Inner_Fire'] } ")
-#         md.paragraph(f"* __Movement:__")
-#         for key, val in info['movement'].items():
-#           md.paragraph(f"  * __{key.title()}:__ {val} feet")
-#                 #movement_str = '  '.join([f"{key.title()}: _{val}_" for key, val in info['movement'].items() ])
+  md = markdown_handler.markdown_handler(f'Items', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
-#         md.chart_title(abbreviations)
-#         md.chart_row(my_stats)
-#         md.add_whitespace()
-
-#         if 'abilities' in info:
-#           md.paragraph("__Abilities:__")
-#           for ability, description in info['abilities'].items():
-#             ability_str = f"* __{ability.replace('_', ' ').title()}:__ {description}"
-#             md.paragraph(ability_str)
-#           # Reset after abilities
-#           md.add_whitespace()
-
-#         if 'action_spec' in info:
-#           md.paragraph("__Special Action Rules:__")
-#           for key, val in info['action_spec'].items():
-#             md.paragraph(f"* __{key.replace('_', ' ').title()}:__ {val}")
-#           # Reset after action spec
-#           md.add_whitespace()
+  weapon_lines = []
+  for rnr_weapon in sorted(rnr_game.weapons, key=lambda x: x.name):
+    list_of_lines = rnr_weapon.get_markdown(level=3).split('\n')
+    list_of_lines = [line + '\n' for line in list_of_lines]
+    weapon_lines += list_of_lines
 
 
-#         md.paragraph("__Actions:__")
-#         for action, a_info in info['actions'].items():
-#           action_str = f"* __{action.replace('_', ' ').title()}:__"
-#           if 'damage' in a_info:
-#             damage_addition = info['stats'][a_info['modifier']]
-#             action_str = f"{action_str} _{a_info['damage']} + {damage_addition} {a_info['modifier'].replace('_', ' ').title()}._"
-#           action_str = f"{action_str} {a_info['description']}"
-#           md.paragraph(action_str)
+  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
+  md.start_heading("Weapons", 2)
+  md.slurp_markdown_lines(weapon_lines)
 
-#         # Reset after action
-#         md.add_whitespace()
-
-
-#         for action_type in ['offhand_actions', 'villain_actions', 'conditional_actions', 'sanctuary_actions']:
-#           if action_type in info:
-#             md.paragraph(f"__{action_type.replace('_', ' ').title()}:__")
-#             for action, description in info[action_type].items():
-#               md.paragraph(f"* __{action.replace('_', ' ').title()}:__ {description}")
-#             # Reset after new action type.
-#             md.add_whitespace()
-
-#         # One last reset just in case.
-#         md.add_whitespace()
-#         md.paragraph('___')
-
-#   md._write_topmatter()
-#   md._write_section(f'Book of Known Beasts')
-#   md.write_toc(max_to_include=4)
-#   md.write_buffer()
-
+  md._write_topmatter()
+  md._write_section(f'Items')
+  md.write_toc(max_to_include=3)
+  md.write_buffer()
 # def publish_pantheon(force_overwrite):
 #   core.load_Rangers_And_Ruffians_Data()
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
@@ -376,18 +300,24 @@ from rangers_and_ruffians import RnRAbility
 #   md.write_toc(max_to_include=2)
 #   md.write_buffer()
 
-# def archive_past_versions():
-#   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
-#   archve_directory = os.path.join(docs_directory, 'archive')
+def archive_past_versions():
+  version_number_path = core.BASE_DIRECTORY.joinpath('meta.json')
 
-#   old_version = core.VERSION_NUMBER.replace('.', '_')
+  with open(version_number_path) as infile:
+    data = json.load(infile)
+    archive_version = data['version']
 
-#   print(f'searching {docs_directory} for markdown files')
-#   for file in Path(docs_directory).glob('*.md'):
-#     name = str(file).split('/')[-1].replace('.md', '')
-#     name = f'{name}_{old_version}.md'
-#     print(f'moving {file} to {os.path.join(archve_directory, name)}')
-#     shutil.move(file, os.path.join(archve_directory, name))
+  docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
+  archve_directory = os.path.join(docs_directory, 'archive')
+
+  old_version = archive_version.replace('.', '_')
+
+  print(f'searching {docs_directory} for markdown files')
+  for file in Path(docs_directory).glob('*.md'):
+    name = str(file).split('/')[-1].replace('.md', '')
+    name = f'{name}_{old_version}.md'
+    print(f'moving {file} to {os.path.join(archve_directory, name)}')
+    shutil.move(file, os.path.join(archve_directory, name))
 
 # def create_alt_all_race_class_json():
 #   all_race_data = copy.deepcopy(core.GLOBAL_RACE_DATA)
@@ -475,87 +405,92 @@ from rangers_and_ruffians import RnRAbility
 #   with open( os.path.join(GENERATED_SITE_DIRECTORY, 'ALT.json' ), 'w' ) as outfile:
 #     json.dump(data, outfile)
 
-# def setup_service_worker():
-#   intended_service_worker_path = os.path.join(core.BASE_DIRECTORY, 'service_worker.js')
+def setup_service_worker():
+  intended_service_worker_path = os.path.join(core.BASE_DIRECTORY, 'service_worker.js')
 
-#   site_path = os.path.join(core.BASE_DIRECTORY, '_site')
-#   site_service_worker_path = os.path.join(site_path, 'service_worker.js')
+  site_path = core.BASE_DIRECTORY.joinpath('_site')
+  site_service_worker_path = site_path.joinpath('service_worker.js')
 
-#   os.chdir(core.BASE_DIRECTORY)
-#   os.system("bundle exec jekyll build")
-#   os.chdir(site_path)
-#   os.system("node build.js")
-#   shutil.copy(site_service_worker_path, intended_service_worker_path)
-#   os.chdir(CODE_DIRECTORY)
+  os.chdir(core.BASE_DIRECTORY)
+  os.system("bundle exec jekyll build")
+  os.chdir(site_path)
+  os.system("node build.js")
+  shutil.copy(site_service_worker_path, intended_service_worker_path)
+  os.chdir(core.CODE_DIRECTORY)
 
 
 if __name__ == "__main__":
   core.printLogo()
-  rnr_game = core.load_Rangers_And_Ruffians()
 
-  with open('races.md', 'w') as outfile:
-    for race_name, race_obj in rnr_game.races.items():
-      outfile.write(race_obj.get_markdown(level=2))
+  # with open('races.md', 'w') as outfile:
+  #   for race_name, race_obj in rnr_game.races.items():
+  #     outfile.write(race_obj.get_markdown(level=2))
 
-  with open('classes.md', 'w') as outfile:
-    for class_name, class_obj in rnr_game.classes.items():
-      outfile.write(class_obj.get_markdown(level=2))
+  # with open('classes.md', 'w') as outfile:
+  #   for class_name, class_obj in rnr_game.classes.items():
+  #     outfile.write(class_obj.get_markdown(level=2))
   
-  with open('backgrounds.md', 'w') as outfile:
-    for background_name, background_obj in rnr_game.backgrounds.items():
-      outfile.write(background_obj.get_markdown(level=2))
+  # with open('backgrounds.md', 'w') as outfile:
+  #   for background_name, background_obj in rnr_game.backgrounds.items():
+  #     outfile.write(background_obj.get_markdown(level=2))
   
-  with open('weapons.md', 'w') as outfile:
-    for weapon_name, weapon_obj in rnr_game.weapons.items():
-      outfile.write(weapon_obj.get_markdown(level=2))
+  # with open('weapons.md', 'w') as outfile:
+  #   for weapon_name, weapon_obj in rnr_game.weapons.items():
+  #     outfile.write(weapon_obj.get_markdown(level=2))
   
-  with open('monsters.md', 'w') as outfile:
-    for monster_name, monster_obj in rnr_game.monsters.items():
-      outfile.write(monster_obj.get_markdown(level=2))
+  # with open('monsters.md', 'w') as outfile:
+  #   for monster_name, monster_obj in rnr_game.monsters.items():
+  #     outfile.write(monster_obj.get_markdown(level=2))
 
 
-  for class_name, class_obj in rnr_game.classes.items():
-    for ability in class_obj.get_all_abilities():
-      if ability.summoned_creature is not None:
-        print(f"{class_name} {ability.summoned_creature}")
+  # for class_name, class_obj in rnr_game.classes.items():
+  #   for ability in class_obj.get_all_abilities():
+  #     if ability.summoned_creature is not None:
+  #       print(f"{class_name} {ability.summoned_creature}")
 
 
-  # if not os.path.exists(GENERATED_SITE_DIRECTORY):
-  #   os.mkdir(GENERATED_SITE_DIRECTORY)
+  if not os.path.exists(GENERATED_SITE_DIRECTORY):
+    os.mkdir(GENERATED_SITE_DIRECTORY)
 
-  # parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
-  # parser.add_argument('--ask', action='store_true')
-  # args = parser.parse_args()
-  # force_overwrite = not args.ask
+  parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
+  parser.add_argument('--ask', action='store_true')
+  parser.add_argument('--skip_validation', action='store_true')
+  args = parser.parse_args()
+  force_overwrite = not args.ask
+  skip_validation = args.skip_validation
 
-  # print(f"Yes is {force_overwrite}")
+  print(f"Force overwrite is {force_overwrite}")
 
 
-  # update_version = False
-  # try:
-  #   new_version = input('Is this a new edition? If so, what is the new number? ')
-  #   major, greater, minor = new_version.split('.')
-  #   _,_,_ = int(major), int(greater), int(minor)
-  #   update_version = True
-  # except Exception as e:
-  #   print("Not naming a new version.")
+  update_version = False
+  try:
+    new_version = input('Is this a new edition? If so, what is the new number? ')
+    major, greater, minor = new_version.split('.')
+    _,_,_ = int(major), int(greater), int(minor)
+    update_version = True
+    new_suffix = input('What is the version suffix? ')
+  except Exception as e:
+    print("Not naming a new version.")
 
-  # if update_version:
-  #   print('Archiving past versions...')
-  #   archive_past_versions()
-  #   core.update_version(new_version)
-  #   print(f"The Version Number is now {core.VERSION_NUMBER}")
+  if update_version:
+    print('Archiving past versions...')
+    archive_past_versions()
+    update = core.update_version(new_version, new_suffix)
+  
+  rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
+  print(f"Loaded RnR version {rnr_game.get_full_version()}")
 
-  # copyImages()
-  # publish_rulebook(force_overwrite)
-  # publish_book_of_known_beasts(force_overwrite)
+  copyImages(rnr_game)
+  #publish_rulebook(force_overwrite)
+  publish_monsters(rnr_game, force_overwrite)
   # publish_pantheon(force_overwrite)
-  # publish_character_creation(force_overwrite)
+  publish_character_creation(rnr_game, force_overwrite)
+  publish_weapons(rnr_game, force_overwrite)
   # publish_ancients(force_overwrite)
   # publish_examples(force_overwrite)
   # publish_changelog(force_overwrite)
   # publish_printabled_materials(force_overwrite)
   # publish_poohbah_printables(force_overwrite)
   # create_alt_all_race_class_json()
-  # setup_service_worker()
-  # print("Done!")
+  setup_service_worker()
+  print("Done!")

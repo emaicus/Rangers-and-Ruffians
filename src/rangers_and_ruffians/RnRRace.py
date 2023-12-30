@@ -8,7 +8,8 @@ class RnRRace():
     self.health_dice = race_data['health_dice']
     self.base_movement = race_data['base_movement']
     self.handbook = race_data['handbook']
-    self.is_a = race_data.get('is_a', None)
+    self.parent_class = race_data.get('parent_class', self.name)
+    self.art_data = None
 
     self.abilities = list()
     # for ability in race_data['abilities']:
@@ -43,32 +44,38 @@ class RnRRace():
   #   return serial
   
 
-  def get_markdown(self, level=None):
+  def get_markdown(self, level=None, art_data=None):
+    subsection_level = None if level is None else level + 1
+    ability_level = None if level is None else level + 2
+
     race_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
-    ability_level = None if level is None else level + 1
+
+    if art_data is not None:
+      race_text += f"<img src='{art_data['path']}' class=\"raceClassImage\" />\n\n"
+      race_text += art_data['attribution']
 
     for para in self.handbook['introduction']:
-      race_text += f"{para}  \n"
+      race_text += f"{para}  \n  \n"
     race_text += '  \n'
 
-    race_text += f"### {self.handbook['you_may']['title']}  \n"
+    race_text += f"{'#' * subsection_level} {self.handbook['you_may']['title']}  \n"
     for option in self.handbook['you_may']['options']:
       race_text += f"* {option}  \n"
     race_text += '  \n'
     
-    race_text += f"### {self.handbook['assumptions']['title']}  \n"
+    race_text += f"{'#' * subsection_level} {self.handbook['assumptions']['title']}  \n"
     for option in self.handbook['assumptions']['options']:
       race_text += f"* {option}  \n"
     race_text += '  \n'
 
-    race_text += f"### Physical Features  \n"
+    race_text += f"{'#' * subsection_level} Physical Features  \n"
     for feature in self.handbook['looks']:
       title = feature['title']
       options = feature['options']
       race_text += f"* __{title}__ {options}  \n"
     race_text += '  \n'
 
-    race_text += '### Stats and Abilities  \n'
+    race_text += f"{'#' * subsection_level} Stats and Abilities  \n"
     race_text += f'__Health Dice:__ {self.health_dice} __Movement:__ {self.base_movement}ft   \n'
     for ability_obj in self.abilities:
       race_text += ability_obj.get_markdown(ability_level) + '   \n'

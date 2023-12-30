@@ -36,67 +36,47 @@ class RnRClass():
       all_abilities += self.abilities
     return all_abilities
 
-
-  # def serialize(self, male=False, verbose=False, skip_art=False):
-  #   global GLOBAL_SITE_ART_PATH, GLOBAL_ART_DICTIONARY
-
-  #   serial = {}
-  #   serial['name'] = self.name
-  #   serial['evasion'] = self.evasion
-  #   serial['stat_recommendation'] = self.stat_recommendation
-  #   serial['handbook'] = self.handbook
-  #   serial['health_dice_bonus'] = self.health_dice_bonus
-  #   serial['abilities'] = self.abilities
-  #   serial['expertise'] = self.expertise
-
-  #   gender_string = 'male' if male else 'female'
-
-  #   if not skip_art:
-  #     absolute_art_folder = Path(GLOBAL_SITE_ART_PATH, 'class')
-  #     relative_art_folder = Path('static', 'images', 'class')
-
-  #     image_path, attribution = core.get_gendered_art(relative_art_folder, absolute_art_folder, self.name.lower(), male)
-
-  #     img_name = image_path.split('/')[-1].split('.')[0]
-  #     rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}_{gender_string}', None)
-  #     if rights is None:
-  #       rights = GLOBAL_ART_DICTIONARY.get(f'{img_name}', None)
-
-  #     serial['rights'] = rights
-  #     serial["path_to_image"] = image_path
-  #   return serial
   
-  def get_markdown(self, level=None):
-    class_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
-    ability_level = None if level is None else level + 1
+  
+  def get_markdown(self, level=None, art_data=None):
+    subsection_level = None if level is None else level + 1
+    ability_level = None if level is None else level + 2
     
+    class_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    if art_data is not None:
+      class_text += f"<img src='{art_data['path']}' class=\"raceClassImage\" />\n\n"
+      class_text += art_data['attribution']
+
     for section in self.handbook:
       if section['display_title']:
-        class_text += f"### {section['title']}  \n"
+        class_text += f"{'#' * subsection_level} {section['title']}  \n"
       class_text += f"{section['text']}  \n"
-      class_text += "  \n"
+      class_text += "  \n  \n"
 
-    class_text += "### Recommended Stats  \n"
+    class_text += f"{'#' * subsection_level} Recommended Stats  \n"
     for stat in ["Strength", "Dexterity", "Intelligence","Inner_Fire",  "Perception", "Charisma"]:
       class_text += f"*  __{stat.replace('_', ' ')}:__ {self.stat_recommendation[stat]}  \n"
 
     class_text += "  \n"
 
-    class_text += "## Health and Expertise  \n"
+    class_text += f"{'#' * subsection_level}  Health and Expertise  \n"
     class_text += f"{self.name}s use {self.health_dice} as their class health dice. "
     class_text += f"{self.expertise}  \n"
 
-    class_text += "## Abilities  \n"
-    for ability in sorted(self.abilities, key=lambda a: a.name):
-      class_text += ability.get_markdown(ability_level)
-    class_text+= '  \n'
+    if len(self.abilities) > 0:
+      class_text += f"{'#' * subsection_level} Abilities  \n  \n"
+      class_text += f"<img src='{art_data['skill_tree_path']}' class=\"raceClassImage\" />  \n  \n"
+      for ability in sorted(self.abilities, key=lambda a: a.name):
+        class_text += ability.get_markdown(ability_level)
+      class_text+= '  \n'
 
-    class_text += "## Spells  \n"
-    for tier, spells in self.spells.items():
-      class_text += f"### {tier}  \n"
-      for spell in spells:
-        class_text += f'{spell.get_markdown(ability_level)}  \n'
-      class_text += '  \n'
-    class_text+= '  \n'
+    if len(self.spells) > 0:
+      class_text += f"{'#' * subsection_level}  Spells  \n"
+      for tier, spells in self.spells.items():
+        class_text += f"{'#' * subsection_level} {tier.replace('_', ' ')}  \n"
+        for spell in spells:
+          class_text += f'{spell.get_markdown(ability_level)}  \n'
+        class_text += '  \n'
+      class_text+= '  \n'
 
     return class_text

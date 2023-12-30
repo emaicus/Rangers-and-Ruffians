@@ -12,8 +12,8 @@ class RnRBackground:
 		
 		for option in self.options:
 			ret += f'__{option["question"]}__  \n'
-			for answer in option['answers']:
-				ret += f' * {answer}  \n'
+			for i in range(len(option['answers'])):
+				ret += f' {i+1}. {option["answers"][i]}    \n'
 			ret += '  \n'
 		ret += '  \n'
 		

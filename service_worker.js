@@ -272,51 +272,23 @@ workbox.precaching.precacheAndRoute([
     "revision": "d27f0aef1dc566bd36d27422e662ba5e"
   },
   {
-    "url": "site/images/class/female/archer.jpg",
-    "revision": "e307193a995d45f8dfd0823817d60929"
-  },
-  {
-    "url": "site/images/class/female/beastmaster.jpg",
-    "revision": "782c91369af5f3f3a5e1b4bc601d859c"
-  },
-  {
     "url": "site/images/class/fighter.jpg",
-    "revision": "d8b3923fbf791754e06513f8477c298a"
+    "revision": "56fde3a6762260ca423e529428aa51dd"
   },
   {
-    "url": "site/images/class/gunslinger.jpg",
-    "revision": "71aacf4abd579be8cef7cd3424386bf1"
-  },
-  {
-    "url": "site/images/class/highborn.jpg",
-    "revision": "4df3aec08c7de62d136b9266aae6bd29"
-  },
-  {
-    "url": "site/images/class/male/knight.jpg",
+    "url": "site/images/class/knight.jpg",
     "revision": "f0b835bd2e4e24965be812f191921670"
   },
   {
-    "url": "site/images/class/male/rogue.jpg",
+    "url": "site/images/class/monk.jpg",
+    "revision": "070f82df4cdc760f508f7c108b0dfddd"
+  },
+  {
+    "url": "site/images/class/rogue.jpg",
     "revision": "85542a55467e48e83214cd8bdb5b8288"
   },
   {
-    "url": "site/images/class/monk.jpg",
-    "revision": "524d941063e99603ccaf0027f48cc54e"
-  },
-  {
-    "url": "site/images/class/necromancer.jpg",
-    "revision": "8d92816cb04e9e53ac956eb271c6e64b"
-  },
-  {
-    "url": "site/images/class/paladin.jpg",
-    "revision": "7aef7fee2515cc43067b2419554106d0"
-  },
-  {
-    "url": "site/images/class/ranger.jpg",
-    "revision": "6bbec3c4a9132c3ccf93602cec423bee"
-  },
-  {
-    "url": "site/images/class/sorcerer.jpg",
+    "url": "site/images/class/warlock.jpg",
     "revision": "b5c88a1fc90d3b906d1e426c6bdad30e"
   },
   {
@@ -324,76 +296,84 @@ workbox.precaching.precacheAndRoute([
     "revision": "6a4120f4fcea6e0b0dd4bc70d4f6e658"
   },
   {
-    "url": "site/images/race/female/catterwol.jpg",
-    "revision": "775cc3f7e10770fdb0540d27ac5dcccd"
+    "url": "site/images/race/catterwol.jpg",
+    "revision": "67bb21376b089844d3ee310ac42b4103"
   },
   {
-    "url": "site/images/race/female/deep_elf.jpg",
-    "revision": "467f98e069bcfe94acdd9f2e1192cf3a"
-  },
-  {
-    "url": "site/images/race/female/fleetfoot_halfling.jpg",
-    "revision": "d2cd1e738dcaa07cf70d576758cc3146"
-  },
-  {
-    "url": "site/images/race/female/gnome.jpg",
-    "revision": "e05c11926a86536c9ffd829f63a7f106"
-  },
-  {
-    "url": "site/images/race/female/hardfoot_halfling.jpg",
-    "revision": "dc073ffa3aad64e46eaccb2b907d6a2a"
-  },
-  {
-    "url": "site/images/race/female/high_elf.jpg",
-    "revision": "c34619c914fb05a63381af21a48997d7"
-  },
-  {
-    "url": "site/images/race/female/orc.jpg",
-    "revision": "88e1dee0ab61c729ab76b869e9910bbc"
-  },
-  {
-    "url": "site/images/race/female/sprout.jpg",
-    "revision": "b1c2bb1a2d69922299a9c39c1e221010"
-  },
-  {
-    "url": "site/images/race/female/waterborn.jpg",
-    "revision": "065d24d896b4328dea94021229cf4f2e"
-  },
-  {
-    "url": "site/images/race/female/wood_elf.jpg",
-    "revision": "c29997f8a3d9fa1ccc30ab640923429d"
-  },
-  {
-    "url": "site/images/race/male/automaton.jpg",
-    "revision": "9de7bcb704dd7804e99e18cfa83d6fb4"
-  },
-  {
-    "url": "site/images/race/male/daemonspawn.jpg",
+    "url": "site/images/race/daemonspawn.jpg",
     "revision": "99bad0f4a7fb28b6ffd8a652f8fc91aa"
   },
   {
-    "url": "site/images/race/male/dwarf.jpg",
+    "url": "site/images/race/deep_elf.jpg",
+    "revision": "467f98e069bcfe94acdd9f2e1192cf3a"
+  },
+  {
+    "url": "site/images/race/dwarf.jpg",
     "revision": "7498b94114e2e6875e848c0a0e24a694"
   },
   {
-    "url": "site/images/race/male/goblin.jpg",
+    "url": "site/images/race/gnome.jpg",
+    "revision": "b84432d8709aefeab1691b77bdbe8d84"
+  },
+  {
+    "url": "site/images/race/goblin.jpg",
     "revision": "bebfa44ab43d49034e908ff9b0720bf3"
   },
   {
-    "url": "site/images/race/male/hissling.jpg",
-    "revision": "7484df0c4a008e66de38e7955f95dcab"
+    "url": "site/images/race/halfling.jpg",
+    "revision": "dc073ffa3aad64e46eaccb2b907d6a2a"
   },
   {
-    "url": "site/images/race/male/human.jpg",
+    "url": "site/images/race/high_elf.jpg",
+    "revision": "c34619c914fb05a63381af21a48997d7"
+  },
+  {
+    "url": "site/images/race/human.jpg",
     "revision": "939c1eb3a24baccf8ac9f35db938feb8"
   },
   {
-    "url": "site/images/race/male/kragraven.jpg",
-    "revision": "20389ee0b9bd86032c725fce3545ac6f"
+    "url": "site/images/race/lizkin.jpg",
+    "revision": "2646b164f0d55091f04b9ec1901816e7"
   },
   {
-    "url": "site/images/race/male/lizkin.jpg",
-    "revision": "2646b164f0d55091f04b9ec1901816e7"
+    "url": "site/images/race/orc.jpg",
+    "revision": "88e1dee0ab61c729ab76b869e9910bbc"
+  },
+  {
+    "url": "site/images/race/sprout.jpg",
+    "revision": "b1c2bb1a2d69922299a9c39c1e221010"
+  },
+  {
+    "url": "site/images/race/waterborn.jpg",
+    "revision": "065d24d896b4328dea94021229cf4f2e"
+  },
+  {
+    "url": "site/images/race/wood_elf.jpg",
+    "revision": "c29997f8a3d9fa1ccc30ab640923429d"
+  },
+  {
+    "url": "site/images/skill_trees/barbarian.jpg",
+    "revision": "1bb229e86dca74b8e8cbc341275841c7"
+  },
+  {
+    "url": "site/images/skill_trees/fighter.jpg",
+    "revision": "67719d813c0652f23d2c41ceb3d594af"
+  },
+  {
+    "url": "site/images/skill_trees/knight.jpg",
+    "revision": "2f11f76c8ea17c6fa9503f3323af0e91"
+  },
+  {
+    "url": "site/images/skill_trees/monk.jpg",
+    "revision": "770809db18e256f85edb44c16b1f9d8c"
+  },
+  {
+    "url": "site/images/skill_trees/rogue.jpg",
+    "revision": "6b1d36abbbd838297a3c623fec46bf72"
+  },
+  {
+    "url": "site/images/under_construction/under_construction.jpg",
+    "revision": "2e486932d009d0b6efa79b197b184734"
   },
   {
     "url": "site/js/nunjucks.js",
@@ -405,11 +385,15 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/character_creation_helper_page.html",
-    "revision": "6675c0dae4ba6403c5309ea5e7129de1"
+    "revision": "ce2ffeb734624b0807b355977f08f04f"
   },
   {
     "url": "site/pages/character_sheet.html",
-    "revision": "23d3532ae2e752933fb924bb8785d731"
+    "revision": "01f43c3b9f5fb5970f5c4eadb58899f1"
+  },
+  {
+    "url": "site/pages/character_store.html",
+    "revision": "c3ed2e2bb875e914e2c41c6eb7003cf0"
   },
   {
     "url": "site/pages/GENERATED/ALT.json",
@@ -417,51 +401,55 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "3985a993fc0eb6688e1fe547c67a8769"
+    "revision": "457abe14630862cbac5972d5dca194a0"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
-    "revision": "12f3283c0cf98dd6a7558ae389a7fbf5"
+    "revision": "bd6284586848e8b9ac937086a94374c1"
   },
   {
     "url": "site/pages/GENERATED/Changelog.html",
-    "revision": "b518a4c93e71faf66bdc4e3f6dd0d3ae"
+    "revision": "d57aeae21969fbaf599cd4ff265c77db"
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "234916b2549f4f0249bb8e6f9bd90337"
+    "revision": "096f666d13884c10bc8f242a1e08f1cd"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
-    "revision": "11935f2b9b53e8ba2db6d63041e47f9c"
+    "revision": "2dabafbcff7e5dee69fd4b8edbedef6c"
   },
   {
     "url": "site/pages/GENERATED/Examples.md",
     "revision": "18119a93572a91f6107e4c458aa8d141"
   },
   {
+    "url": "site/pages/GENERATED/Items.html",
+    "revision": "5b591604d3978c31620c781411457f22"
+  },
+  {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
-    "revision": "1e572ace312110fad3d3f11b707e3dca"
+    "revision": "457703a8cc4055f5f38bd2117674c959"
   },
   {
     "url": "site/pages/GENERATED/Printed_Materials.html",
-    "revision": "66e9001975d17e93481225c934dc0733"
+    "revision": "a6b08c6e7e1ffe89132f8b949e84be7d"
   },
   {
     "url": "site/pages/GENERATED/Rulebook.html",
-    "revision": "f4fec9f12ecf922f4754f6fb65a39957"
+    "revision": "5df6d8f19153d2cd29f2336fbd948ece"
   },
   {
     "url": "site/pages/GENERATED/Tome_of_the_Ancients.html",
-    "revision": "6c02c9637f23353976fbef62fe701e15"
+    "revision": "c6da19a5598405cb8f928eca5a1dd0a5"
   },
   {
     "url": "site/pages/level_up_sheet.html",
-    "revision": "92c4e0b952bacb74922d462c089919ae"
+    "revision": "5dd8616a3a416011a6bf389b0e7d86d5"
   },
   {
     "url": "site/pages/weapons.html",
-    "revision": "8b3dd7610bc06a5b91c5d2ed8ade1946"
+    "revision": "bf27f14a2e793b83103879ea9c7d3b17"
   },
   {
     "url": "site/printed_materials/standard_character_sheet.pdf",
@@ -533,11 +521,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "index.html",
-    "revision": "2bd332f45c7a890582a0c216bc6d1dcd"
+    "revision": "4c9fb34f8b4d62f9a1ef4c7e98bcd6e2"
   },
   {
     "url": "assets/css/style.css",
-    "revision": "5ea27f0fecfa9ef1a9b0c6d83cb26148"
+    "revision": "59064a8f69a728b62a5a630efe76235c"
   }
 ]);
 

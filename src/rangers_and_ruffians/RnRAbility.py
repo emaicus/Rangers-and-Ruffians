@@ -142,7 +142,7 @@ class RnRAbility():
     if succinct and self.action_type in ['Action', 'Inherited', 'modifies_ability']:
       pass 
     else:
-      spell_text += f"__{self.type.title()}{', ' + self.action_type if self.action_type is not None and self.action_type not in ['Action', 'Inherited', 'modifies_ability'] else ''}__  \n"
+      spell_text += f"{self.action_type}  \n" if self.action_type is not None and self.action_type not in ['Action', 'Inherited', 'modifies_ability'] else ''
     
     # Determine range display, don't print 'inherited'
     range_unit = 'Feet' if isinstance(self.range, int) else ''
@@ -208,7 +208,7 @@ class RnRAbility():
     
     if self.options is not None:
       for options in self.options:
-        spell_text += f"* {options}  \n"
+        spell_text += f"* __{options['name']}__ {options['description']} \n"
 
     if not self.damage is None:
       # Check weapon scaling. Add a special line if this spell doesn't scale.

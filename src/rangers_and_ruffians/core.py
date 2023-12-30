@@ -11,17 +11,16 @@ from pathlib import Path
 
 from .RangersAndRuffians import RangersAndRuffians
 
-CODE_DIRECTORY = Path(__file__).resolve()
-BASE_DIRECTORY = Path(CODE_DIRECTORY.parent.parent.parent)
+CODE_DIRECTORY = Path(__file__).resolve().parent
+BASE_DIRECTORY = Path(CODE_DIRECTORY.parent.parent)
 INSTALL_DIRECTORY = BASE_DIRECTORY.joinpath('INSTALLED_DATA')
 DATA_DIRECTORY = BASE_DIRECTORY.joinpath('data', 'data')
 SCHEMA_DIRECTORY = BASE_DIRECTORY.joinpath('data', 'schemas')
 
-GLOBAL_ART_PATH = BASE_DIRECTORY.joinpath('site', 'images')
-GLOBAL_SITE_ART_PATH = BASE_DIRECTORY.joinpath('site', 'static', 'images')
+GLOBAL_ART_PATH = Path('site', 'images')
 
 #called by load_rangers_and_ruffians_data to install rangers to this directory.
-def INSTALL_RANGERS_AND_RUFFIANS() -> None:
+def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
   global INSTALL_DIRECTORY
   global DATA_DIRECTORY
   global SCHEMA_DIRECTORY
@@ -108,84 +107,85 @@ def INSTALL_RANGERS_AND_RUFFIANS() -> None:
   with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
     monsters = yaml.safe_load(infile)
   
-  # for rnr_race in rnr_races:
-  #   abilities = rnr_race.get('abilities')
-  #   for ability in abilities:
-  #     ability['ability_type'] = 'ability'
-  #     try:
-  #       jsonschema.validate(ability, schema=ability_schema)
-  #     except jsonschema.exceptions.ValidationError as e:
-  #       print(f"ERROR: {ability.get('name', '')} {e.schema_path}, {e.message}")
-  #       sys.exit(1)
-  #     except Exception:
-  #       traceback.print_exc()
-  #       sys.exit(1)
-  
-  # for weapon in rnr_weapons:
-  #   for ability in weapon['abilities']:
-  #     ability['ability_type'] = 'ability'
-  #     try:
-  #       jsonschema.validate(ability, schema=ability_schema)
-  #     except jsonschema.exceptions.ValidationError as e:
-  #       print(e.relative_path)
-  #       print(e.json_path)
-  #       print(e.cause)
-  #       print(f"{e.schema_path}, {e.message}")
-  #       print(f"ERROR: {weapon.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
-  #       sys.exit(1)
-  #     except Exception:
-  #       traceback.print_exc()
-  #       sys.exit(1)
-  
-  # for monster in monsters:
-  #   for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
-  #     for ability in monster['moveset'].get(action_type, []):
-  #       ability['ability_type'] = 'ability'
-  #       try:
-  #         jsonschema.validate(ability, schema=ability_schema)
-  #       except jsonschema.exceptions.ValidationError as e:
-  #         print(e.relative_path)
-  #         print(e.json_path)
-  #         print(e.cause)
-  #         print(f"{e.schema_path}, {e.message}")
-  #         print(f"ERROR: {monster.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
-  #         sys.exit(1)
-  #       except Exception:
-  #         traceback.print_exc()
-  #         sys.exit(1)
+  if not skip_validation:
+    for rnr_race in rnr_races:
+      abilities = rnr_race.get('abilities')
+      for ability in abilities:
+        ability['ability_type'] = 'ability'
+        try:
+          jsonschema.validate(ability, schema=ability_schema)
+        except jsonschema.exceptions.ValidationError as e:
+          print(f"ERROR: {ability.get('name', '')} {e.schema_path}, {e.message}")
+          sys.exit(1)
+        except Exception:
+          traceback.print_exc()
+          sys.exit(1)
+    
+    for weapon in rnr_weapons:
+      for ability in weapon['abilities']:
+        ability['ability_type'] = 'ability'
+        try:
+          jsonschema.validate(ability, schema=ability_schema)
+        except jsonschema.exceptions.ValidationError as e:
+          print(e.relative_path)
+          print(e.json_path)
+          print(e.cause)
+          print(f"{e.schema_path}, {e.message}")
+          print(f"ERROR: {weapon.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
+          sys.exit(1)
+        except Exception:
+          traceback.print_exc()
+          sys.exit(1)
+    
+    for monster in monsters:
+      for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
+        for ability in monster['moveset'].get(action_type, []):
+          ability['ability_type'] = 'ability'
+          try:
+            jsonschema.validate(ability, schema=ability_schema)
+          except jsonschema.exceptions.ValidationError as e:
+            print(e.relative_path)
+            print(e.json_path)
+            print(e.cause)
+            print(f"{e.schema_path}, {e.message}")
+            print(f"ERROR: {monster.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
+            sys.exit(1)
+          except Exception:
+            traceback.print_exc()
+            sys.exit(1)
 
-  # for rnr_class in rnr_classes:
-  #   if 'skill_tree' not in rnr_class:
-  #     print(f"Validating Mage Class: {rnr_class['name']}")
-  #     spellbook = rnr_class.get('spells')
-  #     for tier, tier_spells in spellbook.items():
-  #       for spell_def in tier_spells:
-  #         # Tell the schema to evaluate this as a spell.
-  #         spell_def['ability_type'] = 'spell'
-  #         try:
-  #           jsonschema.validate(spell_def, schema=ability_schema)
-  #         except jsonschema.exceptions.ValidationError as e:
-  #           print(f'ERROR: Spell error in {rnr_class["name"]}')
-  #           print(f"ERROR: {spell_def.get('name', '')} {e.schema_path}, {e.message}")
-  #           sys.exit(1)
-  #         except Exception:
-  #           traceback.print_exc()
-  #           sys.exit(1)
-  #   else:
-  #     print(f"Validating Martial Class: {rnr_class['name']}")
-  #     skill_tree = rnr_class.get('skill_tree')
-  #     for ability_def in skill_tree['abilities']:
-  #       # Tell the schema to evaluate this as an ability.
-  #       ability_def['ability_type'] = 'ability'
-  #       try:
-  #         jsonschema.validate(ability_def, schema=ability_schema)
-  #       except jsonschema.exceptions.ValidationError as e:
-  #         print(f'ERROR: Ability error in {rnr_class["name"]}')
-  #         print(f"ERROR: {ability_def.get('name', '')} {e.schema_path}, {e.message}")
-  #         sys.exit(1)
-  #       except Exception:
-  #         traceback.print_exc()
-  #         sys.exit(1)
+    for rnr_class in rnr_classes:
+      if 'skill_tree' not in rnr_class:
+        print(f"Validating Mage Class: {rnr_class['name']}")
+        spellbook = rnr_class.get('spells')
+        for tier, tier_spells in spellbook.items():
+          for spell_def in tier_spells:
+            # Tell the schema to evaluate this as a spell.
+            spell_def['ability_type'] = 'spell'
+            try:
+              jsonschema.validate(spell_def, schema=ability_schema)
+            except jsonschema.exceptions.ValidationError as e:
+              print(f'ERROR: Spell error in {rnr_class["name"]}')
+              print(f"ERROR: {spell_def.get('name', '')} {e.schema_path}, {e.message}")
+              sys.exit(1)
+            except Exception:
+              traceback.print_exc()
+              sys.exit(1)
+      else:
+        print(f"Validating Martial Class: {rnr_class['name']}")
+        skill_tree = rnr_class.get('skill_tree')
+        for ability_def in skill_tree['abilities']:
+          # Tell the schema to evaluate this as an ability.
+          ability_def['ability_type'] = 'ability'
+          try:
+            jsonschema.validate(ability_def, schema=ability_schema)
+          except jsonschema.exceptions.ValidationError as e:
+            print(f'ERROR: Ability error in {rnr_class["name"]}')
+            print(f"ERROR: {ability_def.get('name', '')} {e.schema_path}, {e.message}")
+            sys.exit(1)
+          except Exception:
+            traceback.print_exc()
+            sys.exit(1)
 
   # Iterate over the validated files and install them.
   if len(reinstall) > 0:
@@ -225,55 +225,66 @@ def convert_yml_file_to_json_file(input_file : Path, output_file : Path) -> None
   except Exception as e:
     raise Exception(f"ERROR: could not save {str(input_file)} to {str(output_file)} as a yml file\n{traceback.format_exc()}")
 
-def update_version(version_string : str):
+def update_version(version_string : str, new_suffix : str) -> str:
 
   version_number_path = BASE_DIRECTORY.joinpath('meta.json')
 
   with open(version_number_path) as infile:
     data = json.load(infile)
-    current_version = data['most_recent_version']
+    current_version = data['version']
+    current_suffix = data.get('suffix', '')
 
   # Split and convert to int
   major, greater, minor = list(map(int, version_string.split('.')))
-  current_major, current_greater, current_minor = list(map(int, current_version.version.split('.')))
+  current_major, current_greater, current_minor = list(map(int, current_version.split('.')))
 
-  if major == current_major and greater == current_greater and minor == current_minor:
-    raise Exception('Called update version with the current version')
+  if major == current_major and greater == current_greater and minor == current_minor and current_suffix == new_suffix:
+    raise Exception('Called update version with the current version and suffix')
 
-  for variable_name, new_version, current_version, sub_variables in [
-    ('major', major, current_major, (greater, minor)),
-    ('greater', greater, current_greater, (minor)),
-    ('minor', minor, current_minor, ())
-  ]:
-  
-    # Major is too low
-    if current_version > new_version:
-      raise Exception(f'Attempting to roll back {variable_name} from {current_version} to {new_version}')
-    
-    # Major is too big
-    if new_version > current_version + 1:
-      raise Exception(f'Attempting to increment {variable_name} by more than one step from {current_version} to {new_version}')
-    
-    for var in sub_variables:
-      if var != 0:
-        raise(f"Incrementing {variable_name}, but not setting lesser versions to 0.")
+  # If the version number changed (not just a suffix change)
+  found_version_increase = False
+  if major != current_major or greater != current_greater or minor != current_minor:
+    for variable_name, new_version, current_version in [
+      ('major', major, current_major),
+      ('greater', greater, current_greater),
+      ('minor', minor, current_minor)
+    ]:
+      if found_version_increase:
+        if new_version != 0:
+          raise Exception(f'Raised a higher tier but did not set {variable_name} to zero.')
+        continue
 
-  #We can safely increase the version.
-  VERSION_NUMBER = f'{major}.{greater}.{minor}'
+      # Value is too low
+      if new_version < current_version:
+        raise Exception(f'Attempting to roll back {variable_name} from {current_version} to {new_version}')
+
+      # Value is too big
+      if new_version > current_version + 1:
+        raise Exception(f'Attempting to increment {variable_name} by more than one step from {current_version} to {new_version}')
+
+      # Version increased by one
+      if new_version == current_version +1:
+        found_version_increase = True
+
+  #We can safely use the version.
+  new_version = f'{major}.{greater}.{minor}'
 
   with open(BASE_DIRECTORY.joinpath('meta.json'), 'r') as infile:
     data = json.load(infile)
 
-  data['most_recent_version'] = VERSION_NUMBER
+  data['version'] = new_version
+  data['suffix'] = new_suffix
 
   with open(BASE_DIRECTORY.joinpath('meta.json'), 'w') as outfile:
     json.dump(data, outfile, indent=4)
+  
+  return f"{data['version']} {data['suffix']}"
 
-def load_Rangers_And_Ruffians() -> RangersAndRuffians:
+def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   start = time.time()
 
   try:
-    INSTALL_RANGERS_AND_RUFFIANS()
+    INSTALL_RANGERS_AND_RUFFIANS(skip_validation)
   except Exception as e:
     print("Critical Error while loading Rangers and Ruffians Data. Aborting")
     traceback.print_exc()
@@ -285,12 +296,13 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
   background_path = INSTALL_DIRECTORY.joinpath('backgrounds.json')
   weapon_path = INSTALL_DIRECTORY.joinpath('weapons.json')
   monster_path = INSTALL_DIRECTORY.joinpath('monsters.json')
-  art_path = INSTALL_DIRECTORY.joinpath('art.json')
+  attribution_path = INSTALL_DIRECTORY.joinpath('art.json')
   version_number_path = BASE_DIRECTORY.joinpath('meta.json')
 
   with open(version_number_path, 'r') as infile:
     data = json.load(infile)
-    version = data['most_recent_version']
+    version = data['version']
+    version_suffix = data['suffix']
 
   with open(race_path, 'r') as data_file:
     race_data = json.load(data_file)
@@ -322,7 +334,7 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
     #             pass 
     #           spell['effect']['conditions'] = conditions
 
-  with open(art_path, 'r') as data_file:
+  with open(attribution_path, 'r') as data_file:
     attribution_data = json.load(data_file)
 
   with open(pantheon_path, 'r') as data_file:
@@ -340,7 +352,7 @@ def load_Rangers_And_Ruffians() -> RangersAndRuffians:
   finish = time.time()
   print(f'LOAD TIME: {finish - start}(s)')
 
-  return RangersAndRuffians(version, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data)
+  return RangersAndRuffians(version, version_suffix, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data)
 
 ####################################################################################
 #
