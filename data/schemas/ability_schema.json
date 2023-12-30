@@ -1,0 +1,241 @@
+{
+	"description": "Definition of a single spell.",
+	"type": "object",
+	"additionalProperties": false,
+	"if": {
+		"properties": { "ability_type": { "const": "spell" } }
+	  },
+	  "then": {
+		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description", "requirements"]
+	  },
+	  "else": {
+		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description"]
+	  },
+	"properties": {
+		"ability_type": {
+			"type": "string",
+			"enum": ["ability", "spell"]
+		},
+		"name": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string",
+			"enum": ["damage", "aoe damage", "multi-attack damage", "healing", "aoe healing", "debuff",
+			          "aoe debuff", "buff", "aoe buff", "utility", "summoning", "transformation", "combat option",
+					  "critical hit enhancement"]
+		},	
+		"cost": {
+			"type": "integer",
+			"minimum": 0,
+			"maximum": 5
+		},
+		"duration": {
+				"anyOf": [
+				{
+					"type": "integer",
+					"minimum": 1
+				}, 
+				{
+					"type": "string",
+					"enum": ["concentration", "save", "instantaneous", "1 hour", "12 hours", "1 day", "infinite", "1 week", "5 minutes", 
+					          "until dispelled", "passive", "inherited"]
+				}
+			]
+		},
+		"attacks_made": {
+			"type": ["integer", "null"]
+		},
+		"limit": {
+			"type": ["integer", "null"]
+		},
+		"casting_time": {
+			"type": "string",
+			"minLength": 5
+		},
+		"range": {
+			"anyOf": [
+				{
+					"type": "integer",
+					"minimum": 10
+				}, 
+				{
+					"type": "string",
+					"enum": ["self", "touch", "infinite", "1 mile", "100 miles", "dash", "inherited", "base speed"]
+				}
+			]
+		},
+		"radius": {
+				"anyOf": [
+						{
+								"type": "integer",
+								"minimum": 10
+						},
+						{
+								"type": "string",
+								"enum": ["1 mile", "infinite"]
+						}
+				]
+		},
+		"description": {
+			"type": "string",
+			"minLength": 20
+		},
+		"requirements": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["movement", "verbal"],
+				"properties": {
+						"movement": {
+								"type": "boolean"
+						},
+						"verbal": {
+								"type": "boolean"
+						},
+						"components" : {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+						}
+				}
+		},
+		"passive_damage_source": {
+			"type": "boolean"
+		},
+		"damage_scaling": {
+			"type": "object",
+			"required": ["damage_type"],
+			"additionalProperties": false,
+			"properties": {
+				"multi_attack" : {
+					"type": "integer"
+				},
+				"damage_type" : {
+					"type": "string",
+					"enum":  ["acid", "healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", 
+					          "necrotic", "blunt", "piercing", "acoustic", "poison", "temporary health", "inherited"]
+				},
+				"scaled_by": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"weapon": {
+							"type": "boolean"
+						}
+					}
+				},
+				"damage_shape": {
+					"type": "string",
+					"enum": ["cone", "line", "chain"]
+				},
+				"tier_1": {
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
+				},
+				"tier_2": {
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
+				},
+				"tier_3": {
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
+				},
+				"all_tiers": {
+					"type": "string",
+					"pattern": "^\\d+d\\d+$"
+				}
+			}
+		},
+		"upcast": {
+			"type": "string"
+		},
+		"summoned_creature": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+					"tier_1": {
+						"type": "string"
+					},
+					"tier_2": {
+						"type": "string"
+					},
+					"tier_3": {
+						"type": "string"
+					},
+					"all_tiers": {
+						"type": "string"
+					}
+			}
+		},
+		"action_type": {
+			"type": "string",
+			"enum": ["Action", "Reaction", "Free Action", "modifies_ability"]
+		},
+		"ability_modified": {
+			"type": "string"
+		},
+		"effect": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["description", "type", "conditions", "save"],
+			"properties": {
+				"description": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"enum": ["buff", "debuff", "damage", "self-debuff"]
+				},
+				"options": {
+					"type": "array",
+					"items": {
+									"type": "string"
+					}
+				},
+				"conditions": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed","cold resistance",
+						"controlled", "darkvision", "diminished", "distracted",
+						"disarmed", "deafened", "dodging", "dumbstruck", "elemental resistance", "elusive", "empowered", "enlarged", "entangled", "ethereal",
+						"estranged", "fearless", "fire resistance", "fixated", "frenzied", "frightened",
+						"frozen", "grappled", "guarded", "halted", "hastened", "hard to move", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
+						"incapacitated", "inconspicuous", "inspired", "invincible",
+						"isolated", "lightweight", "leeched", "lured", "lycanthropy", "muted", "nimble", "poison resistance", "physical resistance", "psychic resistance",
+						"quickened", "rot", "shrunk", "total resistance", "transformed", "truesight",
+						"spurred to action", "spurred to movement", "staggered", "poisoned", 
+						"prone", "slowed", "stunned", "weakened", "vulnerable"]
+					}
+				},
+				"save" : {
+					"anyOf": [
+						{
+							"type": "null"
+						}, 
+						{
+							"type": "string"
+						}
+					]
+				}
+			}
+		},
+		"options": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["name", "description"],
+				"additionalProperties": false,
+				"properties":{
+					"name":{
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}

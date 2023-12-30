@@ -18,5 +18,6 @@ sass:
   - node_modules
 # Important for node_modules
 exclude: []
+ruby: 2.6.3
 
 logo: /docs/images/backdrops/banner.jpg

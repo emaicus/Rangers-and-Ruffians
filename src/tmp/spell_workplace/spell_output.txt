@@ -1,0 +1,1990 @@
+### Trick up Your Sleeve
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ Self   
+__Components:__ _m, v, A pocket or sleeve_  
+Your sleeve contains a small pocket dimension, capable of holding up to one cubic foot of material. Once you've hidden something up your sleeve, only you may retrieve it. If you fall unconcious or die, anything hidden in your sleeve instantly pops out.  
+  
+  
+### Imitate
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Components:__ _v_  
+Magic suffuses your voice as you perfectly copy a sound. For the spell's duration, you are able to flawlessly mimic voices and sounds that you have heard before.  
+  
+  
+### Suggestion
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Your honeyed words become laced with irresistable magic as you speak earnestly to your target. They must make an spell power save or believe the next ten words that that leave your mouth. They are able to reassess their feelings if they are presented with facts to the contrary. In such a case, they may repeat their save at disadvantage. Saves may be made at most once every ten minutes.  
+  
+  
+### Conjure Illusion
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+The air shimmers as a magical mirrage appears. You are able to conjure a static illusory image of the size of a horse or smaller. To all those who see it, the object appears to be present though upon further inspection it is ethereal.  
+  
+  
+### Dazzling Lights
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v, A flint_  
+As you clap your hands, seven dazzling orbs of light appear in the air around you. For the spell's duration, you may order them to go anywhere within range of you.  
+  
+  
+### Animal Aptitude
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v, A handfull of seeds_  
+Your magic has granted you an affinity over woodland creatures. Small animals love and follow you, and all animals tend to obey your commands and work to keep you happy and safe. This does not include monsterous animals. Whenever you perform an animal handling check, add your expertise.  
+  
+  
+### Song of Slow Healing
+__Healing Spell__  
+__Cost:__ 1 Action Point __Duration:__ 2 __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Calling upon your magic, you play a soothing song which heals an injured ally for two turns.  
+__Tier 1 Damage:__ 1d6 Healing   
+__Tier 2 Damage:__ 2d6 Healing   
+__Tier 3 Damage:__ 4d6 Healing   
+
+  
+  
+### Languages
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+A bead of magic embeds itself in the mind of your target, granting them the ability to speak and understand all languages for the spell's duration.  
+  
+  
+### Hypnotize
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 30 Feet  
+__Components:__ _m, v, A trinket_  
+You deftly begin to swing a trinket. The space around warps as you focus your intent on your target. They must make a spell power saving throw or their eyes slowly glaze over as they fall under your spell and become Charmed. The spell's victim may repeat its save once every ten minutes or whenever it is injured.  You may spend an additional action point on this spell to extend the save to once per hour. A Charmed creature must act in a way that benefits its charmer and has disadvantage on checks and saves made against them. If a charmed creature is harmed by its charmer or their allies, the effect immediately ends.   
+  
+  
+### Dissonant Melody
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _v_  
+The air ripples around you as you wield your focus and realease a chord of dissonant power. Enemies in the spell's radius must make a spell power saving throw or be Staggered.    A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Biting Words
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+You utter an insult laced with magical power, and a set of ethereal teeth appear beside your enemy and attempt to bite them. If your target is fully struck, they must make a spell power saving throw or be Grappled regardless of size. You must use concentration to maintain this grapple. Damage is repeated at the end of any of the target's turns in which it is still grappled. The spell's victim may spend an action on their turn to repeat their save and attempt to break the grapple.  For every action point spent on this spell, increase its range by 60ft. A Grappled creature is being held in place the creature that is Grappling them. Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.   
+__Tier 1 Damage:__ 1d6 Psychic   
+__Tier 2 Damage:__ 2d6 Psychic   
+__Tier 3 Damage:__ 3d6 Psychic   
+
+  
+  
+### Swarm of Squirrels
+__Summoning Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v, An acorn_  
+Seemingly from nowhere, a mob of a hundred squirrles pours out of every nook and cranny around you. These vicious beasts are yours to command! May they lay your enemies low!  
+_Summoned Creature:_  
+*  Tier 1, Minor Swarm  
+*  Tier 2, Greater Swarm  
+*  Tier 3, Zounds!  
+  
+  
+### Disguise
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ 1 Hour __Range:__ Self   
+__Components:__ _m_  
+Magically alter your form so that you look like someone else. You must appear humanoid and be within one foot of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do not hold up to physical inspection.  
+  
+  
+### Silence
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _v, A pair of cottonballs_  
+Holding your magic, you speak the celestial word for 'Silence.' At once, the world mutes itself as though you are underwater. No sound may be produced within the spell's radius. Enemies within the spell's radius are considered Muted.    Muted creatures cannot make sound and cannot cast spells with verbal components.   
+  
+  
+### Blocking Hand
+__Utility Spell, Reaction__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 30 Feet  
+__Components:__ _m, v, An old glove_  
+As an enemy bears down on you, you summon an unseen for protection. For a physical attack, add your expertise and your inner fire to your evasion. It the attack is a Glancing Blow, it instead misses completely. This ability may be used to protect anyone within the spell's radius.  
+  
+  
+### Song of Haste
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Components:__ _v, A coffee bean_  
+Targeting one of your allies, you channel your magic into a helpful incantation. Blood pounds in their ears as they are filled with incredible energy. For the spell's duration, they are affected by the Haste condition.    A Hastened creature can move twice its ordinary speed and gains one extra action on their turn. When a creature loses the hastened condition, they immediately take a level of Exhaustion.   
+  
+  
+### Take Courage
+__Aoe Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _v, A warrior's medal_  
+With a battle cry, you summon the spirit of bravery. In a way of your choosing, she bolsters the courage of everyone within the spell's radius, rendering them immune to the Frightened condition and granting them +2 to inner fire saves for the spell's duration.    Fearless creatures are immune to the Frightened condition.    
+  
+  
+### Restoration
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _m, v_  
+Closing your eyes, you channel healing magic into the space around you. Any allies within the spell's radius may immediately remake a failed saving throw at advantage. This spell does not affect death coin flips, curses, or certain villain abilities.  
+  
+  
+### Slow
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _m, v, A spoonful of honey_  
+As you touch your magic, your next word comes slowly deep as though stretched over time. Like honey, it drips over your target. They must make a spell power save or be Slowed by the soothing cadence of your speech. The spell's victim may repeat its save at the end of each of its turns or once every five minutes when out of combat.   A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative.   
+  
+  
+### Raucous Laughter
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ Self   
+__Radius:__ 60 ft.   
+__Components:__ _v_  
+You fire off a quip or joke laced with magic power. Your target must make a spell power save or fall to the ground in laughter and be Incapacitated. They may repeat their save at the end of each of their turns. The spell's effect ends instantly if the creature is injured. The spell's victim may repeat its save at the end of each of its turns or every five minutes when out of combat.   An Incapacitated creature cannot move or act. Hand-to-hand accuracy checks against them result in an automatic critical hit.   
+  
+  
+### Distract
+__Debuff Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Use your magic to project your voice into an enemy's ears. At the start of each turn, the target must make a spell power saving throw or be Distracted.    Distracted creatures make make perception and accuracy checks at disadvantage."   
+  
+  
+### Breathe Fire
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 15 Feet  
+__Components:__ _m, v, A mouthful of oil_  
+Magical warmth floods into your stomach before bubbling up and out. You belch a cone of fire, igniting anything before you. Anyone touched by your flames must make a spell power save or begin Burning.   For each additional action point spent on this spell, increase its range by 10 feet. A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves.   
+__Tier 1 Damage:__ 1d4 Fire   
+__Tier 2 Damage:__ 2d4 Fire   
+__Tier 3 Damage:__ 3d4 Fire   
+
+  
+  
+### Inanimate Aid
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+In a clattering chorus, every inanimate object within range of you comes to life. As one, they throw themselves at enemies in a radius of your choosing.  
+__Tier 1 Damage:__ 1d4 Blunt   
+__Tier 2 Damage:__ 2d4 Blunt   
+__Tier 3 Damage:__ 3d4 Blunt   
+
+  
+  
+### Immovable
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Radius:__ 300 ft.   
+__Components:__ _m, v_  
+You focus your magic on an object and render it immovable. The object must be smaller than a wagon, and cannot be a living entity. The spell ends if you move further than the radius from the object.  
+  
+  
+### Wall of Sound
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, A few drips of water_  
+As you strike a note, a 5x5x1 foot wall of sound appears at a point withhin range. The wall is impassible, and serves as cover for anyone behind it.  
+  
+  
+### Percussive Pulse
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 10 ft.   
+__Components:__ _v_  
+Emenate a pulse of powerful sound, which pushes back enemies around you. Anyone struck by the spell who is one size larger than you or smaller must make a spell power saving throw or be pushed back ten feet.       
+  
+  
+### Invisible Servant
+__Summoning Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v, A scrap of noble clothing_  
+With a snap of your fingers, you summon an invisible servant to aid you.  
+_Summoned Creature:_  
+*  All Tiers, Invisible Servant  
+  
+  
+### Minor Gate
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 300 Feet  
+__Components:__ _m, v_  
+For a split second, you create a portal large enough to fit yourself and one other individual of your size. You may transport yourself and an adjacent ally to a location anywhere within range, regardless of whether or not you can see your destination.  
+  
+  
+### Smokescreen
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 5 __Range:__ 300 Feet  
+__Radius:__ 60 ft.   
+__Components:__ _m, v, A piece of charcoal_  
+You open your mouth and magical smoke billows out, obscuring the world around you. Entities within the smokescreen are considered to be in darkness.  
+  
+  
+### Featherfall
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+With a flourish, you produce a feather seemingly from nowhere. It ignites, and in that moment, you may focus your magic on an entity or object to slow its falling speed to that of a feather.  
+  
+  
+### Counter Magic
+__Utility Spell, Reaction__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _v_  
+Rebuke an enemy as they cast a spell. Instantly stop tier 1 spells. For higher level spells, the caster must make a spell power save. This spell does not affect natural abilities such as a dragon's fire breath.  
+  
+  
+### Song of Mass Healing
+__Aoe Healing Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _v_  
+You call upon your magic as you perform a healing song. At the sound, your allies wounds begin to knit themselves shut.  
+__Tier 1 Damage:__ 4d4 Healing   
+__Tier 2 Damage:__ 4d10 Healing   
+__Tier 3 Damage:__ 8d10 Healing   
+
+  
+  
+### Kilgore's Thunderous Shout
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 20 Feet  
+__Components:__ _m, v_  
+Sucking in a breath, you channel the fearsome energy of Kilgore, barbarian minstrel of the realm of cheese and mead. The shout that you release is mighty, and wounds all enemies in a cone before you. Anyone struck by the shout must make a spell power saving throw or take damage, be thrown back 15 feet, and be knocked prone. On success, enemies take half damage.   For each additional action point spent on this spell, enemies suffer an additional 1d6 damage and are pushed back 15 feet further. A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+__Tier 2 Damage:__ 3d6 Acoustic   
+__Tier 3 Damage:__ 4d6 Acoustic   
+
+  
+  
+### Conjure Carriage
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Day __Range:__ 30 Feet  
+__Components:__ _m, v, A horseshoe_  
+Raise your hand to hail a magical carriage capable of seating four individuals with additional seats for two drivers. The carriage comes with two magical steeds, which may not be detached, and with an optional ethereal driver.  
+  
+  
+### Polymorph
+__Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _v_  
+Your target's body begins to warp as they seemlessly transition into the form of a creature of their challenge rating or lower. Player characters, including yourself are considered to have a challenge rating of a heavy creature of their level, and cannot transform into villain monsters. Unwilling targets may attempt a saving throw to avoid being Transformed. The spell's victim may repeat their save once per day.  Spend one additional action point on the spell to increase its save to once per month. Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannnot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah.   
+  
+  
+### Modify Memory
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 60 Feet  
+Use your magic to invade a creature's mind. You tell a lie so compelling that your target must make a spell power save or have a memory of your choosing modified. The target tries to rationalize the modified memory within reason, but if provided with adequate proof, will realize what happened.       
+  
+  
+### Zone of Truth
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Self   
+__Casting Time:__ 10 Minutes __Radius:__ 30 ft.   
+__Components:__ _v_  
+Tracing magical glyphs in the air around you, you perform a ritual to transform an area into a zone of truth. When within the zone, anyone who attempts to tell a lie is immediately struck ill, and vomits.  
+  
+  
+### Power Shriek
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 30 Feet  
+__Components:__ _v_  
+Inhale, exhale, inhale again, then release the most shameful of all magics: a power shriek. The attack passes through all enemies in a line before you. The target must make a spell power save or be Deafened and Bleeding. This spell's victims may repeat their save at the end of each of their turns.  You can spend an additional action point on this spell to double its range. A Deafened creature fails all auditory checks and makes perception checks at disadvantage. Bleeding damage is repeated at the start of an enemy's next turn.   
+__Tier 2 Damage:__ 3d6 Acoustic   
+__Tier 3 Damage:__ 4d6 Acoustic   
+
+  
+  
+### Corvo's Contagious Waltz
+__Aoe Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Save __Range:__ Self   
+__Radius:__ 60 ft.   
+__Components:__ _m, v, An object ot use as a baton_  
+As you wave a baton, a ghostly chorus is taken up and a haunting waltz begins to play/ Enemies within the spell's radius must make a spell power save or be Slowed and Staggered. The spell's victim may repeat its save at the end of each of its turns or once every five minutes when out of combat.   A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative. A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Unstoppable
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m, v_  
+Slap an object or person to make them unstoppable for 6 seconds. The object must be the size of a wagon or smaller. Items struck by an unstoppable object are pushed if not fixed in place. If an unstopable object meets an immovable object they both instantly vanish and are teleported to the realm of chaos along with anyone touching them.  
+  
+  
+### Lullaby
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _m, v_  
+Sing a song which attempts to put an enemy to sleep. So long as they can hear, anyone you choose within the spell's radius must make a spell power save at the start of each turn. On the first failure, they becomes dreary and are Hindered. On a second failure, they fall into a deep slumber, and are Incapacitated. The spell's victims remain asleep until damaged or awoken by a successful save. Saves are repeated once every ten minutes.  Spend an additional action point on this spell to cause it to affect all enemies within a 30 foot radius A Hindered creature loses half its movement. An Incapacitated creature cannot move or act. Hand-to-hand accuracy checks against them result in an automatic critical hit.   
+  
+  
+### Winged Magic Steed
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ Infinite __Range:__ 30 Feet  
+__Components:__ _m, v_  
+You raise your fingers to your mouth and whistle. Instantly, a winged steed appears, made of pure magical energy. The stallion may be de-summoned on command. If you have access to Conjure Carriage, it may be used in conjunction with this spell at no cost.  
+_Summoned Creature:_  
+*  All Tiers, Winged Steed  
+  
+  
+### Edmire's Grand Manor
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 300 Feet  
+__Components:__ _m, v_  
+When you learn this spell, a key appears in your hand. Any time that you wish, you may cast this spell to cause a door to appear, which may be unlocked with the key. Within, you find a massive mansion capable of housing up to 80 people comfortably in up to 20 bedrooms. The mansion is fully stocked with extravagant food and drink. It is manned by 100 servants, which are at the beck and call of the mansions creator. You may design the mansion to have rooms that suit the needs of your party, for example a holy sanctum, dungeons, training grounds and a kitchen. At will, you may give additional keys to trusted individuals. As soon as they have a key, they learn this spell, and may also summon the door. Nothing that originated within the mansion may be taken out. However, items brought in may stay. Once a door to the mansion is used, it lingers for ten minutes. During that time, anyone that finds it may attempt to break in.  
+  
+  
+### Marionette
+__Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _m_  
+You hoist your hand as they you are controlling a puppet and focus on an enemy. Your target must make a spell power save or be Controlled." The spell's victim may repeat their save at the end of each of their turns, when they are damaged, and once every hour.   A Controlled creature must fight for its controller and act as they instruct. The creature automatically fails checks and saves made against its controller except for saves made against being controlled. If the controller or its allies harm a controlled creature, the controlled creature may make a save at advantage against being controlled.   
+  
+  
+### Strike Dumb
+__Debuff Spell__  
+__Cost:__ 3 Action Points __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _v_  
+Utter a phrase so mind-bendingly intricate that anyone who hears it becomes confused. Your spell's target must make a spell power save. On success, they are Distracted. On failure, they are Dumbstruck. The spell's victim may repeat their save once per month.   Distracted creatures make make perception and accuracy checks at disadvantage." A Dumbstruck creature's intelligence is treated as -5. It is incapable of speach or complex planning. Dumbstruck creatures can speak using only broken language, and cannot cast spells, but maintain their allegiances.   
+  
+  
+### Nothing but Unicorns
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 120 Feet  
+__Components:__ _m, v_  
+Glitter dances in the air as rainbows erupt from your mouth and fingertips, streaming in three lines towards your foes. As they streak forth, each the colors tangle and combine into the form of a stampede of unicorns! Enemies struck by the stampede must make a spell power saving throw or have their perception of reality distorted. To them, you appear to take the form of a giant, jet black unicorn with blazing red eyes and a bloody horn. Meanwhile, the rest of the world begins to shimmer as sparkles emanate from objects randomly, and the ground begins to undulate. They are Frightened of you and are Distracted and Hindered. The spell's victims may repeat their save at the end of each of their turns.   A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage. Distracted creatures make make perception and accuracy checks at disadvantage." A Hindered creature loses half its movement.   
+__Tier 3 Damage:__ 5d6 Psychic   
+
+  
+  
+### Guards
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ 12 Hours __Range:__ 100 Feet  
+__Casting Time:__ 10 Minutes   
+__Components:__ _m, v_  
+Perform a ritual to summon six guardians to do your bidding. The guardians fearlessly protect anyone within the radius that is an ally to you. They cannot leave the spell's radius.  
+_Summoned Creature:_  
+*  All Tiers, Elemental Guardian  
+  
+  
+### Summon Bleck
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v, A piece of coal blessed by a high priest of Juliet (100gp)_  
+Summon a mighty bleck to fight for you! A bleck is a gooey, little creature with a one inch diameter. Bleck have 1 hit point, and are incapable of attacking. They move at a rate of one foot per minute. Bleck cannot be damaged by crushing force or blades, as they will merely be split and then reform. After five seconds, a bleck splits into two blecks. Each of these blecks wait for five seconds, and then split into two more. The weight of a million bleck is enough to kill a bleck. Bleck that are killed remain for 1 minute before dissolving into nothingness. After the spell's duration, all bleck are destroyed.  
+  
+  
+### I Know Malkizar!
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Infinite __Range:__ Self   
+__Casting Time:__ 1 Day __Radius:__ infinite ft.   
+__Components:__ _m, v, Siren Tongue (50 gp), Dragon Heart (1000 gp), Orb of Shadow (rare, 100,000 gp)_  
+Gather your strength and perform an ancient ritual of obfuscation. Alter the mind of everyone who viewed an event and them that there was another person present named Malkizar. In fourteen words or fewer, describe what Malkizar did. Everyone who witnessed the event now earnestly believes that Malkizar was present and performed the action you described.  
+  
+  
+### Elemental Armor
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+With a howl like the wind, your choice of fire, ice, or lightning wraps and swaddles you. For the spell's duration, you are Resistant to damage based on the chosen element.    Creatures with Elemenatal Resistance take half damage from attacks with the corresponding damage type and are immune to conditions caused by that type. For example, creatures with fire resistance take half damage from fire and are immune to the Burning condition.   
+  
+  
+### Control Plant Growth
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+As you beckon, plants spring from the earth and stretch towards the sky. You can create a plant of up to the size of a tree and may shape its growth for the spell's duration.  
+  
+  
+### Crown of Fireflies
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 100 ft.   
+__Components:__ _m, v_  
+A ring of glowing fireflies dance around your head, bathing the surrounding area in light The fireflies follow your subconscious commands, but must remain within the spell's radius.  
+  
+  
+### Echolocate
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Self   
+__Radius:__ 100 ft.   
+__Components:__ _v_  
+Your ears itch as they stretch, opening themselves to the subltest of sounds. You are able to emit a barely-audible sonic pulse, which gives you a detailed picture of the world within the spell's radius. For the spell's duration, you can continue to make surch perception checks, but are vulnerable to any auditory damage.  
+  
+  
+### Mend
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m, v_  
+Warm light glows faintly from a simple object's dents, dings, or tears as you mend it.  
+  
+  
+### Frost Bite
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+A latticework of frost spreads across your focus, then wraps around one of your enemies. On a critical hit, the enemy is Slowed until the end of their next turn.    A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative.   
+__Tier 1 Damage:__ 1d6 Cold   
+__Tier 2 Damage:__ 2d6 Cold   
+__Tier 3 Damage:__ 3d6 Cold   
+
+  
+  
+### Constricting Vine
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Save __Range:__ 30 Feet  
+__Components:__ _m, v_  
+You beckon snare-like vines from the earth. They writhe as they grasp at your target's feet, tangling and harming them. Average sized targets or smaller must make a spell power saving throw or be Grappled. Large enemies must make a spell power saving throw or be Hindered on their next turn. Grappled entities may repeat their save as an action once per turn.   A Hindered creature loses half its movement. A Grappled creature is being held in place the creature that is Grappling them. Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.   
+__Tier 1 Damage:__ 2d4 Blunt   
+__Tier 2 Damage:__ 3d4 Blunt   
+__Tier 3 Damage:__ 4d4 Blunt   
+
+  
+  
+### Bees!
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Radius:__ 15 ft.   
+__Components:__ _m, v, A piece of honeycomb_  
+A swarm of bees pour forth from your focus. The air hums as they fill an area of your choosing. On each of your turns, the spell deals damage to anyone in the radius. Swarm damage is not affected by focus modifiers. An entity may be harmed at most one time by a swarm of bees per round of combat Enemies who start their turn or who move into the spell's radius must make a spell power saving throw or become Distracted until they leave the swarm.    Distracted creatures make make perception and accuracy checks at disadvantage."   
+__Tier 1 Damage:__ 1d4 Poison   
+__Tier 2 Damage:__ 2d4 Poison   
+__Tier 3 Damage:__ 3d4 Poison   
+
+  
+  
+### Elemental Beam
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 90 Feet  
+__Components:__ _m_  
+Tracing a glyph in the air, you send a helix of fire and ice howling towards your enemies.The beam strikes all enemies in a line up to the spell’s range. Targets must make a spell power saving throw or be either Burning or Slowed. Burned enemies may use an action to extinguish themselves. Slowed targets remain so until the end of their next turn.   A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative. A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves.   
+__Tier 1 Damage:__ 1d4 Fire   
+__Tier 2 Damage:__ 2d4 Fire   
+__Tier 3 Damage:__ 3d4 Fire   
+
+  
+  
+### Poison Jet
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 15 Feet  
+__Components:__ _m, v_  
+Putrid purple liquid bubbles and hisses as it sprays from your focus, bathing enemies in a cone in front of you. Targets must make a spell power saving throw or be Poisoned. The spell's victims may reattempt their save at the end of each of their turns.   Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.   
+__Tier 1 Damage:__ 1d4 Poison   
+__Tier 2 Damage:__ 2d4 Poison   
+__Tier 3 Damage:__ 3d4 Poison   
+
+  
+  
+### Spores
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+As you hold your focus aloft, spores of blackish-green billow out, filling a radius around you. These living parasites heed your whim, entering the lungs of your foes while avoiding your friends. Enemies who begins their turn within the spell's radius must make a spell power saving or be Leeched for the spell's unmodified damage. On success, they are not leeched and they take half damage from the spell.   For each additional action point spent on this spell, increase the radius by 15 feet. A portion of the damage taken by a Leeched creature is returned to the attacker as health.   
+__Tier 1 Damage:__ 1d4 Poison   
+__Tier 2 Damage:__ 2d4 Poison   
+__Tier 3 Damage:__ 3d4 Poison   
+
+  
+  
+### Bark Armor
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Components:__ _m, v, A seed_  
+You take a seed in your hand and whisper to it, instructing it to protect you or an ally from harm. As it adheres to your target, gnarled bark sprouts from and around their armor, hardening them against attacks and granting them resistance to physical damage for the spell's duration.    Creatures with Physical Resistance take half damage from piercing and blunt attacks.   
+  
+  
+### Voice of Nature
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Components:__ _m, v_  
+Like a drop of sunlight, magic touches your mind, opening your ears so that you can understand the tongues of the birds, beasts, and plants. For the spell's duration, you may speak with natural things and understand them, and you have advantage when attempting to pacify hostile creatures.  
+  
+  
+### Homeopathic Remedy
+__Healing Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m, v, Berries, Juniper, Mud_  
+Working carefully, you mix your magic with the elements of the natural world. The result is a natural remedy, which performs a feat of healing on an ally and instantly removes any minor status effects which ail them. This remedy does not remove curses or effects caused by powerful magic as determined by the Grand Poohbah.  
+__Tier 1 Damage:__ 2d4 Healing   
+__Tier 2 Damage:__ 4d4 Healing   
+__Tier 3 Damage:__ 4d10 Healing   
+
+  
+  
+### Tailwind
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+Closing your eyes, you call upon the air or water to raise a mighty tailwind or current behind you. The gust has the ability to shift your trajectory while falling, guide a ship through otherwise windless seas, or to rocket you through deep water towards the surface. In combat, you may use this wind to force average sized or smaller enemies to move at half speed when approaching you from the front or to give yourself fifteen feet of additional movement.  
+  
+  
+### Animal Form
+__Transformation Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Self   
+__Components:__ _m, v_  
+Smoothly as though you were donning a garment, your body transforms into that of a non-magical animal that you have encountered before. In combat, transform yourself into any of the creatures with the 'Transformation' feature in the rulebook. For the spell's duration, you are affected by the Transformed condition. You may change back at any time as an action.  
+_Summoned Creature:_  
+*  All Tiers, transformed  
+  
+  
+### Forest Guardian
+__Summoning Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+You reach out to the natural world and summon a treeling to fight for you. Recasting this spell causes any existing treelings to instantly harden into stumps.  
+_Summoned Creature:_  
+*  Tier 1, Treeling  
+*  Tier 2, Sap Knight  
+*  Tier 3, Woad Warrior  
+  
+  
+### Fool the Senses
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _m, A mushroom_  
+Conjure a bitter smelling psychotoxic which wafts towards one of your foes and attempts to addle their mind. The target must make a spell power saving throw or become Estranged. The spell's victim may repeat their save at the end of each of their turns or once per day when out of combat.   An Estranged creature acts as though everyone is its enemy.   
+  
+  
+### Elemental Weapon
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m_  
+Elemental light wreathes a weapon as you touch it. For the spell's duration, the weapon is Infused with an element of your choosing.    An Infused object deals bonus damage when used as a weapon. The damage starts at 1d6, and increases to 1d8 then 1d10 in gameplay tiers 2 and 3.   
+  
+  
+### Keeper Kerrick's Stars
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _m_  
+The air around you shimmers as it fills with specks of glowing dust. These motes of light are attracted to enemies, adhereing to them. All attacks made against enemies within the spell's radius are at advantage, invisibility is negated, and incorporeal entities may be attacked.  
+  
+  
+### Fairy Ring
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Self   
+__Casting Time:__ 2 Minutes __Radius:__ 25 ft.   
+__Components:__ _m, v, Edelweiss or another small flower_  
+You kneel on the earth and mutter in the lanaguage of the forest. A ring of white flowers grow about you. The flowers are barely larger than a fingernail, and give off a honey-sweet scent. Enemies cannot enter the ring until you leave it. However, they may still attempt to harm you with ranged weapons. Enemies cannot be forced within the ring, but rather strike it like a wall. If an entity is caught between the ring and another solid object, they take 2d6 damage, but the ring creates room for them.  
+  
+  
+### Sanctum
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Self   
+__Radius:__ 100 ft.   
+__Components:__ _m, v_  
+Use your magic to make your campsite more defensible. Sticks and rocks set themselves up to snap under enemy feet, giving your party advantage on perception checks against encroaching enemies. Nature itself conspires to hide you from view, granting anyone in the camp advantage on stealth checks.  
+  
+  
+### Water Breathing
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, Fresh black mud_  
+Touch someone's neck to cause gills to form, granting them the ability to breathe underwater.  
+  
+  
+### Bane
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Wisps of darkness wreath up to four enemies of your choice. They must make a Spell Power Save or be Diminished.    A Diminished creature must subtract 1d4 from all checks and saves.   
+  
+  
+### Stride
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Self   
+__Components:__ _m_  
+The world shifts around you to ease your passing. For the spell's duration, you are Quickened.    A Quickened creature gains fifteen feet of movement and ignores difficult terrain.   
+  
+  
+### Snowblind
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Self   
+__Radius:__ 1 mile ft.   
+__Components:__ _m_  
+A snowstorm swirls around you as you lift your focus aloft. The snows are incredibly heavy, and quickly cause the terrain to become difficult and light to become low.  
+  
+  
+### Wall of Brambles
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 60 Feet  
+__Components:__ _m, A briar, thorn, or raspberry_  
+At your bidding, a snarled wall of brambles bursts from the ground, sporting cruel thorns. The wall is 5 feet wide, 10 feet high, and 40 feet long. Anyone besides you who moves thhrough the brambles takes damage and must make a spell power saving throw or be Halted. On success, they are Hindered.    Halted creatures immediately lose the remainder of their movement for a turn. A Hindered creature loses half its movement.   
+__Tier 1 Damage:__ 2d6 Piercing   
+__Tier 2 Damage:__ 3d6 Piercing   
+__Tier 3 Damage:__ 4d6 Piercing   
+
+  
+  
+### Whirlpool
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 100 Feet  
+__Radius:__ 30 ft.   
+__Components:__ _m_  
+You raise your focus aloft and sway with it as though stirring the air. In moments, a swirling riptide or whirlwind appears at a point within range. Everyone within the spell's radius must make a spell power save or take damage and be pulled 15 feet towards the spell's center. Anyone within the spell's radius is Hindered. Each turn, you must spend an action to maintain the whirlpool."    A Hindered creature loses half its movement.   
+__Tier 1 Damage:__ 1d6 Blunt   
+__Tier 2 Damage:__ 2d6 Blunt   
+__Tier 3 Damage:__ 3d6 Blunt   
+
+  
+  
+### Lightning Strike
+__Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, A piece of metal_  
+White-hot energy fills you until you feel that you might be reduced to cinder. Just before you immolate, you direct it outward, through your focus, and towards an unlucky enemy. With a peal of thunder, lightning arcs between you and your target. They must make a spell power saving throw or fall Prone.    A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+__Tier 1 Damage:__ 5d6 Lightning   
+__Tier 2 Damage:__ 6d6 Lightning   
+__Tier 3 Damage:__ 7d6 Lightning   
+
+  
+  
+### Flaming Orb
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Touch   
+__Radius:__ 10 ft.   
+__Components:__ _m, Tinder_  
+As you channel your magic, a point of fire appears on your hand. You toss it to the ground before you, and it rapidly grows to a white-hot sphere of up to five feet in diameter. Each turn, you may use an action to cause the sphere to roll up to thirty feet. The sphere is capable of rolling over obstacles up to two and a half feet tall. Anyone who is struck by the sphere or who begins their turn next to it must make a spell power saving throw or take damage and begin Burning. On a success, they take half damage.    A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves.   
+__Tier 2 Damage:__ 2d4 Fire   
+__Tier 3 Damage:__ 3d4 Fire   
+
+  
+  
+### Columns of Ice
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 60 Feet  
+__Components:__ _m, A few drips of water_  
+Four crystals of ice fly from your focus and embed in the ground at spots within ragne. They instantly grow into five-by-five foot columns of up to twenty feet high.  
+  
+  
+### Freezing Rain
+__Aoe Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Hour __Range:__ Self   
+__Radius:__ 1 mile ft.   
+__Components:__ _m, A rainstick_  
+Cause a freezing rain to fall over up to one mile of terrain, making it difficult to traverse. Anyone who moves at greater than half speed within the spell's radius must make a spell power saving throw or fall Prone.    A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+  
+  
+### Elemental Form
+__Transformation Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Day __Range:__ Self   
+__Components:__ _m, v_  
+Light bursts from you as you transform yourself into a being of pure elemental energy.  
+_Summoned Creature:_  
+*  Tier 1, Elemental Spark  
+*  Tier 2, Elemental  
+*  Tier 3, Force of Nature  
+  
+  
+### Grant Elemental Resistance
+__Buff Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Mark an ally's brow with a natural glyph. For the spell's duration, they are Resistant to an element of your choosing."    Creatures with Elemenatal Resistance take half damage from attacks with the corresponding damage type and are immune to conditions caused by that type. For example, creatures with fire resistance take half damage from fire and are immune to the Burning condition.   
+  
+  
+### Wings
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Day __Range:__ Self   
+__Components:__ _m, An eagle's feather_  
+Eagles' wings unfurl painlessly at your back and immediately you can fly. Your flying speed is equal to twice your normal movement.  
+  
+  
+### Magnetic
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+__Radius:__ 100 ft.   
+__Components:__ _m, A magnet or piece of metal_  
+Release your magic into an object within range to transform it into an incredibly powerful magnet. Any metal within 100 feet is attracted to the magnet. Entities holding metal weapons must make a spell power save or lose their grip. Entities wearing metal armor are pulled fifteen feet towards the magnet on failure, or fly to the magnet if they roll below a five, taking 1d4 damage per five feet that they are carried.  
+  
+  
+### Call of the Moon
+__Transformation Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Day __Range:__ 60 Feet  
+__Components:__ _m, v, A white gemstone or opal (100gp)_  
+Call upon the power of the moon, and transform yourself or an ally into a werewolf. If the entity falls to zero health while Transformed, they contract the Lycanthropy condition.    Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannnot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah. Fixme I wrote this up in the other document.   
+_Summoned Creature:_  
+*  All Tiers, Werewolf  
+  
+  
+### Prison of Ice
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Save __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _m_  
+A black wind swirls around you as the air plummets to hundreds of degrees below zero. Your allies watch on, unharmed as all enemies within the spell's radius are bitten by merciless frost. Affected enemies must make a spell power saving throw or take full damage and become Frozen. On success, they take half damage. Frozen enemies are not damaged by the spell until unfrozen. The spell's victims may repeat their save at the end of each of their turns or whenever they are damaged.   A Frozen creature’s body has been magically hardened. As such they are resistant to physical damage, but cannot move or act."   
+__Tier 3 Damage:__ 6d6 Cold   
+
+  
+  
+### Awaken
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Infinite __Range:__ Touch   
+__Casting Time:__ 1 Hour   
+__Components:__ _m, Four soul gems (1000gp), Dreamcatchers, Rare Incense (100gp)_  
+Carefully craft a druid's circle with soul gems set at each corner. Place dreamcatchers about the ring, and burn incense. Finally, bring a chosen animal into the circle and place your hand on its head. Its eyes glaze over as you reach into its mind and coax forth a spark of the divine. At the end of the ritual, the animal is sentient and gains the ability of human speech.  
+  
+  
+### Bountiful Harvest
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Day __Range:__ Self   
+__Casting Time:__ 1 Hour   
+__Components:__ _m, A fine chalice (400gp), A stock of wheat_  
+Bring your hands together and make the sign of thanks. As you reach out to your magic, a feast miraculously appears, complete with a table and chairs grown of the finest wood. There is enough food that up to twelve people may partake of the feast. Each of these entities fully heal, and gain additional hit points equal to your level plus your inner fire. These hit points last for 24 hours. Bountiful Harvest may be used at most once per day.  
+  
+  
+### Stormlord
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Concentration __Range:__ Self   
+__Casting Time:__ 1 Hour   
+__Components:__ _m, v_  
+So great is your connection to the natural world that you may change the weather in a region. Summon forth snow or rain, hail or heat, or any other phenomena you wish. You are able to control the weather to accomplish a specific task. The weather does not change back when concentration is broken.  
+  
+  
+### Starfall
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 300 Feet  
+__Casting Time:__ 1 Minute __Radius:__ 15 ft.   
+__Components:__ _m_  
+You raise your hand aloft and reach beyond the sky and up into the realms above. Spend one full round of combat focusing on bringing down four massive meteors. If you are attacked, make a concentration check. On failure, you lose control of the spell, and only 1d4 meteors fall from the sky. On success, call down all four meteors. The fallen stars deal damage to all enemies in their radius. Enemies can be damaged by at most one meteor.  
+__Tier 3 Damage:__ 6d6 Fire   
+
+  
+  
+### Realm Walker
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m_  
+Focus on a tree, the earth, or another element of nature. With a sound like a roaring wind, it tears open, revealing a portal to another realm. If you have visited a place, you may open a portal to it. If you have not visited a realm or location, roll a check with your Poohbah to determine where the portal lets out.  
+  
+  
+### Perfect Foresight
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Hour __Range:__ Self   
+__Components:__ _m, A crystal ball_  
+Like a flame cutting through mist, you peer into the future. During the spell's duration, change one failed roll to a success or one successful roll to a failure.  
+  
+  
+### Beam of Light
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+You raise your hand and a blinding beam of white-hot light streaks towards your target. On a critical hit, your target is Blinded until the end of their next turn.   For each additional action point spent on this spell, deal an additional dice of damage. A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+__Tier 1 Damage:__ 1d6 Radiant   
+__Tier 2 Damage:__ 2d6 Radiant   
+__Tier 3 Damage:__ 3d6 Radiant   
+
+  
+  
+### Firey Rebuke
+__Aoe Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+White hot flames fill the space around you as you call on your deity for protection, damaging everyone in the spell's radius.  
+__Tier 1 Damage:__ 1 Radiant   
+__Tier 2 Damage:__ 1 Radiant   
+__Tier 3 Damage:__ 1 Radiant   
+
+  
+  
+### Block Attack
+__Buff Spell, Reaction__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Your focus blazes and a shimmering barrier materializes between an attack and its target. Add your inner fire to your ally's evasion. If the blow hits, it deals half damage. If it is glancing, it instead misses entirely.       
+  
+  
+### Ward of Protection
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v_  
+Trace a holy symbol on an ally as you pray for them. For the spell's duration, whenever they are attacked the ward flares with light, granting them +3 evasion.       
+  
+  
+### Divine Resonance
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ Self   
+__Radius:__ 60 ft.   
+__Components:__ _m, v_  
+Radiance envelops you and spreads in waves, shaking your enemies' moral. They must make a spell power saving throw or become Staggered on their next turn.    A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Detect Evil
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 10 __Range:__ Self   
+__Radius:__ 100 ft.   
+Your deity grants you a view into the hearts of others. For the spell's duration, evil entities are surrounded by an aura of darkness in your vision, while good entities with an aura of light. The definition of good and evil corresponds to the deity that you worship.  
+  
+  
+### Purification
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Touch   
+__Components:__ _m, v_  
+With a gentle touch, you drive impurity from a food, drink, potion, or person. You may use this spell to render poisons innocuous, heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour.  
+  
+  
+### Mend
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m, v_  
+Your hands glow as you magically mend small dents, dings, scratches, and tears in items.  
+  
+  
+### Holy Light
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Touch   
+__Radius:__ 50 ft.   
+__Components:__ _m, v_  
+With a muttered prayer, you raise an object aloft and it illuminates, casting light within the spell's radius. Undead and demonic entities who begin their turn within the light are Staggered.    A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Make Habitable
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _m, v_  
+As you say a prayer of comfort, the area within the spell's power becomes comfortable. Snow becomes warm to the touch, rain ceases to fall, and puddles instantly evaporate.  
+  
+  
+### Prayer of Healing
+__Healing Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Your voice resonates with profound compassion. Echoing waves of healing energy knit your target's wounds shut. If you physically touch your target, double the number of dice rolled.  
+__Tier 1 Damage:__ 1 Healing   
+__Tier 2 Damage:__ 2 Healing   
+__Tier 3 Damage:__ 3 Healing   
+
+  
+  
+### Spare
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Channel divine magic to spare a downed ally, immediately returning them to 1 health.  
+  
+  
+### Guardian Blade
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 15 Feet  
+__Radius:__ 100 ft.   
+__Components:__ _m, v_  
+You summon a holy blade to float in the air beside you. The blade is able to make its own reactions, and is capable of making exposed attacks. On your turn, you may move the blade thirty feet and attack with it as an action. The blade must remain within the spell's radius or be desummoned. For attack and damage roles, use your inner fire as the modifier.  
+  
+  
+### Sap Life
+__Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Dark tendrils writhe from your outstretched hand and pierce your enemy. They pulse like veins as they sap your target's vitality. Any damage dealt by this spell is Leeched.   For each additional action point, deal an additional dice of damage. A portion of the damage taken by a Leeched creature is returned to the attacker as health.   
+__Tier 1 Damage:__ 1d6 Necrotic   
+__Tier 2 Damage:__ 2d6 Necrotic   
+__Tier 3 Damage:__ 3d6 Necrotic   
+
+  
+  
+### Delayed Heal
+__Healing Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v_  
+Infuse a chosen ally with a delayed healing ward. They may call upon its rejuvenating energies when most needed, mending their wounds at the opportune moment. They may trigger the ward as a reaction or free action.  
+__Tier 1 Damage:__ 1 Healing   
+__Tier 2 Damage:__ 2 Healing   
+__Tier 3 Damage:__ 3 Healing   
+
+  
+  
+### Compelled Truth
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 30 Feet  
+__Components:__ _m_  
+Your eyes flash with holy light as you apply divine pressure to your target. They must make a spell power save or become incapable of lying. The spell's victim may re-attempt their save once per hour.      
+  
+  
+### Enlarge
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Radiant light suffuses and surrounds one of your allies. At once, their body Enlarged. You may choose to cast this spell using concentration. Unwilling targets may repeat their save at the end of each of their turns or once every five minutes when out of combat.   Enlarged creatures have grown to massive size. They deal 1d6 bonus damage on physical attacks, are resistant to physical damage, and have advantage on strength checks. However, Accuracy checks made against an enlarged target are at advantage.   
+  
+  
+### Forget Ability
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Attempt to make an enemy forget one of its abilities." They must make a spell power save or lose an ability of your choice. For example, a dragon may forget how to breathe fire. The spell's victim may repeat their save at the end of each turn or once every ten minutes when out of combat.      
+  
+  
+### Hold Weapon
+__Debuff Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _v_  
+Attempt to bind an enemy's weapon in place. They must make a spell power save or lose access to their weapon.       
+  
+  
+### Share Sense
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ Touch   
+__Components:__ _m_  
+Touch an ally or entity. Enemies are able to make an inner fire save. For the duration of the spell, you are able to share their senses.  
+  
+  
+### Slow
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 30 Feet  
+__Components:__ _v_  
+Attempt to steal the vigor from an enemy. They must make a spell power save or be slowed. The spell's victim may repeat their save at the end of each of their turns or once every five minutes when out of combat.   A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative.   
+  
+  
+### Blind
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Components:__ _v_  
+Attempt to strike an enemy blind. They must make a spell power save or be Blinded. The spell's victim may repeat their save at the end of each of their turns or once every five minutes when out of combat.   A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+  
+  
+### Haste
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Cast a spell which grants an ally vigor. They are granted the benefits of the Hastened condition.   For an additional action point, increase the duration of the spell to 10 minutes. A Hastened creature can move twice its ordinary speed and gains one extra action on their turn. When a creature loses the hastened condition, they immediately take a level of Exhaustion.   
+  
+  
+### Excoriating Beam
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+A blinding beam of light streaks from you, ringed with halos. The blast harms everyone in a line before you, but is stopped by objects with a width greater than one foot. Anyone struck by the spell must make a spell power saving throw or be Blinded until the end of their next turn.   You may spend an additional action point on this spell to allow it to pass through obejcts with a width up to five feet. A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+__Tier 2 Damage:__ 3d6 Radiant   
+__Tier 3 Damage:__ 4d6 Radiant   
+
+  
+  
+### Dispel Magic
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ Touch   
+__Components:__ _v_  
+Carefully undo the weave of a first tier spell or curse. If the magic that you seek to reverse is of a higher tier, a check must be made as defined by the Grand Poohbah. Dispell magic does not heal damage or repair magically damaged objects.  
+  
+  
+### Speak Tongues
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+Your deity touches your tongue or that of an ally and allows you to communicate its word to others. You are able to speak and understand any language for the spell's duration.  
+  
+  
+### Mass Heal
+__Aoe Healing Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _v_  
+Hands clasped, you pray for the health of all those around you. Glowing golden light wraps any allies within the spell's radius as they are healed.  
+__Tier 1 Damage:__ 1 Healing   
+__Tier 2 Damage:__ 1 Healing   
+__Tier 3 Damage:__ 1 Healing   
+
+  
+  
+### Hallow
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Self   
+__Casting Time:__ 10 Minutes __Radius:__ 30 ft.   
+__Components:__ _m, v, Holy Water_  
+Take a few minutes to cast a prayer of healing upon your campsite. For the spell's duration, any sleep taken within the radius passes as though it was in a bed. Further, perception checks made within the radius are at advantage.  
+  
+  
+### Speak with the Dead
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 5 __Range:__ Touch   
+__Components:__ _m, v, A candle, 1 gold piece worth of holy oil_  
+Anoint a body with holy oil and clutch a candle close. As you reach out to your diety, the candle flares as the deceased's spirit returns to the mortal coil. The corpse cannot move, but is able to speak so long as it's mouth and ears are present. You may ask it three questions before the spell ends and the flame goes out. This spell may be cast on a given entity exactly once.  
+  
+  
+### Death Ward
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Touch   
+__Casting Time:__ 5 Minutes   
+__Components:__ _m, v, Sacred ash, Holy water, A gem worth ten gold pieces_  
+Mix together sacred ash and holy water, then place a small gemstone within. As you begin a prayer, the gemstone shatters and the mixture shimmers with gold light. Use the ash to trace a holy glyph on the brow of an ally. The next attack that would have dropped them to zero health is negated.  
+  
+  
+### Scry
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Infinite   
+__Components:__ _m, v, A reflective surface, A clear focusing gem_  
+Press a focusing gem against a reflective surface and speak the primordial word for 'reveal.' You are instantly able to view a person or place that you know as if through a one way window. The scry spell cannot penetrate lead or certain protective spells. By default, sound is not conveyed. However, you can optionally let a person know that you are scrying them. If they are a mage, they are able to spend one action point to tether your scrying spell to a nearby reflective object, allowing you to communicate with one another.  
+  
+  
+### Town Portal
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ Touch   
+__Casting Time:__ 10 Minutes   
+__Components:__ _m, v, Blessed chalk_  
+When you enter a town, you may pray over a dwelling and draw a holy glyph on the doorframe. From that point forward, you may perform a ritual to open a door to that location, regardless of distance. You may mark at most one building per town in this way.  
+  
+  
+### Truesight
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v_  
+Your eyes shimmer with holy light as you speak a prayer for clarity. By the power of your deity, grant yourself and up to six others Trusight.    Fixme I wrote this up in the other document.   
+  
+  
+### Silence
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _v, A pair of cottonballs_  
+Holding your magic, you speak the celestial word for 'Silence.' At once, the world mutes itself as though you are underwater. No sound may be produced within the spell's radius. Enemies within the spell's radius are considered Muted.    Muted creatures cannot make sound and cannot cast spells with verbal components.   
+  
+  
+### Guardians of Faith
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 15 ft.   
+__Components:__ _v_  
+Holy spirits fill the space around you in a swirling tide of light. Enemies within the spell's radius are Hindered. When they move into the spell's radius or begin their turn within it, they must make a spell power saving throw or take damage. On success, they take half damage.    A Hindered creature loses half its movement.   
+__Tier 2 Damage:__ 3d6 Radiant   
+__Tier 3 Damage:__ 4d6 Radiant   
+
+  
+  
+### Turn Undead
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _m, v, Holy Water, Oil, or a Holy Symbol_  
+Hold your focus aloft as a bane for undead enemies. Any undead enemy within the spell's radius must make a spell power saving throw or be Frightened of you. The spell's victims may repeat their save at the end of each turn or once every ten minutes when out of combat.   A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.   
+  
+  
+### Commune
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Casting Time:__ 10 Minutes   
+Attempt to commune with your patron. Roll 1d20 and add your expertise. On a 19 or above, you make contact. During this contact, you may ask one question, which your patron may choose to answer or not. Commune can be attempted once per day.  
+  
+  
+### Sacred Heal
+__Healing Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m, v_  
+Your eyes glow and for an instant light permeates every part of you as you reach out to an injured ally. All status effects are wiped from them.  
+__Tier 1 Damage:__ foo Healing   
+__Tier 2 Damage:__ bar Healing   
+__Tier 3 Damage:__ baz Healing   
+
+  
+  
+### Resurrection
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ Touch   
+__Casting Time:__ 6 Hours   
+__Components:__ _m, v, Rare holy oil and incense (500gp), A soul gem (1000gp)_  
+Lay out the body of someone who has died within the past week. Spend time annointing them with oil, burning insense, and using your magic to mend their body. Lay a soul gem on their chest and ask your diety for their strength. Roll 1d20 and add your expertise. If the result is 11 or higher, reclaim the target's soul and return them to life. On failure, they may not be resurected.  
+  
+  
+### Holy Legion
+__Summoning Spell__  
+__Cost:__ 3 Action Points __Duration:__ 1 Hour __Range:__ 30 Feet  
+Cry out to your diety for aid. Meteors rain from the heavens as three Celestial Guardians heed your summons.  
+_Summoned Creature:_  
+*  All Tiers, Celestial Guardian  
+  
+  
+### Saint's Blessing
+__Buff Spell__  
+__Cost:__ 3 Action Points __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v, Holy oil_  
+Mark an ally with holy oil and grant them your blessing. For the spell's duration, they considered Immune. When the spell ends, any pre-existing status effects or curses return.    Immune creatures cannot be affected by status effects.   
+  
+  
+### Holy Weapons
+__Aoe Buff Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Hour __Range:__ Self   
+__Radius:__ 50 ft.   
+__Components:__ _m, v_  
+Holy fire blazes on the weapons of your allies. For the spell's duration, allies who deal martial damage within the spell's radius set their target aflame. Affected enemies begin Burning.    A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves.   
+  
+  
+### Pillar of Dawn
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 1 Mile   
+__Radius:__ 25 ft.   
+__Components:__ _m, v_  
+Spread your hands wide as you summon forth the glory of your deity. A pillar of fire falls from the heavens and envelops a radius of your choosing. The fire crackles and spreads, reducing your target to cinders. Anyone struck by the beam is instantly set ablaze and begins Burning. They must also make a spell power saving throw or be rendered Blind. The spell's victims may repeat their save at the end of each turn.   A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves. A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+__Tier 3 Damage:__ 5d6 Radiant   
+
+  
+  
+### Avatar
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Concentration __Range:__ Infinite   
+__Casting Time:__ 10 Minutes   
+__Components:__ _Rare Holy Insense (1000gp)_  
+Close your eyes empty your mind. By the will of your diety, project your conciousness across the void. A faintly glowing copy of you appears somewhere in the Realms at a location of your choosing. You control the copy as though it is you. The copy has full health and action points, and knows your abilities. It persists until your real body loses concentration on it, or until it falls to zero health and disappears.  
+  
+  
+### Mantle of Dawn
+__Aoe Buff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _v_  
+A halo blazes about your head, shedding radiant light in a radius around you. For the spell's duration, all allies within the radius are Empowered and enemies are Diminished.    An Empowered creature adds 1d4 to all checks and saves. A Diminished creature must subtract 1d4 from all checks and saves.   
+  
+  
+### Firecrackers
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ 100 Feet  
+__Radius:__ 25 ft.   
+__Components:__ _m, Charcoal_  
+Clutching a spent peice of charcoal, you mutter the language of flame and focus on a point within range. At once, a sizzling bead of light appears and begins to hiss and pop like a tinker's firecrackers. Enemies within the spell's radius must make a spell power saving throw or be Distracted until the end of their next turn.    Distracted creatures make make perception and accuracy checks at disadvantage."   
+  
+  
+### Summoning Spell
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 1 Mile   
+__Components:__ _v_  
+Fix a familiar object in your mind and call to it. Make an intelligence check. On success, the object lifts into the air and flies towards you, born by the invisible streams of magic that flow throughout the realms. The object knows enough to avoid any barriers, but mindlessly takes the quickest path to you. The object must be something that you have seen before, and cannot be more than 10 pounds in weight.  
+  
+  
+### Candlelight
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 60 ft.   
+__Components:__ _m, A piece of string or wick_  
+Roll a piece of string between your fingers and channel your magic into it. It magically ignites, but is not burned. As you release it, the flickering light hovers at your side. The light is difficult to snuff and obeys your subconcious commands, moving as you instruct it within a radius centered on you. If it leaves the radius, it continues to hover, but cannot obey you. The candle gives off light within a thirty foot radius.  
+  
+  
+### Unseen hand
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 100 Feet  
+__Components:__ _v_  
+Mutter a spell to will an ethereal hand into existence. While you concentrate on it, the hand acts as an extension of your will. The hand has a flying speed of 25 feet and may not leave the spell's radius. Its strength score is equivalent to your inner fire modifier.  
+  
+  
+### Conjure Illusion
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 100 Feet  
+__Components:__ _m, A piece of glass_  
+Throw a piece of glass into the air and call upon your magic. The glass shatters into a cloud of shimmering dust and instantly flies to an area of your choice. It forms an illusory image of the size of a person or smaller. To all those who see the illusion, it appears to be present, though upon further inspection, it is ethereal. When you release concentration, the illusion persists for one minute unless you choose otherwise.  
+  
+  
+### Detect Magic
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 100 ft.   
+As you blink your eyes, the flows of magic become visible to you. While you are in this state, sources of magic appear to glow, and you may make perception checks to detect neaby magic.  
+  
+  
+### Arcane Armor
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v, One ounce of iron_  
+Grip a lump of iron in your hand. As you grasp your magic, the iron glows and is consumed. Glowing plate made of arcane energy covers you or an ally within range, granting protection from harm. The recipient's evasiveness is increased by an amount equal to your inner fire for the spell's duration.       
+  
+  
+### Eat Slugs
+__Debuff Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, A slug, worm, or caterpillar._  
+Fixing your eyes on your target, you crush a slug, worm, or caterpillar between your fingers. They must make a spell power save or have their mouth filled with fat, slithering slugs and be Staggered until the end of their next turn.    A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Flare
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v, Phosphorus, A pebble_  
+You smear a streak of phosphorus upon a pebble and hold your hand aloft. A mote of scorching flame crackles toward a target of your choosing. The flare burns as brightly as daylight and leaves a lingering trail behind it. Your target becomes Vulnerable until the end of their next turn. On a critical hit, they begin Burning.    All accuracy checks made against Vulnerable creatures are at advantage. A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves.   
+__Tier 1 Damage:__ 1d6 Fire   
+__Tier 2 Damage:__ 2d6 Fire   
+__Tier 3 Damage:__ 3d6 Fire   
+
+  
+  
+### Arcane Blow
+__Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Touch   
+__Components:__ _m_  
+With a sound like a thunderclap, you punch your foe with a fist instilled with arcane power. If they are one size larger than you or smaller, they must make a spell power saving throw or be knocked back fifteen feet.  
+__Tier 1 Damage:__ 3d6 Arcane   
+__Tier 2 Damage:__ 4d6 Arcane   
+__Tier 3 Damage:__ 5d6 Arcane   
+
+  
+  
+### Drain
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Shadowy tendrils claw at your target. Necrotic energy tears at your enemy, breaking down their essence and transferring it to you. If your attack is not glancing, regain one action point.  
+__Tier 1 Damage:__ 1d4 Necrotic   
+__Tier 2 Damage:__ 2d4 Necrotic   
+__Tier 3 Damage:__ 3d4 Necrotic   
+
+  
+  
+### Acrid Mist
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+A billowing cloud of stinking green gas fills an area of your choosing. It lingers there for the spell's duration, burning the lungs of anyone who breathes it. Enemies who pass through or begin their turn within the fumes must make a spell power saving throw or be damaged and Staggered. On a successful save, they take half damage.    A Staggered creature makes their next action at disadvantage.   
+__Tier 1 Damage:__ 1d4 Poison   
+__Tier 2 Damage:__ 2d4 Poison   
+__Tier 3 Damage:__ 3d4 Poison   
+
+  
+  
+### Jet of Frost
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 15 Feet  
+__Components:__ _m, v_  
+Frigid air howls from your focus, biting at the enemies in a cone before you. Targets must make a spell power saving throw or begin to freeze under the icy blast and be Slowed. The spell's victims may reattempt their save at the end of each of their turns.   A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative.   
+__Tier 1 Damage:__ 1d4 Cold   
+__Tier 2 Damage:__ 2d4 Cold   
+__Tier 3 Damage:__ 3d4 Cold   
+
+  
+  
+### Pindigae's Arcane Orbs
+__Multi-Attack Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+Two multicolored orbs of crackling energy swirl about you before streaking towards as many targets. Make one attack per orb. The orbs do not need to target a single creature.  
+__Tier 1 Damage:__ 1 Arcane   
+__Tier 2 Damage:__ 1 Arcane   
+__Tier 3 Damage:__ 1 Arcane   
+
+  
+  
+### Become Slime
+__Transformation Spell__  
+__Cost:__ 1 Action Point __Duration:__ Infinite __Range:__ Self   
+__Components:__ _m, Tallow_  
+Channel your magic into a bit of tallow or other fat and eat it. As you chew, your body melts and oozes and you Transform.    Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannnot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah.   
+_Summoned Creature:_  
+*  Tier 1, Lesser Slime  
+*  Tier 2, Greater Slime  
+*  Tier 3, Black Slime  
+  
+  
+### Bubble of Air
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v, Soap_  
+Knead a bit of soap between your fingers and blow upon it. A shimmering bubble of breathable air appears around your target's head, sustaining them for up to one hour.   You may spend an additional action point to create six additional bubbles of air.    
+  
+  
+### Mirror Image
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ Self   
+__Components:__ _m, v, A reflective object_  
+Glance into a reflective substance and wield your magic. Summon a number of false images of yourself equal to your spellpower at any location you can see in the reflection. These mirror images copy your actions exactly, but are incapable of interacting with the world in any way. Each has a single hit point, and shares your evasion. On any turn in which an enemy wants to attack you, they must make an SP save or become Fixated on one of your images for a brief moment, and attack it instead.    Fixated creatures are interested only in the item of their fixation. The nature of this fixation is left to the Grand Poohbah.   
+  
+  
+### Animate Weapon
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 90 Feet  
+__Components:__ _m, v, A one handed weapon_  
+Cause a one-handed weapon to float a few feet from you. The weapon has its own reaction which it can use to make exposed attacks. On your turn you may move the weapon up to thirty feet and may attack with it as an action. If the weapon leaves the spell's radius, you may no longer command it, but it remains hovering until the spell ends. Use your inner fire for any checks or attacks made by the weapon.  
+  
+  
+### Mage Charge
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 15 Feet  
+__Components:__ _m_  
+Magic crackles around you as you burst forward with incredible speed, traveling the spell's range in a heartbeat. Roll an attack against each enemy struck by your passing. You are not considered exposed while moving using this spell. Any enemy struck by you must make a spell power saving throw or be knocked Prone.   For each additional action point spent on this spell, travel 15 feet further and do 1d4 additional damage. A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+__Tier 1 Damage:__ 2d4 Arcane   
+__Tier 2 Damage:__ 3d4 Arcane   
+__Tier 3 Damage:__ 4d4 Arcane   
+
+  
+  
+### Jelly Arms
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _m, v, A pin, needle, or other small, sharp implement_  
+Weave a spell and hold a needle aloft. A thousand arcane pins appear around your target, then suddenly lance them. They must make a spell power saving throw or their limbs go slack and fail them, rendering them Staggered and Vulnerable until the end of their next turn.    A Staggered creature makes their next action at disadvantage. All accuracy checks made against Vulnerable creatures are at advantage.   
+  
+  
+### Bagabone's Nightcap
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 60 Feet  
+__Components:__ _m, v_  
+In a burst of rainbow sparks, a faintly glowing and incredibly cozy nightcap appears on the head of your target. They must make a spell power saving throw or fall into an incredibly deep and restful sleep, rendering them Incapacitated. The spell's victims may repeat their save at the end of each of their turns or once every hour when out of combat. They instantly succeed if they are injured.   An Incapacitated creature cannot move or act. Hand-to-hand accuracy checks against them result in an automatic critical hit.   
+  
+  
+### Featherfall
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+With a flourish, you produce a feather seemingly from nowhere. It ignites, and in that moment, you may focus your magic on an entity or object to slow its falling speed to that of a feather.  
+  
+  
+### Message
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Infinite   
+__Components:__ _v, An item that belonged to your target_  
+Hold an object which belongs to someone you've met. You are able to telepathically send them a message of up to 25 words, regardless of distance. The entity then has sixty seconds to respond to you, also with 25 words.  
+  
+  
+### Archibold's Arcane Automaton
+__Summoning Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v, Fifty pounds of scrap material, rocks, or other items which will be assembled to create the automaton._  
+Using items nearby, summon an arcane construct. You may command at most two such constructs at a time. You may give your constructs simple commands and they will follow them without deviating regardless of distance.  
+_Summoned Creature:_  
+*  Tier 1, Arcane Construct  
+*  Tier 2, Clockwork Soldier  
+*  Tier 3, Clockwork Knight  
+  
+  
+### Become Ethereal
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Self   
+__Components:__ _m_  
+Your form flickers as you enter the plane of the ethereal. You may stay there for a number of minutes equal to your combined spell power and expertise or until you choose to regain your material form as a free action. While in this state, you are considered Ethereal.    Ethereal creatures exist on the ethreal plane. They are visible but translucent, and cannot be affected by physical attacks. They are able to pass through any substance less than one inch thick. An ethereal creature cannot attack or cast cast spells that affect targets that are not also bound to the ethereal plane.   
+  
+  
+### Grow or Shrink
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v, A mushroom_  
+Crush a mushroom in your hand as you say an arcane incantation. Your target's body bubbles and writes as they are Enlarged or Shrunk. Unwilling entities must make a spell power saving throw to avoid the effect. Affected entities may repeat their saving throw at the end of each of their turns or once every ten minutes when out of combat.   Enlarged creatures have grown to massive size. They deal 1d6 bonus damage on physical attacks, are resistant to physical damage, and have advantage on strength checks. However, Accuracy checks made against an enlarged target are at advantage. Shrunk creatures have been greatly reduced in size. They can move only half their normal speed, and can pass through spaces occupied by other creatures. Targetted accuracy checks made against them are at disadvantage, but they take 1d6 extra damage from any physical attack.   
+  
+  
+### Ward of Hearing and sight
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Touch   
+__Components:__ _m, v, An eye or ear_  
+A green stalk bursts out of the ground, a knuckled, hairy appendage ending in a bulbous eye and two overlarge ears. It blinks twice, then vanishes. The eyestalk is tethered to you for one day. Whenever you want, you may focus to see through its eye and hear through its ears. The ward cannot move and has only 1 hit point, but can only be harmed by magic or beings also in the ethereal plane.  
+  
+  
+### Statue
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Save __Range:__ 30 Feet  
+__Components:__ _m, v_  
+With a crackle, your target's skin begins to harden. Unwilling entities must make a spell power saving throw or become stone and be considered Frozen. Affected entities can re-attempt their saving throw at the end of each of their turns.   A Frozen creature’s body has been magically hardened. As such they are resistant to physical damage, but cannot move or act."   
+  
+  
+### Door Step
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+As you place your hand on a door handle or walk through an archway, magic flows through you, opening a portal to another door within range.  
+  
+  
+### Invisibility
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m_  
+Over the span of a second, you target's skin, then organs, then bones disappear. For the spell's duration, they are Invisible.    Invisible creatures cannot be seen. They make stealth checks with advantage and accuracy checks made against them are at disadvantage.   
+  
+  
+### Scry
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Infinite   
+__Components:__ _m, v, A reflective surface, A clear focusing gem_  
+Press a focusing gem against a reflective surface and speak the primordial word for 'reveal.' You are instantly able to view a person or place that you know as if through a one way window. The scry spell cannot penetrate lead or certain protective spells. By default, sound is not conveyed. However, you can optionally let a person know that you are scrying them. If they are a mage, they are able to spend one action point to tether your scrying spell to a nearby reflective object, allowing you to communicate with one another.  
+  
+  
+### Platform
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 100 Feet  
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+Cast a spell to summon a shimmering circular platform at a point of your choosing within range.  
+  
+  
+### Dispel Magic
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ Touch   
+__Components:__ _v_  
+Carefully undo the weave of a first tier spell or curse. If the magic that you seek to reverse is of a higher tier, a check must be made as defined by the Grand Poohbah. Dispell magic does not heal damage or repair magically damaged objects.  
+  
+  
+### Ice Spear
+__Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+As you hold your focus aloft, a four foot spear of crystalline ice materializes, then hurtles towards your target.  
+__Tier 1 Damage:__ 5d6 Cold   
+__Tier 2 Damage:__ 6d6 Cold   
+__Tier 3 Damage:__ 7d6 Cold   
+
+  
+  
+### Fireball
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Radius:__ 15 ft.   
+__Components:__ _m, v, A ball of guano, Sulfur_  
+Darkness, blacker than black, darker than dark! Channel your magic into a dried ball of bat guano and sulfur to turn it into a bead of sizzling light. It streaks towards your target before erupting into a massive ball of flames.  
+__Tier 2 Damage:__ 6d4 Fire   
+__Tier 3 Damage:__ 8d4 Fire   
+
+  
+  
+### Octahedral Barrier
+__Aoe Buff Spell, Reaction__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ Self   
+__Radius:__ 15 ft.   
+__Components:__ _m, v_  
+In a rush of energy, a pyramid of arcane enegry forms around you and serves as a barrier. It protects you and any allies in close proximity from an incoming ranged or magical attack.       
+  
+  
+### Cage
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Touch   
+__Radius:__ 25 ft.   
+__Components:__ _m, v, A link of a chain_  
+Bars of energy lance towards the sky in a radius around you. No one who enters the spell's radius can leave until the it is ended.  
+  
+  
+### Pocket Dimension
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, An iron key_  
+Use a key to open a small portal to your own, private pocket dimension. The dimension is a 5ft cube which persists over time, allowing you to store objects within it. In a given day, the pocket dimension holds enough oxygen to sustain one average sized creature for one hour.  
+  
+  
+### Clone
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Infinite __Range:__ Touch   
+__Casting Time:__ 1 Day   
+__Components:__ _m, v, A soul gem valued at 1000 gold pieces, Rare herbs and minerals valued at 500 gold pieces, Clay_  
+You have recovered the ancient secret of creating simulacra. Spend a day infusing a mound of clay with rare herbs and minerals, then use your magic to shape it into a humanoid form. Place a soul gem at its center, then have a willing entity or yourself lay beside it and cast your magic. The creature of clay becomes a living, breathing copy of the spell's target. It has intelligence and their memories, but is aware that it is a copy and is friendly to you. The clone has the same stats and abilities as the original, but has half of the original's hit point maximum and is incapable of spending action points or restoring health by normal means. The copy does not age or grow more powerful and cannot increase in level or learn new abilities. If it is damaged, you may use clay and rare herbs and minerals to heal it, valued at ten gold per hit point restored. If the clone reaches zero hit points, it is reduced to dust. You may command at most two such clones at any given time.  
+  
+  
+### Polymorph
+__Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _v_  
+Your target's body begins to warp as they seemlessly transition into the form of a creature of their challenge rating or lower. Player characters, including yourself are considered to have a challenge rating of a heavy creature of their level, and cannot transform into villain monsters. Unwilling targets may attempt a saving throw to avoid being Transformed. The spell's victim may repeat their save once per day.  Spend one additional action point on the spell to increase its save to once per month. Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannnot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah.   
+  
+  
+### Chain Lightning
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Thunder roars over and over again as your lightning leaps from target to target. After the lightning hits your first target, roll 1d4. If the roll is greater than 1, the lightning chains to another enemy of your choice. Continue until you roll a 1. Lightning may only strike the same entity twice and may leap a maximum of eight times.  
+__Tier 2 Damage:__ 1d6 Lightning   
+__Tier 3 Damage:__ 2d4 Lightning   
+
+  
+  
+### Rainbows
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m_  
+With the sound of trumpets, a blinding beam of light flares from your fingertips or mouth. As the light moves further from you, it separates into bands of color; a rainbow! The beam passes through enemies in a line before it. Anyone struck by the beam must make a spell power saving throw or begin vomiting rainbows, rendering them Vulnerable. The spell's victims may reattempt their save at the end of each of their turns.   All accuracy checks made against Vulnerable creatures are at advantage.   
+__Tier 2 Damage:__ 3d6 Arcane   
+__Tier 3 Damage:__ 4d6 Arcane   
+
+  
+  
+### Igna Bokak
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ 10 __Range:__ 30 Feet  
+__Components:__ _m, v, A phoneix feather (100gp)_  
+A phoneix feather ignites as you focus your magic on it. At once, you summon a phoenix to aid you in battle. You may command at most one phoenix at a time.  
+_Summoned Creature:_  
+*  Tier 2, firebird  
+*  Tier 3, phoneix  
+  
+  
+### Gate
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Energy hums as you tear a rift in reality and create a gate to another place. The gate stands ten feet tall and twenty feet wide. You may target a specific location that you have visited as the other side of the gate, or else make an intelligence check to target somewhere you have not been. The target may be another of the Realms.  
+  
+  
+### Fly
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+The weave of magic supports and guides you, and gravity fades away. For the spell's duration, your target can fly. Their flying speed is equal to twice their normal walking speed.  
+  
+  
+### Invulnerability
+__Buff Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 __Range:__ Touch   
+__Components:__ _m, v, A dragonscale (100gp)_  
+Magic suffuses your target, and their skin becomes hard as diamond even as all magics are repelled from them. For the spell's duration, they are considered Invincible.    Invincible creatures are immune to all damage.   
+  
+  
+### Tri-beam
+__Multi-Attack Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+Three beams of crackling energy fire forth from the source of your magic. Each beam may target an enemy of your choice. Roll a d6 for each beam. The spell's victims may repeat their save at the end of each of their turns.   * On a 1, it is a ray of weakness and the entity must make a spell power save or be rendered Weakened and Vulnerable.  
+* On a 2, it is a ray of fire which deals tier 2 damage and causes the enemy to begin Burning without a save.  
+* On a 3, it is a ray of frost which deals tier 2 damage and causes the enemy to be Slowed without a save.  
+* On a 4, it is a ray of disruption, and the enemy is Dumbstruck without a save.  
+* On a 5, it is a ray of electricity which deals tier 2 damage and causes the enemy to be Stunned without a save.  
+* On a 6, it is a ray of death, and the affected entity takes an additional 4d6 damage.  
+
+A Weakened creature's attacks deal half damage. All accuracy checks made against Vulnerable creatures are at advantage. A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves. A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative. A Dumbstruck creature's intelligence is treated as -5. It is incapable of speach or complex planning. Dumbstruck creatures can speak using only broken language, and cannot cast spells, but maintain their allegiances. A Stunned creature loses one action on its next turn and attacks made against them before their next turn are at advantage.   
+__Tier 3 Damage:__ 6d6 Arcane   
+
+  
+  
+### Stop Time
+__Aoe Debuff Spell__  
+__Cost:__ 3 Action Points __Duration:__ 3 __Range:__ Self   
+__Radius:__ 100 ft.   
+__Components:__ _m, A stopwatch, hourglass, or other time-telling implement_  
+As you spin a timepiece in your hand, focus your magic on it and speak the forgotten tongue of the Timekeepers. In a radius around you, time slows to a crawl. Everyone within the spell's radius must make a spell power saving throw or be frozen in time for the spell's duration and Incapacitated. Anyone or anything that is touched or attacked is instantly returned to the normal flow of time. Effected entities can remake their save at the end of each of your turns or once every five minutes when out of combat.  Spend an additional action point to increase the spell's radius to 300 feet. An Incapacitated creature cannot move or act. Hand-to-hand accuracy checks against them result in an automatic critical hit.   
+  
+  
+### Anti-Magic Ring
+__Aoe Debuff Spell__  
+__Cost:__ 3 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 100 ft.   
+__Components:__ _m, v_  
+With the weight of purpose, begin an arcane enchantment which nullifies nearby magic. This including spells, magical items, and potions. For as long as you concentrate on the spell, no magic may be performed or partaken of within its radius. Magically sustained or animated entities within the spell are considered Vulnerable.    All accuracy checks made against Vulnerable creatures are at advantage.   
+  
+  
+### Black Hole
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ 3 __Range:__ 90 Feet  
+__Radius:__ 100 ft.   
+__Components:__ _m, v, A gram of Osmium (100 gold)_  
+There is a moment of silence as a black speck, smaller than a gnome's fingernail, appears, hanging at a point of your choosing. Then, there is a scream of air as all inanimate objects within the spell's radius are pulled 25 feet towards the newly summoned black hole. The black hole instantly swells to the size of a halfling as debris reaches it. Each turn, everyone within the spell's radius must make a spell power save or be pulled 1d6 x 5 feet towards the black hole. All entities that begin their turn within 50 feet of the black hole are Slowed. Anyone who touches the black hole takes the spell's damage.    A Slowed creature moves at half its normal speed and is pushed back 1d4 spots in initiative.   
+__Tier 3 Damage:__ 10d6 Blunt   
+
+  
+  
+### Reverse Gravity
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 300 ft.   
+__Components:__ _v, Two magnets with oposite polarity_  
+Mutter a spell as you press two magnets together. Dust and debris start flying towards the sky as the fabric of reality warmps, and gravity is reversed in a radius around you. You may end the spell at any time by breaking your concentration. This spell effects everyone in its radius, friend or foe. You may choose whether the spell affects you. When you first cast your spell and at the end of each of your turns, enemies can make a spell power saving thow to shrug off the effects of your magic. When you end the spell, enemies who fall must make a spell power saving throw or take damage and fall Prone. On success, they take half as much.    A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+__Tier 1 Damage:__ 1d1 Blunt   
+__Tier 2 Damage:__ 1d1 Blunt   
+__Tier 3 Damage:__ 1d1 Blunt   
+
+  
+  
+### Mind Whip
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 30 Feet  
+Raising your fingers to your temples, you channel your energy and slice an enemy with a psychic whip. If you score a critical hit, your target is Stunned until the end of their next turn.    A Stunned creature loses one action on its next turn and attacks made against them before their next turn are at advantage.   
+__Tier 1 Damage:__ 1d6 Psychic   
+__Tier 2 Damage:__ 2d6 Psychic   
+__Tier 3 Damage:__ 3d6 Psychic   
+
+  
+  
+### Eldritch Blast
+__Damage Spell__  
+__Cost:__ 0 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+A screaming bolt of green energy leaps from your hand, decaying your enemy where it touches them.  
+__Tier 1 Damage:__ 1d8 Necrotic   
+__Tier 2 Damage:__ 2d8 Necrotic   
+__Tier 3 Damage:__ 3d8 Necrotic   
+
+  
+  
+### Curse
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _v_  
+Muttering an oath, you place a curse upon a creature of your choice. Whenever you attack that creature, deal an additional 1d6 psychic damage. Pick a stat. The creature has disadvantage on checks and saves of that type until the spell ends. If the creature dies, you may immediately attempt to move the curse to another creature within range.       
+  
+  
+### Hexblade
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Dark fire flickers across a blade as you touch it. If you listen closely, you can hear faint screams. The weapon becomes Infused with necrotic damage.    An Infused object deals bonus damage when used as a weapon. The damage starts at 1d6, and increases to 1d8 then 1d10 in gameplay tiers 2 and 3.   
+  
+  
+### Sap Life
+__Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Dark tendrils writhe from your outstretched hand and pierce your enemy. They pulse like veins as they sap your target's vitality. Any damage dealt by this spell is Leeched.   For each additional action point, deal an additional dice of damage. A portion of the damage taken by a Leeched creature is returned to the attacker as health.   
+__Tier 1 Damage:__ 1d6 Necrotic   
+__Tier 2 Damage:__ 2d6 Necrotic   
+__Tier 3 Damage:__ 3d6 Necrotic   
+
+  
+  
+### Tide of Shadow
+__Aoe Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 15 Feet  
+__Components:__ _m, v_  
+Release a powerful, short-range blast of psychic energy. The blast deals damage to all enemies in a cone in front of you. Targets must make a spell power saving throw or begin to Rot. The spell's victims may reattempt their saving throw at the end of each of their turns.   Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.   
+__Tier 1 Damage:__ 1d4 Necrotic   
+__Tier 2 Damage:__ 2d4 Necrotic   
+__Tier 3 Damage:__ 3d4 Necrotic   
+
+  
+  
+### Telepathy
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ 1 __Range:__ 60 Feet  
+You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, allowing for two-way communication.  
+  
+  
+### Read Mind
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 60 Feet  
+Use psychic energy to probe someone's mind and learn their secrets. If you choose to read only their surface level thoughts, you immediately succeed and they are unaware that the spell was cast. You can optionally choose to delve deeper. If you delve deeper, the entity must make a spell power saving throw or have their mind read. On success, they know the spell was cast.  
+  
+  
+### Summon Darkness
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 100 Feet  
+__Radius:__ 25 ft.   
+__Components:__ _m_  
+Fill an area with billowing darkness. The darkness is considered magical, and is not affected by darkvision. Anyone in the darkness is considered Blinded unless they have Blindsight, Truesight, or another equivalent ability.    A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+  
+  
+### Darksight
+__Utility Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ Self   
+__Components:__ _v_  
+Your pupil expands to cover your entire eye as you grant yourself the power of Darkvision.  
+  
+  
+### Embed Eye
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ Touch   
+__Components:__ _m, v_  
+Embed a magical eye in a non-living material. The eye has 1 hit point, but is ethereal. While the eye is closed, it is invisible. For the spell's duration, you can concentrate to cause the eye to open and to see through it.  
+  
+  
+### Summon Familiar
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ Infinite __Range:__ 30 Feet  
+__Casting Time:__ 10 Minutes   
+__Components:__ _v_  
+Summon a small animal such as a bat, dog, or rat to be your familiar. The familiar follows your instructions. if you have the spell Embed Eye, you may use it to add an eye to your familiar. If your familiar is de-summoned or killed, you may cast this spell again to bring it back. You may spend one action point to instantly teleport your familiar to yourself, but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form.  
+_Summoned Creature:_  
+*  All Tiers, Familiar  
+  
+  
+### Haunt
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 30 Feet  
+__Components:__ _v_  
+Impress your will upon someone you can see. They must make a spell power saving throw or be Haunted. The next time they sleep, you know exactly where they are, can manipulate their dreams, and can attempt to force them to answer one question truthfully. They do not gain any benefits from sleep.  
+  
+  
+### Become Ethereal
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ Self   
+__Components:__ _m_  
+Your form flickers as you enter the plane of the ethereal. You may stay there for a number of minutes equal to your combined spell power and expertise or until you choose to regain your material form as a free action. While in this state, you are considered Ethereal.    Ethereal creatures exist on the ethreal plane. They are visible but translucent, and cannot be affected by physical attacks. They are able to pass through any substance less than one inch thick. An ethereal creature cannot attack or cast cast spells that affect targets that are not also bound to the ethereal plane.   
+  
+  
+### Convince
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Psychic barbs implant themselves into your targets mind, attempting to bend them to your will. They must make a Spell Power save or become Charmed. On failure, they know that you attempted to cast a spell on them. The spell's victim may remake their save at the end of each of their turns or once every ten minutes when out of combat.   A Charmed creature must act in a way that benefits its charmer and has disadvantage on checks and saves made against them. If a charmed creature is harmed by its charmer or their allies, the effect immediately ends.   
+  
+  
+### Echoes of the Past
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ Self   
+__Radius:__ 30 ft.   
+__Components:__ _m, v_  
+Echoes and specters dance in your vision as you reach into the past. For the duration, you are able to see what happened within the spell's within the past day.  
+  
+  
+### Frenzy
+__Buff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Blood-red energy swirls around your target, filling them with frantic energy. Your target becomes Frenzied.    FIXME I wrote this up in the other document.   
+  
+  
+### Mental Assault
+__Debuff Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+Hideous and discordant voices fill your target's ears. At the start of each turn, the target must make a spell power saving throw or be Distracted.    Distracted creatures make make perception and accuracy checks at disadvantage."   
+  
+  
+### Shadow Ward
+__Aoe Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ Self   
+__Radius:__ 10 ft.   
+__Components:__ _m, v_  
+Create a shroud of inky darkness around yourself. Allies can see through, but enemies are considered to be in magical darkness and are Blinded.    A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+  
+  
+### Disguise
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Components:__ _m_  
+Magically alter your form so that you look like someone else. You must appear humaniod and be within one foot of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do not hold up to physical inspection.  
+  
+  
+### Isolate
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Swirling darkness dances around your target as you attempt to cut them off from their allies. They must make a spell power saving throw or be Isolated for the spell's duration.    FIXME I wrote this up in the other document.   
+  
+  
+### Raise Thrall
+__Summoning Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Reach across the void and pull a maddened spirit from the darkness. A corpse within range disappears and is replaced with the summoned creature.  
+_Summoned Creature:_  
+*  Tier 1, Undead Thrall  
+*  Tier 2, Greater Undead Thrall  
+*  Tier 3, Undead Champion  
+  
+  
+### Shadowstep
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 __Range:__ 30 Feet  
+__Components:__ _m_  
+Fade into the darkness and immediately re-appear within a shadow in the spell's range. Both the start and destination of this spell me in partial darkness.  
+  
+  
+### Beckon
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+As you mutter an eldritch incantation, a psycic attractor appears at a point of your choosing. Your target must make a spell power save or be Lured toward the point.   Spend an additional action point to cause this spell to affect all enemies within a 30ft radius. A Lured creature immediately moves a distance equal to half their speed towards the object that is luring them. The creature maintains its intelligence and will act accordingly to avoid danger as they move.   
+  
+  
+### Mire
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 3 __Range:__ 60 Feet  
+__Components:__ _m, v_  
+1d4 orbs of darkness hurtle from your focus towards unoccupied spaces of your choice. Upon hitting, they immediately create an area of writhing darkness. Any enemy that passes through immediately loses half their speed. They must also make a spell power saving throw or be Staggered.    A Staggered creature makes their next action at disadvantage.   
+  
+  
+### Mute
+__Debuff Spell__  
+__Cost:__ 0 Action Points __Duration:__ Concentration __Range:__ 60 Feet  
+__Components:__ _m, v_  
+Gripping your focus, you attempt to magically silence someone. They must make a spell power saving throw or be considered Mute until the spell ends.   You may spend an additional action point to grant the spell a radius of 30ft and target everyone within. Muted creatures cannot make sound and cannot cast spells with verbal components.   
+  
+  
+### Hurl Through Hell
+__Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 30 Feet  
+__Components:__ _m, v_  
+A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss. They must make a spell power saving throw or spend 1d4-1 minimum 1 turns falling through the hells. On success, they take half damage and are not sucked into the portal. When they return from the abyss, they reappear, they slam to the earth. They must make spell power saving throws or be Burning and Prone.    A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves. A prone creature has been knocked to the ground, and can move only by crawling. The maximum distance crawled is one quarter of their ordinary speed. Prone creatures make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made against a prone entity are at advantage, except for targeted ranged attacks, which are at advantage. A prone creature may spend an action and half their movement to stand up.   
+__Tier 1 Damage:__ 4d6 Fire   
+__Tier 2 Damage:__ 5d6 Fire   
+__Tier 3 Damage:__ 6d6 Fire   
+
+  
+  
+### Murder of Crows
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ 3 __Range:__ 90 Feet  
+__Radius:__ 10 ft.   
+__Components:__ _m, v_  
+With a sound like a rush of wind, a murder of crows streaks past you and to a location of your choice, dealing damage as it goes. For the spell's duration, any enemy who begins their turn within the swarm or who passes through it takes damage. As an offhand action on your turn, you may command the murder of crows to move up to 30 feet. Swarm damage is not affected by focus modifiers. An entity may be harmed at most one time by a swarm of crows per round of combat.  
+__Tier 2 Damage:__ 3d6 Piercing   
+__Tier 3 Damage:__ 4d6 Piercing   
+
+  
+  
+### Cthulian Tentacles
+__Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ 3 __Range:__ 60 Feet  
+__Components:__ _m, v_  
+At your command, shadows converge into hideous tentacles and burst from the ground. Together, they converge on one of your foes. Your target must make a spell power saving throw or be Grappled. The spell's victims may repeat their save as an action on each of their turns.  You smay spend an action point to create two additional tentacles, attacking two additional creatures in range. A Grappled creature is being held in place the creature that is Grappling them. Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.   
+__Tier 1 Damage:__ 5d6 Blunt   
+__Tier 2 Damage:__ 6d6 Blunt   
+__Tier 3 Damage:__ 7d6 Blunt   
+
+  
+  
+### Wilting Touch
+__Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 __Range:__ Touch   
+__Components:__ _m, v_  
+Black veins creep down your arms as you grip an enemy and channel powerful necrotic energy into them. They must make a spell power saving throw or be affected by Rot. The spell's victim may reattempt their saving throw at the end of each of their turns.   Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.   
+__Tier 1 Damage:__ 5d8 Necrotic   
+__Tier 2 Damage:__ 6d8 Necrotic   
+__Tier 3 Damage:__ 7d8 Necrotic   
+
+  
+  
+### Death Bolt
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+__Components:__ _m, v_  
+You loose a screaming bolt of green necrotic energy, harming all enemies in a line before you.  
+__Tier 2 Damage:__ 3d6 Necrotic   
+__Tier 3 Damage:__ 4d6 Necrotic   
+
+  
+  
+### Tethered Minds
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 15 Feet  
+__Radius:__ infinite ft.   
+__Components:__ _m, v_  
+Tether the minds of up to eight individuals. For the spell's duration, they are able to speak telepathically, regardless of distance. The effects of the spell end if an entity enters another realm.  
+  
+  
+### Open Rift
+__Utility Spell__  
+__Cost:__ 2 Action Points __Duration:__ 10 __Range:__ 90 Feet  
+__Components:__ _m, v_  
+Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 100 miles. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift.  
+  
+  
+### Eyes of Uriel
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ 1 Hour __Range:__ Touch   
+__Components:__ _m, v_  
+Summon 1d4+1 Eyes of Uriel. For the spell's duration, you are able to see through the eyes. When you are attacked, if an eye is within 5 feet of you, it is able to take the damage in your stead.  
+_Summoned Creature:_  
+*  All Tiers, Eye of Uriel  
+  
+  
+### Crown of Chaos
+__Aoe Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ Self   
+__Radius:__ 25 ft.   
+__Components:__ _m, v_  
+A hideous crown appears on your head and reality warps around you. All enemies in the spell's radius are Weakened.    A Weakened creature's attacks deal half damage.   
+  
+  
+### Shared Fate
+__Debuff Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Tether two entities together. If one dies, the other must make a spell power saving throw. On failure, they take an ammount of damage equal to the killing blow. On success, they take half as much damage. The entities must be within 100ft of each other.       
+  
+  
+### Radiant Darkness
+__Aoe Damage Spell__  
+__Cost:__ 2 Action Points __Duration:__ 3 __Range:__ 90 Feet  
+__Radius:__ 10 ft.   
+__Components:__ _m, v_  
+A bead of greenish light explodes at a point of your choosing and rapidly expanding, filling a sphere with blinding light. Anyone who begins a turn within the sphere or who moves through it takes damage. They must also make a spell power saving throw or be Blinded. Entities can avoid this save by moving at half speed. Blinded entities may reattempt their save at the end of each of their turns.   A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.   
+__Tier 2 Damage:__ 2d6 Radiant   
+__Tier 3 Damage:__ 3d6 Radiant   
+
+  
+  
+### Rebuke Spell
+__Utility Spell, Reaction__  
+__Cost:__ 1 Action Point __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m_  
+When an enemy successfully casts a spell, force them to make a spell power saving throw. On failure, they also suffer the effects of their spell.  
+  
+  
+### Summon Fiend
+__Summoning Spell__  
+__Cost:__ 3 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+__Components:__ _m, v_  
+Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane.  
+_Summoned Creature:_  
+*  Tier 2, Pit Fiend  
+*  Tier 3, Pronged Devil  
+  
+  
+### Armor of Lucien
+__Damage Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Hour __Range:__ Self   
+__Components:__ _m, v_  
+For a moment, radiant armor appears about you before fading from vision. For the spell's duration, your gain an amount of temporary health equal to your level plus your inner fire modifer. When the temporary health is gone or the spell's duration elapses, the spell ends. While the spell is active, anyone who strikes you takes damage.  
+__Tier 1 Damage:__ 1d1 Radiant   
+__Tier 2 Damage:__ 1d1 Radiant   
+__Tier 3 Damage:__ 1d1 Radiant   
+
+  
+  
+### Dark Citidel
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ 1 Day __Range:__ 30 Feet  
+__Casting Time:__ 3 Minutes   
+__Components:__ _m, v_  
+Your patron grants you a slice of their realm in the form of a Dark Citadel. When you cast this spell, a door opens to your realm which only you can see. You and your allies may go through it and gain access to your Citadel. The first time you visit, a terrible fiend has taken up residence, and you must drive it out.  
+  
+  
+### Lift
+__Debuff Spell__  
+__Cost:__ 2 Action Points __Duration:__ Concentration __Range:__ 30 Feet  
+Concentrate on a target to cause them to lift into the air. Your target must make a spell power saving throw to avoid being Hoisted. Unwilling entities may not be raised more than thirty feet. Enemies that are released from this spell take Falling Damage. The spell's victims may repeat their save at the end of each of their turns.   Hoisted creatures are unable to move and attacks made against them are at advantage."   
+  
+  
+### Commune
+__Utility Spell__  
+__Cost:__ 1 Action Point __Duration:__ Concentration __Range:__ Self   
+__Casting Time:__ 10 Minutes   
+Attempt to commune with your patron. Roll 1d20 and add your expertise. On a 19 or above, you make contact. During this contact, you may ask one question, which your patron may choose to answer or not. Commune can be attempted once per day.  
+  
+  
+### Sorris' Decay
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 60 Feet  
+__Components:__ _m_  
+Your outstretched hand beckons forth the essence of the abyss, a roiling tide of inky darkness. Like a dragon's breath, decay rolls forward, washing over everyone in a cone before you. Targets must make a spell power saving throw or take full damage and begin to Rot. On success, they take half damage. The spell's victims can repeat their save at the end of each of their turns.   Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.   
+__Tier 3 Damage:__ 8d6 Necrotic   
+
+  
+  
+### Torugar the Many Tongued Demon
+__Aoe Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ 5 __Range:__ 90 Feet  
+__Radius:__ 1000 ft.   
+__Components:__ _m, v, Demonic Eye (200gp)_  
+A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss. Each turn, 1d6 pitch-black tongues (max 6) writhe forth from the pit and attempt to grapple an individual within the spell's radius. Torugar does not distinguish friend from foe. If a tongue takes 50 damage on a single turn, it releases its grapple, and returns to the pit. Each turn an enemy is grappled by a tongue, it takes damage and is pulled 2d4 spaces towards the pit. Anyone who enters the pit is transported to Torugar's Realm, deep within the sixth layer of the Abyss. The tongues' damage is not modified by your casting focus. Affected entities must make a spell power saving throw or be grappled. The spell's victims may repeat their save against being grappled as an action on their turn.   A Grappled creature is being held in place the creature that is Grappling them. Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.   
+__Tier 3 Damage:__ 4d6 Blunt   
+
+  
+  
+### Psychic Spear
+__Damage Spell__  
+__Cost:__ 3 Action Points __Duration:__ Instantaneous __Range:__ 100 Feet  
+Amid the chaos of battle, your willpower coalesces into a shimmering, translucent spear of pure psychic energy. With a focused gesture, you hurl it toward your chosen adversary. The spear streaks through the air, a swift and ethereal missile, unerring in its aim. Upon impact, it tears into the target's psyche with an explosive force, inflicting profound mental anguish. The victim's thoughts unravel, their senses distort, and their very consciousness trembles under the psychic onslaught.  
+__Tier 3 Damage:__ 10d6 Psychic   
+
+  
+  
+### The Abyss Stares Back
+__Summoning Spell__  
+__Cost:__ 3 Action Points __Duration:__ 1 Hour __Range:__ 1000 Feet  
+__Components:__ _m, v_  
+Cry out for your patron's aid. Roll 1d20 and add your expertise. on a 19 or above, your patron or one of their vassals appears to fight alongside you. This spell may be attempted once per day, and may be successful at most once per month.  
+_Summoned Creature:_  
+*  All Tiers, Elder God  
+  
+  
+### Reclaim Soul
+__Utility Spell__  
+__Cost:__ 3 Action Points __Duration:__ Infinite __Range:__ Touch   
+__Casting Time:__ 1 Hour   
+__Components:__ _m, v, Green Lizard in a Jar (500 gp), Greater Soul Gem (1000 gp)_  
+Reach across the great divide in an attempt to pull back a lost soul. Roll 1d20 and add your expertise. On a 10 or higher, the resurection is successful. On a natural 1, you something unexpected returns instead.  
+  
+  
+### Summon Eldritch Vessel
+__Summoning Spell__  
+__Cost:__ 2 Action Points __Duration:__ Infinite __Range:__ 1 Mile   
+__Components:__ _m, v_  
+Tear open a portal and pull forth a living vessel capable of flight. It writhes as you enter it, and is willing to carry you to any destination.  
+_Summoned Creature:_  
+*  All Tiers, Eldritch Vessel -- give it cannons  
+  
+  

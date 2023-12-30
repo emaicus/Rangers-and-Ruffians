@@ -1,0 +1,7 @@
+{
+    "classes.yml": "class_schema.json",
+    "races.yml": "race_schema.json",
+    "weapons.yml": "weapon_schema.json",
+    "backgrounds.yml": "background_schema.json",
+    "monsters.yml": "monster_schema.json"
+}

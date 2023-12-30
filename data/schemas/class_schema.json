@@ -1,0 +1,110 @@
+{
+	"description": "Definition of a single class.",
+	"additionalProperties": false,
+	"type": "array",
+    "items": {
+        "type": "object",
+        "required": ["name", "recommended_stats", "health_dice", "expertise"],
+        "additionalProperties": false,
+        "properties": {
+            "name" : {
+                "type": "string"
+            },
+            "expertise": {
+                "type": "string"
+            },
+            "recommended_stats": {
+                "type": "object",
+                "required" : ["Charisma", "Dexterity", "Inner_Fire", "Intelligence", "Perception", "Strength"],
+                "additionalProperties": false,
+                "properties": {
+                    "Charisma": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    },
+                    "Dexterity": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    },
+                    "Inner_Fire": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    },
+                    "Intelligence": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    },
+                    "Perception": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    },
+                    "Strength": {
+                        "type": "integer",
+                        "minimum": -2,
+                        "maximum": 2
+                    }
+                }
+            },
+            "health_dice": {
+                    "type": "string",
+                    "enum": ["1d6", "1d8", "1d10"]
+            },
+            "skill_tree": {
+                "type": "object",
+                "required": ["tree_path", "abilities"],
+                "additionalProperties": false,
+                "properties": {
+                    "tree_path": {
+                        "type": "string"
+                    },
+                    "abilities": {
+                        "type": "array"
+                    }
+                }
+            },
+            "spells": {
+                "type": "object",
+                "required": ["Tier_1", "Tier_2", "Tier_3"],
+                "additionalProperties": false,
+                "properties": {
+                    "Tier_1": {
+                        "type": "array"
+                    },
+                    "Tier_2": {
+                        "type": "array"
+                    },
+                    "Tier_3": {
+                        "type": "array"
+                    }
+                }
+            },
+            "handbook": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["title", "display_title", "text"],
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "display_title": {
+                            "type": "boolean"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "starting_items": {
+                "type": "array"
+            }
+        }
+    }
+}
