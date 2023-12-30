@@ -44,7 +44,6 @@
 
 
 # Cleric {'all_tiers': 'Celestial Guardian'}
-# Druid - 3 spiders, 3 Birds, 3 fish
 # 25 / 37
 
 -   name: Swarm
@@ -1667,7 +1666,7 @@
 -   name: Werewolf
     metadata: 
         monster_class: Beast
-        monster_family: Wolf
+        monster_family: Werewolf
         type: Heavy
         tier: Tier 2
     summons: 
@@ -1755,6 +1754,605 @@
                     conditions:
                         - frightened 
                     save: Affected creatures may repeat their save at the end of each of their turns.
+-   name: Giant Eagle Chick
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Eagle
+        type: Minion
+        tier: Tier 1
+    summons: 
+        wildshape: true
+    stats:
+        health: 14
+        evasion: 14
+        speed: 
+            Flying Speed: 50
+        stat_bonus: 2
+        size: 5        
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the giant eagle attacks, it flies by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Eagles are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+            -   name: Lesser Carry 
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "The giant eagle can carry up to one creature on its back."
+        combat_actions:
+            -   name: Swipe 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 1d6
+                description: "The eagle slashes its target with its talons as it streaks past."
+-   name: Giant Eagle
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Eagle
+        type: Minion
+        tier: Tier 2
+    summons: 
+        wildshape: true
+    stats:
+        health: 35
+        evasion: 16
+        speed: 
+            Flying Speed: 60
+        stat_bonus: 5
+        size: 10        
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the giant eagle attacks, it flies by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Eagles are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+            -   name: Carry 
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "The giant eagle can carry up to two creatures on its back."
+        combat_actions:
+            -   name: Swipe 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The eagle slashes its target with its talons as it streaks past."
+                effect:
+                    type: debuff 
+                    description: "As the eagle strikes, it can choose to attempt to Grapple its foe."
+                    conditions:
+                        - grappled 
+                    save: null 
+            -   name: Drop
+                attacks_made: 1 
+                limit: null 
+                cost: 0 
+                type: combat option 
+                duration: instantaneous 
+                range: touch 
+                damage_scaling: 
+                    damage_type: piercing 
+                    all_tiers: 6d6
+                description: "If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage."
+-   name: Greater Giant Eagle
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Eagle
+        type: Minion
+        tier: Tier 3
+    summons: 
+        wildshape: true
+    stats:
+        health: 60
+        evasion: 20
+        speed: 
+            Flying Speed: 120
+        stat_bonus: 8
+        size: 15        
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the giant eagle attacks, it flies by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Eagles are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+            -   name: Greater Carry 
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "The giant eagle can carry up to five creatures on its back."
+        combat_actions:
+            -   name: Swipe 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 8d6
+                description: "The eagle slashes its target with its talons as it streaks past."
+                effect:
+                    type: debuff 
+                    description: "As the eagle strikes, it can choose to attempt to Grapple its foe."
+                    conditions:
+                        - grappled 
+                    save: null 
+            -   name: Drop
+                attacks_made: 1 
+                limit: null 
+                cost: 0 
+                type: combat option 
+                duration: instantaneous 
+                range: touch 
+                damage_scaling: 
+                    damage_type: piercing 
+                    all_tiers: 12d6
+                description: "If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage."
+-   name: Giant Spider Hatchling
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Spider
+        type: Minion
+        tier: Tier 1
+    summons: 
+        wildshape: true
+    stats:
+        health: 25
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 2
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Darkvision
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "Giant spiders can see perfectly in the dark."
+                effect:
+                    type: buff 
+                    description: "They are considered to have Darkvision."
+                    conditions:
+                        - darkvision 
+                    save: null
+            -   name: Wall Climb
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "Giant spiders are able to climb up even perfectly verticle surfaces."
+        combat_actions:
+            -   name: Bite 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 1d8
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+            -   name: Stinger
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 2d6
+                description: "Black ichor pulses from the spider's stinger and into its foe."
+                effect:
+                    type: debuff
+                    description: "The target must make a spell power save or gain a level of Exhaustion."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Web Sling
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: 30
+                description: "The spider launches a gob of sticky web at its enemy."
+                effect:
+                    type: debuff
+                    description: "They must make a spell power save or be Grappled. On success, they are Hindered on their next turn."
+                    conditions:
+                        - grappled 
+                        - hindered 
+                    save: null
+-   name: Giant Spider
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Spider
+        type: Minion
+        tier: Tier 2
+    summons: 
+        wildshape: true
+    stats:
+        health: 47
+        evasion: 12
+        speed: 
+            Base Speed: 35
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Darkvision
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "Giant spiders can see perfectly in the dark."
+                effect:
+                    type: buff 
+                    description: "They are considered to have Darkvision."
+                    conditions:
+                        - darkvision 
+                    save: null
+            -   name: Wall Climb
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "Giant spiders are able to climb up even perfectly verticle surfaces."
+        combat_actions:
+            -   name: Bite 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 1d10
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+            -   name: Stinger
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 2d8
+                description: "Black ichor pulses from the spider's stinger and into its foe."
+                effect:
+                    type: debuff
+                    description: "The target must make a spell power save or gain a level of Exhaustion."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Web Sling
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: 30
+                description: "The spider launches a gob of sticky web at its enemy."
+                effect:
+                    type: debuff
+                    description: "They must make a spell power save or be Grappled. On success, they are Hindered on their next turn."
+                    conditions:
+                        - grappled 
+                        - hindered 
+                    save: null
+-   name: Great Attercop
+    metadata: 
+        monster_class: Beast
+        monster_family: Giant Spider
+        type: Minion
+        tier: Tier 3
+    summons: 
+        wildshape: true
+    stats:
+        health: 65
+        evasion: 13
+        speed: 
+            Base Speed: 45
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Darkvision
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "Giant spiders can see perfectly in the dark."
+                effect:
+                    type: buff 
+                    description: "They are considered to have Darkvision."
+                    conditions:
+                        - darkvision 
+                    save: null
+            -   name: Wall Climb
+                type: utility
+                cost: 0
+                duration: passive
+                range: self
+                description: "Giant spiders are able to climb up even perfectly verticle surfaces."
+        combat_actions:
+            -   name: Bite 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 2d10
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+            -   name: Stinger
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: touch
+                damage_scaling:
+                    damage_type: poison
+                    all_tiers: 4d8
+                description: "Black ichor pulses from the spider's stinger and into its foe."
+                effect:
+                    type: debuff
+                    description: "The target must make a spell power save or gain a level of Exhaustion."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Web Sling
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous
+                range: 30
+                description: "The spider launches a gob of sticky web at its enemy."
+                effect:
+                    type: debuff
+                    description: "They must make a spell power save or be Grappled. On success, they are Hindered on their next turn."
+                    conditions:
+                        - grappled 
+                        - hindered 
+                    save: null
+-   name: Daggerfin Fry
+    metadata: 
+        monster_class: Beast
+        monster_family: Daggerfin
+        type: Minion
+        tier: Tier 1
+    summons: 
+        wildshape: true
+    stats:
+        health: 21
+        evasion: 14
+        speed: 
+            Base Speed: 50
+        stat_bonus: 3
+        size: 5
+    moveset:
+        actions_per_turn: 1
+        passive_abilities: 
+            -   name: Waterbreathing
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "The daggerfin breathes water, and begins to suffocate if removed."
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the daggerfin attacks, it streaks by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Daggerfin are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+        combat_actions:
+            -   name: Slice 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 2d6
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+-   name: Daggerfin
+    metadata: 
+        monster_class: Beast
+        monster_family: Daggerfin
+        type: Minion
+        tier: Tier 2
+    summons: 
+        wildshape: true
+    stats:
+        health: 50
+        evasion: 14
+        speed: 
+            Base Speed: 60
+        stat_bonus: 5
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Waterbreathing
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "The daggerfin breathes water, and begins to suffocate if removed."
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the daggerfin attacks, it streaks by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Daggerfin are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+        combat_actions:
+            -   name: Slice 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 2d8
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+-   name: Elder Daggerfin
+    metadata: 
+        monster_class: Beast
+        monster_family: Daggerfin
+        type: Minion
+        tier: Tier 3
+    summons: 
+        wildshape: true
+    stats:
+        health: 70
+        evasion: 14
+        speed: 
+            Base Speed: 120
+        stat_bonus: 7
+        size: 5
+    moveset:
+        actions_per_turn: 2
+        passive_abilities: 
+            -   name: Waterbreathing
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "The daggerfin breathes water, and begins to suffocate if removed."
+            -   name: Streak Past
+                type: buff 
+                cost: 0
+                duration: passive
+                range: self 
+                description: "As the daggerfin attacks, it streaks by with incredible speed."
+                effect:
+                    type: buff 
+                    description: "Daggerfin are always considered to be Elusive."
+                    conditions:
+                        - elusive 
+                    save: null
+        combat_actions:
+            -   name: Slice 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing
+                    all_tiers: 4d8
+                description: "Venom courses into the spider's quarry as it stabs with sharp fangs."
+                effect:
+                    type: debuff 
+                    description: "The target must make a spell power save or be Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+
 #- name: Spectral Guardian # NOT FINISHED
 #  transformed: false
 #  type: Minion

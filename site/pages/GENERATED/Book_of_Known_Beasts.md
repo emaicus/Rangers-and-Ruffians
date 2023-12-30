@@ -56,9 +56,18 @@ show_download: false
      * [Sap Knight](#sap-knight)  
      * [Woad Warrior](#woad-warrior)  
    * [Beast](#beast)  
+     * [Daggerfin Fry](#daggerfin-fry)  
+     * [Daggerfin](#daggerfin)  
+     * [Elder Daggerfin](#elder-daggerfin)  
      * [Young Dire Bear](#young-dire-bear)  
      * [Dire Bear](#dire-bear)  
      * [Ursa](#ursa)  
+     * [Giant Eagle Chick](#giant-eagle-chick)  
+     * [Giant Eagle](#giant-eagle)  
+     * [Greater Giant Eagle](#greater-giant-eagle)  
+     * [Giant Spider Hatchling](#giant-spider-hatchling)  
+     * [Giant Spider](#giant-spider)  
+     * [Great Attercop](#great-attercop)  
      * [Greater Swarm](#greater-swarm)  
      * [Forest Wolf](#forest-wolf)  
      * [Dire Wolf](#dire-wolf)  
@@ -554,6 +563,129 @@ __Damage:__ 4d4 Blunt
 ## Beast
 
   
+### Daggerfin Fry
+__Tier 1 Minion__ Wildshape  
+__Health:__ 21 __Evasion:__ 14 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 3  
+__Movement:__  Base Speed 50ft  
+
+  
+#### Passive Abilities
+
+  
+##### Waterbreathing
+The daggerfin breathes water, and begins to suffocate if removed.    
+  
+  
+
+  
+##### Streak Past
+As the daggerfin attacks, it streaks by with incredible speed. Daggerfin are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 actions per turn.  
+
+  
+##### Slice
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Daggerfin
+__Tier 2 Minion__ Wildshape  
+__Health:__ 50 __Evasion:__ 14 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 5  
+__Movement:__  Base Speed 60ft  
+
+  
+#### Passive Abilities
+
+  
+##### Waterbreathing
+The daggerfin breathes water, and begins to suffocate if removed.    
+  
+  
+
+  
+##### Streak Past
+As the daggerfin attacks, it streaks by with incredible speed. Daggerfin are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 2 actions per turn.  
+
+  
+##### Slice
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 2d8 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Elder Daggerfin
+__Tier 3 Minion__ Wildshape  
+__Health:__ 70 __Evasion:__ 14 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 7  
+__Movement:__  Base Speed 120ft  
+
+  
+#### Passive Abilities
+
+  
+##### Waterbreathing
+The daggerfin breathes water, and begins to suffocate if removed.    
+  
+  
+
+  
+##### Streak Past
+As the daggerfin attacks, it streaks by with incredible speed. Daggerfin are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 2 actions per turn.  
+
+  
+##### Slice
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 4d8 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
 ### Young Dire Bear
 __Tier 1 Heavy__ Wildshape  
 __Health:__ 74 __Evasion:__ 8 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 2  
@@ -699,6 +831,323 @@ If a bear's target is prone, they may maul it, thrashing them about with fearsom
 __Damage:__ 8d6 Blunt   
   
   
+  
+  
+  
+  
+  
+  
+
+  
+### Giant Eagle Chick
+__Tier 1 Minion__ Wildshape  
+__Health:__ 14 __Evasion:__ 14 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 2  
+__Movement:__  Flying Speed 50ft  
+
+  
+#### Passive Abilities
+
+  
+##### Streak Past
+As the giant eagle attacks, it flies by with incredible speed. Eagles are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+
+  
+##### Lesser Carry
+The giant eagle can carry up to one creature on its back.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 actions per turn.  
+
+  
+##### Swipe
+ __Range:__ Touch   
+The eagle slashes its target with its talons as it streaks past.    
+__Damage:__ 1d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Giant Eagle
+__Tier 2 Minion__ Wildshape  
+__Health:__ 35 __Evasion:__ 16 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 5  
+__Movement:__  Flying Speed 60ft  
+
+  
+#### Passive Abilities
+
+  
+##### Streak Past
+As the giant eagle attacks, it flies by with incredible speed. Eagles are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+
+  
+##### Carry
+The giant eagle can carry up to two creatures on its back.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 actions per turn.  
+
+  
+##### Swipe
+ __Range:__ Touch   
+The eagle slashes its target with its talons as it streaks past. As the eagle strikes, it can choose to attempt to Grapple its foe.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.     
+__Damage:__ 4d6 Piercing   
+  
+  
+  
+  
+
+  
+##### Drop
+ __Range:__ Touch   
+If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage.    
+__Damage:__ 6d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Greater Giant Eagle
+__Tier 3 Minion__ Wildshape  
+__Health:__ 60 __Evasion:__ 20 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 8  
+__Movement:__  Flying Speed 120ft  
+
+  
+#### Passive Abilities
+
+  
+##### Streak Past
+As the giant eagle attacks, it flies by with incredible speed. Eagles are always considered to be Elusive.  Elusive entities are immune to exposed attacks.     
+  
+  
+
+  
+##### Greater Carry
+The giant eagle can carry up to five creatures on its back.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 actions per turn.  
+
+  
+##### Swipe
+ __Range:__ Touch   
+The eagle slashes its target with its talons as it streaks past. As the eagle strikes, it can choose to attempt to Grapple its foe.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple.     
+__Damage:__ 8d6 Piercing   
+  
+  
+  
+  
+
+  
+##### Drop
+ __Range:__ Touch   
+If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage.    
+__Damage:__ 12d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Giant Spider Hatchling
+__Tier 1 Minion__ Wildshape  
+__Health:__ 25 __Evasion:__ 10 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 2  
+__Movement:__  Base Speed 25ft  
+
+  
+#### Passive Abilities
+
+  
+##### Darkvision
+Giant spiders can see perfectly in the dark. They are considered to have Darkvision.  A creature with Darkvision is able to see up to 100 feet even in pitch darkness. In low light, they are able to see as though it is day.     
+  
+  
+
+  
+##### Wall Climb
+Giant spiders are able to climb up even perfectly verticle surfaces.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 actions per turn.  
+
+  
+##### Bite
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 1d8 Poison   
+  
+  
+  
+  
+
+  
+##### Stinger
+ __Range:__ Touch   
+Black ichor pulses from the spider's stinger and into its foe. The target must make a spell power save or gain a level of Exhaustion.       
+__Damage:__ 2d6 Poison   
+  
+  
+  
+  
+
+  
+##### Web Sling
+ __Range:__ 30 Feet  
+The spider launches a gob of sticky web at its enemy. They must make a spell power save or be Grappled. On success, they are Hindered on their next turn.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple. A Hindered creature loses half its movement.     
+  
+  
+  
+  
+  
+  
+
+  
+### Giant Spider
+__Tier 2 Minion__ Wildshape  
+__Health:__ 47 __Evasion:__ 12 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 5  
+__Movement:__  Base Speed 35ft  
+
+  
+#### Passive Abilities
+
+  
+##### Darkvision
+Giant spiders can see perfectly in the dark. They are considered to have Darkvision.  A creature with Darkvision is able to see up to 100 feet even in pitch darkness. In low light, they are able to see as though it is day.     
+  
+  
+
+  
+##### Wall Climb
+Giant spiders are able to climb up even perfectly verticle surfaces.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 2 actions per turn.  
+
+  
+##### Bite
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 1d10 Poison   
+  
+  
+  
+  
+
+  
+##### Stinger
+ __Range:__ Touch   
+Black ichor pulses from the spider's stinger and into its foe. The target must make a spell power save or gain a level of Exhaustion.       
+__Damage:__ 2d8 Poison   
+  
+  
+  
+  
+
+  
+##### Web Sling
+ __Range:__ 30 Feet  
+The spider launches a gob of sticky web at its enemy. They must make a spell power save or be Grappled. On success, they are Hindered on their next turn.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple. A Hindered creature loses half its movement.     
+  
+  
+  
+  
+  
+  
+
+  
+### Great Attercop
+__Tier 3 Minion__ Wildshape  
+__Health:__ 65 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 5  
+__Movement:__  Base Speed 45ft  
+
+  
+#### Passive Abilities
+
+  
+##### Darkvision
+Giant spiders can see perfectly in the dark. They are considered to have Darkvision.  A creature with Darkvision is able to see up to 100 feet even in pitch darkness. In low light, they are able to see as though it is day.     
+  
+  
+
+  
+##### Wall Climb
+Giant spiders are able to climb up even perfectly verticle surfaces.    
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 2 actions per turn.  
+
+  
+##### Bite
+ __Range:__ Touch   
+Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
+__Damage:__ 2d10 Poison   
+  
+  
+  
+  
+
+  
+##### Stinger
+ __Range:__ Touch   
+Black ichor pulses from the spider's stinger and into its foe. The target must make a spell power save or gain a level of Exhaustion.       
+__Damage:__ 4d8 Poison   
+  
+  
+  
+  
+
+  
+##### Web Sling
+ __Range:__ 30 Feet  
+The spider launches a gob of sticky web at its enemy. They must make a spell power save or be Grappled. On success, they are Hindered on their next turn.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple. A Hindered creature loses half its movement.     
   
   
   
