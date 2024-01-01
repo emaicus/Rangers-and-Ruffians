@@ -73,13 +73,20 @@ def publish_character_creation(rnr_game, force_overwrite):
   md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
   background_lines = []
+  background_lines.append('{::options parse_block_html="true" /}  \n')
+  background_lines.append('<details><summary markdown="span">View the Backgrounds</summary>  \n')
   for rnr_background in sorted(rnr_game.backgrounds, key=lambda x: x.name):
     list_of_lines = rnr_background.get_markdown(level=3).split('\n')
     list_of_lines = [line + '\n' for line in list_of_lines]
     list_of_lines += '---  \n  \n'
     background_lines += list_of_lines
+  background_lines.append('</details><br/>')
+  background_lines.append('{::options parse_block_html="false" /}')
+  
 
   race_lines = []
+  race_lines.append('{::options parse_block_html="true" /}  \n')
+  race_lines.append('<details><summary markdown="span">View the Races</summary>  \n')
   for rnr_race in sorted(rnr_game.races, key=lambda x: (x.parent_class, x.name)):
     art_data = dict()
     escaped_name = rnr_race.name.replace(' ', '_').lower()
@@ -90,8 +97,12 @@ def publish_character_creation(rnr_game, force_overwrite):
     list_of_lines = [line + '\n' for line in list_of_lines]
     list_of_lines += '---  \n  \n'
     race_lines += list_of_lines
+  race_lines.append('</details><br/>')
+  race_lines.append('{::options parse_block_html="false" /}')
 
   class_lines = []
+  class_lines.append('{::options parse_block_html="true" /}  \n')
+  class_lines.append('<details><summary markdown="span">View the Classes</summary>  \n')
   for rnr_class in sorted(rnr_game.classes, key=lambda x: x.name):
     art_data = dict()
     escaped_name = rnr_class.name.replace(' ', '_').lower()
@@ -103,6 +114,8 @@ def publish_character_creation(rnr_game, force_overwrite):
     list_of_lines = [line + '\n' for line in list_of_lines]
     list_of_lines += '---  \n  \n'
     class_lines += list_of_lines
+  class_lines.append('</details><br/>')
+  class_lines.append('{::options parse_block_html="false" /}')
 
 
   md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
@@ -463,19 +476,21 @@ if __name__ == "__main__":
 
 
   update_version = False
-  try:
-    new_version = input('Is this a new edition? If so, what is the new number? ')
-    major, greater, minor = new_version.split('.')
-    _,_,_ = int(major), int(greater), int(minor)
-    update_version = True
-    new_suffix = input('What is the version suffix? ')
-  except Exception as e:
-    print("Not naming a new version.")
+  # Never allow a new version to be built without validation
+  if not args.skip_validation:
+    try:
+      new_version = input('Is this a new edition? If so, what is the new number? ')
+      major, greater, minor = new_version.split('.')
+      _,_,_ = int(major), int(greater), int(minor)
+      update_version = True
+      new_suffix = input('What is the version suffix? ')
+    except Exception as e:
+      print("Not naming a new version.")
 
-  if update_version:
-    print('Archiving past versions...')
-    archive_past_versions()
-    update = core.update_version(new_version, new_suffix)
+    if update_version:
+      print('Archiving past versions...')
+      archive_past_versions()
+      update = core.update_version(new_version, new_suffix)
   
   rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
   print(f"Loaded RnR version {rnr_game.get_full_version()}")

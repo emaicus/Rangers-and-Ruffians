@@ -19,5 +19,6 @@ sass:
 # Important for node_modules
 exclude: []
 ruby: 2.6.3
+markdown: kramdown
 
 logo: /docs/images/backdrops/banner.jpg

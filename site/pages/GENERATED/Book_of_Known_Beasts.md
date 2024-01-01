@@ -69,9 +69,9 @@ show_download: false
      * [Giant Spider](#giant-spider)  
      * [Great Attercop](#great-attercop)  
      * [Greater Swarm](#greater-swarm)  
+     * [Werewolf](#werewolf)  
      * [Forest Wolf](#forest-wolf)  
      * [Dire Wolf](#dire-wolf)  
-     * [Werewolf](#werewolf)  
      * [Elder Wolf](#elder-wolf)  
      * [Swarm](#swarm)  
      * [Zounds](#zounds)  
@@ -1201,6 +1201,63 @@ __Damage:__ 4d6 Piercing
   
 
   
+### Werewolf
+__Tier 2 Heavy__  
+__Health:__ 155 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 4  
+__Movement:__  Base Speed 35ft  
+
+  
+#### Passive Abilities
+
+  
+##### Pack Strength
+Wolves hunt better in packs. If two wolves are attacking the same target, they deal additional damage on each strike.       
+__Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+
+  
+##### Fear of Fire
+Wolves have a natural fear of fire. If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened. This does not affect a werewolf that has retained its humanity. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
+  
+  
+
+  
+##### Vulnerable to Silver
+Werewolves are weak against silver. Attacks made with silvered weapons deal an additional 2d6 damage to a werewolf.       
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 2 actions per turn.  
+
+  
+##### Grappling Bite
+ __Range:__ Touch   
+The werewolf tears at its foe with sharp teeth. They must make a spell power save or be Hindered on their next turn.  A Hindered creature loses half its movement.     
+__Damage:__ 4d6 Piercing   
+  
+  
+  
+  
+
+  
+##### Howl
+__Radius:__ 120 ft.   
+The werewolf lets a fearsome howl. All creatures within the howl's radius must make a spell power save or be Frightened. Affected creatures may repeat their save at the end of each of their turns. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
+  
+  
+  
+  
+  
+  
+
+  
 ### Forest Wolf
 __Tier 1 Minion__ Wildshape  
 __Health:__ 25 __Evasion:__ 11 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 2  
@@ -1295,63 +1352,6 @@ __Damage:__ 4d6 Piercing
 ##### Howl
 __Radius:__ 120 ft.   
 The wolf lets a fearsome howl. All creatures within the howl's radius must make a spell power save or be Frightened. Affected creatures may repeat their save at the end of each of their turns. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
-  
-  
-  
-  
-  
-  
-
-  
-### Werewolf
-__Tier 2 Heavy__  
-__Health:__ 155 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 4  
-__Movement:__  Base Speed 35ft  
-
-  
-#### Passive Abilities
-
-  
-##### Pack Strength
-Wolves hunt better in packs. If two wolves are attacking the same target, they deal additional damage on each strike.       
-__Damage:__ 2d6 Piercing   
-  
-  
-  
-  
-
-  
-##### Fear of Fire
-Wolves have a natural fear of fire. If another wolf is damaged by fire nearby, the wolf must make a spell power save against the attacker or become Frightened. This does not affect a werewolf that has retained its humanity. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
-  
-  
-
-  
-##### Vulnerable to Silver
-Werewolves are weak against silver. Attacks made with silvered weapons deal an additional 2d6 damage to a werewolf.       
-  
-  
-  
-  
-
-  
-#### Combat Actions
-This creature can take 2 actions per turn.  
-
-  
-##### Grappling Bite
- __Range:__ Touch   
-The werewolf tears at its foe with sharp teeth. They must make a spell power save or be Hindered on their next turn.  A Hindered creature loses half its movement.     
-__Damage:__ 4d6 Piercing   
-  
-  
-  
-  
-
-  
-##### Howl
-__Radius:__ 120 ft.   
-The werewolf lets a fearsome howl. All creatures within the howl's radius must make a spell power save or be Frightened. Affected creatures may repeat their save at the end of each of their turns. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
   
   
   

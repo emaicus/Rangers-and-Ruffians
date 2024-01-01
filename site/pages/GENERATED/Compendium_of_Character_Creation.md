@@ -94,6 +94,8 @@ _Version 3.0.0 Release Candidate 1_
 
   
 ## Backgrounds
+{::options parse_block_html="true" /}  
+<details><summary markdown="span">View the Backgrounds</summary>  
 
   
 ### Amnesiac
@@ -1239,9 +1241,11 @@ As a Wisdom, you begin your journey with:
   
   
   
-
+</details><br/>{::options parse_block_html="false" /}
   
 ## Races
+{::options parse_block_html="true" /}  
+<details><summary markdown="span">View the Races</summary>  
 
   
 ### Catterwol
@@ -2121,9 +2125,11 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
-
+</details><br/>{::options parse_block_html="false" /}
   
 ## Classes
+{::options parse_block_html="true" /}  
+<details><summary markdown="span">View the Classes</summary>  
 
   
 ### Barbarian
@@ -7048,4 +7054,4 @@ __Tier 3 Damage:__ 6d6 Blunt
   
   
   
-
+</details><br/>{::options parse_block_html="false" /}
