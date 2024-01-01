@@ -38,24 +38,41 @@ class RnRClass():
 
   
   
-  def get_markdown(self, level=None, art_data=None):
+  def get_markdown(self, level=None, art_data=None, printable=False):
     subsection_level = None if level is None else level + 1
     ability_level = None if level is None else level + 2
+    class_text = ''
     
-    class_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    if printable:
+      class_text += f'<button onclick="printContent(\'printable-{self.name.lower()}\')">Print {self.name}</button>  \n'
+      class_text += f'<div class="printable-content" id="printable-{self.name.lower()}">  \n'
+
+    class_text += f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
     if art_data is not None:
       class_text += f"<img src='{art_data['path']}' class=\"raceClassImage\" />\n\n"
-      class_text += art_data['attribution']
+      class_text += f"<span class=\"attribution\">{art_data['attribution']}</span>"
+
+    class_text += f'  \n<div class="handbook-section"   id="handbook-{self.name.lower()}">\n' if printable else ''
 
     for section in self.handbook:
       if section['display_title']:
         class_text += f"{'#' * subsection_level} {section['title']}  \n"
       class_text += f"{section['text']}  \n"
       class_text += "  \n  \n"
+    
+    class_text += f'</div>  \n' if printable else ''
 
     class_text += f"{'#' * subsection_level} Recommended Stats  \n"
+
+    class_text += f'<div class="display-stat-section"   id="display-stats-{self.name.lower()}">\n' if printable else ''
     for stat in ["Strength", "Dexterity", "Intelligence","Inner_Fire",  "Perception", "Charisma"]:
       class_text += f"*  __{stat.replace('_', ' ')}:__ {self.stat_recommendation[stat]}  \n"
+    class_text += f'</div>\n' if printable else ''
+
+    class_text += f'<div class="printable-stat-section"   id="printable-stats-{self.name.lower()}">\n' if printable else ''
+    for stat in ["Strength", "Dexterity", "Intelligence","Inner_Fire",  "Perception", "Charisma"]:
+      class_text += f" __{stat.replace('_', ' ')}:__ {self.stat_recommendation[stat]} "
+    class_text += f'  \n </div>\n' if printable else ''
 
     class_text += "  \n"
 
@@ -65,9 +82,11 @@ class RnRClass():
 
     if len(self.abilities) > 0:
       class_text += f"{'#' * subsection_level} Abilities  \n  \n"
-      class_text += f"<img src='{art_data['skill_tree_path']}' class=\"raceClassImage\" />  \n  \n"
+      class_text += f"<img src='{art_data['skill_tree_path']}' class=\"skilltree\" />  \n  \n"
       for ability in sorted(self.abilities, key=lambda a: a.name):
+        class_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
         class_text += ability.get_markdown(ability_level)
+        class_text += f'</div>  \n' if printable else ''
       class_text+= '  \n'
 
     if len(self.spells) > 0:
@@ -75,8 +94,12 @@ class RnRClass():
       for tier, spells in self.spells.items():
         class_text += f"{'#' * subsection_level} {tier.replace('_', ' ')}  \n"
         for spell in spells:
+          class_text += f'<div class="rnr-ability" id="ability-{spell.name.lower()}">  \n' if printable else ''
           class_text += f'{spell.get_markdown(ability_level)}  \n'
+          class_text += f'</div>  \n' if printable else ''
         class_text += '  \n'
       class_text+= '  \n'
+    
+    class_text += '</div>  \n' if printable else ''
 
     return class_text

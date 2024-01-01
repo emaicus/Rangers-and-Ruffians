@@ -381,7 +381,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/js/rangers.js",
-    "revision": "a06cdf42fa706a43aa7d1aa835187589"
+    "revision": "e225b6d6b2218ebd7a3d5ce70113e05b"
   },
   {
     "url": "site/pages/character_creation_helper_page.html",
@@ -413,7 +413,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "ea688bb7c19b4efd10c066da1889a3ed"
+    "revision": "ed62f05c185d0b52f31424a245b9970c"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
@@ -525,7 +525,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/css/style.css",
-    "revision": "59064a8f69a728b62a5a630efe76235c"
+    "revision": "7d5cc3c56548d3074f5b4473bc0b2428"
   }
 ]);
 

@@ -110,7 +110,7 @@ def publish_character_creation(rnr_game, force_overwrite):
     art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('class', f'{escaped_name}.jpg')}"
     art_data['skill_tree_path'] = f"/{core.GLOBAL_ART_PATH.joinpath('skill_trees', f'{escaped_name}.jpg')}"
 
-    list_of_lines = rnr_class.get_markdown(level=3, art_data=art_data).split('\n')
+    list_of_lines = rnr_class.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
     list_of_lines = [line + '\n' for line in list_of_lines]
     list_of_lines += '---  \n  \n'
     class_lines += list_of_lines

@@ -2130,13 +2130,17 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
 ## Classes
 {::options parse_block_html="true" /}  
 <details><summary markdown="span">View the Classes</summary>  
+<button onclick="printContent('printable-barbarian')">Print Barbarian</button>  
+<div class="printable-content" id="printable-barbarian">  
 
   
 ### Barbarian
 <img src='/site/images/class/barbarian.jpg' class="raceClassImage" />
   
   
-_"[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+<span class="attribution">_"[Redhead Warrior"](https://www.deviantart.com/o-melanor/art/Redhead-Warrior-759465552) by O-Melanor is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-barbarian">
 All muscle and rage, the Barbarian is a powerful frontline fighter. With their exceptional health and resileince, the Barbarian is able to shrug off blows that would level their allies. Once a Barbarian closes with an enemy they deal massive damage, laying low anyone that dares stand in their way. Out of combat, the Barbarian is among the strongest of the races, and they use that strength to overcome their problems. The Barbarian's main weakness is their lack of arcane knowledge; for this reason, they are best backed up by a Bard, Cleric, or other support mage.  
   
   
@@ -2166,15 +2170,21 @@ Because of their strength and resilience, a party's Barbarian is usually found o
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-barbarian">
 *  __Strength:__ 2  
 *  __Dexterity:__ 1  
 *  __Intelligence:__ -2  
 *  __Inner Fire:__ 1  
 *  __Perception:__ 0  
 *  __Charisma:__ -1  
+</div>
+<div class="printable-stat-section"   id="printable-stats-barbarian">
+ __Strength:__ 2  __Dexterity:__ 1  __Intelligence:__ -2  __Inner Fire:__ 1  __Perception:__ 0  __Charisma:__ -1   
+ </div>
   
   
 
@@ -2186,9 +2196,10 @@ Barbarians use 1d10 as their class health dice. As a barbarian, you have experti
 #### Abilities
   
   
-<img src='/site/images/skill_trees/barbarian.jpg' class="raceClassImage" />  
+<img src='/site/images/skill_trees/barbarian.jpg' class="skilltree" />  
   
   
+<div class="rnr-ability" id="ability-a little terror">  
 
   
 ##### A Little Terror
@@ -2196,6 +2207,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ 30 Feet
 Use your intimidating presense to force an enemy to do your will. They must make a spell power saving throw or either be Controlled for one turn or answer three of your questions truthfully.  A Controlled creature must fight for its controller and act as they instruct. The creature automatically fails checks and saves made against its controller except for saves made against being controlled. If the controller or its allies harm a controlled creature, the controlled creature may remake its save at advantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-adrenaline">  
 
   
 ##### Adrenaline
@@ -2203,6 +2216,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 A bloody grin spreads across your face as you hurtle towards your foes. When you go berserk, you are Quickened.  A Quickened creature gains fifteen feet of movement and ignores difficult terrain.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-berserk">  
 
   
 ##### Berserk
@@ -2215,6 +2230,8 @@ __Tier 3 Damage:__ 1d8 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-blaze of glory">  
 
   
 ##### Blaze of Glory
@@ -2223,6 +2240,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 As you take injuries, your resolve only strengthens. If you fall below one quarter health and an enemy lands a glancing blow on you you, take no damage.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-blood for blood">  
 
   
 ##### Blood for Blood
@@ -2231,6 +2250,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 When you are going berserk and an enemy harms you, you may use your reaction to make a counterattack.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-brutal attack">  
 
   
 ##### Brutal Attack
@@ -2243,6 +2264,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-chain attack">  
 
   
 ##### Chain Attack
@@ -2251,6 +2274,8 @@ __Cost:__ None __Duration:__ Instantaneous  __Range:__ Self
 As your foes' bodies fall around you, a fiendish energy courses through your veins. Whenever you slay an enemy, you are Spurred to Action.  An entity that is Spurred to Action immediately gains 15 feet of movement and an action.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-corner">  
 
   
 ##### Corner
@@ -2259,6 +2284,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ 15 Feet
 They won't get away that easy! If an enemy moves to pass you within 15 feet to either side, you may spend a reaction to block them. If they are one size larger than you or smaller, they are immediately Halted unless they are flying. Otherwise, they may make a spell power save.  Halted creatures immediately lose the remainder of their movement for a turn.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-every wall is a door">  
 
   
 ##### Every Wall is a Door
@@ -2266,6 +2293,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Base Speed
 Use your strength to blast through an obstacle that is two feet thick or less, to climb solid stone, or to leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-frightening blow">  
 
   
 ##### Frightening Blow
@@ -2278,6 +2307,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guard-break">  
 
   
 ##### Guard-Break
@@ -2290,6 +2321,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-i cast 'fist'">  
 
   
 ##### I cast 'Fist'
@@ -2297,6 +2330,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Self
 Don your pointy hat and grab your stick, you've become a wizard! Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur. Follow the rules for informal magic, but always spend an action point.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-meat shield">  
 
   
 ##### Meat Shield
@@ -2305,6 +2340,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Touch
 When you see an incoming attack, you may attempt to shield yourself with an adjacent enemy. They must make a spell power save or be pulled into the attack's way. If they die and you have the Throw Anything ability, you may immediately make an attack using them as a thrown weapon.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-relentless rage">  
 
   
 ##### Relentless Rage
@@ -2312,6 +2349,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Blood thunders in your ears as you rage, blocking out attacks against your mind. When you are going berserk, you are resistant to psychic damage and immune to conditions of the mind.  Creatures with Psycic Resistance take half damage from psychic attacks and are immune to mental conditions such as Charmed and Controlled.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-rending strike">  
 
   
 ##### Rending Strike
@@ -2324,6 +2363,8 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-savage critical">  
 
   
 ##### Savage Critical
@@ -2332,6 +2373,8 @@ __Radius:__ 30 ft.
 As you lay an enemy low, an aura of wild brutality swirls about you. Whenever you land a critical hit, all enemies the ability's radius must make a spell power save or be Frightened until the end of your next turn.  A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-single out">  
 
   
 ##### Single Out
@@ -2339,6 +2382,8 @@ __Cost:__ 1 Action Point __Duration:__ 10 Turns __Range:__ 60 Feet
 Survey the battlefield and pick out an enemy that you hate in particular. You gain 15ft of movement on any turn when you move towards them and they are considered Vulnerable to your attacks.  All accuracy checks made against Vulnerable creatures are at advantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-stay on your feet">  
 
   
 ##### Stay on Your Feet
@@ -2347,6 +2392,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Even battered and bloodied, you fight on. If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-taunt">  
 
   
 ##### Taunt
@@ -2355,6 +2402,8 @@ __Radius:__ 50 ft.
 A glint in your eye and a bloody smile on your face, you scream a challenge to the world around you! All enemies in the ability's radius must make a spell power saving throw or become Fixated on you. They may reattempt their save at the end of each of their turns. Fixated creatures are interested only in the item of their fixation. The nature of this fixation is left to the Grand Poohbah.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-terrify">  
 
   
 ##### Terrify
@@ -2362,6 +2411,8 @@ __Cost:__ None __Duration:__ Save  __Range:__ 60 Feet
 As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes. They must make a spell power save or become Frightened of you. They may repeat their save at the end of each of their turns, or once every five minutes when out of combat. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-terrifying damage">  
 
   
 ##### Terrifying Damage
@@ -2374,6 +2425,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-the closer">  
 
   
 ##### The Closer
@@ -2386,6 +2439,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-the opener">  
 
   
 ##### The Opener
@@ -2393,6 +2448,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 If you move quickly at the start of combat, you're able to get the drop on your foes. If you attack an enemy that has not yet taken a turn, use Brutal Attack at no cost.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-throw anything">  
 
   
 ##### Throw Anything
@@ -2405,6 +2462,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-throw caution to the wind">  
 
   
 ##### Throw Caution to the Wind
@@ -2418,8 +2477,10 @@ __Tier 3 Damage:__ 1d10 Inherited
   
   
   
+</div>  
   
   
+</div>  
   
   
 ---  
@@ -2434,13 +2495,17 @@ __Tier 3 Damage:__ 1d10 Inherited
   
   
   
+<button onclick="printContent('printable-bard')">Print Bard</button>  
+<div class="printable-content" id="printable-bard">  
 
   
 ### Bard
 <img src='/site/images/class/bard.jpg' class="raceClassImage" />
   
   
-_"[Song of nature"](https://www.deviantart.com/yanporfirio/art/Song-of-nature-695972090) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+<span class="attribution">_"[Song of nature"](https://www.deviantart.com/yanporfirio/art/Song-of-nature-695972090) by Yanporfirio is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-bard">
 Weaver of tales. With their magical melodies, Bards are the heart and soul of every adventure. While wizards use hard-won knowledge and Druids use the power of nature, Bard's channel the power of pure charisma to author the world around them. Bards take the roll of support caster, shaking the resolve of enemies and shaping the face of the battlefield. Many bards are the face of their adventuring party, using their wit and tact to expertly navigate social situations.  
   
   
@@ -2478,15 +2543,21 @@ Bards are showman at heart, dashing and quick of wit. At the start of your journ
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-bard">
 *  __Strength:__ -2  
 *  __Dexterity:__ 0  
 *  __Intelligence:__ 1  
 *  __Inner Fire:__ 1  
 *  __Perception:__ -1  
 *  __Charisma:__ 2  
+</div>
+<div class="printable-stat-section"   id="printable-stats-bard">
+ __Strength:__ -2  __Dexterity:__ 0  __Intelligence:__ 1  __Inner Fire:__ 1  __Perception:__ -1  __Charisma:__ 2   
+ </div>
   
   
 
@@ -2499,6 +2570,7 @@ Bards use 1d6 as their class health dice. As a bard, your raw charisma is second
 
   
 #### Tier 1
+<div class="rnr-ability" id="ability-trick up your sleeve">  
 
   
 ##### Trick up Your Sleeve
@@ -2509,6 +2581,8 @@ Your sleeve contains a small pocket dimension, capable of holding up to one cubi
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-imitate">  
 
   
 ##### Imitate
@@ -2519,6 +2593,8 @@ Magic suffuses your voice as you perfectly copy a sound. For the spell's duratio
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-suggestion">  
 
   
 ##### Suggestion
@@ -2529,6 +2605,8 @@ Your honeyed words become laced with irresistible magic as you speak earnestly t
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-compulsion">  
 
   
 ##### Compulsion
@@ -2539,6 +2617,8 @@ As you lay eyes on a creature, mutter a spell meant to compel them to action. Th
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-conjure illusion">  
 
   
 ##### Conjure Illusion
@@ -2549,6 +2629,8 @@ At the wave of your hand, the air shimmers and a magical mirage appears. You are
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-kiss and tell">  
 
   
 ##### Kiss and Tell
@@ -2559,6 +2641,8 @@ As you place a kiss on a creature, you mark them so that you always know where t
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-dazzling lights">  
 
   
 ##### Dazzling Lights
@@ -2570,6 +2654,8 @@ As you clap your hands, seven dazzling orbs of light appear in the air around yo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-animal aptitude">  
 
   
 ##### Animal Aptitude
@@ -2580,6 +2666,8 @@ Your magic has granted you an affinity over woodland creatures. Small animals lo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-song of slow healing">  
 
   
 ##### Song of Slow Healing
@@ -2595,6 +2683,8 @@ __Tier 3 Healing:__ 4d6
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-languages">  
 
   
 ##### Languages
@@ -2604,6 +2694,8 @@ At your command, a bead of magic embeds itself in the mind of your target. It gr
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hypnotize">  
 
   
 ##### Hypnotize
@@ -2614,6 +2706,8 @@ Focus your intent upon your target and deftly begin to swing a trinket. They mus
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-power chord">  
 
   
 ##### Power Chord
@@ -2625,6 +2719,8 @@ A pulse of sonic energy streaks from you in all directions. The wall of force pa
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-biting words">  
 
   
 ##### Biting Words
@@ -2640,6 +2736,8 @@ __Tier 3 Damage:__ 3d6 Psychic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-swarm of squirrels">  
 
   
 ##### Swarm of Squirrels
@@ -2653,6 +2751,8 @@ __Tier 3 Summon:__ Zounds!
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-disguise">  
 
   
 ##### Disguise
@@ -2663,6 +2763,8 @@ With a whispered incantation, you cloak your true form in a shimmering veil of i
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-silence">  
 
   
 ##### Silence
@@ -2674,6 +2776,8 @@ Holding your magic, you speak the celestial word for 'Silence.' At once, the wor
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-blocking hand">  
 
   
 ##### Blocking Hand
@@ -2685,6 +2789,8 @@ As an enemy bears down on you, summon an unseen force of protection. For a physi
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-haste">  
 
   
 ##### Haste
@@ -2695,6 +2801,8 @@ Your voice rises in a quickening tempo as you urge your target forward. Blood po
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-take courage">  
 
   
 ##### Take Courage
@@ -2706,6 +2814,8 @@ With a battle cry, you summon the spirit of bravery. In a way of your choosing, 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-restoration">  
 
   
 ##### Restoration
@@ -2717,6 +2827,8 @@ Closing your eyes, you channel healing magic into the space around you. Any alli
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-slow">  
 
   
 ##### Slow
@@ -2727,6 +2839,8 @@ As you touch your magic, your next word comes slowly as though stretched over ti
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-raucous laughter">  
 
   
 ##### Raucous Laughter
@@ -2738,6 +2852,8 @@ You fire off a quip or joke laced with magic power. Your target must make a spel
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-distract">  
 
   
 ##### Distract
@@ -2748,6 +2864,8 @@ Use your magic to project your voice into an enemy's ears. At the start of each 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-breathe fire">  
 
   
 ##### Breathe Fire
@@ -2763,6 +2881,8 @@ __Tier 3 Damage:__ 3d4 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-inanimate aid">  
 
   
 ##### Inanimate Aid
@@ -2779,6 +2899,8 @@ __Tier 3 Damage:__ 3d4 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-immovable">  
 
   
 ##### Immovable
@@ -2790,6 +2912,8 @@ With unwavering focus, you channel your energy into an unyielding force that anc
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-wall of sound">  
 
   
 ##### Wall of Sound
@@ -2800,11 +2924,13 @@ As you strike a note, a 5x5x1 foot wall of sound bursts into existence at a poin
   
   
   
+</div>  
   
   
 
   
 #### Tier 2
+<div class="rnr-ability" id="ability-invisible servant">  
 
   
 ##### Invisible Servant
@@ -2816,6 +2942,8 @@ __Summon:__ Invisible Servant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-minor gate">  
 
   
 ##### Minor Gate
@@ -2826,6 +2954,8 @@ With a sound like a rush of wind, you tear open a portal large enough to fit you
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-smokescreen">  
 
   
 ##### Smokescreen
@@ -2837,6 +2967,8 @@ As you open your mouth, magical smoke billows out and obscures the world around 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-featherfall">  
 
   
 ##### Featherfall
@@ -2847,6 +2979,8 @@ With a flourish, you produce a feather and ignite it with your magic. In that mo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-counter magic">  
 
   
 ##### Counter Magic
@@ -2858,6 +2992,8 @@ Rebuke an enemy as they cast a spell. Instantly stop tier 1 spells. For higher l
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-song of mass healing">  
 
   
 ##### Song of Mass Healing
@@ -2874,6 +3010,8 @@ __Tier 3 Healing:__ 8d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-kilgore's thunderous shout">  
 
   
 ##### Kilgore's Thunderous Shout
@@ -2889,6 +3027,8 @@ __Tier 3 Damage:__ 4d6 Acoustic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-conjure carriage">  
 
   
 ##### Conjure Carriage
@@ -2899,6 +3039,8 @@ Raise your hand to hail a magical carriage capable of seating four individuals w
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-polymorph">  
 
   
 ##### Polymorph
@@ -2909,6 +3051,8 @@ Your target's body begins to warp as they seamlessly transition into the form of
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-modify memory">  
 
   
 ##### Modify Memory
@@ -2918,6 +3062,8 @@ Use your magic to invade a creature's mind. You tell a lie so compelling that yo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-zone of truth">  
 
   
 ##### Zone of Truth
@@ -2929,6 +3075,8 @@ Tracing magical glyphs in the air around you, you perform a ritual to transform 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-power shriek">  
 
   
 ##### Power Shriek
@@ -2943,6 +3091,8 @@ __Tier 3 Damage:__ 4d6 Acoustic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-corvo's contagious waltz">  
 
   
 ##### Corvo's Contagious Waltz
@@ -2954,6 +3104,8 @@ As you wave a baton, a ghostly chorus is taken up and a haunting waltz begins to
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-unstoppable">  
 
   
 ##### Unstoppable
@@ -2964,6 +3116,8 @@ Slap an object or person to make them unstoppable for 6 seconds. The object must
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-lullaby">  
 
   
 ##### Lullaby
@@ -2975,6 +3129,8 @@ Humming to yourself, you begin a gentle lullaby, lulling your targets into a sta
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-tamberdoodle's grasp">  
 
   
 ##### Tamberdoodle's Grasp
@@ -2987,6 +3143,8 @@ __Summon:__ Tamberdoodle's Hand
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hava's tricksy escape">  
 
   
 ##### Hava's Tricksy Escape
@@ -2997,11 +3155,13 @@ Close your eyes and repeat three times the words 'Whisked away, vanished' and th
   
   
   
+</div>  
   
   
 
   
 #### Tier 3
+<div class="rnr-ability" id="ability-winged magic steed">  
 
   
 ##### Winged Magic Steed
@@ -3013,6 +3173,8 @@ __Summon:__ Winged Steed
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-edmire's grand manor">  
 
   
 ##### Edmire's Grand Manor
@@ -3024,6 +3186,8 @@ When you learn this spell, a key appears in your hand. Any time that you wish, y
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-marionette">  
 
   
 ##### Marionette
@@ -3034,6 +3198,8 @@ You hoist your hand as they you are controlling a puppet and focus on an enemy. 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-strike dumb">  
 
   
 ##### Strike Dumb
@@ -3044,6 +3210,8 @@ Utter a phrase so mind-bendingly intricate that anyone who hears it becomes conf
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-nothing but unicorns">  
 
   
 ##### Nothing but Unicorns
@@ -3057,6 +3225,8 @@ __Tier 3 Damage:__ 5d8 Psychic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guards">  
 
   
 ##### Guards
@@ -3069,6 +3239,8 @@ __Summon:__ Spectral Guardian
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon bleck">  
 
   
 ##### Summon Bleck
@@ -3080,6 +3252,8 @@ Summon a mighty bleck to fight for you! A bleck is a gooey, little creature with
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-i know malkizar!">  
 
   
 ##### I Know Malkizar!
@@ -3091,10 +3265,12 @@ Gather your strength and perform an ancient ritual of obfuscation. Alter the min
   
   
   
+</div>  
   
   
   
   
+</div>  
   
   
 ---  
@@ -3109,13 +3285,17 @@ Gather your strength and perform an ancient ritual of obfuscation. Alter the min
   
   
   
+<button onclick="printContent('printable-cleric')">Print Cleric</button>  
+<div class="printable-content" id="printable-cleric">  
 
   
 ### Cleric
 <img src='/site/images/class/cleric.jpg' class="raceClassImage" />
   
   
-_"[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[Before the world ends"](https://www.deviantart.com/zezhou/art/Before-the-world-ends-482099982) by Zezhou is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-cleric">
 Servant of the divine. A cleric has given themselves over to the worship of a deity or deities. For some, this means a life spent at a temple, while for others, it means wandering the realms and preaching the good word. As an adventurer, your deity has chosen you for something special and has granted you the power to carry out their will. Clerics are practitioners of divine magic, and are known for their ability to bring healing to the sick and dying.  
   
   
@@ -3145,15 +3325,21 @@ Clerics often take a supporting role in combat, granting powerful boons to their
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-cleric">
 *  __Strength:__ -2  
 *  __Dexterity:__ -1  
 *  __Intelligence:__ 1  
 *  __Inner Fire:__ 2  
 *  __Perception:__ 0  
 *  __Charisma:__ 1  
+</div>
+<div class="printable-stat-section"   id="printable-stats-cleric">
+ __Strength:__ -2  __Dexterity:__ -1  __Intelligence:__ 1  __Inner Fire:__ 2  __Perception:__ 0  __Charisma:__ 1   
+ </div>
   
   
 
@@ -3166,6 +3352,7 @@ Clerics use 1d6 as their class health dice. As a cleric, you take expertise in i
 
   
 #### Tier 1
+<div class="rnr-ability" id="ability-beam of light">  
 
   
 ##### Beam of Light
@@ -3181,6 +3368,8 @@ __Tier 3 Damage:__ 3d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-fiery rebuke">  
 
   
 ##### Fiery Rebuke
@@ -3197,6 +3386,8 @@ __Tier 3 Damage:__ 3d4 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-block attack">  
 
   
 ##### Block Attack
@@ -3208,6 +3399,8 @@ Your holy symbol blazes and a shimmering barrier materializes between an attack 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-ward of protection">  
 
   
 ##### Ward of Protection
@@ -3218,6 +3411,8 @@ Clasp your hands and pray over one of your allies, beseeching your deity to prot
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-divine resonance">  
 
   
 ##### Divine Resonance
@@ -3229,6 +3424,8 @@ Radiance envelops you and spreads in waves, shaking your enemies' moral. Foes wi
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-detect evil">  
 
   
 ##### Detect Evil
@@ -3239,6 +3436,8 @@ Your deity grants you a view into the hearts of others. For the spell's duration
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-purification">  
 
   
 ##### Purification
@@ -3249,6 +3448,8 @@ With a gentle touch, you drive impurity from a food, drink, potion, or person. Y
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mend">  
 
   
 ##### Mend
@@ -3259,6 +3460,8 @@ Your hands glow as you magically mend small dents, dings, scratches, and tears o
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-holy light">  
 
   
 ##### Holy Light
@@ -3270,6 +3473,8 @@ With a muttered prayer, you raise an object aloft and it illuminates, casting li
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-make habitable">  
 
   
 ##### Make Habitable
@@ -3281,6 +3486,8 @@ The road levels itself before you, and all things shift to ease your passing. Wh
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-prayer of healing">  
 
   
 ##### Prayer of Healing
@@ -3296,6 +3503,8 @@ __Tier 3 Healing:__ 4d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-spare">  
 
   
 ##### Spare
@@ -3306,6 +3515,8 @@ As one of your allies falls, you cry out to aid them. A blinding white light shi
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guardian blade">  
 
   
 ##### Guardian Blade
@@ -3321,6 +3532,8 @@ __Tier 3 Damage:__ 5d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-sap life">  
 
   
 ##### Sap Life
@@ -3336,6 +3549,8 @@ __Tier 3 Damage:__ 5d4 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-delayed heal">  
 
   
 ##### Delayed Heal
@@ -3351,6 +3566,8 @@ __Tier 3 Healing:__ 4d6
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-compelled truth">  
 
   
 ##### Compelled Truth
@@ -3361,6 +3578,8 @@ Your eyes flash as you apply divine pressure to your target. They must make a sp
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-enlarge">  
 
   
 ##### Enlarge
@@ -3371,6 +3590,8 @@ As you grasp your holy symbol, glowing energy suffuses a creature of your choosi
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-forget ability">  
 
   
 ##### Forget Ability
@@ -3381,6 +3602,8 @@ With the aid of your deity, attempt to drive a spike into an enemy's mind. They 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hold weapon">  
 
   
 ##### Hold Weapon
@@ -3391,6 +3614,8 @@ As someone attempts to do violence, you hold up your hand and command the hostil
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-share sense">  
 
   
 ##### Share Sense
@@ -3401,6 +3626,8 @@ As your fingertips make contact, a sacred connection forms, allowing you to borr
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-slow">  
 
   
 ##### Slow
@@ -3411,6 +3638,8 @@ As you touch your magic, your next word comes slowly as though stretched over ti
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-identify">  
 
   
 ##### Identify
@@ -3422,6 +3651,8 @@ Take ten minutes to carefully inspect an item, object, or spell and learn its na
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-blind">  
 
   
 ##### Blind
@@ -3432,6 +3663,8 @@ Holy symbol in hand, you attempt to rob an enemy of their sight. They must make 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-haste">  
 
   
 ##### Haste
@@ -3442,6 +3675,8 @@ Your voice rises in a quickening tempo as you urge your target forward. Blood po
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-message">  
 
   
 ##### Message
@@ -3452,6 +3687,8 @@ Hold an object which belongs to someone you've met. You are able to telepathical
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-feign death">  
 
   
 ##### Feign Death
@@ -3462,6 +3699,8 @@ Touch up to five willing individuals to cause them to fall into a state indistin
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bind">  
 
   
 ##### Bind
@@ -3472,11 +3711,13 @@ Focus your intent upon an encroaching enemy and lift your hand to stop them. The
   
   
   
+</div>  
   
   
 
   
 #### Tier 2
+<div class="rnr-ability" id="ability-leap of faith">  
 
   
 ##### Leap of Faith
@@ -3486,6 +3727,8 @@ Look skyward and put your faith in your diety. As you step out onto a surface th
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-excoriating beam">  
 
   
 ##### Excoriating Beam
@@ -3500,6 +3743,8 @@ __Tier 3 Damage:__ 4d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-dispel magic">  
 
   
 ##### Dispel Magic
@@ -3510,6 +3755,8 @@ Carefully undo the weave of a first tier spell or curse. If the magic that you s
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-speak tongues">  
 
   
 ##### Speak Tongues
@@ -3519,6 +3766,8 @@ Your deity touches your tongue and allows you to communicate its word to others.
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mass heal">  
 
   
 ##### Mass Heal
@@ -3535,6 +3784,8 @@ __Tier 3 Healing:__ 4d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hallow">  
 
   
 ##### Hallow
@@ -3546,6 +3797,8 @@ Take a few minutes to cast a prayer of healing upon your campsite. For the spell
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-speak with the dead">  
 
   
 ##### Speak with the Dead
@@ -3556,6 +3809,8 @@ Anoint a body with holy oil and clutch a candle close. As you reach out to your 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-death ward">  
 
   
 ##### Death Ward
@@ -3567,6 +3822,8 @@ Mix together sacred ash and holy water, then place a small gemstone within. As y
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-scry">  
 
   
 ##### Scry
@@ -3577,6 +3834,8 @@ Press a focusing gem against a reflective surface and speak the primordial word 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-town portal">  
 
   
 ##### Town Portal
@@ -3588,6 +3847,8 @@ When you enter a town, you may pray over a dwelling and draw a holy glyph on the
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-truesight">  
 
   
 ##### Truesight
@@ -3598,6 +3859,8 @@ Your eyes shimmer with holy light as you speak a prayer for clarity. By the powe
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-silence">  
 
   
 ##### Silence
@@ -3609,6 +3872,8 @@ Holding your magic, you speak the celestial word for 'Silence.' At once, the wor
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guardians of faith">  
 
   
 ##### Guardians of Faith
@@ -3624,6 +3889,8 @@ __Tier 3 Damage:__ 4d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-banish undead">  
 
   
 ##### Banish Undead
@@ -3635,6 +3902,8 @@ Hold your focus aloft as a bane for undead enemies. Any undead enemy within the 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-commune">  
 
   
 ##### Commune
@@ -3645,6 +3914,8 @@ Attempt to commune with your patron. Roll 1d20 and add your expertise. On a 19 o
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-remove curse">  
 
   
 ##### Remove Curse
@@ -3656,6 +3927,8 @@ Sit beside a creature that you believe has a curse. Wash them with holy water an
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-sphere of encasement">  
 
   
 ##### Sphere of Encasement
@@ -3666,11 +3939,13 @@ Hold a piece of quarts to your eye and view a creature through it. At once, an o
   
   
   
+</div>  
   
   
 
   
 #### Tier 3
+<div class="rnr-ability" id="ability-resurrection">  
 
   
 ##### Resurrection
@@ -3682,6 +3957,8 @@ Lay out the body of someone who has died within the past week. Spend time anoint
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-holy legion">  
 
   
 ##### Holy Legion
@@ -3693,6 +3970,8 @@ __Summon:__ Celestial Guardian
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-saint's blessing">  
 
   
 ##### Saint's Blessing
@@ -3703,6 +3982,8 @@ Mark an ally with holy oil and grant them your blessing. For the spell's duratio
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-holy weapons">  
 
   
 ##### Holy Weapons
@@ -3714,6 +3995,8 @@ Holy fire spirals from the sky and alights upon your allies' weapons. For the sp
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-pillar of dawn">  
 
   
 ##### Pillar of Dawn
@@ -3728,6 +4011,8 @@ __Tier 3 Damage:__ 8d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-avatar">  
 
   
 ##### Avatar
@@ -3739,6 +4024,8 @@ Close your eyes and empty your mind. By the will of your diety, project your con
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mantle of dawn">  
 
   
 ##### Mantle of Dawn
@@ -3750,10 +4037,12 @@ A halo blazes about your head, shedding radiant light in a radius around you. Fo
   
   
   
+</div>  
   
   
   
   
+</div>  
   
   
 ---  
@@ -3768,13 +4057,17 @@ A halo blazes about your head, shedding radiant light in a radius around you. Fo
   
   
   
+<button onclick="printContent('printable-druid')">Print Druid</button>  
+<div class="printable-content" id="printable-druid">  
 
   
 ### Druid
 <img src='/site/images/class/druid.jpg' class="raceClassImage" />
   
   
-_"[Firbolg Druid [C]"](https://www.deviantart.com/jeleynai/art/Firbolg-Druid-C-767712399) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[Firbolg Druid [C]"](https://www.deviantart.com/jeleynai/art/Firbolg-Druid-C-767712399) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-druid">
 Guardians of nature, druids are forged in lightning, shaped by root and spore, and raised by the creatures of the wilds. Druids can be found in even the most unforgiving climbs. They thrive atop craggy, frozen peaks and deserts of driving sand. They employ powerful natural magics, allowing them to shape both the world and themselves. Fledgling druids can transform themselves into the form of a chosen animal, conjure swarms of bees to distract and harm their foes, and speak to plants and growing things. Unlike wizards, druids learn from each other and from the world around them rather than from dusty tomes. As such, a druid quickly forms a deep communion with nature, and will preserve the natural order, no matter the cost.  
   
   
@@ -3804,15 +4097,21 @@ In combat, druids are masters of controlling the battlefield with spells that sh
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-druid">
 *  __Strength:__ -1  
 *  __Dexterity:__ 0  
 *  __Intelligence:__ 1  
 *  __Inner Fire:__ 2  
 *  __Perception:__ 1  
 *  __Charisma:__ -2  
+</div>
+<div class="printable-stat-section"   id="printable-stats-druid">
+ __Strength:__ -1  __Dexterity:__ 0  __Intelligence:__ 1  __Inner Fire:__ 2  __Perception:__ 1  __Charisma:__ -2   
+ </div>
   
   
 
@@ -3825,6 +4124,7 @@ Druids use 1d8 as their class health dice. As a druid you gain expertise in all 
 
   
 #### Tier 1
+<div class="rnr-ability" id="ability-elemental armor">  
 
   
 ##### Elemental Armor
@@ -3835,6 +4135,8 @@ With a howl like the wind, your choice of fire, ice, or lightning swaddles you. 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-control plant growth">  
 
   
 ##### Control Plant Growth
@@ -3845,6 +4147,8 @@ As you beckon, plants spring from the earth and stretch towards the sky. You can
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-crown of fireflies">  
 
   
 ##### Crown of Fireflies
@@ -3856,6 +4160,8 @@ A ring of glowing fireflies dance around your head, bathing the surrounding area
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-echolocate">  
 
   
 ##### Echolocate
@@ -3867,6 +4173,8 @@ Your ears itch as they stretch and open themselves to the subtlest of sounds. Yo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mend">  
 
   
 ##### Mend
@@ -3877,6 +4185,8 @@ Warm light glows faintly from an object's dents, dings, or tears as you mend it.
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-frost bite">  
 
   
 ##### Frost Bite
@@ -3892,6 +4202,8 @@ __Tier 3 Damage:__ 3d6 Cold
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-constricting vine">  
 
   
 ##### Constricting Vine
@@ -3907,6 +4219,8 @@ __Tier 3 Damage:__ 3d4 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bees!">  
 
   
 ##### Bees!
@@ -3924,6 +4238,8 @@ __Tier 3 Damage:__ 3d4 Poison
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-elemental beam">  
 
   
 ##### Elemental Beam
@@ -3939,6 +4255,8 @@ __Tier 3 Damage:__ 3d4 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-poison jet">  
 
   
 ##### Poison Jet
@@ -3954,6 +4272,8 @@ __Tier 3 Damage:__ 3d4 Poison
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-spores">  
 
   
 ##### Spores
@@ -3970,6 +4290,8 @@ __Tier 3 Damage:__ 3d4 Poison
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bark armor">  
 
   
 ##### Bark Armor
@@ -3980,6 +4302,8 @@ Take a seed in your hand and whisper to it, instructing it to protect you or an 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-voice of nature">  
 
   
 ##### Voice of Nature
@@ -3990,6 +4314,8 @@ Like a drop of sunlight, magic touches your mind and opens your ears so that you
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-homeopathic remedy">  
 
   
 ##### Homeopathic Remedy
@@ -4005,6 +4331,8 @@ __Tier 3 Healing:__ 4d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-tailwind">  
 
   
 ##### Tailwind
@@ -4014,6 +4342,8 @@ Closing your eyes, you call upon the air or water to raise a mighty tailwind or 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-animal form">  
 
   
 ##### Animal Form
@@ -4025,6 +4355,8 @@ __Summon:__ transformed
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-forest guardian">  
 
   
 ##### Forest Guardian
@@ -4038,6 +4370,8 @@ __Tier 3 Summon:__ Woad Warrior
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-fool the senses">  
 
   
 ##### Fool the Senses
@@ -4048,6 +4382,8 @@ Conjure a bitter smelling psychotoxin which wafts towards one of your foes and a
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-elemental weapon">  
 
   
 ##### Elemental Weapon
@@ -4058,6 +4394,8 @@ Your choice of fire, ice, or lightning wreathes a weapon as you touch it. For th
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-keeper kerrick's stars">  
 
   
 ##### Keeper Kerrick's Stars
@@ -4069,6 +4407,8 @@ The air around you shimmers as it fills with specks of glowing dust. These motes
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-fairy ring">  
 
   
 ##### Fairy Ring
@@ -4080,6 +4420,8 @@ You kneel on the earth and mutter in the language of the forest. A ring of white
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-sanctum">  
 
   
 ##### Sanctum
@@ -4091,6 +4433,8 @@ Use your magic to make your campsite more defensible. Sticks and rocks set thems
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-water breathing">  
 
   
 ##### Water Breathing
@@ -4101,6 +4445,8 @@ Touch someone's neck to cause gills to form, granting them the ability to breath
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bane">  
 
   
 ##### Bane
@@ -4111,6 +4457,8 @@ Wisps of darkness wreath up to four enemies of your choice. They must make a Spe
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-stride">  
 
   
 ##### Stride
@@ -4121,6 +4469,8 @@ The world shifts around you to ease your passing. For the spell's duration, you 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-somin's shillelagh">  
 
   
 ##### Somin's Shillelagh
@@ -4131,6 +4481,8 @@ As you hold out your hand, a magical shillelagh appears within it. Unlike other 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-pathfinder">  
 
   
 ##### Pathfinder
@@ -4140,11 +4492,13 @@ Fix your mind upon a destination you have heard of or an item have seen. So long
   
   
   
+</div>  
   
   
 
   
 #### Tier 2
+<div class="rnr-ability" id="ability-snowblind">  
 
   
 ##### Snowblind
@@ -4156,6 +4510,8 @@ A snowstorm swirls around you as you lift your focus aloft. The snows are incred
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-wall of thorns">  
 
   
 ##### Wall of Thorns
@@ -4172,6 +4528,8 @@ __Tier 3 Damage:__ 4d6 Piercing
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-maelstrom">  
 
   
 ##### Maelstrom
@@ -4188,6 +4546,8 @@ __Tier 3 Damage:__ 3d6 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-lightning strike">  
 
   
 ##### Lightning Strike
@@ -4202,6 +4562,8 @@ __Tier 3 Damage:__ 7d6 Lightning
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-orb of fire">  
 
   
 ##### Orb of Fire
@@ -4217,6 +4579,8 @@ __Tier 3 Damage:__ 4d4 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-columns of ice">  
 
   
 ##### Columns of Ice
@@ -4227,6 +4591,8 @@ As you hold out your palm, an icicle begins to form at its center. Four times, y
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-elemental form">  
 
   
 ##### Elemental Form
@@ -4240,6 +4606,8 @@ __Tier 3 Summon:__ Force of Nature
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-grant elemental resistance">  
 
   
 ##### Grant Elemental Resistance
@@ -4250,6 +4618,8 @@ Using mud, ash, water, or snow, you mark an ally's brow with a natural glyph. As
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-wings">  
 
   
 ##### Wings
@@ -4260,6 +4630,8 @@ Eagles' wings unfurl painlessly at your back and immediately you can fly. Your f
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-magnetic">  
 
   
 ##### Magnetic
@@ -4271,6 +4643,8 @@ Focus your magic on an object within range to transform it into a powerful magne
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-call of the moon">  
 
   
 ##### Call of the Moon
@@ -4282,6 +4656,8 @@ __Summon:__ Werewolf
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-thunderstep">  
 
   
 ##### Thunderstep
@@ -4297,6 +4673,8 @@ __Tier 3 Damage:__ 6d4 Lightning
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bilgolf's massive ordinance bear blast">  
 
   
 ##### Bilgolf's Massive Ordinance Bear Blast
@@ -4313,6 +4691,8 @@ __Tier 3 Summon:__ Ursa
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-sticky">  
 
   
 ##### Sticky
@@ -4323,6 +4703,8 @@ Knead together a ball of flour, honey, and dragonscale. As you coax its form wit
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-ward of hearing and sight">  
 
   
 ##### Ward of Hearing and Sight
@@ -4333,6 +4715,8 @@ A green stalk bursts out of the ground, a knuckled, hairy appendage ending in a 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-nature's fury">  
 
   
 ##### Nature's Fury
@@ -4343,6 +4727,8 @@ Magic suffuses you as you chew upon a bitter stormheart leaf. As you swallow it'
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-shape stone">  
 
   
 ##### Shape Stone
@@ -4352,11 +4738,13 @@ As you lay your hand against a stone surface, you magic flows into it and forces
   
   
   
+</div>  
   
   
 
   
 #### Tier 3
+<div class="rnr-ability" id="ability-prison of ice">  
 
   
 ##### Prison of Ice
@@ -4371,6 +4759,8 @@ __Tier 3 Damage:__ 8d6 Cold
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-awaken">  
 
   
 ##### Awaken
@@ -4382,6 +4772,8 @@ Carefully craft a druid's circle with soul gems set at each corner. Place dream-
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bountiful harvest">  
 
   
 ##### Bountiful Harvest
@@ -4393,6 +4785,8 @@ Bring your hands together and make the sign of thanks. As you reach out to your 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-stormlord">  
 
   
 ##### Stormlord
@@ -4404,6 +4798,8 @@ So great is your connection to the natural world that you may change the weather
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-starfall">  
 
   
 ##### Starfall
@@ -4418,6 +4814,8 @@ __Tier 3 Damage:__ 8d6 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-realm walker">  
 
   
 ##### Realm Walker
@@ -4428,6 +4826,8 @@ Focus on a tree, the earth, or another element of nature. With a sound like a ro
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-perfect foresight">  
 
   
 ##### Perfect Foresight
@@ -4438,6 +4838,8 @@ Like a flame cutting through mist, you peer into the future. In the span of a th
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-ascended state">  
 
   
 ##### Ascended State
@@ -4448,10 +4850,12 @@ Lifetimes ripple out behind you and merge into one as the knowledge of your ance
   
   
   
+</div>  
   
   
   
   
+</div>  
   
   
 ---  
@@ -4466,13 +4870,17 @@ Lifetimes ripple out behind you and merge into one as the knowledge of your ance
   
   
   
+<button onclick="printContent('printable-fighter')">Print Fighter</button>  
+<div class="printable-content" id="printable-fighter">  
 
   
 ### Fighter
 <img src='/site/images/class/fighter.jpg' class="raceClassImage" />
   
   
-_"[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[RHOSLYN - The Lost Princess"](https://www.deviantart.com/hifarry/art/RHOSLYN-The-Lost-Princess-609866359) by hifarry is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-fighter">
 A master of combat, the fighter is a force to be reckoned with. Some are tactical masterminds, improving their allies' resolve and granting them powerful bonuses in combat. Others rush in, using their superior evasion and combat prowess to overwhelm their enemies. Outside combat, fighters are versatile members of an adventuring party, using their athletic abilities to overcome all manner of obstacles.  
   
   
@@ -4502,15 +4910,21 @@ Many fighters charge into the fray, weapon and shield in hand. Others hang back,
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-fighter">
 *  __Strength:__ 1  
 *  __Dexterity:__ 2  
 *  __Intelligence:__ 0  
 *  __Inner Fire:__ -1  
 *  __Perception:__ 1  
 *  __Charisma:__ -2  
+</div>
+<div class="printable-stat-section"   id="printable-stats-fighter">
+ __Strength:__ 1  __Dexterity:__ 2  __Intelligence:__ 0  __Inner Fire:__ -1  __Perception:__ 1  __Charisma:__ -2   
+ </div>
   
   
 
@@ -4522,9 +4936,10 @@ Fighters use 1d8 as their class health dice. As a fighter, you gain expertise in
 #### Abilities
   
   
-<img src='/site/images/skill_trees/fighter.jpg' class="raceClassImage" />  
+<img src='/site/images/skill_trees/fighter.jpg' class="skilltree" />  
   
   
+<div class="rnr-ability" id="ability-assisted strike">  
 
   
 ##### Assisted Strike
@@ -4537,6 +4952,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-backpedal">  
 
   
 ##### Backpedal
@@ -4545,6 +4962,8 @@ __Cost:__ None __Duration:__ Instantaneous  __Range:__ Self
 As an attack skates off of your armor, use the opportunity to reposition yourself. Whenever you suffer a glancing blow or an attack misses entirely, move 5ft without provoking exposed attacks as a free action.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-cleave">  
 
   
 ##### Cleave
@@ -4558,6 +4977,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-command">  
 
   
 ##### Command
@@ -4565,6 +4986,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ 30 Feet
 You survey the battlefield with a trained eye and spot an opportunity. Quickly, you shout an order to one of your allies. Your target is Spurred to Action.  An entity that is Spurred to Action immediately gains 15 feet of movement and an action.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-counter">  
 
   
 ##### Counter
@@ -4573,6 +4996,8 @@ __Cost:__ 1 Action Point __Duration:__ Passive  __Range:__ Self
 As battle rages, you find an opening in your enemies' mistakes. When you suffer a glancing blow, you may use your reaction to counterattack.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-critical onslaught">  
 
   
 ##### Critical Onslaught
@@ -4580,6 +5005,8 @@ __Cost:__ None __Duration:__ Instantaneous
 Quickly follow up when you score a heavy blow. Whenever you land a critical hit, you are Spurred to Action. This effect can occur once per round of combat.  An entity that is Spurred to Action immediately gains 15 feet of movement and an action.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-dashing strike">  
 
   
 ##### Dashing Strike
@@ -4587,6 +5014,8 @@ __Cost:__ None __Duration:__ Instantaneous  __Range:__ Dash
 You sprint towards your enemey, weapon aloft and ready to strike. Your dash action may end in an attack.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-determination">  
 
   
 ##### Determination
@@ -4595,6 +5024,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Self
 As battle rages about you, take a moment to find your inner focus. For the ability's duration, add your expertise to all checks.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-feint">  
 
   
 ##### Feint
@@ -4602,6 +5033,8 @@ __Cost:__ None __Duration:__ 1 Turn
 Take up a defensive position as enemies circle. Hold an action, and the next enemy who attacks you does so at disadvantage. You may immediately counterattack as a free action. Feint does not stack with Counter.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-final blow">  
 
   
 ##### Final Blow
@@ -4609,6 +5042,8 @@ __Cost:__ None __Duration:__ Infinite
 When you fall to zero health, you may make one last, desperate attack. If the attack fells the enemy that struck you, remain standing at one hit point.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-follow up">  
 
   
 ##### Follow Up
@@ -4616,6 +5051,8 @@ __Cost:__ None __Duration:__ Passive
 Blow after blow, you wear your target down. If you attack an enemy, subsequent attacks deal extra damage if you don't choose another target. Extra damage starts at 1d4 and grows with each hit, capping at 1d12.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-goading attack">  
 
   
 ##### Goading Attack
@@ -4628,6 +5065,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guard-break">  
 
   
 ##### Guard-Break
@@ -4640,6 +5079,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hindering blow">  
 
   
 ##### Hindering Blow
@@ -4652,6 +5093,8 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-lead the way">  
 
   
 ##### Lead the Way
@@ -4659,6 +5102,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You spring into action before others can think. Whenever you roll initiative for combat, add your expertise to the result.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-lunge">  
 
   
 ##### Lunge
@@ -4666,6 +5111,8 @@ __Cost:__ None __Duration:__ Instantaneous
 You are able to extend your reach to make lunging attacks. You can make melee attacks at a 5ft extended range at disadvantage.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-make space">  
 
   
 ##### Make Space
@@ -4678,6 +5125,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-move!">  
 
   
 ##### Move!
@@ -4686,6 +5135,8 @@ __Radius:__ 50 ft.
 Through years of experience, you are able to read a battlefield in moments and to see where your party's formation is failing. You can call out a quick order to your allies to Spur them to Movement and allow them to reposition themselves.  An entity that is Spurred to Movement immediately gains 15 feet of movement.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-precision strike">  
 
   
 ##### Precision Strike
@@ -4698,6 +5149,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-prepare for combat">  
 
   
 ##### Prepare for Combat
@@ -4706,6 +5159,8 @@ __Radius:__ 30 ft.
 As combat begins, you are able to quickly give orders to the allies around you. Everyone within the ability's radius is Spurred to Movement before the fighting starts. This ability does not go into effect if you are surprised by combat.  An entity that is Spurred to Movement immediately gains 15 feet of movement.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-rally cry">  
 
   
 ##### Rally Cry
@@ -4714,6 +5169,8 @@ __Radius:__ 100 ft.
 Holding your weapon aloft, you shout encouragement to your party. All allies within the ability's radius are Inspired.  An inspired creature gains a 1d6 inspiration dice. This dice may be rolled and added to a check or save of their choosing. It cannot be added to damage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-reduced critical">  
 
   
 ##### Reduced Critical
@@ -4721,6 +5178,8 @@ __Cost:__ None __Duration:__ Infinite  __Range:__ Self
 Your critical hit target is permanently decreased by one.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-resurgence">  
 
   
 ##### Resurgence
@@ -4728,6 +5187,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Take heart as your foes fall before you. Whenever you slay an enemy, regain one action point. You can benefit from this ability at most once per turn. The enemy that you slay must pose a threat to you or your party as determined by the Grand Poohbah.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-self-sufficient">  
 
   
 ##### Self-Sufficient
@@ -4740,6 +5201,8 @@ __Tier 3 Healing:__ 4d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-weapon master">  
 
   
 ##### Weapon Master
@@ -4751,8 +5214,10 @@ You are highly proficient with all weapons. Increase the dice size of any weapon
 * __Heavy Weapon Master__ Any attack you make with a two-handed weapon deals an additional 1d6 damage. 
   
   
+</div>  
   
   
+</div>  
   
   
 ---  
@@ -4767,13 +5232,17 @@ You are highly proficient with all weapons. Increase the dice size of any weapon
   
   
   
+<button onclick="printContent('printable-knight')">Print Knight</button>  
+<div class="printable-content" id="printable-knight">  
 
   
 ### Knight
 <img src='/site/images/class/knight.jpg' class="raceClassImage" />
   
   
-_"[Warrior Concept"](https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+<span class="attribution">_"[Warrior Concept"](https://www.deviantart.com/maxprodanov/art/Warrior-Concept-710277635) by maxprodanov is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-knight">
 Bulwark against evil. Knights stand tall on the front-line of an adventuring party. All but unkillable, it is their duty to protect their less resilient companions, standing in the way of blows that would slay wizards and rogues where they stand. While many knights work for coin or glory, others are called by a higher purpose. Such paladins can learn divine magic and use it to heal their allies and burn their foes with radiant light. Whether serving as bastion or healer, knights are a shield, holding their party together and standing strong against any foe.  
   
   
@@ -4803,15 +5272,21 @@ A knight can be counted on to stand at the front line, using their abilities to 
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-knight">
 *  __Strength:__ 2  
 *  __Dexterity:__ -2  
 *  __Intelligence:__ 1  
 *  __Inner Fire:__ 1  
 *  __Perception:__ -1  
 *  __Charisma:__ 0  
+</div>
+<div class="printable-stat-section"   id="printable-stats-knight">
+ __Strength:__ 2  __Dexterity:__ -2  __Intelligence:__ 1  __Inner Fire:__ 1  __Perception:__ -1  __Charisma:__ 0   
+ </div>
   
   
 
@@ -4823,9 +5298,10 @@ Knights use 1d10 as their class health dice. As a knight, you have expertise in 
 #### Abilities
   
   
-<img src='/site/images/skill_trees/knight.jpg' class="raceClassImage" />  
+<img src='/site/images/skill_trees/knight.jpg' class="skilltree" />  
   
   
+<div class="rnr-ability" id="ability-aura of hope">  
 
   
 ##### Aura of Hope
@@ -4834,6 +5310,8 @@ __Radius:__ 15 ft.
 You have grown strong enough that you exude a powerful aura of holy energy. This bolstering effect protects your allies from despair and hardens them against the abilities of your foes. If an ally stands within the effect's radius, they may add +2 to all saving throws and make death coin flips at advantage.    You can spend one action point to increase this ability's radius to 30ft for one hour.   
   
   
+</div>  
+<div class="rnr-ability" id="ability-charge">  
 
   
 ##### Charge
@@ -4846,6 +5324,8 @@ __Tier 3 Damage:__ 4d4 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-controlled advance">  
 
   
 ##### Controlled Advance
@@ -4854,6 +5334,8 @@ __Cost:__ None __Duration:__ Instantaneous  __Range:__ Self
 As a foe falls to your blade, use the oportunity to push into their ranks. Whenever you slay an enemy with a melee attack, you may step forward into the space that they occupied. You are immune to exposed attacks during this movement. Once you've moved, you may either attack again or Ready your Stance.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-goading attack">  
 
   
 ##### Goading Attack
@@ -4866,6 +5348,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-guardian ward">  
 
   
 ##### Guardian Ward
@@ -4874,6 +5358,8 @@ __Radius:__ 100 ft.
 As you focus on an ally, a blazing sigil burns above their head. While they remain within the ability's radius, they are considered Guarded. At most one ally may have a guardian ward at a time. Guardian wards disappear if their bearer falls unconcious.  Creatures that are being guarded gain +2 evasion. If a creature is being guarded by more than one source, they take +3 evasion, regardless of the number of sources.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-healing blow">  
 
   
 ##### Healing Blow
@@ -4887,6 +5373,8 @@ __Tier 3 Damage:__ 2d10 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-healing hands">  
 
   
 ##### Healing Hands
@@ -4899,6 +5387,8 @@ __Tier 3 Healing:__ 4d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-holy shield">  
 
   
 ##### Holy Shield
@@ -4911,6 +5401,8 @@ __Tier 3 Damage:__ 4d10 Temporary Health
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-inspiring critical">  
 
   
 ##### Inspiring Critical
@@ -4918,6 +5410,8 @@ __Cost:__ None __Duration:__ Instantaneous
 The sight of you landing an incredible blow fills one of your allies with determination. Grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities.  An inspired creature gains a 1d6 inspiration dice. This dice may be rolled and added to a check or save of their choosing. It cannot be added to damage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-last hope">  
 
   
 ##### Last Hope
@@ -4930,6 +5424,8 @@ __Tier 3 Healing:__ 2d10
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-last line of defense">  
 
   
 ##### Last Line Of Defense
@@ -4942,6 +5438,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-link lifeforce">  
 
   
 ##### Link Lifeforce
@@ -4949,6 +5447,8 @@ __Cost:__ None __Duration:__ 1 Hour
 A sparkling weave of light binds you to an ally who bears a Guardian Ward before fading into invisibility. For the ability's duration, your life force is magically bound to that of one or more allies with a guardian ward. Until you use a free action to unlink yourself on your turn, you may take all or a portion.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-lionhearted">  
 
   
 ##### Lionhearted
@@ -4957,6 +5457,8 @@ __Radius:__ 30 ft.
 Your presence soothes your allies, guarding them against fear. Inspire all allies within the ability's radius. Furthermore, for the ability's duration, any friendly creaturess who are within 30ft of you are immune to the Frightened condition.  Fearless creatures are immune to the Frightened condition. An inspired creature gains a 1d6 inspiration dice. This dice may be rolled and added to a check or save of their choosing. It cannot be added to damage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-none shall pass">  
 
   
 ##### None Shall Pass
@@ -4964,6 +5466,8 @@ __Cost:__ None __Duration:__ Instantaneous
 You are a bulwark of steel, hindering any enemy advance. When you make your exposed attack, your enemy must make a spell power save or be Halted. On success, their remaining movement is Hindered.  Halted creatures immediately lose the remainder of their movement for a turn. A Hindered creature loses half its movement.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-overwhelming strike">  
 
   
 ##### Overwhelming Strike
@@ -4976,6 +5480,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-phalanx">  
 
   
 ##### Phalanx
@@ -4985,6 +5491,8 @@ __Radius:__ 10 ft.
 Adopt a defensive stance, granting all allies within five feet your protection. While they stand at your side, your allies are considered to be Guarded.  Creatures that are being guarded gain +2 evasion. If a creature is being guarded by more than one source, they take +3 evasion, regardless of the number of sources.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-pivot">  
 
   
 ##### Pivot
@@ -4993,6 +5501,8 @@ __Radius:__ 15 ft.
 As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-second guardian ward">  
 
   
 ##### Second Guardian Ward
@@ -5000,6 +5510,8 @@ __Cost:__ None
 Your divine power is growing. You have gained the ability to maintian two guardian wards at a time.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-sentinel's reaction">  
 
   
 ##### Sentinel's Reaction
@@ -5007,6 +5519,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You have developed a supernatural ability to read the battlefield and to be where you are needed. Each turn, you are able to take a second reaction.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-shield of men">  
 
   
 ##### Shield Of Men
@@ -5015,6 +5529,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Dash
 Burst forward to save somone from harm. As a reaction, jump in front of an ally to become the target of a physical attack aimed at them. Any damage you recieve as a result of this ability is halved.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-slowing strike">  
 
   
 ##### Slowing Strike
@@ -5027,6 +5543,8 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-stay on your feet">  
 
   
 ##### Stay on Your Feet
@@ -5035,6 +5553,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Even battered and bloodied, you fight on. If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-steel yourself">  
 
   
 ##### Steel Yourself
@@ -5043,6 +5563,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self
 Prepare for an attack as it hurtless towards you, hardening yourself against its damanage. As a Free Action, halve the damage of an attack made against you. You may declare this after seeing its outcome.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-very dangerous over short distances">  
 
   
 ##### Very Dangerous over Short Distances
@@ -5055,6 +5577,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-ward conversion">  
 
   
 ##### Ward Conversion
@@ -5063,8 +5587,10 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous
 As danger closes in about your allies, use your power to convert any Guardian Wards you've deployed into Holy Shields. This may be done as a free action at any time, including out of turn in combat, so long as an attack is not currently being resolved."    
   
   
+</div>  
   
   
+</div>  
   
   
 ---  
@@ -5079,13 +5605,17 @@ As danger closes in about your allies, use your power to convert any Guardian Wa
   
   
   
+<button onclick="printContent('printable-monk')">Print Monk</button>  
+<div class="printable-content" id="printable-monk">  
 
   
 ### Monk
 <img src='/site/images/class/monk.jpg' class="raceClassImage" />
   
   
-_"[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[The Protectress"](https://www.deviantart.com/simonpape/art/The-Protectress-658162040) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-monk">
 Faithful servants of an order, Monks have been trained in martial combat to protect its teachings. Some such orders are religious, while others, like the Ordo Liborum, serve a concept like the protection of knowledge. Monks are powerful hand-to-hand fighters, and are among the most agile of the classes. They are especially adept at taking a single enemy out of the equation. A Monk often holds valuable answers about the world at large, and is able to help their party navigate complex situations.  
   
   
@@ -5115,15 +5645,21 @@ Monks excel at one-on-one combat, and are quickly able to overpower single foes.
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-monk">
 *  __Strength:__ -1  
 *  __Dexterity:__ 1  
 *  __Intelligence:__ 0  
 *  __Inner Fire:__ 1  
 *  __Perception:__ 2  
 *  __Charisma:__ -2  
+</div>
+<div class="printable-stat-section"   id="printable-stats-monk">
+ __Strength:__ -1  __Dexterity:__ 1  __Intelligence:__ 0  __Inner Fire:__ 1  __Perception:__ 2  __Charisma:__ -2   
+ </div>
   
   
 
@@ -5135,9 +5671,10 @@ Monks use 1d8 as their class health dice. As a monk, you gain proficiency in acr
 #### Abilities
   
   
-<img src='/site/images/skill_trees/monk.jpg' class="raceClassImage" />  
+<img src='/site/images/skill_trees/monk.jpg' class="skilltree" />  
   
   
+<div class="rnr-ability" id="ability-chain strike">  
 
   
 ##### Chain Strike
@@ -5145,6 +5682,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous
 When you make an attack with a spiritual projection and hit, you may spend another action point to immediately create another spiritual projection within range of the first and attack with it.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-chi block">  
 
   
 ##### Chi Block
@@ -5157,6 +5696,8 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-critical onslaught">  
 
   
 ##### Critical Onslaught
@@ -5164,6 +5705,8 @@ __Cost:__ None __Duration:__ Instantaneous
 You are able to quickly follow up when you land a heavy blow. When you land a critical hit, you are Spurred to Action. This effect can occur once per round.  An entity that is Spurred to Action immediately gains 15 feet of movement and an action.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-defensive dodge">  
 
   
 ##### Defensive Dodge
@@ -5171,6 +5714,8 @@ __Cost:__ None __Duration:__ Passive
 When an attack misses you as a result of your Dodging Stance, you may immediately make an unarmed attack as a free action.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-disarming strike">  
 
   
 ##### Disarming Strike
@@ -5183,6 +5728,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-disengage">  
 
   
 ##### Disengage
@@ -5190,6 +5737,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Self
 You dodge and weave between your foes, focusing your energy on avoiding combat. For the remainder of your turn, you are Elusive.  Elusive entities are immune to exposed attacks.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-dodging stance">  
 
   
 ##### Dodging Stance
@@ -5197,6 +5746,8 @@ __Cost:__ None __Duration:__ 1 Turn __Range:__ Self
 Spend a moment to enter a defensive stance. Until the end of your next turn, you are Dodging.  Accuracy checks against creatures who are dodging are at disadvantage. Any glancing blows that they suffer instead miss them entirely.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-extreme speed">  
 
   
 ##### Extreme Speed
@@ -5204,6 +5755,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Your mastery over your body extends to your movement. You are permanently considered to be Quickened.  A Quickened creature gains fifteen feet of movement and ignores difficult terrain.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-find center">  
 
   
 ##### Find Center
@@ -5212,6 +5765,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Self
 Take a moment to center yourself in the world around you. For the remainder of the turn, add your expertise to all checks.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-flow with the battle">  
 
   
 ##### Flow with the Battle
@@ -5219,6 +5774,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You are a master of pivoting around your foes, and are able to pass through an enemy's space in combat.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-flurry of blows">  
 
   
 ##### Flurry of Blows
@@ -5232,6 +5789,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-freedom of movement">  
 
   
 ##### Freedom of Movement
@@ -5239,6 +5798,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You've gained such mastery over your physical movement that it appears to be magic. You are able to quickly break free of restraints, to run across water, and to free-run up even the most difficult to traverse surfaces. For most feats of movement, you are able to simply accomplish them. When you attempt something more significant, follow the rules for simple magic, so long as you can explain how you are able to manipulate your body to accomplish a feat. In cases when a check is required, you must spend an action point. Additionally, you are immune to difficult terrain.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-hand to hand expert">  
 
   
 ##### Hand to Hand Expert
@@ -5246,6 +5807,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You don't need weapons to be deadly. Whenever you make an unarmed attack, increase the damage dice by one step. For the sake of abilities, simple blunt weapons including quarterstaffs are considered unarmed weapons. Further, you may use either strength or dexterity as the accuracy and damage modifier for unarmed attacks.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-high ground">  
 
   
 ##### High Ground
@@ -5258,6 +5821,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-make space">  
 
   
 ##### Make Space
@@ -5270,6 +5835,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-phase walk">  
 
   
 ##### Phase Walk
@@ -5277,6 +5844,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous
 You are tethered to your astral form. If your Spiritual Projection harms an enemy, you may instantly change places with it.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-reduced critical">  
 
   
 ##### Reduced Critical
@@ -5284,6 +5853,8 @@ __Cost:__ None __Duration:__ Infinite  __Range:__ Self
 Your critical hit target is permanently decreased by one.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-reflexes">  
 
   
 ##### Reflexes
@@ -5292,6 +5863,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self
 As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile, and can immediately make a counterattack with it. Increase to 2d6 then 4d6 in gameplay tiers 2 and 3.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-resting meditation">  
 
   
 ##### Resting Meditation
@@ -5304,6 +5877,8 @@ __Tier 3 Healing:__ 3d6
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-resurgence">  
 
   
 ##### Resurgence
@@ -5311,6 +5886,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Take heart as your foes fall before you. Whenever you slay an enemy, regain one action point. You can benefit from this ability at most once per turn. The enemy that you slay must pose a threat to you or your party as determined by the Grand Poohbah.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-slowing blow">  
 
   
 ##### Slowing Blow
@@ -5323,6 +5900,8 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-spiritual aid">  
 
   
 ##### Spiritual Aid
@@ -5330,6 +5909,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Touch
 Lay your hands on an ally who is suffering. Your peace of mind flows into them, removing any status effects that ail them. Spiritual Aid does not affect curses or some powerful abilities as determined by the Grand Poohbah.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-spiritual projection">  
 
   
 ##### Spiritual Projection
@@ -5343,6 +5924,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-stunning critical">  
 
   
 ##### Stunning Critical
@@ -5350,6 +5933,8 @@ __Cost:__ None __Duration:__ 1 Turn
 As you land a heavy strike against your enemy, knock them off their guard. Whenever you land a critical hit, your target is Stunned.  A Stunned creature loses one action on its next turn and attacks made against them before their next turn are at advantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-unarmored defense">  
 
   
 ##### Unarmored Defense
@@ -5357,8 +5942,10 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Through constant training, you have hardened your body to physical damage. You are considered to be resistant to physical damage.  Creatures with Physical Resistance take half damage from piercing and blunt attacks.     
   
   
+</div>  
   
   
+</div>  
   
   
 ---  
@@ -5373,13 +5960,17 @@ Through constant training, you have hardened your body to physical damage. You a
   
   
   
+<button onclick="printContent('printable-rogue')">Print Rogue</button>  
+<div class="printable-content" id="printable-rogue">  
 
   
 ### Rogue
 <img src='/site/images/class/rogue.jpg' class="raceClassImage" />
   
   
-_"[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[Valeros"](https://www.deviantart.com/arckyu/art/Valeros-484518336) by arckyu is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-rogue">
 Knives in the dark, rogues are famously stealthy and perceptive. They blend into a crowd like shadow, gathering information or relieving a mark of their life or possessions. Rogues have little health, and as such, it can be disastrous if they are struck by an enemy attack. Thankfully, their stealth and abilities make them among the most slippery of combatants. While others tackle their challenges head on, rogues wait to find openings—when life gives you a guarded door, a rogue is the first to go in through a window.  
   
   
@@ -5409,15 +6000,21 @@ Rogues have low health but deal heavy damage to their foes. In combat, they spen
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-rogue">
 *  __Strength:__ -2  
 *  __Dexterity:__ 2  
 *  __Intelligence:__ 0  
 *  __Inner Fire:__ -1  
 *  __Perception:__ 1  
 *  __Charisma:__ 1  
+</div>
+<div class="printable-stat-section"   id="printable-stats-rogue">
+ __Strength:__ -2  __Dexterity:__ 2  __Intelligence:__ 0  __Inner Fire:__ -1  __Perception:__ 1  __Charisma:__ 1   
+ </div>
   
   
 
@@ -5429,9 +6026,10 @@ Rogues use 1d6 as their class health dice. As a rogue, you have expertise in all
 #### Abilities
   
   
-<img src='/site/images/skill_trees/rogue.jpg' class="raceClassImage" />  
+<img src='/site/images/skill_trees/rogue.jpg' class="skilltree" />  
   
   
+<div class="rnr-ability" id="ability-assisted strike">  
 
   
 ##### Assisted Strike
@@ -5444,6 +6042,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-chain attack">  
 
   
 ##### Chain Attack
@@ -5452,6 +6052,8 @@ __Cost:__ None __Duration:__ Instantaneous  __Range:__ Self
 As your foes' bodies fall around you, a fiendish energy courses through your veins. Whenever you slay an enemy, you are Spurred to Action.  An entity that is Spurred to Action immediately gains 15 feet of movement and an action.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-controlled descent">  
 
   
 ##### Controlled Descent
@@ -5459,6 +6061,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 The moment before you strike the earth, release a burst of magic to slow yourself. Reduce any falling damage to zero.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-disengage">  
 
   
 ##### Disengage
@@ -5466,6 +6070,8 @@ __Cost:__ 1 Action Point __Duration:__ 1 Turn __Range:__ Self
 You dodge and weave between your foes, focusing your energy on avoiding combat. For the remainder of your turn, you are Elusive.  Elusive entities are immune to exposed attacks.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-dodge">  
 
   
 ##### Dodge
@@ -5474,6 +6080,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self
 Attempt to pivot out of the way of an incoming attack. As a reactive Free Action, declare that you are Dodging.  Accuracy checks against creatures who are dodging are at disadvantage. Any glancing blows that they suffer instead miss them entirely.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-evasion">  
 
   
 ##### Evasion
@@ -5481,6 +6089,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 Use your uncanny knack for survival to avoid an explosion or other area of effect attack. When an area of effect attack calls for you to make a spell power saving throw or take half damage, you instead take half damage on a failure, or no damage on a success.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-flank">  
 
   
 ##### Flank
@@ -5488,6 +6098,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 When your allies are near an enemy, you are able to avoid that foe's sight. If a creature is Harried, you are considered to be hiding when attacking from behind them. If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-flow with the battle">  
 
   
 ##### Flow with the Battle
@@ -5495,6 +6107,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You are a master of pivoting around your foes, and are able to pass through an enemy's space in combat.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-leap">  
 
   
 ##### Leap
@@ -5502,6 +6116,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self
 As you speak the magic word for 'Ascent' you suddenly launch thirty feet into the air. By angling your body, you are able to turn this into an arc.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-precision strike">  
 
   
 ##### Precision Strike
@@ -5514,6 +6130,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-radiant invisibility break">  
 
   
 ##### Radiant Invisibility Break
@@ -5522,6 +6140,8 @@ __Radius:__ 15 ft.
 When your Spell of Invisibility ends, you may optionally create a flash of blinding light. Beams of radiance wash over everyone nearby, and anyone within the ability's radius must make a spell power save or be Blinded until the end of their next turn or for ten seconds while out of combat.  A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-reduced critical">  
 
   
 ##### Reduced Critical
@@ -5529,6 +6149,8 @@ __Cost:__ None __Duration:__ Infinite  __Range:__ Self
 Your critical hit target is permanently decreased by one.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-ride the blindspot">  
 
   
 ##### Ride The Blindspot
@@ -5536,6 +6158,8 @@ __Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self
 You have learned to stay behind a flanked enemy, even if they try to turn on you. If an enemy you have flanked tries to look at you, you may spend an action point to pivot around them as a reaction. Ride the Blindspot continues until the end of the enemy's turn.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-shared stealth">  
 
   
 ##### Shared Stealth
@@ -5544,6 +6168,8 @@ __Radius:__ 30 ft.
 Your stealth is so great that you are able to make up for your parties' shortcomings. For the next hour, add your proficiency to any friendly stealth rolls made within the ability's radius. If a party member already benefits from proficiency on stealth rolls, they may instead add an additional +1.       
   
   
+</div>  
+<div class="rnr-ability" id="ability-slip away">  
 
   
 ##### Slip Away
@@ -5551,6 +6177,8 @@ __Cost:__ None __Duration:__ Passive  __Range:__ Self
 You are able to streak in, harm a foe, and then retreat again. Whenever you strike an enemy, you are considered Elusive to them until the end of your turn.  Elusive entities are immune to exposed attacks.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-spell of darkvision">  
 
   
 ##### Spell Of Darkvision
@@ -5559,6 +6187,8 @@ __Components:__ _v_
 Your pupil's expand to cover your eyes, leaving them pools of inky darkness. If light strikes them at the right angle, they glow like those of a beast in the night. For the spell's duration, you benefit from Darkvision.  A creature with Darkvision is able to see up to 100 feet even in pitch darkness. In low light, they are able to see as though it is day.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-spell of distraction">  
 
   
 ##### Spell Of Distraction
@@ -5568,6 +6198,8 @@ __Components:__ _m, v_
 Call upon your magic to create a minor ruckus, illusion, or voice at a position you can see within range. When in combat, entities the spell's radius must make a spell sower save or become Distracted until the end of their next turn.  Distracted creatures must make perception and accuracy checks at disadvantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-spell of invisibility">  
 
   
 ##### Spell Of Invisibility
@@ -5576,6 +6208,8 @@ __Components:__ _m, v_
 With a muttered breath, you touch your magic and you cloak yourself in an ethereal shroud. For the spell's duration, you are Invisible to the mortal eye, a wraith among the living.  Invisible creatures cannot be seen. They make stealth checks with advantage and accuracy checks made against them are at disadvantage.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-strike from the shadows">  
 
   
 ##### Strike From The Shadows
@@ -5588,6 +6222,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon darkness">  
 
   
 ##### Summon Darkness
@@ -5597,6 +6233,8 @@ __Components:__ _m_
 Fill an area with billowing darkness. The darkness is considered magical, and is not affected by darkvision. Anyone in the darkness is considered Blinded unless they have Blindsight, Truesight, or another equivalent ability.  A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.     
   
   
+</div>  
+<div class="rnr-ability" id="ability-thief's mark">  
 
   
 ##### Thief's Mark
@@ -5609,6 +6247,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-thieve's strike">  
 
   
 ##### Thieve's Strike
@@ -5621,6 +6261,8 @@ __Tier 3 Damage:__ 1d12 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-throw caution to the wind">  
 
   
 ##### Throw Caution to the Wind
@@ -5634,6 +6276,8 @@ __Tier 3 Damage:__ 1d6 Inherited
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-unseen hand">  
 
   
 ##### Unseen Hand
@@ -5643,6 +6287,8 @@ __Components:__ _v_
 Mutter a spell to will an ethereal hand into existence. While you concentrate on it, the hand acts as an extension of your will. The hand has a flying speed of 25 feet and may not leave the spell's radius. Its strength score is equivalent to your inner fire modifier.    
   
   
+</div>  
+<div class="rnr-ability" id="ability-wasting blow">  
 
   
 ##### Wasting Blow
@@ -5655,8 +6301,10 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+</div>  
   
   
+</div>  
   
   
 ---  
@@ -5671,13 +6319,17 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
+<button onclick="printContent('printable-warlock')">Print Warlock</button>  
+<div class="printable-content" id="printable-warlock">  
 
   
 ### Warlock
 <img src='/site/images/class/warlock.jpg' class="raceClassImage" />
   
   
-_"[Sorca, Magus of the first Seal"](https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[Sorca, Magus of the first Seal"](https://www.deviantart.com/simonpape/art/Sorca-Magus-of-the-first-Seal-645624015) by SimonPape is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-warlock">
 Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force. This being grants them incredible magics, but at a cost; every pact has it's price. This price be anything from gathering information for your patron to performing tasks for them. Regardless, your pact and your patron will greatly color your adventuring career.  
   
   
@@ -5715,15 +6367,21 @@ Warlocks leverage their charisma when dealing with the patron and using their ma
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-warlock">
 *  __Strength:__ -1  
 *  __Dexterity:__ 0  
 *  __Intelligence:__ 1  
 *  __Inner Fire:__ 2  
 *  __Perception:__ 1  
 *  __Charisma:__ -2  
+</div>
+<div class="printable-stat-section"   id="printable-stats-warlock">
+ __Strength:__ -1  __Dexterity:__ 0  __Intelligence:__ 1  __Inner Fire:__ 2  __Perception:__ 1  __Charisma:__ -2   
+ </div>
   
   
 
@@ -5736,6 +6394,7 @@ Warlocks use 1d8 as their class health dice. As a Warlock, you are marked by a f
 
   
 #### Tier 1
+<div class="rnr-ability" id="ability-mind whip">  
 
   
 ##### Mind Whip
@@ -5750,6 +6409,8 @@ __Tier 3 Damage:__ 3d6 Psychic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-eldritch blast">  
 
   
 ##### Eldritch Blast
@@ -5765,6 +6426,8 @@ __Tier 3 Damage:__ 6d4 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-curse">  
 
   
 ##### Curse
@@ -5775,6 +6438,8 @@ Muttering an oath, you place a curse upon a creature of your choice. Whenever yo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-hexblade">  
 
   
 ##### Hexblade
@@ -5785,6 +6450,8 @@ Dark fire flickers across a blade as you touch it. If you listen closely, you ca
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-sap life">  
 
   
 ##### Sap Life
@@ -5800,6 +6467,8 @@ __Tier 3 Damage:__ 5d4 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-tide of shadow">  
 
   
 ##### Tide of Shadow
@@ -5815,6 +6484,8 @@ __Tier 3 Damage:__ 3d4 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-telepathy">  
 
   
 ##### Telepathy
@@ -5824,6 +6495,8 @@ You are able to project your thoughts into someone's mind. Willing participants 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-read mind">  
 
   
 ##### Read Mind
@@ -5833,6 +6506,8 @@ Use psychic energy to probe someone's mind and learn their secrets. If you choos
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon darkness">  
 
   
 ##### Summon Darkness
@@ -5844,6 +6519,8 @@ Fill an area with billowing darkness. The darkness is considered magical, and is
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-darksight">  
 
   
 ##### Darksight
@@ -5854,6 +6531,8 @@ Your pupils expand to cover your eyes as you grant yourself the power to see in 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-embed eye">  
 
   
 ##### Embed Eye
@@ -5864,6 +6543,8 @@ Embed a magical eye in a non-living material. The eye has 1 hit point, but is et
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon familiar">  
 
   
 ##### Summon Familiar
@@ -5876,6 +6557,8 @@ __Summon:__ Familiar
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-haunt">  
 
   
 ##### Haunt
@@ -5886,6 +6569,8 @@ Impress your will upon someone you can see. They must make a spell power save or
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-become ethereal">  
 
   
 ##### Become Ethereal
@@ -5896,6 +6581,8 @@ Your form flickers as you enter the plane of the ethereal. You may stay there fo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-convince">  
 
   
 ##### Convince
@@ -5906,6 +6593,8 @@ Psychic barbs implant themselves into your targets mind, attempting to bend them
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-echoes of the past">  
 
   
 ##### Echoes of the Past
@@ -5917,6 +6606,8 @@ Echoes and specters dance in your vision as you reach into the past. For the dur
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-frenzy">  
 
   
 ##### Frenzy
@@ -5927,6 +6618,8 @@ Blood-red energy swirls around your target, filling them with frenetic energy. T
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mental assault">  
 
   
 ##### Mental Assault
@@ -5936,6 +6629,8 @@ Hideous and discordant voices fill your target's ears. At the start of each turn
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-shadow ward">  
 
   
 ##### Shadow Ward
@@ -5947,6 +6642,8 @@ Create a shroud of inky darkness around yourself. Allies can see through, but en
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-disguise">  
 
   
 ##### Disguise
@@ -5957,6 +6654,8 @@ Magically alter your form so that you look like someone else. You must appear hu
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-isolate">  
 
   
 ##### Isolate
@@ -5967,6 +6666,8 @@ Swirling darkness dances around your target as you attempt to cut them off from 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-raise thrall">  
 
   
 ##### Raise Thrall
@@ -5980,6 +6681,8 @@ __Tier 3 Summon:__ Undead Champion
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-shadowstep">  
 
   
 ##### Shadowstep
@@ -5990,6 +6693,8 @@ Fade into the darkness and immediately re-appear within a shadow in the spell's 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-beckon">  
 
   
 ##### Beckon
@@ -6000,6 +6705,8 @@ As you mutter an eldritch incantation, a psycic attractor appears at a point of 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mire">  
 
   
 ##### Mire
@@ -6010,6 +6717,8 @@ __Components:__ _m, v_
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mute">  
 
   
 ##### Mute
@@ -6020,6 +6729,8 @@ Gripping your focus, you attempt to magically silence someone. They must make a 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-surrogate">  
 
   
 ##### Surrogate
@@ -6031,11 +6742,13 @@ As an enemy attack hurtles towards you, attempt to compel someone block it. Forc
   
   
   
+</div>  
   
   
 
   
 #### Tier 2
+<div class="rnr-ability" id="ability-hurl through hell">  
 
   
 ##### Hurl Through Hell
@@ -6050,6 +6763,8 @@ __Tier 3 Damage:__ 6d8 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-murder of crows">  
 
   
 ##### Murder of Crows
@@ -6065,6 +6780,8 @@ __Tier 3 Damage:__ 4d6 Piercing
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-cthulian tentacles">  
 
   
 ##### Cthulian Tentacles
@@ -6079,6 +6796,8 @@ __Tier 3 Damage:__ 2d10 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-wilting touch">  
 
   
 ##### Wilting Touch
@@ -6093,6 +6812,8 @@ __Tier 3 Damage:__ 8d6 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-death bolt">  
 
   
 ##### Death Bolt
@@ -6107,6 +6828,8 @@ __Tier 3 Damage:__ 6d6 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-tethered minds">  
 
   
 ##### Tethered Minds
@@ -6118,6 +6841,8 @@ Tether the minds of up to eight individuals. For the spell's duration, they are 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-open rift">  
 
   
 ##### Open Rift
@@ -6128,6 +6853,8 @@ Tear a rift in the fabric of reality. Anyone who jumps through is transported to
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-eyes of uriel">  
 
   
 ##### Eyes of Uriel
@@ -6139,6 +6866,8 @@ __Summon:__ Eye of Uriel
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-crown of chaos">  
 
   
 ##### Crown of Chaos
@@ -6150,6 +6879,8 @@ A hideous crown appears on your head, shining with a ghastly green light. All en
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-shared fate">  
 
   
 ##### Shared Fate
@@ -6160,6 +6891,8 @@ Tether two creatures together. If one dies, the other must make a spell power sa
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-radiant darkness">  
 
   
 ##### Radiant Darkness
@@ -6175,6 +6908,8 @@ __Tier 3 Damage:__ 3d8 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-rebuke spell">  
 
   
 ##### Rebuke Spell
@@ -6186,6 +6921,8 @@ When an enemy successfully casts a spell, force them to make a spell power save.
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon fiend">  
 
   
 ##### Summon Fiend
@@ -6198,6 +6935,8 @@ __Tier 3 Summon:__ Pronged Devil
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-armor of lucien">  
 
   
 ##### Armor of Lucien
@@ -6212,6 +6951,8 @@ __Tier 3 Damage:__ 4d6 Radiant
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-dark citidel">  
 
   
 ##### Dark Citidel
@@ -6223,6 +6964,8 @@ Your patron grants you a dwelling in their realm in the form of a Dark Citadel. 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-lift">  
 
   
 ##### Lift
@@ -6232,6 +6975,8 @@ Concentrate on up to three targets to cause them to lift into the air. Your targ
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-commune">  
 
   
 ##### Commune
@@ -6242,11 +6987,13 @@ Attempt to commune with your patron. Roll 1d20 and add your expertise. On a 19 o
   
   
   
+</div>  
   
   
 
   
 #### Tier 3
+<div class="rnr-ability" id="ability-sorris' decay">  
 
   
 ##### Sorris' Decay
@@ -6260,6 +7007,8 @@ __Tier 3 Damage:__ 8d6 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-torugar the many tongued demon">  
 
   
 ##### Torugar the Many Tongued Demon
@@ -6275,6 +7024,8 @@ __Tier 3 Damage:__ 4d8 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-psychic spear">  
 
   
 ##### Psychic Spear
@@ -6287,6 +7038,8 @@ __Tier 3 Damage:__ 20d6 Psychic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-the abyss stares back">  
 
   
 ##### The Abyss Stares Back
@@ -6298,6 +7051,8 @@ __Summon:__ Elder God
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-reclaim soul">  
 
   
 ##### Reclaim Soul
@@ -6309,6 +7064,8 @@ Prepare the body of someone who has died within the past week. Scrawl runes on t
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summon eldritch vessel">  
 
   
 ##### Summon Eldritch Vessel
@@ -6320,6 +7077,8 @@ __Summon:__ Eldritch Vessel -- give it cannons
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-dominate">  
 
   
 ##### Dominate
@@ -6330,6 +7089,8 @@ As you focus your intent upon a hostile creature, dark tendrils close in about t
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-astral prison">  
 
   
 ##### Astral Prison
@@ -6341,10 +7102,12 @@ Subdue a creature and restrain them with magic. Using a void prism, create a poc
   
   
   
+</div>  
   
   
   
   
+</div>  
   
   
 ---  
@@ -6359,13 +7122,17 @@ Subdue a creature and restrain them with magic. Using a void prism, create a poc
   
   
   
+<button onclick="printContent('printable-wizard')">Print Wizard</button>  
+<div class="printable-content" id="printable-wizard">  
 
   
 ### Wizard
 <img src='/site/images/class/wizard.jpg' class="raceClassImage" />
   
   
-_"[Spellcaster"](https://www.deviantart.com/ncorva/art/Spellcaster-768564631) by ncorva is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+<span class="attribution">_"[Spellcaster"](https://www.deviantart.com/ncorva/art/Spellcaster-768564631) by ncorva is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>  
+<div class="handbook-section"   id="handbook-wizard">
 Students of the arcane, wizards are practitioners of world-bending magics. Advanced wizards can take flight, smite their foes with balls of fire, and bend time to their whim. Even fledgling wizards can bring mundane objects to life, send messages to distant allies, and fill their foes mouths’ with slithering slugs. These advanced magics come at a price -- wizards must study diligently to gain their power, standing on the shoulders of giants as they strive to become legends in their own right.  
   
   
@@ -6395,15 +7162,21 @@ A wizard’s spells can shape the face of combat, taking powerful enemies out of
   
   
   
+</div>  
 
   
 #### Recommended Stats
+<div class="display-stat-section"   id="display-stats-wizard">
 *  __Strength:__ -2  
 *  __Dexterity:__ -1  
 *  __Intelligence:__ 2  
 *  __Inner Fire:__ 1  
 *  __Perception:__ 0  
 *  __Charisma:__ 1  
+</div>
+<div class="printable-stat-section"   id="printable-stats-wizard">
+ __Strength:__ -2  __Dexterity:__ -1  __Intelligence:__ 2  __Inner Fire:__ 1  __Perception:__ 0  __Charisma:__ 1   
+ </div>
   
   
 
@@ -6416,6 +7189,7 @@ Wizards use 1d6 as their class health dice. As a Wizard, you are marked by your 
 
   
 #### Tier 1
+<div class="rnr-ability" id="ability-firecrackers">  
 
   
 ##### Firecrackers
@@ -6427,6 +7201,8 @@ Clutching a spent peice of charcoal, you mutter the language of flame and focus 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-summoning spell">  
 
   
 ##### Summoning Spell
@@ -6437,6 +7213,8 @@ Fix a familiar object in your mind and call to it. The object lifts into the air
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-candlelight">  
 
   
 ##### Candlelight
@@ -6448,6 +7226,8 @@ Roll a piece of string between your fingers and channel your magic into it. It m
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-unseen hand">  
 
   
 ##### Unseen Hand
@@ -6458,6 +7238,8 @@ Mutter a spell to will an ethereal hand into existence. While you concentrate on
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-conjure illusion">  
 
   
 ##### Conjure Illusion
@@ -6468,6 +7250,8 @@ Throw a piece of glass into the air and call upon your magic. The glass shatters
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-detect magic">  
 
   
 ##### Detect Magic
@@ -6478,6 +7262,8 @@ As you blink your eyes, the flows of magic become visible to you. While you are 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-arcane armor">  
 
   
 ##### Arcane Armor
@@ -6488,6 +7274,8 @@ Grip a lump of iron in your hand. As you grasp your magic, the iron glows and is
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-eat slugs">  
 
   
 ##### Eat Slugs
@@ -6498,6 +7286,8 @@ Fixing your eyes on your target, you crush a slug, worm, or caterpillar between 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-flare">  
 
   
 ##### Flare
@@ -6513,6 +7303,8 @@ __Tier 3 Damage:__ 3d6 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-arcane blow">  
 
   
 ##### Arcane Blow
@@ -6528,6 +7320,8 @@ __Tier 3 Damage:__ 5d6 Arcane
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-drain">  
 
   
 ##### Drain
@@ -6543,6 +7337,8 @@ __Tier 3 Damage:__ 3d4 Necrotic
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-acrid mist">  
 
   
 ##### Acrid Mist
@@ -6559,6 +7355,8 @@ __Tier 3 Damage:__ 3d4 Poison
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-jet of frost">  
 
   
 ##### Jet of Frost
@@ -6574,6 +7372,8 @@ __Tier 3 Damage:__ 3d4 Cold
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-pindigae's arcane orbs">  
 
   
 ##### Pindigae's Arcane Orbs
@@ -6589,6 +7389,8 @@ __Tier 3 Damage:__ 1d8 Arcane
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-become slime">  
 
   
 ##### Become Slime
@@ -6602,6 +7404,8 @@ __Tier 3 Summon:__ Black Slime
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bubble of air">  
 
   
 ##### Bubble of Air
@@ -6612,6 +7416,8 @@ Knead a bit of soap between your fingers and blow upon it. A shimmering bubble o
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mirror image">  
 
   
 ##### Mirror Image
@@ -6622,6 +7428,8 @@ Glance into a reflective substance and wield your magic. Summon a number of fals
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-animate weapon">  
 
   
 ##### Animate Weapon
@@ -6632,6 +7440,8 @@ Cause a one-handed weapon to float a few feet from you. The weapon has its own r
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-mage charge">  
 
   
 ##### Mage Charge
@@ -6647,6 +7457,8 @@ __Tier 3 Damage:__ 4d4 Arcane
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-jelly arms">  
 
   
 ##### Jelly Arms
@@ -6657,6 +7469,8 @@ Weave a spell and hold a needle aloft. A thousand arcane pins appear around your
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-bagabone's nightcap">  
 
   
 ##### Bagabone's Nightcap
@@ -6667,6 +7481,8 @@ In a burst of rainbow sparks, a faintly glowing and incredibly cozy nightcap app
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-featherfall">  
 
   
 ##### Featherfall
@@ -6677,6 +7493,8 @@ With a flourish, you produce a feather seemingly from nowhere. It ignites, and i
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-message">  
 
   
 ##### Message
@@ -6687,6 +7505,8 @@ Hold an object which belongs to someone you've met. You are able to telepathical
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-archibold's arcane automaton">  
 
   
 ##### Archibold's Arcane Automaton
@@ -6700,6 +7520,8 @@ __Tier 3 Summon:__ Clockwork Knight
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-become ethereal">  
 
   
 ##### Become Ethereal
@@ -6710,6 +7532,8 @@ Your form flickers as you enter the plane of the ethereal. You may stay there fo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-grow or shrink">  
 
   
 ##### Grow or Shrink
@@ -6720,6 +7544,8 @@ Crush a mushroom in your hand as you say an arcane incantation. Your target's bo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-identify">  
 
   
 ##### Identify
@@ -6731,11 +7557,13 @@ Take ten minutes to carefully inspect an item, object, or spell and learn its na
   
   
   
+</div>  
   
   
 
   
 #### Tier 2
+<div class="rnr-ability" id="ability-statue">  
 
   
 ##### Statue
@@ -6746,6 +7574,8 @@ With a crackle, your target's skin begins to harden. Unwilling creatures must ma
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-door step">  
 
   
 ##### Door Step
@@ -6756,6 +7586,8 @@ As you place your hand on a door-handle or walk through an archway, magic flows 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-invisibility">  
 
   
 ##### Invisibility
@@ -6766,6 +7598,8 @@ Over the span of a second, you target's skin, then organs, then bones disappear.
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-scry">  
 
   
 ##### Scry
@@ -6776,6 +7610,8 @@ Press a focusing gem against a reflective surface and speak the primordial word 
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-platform">  
 
   
 ##### Platform
@@ -6787,6 +7623,8 @@ With a twist of your hand, a circular disk of purple light appears at a point of
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-dispel magic">  
 
   
 ##### Dispel Magic
@@ -6797,6 +7635,8 @@ Carefully undo the weave of a first tier spell or curse. If the magic that you s
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-ice spear">  
 
   
 ##### Ice Spear
@@ -6811,6 +7651,8 @@ __Tier 3 Damage:__ 7d6 Cold
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-fireball">  
 
   
 ##### Fireball
@@ -6826,6 +7668,8 @@ __Tier 3 Damage:__ 8d4 Fire
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-octahedral barrier">  
 
   
 ##### Octahedral Barrier
@@ -6838,6 +7682,8 @@ In a rush of energy, a pyramid of solid magic forms around you and serves as a b
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-cage">  
 
   
 ##### Cage
@@ -6849,6 +7695,8 @@ Bars of energy lance towards the sky in a radius around you, visible only to tho
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-pocket dimension">  
 
   
 ##### Pocket Dimension
@@ -6859,6 +7707,8 @@ Use a key to open a small portal to your own, private pocket dimension. The dime
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-clone">  
 
   
 ##### Clone
@@ -6870,6 +7720,8 @@ You have recovered the ancient secret of creating simulacra. Spend a day infusin
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-polymorph">  
 
   
 ##### Polymorph
@@ -6880,6 +7732,8 @@ Your target's body begins to warp as they seamlessly transition into the form of
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-chain lightning">  
 
   
 ##### Chain Lightning
@@ -6894,6 +7748,8 @@ __Tier 3 Damage:__ 2d6 Lightning
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-rainbows">  
 
   
 ##### Rainbows
@@ -6908,6 +7764,8 @@ __Tier 3 Damage:__ 4d6 Arcane
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-igna bokak">  
 
   
 ##### Igna Bokak
@@ -6920,6 +7778,8 @@ __Tier 3 Summon:__ phoneix
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-m&m's beckoning call">  
 
   
 ##### M&M's Beckoning Call
@@ -6930,11 +7790,13 @@ Lay your hands on a willing creature and imbue them with magic of recall. One ti
   
   
   
+</div>  
   
   
 
   
 #### Tier 3
+<div class="rnr-ability" id="ability-gate">  
 
   
 ##### Gate
@@ -6945,6 +7807,8 @@ Energy hums as you tear a rift in reality and create a gate to another place. Th
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-fly">  
 
   
 ##### Fly
@@ -6954,6 +7818,8 @@ The weave of magic supports and guides you, and gravity fades away. For the spel
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-invulnerability">  
 
   
 ##### Invulnerability
@@ -6964,6 +7830,8 @@ Magic suffuses your target, and their skin becomes hard as diamond even as all m
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-tri-beam">  
 
   
 ##### Tri-beam
@@ -6986,6 +7854,8 @@ __Tier 3 Damage:__ 6d6 Arcane
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-stop time">  
 
   
 ##### Stop Time
@@ -6997,6 +7867,8 @@ As you spin a timepiece in your hand, focus your magic on it and speak the forgo
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-anti-magic ring">  
 
   
 ##### Anti-Magic Ring
@@ -7008,6 +7880,8 @@ With the weight of purpose, begin an arcane enchantment which nullifies nearby m
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-black hole">  
 
   
 ##### Black Hole
@@ -7022,6 +7896,8 @@ __Tier 3 Damage:__ 10d6 Blunt
   
   
   
+</div>  
+<div class="rnr-ability" id="ability-reverse gravity">  
 
   
 ##### Reverse Gravity
@@ -7036,10 +7912,12 @@ __Tier 3 Damage:__ 6d6 Blunt
   
   
   
+</div>  
   
   
   
   
+</div>  
   
   
 ---  

@@ -40,3 +40,16 @@ function getClassFromSubclass(base, subclass){
 function goBack() {
   window.history.back();
 }
+
+//For printing a given div
+function printContent(divId) {
+  var divToPrint = document.getElementById(divId);
+  var newWindow = window.open('', '_blank');
+  newWindow.document.write('<html><head><title>Print</title>');
+  newWindow.document.write('<link rel="stylesheet" type="text/css" href="/assets/css/style.css">');
+  newWindow.document.write('</head><body>');
+  newWindow.document.write(divToPrint.innerHTML);
+  newWindow.document.write('</body></html>');
+  newWindow.document.close();
+  newWindow.print();
+}
