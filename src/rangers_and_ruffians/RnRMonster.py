@@ -56,7 +56,8 @@ class RnRMonster:
 		
 		if len(self.moveset['combat_actions']) > 0:
 			ret += f'{ability_header_level * "#"} Combat Actions  \n'
-			ret += f"This creature can take {self.moveset['actions_per_turn']} actions per turn.  \n"
+			action_or_actions = "action" if self.moveset['actions_per_turn'] == 1 else 'actions'
+			ret += f"This creature can take {self.moveset['actions_per_turn']} {action_or_actions} per turn.  \n"
 		for action in self.moveset['combat_actions']:
 			ret += action.get_markdown(level=ability_level, succinct=True)
 		ret += '  \n'

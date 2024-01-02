@@ -63,7 +63,6 @@ def copyImages(rnr_game : RangersAndRuffians) -> None:
   dest   = core.BASE_DIRECTORY.joinpath('site', 'images', 'under_construction', 'under_construction.jpg')
   shutil.copy(str(source), str(dest))
 
-
 def publish_character_creation(rnr_game, force_overwrite):
   docs_directory = core.BASE_DIRECTORY.joinpath('docs')
   docs_parts_directory = docs_directory.joinpath('parts')
@@ -205,6 +204,7 @@ def publish_monsters(rnr_game : RangersAndRuffians, force_overwrite):
       list_of_lines.append(f'## {current_monster_class}  \n')
     list_of_lines += rnr_monster.get_markdown(level=3).split('\n')
     list_of_lines = [line + '\n' for line in list_of_lines]
+    list_of_lines += '---  \n  \n'    
     monster_lines += list_of_lines
 
 
@@ -225,10 +225,18 @@ def publish_weapons(rnr_game : RangersAndRuffians, force_overwrite : bool):
   md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
   weapon_lines = []
+  weapon_lines.append('{::options parse_block_html="true" /}  \n')
+  weapon_lines.append(f'  \n<div class="printable-content" id="printable-weapons">  \n')
+  weapon_lines.append(f'  \n<button onclick="printContent(\'printable-weapons\')">Print Weapons</button>  \n')
   for rnr_weapon in sorted(rnr_game.weapons, key=lambda x: x.name):
+    weapon_lines += f'<div class="rnr-ability" id="weapon-{rnr_weapon.name.lower()}">  \n'
     list_of_lines = rnr_weapon.get_markdown(level=3).split('\n')
     list_of_lines = [line + '\n' for line in list_of_lines]
     weapon_lines += list_of_lines
+    weapon_lines += '</div>  \n'
+    weapon_lines += '---  \n  \n'    
+  weapon_lines.append('</div>  \n')
+  weapon_lines.append('{::options parse_block_html="false" /}')
 
 
   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))

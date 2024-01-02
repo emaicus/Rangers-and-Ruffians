@@ -121,7 +121,7 @@ __Damage:__ 2d6 Piercing
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Slashing Strike
@@ -136,6 +136,18 @@ __Damage:__ 2d4 Piercing
 ##### Self Repair
 In the heat of battle, the construct takes a moment to tend to its wounds, hastily grafting metal or wood over the holes in its frame.    
 __Healing:__ 2d6    
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -175,7 +187,7 @@ __Damage:__ 4d6 Piercing
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Slashing Strike
@@ -200,6 +212,18 @@ __Damage:__ 4d6 Piercing
 ##### Self Repair
 In the heat of battle, the construct takes a moment to tend to its wounds, hastily grafting metal or wood over the holes in its frame.    
 __Healing:__ 3d6    
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -239,7 +263,7 @@ __Damage:__ 6d6 Piercing
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Slashing Strike
@@ -272,6 +296,18 @@ __Healing:__ 4d6
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Elemental Spark
@@ -292,13 +328,25 @@ When an Elemental comes into existence its creator may choose its elemental affi
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Elemental Burst
 __Radius:__ 10 ft.   
 With a flash of energy, the Elemental Spark makes an attack against all creatures adjacent to them.    
 __Damage:__ 1d4 Inherited   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -327,7 +375,7 @@ When an Elemental comes into existence its creator may choose its elemental affi
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Elemental Blaze
@@ -344,6 +392,18 @@ __Damage:__ 2d6 Inherited
  __Range:__ Touch   
 The Elemental makes two strikes in rapid succession against its foe. They must make a spell power save or be Burned if it has fire affinity, Hindered if it has ice affinity, pushed back 15 feet if it has water affinity or Hoisted if it has air affinity. If the creature is hoisted, it may repeat its save at the end of each of its turns. A Burning creature take 2d6 damage at the start of each turn until they spend an action to extinguish themselves. A Hindered creature loses half its movement. Hoisted creatures are unable to move and attacks made against them are at advantage."     
 __Damage:__ 2d6 Inherited   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -372,7 +432,7 @@ When an Elemental comes into existence its creator may choose its elemental affi
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Elemental Fury
@@ -397,6 +457,18 @@ __Damage:__ 4d6 Inherited
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Tamberdoodle's Hand
@@ -408,7 +480,7 @@ __Movement:__  Flying Speed 30ft
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grab
@@ -443,6 +515,18 @@ __Damage:__ 4d6 Blunt
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Treeling
@@ -461,6 +545,18 @@ This creature can take 2 actions per turn.
  __Range:__ Touch   
 The treeling takes a swipe at its foe with hardened, spearlike fingers.    
 __Damage:__ 1d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -496,6 +592,18 @@ This creature can take 2 actions per turn.
  __Range:__ Touch   
 As the knight slashes an enemy with its sword, strands of sticky sap flow over them. They must make a spell power save of be Hindered.  A Hindered creature loses half its movement.     
 __Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -558,6 +666,18 @@ __Damage:__ 4d4 Blunt
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ## Beast
@@ -587,13 +707,25 @@ As the daggerfin attacks, it streaks by with incredible speed. Daggerfin are alw
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Slice
  __Range:__ Touch   
 Venom courses into the spider's quarry as it stabs with sharp fangs. The target must make a spell power save or be Poisoned.  Poisoned creatures must make a D15 inner fire save at the start of each turn or take one level of exhaustion and 2d6 damage.     
 __Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -643,6 +775,18 @@ __Damage:__ 2d8 Piercing
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Elder Daggerfin
@@ -684,6 +828,18 @@ __Damage:__ 4d8 Piercing
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Young Dire Bear
@@ -710,7 +866,7 @@ Dire bears have thick hides and warm pelts. They are Resistant to Cold.  Creatur
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Claw
@@ -727,6 +883,18 @@ __Damage:__ 2d6 Piercing
  __Range:__ Touch   
 If a bear's target is prone, they may maul it, thrashing them about with fearsome jaws.    
 __Damage:__ 4d6 Blunt   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -786,6 +954,18 @@ __Damage:__ 4d6 Blunt
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Ursa
@@ -837,6 +1017,18 @@ __Damage:__ 8d6 Blunt
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Giant Eagle Chick
@@ -863,13 +1055,25 @@ The giant eagle can carry up to one creature on its back.
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Swipe
  __Range:__ Touch   
 The eagle slashes its target with its talons as it streaks past.    
 __Damage:__ 1d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -904,7 +1108,7 @@ The giant eagle can carry up to two creatures on its back.
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Swipe
@@ -921,6 +1125,18 @@ __Damage:__ 4d6 Piercing
  __Range:__ Touch   
 If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage.    
 __Damage:__ 6d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -955,7 +1171,7 @@ The giant eagle can carry up to five creatures on its back.
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Swipe
@@ -972,6 +1188,18 @@ __Damage:__ 8d6 Piercing
  __Range:__ Touch   
 If an eagle is grappling a creature, it may use its movement to lift them up to fifty feet in the air and drop them, dealing damage.    
 __Damage:__ 12d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1006,7 +1234,7 @@ Giant spiders are able to climb up even perfectly verticle surfaces.
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Bite
@@ -1032,6 +1260,18 @@ __Damage:__ 2d6 Poison
 ##### Web Sling
  __Range:__ 30 Feet  
 The spider launches a gob of sticky web at its enemy. They must make a spell power save or be Grappled. On success, they are Hindered on their next turn.  Grappled creatures make all physical checks and saves at disadvantage. They cannot move, and accuracy checks against them are at advantage. A grappled creature may attempt to free themselves as an action. To do so, they must repeat the save that caused the grapple. A Hindered creature loses half its movement.     
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
   
   
   
@@ -1096,6 +1336,18 @@ The spider launches a gob of sticky web at its enemy. They must make a spell pow
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Great Attercop
@@ -1154,6 +1406,18 @@ The spider launches a gob of sticky web at its enemy. They must make a spell pow
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Greater Swarm
@@ -1184,13 +1448,25 @@ __Damage:__ 2d6 Piercing
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Vicious Consumption
  __Range:__ Touch   
 The swarm crawls up an enemy, a hundred mouths gnawing as it flows over them. Its target must make a spell power saving throw or become Distracted until the end of its next turn.  Distracted creatures must make perception and accuracy checks at disadvantage.     
 __Damage:__ 4d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1256,6 +1532,18 @@ The werewolf lets a fearsome howl. All creatures within the howl's radius must m
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Forest Wolf
@@ -1285,7 +1573,7 @@ Wolves have a natural fear of fire. If another wolf is damaged by fire nearby, t
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grappling Bite
@@ -1301,6 +1589,18 @@ __Damage:__ 2d6 Piercing
 ##### Howl
 __Radius:__ 120 ft.   
 The wolf lets a fearsome howl. All creatures within the howl's radius must make a spell power save or be Frightened. Affected creatures may repeat their save at the end of each of their turns. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
   
   
   
@@ -1336,7 +1636,7 @@ Wolves have a natural fear of fire. If another wolf is damaged by fire nearby, t
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grappling Bite
@@ -1352,6 +1652,18 @@ __Damage:__ 4d6 Piercing
 ##### Howl
 __Radius:__ 120 ft.   
 The wolf lets a fearsome howl. All creatures within the howl's radius must make a spell power save or be Frightened. Affected creatures may repeat their save at the end of each of their turns. A Frightened creature cannot move closer to the source of it’s fear and must make accuracy checks against it at disadvantage.     
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
   
   
   
@@ -1409,6 +1721,18 @@ The wolf lets a fearsome howl. All creatures within the howl's radius must make 
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ### Swarm
@@ -1439,13 +1763,25 @@ __Damage:__ 1d4 Piercing
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Vicious Consumption
  __Range:__ Touch   
 The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them. Its target must make a spell power saving throw or become Distracted until the end of its next turn.  Distracted creatures must make perception and accuracy checks at disadvantage.     
 __Damage:__ 1d4 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1499,6 +1835,18 @@ __Damage:__ 4d6 Piercing
   
   
   
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   
 ## Slime
@@ -1543,13 +1891,25 @@ Slimes move soundlessly, and can creep through spaces the size of a pinhole, tho
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Devouring Slime
  __Range:__ Touch   
 The green slime oozes up and onto a creature, corroding and eating at them with its acid.    
 __Damage:__ 2d6 Acid   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1599,13 +1959,25 @@ Slimes move soundlessly, and can creep through spaces the size of a pinhole, tho
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Greater Devouring Slime
  __Range:__ Touch   
 The green slime oozes up and onto a creature, corroding and eating at them with its acid.    
 __Damage:__ 4d6 Acid   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1655,13 +2027,25 @@ Slimes move soundlessly, and can creep through spaces the size of a pinhole, tho
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Deadly Devouring Slime
  __Range:__ Touch   
 The black slime oozes up and onto a creature, corroding and eating at them with its acid.    
 __Damage:__ 6d6 Acid   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1684,7 +2068,7 @@ __Movement:__  Base Speed 25ft
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grappling Strike
@@ -1701,6 +2085,18 @@ __Damage:__ 1d6 Blunt
  __Range:__ Touch   
 If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth.    
 __Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1730,7 +2126,7 @@ The scent of blood whips the thrall into a wild frenzy. As soon as any thrall ha
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grappling Strike
@@ -1747,6 +2143,18 @@ __Damage:__ 1d8 Blunt
  __Range:__ Touch   
 If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth. The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot.  Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.     
 __Damage:__ 4d8 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   
@@ -1776,7 +2184,7 @@ The scent of blood whips the thrall into a wild frenzy. As soon as any thrall ha
 
   
 #### Combat Actions
-This creature can take 1 actions per turn.  
+This creature can take 1 action per turn.  
 
   
 ##### Grappling Strike
@@ -1793,6 +2201,18 @@ __Damage:__ 2d8 Blunt
  __Range:__ Touch   
 If a thrall attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth. The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot.  Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.     
 __Damage:__ 8d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
   
   
   

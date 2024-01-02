@@ -401,7 +401,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Book_of_Known_Beasts.html",
-    "revision": "dd9afeac212ce4a77228cd9e4032466e"
+    "revision": "d7760fd534e95e2cbd5dd3367233c6bc"
   },
   {
     "url": "site/pages/GENERATED/Book_of_Lore.html",
@@ -425,7 +425,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Items.html",
-    "revision": "5b591604d3978c31620c781411457f22"
+    "revision": "42e2dd9711d5dc0c0d0955bbbc27ba77"
   },
   {
     "url": "site/pages/GENERATED/Poohbah_Printables.html",
@@ -525,7 +525,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/css/style.css",
-    "revision": "695d5b66cc9278ab58c2c1f391627c21"
+    "revision": "41a815aa3390dd8141c670c360e0dc16"
   }
 ]);
 

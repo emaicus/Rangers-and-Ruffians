@@ -31,6 +31,21 @@ _Version 3.0.0 Release Candidate 1_
 
   
 ## Weapons
+{::options parse_block_html="true" /}  
+  
+<div class="printable-content" id="printable-weapons">  
+  
+<button onclick="printContent('printable-weapons')">Print Weapons</button>  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-crossbow">  
+  
+  
+  
+  
+  
 
   
 ### Crossbow
@@ -47,6 +62,34 @@ __Piercing Shot__
  __Range:__ 30 Feet  
 If you target an enemy within thirty feet of you, your shots penetrate them. If the attack successfully hits the target, it also deals half damage to an enemy behind them.    
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-dagger">  
   
   
   
@@ -76,6 +119,34 @@ When daggers are dual wielded, you are able to make a third attack dagger attack
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-flail">  
+  
+  
+  
+  
+  
 
   
 ### Flail
@@ -91,6 +162,36 @@ __Abilities:__
 __Entangling Critical__  
 When you land a critical hit with this weapon, it tangles itself around your foe. They must make a spell power save or be Hindered on their next turn.  A Hindered creature loses half its movement.     
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-great  
+  
+axe">  
   
   
   
@@ -116,6 +217,36 @@ If you make an attack against an adjacent enemy and hit, your attack skates acro
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-great  
+  
+hammer">  
+  
+  
+  
+  
+  
 
   
 ### Great Hammer
@@ -131,6 +262,36 @@ __Abilities:__
 __Heavy Blow__  
 When wielding this weapon, you can wind up an in attempt to land a devestating blow against an opponent. If you do this, you may double the damage dice rolled for the attack, but your opponent is considered to be Dodging.  Accuracy checks against creatures who are dodging are at disadvantage. Any glancing blows that they suffer instead miss them entirely.     
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-great  
+  
+sword">  
   
   
   
@@ -157,6 +318,34 @@ As a reaction, raise your blade to protect yourself. Until your next turn, your 
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-halberd">  
+  
+  
+  
+  
+  
 
   
 ### Halberd
@@ -172,6 +361,36 @@ __Abilities:__
 __Sweeping Strike__  
 When wielding this weapon, you can optionally make an attack against all foes in a ten foot cone in front of you. The attack deals half damage.    
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-hand  
+  
+axe">  
   
   
   
@@ -197,6 +416,36 @@ If you make your first attack with a hand axe and score a glancing blow, the acc
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-hand  
+  
+crossbow">  
+  
+  
+  
+  
+  
 
   
 ### Hand Crossbow
@@ -216,6 +465,34 @@ It is easy to move while carrying this weapon. While you carry it, you benefit f
 __Opening Shot__  
 This weapon is an ideal weapon for opening an engagement. If you attack a creature and the blow is not glancing, they are considered Vulnerable for the remainder of your turn.  All accuracy checks made against Vulnerable creatures are at advantage.     
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-katana">  
   
   
   
@@ -246,6 +523,34 @@ Critical hits with this weapon leave grevious wounds. When you land a critical h
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-longbow">  
+  
+  
+  
+  
+  
 
   
 ### Longbow
@@ -261,6 +566,34 @@ __Abilities:__
 __Careful Aim__  
 When using this weapon, you can give up your movement to add your expertise to all accuracy checks made on your turn.    
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-quarterstaff">  
   
   
   
@@ -286,6 +619,34 @@ You are able to use your weapon to guard against enemy attacks. While wielding i
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-rapier">  
+  
+  
+  
+  
+  
 
   
 ### Rapier
@@ -301,6 +662,34 @@ __Abilities:__
 __Fast Blade__  
 The rapier is an exceptionally fast weapon. When wielding it, add +2 to all accuracy checks.       
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-shortspear">  
   
   
   
@@ -326,6 +715,34 @@ When an enemy moves into range of you from the front, they are considered Expose
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-shortsword">  
+  
+  
+  
+  
+  
 
   
 ### Shortsword
@@ -341,6 +758,34 @@ __Abilities:__
 __En Guarde__  
 You are able to use your weapon to guard against enemy attacks. While wielding it, add +1 to your evasion.       
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-shuriken">  
   
   
   
@@ -366,6 +811,34 @@ __Spread Attack__
  __Range:__ 15 Feet  
 When you attack with this weapon, optionally throw a cloud of shuriken in a 15ft cone. This can be used in conjunction with other abilities.    
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-slingshot">  
   
   
   
@@ -399,6 +872,34 @@ Through careful aim, you are able to strike your enemies where they are most vul
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-twinsword">  
+  
+  
+  
+  
+  
 
   
 ### Twinsword
@@ -420,6 +921,34 @@ If you make an attack against an adjacent enemy and hit, your attack skates acro
   
   
   
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-warpick">  
+  
+  
+  
+  
+  
 
   
 ### Warpick
@@ -435,6 +964,34 @@ __Abilities:__
 __Heavy Critical__  
 Critical hits landed with this weapon are especially savage. When you land a critical hit, optionally force your target to make a spell power save or be Staggered.  A Staggered creature makes their next action at disadvantage.     
   
+  
+  
+  
+  
+  
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div  
+  
+class="rnr-ability"  
+  
+id="weapon-whip">  
   
   
   
@@ -464,4 +1021,23 @@ This weapon is strong enough to hold two normal sized humanoids without taking d
   
   
   
-
+</div>  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>  
+{::options parse_block_html="false" /}
