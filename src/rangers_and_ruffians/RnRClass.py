@@ -43,11 +43,10 @@ class RnRClass():
     ability_level = None if level is None else level + 2
     class_text = ''
     
-    if printable:
-      class_text += f'<button onclick="printContent(\'printable-{self.name.lower()}\')">Print {self.name}</button>  \n'
-      class_text += f'<div class="printable-content" id="printable-{self.name.lower()}">  \n'
-
+    class_text += f'<div class="printable-content" id="printable-{self.name.lower()}">  \n' if printable else ''
     class_text += f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    class_text += f'<button onclick="printContent(\'printable-{self.name.lower()}\')">Print {self.name}</button>  \n  \n' if printable else ''
+
     if art_data is not None:
       class_text += f"<img src='{art_data['path']}' class=\"raceClassImage\" />\n\n"
       class_text += f"<span class=\"attribution\">{art_data['attribution']}</span>"

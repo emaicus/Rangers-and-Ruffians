@@ -93,7 +93,7 @@ def publish_character_creation(rnr_game, force_overwrite):
     art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
     art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('race', f'{escaped_name}.jpg')}"
 
-    list_of_lines = rnr_race.get_markdown(level=3, art_data=art_data).split('\n')
+    list_of_lines = rnr_race.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
     list_of_lines = [line + '\n' for line in list_of_lines]
     list_of_lines += '---  \n  \n'
     race_lines += list_of_lines

@@ -12,8 +12,8 @@ class RnRRace():
     self.art_data = None
 
     self.abilities = list()
-    # for ability in race_data['abilities']:
-    #   self.abilities.append(RnRAbility(ability))
+    for ability in race_data['abilities']:
+      self.abilities.append(RnRAbility(ability))
 
   
   
@@ -44,15 +44,18 @@ class RnRRace():
   #   return serial
   
 
-  def get_markdown(self, level=None, art_data=None):
+  def get_markdown(self, level=None, art_data=None, printable=False):
     subsection_level = None if level is None else level + 1
     ability_level = None if level is None else level + 2
+    race_text = ''
 
-    race_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    race_text += f'<div class="printable-content" id="printable-{self.name.lower()}">  \n' if printable else ''
+    race_text += f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
+    race_text += f'<button onclick="printContent(\'printable-{self.name.lower()}\')">Print {self.name}</button>  \n  \n' if printable else ''
 
     if art_data is not None:
       race_text += f"<img src='{art_data['path']}' class=\"raceClassImage\" />\n\n"
-      race_text += art_data['attribution']
+      race_text += f"<span class=\"attribution\">{art_data['attribution']}</span>"
 
     for para in self.handbook['introduction']:
       race_text += f"{para}  \n  \n"
@@ -77,7 +80,11 @@ class RnRRace():
 
     race_text += f"{'#' * subsection_level} Stats and Abilities  \n"
     race_text += f'__Health Dice:__ {self.health_dice} __Movement:__ {self.base_movement}ft   \n'
-    for ability_obj in self.abilities:
-      race_text += ability_obj.get_markdown(ability_level) + '   \n'
+    for ability in self.abilities:
+      race_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
+      race_text += ability.get_markdown(ability_level) + '   \n'
+      race_text += f'</div>  \n' if printable else ''
+
+    race_text += '</div>  \n' if printable else ''
         
     return race_text

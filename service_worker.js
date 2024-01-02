@@ -413,7 +413,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "ed62f05c185d0b52f31424a245b9970c"
+    "revision": "cdfa4ec02c8b5092edebb4d73bface15"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
@@ -525,7 +525,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "assets/css/style.css",
-    "revision": "7d5cc3c56548d3074f5b4473bc0b2428"
+    "revision": "695d5b66cc9278ab58c2c1f391627c21"
   }
 ]);
 

@@ -1246,14 +1246,18 @@ As a Wisdom, you begin your journey with:
 ## Races
 {::options parse_block_html="true" /}  
 <details><summary markdown="span">View the Races</summary>  
+<div class="printable-content" id="printable-catterwol">  
 
   
 ### Catterwol
+<button onclick="printContent('printable-catterwol')">Print Catterwol</button>  
+  
+  
 <img src='/site/images/race/catterwol.jpg' class="raceClassImage" />
   
   
-_"[Karn, the Commander of Black Wood"](https://www.deviantart.com/noxypia/art/Karn-the-Commander-of-Black-Wood-287582659) by Noxypia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Catterwol, sometimes called catfolk, are a bipedal race that has retained the grace of their feline ancestors. With sharp claws and tails to help them keep their balance, catterwol easily leap from tree to tree or rooftop to rooftop. While some "wild" catterwol live in small tribal units, others have made their home in the great cities of the realms. Wild catterwol tend to have short, bristly fur in dark colors while city-catterwol often have long, soft coats.  
+<span class="attribution">_"[Karn, the Commander of Black Wood"](https://www.deviantart.com/noxypia/art/Karn-the-Commander-of-Black-Wood-287582659) by Noxypia is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Catterwol, sometimes called catfolk, are a bipedal race that has retained the grace of their feline ancestors. With sharp claws and tails to help them keep their balance, catterwol easily leap from tree to tree or rooftop to rooftop. While some "wild" catterwol live in small tribal units, others have made their home in the great cities of the realms. Wild catterwol tend to have short, bristly fur in dark colors while city-catterwol often have long, soft coats.  
   
   
 By nature, Catterwol are secluded and keep their own council. They are native to tropical jungles and arid deserts, and are adapted to life in these warm climates. Villages and tribes of catterwol tend to be matriarchal, following the orders of a respected wise woman or sage. It is rare for catterwol to engage in simple pleasantries—they speak when it is important, or when they are moved by love or anger. Their tails and whiskers, however, may give them away when they are feeling strong emotion.  
@@ -1295,6 +1299,62 @@ In an adventuring party, catterwol make excellent rogues, fighters, and rangers.
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-darkvision">  
+
+  
+##### Darkvision
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have incredible night vision. You are permanently under the effects of Darvision.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-they're retractable">  
+
+  
+##### They're Retractable
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have razor sharp, retractable claws. Whenever you make an unarmed attack, increase the damage dice by one step.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-loose skin">  
+
+  
+##### Loose Skin
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to twist and turn to free yourself when grabbed. Add your expertise to any checks or saves against being physically restrained.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-fear of water">  
+
+  
+##### Fear of Water
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have a deep distaste for be being wet. Take disadvantage on all checks when you are soaked through.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-mantle">  
+
+  
+##### Mantle
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to easily scale to great heights. Add your expertise to checks made to climb.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1309,14 +1369,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-daemonspawn">  
 
   
 ### Daemonspawn
+<button onclick="printContent('printable-daemonspawn')">Print Daemonspawn</button>  
+  
+  
 <img src='/site/images/race/daemonspawn.jpg' class="raceClassImage" />
   
   
-_"[Tiefling Bard Custom DnD Char Comission"](https://www.deviantart.com/surugamonkey/art/Tiefling-Bard-Custom-DnD-Char-Comission-663338002) by SurugaMonkey is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Long ago, during an age before mankind walked the earth, a race of deep elves that inhabited the bowels of the abyss intermarried with demons. When the demons were overthrown, their children remained; the first of the daemonspawn.  
+<span class="attribution">_"[Tiefling Bard Custom DnD Char Comission"](https://www.deviantart.com/surugamonkey/art/Tiefling-Bard-Custom-DnD-Char-Comission-663338002) by SurugaMonkey is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Long ago, during an age before mankind walked the earth, a race of deep elves that inhabited the bowels of the abyss intermarried with demons. When the demons were overthrown, their children remained; the first of the daemonspawn.  
   
   
 Daemonspawn are relatively few in number and are largely ostracized. Their largest concentrations are found in small villages at the fringes of society. These settlements rarely last long before fear or malice lead the local populace to put them to the torch. Some daemonspawn choose to dwell in cities where they can make a humble living as thieves, assassins for hire, and petty sorcerers. Daemonspawn have been forced into such ignoble occupations by society's general mistrust and persecution of their race. However, their heavy involvement in such pursuits has only served to deepen the prejudice against them.  
@@ -1359,6 +1423,68 @@ Most daemonspawn have skin that is red in color. However, some are grey skinned 
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-charm">  
+
+  
+##### Charm
+__Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ 30 Feet  
+A dark light surrounds you as you impose your will upon another, and for a moment you are radiant in their eyes. The affected creature must make a spell power save or bend to your will and become Charmed. They may repeat their save at the end of each of their turns.     
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-incombustible">  
+
+  
+##### Incombustible
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your infernal heritage has left you acclimated to heat. At all times, you are considered to have Fire Resistance.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-peer within">  
+
+  
+##### Peer Within
+__Cost:__ 1 Action Point __Duration:__ 10 Turns __Range:__ Self   
+__Radius:__ 100 ft.   
+Your demonic heritage grants you a view into the hearts of others. For the spell's duration, evil creatures are surrounded by an aura of darkness in your vision, while good creatures with an aura of light. The definition of good and evil corresponds to the way that you have aligned yourself within the world.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-firebolt">  
+
+  
+##### Firebolt
+__Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ 60 Feet  
+Use your inherent magic to launch a bolt of crackling fire at an enemy.    
+__Tier 1 Damage:__ 3d6 Fire   
+__Tier 2 Damage:__ 4d6 Fire   
+__Tier 3 Damage:__ 5d6 Fire   
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-child of dread">  
+
+  
+##### Child of Dread
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+While the people of the realms may distrust you due to your heritage, the fiends of the abyss may find you easier to parley with. Add your expertise to any charisma check made against a demon or fiend.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1373,14 +1499,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-dwarf">  
 
   
 ### Dwarf
+<button onclick="printContent('printable-dwarf')">Print Dwarf</button>  
+  
+  
 <img src='/site/images/race/dwarf.jpg' class="raceClassImage" />
   
   
-_"[The Hunter"](https://www.deviantart.com/ortsmor/art/The-Hunter-590846159) by ortsmor is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-A stocky, brooding people, dwarves are known to be incredible craftsmen, and shrewd businessmen. "Stubborn as a dwarf" has become a common saying, and for good reason—by and large, dwarves know what they want, and won't stop working until they get it. Family and clan is of paramount importance to a dwarf, and it is not uncommon for generations of dwarves to all work on the same, massive project. The result is that the scope and artistry of dwarven projects vastly overcomes the ability of an individual. Dwarven strongholds are things of legend, wrought of stone and iron and carved into the face of mountains. Great dwarven bridges span straits and seas, and dwarven statues tower, higher than the tallest tree.  
+<span class="attribution">_"[The Hunter"](https://www.deviantart.com/ortsmor/art/The-Hunter-590846159) by ortsmor is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>A stocky, brooding people, dwarves are known to be incredible craftsmen, and shrewd businessmen. "Stubborn as a dwarf" has become a common saying, and for good reason—by and large, dwarves know what they want, and won't stop working until they get it. Family and clan is of paramount importance to a dwarf, and it is not uncommon for generations of dwarves to all work on the same, massive project. The result is that the scope and artistry of dwarven projects vastly overcomes the ability of an individual. Dwarven strongholds are things of legend, wrought of stone and iron and carved into the face of mountains. Great dwarven bridges span straits and seas, and dwarven statues tower, higher than the tallest tree.  
   
   
 True to their name, dwarves are short of stature, though taller than halflings and sprouts. Most stand at between four and five feet, with a stocky build and strong shoulders. This build gives them a low center of mass which makes them exceptionally steady on their feet and makes them prolific sailors. They are also thick-of-skin, allowing them to stand great heat when working their forges. Dwarves have a reputation for being greedy and there is a precedent for this belief—many dwarves are keenly aware of the value of their work, and think about the betterment of their family not just in the short term, but for generations to come.  
@@ -1423,6 +1553,62 @@ A dwarf might take up a life of adventure for a number of reasons. Some might be
   
 #### Stats and Abilities
 __Health Dice:__ 1d8 __Movement:__ 25ft   
+<div class="rnr-ability" id="ability-stocky build">  
+
+  
+##### Stocky Build
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You're built hearty, with a low center of gravity. As such, you are quite Hard to Move.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-hearty">  
+
+  
+##### Hearty
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are of naturally hearty stock. When you level up, roll your health dice with advantage.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-appraiser's eye">  
+
+  
+##### Appraiser's Eye
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have a knack for evaluating an object's worth—and at getting your hands on it for even less. Add your expertise to checks made to evaluate craftsmanship and to charisma checks made when bartering.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-very dangerous over short distances">  
+
+  
+##### Very Dangerous over Short Distances
+__Cost:__ None __Duration:__ Passive   
+You may not be the fastest, but once you close with an enemy, they're in trouble! If you begin your turn within melee range of an enemy, deal an extra 1d6 damage on any attacks that you make against them before you take your movement.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-dwarven momentum">  
+
+  
+##### Dwarven Momentum
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Once you start moving, you are very hard to stop. Whenever an effect or item calls for your speed to be decreased but not reduced to zero, halve the amount and round down to the nearest 5ft. If an ability calls for you to be halted, roll any saves at advantage.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1437,14 +1623,18 @@ __Health Dice:__ 1d8 __Movement:__ 25ft
   
   
   
+<div class="printable-content" id="printable-deep elf">  
 
   
 ### Deep Elf
+<button onclick="printContent('printable-deep elf')">Print Deep Elf</button>  
+  
+  
 <img src='/site/images/race/deep_elf.jpg' class="raceClassImage" />
   
   
-_"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-The deep elves have adapted to the dark, perilous caverns of the Abyss. Danger is always present in these harsh lands and life is often short and painful. Many deep elves have wide, pupil-dominated eyes, built to see in even the faintest light. Their skin is pale white or dark as night to help them blend into the caverns of the deep. Others have greyish skin, and live in cities sculpted into the sides of caverns and lit by bioluminescent moss.  
+<span class="attribution">_"[Fydriel Silentbloon [C]"](https://www.deviantart.com/jeleynai/art/Fydriel-Silentbloon-C-791379624) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>The deep elves have adapted to the dark, perilous caverns of the Abyss. Danger is always present in these harsh lands and life is often short and painful. Many deep elves have wide, pupil-dominated eyes, built to see in even the faintest light. Their skin is pale white or dark as night to help them blend into the caverns of the deep. Others have greyish skin, and live in cities sculpted into the sides of caverns and lit by bioluminescent moss.  
   
   
 Harsh surroundings sometimes lead to harsh personalities and many of the deep elves come off as cold or uncaring out of necessity. In a subterranean world where nothing lives long, attachments can lead to more mental anguish than they are worth. Where they do form, deep elf friendships or familial bonds are tight. Deep elven adventurers may be cut from a different cloth. Some choose to forsake their dark homeland, going instead to the surface. These are met by a land that is alien and difficult; the light of the sun burns their skin and eyes, forcing them to cover their faces and bodies with cloth.  
@@ -1486,6 +1676,67 @@ Deep elves make skilled adventurers due to their superior vision and reflexes. I
   
 #### Stats and Abilities
 __Health Dice:__ 1d8 __Movement:__ 25ft   
+<div class="rnr-ability" id="ability-sleepless">  
+
+  
+##### Sleepless
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-poison resistance">  
+
+  
+##### Poison Resistance
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your heritage has given you a strong constitution. You are always considered to have Poison Resistance.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-born in darkness">  
+
+  
+##### Born in Darkness
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your abyssal heritage has changed the way that you percieve light. You can see perfectly in pitch darkness, but cannot see in total light unless you wear a mesh over your eyes.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-survivor">  
+
+  
+##### Survivor
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+The struggle of living in the abyss is in your blood. You may add your expertise to checks made to survive the nonmagical elements of nature.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-cruel critical">  
+
+  
+##### Cruel Critical
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Self   
+Make the most of a well placed blow. Whenever you land a critical hit, add an extra 1d6 damage.    
+__Tier 1 Damage:__ 1d6 Inherited   
+__Tier 2 Damage:__ 1d6 Inherited   
+__Tier 3 Damage:__ 1d6 Inherited   
+  
+  
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1500,14 +1751,18 @@ __Health Dice:__ 1d8 __Movement:__ 25ft
   
   
   
+<div class="printable-content" id="printable-high elf">  
 
   
 ### High Elf
+<button onclick="printContent('printable-high elf')">Print High Elf</button>  
+  
+  
 <img src='/site/images/race/high_elf.jpg' class="raceClassImage" />
   
   
-_"[Elf Girl"](https://www.deviantart.com/selenada/art/Elf-Girl-459931558) by Selenada is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Fairest of the elves, the high elves are the least changed from their original form. City-dwellers and scholars, the high elves prefer the comfort of civilization to the challenges of the wilds beyond. High elven cities are things of legend, with magic-wrought spires of alabaster scraping azure skies overhead. Their libraries draw wizards and clerics from across the land, though only those deemed worthy may have access to the most secret and precious of their tomes. Some legends exist of high elven cities which have taken flight, rising from the ground and into the skies beyond.  
+<span class="attribution">_"[Elf Girl"](https://www.deviantart.com/selenada/art/Elf-Girl-459931558) by Selenada is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Fairest of the elves, the high elves are the least changed from their original form. City-dwellers and scholars, the high elves prefer the comfort of civilization to the challenges of the wilds beyond. High elven cities are things of legend, with magic-wrought spires of alabaster scraping azure skies overhead. Their libraries draw wizards and clerics from across the land, though only those deemed worthy may have access to the most secret and precious of their tomes. Some legends exist of high elven cities which have taken flight, rising from the ground and into the skies beyond.  
   
   
 The magic that has shaped the form of the other elves is instead untapped inside of the high elves. This allows them to become fearfully powerful casters and to shape the world to their will. These abilities are not only useful to high elven wizards and sorcerers; high elven warriors are fierce and dexterous and are feared by their foes. While all high elves have been refined by magic, some choose to push the limits, modifying their own physicality with their powers. It is not out of the ordinary to find high elves who have changed themselves to meet their own, otherwise impossible standards of beauty. Some have hair as dark as the night sky which shimmers as if by starlight, others of ocean blue, or fiery red. Some have angular faces, crafted by artisans with centuries of practice. There are also those who change their look as the centuries pass and new bodies come into style.  
@@ -1549,6 +1804,63 @@ Because of their long lives and mastery of magic, high elves are preceded by a r
   
 #### Stats and Abilities
 __Health Dice:__ 1d4 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-sleepless">  
+
+  
+##### Sleepless
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-inherent magic">  
+
+  
+##### Inherent Magic
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You were born with inherent magical ability. Begin your adventure with two tier zero spells from any spellbook. If you are a casting class, these spells are considered a bonus.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-detect magic">  
+
+  
+##### Detect Magic
+__Cost:__ 1 Action Point __Duration:__ Concentration  __Range:__ Self   
+__Radius:__ 100 ft.   
+As you blink your eyes, the flows of magic become visible to you. While you are in this state, sources of magic appear to glow, and you may make perception checks to detect neaby magic.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-natural intellect">  
+
+  
+##### Natural Intellect
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You naturally retain and understand information. Add you expertise to intelligence checks made to recall lore or to understand the world around you.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-font of magic">  
+
+  
+##### Font of Magic
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Magic flows through you as surely as blood, guiding you and granting you power. Add one to your maximum number of action points.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1563,14 +1875,18 @@ __Health Dice:__ 1d4 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-wood elf">  
 
   
 ### Wood Elf
+<button onclick="printContent('printable-wood elf')">Print Wood Elf</button>  
+  
+  
 <img src='/site/images/race/wood_elf.jpg' class="raceClassImage" />
   
   
-_"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-The most common type of elf, wood elves flourish in the verdant glades of ancient forests. They move like shadows under the cover of their arboreal home, using magic to craft villages from living wood. Many have long, especially sensitive ears that taper to a point and hair and skin that helps them fade into underbrush. Magic has affected some further still; there are stories of wood elves with beast-like eyes and sharpened claws.  
+<span class="attribution">_"[Rinn"](https://www.deviantart.com/jeleynai/art/Rinn-Gift-767109597) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>The most common type of elf, wood elves flourish in the verdant glades of ancient forests. They move like shadows under the cover of their arboreal home, using magic to craft villages from living wood. Many have long, especially sensitive ears that taper to a point and hair and skin that helps them fade into underbrush. Magic has affected some further still; there are stories of wood elves with beast-like eyes and sharpened claws.  
   
   
 Some wood-elf tribes take to the deep, ancient places, far from the prying eyes of outsiders. These more than others guard the woods and their inhabitants from destructive forces. Other wood elves live nearer to the edge of the forest or even in small towns and villages. Such communities are full of skilled trappers, woodsmen, and guides who know how to use the forests without causing lasting harm. Wood elves who move to cities often describe a longing to return to the forest.  
@@ -1613,6 +1929,62 @@ Wood elves make fantastic trackers, and can often be found helping adventuring p
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-sleepless">  
+
+  
+##### Sleepless
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-natural tracker">  
+
+  
+##### Natural Tracker
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are naturally adept at tracking your foes. Add your expertise to checks made to track enemies or perceive their passing.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-meditative rest">  
+
+  
+##### Meditative Rest
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Whenever you rest, you can focus to regain one extra action point.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-natural agility">  
+
+  
+##### Natural Agility
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your elven heritage has gifted you with supernatural agility. Add your expertise to checks made to move quickly.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-hasten">  
+
+  
+##### Hasten
+__Cost:__ 1 Action Point __Duration:__ 5 Turns __Range:__ Self   
+Channel the magic within you to spur yourself to great speeds. For the ability's duration, you are Hastened.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1627,14 +1999,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-gnome">  
 
   
 ### Gnome
+<button onclick="printContent('printable-gnome')">Print Gnome</button>  
+  
+  
 <img src='/site/images/race/gnome.jpg' class="raceClassImage" />
   
   
-_"[Flying Gnome"](https://www.deviantart.com/thepastart/art/Flying-Gnome-499590161) by Thepastart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Tinkerers by nature, gnomes are two parts chaos, one part wonder. Among the other races, their verve is unmatched and the act of creation comes to them as easily as breathing. While Dwarves are known for constructions that will last ages, gnomes ply their talents in gears and acetaline torches. They were the inventors of fireworks, and automata, and so many other wonders. When visiting a village of gnomes, you fill find them running pell-mell from place to place, devoted entirely to their work until the closing bell rings. Then, the fun begins. Gnomish parties are reknown across the realms, as their hosts through they themselves as readily into play as they do their work.  
+<span class="attribution">_"[Flying Gnome"](https://www.deviantart.com/thepastart/art/Flying-Gnome-499590161) by Thepastart is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Tinkerers by nature, gnomes are two parts chaos, one part wonder. Among the other races, their verve is unmatched and the act of creation comes to them as easily as breathing. While Dwarves are known for constructions that will last ages, gnomes ply their talents in gears and acetaline torches. They were the inventors of fireworks, and automata, and so many other wonders. When visiting a village of gnomes, you fill find them running pell-mell from place to place, devoted entirely to their work until the closing bell rings. Then, the fun begins. Gnomish parties are reknown across the realms, as their hosts through they themselves as readily into play as they do their work.  
   
   
 While many gnomes live the industrial districts of cities, others can be found deep in the forest. These make their homes in great mushrooms, or high in forest canopies. Spotting a gnome is easy; they stand shorter than a halfling—three feet at the tallest—and have bright hair and wide eyes. A gnome in an adventuring party is a great asset, as they are natural problem solvers with a knack for thinking of out-of-the-box solutions.  
@@ -1673,6 +2049,73 @@ While many gnomes live the industrial districts of cities, others can be found d
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-tinker">  
+
+  
+##### Tinker
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have a mind for crafting. Add your expertise to all checks made with Tinker's Tools.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-perfect recall">  
+
+  
+##### Perfect Recall
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have an incredible memory, and can recall anything you spend one minute looking at in perfect detail.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-a mind for mechanics">  
+
+  
+##### A Mind for Mechanics
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have a deep natural grasp of systems and mechanics. Add your expertise to any intelligence check made to understand the purpose, intention, or design of something, or to determine by what process a goal might be achieved.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-little one">  
+
+  
+##### Little One
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your small size helps you to easily manuever through a battlefield. You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-single minded">  
+
+  
+##### Single Minded
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to shut out everything but the task at hand. Your focus is so intense that you gain Psycic Resistance.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-spirit of fun">  
+
+  
+##### Spirit of Fun
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You might work hard, but you play hard, too! Add your expertise to any checks made to play or compete.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1687,14 +2130,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-goblin">  
 
   
 ### Goblin
+<button onclick="printContent('printable-goblin')">Print Goblin</button>  
+  
+  
 <img src='/site/images/race/goblin.jpg' class="raceClassImage" />
   
   
-_"[Goblin archer"](https://www.deviantart.com/fjft-art/art/Goblin-archer-551201383) by FJFT-Art is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Wherever the peoples of the world gather, warpacks of goblins can be found, waiting and watching. Goblins are mainly found in mountains, marshes, caves, and hills, though in some rare instances they have been known to take to the water in great sailing ships. They are known to be skittish and careful, and will wait for opportune moments to ambush their opponents rather than meeting them head-on in battle. Goblins are often mistaken for orcs from a distance, but up close they are smaller, quicker, and often more clever. They plague lesser traveled roads, and it is common to see merchant caravans hire guards to stave off just such attacks.   
+<span class="attribution">_"[Goblin archer"](https://www.deviantart.com/fjft-art/art/Goblin-archer-551201383) by FJFT-Art is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Wherever the peoples of the world gather, warpacks of goblins can be found, waiting and watching. Goblins are mainly found in mountains, marshes, caves, and hills, though in some rare instances they have been known to take to the water in great sailing ships. They are known to be skittish and careful, and will wait for opportune moments to ambush their opponents rather than meeting them head-on in battle. Goblins are often mistaken for orcs from a distance, but up close they are smaller, quicker, and often more clever. They plague lesser traveled roads, and it is common to see merchant caravans hire guards to stave off just such attacks.   
   
   
 Goblins in a warpack swear their loyalty to a goblin king or queen. They are skittish, however, and will quickly break ranks and flea should their ruler fall in battle. Goblin rulers are renowned for their cruelty, using their might to lord over their subjects. Usually, goblins are unable to construct anything that will last; their buildings and monuments are often cobbled-together in a tangle of tied on boards and glued together stones. Instead, a goblin ruler will quickly lead its soldiers to take over a settlement or abandoned structure. The greatest goblin kingdoms are built in the ruined corpses of long abandoned dwarven cities.   
@@ -1739,6 +2186,67 @@ It is rare to find a goblin adventurer. Usually, such individuals have cast off 
   
 #### Stats and Abilities
 __Health Dice:__ 1d4 __Movement:__ 35ft   
+<div class="rnr-ability" id="ability-still warm">  
+
+  
+##### Still Warm
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Touch   
+A bit of warm meat does you wonders. Once per day, you may restore health by consuming raw meat.    
+__Tier 1 Healing:__ 2d4    
+__Tier 2 Healing:__ 4d4    
+__Tier 3 Healing:__ 4d10    
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-mantle">  
+
+  
+##### Mantle
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to easily scale to great heights. Add your expertise to checks made to climb.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-natural sneak">  
+
+  
+##### Natural Sneak
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You naturally meld into the shadows, and are able to move unseen. You are considered Inconspicuous.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-darkvision">  
+
+  
+##### Darkvision
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You have incredible night vision. You are permanently under the effects of Darvision.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-one of the pack">  
+
+  
+##### One of the Pack
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are used to fighting as a member of a pack. So long as you have at least one ally within 30ft, you are Fearless. If you have no allies within 100 feet in combat, you are immediately Frightened.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1753,14 +2261,18 @@ __Health Dice:__ 1d4 __Movement:__ 35ft
   
   
   
+<div class="printable-content" id="printable-halfling">  
 
   
 ### Halfling
+<button onclick="printContent('printable-halfling')">Print Halfling</button>  
+  
+  
 <img src='/site/images/race/halfling.jpg' class="raceClassImage" />
   
   
-_"[Houma"](https://www.deviantart.com/junica-hots/art/Houma-743629249) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Small enough to avoid notice, most halflings are content to live in peace and to watch the world slip slowly by. Short of stature—and often wide of stomach—halflings live in warm holes in the earth, or in the stumps of great trees, and in comfortable, straw-roofed shacks among their crops. Their hair is usually brown, and curly, covering their heads and the tops of their feet. Some halflings grow facial hair, though it is rare to see more than a mustache. Halfling adventurers are rare, as it takes a solid push to get them out of the door. Once they make up their mind, however, a halfling can quickly become a steadfast and cunning traveling companion.  
+<span class="attribution">_"[Houma"](https://www.deviantart.com/junica-hots/art/Houma-743629249) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Small enough to avoid notice, most halflings are content to live in peace and to watch the world slip slowly by. Short of stature—and often wide of stomach—halflings live in warm holes in the earth, or in the stumps of great trees, and in comfortable, straw-roofed shacks among their crops. Their hair is usually brown, and curly, covering their heads and the tops of their feet. Some halflings grow facial hair, though it is rare to see more than a mustache. Halfling adventurers are rare, as it takes a solid push to get them out of the door. Once they make up their mind, however, a halfling can quickly become a steadfast and cunning traveling companion.  
   
   
 Halflings can be broadly broken into two types, Fleetfoots and Hardfoots. Hardfoot halflings tend to be portly and jovial and to enjoy a good drink and as many meals as they can get. Fleetfoot halflings are thinner, and shorter—3'3" tall to a hardfoots 3'6"—and largely spend their time outdoors. Fleetfoots are generally more daring than hardfoots, and are much more likely to be seen in cities or adventuring parties.  
@@ -1802,6 +2314,65 @@ If a halfling becomes an adventurer, their speed and size can be of great use. W
   
 #### Stats and Abilities
 __Health Dice:__ 1d4 __Movement:__ 35ft   
+<div class="rnr-ability" id="ability-hamstring">  
+
+  
+##### Hamstring
+__Cost:__ None __Duration:__ Instantaneous   
+The bigger they are, the harder they fall! When you score a critical hit on an enemy that is larger than you, you may choose to hamstring them. They must make a spell power save or be Hindered on their next turn.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-hide underfoot">  
+
+  
+##### Hide Underfoot
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to bob and weave around the larger races. When you have two or more creatures adjacent to you, you are considered to be Dodging.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-warm butter">  
+
+  
+##### Warm Butter
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Touch   
+You are a naturally talented chef. Whenever you rest, you may choose to prepare food which heals all allies.    
+__Healing:__ 1d6    
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-soft bed">  
+
+  
+##### Soft Bed
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Self   
+You sleep very deeply. Whenever you sleep, you may choose to restore all of your health, action points, and luck, but for the full duration you are completely oblivious unless shaken awake.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-little one">  
+
+  
+##### Little One
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your small size helps you to easily manuever through a battlefield. You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1816,14 +2387,18 @@ __Health Dice:__ 1d4 __Movement:__ 35ft
   
   
   
+<div class="printable-content" id="printable-human">  
 
   
 ### Human
+<button onclick="printContent('printable-human')">Print Human</button>  
+  
+  
 <img src='/site/images/race/human.jpg' class="raceClassImage" />
   
   
-_"[Escape"](https://www.deviantart.com/gkb3rk/art/Escape-464097162) by gkb3rk is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Humans are quick to learn and are one of the most adaptable of the races. They can survive and even flourish in almost every environment imaginable, from cold, barren wastes to arid deserts, temperate forests to highlands, and humid, tropical regions. Given their adaptability there is an increasingly wide range of culture, dress, and language amongst human civilizations.   
+<span class="attribution">_"[Escape"](https://www.deviantart.com/gkb3rk/art/Escape-464097162) by gkb3rk is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Humans are quick to learn and are one of the most adaptable of the races. They can survive and even flourish in almost every environment imaginable, from cold, barren wastes to arid deserts, temperate forests to highlands, and humid, tropical regions. Given their adaptability there is an increasingly wide range of culture, dress, and language amongst human civilizations.   
   
   
 Most humans are incredibly sociable, and though some may claim to shun society, all human beings crave interaction. This is why the largest concentrations of humans are found in cities. Human intelligence is generally lauded as is their thirst for knowledge. However, human beings, particularly those of the male gender, tend to overestimate themselves. Understandably, this trait brings about many difficult situations. It should also be noted that humans are not particularly far minded. They frequently overestimate the impact a decision will have in the short term and underestimate its long term implications. Despite these pitfalls, their mental fortitude and dogged willpower make humans a force to be reckoned with.   
@@ -1864,6 +2439,66 @@ Both male and female humans grow hair on the top of their heads, though males ar
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-human endurance">  
+
+  
+##### Human Endurance
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are relentless when you set your mind to something. When you fail at a feat of strength or endurance, choose to instead succeed in twice the time, but take a level of exhaustion.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-adaptable">  
+
+  
+##### Adaptable
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+After a condition has afflicted them, humans are uniquely able to steel themselves against it in the future. If you are affected by a status effect, take advantage on saves against it until your next rest.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-rally cry">  
+
+  
+##### Rally Cry
+__Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self   
+__Radius:__ 30 ft.   
+Loose a rallying cry, filled with all the hope and ambition of man. All allies within the ability's radius are Inspired.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-specialized">  
+
+  
+##### Specialized
+__Cost:__ 1 Action Point __Duration:__ Passive  __Range:__ Self   
+Humans are a far-flung species, and no two are quite the same. Choose one of the following areas of expertise:    
+* __Free-Runner__ You are skilled at movement. Add your expertise to checks made to leap, run, climb, or otherwise traverse the world in an acrobatic way. 
+* __Athletic__ You are physically strong. Add your expertise to feats of raw strength such as lifting something heavy or bending iron bars. 
+* __Bookish__ You are highly intelligent. Add your expertise to intelligence checks made to understand the world around you, to recall lore, or to perform informal magic if you are a mage. 
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-one of many">  
+
+  
+##### One of Many
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Self   
+Regardless of your personality, you are naturally adept when you choose to step in to help. Whenever you take the 'Help' action, grant your ally an additional +1 to their check.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1878,14 +2513,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-lizkin">  
 
   
 ### Lizkin
+<button onclick="printContent('printable-lizkin')">Print Lizkin</button>  
+  
+  
 <img src='/site/images/race/lizkin.jpg' class="raceClassImage" />
   
   
-_"[Cleric of the three moons"](https://www.deviantart.com/themefinland/art/Cleric-of-the-three-moons-709879645) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
-Noble and proud, the Lizkin race commands great respect throughout the realms. Thought to be the descendants of dragons, lizkin appear as bipedal reptiles. They stand taller than most, with muscled frames and glittering scales. It is rare to set eyes on a lizkin, as there aren't many in the world. They are known to be loners, often found traveling long-forgotten roads or exploring desrted ruins. Each Lizkin is born with a deep sense of justice and purpose, and many take up the oath of a knight or paladin. While the Lizkin have no nation, it is rumored that they do congregate in hidden cities. The location of these is a closely guarded secret, though some clever scholars believe that they may be in the underground marshlands of the Abyssal Caverns, or perhaps even in a gated realm crafted by magic.  
+<span class="attribution">_"[Cleric of the three moons"](https://www.deviantart.com/themefinland/art/Cleric-of-the-three-moons-709879645) by ThemeFinland is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)_  
+</span>Noble and proud, the Lizkin race commands great respect throughout the realms. Thought to be the descendants of dragons, lizkin appear as bipedal reptiles. They stand taller than most, with muscled frames and glittering scales. It is rare to set eyes on a lizkin, as there aren't many in the world. They are known to be loners, often found traveling long-forgotten roads or exploring desrted ruins. Each Lizkin is born with a deep sense of justice and purpose, and many take up the oath of a knight or paladin. While the Lizkin have no nation, it is rumored that they do congregate in hidden cities. The location of these is a closely guarded secret, though some clever scholars believe that they may be in the underground marshlands of the Abyssal Caverns, or perhaps even in a gated realm crafted by magic.  
   
   
 Lizkins are tough, knowledgeable and deeply thoughtful creatures. They think of the forests and rivers as a part of themselves and hold an immense respect for nature and all its creatures. Lizkin are thought to have the same lifespan as elves and orcs, though when they grow old enough, they return home to their hidden cities. Lizkin who leave their ancestral homes find work in cities and towns as smiths, clerics, or guild members.  
@@ -1925,6 +2564,62 @@ As adventurers, Lizkin are powerful allies. Their deep sense of purpose and just
   
 #### Stats and Abilities
 __Health Dice:__ 1d8 __Movement:__ 25ft   
+<div class="rnr-ability" id="ability-membraned eyes">  
+
+  
+##### Membraned Eyes
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your eyes have a thin, transparent second lid. As such, your vision cannot be reduced by water, smoke, or other particles.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-shed tail">  
+
+  
+##### Shed Tail
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Self   
+Your tail is detatchable and grows back in about a week's time. Once per week, you may shed your tail to immediately break a grapple.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-poison resistance">  
+
+  
+##### Poison Resistance
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your heritage has given you a strong constitution. You are always considered to have Poison Resistance.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-armored scales">  
+
+  
+##### Armored Scales
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Gleaming scales as hard as steel cover you from snout to foot. Add +2 to your base evasion.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-taste air">  
+
+  
+##### Taste Air
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ 100 Feet  
+Your tounge is keen enough that you can taste the world around you on the wind. You are able to make perception checks within this ability's radius that are not based on vision, so long as there is a free flow of air.    
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -1939,14 +2634,18 @@ __Health Dice:__ 1d8 __Movement:__ 25ft
   
   
   
+<div class="printable-content" id="printable-orc">  
 
   
 ### Orc
+<button onclick="printContent('printable-orc')">Print Orc</button>  
+  
+  
 <img src='/site/images/race/orc.jpg' class="raceClassImage" />
   
   
-_"[Rakhven portrait"](https://www.deviantart.com/jeleynai/art/Rakhven-portrait-732800784) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-Orcs are a brutal race that range across the world. They can be found almost anywhere, from deep in caves where no explorer dares to tread, to the tops of snowy mountains where the winds howl and the snows never melt or die. They have a distaste crossing water, but can be found in swamps and bogs.  
+<span class="attribution">_"[Rakhven portrait"](https://www.deviantart.com/jeleynai/art/Rakhven-portrait-732800784) by Jeleynai is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>Orcs are a brutal race that range across the world. They can be found almost anywhere, from deep in caves where no explorer dares to tread, to the tops of snowy mountains where the winds howl and the snows never melt or die. They have a distaste crossing water, but can be found in swamps and bogs.  
   
   
 While some orcs become adventurers, many more can be found in vast warpacks. These uneasy alliances hold for as long as there is a common goal to achieve or a common enemy to fight. Orcs naturally fight amongst themselves, but the strong hand of a warchief can hold them in check. If a chief has earned the respect of the pack, the pack's members will follow their orders to the letter, even if it means a suicide mission. Because a common goal is the only thing holding a pack in sway, warchiefs must often eventually declare war against the world once local enemies are defeated.  
@@ -1988,6 +2687,68 @@ Orc adventurers often have a complicated past. Some are half-orc, the union of a
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-predator">  
+
+  
+##### Predator
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are naturally adept at tracking prey. Add your expertise to checks made to follow or detect the passage of an creature.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-brutish strength">  
+
+  
+##### Brutish Strength
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Orc are known for their vicious strength, which puts other creatures to shame. You may add your expertise to feats of raw strength.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-bellow">  
+
+  
+##### Bellow
+__Cost:__ 1 Action Point __Duration:__ Save  __Range:__ Self   
+__Radius:__ 60 ft.   
+Spittle flies from your mouth as you loose a terrible battle cry. As the bellow echoes in the air, enemies within the ability's radius must make a spell power save or become frightened. They may re-attempt their save at the end of each of their turns.     
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-still warm">  
+
+  
+##### Still Warm
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Touch   
+A bit of warm meat does you wonders. Once per day, you may restore health by consuming the raw meat of a fresh kill.    
+__Tier 1 Healing:__ 2d4    
+__Tier 2 Healing:__ 4d4    
+__Tier 3 Healing:__ 4d10    
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-vengeful death">  
+
+  
+##### Vengeful Death
+__Cost:__ None __Duration:__ Instantaneous   
+Orcs don't go down easily. When you fall to death's door, you may immediately make an attack.    
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -2002,14 +2763,18 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
   
   
   
+<div class="printable-content" id="printable-sprout">  
 
   
 ### Sprout
+<button onclick="printContent('printable-sprout')">Print Sprout</button>  
+  
+  
 <img src='/site/images/race/sprout.jpg' class="raceClassImage" />
   
   
-_"[Kynitia"](https://www.deviantart.com/deevad/art/Kynitia-322571692) by Deevad is licensed under [CC BY-SA 3.0 US](https://creativecommons.org/licenses/by-sa/3.0/us/)_  
-Sprouts are among the smallest races, and have an average height of just two and a half feet. Shy, bipedal beings with soft faces and childlike voices, it is easy to mistake them for children lost in the woods—if they are even spotted in the first place. Sprouts have skin of olive green, or tree-bark brown, or sunkist yellow. They wear hair only on their heads, which is usually long and left to hang freely about their shoulders. Sprouts move unseen and unheard through the underbrush of their forest homes, watching travelers with wary eyes. If a sprout decides you are dangerous, you will likely never see it. If you seem harmless, the sprout's natural curiosity will quickly get the better of it, and it will begin testing you to see if you are hiding secret aggression by playing harmless tricks.  
+<span class="attribution">_"[Kynitia"](https://www.deviantart.com/deevad/art/Kynitia-322571692) by Deevad is licensed under [CC BY-SA 3.0 US](https://creativecommons.org/licenses/by-sa/3.0/us/)_  
+</span>Sprouts are among the smallest races, and have an average height of just two and a half feet. Shy, bipedal beings with soft faces and childlike voices, it is easy to mistake them for children lost in the woods—if they are even spotted in the first place. Sprouts have skin of olive green, or tree-bark brown, or sunkist yellow. They wear hair only on their heads, which is usually long and left to hang freely about their shoulders. Sprouts move unseen and unheard through the underbrush of their forest homes, watching travelers with wary eyes. If a sprout decides you are dangerous, you will likely never see it. If you seem harmless, the sprout's natural curiosity will quickly get the better of it, and it will begin testing you to see if you are hiding secret aggression by playing harmless tricks.  
   
   
 Most sprout communities keep to themselves, hidden away in the secluded reaches of ancient woods. There, they tend the trees and cultivate the forest—healing rot, clearing fallen branches, and helping new saplings to find the sun. While sprouts can be mistaken for halflings or children, they are put together in a far different manner. Thin, greenish sap flows through a sprout's body in place of blood, quickly sealing any injuries that it sustains. Sprouts reject meat by nature, instead gaining their sustenance from leafy sticks, acorns, and sunlight.  
@@ -2051,6 +2816,83 @@ Because of their size, sprouts generally lack strength and the health needed to 
   
 #### Stats and Abilities
 __Health Dice:__ 1d4 __Movement:__ 35ft   
+<div class="rnr-ability" id="ability-woodland home">  
+
+  
+##### Woodland Home
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are deeply at home in the forests and glades of the world. So long as you are surrounded by plants, add your expertise to stealth and tracking checks.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-regrowth">  
+
+  
+##### Regrowth
+__Cost:__ 1 Action Point __Duration:__ 5 Turns __Range:__ Self   
+Green sap oozes from your wounds, slowly sealing them. Restore health every minute or turn for the ability's duration.    
+__Tier 1 Healing:__ 1d4    
+__Tier 2 Healing:__ 1d6    
+__Tier 3 Healing:__ 1d8    
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-riding high">  
+
+  
+##### Riding High
+__Cost:__ None __Range:__ Self   
+As an action, clamber atop a teammate to ride them. While you are riding, both you and your ally gain advantage on accuracy checks while targeting the same enemy. Furthermore, you are considered to be Guarded while riding a party member.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-forest aid">  
+
+  
+##### Forest Aid
+__Cost:__ 1 Action Point __Duration:__ 1 Hour  __Range:__ Self   
+All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-compost">  
+
+  
+##### Compost
+__Cost:__ None __Duration:__ Instantaneous  __Range:__ Self   
+When you take your rest, you may consume nearby plants to aid in your healing. Restore extra health equal to the amount rolled.    
+__Tier 1 Healing:__ 1d4    
+__Tier 2 Healing:__ 2d4    
+__Tier 3 Healing:__ 3d4    
+  
+  
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-little one">  
+
+  
+##### Little One
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your small size helps you to easily manuever through a battlefield. You are able to move through the space of any creature that is larger than you. You are still vulnerable to exposed attacks.      
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -2065,14 +2907,18 @@ __Health Dice:__ 1d4 __Movement:__ 35ft
   
   
   
+<div class="printable-content" id="printable-waterborn">  
 
   
 ### Waterborn
+<button onclick="printContent('printable-waterborn')">Print Waterborn</button>  
+  
+  
 <img src='/site/images/race/waterborn.jpg' class="raceClassImage" />
   
   
-_"[Dark Elf"](https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
-A subaquatic race, most waterborn live near the surface. Sisters to the sirens of legend, these are of unparalleled beauty. They live in gleaming cities just below the surface and trade and socialize with nearby land-dwellers. Because their underwater homes hinder the forging of metal, waterborn have developed a complex method of weaving together magic and coral to craft their homes and tools. Even the high-elves have been unable to replicate the feat, and waterborn jewelry and armor is sought after across the realms. Others waterborn live deep below the waves, making their homes in the darkest reaches of the oceans. With large eyes and pale skin, deep-waterborn are truly alien, and are rarely if ever spotted, though each year a few wash up on beaches across the realms. Sailors take heed of such sightings, as tales have been spun about pale forms climbing the edges of ships and pulling unwitting sailors down and into a deep, dark grave.  
+<span class="attribution">_"[Dark Elf"](https://www.deviantart.com/junica-hots/art/Dark-Elf-706830603) by Junica-Hots is licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/)_  
+</span>A subaquatic race, most waterborn live near the surface. Sisters to the sirens of legend, these are of unparalleled beauty. They live in gleaming cities just below the surface and trade and socialize with nearby land-dwellers. Because their underwater homes hinder the forging of metal, waterborn have developed a complex method of weaving together magic and coral to craft their homes and tools. Even the high-elves have been unable to replicate the feat, and waterborn jewelry and armor is sought after across the realms. Others waterborn live deep below the waves, making their homes in the darkest reaches of the oceans. With large eyes and pale skin, deep-waterborn are truly alien, and are rarely if ever spotted, though each year a few wash up on beaches across the realms. Sailors take heed of such sightings, as tales have been spun about pale forms climbing the edges of ships and pulling unwitting sailors down and into a deep, dark grave.  
   
   
 Waterborn stand taller than most, with thin limbs that end in webbed fingers. They have fine features. Their skin is often blue, though pale grey or green waterborn have been seen in frigid or tropical oceans. Waterborn have unique lungs which are able to extract the oxygen from water but which can also breathe air. However, even though they can breathe on land, a waterborn will slowly dry out over time, and must periodically submerge themselves for their health.  
@@ -2111,6 +2957,62 @@ Waterborn stand taller than most, with thin limbs that end in webbed fingers. Th
   
 #### Stats and Abilities
 __Health Dice:__ 1d6 __Movement:__ 30ft   
+<div class="rnr-ability" id="ability-water breathing">  
+
+  
+##### Water Breathing
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You are able to breathe water like air, and can hold your breath for far longer than most. So long as you do not speak, you may stay concious without breathing for up to a full day.    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-dried out">  
+
+  
+##### Dried Out
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You must periodically submerge yourself in water to stay healthy. For every week that you do not submerge yourself in water for at least one long rest, take a level of exhuastion which cannot be removed by normal rest. When you are in an arid climate, this occurrs once per day unless you are able to rest in a suitably cool and wet environment.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-flow like water">  
+
+  
+##### Flow Like Water
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Your anatomy allows you to move very quickly in water. With webbed hands and feet, you are able to achieve a swimming speed equal to twice your base movement speed.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-natural charisma">  
+
+  
+##### Natural Charisma
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Like your forebearer's, the sirens, you have a natural affinity for winning people over. Add your expertise to any charisma check made to convince or beguile someone.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-control water">  
+
+  
+##### Control Water
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+You linked to the sea, and have a natural command over the waters around you. Even if you are not a caster, you are able to perform simple feats of water magic using the rules for Informal Magic. If you are a caster, add your expertise to such checks.    
+  
+  
+  
+  
+</div>  
+</div>  
   
   
 ---  
@@ -2130,11 +3032,13 @@ __Health Dice:__ 1d6 __Movement:__ 30ft
 ## Classes
 {::options parse_block_html="true" /}  
 <details><summary markdown="span">View the Classes</summary>  
-<button onclick="printContent('printable-barbarian')">Print Barbarian</button>  
 <div class="printable-content" id="printable-barbarian">  
 
   
 ### Barbarian
+<button onclick="printContent('printable-barbarian')">Print Barbarian</button>  
+  
+  
 <img src='/site/images/class/barbarian.jpg' class="raceClassImage" />
   
   
@@ -2495,11 +3399,13 @@ __Tier 3 Damage:__ 1d10 Inherited
   
   
   
-<button onclick="printContent('printable-bard')">Print Bard</button>  
 <div class="printable-content" id="printable-bard">  
 
   
 ### Bard
+<button onclick="printContent('printable-bard')">Print Bard</button>  
+  
+  
 <img src='/site/images/class/bard.jpg' class="raceClassImage" />
   
   
@@ -3285,11 +4191,13 @@ Gather your strength and perform an ancient ritual of obfuscation. Alter the min
   
   
   
-<button onclick="printContent('printable-cleric')">Print Cleric</button>  
 <div class="printable-content" id="printable-cleric">  
 
   
 ### Cleric
+<button onclick="printContent('printable-cleric')">Print Cleric</button>  
+  
+  
 <img src='/site/images/class/cleric.jpg' class="raceClassImage" />
   
   
@@ -4057,11 +4965,13 @@ A halo blazes about your head, shedding radiant light in a radius around you. Fo
   
   
   
-<button onclick="printContent('printable-druid')">Print Druid</button>  
 <div class="printable-content" id="printable-druid">  
 
   
 ### Druid
+<button onclick="printContent('printable-druid')">Print Druid</button>  
+  
+  
 <img src='/site/images/class/druid.jpg' class="raceClassImage" />
   
   
@@ -4870,11 +5780,13 @@ Lifetimes ripple out behind you and merge into one as the knowledge of your ance
   
   
   
-<button onclick="printContent('printable-fighter')">Print Fighter</button>  
 <div class="printable-content" id="printable-fighter">  
 
   
 ### Fighter
+<button onclick="printContent('printable-fighter')">Print Fighter</button>  
+  
+  
 <img src='/site/images/class/fighter.jpg' class="raceClassImage" />
   
   
@@ -5232,11 +6144,13 @@ You are highly proficient with all weapons. Increase the dice size of any weapon
   
   
   
-<button onclick="printContent('printable-knight')">Print Knight</button>  
 <div class="printable-content" id="printable-knight">  
 
   
 ### Knight
+<button onclick="printContent('printable-knight')">Print Knight</button>  
+  
+  
 <img src='/site/images/class/knight.jpg' class="raceClassImage" />
   
   
@@ -5605,11 +6519,13 @@ As danger closes in about your allies, use your power to convert any Guardian Wa
   
   
   
-<button onclick="printContent('printable-monk')">Print Monk</button>  
 <div class="printable-content" id="printable-monk">  
 
   
 ### Monk
+<button onclick="printContent('printable-monk')">Print Monk</button>  
+  
+  
 <img src='/site/images/class/monk.jpg' class="raceClassImage" />
   
   
@@ -5960,11 +6876,13 @@ Through constant training, you have hardened your body to physical damage. You a
   
   
   
-<button onclick="printContent('printable-rogue')">Print Rogue</button>  
 <div class="printable-content" id="printable-rogue">  
 
   
 ### Rogue
+<button onclick="printContent('printable-rogue')">Print Rogue</button>  
+  
+  
 <img src='/site/images/class/rogue.jpg' class="raceClassImage" />
   
   
@@ -6319,11 +7237,13 @@ __Tier 3 Damage:__ 2d12 Inherited
   
   
   
-<button onclick="printContent('printable-warlock')">Print Warlock</button>  
 <div class="printable-content" id="printable-warlock">  
 
   
 ### Warlock
+<button onclick="printContent('printable-warlock')">Print Warlock</button>  
+  
+  
 <img src='/site/images/class/warlock.jpg' class="raceClassImage" />
   
   
@@ -7122,11 +8042,13 @@ Subdue a creature and restrain them with magic. Using a void prism, create a poc
   
   
   
-<button onclick="printContent('printable-wizard')">Print Wizard</button>  
 <div class="printable-content" id="printable-wizard">  
 
   
 ### Wizard
+<button onclick="printContent('printable-wizard')">Print Wizard</button>  
+  
+  
 <img src='/site/images/class/wizard.jpg' class="raceClassImage" />
   
   
