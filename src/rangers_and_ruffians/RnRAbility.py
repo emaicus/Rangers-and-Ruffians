@@ -14,22 +14,21 @@ class StatusEffect():
     global EFFECTS
     if EFFECTS is None:
       try:
-        print('loading')
         with open(INSTALL_DIRECTORY.joinpath('status_effects.json'), 'r') as infile:
           EFFECTS = json.load(infile)
-        print('loaded')
       except Exception:
         print('Status Effects file not found.')
         print(traceback.format_exc())
 
-
     value = seek_effect(name)
-
 
     self.name = name
     self.balance = value['balance'] 
     self.numeric_balance = 1 #int(rnr_balance.get_balance_value('effect_ranking')[balance])
     self.about = value['about']
+
+  def serialize(self):
+    return self.name
 
   def get_markdown(self):
     return self.about
@@ -136,6 +135,34 @@ class RnRAbility():
 
     return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
                summoned_creature, action_type, effect, options, dict_data=dict_data)
+
+  def serialize(self):
+    serial = dict()
+    serial['name'] = self.name 
+    serial['type'] = self.type
+    serial['spellbook'] = self.spellbook
+    serial['cost'] = self.cost 
+    serial['duration'] = self.duration
+    serial['casting_time'] = self.casting_time
+    serial['range'] = self.range
+    serial['radius'] = self.radius 
+    serial['is_aoe'] = self.is_aoe
+    serial['description'] = self.description
+    serial['requirements'] = self.requirements 
+    serial['damage_scaling'] = self.damage 
+    serial['upcast'] = self.upcast 
+    serial['summoned_creature'] = self.summoned_creature 
+    serial['action_type'] = self.action_type 
+    if self.effect is None:
+      serial['effect'] = None 
+    else:
+      serial['effect'] = dict()
+      serial['effect']['conditions'] = list()
+      for condition in self.effect['conditions']:
+        serial['effect']['conditions'].append(condition.serialize())
+    serial['options'] = self.options
+
+    return serial
 
   def get_markdown(self, level=None, succinct=False):
     spell_text = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'

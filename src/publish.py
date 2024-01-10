@@ -437,10 +437,11 @@ def setup_service_worker():
   os.chdir(site_path)
   os.system("node build.js")
   shutil.copy(site_service_worker_path, intended_service_worker_path)
-  os.chdir(core.CODE_DIRECTORY)
+  os.chdir(core.CODE_DIRECTORY.parent)
 
 
 if __name__ == "__main__":
+ 
   core.printLogo()
 
   # with open('races.md', 'w') as outfile:
@@ -504,7 +505,7 @@ if __name__ == "__main__":
   print(f"Loaded RnR version {rnr_game.get_full_version()}")
 
   copyImages(rnr_game)
-  #publish_rulebook(force_overwrite)
+  # publish_rulebook(force_overwrite)
   publish_monsters(rnr_game, force_overwrite)
   # publish_pantheon(force_overwrite)
   publish_character_creation(rnr_game, force_overwrite)
@@ -517,3 +518,9 @@ if __name__ == "__main__":
   # create_alt_all_race_class_json()
   setup_service_worker()
   print("Done!")
+
+  rnr_game.print_statistics()
+
+  serial = rnr_game.serialize()
+  with open('serialize.json', 'w') as f:
+    json.dump(serial, f, indent=4)

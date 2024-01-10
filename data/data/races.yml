@@ -1205,20 +1205,6 @@
                 conditions:
                     - custom 
                 save: null
-        -   name: Very Dangerous over Short Distances
-            cost: 0
-            type: buff 
-            passive_damage_source: true 
-            range: inherited
-            duration: passive 
-            ability_modified: martial attack 
-            description: "You may not be the fastest, but once you close with an enemy, they're in trouble!"
-            effect:
-                type: buff 
-                description: "If you begin your turn within melee range of an enemy, deal an extra 1d6 damage on any attacks that you make against them before you take your movement."
-                conditions:
-                    - custom 
-                save: null
         -   name: Dwarven Momentum
             cost: 0
             type: buff 
@@ -1231,6 +1217,18 @@
                               If an ability calls for you to be halted, roll any saves at advantage."
                 conditions:
                     - custom 
+                save: null
+        -   name: Incombustible
+            cost: 0
+            type: buff
+            range: self 
+            duration: passive 
+            description: "Dwarves have thick skin, which is naturally resistant to heat."
+            effect: 
+                type: buff 
+                description: "At all times, you are considered to have Fire Resistance."
+                conditions:
+                    - fire resistance 
                 save: null
     handbook:
         introduction:

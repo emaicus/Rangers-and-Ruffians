@@ -135,7 +135,7 @@ __What two things did you wake up with (roll twice)?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Amnesiac, you begin your journey with:  
 * Two gold per character level  
 * A Potion of Minor Healing  
@@ -191,7 +191,7 @@ __Where is your mentor now?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Apprentice, you begin your journey with:  
 * Three gold per character level  
 * An Adventurer's Kit  
@@ -220,7 +220,7 @@ To resist is death. As a Blackmailed, someone is controlling you. Maybe it is a 
   
   
 __What did you do before you were a hunted?__  
- 1. Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equiptment from your second background.    
+ 1. Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equipment from your second background.    
   
   
 __Who holds sway over you?__  
@@ -243,7 +243,7 @@ __How do they control you?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Blackmailed, you begin your journey with:  
 * A cryptic letter from your blackmailer  
   
@@ -297,7 +297,7 @@ __What is your fighter's quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Brawler, you begin your journey with:  
 * Five gold per character level  
 * Two Common Weapons  
@@ -357,7 +357,7 @@ __What two things need to happen before your destiny can unfold (roll twice)?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Chosen, you begin your journey with:  
 * Five gold per character level  
 * A Masterwork 1 Shortsword or Rapier  
@@ -415,7 +415,7 @@ __What is your relationship with your faith?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Disciple, you begin your journey with:  
 * Three gold per character level  
 * A holy symbol  
@@ -473,7 +473,7 @@ __What is your entertainer's quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Entertainer, you begin your journey with:  
 * Five gold per character level  
 * A Common Dagger  
@@ -529,12 +529,12 @@ __What is your explorer's quirk?__
  5. I am so used to roughing it in the wilds that I no longer fit in society.    
  6. I have an anecdote for every situation. "This reminds me of that time in the goblin city of Gnorth, when..."    
  7. I am always naming the new things that I find, even if they may have already been discovered.    
- 8. All of my equiptment has been with me for so long that I consider it "trusty," and refuse to upgrade.    
+ 8. All of my equipment has been with me for so long that I consider it "trusty," and refuse to upgrade.    
   
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Explorer, you begin your journey with:  
 * Five gold per character level  
 * A common Dagger  
@@ -593,7 +593,7 @@ __What is your servant like?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Highborn, you begin your journey with:  
 * 100 gold per character level  
 * A Masterwork 1 Weapon  
@@ -625,7 +625,7 @@ It follows. Something from your past is chasing you, and it's getting closer. Ma
   
   
 __What did you do before you were a hunted?__  
- 1. Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equiptment from your second background.    
+ 1. Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equipment from your second background.    
   
   
 __Who is hunting you?__  
@@ -648,7 +648,7 @@ __Why are you being hunted?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Hunted, you begin your journey with:  
 * An item related to the person, group, or creature that is hunting you  
   
@@ -702,7 +702,7 @@ __What tends to go wrong with your inventions?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Inventor, you begin your journey with:  
 * Five gold per character level  
 * A Common Handgun  
@@ -759,7 +759,7 @@ __Why did you take up a life of adventure?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Layperson, you begin your journey with:  
 * Three gold per character level  
 * A Common Quarterstaff  
@@ -816,7 +816,7 @@ __What is your Recluse's Quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Recluse, you begin your journey with:  
 * Two gold per character level  
 * An Adventurer's Kit  
@@ -875,7 +875,7 @@ __What is your Retired Adventurer's Quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Retired Adventurer, you begin your journey with:  
 * Five gold per character level  
 * A Masterwork 1 Weapon  
@@ -933,7 +933,7 @@ __What is your ruffian's quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Ruffian, you begin your journey with:  
 * Five gold per character level  
 * A Thieve's Kit  
@@ -990,7 +990,7 @@ __What forced you into the field?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Scholar, you begin your journey with:  
 * Three gold per character level  
 * A collection of books  
@@ -1048,7 +1048,7 @@ __Where are the people you serve now?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Servant, you begin your journey with:  
 * Three gold per character level  
 * A letter of invitation from the people you serve  
@@ -1104,7 +1104,7 @@ __How did you end up as an adventurer?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As an Urchin, you begin your journey with:  
 * One gold piece per character level  
 * A Common Dagger  
@@ -1161,7 +1161,7 @@ __What is your wanderers quirk?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Wanderer, you begin your journey with:  
 * Three gold per character level  
 * A Common Dagger  
@@ -1218,7 +1218,7 @@ __From what source do you draw your wisdom?__
   
   
   
-__Starting Equiptment__  
+__Starting Equipment__  
 As a Wisdom, you begin your journey with:  
 * Two gold per character level  
 * A Common Quarterstaff  
@@ -1586,23 +1586,23 @@ You have a knack for evaluating an object's worth—and at getting your hands on
   
   
 </div>  
-<div class="rnr-ability" id="ability-very dangerous over short distances">  
-
-  
-##### Very Dangerous over Short Distances
-__Cost:__ None __Duration:__ Passive   
-You may not be the fastest, but once you close with an enemy, they're in trouble! If you begin your turn within melee range of an enemy, deal an extra 1d6 damage on any attacks that you make against them before you take your movement.      
-  
-  
-  
-  
-</div>  
 <div class="rnr-ability" id="ability-dwarven momentum">  
 
   
 ##### Dwarven Momentum
 __Cost:__ None __Duration:__ Passive  __Range:__ Self   
 Once you start moving, you are very hard to stop. Whenever an effect or item calls for your speed to be decreased but not reduced to zero, halve the amount and round down to the nearest 5ft. If an ability calls for you to be halted, roll any saves at advantage.      
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-incombustible">  
+
+  
+##### Incombustible
+__Cost:__ None __Duration:__ Passive  __Range:__ Self   
+Dwarves have thick skin, which is naturally resistant to heat. At all times, you are considered to have Fire Resistance.      
   
   
   
@@ -3650,7 +3650,7 @@ __Tier 3 Damage:__ 3d6 Psychic
 __Cost:__ 1 Action Point __Duration:__ 1 Hour  __Range:__ 30 Feet  
 __Components:__ _m, v, An acorn_  
 Seemingly from nowhere, hundreds of squirrels pour out of every nook and cranny around you. Good God! They're _everywhere!_ And these vicious beasts are yours to command! May they lay your enemies low!    
-__Tier 1 Summon:__ Minor Swarm  
+__Tier 1 Summon:__ Swarm  
 __Tier 2 Summon:__ Greater Swarm  
 __Tier 3 Summon:__ Zounds!  
   
@@ -3842,8 +3842,7 @@ As you strike a note, a 5x5x1 foot wall of sound bursts into existence at a poin
 ##### Invisible Servant
 __Cost:__ 1 Action Point __Duration:__ 1 Hour  __Range:__ 30 Feet  
 __Components:__ _m, v, A scrap of noble clothing_  
-With a snap of your fingers, you summon an invisible servant to aid you. The servant has no mind of its own, but is instead a manifestation of you will, and will follow your orders to the letter.    
-__Summon:__ Invisible Servant  
+With a snap of your fingers, you summon an invisible servant to aid you. The servant has no mind of its own, but is instead a manifestation of you will, and will follow your orders to the letter. Invisible servants are of little use in combat. As an action, you may have your invisible servant attempt to grapple someone.    
   
   
   
@@ -4071,10 +4070,9 @@ Close your eyes and repeat three times the words 'Whisked away, vanished' and th
 
   
 ##### Winged Magic Steed
-__Cost:__ 2 Action Points __Duration:__ Infinite  __Range:__ 30 Feet  
+__Cost:__ 2 Action Points __Duration:__ Concentration  __Range:__ 30 Feet  
 __Components:__ _m, v_  
 Raise your fingers to your mouth and whistle. Instantly, a winged steed appears, made of pure magical energy. The stallion may be de-summoned on command. If you have access to Conjure Carriage, it may be used in conjunction with this spell at no cost.    
-__Summon:__ Winged Steed  
   
   
   
@@ -5260,7 +5258,6 @@ Closing your eyes, you call upon the air or water to raise a mighty tailwind or 
 __Cost:__ 1 Action Point __Duration:__ 1 Day  __Range:__ Self   
 __Components:__ _m, v_  
 Smoothly as though you were donning a garment, your body transforms into that of a non-magical animal that you have encountered before. In combat, transform yourself into any of the creatures with the 'Transformation' feature in the rulebook. For the spell's duration, you are affected by the Transformed condition.You may change back at any time as an action.  Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah.     
-__Summon:__ transformed  
   
   
   
@@ -6249,6 +6246,33 @@ As a foe falls to your blade, use the oportunity to push into their ranks. Whene
   
   
 </div>  
+<div class="rnr-ability" id="ability-enhanced healing">  
+
+  
+##### Enhanced Healing
+__Cost:__ None __Duration:__ Instantaneous   
+When you heal an ally who has a guardian ward, a shean of gold blazes around them. Your healing restores bonus health to them.    
+__Tier 1 Healing:__ 1d6    
+__Tier 2 Healing:__ 2d6    
+__Tier 3 Healing:__ 3d6    
+  
+  
+  
+  
+</div>  
+<div class="rnr-ability" id="ability-faithful weapon">  
+
+  
+##### Faithful Weapon
+__Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Self   
+__Radius:__ 1 mile   
+You have gained the ability to bind yourself magically to a weapon. Whenever you rest, you may pray over a weapon to impart it with the intention of your diety. From then on, the weapon deals bonus damage. You may also summon it at any time, so long as it is within the abilities radius, and it will fly to your hand in as straight a line as it can manage. You may bind yourself to at most one weapon in this way at a time.    
+__Damage:__ 1d6 Radiant   
+  
+  
+  
+  
+</div>  
 <div class="rnr-ability" id="ability-goading attack">  
 
   
@@ -6821,8 +6845,8 @@ __Tier 3 Damage:__ 2d12 Inherited
 
   
 ##### Spiritual Aid
-__Cost:__ 1 Action Point __Duration:__ Instantaneous  __Range:__ Touch   
-Lay your hands on an ally who is suffering. Your peace of mind flows into them, removing any status effects that ail them. Spiritual Aid does not affect curses or some powerful abilities as determined by the Grand Poohbah.    
+__Cost:__ 1 Action Point __Duration:__ 5 Minutes  __Range:__ Self   
+Summon a spiritual version of yourself to stand beside you. When you close your eyes, you may take control of the projection. The projection is Ethereal, and remains for the duration of the ability or until you choose to make a single hand to hand attack through it. The projection  Ethereal creatures exist on the ethereal plane. They are visible but translucent, and cannot be affected by physical attacks. They are able to pass through any substance less than one inch thick. An ethereal creature cannot attack or cast spells that affect targets that are not also bound to the ethereal plane.     
   
   
 </div>  
@@ -7471,8 +7495,7 @@ Embed a magical eye in a non-living material. The eye has 1 hit point, but is et
 __Cost:__ 2 Action Points __Duration:__ Infinite  __Range:__ 30 Feet  
 __Casting Time:__ 10 Minutes   
 __Components:__ _v, Charcoal, Insense, and Herbs (10gp)_  
-Summon a small animal such as a bat, dog, or rat to be your familiar. The familiar follows your instructions. If you have the spell Embed Eye, you may use it to add an eye to your familiar. If your familiar is de-summoned or killed, you may cast this spell again to bring it back. You may spend one action point to instantly teleport your familiar to yourself, but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form.    
-__Summon:__ Familiar  
+Summon a small animal such as a bat, dog, or rat to be your familiar. The familiar follows your instructions. If you have the spell Embed Eye, you may use it to add an eye to your familiar. If your familiar is de-summoned or killed, you may cast this spell again to bring it back. You may spend one action point to instantly teleport your familiar to yourself, but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form. Your familiar has one hit point and evasion equal to your spell power.    
   
   
   
@@ -7596,7 +7619,7 @@ __Components:__ _m, v_
 Reach across the void and pull a maddened spirit from the darkness. A corpse within range disappears and is replaced with a summoned thrall. The thrall is mindless, obeying only you. It can neither speak nor reason, though if you give it simple instructions it will attempt to carry them out.    
 __Tier 1 Summon:__ Undead Thrall  
 __Tier 2 Summon:__ Greater Undead Thrall  
-__Tier 3 Summon:__ Undead Champion  
+__Tier 3 Summon:__ Greater Undead Thrall  
   
   
   
@@ -7780,8 +7803,7 @@ Tear a rift in the fabric of reality. Anyone who jumps through is transported to
 ##### Eyes of Uriel
 __Cost:__ 2 Action Points __Duration:__ 1 Hour  __Range:__ Touch   
 __Components:__ _m, v_  
-Summon 1d4+1 Eyes of Uriel. For the spell's duration, you are able to see through the eyes. If an eye is within 15 feet of you when you are attacked, it is able to take the damage in your stead.    
-__Summon:__ Eye of Uriel  
+As you hold both hands aloft, 1d4+1 eyes suddenly open in the air behind you. Each is the size of a balled fist, and they float in a halo about you. The eyes move slowly, and travel at about the walking speed of a normal person, fifteen feet per turn. If you concentrate, you can see through the eyes. When the eyes close, they become Ethereal and cannot be seen. If an eye is within fifteen feet of an attack, you may use your reaction to cause the eye to sacrifice itself and become the attack's target instead.  Ethereal creatures exist on the ethereal plane. They are visible but translucent, and cannot be affected by physical attacks. They are able to pass through any substance less than one inch thick. An ethereal creature cannot attack or cast spells that affect targets that are not also bound to the ethereal plane.     
   
   
   
@@ -8319,8 +8341,8 @@ __Tier 3 Damage:__ 1d8 Arcane
 __Cost:__ 1 Action Point __Duration:__ Infinite  __Range:__ Self   
 __Components:__ _m, Tallow_  
 Channel your magic into a bit of tallow or other fat and eat it. As you chew, your body melts and oozes and you Transform into a slime.  Transformed creatures take on the Strength, Dexterity, Perception, Health, Evasion, and Movement Speed of the creature that they have turned into. They cannot use the abilities of their original state, except for those which allow them to transform back into that form. If a transformed creature reaches zero health, they immediately revert to their original form and lose an amount of health equal to the maximum health of the creature they transformed into. Creatures which cast a spell or use an ability to voluntarily transform may spend an action to transform back to their original state, unless otherwise stated by a rule or by the Grand Poohbah.     
-__Tier 1 Summon:__ Lesser Slime  
-__Tier 2 Summon:__ Greater Slime  
+__Tier 1 Summon:__ Lesser Green Slime  
+__Tier 2 Summon:__ Green Slime  
 __Tier 3 Summon:__ Black Slime  
   
   
@@ -8437,7 +8459,7 @@ __Components:__ _m, v, Fifty pounds of scrap material, rocks, or other items whi
 Using items nearby, summon an arcane construct. You may command at most two such constructs at a time. You may give your constructs simple commands and they will follow them without deviating regardless of distance.    
 __Tier 1 Summon:__ Arcane Construct  
 __Tier 2 Summon:__ Clockwork Soldier  
-__Tier 3 Summon:__ Clockwork Knight  
+__Tier 3 Summon:__ Arcane Automaton  
   
   
   
@@ -8691,11 +8713,13 @@ __Tier 3 Damage:__ 4d6 Arcane
 
   
 ##### Igna Bokak
-__Cost:__ 2 Action Points __Duration:__ 10 Turns __Range:__ 30 Feet  
+__Cost:__ 2 Action Points __Duration:__ 3 Turns __Range:__ 30 Feet  
 __Components:__ _m, v, A phoneix feather (100gp)_  
-Clutching the feather of a Firebird in your hands, you scream the ancient words: IGNA, BOKAK! The feather immolates in flash of blinding light and a phoenix appears to aid you!    
-__Tier 2 Summon:__ firebird  
-__Tier 3 Summon:__ phoneix  
+Clutching the feather of a phoenix in your hands, you scream the ancient words: IGNA, BOKAK! At once, the feather bursts into flame and a blazing Firebird appears above your head and streaks towards an enemy of your choosing. The creature leaves a path of fire in its wake, and anyone who walks through it takes 2d6 damage. The bird then attacks your foe each turn for three turns.    
+__Tier 2 Damage:__ 2d6 Arcane   
+__Tier 3 Damage:__ 3d6 Arcane   
+  
+  
   
   
   

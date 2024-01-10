@@ -12,7 +12,7 @@ class RnRClass():
     self.expertise = rnr_classdata['expertise']
     self.is_mage = 'skill_tree' not in rnr_classdata
     self.abilities = list()
-    
+
     self.skill_tree_abilities = list()
     self.skill_tree = None
     self.spells = dict()
@@ -36,7 +36,28 @@ class RnRClass():
       all_abilities += self.abilities
     return all_abilities
 
-  
+  def serialize(self):
+    serial = dict()
+    serial['name'] = self.name 
+    serial['recommended_stats'] = self.stat_recommendation 
+    serial['handbook'] = self.handbook 
+    serial['health_dice'] = self.health_dice 
+    serial['expertise'] = self.expertise
+    serial['is_mage'] = self.is_mage
+
+    if not self.is_mage:
+      serial['skill_tree'] = dict()
+      serial['skill_tree']['tree_path'] = self.skill_tree
+      serial['skill_tree']['abilities'] = list()
+      for ability in self.abilities:
+       serial['skill_tree']['abilities'].append(ability.serialize())
+    else: 
+      serial['spells'] = dict()
+      for tier, spells in self.spells.items():
+        serial['spells'][tier] = list()
+        for spell in spells:
+          serial['spells'][tier].append(spell.serialize())
+    return serial
   
   def get_markdown(self, level=None, art_data=None, printable=False):
     subsection_level = None if level is None else level + 1

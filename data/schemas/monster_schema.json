@@ -24,7 +24,7 @@
 					},
 					"monster_class": {
 						"type": "string",
-						"enum": ["Beast", "Arcane Construct", "Wolf", "Dire Bear", "Slime", "Undead"]
+						"enum": ["Beast", "Arcane Construct", "Wolf", "Dire Bear", "Slime", "Undead", "Celestial"]
 					}, 
 					"monster_family": {
 						"type": "string"

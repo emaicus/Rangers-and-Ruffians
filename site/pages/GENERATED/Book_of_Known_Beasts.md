@@ -50,7 +50,7 @@ show_download: false
      * [Arcane Automaton](#arcane-automaton)  
      * [Elemental Spark](#elemental-spark)  
      * [Elemental](#elemental)  
-     * [Greater Elemental](#greater-elemental)  
+     * [Force of Nature](#force-of-nature)  
      * [Tamberdoodle's Hand](#tamberdoodles-hand)  
      * [Treeling](#treeling)  
      * [Sap Knight](#sap-knight)  
@@ -68,13 +68,13 @@ show_download: false
      * [Giant Spider Hatchling](#giant-spider-hatchling)  
      * [Giant Spider](#giant-spider)  
      * [Great Attercop](#great-attercop)  
-     * [Greater Swarm](#greater-swarm)  
      * [Werewolf](#werewolf)  
      * [Forest Wolf](#forest-wolf)  
      * [Dire Wolf](#dire-wolf)  
      * [Elder Wolf](#elder-wolf)  
      * [Swarm](#swarm)  
-     * [Zounds](#zounds)  
+     * [Greater Swarm](#greater-swarm)  
+     * [Zounds!](#zounds)  
    * [Slime](#slime)  
      * [Lesser Green Slime](#lesser-green-slime)  
      * [Green Slime](#green-slime)  
@@ -414,7 +414,7 @@ __Damage:__ 2d6 Inherited
   
 
   
-### Greater Elemental
+### Force of Nature
 __Tier 3 Minion__  
 __Health:__ 65 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 5  
 __Movement:__  Base Speed 25ft  
@@ -1420,63 +1420,6 @@ The spider launches a gob of sticky web at its enemy. They must make a spell pow
   
 
   
-### Greater Swarm
-__Tier 2 Minion__  
-__Health:__ 43 __Evasion:__ 12 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 4  
-__Movement:__  Base Speed 25ft  
-
-  
-#### Passive Abilities
-
-  
-##### Freedom of Movement
-The swarm is able to move freely throughout the battlefield. It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks.       
-  
-  
-
-  
-##### Great Chomps
- __Range:__ Touch   
-Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels.    
-__Damage:__ 2d6 Piercing   
-  
-  
-  
-  
-  
-  
-
-  
-#### Combat Actions
-This creature can take 1 action per turn.  
-
-  
-##### Vicious Consumption
- __Range:__ Touch   
-The swarm crawls up an enemy, a hundred mouths gnawing as it flows over them. Its target must make a spell power saving throw or become Distracted until the end of its next turn.  Distracted creatures must make perception and accuracy checks at disadvantage.     
-__Damage:__ 4d6 Piercing   
-  
-  
-  
-  
-  
-  
-  
-  
----  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
 ### Werewolf
 __Tier 2 Heavy__  
 __Health:__ 155 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 4  
@@ -1792,7 +1735,64 @@ __Damage:__ 1d4 Piercing
   
 
   
-### Zounds
+### Greater Swarm
+__Tier 2 Minion__  
+__Health:__ 43 __Evasion:__ 12 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 4  
+__Movement:__  Base Speed 25ft  
+
+  
+#### Passive Abilities
+
+  
+##### Freedom of Movement
+The swarm is able to move freely throughout the battlefield. It is able to occupy enemy spaces, move through enemy spaces, and is immune to exposed attacks.       
+  
+  
+
+  
+##### Great Chomps
+ __Range:__ Touch   
+Whenever an enemy begins their turn within the swarm, they take damage as the swarm nips at their heels.    
+__Damage:__ 2d6 Piercing   
+  
+  
+  
+  
+  
+  
+
+  
+#### Combat Actions
+This creature can take 1 action per turn.  
+
+  
+##### Vicious Consumption
+ __Range:__ Touch   
+The swarm crawls up an enemy, a hundred mouths gnawing as it flows over them. Its target must make a spell power saving throw or become Distracted until the end of its next turn.  Distracted creatures must make perception and accuracy checks at disadvantage.     
+__Damage:__ 4d6 Piercing   
+  
+  
+  
+  
+  
+  
+  
+  
+---  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+### Zounds!
 __Tier 3 Minion__  
 __Health:__ 60 __Evasion:__ 13 __Spell Power:__ TMP_SPELL_POWER __Stat Bonus:__ 7  
 __Movement:__  Base Speed 25ft  
