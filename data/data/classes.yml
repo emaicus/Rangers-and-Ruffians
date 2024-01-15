@@ -868,20 +868,20 @@
                         - hindered
                     type: debuff
                     save: "The spell's victims may repeat their save at the end of each of their turns."
-            -   name: Guards
-                type: summoning
-                cost: 2
-                duration: 12 hours
-                casting_time: 10 minutes
-                requirements:
-                    movement: true 
-                    verbal: true
-                description: "As you raise your hand, four spectral knights materialize about you, sworn to protect and serve
-                            with unwavering loyalty. The knights cannot leave the spell's radius."
-                summoned_creature: 
-                    all_tiers: Spectral Guardian
-                range: 30 
-                radius: 100
+            # -   name: Guards
+            #     type: summoning
+            #     cost: 2
+            #     duration: 12 hours
+            #     casting_time: 10 minutes
+            #     requirements:
+            #         movement: true 
+            #         verbal: true
+            #     description: "As you raise your hand, four spectral knights materialize about you, sworn to protect and serve
+            #                 with unwavering loyalty. The knights cannot leave the spell's radius."
+            #     summoned_creature: 
+            #         all_tiers: Spectral Guardian
+            #     range: 30 
+            #     radius: 100
             -   name: Summon Bleck
                 type: utility
                 cost: 3
@@ -4701,20 +4701,20 @@
                             soul and return them to life. On failure, they may not be resurrected."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
                         to to grant you advantage on your check."
-            -   name: Holy Legion
-                type: summoning
-                cost: 3
-                range: self 
-                radius: 100
-                duration: 1 hour 
-                requirements:
-                    movement: false 
-                    verbal: false
-                description: "Casting your eyes skyward, you command your deity's legions. Meteors rain from the heavens as three Celestial Guardians heed your summons. 
-                            Select three locations within the spell's radius for the guardian's to land. As they strike the earth, all foes within 15 feet suffer
-                            4d6 damage. A given creature can be harmed at most once by a guardian's entrance."
-                summoned_creature: 
-                    all_tiers: Celestial Guardian
+            # -   name: Holy Legion
+            #     type: summoning
+            #     cost: 3
+            #     range: self 
+            #     radius: 100
+            #     duration: 1 hour 
+            #     requirements:
+            #         movement: false 
+            #         verbal: false
+            #     description: "Casting your eyes skyward, you command your deity's legions. Meteors rain from the heavens as three Celestial Guardians heed your summons. 
+            #                 Select three locations within the spell's radius for the guardian's to land. As they strike the earth, all foes within 15 feet suffer
+            #                 4d6 damage. A given creature can be harmed at most once by a guardian's entrance."
+            #     summoned_creature: 
+            #         all_tiers: Celestial Guardian
             -   name: Saint's Blessing
                 type: buff
                 cost: 2
@@ -6485,18 +6485,18 @@
                     movement: true 
                 action_type: Reaction
                 description: "When an enemy successfully casts a spell, force them to make a spell power save. On failure, they also suffer the effects of their spell."
-            -   name: Summon Fiend # Summon
-                type: summoning
-                cost: 3
-                duration: concentration
-                range: 30
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane."
-                summoned_creature:
-                    tier_2: "Pit Fiend"
-                    tier_3: "Pronged Devil"
+            # -   name: Summon Fiend # Summon
+            #     type: summoning
+            #     cost: 3
+            #     duration: concentration
+            #     range: 30
+            #     requirements: 
+            #         verbal: true
+            #         movement: true 
+            #     description: "Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane."
+            #     summoned_creature:
+            #         tier_2: "Pit Fiend"
+            #         tier_3: "Pronged Devil"
             #Hungering Pit # Crowd Control
             -   name: Armor of Lucien
                 type: damage
@@ -6634,19 +6634,19 @@
                 damage_scaling:
                     damage_type: psychic
                     tier_3: "20d6"       
-            -   name: The Abyss Stares Back # Summon Cthlulu?
-                type: summoning
-                cost: 3
-                range: 1000
-                duration: 1 hour
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Cry out for your patron's aid. Roll 1d20 and add your expertise.
-                on a 19 or above, your patron or one of their vassals appears to fight alongside you.
-                This spell may be attempted once per day, and may be successful at most once per month."
-                summoned_creature: 
-                    all_tiers: Elder God
+            # -   name: The Abyss Stares Back # Summon Cthlulu?
+            #     type: summoning
+            #     cost: 3
+            #     range: 1000
+            #     duration: 1 hour
+            #     requirements: 
+            #         verbal: true
+            #         movement: true 
+            #     description: "Cry out for your patron's aid. Roll 1d20 and add your expertise.
+            #     on a 19 or above, your patron or one of their vassals appears to fight alongside you.
+            #     This spell may be attempted once per day, and may be successful at most once per month."
+            #     summoned_creature: 
+            #         all_tiers: Elder God
             # Gremlins: # Utility - Summon a mob of gremlins to cause chaos around you.
                 #     type: summoning
                 #     cost: 2
@@ -6679,18 +6679,18 @@
                             the body."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
                         to to grant you advantage on your check."
-            -   name: Summon Eldritch Vessel
-                type: summoning
-                cost: 2
-                range: 1 mile
-                duration: infinite
-                requirements:
-                    verbal: true 
-                    movement: true
-                description: "Tear open a portal and pull forth a living vessel capable of flight.
-                    It writhes as you enter it, and is willing to carry you to any destination."
-                summoned_creature:
-                    all_tiers: Eldritch Vessel -- give it cannons
+            # -   name: Summon Eldritch Vessel
+            #     type: summoning
+            #     cost: 2
+            #     range: 1 mile
+            #     duration: infinite
+            #     requirements:
+            #         verbal: true 
+            #         movement: true
+            #     description: "Tear open a portal and pull forth a living vessel capable of flight.
+            #         It writhes as you enter it, and is willing to carry you to any destination."
+            #     summoned_creature:
+            #         all_tiers: Eldritch Vessel -- give it cannons
             -   name: Dominate
                 type: debuff
                 cost: 3

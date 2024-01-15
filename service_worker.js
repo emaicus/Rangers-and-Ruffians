@@ -413,7 +413,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "site/pages/GENERATED/Compendium_of_Character_Creation.html",
-    "revision": "b54dba7a875bd89a0e51489bda1cb1c3"
+    "revision": "8d827d0f378ab075b0e5692017c9b140"
   },
   {
     "url": "site/pages/GENERATED/Examples.html",
