@@ -10,25 +10,47 @@ class RnRMonster:
 		self.full_type = f"{self.tier} {self.type}"
 		
 		self.summons = monster_def['summons']
-		stats = monster_def['stats']
-		self.health = stats['health']
-		self.evasion = stats['evasion']
+		self.stats = monster_def['stats']
+		self.health = self.stats['health']
+		self.evasion = self.stats['evasion']
 		self.spell_power = 'TMP_SPELL_POWER' #stats['spell_power']
-		self.speed = stats['speed']
-		self.stat_bonus = stats['stat_bonus']
-		self.size = stats['size']
+		self.speed = self.stats['speed']
+		self.stat_bonus = self.stats['stat_bonus']
+		self.size = self.stats['size']
 
 		moveset = monster_def['moveset']
 		self.moveset = dict()
 		self.moveset['actions_per_turn'] = moveset['actions_per_turn']
-		self.moveset['passive_abilities']  = list()
-		self.moveset['active_abilities'] = list()
 
 		for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
 			self.moveset[action_type] = list()
 			for ability in moveset.get(action_type, []):
 				self.moveset[action_type].append(RnRAbility(ability))
 			
+	def serialize(self):
+		serial = dict()
+		serial['metadata'] = dict()
+		serial['name'] = self.name
+		serial['metadata']['type'] = self.type 
+		serial['metadata']['tier'] = self.tier 
+		serial['metadata']['monster_family'] = self.monster_family 
+		serial['metadata']['monster_class'] = self.monster_class 
+		serial['metadata']['full_type'] = self.full_type 
+
+		serial['summons'] = self.summons
+		serial['stats'] = self.stats 
+		
+		serial['moveset'] = dict()
+		serial['moveset']['actions_per_turn'] = self.moveset['actions_per_turn']
+		
+		for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
+			serial['moveset'][action_type] = list()
+			for ability in self.moveset.get(action_type, []):
+				serial['moveset'][action_type].append(ability.serialize())
+
+		return serial
+
+
 	def get_markdown(self, level=None):
 		ret = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
 		ability_header_level = None if level is None else level + 1
@@ -64,6 +86,7 @@ class RnRMonster:
 		
 		return ret
 
+	
 
 
 

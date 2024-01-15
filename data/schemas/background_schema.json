@@ -3,7 +3,7 @@
 	"type": "array",
 	"items": {
 		"type": "object",
-		"required": ["name", "description", "options", "starting_equiptment"],
+		"required": ["name", "description", "options", "starting_equipment"],
 		"additionalProperties": false,
 		"properties": {
 			"name": {
@@ -31,7 +31,7 @@
 					}
 				}
 			},
-			"starting_equiptment": {
+			"starting_equipment": {
 				"type": "array",
 				"items": {
 					"type": "string"

@@ -251,7 +251,7 @@
                             Good God! They're _everywhere!_ And these vicious beasts are yours to command! 
                             May they lay your enemies low!"
                 summoned_creature: 
-                    tier_1: "Minor Swarm"
+                    tier_1: "Swarm"
                     tier_2: "Greater Swarm"
                     tier_3: "Zounds!"
                 range: 30
@@ -491,10 +491,10 @@
                         - A scrap of noble clothing
                 description: "With a snap of your fingers, you summon an invisible servant to aid you. 
                             The servant has no mind of its own, but is instead a manifestation of you 
-                            will, and will follow your orders to the letter."
+                            will, and will follow your orders to the letter. Invisible servants 
+                            are of little use in combat. As an action, you may have your
+                            invisible servant attempt to grapple someone."
                 range: 30
-                summoned_creature: 
-                    all_tiers: Invisible Servant
             -   name: Minor Gate
                 type: utility
                 cost: 1
@@ -777,14 +777,12 @@
             -   name: Winged Magic Steed
                 type: summoning
                 cost: 2
-                duration: infinite
+                duration: concentration
                 requirements:
                     movement: true 
                     verbal: true
                 description: "Raise your fingers to your mouth and whistle. Instantly, a winged steed appears, made of pure magical energy. The stallion
                     may be de-summoned on command. If you have access to Conjure Carriage, it may be used in conjunction with this spell at no cost."
-                summoned_creature: 
-                    all_tiers: Winged Steed
                 range: 30
             -   name: Edmire's Grand Manor
                 type: utility
@@ -870,20 +868,20 @@
                         - hindered
                     type: debuff
                     save: "The spell's victims may repeat their save at the end of each of their turns."
-            -   name: Guards
-                type: summoning
-                cost: 2
-                duration: 12 hours
-                casting_time: 10 minutes
-                requirements:
-                    movement: true 
-                    verbal: true
-                description: "As you raise your hand, four spectral knights materialize about you, sworn to protect and serve
-                            with unwavering loyalty. The knights cannot leave the spell's radius."
-                summoned_creature: 
-                    all_tiers: Spectral Guardian
-                range: 30 
-                radius: 100
+            # -   name: Guards
+            #     type: summoning
+            #     cost: 2
+            #     duration: 12 hours
+            #     casting_time: 10 minutes
+            #     requirements:
+            #         movement: true 
+            #         verbal: true
+            #     description: "As you raise your hand, four spectral knights materialize about you, sworn to protect and serve
+            #                 with unwavering loyalty. The knights cannot leave the spell's radius."
+            #     summoned_creature: 
+            #         all_tiers: Spectral Guardian
+            #     range: 30 
+            #     radius: 100
             -   name: Summon Bleck
                 type: utility
                 cost: 3
@@ -972,16 +970,24 @@
         - Your choice of chainmail (common moderate armor) or heavy plate (common heavy armor).
         - A tier appropriate minor healing potion
     health_dice: "1d10"
-    skill_tree: #25 / 25
+    skill_tree: # 27 / 25
         tree_path: "tmp"
         abilities:
-            #-   name: Faithful Weapon
-                #    cost: 1
-                #    damage_scaling:
-                #        tier_1: "1d8"
-                #        tier_2: "1d10"
-                #        tier_3: "1d12"
-                #    description: After you bond with a weapon, you can feel a faint tether connecting it to you. When you throw your weapon, it deals damage. So long as you are within 50 feet of your weapon, you may recall it to yourself as an offhand action or reaction. The weapon flies directly to you, striking any enemy in its way as though you had made an attack with your inner fire as its modifier.
+            -   name: Faithful Weapon
+                cost: 1
+                type: combat option 
+                passive_damage_source: true
+                range: self
+                radius: 1 mile
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: radiant 
+                    all_tiers: 1d6
+                description: "You have gained the ability to bind yourself magically to a weapon. 
+                              Whenever you rest, you may pray over a weapon to impart it with the intention of your diety.
+                              From then on, the weapon deals bonus damage. You may also summon it at any time, 
+                              so long as it is within the abilities radius, and it will fly to your hand in as straight 
+                              a line as it can manage. You may bind yourself to at most one weapon in this way at a time." 
             -   name: Charge
                 type: combat option
                 cost: 1
@@ -1106,9 +1112,18 @@
                     conditions: 
                         - custom 
                     save: null
-            #-   name: Enhanced Healing
-                #cost: 0
-                #description: If an ally has a guardian ward, add 1d6 to any healing that you grant them.
+            -   name: Enhanced Healing
+                type: healing
+                cost: 0
+                range: inherited
+                duration: instantaneous
+                damage_scaling:
+                    damage_type: healing 
+                    tier_1: 1d6 
+                    tier_2: 2d6
+                    tier_3: 3d6
+                description: "When you heal an ally who has a guardian ward, a shean of gold blazes around them. 
+                              Your healing restores bonus health to them."
             -   name: Second Guardian Ward
                 type: combat option
                 cost: 0
@@ -2394,12 +2409,18 @@
                 description: "You are tethered to your astral form. If your Spiritual Projection harms an enemy, you may instantly change places with it."
             -   name: Spiritual Aid
                 cost: 1
-                type: combat option
-                range: touch
-                duration: instantaneous
-                description: "Lay your hands on an ally who is suffering. Your peace of mind flows into them,
-                            removing any status effects that ail them. Spiritual Aid does not affect curses 
-                            or some powerful abilities as determined by the Grand Poohbah."
+                type: utility
+                range: self
+                duration: 5 minutes
+                description: "Summon a spiritual version of yourself to stand beside you. When you close your eyes, you may 
+                              take control of the projection. The projection is Ethereal, and remains for the duration of the 
+                              ability or until you choose to make a single hand to hand attack through it."
+                effect:
+                    type: buff 
+                    description: "The projection"
+                    conditions:
+                        - ethereal 
+                    save: null
             #-   name: Warrior Spirit
                 #    cost: 0
                 #    description: If you slay an enemy, regain one action point.
@@ -3261,8 +3282,6 @@
                         - transformed
                     save: null
                 range: self
-                summoned_creature: 
-                    all_tiers: transformed
             -   name: Forest Guardian
                 type: summoning
                 cost: 1
@@ -4682,20 +4701,20 @@
                             soul and return them to life. On failure, they may not be resurrected."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
                         to to grant you advantage on your check."
-            -   name: Holy Legion
-                type: summoning
-                cost: 3
-                range: self 
-                radius: 100
-                duration: 1 hour 
-                requirements:
-                    movement: false 
-                    verbal: false
-                description: "Casting your eyes skyward, you command your deity's legions. Meteors rain from the heavens as three Celestial Guardians heed your summons. 
-                            Select three locations within the spell's radius for the guardian's to land. As they strike the earth, all foes within 15 feet suffer
-                            4d6 damage. A given creature can be harmed at most once by a guardian's entrance."
-                summoned_creature: 
-                    all_tiers: Celestial Guardian
+            # -   name: Holy Legion
+            #     type: summoning
+            #     cost: 3
+            #     range: self 
+            #     radius: 100
+            #     duration: 1 hour 
+            #     requirements:
+            #         movement: false 
+            #         verbal: false
+            #     description: "Casting your eyes skyward, you command your deity's legions. Meteors rain from the heavens as three Celestial Guardians heed your summons. 
+            #                 Select three locations within the spell's radius for the guardian's to land. As they strike the earth, all foes within 15 feet suffer
+            #                 4d6 damage. A given creature can be harmed at most once by a guardian's entrance."
+            #     summoned_creature: 
+            #         all_tiers: Celestial Guardian
             -   name: Saint's Blessing
                 type: buff
                 cost: 2
@@ -5108,8 +5127,8 @@
                         - transformed
                     save: null
                 summoned_creature:
-                    tier_1: Lesser Slime
-                    tier_2: Greater Slime
+                    tier_1: Lesser Green Slime
+                    tier_2: Green Slime
                     tier_3: Black Slime
             -   name: Bubble of Air
                 type: buff
@@ -5266,7 +5285,7 @@
                 summoned_creature:
                     tier_1: Arcane Construct 
                     tier_2: Clockwork Soldier 
-                    tier_3: Clockwork Knight
+                    tier_3: Arcane Automaton
             -   name: Become Ethereal
                 type: buff
                 cost: 1
@@ -5589,18 +5608,21 @@
             -   name: Igna Bokak
                 type: summoning
                 cost: 2
-                duration: 10
+                duration: 3
                 range: 30
                 requirements:
                     movement: true 
                     verbal: true 
                     components:
                         - A phoneix feather (100gp)
-                description: "Clutching the feather of a Firebird in your hands, you scream the ancient words: IGNA, BOKAK! 
-                            The feather immolates in flash of blinding light and a phoenix appears to aid you!"
-                summoned_creature:
-                    tier_2: firebird 
-                    tier_3: phoneix
+                description: "Clutching the feather of a phoenix in your hands, you scream the ancient words: IGNA, BOKAK! 
+                            At once, the feather bursts into flame and a blazing Firebird appears above your head and streaks 
+                            towards an enemy of your choosing. The creature leaves a path of fire in its wake, and anyone 
+                            who walks through it takes 2d6 damage. The bird then attacks your foe each turn for three turns."
+                damage_scaling:
+                    damage_type: arcane
+                    tier_2: 2d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
+                    tier_3: 3d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             -   name: M&M's Beckoning Call
                 type: utility
                 cost: 2
@@ -6032,9 +6054,8 @@
                 description: "Summon a small animal such as a bat, dog, or rat to be your familiar. The familiar follows your instructions.
                     If you have the spell Embed Eye, you may use it to add an eye to your familiar. If your familiar is de-summoned or killed, 
                     you may cast this spell again to bring it back. You may spend one action point to instantly teleport your familiar to yourself, 
-                    but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form."
-                summoned_creature: 
-                    all_tiers: Familiar
+                    but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form. Your familiar 
+                    has one hit point and evasion equal to your spell power."
             -   name: Haunt # Utility - Haunt an enemy's dreams. When they sleep, you know where they are, and can try to force them to answer one question.
                 type: utility
                 cost: 1
@@ -6177,7 +6198,7 @@
                 summoned_creature: 
                     tier_1: "Undead Thrall"
                     tier_2: "Greater Undead Thrall"
-                    tier_3: "Undead Champion"
+                    tier_3: "Greater Undead Thrall"
             -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
                 type: utility
                 cost: 1
@@ -6385,9 +6406,18 @@
                 requirements: 
                     verbal: true
                     movement: true 
-                description: "Summon 1d4+1 Eyes of Uriel. For the spell's duration, you are able to see through the eyes. If an eye is within 15 feet of you when you are attacked, it is able to take the damage in your stead."
-                summoned_creature: 
-                    all_tiers: "Eye of Uriel"
+                description: "As you hold both hands aloft, 1d4+1 eyes suddenly open in the air behind you. Each 
+                              is the size of a balled fist, and they float in a halo about you. The eyes move slowly, and
+                              travel at about the walking speed of a normal person, fifteen feet per turn.
+                              If you concentrate, you can see through the eyes. When the eyes close, they
+                              become Ethereal and cannot be seen."
+                effect:
+                    type: buff
+                    description: "If an eye is within fifteen feet of an attack, you may use your reaction to cause
+                                  the eye to sacrifice itself and become the attack's target instead."
+                    conditions:
+                        - ethereal
+                    save: null
             -   name: Crown of Chaos # Buff
                 type: aoe debuff
                 cost: 2
@@ -6455,18 +6485,18 @@
                     movement: true 
                 action_type: Reaction
                 description: "When an enemy successfully casts a spell, force them to make a spell power save. On failure, they also suffer the effects of their spell."
-            -   name: Summon Fiend # Summon
-                type: summoning
-                cost: 3
-                duration: concentration
-                range: 30
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane."
-                summoned_creature:
-                    tier_2: "Pit Fiend"
-                    tier_3: "Pronged Devil"
+            # -   name: Summon Fiend # Summon
+            #     type: summoning
+            #     cost: 3
+            #     duration: concentration
+            #     range: 30
+            #     requirements: 
+            #         verbal: true
+            #         movement: true 
+            #     description: "Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane."
+            #     summoned_creature:
+            #         tier_2: "Pit Fiend"
+            #         tier_3: "Pronged Devil"
             #Hungering Pit # Crowd Control
             -   name: Armor of Lucien
                 type: damage
@@ -6604,19 +6634,19 @@
                 damage_scaling:
                     damage_type: psychic
                     tier_3: "20d6"       
-            -   name: The Abyss Stares Back # Summon Cthlulu?
-                type: summoning
-                cost: 3
-                range: 1000
-                duration: 1 hour
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Cry out for your patron's aid. Roll 1d20 and add your expertise.
-                on a 19 or above, your patron or one of their vassals appears to fight alongside you.
-                This spell may be attempted once per day, and may be successful at most once per month."
-                summoned_creature: 
-                    all_tiers: Elder God
+            # -   name: The Abyss Stares Back # Summon Cthlulu?
+            #     type: summoning
+            #     cost: 3
+            #     range: 1000
+            #     duration: 1 hour
+            #     requirements: 
+            #         verbal: true
+            #         movement: true 
+            #     description: "Cry out for your patron's aid. Roll 1d20 and add your expertise.
+            #     on a 19 or above, your patron or one of their vassals appears to fight alongside you.
+            #     This spell may be attempted once per day, and may be successful at most once per month."
+            #     summoned_creature: 
+            #         all_tiers: Elder God
             # Gremlins: # Utility - Summon a mob of gremlins to cause chaos around you.
                 #     type: summoning
                 #     cost: 2
@@ -6649,18 +6679,18 @@
                             the body."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
                         to to grant you advantage on your check."
-            -   name: Summon Eldritch Vessel
-                type: summoning
-                cost: 2
-                range: 1 mile
-                duration: infinite
-                requirements:
-                    verbal: true 
-                    movement: true
-                description: "Tear open a portal and pull forth a living vessel capable of flight.
-                    It writhes as you enter it, and is willing to carry you to any destination."
-                summoned_creature:
-                    all_tiers: Eldritch Vessel -- give it cannons
+            # -   name: Summon Eldritch Vessel
+            #     type: summoning
+            #     cost: 2
+            #     range: 1 mile
+            #     duration: infinite
+            #     requirements:
+            #         verbal: true 
+            #         movement: true
+            #     description: "Tear open a portal and pull forth a living vessel capable of flight.
+            #         It writhes as you enter it, and is willing to carry you to any destination."
+            #     summoned_creature:
+            #         all_tiers: Eldritch Vessel -- give it cannons
             -   name: Dominate
                 type: debuff
                 cost: 3

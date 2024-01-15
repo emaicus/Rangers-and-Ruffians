@@ -137,7 +137,9 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
           traceback.print_exc()
           sys.exit(1)
     
+    all_monster_names = set()
     for monster in monsters:
+      all_monster_names.add(monster['name'])
       for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
         for ability in monster['moveset'].get(action_type, []):
           ability['ability_type'] = 'ability'
@@ -187,6 +189,38 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
             traceback.print_exc()
             sys.exit(1)
 
+    # Check for Summonable Creatures
+    summoning_errors = list()
+    for rnr_class in rnr_classes:
+      if 'skill_tree' not in rnr_class:
+        for _, tier_spells in rnr_class['spells'].items():
+          for spell_def in tier_spells:
+            if 'summoned_creature' not in spell_def:
+              continue
+            for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
+              if key not in spell_def['summoned_creature']:
+                continue 
+              creature = spell_def['summoned_creature'][key]
+              if creature not in all_monster_names:
+                summoning_errors.append(creature)
+      else:
+        skill_tree = rnr_class.get('skill_tree')
+        for ability_def in skill_tree['abilities']:
+          if 'summoned_creature' not in spell_def:
+            continue
+          for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
+            if key not in ability_def['summoned_creature']:
+              continue 
+            creature = ability_def['summoned_creature'][key]
+            if creature not in all_monster_names:
+              summoning_errors.append(creature)
+      
+    if len(summoning_errors) > 0:
+      print("The following summoned creatures don't appear in monsters.yml:")
+      for monster in summoning_errors:
+        print(f"  {monster}")
+      #raise KeyError(f"Missing {len(summoning_errors)} summoned monsters.")
+                          
   # Iterate over the validated files and install them.
   if len(reinstall) > 0:
     # progress bar.

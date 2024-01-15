@@ -30,7 +30,7 @@
                 - I ran away from my mentor or was kicked out.
                 - My mentor decided that it was time for me to get experience in the world by myself.
                 - My mentor sent me on a mission while they attended to other matters. 
-    starting_equiptment: 
+    starting_equipment: 
         - "Three gold per character level"
           #quantity: 3
           #level_multiplier: true
@@ -84,7 +84,7 @@
                 - A pouch full of gold (50 per character level).
                 - Fine clothes.
                 - A voice in my head.
-    starting_equiptment:
+    starting_equipment:
         - "Two gold per character level"
           #quantity: 2
           #level_multiplier: true
@@ -127,7 +127,7 @@
                 - I must defeat a powerful foe.
                 - I must visit mystical sites.
                 - I must visit a wise master.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -167,7 +167,7 @@
                 - I am full of childlike joy, and have trouble being serious.
                 - I burst into performance at random.
                 - I do everything with a flair of showmanship.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -211,8 +211,8 @@
                 - I am so used to roughing it in the wilds that I no longer fit in society.
                 - I have an anecdote for every situation. "This reminds me of that time in the goblin city of Gnorth, when..."
                 - I am always naming the new things that I find, even if they may have already been discovered.
-                - All of my equiptment has been with me for so long that I consider it "trusty," and refuse to upgrade.
-    starting_equiptment:
+                - All of my equipment has been with me for so long that I consider it "trusty," and refuse to upgrade.
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -251,7 +251,7 @@
                 - I am a conduit. I receive my wisdom from visions, signs, and rituals.
                 - I am a member of a tradition. I was trained in the old ways.
                 - I am a charlatan. I am just faking it.
-    starting_equiptment:
+    starting_equipment:
         -   Two gold per character level
             #quantity: 2
             #level_multiplier: true
@@ -292,7 +292,7 @@
                 - I overengineer my inventions to solve simple problems.
                 - They all have my own unique sense of flair, which other people fail to appreciate.
                 - They have a mind of their own.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -307,7 +307,7 @@
     options:
         -   question: What did you do before you were a hunted? 
             answers:
-                - Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equiptment from your second background.
+                - Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equipment from your second background.
         -   question: Who holds sway over you?
             answers:
                 - A corrupt official.
@@ -324,7 +324,7 @@
             - I owe them an enormous debt.
             - They have control of my livlihood.
             - They know information that must be kept secret.
-    starting_equiptment:
+    starting_equipment:
         - "A cryptic letter from your blackmailer"
 -   name: Highborn
     description: "Wealth and glory. You are a member of the upper crust of society. Perhaps you were born with a silver spoon
@@ -359,7 +359,7 @@
                 - They are prim and proper and constantly complain about conditions while adventuring.
                 - They are my personal chef. They have a sweet disposition and are always trying to fatten me up.
                 - They are aged. They have a lot of wisdom, but not as much pep in their step as they used to have.
-    starting_equiptment:
+    starting_equipment:
         -   100 gold per character level
             #quantity: 100
             #level_multiplier: true
@@ -402,7 +402,7 @@
                 - I feel deeply unworthy of the blessings I am given.
                 - The fire of my faith is strong. I try to convert anyone I can.
                 - I have fallen out of favor with my faith. 
-    starting_equiptment:
+    starting_equipment:
         -   Three gold per character level
             #quantity: 3
             #level_multiplier: true
@@ -446,7 +446,7 @@
                 - I am very distrusting of other people.
                 - I am socially awkward and bad at reading people.
                 - I don't value the contributions of others. My opinion is the only one that matters.
-    starting_equiptment:
+    starting_equipment:
         -   Two gold per character level
             #quantity: 2
             #level_multiplier: true
@@ -489,7 +489,7 @@
                 - I tell it like it is. I'll give you advice even if you don't want it.
                 - I try to be a parental figure to my adventuring party.
                 - I am hiding secret pain. When I feel desparate, I will do anything to make it go away.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -536,7 +536,7 @@
                 - I am deeply tempted by my vices, and often slip back into my old ways. However, I would never harm my friends or my adventuring party.
                 - I have delusions of granduer. I am the greatest criminal the world has ever seen!
                 - I have deep code of honor which dictates how I act. I will only harm someone if my code calls for it.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -577,7 +577,7 @@
                 - I was selected by another adventurer to go on a journey.
                 - I was in the wrong place at the wrong time, and experienced something that I shouldn't have.
                 - A magic item appeared out of nowhere and thrust me into a world of adventure.
-    starting_equiptment:
+    starting_equipment:
         -   Three gold per character level
             #quantity: 3
             #level_multiplier: true
@@ -618,7 +618,7 @@
                 - My presence was requested by a collegue to whom I owe a favor.
                 - I was thrown out of academia in disgrace.
                 - I suspect that my rival is close to a major discovery, and I must beat them to the chase!
-    starting_equiptment:
+    starting_equipment:
         - Three gold per character level
             #quantity: 3
             #level_multiplier: true
@@ -634,7 +634,7 @@
     options:
         -   question: What did you do before you were a hunted?
             answers: 
-                - Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equiptment from your second background.
+                - Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equipment from your second background.
         -   question: Who is hunting you?
             answers:
                 - I am being hunted by Monsters.
@@ -651,7 +651,7 @@
                 - I ruined their plans, and now they're after me.
                 - I am valuable to them.
                 - I was in a romantic relationship and it ended very badly.
-    starting_equiptment:
+    starting_equipment:
         - "An item related to the person, group, or creature that is hunting you"
 -   name: Servant
     description: "I obey. As a servant, you are bound to attend to a master. Some servants are paid a wage for their
@@ -683,7 +683,7 @@
                 - I am accompanying one of them on a journey.
                 - I am supposed to meet one of them.
                 - I have run away from them.
-    starting_equiptment:
+    starting_equipment:
         -   Three gold per character level
             #quantity: 3
             #level_multiplier: true
@@ -720,7 +720,7 @@
                 - I am brusque, and very confident.
                 - People find me intimidating, but I am very loyal to my friends.
                 - I have a happy go lucky attitude, but I can flip at a moment's notice.
-    starting_equiptment:
+    starting_equipment:
         -   Five gold per character level
             #quantity: 5
             #level_multiplier: true
@@ -761,7 +761,7 @@
                 - I know someone in every town. I am always dropping in on old friends and bringing news of the land.
                 - I sometimes talk aloud to myself or my animals. Because of all of the time I've spent alone, I am always saying too much or too little.
                 - People tend to distrust me. I have to work to get them to let me in.
-    starting_equiptment:
+    starting_equipment:
         -   Three gold per character level
             #quantity: 3
             #level_multiplier: true
@@ -802,7 +802,7 @@
                 - I got tied up in dark dealings. I know that I need a change before it's too late.
                 - I have people who look up to me. I can't let them down.
                 - I let down the people I care about. I have to atone for what I've done.
-    starting_equiptment:
+    starting_equipment:
         -   One gold piece per character level
             #quantity: 1
             #level_multiplier: true

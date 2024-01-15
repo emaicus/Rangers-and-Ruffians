@@ -13,7 +13,23 @@ class RnRWeapon:
 		self.abilities = list()
 		for ability in weapon_def.get('abilities', []):
 			self.abilities.append(RnRAbility(ability))
-			
+	
+	def serialize(self):
+		serial = dict()
+		serial['name'] = self.name 
+		serial['base_stat'] = self.base_stat 
+		serial['value'] = self.gold_value 
+		serial['damage_scaling'] = self.damage_scaling
+		serial['range'] = self.range 
+		serial['harried'] = self.harried 
+		serial['handedness'] = self.handedness 
+
+		serial['abilities'] = list() 
+		for ability in self.abilities:
+			serial['abilities'].append(ability.serialize())
+		
+		return serial
+
 	def get_markdown(self, level=None):
 		ret = f'__{self.name}__  \n' if level == None else '#' * level + f' {self.name}  \n'
 		ret += f'__{self.handedness}, {self.base_stat}'
@@ -35,6 +51,7 @@ class RnRWeapon:
 			ret += ability.get_markdown(level=None, succinct=True)
 		ret += '  \n'
 		return ret
+	
 
 
 
