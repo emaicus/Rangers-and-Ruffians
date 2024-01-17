@@ -4130,20 +4130,6 @@ __Tier 3 Damage:__ 5d8 Psychic
   
   
 </div>  
-<div class="rnr-ability" id="ability-guards">  
-
-  
-##### Guards
-__Cost:__ 2 Action Points __Duration:__ 12 Hours  __Range:__ 30 Feet  
-__Casting Time:__ 10 Minutes __Radius:__ 100 ft.   
-__Components:__ _m, v_  
-As you raise your hand, four spectral knights materialize about you, sworn to protect and serve with unwavering loyalty. The knights cannot leave the spell's radius.    
-__Summon:__ Spectral Guardian  
-  
-  
-  
-  
-</div>  
 <div class="rnr-ability" id="ability-summon bleck">  
 
   
@@ -4859,19 +4845,6 @@ __Cost:__ 3 Action Points __Duration:__ Instantaneous  __Range:__ Touch
 __Casting Time:__ 6 Hours   
 __Components:__ _m, v, Rare holy oil and incense (500gp), A soul gem (1000gp)_  
 Lay out the body of someone who has died within the past week. Spend time anointing them with oil, burning incense, and using your magic to mend their body. Lay a soul gem on their chest and ask your deity for their strength. Roll 1d20. If the result is 11 or higher, reclaim the target's soul and return them to life. On failure, they may not be resurrected. If someone who loved the deceased dearly helps you, they may spend one action point to to grant you advantage on your check.   
-  
-  
-  
-  
-</div>  
-<div class="rnr-ability" id="ability-holy legion">  
-
-  
-##### Holy Legion
-__Cost:__ 3 Action Points __Duration:__ 1 Hour  __Range:__ Self   
-__Radius:__ 100 ft.   
-Casting your eyes skyward, you command your deity's legions. Meteors rain from the heavens as three Celestial Guardians heed your summons. Select three locations within the spell's radius for the guardian's to land. As they strike the earth, all foes within 15 feet suffer 4d6 damage. A given creature can be harmed at most once by a guardian's entrance.    
-__Summon:__ Celestial Guardian  
   
   
   
@@ -7864,20 +7837,6 @@ When an enemy successfully casts a spell, force them to make a spell power save.
   
   
 </div>  
-<div class="rnr-ability" id="ability-summon fiend">  
-
-  
-##### Summon Fiend
-__Cost:__ 3 Action Points __Duration:__ Concentration  __Range:__ 30 Feet  
-__Components:__ _m, v_  
-Bells toll as a rift opens in the ground before you and a fiend appears. You are able to give the fiend a single task. While you maintain concentration, the fiend is under your control. As soon as its task is completed, it is banished to its home plane.    
-__Tier 2 Summon:__ Pit Fiend  
-__Tier 3 Summon:__ Pronged Devil  
-  
-  
-  
-  
-</div>  
 <div class="rnr-ability" id="ability-armor of lucien">  
 
   
@@ -7981,19 +7940,6 @@ __Tier 3 Damage:__ 20d6 Psychic
   
   
 </div>  
-<div class="rnr-ability" id="ability-the abyss stares back">  
-
-  
-##### The Abyss Stares Back
-__Cost:__ 3 Action Points __Duration:__ 1 Hour  __Range:__ 1000 Feet  
-__Components:__ _m, v_  
-Cry out for your patron's aid. Roll 1d20 and add your expertise. on a 19 or above, your patron or one of their vassals appears to fight alongside you. This spell may be attempted once per day, and may be successful at most once per month.    
-__Summon:__ Elder God  
-  
-  
-  
-  
-</div>  
 <div class="rnr-ability" id="ability-reclaim soul">  
 
   
@@ -8002,19 +7948,6 @@ __Cost:__ 3 Action Points __Duration:__ Infinite  __Range:__ Touch
 __Casting Time:__ 1 Hour   
 __Components:__ _m, v, A jeweled tuning fork (500 gp), Greater Soul Gem (1000 gp)_  
 Prepare the body of someone who has died within the past week. Scrawl runes on their flesh to mark them as a conduit to the realm beyond. Find the location of their soul using a tuning fork. Once you've found it, place a soul gem on their chest, and reach beyond the divide. Roll 1d20. If the result is 11 or higher, reclaim the target's soul and return them to life. On failure, something else returns and takes up residence in the body. If someone who loved the deceased dearly helps you, they may spend one action point to to grant you advantage on your check.   
-  
-  
-  
-  
-</div>  
-<div class="rnr-ability" id="ability-summon eldritch vessel">  
-
-  
-##### Summon Eldritch Vessel
-__Cost:__ 2 Action Points __Duration:__ Infinite  __Range:__ 1 Mile   
-__Components:__ _m, v_  
-Tear open a portal and pull forth a living vessel capable of flight. It writhes as you enter it, and is willing to carry you to any destination.    
-__Summon:__ Eldritch Vessel -- give it cannons  
   
   
   

@@ -2427,89 +2427,127 @@
                               Anyone who walks through it instantly takes 6d8 points of damage."
 
 
-Spectral Guardian
-Celestial Guardian
-Pit Fiend
-Pronged Devil
-Elder God
-Eldritch Vessel -- give it cannons
+# Spectral Guardian
+# Celestial Guardian
+# Pit Fiend
+# Pronged Devil
+# Elder God
+# Eldritch Vessel -- give it cannons
+# -   name: Spectral Guardian
+#     metadata:
+#         type: Minion
+#         tier: Tier 3
+#         monster_class: Undead 
+#     summons:
+#         wildshape: false
+#     stats:
+#         health: 60
+#         evasion: 13
+#         speed: 
+#             Base Speed: 30
+#         stat_bonus: 7
+#         size: 5
+#     moveset:
+#         actions_per_turn: 1
+#         passive_abilities: 
+#             -   name: Spectral Movement 
+#                 type: buff 
+#                 cost: 0
+#                 range: self 
+#                 duration: passive  
+#                 description: "Spectral guardians can phase through most anything."
+#                 effect:
+#                     type: buff 
+#                     description: "When moving, they are considered Ethereal and are immune to exposed attacks."
+#                     conditions:
+#                         - ethereal 
+#                     save: null
+#         combat_actions:
+#             -   name: Crippling Touch  
+#                 attacks_made: 1
+#                 limit: null
+#                 type: combat option 
+#                 cost: 0
+#                 range: touch 
+#                 duration: instantaneous 
+#                 damage_scaling:
+#                     damage_type: blunt 
+#                     all_tiers: 6d8
+#                 description: "The guardian reaches a hand into its foe. At once, they begin to wither and veins turn black." 
+#                 effect:
+#                     type: debuff 
+#                     description: "The target must make a spell power save or begin to Rot."
+#                     conditions:
+#                         - rot
+#                     save: null
+#             -   name: Viel of Disintigration 
+#                 attacks_made: 1
+#                 limit: null 
+#                 type: utility
+#                 cost: 0
+#                 range: 15
+#                 duration: 3
+#                 description: "The guardian holds out a finger and points. Instantly, a 15ft wall of mist appears.
+#                               Anyone who walks through it instantly takes 6d8 points of damage."
+# -   name: Celestial Guardian
+#     metadata:
+#         type: Heavy
+#         tier: Tier 3
+#         monster_class: Celestial 
+#     summons:
+#         wildshape: false
+#     stats:
+#         health: 200
+#         evasion: 13
+#         speed: 
+#             Base Speed: 30
+#             Flying Speed: 60
+#         stat_bonus: 7
+#         size: 5
+#     moveset:
+#         actions_per_turn: 1
+#         passive_abilities: 
+#             -   name: Spectral Movement 
+#                 type: buff 
+#                 cost: 0
+#                 range: self 
+#                 duration: passive  
+#                 description: "Spectral guardians can phase through most anything."
+#                 effect:
+#                     type: buff 
+#                     description: "When moving, they are considered Ethereal and are immune to exposed attacks."
+#                     conditions:
+#                         - ethereal 
+#                     save: null
+#         combat_actions:
+#             -   name: Crippling Touch  
+#                 attacks_made: 1
+#                 limit: null
+#                 type: combat option 
+#                 cost: 0
+#                 range: touch 
+#                 duration: instantaneous 
+#                 damage_scaling:
+#                     damage_type: blunt 
+#                     all_tiers: 6d8
+#                 description: "The guardian reaches a hand into its foe. At once, they begin to wither and veins turn black." 
+#                 effect:
+#                     type: debuff 
+#                     description: "The target must make a spell power save or begin to Rot."
+#                     conditions:
+#                         - rot
+#                     save: null
+#             -   name: Viel of Disintigration 
+#                 attacks_made: 1
+#                 limit: null 
+#                 type: utility
+#                 cost: 0
+#                 range: 15
+#                 duration: 3
+#                 description: "The guardian holds out a finger and points. Instantly, a 15ft wall of mist appears.
+#                               Anyone who walks through it instantly takes 6d8 points of damage."
 
-#- name: Spectral Guardian # NOT FINISHED
-#  transformed: false
-#  type: Minion
-#  tier: Tier 3
-#  health: 66
-#  evasion: 14
-#  speed: 
-#    Base Speed: 30
-#  stat_bonus: 5
-#  actions_per_turn: 2
-#  size: 5
-#  passive:
-#    - name: Spectral Movement
-#      type: utility
-#      duration: passive
-#      range: self
-#      description: "When the spectral guardian moves, it vanishes and then instantly appears at its destination.
-#                    The spectral guardian does not provoke exposed attacks."
-#  moveset:
-#    - attacks_made: 1
-#      limit: 2
-#halp!
-      
-      
-      
-      
-#- name: Invisible Servant
-#  transformed: false
-#  type: Minion
-#  tier: Tier 1
-#  health: 10
-#  evasion: 12
-#  speed: 
-#    Base Speed: 25
-#  passive:
-#    - name: Invisibility
-#      type: passive
-#      duration: passive
-#      range: self
-#      description: ""
-#      effect:
-#        type: buff
-#        description: ""
-#        conditions:
-#          - invisible
-#        save: null
-#  stat_bonus: 1
-#  actions_per_turn: 1
-#  size: 5
-#  moveset:
-#    - attacks_made: 1
-#      limit: null
-#      name: Hamper
-#      description: "The Invisible Servant grabs at an enemy, attempting to hamper them."
-#      effect: 
-#        - type: debuff 
-#          description: "They must make a spell power saving throw or be Hindered."
-#          conditions: 
-#            - Hindered
-#          save: null
-#      range: touch 
 
-#- name: Winged Steed
-#  transformed: false
-#  type: Minion
-#  tier: Tier 3
-#  health: 60
-#  evasion: 13
-#  speed: 
-#    flying_speed: 120
-#  stat_bonus: 3
-#  actions_per_turn: 0
-#  size: 5
-#  moveset: null  
-      
-      
       
       
       
