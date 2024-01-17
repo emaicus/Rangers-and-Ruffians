@@ -43,9 +43,7 @@ class RangersAndRuffians():
 
     serial['attributions'] = self.attributions 
 
-    serial['monsters'] = list() 
-    for monster in self.monsters:
-      serial['monsters'].append(monster.serialize())
+    serial['monsters'] = self.serialize_monsters()
 
     # serial['pantheon'] = list()
     # for diety in self.pantheon:
@@ -60,6 +58,12 @@ class RangersAndRuffians():
       serial['weapons'].append(weapon.serialize())
     
     return serial
+  
+  def serialize_monsters(self):
+    serial_monsters = list() 
+    for monster in self.monsters:
+      serial_monsters['monsters'].append(monster.serialize())
+    return serial_monsters
 
   def get_full_version(self):
     return f'{self.version} {self.version_suffix}'

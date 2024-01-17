@@ -24,7 +24,8 @@ from rangers_and_ruffians import RnRClass
 from rangers_and_ruffians import RnRClass
 from rangers_and_ruffians import RnRAbility
 
-GENERATED_SITE_DIRECTORY = core.BASE_DIRECTORY.joinpath('site', 'pages', 'GENERATED')
+#GENERATED_SITE_DIRECTORY = core.BASE_DIRECTORY.joinpath('site', 'pages', 'GENERATED')
+GENERATED_DATA_DIRECTORY = core.BASE_DIRECTORY.joinpath('src', 'assets', 'data')
 
 
 # MALE = True
@@ -471,17 +472,17 @@ if __name__ == "__main__":
   #       print(f"{class_name} {ability.summoned_creature}")
 
 
-  if not os.path.exists(GENERATED_SITE_DIRECTORY):
-    os.mkdir(GENERATED_SITE_DIRECTORY)
+  # if not os.path.exists(GENERATED_SITE_DIRECTORY):
+  #   os.mkdir(GENERATED_SITE_DIRECTORY)
 
   parser=argparse.ArgumentParser(description="Utility to re-write new versions of the core rulebooks.")
-  parser.add_argument('--ask', action='store_true')
+  #parser.add_argument('--ask', action='store_true')
   parser.add_argument('--skip_validation', action='store_true')
   args = parser.parse_args()
-  force_overwrite = not args.ask
+  #force_overwrite = not args.ask
   skip_validation = args.skip_validation
 
-  print(f"Force overwrite is {force_overwrite}")
+ # print(f"Force overwrite is {force_overwrite}")
 
 
   update_version = False
@@ -502,25 +503,30 @@ if __name__ == "__main__":
       update = core.update_version(new_version, new_suffix)
   
   rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
-  print(f"Loaded RnR version {rnr_game.get_full_version()}")
+  
+  with open(GENERATED_DATA_DIRECTORY.joinpath(), 'w') as outfile:
+    json.dump(rnr_game.serialize_monsters(), outfile)
+  
+  
+  # print(f"Loaded RnR version {rnr_game.get_full_version()}")
 
-  copyImages(rnr_game)
-  # publish_rulebook(force_overwrite)
-  publish_monsters(rnr_game, force_overwrite)
-  # publish_pantheon(force_overwrite)
-  publish_character_creation(rnr_game, force_overwrite)
-  publish_weapons(rnr_game, force_overwrite)
-  # publish_ancients(force_overwrite)
-  # publish_examples(force_overwrite)
-  # publish_changelog(force_overwrite)
-  # publish_printabled_materials(force_overwrite)
-  # publish_poohbah_printables(force_overwrite)
-  # create_alt_all_race_class_json()
-  setup_service_worker()
-  print("Done!")
+  # copyImages(rnr_game)
+  # # publish_rulebook(force_overwrite)
+  # publish_monsters(rnr_game, force_overwrite)
+  # # publish_pantheon(force_overwrite)
+  # publish_character_creation(rnr_game, force_overwrite)
+  # publish_weapons(rnr_game, force_overwrite)
+  # # publish_ancients(force_overwrite)
+  # # publish_examples(force_overwrite)
+  # # publish_changelog(force_overwrite)
+  # # publish_printabled_materials(force_overwrite)
+  # # publish_poohbah_printables(force_overwrite)
+  # # create_alt_all_race_class_json()
+  # setup_service_worker()
+  # print("Done!")
 
-  rnr_game.print_statistics()
+  # rnr_game.print_statistics()
 
-  serial = rnr_game.serialize()
-  with open('serialize.json', 'w') as f:
-    json.dump(serial, f, indent=4)
+  # serial = rnr_game.serialize()
+  # with open('serialize.json', 'w') as f:
+  #   json.dump(serial, f, indent=4)
