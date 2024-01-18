@@ -53,17 +53,21 @@ class RangersAndRuffians():
     for background in self.backgrounds:
       serial['backgrounds'].append(background.serialize())
     
-    serial['weapons'] = list()
-    for weapon in self.weapons:
-      serial['weapons'].append(weapon.serialize())
+    serial['weapons'] = self.serialize_weapons()
     
     return serial
   
   def serialize_monsters(self):
     serial_monsters = list() 
     for monster in self.monsters:
-      serial_monsters['monsters'].append(monster.serialize())
+      serial_monsters.append(monster.serialize())
     return serial_monsters
+  
+  def serialize_weapons(self):
+    serialize_weapons = list() 
+    for weapon in self.weapons:
+      serialize_weapons.append(weapon.serialize())
+    return serialize_weapons
 
   def get_full_version(self):
     return f'{self.version} {self.version_suffix}'

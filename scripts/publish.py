@@ -189,65 +189,65 @@ def publish_character_creation(rnr_game, force_overwrite):
 #   md.write_toc(max_to_include=3)
 #   md.write_buffer()
   
-def publish_monsters(rnr_game : RangersAndRuffians, force_overwrite):
-  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
-  file_path = GENERATED_SITE_DIRECTORY.joinpath('Book_of_Known_Beasts.md')
+# def publish_monsters(rnr_game : RangersAndRuffians, force_overwrite):
+#   docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+#   file_path = GENERATED_SITE_DIRECTORY.joinpath('Book_of_Known_Beasts.md')
 
-  md = markdown_handler.markdown_handler(f'The Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=file_path)
-  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
+#   md = markdown_handler.markdown_handler(f'The Book of Known Beasts', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+#   md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
-  monster_lines = []
-  current_monster_class = None
-  for rnr_monster in sorted(rnr_game.monsters, key=lambda x: (x.monster_class, x.monster_family, x.tier, x.name)):
-    list_of_lines = list()
-    if rnr_monster.monster_class != current_monster_class:
-      current_monster_class = rnr_monster.monster_class
-      list_of_lines.append(f'## {current_monster_class}  \n')
-    list_of_lines += rnr_monster.get_markdown(level=3).split('\n')
-    list_of_lines = [line + '\n' for line in list_of_lines]
-    list_of_lines += '---  \n  \n'    
-    monster_lines += list_of_lines
-
-
-  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
-  md.start_heading("Monsters", 2)
-  md.slurp_markdown_lines(monster_lines)
-
-  md._write_topmatter()
-  md._write_section(f'Monsters')
-  md.write_toc(max_to_include=3)
-  md.write_buffer()
-
-def publish_weapons(rnr_game : RangersAndRuffians, force_overwrite : bool):
-  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
-  file_path = GENERATED_SITE_DIRECTORY.joinpath('Items.md')
-
-  md = markdown_handler.markdown_handler(f'Items', force_overwrite=force_overwrite, heading_level=1, file=file_path)
-  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
-
-  weapon_lines = []
-  weapon_lines.append('{::options parse_block_html="true" /}  \n')
-  weapon_lines.append(f'  \n<div class="printable-content" id="printable-weapons">  \n')
-  weapon_lines.append(f'  \n<button onclick="printContent(\'printable-weapons\')">Print Weapons</button>  \n')
-  for rnr_weapon in sorted(rnr_game.weapons, key=lambda x: x.name):
-    weapon_lines += f'<div class="rnr-ability" id="weapon-{rnr_weapon.name.lower()}">  \n'
-    list_of_lines = rnr_weapon.get_markdown(level=3).split('\n')
-    list_of_lines = [line + '\n' for line in list_of_lines]
-    weapon_lines += list_of_lines
-    weapon_lines += '</div>  \n'
-    weapon_lines += '---  \n  \n'    
-  weapon_lines.append('</div>  \n')
-  weapon_lines.append('{::options parse_block_html="false" /}')
+#   monster_lines = []
+#   current_monster_class = None
+#   for rnr_monster in sorted(rnr_game.monsters, key=lambda x: (x.monster_class, x.monster_family, x.tier, x.name)):
+#     list_of_lines = list()
+#     if rnr_monster.monster_class != current_monster_class:
+#       current_monster_class = rnr_monster.monster_class
+#       list_of_lines.append(f'## {current_monster_class}  \n')
+#     list_of_lines += rnr_monster.get_markdown(level=3).split('\n')
+#     list_of_lines = [line + '\n' for line in list_of_lines]
+#     list_of_lines += '---  \n  \n'    
+#     monster_lines += list_of_lines
 
 
-  md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
-  md.start_heading("Weapons", 2)
-  md.slurp_markdown_lines(weapon_lines)
+#   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'known_beasts_topmatter.md'))
+#   md.start_heading("Monsters", 2)
+#   md.slurp_markdown_lines(monster_lines)
 
-  md._write_topmatter()
-  md._write_section(f'Items')
-  md.write_toc(max_to_include=3)
-  md.write_buffer()
+#   md._write_topmatter()
+#   md._write_section(f'Monsters')
+#   md.write_toc(max_to_include=3)
+#   md.write_buffer()
+
+# def publish_weapons(rnr_game : RangersAndRuffians, force_overwrite : bool):
+#   docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+#   file_path = GENERATED_SITE_DIRECTORY.joinpath('Items.md')
+
+#   md = markdown_handler.markdown_handler(f'Items', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+#   md.paragraph(f'_Version {rnr_game.get_full_version()}_')
+
+#   weapon_lines = []
+#   weapon_lines.append('{::options parse_block_html="true" /}  \n')
+#   weapon_lines.append(f'  \n<div class="printable-content" id="printable-weapons">  \n')
+#   weapon_lines.append(f'  \n<button onclick="printContent(\'printable-weapons\')">Print Weapons</button>  \n')
+#   for rnr_weapon in sorted(rnr_game.weapons, key=lambda x: x.name):
+#     weapon_lines += f'<div class="rnr-ability" id="weapon-{rnr_weapon.name.lower()}">  \n'
+#     list_of_lines = rnr_weapon.get_markdown(level=3).split('\n')
+#     list_of_lines = [line + '\n' for line in list_of_lines]
+#     weapon_lines += list_of_lines
+#     weapon_lines += '</div>  \n'
+#     weapon_lines += '---  \n  \n'    
+#   weapon_lines.append('</div>  \n')
+#   weapon_lines.append('{::options parse_block_html="false" /}')
+
+
+#   md.slurp_topmatter_file(os.path.join(docs_directory, 'parts', 'topmatter', 'skip_topmatter.md'))
+#   md.start_heading("Weapons", 2)
+#   md.slurp_markdown_lines(weapon_lines)
+
+#   md._write_topmatter()
+#   md._write_section(f'Items')
+#   md.write_toc(max_to_include=3)
+#   md.write_buffer()
 # def publish_pantheon(force_overwrite):
 #   core.load_Rangers_And_Ruffians_Data()
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
@@ -504,8 +504,11 @@ if __name__ == "__main__":
   
   rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
   
-  with open(GENERATED_DATA_DIRECTORY.joinpath(), 'w') as outfile:
+  with open(GENERATED_DATA_DIRECTORY.joinpath('monsters.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_monsters(), outfile)
+  
+  with open(GENERATED_DATA_DIRECTORY.joinpath('weapons.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_weapons(), outfile)
   
   
   # print(f"Loaded RnR version {rnr_game.get_full_version()}")
