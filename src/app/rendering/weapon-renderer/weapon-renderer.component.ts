@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Weapon } from '../weapon';
+import { Weapon } from '../../data_types/Weapon';
 import { CommonModule } from '@angular/common';
 import { NgIf } from '@angular/common';
 
