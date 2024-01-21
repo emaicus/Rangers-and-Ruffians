@@ -1,5 +1,46 @@
-<div *ngIf="weapon">
-    <h4>
-        {{ weapon.name }}
-    </h4>
+<div class="rnr-weapon" *ngIf="weapon">
+	<div class="rnr-subsection" *ngIf="weapon.name !== null">
+		{{weapon.name}}
+	</div>
+	<div>
+		<span class=rnr-boldtext>
+			{{ weapon.handednessLine }}
+		</span>
+	</div>
+	<div *ngIf="weapon.range !== null">
+		<span *ngFor="let item of weapon.range | keyvalue">
+			{{ item.value }}ft {{ item.key.replace('_', ' ') }}
+		</span>
+	</div>
+	<div>
+		<span class="rnr-boldtext">
+			Damage
+		</span>
+		<ul>
+			<li>
+				<span>
+					Common: Deals {{weapon.tierOneDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierOneValue}} gold.
+				</span>
+			</li>
+			<li>
+				<span>
+					Mastercraft 1: Deals {{weapon.tierTwoDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierTwoValue}} gold.
+				</span>
+			</li>
+			<li>
+				<span>
+					Mastercraft 2: Deals {{weapon.tierThreeDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierThreeValue}} gold.
+				</span>
+			</li>
+		</ul>
+	</div>
+	
+	<div>
+		<span class="rnr-boldtext">
+			Abilities:
+		</span>
+		<ng-container *ngFor="let ability of weapon.abilities">
+			<app-ability-renderer [ability]="ability"></app-ability-renderer>
+		</ng-container>
+	</div>
 </div>

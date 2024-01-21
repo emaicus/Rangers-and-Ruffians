@@ -1,6 +1,12 @@
-class Ability {
+import { AbilityData } from "./AbilityInterface";
+import { Requirements } from "./AbilityInterface";
+import { Effect } from "./AbilityInterface";
+import { Damage } from "./AbilityInterface";
+import { Summons } from "./AbilityInterface";
+
+export class RnRAbility {
 	name: string;
-	ability_type: string;
+	abilityType: string;
 	shouldDisplayActionType: boolean;
 	cost: number;
 	shouldDisplayCost: boolean;
@@ -16,25 +22,28 @@ class Ability {
 	castingTimeString: string;
 	radius: number;
 	shouldDisplayRadius: boolean;
-	requirements: object;
+	requirements: Requirements;
+	shouldDisplayRequirements : boolean;
 	description: string;
 	shouldDisplayDescription: boolean;
-	effect: object;
+	effect: Effect;
 	shouldDisplayEffect: boolean;
 	upcast: string;
 	shouldDisplayUpcast: boolean;
 	options: Array<any>;
 	shouldDisplayOptions: boolean;
-	damage: object;
+	damageScaling: Damage;
 	shouldDisplayDamage: boolean;
 	isAoe: boolean;
-	summonedCreature: string | object;
+	summonedCreature: Summons;
 	shouldDisplaySummons: boolean;
 	
-	constructor(data: {} ) {
+	constructor(
+		data: AbilityData
+	) {
 		this.name = data.name ?? "No Ability Name Entered";
-		this.ability_type = data.type ?? "";
-		this.shouldDisplayActionType = data.type != null;
+		this.abilityType = data.ability_type ?? "";
+		this.shouldDisplayActionType = data.ability_type != null;
 		
 		this.cost = data.cost ?? 0;
 		this.shouldDisplayCost = data.cost != null;
@@ -50,26 +59,27 @@ class Ability {
 		
 		this.range = data.range ?? "Touch";
 		this.shouldDisplayRange = data.range != null;
-		this.rangeString = typeof this.range === "number" ? `{this.range} Feet` : data.range;
+		this.rangeString = typeof this.range === "number" ? `{this.range} Feet` : data.range.toString();
 		
 		this.castingTime = data.castingTime ?? "";
 		this.shouldDisplayCastingTime = data.castingTime != null;
-		this.castingTimeString = this.castingTime;
+		this.castingTimeString = this.castingTime.toString();
 		
 		this.radius = data.radius ?? 0;
 		this.shouldDisplayRadius = data.radius != null;
 		
 		this.requirements = data.requirements ?? {};
-		this.shouldDisplayRequirements = data.requirements != null;
 		this.requirements['movement'] = this.requirements.movement ?? false;
 		this.requirements['verbal'] = this.requirements.verbal ?? false;
 		this.requirements['components'] = this.requirements.components ?? [];
+		this.shouldDisplayRequirements = this.requirements.movement ||  this.requirements.verbal || this.requirements.components.length > 0;
+
 		
 		this.description = data.description;
 		this.shouldDisplayDescription = true;
 
 		this.effect = data.effect ?? {};
-		this.shouldDisplayEffect = data.effects != null;
+		this.shouldDisplayEffect = data.effect != null;
 		this.effect.description = this.effect.description ?? "";
 		this.effect.save = this.effect.save ?? "";
 		this.effect.options = this.effect.options ?? [];
@@ -82,15 +92,19 @@ class Ability {
 		this.options = data.options ?? [];
 		this.shouldDisplayOptions = data.options != null;
 		
-		this.damage = data.damage_scaling ?? {};
+		this.damageScaling = data.damage_scaling ?? {};
 		this.shouldDisplayDamage = data.damage_scaling != null;
-		this.damage.multi_attack = this.damage.multi_attack ?? 1;
-		this.damage.scaled_by = this.damage.scaled_by ?? {};
-		this.damage.scaled_by.weapon = this.damage.scaled_by.weapon ?? false;
-		this.damage.scaled_by.stat = this.damage.scaled_by.stat ?? false;
-		this.damage.damage_shape = this.damage.damage_shape ?? "";
-		this.isAoe = this.damage.damage_shape != "";
-		
+		this.damageScaling.multi_attack = this.damageScaling.multi_attack ?? 1;
+		this.damageScaling.scaled_by = this.damageScaling.scaled_by ?? {};
+		this.damageScaling.scaled_by.weapon = this.damageScaling.scaled_by.weapon ?? false;
+		this.damageScaling.scaled_by.stat = this.damageScaling.scaled_by.stat ?? false;
+		this.damageScaling.damage_shape = this.damageScaling.damage_shape ?? "";
+		this.isAoe = this.damageScaling.damage_shape != "";
+		this.damageScaling.all_tiers = this.damageScaling.all_tiers;
+		this.damageScaling.tier_1 = this.damageScaling.tier_1;
+		this.damageScaling.tier_2 = this.damageScaling.tier_2;
+		this.damageScaling.tier_3 = this.damageScaling.tier_3;
+
 		this.summonedCreature = data.summonedCreature ?? "";
 		this.shouldDisplaySummons = data.summonedCreature != null;		
 	}

@@ -4,7 +4,7 @@ class RnRWeapon:
 	def __init__(self, weapon_def):
 		self.name = weapon_def['name'] 
 		self.base_stat = weapon_def['base_stat'] 
-		self.gold_value = weapon_def['value'] 
+		self.gold_value = weapon_def['goldValue'] 
 		self.damage_scaling = weapon_def['damage_scaling']
 		self.range = weapon_def['range']
 		self.harried = weapon_def['harried']
@@ -18,7 +18,7 @@ class RnRWeapon:
 		serial = dict()
 		serial['name'] = self.name 
 		serial['base_stat'] = self.base_stat 
-		serial['value'] = self.gold_value 
+		serial['goldValue'] = self.gold_value 
 		serial['damage_scaling'] = self.damage_scaling
 		serial['range'] = self.range 
 		serial['harried'] = self.harried 
@@ -41,8 +41,10 @@ class RnRWeapon:
 		ret += '  \n'
 	
 		ret += '__Damage:__  \n'
+		scaler = 1
 		for value in ['Common', 'Mastercraft 1', 'Mastercraft 2']:
-			ret += f' *  {value}: Priced at {self.gold_value}, deals {self.damage_scaling[value]} {self.damage_scaling["damage_type"]} damage  \n'
+			ret += f' *  {value}: Priced at {self.gold_value * scaler}, deals {self.damage_scaling[value]} {self.damage_scaling["damage_type"]} damage  \n'
+			scaler *= 10
 		ret += '  \n'
 
 		ret += '__Abilities:__  \n'

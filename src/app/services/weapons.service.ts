@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Weapon } from '../weapon';
+import { Weapon } from '../data_types/Weapon';
 import { map } from 'rxjs/operators';
 
 
@@ -16,9 +16,7 @@ export class WeaponsService {
 
   getWeapons(): Observable<Weapon[]> {
     return this.http.get<any[]>(this.jsonUrl).pipe(
-      map(data => data.map(wdata => new Weapon(wdata.name, wdata.base_stat,
-           wdata.value, wdata.damage_scaling, wdata.range, wdata.harried,
-           wdata.handedness, wdata.abilities)))
+      map(data => data.map(wdata => new Weapon(wdata)))
     );
   }
 

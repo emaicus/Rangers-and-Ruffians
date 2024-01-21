@@ -1,6 +1,6 @@
 -   name: Dagger
     base_stat: Dexterity
-    value: 2 gold
+    goldValue: 2
     damage_scaling:
         damage_type: piercing
         Common: 1d4 
@@ -32,7 +32,7 @@
             description: "When daggers are dual wielded, you are able to make a third attack dagger attack on your turn."
 -   name: Shuriken
     base_stat: Dexterity
-    value: 5 copper
+    goldValue: .5
     damage_scaling:
         damage_type: piercing
         Common: 1d4 
@@ -63,7 +63,7 @@
             description: "When you attack with this weapon, optionally throw a cloud of shuriken in a 15ft cone. This can be used in conjunction with other abilities."
 -   name: Shortspear 
     base_stat: Dexterity
-    value: 1 gold
+    goldValue: 1
     damage_scaling:
         damage_type: piercing
         Common: 1d6
@@ -83,7 +83,7 @@
             description: "When an enemy moves into range of you from the front, they are considered Exposed."
 -   name: Whip
     base_stat: Dexterity
-    value: 2 gold
+    goldValue: 2
     damage_scaling:
         damage_type: piercing
         Common: 1d6 
@@ -114,7 +114,7 @@
             description: "This weapon is strong enough to hold two normal sized humanoids without taking damage, and it may be used as a short distance grappling hook."
 -   name: Great Sword
     base_stat: Strength 
-    value: 5 gold
+    goldValue: 5
     damage_scaling:
         damage_type: piercing
         Common: 2d4 
@@ -140,7 +140,7 @@
                 save: null
 -   name: Great Hammer
     base_stat: Strength
-    value: 5 gold
+    goldValue: 5
     damage_scaling:
         damage_type: blunt
         Common: 2d6 
@@ -165,7 +165,7 @@
                 save: null
 -   name: Flail
     base_stat: Strength
-    value: 2 gold
+    goldValue: 2
     damage_scaling:
         damage_type: blunt
         Common: 1d6 
@@ -190,7 +190,7 @@
                 save: null
 -   name: Longbow
     base_stat: Perception 
-    value: 4 gold
+    goldValue: 4
     damage_scaling:
         damage_type: piercing
         Common: 1d8 
@@ -209,7 +209,7 @@
             description: "When using this weapon, you can give up your movement to add your expertise to all accuracy checks made on your turn."
 -   name: Crossbow
     base_stat: Perception 
-    value: 8 gold
+    goldValue: 8
     damage_scaling:
         damage_type: piercing
         Common: 2d4 
@@ -228,7 +228,7 @@
             description: "If you target an enemy within thirty feet of you, your shots penetrate them. If the attack successfully hits the target, it also deals half damage to an enemy behind them."
 -   name: Hand Crossbow
     base_stat: Perception 
-    value: 3 gold
+    goldValue: 3
     damage_scaling:
         damage_type: piercing
         Common: 1d4 
@@ -265,7 +265,7 @@
                 save: null
 -   name: Slingshot
     base_stat: Perception 
-    value: 1 gold 
+    goldValue: 1 
     damage_scaling:
         damage_type: blunt
         Common: 1d4 
@@ -308,7 +308,7 @@
                 save: null
 -   name: Rapier
     base_stat: Dexterity 
-    value: 5 gold
+    goldValue: 5
     damage_scaling:
         damage_type: piercing
         Common: 1d6 
@@ -333,7 +333,7 @@
                 save: null
 -   name: Shortsword
     base_stat: Strength 
-    value: 5 gold
+    goldValue: 5
     damage_scaling:
         damage_type: piercing
         Common: 1d6 
@@ -358,7 +358,7 @@
                 save: null
 -   name: Hand Axe
     base_stat: Strength 
-    value: 2 gold
+    goldValue: 2
     damage_scaling:
         damage_type: piercing
         Common: 1d6 
@@ -378,7 +378,7 @@
             description: "If you make your first attack with a hand axe and score a glancing blow, the accuracy check of your second attack with the axe is at advantage."
 -   name: Great Axe
     base_stat: Strength 
-    value: 6 gold
+    goldValue: 6
     damage_scaling:
         damage_type: piercing
         Common: 2d4 
@@ -397,7 +397,7 @@
             description: "If you make an attack against an adjacent enemy and hit, your attack skates across them and deals half damage to an any other enemies adjacent to you."
 -   name: Twinsword
     base_stat: Dexterity 
-    value: 12 gold
+    goldValue: 12
     damage_scaling:
         damage_type: piercing
         Common: 2d4 
@@ -416,7 +416,7 @@
             description: "If you make an attack against an adjacent enemy and hit, your attack skates across them and deals half damage to an any other enemies adjacent to you."
 -   name: Quarterstaff
     base_stat: Dexterity 
-    value: 5 Silver
+    goldValue: .5
     damage_scaling:
         damage_type: blunt
         Common: 1d6 
@@ -441,7 +441,7 @@
                 save: null
 -   name: Katana
     base_stat: Dexterity 
-    value: 10 gold
+    goldValue: 10
     damage_scaling:
         damage_type: piercing
         Common: 2d4 
@@ -472,7 +472,7 @@
                 save: null
 -   name: Halberd
     base_stat: Strength
-    value: 10 gold
+    goldValue: 10
     damage_scaling:
         damage_type: piercing
         Common: 2d4
@@ -491,7 +491,7 @@
     handedness: Two Handed
 -   name: Warpick
     base_stat: Strength
-    value: 3 gold
+    goldValue: 4
     damage_scaling:
         damage_type: piercing
         Common: 1d8 

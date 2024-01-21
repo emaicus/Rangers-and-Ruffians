@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TopmatterComponent } from '../../topmatter/topmatter.component';
+import { TopmatterComponent } from '../../rendering/topmatter/topmatter.component';
 
 @Component({
   selector: 'app-home-page',

@@ -1,6 +1,9 @@
-<h2>Items</h2>
+<main id="content" class="main-content" role="main">
+    <h1>Items</h1>
 
-<h3>Weapons</h3>
-<div *ngFor="let weapon of weapons">
-    <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
-</div>
+    <h2>Weapons</h2>
+    <div *ngFor="let weapon of weapons">
+        <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
+        <hr>
+    </div>
+</main>

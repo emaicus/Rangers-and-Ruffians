@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Weapon } from '../weapon';
-import { WeaponsService } from '../services/weapons.service';
-import { WeaponRendererComponent } from '../weapon-renderer/weapon-renderer.component';
+import { Weapon } from "../../data_types/Weapon";
+import { WeaponsService } from '../../services/weapons.service';
+import { WeaponRendererComponent } from '../../rendering/weapon-renderer/weapon-renderer.component';
 import { NgFor, NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +22,10 @@ export class WeaponPageComponent implements OnInit {
 
   getWeapons(): void {
     this.weapon_service.getWeapons()
-        .subscribe(weapons => this.weapons = weapons);
+    .subscribe(weapons => {
+      this.weapons = weapons;
+      // Sort the weapons array by some criteria, e.g., by name
+      this.weapons.sort((a, b) => a.name.localeCompare(b.name));
+    });
   }
 }

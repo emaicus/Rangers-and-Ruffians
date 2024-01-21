@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { WeaponPageComponent } from './weapon-page/weapon-page.component';
+import { HomePageComponent } from './webpages/home-page/home-page.component';
+import { WeaponPageComponent } from './webpages/weapon-page/weapon-page.component';
 
 export const routes: Routes = [ 
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
