@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Weapon } from "../../data_types/Weapon";
-import { WeaponsService } from '../../services/weapons.service';
+import { Weapon } from "../../data_types/Classes/Weapon";
+import { WeaponsService } from '../../services/weapon_service/weapons.service';
 import { WeaponRendererComponent } from '../../rendering/weapon-renderer/weapon-renderer.component';
 import { NgFor, NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';

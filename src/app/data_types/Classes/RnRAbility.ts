@@ -1,8 +1,4 @@
-import { AbilityData } from "./AbilityInterface";
-import { Requirements } from "./AbilityInterface";
-import { Effect } from "./AbilityInterface";
-import { Damage } from "./AbilityInterface";
-import { Summons } from "./AbilityInterface";
+import { AbilityData , Requirements, Effect, Damage, Summons} from "../Interfaces/AbilityInterface";
 
 export class RnRAbility {
 	name: string;

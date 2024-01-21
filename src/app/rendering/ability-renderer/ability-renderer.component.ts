@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RnRAbility } from '../../data_types/RnRAbility';
+import { RnRAbility } from '../../data_types/Classes/RnRAbility';
 import { CommonModule } from '@angular/common';
 import { NgIf, NgFor } from '@angular/common';
 

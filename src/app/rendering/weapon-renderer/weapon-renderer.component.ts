@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Weapon } from '../../data_types/Weapon';
+import { Weapon } from '../../data_types/Classes/Weapon';
 import { CommonModule } from '@angular/common';
 import { NgIf, NgFor } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';

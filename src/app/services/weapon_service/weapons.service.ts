@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Weapon } from '../data_types/Weapon';
+import { Weapon } from '../../data_types/Classes/Weapon';
 import { map } from 'rxjs/operators';
 
 

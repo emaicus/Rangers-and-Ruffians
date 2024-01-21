@@ -1,5 +1,5 @@
-import { AbilityData } from "./AbilityInterface"
-import { WeaponData, DamageScaling, Range } from "./WeaponInterface"
+import { AbilityData } from "../Interfaces/AbilityInterface"
+import { WeaponData, DamageScaling, Range } from "../Interfaces/WeaponInterface"
 import { RnRAbility } from "./RnRAbility"
 
 export class Weapon {
