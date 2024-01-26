@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { Weapon } from '../../data_types/Classes/Weapon';
+import { RnRMonster } from '../../data_types/Classes/RnRMonster';
 import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 
 @Component({
-  selector: 'app-weapon-renderer',
+  selector: 'app-monster-renderer',
   standalone: true,
   imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
-  templateUrl: './weapon-renderer.component.html',
-  styleUrl: './weapon-renderer.component.scss'
+  templateUrl: './monster-renderer.component.html',
+  styleUrl: './monster-renderer.component.scss'
 })
-export class WeaponRendererComponent {
-  @Input() weapon?: Weapon;
+export class MonsterRendererComponent {
+  @Input() monster?: RnRMonster;
 }

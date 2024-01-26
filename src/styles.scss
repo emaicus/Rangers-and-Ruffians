@@ -49,6 +49,14 @@ button{
   color: white;
 }
 
+.rnr-marginless {
+  margin: 0px !important;
+}
+
+.rnr-ability {
+  margin-bottom: 2rem;
+}
+
 .rnr-subsection {
   text-decoration: underline;
   color: black;
@@ -57,8 +65,28 @@ button{
   padding-bottom: .75rem;
 }
 
+.rnr-sub-subsection {
+  text-decoration: underline;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+.rnr-ability-title {
+  text-decoration: underline;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
 .rnr-boldtext {
   font-weight: bold;
+}
+
+.rnr-italictext {
+  font-style:italic;
 }
 
 .blackBox {
@@ -121,7 +149,7 @@ button{
 }
 
 *[id]:before { 
-  display: block; 
+  // display: block; 
   content: " "; 
   margin-top: -60px; // Set the Appropriate Height
   height: 60px; // Set the Appropriate Height

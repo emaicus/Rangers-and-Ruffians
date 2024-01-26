@@ -1,0 +1,33 @@
+<div class="rnr-background" *ngIf="background" [id]="(background.name | lowercase) + '-background'">
+	<div class="rnr-subsection" [id]="(background.name | lowercase) + '-name'">
+		{{ background.name }}
+	</div>
+	<div *ngIf="background.description !== null" [id]="(background.name | lowercase) + '-description'">
+		<p>
+			{{ background.description }}
+		</p>
+	</div>
+	<div *ngIf="background.options !== null" [id]="(background.name | lowercase) + '-options'">
+		<div *ngFor="let option of background.options">
+			<span *ngIf="option.question !== null" class="rnr-boldtext"> {{option.question}} </span>
+			<ol *ngIf="option.answers !== null">
+				<li *ngFor="let answer of option.answers">
+					{{ answer }}
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div *ngIf="background.startingEquipment !== null" [id]="(background.name | lowercase) + '-equiptment'">
+		<p class="rnr-boldtext">
+			Starting Equipment
+        </p>
+        <p>
+            As {{background.addArticle(background.name)}} {{background.name | titlecase }}, you begin your jounrey with:
+        </p>
+		<ul>
+			<li *ngFor="let rnr_item of background.startingEquipment">
+				{{ rnr_item }}
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { Weapon } from '../../data_types/Classes/Weapon';
+import { RnRRace } from '../../data_types/Classes/RnRRace';
 import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 
 @Component({
-  selector: 'app-weapon-renderer',
+  selector: 'app-race-renderer',
   standalone: true,
   imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
-  templateUrl: './weapon-renderer.component.html',
-  styleUrl: './weapon-renderer.component.scss'
+  templateUrl: './race-renderer.component.html',
+  styleUrl: './race-renderer.component.scss'
 })
-export class WeaponRendererComponent {
-  @Input() weapon?: Weapon;
+export class RaceRendererComponent {
+  @Input() race?: RnRRace;
 }

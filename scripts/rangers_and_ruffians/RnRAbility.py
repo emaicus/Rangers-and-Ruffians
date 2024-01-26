@@ -157,6 +157,9 @@ class RnRAbility():
       serial['effect'] = None 
     else:
       serial['effect'] = dict()
+      serial['effect']['description'] = self.effect['description']
+      serial['effect']['save'] = self.effect['save']
+      serial['effect']['type'] = self.effect['type']
       serial['effect']['conditions'] = list()
       for condition in self.effect['conditions']:
         serial['effect']['conditions'].append(condition.serialize())

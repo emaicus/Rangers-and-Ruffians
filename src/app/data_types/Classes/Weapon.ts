@@ -36,6 +36,6 @@ export class Weapon {
         
         this.handednessLine = [this.baseStat, this.handedness,  harriedString].filter(value => value !== null && value !== undefined).join(', ');
 
-        this.abilities = (data.abilities as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData));
+        this.abilities = (data.abilities as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, true));
     }
 }

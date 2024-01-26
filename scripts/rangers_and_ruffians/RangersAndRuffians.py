@@ -58,16 +58,28 @@ class RangersAndRuffians():
     return serial
   
   def serialize_monsters(self):
-    serial_monsters = list() 
-    for monster in self.monsters:
-      serial_monsters.append(monster.serialize())
-    return serial_monsters
+    return self._abstract_serialize(self.monsters)
   
   def serialize_weapons(self):
-    serialize_weapons = list() 
-    for weapon in self.weapons:
-      serialize_weapons.append(weapon.serialize())
-    return serialize_weapons
+    return self._abstract_serialize(self.weapons)
+  
+  def serialize_backgrounds(self):
+    return self._abstract_serialize(self.backgrounds)
+  
+  def serialize_races(self):
+    return self._abstract_serialize(self.races)
+  
+  def serialize_classes(self):
+    return self._abstract_serialize(self.classes)
+  
+  def serialize_attributions(self):
+    return self.attributions
+
+  def _abstract_serialize(self, serializable_array):
+    serialized_objects = list()
+    for item in serializable_array:
+      serialized_objects.append(item.serialize())
+    return serialized_objects
 
   def get_full_version(self):
     return f'{self.version} {self.version_suffix}'

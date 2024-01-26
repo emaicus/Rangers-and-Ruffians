@@ -35,18 +35,19 @@ export class RnRAbility {
 	shouldDisplaySummons: boolean;
 	
 	constructor(
-		data: AbilityData
+		data: AbilityData,
+		succinct: boolean
 	) {
 		this.name = data.name ?? "No Ability Name Entered";
 		this.abilityType = data.ability_type ?? "";
 		this.shouldDisplayActionType = data.ability_type != null;
 		
 		this.cost = data.cost ?? 0;
-		this.shouldDisplayCost = data.cost != null;
+		this.shouldDisplayCost = data.cost != null && (!succinct || (succinct && data.cost != 0));
 		this.costString = `${this.cost} Action ${this.cost === 1 ? 'Point' : 'Points'}`;
 
 		this.duration = data.duration ?? 0;
-		this.shouldDisplayDuration = data.duration != null;
+		this.shouldDisplayDuration = data.duration != null && (!succinct || (succinct && data.duration != "Instantaneous"));
 		if (typeof this.duration === 'number') {
 		  this.durationString = `${this.duration} ${this.duration === 1 ? 'Turn' : 'Turns'}`;
 		} else {
@@ -54,8 +55,8 @@ export class RnRAbility {
 		}
 		
 		this.range = data.range ?? "Touch";
-		this.shouldDisplayRange = data.range != null;
-		this.rangeString = typeof this.range === "number" ? `{this.range} Feet` : data.range.toString();
+		this.shouldDisplayRange = data.range != null && (!succinct || (succinct && !(data.range == "Touch" || data.range == "Self")));
+		this.rangeString = typeof this.range === "number" ? `${this.range} Feet` : data.range.toString();
 		
 		this.castingTime = data.castingTime ?? "";
 		this.shouldDisplayCastingTime = data.castingTime != null;
@@ -69,7 +70,6 @@ export class RnRAbility {
 		this.requirements['verbal'] = this.requirements.verbal ?? false;
 		this.requirements['components'] = this.requirements.components ?? [];
 		this.shouldDisplayRequirements = this.requirements.movement ||  this.requirements.verbal || this.requirements.components.length > 0;
-
 		
 		this.description = data.description;
 		this.shouldDisplayDescription = true;

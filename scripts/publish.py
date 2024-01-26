@@ -32,37 +32,37 @@ GENERATED_DATA_DIRECTORY = core.BASE_DIRECTORY.joinpath('src', 'assets', 'data')
 # FEMALE = False
 # UNDEFINED = True
 
-def copyImages(rnr_game : RangersAndRuffians) -> None:
-  races = ('race', rnr_game.races)
-  classes = ('class', rnr_game.classes)
+# def copyImages(rnr_game : RangersAndRuffians) -> None:
+#   races = ('race', rnr_game.races)
+#   classes = ('class', rnr_game.classes)
 
-  print('Installing Images')
-  for img_type, races_or_classes in (races, classes):
-    for rnr_obj in races_or_classes:
-      name = rnr_obj.name.lower().replace(' ', '_')
+#   print('Installing Images')
+#   for img_type, races_or_classes in (races, classes):
+#     for rnr_obj in races_or_classes:
+#       name = rnr_obj.name.lower().replace(' ', '_')
 
-      source = core.BASE_DIRECTORY.joinpath('docs', 'images', img_type, f'{name}.jpg')
-      dest   = core.BASE_DIRECTORY.joinpath('site', 'images', img_type, f'{name}.jpg')
+#       source = core.BASE_DIRECTORY.joinpath('docs', 'images', img_type, f'{name}.jpg')
+#       dest   = core.BASE_DIRECTORY.joinpath('src',  'assets', 'images', img_type, f'{name}.jpg')
 
-      if source.exists():
-        source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, f'{name}.jpg')
-        dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, f'{name}.jpg')
-      else:
-        print(f"couldn't find {str(source)}")
+#       # if source.exists():
+#       #   source = os.path.join(core.BASE_DIRECTORY, 'docs', 'images', img_type, f'{name}.jpg')
+#       #   dest   = os.path.join(core.BASE_DIRECTORY, 'site', 'images', img_type, f'{name}.jpg')
+#       # else:
+#       #   print(f"couldn't find {str(source)}")
 
-      shutil.copy(str(source), str(dest))
+#       shutil.copy(str(source), str(dest))
 
-      skill_tree_path = core.BASE_DIRECTORY.joinpath('docs', 'images', 'skill_trees', f'{name}.jpg')
-      skill_tree_dest = core.BASE_DIRECTORY.joinpath('site', 'images', 'skill_trees', f'{name}.jpg')
+#       skill_tree_path = core.BASE_DIRECTORY.joinpath('docs', 'images', 'skill_trees', f'{name}.jpg')
+#       skill_tree_dest = core.BASE_DIRECTORY.joinpath('src', 'assets', 'images', 'skill_trees', f'{name}.jpg')
 
-      if skill_tree_path.exists():
-        print(f"Found a skill tree for {rnr_obj.name}")
-        shutil.copy(str(skill_tree_path), str(skill_tree_dest))
+#       if skill_tree_path.exists():
+#         print(f"Found a skill tree for {rnr_obj.name}")
+#         shutil.copy(str(skill_tree_path), str(skill_tree_dest))
 
 
-  source = core.BASE_DIRECTORY.joinpath('docs', 'images', 'under_construction', 'under_construction.jpg')
-  dest   = core.BASE_DIRECTORY.joinpath('site', 'images', 'under_construction', 'under_construction.jpg')
-  shutil.copy(str(source), str(dest))
+  # source = core.BASE_DIRECTORY.joinpath('docs', 'images', 'under_construction', 'under_construction.jpg')
+  # dest   = core.BASE_DIRECTORY.joinpath('site', 'images', 'under_construction', 'under_construction.jpg')
+  # shutil.copy(str(source), str(dest))
 
 def publish_character_creation(rnr_game, force_overwrite):
   docs_directory = core.BASE_DIRECTORY.joinpath('docs')
@@ -167,7 +167,6 @@ def publish_character_creation(rnr_game, force_overwrite):
 #   md.write_buffer()
 
 #def publish_rulebook(rnr_game, force_overwrite):
-
 
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
 #   docs_parts_directory = os.path.join(docs_directory, 'parts')
@@ -510,6 +509,17 @@ if __name__ == "__main__":
   with open(GENERATED_DATA_DIRECTORY.joinpath('weapons.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_weapons(), outfile)
   
+  with open(GENERATED_DATA_DIRECTORY.joinpath('backgrounds.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_backgrounds(), outfile)
+  
+  with open(GENERATED_DATA_DIRECTORY.joinpath('races.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_races(), outfile)
+  
+  with open(GENERATED_DATA_DIRECTORY.joinpath('classes.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_classes(), outfile)
+  
+  with open(GENERATED_DATA_DIRECTORY.joinpath('attributions.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_attributions(), outfile)
   
   # print(f"Loaded RnR version {rnr_game.get_full_version()}")
 

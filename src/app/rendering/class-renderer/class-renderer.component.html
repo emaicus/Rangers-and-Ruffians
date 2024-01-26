@@ -1,0 +1,72 @@
+<div class="rnr-class printable-content" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'">
+	<div class="rnr-subsection" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
+		{{ rnrclass.name }}
+	</div>
+	<!-- <button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button> -->
+	<app-attributed-art-renderer [art]="getAttributedArt(rnrclass)"></app-attributed-art-renderer>
+
+	<div *ngIf="rnrclass.handbook" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-handbook'">
+		<ng-container *ngFor="let section of rnrclass.handbook">
+            <p *ngIf="section.display_title">
+                <span class="rnr-sub-subsection">{{ section.title }}</span>
+            </p>
+            <p>
+                {{ section.text }}
+            </p>
+        </ng-container>
+	</div>
+	<ng-container *ngIf="rnrclass.recommended_stats !== null">
+        <span class="rnr-sub-subsection">
+            Recommended Stats
+        </span>
+		<div class="display-stat-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-stats'">
+			<ul>
+				<li *ngFor="let statpair of rnrclass.recommended_stats | keyvalue">
+					<span class="rnr-boldtext">{{statpair.key| titlecase}}: </span>{{ statpair.value }}<span></span>
+				</li>
+			</ul>
+		</div>
+		<div class="printable-stat-section" id="printable-stats{{rnrclass.name.replace('/\s+/g', '-').toLowerCase()}}">
+			<ng-container *ngFor="let statpair of rnrclass.recommended_stats | keyvalue">
+				<span class="rnr-boldtext">{{statpair.key| titlecase}}: </span>{{ statpair.value }}<span></span>
+			</ng-container>
+		</div>
+	</ng-container>
+	
+	<div *ngIf="rnrclass.expertise !== null && rnrclass.health_dice !== null" class="health-and-expertise" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-health-and-expertise'">
+		<p>
+            <span class="rnr-sub-subsection">
+                Health and Expertise
+            </span>
+        </p>
+		<p>
+			{{rnrclass.name | titlecase}}s use {{rnrclass.health_dice}} as their health dice. {{rnrclass.expertise}}
+		</p>
+	</div>
+	
+	<ng-container *ngIf="rnrclass.instantiated_skill_tree">
+		<div class="ability-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-abilities'">
+			<span class="rnr-sub-subsection" *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0">
+				Abilities:
+			</span>
+			<ng-container *ngFor="let ability of rnrclass.instantiated_skill_tree.abilities">
+				<app-ability-renderer [ability]=ability></app-ability-renderer>
+			</ng-container>
+		</div>
+	</ng-container>
+	<ng-container *ngIf="rnrclass.instantiated_spells">
+		<div class="spells-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-spells'">
+			<span class="rnr-sub-subsection" *ngIf="rnrclass.instantiated_skill_tree.abilities.length == 0">
+				Spells:
+			</span>
+			<ng-container *ngFor="let chapters of rnrclass.instantiated_spells | keyvalue">
+				<div class="spell-tier">
+					<span class="rnr-sub-subsection">{{chapters.key}}</span>
+					<ng-container *ngFor="let ability of chapters.value">
+						<app-ability-renderer [ability]="ability"></app-ability-renderer>
+					</ng-container>
+				</div>
+			</ng-container>
+		</div>
+	</ng-container>
+</div>
