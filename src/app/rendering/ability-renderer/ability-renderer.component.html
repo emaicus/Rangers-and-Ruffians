@@ -28,17 +28,9 @@
 		</ng-container>
 	</div>
 
-	<div *ngIf="ability.shouldDisplayRequirements">
+	<div *ngIf="ability.requirementsArr.length > 0">
         <span class="rnr-boldtext"> Components: </span>
-		<ng-container *ngIf="ability.requirements.movement">
-			<span class="rnr-boldtext" *ngIf="ability.requirements.movement" > movement </span>
-		</ng-container>
-		<ng-container *ngIf="ability.requirements.verbal">
-        	<span class="rnr-boldtext" *ngIf="ability.requirements.verbal" > verbal </span>
-		</ng-container>
-		<ng-container *ngIf="ability.requirements.components">		
-			<span *ngFor="let component of ability.requirements.components" >{{ component }}</span>
-		</ng-container>
+		<span class="rnr-italictext"> {{ability.requirementsArr}} </span>
 	</div>
 	
 	<div *ngIf="ability.shouldDisplayDescription" class="ability-description">
@@ -63,7 +55,7 @@
                 </ng-container>
 			</span>
 			<ng-container *ngIf="ability.effect.options">
-				<ul class="ability-options-list">
+				<ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
 					<li *ngFor="let option of ability.effect.options">
 						<span class="rnr-boldtext">{{ option.name }}</span><span>{{ option.description }}</span>
 					</li>
@@ -86,13 +78,13 @@
 		<span class="rnr-boldtext">Damage</span>
 		<ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
 			<li *ngIf="ability.damageScaling.tier_1">
-			  <span class="rnr-boldtext">Tier 1:</span> <span>{{ ability.damageScaling.tier_1 }} </span>
+			  <span class="rnr-boldtext">Tier 1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.damageType}}</span>
 			</li>
             <li *ngIf="ability.damageScaling.tier_2">
-                <span class="rnr-boldtext">Tier 2:</span> <span>{{ ability.damageScaling.tier_2 }} </span>
+                <span class="rnr-boldtext">Tier 2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.damageType}}</span>
             </li>
             <li *ngIf="ability.damageScaling.tier_3">
-                <span class="rnr-boldtext">Tier 3:</span> <span>{{ ability.damageScaling.tier_3 }} </span>
+                <span class="rnr-boldtext">Tier 3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.damageType}}</span>
             </li>
 		</ul>
 	</div>

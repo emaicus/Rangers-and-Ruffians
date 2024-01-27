@@ -19,7 +19,7 @@ export class RnRAbility {
 	radius: number;
 	shouldDisplayRadius: boolean;
 	requirements: Requirements;
-	shouldDisplayRequirements : boolean;
+	requirementsArr: string = "";
 	description: string;
 	shouldDisplayDescription: boolean;
 	effect: Effect;
@@ -33,6 +33,7 @@ export class RnRAbility {
 	isAoe: boolean;
 	summonedCreature: Summons;
 	shouldDisplaySummons: boolean;
+	damageType: string;
 	
 	constructor(
 		data: AbilityData,
@@ -47,7 +48,7 @@ export class RnRAbility {
 		this.costString = `${this.cost} Action ${this.cost === 1 ? 'Point' : 'Points'}`;
 
 		this.duration = data.duration ?? 0;
-		this.shouldDisplayDuration = data.duration != null && (!succinct || (succinct && data.duration != "Instantaneous"));
+		this.shouldDisplayDuration = data.duration != null &&  data.duration != "Inherited" && (!succinct || (succinct && data.duration != "Instantaneous"));
 		if (typeof this.duration === 'number') {
 		  this.durationString = `${this.duration} ${this.duration === 1 ? 'Turn' : 'Turns'}`;
 		} else {
@@ -55,7 +56,7 @@ export class RnRAbility {
 		}
 		
 		this.range = data.range ?? "Touch";
-		this.shouldDisplayRange = data.range != null && (!succinct || (succinct && !(data.range == "Touch" || data.range == "Self")));
+		this.shouldDisplayRange = data.range != null  &&  data.range != "Inherited"  && (!succinct || (succinct && !(data.range == "Touch" || data.range == "Self")));
 		this.rangeString = typeof this.range === "number" ? `${this.range} Feet` : data.range.toString();
 		
 		this.castingTime = data.castingTime ?? "";
@@ -66,10 +67,22 @@ export class RnRAbility {
 		this.shouldDisplayRadius = data.radius != null;
 		
 		this.requirements = data.requirements ?? {};
-		this.requirements['movement'] = this.requirements.movement ?? false;
-		this.requirements['verbal'] = this.requirements.verbal ?? false;
-		this.requirements['components'] = this.requirements.components ?? [];
-		this.shouldDisplayRequirements = this.requirements.movement ||  this.requirements.verbal || this.requirements.components.length > 0;
+		this.requirements.movement = this.requirements.movement ?? false;
+		this.requirements.verbal = this.requirements.verbal ?? false;
+		this.requirements.components = this.requirements.components ?? [];
+
+		if (this.requirements.movement) {
+			this.requirementsArr += 'm, ';
+		}
+		if (this.requirements.verbal) {
+			this.requirementsArr += 'v, ';
+		}
+		this.requirementsArr  += this.requirements.components.join(', ');
+		  
+		  // Remove the trailing comma if exists
+		console.log(this.requirementsArr);
+		this.requirementsArr = this.requirementsArr.replace(/, $/, '');
+		console.log(this.requirementsArr);
 		
 		this.description = data.description;
 		this.shouldDisplayDescription = true;
@@ -100,6 +113,7 @@ export class RnRAbility {
 		this.damageScaling.tier_1 = this.damageScaling.tier_1;
 		this.damageScaling.tier_2 = this.damageScaling.tier_2;
 		this.damageScaling.tier_3 = this.damageScaling.tier_3;
+		this.damageType = this.damageScaling?.damage_type ?? "";
 
 		this.summonedCreature = data.summonedCreature ?? "";
 		this.shouldDisplaySummons = data.summonedCreature != null;		

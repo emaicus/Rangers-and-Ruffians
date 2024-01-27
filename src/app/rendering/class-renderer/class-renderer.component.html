@@ -54,9 +54,9 @@
 			</ng-container>
 		</div>
 	</ng-container>
-	<ng-container *ngIf="rnrclass.instantiated_spells">
+	<ng-container *ngIf="rnrclass.instantiated_spells && rnrclass.instantiated_skill_tree.abilities.length == 0">
 		<div class="spells-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-spells'">
-			<span class="rnr-sub-subsection" *ngIf="rnrclass.instantiated_skill_tree.abilities.length == 0">
+			<span class="rnr-sub-subsection">
 				Spells:
 			</span>
 			<ng-container *ngFor="let chapters of rnrclass.instantiated_spells | keyvalue">

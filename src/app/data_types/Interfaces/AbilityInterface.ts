@@ -39,7 +39,7 @@ export interface Damage {
 	tier_2: string;
 	tier_3: string;
 	all_tiers: string;
-	damage_scaling: string;
+	damage_type: string;
 }
 
 export interface Summons {
