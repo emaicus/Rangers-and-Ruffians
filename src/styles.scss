@@ -98,45 +98,12 @@ button{
 }
 
 /* The navigation bar */
-
-.navbar {
-  overflow: hidden;
+.sidenav-content{
   background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  height: 50px;
-  width: 100%; /* Full width */
-  z-index: 1;
-  top: 0;
-  top: env(safe-area-inset-top, 0);
-  font-size: 2.5vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-}
-
-.navbar-nav {
-  flex-direction: row;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Change background on mouse-over */
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.navbar a.active {
-  background-color: #4CAF50;
-  color: white;
+  height: 10vh;
+  max-height:50px;
+  display: flex;
+  align-items: center; /* Vertical centering */
 }
 
 .project-tagline {
@@ -207,3 +174,5 @@ button{
     display: none;
   }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
