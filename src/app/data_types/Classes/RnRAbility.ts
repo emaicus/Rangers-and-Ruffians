@@ -80,9 +80,7 @@ export class RnRAbility {
 		this.requirementsArr  += this.requirements.components.join(', ');
 		  
 		  // Remove the trailing comma if exists
-		console.log(this.requirementsArr);
 		this.requirementsArr = this.requirementsArr.replace(/, $/, '');
-		console.log(this.requirementsArr);
 		
 		this.description = data.description;
 		this.shouldDisplayDescription = true;

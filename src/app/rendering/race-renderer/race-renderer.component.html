@@ -3,8 +3,9 @@
 	<div class="rnr-subsection" [id]="(race.name | lowercase) + '-name'">
 		{{ race.name }}
 	</div>
-	<!-- <button (click)="printContent(race.name.toLowerCase() + '-race')">Print {{race.name}}</button>
-	<art-renderer [art]="raceArt"></art-renderer> -->
+	<!-- <button (click)="printContent(race.name.toLowerCase() + '-race')">Print {{race.name}}</button>-->
+	<app-attributed-art-renderer [artName]="race.name"></app-attributed-art-renderer>
+
 	<div *ngIf="race.handbook.introduction !== null" [id]="(race.name | lowercase) + '-introduction'">
 		<p *ngFor="let paragraph of race.handbook.introduction">
 			{{ paragraph }}

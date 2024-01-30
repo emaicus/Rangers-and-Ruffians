@@ -426,6 +426,11 @@ def archive_past_versions():
 #   with open( os.path.join(GENERATED_SITE_DIRECTORY, 'ALT.json' ), 'w' ) as outfile:
 #     json.dump(data, outfile)
 
+def serialize_conditions():
+  input =  core.DATA_DIRECTORY.joinpath('status_effects.yml')
+  output = GENERATED_DATA_DIRECTORY.joinpath('conditions.json')
+  core.convert_yml_file_to_json_file(input, output)
+
 def setup_service_worker():
   intended_service_worker_path = os.path.join(core.BASE_DIRECTORY, 'service_worker.js')
 
@@ -520,6 +525,8 @@ if __name__ == "__main__":
   
   with open(GENERATED_DATA_DIRECTORY.joinpath('attributions.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_attributions(), outfile)
+  
+  serialize_conditions()
   
   # print(f"Loaded RnR version {rnr_game.get_full_version()}")
 

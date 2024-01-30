@@ -1,0 +1,94 @@
+.example-container {
+    position: absolute;
+    top: min(10vh, 50px);
+    left: 0;
+    right: 0;
+    background-color: white;
+    color: black;
+  }
+  
+  .example-sidenav {
+    position: fixed;
+    display: flex;
+    top: min(10vh, 50px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+.example-header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 10vh;
+    max-height:50px;
+    border-bottom: 1px solid white;
+    display:flex;
+    justify-content: space-between; /* Align items to the start and end of the toolbar */
+    align-items: center;
+
+}
+
+.spacer {
+    flex: 1; /* Flexible space to push the button to the right */
+  }
+
+.example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-icon {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  display: inline-flex; /* Use inline-flex to respect the size of the icon */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+}
+
+.custom-icon-size {
+  font-size: 2rem !important;
+  height: 2.2rem !important;
+  width: 2.2rem !important;
+  color: white;
+  display: inline-flex; /* Use inline-flex to respect the size of the icon */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin-left:1rem;
+  margin-right:2rem;
+}
+
+.nav-list li {
+  margin-bottom: 10px; /* Adjust spacing between links */
+}
+
+.nav-list li a {
+  font-size: 1.5rem;
+  color: black; /* Set link color */
+  display: block; /* Each link on its own line */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-list li a:hover {
+  cursor: pointer; /* Show pointer cursor on hover */
+  // background-color: #f0f0f0; /* Highlight background color on hover */
+  background-color: #0080e9;
+  color: white;
+}
+
+/* Apply styles to the active link */
+.nav-list li a.active {
+  font-weight: bold; /* Example: make active link bold */
+}

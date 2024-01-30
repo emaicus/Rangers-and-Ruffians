@@ -51,7 +51,7 @@
 			</span>
 			<span *ngIf="ability.effect.conditions">
                 <ng-container *ngFor="let condition of ability.effect.conditions">
-				    {{ condition }}
+					<app-condition-renderer [conditionName]="condition"></app-condition-renderer>
                 </ng-container>
 			</span>
 			<ng-container *ngIf="ability.effect.options">

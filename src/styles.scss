@@ -1,5 +1,6 @@
 @import 'assets/css/cayman/cayman';
 
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #000000fc; }
 body {padding: 0; padding-top: env(safe-area-inset-top, 0vh); margin: 0;font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 16px;line-height: 1.5;color: #212529;}
 .main-content blockquote {padding: 0 1rem;margin-left: 0;color: #000000d4;border-left: 0.3rem solid #dce6f0;}
@@ -97,13 +98,15 @@ button{
   bottom: env(safe-area-inset-top, 0);
 }
 
-/* The navigation bar */
-.sidenav-content{
-  background-color: #333;
-  height: 10vh;
-  max-height:50px;
-  display: flex;
-  align-items: center; /* Vertical centering */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure the content stays on top of other elements */
+  transition: margin-top 0.3s ease; /* Smooth transition for margin change */
+
+  /* Add any additional styles you need */
 }
 
 .project-tagline {
@@ -173,6 +176,8 @@ button{
   button {
     display: none;
   }
+
+
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
