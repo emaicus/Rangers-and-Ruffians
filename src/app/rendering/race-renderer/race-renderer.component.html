@@ -1,6 +1,6 @@
 <div class="rnr-race printable-content" *ngIf="race" [id]="(race.name | lowercase) + '-race'">
 
-	<div class="rnr-subsection" [id]="(race.name | lowercase) + '-name'">
+	<div class="rnr-subsection toc-section" [id]="(race.name | lowercase) + '-name'">
 		{{ race.name }}
 	</div>
 	<!-- <button (click)="printContent(race.name.toLowerCase() + '-race')">Print {{race.name}}</button>-->

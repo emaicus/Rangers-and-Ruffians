@@ -1,9 +1,11 @@
 <main id="content" class="main-content" role="main">
+    <app-table-of-contents></app-table-of-contents>
+
     <h1>Character Creation</h1>
     <div id="backgrounds">
         <h2> Backgrounds </h2>
         <ng-container *ngFor="let background of backgrounds">
-            <app-background-renderer [background]="background"></app-background-renderer>
+            <app-background-renderer (rendered)="childRendered($event)" [background]="background"></app-background-renderer>
             <hr>
         </ng-container>
     </div>
@@ -11,7 +13,7 @@
     <div id="races">
         <h2>Races</h2>
         <ng-container *ngFor="let race of races">
-            <app-race-renderer [race]="race"></app-race-renderer>
+            <app-race-renderer (rendered)="childRendered($event)"[race]="race"></app-race-renderer>
             <hr>
         </ng-container>
     </div>
@@ -19,7 +21,7 @@
     <div id="classes">
         <h2>Classes</h2>
         <ng-container *ngFor="let rclass of rnrclasses">
-            <app-class-renderer [rnrclass]="rclass"></app-class-renderer>
+            <app-class-renderer (rendered)="childRendered($event)" [rnrclass]="rclass"></app-class-renderer>
             <hr>
         </ng-container> 
     </div>

@@ -8,7 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { Location } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-import { ActivatedRoute, NavigationEnd } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from './services/navigation_service/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -20,17 +21,10 @@ import { ActivatedRoute, NavigationEnd } from '@angular/router';
 export class AppComponent {
   title = 'Rangers-and-Ruffians';
 
-  constructor(private _location: Location, private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private _location: Location, private router: Router, private activatedRoute: ActivatedRoute, private navService: NavigationService) {}
 
   navigateToPageAndFragment(page: string, fragment: string) {
-    this.router.navigate([page], { fragment: fragment }).then(() => {
-      setTimeout(() => {
-        const element = document.getElementById(fragment);
-        if (element) {
-          element.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
-      }, 150); // Adjust the delay as needed
-    });
+    this.navService.navigateToPageAndFragment(page, fragment);
   }
 
   backClicked() {

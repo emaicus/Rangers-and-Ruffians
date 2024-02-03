@@ -1,0 +1,10 @@
+<main id="content" class="main-content" role="main">
+    <h1>Races</h1>
+    <app-table-of-contents></app-table-of-contents>
+    <div id="races">
+        <ng-container *ngFor="let race of rnrRaces">
+            <app-race-renderer (rendered)="childRendered($event)"[race]="race"></app-race-renderer>
+            <hr>
+        </ng-container>
+    </div>
+</main>

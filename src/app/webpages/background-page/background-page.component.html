@@ -1,0 +1,10 @@
+<main id="content" class="main-content" role="main">
+    <h1> Backgrounds </h1>
+    <app-table-of-contents></app-table-of-contents>
+    <div id="backgrounds">
+        <ng-container *ngFor="let background of backgrounds">
+            <app-background-renderer (rendered)="childRendered($event)" [background]="background"></app-background-renderer>
+            <hr>
+        </ng-container>
+    </div>
+</main>

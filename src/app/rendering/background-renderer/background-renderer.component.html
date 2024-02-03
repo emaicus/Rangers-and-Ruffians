@@ -1,5 +1,5 @@
 <div class="rnr-background" *ngIf="background" [id]="(background.name | lowercase) + '-background'">
-	<div class="rnr-subsection" [id]="(background.name | lowercase) + '-name'">
+	<div class="rnr-subsection toc-section" [id]="(background.name | lowercase) + '-name'">
 		{{ background.name }}
 	</div>
 	<div *ngIf="background.description !== null" [id]="(background.name | lowercase) + '-description'">

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output, AfterViewInit } from '@angular/core';
 import { RnRClass } from '../../data_types/Classes/RnRClass';
 import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
@@ -11,7 +11,13 @@ import { AttributedArtRendererComponent } from '../attributed-art/attributed-art
   templateUrl: './class-renderer.component.html',
   styleUrl: './class-renderer.component.scss'
 })
-export class ClassRendererComponent {
+export class ClassRendererComponent implements AfterViewInit {
   @Input() rnrclass?: RnRClass; 
+  @Output() rendered = new EventEmitter<boolean>();
+  isRendered: boolean = false;
 
+  ngAfterViewInit() {
+    this.isRendered = true;
+    this.rendered.emit(true);
+  }
 }

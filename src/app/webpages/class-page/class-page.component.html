@@ -1,0 +1,10 @@
+<main id="content" class="main-content" role="main">
+    <h1>Classes</h1>
+    <app-table-of-contents></app-table-of-contents>
+    <div id="classes">
+        <ng-container *ngFor="let rclass of rnrClasses">
+            <app-class-renderer (rendered)="childRendered($event)" [rnrclass]="rclass"></app-class-renderer>
+            <hr>
+        </ng-container> 
+    </div>
+</main>

@@ -1,5 +1,5 @@
 <div class="rnr-class printable-content" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'">
-	<div class="rnr-subsection" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
+	<div class="rnr-subsection toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ rnrclass.name }}
 	</div>
 	<!-- <button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button> -->

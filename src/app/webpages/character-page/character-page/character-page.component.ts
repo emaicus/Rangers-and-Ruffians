@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  ViewChild, AfterViewInit} from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { TopmatterComponent } from '../../../rendering/topmatter/topmatter.component';
 
@@ -15,18 +15,20 @@ import { RnRClassService } from '../../../services/rnr_class_service/rnr-class.s
 import { ClassRendererComponent } from '../../../rendering/class-renderer/class-renderer.component';
 
 import { CommonModule } from '@angular/common';
+import { TableOfContentsComponent } from '../../../rendering/table-of-contents/table-of-contents.component';
 
 @Component({
   selector: 'app-character-page',
   standalone: true,
-  imports: [TopmatterComponent, RaceRendererComponent, ClassRendererComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule],
+  imports: [TopmatterComponent, RaceRendererComponent, ClassRendererComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
   templateUrl: './character-page.component.html',
   styleUrl: './character-page.component.scss'
 })
-export class CharacterPageComponent implements OnInit {
+export class CharacterPageComponent implements OnInit, AfterViewInit{
   backgrounds: Background[] = [];
   races: RnRRace[] = []
   rnrclasses: RnRClass[] = [];
+  @ViewChild(TableOfContentsComponent) tocComponent!: TableOfContentsComponent;
 
   constructor(
       private background_service: BackgroundService, 
@@ -38,6 +40,17 @@ export class CharacterPageComponent implements OnInit {
     this.getBackgrounds();
     this.getRaces();
     this.getRnRClasses();
+  }
+
+  ngAfterViewInit(): void {
+    console.log('boop');
+    setTimeout(() => {
+      this.childRendered(true); // Check if all child components are rendered
+    });
+  }
+
+  childRendered(isRendered: boolean) {
+    this.tocComponent.generateTableOfContents('character');
   }
 
   getBackgrounds(): void {
