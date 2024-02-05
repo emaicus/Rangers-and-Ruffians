@@ -34,6 +34,7 @@ export class RnRAbility {
 	summonedCreature: Summons;
 	shouldDisplaySummons: boolean;
 	damageType: string;
+	displayableDamageType : string;
 	
 	constructor(
 		data: AbilityData,
@@ -112,6 +113,7 @@ export class RnRAbility {
 		this.damageScaling.tier_2 = this.damageScaling.tier_2;
 		this.damageScaling.tier_3 = this.damageScaling.tier_3;
 		this.damageType = this.damageScaling?.damage_type ?? "";
+		this.displayableDamageType = this.damageType != "Inherited" ? "" : this.damageType; 
 
 		this.summonedCreature = data.summonedCreature ?? "";
 		this.shouldDisplaySummons = data.summonedCreature != null;		

@@ -36,7 +36,7 @@
 	<div *ngIf="ability.shouldDisplayDescription" class="ability-description">
 		<ng-container *ngIf="ability.damageScaling && ability.damageScaling.all_tiers">
 			<span class="rnr-boldtext">
-				{{ ability.damageScaling.all_tiers }} Damage.
+				{{ ability.damageScaling.all_tiers }} {{ability.displayableDamageType}} Damage.
 			</span>
 		</ng-container>
 		<span>
@@ -75,18 +75,26 @@
 		<!-- <ng-container *ngIf="ability.damageScaling.scaled_by  && ability.damageScaling.scaled_by.weapon !== true">
 		  <span class="rnr-boldtext">This spell is not affected by Focus or Weapon damage bonuses.</span>
 		</ng-container> -->
-		<span class="rnr-boldtext">Damage</span>
-		<ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
-			<li *ngIf="ability.damageScaling.tier_1">
-			  <span class="rnr-boldtext">Tier 1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.damageType}}</span>
-			</li>
-            <li *ngIf="ability.damageScaling.tier_2">
-                <span class="rnr-boldtext">Tier 2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.damageType}}</span>
-            </li>
-            <li *ngIf="ability.damageScaling.tier_3">
-                <span class="rnr-boldtext">Tier 3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.damageType}}</span>
-            </li>
-		</ul>
+		<div class="display-damage-section">
+			<span class="rnr-boldtext">Damage</span>
+			<ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
+				<li *ngIf="ability.damageScaling.tier_1">
+				<span class="rnr-boldtext">Tier 1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}}</span>
+				</li>
+				<li *ngIf="ability.damageScaling.tier_2">
+					<span class="rnr-boldtext">Tier 2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}}</span>
+				</li>
+				<li *ngIf="ability.damageScaling.tier_3">
+					<span class="rnr-boldtext">Tier 3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}}</span>
+				</li>
+			</ul>
+		</div>
+		<div class="printable-damage-section">
+			<span class="rnr-boldtext">Damage </span>
+			<span class="rnr-boldtext">T1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} </span>
+			<span class="rnr-boldtext">T2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} </span>
+			<span class="rnr-boldtext">T3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}} </span>
+		</div>
 	</div>
 
     <div *ngIf="ability.shouldDisplaySummons && ability.summonedCreature">

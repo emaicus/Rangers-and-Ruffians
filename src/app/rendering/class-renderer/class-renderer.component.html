@@ -2,7 +2,7 @@
 	<div class="rnr-subsection toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ rnrclass.name }}
 	</div>
-	<!-- <button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button> -->
+	<button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button>
 	<app-attributed-art-renderer [artName]="rnrclass.name"></app-attributed-art-renderer>
 
 	<div *ngIf="rnrclass.handbook" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-handbook'">
@@ -21,14 +21,14 @@
         </span>
 		<div class="display-stat-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-stats'">
 			<ul>
-				<li *ngFor="let statpair of rnrclass.recommended_stats | keyvalue">
-					<span class="rnr-boldtext">{{statpair.key| titlecase}}: </span>{{ statpair.value }}<span></span>
+				<li *ngFor="let statpair of rnrclass.displayReccomendedStats | keyvalue">
+					<span class="rnr-boldtext">{{statpair.key| titlecase }}: </span><span>{{ statpair.value }} </span>
 				</li>
 			</ul>
 		</div>
 		<div class="printable-stat-section" id="printable-stats{{rnrclass.name.replace('/\s+/g', '-').toLowerCase()}}">
-			<ng-container *ngFor="let statpair of rnrclass.recommended_stats | keyvalue">
-				<span class="rnr-boldtext">{{statpair.key| titlecase}}: </span>{{ statpair.value }}<span></span>
+			<ng-container *ngFor="let statpair of rnrclass.displayReccomendedStats | keyvalue">
+				<span class="rnr-boldtext">{{statpair.key| titlecase}}: </span><span>{{ statpair.value }} </span>
 			</ng-container>
 		</div>
 	</ng-container>
@@ -45,6 +45,7 @@
 	</div>
 	
 	<ng-container *ngIf="rnrclass.instantiated_skill_tree">
+		<app-skill-tree-renderer *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0" [rnr_class_name]="rnrclass.name" ></app-skill-tree-renderer>
 		<div class="ability-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-abilities'">
 			<span class="rnr-sub-subsection" *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0">
 				Abilities:

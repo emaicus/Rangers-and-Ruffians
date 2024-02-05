@@ -9,9 +9,9 @@ interface InstantiatedSkillTree {
 }
 
 interface InstantiatedSpells {
-    Tier_1: RnRAbility[];
-    Tier_2: RnRAbility[];
-    Tier_3: RnRAbility[];
+    "Tier 1": RnRAbility[];
+    "Tier 2": RnRAbility[];
+    "Tier 3": RnRAbility[];
 }
 
 export class RnRClass implements ClassData {
@@ -25,12 +25,21 @@ export class RnRClass implements ClassData {
     starting_items: string[];
     instantiated_skill_tree : InstantiatedSkillTree;
     instantiated_spells: InstantiatedSpells;
+    displayReccomendedStats;
     
 
     constructor(data: ClassData) {
         this.name = data.name;
         this.expertise = data.expertise;
         this.recommended_stats = data.recommended_stats;
+        this.displayReccomendedStats = {
+            "Strength": data.recommended_stats.Strength,
+            "Dexterity": data.recommended_stats.Dexterity,
+            "Intelligence": data.recommended_stats.Intelligence,
+            "Inner Fire": data.recommended_stats.Inner_Fire,
+            "Perception": data.recommended_stats.Perception,
+            "Charisma": data.recommended_stats.Charisma
+        }
         this.health_dice = data.health_dice;
 
         this.handbook = data.handbook ?? [];
@@ -43,9 +52,9 @@ export class RnRClass implements ClassData {
         
         this.spells = data.spells;
         this.instantiated_spells = {
-          Tier_1: (data?.spells?.Tier_1 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
-          Tier_2: (data?.spells?.Tier_2 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
-          Tier_3: (data?.spells?.Tier_3 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false))
+          "Tier 1": (data?.spells?.Tier_1 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
+          "Tier 2": (data?.spells?.Tier_2 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
+          "Tier 3": (data?.spells?.Tier_3 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false))
         }
     }
 }
