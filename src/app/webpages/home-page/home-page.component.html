@@ -1,9 +1,11 @@
 <app-topmatter></app-topmatter>
-<!-- [hero]="selectedHero" -->
 
 <main id="content" class="main-content" role="main">
     <h1>Rangers and Ruffians</h1>
     <i>Version 3.0.0 Release Candidate 1</i>
+
+    <button (click)="installPWA()" *ngIf="deferredPrompt">Install App</button>
+
 
 
     <h2>Release Candidate</h2>
