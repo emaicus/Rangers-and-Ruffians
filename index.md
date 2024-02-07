@@ -75,13 +75,13 @@ if ('serviceWorker' in navigator) {
 </script>
 
 # Rangers and Ruffians
-_Version 3.0.0 Release Candidate 1_
+_Version 3.0.0 Release Candidate 1 Github Pages Migration_
 
 
 ## Release Candidate
 This version of Rangers and Ruffians is a release candidate! That means it's almost ready for showtime. 
 The site will be updated frequently in the coming weeks with new rules and features as the documentation is
-completed.
+completed. 
 
 ### Check out the Release Candidate!
 1. [Choose your Background, Race, and Class](/site/pages/GENERATED/Compendium_of_Character_Creation.md)
