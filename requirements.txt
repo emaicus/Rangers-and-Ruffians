@@ -1,7 +1,0 @@
-tqdm
-names
-contractions
-pyspellchecker
-textsearch
-inquirer
-jsonschema
