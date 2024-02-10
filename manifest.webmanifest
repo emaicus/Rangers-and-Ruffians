@@ -1,8 +1,8 @@
 {
   "name": "Rangers and Ruffians",
   "short_name": "RnR",
-  "theme_color": "#1976d2",
-  "background_color": "#0a51f7",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
