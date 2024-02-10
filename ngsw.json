@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1707353377535,
+  "timestamp": 1707533589839,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-7LC5JT5Z.js",
+        "/main-DZP5WJFK.js",
         "/manifest.webmanifest",
         "/polyfills-RX4V3J3S.js",
-        "/styles-SVZ7CNHM.css"
+        "/styles-BKC3SOY4.css"
       ],
       "patterns": []
     },
@@ -40,6 +40,7 @@
         "/assets/css/material-theme/css/theme.light.css",
         "/assets/css/material-theme/css/tokens.css",
         "/assets/css/material-theme/css/typography.module.css",
+        "/assets/css/print.css",
         "/assets/css/style.scss",
         "/assets/data/attributions.json",
         "/assets/data/backgrounds.json",
@@ -197,6 +198,7 @@
     "/assets/css/material-theme/css/theme.light.css": "43510b7cf0d723e81c93a8cf8e5c75e5f22d96c9",
     "/assets/css/material-theme/css/tokens.css": "04179b1984f4d39a1cdd89be13101d808b1900ee",
     "/assets/css/material-theme/css/typography.module.css": "7b3ee2118a0447103a360389024e74afb93f3a12",
+    "/assets/css/print.css": "bc506a5bc0901a05f4c90064a6f9babda1336c50",
     "/assets/css/style.scss": "6dc1dfdfe0662d4225483deb2abedc15f301cc03",
     "/assets/data/attributions.json": "5a109ae5d964fb9aa692369340140ca3140e4441",
     "/assets/data/backgrounds.json": "b7de4c70486b7c8754959c2ba8c07a2be6e6dd4c",
@@ -327,8 +329,8 @@
     "/assets/images/wizard.jpg": "7069baca177f66ad3bdc681e72f4ba19cf87a5bf",
     "/assets/images/wood_elf.jpg": "ca18f03470a2effb6bcd1ae7da2020fe35c51c9d",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "2280623977041d398449b49e9a787c07a038d154",
-    "/main-7LC5JT5Z.js": "e0ce9055c101073784978e71998986af6c410dc5",
+    "/index.html": "fe5328f34b171781d520195d69e8a0bac96e5095",
+    "/main-DZP5WJFK.js": "ce76782dd38edf55b9d737060ec75901d7850382",
     "/manifest.webmanifest": "8caedae8a0900bbf89d68fcdea5f7581d43dab47",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
@@ -341,7 +343,7 @@
     "/media/material-icons-two-tone-LCGWGE2N.woff": "02225d888afe4eebc7312b7432878dc8aef1f50f",
     "/media/material-icons-two-tone-M5N5K6F5.woff2": "296ff0bff395a77c2e33e7e31fffe73980bd93cf",
     "/polyfills-RX4V3J3S.js": "6b4c4ea33aa92bce0b91df442a680ed73e4303db",
-    "/styles-SVZ7CNHM.css": "9b4bae6801c2e2e43a7cbe61b3a162a7c4f32590"
+    "/styles-BKC3SOY4.css": "2827cd4edc86a2e9982d2ead897291ec7bf09853"
   },
   "navigationUrls": [
     {
