@@ -14,17 +14,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 21.x
+          node-version: 20.x
+          cache: "npm"
       - name: Install dependencies
         run: npm install
-      - name: Build Angular app
-        run: npm run build -- --prod
-      - name: gh-pages
-        run: |
-          npm install -g @angular/cli
-          ng add angular-cli-ghpages
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub provided token
-        run: ng deploy --cname=rangersandruffians.com
-
+        run: npm run ng -- deploy --cname=rangersandruffians.com --name="emaicus" --email="emaicus@outlook.com"
