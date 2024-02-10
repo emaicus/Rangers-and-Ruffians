@@ -1,0 +1,14 @@
+<ng-container *ngIf="art">
+    <div class="attributed-art" *ngIf="art.imageExists">
+        <div>
+            <img [src]="art.getImagePath()" class="raceClassImage">
+        </div>
+        <p>
+            <span class="attribution">
+                <a [href]="art.url"> {{art.title}} </a> 
+                by {{art.artist}} is licensed under 
+                <a [href]="art.license_url"> {{art.license}} </a>
+            </span>
+        </p>
+    </div>
+</ng-container>

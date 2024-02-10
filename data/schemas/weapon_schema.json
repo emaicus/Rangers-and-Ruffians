@@ -3,7 +3,7 @@
 	"type": "array",
 	"items": {
 		"type": "object",
-		"required": ["name", "base_stat", "value", "damage_scaling", "range", "harried", "handedness", "abilities"],
+		"required": ["name", "base_stat", "goldValue", "damage_scaling", "range", "harried", "handedness", "abilities"],
 		"additionalProperties": false,
 		"properties": {
 			"name": {
@@ -13,8 +13,8 @@
 				"type": "string",
 				"enum": ["Dexterity", "Strength", "Intelligence", "Inner Fire", "Perception", "Charisma"]
 			},
-			"value": {
-				"type": "string"
+			"goldValue": {
+				"type": "number"
 			},
 			"damage_scaling": {
 				"type": "object",

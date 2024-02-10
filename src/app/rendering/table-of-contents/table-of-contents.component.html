@@ -1,0 +1,11 @@
+<!-- table-of-contents.component.html -->
+<ol class="toc-list">
+    <ng-container *ngFor="let heading of headings">
+        <li class="toc-item">
+            <a (click)="navigateToPageAndFragment(heading.page, heading.fragment)" routerLinkActive="active">
+                {{ heading.text }}
+            </a>
+        </li>
+    </ng-container>
+</ol>
+  

@@ -1,0 +1,24 @@
+  /* Style the table of contents */
+.toc-list {
+  list-style-type: decimal; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  padding-left: 1.4rem;
+}
+
+/* Style each table of contents item */
+.toc-item {
+  padding: 5px 10px; /* Add padding to create space around the content */
+  font-size: 1.2rem;
+}
+
+/* Style anchor tags within the table of contents */
+.toc-item a {
+  color: black; /* Set text color to white */
+  text-decoration: none; /* Remove default underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Add hover effect for anchor tags */
+.toc-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

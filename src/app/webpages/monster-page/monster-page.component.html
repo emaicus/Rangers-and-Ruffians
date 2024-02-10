@@ -1,0 +1,18 @@
+<main id="content" class="main-content" role="main">
+    <h1>Monsters</h1>
+    <!-- <h2> Backgrounds </h2>
+    <ng-container *ngFor="let background of backgrounds">
+        <app-background-renderer [background]="background"></app-background-renderer>
+        <hr>
+    </ng-container> -->
+    <!-- <h2>Races</h2>
+    <ng-container *ngFor="let race of races">
+        <app-race-renderer [race]="race"></app-race-renderer>
+        <hr>
+    </ng-container> -->
+
+    <ng-container *ngFor="let monster of monsters">
+        <app-monster-renderer [monster]="monster"></app-monster-renderer>
+        <hr>
+    </ng-container>
+</main>

@@ -1,0 +1,229 @@
+@import 'assets/css/cayman/cayman';
+
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { margin-top: 2rem; margin-bottom: 1rem; font-weight: normal; color: #000000fc; }
+body {padding: 0; padding-top: env(safe-area-inset-top, 0vh); margin: 0;font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size: 16px;line-height: 1.5;color: #212529;}
+.main-content blockquote {padding: 0 1rem;margin-left: 0;color: #000000d4;border-left: 0.3rem solid #dce6f0;}
+.main-content { padding-top: 6vh; }
+.main-content h5 {text-decoration: underline;}
+
+// .project-name { margin-top: 0; margin-bottom: 2rem; font-family: 'Tangerine', serif; font-size:4rem" }
+.project-name { margin-top: 0; margin-bottom: 0.1rem; font-family: 'Cardo', serif; font-weight: normal;}
+@media screen and (min-width: 64em) { .project-name { font-size: 4rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .project-name { font-size: 2.25rem; } }
+@media screen and (max-width: 42em) { .project-name { font-size: 1.5rem; } }
+
+
+figcaption {}
+@media screen and (min-width: 64em) { figcaption { font-size: 1rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { figcaption { font-size: 0.75rem; } }
+@media screen and (max-width: 42em) { figcaption { font-size: 0.5rem; } }
+
+h1 { font-size: 2.5rem;}
+h2 { font-size: 2rem; text-decoration: underline;}
+h3 { font-size: 1.75rem; text-decoration: underline;}
+h4 { font-size: 1.5rem; text-decoration: underline;}
+
+.raceClassImage{ max-width:90vw; max-height:60vh; }
+.skilltree { max-height:60vh; }
+@media screen and (max-width: 42em) { .raceClassImage { max-width:100vw; max-height:80vh; } }
+
+@media screen and (orientation: portrait)
+{  
+  .header-landscape{display:none;}
+  .header-portrait{display:inline-block;}
+}
+
+@media screen and (orientation: landscape)
+{  
+  .header-landscape{display:inline-block;}
+  .header-portrait{display:none;}
+}
+
+
+@import "assets/css/cayman/variables";
+// @import "../node_modules/bootstrap/scss/";
+// @import "bootstrap-select/sass/bootstrap-select";
+
+button{
+  background-color: #0080e9;
+  color: white;
+}
+
+.rnr-marginless {
+  margin: 0px !important;
+}
+
+.rnr-ability {
+  margin-bottom: 2rem;
+}
+
+.rnr-subsection {
+  text-decoration: underline;
+  color: black;
+  font-size: 1.75rem;
+  font-weight: normal;
+  padding-bottom: .75rem;
+}
+
+.rnr-sub-subsection {
+  text-decoration: underline;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+.rnr-ability-title {
+  text-decoration: underline;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+.rnr-boldtext {
+  font-weight: bold;
+}
+
+.rnr-italictext {
+  font-style:italic;
+}
+
+.blackBox {
+  z-index: 2;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  bottom: env(safe-area-inset-top, 0);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure the content stays on top of other elements */
+  transition: margin-top 0.3s ease; /* Smooth transition for margin change */
+
+  /* Add any additional styles you need */
+}
+
+.project-tagline {
+  opacity: 1;
+}
+
+.headerIcon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+*[id]:before { 
+  // display: block; 
+  content: " "; 
+  margin-top: -60px; // Set the Appropriate Height
+  height: 60px; // Set the Appropriate Height
+  visibility: hidden; 
+}
+
+.printable-stat-section {
+  display: none;
+}
+
+.display-stat-section {
+  display: block;
+}
+
+.printable-damage-section {
+  display: none;
+}
+
+.display-damage-section {
+  display: block;
+}
+
+
+.main-content hr {
+  background-color: #dddddd;
+}
+
+@media print {
+  @page {
+    margin: 1in;
+  }
+
+  .printable-stat-section {
+    display: block;
+  }
+
+  .display-stat-section {
+    display: none;
+  }
+
+  .printable-damage-section {
+    display: block;
+  }
+
+  .display-damage-section {
+    display: none;
+  }
+
+  .raceClassImage {
+    display: none;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .rnr-ability {
+    page-break-inside: avoid; /* Prevent splitting across pages */
+  }
+
+  /* Set width for elements with the class "skilltree" */
+  .skilltree {
+    width: calc(100% - 20px); /* Set the margin size as needed */
+    margin: 10px; /* Set the margin size as needed */
+  }
+
+  .handbook-section {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .rnr-subsection {
+    text-decoration: underline;
+    color: black;
+    font-size: 16pt;
+    font-weight: normal;
+    padding-bottom: .75rem;
+  }
+  
+  .rnr-sub-subsection {
+    text-decoration: underline;
+    color: black;
+    font-size: 14pt;
+    font-weight: normal;
+    margin-bottom: .5rem;
+  }
+  
+  .rnr-ability-title {
+    text-decoration: underline;
+    color: black;
+    font-size: 12pt;
+    font-weight: normal;
+    margin-bottom: .5rem;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+  
+
+
+}
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

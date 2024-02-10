@@ -1,0 +1,70 @@
+<mat-toolbar class="example-header">
+  <button mat-button (click)="backClicked()">
+      <mat-icon class="custom-icon-size">
+        arrow_back
+      </mat-icon>
+  </button>
+  <button mat-button (click)="homeClicked()">
+    <mat-icon class="custom-icon-size">
+      home
+    </mat-icon>
+  </button>
+  <div class="spacer"></div>
+  <div>
+    <button mat-button	class="material-icons" (click)="drawer.toggle()">
+      <mat-icon class="custom-icon-size">
+        menu
+      </mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize>
+  <mat-sidenav #drawer [fixedInViewport]="false" mode="side" position="end" class="example-sidenav">
+    <ul class="nav-list">
+      <li>
+        <a (click)="navigateToPageAndFragment('/backgrounds', '')" routerLinkActive="active">
+          Backgrounds
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToPageAndFragment('/races', '')" routerLinkActive="active">
+          Races
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToPageAndFragment('/classes', '')" routerLinkActive="active">
+          Classes
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToPageAndFragment('/weapons', '')" routerLinkActive="active">
+          Weapons
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToPageAndFragment('/monsters', '')" routerLinkActive="active">
+          Monsters
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>  
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <mat-toolbar class="example-header">Header</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer [fixedInViewport]="false" mode="side" class="example-sidenav">
+    stuff and nonsense.
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="drawer.toggle()">Toggle</button></p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar class="example-footer">Footer</mat-toolbar> -->

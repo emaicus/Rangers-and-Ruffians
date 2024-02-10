@@ -1,0 +1,70 @@
+<div class="rnr-race printable-content" *ngIf="race" [id]="(race.name | lowercase) + '-race'">
+
+	<div class="rnr-subsection toc-section" [id]="(race.name | lowercase) + '-name'">
+		{{ race.name }}
+	</div>
+	<!-- <button (click)="printContent(race.name.toLowerCase() + '-race')">Print {{race.name}}</button>-->
+	<app-attributed-art-renderer [artName]="race.name"></app-attributed-art-renderer>
+
+	<div *ngIf="race.handbook.introduction !== null" [id]="(race.name | lowercase) + '-introduction'">
+		<p *ngFor="let paragraph of race.handbook.introduction">
+			{{ paragraph }}
+		</p>
+	</div>
+	<div *ngIf="race.handbook.you_may !== null" [id]="(race.name | lowercase) + '-youMay'">
+		<p *ngIf="race.handbook.you_may.title !== null" class="rnr-sub-subsection">
+			{{ race.handbook.you_may.title }}
+		</p>
+		<ul *ngIf="race.handbook.you_may.options !== null">
+			<li *ngFor="let option of race.handbook.you_may.options">
+				{{ option }}
+			</li>
+		</ul>
+	</div>
+	<div *ngIf="race.handbook.assumptions !== null" [id]="(race.name | lowercase) + '-assumptions'">
+		<p *ngIf="race.handbook.assumptions.title !== null">
+            <span class="rnr-sub-subsection">
+			    {{ race.handbook.assumptions.title }}
+            </span>    
+        </p>
+		<ul *ngIf="race.handbook.assumptions.options !== null">
+			<li *ngFor="let option of race.handbook.assumptions.options">
+				{{ option }}
+			</li>
+		</ul>
+	</div>
+	<div *ngIf="race.handbook.looks !== null" [id]="(race.name | lowercase) + '-looks'">
+		<p class="rnr-sub-subsection">
+			Physical Features
+		</p>
+		<ul *ngIf="race.handbook.looks">
+			<li *ngFor="let item of race.handbook.looks">
+				<span class="rnr-boldtext">{{ item.title }}:</span> <span> {{ item.options }} </span>
+			</li>
+		</ul>
+	</div>
+    <span class="rnr-sub-subsection">
+        Stats and Abilities
+    </span>
+	<div *ngIf="race.base_movement !== null && race.health_dice !== null" [id]="(race.name | lowercase) + '-movement-and-health'">
+		<p>
+            <span class="rnr-boldtext">
+                Health Dice: 
+            </span>
+            <span [id]="(race.name | lowercase) + '-health-dice'">
+                {{race.health_dice}}
+            </span>
+            <span class="rnr-boldtext">
+                Movement: 
+            </span>
+            <span [id]="(race.name | lowercase) + '-base-movement'">
+                {{race.base_movement}}ft
+            </span>
+        </p>
+    </div>
+	<div *ngIf="race.abilities !== null" [id]="(race.name | lowercase) + '-abilities'">
+		<ng-container *ngFor="let ability of race.instantiated_abilities">
+			<app-ability-renderer [ability]="ability"></app-ability-renderer>
+		</ng-container>
+	</div>
+</div>
