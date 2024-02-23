@@ -1,5 +1,5 @@
 <div class="rnr-class printable-content" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'">
-	<div class="rnr-subsection toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
+	<div class="rnr-subsection-title toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ rnrclass.name }}
 	</div>
 	<button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button>
@@ -8,7 +8,7 @@
 	<div *ngIf="rnrclass.handbook" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-handbook'">
 		<ng-container *ngFor="let section of rnrclass.handbook">
             <p *ngIf="section.display_title">
-                <span class="rnr-sub-subsection">{{ section.title }}</span>
+                <span class="rnr-sub-subsection-title">{{ section.title }}</span>
             </p>
             <p>
                 {{ section.text }}
@@ -16,7 +16,7 @@
         </ng-container>
 	</div>
 	<ng-container *ngIf="rnrclass.recommended_stats !== null">
-        <span class="rnr-sub-subsection">
+        <span class="rnr-sub-subsection-title">
             Recommended Stats
         </span>
 		<div class="display-stat-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-stats'">
@@ -35,7 +35,7 @@
 	
 	<div *ngIf="rnrclass.expertise !== null && rnrclass.health_dice !== null" class="health-and-expertise" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-health-and-expertise'">
 		<p>
-            <span class="rnr-sub-subsection">
+            <span class="rnr-sub-subsection-title">
                 Health and Expertise
             </span>
         </p>
@@ -47,7 +47,7 @@
 	<ng-container *ngIf="rnrclass.instantiated_skill_tree">
 		<app-skill-tree-renderer *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0" [rnr_class_name]="rnrclass.name" ></app-skill-tree-renderer>
 		<div class="ability-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-abilities'">
-			<span class="rnr-sub-subsection" *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0">
+			<span class="rnr-sub-subsection-title" *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0">
 				Abilities:
 			</span>
 			<ng-container *ngFor="let ability of rnrclass.instantiated_skill_tree.abilities">
@@ -57,12 +57,12 @@
 	</ng-container>
 	<ng-container *ngIf="rnrclass.instantiated_spells && rnrclass.instantiated_skill_tree.abilities.length == 0">
 		<div class="spells-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-spells'">
-			<span class="rnr-sub-subsection">
+			<span class="rnr-sub-subsection-title">
 				Spells:
 			</span>
 			<ng-container *ngFor="let chapters of rnrclass.instantiated_spells | keyvalue">
 				<div class="spell-tier">
-					<span class="rnr-sub-subsection">{{chapters.key}}</span>
+					<span class="rnr-sub-subsection-title">{{chapters.key}}</span>
 					<ng-container *ngFor="let ability of chapters.value">
 						<app-ability-renderer [ability]="ability"></app-ability-renderer>
 					</ng-container>

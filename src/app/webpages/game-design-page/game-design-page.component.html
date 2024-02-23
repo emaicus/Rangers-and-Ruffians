@@ -1,0 +1,1939 @@
+<main id="content" class="main-content" role="main">
+    <h1>
+        Designing for Rangers and Ruffians
+    </h1>
+
+    <div class="rnr-section">
+        <div class="rnr-section-title">
+            <span>
+                Tiers of Play
+            </span>
+        </div>
+        <div class="rnr-section-body">
+            <p class="rnr-body-paragraph">
+                To ease game design, the career of an adventuer has been broken into three tiers.
+                It is useful to view each of these tiers as a book, and the adventures within as chapters.
+                Each tier will feel different than the last, and in each tier the adventurers -- and the threats that they face -- will grow much stronger. 
+                Tier One, the lowest tier, takes place between character levels 0 and 4. Tier Two
+                lasts from level 5 to 10, and gameplay Tier Three lasts from levels 11 to 15. 
+            </p>
+            <p class="rnr-body-paragraph">
+                To aid in design, this document provides minimum and maximum expected values within a given tier.
+                For example, a minion's health is expected to be between 21 and 36 in Tier 1 play. 
+                Many of these statistics are rooted around assumptions regarding how
+                many attacks a minion, adventurer, or villain should be able to survive.
+                These values are guidelines, and can certainly be ignored. 
+                However, remember that if a character is given a weapon that deals 
+                significantly more damage than expected, for example, monster stats will need to be adjusted accordingly
+                and the usefulness of the guidelines will be decreased.
+            </p>
+            <p class="rnr-body-paragraph">
+                The remainder of this document will give advice and guidance on the design of the monsters and loot 
+                that your characters will discover as they adventure through the realms of your world.
+            </p>
+        </div>
+    </div>
+    <div class="rnr-section">
+        <div class="rnr-section-title">
+            <span>
+                Design Principles
+            </span>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    What is your Goal?
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    Whenever you set out to design something, ask yourself what you are trying to achieve.
+                    Generally, you have identified a missing piece in the provided rules and want to fill it. 
+                    Knowing what that missing piece is will help you understand how to proceed. Ask yourself 
+                    <span class="rnr-italictext"> 
+                        how does what I'm adding help fill in the gap I've identified? How does it 
+                        support the fantasy that I'm trying to add to the game?
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Avoid Duplication
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    An important part of designing something new is to ensure that it doesn't 
+                    devalue something else. For example, if you introduce a "Belt of Rage" that 
+                    allows its wearer to go Berserk, it could make a party's barbarian seem less unique and therefore 
+                    less fun for the player. If your party doesn't have a Barbarian, that is less important.
+                    Look at your adventurer's abilities before implementing adding new items in the game.
+                </p>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Conditions
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    Rangers and Ruffians provides an extensive list of status effects that can be applied to a 
+                    combatant. It can be useful for you to acquaint yourself with that list and 
+                    to use these conditions in your design. If you can't find one that fits, feel free to make up your own.
+                </p>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Hard Choices are Fun 
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">		
+                    When you are designing magic items, consider giving them limitations, quirks, or pitfalls. 
+                    For example,
+                    <span class="rnr-italictext">
+                        Boots of Jumping
+                    </span>
+                    which carry a character too far if they roll low, an 
+                    <span class="rnr-italictext">
+                        Orb of Seeing
+                    </span>
+                    which can only be used once per day, or a 
+                    <span class="rnr-italictext">
+                        Rapier of Dread
+                    </span>
+                    which will shatter on a natural one accuracy check. Such items force the player to make a choice 
+                    every time they are used, and to weigh their odds. This builds drama and fun.
+                    Don't overuse this technique, but keep it in mind as you implement your designs.
+                </p>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Cool Abilities over Stat Boosts
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    As you design magic items, you may consider providing a character with a bonus to a stat.
+                    This is very much acceptable and is allowed by the rules, but it requires more consideration than you might expect.
+                    The recommended values table provides guidance for the expected stat bonuses that should be granted
+                    to players by persistent magic items. As you consult it, remember that giving a flat bonus to a base
+                    stat affects more than just character checks and saves: a boost to dexterity or strength also increases a character's
+                    accuracy and damage, for example. In general, it is safer to give a bonus to a specific attribute or check (e.g. +2 accuracy, +2 stealth) than a raw stat.
+                    Better yet, consider providing a character expertise in a type of check. Recall that if multiple sources grant a character expertise on the same check, 
+                    they instead take expertise +1. 
+                </p>
+                <p class="rnr-body-paragraph">
+                    As a practical example, imagine that you are designing a pair of bracers that makes a character stronger. 
+                    An obvious way to accomplish this is to give them bonus strength, for example +2. 
+                    As an alternative, you might instead allow the wielder of the bracers to cast _Enlarge_ on themselves
+                    once per day. This conforms with the idea that _Hard Choices are Fun_, provides a host of other bonuses,
+                    and stops the item from affecting attributes such as a character's accuracy. If you want the bracers to have a more impactful effect, 
+                    you could consier having them also grant either expertise or a flat bonus (perhaps +2) on strength checks. 
+                </p>
+                <p class="rnr-body-paragraph">
+                    As another example, imagine that you are designing a helm that makes a character seem more intelligent.
+                    Again, an obvious way to do this might be to add expertise to intelligence checks. However, what if we instead
+                    made it a _Helm of Mind Reading_ and gave the character the ability to read a creature's surface level thoughts
+                    at any time, or to read their deep thoughts if the enemy fails a spell power saving throw (see the Warlock's Read Mind spell).
+                    This makes the helm more dynamic and interesting, in line with the idea that cool abilities are more fun than stat bonuses.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="rnr-section">
+        <div class="rnr-section-title">
+            <span>
+                Designing Items
+            </span>
+        </div>
+        <div class="rnr-section-body">
+            <p class="rnr-body-paragraph">
+                Items can generally be categorized into four types: 
+                <span class="rnr-boldtext">
+                    Weapons, Armor, Limited use Magic Items,
+                </span> 
+                and 
+                <span class="rnr-boldtext">
+                    Persistent Magic Items.
+                </span>
+                A 
+                <span class="rnr-boldtext">
+                    Weapon
+                </span>
+                is any non-consumable item that a character uses to deal damage to an enemy. 
+                <span class="rnr-boldtext">
+                    Armor
+                </span>
+                is an equipable set of clothing which raises a character's evasion. 
+                <span class="rnr-boldtext">
+                    Limited use Magic Items
+                </span> 
+                are consumable items which yield an effect only a set number of times, for example a magic potion which can be swallowed to turn invisible. 
+                <span class = "rnr-boldtext">
+                    Persistent Magic Items
+                </span> 
+                are items which grant a boon or ability for as long as they are used or worn.
+            </p>
+            <p class="rnr-body-paragraph">
+                Weapons which deal extra damage due to magic are covered in the Designing Weapons section.
+                When weapons or armor grant a boon or ability, they are also be considered to be limited use or persistent magic items. 
+            </p>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Weapons
+                </span>
+            </div>
+            <!-- <reccomendedWeaponsTable></reccomendedWeaponsTable> -->
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    To make running the game smoother, a list of common weapons has been provided. Each of these weapons also have high level variants called _Mastercraft Weapons._
+                    The purpose of these weapons is twofold: first, they provide a good starting point for a Poohbah to design their own, and second, they 
+                    allow the Poohbah to hand out loot more quickly in play, because they don't have to design everything from scratch. The table above contains
+                    guidelines for which types of weapons are expected to be handed out in each tier of play.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Designing a new Weapon Type
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Usually, you shouldn't have to design new types of weapons: you can just use the ones that come with the game.
+                        Sometimes, however, you or one of the players might have an idea for a new weapon type to add to the game.
+                        The rules in this section should make creating these very simple. 
+                    </p>
+                    <p>
+                        Weapons come in two varieties: one-handed and two-handed. One-handed weapons deal slightly less damage than two-handed weapons, but 
+                        can be dual wielded to increase accuracy or wielded with a shield to increase evasion. All weapons come with one or two
+                        small abilities to make them distinct from the other weapons in the game. For example, the 
+                        <span class="rnr-boldtext">
+                            Spear
+                        </span>
+                        has the 
+                        <span class="rnr-italictext">
+                            Guarded Front
+                        </span>
+                        ability, which lets the wielder make exposed attacks against enemies who approach them from the front.
+                        Recall that, when we are designing a new weapon type, we aren't yet considering magic variants of the weapon.
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        Weapons have the following attributes:
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Name: 
+                                </span> 
+                                What is the weapon called?
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Value: 
+                                </span> 
+                                How much does the common version of the weapon cost? Recall that 1 gold is equal
+                                to 100 US Dollars. In general a mastercraft weapon costs ten times more than the
+                                variant below it. If the base cost of a weapon is 2 gold, the mastercraft 1
+                                variant would be 20, and the mastercraft 2 variant would be 200.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Base Stat: 
+                                </span> 
+                                Which player stat is used for the accuracy rolls and damage bonus for the weapon?
+                                In general, this is _strength_ or _dexterity_ for hand to hand weapons, _perception_ for ranged weapons, and "inner fire" for focuses.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Scaling: 
+                                </span> 
+                                How much damage do the common, mastercraft 1, and mastercraft 2 variants
+                                of a weapon deal? Consult the list of provided weapons for guidance.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Range: 
+                                </span> 
+                                What are the 
+                                <span class="rnr-italictext">
+                                    Hand to Hand,  
+                                </span>
+                                <span class="rnr-italictext">
+                                    Thrown, 
+                                </span>
+                                and
+                                <span class="rnr-italictext">
+                                    Fired 
+                                </span>
+                                ranges for the weapon? Most weapons will have zero for one or more of these. 
+                                Ranged distances tend to increase in increments of 30ft, where 30ft is short range and 120ft
+                                is very long range. Remember that most battles take place over a relatively small battlefield;
+                                it is more important to capture the fantasy of a weapon than to have perfectly realistic distances.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Harried: 
+                                </span> 
+                                Are attacks with this weapon made at distadvantage when an enemy is adjacent to its wielder?
+                                For example, if an enemy is in melee with someone holding a longbow, attacks with the bow are made at disadvantage.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Handedness: 
+                                </span> 
+                                Is this a one- or two-handed weapon?
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Abilities: 
+                                </span> 
+                                What are the one or two small abilities this weapon has that set it apart?
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Example: The Slingshot
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        As an example, follow the design process that lead to a new weapon for the game, the 
+                        <span class="rnr-boldtext">
+                            Slingshot.
+                        </span>
+                        The core fantasy that we want to get across is that when used intelligently, 
+                        the slingshot can be used to harrass enemies without dealing too much damage.
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Name: 
+                                </span> 
+                                Slingshot
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Value: 
+                                </span> 
+                                1 Gold. Slingshots are relatively cheap, so we'll list 1 gold, or 100 US Dollars.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Base Stat: 
+                                </span> 
+                                Perception. Because the slingshot is ranged, we'll choose Perception.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Scaling: 
+                                </span> 
+                                1d4, 1d6, 1d8. Because the slingshot doesn't do much damage, we'll list 1d4 for common damage, then step up one dice step for mastercraft 1 and 2. This puts it in line with the dagger and shuriken.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Range: 
+                                </span> 
+                                60 feet fired. Slingshots can fire a fair distance, so we'll give it 60 feet fired. This is actually better than the hand crossbow, making the slingshot a competitive choice.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Harried: 
+                                </span> 
+                                Yes. When an enemy is in melee with a slingshot wielder, it makes sense that they won't be able to fire it effectively. This isn't true for the hand crossbow, which is an interesting tradeoff.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Handedness: 
+                                </span> 
+                                Two Handed. The slingshot requires two hands to use. However, its low damage makes it less powerful than most two handed weapons. We have two options to overcome this: either we increase its damage or give it an ability to compensate. We'll give it a special ability that lets it be wielded with a shield.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Ability One: 
+                                </span> 
+                                <span class="rnr-italictext">
+                                    Left Hand Free: 
+                                </span>
+                                Even though it is two handed, this weapon can be wielded with a shield.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Ability One: 
+                                </span> 
+                                <span class="rnr-italictext">
+                                    Harassing Shots: 
+                                </span>
+                                Whenever you land a hit on an enemy that is not a glancing blow, you may choose to deal half damage and render them 
+                                <span class="rnr-italictext">
+                                    Staggered
+                                </span>
+                                instead.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="rnr-body-paragraph">
+                        This design captures our core fantasy of a low damage weapon that can be used to harass enemies. In play, it may require iteration and that's alright.
+                        You may have different ideas or disagree on the design; that's alright too! Feel free to change it to match your idea of how a slingshot should act.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Designing Weapons which deal Magical Damage
+                    </span>
+                </div>
+                <!-- <rnrMagicWeaponDamageTable></rnrMagicWeaponDamageTable> -->
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Some weapons deal bonus damage. For example, a 
+                        <span class="rnr-italictext">
+                            Flametouched 
+                        </span>
+                        dagger might deal bonus fire damage on every hit.
+                        The list above gives guidelines for how much magic damage is expected in a given gameplay tier. Magical damage
+                        should be the least interesting thing about a magical weapon. For example, which of the following is more evocative:
+                        a flametouched sword which deals 1d6 bonus fire damage, or 
+                        <span class="rnr-italictext">
+                            Blaze 
+                        </span>, a flametouched sword which deals 1d6 bonus fire 
+                        damage and allows the wielder to cast 
+                        <span class="rnr-italictext">
+                            Firestrike 
+                        </span>
+                        twice per day, resulting in a 25ft wall of flame which apears in a line before them?
+                        By giving magical weapons special abilities and names you are able to create something that your 
+                        players will find truly special.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Armor
+                </span>
+            </div>
+            <!-- <reccomendeArmorTable [type]="all"></reccomendeArmorTable> -->
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    The base function of shields and armor is to increase a character's evasion.
+                    More than other aspects of the game, it is recomended that you follow the recomended minimum and maximum values 
+                    for armor, as having an unexpected amount of evasion can impact character survivability. 
+                    Armor is split into three groups: 
+                    <span class="rnr-boldtext">
+                        Heavy Armor,
+                    </span> 
+                    which is worn by knights and barbarians; 
+                    <span class="rnr-boldtext">
+                        Light Armor
+                    </span> 
+                    which is worn by most everyone else; and 
+                    <span class="rnr-boldtext">
+                        Shields,
+                    </span>
+                    which can be wielded by anyone with a one-handed weapon.
+                    Rather than granting bonus evasion, consider
+                    treating magic armor as a limited use or persistent magic item.
+                </p>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Potions and Limited Use Magic Items
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    Limited use magic items are consumable pieces of equipment which are either destroyed
+                    or discharged after a set number of uses. Examples include a potion which is consumed when drank
+                    and a wand which can cast a spell three times per day. Because such items have a set number of uses, 
+                    they are less likely to derail your game, even if they are more powerful than you intended.
+                    A potion which grants an adventurer fire resistance for an hour is less troublesome
+                    than a set of armor which grants them fire resistance forever.
+                </p>
+                <div>
+                    When designing a limitied use magic item, consider how often you want your players to be able to use it.
+                    <ul class="rnr-list">
+                        <li>
+                            <span class="rnr-boldtext">
+                                Set Number of Uses: 
+                            </span>
+                            Some items might be able to used one or more times before being consumed. Usually, this
+                            number should be between 1-3 times. Examples include a potion which can be consumed once
+                            and an genie's bottle artifact which grants an adventurer three wishes.
+                        </li>
+                    </ul>
+                    <ul class="rnr-list">
+                        <li>
+                            <span class="rnr-boldtext">
+                                X Minutes: 
+                            </span>
+                            Some items might have a set number of minutes that they can be used. An example would be
+                            a magic ring which allows an adventurer to turn invisible for ten minutes when worn.
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Recharging: 
+                            </span>
+                            Some items might recharge their uses. These might recharge at an interval or require gold or other resources to gain charge.
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Discouraged: Action Points: 
+                            </span>
+                            It is discouraged that you create an item which consumes an adventurer's action points to use. 
+                            Such items must be balanced against an adventurer's other abilities. If such an item is too weak
+                            it will never be used, and if it is too powerful, an adventurer will choose to use it instead of
+                            their other abilities.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Example Limited Use Items
+                    </span>
+                </div>
+                <div class="rnr-sub-sub-subsection">
+                    <div class="rnr-sub-subsection-title">
+                        <span>
+                            The Goggles of Sight
+                        </span>
+                    </div>
+                    <div class="rnr-section-body">
+                        <div class="rnr-body-paragraph">
+                            <ul class="rnr-list">
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Design Goal: 
+                                    </span> 
+                                    Support the fantasy of being a reconissance character who can help the party see what's coming ahead.
+                                </li>	
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Abilities: 
+                                    </span> 
+                                    A character who wears the Goggles of Sight is able to see through walls up to three feet thick as though they weren't there.
+                                </li>
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Uses: 
+                                    </span> 
+                                    The goggles can be used for ten minutes before running out of charge.
+                                </li>
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Recharging: 
+                                    </span> 
+                                    The goggles can be recharged by slotting an opal valued at 10 gold pieces into a slot at the back.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="rnr-sub-sub-subsection">
+                    <div class="rnr-sub-subsection-title">
+                        <span>
+                            The Potion of Flight
+                        </span>
+                    </div>
+                    <div class="rnr-section-body">
+                        <div class="rnr-body-paragraph">
+                            <ul class="rnr-list">
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Design Goal: 
+                                    </span> 
+                                    To make the player feel powerful and versatile without breaking game balance.
+                                </li>	
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Abilities: 
+                                    </span> 
+                                    A character who consumes the potion gains a flying speed of 120ft for one hour.
+                                </li>
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Uses: 
+                                    </span> 
+                                    The potion of flight can be used once, and does not recharge.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Persistent Magic Items
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <div class="rnr-body-paragraph">	
+                    Persistent magic items stay with the adventurer until they decide to stop using them and 
+                    require no cost or charge to use. Such items should be deployed in tandem with limited use items so that a character 
+                    gains a unique set of active and passive effects over time. The effects granted by persistent magic items should 
+                    be less dramatic than limited use items, while still fostering a feeling of power. Consider the following while 
+                    designing persistent magic items:
+                    <ul class="rnr-list">
+                        <li>
+                            Even moreso than other items, persistent magic items should be designed to support a core fantasy.
+                        </li>
+                        <li>
+                            The power of persistent magic items is proportional to how often they are useful.
+                        </li>
+                        <li>
+                            Powerful persistent items can still come with a price. Remember, 
+                            <span class="rnr-boldtext">
+                                Hard Choices are Fun.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Resistances
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">	
+                        Resistances are abilities which cause certain damage types (e.g., fire, ice) to deal half damage.
+                        Because it can be difficult to quickly perform division in combat, it is recomended that resistances always result in half damage.
+                        Grant resistances with extreme care, as they can make a character far more effective against certain enemies. A character with 
+                        fire resistance will be at a great advantage when fighting a Fire Drake. Recall as well that some 
+                        resistances are more valuable than others. A resistance to piercing/slashing damage will be useful 
+                        more often than a resistance to psychic damage. If you grant a character a permanent resistance, 
+                        it is unlikely that they will ever give it up.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Cursed Items 
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    Some persistent magic items might be 
+                    <span class="rnr-boldtext">
+                        Cursed.
+                    </span>
+                    Cursed items bestow a negative effect upon the wearer.
+                    Usually, curses are difficult to get rid of. Despite their name, curses should be fun for the player, because 
+                    they should grant chances for roleplaying opportunities. Whenever you deploy a curse, consider the character that 
+                    the targeted player has created. Ask yourself whether the curse will provide an interesting obstacle for them, or
+                    derail everything they have been working on.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Ill-Advised Curses
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <div class="rnr-body-paragraph">	
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of Wasting: 
+                                </span> 
+                                Anyone affected by the curse of wasting has half of their maximum health and must make checks at disadvantage. For many players, this curse will quickly wear out its welcome. Deploy such curses only when there is a clear path forward to remove it, likely tied to a quest.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of Rhyming: 
+                                </span> 
+                                Anyone affected by the curse of rhyming must speak in rhymes. While this curse might sound funny on paper, it is discouraged that you create curses which make it more difficult for a player to engage in your story. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of Kindness: 
+                                </span> 
+                                Anyone affected by the curse of kindness must be kind to everyone they meet. Again, while this curse might sound funny in theory, it has the potential to derail a character. If you deploy such a curse, make sure that the target is up to the challenge and is interested in the direction it takes their character.					
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Well Designed Curses
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <div class="rnr-body-paragraph">	
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of the Ravenous: 
+                                </span> 
+                                the sight of blood. They must roll a D14 spell power saving throw or become frenzied. However, once per turn they must attempt to make a bite attack against a bloodied enemy. On a a successful hit, they restore as much damage as health. This curse has a relatively low save, which means that it won't always go into affect. When it does, the player gets both a boon and a bane, keeping things interesting. Of note, this curse could be triggered anywhere, not just in combat.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of the Drowned: 
+                                </span> 
+                                Anyone affected by the curse of the drowned loses the ability to swim. Their swimming speed is zero, and they sink at a rate of their movement speed. This curse doesn't remove player agency, but instead presents them with a new obstacle to overcome.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    The Curse of the Sleepwalker: 
+                                </span> 
+                                Anyone affected by the curse of the sleepwalker will attempt to break camp in the night and sleepwalk away. This curse is more a nuisance than anything, and will likely take the party by surprise only once or twice.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Example Persistent Items
+                </span>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Choker of Waterbreathing
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <ul class="rnr-list">
+                        <li>
+                            <span class="rnr-boldtext">
+                                Design Goal: 
+                            </span> 
+                            A nautical themed magic item which makes an adventurer better able to navigate underwater.				
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Abilities: 
+                            </span> 
+                            A character who wears the 
+                            <span class="rnr-italictext">
+                                Choker of Waterbreathing
+                            </span>
+                            is able to breathe underwater and gains a swimming speed equal to their base movement.				
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Drawbacks: 
+                            </span> 
+                            None. The choker of waterbreathing is a very useful item in some adventures and is less useful in others. Even when useful, it only affects the wielder.			
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Ring of Goblinkind
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <ul class="rnr-list">
+                        <li>
+                            <span class="rnr-boldtext">
+                                Design Goal: 
+                            </span> 
+                            A cursed magic item which makes the wielder more goblin-ish. It should make the wielder feel like they are becoming more monstrous. 			
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Abilities: 
+                            </span> 
+                            When a character puts on the 
+                            <span class="rnr-italictext">
+                                Ring of Goblinkind, 
+                            </span>
+                            it immediately pierces their finger with tiny spikes and they lose 1 hit point. Try though they might, they cannot remove
+                            it unless they cut off their finger or a 
+                            <span class="rnr-italictext">
+                                Remove Curse 
+                            </span>
+                            ritual is successfully performed upon them. After their first full
+                            night of sleep, their skin becomes a shade greener, their teeth sharpen slightly, and they become more covetous.
+                            They gain expertise on checks made to climb and on feats of fine-motor coordination. However, when they see something shiny,
+                            they must make a D16 spell power saving throw or have the irresistable compulsion to steal it. After one month, they shrink slightly
+                            in size, and become more green. After a month, their race is changed to Goblin.
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Drawbacks: 
+                            </span> 
+                            The ring of Goblinkind grants powerful boons, but also bestows a nasty curse. Note that the results of the curse can be removed, and that they do not significantly the character.			
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        The Armor of the Firelord
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <ul class="rnr-list">
+                        <li>
+                            <span class="rnr-boldtext">
+                                Design Goal: 
+                            </span> 
+                            A nautical themed magic item which makes an adventurer better able to navigate underwater.				
+                        </li>
+                        <li>
+                            <span class="rnr-boldtext">
+                                Abilities: 
+                            </span> 
+                            The wielder of the Armor of the Firelord is resistant to fire damage. As an action, the wielder can call upon the power
+                            of the Firelord to command flames within a 60-foot radius. Flames within this radius, whether natural or magical,
+                            bend to the wielder's will for 1 minute. During this time, the wielder can manipulate flames in the following ways:
+                            <ul>
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Pyrokinetic Control
+                                    </span>
+                                    The wielder can move, extinguish, or grow any non-magical flames within the radius. Flame growth occurs at a rate of 5ft per action spent, but can target all fire within the radius.
+                                </li>
+                                <li>
+                                    <span class="rnr-boldtext">
+                                        Wave of Flame
+                                    </span>
+                                    Once per day, the wielder can unleash a wave of intense heat in a 15-foot cone in front of them. Creatures in the area must make a spell power save or take 6d6 fire damage, or half as much on success.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Artifacts
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">	
+                    <span class="rnr-italictext">
+                        Vermineshroud. The Eye of Uriel. Cinder.
+                    </span>
+                    Such artifacts are a special class of magic item, sought after 
+                    by villains and adventurers alike. They are often cornerstones of an adventure and can serve as vital elements of the shared story you are weaving.
+                    Unlike other items, artifacts grow with the player, and can be _awakened_ over time. An adventurer can encounter an artifact in any tier of play,
+                    but the artifact won't grow to its full power until after the adventurer has done something to awaken it. The awakened power of an artifact 
+                    should be unique to your campaign. An Eye of Uriel in one setting might behave differently when awakened than an Eye of Uriel in another.
+                </p>
+                <div class="rnr-body-paragraph">
+                    In general, artifacts:
+                    <ol class="rnr-orderedlist">
+                        <li>
+                            Can deal slightly more damage or grant slightly more evasion than an equivalent weapons or armor from their tier.
+                        </li>
+                        <li>
+                            Can have more powerful abilities than an equivalent item from their tier.
+                        </li>
+                        <li>
+                            Should be steeped in lore, which the character will have to engage with in order to unlock the artifact's potential.
+                        </li>
+                    </ol>
+                    As an example, let's design two example artifacts, Cinder and The Eye of Uriel.
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        The Eye of Uriel
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        A pulsing, wet orb of viscous green slime, the Eye of Uriel lays dormant, waiting for a host.
+                        The moment that someone attacks or touches the eye, it immediately and unavoidably latches onto them.
+                        It writhes and skitters, crawling up them and escaping their grip like smoke before burrowing into their right eye
+                        and taking its place. The eye of Uriel can be gouged out, but otherwise cannot be removed unless the wielder dies, 
+                        at which point it moves to the nearest host.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Dormant Powers: 
+                        </span>
+                        The wielder of the Eye of Uriel is granted Truesight, the dark is as light to them, and they can see invisible entities
+                        up to 100 feet. Once per day, they are able to cast the Scry spell from the Wizard's spellbook. Additionally, they take expertise on perception.
+                        After a period of being bonded to it's wielder, the Eye of Uriel begins whispering cryptic messages to them, urging them to complete 
+                        missions that bring about its master's return.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Example Awakened Power: 
+                        </span>
+                        Once the wielder of the Eye has completed a number of tasks for it, they are granted additional power. This first manifests itself as hallucination-like visions 
+                        that can only be seen through the eye. The wielder will soon learn that they can interact with these hallucinations, and that they are echoes from other realms.
+                        Once per day, the wielder can reach across the border ethereal and pull something to their side. Additionally, the eye gains the ability to see in all directions, 
+                        including through the wielder's skull. It becomes impossible to sneak up on the wielder, even while they are asleep.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Cinder
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Blazing like a hot coal, cinder is a dagger of incredible worksmanship. When it is first encountered, it serves as a Mastercraft 1 dagger which deals 1d8 bonus fire damage.
+                        Cinder is a deeply loyal blade, and only it can choose it's wielder. Once it has chosen, the wielder is forever immune to its flames, otherwise, anyone who tries to hold 
+                        takes 1d6 damage and begins Burning. Upon bonding with Cinder, the wielder is immediately marked by a crimson tatoo, which flickers and casts soft light. When Cinder is 
+                        stowed, it disappears into the tatoo, and the wielder can forever extend their hand to have Cinder appear there as a free action. This allows the wielder to throw the blade 
+                        then instantly summon it back to their hand.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Dormant Powers: 
+                        </span>
+                        Once per day, the wielder of Cinder can ignite the blade, causing it to blaze with incredible light. For ten minutes, all attacks made with Cinder deal 
+                        1d6 extra damage, and their target must make a spell power save or begin burning.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Example Awakened Power: 
+                        </span>
+                        Once the wielder of Cinder has served with it long enough to earn the blades full loyalty, it awakens and becomes a masterwork 2 dagger which deals 
+                        2d6 bonus fire damage. From that point foward, they are able to ignite Cinder three times per day and the extra damage is increased to 2d6. 
+                        Additionally, any hostile creatures within 30ft of Cinder take 2d6 fire damage on each turn that it is ignited. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rnr-section">
+        <div class="rnr-section-title">
+            <span>
+                Designing Monsters
+            </span>
+        </div>
+        <div class="rnr-section-body">
+            <!-- <monster-stat-table tiers="all"></monster-stat-table> -->
+            <div class="rnr-body-paragraph">
+                From the moans of a pack of shambling zombiess to the still of the ocean before a kraken attack, many of the most exciting parts of an 
+                adventurer's career will be battles against monsters. The table above provides guidelines for the upper and lower bounds of a monster's 
+                statistics within the three tiers of play. When players are at a lower level within a tier, the monsters they fight should 
+                fall at the lower end of the scale, and when they are further in a tier, the monsters should fall higher. 
+                While the power of a monster is important, the best monsters will be
+                be more than just harrowing attacks and a high hit point total. As you design your monsters, consider the following:
+                <ul class="rnr-list">
+                    <li>
+                        What is the core fantasy of this monster? What makes it interesting? What would it be like to fight a monster like this?
+                    </li>
+                    <li>
+                        What is this monster's place in the world? Why is it attacking and how did it get here? What does it want, and when will it retreat?
+                    </li>
+                    <li>
+                        What cool abilities does this monster have? How do they synergize with the abilites of its allies?
+                    </li>
+                    <li>
+                        What is this monster's role in combat? Is it a frontline fighter? A support caster? Or perhaps it is an artillery specialist, that fights from the back line.
+                    </li>
+                    <li>
+                        What is this monster's role in the story? Is it there to pose a challenge to the players, or to fall easily and make them feel like heroes?
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Monster Attributes
+                </span>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Stats
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <div class="tipbox">
+                        Throughout this section, the design of a monster is related to how many turns it should take them to fell an adventurer and vice versa.
+                        Remember that combat is dynamic; just because we say that a villain should be able to fell an adventurer every two turns doesn't mean that 
+                        they will. The adventurer might be healed, the villain's target may change, or the adventurer might use one of their abilities to avoid 
+                        taking full damage.
+                    </div>
+                    <div class="rnr-body-paragraph">
+                        To make running monsters easy for the Poohbah, they are kept simpler than player characters. Monsters don't 
+                        have stats in the same way that players do. Instead, monsters are made up of the following attributes:
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Health: 
+                                </span>
+                                Like adventurers, monsters have health. Unlike adventurers, when a monster's health hits zero, they usually die instantly without any death coin flips.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Evasion: 
+                                </span>
+                                Monster evasion works the same way as player evasion.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Movement Speed: 
+                                </span>
+                                Like players, monsters move in increments of five feet. In general, slow monsters should move between 20 - 60 feet per turn, with 30 being the average.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Accuracy Bonus: 
+                                </span>
+                                A monster's damage bonus is added to the damage total of each of their attacks. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Bonus: 
+                                </span>
+                                A monster's damage bonus is added to the damage total of each of their attacks. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Spell Power: 
+                                </span>
+                                A monster's spell power is used as the target number whenever a character has to roll a spell power save against a monster's ability.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Save Bonus: 
+                                </span>
+                                A monster's save bonus is added whenever they must roll a spell power save against a character's ability.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Combat Options
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Unlike players, monsters don't use weapons in a mechanical sense. Instead, they have "Combat Options" that they can choose from
+                        when fighting. For example, a goblin's "Stab It!" attack might deal 1d6 damage plus it's damage bonus. Whether the goblin was carrying 
+                        a sharpened stick or a a flail, the Poohbah could still use the "Stab It!" ability without thinking about the mechanics of the weapon. 
+                        That does not mean that the poohbah shouldn't adjust the attack, however. If a goblin has a flaming greatsword, feel free to 
+                        add additional damage to it's attacks, and if a goblin is disarmed by an adventurer, decrease its attack's damage. But in the general case,
+                        use combat options to avoid getting lost in the weeds of if a goblin with a dagger should do less damage than a goblin with a bow and arrow -- the 
+                        usual case is that they all do the same. Many monsters get to use one combat option per turn, but some have the ability to use two or more. 
+                        When designing combat options, consider the recommended damage for that monster type in the table above. 
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Computing Expected Damage
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        To compute the damage of a combat option, 
+                        recall that the average roll of a standard dice is (number of sides / 2) + .5. There is no need to adjust for glancing blows, so long as
+                        the monster's accuracy bonus is within the prescribed ranges. If an attack has an area of effect, multiply its expected damage by 1.5. 
+                        If the a wizard's firebolt deals 6d6 + 5 damage, we would compute it's expected damage as ((3.5 * 6) + 5) * 1.5 = (26 * 1.5) = 39 damage.
+                    </p>
+                    <p>
+                        Sometimes, an attack deals Area of Effect (AoE) damage and hits multiple targets. In such cases, multiply the amount of damage the attack 
+                        does by 2. This reflects the assumption that an AoE attack will hit at least two targets. When designing AoE attacks, consider using 
+                        Spell Power saves rather than Accuracy Rolls to determine if the attack hits. For example, everyone within a 30ft radius of a fireball 
+                        might roll a Spell Power save and take half-damage on success.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Passive Abilities
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Passive Abilities are special features that effect a monster without it needing to take any action. 
+                        A specter might have the passive ability to walk through walls up to five feet thick. A zombie might 
+                        have the passive ability to stay standing when it hits zero health, so long as it makes a D10 saving throw. 
+                        Not all passive abilities are good for the monster: a goblin might have a passive ability that says that it 
+                        will become Frightened if it is thirty feet or more from its closest ally. These passive abilities go a long 
+                        way towards making a monster feel unique by emphasizing its core fantasy.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Minions
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    While villains are the most important enemies in your game, most of the players' time will be spent fighting thier 
+                    underlings. These lackey's can be broadly separated into two categories 
+                    <span class="rnr-boldtext">
+                        Minions 
+                    </span>
+                    and 
+                    <span class="rnr-boldtext">
+                        Elites.
+                    </span>
+                    In general, minions
+                    serve as fodder in a villain's army. A goblin would be an excellent example of a minion. Being weak doesn't
+                    mean that minions aren't dangerous, however; if an adventurer is attacked by many minions at once, it could spell trouble.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Minion Stats and Abilities
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        The recommended stats for minions in the table above are designed around the idea that a minion should fall after a player 
+                        spends about two turns attacking them. Sometimes, minions will fall in a single attack, and other times they will survive a little longer.
+                        Most minions should have relatively low evasion so that it is easy for players to hit them. However, minion damage is high enough to be 
+                        threatening to players of all levels: in combat, a single minion should be able to slay a player in about four turns. That means that if 
+                        a group of minions teams up on a player, they're in trouble.
+                    </p>
+                    <p>
+                        When designing a minion's abilities, try to keep things simple. Usually, one or two interesting abilities is enough. As you add
+                        abilities to a minion, consider how they emphasize the core fantasy of fighting it. 
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Example Tier 1 Minion: The Zombie
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Let's imagine that you want to design a zombie for your Tier 1 game. First, consider what it should be like to fight a zombie. 
+                        In most fiction, zombies move slowly and shamble. They are dangerous when they get close to you and usually fight in groups. However, 
+                        in some stories, zombies can be spurred to frantic movement, becoming much more dangerous in an instant. 
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        Let's determine our zombie's stats based on the fantasy we've determined. Let's assume that our players are level 2.
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Health: 
+                                </span>
+                                30. Zombies should be hard to kill, with slightly more health than many minions. Our players are level 2, so we'll pick from the middle of the recommended health range for tier 1 minions.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Evasion: 
+                                </span>
+                                8. Zombies are easy to hit, so we'll give them an evasion that is even lower than the recommended range. This means they'll take a little extra damage on average, but we'll compensate with cool abilities.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Movement Speed: 
+                                </span>
+                                25ft. 25ft is on the low end of the expected movement range, which means that zombies are slower than most players to start. This matches the idea that they shamble around. However, we'll add an ability to make them be spurred suddenly to movement.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Accuracy Bonus: 
+                                </span>
+                                1. Zombies are uncoordinated, so we'll give them a low accuracy bonus.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Bonus: 
+                                </span>
+                                2. Zombies are dangerous at close range, so we'll give them a decent damage bonus. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Spell Power: 
+                                </span>
+                                12. A zombie's bite might cause a spell power save. We'll pick a save from the lower end of the recommended range.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Save Bonus: 
+                                </span>
+                                0. If a zombie is hit by a spell, it will probably work on it. We choose a save of zero.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="rnr-body-paragraph">
+                        Next, let's come up with some combat options that enhance the core fantasy of fighting a zombie. The abilities here each have a description. 
+                        When you're making your own monsters, you can skip adding these unless it helps you to picture or describe the monster. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Passive Abilities
+                        </span>
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Blood Frenzy
+                        </span>
+                        Duration: 3 Turns. The scent of blood whips the zombie into a wild frenzy. 
+                        As soon as any zombie has made a Gnashing Bite attack against a hostile creature,
+                        they all are affected by the Frenzied condition for the ability's duration. A frenzied creature is filled with a manic energy.
+                        They deal 1d6 bonus damage on all physical attacks and gain 15 feet of base movement. A frenzied creature can spend its reaction
+                        to force an enemy to roll an attack at disadvantage.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        The Blood Frenzy ability makes zombies much scarier. As soon as any zombie manages to bite a player, 
+                        things get serious; they all start moving more quickly, dealing more damage,
+                        and become harder to hit! Recall that 
+                        <span class="rnr-italictext">
+                            Frenzied
+                        </span> 
+                        is one of the conditions provided by the rules of the game.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Combat Actions
+                        </span>
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Grappling Strike
+                        </span>
+                        2d6 Damage. The zombie latches onto its target, gripping tightly as it attempts to drag them to the ground.
+                        The creature must make a spell power save or become Grappled by the zombie.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        The recommended damage of a tier 1 minion is 5 - 17. Our zombie always deals at least 2 damage because of its damage bonus, so we need to add another 3 - 14 with it's attack.
+                        2d6 is (3.5 * 2) = 7 damage, which means our zombie will deal about 9 damage on a successful attack, right in the middle of the range. We want a zombie's grappling strike to 
+                        be on the low end of the scale for two reasons: first, we want their bite to be more feersome than their grapple, and second, recall that as soon as any zombie lands a 
+                        bite, all zombies deal an extra 1d6 damage on all of their attacks.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Gnashing Bite 
+                        </span>
+                        4d4 Damage. If a zombie attacks a grappled creature, they are able to bite it with gnashing, yellowed teeth. 
+                        The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot. 
+                        Creatures affected by Rot take 1d6 damage at the start of each turn or once every ten minutes. This continues until they have rested or been healed.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        The bite attack is serious business. Characters hit by it take 4d4 + 2 (12) damage and then an additional 1d6 (3.5) per turn if the player fails a save.
+                        Even more deadly, now every zombie deals another 1d6 more damage per turn and they move faster! A group of six or seven zombies now looks like quite the challenge to a low level party. 
+                    </p>					
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Elites
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    From lumbering ogres and fiersome samuri to deadly daemonspawn sorcerers, 
+                    <span class="rnr-boldtext">
+                        Elites 
+                    </span>
+                    are a cut above other monsters.
+                    While they do not rise to the level of a villain or solo monster, elites still pose a real challenge for an adventuring party. 
+                    Usually, one or two elites will be supported by a group of minions and together make up a challenging fighting force.
+                    Deploy elites whenever you want to give a combat extra punch.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Elite Stats and Abilities
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        The recommended stats for elites assume that an elite should be able to fell an adventurer given three turns, and that an adventurer 
+                        should be able to fell an elite in five. Unlike minions, this means that a one-on-one battle between an adventurer and an elite should 
+                        be a harrowing contest. By using their special abilities, an adventurer can likely still win, but it will be hard-fought. As a result, there 
+                        should usually be fewer elites than adventurers in a given encounter.
+                    </p>
+                    <p>
+                        Unlike minions, an elite's abilities should be more dramatic, and should make it clear that they are not to be trifled with.
+                        Because an encounter will have fewer elites than minions, their abilities can be more complex without slowing the speed of play.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Example Tier 1 Elite: The Ogre
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Let's design an Ogre for your Tier 1 game. Just as with a minion, consider what it should feel like to fight an ogre.
+                        Our ogre will be a hulking beast, standing much taller than our adventurers&mdash;ten feet, at least. It should feel as though it isn't 
+                        agile, but when it does hit, it should pack a serious punch. It should be difficult to kill an ogre, and when it does die, it's body should 
+                        become part of the terrain of the battle.
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        Let's determine our ogre's stats based on the fantasy we've determined. Let's assume that our players are level 2.
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Health: 
+                                </span>
+                                120. Our ogre should be hard to kill, so we'll give it health from the upper end of the range for Tier 1 play. However, we'll make it easy to hit, which will reduce it's survivability slightly in practice.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Evasion: 
+                                </span>
+                                8. Ogres are easy to hit, so we'll give them low evasion.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Movement Speed: 
+                                </span>
+                                30ft. The ogre can't go far using it's movement, but we'll compensate with a "Charge" ability.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Accuracy Bonus: 
+                                </span>
+                                0. Ogres aren't very coordinated, so we'll give them a low accuracy bonus.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Bonus: 
+                                </span>
+                                3. Ogres deal a lot of damage, so we'll give them a high damage bonus 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Spell Power: 
+                                </span>
+                                14. As an elite, we'll give the ogre a slightly higher spell power. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Save Bonus: 
+                                </span>
+                                3. To make the ogre more formidable, we'll give it a high save bonus, and thus high magic resistance.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage per Round: 
+                                </span>
+                                A tier 1 elite should deal between 6 and 22 damage per round. For our ogre, we'll aim for 16-18 damage.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="rnr-body-paragraph">
+                        Next, let's come up with some combat options that enhance the core fantasy of fighting an ogre. Note that the abilities each have a description. 
+                        When you're making your own monsters, you can skip adding these unless it helps you to picture or describe the monster. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Passive Abilities
+                        </span>
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            The Harder they Fall
+                        </span>
+                        When an ogre is killed, it falls in a direction opposite to the attack that felled it. Anyone within ten feet in that direction must 
+                        make a D16 dexterity check or be crushed beneath it, taking 4d6 damage and being knocked prone. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            The Harder they Fall
+                        </span>
+                        makes an ogre's death dramatic. It also means that after the adventurer's have fought a few ogres, they 
+                        will realize that a dying ogre can be used as a weapon.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            On the Shoulders of Giants
+                        </span>
+                        A small ally may ride atop an ogre's shoulders. They are considered to be out of reach of hand-to-hand weapons, unless the weapon 
+                        has 10ft range like a spear. Any attack made against them that is a glancing blow instead hits the ogre.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            On the Shoulders of Giants
+                        </span>
+                        makes ogres more versatile so that you can use them in more varried encounters. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Combat Actions
+                        </span>
+                        The Ogre can make 2 actions per turn, only one of which may be a charge.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Club
+                        </span>
+                        1d10 Damage. The ogre takes a heavy swing at an enemy with its club. If the attack is not glancing, the target is thrown 
+                        back 1d4 spaces unless they are _small_ in which case they are thrown back 1d6. If a thrown creature strikes a solid object, they take 
+                        1d6 additional damage.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        An ogre's club attack should _feel_ impactful, which is why we've added its knockback ability. The club attack should on average deal 
+                        1d10 + 2 (7.5) damage, which means that if an ogre uses it twice, it will deal about 15. If either attack triggers knockback damage, 
+                        the the damage will reach our target range.  
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Charge
+                        </span>
+                        6d4 Damage. The ogre charges 25ft with a bellow. It cannot stop or turn during this movement, which passes through 
+                        obstacles 5ft thick or less. If anyone is in the path of this movement, they must make a Spell Power save or be trampled and take full 
+                        damage. On a success, they take half.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        An ogre's charge is deadly, dealing 4d4 + 2 (12) damage to one or more adventurers in a single attack. 
+                        Because an ogre's spell power is low, most adventurers should avoid taking full damage. That doesn't put them out of harms way, however;
+                        the ogre can immediately follow up with its club.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Solo Monsters and Villains
+                </span>
+            </div>
+            <div class="tipbox">
+                Not Just the Final Boss: While "Villain" is used to describe this class of monster, 
+                your campaign should have more villains than just the final boss. For example, an evil overlord 
+                might have a ancient black dragon at their command. Any monster that should stand out as 
+                exceptionally powerful is a candidate to become a villain.
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    Now that you have the appetizers out of the way, you can focus on the main course; solo monsters and villains!
+                    <span class="rnr-boldtext">
+                        Villains
+                    </span> 
+                    are high level monsters with epic abilities that make fighting them memorable. Across
+                    genres, such monsters are sometimes called "BBEGs" (Big Bad Evil Guys/Gals) and "Boss Monsters."
+                    No matter what you call them, villains are serious business. 
+                    <span class="rnr-boldtext">
+                        Solo Monsters
+                    </span>
+                    are a type of villain 
+                    which can take on a whole adventuring party by themselves.
+                    When designed well, villains can be a great end of adventure showdown or a high-stakes interlude.
+                    To create a solo monster, you should be aware of idea of the 
+                    <span class="rnr-italictext">
+                        Action Economy
+                    </span>
+                    for turn based games.
+                    Basically, it states that whatever side in combat has more actions is at an advantage.
+                    Conversly, it means that solo monsters are at a disadvantage, so we must 
+                    employ countermeasures in our design to give them a chance.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Villain Stats
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p>
+                        The recomended stats for villains assume that they should survive seventeen turns of attacks from an adventurer, and that they 
+                        be able to fell an adventurer once every two turns. Seventeen is chosen because that means that a villain should stand up to 
+                        a party of four adventurers for just about 4 rounds of combat, or against a party of five for 3 rounds. 
+                    </p>
+                    <p>
+                        Because they will be attacked more frequently and take more damage, villains have high evasion and health.
+                        It can also be prudent to give them resistance to certain damage types. Because they will attack less frequently than players, they 
+                        deal more damage and have higher accuracy than minions. Villains should have higher spell power and a better than average spell power save.
+                        Your villain will have only a few chances to cast their magic or use their abilities, so they should have a good chance of working.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Villain Abilities
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <div class="rnr-body-paragraph">
+                        While high stats help make a villain more fearsome, they do not make them fun to fight. High hit points alone 
+                        can lead to a war of attrition, where both sides stay still and attack one another until the battle is over.
+                        To make things more interesting, you must ensure that your villain has many options in combat.
+                        
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Multiple Attacks:
+                                </span>
+                                To help level the playing field, consider giving your villain the ability to attack multiple times on their turn. This can be made even more interesting by giving them a choice: the fire drake can attack once with it's tail, or twice with its claws.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Powerful Abilities:
+                                </span>
+                                Give your solo monsters -- and especially your villains -- fearsome abilities and area of effect attacks. These should have a high probability of working because they likely won't be used many times.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Passive Abilities:
+                                </span>
+                                Just like other monsters, villains have access to passive abilities. Villain passives, however, can be harder to deal with by draining their foes resources. For example, a Fire Drake might have the Immolate abilitiy, which causes everyone within ten feet to take damage at the start of each turn.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Freedom of Movement:
+                                </span>
+                                Because of the Exposed Attack, solo monsters are likely to become stuck if they are surrounded by enemies. Consider giving them abilities which knock enemies away, allow them to teleport, or otherwise grant them freedom of movement as a combat option. Each of these should cost an action.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Recharge Abilities:
+                                </span>
+                                Consider granting your solo enemy an ability which recharges over time. Remember, though, that villains will live on average three or four turns. For example, grant a Fire Drake a firebreathing attack which recharges if it rolls a 5 or 6 on 1d6 at the start of its turn.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Status Effect Blockers:
+                                </span>
+                                Because many adventurers will be throwing status effects at a villain, they should have a way to avoid them. However, it is not fun for the players to have a villain simply ignore their cool abilities. Instead, the villain should suffer a cost for avoiding a status effect. For example, let's give our fire drake three blazing gemstones set upon it's neck. If the drake fails a saving throw, it can negate the status effect, but one of the gemstones shatters. When all of the gems are gone, the drake can no longer avoid status effects. By describing the gems shattering, the player who's ability was negated still feels like they've accomplished something by spending their action points.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Villain, Conditional, and Lair Actions:
+                                </span>
+                                Solo monsters should get special out of turn actions to make them more versatile and dangerous. 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Villain Actions
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p>
+                        Villain actions are an important part of a solo monster's arsenal which allows them to take special, out of turn actions between players' 
+                        turns one or more times in combat. For example, after a player's turn, the fire drake may get to move 
+                        up to thirty feet while beating its wings and pushing away anyone nearby. Villain actions give the solo monster more options and 
+                        also help them to gain additional action economy.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Conditional Actions 
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        As the gemstone on the ogre cheiftain's armor shatters, he looses a terrible scream. 
+                        Power flows through him, leaving charred paths across his skin as he slowly grows to twice his size.
+                        Battered and bloodied, he turns towards the party, hatered in his eyes.
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        Conditional actions are special events or actions that happen when a triggering event occurs.
+                        They can trigger on many different types of events, such as:
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Health Threshold.
+                                </span>
+                                When a villain hits a certain amount of health (e.g., half), they get to do something special. This can be as simple 
+                                as making an attack or as complex as "changing forms" and initiating another phase of the battle.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Round of Combat.
+                                </span>
+                                When a certain round of combat is reached, the villain gets to do something special. For example, on the third turn of a battle,
+                                an ogre chieftain might call for reinforcements and summon 1d4 goblins to its aid. Round based conditional actions are 
+                                among the easiest to use, so feel free to deploy lots of them in your battles.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Recharge Abilities.
+                                </span>
+                                For recharge abilities, the villain must roll a check at the beginning of its turn; if it succeeds, it gets to do something special.
+                                For example, a fire drake might roll 1d6, and get to use its fire breath if it rolls a 5 or 6.
+                                This adds an element of chance to a battle. Be careful, though; if the check is too difficult, the villain may never get to use its cool ability.
+                            </li>
+                        </ul>
+                        Conditional actions can help a fight feel dynamic, dangerous, and most importantly special to your players.
+                        They ensure that a villain gets to do epic things, even if the battle isn't 
+                        going thier way. For most villains, try to include a minimum of one conditional action per round of combat.
+                    </div>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Lair Actions 
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Sweat beads the adventurers' brows as the battle rages within the dragon's cave. Slowly, 
+                        the gold that covers the floor begins to melt, leaving the ground a trecherous laticework of 
+                        molten metal.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        When a solo monster is fought in its lair, it is especially dangerous. To enforce this fantasy, 
+                        you can add turn based events to the combat. 
+                        While Lair actions can damage the adventurers directly, as with stalactites falling from the ceiling,
+                        it is often more fun if they change the battlefield beneath their feet.
+                        This also helps reduce redundancy with conditional actions. When a monster has both lair actions and round-based conditional actions, the conditional action 
+                        should occur at the start of initiative and the lair action should occur halfway through.
+                    </p>
+                </div>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Example Tier 1 Villain: The Fire Drake
+                    </span>
+                </div>
+                <div class="rnr-section-body">
+                    <p class="rnr-body-paragraph">
+                        Let's design a Fire Drake for your Tier 1 game. The fire drake is meant to be fought as a solo encounter and to take on an entire adventuring 
+                        party by itself. Fire drakes are young fire-dragons; fighting one should be a harrowing conclusion to a story-arc. Their firebreath should be 
+                        a harrowing event, and a perfect candidate for a recharge conditional action.
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        Let's assume that our players are level 4, and that the fire drake battle must be completed for them to reach level 5 and tier 2.
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Health: 
+                                </span>
+                                400. Our fire drak is an upper tier 1 villain, so we'll use a value near the maximum end of the recommended range.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Evasion: 
+                                </span>
+                                13. We'll give our fire drake slightly higher than reccomended evasion to enhance the fantasy that its scaled hide protects it from harm.  
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Movement Speed: 
+                                </span>
+                                30ft walking. 100ft flying. The fire drake is faster when flying than when on foot. When flying, it can easily outpace the adventurers.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Accuracy Bonus: 
+                                </span>
+                                4. We'll give our fire drake the maximum accuracy bonus so that its attacks tend to hit.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage Bonus: 
+                                </span>
+                                3. The fire drake deals a lot of damage, so we'll give it the maximum value. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Spell Power: 
+                                </span>
+                                16. As a villan, we'll give the firedrake a formidable spell power, so that it's effects tend to work on the adventurers. 
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Save Bonus: 
+                                </span>
+                                5. Villains should always have a high save bonus so that they're less likely to be effected by player abilities.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Damage per Round: 
+                                </span>
+                                A tier 1 villain should deal between 9 and 33 damage per round. For our drake, we'll aim for the full 33 damage.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="rnr-body-paragraph">
+                        Next, let's come up with some combat options that enhance the core fantasy of fighting a fire drake. Note that the abilities each have a description. 
+                        When you're making your own monsters, you can skip adding these unless it helps you to picture or describe the monster. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Passive Abilities
+                        </span>
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Immolate
+                        </span>
+                        Whenever an adventurer starts their turn within 15ft of an angered fire drake, they take 1d8 damage as
+                        blistering heat washes over them. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Immolate
+                        </span>
+                        Adds an interesting dynamic to a fight by causing martial characters to think twice about engaging with a drake directly.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Incombustible
+                        </span>
+                        Fire drakes are immune to fire damage and the Burning condition.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Incombustible
+                        </span>
+                        makes logical sense and is in line with most adventurer's conception of a fire drake. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Conditional Actions
+                        </span>
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Firebreath (Roll 1d6, recharge on 5-6)
+                        </span>
+                        6d4 + 4 On this turn, the fire drake can spend it's combat action to breathe fire. Anyone within a 100ft long, 15ft wide cone 
+                        must make a spell power save or take full damage and begin Burning. On success, the take half damage and are not Burning.
+                        The fire remains for until the start of the fire drake's next turn.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        Firebreath deals (6 * 2.5) + 4 = 15 + 4 = 19 damage to a single target. When we adjust for AoE, it deals 38 damage, slightly higher than our 
+                        recommended damage output. However, as a charged action, it is alright for it to feel especially dangerous. If the fire drake 
+                        deals too much damage and fells multiple adventurers, feel free to rule that it can't use its fire breath again right away.				
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            I am Death! (Turn 1)
+                        </span>
+                        At the start of the first turn of combat, the fire drake roars. 
+                        Everyone within sight of it must make a spell power save 
+                        or take 2d6 + 4 acoustic damage and become Deafened and Frightened.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        I am death immediately puts the adventurers at a disadvantage and shows them that this villain means business.
+                        Because the drake is tier 1, we keep the damage low and use conditions that aren't too harsh.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Inferno (Turn 2)
+                        </span>
+                        The fire drake's Immolate ability flares, affecting everyone not under cover within 25 feet.
+                        All status effects that affected it are burned away.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        Inferno gives the drake a chance to cleans itself of conditions while simultaneously doling out passive damage to the adventurers.
+                        At this point, even the adventurers that the drake hasn't targeted should have taken some damage.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            BURN! (Turn 3)
+                        </span>
+                        The fire drake's firebreath instantly recharges and it uses it.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        A dramatic conclusion to the battle. By this point, the fire drake should have taken some serious damage, and the adventurers are 
+                        likely nearing victory.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Lair Actions
+                        </span>
+                    </p>
+                    <div class="rnr-body-paragraph">
+                        <ul class="rnr-list">
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Turn 1
+                                </span>
+                                The dragon's fire has begun to melt the stones of the cave, and motes of lava flow across the floor making movement difficult.
+                                Falling into the lava deals 4d6 damage to an adventurer, and they immediately start Burning without a save. adventurers
+                                are able to avoid the lava as it begins to flow.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Turn 2
+                                </span>
+                                The pools of lava grow, making it very difficult to traverse the terrain.
+                            </li>
+                            <li>
+                                <span class="rnr-boldtext">
+                                    Turn 3
+                                </span>
+                                Great fissures open in the ground, and the lava expands even further.
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="rnr-body-paragraph">
+                        Note that the lair actions for the drake are less directly dangerous than its conditional actions. None of them deal damage
+                        immediately; instead, they make the terrain harder to navigate and thereby make the battle more interesting. This is especially true 
+                        because the fire drake can fly and can also ignore the heat.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-sub-subsection-title">
+                            Combat Actions
+                        </span>
+                        A fire drake can make two Claw attacks and either a Devour or a Tail attack on its turn.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Claw
+                        </span>
+                        2d4 + 4 damage. The fire drake rakes its razor sharp claws across an adventurer. 
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Claw
+                        </span>
+                        Deals (2.5 * 2) + 4 = 9 points of damage. The drake can use it twice, which causes 18 points of damage out of our desired 33.
+                        While that doesn't seem like much, striking at adventurers multiple times can be more effective than just hitting once, as
+                        they must spend more action points to use damage-mitigating abilities.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Devour
+                        </span>
+                        4d6 + 4 damage. The fire drake snaps at an adventurer with its fangs. If the adventurer is small in size, 
+                        they must make a spell power save or be Devoured. Devoured creatures are considered Grappled and take 2d6 damage per turn and are considered grappled.
+                        Whenever the drake is damaged, it must make a save against the total amount of damage. On failure, it spits the adventurer up.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Devour
+                        </span>
+                        Deals (3.5 * 2) + 4 = 18 points of damage. It's ability to devour small creatures adds both a crowd control aspect and an 
+                        element of fear to the combat. Unseasoned adventurer's will be thrown into chaos as one of their members disappears into the 
+                        dragon's jaws!					
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-ability-title">
+                            Tail
+                        </span>
+                        2d8 + 4 damage. The fire drake whips its tail, striking all enemies in a 15ft arc behind it. Anyone struck 
+                        must make a spell power save or be thrown 10ft and knocked prone.
+                    </p>
+                    <p class="rnr-body-paragraph">
+                        <span class="rnr-boldtext">
+                            Tail
+                        </span>
+                        Deals (4.5 * 2) + 4 = 13 points of damage. After adjusting for AoE, it deals 26.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rnr-subsection">
+            <div class="rnr-subsection-title">
+                <span>
+                    Designing Combat Encounters
+                </span>
+            </div>
+            <div class="rnr-section-body">
+                <p class="rnr-body-paragraph">
+                    Once you've constructed your monsters or consulted the Book of Known Beasts, it's time to develop a combat encounter for your players.
+                    Designing an encounter takes more than a simple lookup in a table to determine which monsters to use. 
+                    Factors such as surprise, environmental hazards, and synergies of monster abilities can turn an encounter that looks easy 
+                    on paper into a deadly one. This section covers a rule of thumb for creating encounters, and how to fine tune things on the fly if 
+                    your adventurer's (or monsters) end up in over their head.
+                </p>
+            </div>
+            <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
+                    <span>
+                        Determining the Number of Monsters to Use
+                    </span>
+                </div>
+            </div>
+            <div class="rnr-section-body">
+                <div class="rnr-body-paragraph">
+                    Determining the exact number and types of creatures to throw at your party takes experience to master. 
+                    An enemy that is trivial to defeat in one circumstance might be deadly in another, and dice rolls can 
+                    cause an easy fight to become harrowing. However, as a general rule of thumb:
+                    <ul class="rnr-list">
+                        <li>
+                            One minion is worth 0.5 adventurers.
+                        </li>
+                        <li>
+                            One Elite is worth 1 adventurer.
+                        </li>
+                        <li>
+                            One Commander Villain is worth 2.5 adventurers.
+                        </li>
+                        <li>
+                            One Solo Monster is worth 4 adventurers.
+                        </li>
+                    </ul>
+                </div>
+                <p>
+                    Remember that some monsters of a given type are much more dangerous than others, even in the same tier. 
+                    If your players just reached level five, throwing six tier two minions at them with high stats will likely end 
+                    up being more than they can handle. 
+                </p>
+                <div class="rnr-body-paragraph">
+                    If you have an adventuring party with four player characters and you want a fight, you might use:
+                    <ul class="rnr-list">
+                        <li>
+                            Six Minions.
+                        </li>
+                        <li>
+                            One Elite and four minions.
+                        </li>
+                        <li>
+                            Two Elites and two minions.
+                        </li>
+                        <li>
+                            Three Elites.
+                        </li>
+                        <li>
+                            One Commander and one minion.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </main>

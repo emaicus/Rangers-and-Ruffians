@@ -58,7 +58,15 @@ button{
   margin-bottom: 2rem;
 }
 
-.rnr-subsection {
+.rnr-section-title {
+  text-decoration: underline;
+  color: black;
+  font-size: 2rem;
+  font-weight: normal;
+  padding-bottom: .75rem;
+}
+
+.rnr-subsection-title {
   text-decoration: underline;
   color: black;
   font-size: 1.75rem;
@@ -66,7 +74,7 @@ button{
   padding-bottom: .75rem;
 }
 
-.rnr-sub-subsection {
+.rnr-sub-subsection-title {
   text-decoration: underline;
   color: black;
   font-size: 1.5rem;
@@ -80,6 +88,7 @@ button{
   font-size: 1.25rem;
   font-weight: normal;
   margin-bottom: .5rem;
+  display: block;
 }
 
 .rnr-boldtext {

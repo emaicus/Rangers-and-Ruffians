@@ -1,5 +1,5 @@
 <div class="rnr-monster printable-content" *ngIf="monster"  [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-monster'">
-	<div class="rnr-subsection" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
+	<div class="rnr-subsection-title" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ monster.name }}
 	</div>
 	<div  [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-type'">
@@ -54,7 +54,7 @@
 	<div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-moveset'">
         <ng-container *ngIf="monster.instantiatedMoveset.passive_abilities">
             <div *ngIf="monster.instantiatedMoveset.passive_abilities.length > 0">
-                <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
                     Passive Abilities
 				</div>
                 <div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-passive-abilities'">
@@ -66,7 +66,7 @@
         </ng-container>
         <ng-container *ngIf="monster.instantiatedMoveset.combat_actions">
             <div *ngIf="monster.instantiatedMoveset.combat_actions.length > 0">
-                <div class="rnr-sub-subsection">
+                <div class="rnr-sub-subsection-title">
                     Combat Actions
 				</div> 
 				<span class="rnr-boldtext">
