@@ -157,11 +157,16 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
             sys.exit(1)
 
     for rnr_class in rnr_classes:
+      expected_spells = 52
+      expected_abilities = 25
+      count_of_spells = 0
+      count_of_abilities = 0
       if 'skill_tree' not in rnr_class:
         print(f"Validating Mage Class: {rnr_class['name']}")
         spellbook = rnr_class.get('spells')
         for tier, tier_spells in spellbook.items():
           for spell_def in tier_spells:
+            count_of_spells += 1
             # Tell the schema to evaluate this as a spell.
             spell_def['ability_type'] = 'spell'
             try:
@@ -173,10 +178,13 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
             except Exception:
               traceback.print_exc()
               sys.exit(1)
+        if count_of_spells < expected_spells:
+          print(f"{rnr_class['name']} has {count_of_spells} / {expected_spells} spells")
       else:
         print(f"Validating Martial Class: {rnr_class['name']}")
         skill_tree = rnr_class.get('skill_tree')
         for ability_def in skill_tree['abilities']:
+          count_of_abilities += 1
           # Tell the schema to evaluate this as an ability.
           ability_def['ability_type'] = 'ability'
           try:
@@ -188,7 +196,8 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
           except Exception:
             traceback.print_exc()
             sys.exit(1)
-
+        if count_of_abilities < expected_abilities:
+          print(f"{rnr_class['name']} has {count_of_abilities} / {expected_abilities} abilities")
     # Check for Summonable Creatures
     summoning_errors = list()
     for rnr_class in rnr_classes:

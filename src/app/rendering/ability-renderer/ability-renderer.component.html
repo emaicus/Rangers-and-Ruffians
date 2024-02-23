@@ -76,7 +76,7 @@
 		  <span class="rnr-boldtext">This spell is not affected by Focus or Weapon damage bonuses.</span>
 		</ng-container> -->
 		<div class="display-damage-section">
-			<span class="rnr-boldtext">Damage</span>
+			<span class="rnr-boldtext" *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">Damage</span>
 			<ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
 				<li *ngIf="ability.damageScaling.tier_1">
 				<span class="rnr-boldtext">Tier 1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}}</span>
