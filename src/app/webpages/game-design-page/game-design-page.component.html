@@ -194,7 +194,34 @@
                     Designing Weapons
                 </span>
             </div>
-            <!-- <reccomendedWeaponsTable></reccomendedWeaponsTable> -->
+
+            <table>
+                <thead>
+                  <tr>
+                    <th>Gameplay Tier</th>
+                    <th>Minimum Weapon Type</th>
+                    <th>Maximum Weapon Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tier One (Levels 0 - 4)</td>
+                    <td>Common</td>
+                    <td>Mastercraft 1</td>
+                  </tr>
+                  <tr>
+                    <td>Tier Two (Levels 5 - 10)</td>
+                    <td>Mastercraft 1</td>
+                    <td>Mastercraft 2, Rarely Artifacts</td>
+                  </tr>
+                  <tr>
+                    <td>Tier Three (Levels 11 - 15)</td>
+                    <td>Mastercraft 2</td>
+                    <td>Artifact</td>
+                  </tr>
+                </tbody>
+              </table>
+              
             <div class="rnr-section-body">
                 <p class="rnr-body-paragraph">	
                     To make running the game smoother, a list of common weapons has been provided. Each of these weapons also have high level variants called _Mastercraft Weapons._
@@ -399,7 +426,32 @@
                         Designing Weapons which deal Magical Damage
                     </span>
                 </div>
-                <!-- <rnrMagicWeaponDamageTable></rnrMagicWeaponDamageTable> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gameplay Tier</th>
+                            <th>Minimum Bonus Damage</th>
+                            <th>Maximum Bonus Damage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tier One (Levels 0 - 4)</td>
+                            <td>0</td>
+                            <td>1d4</   td>
+                        </tr>
+                        <tr>
+                            <td>Tier Two (Levels 5 - 10)</td>
+                            <td>1d6</td>
+                            <td>1d8 </td>
+                        </tr>
+                        <tr>
+                            <td>Tier Three (Levels 11 - 15)</td>
+                            <td>1d10</td>
+                            <td>1d1 2</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <div class="rnr-section-body">
                     <p class="rnr-body-paragraph">
                         Some weapons deal bonus damage. For example, a 
@@ -430,7 +482,32 @@
                     Designing Armor
                 </span>
             </div>
-            <!-- <reccomendeArmorTable [type]="all"></reccomendeArmorTable> -->
+            <table>
+                <thead>
+                <tr>
+                    <th>Gameplay Tier</th>
+                    <th>Minimum Armor</th>
+                    <th>Maximum Armor</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Tier One (Levels 0 - 4)</td>
+                    <td>4</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Tier Two (Levels 5 - 10)</td>
+                    <td>7</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Tier Three (Levels 11 - 15)</td>
+                    <td>10</td>
+                    <td>13</td>
+                </tr>
+                </tbody>
+            </table>
             <div class="rnr-section-body">
                 <p class="rnr-body-paragraph">	
                     The base function of shields and armor is to increase a character's evasion.
@@ -941,7 +1018,120 @@
             </span>
         </div>
         <div class="rnr-section-body">
-            <!-- <monster-stat-table tiers="all"></monster-stat-table> -->
+                <table border="1" cellspacing="0" cellpadding="5">
+                  <thead>
+                    <tr>
+                      <th>Tier</th>
+                      <th>Monster Type</th>
+                      <th>Health</th>
+                      <th>Evasion</th>
+                      <th>Expected Damage per Round</th>
+                      <th>Hit Bonus</th>
+                      <th>Easy Spell Power</th>
+                      <th>Difficult Spell Power</th>
+                      <th>Saving Throw</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Tier 1 -->
+                    <tr>
+                      <td rowspan="3">Tier 1</td>
+                      <td>Minions</td>
+                      <td>21 - 36</td>
+                      <td>10 - 11</td>
+                      <td>5 - 17</td>
+                      <td>1 - 4</td>
+                      <td>12 - 13</td>
+                      <td>16 - 17</td>
+                      <td>0 - 1</td>
+                    </tr>
+                    <tr>
+                      <td>Heavy</td>
+                      <td>70 - 118</td>
+                      <td>10 - 11</td>
+                      <td>6 - 22</td>
+                      <td>1 - 4</td>
+                      <td>12 - 13</td>
+                      <td>16 - 17</td>
+                      <td>0 - 1</td>
+                    </tr>
+                    <tr>
+                      <td>Villain</td>
+                      <td>253 - 406</td>
+                      <td>12 - 13</td>
+                      <td>9 - 33</td>
+                      <td>1 - 4</td>
+                      <td>12 - 13</td>
+                      <td>16 - 17</td>
+                      <td>2 - 3</td>
+                    </tr>
+                    <!-- Tier 2 -->
+                    <tr>
+                      <td rowspan="3">Tier 2</td>
+                      <td>Minions</td>
+                      <td>43 - 50</td>
+                      <td>12 - 13</td>
+                      <td>20 - 35</td>
+                      <td>4 - 7</td>
+                      <td>14 - 15</td>
+                      <td>18 - 19</td>
+                      <td>2 - 3</td>
+                    </tr>
+                    <tr>
+                      <td>Heavy</td>
+                      <td>143 - 166</td>
+                      <td>12 - 13</td>
+                      <td>26 - 46</td>
+                      <td>4 - 7</td>
+                      <td>14 - 15</td>
+                      <td>18 - 19</td>
+                      <td>2 - 3</td>
+                    </tr>
+                    <tr>
+                      <td>Villain</td>
+                      <td>491 - 563</td>
+                      <td>14 - 15</td>
+                      <td>39 - 68</td>
+                      <td>4 - 7</td>
+                      <td>14 - 15</td>
+                      <td>18 - 19</td>
+                      <td>3 - 4</td>
+                    </tr>
+                    <!-- Tier 3 -->
+                    <tr>
+                      <td rowspan="3">Tier 3</td>
+                      <td>Minions</td>
+                      <td>60 - 67</td>
+                      <td>13 - 14</td>
+                      <td>38 - 50</td>
+                      <td>7 - 10</td>
+                      <td>15 - 16</td>
+                      <td>18 - 20</td>
+                      <td>3 - 4</td>
+                    </tr>
+                    <tr>
+                      <td>Heavy</td>
+                      <td>200 - 223</td>
+                      <td>13 - 14</td>
+                      <td>50 - 66</td>
+                      <td>7 - 10</td>
+                      <td>15 - 16</td>
+                      <td>18 - 20</td>
+                      <td>3 - 4</td>
+                    </tr>
+                    <tr>
+                      <td>Villain</td>
+                      <td>678 - 750</td>
+                      <td>15 - 18</td>
+                      <td>74 - 97</td>
+                      <td>7 - 10</td>
+                      <td>15 - 16</td>
+                      <td>18 - 20</td>
+                      <td>4 - 5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
             <div class="rnr-body-paragraph">
                 From the moans of a pack of shambling zombiess to the still of the ocean before a kraken attack, many of the most exciting parts of an 
                 adventurer's career will be battles against monsters. The table above provides guidelines for the upper and lower bounds of a monster's 
