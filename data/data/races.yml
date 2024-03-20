@@ -1681,7 +1681,10 @@
             duration: passive
             description: "As a pixie, you are able to fly at a speed equal to your base movement. While flying, you can carry objects
                               up to your weight without imposing a strength check. A failed strength check made in flight results in you either 
-                              being pulled to the ground or dropping your burden."
+                              being pulled to the ground or dropping your burden. If you are struck by an attack while flying 15ft or higher, 
+                              you must make a spell power save of D10 or half the damage (whichever is higher) or begin plummeting. While plummeting,
+                              you immediately fall 30ft, and continue to fall 30ft at the start of each until you make the save successfully as an
+                              action."
         -   name: Tiny Sprite
             type: buff 
             cost: 0
