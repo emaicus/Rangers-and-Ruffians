@@ -8,6 +8,7 @@ class RnRClass():
     self.name = rnr_classdata['name']
     self.stat_recommendation = rnr_classdata['recommended_stats']
     self.handbook = rnr_classdata['handbook']
+    self.rule_sections = rnr_classdata.get('rule_sections', [])
     self.health_dice = rnr_classdata['health_dice']
     self.expertise = rnr_classdata['expertise']
     self.is_mage = 'skill_tree' not in rnr_classdata
@@ -41,6 +42,7 @@ class RnRClass():
     serial['name'] = self.name 
     serial['recommended_stats'] = self.stat_recommendation 
     serial['handbook'] = self.handbook 
+    serial['rule_sections'] = self.rule_sections
     serial['health_dice'] = self.health_dice 
     serial['expertise'] = self.expertise
     serial['is_mage'] = self.is_mage

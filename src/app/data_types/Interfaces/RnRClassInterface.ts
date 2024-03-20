@@ -35,6 +35,7 @@ export interface ClassData {
     spells: Spells;
     handbook: HandbookEntry[];
     starting_items: string[];
+    rule_sections: string[];
 }
   
   

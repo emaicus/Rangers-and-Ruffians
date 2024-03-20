@@ -17,6 +17,7 @@ export class Weapon {
     public tierTwoValue: number;
     public tierThreeValue: number;
     public handednessLine: string;
+    public type: string;
 
     constructor(data: WeaponData) {
         this.name = data.name ?? "Unknown Weapon";
@@ -28,6 +29,7 @@ export class Weapon {
         this.tierThreeDamage = data.damage_scaling["Mastercraft 2"] ?? "1d10";
         this.damageType = data.damage_scaling.damage_type ?? "blunt";
         this.range = data.range;
+        this.type = data.type ?? "Weapon"
 
         this.baseStat = data.base_stat ?? "Strength";
         this.harried = data.harried ?? false;
@@ -36,6 +38,6 @@ export class Weapon {
         
         this.handednessLine = [this.baseStat, this.handedness,  harriedString].filter(value => value !== null && value !== undefined).join(', ');
 
-        this.abilities = (data.abilities as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, true));
+        this.abilities = (data.abilities as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, true, false));
     }
 }

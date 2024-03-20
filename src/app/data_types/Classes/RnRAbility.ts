@@ -35,11 +35,14 @@ export class RnRAbility {
 	shouldDisplaySummons: boolean;
 	damageType: string;
 	displayableDamageType : string;
+	renderCheckbox: boolean;
 	
 	constructor(
 		data: AbilityData,
-		succinct: boolean
+		succinct: boolean,
+		renderCheckbox: boolean
 	) {
+		this.renderCheckbox = renderCheckbox;
 		this.name = data.name ?? "No Ability Name Entered";
 		this.abilityType = data.ability_type ?? "";
 		this.shouldDisplayActionType = data.ability_type != null;
@@ -49,7 +52,7 @@ export class RnRAbility {
 		this.costString = `${this.cost} Action ${this.cost === 1 ? 'Point' : 'Points'}`;
 
 		this.duration = data.duration ?? 0;
-		this.shouldDisplayDuration = data.duration != null &&  data.duration != "Inherited" && (!succinct || (succinct && data.duration != "Instantaneous"));
+		this.shouldDisplayDuration = data.duration != null &&  data.duration != "Inherited" && (!succinct || (succinct && (data.duration != "Instantaneous" && data.duration!="Passive")));
 		if (typeof this.duration === 'number') {
 		  this.durationString = `${this.duration} ${this.duration === 1 ? 'Turn' : 'Turns'}`;
 		} else {
@@ -91,7 +94,6 @@ export class RnRAbility {
 		this.effect.description = this.effect.description ?? "";
 		this.effect.save = this.effect.save ?? "";
 		this.effect.options = this.effect.options ?? [];
-		// I'll have to load these from a service.
 		this.effect.conditions = this.effect.conditions ?? [];
 		
 		this.upcast = data.upcast ?? "";
@@ -113,7 +115,7 @@ export class RnRAbility {
 		this.damageScaling.tier_2 = this.damageScaling.tier_2;
 		this.damageScaling.tier_3 = this.damageScaling.tier_3;
 		this.damageType = this.damageScaling?.damage_type ?? "";
-		this.displayableDamageType = this.damageType != "Inherited" ? "" : this.damageType; 
+		this.displayableDamageType = this.damageType == "inherited" ? "" : this.damageType; 
 
 		this.summonedCreature = data.summonedCreature ?? "";
 		this.shouldDisplaySummons = data.summonedCreature != null;		

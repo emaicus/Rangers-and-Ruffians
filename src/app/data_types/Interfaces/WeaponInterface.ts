@@ -24,6 +24,7 @@ export interface DamageScaling {
     harried: boolean;
     handedness: 'One Handed' | 'Two Handed';
     abilities: AbilityData[];
+    type: string;
   }
   
   

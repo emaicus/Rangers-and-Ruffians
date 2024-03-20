@@ -24,7 +24,7 @@
 					},
 					"monster_class": {
 						"type": "string",
-						"enum": ["Beast", "Arcane Construct", "Wolf", "Dire Bear", "Slime", "Undead", "Celestial"]
+						"enum": ["Beast", "Arcane Constructs", "Wolf", "Dire Bear", "Slime", "Undead", "Celestial"]
 					}, 
 					"monster_family": {
 						"type": "string"
@@ -33,10 +33,13 @@
 			},
 			"summons": {
 				"type": "object",
-				"required": ["wildshape"],
+				"required": ["wildshape", "ranger_companion"],
 				"additionalProperties": false,
 				"properties":{
 					"wildshape": {
+						"type": "boolean"
+					},
+					"ranger_companion": {
 						"type": "boolean"
 					} 
 				}

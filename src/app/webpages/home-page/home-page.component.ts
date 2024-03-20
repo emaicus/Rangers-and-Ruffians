@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TopmatterComponent } from '../../rendering/topmatter/topmatter.component';
 import { NgIf } from '@angular/common';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [TopmatterComponent, RouterLink, NgIf],
+  imports: [TopmatterComponent, RouterLink, NgIf, MatExpansionModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })

@@ -11,9 +11,9 @@ export class RnRClassService {
   private jsonUrl = 'assets/data/classes.json'; // Local JSON file
   constructor(private http: HttpClient) {}
 
-  getClasses(): Observable<RnRClass[]> {
+  getClasses(succinct: boolean): Observable<RnRClass[]> {
     return this.http.get<any[]>(this.jsonUrl).pipe(
-      map(data => data.map(cdata => new RnRClass(cdata)))
+      map(data => data.map(cdata => new RnRClass(cdata, succinct)))
     );
   }
 }

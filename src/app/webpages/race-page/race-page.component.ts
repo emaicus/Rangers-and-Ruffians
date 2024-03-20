@@ -34,11 +34,18 @@ export class RacePageComponent implements OnInit, AfterViewInit {
   }
 
   getRaces(): void {
-    this.rnrRaceService.getRaces()
+    this.rnrRaceService.getRaces(true)
     .subscribe(races => {
       this.rnrRaces = races;
       // Sort the weapons array by some criteria, e.g., by name
-      this.rnrRaces.sort((a, b) => a.name.localeCompare(b.name));
+      this.rnrRaces.sort((a, b) => {
+        // Compare by parent attribute first
+        if (a.parent_class < b.parent_class) return -1;
+        if (a.parent_class > b.parent_class) return 1;
+    
+        // If parent attributes are equal, compare by name attribute
+        return a.name.localeCompare(b.name);
+      });
     });
   }
 

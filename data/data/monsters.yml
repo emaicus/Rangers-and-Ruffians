@@ -54,6 +54,7 @@
         tier: Tier 1
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 20
         evasion: 10
@@ -112,6 +113,7 @@
         tier: Tier 2    
     summons:
         wildshape: false  
+        ranger_companion: false
     stats:
         health: 43
         evasion: 12
@@ -169,7 +171,8 @@
         type: Minion
         tier: Tier 3
     summons:
-        wildshape: false     
+        wildshape: false
+        ranger_companion: false
     stats:
         health: 60
         evasion: 13
@@ -222,11 +225,12 @@
                     save: null
 -   name: Tamberdoodle's Hand
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         type: Heavy
         tier: Tier 2
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 250
         evasion: 12
@@ -278,12 +282,13 @@
                     all_tiers: 4d6
 -   name: Treeling
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Treeling"
         type: Minion
         tier: Tier 1
     summons:
         wildshape: false
+        ranger_companion: true
     stats:
         health: 24
         evasion: 10
@@ -307,12 +312,13 @@
                 description: "The treeling takes a swipe at its foe with hardened, spearlike fingers."
 -   name: Sap Knight
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Treeling"
         type: Minion
         tier: Tier 2
     summons:
         wildshape: false
+        ranger_companion: true
     stats:
         health: 44
         evasion: 12
@@ -355,12 +361,13 @@
                     save: null
 -   name: Woad Warrior
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Treeling"
         type: Minion
         tier: Tier 3
     summons:
         wildshape: false
+        ranger_companion: true
     stats:
         health: 60
         evasion: 13
@@ -431,12 +438,13 @@
                     save: null
 -   name: Elemental Spark
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Elemental"
         type: Minion
         tier: Tier 1
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 24
         evasion: 11
@@ -470,12 +478,13 @@
                 description: "With a flash of energy, the Elemental Spark makes an attack against all creatures adjacent to them."
 -   name: Elemental
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Elemental"
         type: Minion
         tier: Tier 2
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 45
         evasion: 12
@@ -530,12 +539,13 @@
                     save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
 -   name: Force of Nature
     metadata:
-        monster_class: Arcane Construct
+        monster_class: Arcane Constructs
         monster_family: "Elemental"
         type: Minion
         tier: Tier 3
     summons:
-        wildshape: false 
+        wildshape: false
+        ranger_companion: false
     stats:
         health: 65
         evasion: 13
@@ -596,6 +606,7 @@
         tier: Tier 1
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 74
         evasion: 8
@@ -611,7 +622,7 @@
                 cost: 0
                 duration: passive
                 range: self 
-                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                description: "A dire bear gains a frightening energy when its family is in harm's way."
                 effect:
                     type: buff 
                     description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
@@ -629,6 +640,18 @@
                     description: "They are Resistant to Cold."
                     conditions:
                         - cold resistance
+                    save: null
+            -   name: Lumbering Movement 
+                type: debuff
+                cost: 0
+                range: self
+                duration: passive
+                description: "Because of their great size, dire bears inevitably cause a commotion while they move and have trouble hiding."
+                effect:
+                    type: debuff
+                    description: "All stealth checks made by the bear are at disadvantage."
+                    conditions:
+                        - custom
                     save: null
         combat_actions:
             -   name: Claw 
@@ -667,6 +690,7 @@
         tier: Tier 2
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 140
         evasion: 10
@@ -682,7 +706,7 @@
                 cost: 0
                 duration: passive
                 range: self 
-                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                description: "A dire bear gains a frightening energy when its family is in harm's way."
                 effect:
                     type: buff 
                     description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
@@ -700,6 +724,18 @@
                     description: "They are Resistant to Cold."
                     conditions:
                         - cold resistance
+                    save: null
+            -   name: Lumbering Movement 
+                type: debuff
+                cost: 0
+                range: self
+                duration: passive
+                description: "Because of their great size, dire bears inevitably cause a commotion while they move and have trouble hiding."
+                effect:
+                    type: debuff
+                    description: "All stealth checks made by the bear are at disadvantage."
+                    conditions:
+                        - custom
                     save: null
         combat_actions: 
             -   name: Claw
@@ -738,6 +774,7 @@
         tier: Tier 3
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 200
         evasion: 12
@@ -753,7 +790,7 @@
                 cost: 0
                 duration: passive
                 range: self 
-                description: "A dire bear gains a frightening energy if their family is in harm's way."
+                description: "A dire bear gains a frightening energy when its family is in harm's way."
                 effect:
                     type: buff 
                     description: "If a dire bear's cubs are in danger or if an ally is on death's door, they are affected by the Hastened condition."
@@ -771,6 +808,18 @@
                     description: "They are Resistant to Cold."
                     conditions:
                         - cold resistance
+                    save: null
+            -   name: Lumbering Movement 
+                type: debuff
+                cost: 0
+                range: self
+                duration: passive
+                description: "Because of their great size, dire bears inevitably cause a commotion while they move and have trouble hiding."
+                effect:
+                    type: debuff
+                    description: "All stealth checks made by the bear are at disadvantage."
+                    conditions:
+                        - custom
                     save: null
         combat_actions:
             -   name: Claw
@@ -809,6 +858,7 @@
         tier: Tier 1
     summons: 
         wildshape: false
+        ranger_companion: false
     stats:
         health: 20
         evasion: 6
@@ -887,6 +937,7 @@
         tier: Tier 2
     summons: 
         wildshape: false
+        ranger_companion: false
     stats:
         health: 40
         evasion: 8
@@ -965,6 +1016,7 @@
         tier: Tier 3
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 80
         evasion: 10
@@ -1039,10 +1091,11 @@
     metadata:
         type: Minion
         tier: Tier 1
-        monster_class: Arcane Construct 
-        monster_family: Arcane Construct
+        monster_class: Arcane Constructs 
+        monster_family: Arcane Constructs
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 24
         evasion: 10
@@ -1103,10 +1156,11 @@
     metadata:
         type: Minion
         tier: Tier 2
-        monster_class: Arcane Construct 
-        monster_family: Arcane Construct
+        monster_class: Arcane Constructs 
+        monster_family: Arcane Constructs
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 46
         evasion: 12
@@ -1178,10 +1232,11 @@
     metadata:
         type: Minion
         tier: Tier 3
-        monster_class: Arcane Construct 
-        monster_family: Arcane Construct
+        monster_class: Arcane Constructs 
+        monster_family: Arcane Constructs
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 64
         evasion: 14
@@ -1257,6 +1312,7 @@
         monster_family: Thrall
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 20
         evasion: 10
@@ -1303,6 +1359,7 @@
         monster_family: Thrall
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 40
         evasion: 12
@@ -1368,6 +1425,7 @@
         monster_family: Thrall
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 40
         evasion: 14
@@ -1433,6 +1491,7 @@
         tier: Tier 1
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 25
         evasion: 11
@@ -1512,6 +1571,7 @@
         tier: Tier 2
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 50
         evasion: 12
@@ -1591,6 +1651,7 @@
         tier: Tier 3
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 140
         evasion: 13
@@ -1671,6 +1732,7 @@
         tier: Tier 2
     summons: 
         wildshape: false
+        ranger_companion: false
     stats:
         health: 155
         evasion: 13
@@ -1762,6 +1824,7 @@
         tier: Tier 1
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 14
         evasion: 14
@@ -1789,7 +1852,7 @@
                 cost: 0
                 duration: passive
                 range: self
-                description: "The giant eagle can carry up to one creature on its back."
+                description: "The giant eagle check is able to carry one creature in its tallons."
         combat_actions:
             -   name: Swipe 
                 attacks_made: 1
@@ -1810,6 +1873,7 @@
         tier: Tier 2
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 35
         evasion: 16
@@ -1837,7 +1901,7 @@
                 cost: 0
                 duration: passive
                 range: self
-                description: "The giant eagle can carry up to two creatures on its back."
+                description: "The eagle is able to carry two creatures on its back."
         combat_actions:
             -   name: Swipe 
                 attacks_made: 1
@@ -1875,6 +1939,7 @@
         tier: Tier 3
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 60
         evasion: 20
@@ -1940,6 +2005,7 @@
         tier: Tier 1
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 25
         evasion: 10
@@ -2026,6 +2092,7 @@
         tier: Tier 2
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 47
         evasion: 12
@@ -2112,6 +2179,7 @@
         tier: Tier 3
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 65
         evasion: 13
@@ -2198,6 +2266,7 @@
         tier: Tier 1
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 21
         evasion: 14
@@ -2252,6 +2321,7 @@
         tier: Tier 2
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 50
         evasion: 14
@@ -2306,6 +2376,7 @@
         tier: Tier 3
     summons: 
         wildshape: true
+        ranger_companion: true
     stats:
         health: 70
         evasion: 14
@@ -2376,6 +2447,7 @@
         monster_class: Celestial 
     summons:
         wildshape: false
+        ranger_companion: false
     stats:
         health: 60
         evasion: 13

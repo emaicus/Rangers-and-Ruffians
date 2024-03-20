@@ -1,0 +1,26 @@
+{
+	"description": "Definition of the RnR items.yml file.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["name", "goldValue", "type", "ability"],
+		"additionalProperties": false,
+		"properties": {
+			"name": {
+				"type": "string"
+			},
+			"goldValue": {
+				"type": "number"
+			},
+            "type": {
+				"type": "string"
+			},
+            "subtype": {
+				"type": "string"
+			},
+			"ability" : {
+				"type": "object"
+			}
+		}
+	}
+}

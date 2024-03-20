@@ -1,0 +1,20 @@
+{
+	"description": "Definition of the RnR status_effects.yml file.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"required": ["name", "balance", "about"],
+		"additionalProperties": false,
+		"properties": {
+			"name": {
+				"type": "string"
+			},
+			"balance": {
+				"type": "string"
+			},
+			"about": {
+				"type": "string"
+			}
+		}
+	}
+}

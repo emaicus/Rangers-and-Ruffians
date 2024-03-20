@@ -3,6 +3,7 @@ from .RnRClass import RnRClass
 from .RnRBackground import RnRBackground
 from .RnRWeapon import RnRWeapon
 from .RnRMonster import RnRMonster
+from .RnRItem import RnRItem
 
 class RangersAndRuffians():
   ''' Takes in classname and json object, instantiates class.'''
@@ -16,7 +17,8 @@ class RangersAndRuffians():
         monster_data: dict, 
         pantheon_data: dict, 
         background_data: list, 
-        weapon_data: list
+        weapon_data: list,
+        item_data: list
   )-> None:
     self.version = version
     self.version_suffix = version_suffix
@@ -27,6 +29,7 @@ class RangersAndRuffians():
     self.pantheon = self.load_pantheon(pantheon_data)
     self.backgrounds = self.load_backgrounds(background_data)
     self.weapons = self.load_weapons(weapon_data)
+    self.items = self.load_items(item_data)
   
   def serialize(self):
     serial = dict()
@@ -62,6 +65,9 @@ class RangersAndRuffians():
   
   def serialize_weapons(self):
     return self._abstract_serialize(self.weapons)
+
+  def serialize_items(self):
+    return self._abstract_serialize(self.items)
   
   def serialize_backgrounds(self):
     return self._abstract_serialize(self.backgrounds)
@@ -107,6 +113,12 @@ class RangersAndRuffians():
     for weapon in weapon_data:
       rnr_weapons.append(RnRWeapon(weapon))
     return rnr_weapons
+  
+  def load_items(self, item_data: list) -> list:
+    rnr_items = list()
+    for rnr_item in item_data:
+      rnr_items.append(RnRItem(rnr_item))
+    return rnr_items
   
   def load_monsters(self, monster_data : dict) -> list:
     rnr_monsters = list()

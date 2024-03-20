@@ -48,6 +48,11 @@ h4 { font-size: 1.5rem; text-decoration: underline;}
 button{
   background-color: #0080e9;
   color: white;
+  margin-bottom: 1rem;
+}
+
+.print-button {
+  margin-bottom: 1rem;
 }
 
 .rnr-marginless {
@@ -67,9 +72,8 @@ button{
 }
 
 .rnr-subsection-title {
-  text-decoration: underline;
   color: black;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: normal;
   padding-bottom: .75rem;
 }
@@ -83,10 +87,10 @@ button{
 }
 
 .rnr-ability-title {
-  text-decoration: underline;
+  // text-decoration: underline;
   color: black;
-  font-size: 1.25rem;
-  font-weight: normal;
+  font-size: 1.3rem;
+  font-weight: bold;
   margin-bottom: .5rem;
   display: block;
 }
@@ -156,14 +160,91 @@ button{
   background-color: #dddddd;
 }
 
+.spell-tier {
+  margin-top: 1rem;
+}
+
+.spell-tier-title {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 1rem;
+}
+.mat-expansion-panel-content {
+  flex-direction: row !important; /* Reset flex-direction to default */
+}
+
+.mat-expansion-panel {
+  margin-top: 1rem !important;
+}
+
+.mat-mdc-form-field {
+  padding-right: 1rem;
+}
+
+
 @media print {
+  
+
+  .main-content {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 0px;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+  }
+
   @page {
-    margin: 1in;
+    margin-top: 0.5in !important;
+    margin-bottom: 0.5in !important;
+  }
+
+  .rnr-class {
+    display: none !important;
+  }
+
+  .rnr-race {
+    display: none !important;
+  }
+
+  .rnr-line {
+    display: none;
+  }
+
+  .toc-list {
+    display: none !important;
+  }
+
+  .example-header {
+    display: none !important;
+  }
+
+  .mat-drawer {
+    display: none !important;
+    width: 0px !important;
+  }
+
+  .mat-sidenav-content {
+    width: 100%;
+  }
+
+  .printable-content {
+    display: block !important; /* Or any appropriate display property */
+    // margin-left: 1in;
+    // margin-right: 1in;
+  }
+
+  .rnr-page-header {
+    display: none !important;
   }
 
   .printable-stat-section {
     display: block;
+    margin-bottom: .25in;
   }
+
+
+  
 
   .display-stat-section {
     display: none;
@@ -199,28 +280,30 @@ button{
     display: none;
   }
 
+  .printable {
+    display: block;
+  }
+
   button {
     display: none;
   }
 
-  .rnr-subsection {
-    text-decoration: underline;
+  .rnr-subsection-title {
     color: black;
-    font-size: 16pt;
+    font-size: 24pt;
     font-weight: normal;
     padding-bottom: .75rem;
   }
   
-  .rnr-sub-subsection {
-    text-decoration: underline;
+  .rnr-sub-subsection-title {
+    text-decoration: none;
     color: black;
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: normal;
     margin-bottom: .5rem;
-  }
+  } 
   
   .rnr-ability-title {
-    text-decoration: underline;
     color: black;
     font-size: 12pt;
     font-weight: normal;
@@ -230,8 +313,17 @@ button{
   body {
     font-size: 10pt;
   }
-  
 
+  .spell-tier {
+    margin-top: .25in;
+  }
+  
+  .spell-tier-title {
+    font-size: 16pt;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 0.25in;
+  }
 
 }
 // html, body { height: 100%; }

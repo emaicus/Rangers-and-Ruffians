@@ -4,11 +4,18 @@
             <img [src]="art.getImagePath()" class="raceClassImage">
         </div>
         <p>
-            <span class="attribution">
-                <a [href]="art.url"> {{art.title}} </a> 
-                by {{art.artist}} is licensed under 
-                <a [href]="art.license_url"> {{art.license}} </a>
-            </span>
+            <ng-container *ngIf="art.ai_art==false">
+                <span class="attribution">
+                    <a [href]="art.url"> {{art.title}} </a> 
+                    by {{art.artist}} is licensed under 
+                    <a [href]="art.license_url"> {{art.license}} </a>
+                </span>
+            </ng-container>
+            <ng-container *ngIf="art.ai_art">
+                <span class="attribution">
+                    {{art.title}} was generated through the use of an AI tool and is in the public domain.
+                </span>
+            </ng-container>
         </p>
     </div>
 </ng-container>

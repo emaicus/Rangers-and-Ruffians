@@ -1,8 +1,8 @@
-<div class="rnr-class printable-content" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'">
+<div class="rnr-class" [class.printable-content]="isReadyToPrint" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'" #myPrintableContent>
 	<div class="rnr-subsection-title toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ rnrclass.name }}
 	</div>
-	<button (click)="printContent(rnrclass.name.toLowerCase() + '-class')">Print {{rnrclass.name}}</button>
+	<button (click)="printContent()" class="print-button">Print {{rnrclass.name}}</button>
 	<app-attributed-art-renderer [artName]="rnrclass.name"></app-attributed-art-renderer>
 
 	<div *ngIf="rnrclass.handbook" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-handbook'">
@@ -14,6 +14,13 @@
                 {{ section.text }}
             </p>
         </ng-container>
+	</div>
+	<div *ngIf="rnrclass.rule_sections" class="printable handbook-section">
+		<ng-container *ngFor="let section of rnrclass.rule_sections">
+			<ng-container *ngIf="section==='ranger_companion_creature'">
+				<app-ranger-companion-creature>></app-ranger-companion-creature>
+			</ng-container>
+		</ng-container>
 	</div>
 	<ng-container *ngIf="rnrclass.recommended_stats !== null">
         <span class="rnr-sub-subsection-title">
@@ -57,12 +64,9 @@
 	</ng-container>
 	<ng-container *ngIf="rnrclass.instantiated_spells && rnrclass.instantiated_skill_tree.abilities.length == 0">
 		<div class="spells-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-spells'">
-			<span class="rnr-sub-subsection-title">
-				Spells:
-			</span>
 			<ng-container *ngFor="let chapters of rnrclass.instantiated_spells | keyvalue">
 				<div class="spell-tier">
-					<span class="rnr-sub-subsection-title">{{chapters.key}}</span>
+					<span class="spell-tier-title">{{chapters.key}} Spells</span>
 					<ng-container *ngFor="let ability of chapters.value">
 						<app-ability-renderer [ability]="ability"></app-ability-renderer>
 					</ng-container>

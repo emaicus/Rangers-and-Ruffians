@@ -25,6 +25,10 @@
 						"type": "string",
 						"enum": ["blunt", "piercing"]
 					},
+					"damage_shape": {
+						"type": "string",
+						"enum": ["cone"]
+					},
 					"Common": {
 						"type": "string",
 						"pattern": "^\\d+d\\d+$"
@@ -69,6 +73,10 @@
 				"items": {
 					"type": "object"
 				}
+			}, 
+			"type": {
+				"type": "string",
+				"enum": ["Firearm"]
 			}
 		}
 	}

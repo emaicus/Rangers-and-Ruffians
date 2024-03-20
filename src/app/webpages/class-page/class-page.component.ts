@@ -34,7 +34,7 @@ export class ClassPageComponent implements OnInit, AfterViewInit{
   }
 
   getRnRClasses(): void {
-    this.rnrClassService.getClasses()
+    this.rnrClassService.getClasses(true)
     .subscribe(rnr_classes => {
       this.rnrClasses = rnr_classes;
       // Sort the weapons array by some criteria, e.g., by name

@@ -6,4 +6,5 @@ export interface AttributedArtData {
   license_url: string;
   title: string;
   url: string;
+  ai_art: boolean;
 }

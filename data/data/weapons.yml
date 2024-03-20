@@ -514,6 +514,109 @@
                 conditions:
                     - staggered 
                 save: null
+-   name: Handgun 
+    type: Firearm
+    base_stat: Perception
+    goldValue: 10
+    damage_scaling:
+        damage_type: piercing
+        Common: 1d8 
+        Mastercraft 1: 1d10
+        Mastercraft 2: 1d12
+    range: 
+        fired: 30
+    harried: false 
+    handedness: One Handed 
+    abilities:
+        -   name: Misfire
+            cost: 0
+            type: debuff 
+            range: self 
+            duration: instantaneous 
+            description: "When you roll a critical failure on an accuracy check with this weapon, it jams."
+            effect:
+                type: debuff 
+                description: "From that moment on, it becomes inoperable until you spend an action to attempt to clear it. 
+                              To clear the weapon, you must succeed at a D15 intelligence check. On failure, you cannot clear the weapon,
+                              and it is disabled until you can spend a rest clearing it."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Firearm Customization
+            cost: 0
+            type: utility
+            range: self 
+            duration: instantaneous 
+            description: "Throughout your adventure, you can find, craft, or purchase modifications for your firearm to change its form and function."
+-   name: Scattergun
+    type: Firearm
+    base_stat: Perception
+    goldValue: 15
+    damage_scaling:
+        damage_type: piercing
+        damage_shape: cone
+        Common: 2d4 
+        Mastercraft 1: 2d6
+        Mastercraft 2: 2d8
+    range: 
+        fired: 20
+    harried: true  
+    handedness: Two Handed 
+    abilities:
+        -   name: Misfire
+            cost: 0
+            type: debuff 
+            range: self 
+            duration: instantaneous 
+            description: "When you roll a critical failure on an accuracy check with this weapon, it jams."
+            effect:
+                type: debuff 
+                description: "From that moment on, it becomes inoperable until you spend an action to attempt to clear it. 
+                                To clear the weapon, you must succeed at a D15 intelligence check. On failure, you cannot clear the weapon,
+                                and it is disabled until you can spend a rest clearing it."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Firearm Customization
+            cost: 0
+            type: utility
+            range: self 
+            duration: instantaneous 
+            description: "Throughout your adventure, you can find, craft, or purchase modifications for your firearm to change its form and function."
+-   name: Long Gun
+    type: Firearm
+    base_stat: Perception
+    goldValue: 20
+    damage_scaling:
+        damage_type: piercing
+        Common: 2d6 
+        Mastercraft 1: 2d8
+        Mastercraft 2: 2d10
+    range: 
+        fired: 120
+    harried: true 
+    handedness: Two Handed 
+    abilities:
+        -   name: Misfire
+            cost: 0
+            type: debuff 
+            range: self 
+            duration: instantaneous 
+            description: "When you roll a critical failure on an accuracy check with this weapon, it jams."
+            effect:
+                type: debuff 
+                description: "From that moment on, it becomes inoperable until you spend an action to attempt to clear it. 
+                              To clear the weapon, you must succeed at a D15 intelligence check. On failure, you cannot clear the weapon,
+                              and it is disabled until you can spend a rest clearing it."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Firearm Customization
+            cost: 0
+            type: utility
+            range: self 
+            duration: instantaneous 
+            description: "Throughout your adventure, you can find, craft, or purchase modifications for your firearm to change its form and function."
 
 
 
