@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710904279502,
+  "timestamp": 1710905136701,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-3YU3XERD.js",
+        "/main-JUD4NEG2.js",
         "/manifest.webmanifest",
         "/polyfills-RX4V3J3S.js",
-        "/styles-4E3PXJ4O.css"
+        "/styles-SE4TO533.css"
       ],
       "patterns": []
     },
@@ -206,7 +206,7 @@
     "/assets/css/material-theme/css/typography.module.css": "7b3ee2118a0447103a360389024e74afb93f3a12",
     "/assets/css/print.css": "bc506a5bc0901a05f4c90064a6f9babda1336c50",
     "/assets/css/style.scss": "6dc1dfdfe0662d4225483deb2abedc15f301cc03",
-    "/assets/data/attributions.json": "628d64167191efe122d8666fa5a094b5d5272db8",
+    "/assets/data/attributions.json": "4d8cc6bbae39c41749f4cf4657f81a223a95abf7",
     "/assets/data/backgrounds.json": "b7de4c70486b7c8754959c2ba8c07a2be6e6dd4c",
     "/assets/data/classes.json": "5dd4c750ff2d42bd1492cbe4f3e14fb343c25b81",
     "/assets/data/conditions.json": "ee9e3af095863eb6665d229b317173689e8ce06b",
@@ -341,8 +341,8 @@
     "/assets/images/wood_elf.jpg": "ca18f03470a2effb6bcd1ae7da2020fe35c51c9d",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "4b917841293b9a4c11d06c038f9a9e810caacc96",
-    "/main-3YU3XERD.js": "51fdb43de1bdb270951e0fb4c5458a799a7b7e5c",
+    "/index.html": "31e25d48b5042389198fc33a9db973d1c652ae8e",
+    "/main-JUD4NEG2.js": "83d5eb0bcf57d970d1c628551329f1b7ed3da3a6",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
@@ -355,7 +355,7 @@
     "/media/material-icons-two-tone-LCGWGE2N.woff": "02225d888afe4eebc7312b7432878dc8aef1f50f",
     "/media/material-icons-two-tone-M5N5K6F5.woff2": "296ff0bff395a77c2e33e7e31fffe73980bd93cf",
     "/polyfills-RX4V3J3S.js": "6b4c4ea33aa92bce0b91df442a680ed73e4303db",
-    "/styles-4E3PXJ4O.css": "85fbd9da917dc2dfd84d0984d8fb0e294c7222a4"
+    "/styles-SE4TO533.css": "16db21719b13a0e6c886c002ed93f496583fdabc"
   },
   "navigationUrls": [
     {
