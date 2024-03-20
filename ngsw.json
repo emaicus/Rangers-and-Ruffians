@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710934584870,
+  "timestamp": 1710970699811,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -212,7 +212,7 @@
     "/assets/data/conditions.json": "ee9e3af095863eb6665d229b317173689e8ce06b",
     "/assets/data/items.json": "e664b9655cb9bf09b54f30dae884fb70a392b546",
     "/assets/data/monsters.json": "09ca4e3a633d3ade92c4008199c5866ecee584c0",
-    "/assets/data/races.json": "47b1d81006fe50cc75a0fece6f0b6dce7126d184",
+    "/assets/data/races.json": "e69b579cb82b12d634061ad9cebfed6d74f81090",
     "/assets/data/weapons.json": "403f2fafe1698e99c55dd9f39393326d5cb5e0e1",
     "/assets/docs/archive/helpful_poohbah_stats_2_3_1.md": "7932c9cbb00e0439fbd799f613ab9a06489716e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_4_1.md": "1ac9ad69c8349c58589bea4e0885b41b2f4edf11",
