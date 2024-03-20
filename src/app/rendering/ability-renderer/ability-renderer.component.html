@@ -1,6 +1,7 @@
 <div class="rnr-ability" *ngIf="ability">
-	<div class="rnr-ability-title">
-		{{ability.name}}
+	<div *ngIf="ability.name !=='inherited'" class="rnr-ability-title">
+		<span *ngIf="ability.renderCheckbox" class="checkbox-square"></span>
+		<span>{{ability.name}}</span>
 	</div>
 	
 	<div *ngIf="ability.shouldDisplayActionType" class="ability-action-type"> 
@@ -21,10 +22,10 @@
 	
 	<div *ngIf="ability.shouldDisplayRadius || ability.shouldDisplayCastingTime">
 		<ng-container *ngIf="ability.shouldDisplayCastingTime">
-			<span class="rnr-boldtext">Casting Time:</span> <span>{{ ability.castingTime }}</span>
+			<span class="rnr-boldtext">Casting Time: </span> <span>{{ ability.castingTime }}</span>
 		</ng-container>
 		<ng-container *ngIf="ability.shouldDisplayRadius">
-			<span class="rnr-boldtext">Radius:</span> <span>{{ ability.radius }}</span>
+			<span class="rnr-boldtext">Radius: </span> <span>{{ ability.radius }}</span>
 		</ng-container>
 	</div>
 
@@ -36,7 +37,13 @@
 	<div *ngIf="ability.shouldDisplayDescription" class="ability-description">
 		<ng-container *ngIf="ability.damageScaling && ability.damageScaling.all_tiers">
 			<span class="rnr-boldtext">
-				{{ ability.damageScaling.all_tiers }} {{ability.displayableDamageType}} Damage.
+				{{ ability.damageScaling.all_tiers }}
+				<ng-container *ngIf="ability.displayableDamageType != 'healing'">
+					{{ability.displayableDamageType}} Damage.
+				</ng-container>
+				<ng-container *ngIf="ability.displayableDamageType === 'healing'">
+					Healing.
+				</ng-container>
 			</span>
 		</ng-container>
 		<span>
@@ -57,7 +64,12 @@
 			<ng-container *ngIf="ability.effect.options">
 				<ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
 					<li *ngFor="let option of ability.effect.options">
-						<span class="rnr-boldtext">{{ option.name }}</span><span>{{ option.description }}</span>
+						<span class="rnr-boldtext">
+							{{ option.name }}.
+						</span>
+						<span>
+							{{ option.description }}
+						</span>
 					</li>
 				</ul>
 			</ng-container>
@@ -67,7 +79,12 @@
 		</span>
 		<ul *ngIf="ability.shouldDisplayOptions && ability.options && ability.options.length > 0" class="ability-options-list">
 			<li *ngFor="let option of ability.options">
-				<span class="rnr-boldtext">{{ option.name }}</span><span>{{ option.description }}</span>
+				<span class="rnr-boldtext">
+					{{ option.name }}.
+				</span>
+				<span>
+					{{ option.description }}
+				</span>
 			</li>
 		</ul>
 	</div>

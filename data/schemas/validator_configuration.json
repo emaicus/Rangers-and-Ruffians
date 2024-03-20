@@ -3,5 +3,7 @@
     "races.yml": "race_schema.json",
     "weapons.yml": "weapon_schema.json",
     "backgrounds.yml": "background_schema.json",
-    "monsters.yml": "monster_schema.json"
+    "monsters.yml": "monster_schema.json",
+    "status_effects.yml": "status_effect_schema.json",
+    "items.yml": "item_schema.json"
 }

@@ -11,16 +11,30 @@ export class AttributedArt implements AttributedArtData {
     license_url="";
     title="";
     url="";
+    ai_art: boolean=false;
     imageExists: boolean = false;
 
     constructor (data: AttributedArtData) {
         this.name = data.name;
-        this.artist = data.artist;
-        this.license = data.license;
-        this.license_acronym = data.license_acronym;
-        this.license_url = data.license_url;
-        this.title = data.title;
-        this.url = data.url;
+        this.ai_art = data.ai_art ?? false;
+
+        if(this.ai_art == false) {
+            this.artist = data.artist;
+            this.license = data.license;
+            this.license_acronym = data.license_acronym;
+            this.license_url = data.license_url;
+            this.title = data.title;
+            this.url = data.url;
+        } else {
+            this.artist ="AI";
+            this.license = "Public Domain";
+            this.license_acronym = "Public Domain";
+            this.license_url = "";
+            this.title = data.title;
+            this.url = "";
+        }
+        
+        
         this.checkIfImageExists();
     }
 

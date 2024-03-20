@@ -102,6 +102,12 @@
                     }
                 }
             },
+            "rule_sections" : {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
             "starting_items": {
                 "type": "array"
             }

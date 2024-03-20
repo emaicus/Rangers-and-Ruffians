@@ -1,0 +1,8 @@
+<div class="rnr-weapon" *ngIf="item">
+	<div class="rnr-subsection-title" *ngIf="item.name !== null">
+		{{item.name}}
+	</div>
+	<div>
+		<app-ability-renderer [ability]="item.instantiatedAbility"></app-ability-renderer>
+	</div>
+</div>

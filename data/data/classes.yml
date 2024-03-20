@@ -1343,9 +1343,7 @@
                     save: null
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
                 #Tyrone's Ravenous Hunger:
                     #    cost: 2
                     #    range: 30
@@ -1467,9 +1465,7 @@
                             If it does not, you may throw it up to 30 feet."
                 damage_scaling:
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
             -   name: Taunt
                 type: aoe debuff
                 cost: 1
@@ -1651,9 +1647,7 @@
                 passive_damage_source: true
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
                 description: "You use every opening to prove your glory. If you attack an enemy that is prone, deal bonus damage."
             -   name: Terrifying Damage
                 type: buff
@@ -1665,9 +1659,7 @@
                 passive_damage_source: true
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
                 description: "You've learned to use your enemies' terror to your advantage. When you attack an enemy that is Frightened of you, deal bonus damage."
             -   name: Chain Attack
                 cost: 0
@@ -2084,7 +2076,7 @@
                     conditions:
                         - inspired 
                     save: null
-            -   name: Assisted Strike
+            -   name: Allied Strike
                 type: combat option 
                 cost: 1
                 range: inherited
@@ -2487,9 +2479,7 @@
                     save: null
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
             -   name: Resurgence
                 type: buff 
                 cost: 0
@@ -2585,9 +2575,7 @@
                     save: null
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
             -   name: Controlled Descent
                 cost: 0
                 type: buff 
@@ -2730,9 +2718,7 @@
                         - custom
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
             -   name: Radiant Invisibility Break
                 cost: 0
                 type: aoe debuff
@@ -2871,9 +2857,7 @@
                     save: null
                 damage_scaling: 
                     damage_type: inherited
-                    tier_1: 1d6 
-                    tier_2: 1d6
-                    tier_3: 1d6
+                    all_tiers: 1d6
             #-   name: Tether
                 #cost: 1
                 #description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
@@ -2916,9 +2900,7 @@
                 passive_damage_source: true
                 damage_scaling:
                     damage_type: inherited 
-                    tier_1: 1d6
-                    tier_2: 1d6 
-                    tier_3: 1d6
+                    all_tiers: 1d6
             -   name: Unseen Hand
                 type: utility
                 cost: 1
@@ -6727,3 +6709,795 @@
                             or the omen occurs. No action taken by the bound creature may free them."
                 upcast: "By spending three more action points and using a void catalyst (10,000 gold) you can reduce
                         the casting time of this spell to 3 minutes and cast it on an unrestrained creature."
+-   name: Ranger
+    recommended_stats:
+        Charisma: -2
+        Dexterity: 1
+        Inner_Fire: 1
+        Intelligence: -1
+        Perception: 2
+        Strength: 0
+    expertise: "As a Ranger, you are a master at traversing and understanding the wilderness. Add your expertise to intelligence 
+                  made to understand natural phenomena and to perception checks made when traversing the wilds or keeping watch.
+                  Additionally, add your expertise to any check made to understand a monster or its motivations and to any charisma check made with 
+                  individuals you are trying to protect from a monster."
+    health_dice: "1d8"
+    handbook:
+        -   title: Intro
+            display_title: false 
+            text: "Protectors of natural order, Rangers are masters of traversing the wilderness. 
+                   Tales of Rangers are sung in the borderlands, where the wilds crash 
+                   against civilization. Rangers silently push back against the chaos of the wilds, 
+                   protecting unwitting villagers from abberations, fiends, and wild things. 
+                   Rangers rarely stay in one place, and the area under their protection can span for hundreds of miles.
+                   This means that their relationships are few and transient, though some take an animal companion or
+                   find friendship with a local druid or wizard. Rangers are often among the first to realize 
+                   when something sinister is brewing. When they end up in an adventuring party, it is usually 
+                   because something has threatened the natural order and they believe that they can help restore it."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Rangers are invaluable when traversing the wilderness and their knack for crafting 
+                    useful items from foraged materials makes them ideal at overcoming obstacles. 
+                    Dawnstar's Light, Flameburst Oil, and Grappler's Vines are each powerful tools
+                    at the Ranger's disposal. Likewise, a Ranger's animal companion acts as an extension of their will, 
+                    retrieving items, guarding people or locations, and otherwise aiding the Ranger and their party as they travel."                    
+        -   title: "When Socializing"
+            display_title: true 
+            text: "While rangers have a reputation as brooding figures found in the corner of the local tavern, they 
+                     command great respect from the citizens of border towns. A ranger's word carries weight, and even the 
+                     few question their expertise when it comes to monsters or monster-hunting."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Rangers are intelligent combatants who fight with precision and care. Their Analyze ability 
+                    allows them to learn their enemy before striking, gaining advantages when fighting enemies of that type.
+                    Foraged items play a key role in a Ranger's arsenal, allowing them to strike with the power of vine, or flame, or with vampiric intent. 
+                    Animal Companion serves as a fearsome allies, and a wayward goblin may find itself mauled by a bear if they dare
+                    cross a Ranger's path."    
+    rule_sections:
+        - "ranger_companion_creature"
+    skill_tree:
+        tree_path: "tmp"
+        abilities: #25 /25
+            -   name: Companion Creature
+                cost: 0
+                type: utility
+                duration: passive 
+                range: self 
+                description: "Gain a companion creature capable of aiding you both while adventuring and in combat.
+                              The rules for Ranger Companions are detailed in the Ranger section of the core rulebook."
+            -   name: Track Someone
+                type: buff
+                cost: 0
+                duration: instantaneous
+                range: self 
+                description: "If you have an item, article of clothing, or a known track from someone you wish to follow,
+                              you may provide it to your companion so that they can help you follow it."
+                effect:
+                    type: buff
+                    description: "Take advantage on the resulting tracking check. If you have used the Analyzed ability
+                                    on a creature of this type, your companion succeeds in tracking it without a check unless signs
+                                    of its passing are suppressed by magic or a natural ability."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Deliver a Message
+                type: utility
+                cost: 1
+                duration: instantaneous
+                range: self 
+                description: "You have trained your companion to carry your words to others. If your companion knows a person and
+                                their relative location, you are able to give them a message to deliver. If it is possible, your
+                                creature will find the person and deliver the message without fail and will return with a response."
+            -   name: Scout Ahead
+                type: utility
+                cost: 1
+                duration: instantaneous
+                range: self 
+                description: "Your have trained your companion to scout ahead. Ask it to return with one piece of information
+                                and it will do its best to. Your Grand Poohbah may ask you to make a check to determine
+                                your companion's success."
+            -   name: Retrieve Something
+                type: utility
+                cost: 0
+                duration: instantaneous
+                range: 1 mile
+                description: "Your companion is able to retrieve items when you ask it to. The item must be unguarded,
+                                and your companion must know its approximate location. Additionally, whenever you use the Ranger's
+                                Infusions ability, your maximum number of infusions carried increases by one and you may add +1
+                                to the result of your foraging roll."
+            -   name: Distract Someone
+                type: debuff
+                cost: 1
+                duration: 5
+                range: 1 mile
+                radius: 50
+                description: "You have trained your companion to distract people in a non-hostile manner."
+                effect:
+                    type: debuff 
+                    description: "Order your companion to go somewhere and cause a ruckus. Any creature within the ability's radius 
+                                    must make a Spell Power save. On failure, they are Fixated on your companion, on success they are
+                                    Distracted by it."
+                    conditions:
+                        - fixated
+                        - distracted 
+                    save: "Affected creatures may repeat the save at the end of each turn."
+            -   name: Guard Something
+                type: utility
+                cost: 0
+                duration: infinite
+                range: 1 mile
+                description: "Your companion is loyal enough to guard something or someone that you care about.
+                                You may command your companion to either alert you if something occurs, or to
+                                fight to defend a person or area with all of its strength."
+                                
+            -   name: Perfect Bond
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                ability_modified: companion creature
+                description: "Over your travels, you have fostered a deep trust between yourself and your companion."
+                effect:
+                    type: buff 
+                    description: "Your companion no longer becomes panicked when injurted and no longer has to roll on the panicked table.."
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: Guard Something
+                type: utility
+                cost: 0
+                duration: infinite
+                range: 1 mile
+                description: "The time that you've spent with your companion has made you adept at working with all animals. Whenever
+                                you make a check to calm or otherwise handle an animal, add your expertise. Additionally, you are able 
+                                to communicate with creatures of all types. They do not speak to you, but you are instead able to express 
+                                simple ideas to them, and they can do the same."
+            -   name: Ranger's Weapon Training
+                passive_damage_source: true
+                cost: 0
+                type: buff 
+                range: self
+                duration: passive
+                description: "You have spent countless hours mastering the use of our weapons. Choose one of the following weapon groups.
+                                Whenever you attack with a weapon from your chosen group, add your expertise to the accuracy check. "
+                options:
+                    -   name: "Archer"
+                        description: Bow, crossbow, hand-crossbow. 
+                    -   name: "Ronin"
+                        description: Katana, twinsword, shuriken.
+                    -   name: "Nomad"
+                        description: Quarterstaff, shortspear, slingshot. 
+
+            -   name: Analyze
+                type: combat option
+                cost: 0
+                casting_time: 1 minute
+                duration: infinite
+                range: 30
+                description: "Spend a full turn watching a monster. Learn one fact of your choice about the creature, for example, what its strongest ability is."
+                effect:
+                    type: debuff 
+                    description: "Forevermore, creatures of that type are considered Analyzed when fighting you."
+                    conditions:
+                        - analyzed 
+                    save: null
+            -   name: Track
+                type: buff
+                cost: 0
+                duration: passive
+                action_type: modifies_ability
+                ability_modified: analyze 
+                range: 100
+                description: "You are adept at tracking enemies that you have analyzed."
+                effect:
+                    type: buff
+                    description: "If you have analyzed a type of enemy, take advantage on checks made to track them. By looking at the tracks 
+                                    of enemies of that type, you are able to determine how many are in their group and how long ago they passed."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Resistant
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "You are able to anticipate even the most deadly attacks from an analyzed creature."
+                effect:
+                    type: buff
+                    description: "If you have analyzed an enemy, add your expertise to any spell power saves made to resist the effects of its abilities."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Strider
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "Difficult terrain does not hinder you, and you succeed in simple athletics checks with ease."
+                effect:
+                    type: buff
+                    description: "Such checks include vaulting over a table, leaping across a narrow gap, or walking on top of deep snow."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Fade into Nature
+                type: buff
+                cost: 0
+                duration: passive
+                range: self
+                description: "Your movements are so natural as to become undetecatable to the untrained eye."
+                effect:
+                    type: buff
+                    description: "You are able to add your expertise to your stealth checks."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Counter
+                type: combat option 
+                action_type: Reaction
+                cost: 1
+                duration: passive
+                range: self
+                description: "When a creature within 5 feet of you hits you with a melee attack, spend your reaction to counter-attack them. "
+            -   name: Strider
+                type: buff 
+                passive_damage_source: true 
+                cost: 0
+                duration: passive
+                range: self
+                description: "Your training with your weapons has reached the level of mastery."
+                effect:
+                    type: buff
+                    description: "Whenever you make an attack with a weapon from the group you chose for Ranger's Weapon Training, add bonus damage to the result."
+                    conditions:
+                        - custom 
+                    save: null
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 1d6
+            -   name: Hunter's Infusions
+                type: utility 
+                action_type: modifies_ability 
+                ability_modified: rest
+                cost: 0
+                duration: passive
+                range: self
+                description: "Rather than rushing into battle, rangers take time to prepare. You do this by crafting Hunter's Infusions, which can be used to empower the abilities found in the Ranger's Arsenal skill tree. You are able to carry a number of hunter's infusions equal to your expertise bonus. Whenever you take a rest, you may forage for the materials needed to restock, restoring 1d4 infusions."
+            -   name: Field Medicine 
+                cost: 1
+                type: healing 
+                range: touch 
+                duration: instantaneous
+                description: "Quickly crush lorelroot to release its healing properties. The poultice quickly hardens over wounds (2d4, 4d4, 4d10)"
+                damage_scaling:
+                    damage_type: healing 
+                    tier_1: 2d4
+                    tier_2: 4d4
+                    tier_3: 4d10 
+                upcast: "Apply a hunter's infusion to the poultice to increase its potency, removing any non-curse status effects from your target and increasing the healing to 4d4, 4d10, and 8d10 in gameplay tiers 1, 2, and 3, respectively."
+            -   name: Venomous Strike
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Dip your blade or projectile in caustic venom before attacking."
+                effect:
+                    type: debuff 
+                    description: "Your target must make a spell power save or become Poisoned."
+                    conditions:
+                        - poisoned 
+                    save: null
+                damage_scaling:
+                    damage_type: poison 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunter's infusion to the venom to cause the attack to roll twice the number of bonus damage dice (2d8, 2d10, 2d12) and to force your target to make its save against Poison with disadvantage."    
+            -   name: Grappler's Line
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Affix a shoot of devil's ivy to your weapon or projectile. As it hits, it creates a durable rope which is attached to your weapon."
+                effect:
+                    type: debuff 
+                    description: "If your target is a living creature, they must make a spell power save or become Tethered."
+                    conditions:
+                        - tethered 
+                    save: null
+                damage_scaling:
+                    damage_type: inherited 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunter's infusion to the attack to use a tanglethron vine instead of devil's ivy.
+                            When the arrow hits, it bursts into a web of thorned vines in a 15ft radius. 
+                            Anyone who moves through the vines is Hindered, and must make a spell power save or take 2d6 damage."    
+            -   name: Frostbite
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Use frostheart extract to imbue an attack or projectile with the power of ice and snow."
+                effect:
+                    type: debuff 
+                    description: "Your target must make a spell power save or become Hindered as they are chilled to the bone."
+                    conditions:
+                        - hindered
+                        - slowed
+                    save: null
+                damage_scaling:
+                    damage_type: cold 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunter's infusion to the extract to force your target to save against the Slowed condition instead of Hindered."
+            -   name: Flameburst Oil
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Affix a firestar seed to your weapon or projectile so that it ignites on impact."
+                effect:
+                    type: debuff 
+                    description: "Your target must make a Spell Power Save or begin Burning."
+                    conditions:
+                        - burning
+                    save: null
+                damage_scaling:
+                    damage_type: fire 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunters infusion to the firestar seed to cause it to explode on impact, dealing an additional 2d6 damage to your target and anyone within 15ft."
+            -   name: Thunderclap Charge
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Add the ball of a puff-root to your blade or projectile so that it emits a burst of air on impact."
+                effect:
+                    type: debuff 
+                    description: "Your target must make a Spell Power save or be pushed 15ft back."
+                    conditions:
+                        - burning
+                    save: null
+                damage_scaling:
+                    damage_type: blunt 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunter's infusion to the puff-root to cause it to explode on impact, forcing all creatures within a 10ft radius to make a spell power save or be pushed back 15ft."
+            -   name: Dawnstar's Light
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Apply a vial of dawnstar sap to a blade or projectile."
+                effect:
+                    type: debuff 
+                    description: "The next attack that you make blazes with blinding light. Your target must make a Spell Power save or be Blinded."
+                    conditions:
+                        - blinded
+                    save: null
+                damage_scaling:
+                    damage_type: radiant 
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12 
+                upcast: "Apply a hunter's infusion to the dawnstar sap to make it continue to blaze for 5 minutes. For the duration, anyone within a 30ft radius of the 
+                          sap must make a Spell Power save at the start of each turn or be Blinded on failure."
+            -   name: Vampiric Stirke
+                cost: 1
+                type: combat option 
+                range: inherited 
+                duration: instantaneous
+                description: "Pierce yourself a wraithfang shard and affix the other end to a weapon or projectile."
+                effect:
+                    type: debuff 
+                    description: "As your next attack hits, your foe's strength is sapped and flows into you. They are Leeched for an amount of health equal to the bonus damage dealt."
+                    conditions:
+                        - leeched
+                    save: null
+                damage_scaling:
+                    damage_type: necrotic 
+                    tier_1: 1d6
+                    tier_2: 1d8
+                    tier_3: 1d10 
+                upcast: "Apply a hunter's infusion to the shard to cause it to do twice the bonus damage, 2d6, 2d8, and 2d10 in gameplay tiers 1, 2, and 3, respectively."
+-   name: Gunslinger
+    recommended_stats:
+        Charisma: -1
+        Dexterity: 0
+        Inner_Fire: 1
+        Intelligence: 1
+        Perception: 2
+        Strength: -2
+    expertise: "As a gunslinger, you are incredibly perceptive. Add your expertise whenever you make a perception or 
+                passive perception check. You are also adept at clearing misfired weapons. Add your expertise to checks 
+                made to clear a weapon that has misfired."
+    health_dice: "1d8"
+    handbook:
+        -   title: "Intro"
+            display_title: false
+            text: "A tumbleweed rolls across the street as the gunslinger steps into the noonday sun, her 
+                    hand hovering over the handgun at her hip. High atop a rise, the marksman sites down the scope of
+                    his long-rifle, centering his crosshairs on the ogre's head. A bloody grin on his face, the bounty hunter 
+                    mounts a breaching charge to the wall as his party looks on nervously. Through luck, valor, or perhaps trickery,
+                    they have mastered the use of one of the most complicated weapons in the world. As such, gunslinger's have a close
+                    bond with their weapon, which is usually their primary means of income. Gunslingers are a damage-first class, 
+                    and they can specialize in mid- or long-range combat."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Gunslingers are especially perceptive, making good lookouts and scouts. They specialize in the use
+                    of gadgets and machines, and most are intelligent enough to be a serviceable tinker. They come into their own 
+                    in combat, however, serving as a heavy hitter for an adventuring party."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Whether silent and calculating or brash and fun-loving, Gunslingers command the respect of those around them.
+                    Across most of the realms, firearms are things of legend; so when a gun-toting stranger enters the scene, 
+                    villagers take notice."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "Gunslingers can specialize in either long or short-ranged combat. Long ranged gunslingers provide high single target 
+                    damage and support for their party by setting up and carefully picking off foes one by one. Mid-ranged gunslingers wield 
+                    scatterguns or handguns and rush into the fray in a hail of bullets."
+    skill_tree:
+        tree_path: "tmp"
+        abilities: #24 /25
+            -   name: Strike From The Shadows
+                passive_damage_source: true
+                cost: 0
+                type: buff
+                duration: passive 
+                range: inherited 
+                ability_modified: attack from hiding 
+                description: "Barely daring to breathe, you line up a shot on your unsuspecting enemy."
+                effect:
+                    type: buff 
+                    description: "Add 1d6 damage to attacks made from hiding."
+                    conditions: 
+                        - custom 
+                    save: null
+                damage_scaling: 
+                    damage_type: inherited
+                    all_tiers: 1d6 
+            -   name: Focus 
+                cost: 0
+                type: buff 
+                duration: 1
+                range: self 
+                ability_modified: next attack 
+                description: "Spend the entire first action to carefully line up your next shot."
+                effect:
+                    type: buff 
+                    description: "When you attack, double your weapon's effective range and decrease your critical hit target by your expertise. Your enemy must make a spell power save or be Staggered."
+                    conditions:
+                        - custom 
+                        - staggered 
+                    save: null
+            -   name: Reduced Critical
+                cost: 0
+                type: critical hit enhancement 
+                range: self 
+                duration: infinite 
+                action_type: modifies_ability
+                ability_modified: standard attack 
+                description: Your critical hit target is permanently decreased by one. 
+            -   name: Chain Attack
+                cost: 0
+                type: buff
+                duration: instantaneous
+                range: self 
+                action_type: Free Action
+                ability_modified: slayed enemy
+                description: "Before your foe's body has even hit the ground, you line up your next shot."
+                effect:
+                    type: buff 
+                    description: "Whenever you slay an enemy, you are Spurred to Action." 
+                    conditions:
+                        - spurred to action
+                    save: null
+            -   name: Set Up 
+                cost: 0
+                type: buff 
+                duration: 1
+                range: self 
+                ability_modified: next attack 
+                description: "Spend an action to set up with your long-gun."
+                effect:
+                    type: buff 
+                    description: "Until you break down, add your expertise to the accuracy rolls for your shots. Breaking down requires one action and half of your movement unless you abandon your rifle."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Harrying Shots 
+                cost: 0
+                type: debuff 
+                duration: instantaneous
+                range: inherited 
+                ability_modified: standard_attack
+                description: "Your attacks knock ranged enemies off guard."
+                effect:
+                    type: debuff 
+                    description: "Whenever your attacks hit, your target is considered Harried."
+                    conditions:
+                        - harried 
+                    save: null
+            -   name: Blinding Shot 
+                cost: 2
+                type: combat option
+                duration: instantaneous 
+                range: inherited 
+                ability_modified: standard attack 
+                description: "Fire a round which glances your opponent's head."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Blinded."
+                    conditions:
+                        - blinded 
+                    save: null 
+                damage_scaling: 
+                    damage_type: inherited
+                    tier_1: 2d8
+                    tier_2: 2d10
+                    tier_3: 2d12
+            -   name: Bleeding Critical
+                cost: 0
+                type: critical hit enhancement 
+                range: inherited 
+                ability_modified: critical hit
+                duration: instantaneous
+                description: "Your critical hits are particularly savage."
+                effect:
+                    type: debuff 
+                    description: "When you land a critical hit, you may spend 1AP to convert half of the damage to Bleeding. This can be stacked with other critical hit enhancements."
+                    conditions:
+                        - bleeding 
+                    save: null 
+            -   name: Piercing Shot 
+                cost: 1 
+                type: buff 
+                range: self 
+                duration: instantaneous
+                ability_modified: standard attack 
+                description: "You find exactly the right angle to fire a shot which pierces your enemies."
+                effect:
+                    type: buff
+                    description: "The shot passes through all enemies in a line before you, dealing damage to each. A piercing shot can pass through up to 5ft of cover."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Bull Rush
+                cost: 0
+                type: buff
+                range: dash 
+                ability_modified: dash 
+                duration: instantaneous
+                description: "Taking your firearm in hand, you rush towards your enemy and loose a battle cry as you fire on them."
+                effect:
+                    type: buff
+                    description: "You can make a disadvantaged attack while dashing."
+                    conditions: 
+                        - custom 
+                    save: null
+            -   name: Fan the Hammer 
+                cost: 2 
+                type: buff 
+                range: 50 
+                duration: instantaneous
+                ability_modified: standard attack 
+                description: "Rapidly make attacks against all enemies in a cone before you."
+                effect:
+                    type: buff 
+                    description: "You must be wielding a handgun to utilize this ability."
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: Draw!
+                cost: 0 
+                type: buff
+                range: self
+                duration: passive
+                description: "You are constantly ready to spring into action."
+                effect:
+                    type: buff 
+                    description: "Whenever you roll initiative for combat, add your expertise to the result."
+                    conditions:
+                        - custom 
+                    save: null
+            -   name: Last Stand 
+                cost: 0 
+                type: buff 
+                range: self 
+                duration: passive 
+                description: "Using nothing but determination, you keep yourself conscious even as you bleed out."
+                effect:
+                    type: buff 
+                    description: "While you are on death's door, you may make one attack per turn immediately before your death coin flip.
+                                  If you slay your target, immediately raise to 1 health." 
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: Shoot from the Hip
+                cost: 1 
+                type: combat option 
+                range: inherited 
+                action_type: Reaction 
+                duration: instantaneous
+                description: "As a reaction, hastily take a shot at an enemy who is threatening you."
+                effect:
+                    type: debuff 
+                    description: "If it is not a glancing blow, your enemy must make a spell power save or be Halted and have their attack fail to land."
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: First Strike 
+                cost: 0 
+                type: buff 
+                range: self 
+                passive_damage_source: true 
+                duration: instantaneous 
+                description: "You are able to move quickly and strike your foes while they are defenseless. If you attack an enemy
+                               that has not yet moved in combat, deal additional damage." 
+                damage_scaling:
+                    damage_type: inherited 
+                    all_tiers: 2d6   
+            -   name: Grit 
+                cost: 0
+                type: buff 
+                duration: passive 
+                range: self 
+                description: "Whenever you are met with an obstacle, you mcy choose to attempt to overcome it by the most over the top route possible. 
+                              For example, swinging on a vine to cross a gap or sliding down a ladder rather than climbing wrung by wrung."
+                effect:
+                    type: buff 
+                    description: "When you do this, you may tell your Poohbah and add your expertise to the check. On failure, Something Bad Happens."
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: Called Shot
+                cost: 1
+                type: combat option 
+                duration: instantaneous
+                range: inherited
+                ability_modified: standard_attack 
+                description: "Carefully target a specific part of your enemy in an attempt to hinder them."
+                effect:
+                    type: debuff
+                    description: "Your target must make a spell power save or be affected by a condition of your choice from the following list:"
+                    options:  
+                        - "You aim for something in you're target's grasp, and Disarm them."
+                        - "You aim for a flying creature's wing, and cause them to fall 50ft."
+                        - "You aim at your target's head, and the suppressing fire Distracts them."
+                        - "You aim for your target's center of mass, and they are knocked back 15ft."
+                        - "You aim for your target's legs, and they are Hindered."
+                    conditions:
+                        - disarmed 
+                        - distracted 
+                        - hindered
+                    save: null
+                damage_scaling: 
+                    damage_type: inherited
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12
+            -   name: Called Critical 
+                cost: 0
+                type: critical hit enhancement 
+                range: inherited 
+                ability_modified: critical hit
+                duration: instantaneous
+                description: "Whenever you land a critical hit, you may choose to immediately apply one of the effects from your Called Shot to your enemy."
+                effect:
+                    type: debuff
+                    description: "If the attack was already a Called Shot, apply two."
+                    conditions:
+                        - custom 
+                    save: null 
+            -   name: Tracer 
+                cost: 1 
+                type: combat option 
+                duration: instantaneous
+                range: inherited 
+                ability_modified: standard attack 
+                description: "An arc of light cuts across the battlefield as you fire a tracer at your target."
+                effect:
+                    type: debuff 
+                    description: "They are considered Exposed, and they must make a spell power save or begin Burning."
+                    conditions: 
+                        - vulnerable 
+                        - burning 
+                    save: null 
+                damage_scaling: 
+                    damage_type: inherited
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12
+            -   name: Flash Grenade
+                cost: 1
+                type: aoe debuff
+                radius: 15
+                range: 30
+                duration: instantaneous
+                description: "Magically enchant an item that you are holding, turning it into your a flash grenade which will explode on impact or in six seconds time."
+                effect: 
+                    type: debuff
+                    description: "Enemies within the blasts radius must make a spell power save or be Blinded."
+                    conditions:
+                        - blinded
+                    save: null 
+            -   name: Breaching Charge
+                type: utility
+                cost: 1
+                radius: 15
+                duration: instantaneous
+                casting_time: 10 minutes
+                range: self
+                description: "Spend 10 minutes to create a breaching charge which takes one minute to deploy. The charge is not a weapon, but can instead 
+                               blast through up to five feet of a solid substance. The magic used to make breaching charges is shortlived, and they break down 
+                               an hour after they are created."
+            -   name: Duel
+                type: combat option
+                range: 100
+                duration: concentration
+                cost: 1
+                passive_damage_source: true 
+                description: "Single out a creature and challenge them to a duel which they cannot refuse."
+                effect:
+                    type: debuff
+                    description: "Until you break concentration, your speed is halved but you may add your expertise to accuracy checks made against them and your attacks deal bonus damage."
+                    save: null 
+                    conditions: 
+                        - custom
+                damage_scaling: 
+                    damage_type: inherited
+                    all_tiers: 1d6
+            -   name: Covering Fire
+                type: combat option
+                range: 60
+                duration: 1
+                cost: 1 
+                description: "As the final action on your turn, lay down covering fire across a 15x60ft line before you."
+                effect:
+                    type: debuff
+                    description: "Until the start of your next turn, anyone who walks through it is Hindered and takes damage."
+                    save: null 
+                    conditions: 
+                        - hindered
+                damage_scaling: 
+                    damage_type: inherited
+                    damage_shape: line
+                    scaled_by:
+                        weapon: false
+                    tier_1: 2d6 #(7)
+                    tier_2: 3d6 #(9.5)
+                    tier_3: 4d6 #(14)
+            -   name: Combat Roll
+                type: combat option
+                action_type: Reaction
+                range: self
+                duration: instantaneous
+                cost: 1 
+                description: "As an enemy attacks you, leap out of the way."
+                effect:
+                    type: debuff
+                    description: "You are considered to be Dodging, and may move 5ft in any direction.
+                                    If you have the 'Shoot From the Hip' ability, you may roll 5ft any time you use
+                                    it at no additional cost."
+                    conditions: 
+                        - dodging
+                    save: null 
+            -   name: Adrenaline
+                type: buff
+                cost: 0
+                range: self
+                duration: 1
+                ability_modified: "luck"
+                description: "Spend one of your luck points to steel yourself as you prepare to leap into danger."
+                effect:
+                    type: buff
+                    description: "For the next 60 seconds, you are affected by the Hastened condition."
+                    conditions:
+                        - hastened 
+                    save: null

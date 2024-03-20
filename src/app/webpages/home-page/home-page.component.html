@@ -2,19 +2,77 @@
 
 <main id="content" class="main-content" role="main">
     <h1>Rangers and Ruffians</h1>
-    <i>Version 3.0.0 Release Candidate 1</i>
+    <i>Version 3.0.0 Release Candidate 2</i>
+    <button class="install-pwa-button" (click)="installPWA()" *ngIf="deferredPrompt">Install App</button>
 
-    <button (click)="installPWA()" *ngIf="deferredPrompt">Install App</button>
-
-
-
-    <h2>Release Candidate</h2>
+    <h2>Release Candidate 2</h2>
     This version of Rangers and Ruffians is a release candidate! That means it's almost ready for showtime. 
-    The site will be updated frequently in the coming weeks with new rules and features as the documentation is
-    completed. Check back often for updates!
+    The site will be updated frequently in the coming weeks with new rules and features as the documentation is completed. Check back often for updates!
 
-    <h2> Check out the Release Candidate!</h2>
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header >
+            <mat-panel-title>
+                Release candidate 2 includes the following changes:
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <ng-template matExpansionPanelContent>
+            <ol>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Class: The Gunslinger.
+                    </span>
+                    The gunslinger returns with two skill trees: the Marksman and the Quickdraw. 
+                    Marksmen take their time to set up a perfect shot, eliminating foes with precision.
+                    The Quickdraw supports a run-and-gun playstyle, where desperados challenge their foes to duels and strike before their opponents can move.
+                </li>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Class: The Ranger.
+                    </span>
+                    The ranger bursts onto the scene with three unique skill trees: the Beastmaster, Nature's Vanguard, and Ranger's Arsenal.
+                    Beastmasters are able to tame a wild creature, making it their companion so that it aids them in their journeys. 
+                    Nature's Vanguard allows rangers to become masters monster hunters, analyzing their foes to learn their weaknesses.
+                    Finally, Ranger's Arsenal allows Rangers to craft powerful infusions which empower their attacks and make them versatile combatants.
+                </li>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Race: The Automaton.
+                    </span>
+                    A robotic race, each automaton must find its place in the realms. From going into overdrive to
+                    performing maintenance on themselves, the automaton plays like no other race in the game.
+                </li>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Race: The Pixie.
+                    </span>
+                    The smallest race ever in Rangers and Ruffians, the Pixie stands at only 6-8". With the ability to fly and to 
+                    cast simple illusory magic, Pixies must keep themselves out of danger to compensate for their lack of strength.
+                </li>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Weapons: Firearms.
+                    </span>
+                    The Handgun, Long Gun, and Scattergun are now available to adventurers. Unlike other weapons, firearms have
+                    the potential to jam, but can also be customized with a number of firearm upgrades. Firearms are available to 
+                    all classes, but function best in the hands of a Gunslinger.
+                </li>
+                <li>
+                    <span class="rnr-boldtext">
+                        New Items: Potions.
+                    </span>
+                    Twenty potions have been added to the game, allowing Grand Poohbah's the ability to quickly hand out potions as loot!
+                </li>
+            </ol>
+        </ng-template>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    <h2> Links for Players</h2>
     <ol>
+        <li>
+            <a href="assets/pdfs/Character_Sheet_V_02_00.pdf" download>Download Your Character Sheet</a>
+        </li>
         <li>
             <a routerLink="/backgrounds">
                 Choose your Background
@@ -30,20 +88,28 @@
                 Choose your Class
             </a>
         </li>
-        <li>
-            <a routerLink="/monsters">
-                Study the Monsters
-            </a>
-        </li>
-        <li>
-            <a routerLink="/weapons">
-                Choose your weapon!
-            </a>
-        </li>
-        <li>
-            <a routerLink="/game-design">
-                Design your campaign!
-            </a>
-        </li>
     </ol>
+
+    <h2> Links for Everyone</h2>
+        <ol>    
+            <li>
+                <a routerLink="/monsters">
+                    Study the Monsters
+                </a>
+            </li>
+            <li>
+                <a routerLink="/weapons">
+                    Choose your weapon!
+                </a>
+            </li>
+        </ol>
+
+    <h2>Links for the Grand Poohbah</h2>
+        <ol>
+            <li>
+                <a routerLink="/game-design">
+                    Design your campaign!
+                </a>
+            </li>
+        </ol>
 </main>

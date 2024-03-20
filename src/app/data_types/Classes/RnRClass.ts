@@ -26,9 +26,10 @@ export class RnRClass implements ClassData {
     instantiated_skill_tree : InstantiatedSkillTree;
     instantiated_spells: InstantiatedSpells;
     displayReccomendedStats;
+    rule_sections: string[];
     
 
-    constructor(data: ClassData) {
+    constructor(data: ClassData, succinct: boolean) {
         this.name = data.name;
         this.expertise = data.expertise;
         this.recommended_stats = data.recommended_stats;
@@ -47,14 +48,24 @@ export class RnRClass implements ClassData {
         this.skill_tree = data.skill_tree;
         this.instantiated_skill_tree = {
             tree_path: data?.skill_tree?.tree_path ?? "",
-            abilities: (data?.skill_tree?.abilities as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false))
+            abilities: ((data?.skill_tree?.abilities as AbilityData[] || [])
+                .map(abilityData => new RnRAbility(abilityData, succinct, true)))
+                .sort((a, b) => a.name.localeCompare(b.name))
         };
         
         this.spells = data.spells;
         this.instantiated_spells = {
-          "Tier 1": (data?.spells?.Tier_1 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
-          "Tier 2": (data?.spells?.Tier_2 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false)),
-          "Tier 3": (data?.spells?.Tier_3 as AbilityData[] || []).map(abilityData => new RnRAbility(abilityData, false))
+          "Tier 1": ((data?.spells?.Tier_1 as AbilityData[] || [])
+            .map(abilityData => new RnRAbility(abilityData, succinct, true)))
+            .sort((a, b) => a.name.localeCompare(b.name)),
+          "Tier 2": ((data?.spells?.Tier_2 as AbilityData[] || [])
+            .map(abilityData => new RnRAbility(abilityData, succinct, true)))
+            .sort((a, b) => a.name.localeCompare(b.name)),
+          "Tier 3": ((data?.spells?.Tier_3 as AbilityData[] || [])
+            .map(abilityData => new RnRAbility(abilityData, succinct, true)))
+            .sort((a, b) => a.name.localeCompare(b.name))
         }
+
+        this.rule_sections = data.rule_sections ?? [];
     }
 }

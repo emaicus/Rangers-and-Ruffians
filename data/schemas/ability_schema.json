@@ -197,16 +197,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["custom", "blinded", "bleeding", "blocked", "burning", "charmed","cold resistance",
+						"enum": ["analyzed", "custom", "blinded", "bleeding", "blocked", "burning", "charmed","cold resistance",
 						"controlled", "darkvision", "diminished", "distracted",
 						"disarmed", "deafened", "dodging", "dumbstruck", "elemental resistance", "elusive", "empowered", "enlarged", "entangled", "ethereal",
 						"estranged", "fearless", "fire resistance", "fixated", "frenzied", "frightened",
-						"frozen", "grappled", "guarded", "halted", "hastened", "hard to move", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
+						"frozen", "gigantic", "grappled", "guarded", "halted", "hastened", "hard to move", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
 						"incapacitated", "inconspicuous", "inspired", "invincible",
 						"isolated", "lightweight", "leeched", "lured", "lycanthropy", "muted", "nimble", "poison resistance", "physical resistance", "psychic resistance",
-						"quickened", "rot", "shrunk", "total resistance", "transformed", "truesight",
+						"quickened", "rot", "shrunk", "tiny", "total resistance", "transformed", "truesight",
 						"spurred to action", "spurred to movement", "staggered", "poisoned", 
-						"prone", "slowed", "stunned", "weakened", "vulnerable"]
+						"prone", "slowed", "stunned", "tethered", "weakened", "vulnerable"]
 					}
 				},
 				"save" : {

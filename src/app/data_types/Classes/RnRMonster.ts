@@ -17,11 +17,12 @@ export class RnRMonster implements MonsterData {
 			type: data?.metadata?.type ?? "Unassigned",
 			tier: data?.metadata?.tier ?? "Unassigned",
 			monster_class: data?.metadata?.monster_class ?? "Unassigned",
-			monster_family: data?.metadata?.monster_family
+			monster_family: data?.metadata?.monster_family ?? this.name
 		}
 		
 		this.summons = {
-		  wildshape: data?.summons?.wildshape ?? false
+		  wildshape: data?.summons?.wildshape ?? false,
+		  ranger_companion: data?.summons?.ranger_companion ?? false,
 		};
 		
 		this.stats = {
@@ -37,11 +38,11 @@ export class RnRMonster implements MonsterData {
 		this.instantiatedMoveset = {
 		  combat_actions_per_turn: this.moveset?.combat_actions_per_turn ?? 1,
 		  villain_actions_per_turn: this.moveset?.villain_actions_per_turn ?? 1,
-		  passive_abilities: (this.moveset?.passive_abilities || []).map((ability: any) => new RnRAbility(ability, true)),
-		  combat_actions: (this.moveset?.combat_actions || []).map((ability: any) => new RnRAbility(ability, true)),
-		  villain_actions: (this.moveset?.villain_actions || []).map((ability: any) => new RnRAbility(ability, true)),
-		  lair_actions: (this.moveset?.lair_actions || []).map((ability: any) => new RnRAbility(ability, true)),
-		  dynamic_actions: (this.moveset?.dynamic_actions || []).map((ability: any) => new RnRAbility(ability, true)),
+		  passive_abilities: (this.moveset?.passive_abilities || []).map((ability: any) => new RnRAbility(ability, true, false)),
+		  combat_actions: (this.moveset?.combat_actions || []).map((ability: any) => new RnRAbility(ability, true, false)),
+		  villain_actions: (this.moveset?.villain_actions || []).map((ability: any) => new RnRAbility(ability, true, false)),
+		  lair_actions: (this.moveset?.lair_actions || []).map((ability: any) => new RnRAbility(ability, true, false)),
+		  dynamic_actions: (this.moveset?.dynamic_actions || []).map((ability: any) => new RnRAbility(ability, true, false)),
 		};	
 	}  
 

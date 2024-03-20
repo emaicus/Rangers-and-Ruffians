@@ -6,12 +6,13 @@ export interface MonsterMetadata {
 	type: 'Minion' | 'Heavy' | 'Villain';
 	tier: 'Tier 1' | 'Tier 2' | 'Tier 3';
 	monster_class: string;
-	monster_family?: string;
+	monster_family: string;
 }
 
 // Define interface for summons
 export interface MonsterSummons {
 	wildshape: boolean;
+	ranger_companion: boolean;
 }
 
 // Define interface for speed

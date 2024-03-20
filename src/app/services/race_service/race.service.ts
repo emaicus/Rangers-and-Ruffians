@@ -11,9 +11,9 @@ export class RaceService {
   private jsonUrl = 'assets/data/races.json'; // Local JSON file
   constructor(private http: HttpClient) {}
 
-  getRaces(): Observable<RnRRace[]> {
+  getRaces(succinct: boolean): Observable<RnRRace[]> {
     return this.http.get<any[]>(this.jsonUrl).pipe(
-      map(data => data.map(rdata => new RnRRace(rdata)))
+      map(data => data.map(rdata => new RnRRace(rdata, succinct)))
     );
   }
 }

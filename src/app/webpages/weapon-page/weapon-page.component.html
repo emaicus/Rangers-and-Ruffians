@@ -1,9 +1,50 @@
 <main id="content" class="main-content" role="main">
-    <h1>Items</h1>
 
-    <h2>Weapons</h2>
+    <h1>Items</h1>
+    <app-table-of-contents></app-table-of-contents>
+
+    <div class="rnr-section toc-section"id="weapons">
+        <span class="rnr-section-title">
+            Weapons
+        </span>
+    </div>
     <div *ngFor="let weapon of weapons">
-        <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
-        <hr>
+        <ng-container *ngIf="weapon.type === 'Weapon'">
+            <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
+            <hr>
+        </ng-container>
+    </div>
+    <div class="rnr-section toc-section" id="firearms">
+        <span class="rnr-section-title">
+            Firearms
+        </span>
+    </div>
+    <div *ngFor="let weapon of weapons">
+        <ng-container *ngIf="weapon.type === 'Firearm'">
+            <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
+            <hr>
+        </ng-container>
+    </div>
+    <div class="rnr-section toc-section" id="firearm-upgrades">
+        <span class="rnr-section-title">
+            Firearm Upgrades
+        </span>
+    </div>
+    <div *ngFor="let item of items">
+        <ng-container *ngIf="item.type === 'Firearm Upgrade'">
+            <app-item-renderer [item]="item"></app-item-renderer>
+            <hr>
+        </ng-container>
+    </div>
+    <div class="rnr-section toc-section" id="potions">
+        <span class="rnr-section-title">
+            Potions
+        </span>
+    </div>
+    <div *ngFor="let item of items">
+        <ng-container *ngIf="item.type === 'Potion'">
+            <app-item-renderer [item]="item"></app-item-renderer>
+            <hr>
+        </ng-container>
     </div>
 </main>

@@ -514,6 +514,9 @@ if __name__ == "__main__":
   with open(GENERATED_DATA_DIRECTORY.joinpath('weapons.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_weapons(), outfile)
   
+  with open(GENERATED_DATA_DIRECTORY.joinpath('items.json'), 'w') as outfile:
+    json.dump(rnr_game.serialize_items(), outfile)
+  
   with open(GENERATED_DATA_DIRECTORY.joinpath('backgrounds.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_backgrounds(), outfile)
   

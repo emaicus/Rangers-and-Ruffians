@@ -9,6 +9,7 @@ class RnRWeapon:
 		self.range = weapon_def['range']
 		self.harried = weapon_def['harried']
 		self.handedness = weapon_def['handedness']
+		self.type = weapon_def.get('type', None)
 		
 		self.abilities = list()
 		for ability in weapon_def.get('abilities', []):
@@ -22,7 +23,8 @@ class RnRWeapon:
 		serial['damage_scaling'] = self.damage_scaling
 		serial['range'] = self.range 
 		serial['harried'] = self.harried 
-		serial['handedness'] = self.handedness 
+		serial['handedness'] = self.handedness
+		serial['type'] = self.type
 
 		serial['abilities'] = list() 
 		for ability in self.abilities:

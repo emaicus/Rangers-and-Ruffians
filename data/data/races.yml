@@ -1,3 +1,115 @@
+-   name: Automaton 
+    health_dice: 1d6
+    base_movement: 25
+    handbook:    
+        introduction:
+            -    "Artificial beings of magical origin, the automata are varied in construction and temperament.
+                 Automata can be made of steel, or wood, or stone, and can be tall or short, broad or lithe.
+                 Some automata may be constructed from magic alone, while others may have been created by
+                 transferring the essence of a living being into a mechanistic body. While they are varied 
+                 in appearance, all automata share one key feature: a power core embedded within them.
+                 So long as this core survives, so too does the automaton, and so they must guard it closely."
+            -   "Many automata spend their existence as loyal servants, workers, or warriors, never 
+                 questioning their place in the world. However, a chosen few do find their freedom
+                 and autonomy and may seek a higher purpose. As adventurers, automata can make steadfast
+                 companions, using their strength to great effect in service of their friends. In most
+                 settings automata are a rare or abnormal sight."
+        you_may:
+            title: "As an Automaton, you may"
+            options:
+                - "Question the nature of your being, and your place in the world."
+                - "Be bound by your programming to ardently follow a set of rules or procedures."
+                - "Have a complex relationship with your creator."
+        assumptions:
+            title: "People who don't know you might assume"
+            options:
+                - "That your life has less meaning than the natural-born races."
+                - "That your purpose is to serve, and that your opinion is pre-programmed."
+                - "That you are scary, or impressive, or interesting."
+        looks:
+            -   title: "Height"
+                options: "Most automata are humanoid, standing between 5 and 6 feet tall."
+            -   title: "Age"
+                options: "Automata can live for centuries before the magic that binds them together begins to break down."
+            -   title: "Eyes"
+                options: "None, Glowing, Flickering, A single slit"
+            -   title: "Body"
+                options: "Shining, Rusty, Wooden, Modular"
+            -   title: "Power Core"
+                options: "Hidden in a compartment, Shining from your chest"
+    abilities:
+        -   name: Choice of Chasis
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive
+            description: "Automatons come in many variations."
+            effect:
+                type: buff 
+                description: "At the start of your journey, choose whether your chasis is lightweight or armored. 
+                              If it is armored, increase your health dice to 1d8. If it is lightweight, increase your base movement to 30ft."
+                conditions:
+                    - custom 
+                save: null
+        -   name: Field Repairs 
+            cost: 1
+            type: combat option 
+            range: self 
+            duration: instantaneous
+            description: "Spend an action to perform quick field repairs, healing yourself."
+            damage_scaling: 
+                    damage_type: healing
+                    tier_1: 2d4
+                    tier_2: 4d4
+                    tier_3: 4d10
+        -   name: Standard Maintenance    
+            cost: 0
+            type: utility 
+            range: self 
+            duration: instantaneous
+            casting_time: 6 hours 
+            description: "Because your body is not organic, it cannot be affected by potions of healing or other such medicines. 
+                          You do not regain health from sleeping, but can instead repair yourself overnight. 
+                          If someone aids in your repairs, it is as though you've slept in a bed. Healing magic, such as a cleric's Prayer of Healing 
+                          are able to heal you by magically repairing damage to your frame."
+        -   name: Hydrophobic
+            cost: 0
+            type: debuff 
+            range: self 
+            duration: passive 
+            description: "While your magical construction keeps you safe from corrosion and damage due to water, it is not perfect."
+            effect:
+                type: debuff 
+                description: "You are unable to swim, and instead sink as though you were wearing heavy armor. You can remain submerged
+                               for up to one hour before the magic that protects you fails and you are drowned."
+                conditions:
+                    - custom 
+                save: null 
+        -   name: Overdrive 
+            type: buff 
+            cost: 1
+            range: self 
+            duration: 3
+            description: "Gears whir and clank as your system is sent into overdrive."
+            effect:
+                type: buff
+                description: "For the duration, you are Frenzied. When the effect ends, you immediately take one level of Exhaustion."
+                conditions: 
+                    - frenzied
+                save: null 
+        -   name: Eternal Endurance
+            type: buff 
+            range: self 
+            cost: 0
+            duration: passive
+            description: "As you are made of steel and gears, you do not experience tiredness like the other races."
+            effect:
+                type: buff 
+                description: "You do not gain levels of exhaustion from natural causes, but instead can only take them as the result of 
+                              an ability or status effect, such as from Overdrive."
+                conditions:
+                    - custom 
+                save: null
 -   name: Catterwol #Done
     health_dice: 1d6
     base_movement: 30
@@ -355,9 +467,7 @@
             passive_damage_source: true 
             damage_scaling: 
                 damage_type: inherited
-                tier_1: 1d6
-                tier_2: 1d6
-                tier_3: 1d6
+                all_tiers: 1d6
             description: "Make the most of a well placed blow. Whenever you land a critical hit, add an extra 1d6 damage."
     handbook:
         introduction: 
@@ -780,7 +890,7 @@
                     - inspired 
                 save: null
         -   name: Specialized #Done
-            cost: 1
+            cost: 0
             type: buff 
             range: self
             duration: passive 
@@ -1511,77 +1621,113 @@
                 options: "Sprout artisans are able to shape living plants into garments and tools. 
                           Sprout clothing is often very foreign to the bigger folk, made all of vines, 
                           leaves, and twigs."
-# Automaton:
-#     health_dice: 2
-#     base_movement: 30
-#     abilities:
-#         - Power Core
-#         - Overdrive
-#         - Repair
-#         - Self Repair
-#         - True Sleeplessness
-#         - Gyroscopic Center of Mass
-#         - Armored Exterior
-#         - Piston Punch
-#         - Upgrades
-#     handbook:
-        # quote: "Well, for a time, I was working on a project to produce artificial life forms, automata, if you will.
-        #     The project had limited success, and was on the brink of being defunded. In a desperate attempt to keep things
-        #     going, we turned to magic as a solution. So it was, that he soul gem was discovered. To this day, I wonder what
-        #     it is exactly that we created. Was it life, or was it some crude approximation? I know not. Nor, I think, does
-        #     the automaton."
-        # author: Simon, Gnome Tinker
-        # description: "The biproduct of tinkers and mages, the automaton is considered by many to be an artificial being. For this
-        #     reason, many are persecuted, and treated as mere objects. And perhaps they are. To question your place is
-        #     to be an automaton, and the quest for meaning is a path that all such beings must walk."
-# Hissling:
-#   subraces:
-#     Hissling:
-#       health_dice: 0
-#       abilities:
-#         - Small Fry
-#         - All Tuckered Out
-#         - Chomp Chomp
-#         - Riding High
-#         - Dig Dig Dig
-#         - I'm a Red One!
-#         - Tossed Around
-#       quote: "So here's one for you: A while back, we were called to a town by the name of Broshtik to help some yokels. Apparently,
-#         things had been going missing. Little things, mostly; utensils and fire pokers and the like. Normally, we wouldn't
-#         have taken such a small job, but work had been scarce and beggars can't be choosers. So, anyway, we get to Broshtik, and we spend
-#         a good three days poking around, but can't find anything. It gets to the point that we are ready to call it quits and get out of there.
-#         Then, one of Harley's rings goes missing overnight. We look around, and find a trail, barely anything, leading through one of the windows.
-#         So, out we go, and over to one of the sewer grates in town. We pried it open, and dropped down in. And what do you think we saw?
-#         An entire civilization of tiny little lizardlings, that's what. Generations of them, all living in houses built of mud and candlesticks.
-#         All at once, the little buggers start taking off like they'd seen Melikar, skittering and running in every direction. Then, an elder
-#         approaches us. Or, at least, I think it was an elder; it only came to my knees, and wore a robe made out of a piece of towel. In broken
-#         speech, it asked us to leave them be in return for a great gift: two necklaces and a pair of children's shoes. Some times, I wonder
-#         if they're still down there."
-#       author: Gillthunder, Human Knight
-#       description: "Next to Sprouts, Hisslings are the smallest of races. Lizardlike creatures, Hisslings try their very best to be ferocious.
-#         While naturally clever, Hisslings do not cherish knowledge, but rather focus upon helping their clan flourish. The life of a Hissling is
-#         often a bleak one: while hisslings can live upwards of 40 years, they rarely do. Instead, most die early due to their fragile nature
-#         and disregard for their own safety. Because of the commonality of death in Hissling tribes, most Hisslings put the long-term wellbeing
-#         of the collective above that of themselves or even their closest friends and family. Hisslings reach full maturity after only two years,
-#         and can reproduce just a few years after.
-#         "
-#       expertise_choices:
-#         - Dexterity
-#         - Perception
-# Kragraven:
-#   subraces:
-#     Kragraven:
-#       health_dice: 0
-#       abilities:
-#         - Peck
-#         - High Jump
-#         - Coast
-#         - Carrion
-#         - Mimic
-#       quote: "I don't trust them, those bird-men that live to the west. Don't trust them one bit."
-#       author: Old Man Mcuffit, Racist Old Man
-#       description: "Kragraven stand at about the height of a human, though they are known to hunch over, slightly. Kragraven are reclusive,
-#                     taking to lofty homes amidst ancient forests. Myths say that Kragraven were first created by the god Ragnhall, and that they are his servants."
-#       expertise_choices:
-#         - Intelligence
-#         - Perception
+
+-   name: Pixie 
+    health_dice: 1d4
+    base_movement: 30
+    handbook:    
+        introduction:
+            -   "Fun-loving and mischievous, the intentions of Pixies are often inscrutable to the other races.
+                    This is of little surprise as they descended from the Sylphs and Sprites of the realm of the Fae,
+                    an alien place which serves joy and terror in equal measure. Today's pixies 
+                    have acclimated somewhat to the customs of men and elves and are less volatile than their 
+                    wild cousins. As such, the tricks of modern pixies are far less dangerous than in days gone;
+                    it is rare to hear of pixies leading children into the forest or replacing a family pet 
+                    with a doppelgänger. Instead, they often engage in harmless pranks and playful tricks; 
+                    spoiling milk and stealing knick-nacks instead."
+            -   "Pixies are the smallest race, standing between six and eight inches. They are humanoid, though their 
+                  skin is often green, or blue, and they give off a faint glow. Insectine wings sprout from their back, 
+                  sometimes soft and beautiful like those of a butterfly, and at others sleek like a dragonfly's.
+                  They are steeped in magic, which they use both to overcome physical obstacles and to bewitch and 
+                  trick their foes."
+            -   "Many pixie's live in great, hive-like villages in the trees of ancient forests, and it is said that their 
+                  songs mix with the hum of their wings as you draw close. They are fast friends with Sprouts and the occasional
+                  druid or wizard that passes by. A few pixies can also be found in great cities, often after they or their forefathers
+                  were forcibly relocated there. In general, Pixies have little to do with the politics of the other races, and instead
+                  focus on the intrigues of their own Fae Courts. If a pixie befriends someone, they are often bound for life, and usually
+                  Pixie adventurers are traveling with such a companion."
+        you_may:
+            title: "As a Pixie, you may"
+            options:
+                - "Have a deep-seated desire to play tricks and pranks on people to see if they're friendly and can take a joke."
+                - "Have little care for the politics of the other races."
+                - "Be deeply loyal to the members of your adventuring party, and especially to one or two in particular."
+        assumptions:
+            title: "People who don't know you might assume"
+            options:
+                - "That you're up to no good. At best, they will expect that you want to play tricks on them, at worst, they will assume that you want to steal children like the stories of olde."               
+                - "That you won't be able to contribute much. Because of  your small size, some people might disrespect you whether intentionally or not."
+                - "That you care less than others. Because of pixies' reputation for mischief and fun, some might assume that you cannot be serious if needed."
+        looks:
+            -   title: "Height"
+                options: "Pixies are tiny, standing on average between 6\" and 8\" tall."
+            -   title: "Age"
+                options: "It is very rare to see a pixie die of old age. Instead, when they start showing signs
+                           of growing older (usually after about 60 years), they migrate to the Fae Realm, where they live out the remainder of their days.
+                           Because time does not flow the same way in the Realm of Fae, who can say how long they live."
+            -   title: "Eyes"
+                options: "Jade, Bright Blue, Piercing Yellow"
+            -   title: "Skin"
+                options: "Light Brown, Tree-Leaf Green, Icy Blue, Glowing Yellow"
+            -   title: "Hair"
+                options: "Deep Brown, Auburn, Leafy Green, Blue, Yellow"
+            -   title: "Wings"
+                options: "Butterfly, Dragonfly"
+    abilities:
+        -   name: Fairy Flight
+            type: utility 
+            cost: 0
+            range: self 
+            duration: passive
+            description: "As a pixie, you are able to fly at a speed equal to your base movement. While flying, you can carry objects
+                              up to your weight without imposing a strength check. A failed strength check made in flight results in you either 
+                              being pulled to the ground or dropping your burden."
+        -   name: Tiny Sprite
+            type: buff 
+            cost: 0
+            range: self 
+            duration: passive
+            description: "As a pixie, you are very small."
+            effect:
+                type: buff 
+                description: "At all times,  you are considered to be affected by the Tiny condition."
+                conditions:
+                    - tiny 
+                save: null
+        -   name: Magical Compensation
+            type: utility 
+            cost: 0
+            range: self 
+            duration: passive 
+            description: "Strength checks are based on the size of the creature making them. For a giant, lifting a boulder is easy, while for a human it is very challenging.
+                            Because you are tiny, it is often difficult for you to perform feats of raw strength. 
+                            As an adaptation to this, you are able to release quick bursts of magic to empower your movements.
+                            In your day to day life, you use such magic to help you push open doors, quickly lift heavy things, or
+                            to otherwise overcome momentary physical obstacles which last for six seconds or less.
+                            For such checks, you are able to substitute your inner fire for your strength and are treated as being of average size.
+                            Using a similar principle, you are able to wield miniature versions of larger weapons with great force,
+                            dealing comparable damage to their larger counterparts."
+        -   name: Charm
+            cost: 1
+            type: debuff 
+            range: 30 
+            duration: instantaneous
+            description: "For a moment you glow brightly as you fix your intent upon a creature within range."
+            effect:
+                type: debuff 
+                description: "As you attempt to addle their mind, they must make a spell power save or bend to your will and become Charmed."
+                conditions:
+                    - charmed 
+                save: "They may repeat their save at the end of each of their turns."
+        -   name: Fae Illusion
+            type: utility
+            cost: 1
+            duration: concentration
+            range: 30
+            requirements:
+                    movement: true 
+                    verbal: true 
+            description: "The air shimmers at a point of your choosing as you call up 
+                            an illusory image of the size of a person or smaller. To all those
+                            who see the illusion, it appears to be present, though upon further inspection, it is ethereal.
+                            When you release concentration, the illusion persists for one minute unless you choose otherwise."   

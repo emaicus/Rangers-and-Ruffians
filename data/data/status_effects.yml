@@ -1,3 +1,9 @@
+-   name: Analyzed
+    balance: strong
+    about: "Forever more, when you are fighting an equivalent creature, deal extra 1d4 damage on all of your attacks. 
+            This increases to 1d6 at tier 2, then 1d8 at tier 3.  Equivalency is determined by the Grand Poohbah,
+            but generally means that the creatures share the same stat-block. A goblin wielding a bow and a goblin
+            wielding a spear might be equivalent with each other, but not with a goblin chieftain or a goblin warlock."
 -   name: Blinded
     balance: strong
     about: A Blinded creature fails all sight based checks, makes accuracy checks at disadvantage, and must move at half speed.
@@ -61,7 +67,7 @@
     about: "An Empowered creature adds 1d4 to all checks and saves."
 -   name: Enlarged
     balance: strong
-    about: "Enlarged creatures grow to massive size. They deal 1d6 bonus damage on physical attacks,
+    about: "Enlarged creatures grow twice their ordinary size. They deal 1d6 bonus damage on physical attacks,
             are resistant to physical damage, and have advantage on strength checks. However, Accuracy
             checks made against an enlarged target are at advantage."
 -   name: Elusive
@@ -73,6 +79,9 @@
 -   name: Fearless
     balance: weak
     about: Fearless creatures are immune to the Frightened condition.
+-   name: Fire Resistance
+    balance: good 
+    about: "Creatures with fire resistance take half damage from fire based attacks and are immune to the Burning condition."
 -   name: Elemental Resistance
     balance: good
     about: "Creatures with Fire Resistance take half damage from fire based attacks and are immune to the Burned condition."
@@ -90,6 +99,11 @@
 -   name: Frozen
     balance: very strong
     about: A Frozen creature’s body has been magically hardened. As such they are resistant to physical damage, but cannot move or act."
+-   name: Gigantic
+    balance: string 
+    about: "Gigantic creatures grow to seven times their ordinary size. They deal 2d6 bonus damage on physical attacks,
+            are resistant to physical damage, and succeed automatically at many strength checks. However, Accuracy
+            checks made against them are at advantage."
 -   name: Grappling
     balance: neutral
     about: "A Grappling creature is applying the Grappled condition to another target. While a creature is grappling, their movement speed 
@@ -186,6 +200,13 @@
 -   name: Staggered
     balance: neutral
     about: A Staggered creature makes their next action at disadvantage.
+-   name: Tiny
+    balance: strong 
+    about: "You are considered to be of the size 'Tiny.' Your small size imparts a -2 penalty to all strength checks, but 
+                targeted, ranged attacks are made at disadvantage against you. 
+                Additionally, you are able to fit through spaces one inch or larger, and may move through or occupy enemy spaces while in combat. 
+                While you occupy an enemy space, you may add your expertise to your Evasion and critical failures which target you instead hit the 
+                enemy who's space you are occupying."
 -   name: Total Resistance 
     balance: strong 
     about: "Creatures with total resistance take half damage from all attacks."
@@ -224,6 +245,12 @@
 -   name: Stunned
     balance: strong
     about: A Stunned creature loses one action on its next turn and attacks made against them before their next turn are at advantage.
+-   name: Tethered
+    balance: good
+    about: A tethered creature has been bound to something by a physical link. They cannot move further from the 
+           person or object which has tethered them. If two creatures are tethered by physical means, 
+           either may initiate a contested strength roll to attempt to pull the other 15ft closer as an action.
+           A tethered creature may attempt to break free by spending an action to repeat their save.
 -   name: Weakened
     balance: very strong
     about: A Weakened creature's attacks deal half damage.

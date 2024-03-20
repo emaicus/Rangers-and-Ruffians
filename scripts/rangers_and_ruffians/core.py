@@ -78,7 +78,6 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
     except jsonschema.exceptions.ValidationError as e:
       print(f"ERROR IN {data_file}")
       print(e.relative_path)
-      print(e.json_path)
       print(e.cause)
       print(f"{e.schema_path}, {e.message}")
       sys.exit(1)
@@ -107,35 +106,30 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
   with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
     monsters = yaml.safe_load(infile)
   
+  status_effects = None 
+  with open(DATA_DIRECTORY.joinpath('status_effects.yml'), 'r') as infile:
+    status_effects = yaml.safe_load(infile)
+
+  rnr_items = None 
+  with open(DATA_DIRECTORY.joinpath('items.yml'), 'r') as infile:
+    rnr_items = yaml.safe_load(infile)
+  
   if not skip_validation:
     for rnr_race in rnr_races:
       abilities = rnr_race.get('abilities')
       for ability in abilities:
         ability['ability_type'] = 'ability'
-        try:
-          jsonschema.validate(ability, schema=ability_schema)
-        except jsonschema.exceptions.ValidationError as e:
-          print(f"ERROR: {ability.get('name', '')} {e.schema_path}, {e.message}")
-          sys.exit(1)
-        except Exception:
-          traceback.print_exc()
-          sys.exit(1)
+        validateAbility(ability, ability_schema, status_effects, rnr_race['name'])
     
     for weapon in rnr_weapons:
       for ability in weapon['abilities']:
         ability['ability_type'] = 'ability'
-        try:
-          jsonschema.validate(ability, schema=ability_schema)
-        except jsonschema.exceptions.ValidationError as e:
-          print(e.relative_path)
-          print(e.json_path)
-          print(e.cause)
-          print(f"{e.schema_path}, {e.message}")
-          print(f"ERROR: {weapon.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
-          sys.exit(1)
-        except Exception:
-          traceback.print_exc()
-          sys.exit(1)
+        validateAbility(ability, ability_schema, status_effects, weapon['name'])
+    
+    for rnr_item in rnr_items:
+      ability = rnr_item['ability']
+      ability['ability_type'] = 'ability'
+      validateAbility(ability, ability_schema, status_effects, rnr_item['name'])
     
     all_monster_names = set()
     for monster in monsters:
@@ -143,18 +137,7 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
       for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
         for ability in monster['moveset'].get(action_type, []):
           ability['ability_type'] = 'ability'
-          try:
-            jsonschema.validate(ability, schema=ability_schema)
-          except jsonschema.exceptions.ValidationError as e:
-            print(e.relative_path)
-            print(e.json_path)
-            print(e.cause)
-            print(f"{e.schema_path}, {e.message}")
-            print(f"ERROR: {monster.get('name', '')} {ability.get('name', '')} {e.schema_path}, {e.message}")
-            sys.exit(1)
-          except Exception:
-            traceback.print_exc()
-            sys.exit(1)
+          validateAbility(ability, ability_schema, status_effects, monster['name'])
 
     for rnr_class in rnr_classes:
       expected_spells = 52
@@ -169,15 +152,7 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
             count_of_spells += 1
             # Tell the schema to evaluate this as a spell.
             spell_def['ability_type'] = 'spell'
-            try:
-              jsonschema.validate(spell_def, schema=ability_schema)
-            except jsonschema.exceptions.ValidationError as e:
-              print(f'ERROR: Spell error in {rnr_class["name"]}')
-              print(f"ERROR: {spell_def.get('name', '')} {e.schema_path}, {e.message}")
-              sys.exit(1)
-            except Exception:
-              traceback.print_exc()
-              sys.exit(1)
+            validateAbility(spell_def, ability_schema, status_effects, rnr_class['name'])
         if count_of_spells < expected_spells:
           print(f"{rnr_class['name']} has {count_of_spells} / {expected_spells} spells")
       else:
@@ -187,15 +162,7 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
           count_of_abilities += 1
           # Tell the schema to evaluate this as an ability.
           ability_def['ability_type'] = 'ability'
-          try:
-            jsonschema.validate(ability_def, schema=ability_schema)
-          except jsonschema.exceptions.ValidationError as e:
-            print(f'ERROR: Ability error in {rnr_class["name"]}')
-            print(f"ERROR: {ability_def.get('name', '')} {e.schema_path}, {e.message}")
-            sys.exit(1)
-          except Exception:
-            traceback.print_exc()
-            sys.exit(1)
+          validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
         if count_of_abilities < expected_abilities:
           print(f"{rnr_class['name']} has {count_of_abilities} / {expected_abilities} abilities")
     # Check for Summonable Creatures
@@ -338,6 +305,7 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   pantheon_path = INSTALL_DIRECTORY.joinpath('pantheon.json')
   background_path = INSTALL_DIRECTORY.joinpath('backgrounds.json')
   weapon_path = INSTALL_DIRECTORY.joinpath('weapons.json')
+  item_path = INSTALL_DIRECTORY.joinpath('items.json')
   monster_path = INSTALL_DIRECTORY.joinpath('monsters.json')
   attribution_path = INSTALL_DIRECTORY.joinpath('art.json')
   version_number_path = BASE_DIRECTORY.joinpath('meta.json')
@@ -350,32 +318,8 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   with open(race_path, 'r') as data_file:
     race_data = json.load(data_file)
 
-    for rnr_race in race_data:
-      for ability in rnr_race['abilities']:
-        if 'effect' in ability:
-          conditions = list()
-          for condition in ability['effect']['conditions']:
-            pass 
-          ability['effect']['conditions'] = conditions
-
   with open(class_path, 'r') as data_file:
     class_data = json.load(data_file)
-    # for rnr_class in class_data:
-    #   if 'skill_tree' in rnr_class:
-    #     for ability in rnr_class['skill_tree']['abilities']:
-    #       if 'effect' in ability:
-    #         conditions = list()
-    #         for condition in ability['effect']['conditions']:
-    #           pass 
-    #         ability['effect']['conditions'] = conditions
-    #   else:
-    #     for tier, spell_list in rnr_class['spells'].items():
-    #       for spell in spell_list:
-    #         if 'effect' in spell:
-    #           conditions = list()
-    #           for condition in spell['effect']['conditions']:
-    #             pass 
-    #           spell['effect']['conditions'] = conditions
 
   with open(attribution_path, 'r') as data_file:
     attribution_data = json.load(data_file)
@@ -387,7 +331,10 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
     background_data = json.load(data_file)
   
   with open(weapon_path, 'r') as data_file:
-    weapon_data = json.load(data_file)    
+    weapon_data = json.load(data_file)
+  
+  with open(item_path, 'r') as data_file:
+    item_data = json.load(data_file)    
   
   with open(monster_path, 'r') as data_file:
     monster_data = json.load(data_file)
@@ -395,7 +342,7 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   finish = time.time()
   print(f'LOAD TIME: {finish - start}(s)')
 
-  return RangersAndRuffians(version, version_suffix, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data)
+  return RangersAndRuffians(version, version_suffix, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data, item_data)
 
 ####################################################################################
 #
@@ -467,4 +414,36 @@ def generate_markdown_art_attribution(rnr_game : RangersAndRuffians, art : Path)
   return f'"[{title}"]({url}) by {artist} is licensed under [{license_acronym}]({license_url})  \n'
 
 
+def seekCondition(conditionName: str, conditions) -> bool:
+  if conditionName.lower() == "custom":
+      return True
 
+  found = False
+  for condition in conditions:
+    if condition['name'].lower() == conditionName:
+      found = True
+      break 
+  return found
+
+def validateAbility(ability: dict, ability_schema: dict, status_effects: list, context: str | None) -> None:
+
+  try:
+    jsonschema.validate(ability, schema=ability_schema)
+  except jsonschema.exceptions.ValidationError as e:
+    print(f"ERROR: {context} {ability.get('name', '')} {e.schema_path}, {e.message}")
+    sys.exit(1)
+  except Exception:
+    traceback.print_exc()
+    sys.exit(1)
+  if 'effect' in ability:
+    for condition in ability['effect']['conditions']:
+      if seekCondition(condition, status_effects) == False:
+        print(f'WARNING: {context} missing condition {condition}')
+  if 'damage_scaling' in ability:
+    
+    t1 = ability['damage_scaling'].get('tier_1')
+    t2 = ability['damage_scaling'].get('tier_2')
+    t3 = ability['damage_scaling'].get('tier_3')
+    if t1 is not None and t2 is not None and t3 is not None:
+      if t1 == t2 and t2 == t3:
+        print(f"WARNING: {context} {ability['name']}: All tiers have the same damage")

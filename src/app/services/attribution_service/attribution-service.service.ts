@@ -30,6 +30,7 @@ export class AttributionService {
   }
 
   getArtByTitle(name: string): any | undefined {
+    name = name.replace(" ", "_");
     return this.attributedArt.find((art) => art.name === name);
   }
 }
