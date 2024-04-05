@@ -617,7 +617,106 @@
             range: self 
             duration: instantaneous 
             description: "Throughout your adventure, you can find, craft, or purchase modifications for your firearm to change its form and function."
-
+-   name: Wand
+    type: Focus
+    base_stat: Inner Fire
+    goldValue: 50
+    damage_scaling:
+        damage_type: inherited
+        Common: 1d4 
+        Mastercraft 1: 1d6
+        Mastercraft 2: 1d12
+    range: {}
+    harried: false 
+    handedness: One Handed
+    abilities:
+        -   type: utility 
+            name: Spell Sniper
+            cost: 0
+            duration: instantaneous
+            range: inherited 
+            description: "A thin rod of polished wood with a magical amplifier inside."
+            effect:
+                type: buff 
+                description: "When wielding this focus, increase the maximum range of all spells by 50%."
+                conditions:
+                    - custom
+                save: null
+-   name: Orb
+    type: Focus
+    base_stat: Inner Fire
+    goldValue: 40
+    damage_scaling:
+        damage_type: inherited
+        Common: 1d4 
+        Mastercraft 1: 1d6
+        Mastercraft 2: 1d12
+    range: {}
+    harried: false 
+    handedness: One Handed
+    abilities:
+        -   type: utility 
+            name: Empowered Casting
+            duration: instantaneous
+            cost: 0
+            range: inherited 
+            description: "A fist sized sphere of polished material. Faintly glowing smoke coils within."
+            effect:
+                type: buff 
+                description: "When wielding this focus, increase the radius of all area of effect spells by 50%."
+                conditions:
+                    - custom
+                save: null
+-   name: Staff
+    type: Focus
+    base_stat: Inner Fire
+    goldValue: 50
+    damage_scaling:
+        damage_type: inherited
+        Common: 1d4 
+        Mastercraft 1: 1d6
+        Mastercraft 2: 1d12
+    range: {}
+    harried: false 
+    handedness: One Handed
+    abilities:
+        -   type: utility 
+            name: Strength of Will
+            cost: 0
+            duration: instantaneous
+            range: inherited 
+            description: "A length long, sturdy length of polished material with a focusing gem set at its top."
+            effect:
+                type: buff 
+                description: "When wielding this focus, your spell power is increased by +2."
+                conditions:
+                    - custom
+                save: null
+-   name: Amulet
+    type: Focus
+    base_stat: Inner Fire
+    goldValue: 75
+    damage_scaling:
+        damage_type: inherited
+        Common: 1d4 
+        Mastercraft 1: 1d6
+        Mastercraft 2: 1d12
+    range: {}
+    harried: false 
+    handedness: One Handed
+    abilities:
+        -   type: utility 
+            name: Strength of Will
+            cost: 0
+            duration: instantaneous
+            range: inherited 
+            description: "A magical totem which dangles from a chain."
+            effect:
+                type: buff 
+                description: "When wielding this focus, re-roll any ones when rolling damage."
+                conditions:
+                    - custom
+                save: null
 
 
 

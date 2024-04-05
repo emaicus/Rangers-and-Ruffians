@@ -60,7 +60,7 @@
         evasion: 10
         speed:
             Base Speed: 25 
-        stat_bonus: 0
+        stat_bonus: 1
         size: 10
     moveset:
         actions_per_turn: 1
@@ -850,6 +850,266 @@
                     damage_type: blunt 
                     all_tiers: 8d6
                 description: "If a bear's target is prone, they may maul it, thrashing them about with fearsome jaws."      
+-   name: Young Clawbeak
+    metadata: 
+        monster_class: Beast
+        monster_family: Clawbeak
+        type: Heavy
+        tier: Tier 1
+    summons: 
+        wildshape: true
+        ranger_companion: true
+    stats:
+        health: 64
+        evasion: 10
+        speed: 
+            Base Speed: 25
+        stat_bonus: 3
+        size: 5        
+    moveset:
+        actions_per_turn: 1
+        passive_abilities:
+            -   name: Coast
+                type: utility 
+                cost: 0
+                range: self
+                duration: instantaneous
+                description: "When the clawbeak jumps from a high place, it can use the wing-flaps on its front legs to glide, mitigating up to thirty feet of falling damage."
+            -   name: Psychic Communication 
+                type: utility 
+                cost: 0
+                range: self 
+                radius: 100
+                duration: passive 
+                description: "Clawbeaks are sentient creatures with psychic abilites. Young clawbeaks communicate by impressing images into
+                              the minds of others. Older clawbeaks can eventually learn the common tongue."
+            -   name: Opportunistic Hunter
+                type: buff
+                cost: 0
+                duration: passive
+                range: self 
+                passive_damage_source: true
+                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                damage_scaling:
+                    damage_type: inherited
+                    all_tiers: 1d6
+        combat_actions:
+            -   name: Mental Assault # Debuff
+                type: debuff
+                cost: 0
+                duration: concentration
+                range: 60
+                requirements: 
+                    verbal: false
+                    movement: false 
+                description: "Using its psychic power, the clawbeak batters a foe with its mind."
+                effect:
+                    description: "At the start of each turn, the target must make a spell power save or be Distracted."
+                    type: debuff
+                    conditions:
+                        - distracted
+                    save: null
+            -   name: Peck 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 1d8
+                description: "The clawbeak lunges at a foe with its beak."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered."
+                    conditions:
+                        - hindered 
+                    save: null 
+            -   name: Claw 
+                limit: 1
+                attacks_made: 1
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The clawbeak rakes its claws across its foe, shredding it."
+-   name: Dire Clawbeak
+    metadata: 
+        monster_class: Beast
+        monster_family: Clawbeak
+        type: Heavy
+        tier: Tier 2
+    summons: 
+        wildshape: true
+        ranger_companion: true
+    stats:
+        health: 120
+        evasion: 12
+        speed: 
+            Base Speed: 25
+        stat_bonus: 5
+        size: 5        
+    moveset:
+        actions_per_turn: 2
+        passive_abilities:
+            -   name: Greater Coast
+                type: utility 
+                cost: 0
+                range: self
+                duration: instantaneous
+                description: "When the clawbeak jumps from a high place, it can use the wing-flaps on its front legs to glide, mitigating up to fifty feet of falling damage."
+            -   name: Psychic Communication 
+                type: utility 
+                cost: 0
+                range: self 
+                radius: 100
+                duration: passive 
+                description: "Clawbeaks are sentient creatures with psychic abilites. Young clawbeaks communicate by impressing images into
+                              the minds of others. Older clawbeaks can eventually learn the common tongue."
+            -   name: Opportunistic Hunter
+                type: buff
+                cost: 0
+                duration: passive
+                range: self 
+                passive_damage_source: true
+                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                damage_scaling:
+                    damage_type: inherited
+                    all_tiers: 1d6
+        combat_actions:
+            -   name: Mental Assault # Debuff
+                type: debuff
+                cost: 0
+                duration: concentration
+                range: 60
+                requirements: 
+                    verbal: false
+                    movement: false 
+                description: "Using its psychic power, the clawbeak batters a foe with its mind."
+                effect:
+                    description: "At the start of each turn, the target must make a spell power save or be Vulnerable."
+                    type: debuff
+                    conditions:
+                        - vulnerable
+                    save: null
+            -   name: Peck 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 1d12
+                description: "The clawbeak lunges at a foe with its beak."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered."
+                    conditions:
+                        - hindered 
+                    save: null 
+            -   name: Claw 
+                attacks_made: 1
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d6
+                description: "The clawbeak rakes its claws across its foe, shredding it."
+-   name: Elder Clawbeak
+    metadata: 
+        monster_class: Beast
+        monster_family: Clawbeak
+        type: Heavy
+        tier: Tier 3
+    summons: 
+        wildshape: true
+        ranger_companion: true
+    stats:
+        health: 170
+        evasion: 15
+        speed: 
+            Base Speed: 25
+        stat_bonus: 7
+        size: 10
+    moveset:
+        actions_per_turn: 2
+        passive_abilities:
+            -   name: Major Coast
+                type: utility 
+                cost: 0
+                range: self
+                duration: instantaneous
+                description: "When the clawbeak jumps from a high place, it can use the wing-flaps on its front legs to glide, mitigating up to one hundred feet of falling damage."
+            -   name: Psychic Communication 
+                type: utility 
+                cost: 0
+                range: self 
+                radius: 100
+                duration: passive 
+                description: "Clawbeaks are sentient creatures with psychic abilites. Young clawbeaks communicate by impressing images into
+                              the minds of others. Older clawbeaks can eventually learn the common tongue."
+            -   name: Greater Opportunistic Hunter
+                type: buff
+                cost: 0
+                duration: passive
+                range: self 
+                passive_damage_source: true
+                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                damage_scaling:
+                    damage_type: inherited
+                    all_tiers: 2d6
+        combat_actions:
+            -   name: Mental Assault # Debuff
+                type: debuff
+                cost: 0
+                duration: concentration
+                range: 60
+                requirements: 
+                    verbal: false
+                    movement: false 
+                description: "Using its psychic power, the clawbeak batters a foe with its mind."
+                effect:
+                    description: "At the start of each turn, the target must make a spell power save or be Vulnerable."
+                    type: debuff
+                    conditions:
+                        - vulnerable
+                    save: null
+            -   name: Peck 
+                attacks_made: 1
+                limit: null
+                cost: 0
+                type: combat option
+                duration: instantaneous       
+                range: touch
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 2d12
+                description: "The clawbeak lunges at a foe with its beak."
+                effect:
+                    type: debuff 
+                    description: "They must make a spell power save or be Hindered."
+                    conditions:
+                        - hindered 
+                    save: null 
+            -   name: Claw 
+                limit: 1
+                attacks_made: 1
+                type: combat option 
+                cost: 0
+                range: touch
+                duration: instantaneous 
+                damage_scaling:
+                    damage_type: piercing 
+                    all_tiers: 4d6
+                description: "The clawbeak rakes its claws across its foe, shredding it."
 -   name: Lesser Green Slime
     metadata:
         monster_class: Slime

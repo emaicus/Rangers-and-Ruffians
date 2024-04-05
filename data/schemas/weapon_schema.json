@@ -23,7 +23,7 @@
 				"properties": {
 					"damage_type": {
 						"type": "string",
-						"enum": ["blunt", "piercing"]
+						"enum": ["blunt", "piercing", "inherited"]
 					},
 					"damage_shape": {
 						"type": "string",
@@ -76,7 +76,7 @@
 			}, 
 			"type": {
 				"type": "string",
-				"enum": ["Firearm"]
+				"enum": ["Firearm", "Focus"]
 			}
 		}
 	}

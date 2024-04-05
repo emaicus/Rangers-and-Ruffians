@@ -1,7 +1,7 @@
 <main id="content" class="main-content" role="main">
-    <h1>Monsters</h1>
+    <h1 class="non-printable">Monsters</h1>
 
-    <section class="example-section">
+    <section class="monster-selector">
         <mat-form-field>
             <mat-label>Tiers Displayed</mat-label>
             <mat-select [(ngModel)]="chosenTier"  (ngModelChange)="applyFilter()">
@@ -28,12 +28,12 @@
         <hr>
     </ng-container> -->
     <div class="rnr-subsection" *ngFor="let item of selectedMonsters | keyvalue">
-        <div class="rnr-section-title">
+        <div class="rnr-section-title non-printable">
             {{item.key}}
         </div>
         <ng-container *ngFor="let monster of item.value">
             <app-monster-renderer [monster]="monster"></app-monster-renderer>
-            <hr>
+            <hr class="non-printable">
         </ng-container>
     </div>
     

@@ -1,7 +1,8 @@
-<div class="rnr-monster printable-content" *ngIf="monster"  [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-monster'">
+<div class="rnr-monster printable-content" *ngIf="monster"  [class.printable-content]="isReadyToPrint" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-monster'">
 	<div class="rnr-subsection-title" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
 		{{ monster.name }}
 	</div>
+	<button (click)="printContent()" class="print-button">Print {{monster.name}}</button>
 	<div  [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-type'">
 		<span class="rnr-boldtext">
 		{{monster.metadata.tier}} {{monster.metadata.type}}
