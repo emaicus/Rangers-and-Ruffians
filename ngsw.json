@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1710970699811,
+  "timestamp": 1712353637449,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-JUD4NEG2.js",
+        "/main-36ZFFTW6.js",
         "/manifest.webmanifest",
         "/polyfills-RX4V3J3S.js",
-        "/styles-SE4TO533.css"
+        "/styles-SOUZ2ZON.css"
       ],
       "patterns": []
     },
@@ -211,9 +211,9 @@
     "/assets/data/classes.json": "5dd4c750ff2d42bd1492cbe4f3e14fb343c25b81",
     "/assets/data/conditions.json": "ee9e3af095863eb6665d229b317173689e8ce06b",
     "/assets/data/items.json": "e664b9655cb9bf09b54f30dae884fb70a392b546",
-    "/assets/data/monsters.json": "09ca4e3a633d3ade92c4008199c5866ecee584c0",
+    "/assets/data/monsters.json": "40c887e0edc782667718e6a70aa2d41950461d64",
     "/assets/data/races.json": "e69b579cb82b12d634061ad9cebfed6d74f81090",
-    "/assets/data/weapons.json": "403f2fafe1698e99c55dd9f39393326d5cb5e0e1",
+    "/assets/data/weapons.json": "f7aee14da397da39c6407dd5cbdaa687a96b6132",
     "/assets/docs/archive/helpful_poohbah_stats_2_3_1.md": "7932c9cbb00e0439fbd799f613ab9a06489716e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_4_1.md": "1ac9ad69c8349c58589bea4e0885b41b2f4edf11",
     "/assets/docs/images/gender/female.jpg": "48914ab707d572ee91489900be0cebb9920aec0f",
@@ -341,8 +341,8 @@
     "/assets/images/wood_elf.jpg": "ca18f03470a2effb6bcd1ae7da2020fe35c51c9d",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "31e25d48b5042389198fc33a9db973d1c652ae8e",
-    "/main-JUD4NEG2.js": "83d5eb0bcf57d970d1c628551329f1b7ed3da3a6",
+    "/index.html": "95432380b1af43d0caba2287b6424db720ea5f34",
+    "/main-36ZFFTW6.js": "77dd93bc3a7753f147b291d1281ed60381d129d8",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
@@ -355,7 +355,7 @@
     "/media/material-icons-two-tone-LCGWGE2N.woff": "02225d888afe4eebc7312b7432878dc8aef1f50f",
     "/media/material-icons-two-tone-M5N5K6F5.woff2": "296ff0bff395a77c2e33e7e31fffe73980bd93cf",
     "/polyfills-RX4V3J3S.js": "6b4c4ea33aa92bce0b91df442a680ed73e4303db",
-    "/styles-SE4TO533.css": "16db21719b13a0e6c886c002ed93f496583fdabc"
+    "/styles-SOUZ2ZON.css": "1946d59ef0c373877da16162d76666abba47c346"
   },
   "navigationUrls": [
     {
