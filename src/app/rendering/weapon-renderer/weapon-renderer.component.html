@@ -22,7 +22,11 @@
 					Common: 
 				</span>
 				<span>
-					Deals {{weapon.tierOneDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierOneValue}} gold.
+					Deals {{weapon.tierOneDamage}} 
+					<ng-container *ngIf="weapon.displayDamageType">
+						{{weapon.damageType}} 
+					</ng-container>
+					damage. Commonly priced at {{weapon.tierOneValue}} gold.
 				</span>
 			</li>
 			<li>
@@ -30,7 +34,11 @@
 					Mastercraft 1: 
 				</span>
 				<span>
-					Deals {{weapon.tierTwoDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierTwoValue}} gold.
+					Deals {{weapon.tierTwoDamage}}
+					<ng-container *ngIf="weapon.displayDamageType">
+						{{weapon.damageType}} 
+					</ng-container>
+					damage. Commonly priced at {{weapon.tierTwoValue}} gold.
 				</span>
 			</li>
 			<li>
@@ -38,7 +46,11 @@
 					Mastercraft 2: 
 				</span>
 				<span>
-					Deals {{weapon.tierThreeDamage}} {{weapon.damageType}} damage. Commonly priced at {{weapon.tierThreeValue}} gold.
+					Deals {{weapon.tierThreeDamage}} 
+					<ng-container *ngIf="weapon.displayDamageType">
+						{{weapon.damageType}} 
+					</ng-container>
+					damage. Commonly priced at {{weapon.tierThreeValue}} gold.
 				</span>
 			</li>
 		</ul>

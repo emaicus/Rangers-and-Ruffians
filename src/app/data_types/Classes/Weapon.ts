@@ -5,6 +5,7 @@ import { RnRAbility } from "./RnRAbility"
 export class Weapon {
     public name : string;
     public baseStat: string;
+    public displayDamageType: boolean;
     public tierOneDamage: string;
     public tierTwoDamage: string;
     public tierThreeDamage: string;
@@ -28,6 +29,7 @@ export class Weapon {
         this.tierTwoDamage = data.damage_scaling["Mastercraft 1"] ?? "1d8";
         this.tierThreeDamage = data.damage_scaling["Mastercraft 2"] ?? "1d10";
         this.damageType = data.damage_scaling.damage_type ?? "blunt";
+        this.displayDamageType = this.damageType != "inherited";
         this.range = data.range;
         this.type = data.type ?? "Weapon"
 

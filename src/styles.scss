@@ -208,7 +208,21 @@ button{
     margin-bottom: 0.5in !important;
   }
 
+  
+
   .rnr-class {
+    display: none !important;
+  }
+
+  .rnr-monster {
+    display: none !important;
+  }
+
+  .monster-selector {
+    display: none !important;
+  }
+
+  .non-printable {
     display: none !important;
   }
 
@@ -235,6 +249,10 @@ button{
 
   .mat-sidenav-content {
     width: 100%;
+  }
+
+  .rnr-monster > .rnr-ability {
+    margin-bottom: 0rem !important;
   }
 
   .printable-content {

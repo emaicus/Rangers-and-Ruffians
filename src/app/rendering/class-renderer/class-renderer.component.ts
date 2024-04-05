@@ -28,49 +28,17 @@ export class ClassRendererComponent implements AfterViewInit {
 
   printContent(): void {
     this.isReadyToPrint = true;
-  console.log(this.isReadyToPrint);
+    console.log(this.isReadyToPrint);
 
-  // Wait for a short delay (to ensure the class is applied)
-  setTimeout(() => {
-    // Print the document
-    window.print();
-
-    // Reset flag after a short delay (to ensure printing is complete)
+    // Wait for a short delay (to ensure the class is applied)
     setTimeout(() => {
-      this.isReadyToPrint = false;
-    }, 100); // Adjust delay as needed
-  }, 100); // Adjust delay as needed
-  }
-  // printContent(divId: string): void {
-  //   let printContents = document.getElementById(divId);
+      // Print the document
+      window.print();
 
-  //   if (!printContents) {
-  //     console.error(`Element with id ${divId} not found.`);
-  //     return;
-  //   }
-  
-  //   let printWindow = window.open('', '_blank');
-  
-  //   if (!printWindow) {
-  //     console.error('Failed to open print window.');
-  //     return;
-  //   }
-  
-  //   // Write the HTML content to the print window
-  //   printWindow.document.write('<html><head><title>Print</title>');
-  
-  //   // Include the Angular stylesheets in the print window
-  //   printWindow.document.write(`<link rel="stylesheet" type="text/css" href="assets/css/print.css">`);
-  
-  //   // Finish the head section and start the body section
-  //   printWindow.document.write('</head><body>');
-  
-  //   // Write the HTML content of the element to be printed
-  //   printWindow.document.write(printContents.innerHTML);
-  
-  //   // Finish writing to the print window
-  //   printWindow.document.write('</body></html>');
-  //   printWindow.document.close();
-  
-  // }
+      // Reset flag after a short delay (to ensure printing is complete)
+      setTimeout(() => {
+        this.isReadyToPrint = false;
+      }, 100); // Adjust delay as needed
+    }, 100); // Adjust delay as needed
+  }
 }

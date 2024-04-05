@@ -5,6 +5,17 @@
 
     <div class="rnr-section toc-section"id="weapons">
         <span class="rnr-section-title">
+            Focuses
+        </span>
+    </div>
+    <div *ngFor="let weapon of weapons">
+        <ng-container *ngIf="weapon.type === 'Focus'">
+            <app-weapon-renderer [weapon]="weapon"></app-weapon-renderer>
+            <hr>
+        </ng-container>
+    </div>
+    <div class="rnr-section toc-section"id="weapons">
+        <span class="rnr-section-title">
             Weapons
         </span>
     </div>
