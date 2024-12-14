@@ -46,16 +46,16 @@
 			},
 			"stats": {
 				"type": "object",
-				"required": ["health", "evasion", "speed", "stat_bonus", "size"],
+				"required": ["health", "armor", "speed", "stat_bonus", "size"],
 				"additionalProperties": false,
 				"properties": {
 					"health": {
 						"type": "integer", 
 						"exclusiveMinimum": 0
 					},
-					"evasion": {
+					"armor": {
 						"type": "integer", 
-						"minimum": 5 
+						"minimum": 0 
 					},
 					"speed": {
 						"type": "object",

@@ -43,6 +43,7 @@
     spells:
         Tier_1: #27/ 27
             -   name: Trick up Your Sleeve
+                action_type: Offhand Action
                 type: utility
                 cost: 0
                 duration: instantaneous
@@ -59,6 +60,7 @@
                         of tied together cloths from your sleeve. The cloths are bound tightly enough that
                         they are able to hold the weight of an average sized humanoid."
             -   name: Imitate
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -69,6 +71,7 @@
                             and sounds that you have heard before."
                 range: self
             -   name: Suggestion
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -81,6 +84,7 @@
                             their save at disadvantage."
                 range: 30
             -   name: Compulsion
+                action_type: Offhand Action
                 type: debuff 
                 cost: 1
                 duration: instantaneous
@@ -98,6 +102,7 @@
                         - custom 
                     save: null
             -   name: Conjure Illusion
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -112,6 +117,7 @@
                     movement and speech. When you create such an illusion, you may establish up to five responses that it is capable of making. You must give it a script
                     and directions regarding how and where it should move. The programmed illusion is not sentient, and cannot make decisions for itself."    
             -   name: Kiss and Tell
+                action_type: Offhand Action
                 type: utility 
                 cost: 1
                 duration: 1 week 
@@ -122,6 +128,7 @@
                 description: "As you place a kiss on a creature, you mark them so that you always know where they are
                             within one hundred feet. This effect fades after the spell's duration."
             -   name: Dazzling Lights
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -136,6 +143,7 @@
                 range: self 
                 radius: 100
             -   name: Animal Aptitude
+                action_type: Passive
                 type: utility
                 cost: 0
                 duration: concentration
@@ -153,6 +161,7 @@
                         task that can be performed in one hour or less and is in line with the intelligence
                         and skill of the animal."
             -   name: Song of Slow Healing
+                action_type: Offhand Action
                 type: healing
                 cost: 1
                 duration: 2
@@ -168,6 +177,7 @@
                     tier_3: "4d6"
                 range: 30
             -   name: Languages
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 range: 30
@@ -179,6 +189,7 @@
                             It grows and twists, entangling itself in their consciousness and granting them 
                             the ability to speak and understand any language for the spell's duration."
             -   name: Hypnotize
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: save
@@ -197,6 +208,7 @@
                     save: "The spell's victim may repeat its save once every ten minutes or whenever it is injured."
                 upcast: "You may spend an additional action point on this spell to extend the save to once per hour."
             -   name: Power Chord
+                action_type: Action
                 type: aoe debuff
                 cost: 1
                 duration: instantaneous
@@ -214,6 +226,7 @@
                         - staggered
                     save: null
             -   name: Biting Words #Bard
+                action_type: Action
                 type: "damage"
                 cost: 0
                 range: 60
@@ -239,6 +252,7 @@
                         - grappled
                 upcast: "For every action point spent on this spell, increase its range by 60ft."
             -   name: Swarm of Squirrels
+                action_type: Action
                 type: summoning
                 cost: 1
                 duration: 1 hour
@@ -256,6 +270,7 @@
                     tier_3: "Zounds!"
                 range: 30
             -   name: Disguise
+                action_type: Offhand Action
                 type: utility
                 cost: 0
                 duration: 1 hour
@@ -268,6 +283,7 @@
                             of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do
                             not hold up to physical inspection."
             -   name: Silence
+                action_type: Offhand Action
                 type: aoe debuff
                 cost: 1
                 duration: concentration
@@ -287,6 +303,7 @@
                 range: self
                 radius: 50
             -   name: Blocking Hand
+                action_type: Reaction
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -295,10 +312,11 @@
                     verbal: true 
                     components: 
                         - An old glove
-                description: "As an enemy bears down on you, summon an unseen force of protection. For a physical attack, add your expertise and your inner fire to your evasion. It the attack is a Glancing Blow, it instead misses completely. This ability may be used to protect anyone within the spell's radius."
-                action_type: Reaction
+                description: "As an enemy bears down on you, summon an unseen force of protection as a reaction.
+                                The attacker must make a spell power save. On failure, their attack misses. On success, it deals half damage."
                 range: 30
             -   name: Haste
+                action_type: Action
                 type: buff
                 cost: 1
                 duration: 3
@@ -316,6 +334,7 @@
                         - hastened
                     save: null
             -   name: Take Courage
+                action_type: Offhand Action
                 type: aoe buff
                 cost: 1
                 duration: concentration
@@ -337,6 +356,7 @@
                 range: self
                 radius: 30
             -   name: Restoration
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -349,6 +369,7 @@
                 range: self
                 radius: 30
             -   name: Slow
+                action_type: Action
                 type: debuff
                 cost: 1
                 duration: save
@@ -366,6 +387,7 @@
                         - slowed
                     save: "The spell's victim may repeat its save at the end of each of its turns or once every five minutes when out of combat."
             -   name: Raucous Laughter
+                action_type: Action
                 type: aoe debuff
                 cost: 1
                 duration: save
@@ -382,6 +404,7 @@
                     type: debuff
                     save: "The spell's victim may repeat its save at the end of each of its turns or every five minutes when out of combat. The effect ends instantly if they are injured."
             -   name: Distract
+                action_type: Offhand Action
                 type: debuff
                 cost: 0
                 duration: concentration
@@ -397,6 +420,7 @@
                         - distracted
                     save: null
             -   name: Breathe Fire # Bard
+                action_type: Action
                 type: aoe damage
                 cost: 1
                 duration: instantaneous
@@ -422,6 +446,7 @@
                     save: null
                 upcast: "For each additional action point spent on this spell, increase its range by 10 feet."
             -   name: Inanimate Aid # Bard
+                action_type: Action
                 type: aoe damage
                 cost: 1
                 requirements:
@@ -439,6 +464,7 @@
                     tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
                 upcast: "For each additional action point spent on this spell, increases its damage by 2d4"
             -   name: Immovable
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -451,6 +477,7 @@
                 range: 30
                 radius: 300
             -   name: Wall of Sound
+                action_type: Action
                 type: utility
                 cost: 1
                 range: 30
@@ -481,6 +508,7 @@
                 #         save: null
         Tier_2: # 17 / 17
             -   name: Invisible Servant
+                action_type: Offhand Action
                 type: summoning
                 cost: 1
                 duration: 1 hour
@@ -496,6 +524,7 @@
                             invisible servant attempt to grapple someone."
                 range: 30
             -   name: Minor Gate
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -509,6 +538,7 @@
                 how close you get to your target."
                 range: 300
             -   name: Smokescreen
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 radius: 60
@@ -523,6 +553,7 @@
                             within the smokescreen are considered to be in darkness."
                 upcast: "You may spend an additional action point to magically empower the smoke, creating Magical Darkness which thwarts darkvision."
             -   name: Featherfall
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -549,6 +580,7 @@
                     This spell does not affect natural abilities such as a dragon's fire breath."
                 upcast: "For each additional action point spent on this spell, increases the tier of spell instantly countered by one."
             -   name: Song of Mass Healing
+                action_type: Offhand Action
                 type: aoe healing
                 cost: 2
                 duration: instantaneous
@@ -565,6 +597,7 @@
                 range: self
                 radius: 30
             -   name: Kilgore's Thunderous Shout # Bard
+                action_type: Action
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -605,6 +638,7 @@
                 #         tier_3: 6d8 #(27)
                 #         tier_4: 6d10 #(33)
             -   name: Conjure Carriage
+                action_type: Offhand Action
                 type: utility
                 cost: 2
                 duration: 1 day
@@ -618,6 +652,7 @@
                     not be detached, and with an optional ethereal driver."
                 range: 30
             -   name: Polymorph
+                action_type: Action
                 type: debuff
                 cost: 2
                 duration: infinite
@@ -636,6 +671,7 @@
                     save: "The spell's victim may repeat their save once per day."
                 upcast: "Spend one additional action point on the spell to increase its save to once per week."
             -   name: Modify Memory
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: save
@@ -652,6 +688,7 @@
                     save: null
                 range: 60
             -   name: Zone of Truth
+                action_type: Ritual
                 type: utility
                 cost: 2
                 duration: concentration
@@ -665,7 +702,8 @@
                 range: self
                 radius: 30
                 casting_time: "10 minutes"
-            -   name: Power Shriek #Bard 
+            -   name: Power Shriek #Bard
+                action_type: Action
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -689,6 +727,7 @@
                     save: "This spell's victims may repeat their save at the end of each of their turns."
                 upcast: "You can spend an additional action point on this spell to double its range."
             -   name: Corvo's Contagious Waltz
+                action_type: Action
                 type: aoe debuff
                 cost: 2
                 duration: save
@@ -708,6 +747,7 @@
                         - distracted
                     save: "The spell's victims may repeat their save at the end of each of their turns or once every five minutes when out of combat."
             -   name: Unstoppable
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -719,6 +759,7 @@
                             they both instantly vanish and are teleported to the realm of chaos along with anyone touching them."
                 range: touch
             -   name: Lullaby
+                action_type: Action
                 type: aoe debuff
                 cost: 1
                 radius: 30
@@ -738,6 +779,7 @@
                     type: debuff
                     save: "The spell's victims remain asleep until damaged or awoken by a successful save. Saves are repeated once every ten minutes."
             -   name: Tamberdoodle's Grasp
+                action_type: Action
                 type: summoning
                 cost: 2
                 duration: concentration
@@ -755,6 +797,7 @@
                 summoned_creature: 
                     all_tiers: Tamberdoodle's Hand
             -   name: Hava's Tricksy Escape
+                action_type: Offhand Action
                 type: buff 
                 cost: 2
                 duration: 5 minutes
@@ -775,6 +818,7 @@
                 upcast: "You can spend an additional action point on this spell to make it last for ten minutes."
         Tier_3: # 8 / 8
             -   name: Winged Magic Steed
+                action_type: Offhand Action
                 type: summoning
                 cost: 2
                 duration: concentration
@@ -785,6 +829,7 @@
                     may be de-summoned on command. If you have access to Conjure Carriage, it may be used in conjunction with this spell at no cost."
                 range: 30
             -   name: Edmire's Grand Manor
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1 day
@@ -807,6 +852,7 @@
                     for ten minutes. During that time, anyone that finds it may attempt to break in."
                 range: 300
             -   name: Marionette
+                action_type: Action
                 type: debuff
                 cost: 2
                 description: "You hoist your hand as they you are controlling a puppet and focus on an enemy."
@@ -822,6 +868,7 @@
                     type: debuff
                     save: "The spell's victim may repeat their save at the end of each of their turns and once every hour."
             -   name: Strike Dumb
+                action_type: Action
                 type: debuff
                 cost: 3
                 duration: save
@@ -839,6 +886,7 @@
                     type: debuff
                     save: "The spell's victim may repeat their save once per month."
             -   name: Nothing but Unicorns #Bard
+                action_type: Action
                 type: aoe damage
                 cost: 3
                 description: "Glitter dances in the air as rainbows erupt from your mouth and fingertips, streaming
@@ -883,6 +931,7 @@
             #     range: 30 
             #     radius: 100
             -   name: Summon Bleck
+                action_type: Action
                 type: utility
                 cost: 3
                 duration: 1 hour
@@ -902,6 +951,7 @@
                 million bleck is enough to kill a bleck. Bleck that are killed remain for 1 minute
                 before dissolving into nothingness. After the spell's duration, all bleck are destroyed."
             -   name: I Know Malkizar! # Everyone who witnessed an event must make a SP save or be convinced
+                action_type: Ritual
                 type: utility
                 cost: 3
                 duration: infinite
@@ -974,6 +1024,7 @@
         tree_path: "tmp"
         abilities:
             -   name: Faithful Weapon
+                action_type: "Free Action"
                 cost: 1
                 type: combat option 
                 passive_damage_source: true
@@ -989,6 +1040,7 @@
                               so long as it is within the abilities radius, and it will fly to your hand in as straight 
                               a line as it can manage. You may bind yourself to at most one weapon in this way at a time." 
             -   name: Charge
+                action_type: "Action"
                 type: combat option
                 cost: 1
                 duration: instantaneous
@@ -1009,6 +1061,7 @@
                         - prone 
                     save: null
             -   name: Healing Blow
+                action_type: "Action"
                 type: combat option 
                 cost: 2
                 duration: instantaneous
@@ -1023,6 +1076,7 @@
                     tier_2: "2d8"
                     tier_3: "2d10"
             -   name: Healing Hands
+                action_type: "Offhand Action"
                 type: healing
                 cost: 1
                 range: touch 
@@ -1034,6 +1088,7 @@
                     tier_2: "4d4"
                     tier_3: "4d10"
             -   name: Last Hope
+                action_type: "Passive"
                 type: buff
                 cost: 0
                 duration: passive
@@ -1047,6 +1102,7 @@
                     tier_2: 2d4
                     tier_3: 2d10
             -   name: Guardian Ward
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: 30
@@ -1062,6 +1118,7 @@
                         - guarded 
                     save: null
             -   name: Holy Shield
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: 30
@@ -1084,6 +1141,7 @@
                             Holy Shields. This may be done as a free action at any time, including out of turn in combat, so long as
                             an attack is not currently being resolved."
             -   name: Aura of Hope
+                action_type: "Passive"
                 type: aoe buff
                 cost: 0
                 range: self 
@@ -1100,6 +1158,7 @@
                     save: null
                 upcast: "You can spend one action point to increase this ability's radius to 30ft for one hour."
             -   name: Link Lifeforce
+                action_type: "Offhand Action"
                 cost: 0
                 type: buff
                 range: inherited 
@@ -1113,6 +1172,7 @@
                         - custom 
                     save: null
             -   name: Enhanced Healing
+                action_type: "Passive"
                 type: healing
                 cost: 0
                 range: inherited
@@ -1190,6 +1250,7 @@
                             into the space that they occupied. You are immune to exposed attacks 
                             during this movement. Once you've moved, you may either attack again or Ready your Stance."
             -   name: Sentinel's Reaction
+                action_type: "Passive"
                 cost: 0
                 type: buff 
                 range: self 
@@ -1202,20 +1263,20 @@
                         - custom 
                     save: null
             -   name: Pivot
+                action_type: Action
                 cost: 0
                 type: combat option 
                 duration: instantaneous
                 range: self  
                 radius: 15
-                action_type: Action
                 description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
             -   name: Phalanx
+                action_type: "Free Action"
                 cost: 0
                 type: aoe buff 
                 duration: infinite 
                 range: self 
                 radius: 10 
-                action_type: Free Action
                 description: "Adopt a defensive stance, granting all allies within five feet your protection."
                 effect:
                     type: buff 
@@ -1227,6 +1288,7 @@
                     #cost: 0
                     #description: As an action, prepare yourself for an attack. The first time you are attacked before your next turn, counterattack as a free action.
             -   name: Overwhelming Strike
+                action_type: "Action"               
                 type: combat option
                 cost: 1
                 range: inherited
@@ -1245,6 +1307,7 @@
                         - stunned 
                     save: null                
             -   name: Slowing Strike
+                action_type: Action                
                 type: combat option
                 cost: 2
                 range: inherited
@@ -1263,6 +1326,7 @@
                     tier_2: "2d10"
                     tier_3: "2d12"
             -   name: Last Line Of Defense
+                action_type: Passive
                 type: buff
                 cost: 0
                 range: self
@@ -1281,6 +1345,7 @@
                         - custom 
                     save: null
             -   name: Goading Attack
+                action_type: "Action"
                 cost: 1
                 type: combat option
                 range: inherited
@@ -1299,6 +1364,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Inspiring Critical
+                action_type: "Passive"
                 cost: 0
                 type: critical hit enhancement
                 range: inherited
@@ -1309,11 +1375,12 @@
                             with determination."
                 effect:
                     type: buff 
-                    description: "Grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities."
+                    description: "Whenever you spend a hero token, additionally grant a chosen ally a 1d6 inspiration dice. This ability works in conjunction with other critical abilities."
                     conditions: 
                         - inspired 
                     save: null
             -   name: Lionhearted
+                action_type: "Offhand Action"
                 cost: 1
                 type: aoe buff 
                 range: self 
@@ -1328,6 +1395,7 @@
                         - inspired 
                     save: null
             -   name: Very Dangerous over Short Distances 
+                action_type: "Passive"
                 type: buff
                 cost: 0
                 range: touch
@@ -1398,6 +1466,7 @@
         tree_path: "tmp"
         abilities: #25 / 25
             -   name: Berserk
+                action_type: Offhand Action
                 type: buff
                 passive_damage_source: true
                 cost: 1
@@ -1417,6 +1486,7 @@
                         - physical resistance
                     save: null
             -   name: Relentless Rage
+                action_type: Passive
                 type: buff
                 cost: 0
                 range: self
@@ -1431,11 +1501,11 @@
                         - psychic resistance 
                     save: null
             -   name: Blood for Blood
+                action_type: Reaction
                 type: combat option
                 cost: 0
                 range: self 
                 duration: passive
-                action_type: Reaction
                 description: When you are going berserk and an enemy harms you, you may use your reaction to make a counterattack.
             -   name: Adrenaline
                 type: buff
@@ -1467,6 +1537,7 @@
                     damage_type: inherited
                     all_tiers: 1d6
             -   name: Taunt
+                action_type: Offhand Action
                 type: aoe debuff
                 cost: 1
                 range: self
@@ -1480,6 +1551,7 @@
                         - fixated 
                     save: "They may reattempt their save at the end of each of their turns."
             -   name: Single Out
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 range: 60
@@ -1512,7 +1584,7 @@
                 cost: 0
                 range: self
                 duration: passive
-                action_type: Free Action
+                action_type: Passive
                 description: "Even battered and bloodied, you fight on.
                             If you fall to zero health, make a D10 inner fire saving throw. If you succeed, drop to 1 health instead."
             -   name: Blaze of Glory
@@ -1521,7 +1593,7 @@
                 range: self
                 duration: passive
                 action_type: Free Action
-                description: "As you take injuries, your resolve only strengthens. If you fall below one quarter health and an enemy lands a glancing blow on you you, take no damage."
+                description: "As you take injuries, your resolve only strengthens. If you fall below one quarter health all damage you take is halved."
             -   name: Meat Shield
                 type: combat option
                 cost: 1
@@ -1536,6 +1608,7 @@
                         - custom 
                     save: null
             -   name: Brutal Attack
+                action_type: Action
                 type: combat option
                 cost: 1
                 range: inherited
@@ -1554,6 +1627,7 @@
                     tier_2: "1d10"
                     tier_3: "1d12"
             -   name: Frightening Blow
+                action_type: Action
                 type: combat option
                 cost: 1
                 range: inherited
@@ -1572,6 +1646,7 @@
                     tier_2: "1d10"
                     tier_3: "1d12"
             -   name: The Opener
+                action_type: Passive
                 type: buff
                 cost: 0
                 range: self
@@ -1602,6 +1677,7 @@
                     tier_2: 1d8 
                     tier_3: 1d10
             -   name: Guard-Break
+                action_type: Action
                 type: combat option
                 range: inherited
                 duration: instantaneous
@@ -1620,6 +1696,7 @@
                     tier_2: "1d10"
                     tier_3: "1d12"
             -   name: Rending Strike
+                action_type: Action
                 type: combat option
                 cost: 2
                 range: inherited
@@ -1689,7 +1766,7 @@
                     save: null
                     conditions: 
                         - frightened
-                    description: "Whenever you land a critical hit, all enemies the ability's radius must make a spell power save or be Frightened until the end of your next turn."
+                    description: "Whenever you use a hero token, all enemies the ability's radius must make a spell power save or be Frightened until the end of your next turn."
             -   name: Corner
                 type: combat option
                 cost: 1
@@ -1705,6 +1782,7 @@
                         - halted
                     save: null
             -   name: Every Wall is a Door
+                action_type: Passive
                 type: utility
                 range: base speed
                 duration: 1
@@ -1712,6 +1790,7 @@
                 description: "Use your strength to blast through an obstacle that is two feet thick or less, to climb solid stone,
                             or to leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks."
             -   name: I cast 'Fist'
+                action_type: Action
                 cost: 1
                 type: utility 
                 range: self
@@ -1721,6 +1800,7 @@
                             of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur.
                             Follow the rules for informal magic, but always spend an action point."
             -   name: A Little Terror
+                action_type: Action
                 type: debuff
                 cost: 1
                 range: 30 
@@ -1786,23 +1866,25 @@
                 range: self 
                 action_type: Free Action
                 ability_modified: incoming miss/glance
-                description: "As an attack skates off of your armor, use the opportunity to reposition yourself.  
-                            Whenever you suffer a glancing blow or an attack misses entirely, move 5ft without provoking exposed attacks as a free action."
+                description: "As an attack skates off your armor, use the opportunity to reposition yourself.  
+                            Whenever you are attacked, move 5ft without provoking exposed attacks as a free action."
             -   name: Counter
                 cost: 1
                 type: combat option
                 range: self
                 duration: passive
                 action_type: Reaction
-                description: "As battle rages, you find an opening in your enemies' mistakes. When you suffer a glancing blow, you may use your reaction to counterattack."
+                description: "As battle rages, you find an opening in your enemies' mistakes. When an enemy attacks you, you may use your reaction to counter with a standard attack."
             -   name: Feint
+                action_type: Offhand Action
                 cost: 0
                 type: combat option 
                 duration: 1
                 range: inherited
-                description: "Take up a defensive position as enemies circle. Hold an action, and the next enemy who attacks you does so at disadvantage.
-                            You may immediately counterattack as a free action. Feint does not stack with Counter."
+                description: "Take up a defensive position as enemies circle. The next enemy who attacks you does so at disadvantage.
+                            You may immediately make a standard attack as a free action. Feint does not stack with Counter."
             -   name: Self-Sufficient
+                action_type: Offhand Action
                 cost: 1
                 type: healing
                 duration: instantaneous
@@ -1814,6 +1896,7 @@
                     tier_2: 4d4
                     tier_3: 4d10
             -   name: Command
+                action_type: Offhand Action
                 type: combat option
                 cost: 1
                 range: 30
@@ -1826,6 +1909,7 @@
                         - spurred to action 
                     save: null       
             -   name: Lead the Way
+                action_type: Passive
                 cost: 0
                 type: buff 
                 duration: passive 
@@ -1833,8 +1917,9 @@
                 ability_modified: initiative
                 description: "You spring into action before others can think. Whenever you roll initiative for combat, add your expertise to the result."
             -   name: Move!
+                action_type: Offhand Action
                 type: aoe buff
-                cost: 2
+                cost: 1
                 duration: instantaneous
                 range: self
                 radius: 50
@@ -1846,6 +1931,7 @@
                     save: null
                 description: "Through years of experience, you are able to read a battlefield in moments and to see where your party's formation is failing."
             -   name: Prepare for Combat
+                action_type: Passive
                 type: aoe buff 
                 cost: 0
                 radius: 30 
@@ -1869,11 +1955,12 @@
                 description: "Quickly follow up when you score a heavy blow."
                 effect: 
                     type: buff
-                    description: "Whenever you land a critical hit, you are Spurred to Action. This effect can occur once per round of combat."
+                    description: "You may spend a hero token to make an extra action in combat."
                     conditions:
                         - spurred to action 
                     save: null
             -   name: Resurgence
+                action_type: Passive
                 type: buff 
                 cost: 0
                 range: self 
@@ -1889,7 +1976,7 @@
                 duration: infinite 
                 action_type: modifies_ability
                 ability_modified: standard attack 
-                description: Your critical hit target is permanently decreased by one.
+                description: You now gain a hero token when you roll a 19 or 20.
             -   name: Determination
                 type: buff
                 cost: 1
@@ -1903,7 +1990,8 @@
                     conditions:
                         - custom 
                     save: null
-            -   name: Final Blow 
+            -   name: Final Blow
+                action_type: Passive
                 type: combat option 
                 cost: 0
                 range: inherited
@@ -1911,24 +1999,16 @@
                 ability_modified: falling unconcious 
                 description: "When you fall to zero health, you may make one last, desperate attack. If the attack fells the enemy that struck you,
                             remain standing at one hit point."
-            #-   name: Dodge
-                #cost: 1
-                #action_type: Free Action
-                #description: Attempt to pivot out of the way of an incoming attack as a Free Action. Before you are attacked, declare a dodge to give the enemy disadvantage on their accuracy check. If the attack hits, it deals half damage. If it glances you, you instead avoid it entirely.
-            #-   name: Fallen
-                #cost: 0
-                #description: Inspire your allies to save you when you are in peril. While you are on death's door, all allies gain an additional action.
-            #-   name: Final Resolve
-                #cost: 0
-                #description: Even when you are down, you aren't out. When you are on death's door, you may crawl up to 15ft per turn without invoking exposed attacks.
             -   name: Dashing Strike
+                action_type: Passive
                 type: buff
-                cost: 0
+                cost: 1
                 duration: instantaneous
                 range: dash
                 ability_modified: dash
-                description: "You sprint towards your enemey, weapon aloft and ready to strike. Your dash action may end in an attack."
+                description: "You sprint towards your enemey, weapon aloft and ready to strike. ."
             -   name: Follow Up
+                action_type: Passive
                 cost: 0
                 type: buff
                 passive_damage_source: true
@@ -1939,7 +2019,8 @@
                             subsequent attacks deal extra damage if you don't choose another target.
                             Extra damage starts at 1d4 and grows with each hit, capping at 1d12."
             -   name: Make Space
-                cost: 1
+                action_type: Offhand Action
+                cost: 0
                 type: combat option
                 range: inherited
                 duration: instantaneous
@@ -1959,6 +2040,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Goading Attack
+                action_type: Action
                 cost: 1
                 type: combat option
                 range: inherited
@@ -1990,6 +2072,7 @@
                 #         - grappled
                 #     save: "They may repeat their save at the end of each of their turns."
             -   name: Guard-Break
+                action_type: Action
                 type: combat option
                 range: inherited
                 duration: instantaneous
@@ -2008,6 +2091,7 @@
                     tier_2: "1d10"
                     tier_3: "1d12"
             -   name: Lunge
+                action_type: Passive
                 type: combat option 
                 cost: 0
                 range: inherited
@@ -2015,19 +2099,21 @@
                 ability_modified: standard attack 
                 description: "You are able to extend your reach to make lunging attacks. You can make melee attacks at a 5ft extended range at disadvantage."
             -   name: Cleave
+                action_type: Action
                 type: combat option 
                 cost: 1
                 range: self 
                 duration: instantaneous
                 radius: 10
                 ability_modified: standard_attack
-                description: "Swing your weapon in a wide arc, targetting all enemies within 5ft. of you. Make a separate accuracy check against each target."
+                description: "Swing your weapon in a wide arc, targetting all enemies within 5ft. of you."
                 damage_scaling:
                     damage_type: inherited 
                     tier_1: 1d8
                     tier_2: 1d10
                     tier_3: 1d12
-            -   name: Precision Strike 
+            -   name: Precision Strike
+                action_type: Action
                 type: combat option 
                 cost: 1
                 range: inherited
@@ -2045,7 +2131,8 @@
                     tier_1: 1d8
                     tier_2: 1d10
                     tier_3: 1d12
-            -   name: Hindering Blow 
+            -   name: Hindering Blow
+                action_type: Action
                 type: combat option 
                 cost: 2
                 range: inherited
@@ -2064,6 +2151,7 @@
                     tier_2: 2d10
                     tier_3: 2d12
             -   name: Rally Cry
+                action_type: Offhand Action
                 type: combat option
                 cost: 1
                 duration: 1 hour 
@@ -2077,6 +2165,7 @@
                         - inspired 
                     save: null
             -   name: Allied Strike
+                action_type: Action
                 type: combat option 
                 cost: 1
                 range: inherited
@@ -2103,6 +2192,7 @@
                     #    - weakened 
                     #save: null       
             -   name: Weapon Master
+                action_type: modifies_ability
                 passive_damage_source: true
                 cost: 0
                 type: buff 
@@ -2110,14 +2200,12 @@
                 duration: passive
                 description: "You are highly proficient with all weapons. Increase the dice size of any weapon you wield by one step. If it is a d12 weapon, instead add 1d4. Further, pick one of the following effect:"
                 options:
-                    -   name: "Dual Weapon Master"
-                        description: When dual wielding, if you use an action point on your first attack and miss, make the same move with the second attack at no cost.
                     -   name: "Ranged Weapon Master"
                         description: When using ranged weapons, enemies moving within 30ft of you are considered Exposed.
                     -   name: "Shield Master"
-                        description: Gain an additional +1 evasion when carrying a shield.
-                    -   name: "Heavy Weapon Master"
-                        description: "Any attack you make with a two-handed weapon deals an additional 1d6 damage."
+                        description: Gain an additional +2 armor when carrying a shield.
+                    -   name: "Martial Weapon Master"
+                        description: "Any attack you make with a martial weapon deals an additional 1d6 damage."
 -   name: Monk
     recommended_stats:
         Charisma: -2
@@ -2165,6 +2253,7 @@
         tree_path: "tmp"
         abilities: #25/25
             -   name: Hand to Hand Expert
+                action_type: Passive
                 type: buff
                 cost: 0
                 range: self
@@ -2175,12 +2264,13 @@
                     type: buff 
                     description: "Whenever you make an unarmed attack, increase the damage dice by one step. 
                                 For the sake of abilities, simple blunt weapons including quarterstaffs are considered unarmed weapons.
-                                Further, you may use either strength or dexterity as the accuracy and damage modifier for 
+                                Further, you may use either strength or dexterity as the damage modifier for 
                                 unarmed attacks."
                     conditions:
                         - custom
                     save: null
-            -   name: Unarmored Defense 
+            -   name: Unarmored Defense
+                action_type: Passive
                 type: buff 
                 cost: 0
                 range: self 
@@ -2193,6 +2283,7 @@
                         - physical resistance 
                     save: null
             -   name: Slowing Blow # Attack
+                action_type: Action
                 type: combat option
                 cost: 2
                 range: inherited 
@@ -2211,6 +2302,7 @@
                     tier_2: "2d10"
                     tier_3: "2d12"
             -   name: Make Space # Attack
+                action_type: Action
                 cost: 1
                 type: combat option
                 range: inherited
@@ -2231,6 +2323,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Disarming Strike # Attack
+                action_type: Action
                 type: combat option
                 cost: 1
                 range: inherited 
@@ -2248,6 +2341,7 @@
                     tier_2: "1d10"
                     tier_3: "1d12"
             -   name: Critical Onslaught
+                action_type: Passive
                 cost: 0
                 type: "critical hit enhancement"
                 range: inherited
@@ -2257,11 +2351,12 @@
                 description: "You are able to quickly follow up when you land a heavy blow."
                 effect: 
                     type: buff
-                    description: "When you land a critical hit, you are Spurred to Action. This effect can occur once per round."
+                    description: "You can spend a hero token to take an additional action in combat."
                     conditions:
                         - spurred to action 
                     save: null
             -   name: Flow with the Battle
+                action_type: Passive
                 type: buff 
                 cost: 0
                 range: self 
@@ -2275,19 +2370,21 @@
                         - custom 
                     save: null
             -   name: Flurry of Blows # Attack
+                action_type: Action
                 type: combat option 
                 cost: 1
                 range: self 
                 duration: instantaneous
                 radius: 10
                 ability_modified: standard_attack
-                description: "In rapid succession, make unarmed attacks against all enemies adjacent to you. Make a separate accuracy check against each target."
+                description: "In rapid succession, make unarmed attacks against all enemies adjacent to you."
                 damage_scaling:
                     damage_type: inherited 
                     tier_1: 1d8
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Extreme Speed
+                action_type: Passive
                 type: buff
                 cost: 0
                 duration: passive
@@ -2301,6 +2398,7 @@
                         - quickened 
                     save: null
             -   name: Freedom of Movement
+                action_type: Passive
                 cost: 0
                 type: utility 
                 range: self
@@ -2313,6 +2411,7 @@
                             manipulate your body to accomplish a feat. In cases when a check is required, you
                             must spend an action point. Additionally, you are immune to difficult terrain."
             -   name: Disengage
+                action_type: Offhand Action
                 type: buff 
                 range: self 
                 duration: 1
@@ -2326,14 +2425,16 @@
                         - elusive
                     save: null
             -   name: Reduced Critical
+                action_type: Passive
                 cost: 0
                 type: "critical hit enhancement" 
                 range: self 
                 duration: infinite 
                 action_type: modifies_ability
                 ability_modified: standard attack 
-                description: Your critical hit target is permanently decreased by one.   
+                description: You now gain a heroic token when you roll a 19 or 20.   
             -   name: Dodging Stance
+                action_type: Offhand Action
                 cost: 0
                 type: buff 
                 duration: 1
@@ -2345,7 +2446,7 @@
                     conditions: 
                         - dodging
                     save: null
-            -   name: Defensive Dodge 
+            -   name: Defensive Dodge
                 cost: 0
                 type: buff 
                 action_type: modifies_ability
@@ -2361,6 +2462,7 @@
                 action_type: Reaction
                 description: "As a reaction, attempt to block a targeted, solid projectile. Roll 1d6 and add your dexterity and expertise, then reduce the damage by that amount. If the damage is reduced to zero, you catch the projectile, and can immediately make a counterattack with it. Increase to 2d6 then 4d6 in gameplay tiers 2 and 3."
             -   name: Chi Block # Attack
+                action_type: Action
                 cost: 2
                 type: combat option
                 range: inherited
@@ -2378,6 +2480,7 @@
                         - blocked 
                     save: "Affected enemies may repeat their save at the end of each of their turns."
             -   name: Spiritual Projection #Attack
+                action_type: Offhand Action
                 cost: 1
                 type: combat option
                 duration: instantaneous
@@ -2400,6 +2503,7 @@
                 ability_modified: "Spiritual Projection"
                 description: "You are tethered to your astral form. If your Spiritual Projection harms an enemy, you may instantly change places with it."
             -   name: Spiritual Aid
+                action_type: Free Action
                 cost: 1
                 type: utility
                 range: self
@@ -2424,6 +2528,7 @@
                 #        tier_3: "1d12"
                 #    description: Placeholder text #Flag
             -   name: Stunning Critical
+                action_type: Passive
                 cost: 0
                 type: "critical hit enhancement"
                 range: inherited
@@ -2436,8 +2541,10 @@
                     save: null
                     conditions: 
                         - stunned
-                    description: "Whenever you land a critical hit, your target is Stunned."
+                    description: "When you use a hero token to do extra damage, your enemy must make a spell power save or be Stunned."
             -   name: Chain Strike
+                action_type: modifies_ability
+                ability_modified: Chain Strike
                 cost: 1
                 type: combat option
                 range: inherited
@@ -2445,6 +2552,7 @@
                 description: "When you make an attack with a spiritual projection and hit, you may spend another action point
                             to immediately create another spiritual projection within range of the first and attack with it."
             -   name: Resting Meditation
+                action_type: Offhand Action
                 type: buff 
                 range: self 
                 duration: passive
@@ -2453,9 +2561,9 @@
                 description: "Given a moment to rest, you are able to quickly enter a state of deep meditation. As you focus, you command your wounds to heal."
                 damage_scaling:
                     damage_type: healing 
-                    tier_1: "1d6"
-                    tier_2: "2d6"
-                    tier_3: "3d6"
+                    tier_1: 2d4
+                    tier_2: 4d4
+                    tier_3: 4d10
             -   name: Find Center
                 action_type: Free Action
                 type: combat option
@@ -2464,6 +2572,7 @@
                 cost: 1
                 description: "Take a moment to center yourself in the world around you. For the remainder of the turn, add your expertise to all checks."
             -   name: High Ground
+                action_type: Offhand Action
                 cost: 0
                 type: buff 
                 range: self 
@@ -2481,6 +2590,7 @@
                     damage_type: inherited
                     all_tiers: 1d6
             -   name: Resurgence
+                action_type: Offhand Action
                 type: buff 
                 cost: 0
                 range: self 
@@ -2536,7 +2646,8 @@
     skill_tree:
         tree_path: "tmp"
         abilities: # 25/25
-            -   name: Leap 
+            -   name: Leap
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1 
                 duration: instantaneous
@@ -2544,6 +2655,7 @@
                 description: "As you speak the magic word for 'Ascent' you suddenly launch thirty feet into the air.
                             By angling your body, you are able to turn this into an arc."
             -   name: Summon Darkness
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 duration: concentration
@@ -2560,6 +2672,7 @@
                         - blinded
                     save: null
             -   name: Assisted Strike
+                action_type: "Passive"
                 cost: 0
                 type: buff 
                 range: self 
@@ -2577,6 +2690,7 @@
                     damage_type: inherited
                     all_tiers: 1d6
             -   name: Controlled Descent
+                action_type: "Free Action"
                 cost: 0
                 type: buff 
                 range: self 
@@ -2606,6 +2720,7 @@
                     #tier_2: "1d10"
                     #tier_3: "1d12"
             -   name: Disengage
+                action_type: "Offhand Action"
                 type: buff 
                 range: self 
                 duration: 1
@@ -2619,6 +2734,7 @@
                         - elusive
                     save: null
             -   name: Dodge
+                action_type: "Free Action"
                 cost: 1
                 range: self 
                 duration: instantaneous
@@ -2632,6 +2748,7 @@
                         - dodging
                     save: null
             -   name: Evasion
+                action_type: "Passive"
                 cost: 0
                 range: self 
                 duration: passive 
@@ -2645,6 +2762,7 @@
                         - custom 
                     save: null
             -   name: Precision Strike 
+                action_type: "Action"
                 type: combat option 
                 cost: 1
                 range: inherited
@@ -2663,6 +2781,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Flank
+                action_type: "Passive"
                 cost: 0
                 type: buff 
                 duration: passive 
@@ -2676,6 +2795,7 @@
                         - custom 
                     save: null
             -   name: Flow with the Battle
+                action_type: "Passive"
                 type: buff 
                 cost: 0
                 range: self 
@@ -2689,11 +2809,11 @@
                         - custom 
                     save: null
             -   name: Chain Attack
+                action_type: "Passive"
                 cost: 0
                 type: buff
                 duration: instantaneous
                 range: self 
-                action_type: Free Action
                 ability_modified: slayed enemy
                 description: "As your foes' bodies fall around you, a fiendish energy courses through your veins."
                 effect:
@@ -2703,6 +2823,7 @@
                         - spurred to action
                     save: null
             -   name: Thief's Mark
+                action_type: "Offhand Action"
                 type: combat option
                 range: touch
                 duration: 1 day
@@ -2742,8 +2863,9 @@
                 duration: infinite 
                 action_type: modifies_ability
                 ability_modified: standard attack 
-                description: Your critical hit target is permanently decreased by one.
+                description: You now gain a hero token when you roll a 19 or 20.
             -   name: Ride The Blindspot
+                action_type: "Reaction"
                 cost: 1
                 type: buff 
                 range: self 
@@ -2759,6 +2881,7 @@
                         - custom 
                     save: null
             -   name: Shared Stealth
+                action_type: "Free Action"
                 type: aoe buff 
                 cost: 1
                 duration: 1 hour 
@@ -2773,6 +2896,8 @@
                         - custom 
                     save: null
             -   name: Slip Away
+                action_type: "modifies_ability"
+                ability_modified: "Standard Attack"
                 cost: 0
                 type: buff
                 ability_modified: standard attack 
@@ -2786,6 +2911,7 @@
                         - elusive 
                     save: null
             -   name: Spell Of Darkvision # Might cut
+                action_type: "Offhand Action"
                 cost: 1
                 requirements: 
                     verbal: true
@@ -2802,6 +2928,7 @@
                         - darkvision 
                     save: null
             -   name: Spell Of Distraction
+                action_type: "Offhand Action"
                 type: aoe debuff 
                 requirements: 
                     verbal: true
@@ -2818,6 +2945,7 @@
                         - distracted 
                     save: null
             -   name: Spell Of Invisibility
+                action_type: "Offhand Action"
                 cost: 1
                 requirements: 
                     verbal: true
@@ -2842,6 +2970,7 @@
                     #save: null
                 # description: Magic courses through you in time with your heartbeat, quickening your reflexes."
             -   name: Strike From The Shadows
+                action_type: "modifies_ability"
                 passive_damage_source: true
                 cost: 0
                 type: buff
@@ -2862,6 +2991,7 @@
                 #cost: 1
                 #description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
             -   name: Thieve's Strike
+                action_type: "Action"
                 type: combat option 
                 cost: 1
                 range: inherited
@@ -2883,10 +3013,10 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Throw Caution to the Wind
+                action_type: Free Action
                 type: buff
                 cost: 0
                 range: self 
-                action_type: Free Action
                 duration: 1
                 ability_modified: standard attack
                 description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
@@ -2902,6 +3032,7 @@
                     damage_type: inherited 
                     all_tiers: 1d6
             -   name: Unseen Hand
+                action_type: "Free Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -2915,6 +3046,7 @@
                             and may not leave the spell's radius. Its strength score is equivalent to your
                             inner fire modifier."
             -   name: Wasting Blow
+                action_type: "Action"
                 cost: 2
                 type: combat option
                 range: inherited 
@@ -2972,6 +3104,7 @@
     spells:
         Tier_1: #27 / 27
             -   name: Elemental Armor
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: 1 hour
@@ -2987,6 +3120,7 @@
                     save: null
                 range: 30
             -   name: Control Plant Growth
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: 60
@@ -2997,6 +3131,7 @@
                 description: "As you beckon, plants spring from the earth and stretch towards the sky. You can create a plant of up
                             to the size of a tree and may shape its growth for the spell's duration."
             -   name: Crown of Fireflies
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -3008,6 +3143,7 @@
                 range: self
                 radius: 100
             -   name: Echolocate
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -3020,6 +3156,7 @@
                     to emit a barely-audible sonic pulse, which gives you a detailed picture of the world within the spell's radius.
                     For the spell's duration, you can continue to make such perception checks, but are Vulnerable to any auditory damage."
             -   name: Mend
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: instantaneous
@@ -3048,6 +3185,7 @@
                 #            - prone
                 #        type: debuff
             -   name: Frost Bite # Druid
+                action_type: "Action"
                 type: damage
                 cost: 0
                 range: 60
@@ -3062,12 +3200,13 @@
                     tier_3: 3d6 #(10.5 + 10.5f = 21)
                 description: "A latticework of frost spreads across your focus, then wraps around one of your enemies."
                 effect:
-                    description: On a critical hit, the enemy is Slowed until the end of their next turn.
+                    description: If you roll a 6 on any of the dice for this attack, the enemy is Slowed until the end of their next turn.
                     conditions: 
                         - slowed
                     type: debuff
                     save: null
             -   name: Constricting Vine # 0 cost targeted attack with Hindered
+                action_type: "Action"
                 type: damage
                 range: 30
                 cost: 0
@@ -3090,6 +3229,7 @@
                     type: debuff
                     save: null
             -   name: Bees! # Druid
+                action_type: "Action"
                 type: aoe damage
                 range: 60
                 radius: 15
@@ -3119,6 +3259,7 @@
                     type: debuff
                     save: null
             -   name: Elemental Beam # Druid
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 range: 90
@@ -3141,6 +3282,7 @@
                         - burning
                     save: "Slowed targets remain so until the end of their next turn."
             -   name: Poison Jet # Druid
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 range: 15
@@ -3162,6 +3304,7 @@
                     type: debuff
                     save: "The spell's victims may reattempt their save at the end of each of their turns."
             -   name: Spores # Druid 
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: concentration
@@ -3176,7 +3319,7 @@
                     tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
                     tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
                 description: "Spores of greenish-black billow from you, filling a radius of your choice.
-                These living parasites heed your whim, entering the lungs of your foes while avoiding your friends."
+                    These living parasites heed your whim, entering the lungs of your foes while avoiding your friends."
                 effect:
                     description: Enemies who begins their turn within the spell's radius must make a spell power saving
                                 or be Leeched for the spell's unmodified damage. On success, they are not leeched and they 
@@ -3187,6 +3330,7 @@
                     save: null
                 upcast: For each additional action point spent on this spell, increase the radius by 15 feet.
             -   name: Bark Armor
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: 60
@@ -3205,6 +3349,7 @@
                         - physical resistance
                     save: null
             -   name: Voice of Nature
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: self
@@ -3216,6 +3361,7 @@
                             the tongues of the birds, beasts, and plants. For the spell's duration, you may speak with natural
                             things and understand them, and you have advantage when attempting to pacify hostile creatures."
             -   name: Homeopathic Remedy
+                action_type: "Offhand Action"
                 type: healing
                 cost: 1
                 range: touch
@@ -3229,13 +3375,14 @@
                         - Mud
                 description: "Working carefully, you mix your magic with elements you find in the world around you. The result is a 
                     natural remedy, which performs a feat of healing on an ally and instantly removes any minor status effects which ail them.
-                    This remedy does not remove curses or effects caused by powerful magic as determined by the Grand Poohbah."
+                    This remedy does not remove curses or effects caused by powerful magic unless determined by the Grand Poohbah."
                 damage_scaling:
                     damage_type: healing
                     tier_1: 2d4 #(9)
                     tier_2: 4d4 #(18)
                     tier_3: 4d10 #(22)
             -   name: Tailwind
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: 30
@@ -3249,6 +3396,7 @@
                             or smaller enemies to move at half speed when approaching you from the front or to give yourself fifteen feet
                             of additional movement."
             -   name: Animal Form
+                action_type: "Offhand Action"
                 type: transformation
                 cost: 1
                 duration: 1 day
@@ -3265,6 +3413,7 @@
                     save: null
                 range: self
             -   name: Forest Guardian
+                action_type: "Action"
                 type: summoning
                 cost: 1
                 duration: 1 hour
@@ -3280,6 +3429,7 @@
                     tier_3: Woad Warrior
                 range: 30
             -   name: Fool the Senses
+                action_type: "Offhand Action"
                 type:  debuff
                 cost: 1
                 requirements:
@@ -3299,6 +3449,7 @@
                 duration: save
                 upcast: "You may spend an additional action point on this spell to increase its range to 100 feet and give it a thirty foot radius."
             -   name: Elemental Weapon
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: 1 hour
@@ -3314,8 +3465,9 @@
                         - infused
                     save: null
             -   name: Keeper Kerrick's Stars
+                action_type: "Offhand Action"
                 type: utility
-                cost: 1
+                cost: 2
                 duration: concentration
                 range: self
                 radius: 30
@@ -3327,6 +3479,7 @@
                             All attacks made against enemies within the spell's radius are at advantage,
                             invisibility is negated, and incorporeal creatures may be attacked."
             -   name: Fairy Ring
+                action_type: "Ritual"
                 type: utility
                 cost: 1
                 range: self
@@ -3344,6 +3497,8 @@
                             Enemies cannot be forced within the ring, but rather strike it like a wall. If a creature is caught between the 
                             ring and another solid object, they take 2d6 damage, but the ring creates room for them."
             -   name: Sanctum
+                action_type: "Ritual"
+                casting_time: 10 minutes
                 type: aoe debuff
                 cost: 1
                 range: self
@@ -3364,6 +3519,7 @@
                         - hindered 
                     save: null
             -   name: Water Breathing
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -3376,6 +3532,7 @@
                 range: touch
                 upcast: "You may spend an additional action point on this spell to grant the effect to up to six nearby allies."
             -   name: Bane
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 range: 30
@@ -3391,6 +3548,7 @@
                         - diminished
                     save: "The enemy is affected by the condition until your concentration is broken, regardless of distance."
             -   name: Stride
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: self
@@ -3406,6 +3564,7 @@
                         - quickened 
                     save: null
             -   name: Somin's Shillelagh
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -3414,10 +3573,11 @@
                     verbal: false 
                     movement: true
                 description: "As you hold out your hand, a magical shillelagh appears within it. 
-                            Unlike other shillelagh's this weapon uses your inner fire as its damage and accuracy modifier.
+                            Unlike other shillelagh's this weapon uses your inner fire as its damage modifier.
                             At tier 1, it is a masterwork 1 shillelagh. At tier 2, it is masterwork 2. And at tier 3, it is
                             masterwork 2 and deals an additional 1d6 arcane damage."
             -   name: Pathfinder
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: 100 miles
@@ -3430,8 +3590,10 @@
                             over the distance and know which direction to head."
         Tier_2: # 17 / 17
             -   name: Snowblind
+                action_type: "Ritual"
+                casting_time: "1 hour"
                 type: utility
-                cost: 1
+                cost: 2
                 range: self
                 radius: 1 mile
                 duration: 1 hour
@@ -3441,9 +3603,11 @@
                 description: "A snowstorm swirls around you as you lift your focus aloft. The snows
                     are incredibly heavy, and quickly cause the terrain to become difficult for everyone but
                     your party, and light to become low."
+                upcast: "You are able to spend ten minutes to reduce the cost of this spell by 1."
             -   name: Wall of Thorns
+                action_type: "Action"
                 type: aoe damage
-                cost: 1
+                cost: 2
                 range: 60
                 duration: 1 day
                 requirements:
@@ -3470,6 +3634,7 @@
                         - hindered
                     save: null
             -   name: Maelstrom # Druid 
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: concentration
@@ -3493,6 +3658,7 @@
                         - hindered
                     save: null
             -   name: Lightning Strike # Druid
+                action_type: "Action"
                 type: damage
                 cost: 2
                 duration: instantaneous
@@ -3517,6 +3683,7 @@
                     tier_2: 6d6 #(21 + 7f + 4inf = 32)
                     tier_3: 7d6 #(24.5 + 10.5f + 5 inf = 40)
             -   name: Orb of Fire
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 range: touch
@@ -3543,8 +3710,9 @@
                         - burning
                     save: null
             -   name: Columns of Ice
+                action_type: "Offhand Action"
                 type: utility
-                cost: 1
+                cost: 2
                 range: 60
                 duration: 1 day
                 requirements:
@@ -3575,6 +3743,7 @@
                 #             - prone
                 #         save: null
             -   name: Elemental Form
+                action_type: "Offhand Action"
                 type: transformation
                 cost: 2
                 range: self
@@ -3594,6 +3763,7 @@
                     tier_2: Elemental
                     tier_3: Force of Nature
             -   name: Grant Elemental Resistance
+                action_type: "Offhand Action"
                 type: buff
                 cost: 2
                 duration: 1 hour
@@ -3612,6 +3782,7 @@
                         - "elemental resistance"
                     save: null
             -   name: Wings
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 duration: 1 day
@@ -3625,6 +3796,7 @@
                             is equal to twice your normal movement."
                 upcast: "If you spend ten minutes casting this spell, you are able to perform the feat using only a single action point."
             -   name: Magnetic
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 range: 30
@@ -3642,6 +3814,7 @@
                             fifteen feet towards the magnet on failure, or fly to the magnet if they roll
                             below a five, taking 1d6 damage per five feet that they are carried."
             -   name: Call of the Moon
+                action_type: "Offhand Action"
                 type: transformation
                 cost: 2
                 range: 60
@@ -3662,6 +3835,7 @@
                 summoned_creature: 
                     all_tiers: Werewolf
             -   name: Thunderstep # Movement - Explosive Teleport
+                action_type: "Offhand Action"
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -3679,6 +3853,7 @@
                     tier_2: 4d4
                     tier_3: 6d4
             -   name: Bilgolf's Massive Ordinance Bear Blast
+                action_type: "Action"
                 type: summoning
                 cost: 2
                 duration: instantaneous
@@ -3704,6 +3879,7 @@
                     tier_2: Dire Bear
                     tier_3: Ursa
             -   name: Sticky
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 day
@@ -3722,6 +3898,7 @@
                             duration and has a cure time of six seconds. 
                             Through another casting of this spell, you are able to make a solvent to remove the adhesive."
             -   name: Ward of Hearing and Sight
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: touch
@@ -3737,6 +3914,7 @@
                             magic or beings also in the ethereal plane."
                 upcast: If you spend an additional action point, you may increase the length of the spell to 1 week.
             -   name: Nature's Fury
+                action_type: "Action"
                 type: buff
                 cost: 1
                 duration: 5
@@ -3757,6 +3935,7 @@
                         - physical resistance
                     save: null
             -   name: Shape Stone
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -3771,6 +3950,7 @@
                             to shape metal, you may be asked to make a check by your Grand Poohbah."
         Tier_3: # 8 / 8
             -   name: Prison of Ice #Druid
+                action_type: "Action"
                 type: aoe damage
                 cost: 3
                 range: self
@@ -3794,6 +3974,7 @@
                     conditions:
                         - frozen
             -   name: Awaken
+                action_type: "Ritual"
                 type: utility
                 cost: 3
                 duration: infinite
@@ -3813,6 +3994,7 @@
                             of the divine. At the end of the ritual, the animal is sentient
                             and gains the ability of human speech."
             -   name: Bountiful Harvest
+                action_type: "Ritual"
                 type: utility
                 cost: 2
                 range: self
@@ -3832,6 +4014,7 @@
                             level plus your inner fire. This health lasts for 24 hours.
                             Bountiful Harvest may be used at most once per day."
             -   name: Stormlord
+                action_type: "Ritual"
                 type: utility
                 cost: 3
                 range: self
@@ -3846,6 +4029,7 @@
                             any other phenomena you wish. You are able to control the weather to 
                             accomplish a specific task. The weather does not change back when concentration is broken."
             -   name: Starfall # Druid
+                action_type: "Action"
                 type: aoe damage
                 cost: 3
                 range: 300
@@ -3864,6 +4048,7 @@
                                 control of the spell, and only 1d4 meteors fall from the sky. On success, call down all four meteors.
                                 The fallen stars deal damage to all enemies in their radius. Enemies can be damaged by at most one meteor."                
             -   name: Realm Walker
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 range: 30
@@ -3877,6 +4062,7 @@
                             open a portal to it. If you have not visited a realm or location,
                             roll a check with your Poohbah to determine where the portal lets out."
             -   name: Perfect Foresight
+                action_type: "Action"
                 type: utility
                 cost: 2
                 range: self
@@ -3892,6 +4078,7 @@
                             During the spell's duration, change one failed roll to a success or
                             one successful roll to a failure."
             -   name: Ascended State
+                action_type: "Offhand Action"
                 type: buff
                 duration: 10
                 cost: 3
@@ -3957,6 +4144,7 @@
     spells:
         Tier_1: # 27 / 27
             -   name: Beam of Light # Cleric
+                action_type: "Action"
                 type: damage
                 cost: 0
                 duration: instantaneous
@@ -3964,7 +4152,7 @@
                 description: "As raise your holy symbol, a blinding beam of radiance streaks towards your target."
                 effect: 
                     type: debuff
-                    description: "On a critical hit, your target is Blinded until the end of their next turn."
+                    description: "If you roll a 6 on any of the dice for this attack, your target is Blinded until the end of their next turn."
                     conditions:
                         - blinded
                     save: null
@@ -3978,6 +4166,7 @@
                     tier_3: 3d6 #(10.5 + 10.5f = 21)
                 upcast: "For each additional action point spent on this spell, deal an additional dice of damage."
             -   name: Fiery Rebuke # Cleric
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: concentration
@@ -3994,6 +4183,7 @@
                 radius: 15
                 upcast: "For each additional action point spent on this spell, increase its radius by 10 feet."
             -   name: Block Attack
+                action_type: "Reaction"
                 type: buff
                 cost: 1
                 duration: instantaneous
@@ -4004,13 +4194,13 @@
                 description: "Your holy symbol blazes and a shimmering barrier materializes between an attack and its target."
                 effect:
                     type: buff
-                    description: "As a reaction, add your inner fire to a creature's evasion. If the blow lands, it deals half damage.
-                                If it is glancing, it instead misses entirely."
+                    description: "As a reaction, force an attacking enemy to make a spell power save. On failure, their attack misses.
+                                    On success, it deals half damage."
                     conditions:
                         - custom
                     save: null
-                action_type: Reaction
             -   name: Ward of Protection
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: 1 hour
@@ -4022,14 +4212,15 @@
                             As you pray, a ward of light shimmers over their heart."
                 effect: 
                     description: "For the spell's duration, whenever they are attacked, the ward flares
-                                with light, granting them +3 evasion."
+                                with light, granting them +2 armor."
                     type: buff
                     conditions:
                         - custom
                     save: null
             -   name: Divine Resonance
+                action_type: "Offhand Action"
                 type: aoe debuff
-                cost: 1
+                cost: 2
                 duration: save
                 range: self
                 radius: 60
@@ -4044,6 +4235,7 @@
                         - staggered
                     save: null
             -   name: Detect Evil
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 10
@@ -4056,6 +4248,7 @@
                 by an aura of darkness in your vision, while good creatures with an aura of light. The definition of good and evil corresponds
                 to the deity that you worship."
             -   name: Purification
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4067,6 +4260,7 @@
                 heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour. Purification can be used on 
                 a person to remove a status effect or to render a curse innocuous for one day."
             -   name: Mend
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: instantaneous
@@ -4077,6 +4271,7 @@
                 description: "Your hands glow as you magically mend small dents, dings, scratches, and tears on an item you are touching."
                 upcast: "You may spend an action point on this spell to increase it's power, mending larger items such as broken walls, wheels, or armor."
             -   name: Holy Light
+                action_type: "Offhand Action"
                 type: aoe debuff
                 cost: 1
                 duration: concentration
@@ -4094,6 +4289,7 @@
                         - staggered
                     save: null
             -   name: Make Habitable
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: concentration
@@ -4107,6 +4303,7 @@
                             the area within the spell's radius becomes pleasant and habitable. Snow becomes warm to the touch, rain
                             ceases to fall, and puddles instantly evaporate."
             -   name: Prayer of Healing
+                action_type: "Offhand Action"
                 type: healing
                 cost: 1
                 duration: instantaneous
@@ -4122,6 +4319,7 @@
                     tier_2: 4d4
                     tier_3: 4d10
             -   name: Spare
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: instantaneous
@@ -4133,6 +4331,7 @@
                             shines about their form, and they are immediately stabilized. They remain unconscious, 
                             but no longer need to make Death Coin flips and their health returns to zero."
             -   name: Guardian Blade
+                action_type: "Offhand Action"
                 type: damage
                 cost: 1
                 duration: concentration
@@ -4149,6 +4348,7 @@
                     tier_2: 4d6 
                     tier_3: 5d6
             -   name: Sap Life # Cleric and Warlock
+                action_type: "Action"
                 type: damage
                 cost: 1
                 duration: instantaneous
@@ -4171,6 +4371,7 @@
                     tier_3: 5d4 #(10.5 + 10.5f = 21)
                 upcast: "For each additional action point, deal an additional dice of damage."
             -   name: Delayed Heal
+                action_type: "Offhand Action"
                 type: healing
                 cost: 1
                 duration: 1 hour
@@ -4187,6 +4388,7 @@
                     tier_2: 2d6
                     tier_3: 4d6
             -   name: Compelled Truth
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 duration: save
@@ -4202,6 +4404,7 @@
                         - "custom"
                     save: "The spell's victim may re-attempt their save once per hour."
             -   name: Enlarge
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: 3
@@ -4217,6 +4420,7 @@
                         - enlarged
                     save: "Unwilling targets may repeat their save at the end of each of their turns or once every five minutes when out of combat."
             -   name: Forget Ability
+                action_type: "Action"
                 type: debuff
                 cost: 1
                 duration: concentration
@@ -4232,6 +4436,7 @@
                         - "custom"
                     save: "The spell's victim may repeat their save at the end of each turn or once every ten minutes when out of combat."
             -   name: Hold Weapon
+                action_type: "Reaction"
                 type: debuff
                 cost: 0
                 duration: concentration
@@ -4248,6 +4453,7 @@
                         - "custom"
                     save: null 
             -   name: Share Sense
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: concentration
@@ -4258,6 +4464,7 @@
                 description: "As your fingertips make contact, a sacred connection forms, allowing you to borrow the senses
                             of another. For the spell's duration, you are able to meditate to share in another's experiences."
             -   name: Slow
+                action_type: "Action"
                 type: debuff
                 cost: 1
                 duration: save
@@ -4275,6 +4482,7 @@
                         - slowed
                     save: "The spell's victim may repeat its save at the end of each of its turns or once every five minutes when out of combat."
             -   name: Identify 
+                action_type: "Offhand Action"
                 type: utility
                 duration: instantaneous
                 casting_time: 10 minutes
@@ -4291,6 +4499,7 @@
             #Critical Aid:
             #    when an ally rolls one below their critical hit target, declare that the attack was a critical hit. Or, if an ally rolls a critical hit, allow them to add an extra 2d6 + your INF damage.
             -   name: Blind
+                action_type: "Action"
                 type: debuff
                 cost: 1
                 duration: 3
@@ -4308,6 +4517,7 @@
             #Careful Retreat: Move without provoking opportunity attacks.
             #Sustained Heal: (orb)
             -   name: Haste
+                action_type: "Action"
                 type: buff
                 cost: 1
                 duration: 3
@@ -4325,6 +4535,7 @@
                         - hastened
                     save: null
             -   name: Message
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -4339,6 +4550,7 @@
                 to 25 words, regardless of distance. The creature then has
                 sixty seconds to respond to you, also with 25 words."
             -   name: Feign Death
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -4353,6 +4565,7 @@
                             they view themselves from above as though disembodied. Whenever you will it, they return to their bodies, 
                             good as new."
             -   name: Bind
+                action_type: "Action"
                 type: debuff
                 cost: 1
                 range: 30
@@ -4371,6 +4584,7 @@
                 upcast: "For each additional action point spent on this spell, you may attempt to bind five more creatures."
         Tier_2: # 17 / 17
             -   name: Leap of Faith
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4382,6 +4596,7 @@
                             it is instead solid and safe. In this way you can walk atop water, molten earth, or even across 
                             thin air. This spell continues until you lose concentration or until you have moved 300 feet."
             -   name: Excoriating Beam # Cleric
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -4406,6 +4621,7 @@
                 upcast: "You may spend an additional action point on this spell to allow it to pass through obejcts
                         with a width up to five feet."
             -   name: Dispel Magic
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1
@@ -4417,6 +4633,7 @@
                             reverse is of a higher tier, a check must be made as defined by the Grand Poohbah.
                             Dispel magic does not heal damage or repair magically damaged objects."
             -   name: Speak Tongues
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -4427,6 +4644,7 @@
                 description: "Your deity touches your tongue and allows you
                     to communicate its word to others. You are able to speak and understand any language for the spell's duration."
             -   name: Mass Heal
+                action_type: "Offhand Action"
                 type: aoe healing
                 cost: 2
                 range: self 
@@ -4443,6 +4661,7 @@
                     tier_2: 4d4
                     tier_3: 4d10
             -   name: Hallow
+                action_type: "Ritual"
                 type: utility
                 cost: 1
                 range: self
@@ -4458,6 +4677,7 @@
                 any sleep taken within the radius passes as though it was in a bed. Further, perception checks made
                 within the radius are at advantage."
             -   name: Speak with the Dead #REMOVE FROM BARD
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: touch
@@ -4477,6 +4697,7 @@
                             on a given creature exactly once."
                 upcast: You can spend an additional action point to ask five questions of the corpse.
             -   name: Death Ward
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: touch
@@ -4494,6 +4715,7 @@
                             Use the ash to trace a holy glyph on the brow of an ally. The next attack that would
                             have dropped them to zero health is negated."
             -   name: Scry # Wizard spell
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: infinite
@@ -4515,6 +4737,7 @@
                 upcast: "You may spend an additional action point to allow sound to transfer through the spell 
                         even if the recipient doesn't know you are watching them."
             -   name: Town Portal
+                action_type: "Ritual"
                 type: utility
                 cost: 2
                 duration: instantaneous
@@ -4529,6 +4752,7 @@
                 you may perform a ritual to open a door to that location, regardless of distance. You may mark at most one building per town
                 in this way."
             -   name: Truesight
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: touch
@@ -4544,6 +4768,7 @@
                         - truesight
                     save: null
             -   name: Silence
+                action_type: "Offhand Action"
                 type: aoe debuff
                 cost: 1
                 duration: concentration
@@ -4563,6 +4788,7 @@
                 range: self
                 radius: 50
             -   name: Guardians of Faith # Cleric 
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 requirements:
@@ -4585,6 +4811,7 @@
                     tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
                     tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             -   name: Banish Undead # Rename
+                action_type: "Offhand Action"
                 type: aoe debuff
                 cost: 1
                 requirements:
@@ -4603,6 +4830,7 @@
                         - frightened 
                     save: "The spell's victims may repeat their save at the end of each turn or once every ten minutes when out of combat."
             -   name: Commune # Utility - Talk to Patron
+                action_type: "Ritual"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4616,6 +4844,7 @@
                             one question, which your patron may choose to answer or not.
                             Commune can be attempted once per day."
             -   name: Remove Curse
+                action_type: "Ritual"
                 type: utility
                 range: touch
                 cost: 2
@@ -4635,6 +4864,7 @@
                             to make a check by the Grand Poohbah. If a fiend placed the curse, they may appear to try 
                             to reclaim their prize."
             -   name: Sphere of Encasement
+                action_type: "Action"
                 type: utility
                 cost: 2
                 range: 60
@@ -4665,6 +4895,7 @@
             #         tier_2: bar
             #         tier_3: baz
             -   name: Resurrection
+                action_type: "Ritual"
                 type: utility
                 cost: 3
                 range: touch 
@@ -4698,6 +4929,7 @@
             #     summoned_creature: 
             #         all_tiers: Celestial Guardian
             -   name: Saint's Blessing
+                action_type: "Offhand Action"
                 type: buff
                 cost: 2
                 range: touch
@@ -4715,6 +4947,7 @@
                         - immune
                     save: null
             -   name: Holy Weapons
+                action_type: "Offhand Action"
                 type: aoe buff
                 cost: 2
                 range: self
@@ -4732,6 +4965,7 @@
                         - burning
                     save: null
             -   name: Pillar of Dawn # Cleric
+                action_type: "Action"
                 type: aoe damage
                 cost: 3
                 range: 1 mile
@@ -4755,6 +4989,7 @@
                         - blinded 
                     save: "The spell's victims may repeat their save at the end of each turn."
             -   name: Avatar
+                action_type: "Ritual"
                 type: utility
                 cost: 3
                 range: infinite 
@@ -4770,6 +5005,7 @@
                             control the copy as though it is you. The copy has full health and action points, and knows your abilities. 
                             It persists until your real body loses concentration on it, or until it falls to zero health and disappears."
             -   name: Mantle of Dawn
+                action_type: "Offhand Action"
                 type: aoe buff
                 cost: 2
                 requirements:
@@ -4832,6 +5068,7 @@
     spells:
         Tier_1: # 27 / 27 Edited 27 / 27
             -   name: Firecrackers
+                action_type: "Offhand Action"
                 type: aoe debuff
                 cost: 1
                 duration: instantaneous
@@ -4854,6 +5091,7 @@
                         - distracted
                     save: null
             -   name: Summoning Spell
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: concentration
@@ -4869,6 +5107,7 @@
                             If the object is restrained or protected by magical means, this spell may fail, or the Poohbah
                             may ask you to make a check."
             -   name: Candlelight
+                action_type: "Offhand Action"
                 type: utility
                 cost: 0
                 duration: concentration
@@ -4888,6 +5127,7 @@
                             commands, moving as you instruct it within a radius centered on you. If it leaves the radius, it continues to hover, but 
                             cannot obey you. The candle gives off light within a thirty foot radius."
             -   name: Unseen Hand
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4900,6 +5140,7 @@
                             and may not leave the spell's radius. Its strength score is equivalent to your
                             inner fire modifier."
             -   name: Conjure Illusion
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4920,6 +5161,7 @@
                         and your triggers and actions must be able to be described in a handful of words. Additionally, you may spend
                         an action point to increase theh size of the illusion to that of a merchant's stall or smaller.
             -   name: Detect Magic
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -4932,6 +5174,7 @@
                 range: self
                 radius: 100
             -   name: Arcane Armor
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 range: 30
@@ -4950,6 +5193,7 @@
                         - custom
                     save: null
             -   name: Eat Slugs
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 0
                 duration: instantaneous
@@ -4967,6 +5211,7 @@
                         - staggered
                     save: null
             -   name: Flare # Wizard
+                action_type: "Action"
                 type: damage
                 cost: 0
                 duration: instantaneous
@@ -4982,7 +5227,7 @@
                             The flare burns as brightly as daylight and leaves a lingering trail behind it."
                 effect:
                     type: debuff
-                    description: "Your target becomes Vulnerable until the end of their next turn. On a critical hit, they begin Burning."
+                    description: "Your target becomes Vulnerable until the end of their next turn. If you roll a 6 on any of the dice for this attack, your target begins Burning."
                     conditions:
                         - vulnerable
                         - burning
@@ -4993,6 +5238,7 @@
                     tier_2: 2d6 #(7 + 7f = 14)
                     tier_3: 3d6 #(10.5 + 10.5f = 21)
             -   name: Arcane Blow # Wizard
+                action_type: "Action"
                 type: damage
                 cost: 1
                 duration: instantaneous
@@ -5009,6 +5255,7 @@
                     tier_2: 4d6 #(14 + 7f = 21)
                     tier_3: 5d6 #(17.5 + 10.5f = 28)
             -   name: Drain # Wizard
+                action_type: "Action"
                 type: "damage"
                 cost: 0
                 duration: instantaneous
@@ -5020,7 +5267,7 @@
                                 it to you."
                 effect:
                     type: debuff 
-                    description: "If your attack is not glancing, regain one action point."
+                    description: "If you roll a 4 on any dice for this attack, regain one action point."
                     conditions:
                         - custom
                     save: null
@@ -5031,6 +5278,7 @@
                     tier_2: 2d4 #(5 + 7f = 12.5)
                     tier_3: 3d4 #(13 + 10.5f = 23.5)
             -   name: Acrid Mist # Wizard
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: 3
@@ -5054,6 +5302,7 @@
                     tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
                     tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
             -   name: Jet of Frost #Wizard
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: instantaneous
@@ -5075,6 +5324,7 @@
                         - slowed
                     save: null
             -   name: Pindigae's Arcane Orbs # Wizard
+                action_type: "Action"
                 type: multi-attack damage
                 cost: 1
                 duration: instantaneous
@@ -5092,6 +5342,7 @@
                     tier_3: "1d8" #(4.5 + 10.5f + 5inf x 2 = 16.5 x 2 = 33) 
                 upcast: "For each additional action point spent on this spell, fire an additional orb."
             -   name: Become Slime
+                action_type: "Action"
                 type: transformation
                 cost: 1
                 requirements:
@@ -5113,6 +5364,7 @@
                     tier_2: Green Slime
                     tier_3: Black Slime
             -   name: Bubble of Air
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: 1 hour
@@ -5132,6 +5384,7 @@
                     save: null
                 upcast: "You may spend an additional action point to create six additional bubbles of air."
             -   name: Mirror Image
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 duration: 1
@@ -5145,7 +5398,7 @@
                     Summon a number of false images of yourself equal to your spell power at any location you can see in 
                     the reflection.
                     These mirror images copy your actions exactly, but are incapable of interacting
-                    with the world in any way. Each has a single hit point, and shares your evasion."
+                    with the world in any way. Each has a single hit point."
                 effect:
                     type: debuff
                     description: "On any turn in which an enemy wants to attack you, they must make an spell power save or become
@@ -5154,6 +5407,7 @@
                         - fixated
                     save: null
             -   name: Animate Weapon
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -5168,6 +5422,7 @@
                             an action. If the weapon leaves the spell's radius, you may no longer command it, but it remains hovering
                             until the spell ends. Use your inner fire for any checks or attacks made by the weapon."
             -   name: Mage Charge # Wizard
+                action_type: "Action"
                 type: aoe damage
                 cost: 1
                 duration: instantaneous
@@ -5193,6 +5448,7 @@
                     save: null
                 upcast: "For each additional action point spent on this spell, travel 15 feet further and do 1d4 additional damage."  
             -   name: Jelly Arms
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 duration: save
@@ -5212,6 +5468,7 @@
                         - vulnerable
                     save: null
             -   name: Bagabone's Nightcap
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 duration: save
@@ -5227,6 +5484,7 @@
                         - incapacitated
                     save: "The spell's victims may repeat their save at the end of each of their turns or once every hour when out of combat. They instantly succeed if they are injured."
             -   name: Featherfall
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -5239,6 +5497,7 @@
                 speed to that of a feather."
                 upcast: You may spend an additional action point to use this spell on up to five additonal objects or creatures.
             -   name: Message
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -5253,6 +5512,7 @@
                 to 25 words, regardless of distance. The creature then has
                 sixty seconds to respond to you, also with 25 words."
             -   name: Archibold's Arcane Automaton
+                action_type: "Action"
                 type: summoning
                 cost: 1
                 duration: 1 day
@@ -5269,6 +5529,7 @@
                     tier_2: Clockwork Soldier 
                     tier_3: Arcane Automaton
             -   name: Become Ethereal
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: instantaneous
@@ -5286,6 +5547,7 @@
                         - ethereal
                     save: null
             -   name: Grow or Shrink
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: concentration
@@ -5304,6 +5566,7 @@
                         - shrunk
                     save: "Affected creatures may repeat their saving throw at the end of each of their turns or once every ten minutes when out of combat."
             -   name: Identify 
+                action_type: "Offhand Action"
                 type: utility
                 duration: instantaneous
                 casting_time: 10 minutes
@@ -5334,6 +5597,7 @@
                 #     upcast: If you spend an additional action point, you may increase the length of the spell to 1 week.
         Tier_2: # 17 / 17
             -   name: Statue #Update to turn enemies into statues.
+                action_type: "Action"
                 type: debuff
                 cost: 1
                 duration: save
@@ -5350,6 +5614,7 @@
                         - frozen
                     save: "Affected creatures can re-attempt their saving throw at the end of each of their turns."
             -   name: Door Step
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -5360,6 +5625,7 @@
                 description: "As you place your hand on a door-handle or walk through an archway, magic flows through you,
                             opening a portal to another door within range."
             -   name: Invisibility
+                action_type: "Offhand Action"
                 type: buff
                 cost: 1
                 duration: concentration
@@ -5375,6 +5641,7 @@
                         - invisible
                     save: null
             -   name: Scry # Wizard spell
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 range: infinite
@@ -5394,6 +5661,7 @@
                     are able to spend one action point to tether your scrying spell to a nearby reflective object,
                     allowing you to communicate with one another."
             -   name: Platform
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -5405,6 +5673,7 @@
                 description: "With a twist of your hand, a circular disk of purple light appears at a point of your choosing.
                             The disk is one foot thick and is formed of solid magic. It is capable of holding any amount of weight."
             -   name: Dispel Magic
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: 1
@@ -5416,6 +5685,7 @@
                             reverse is of a higher tier, a check must be made as defined by the Grand Poohbah.
                             Dispel magic does not heal damage or repair magically damaged objects."
             -   name: Ice Spear # Wizard
+                action_type: "Action"
                 type: damage
                 cost: 2
                 duration: instantaneous
@@ -5432,6 +5702,7 @@
                     tier_3: 7d6 #(24.5 + 10.5f + 5 inf = 40)
                 upcast: "You may spend an additional action point on this spell to add 2d6 damage."
             -   name: Fireball # Wizard 
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -5457,12 +5728,12 @@
                     tier_2: 6d4 #(15 + 7f + 4inf x 2 = 26 each x2 = 52 total)
                     tier_3: 8d4 #(20 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             -   name: Octahedral Barrier
+                action_type: "Reaction"
                 cost: 2
                 type: aoe buff
                 duration: instantaneous
                 range: self
                 radius: 15
-                action_type: Reaction
                 requirements:
                     movement: true 
                     verbal: true 
@@ -5474,6 +5745,7 @@
                         - custom
                     save: null
             -   name: Cage
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 duration: concentration
@@ -5487,6 +5759,7 @@
                 description: "Bars of energy lance towards the sky in a radius around you, visible only to those on the inside.
                             Anyone may enter the spell's radius, but none may leave until it ends."
             -   name: Pocket Dimension
+                action_type: "Offhand Action"
                 type: utility
                 cost: 1
                 duration: concentration
@@ -5500,6 +5773,7 @@
                     is a 5ft cube which persists over time, allowing you to store objects within it. In a given day,
                     the pocket dimension holds enough oxygen to sustain one average sized creature for one hour."
             -   name: Clone
+                action_type: "Ritual"
                 type: utility
                 cost: 3
                 duration: infinite
@@ -5528,6 +5802,7 @@
                             If the clone reaches zero hit points, it is reduced to dust.
                             You may command at most two such clones at any given time."
             -   name: Polymorph
+                action_type: "Action" # Note below allows offhand self-cast
                 type: debuff
                 cost: 2
                 duration: infinite
@@ -5543,9 +5818,10 @@
                                 You are able to end the effects of a casting of Polymorph at any time as an action."
                     conditions: 
                         - transformed
-                    save: "The spell's victim may repeat their save once per day."
+                    save: "The spell's victim may repeat their save once per day. If you cast this spell on yourself, it may be cast as an Offhand Action."
                 upcast: "Spend one additional action point on the spell to increase its save to once per week."
             -   name: Chain Lightning # Wizard 
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -5564,6 +5840,7 @@
                     tier_2: "2d4" # (5 + 7f + 4inf = 16 each x 3 jumps = 48 )
                     tier_3: "2d6" # (7 + 10.5f + 5inf = 22.5 each x 3 jumps = 67.5 )
             -   name: Rainbows # Wizard 
+                action_type: "Action"
                 type: aoe damage
                 cost: 2
                 range: 100
@@ -5588,6 +5865,7 @@
                     tier_2: 3d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
                     tier_3: 4d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             -   name: Igna Bokak
+                action_type: "Action"
                 type: summoning
                 cost: 2
                 duration: 3
@@ -5606,6 +5884,7 @@
                     tier_2: 2d6 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
                     tier_3: 3d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             -   name: M&M's Beckoning Call
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 requirements:
@@ -5618,9 +5897,10 @@
                 description: "Lay your hands on a willing creature and imbue them with magic of recall.
                             One time over the spell's duration, you are able to instantly teleport them to a space 
                             adjacent to you, regardless of distance. This teleportation has the same restrictions as
-                            any other and may be blocked by certain spells or abilities."
+                            any other, may be blocked by certain spells or abilities, and is performed as a Free Action."
         Tier_3: # 8 / 8
             -   name: Gate
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 duration: concentration
@@ -5635,6 +5915,7 @@
                     gate, or else make an intelligence check to target somewhere
                     you have not been. The target may be another of the Realms."
             -   name: Fly
+                action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 duration: concentration
@@ -5647,6 +5928,7 @@
                                 equal to twice their normal walking speed."
                 upcast: "For each additional action point spent, grant four more creatures the power of flight."
             -   name: Invulnerability
+                action_type: "Offhand Action"
                 type: buff
                 cost: 2
                 duration: 1
@@ -5664,6 +5946,7 @@
                         - invincible
                     save: null
             -   name: Tri-beam # Wizard
+                action_type: "Action"
                 type: multi-attack damage
                 cost: 3
                 range: 100 
@@ -5698,6 +5981,7 @@
                     multi_attack: 3
                     tier_3: "6d6"
             -   name: Stop Time
+                action_type: "Action"
                 type: aoe debuff
                 cost: 3
                 duration: 3
@@ -5721,6 +6005,7 @@
                     save: "Effected creatures can remake their save at the end of each of your turns or once every five minutes when out of combat."
                 upcast: "You may spend an additional action point to increase the spell's radius to 300 feet."
             -   name: Anti-Magic Ring
+                action_type: "Action"
                 type: aoe debuff
                 cost: 3
                 range: self
@@ -5730,8 +6015,8 @@
                     movement: true
                 duration: concentration
                 description: "With the weight of purpose, begin an arcane enchantment which
-                nullifies nearby magic. This including spells, magical items, and potions. For as long as you concentrate on the spell, no magic
-                may be performed or partaken of within its radius."
+                    nullifies nearby magic. This including spells, magical items, and potions. For as long as you concentrate on the spell, no magic
+                    may be performed or partaken of within its radius."
                 effect:
                     type: debuff
                     description: "Magically sustained or animated creatures within the spell are considered Vulnerable."
@@ -5739,6 +6024,7 @@
                         - vulnerable 
                     save: null
             -   name: Black Hole # Wizard
+                action_type: "Action"
                 type: aoe damage
                 cost: 3
                 requirements:
@@ -5769,6 +6055,7 @@
                     damage_type: blunt
                     tier_3: "10d6"
             -   name: Reverse Gravity
+                action_type: "Action"
                 cost: 3
                 type: aoe damage
                 duration: concentration
@@ -5843,6 +6130,7 @@
     spells:
         Tier_1: # 26 / 27
             -   name: Mind Whip # Warlock
+                action_type: Action
                 type: damage
                 cost: 0
                 duration: "instantaneous"
@@ -5858,11 +6146,12 @@
                     tier_3: 3d6 #(10.5 + 10.5f = 21)
                 effect:
                     type: debuff 
-                    description: "If you score a critical hit, your target is Stunned."
+                    description: "If you roll a 6 on any of the dice for this attack, your target is Stunned."
                     conditions:
                         - stunned
                     save: null
             -   name: Eldritch Blast # Warlock
+                action_type: Action
                 type: damage
                 cost: 0
                 duration: "instantaneous"
@@ -5883,6 +6172,7 @@
                         - rot
                     save: null
             -   name: Curse 
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: concentration
@@ -5901,6 +6191,7 @@
                         - custom
                     save: null
             -   name: Hexblade
+                action_type: Offhand Action
                 type: buff
                 cost: 1
                 duration: 1 hour
@@ -5916,6 +6207,7 @@
                         - infused
                     save: null
             -   name: Sap Life # Cleric and Warlock
+                action_type: Action
                 type: damage
                 cost: 1
                 duration: instantaneous
@@ -5938,6 +6230,7 @@
                     tier_3: 5d4 #(10.5 + 10.5f = 21)
                 upcast: "For each additional action point, deal an additional dice of damage."
             -   name: Tide of Shadow #Warlock
+                action_type: Action
                 type: aoe damage
                 cost: 1
                 duration: "instantaneous"
@@ -5959,16 +6252,18 @@
                     tier_2: 2d4 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
                     tier_3: 3d4 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
             -   name: Telepathy
+                action_type: Passive
                 type: utility
                 cost: 0
                 range: 60
-                duration: 1
+                duration: passive
                 requirements: 
                     verbal: false
                     movement: false 
                 description: "You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, 
                     allowing for two-way communication."
             -   name: Read Mind
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -5982,6 +6277,7 @@
                     deeper. If you delve deeper, the creature must make a spell power save or
                     have their mind read. On success, they know the spell was cast."
             -   name: Summon Darkness
+                action_type: Offhand Action
                 type: aoe debuff
                 cost: 1
                 duration: concentration
@@ -5998,6 +6294,7 @@
                         - blinded
                     save: null
             -   name: Darksight # Utility
+                action_type: Offhand Action
                 type: buff
                 cost: 0
                 duration: concentration 
@@ -6013,6 +6310,7 @@
                         - darkvision
                     save: null
             -   name: Embed Eye # Utility
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: "1 day"
@@ -6023,6 +6321,7 @@
                 description: "Embed a magical eye in a non-living material. The eye has 1 hit point, but is ethereal. While the eye is closed, it is invisible. For the spell's duration, you can concentrate to cause the eye to open and to see through it."
                 upcast: "You can spend one additional action point to cause the eye to last for 1 week, or two to make it last for one month." 
             -   name: Summon Familiar # Utility
+                action_type: Action
                 type: summoning
                 cost: 2
                 casting_time: 10 minutes
@@ -6037,8 +6336,9 @@
                     If you have the spell Embed Eye, you may use it to add an eye to your familiar. If your familiar is de-summoned or killed, 
                     you may cast this spell again to bring it back. You may spend one action point to instantly teleport your familiar to yourself, 
                     but it drops whatever it is holding. Whenever you re-summon your familiar, you are able to change its form. Your familiar 
-                    has one hit point and evasion equal to your spell power."
+                    has a number of hit points equal to the sum of your inner fire and expertise."
             -   name: Haunt # Utility - Haunt an enemy's dreams. When they sleep, you know where they are, and can try to force them to answer one question.
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1 day
@@ -6050,6 +6350,7 @@
                             you know exactly where they are, can manipulate their dreams, and can force them to answer one question truthfully.
                             They do not gain any benefits from sleep."
             -   name: Become Ethereal
+                action_type: Offhand Action
                 type: buff
                 cost: 1
                 duration: instantaneous
@@ -6067,6 +6368,7 @@
                         - ethereal
                     save: null
             -   name: Convince # Utility - Cha save or they treat you as friendly
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: concentration
@@ -6082,6 +6384,7 @@
                     type: debuff
                     save: "The spell's victim may reattempt their save at the end of each of their turns or once every ten minutes when out of combat."
             -   name: Echoes of the Past # Utility - See what happened in a location a number of minutes ago equal to 10 * INF or 1 hour * INF if upcast
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1
@@ -6094,6 +6397,7 @@
                             radius over the past day."
                 upcast: "You may spend an additional action point to look back within the past week."
             -   name: Frenzy # Buff - Ally
+                action_type: Offhand Action
                 type: buff
                 cost: 1
                 duration: 1
@@ -6109,6 +6413,7 @@
                     type: buff
                     save: null
             -   name: Mental Assault # Debuff
+                action_type: Offhand Action
                 type: debuff
                 cost: 0
                 duration: concentration
@@ -6124,6 +6429,7 @@
                         - distracted
                     save: null
             -   name: Shadow Ward # Debuff - Enemies that come within 10ft
+                action_type: Offhand Action
                 type: aoe debuff
                 cost: 1
                 duration: 3
@@ -6140,6 +6446,7 @@
                         - blinded
                     save: null
             -   name: Disguise
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -6151,6 +6458,7 @@
                             of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do
                             not hold up to physical inspection."
             -   name: Isolate # Debuff - Can't recieve healing for a number of turns equal to your expertise
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: concentration
@@ -6167,6 +6475,7 @@
                     save: null
             #Strike Fear # Debuff - You appear to be a hideous monstrosity. Enemies within 30ft of you must make an SP save or be frightened.
             -   name: Raise Thrall # Tiered Summon
+                action_type: Action
                 type: summoning
                 cost: 1
                 duration: "1 day"
@@ -6182,6 +6491,7 @@
                     tier_2: "Greater Undead Thrall"
                     tier_3: "Greater Undead Thrall"
             -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1
@@ -6191,6 +6501,7 @@
                     movement: true 
                 description: "Fade into the darkness and immediately re-appear within a shadow in the spell's range. Both the start and destination of this spell must be in partial darkness."
             -   name: Beckon # Crowd Control - Create a psychic lure that beckons an enemy to immediately move half their speed in a direction (upcast to make it mass)
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: instantaneous
@@ -6207,6 +6518,7 @@
                     save: null
                 upcast: "Spend an additional action point to cause this spell to affect all enemies within a 30ft radius."
             -   name: Mire # 1d4 motes of darkness. Anyone who moves through loses half thier speed and must make an INF save or take damage and be <blank> upcast for more motes.
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 duration: 3
@@ -6224,6 +6536,7 @@
                     type: debuff
                     save: null
             -   name: Mute 
+                action_type: Offhand Action
                 type: debuff
                 cost: 0
                 range: 60
@@ -6240,8 +6553,8 @@
                     save: null
                 upcast: "You may spend an additional action point to grant the spell a radius of 30ft and target everyone within."
             -   name: Surrogate
-                type: debuff
                 action_type: Reaction
+                type: debuff
                 cost: 1
                 duration: instantaneous
                 requirements:
@@ -6259,6 +6572,7 @@
             # Empower Spell - Cleric? Make a spell stronger
         Tier_2: # 17 / 17
             -   name: Hurl Through Hell # Warlock
+                action_type: Action
                 type: damage
                 cost: 2
                 duration: "instantaneous"
@@ -6283,6 +6597,7 @@
                     tier_2: 5d8 #(17.5 + 7f + 4inf = 28.5)
                     tier_3: 6d8 #(21 + 10.5f + 5 inf = 36.5)
             -   name: Murder of Crows # Warlock 
+                action_type: Action
                 type: aoe damage
                 cost: 2
                 duration: 3
@@ -6301,6 +6616,7 @@
                     tier_2: 3d6 #(10.5 + 4inf x 2 = 14.5 each x2 = 29 total)
                     tier_3: 4d6 #(14 + 5inf x 2 = 19 each x2 = 38 total)
             -   name: Cthulian Tentacles # Warlock
+                action_type: Action
                 type: damage
                 cost: 2
                 duration: 3
@@ -6323,6 +6639,7 @@
                     save: null
                 upcast: You may spend an action point to create two additional tentacles, attacking two additional creatures in range.
             -   name: Wilting Touch # Warlock 
+                action_type: Action
                 type: damage
                 cost: 2
                 range: touch
@@ -6344,6 +6661,7 @@
                     tier_2: 6d6 #(21 + 7f + 4inf = 32)
                     tier_3: 8d6 #(24.5 + 10.5f + 5 inf = 40)
             -   name: Death Bolt # Warlock
+                action_type: Action
                 type: aoe damage
                 cost: 2
                 duration: instantaneous
@@ -6359,6 +6677,7 @@
                     tier_3: 6d6 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
             #Grim Omen # DMG over time - 3 turn curse
             -   name: Tethered Minds # Utility
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: 1 hour
@@ -6370,6 +6689,7 @@
                 description: "Tether the minds of up to eight individuals. For the spell's duration, they are able to speak telepathically regardless of distance. The effects of the spell end if a creature enters another realm."
                 upcast: You may spend an additional action point on this spell to make it last 6 hours, or two more to make it last 24 hours.
             -   name: Open Rift # Utility - Every turn something might come out. You can enter.
+                action_type: Offhand Action
                 type: utility
                 cost: 2
                 duration: 10
@@ -6381,6 +6701,7 @@
                             If you have visited the location, you are able to open the rift with no trouble. If not, roll an intelligence check 
                             with the Grand Poohbah to determine where the rift lets out. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift."     
             -   name: Eyes of Uriel # Buff - Floating eyes surround you dealing damage and taking hits
+                action_type: Offhand Action
                 type: summoning
                 cost: 2
                 duration: "1 hour"
@@ -6401,6 +6722,7 @@
                         - ethereal
                     save: null
             -   name: Crown of Chaos # Buff
+                action_type: Offhand Action
                 type: aoe debuff
                 cost: 2
                 duration: concentration
@@ -6417,6 +6739,7 @@
                         - weakened
                     save: null
             -   name: Shared Fate # Debuff
+                action_type: Offhand Action
                 type: debuff
                 cost: 1
                 range: 30
@@ -6435,6 +6758,7 @@
                         - custom
                     save: null
             -   name: Radiant Darkness # Warlock
+                action_type: Action
                 type: aoe damage
                 cost: 2
                 duration: 3
@@ -6458,6 +6782,7 @@
                         - blinded 
                     save: "Blinded creatures may reattempt their save at the end of each of their turns."
             -   name: Rebuke Spell # Counterspell - Punish enemy for successful spell casting
+                action_type: Reaction
                 type: utility
                 cost: 2
                 duration: instantaneous
@@ -6465,7 +6790,6 @@
                 requirements: 
                     verbal: false
                     movement: true 
-                action_type: Reaction
                 description: "When an enemy successfully casts a spell, force them to make a spell power save. On failure, they also suffer the effects of their spell."
             # -   name: Summon Fiend # Summon
             #     type: summoning
@@ -6481,6 +6805,7 @@
             #         tier_3: "Pronged Devil"
             #Hungering Pit # Crowd Control
             -   name: Armor of Lucien
+                action_type: Offhand Action
                 type: damage
                 cost: 1
                 duration: "1 hour"
@@ -6498,6 +6823,7 @@
                             or the spell's duration elapses, the spell ends. While the spell is active,
                             anyone who strikes you takes damage."
             -   name: Dark Citidel # Enter the abode of your patron. Buffs for sleeping there.
+                action_type: Ritual
                 type: utility
                 cost: 1
                 casting_time: 3 minutes
@@ -6513,6 +6839,7 @@
                             you must drive it out. Work with your Grand Poohbah to design your Citadel, 
                             giving it features needed by your party and relevant to your bond with your patron."
             -   name: Lift 
+                action_type: Offhand Action
                 type: debuff 
                 cost: 2 
                 range: 30
@@ -6530,6 +6857,7 @@
                         - hoisted
                     save: "The spell's victims may repeat their save at the end of each of their turns."     
             -   name: Commune # Utility - Talk to Patron
+                action_type: Offhand Action
                 type: utility
                 cost: 1
                 duration: concentration
@@ -6545,6 +6873,7 @@
             #Portal # Movement - Like the game, portal!      
         Tier_3: #8 / 8
             -   name: Sorris' Decay #Warlock
+                action_type: Action
                 type: aoe damage
                 cost: 3
                 range: 60
@@ -6567,6 +6896,7 @@
                         - rot
                     save: null
             -   name: Torugar the Many Tongued Demon # Warlock
+                action_type: Action
                 type: aoe damage
                 cost: 3
                 duration: 5
@@ -6598,6 +6928,7 @@
                         - grappled
                     save: "The spell's victims may repeat their save against being grappled as an action on their turn."
             -   name: Psychic Spear #Warlock
+                action_type: Action
                 type: damage
                 cost: 3
                 range: 100
@@ -6641,6 +6972,7 @@
                 #         but they will sow mayhem to distract anyone nearby."
                 #     summoned_creature: Gremlin
             -   name: Reclaim Soul # Reach across the divide to resurrect someone. Battle first?
+                action_type: Ritual
                 type: utility
                 cost: 3
                 duration: infinite
@@ -6674,6 +7006,7 @@
             #     summoned_creature:
             #         all_tiers: Eldritch Vessel -- give it cannons
             -   name: Dominate
+                action_type: Action
                 type: debuff
                 cost: 3
                 duration: concentration
@@ -6690,6 +7023,7 @@
                         - controlled
                     save: null
             -   name: Astral Prison
+                action_type: Ritual
                 type: utility
                 duration: until dispelled
                 cost: 5
@@ -6709,402 +7043,6 @@
                             or the omen occurs. No action taken by the bound creature may free them."
                 upcast: "By spending three more action points and using a void catalyst (10,000 gold) you can reduce
                         the casting time of this spell to 3 minutes and cast it on an unrestrained creature."
--   name: Ranger
-    recommended_stats:
-        Charisma: -2
-        Dexterity: 1
-        Inner_Fire: 1
-        Intelligence: -1
-        Perception: 2
-        Strength: 0
-    expertise: "As a Ranger, you are a master at traversing and understanding the wilderness. Add your expertise to intelligence 
-                  made to understand natural phenomena and to perception checks made when traversing the wilds or keeping watch.
-                  Additionally, add your expertise to any check made to understand a monster or its motivations and to any charisma check made with 
-                  individuals you are trying to protect from a monster."
-    health_dice: "1d8"
-    handbook:
-        -   title: Intro
-            display_title: false 
-            text: "Protectors of natural order, Rangers are masters of traversing the wilderness. 
-                   Tales of Rangers are sung in the borderlands, where the wilds crash 
-                   against civilization. Rangers silently push back against the chaos of the wilds, 
-                   protecting unwitting villagers from abberations, fiends, and wild things. 
-                   Rangers rarely stay in one place, and the area under their protection can span for hundreds of miles.
-                   This means that their relationships are few and transient, though some take an animal companion or
-                   find friendship with a local druid or wizard. Rangers are often among the first to realize 
-                   when something sinister is brewing. When they end up in an adventuring party, it is usually 
-                   because something has threatened the natural order and they believe that they can help restore it."
-        -   title: "When Adventuring"
-            display_title: true 
-            text: "Rangers are invaluable when traversing the wilderness and their knack for crafting 
-                    useful items from foraged materials makes them ideal at overcoming obstacles. 
-                    Dawnstar's Light, Flameburst Oil, and Grappler's Vines are each powerful tools
-                    at the Ranger's disposal. Likewise, a Ranger's animal companion acts as an extension of their will, 
-                    retrieving items, guarding people or locations, and otherwise aiding the Ranger and their party as they travel."                    
-        -   title: "When Socializing"
-            display_title: true 
-            text: "While rangers have a reputation as brooding figures found in the corner of the local tavern, they 
-                     command great respect from the citizens of border towns. A ranger's word carries weight, and even the 
-                     few question their expertise when it comes to monsters or monster-hunting."
-        -   title: "When in Combat"
-            display_title: true 
-            text: "Rangers are intelligent combatants who fight with precision and care. Their Analyze ability 
-                    allows them to learn their enemy before striking, gaining advantages when fighting enemies of that type.
-                    Foraged items play a key role in a Ranger's arsenal, allowing them to strike with the power of vine, or flame, or with vampiric intent. 
-                    Animal Companion serves as a fearsome allies, and a wayward goblin may find itself mauled by a bear if they dare
-                    cross a Ranger's path."    
-    rule_sections:
-        - "ranger_companion_creature"
-    skill_tree:
-        tree_path: "tmp"
-        abilities: #25 /25
-            -   name: Companion Creature
-                cost: 0
-                type: utility
-                duration: passive 
-                range: self 
-                description: "Gain a companion creature capable of aiding you both while adventuring and in combat.
-                              The rules for Ranger Companions are detailed in the Ranger section of the core rulebook."
-            -   name: Track Someone
-                type: buff
-                cost: 0
-                duration: instantaneous
-                range: self 
-                description: "If you have an item, article of clothing, or a known track from someone you wish to follow,
-                              you may provide it to your companion so that they can help you follow it."
-                effect:
-                    type: buff
-                    description: "Take advantage on the resulting tracking check. If you have used the Analyzed ability
-                                    on a creature of this type, your companion succeeds in tracking it without a check unless signs
-                                    of its passing are suppressed by magic or a natural ability."
-                    conditions:
-                        - custom 
-                    save: null
-            -   name: Deliver a Message
-                type: utility
-                cost: 1
-                duration: instantaneous
-                range: self 
-                description: "You have trained your companion to carry your words to others. If your companion knows a person and
-                                their relative location, you are able to give them a message to deliver. If it is possible, your
-                                creature will find the person and deliver the message without fail and will return with a response."
-            -   name: Scout Ahead
-                type: utility
-                cost: 1
-                duration: instantaneous
-                range: self 
-                description: "Your have trained your companion to scout ahead. Ask it to return with one piece of information
-                                and it will do its best to. Your Grand Poohbah may ask you to make a check to determine
-                                your companion's success."
-            -   name: Retrieve Something
-                type: utility
-                cost: 0
-                duration: instantaneous
-                range: 1 mile
-                description: "Your companion is able to retrieve items when you ask it to. The item must be unguarded,
-                                and your companion must know its approximate location. Additionally, whenever you use the Ranger's
-                                Infusions ability, your maximum number of infusions carried increases by one and you may add +1
-                                to the result of your foraging roll."
-            -   name: Distract Someone
-                type: debuff
-                cost: 1
-                duration: 5
-                range: 1 mile
-                radius: 50
-                description: "You have trained your companion to distract people in a non-hostile manner."
-                effect:
-                    type: debuff 
-                    description: "Order your companion to go somewhere and cause a ruckus. Any creature within the ability's radius 
-                                    must make a Spell Power save. On failure, they are Fixated on your companion, on success they are
-                                    Distracted by it."
-                    conditions:
-                        - fixated
-                        - distracted 
-                    save: "Affected creatures may repeat the save at the end of each turn."
-            -   name: Guard Something
-                type: utility
-                cost: 0
-                duration: infinite
-                range: 1 mile
-                description: "Your companion is loyal enough to guard something or someone that you care about.
-                                You may command your companion to either alert you if something occurs, or to
-                                fight to defend a person or area with all of its strength."
-                                
-            -   name: Perfect Bond
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                ability_modified: companion creature
-                description: "Over your travels, you have fostered a deep trust between yourself and your companion."
-                effect:
-                    type: buff 
-                    description: "Your companion no longer becomes panicked when injurted and no longer has to roll on the panicked table.."
-                    conditions:
-                        - custom 
-                    save: null 
-            -   name: Guard Something
-                type: utility
-                cost: 0
-                duration: infinite
-                range: 1 mile
-                description: "The time that you've spent with your companion has made you adept at working with all animals. Whenever
-                                you make a check to calm or otherwise handle an animal, add your expertise. Additionally, you are able 
-                                to communicate with creatures of all types. They do not speak to you, but you are instead able to express 
-                                simple ideas to them, and they can do the same."
-            -   name: Ranger's Weapon Training
-                passive_damage_source: true
-                cost: 0
-                type: buff 
-                range: self
-                duration: passive
-                description: "You have spent countless hours mastering the use of our weapons. Choose one of the following weapon groups.
-                                Whenever you attack with a weapon from your chosen group, add your expertise to the accuracy check. "
-                options:
-                    -   name: "Archer"
-                        description: Bow, crossbow, hand-crossbow. 
-                    -   name: "Ronin"
-                        description: Katana, twinsword, shuriken.
-                    -   name: "Nomad"
-                        description: Quarterstaff, shortspear, slingshot. 
-
-            -   name: Analyze
-                type: combat option
-                cost: 0
-                casting_time: 1 minute
-                duration: infinite
-                range: 30
-                description: "Spend a full turn watching a monster. Learn one fact of your choice about the creature, for example, what its strongest ability is."
-                effect:
-                    type: debuff 
-                    description: "Forevermore, creatures of that type are considered Analyzed when fighting you."
-                    conditions:
-                        - analyzed 
-                    save: null
-            -   name: Track
-                type: buff
-                cost: 0
-                duration: passive
-                action_type: modifies_ability
-                ability_modified: analyze 
-                range: 100
-                description: "You are adept at tracking enemies that you have analyzed."
-                effect:
-                    type: buff
-                    description: "If you have analyzed a type of enemy, take advantage on checks made to track them. By looking at the tracks 
-                                    of enemies of that type, you are able to determine how many are in their group and how long ago they passed."
-                    conditions:
-                        - custom 
-                    save: null
-            -   name: Resistant
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                description: "You are able to anticipate even the most deadly attacks from an analyzed creature."
-                effect:
-                    type: buff
-                    description: "If you have analyzed an enemy, add your expertise to any spell power saves made to resist the effects of its abilities."
-                    conditions:
-                        - custom 
-                    save: null
-            -   name: Strider
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                description: "Difficult terrain does not hinder you, and you succeed in simple athletics checks with ease."
-                effect:
-                    type: buff
-                    description: "Such checks include vaulting over a table, leaping across a narrow gap, or walking on top of deep snow."
-                    conditions:
-                        - custom 
-                    save: null
-            -   name: Fade into Nature
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                description: "Your movements are so natural as to become undetecatable to the untrained eye."
-                effect:
-                    type: buff
-                    description: "You are able to add your expertise to your stealth checks."
-                    conditions:
-                        - custom 
-                    save: null
-            -   name: Counter
-                type: combat option 
-                action_type: Reaction
-                cost: 1
-                duration: passive
-                range: self
-                description: "When a creature within 5 feet of you hits you with a melee attack, spend your reaction to counter-attack them. "
-            -   name: Strider
-                type: buff 
-                passive_damage_source: true 
-                cost: 0
-                duration: passive
-                range: self
-                description: "Your training with your weapons has reached the level of mastery."
-                effect:
-                    type: buff
-                    description: "Whenever you make an attack with a weapon from the group you chose for Ranger's Weapon Training, add bonus damage to the result."
-                    conditions:
-                        - custom 
-                    save: null
-                damage_scaling:
-                    damage_type: inherited 
-                    all_tiers: 1d6
-            -   name: Hunter's Infusions
-                type: utility 
-                action_type: modifies_ability 
-                ability_modified: rest
-                cost: 0
-                duration: passive
-                range: self
-                description: "Rather than rushing into battle, rangers take time to prepare. You do this by crafting Hunter's Infusions, which can be used to empower the abilities found in the Ranger's Arsenal skill tree. You are able to carry a number of hunter's infusions equal to your expertise bonus. Whenever you take a rest, you may forage for the materials needed to restock, restoring 1d4 infusions."
-            -   name: Field Medicine 
-                cost: 1
-                type: healing 
-                range: touch 
-                duration: instantaneous
-                description: "Quickly crush lorelroot to release its healing properties. The poultice quickly hardens over wounds (2d4, 4d4, 4d10)"
-                damage_scaling:
-                    damage_type: healing 
-                    tier_1: 2d4
-                    tier_2: 4d4
-                    tier_3: 4d10 
-                upcast: "Apply a hunter's infusion to the poultice to increase its potency, removing any non-curse status effects from your target and increasing the healing to 4d4, 4d10, and 8d10 in gameplay tiers 1, 2, and 3, respectively."
-            -   name: Venomous Strike
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Dip your blade or projectile in caustic venom before attacking."
-                effect:
-                    type: debuff 
-                    description: "Your target must make a spell power save or become Poisoned."
-                    conditions:
-                        - poisoned 
-                    save: null
-                damage_scaling:
-                    damage_type: poison 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunter's infusion to the venom to cause the attack to roll twice the number of bonus damage dice (2d8, 2d10, 2d12) and to force your target to make its save against Poison with disadvantage."    
-            -   name: Grappler's Line
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Affix a shoot of devil's ivy to your weapon or projectile. As it hits, it creates a durable rope which is attached to your weapon."
-                effect:
-                    type: debuff 
-                    description: "If your target is a living creature, they must make a spell power save or become Tethered."
-                    conditions:
-                        - tethered 
-                    save: null
-                damage_scaling:
-                    damage_type: inherited 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunter's infusion to the attack to use a tanglethron vine instead of devil's ivy.
-                            When the arrow hits, it bursts into a web of thorned vines in a 15ft radius. 
-                            Anyone who moves through the vines is Hindered, and must make a spell power save or take 2d6 damage."    
-            -   name: Frostbite
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Use frostheart extract to imbue an attack or projectile with the power of ice and snow."
-                effect:
-                    type: debuff 
-                    description: "Your target must make a spell power save or become Hindered as they are chilled to the bone."
-                    conditions:
-                        - hindered
-                        - slowed
-                    save: null
-                damage_scaling:
-                    damage_type: cold 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunter's infusion to the extract to force your target to save against the Slowed condition instead of Hindered."
-            -   name: Flameburst Oil
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Affix a firestar seed to your weapon or projectile so that it ignites on impact."
-                effect:
-                    type: debuff 
-                    description: "Your target must make a Spell Power Save or begin Burning."
-                    conditions:
-                        - burning
-                    save: null
-                damage_scaling:
-                    damage_type: fire 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunters infusion to the firestar seed to cause it to explode on impact, dealing an additional 2d6 damage to your target and anyone within 15ft."
-            -   name: Thunderclap Charge
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Add the ball of a puff-root to your blade or projectile so that it emits a burst of air on impact."
-                effect:
-                    type: debuff 
-                    description: "Your target must make a Spell Power save or be pushed 15ft back."
-                    conditions:
-                        - burning
-                    save: null
-                damage_scaling:
-                    damage_type: blunt 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunter's infusion to the puff-root to cause it to explode on impact, forcing all creatures within a 10ft radius to make a spell power save or be pushed back 15ft."
-            -   name: Dawnstar's Light
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Apply a vial of dawnstar sap to a blade or projectile."
-                effect:
-                    type: debuff 
-                    description: "The next attack that you make blazes with blinding light. Your target must make a Spell Power save or be Blinded."
-                    conditions:
-                        - blinded
-                    save: null
-                damage_scaling:
-                    damage_type: radiant 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12 
-                upcast: "Apply a hunter's infusion to the dawnstar sap to make it continue to blaze for 5 minutes. For the duration, anyone within a 30ft radius of the 
-                          sap must make a Spell Power save at the start of each turn or be Blinded on failure."
-            -   name: Vampiric Stirke
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Pierce yourself a wraithfang shard and affix the other end to a weapon or projectile."
-                effect:
-                    type: debuff 
-                    description: "As your next attack hits, your foe's strength is sapped and flows into you. They are Leeched for an amount of health equal to the bonus damage dealt."
-                    conditions:
-                        - leeched
-                    save: null
-                damage_scaling:
-                    damage_type: necrotic 
-                    tier_1: 1d6
-                    tier_2: 1d8
-                    tier_3: 1d10 
-                upcast: "Apply a hunter's infusion to the shard to cause it to do twice the bonus damage, 2d6, 2d8, and 2d10 in gameplay tiers 1, 2, and 3, respectively."
 -   name: Gunslinger
     recommended_stats:
         Charisma: -1
@@ -7114,8 +7052,9 @@
         Perception: 2
         Strength: -2
     expertise: "As a gunslinger, you are incredibly perceptive. Add your expertise whenever you make a perception or 
-                passive perception check. You are also adept at clearing misfired weapons. Add your expertise to checks 
-                made to clear a weapon that has misfired."
+                passive perception check."
+                # You are also adept at clearing misfired weapons. Add your expertise to checks 
+                # made to clear a weapon that has misfired."
     health_dice: "1d8"
     handbook:
         -   title: "Intro"
@@ -7146,6 +7085,7 @@
         tree_path: "tmp"
         abilities: #24 /25
             -   name: Strike From The Shadows
+                action_type: modifies_ability
                 passive_damage_source: true
                 cost: 0
                 type: buff
@@ -7162,29 +7102,37 @@
                 damage_scaling: 
                     damage_type: inherited
                     all_tiers: 1d6 
-            -   name: Focus 
+            -   name: Focus
+                action_type: Offhand Action
                 cost: 0
-                type: buff 
+                type: buff
+                passive_damage_source: true
                 duration: 1
                 range: self 
                 ability_modified: next attack 
-                description: "Spend the entire first action to carefully line up your next shot."
+                description: "Carefully line up your next shot."
                 effect:
                     type: buff 
-                    description: "When you attack, double your weapon's effective range and decrease your critical hit target by your expertise. Your enemy must make a spell power save or be Staggered."
+                    description: "When you attack, double your weapon's effective range and increase it's damage."
                     conditions:
                         - custom 
-                        - staggered 
                     save: null
+                damage_scaling: 
+                    damage_type: inherited
+                    tier_1: 1d6
+                    tier_2: 1d8
+                    tier_3: 1d10
             -   name: Reduced Critical
+                action_type: Passive
                 cost: 0
                 type: critical hit enhancement 
                 range: self 
                 duration: infinite 
                 action_type: modifies_ability
                 ability_modified: standard attack 
-                description: Your critical hit target is permanently decreased by one. 
+                description: You now gain a hero token when you roll a 19 or 20. 
             -   name: Chain Attack
+                action_type: Offhand Action
                 cost: 0
                 type: buff
                 duration: instantaneous
@@ -7198,7 +7146,8 @@
                     conditions:
                         - spurred to action
                     save: null
-            -   name: Set Up 
+            -   name: Set Up
+                action_type: Offhand Action
                 cost: 0
                 type: buff 
                 duration: 1
@@ -7207,11 +7156,12 @@
                 description: "Spend an action to set up with your long-gun."
                 effect:
                     type: buff 
-                    description: "Until you break down, add your expertise to the accuracy rolls for your shots. Breaking down requires one action and half of your movement unless you abandon your rifle."
+                    description: "Until you break down, roll the damage dice for your firearm at advantage. Breaking down requires one action and half of your movement unless you abandon your rifle."
                     conditions:
                         - custom 
                     save: null
-            -   name: Harrying Shots 
+            -   name: Harrying Shots
+                action_type: Passive
                 cost: 0
                 type: debuff 
                 duration: instantaneous
@@ -7224,7 +7174,8 @@
                     conditions:
                         - harried 
                     save: null
-            -   name: Blinding Shot 
+            -   name: Blinding Shot
+                action_type: Action
                 cost: 2
                 type: combat option
                 duration: instantaneous 
@@ -7243,6 +7194,7 @@
                     tier_2: 2d10
                     tier_3: 2d12
             -   name: Bleeding Critical
+                action_type: Passive
                 cost: 0
                 type: critical hit enhancement 
                 range: inherited 
@@ -7251,11 +7203,12 @@
                 description: "Your critical hits are particularly savage."
                 effect:
                     type: debuff 
-                    description: "When you land a critical hit, you may spend 1AP to convert half of the damage to Bleeding. This can be stacked with other critical hit enhancements."
+                    description: "When you use a hero token to do extra damage, you may spend 1AP to convert half of the damage to Bleeding. This can be stacked with other critical hit enhancements."
                     conditions:
                         - bleeding 
                     save: null 
-            -   name: Piercing Shot 
+            -   name: Piercing Shot
+                action_type: Action
                 cost: 1 
                 type: buff 
                 range: self 
@@ -7269,6 +7222,7 @@
                         - custom 
                     save: null
             -   name: Bull Rush
+                action_type: Action
                 cost: 0
                 type: buff
                 range: dash 
@@ -7281,7 +7235,8 @@
                     conditions: 
                         - custom 
                     save: null
-            -   name: Fan the Hammer 
+            -   name: Fan the Hammer
+                action_type: Action 
                 cost: 2 
                 type: buff 
                 range: 50 
@@ -7295,6 +7250,7 @@
                         - custom 
                     save: null 
             -   name: Draw!
+                action_type: Passive
                 cost: 0 
                 type: buff
                 range: self
@@ -7306,7 +7262,8 @@
                     conditions:
                         - custom 
                     save: null
-            -   name: Last Stand 
+            -   name: Last Stand
+                action_type: Passive 
                 cost: 0 
                 type: buff 
                 range: self 
@@ -7320,19 +7277,20 @@
                         - custom 
                     save: null 
             -   name: Shoot from the Hip
+                action_type: Reaction
                 cost: 1 
                 type: combat option 
                 range: inherited 
-                action_type: Reaction 
                 duration: instantaneous
                 description: "As a reaction, hastily take a shot at an enemy who is threatening you."
                 effect:
                     type: debuff 
-                    description: "If it is not a glancing blow, your enemy must make a spell power save or be Halted and have their attack fail to land."
+                    description: "Your enemy must make a spell power save or be Halted and have their attack fail to land."
                     conditions:
                         - custom 
                     save: null 
-            -   name: First Strike 
+            -   name: First Strike
+                action_type: Passive
                 cost: 0 
                 type: buff 
                 range: self 
@@ -7343,12 +7301,13 @@
                 damage_scaling:
                     damage_type: inherited 
                     all_tiers: 2d6   
-            -   name: Grit 
+            -   name: Grit
+                action_type: Passive
                 cost: 0
                 type: buff 
                 duration: passive 
                 range: self 
-                description: "Whenever you are met with an obstacle, you mcy choose to attempt to overcome it by the most over the top route possible. 
+                description: "Whenever you are met with an obstacle, you may attempt to overcome it by the most over the top route possible. 
                               For example, swinging on a vine to cross a gap or sliding down a ladder rather than climbing wrung by wrung."
                 effect:
                     type: buff 
@@ -7357,6 +7316,7 @@
                         - custom 
                     save: null 
             -   name: Called Shot
+                action_type: Action
                 cost: 1
                 type: combat option 
                 duration: instantaneous
@@ -7382,20 +7342,22 @@
                     tier_1: 1d8
                     tier_2: 1d10
                     tier_3: 1d12
-            -   name: Called Critical 
+            -   name: Called Critical
+                action_type: Passive
                 cost: 0
                 type: critical hit enhancement 
                 range: inherited 
                 ability_modified: critical hit
                 duration: instantaneous
-                description: "Whenever you land a critical hit, you may choose to immediately apply one of the effects from your Called Shot to your enemy."
+                description: "Whenever you spend a hero token to do extra damage, you may choose to immediately apply one of the effects from your Called Shot to your enemy."
                 effect:
                     type: debuff
                     description: "If the attack was already a Called Shot, apply two."
                     conditions:
                         - custom 
                     save: null 
-            -   name: Tracer 
+            -   name: Tracer
+                action_type: Action
                 cost: 1 
                 type: combat option 
                 duration: instantaneous
@@ -7415,6 +7377,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
             -   name: Flash Grenade
+                action_type: Offhand Action
                 cost: 1
                 type: aoe debuff
                 radius: 15
@@ -7428,6 +7391,7 @@
                         - blinded
                     save: null 
             -   name: Breaching Charge
+                action_type: Ritual
                 type: utility
                 cost: 1
                 radius: 15
@@ -7438,6 +7402,7 @@
                                blast through up to five feet of a solid substance. The magic used to make breaching charges is shortlived, and they break down 
                                an hour after they are created."
             -   name: Duel
+                action_type: Offhand Action
                 type: combat option
                 range: 100
                 duration: concentration
@@ -7446,7 +7411,7 @@
                 description: "Single out a creature and challenge them to a duel which they cannot refuse."
                 effect:
                     type: debuff
-                    description: "Until you break concentration, your speed is halved but you may add your expertise to accuracy checks made against them and your attacks deal bonus damage."
+                    description: "Until you break concentration, your speed is halved but you may your attacks deal bonus damage."
                     save: null 
                     conditions: 
                         - custom
@@ -7454,6 +7419,7 @@
                     damage_type: inherited
                     all_tiers: 1d6
             -   name: Covering Fire
+                action_type: Offhand Action
                 type: combat option
                 range: 60
                 duration: 1
@@ -7489,15 +7455,16 @@
                         - dodging
                     save: null 
             -   name: Adrenaline
+                action_type: Passive
                 type: buff
                 cost: 0
                 range: self
                 duration: 1
                 ability_modified: "luck"
-                description: "Spend one of your luck points to steel yourself as you prepare to leap into danger."
+                description: "Spend one of your luck points to amp yourself up as you prepare to leap into danger."
                 effect:
                     type: buff
-                    description: "For the next 60 seconds, you are affected by the Hastened condition."
+                    description: "For the next 60 seconds, you are affected by the Hastened condition. You do not take exhaustion as a result."
                     conditions:
                         - hastened 
                     save: null

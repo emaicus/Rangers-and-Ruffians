@@ -4,17 +4,25 @@
 	"additionalProperties": false,
 	"if": {
 		"properties": { "ability_type": { "const": "spell" } }
-	  },
-	  "then": {
-		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description", "requirements"]
-	  },
-	  "else": {
-		"required": ["ability_type", "name", "type", "cost", "range", "duration", "description"]
-	  },
+	},
+	"then": {
+		"required": ["ability_type", "action_type", "name", "type", "cost", "range", "duration", "description", "requirements"]
+	},
+	"else": {
+		"if": {
+		"properties": { "ability_type": { "const": "monster" } }
+		},
+		"then": {
+			"required": ["ability_type", "name", "type", "cost", "range", "duration", "description"]
+		},
+		"else": {
+			"required": ["ability_type", "action_type", "name", "type", "cost", "range", "duration", "description"]
+		}
+	},
 	"properties": {
 		"ability_type": {
 			"type": "string",
-			"enum": ["ability", "spell"]
+			"enum": ["ability", "spell", "monster"]
 		},
 		"name": {
 			"type": "string"
@@ -170,7 +178,7 @@
 		},
 		"action_type": {
 			"type": "string",
-			"enum": ["Action", "Reaction", "Free Action", "modifies_ability"]
+			"enum": ["Action", "Offhand Action", "Reaction", "Free Action", "Passive", "modifies_ability", "Ritual"]
 		},
 		"ability_modified": {
 			"type": "string"

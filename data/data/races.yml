@@ -39,6 +39,7 @@
                 options: "Hidden in a compartment, Shining from your chest"
     abilities:
         -   name: Choice of Chasis
+            action_type: "Passive" 
             cost: 0
             type: buff 
             range: self 
@@ -52,17 +53,19 @@
                     - custom 
                 save: null
         -   name: Field Repairs 
+            action_type: "Action" 
             cost: 1
             type: combat option 
             range: self 
             duration: instantaneous
-            description: "Spend an action to perform quick field repairs, healing yourself."
+            description: "Perform quick field repairs, healing yourself."
             damage_scaling: 
                     damage_type: healing
                     tier_1: 2d4
                     tier_2: 4d4
                     tier_3: 4d10
         -   name: Standard Maintenance    
+            action_type: "Passive" 
             cost: 0
             type: utility 
             range: self 
@@ -73,6 +76,7 @@
                           If someone aids in your repairs, it is as though you've slept in a bed. Healing magic, such as a cleric's Prayer of Healing 
                           are able to heal you by magically repairing damage to your frame."
         -   name: Hydrophobic
+            action_type: "Passive"
             cost: 0
             type: debuff 
             range: self 
@@ -85,7 +89,8 @@
                 conditions:
                     - custom 
                 save: null 
-        -   name: Overdrive 
+        -   name: Overdrive
+            action_type: "Offhand Action"
             type: buff 
             cost: 1
             range: self 
@@ -98,6 +103,7 @@
                     - frenzied
                 save: null 
         -   name: Eternal Endurance
+            action_type: "Passive"
             type: buff 
             range: self 
             cost: 0
@@ -115,6 +121,7 @@
     base_movement: 30
     abilities:
         -   name: Darkvision
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -126,7 +133,8 @@
                 conditions:
                     - darkvision 
                 save: null
-        -   name: They're Retractable 
+        -   name: They're Retractable
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -139,6 +147,7 @@
                     - custom 
                 save: null
         -   name: Loose Skin
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -151,6 +160,7 @@
                     - custom 
                 save: null
         -   name: Fear of Water
+            action_type: "Passive"
             type: debuff
             range: self
             duration: passive
@@ -163,6 +173,7 @@
                     - custom 
                 save: null
         -   name: Mantle
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -222,6 +233,7 @@
     base_movement: 30
     abilities:
         -   name: Sleepless
+            action_type: "Passive"
             cost: 0
             type: utility 
             range: self 
@@ -229,6 +241,7 @@
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
         -   name: Natural Tracker
+            action_type: "Passive"
             type: buff
             cost: 0
             range: self 
@@ -241,12 +254,14 @@
                     - custom 
                 save: null
         -   name: Meditative Rest
+            action_type: "Passive"
             type: utility 
             range: self 
             duration: passive
             cost: 0
             description: "Whenever you rest, you can focus to regain one extra action point."
         -   name: Natural Agility
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self
@@ -259,9 +274,10 @@
                     - custom 
                 save: null 
         -   name: Hasten
+            action_type: "Offhand Action"
             type: buff 
             range: self 
-            duration: 5
+            duration: 3
             cost: 1
             description: "Channel the magic within you to spur yourself to great speeds."
             effect:
@@ -320,6 +336,7 @@
     base_movement: 30
     abilities:
         -   name: Sleepless
+            action_type: "Passive"
             type: utility 
             cost: 0
             range: self 
@@ -327,6 +344,7 @@
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
         -   name: Inherent Magic
+            action_type: "Passive"
             type: utility 
             cost: 0
             range: self 
@@ -334,6 +352,7 @@
             description: "You were born with inherent magical ability. Begin your adventure with two tier zero spells from any spellbook.
                           If you are a casting class, these spells are considered a bonus." 
         -   name: Detect Magic
+            action_type: "Offhand Action"
             type: utility
             cost: 1
             duration: concentration
@@ -346,6 +365,7 @@
                         While you are in this state, sources of magic appear to glow,
                         and you may make perception checks to detect neaby magic.
         -   name: Natural Intellect
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self
@@ -358,6 +378,7 @@
                     - custom 
                 save: null 
         -   name: Font of Magic
+            action_type: "Passive"
             cost: 0
             type: buff 
             duration: passive 
@@ -365,7 +386,7 @@
             description: "Magic flows through you as surely as blood, guiding you and granting you power."
             effect:
                 type: buff 
-                description: "Add one to your maximum number of action points."
+                description: "Add two to your maximum number of action points."
                 conditions:
                     - custom 
                 save: null
@@ -423,6 +444,7 @@
     base_movement: 25
     abilities:
         -   name: Sleepless
+            action_type: "Passive"
             cost: 0
             type: utility 
             range: self 
@@ -430,6 +452,7 @@
             cost: 0
             description: "When you sleep, you go into a meditative trance. You are able to go up to three days without sleeping before exhaustion sets in."
         -   name: Poison Resistance
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self
@@ -442,12 +465,14 @@
                     - poison resistance 
                 save: null
         -   name: Born in Darkness
+            action_type: "Passive"
             type: utility 
             range: self 
             duration: passive
             cost: 0
             description: "Your abyssal heritage has changed the way that you percieve light. You can see perfectly in pitch darkness, but cannot see in total light unless you wear a mesh over your eyes."
         -   name: Survivor
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive
@@ -460,6 +485,7 @@
                     - custom 
                 save: null
         -   name: Cruel Critical
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: instantaneous
@@ -515,7 +541,8 @@
     health_dice: 1d6
     base_movement: 30
     abilities:
-        -   name: Tinker 
+        -   name: Tinker
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive 
@@ -528,6 +555,7 @@
                     - custom
                 save: null
         -   name: Perfect Recall 
+            action_type: "Passive"
             type: utility 
             range: self 
             duration: passive 
@@ -535,6 +563,7 @@
             description: "You have an incredible memory, and can recall anything you spend one minute looking at in perfect detail."
         -   name: A Mind for Mechanics 
             cost: 0
+            action_type: "Passive"
             range: self 
             duration: passive 
             type: buff 
@@ -547,6 +576,7 @@
                     - custom
                 save: null
         -   name: Little One
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -559,6 +589,7 @@
                     - custom
                 save: null
         -   name: Single Minded
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive
@@ -571,6 +602,7 @@
                     - psychic resistance
                 save: null
         -   name: Spirit of Fun
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive 
@@ -626,6 +658,7 @@
     base_movement: 35
     abilities:
         -   name: Still Warm
+            action_type: "Action"
             type: combat option 
             range: touch 
             duration: instantaneous
@@ -637,6 +670,7 @@
                 tier_3: 4d10
             description: "A bit of warm meat does you wonders. Once per day, you may restore health by consuming raw meat."
         -   name: Mantle
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -649,6 +683,7 @@
                     - custom 
                 save: null 
         -   name: Natural Sneak
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self
@@ -662,6 +697,7 @@
                     - inconspicuous
                 save: null 
         -   name: Darkvision
+            action_type: "Passive"
             type: buff
             range: self
             duration: passive
@@ -669,11 +705,12 @@
             description: "You have incredible night vision."
             effect:
                 type: buff 
-                description: "You are permanently under the effects of Darvision."
+                description: "You are permanently under the effects of Darkvision."
                 conditions:
                     - darkvision 
                 save: null
         -   name: One of the Pack
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self 
@@ -754,6 +791,7 @@
     base_movement: 35
     abilities:
         -   name: Hamstring 
+            action_type: "Passive"
             cost: 0
             type: critical hit enhancement 
             range: inherited 
@@ -766,6 +804,7 @@
                     - hindered 
                 save: null
         -   name: Hide Underfoot
+            action_type: "Passive"
             cost: 0
             range: self 
             type: buff 
@@ -778,6 +817,7 @@
                     - dodging 
                 save: null
         -   name: Warm Butter
+            action_type: "Passive"
             cost: 0
             type: healing 
             range: touch 
@@ -787,6 +827,7 @@
                 all_tiers: 1d6
             description: "You are a naturally talented chef. Whenever you rest, you may choose to prepare food which heals all allies."
         -   name: Soft Bed
+            action_type: "Passive"
             type: utility 
             range: self
             duration: instantaneous
@@ -794,6 +835,7 @@
             description: "You sleep very deeply. Whenever you sleep, you may choose to restore all of your health, action points,
                           and luck, but for the full duration you are completely oblivious unless shaken awake."
         -   name: Little One
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -853,6 +895,7 @@
     base_movement: 30
     abilities:
         -   name: Human Endurance #Done
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive 
@@ -865,6 +908,7 @@
                     - custom 
                 save: null
         -   name: Adaptable # Done
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -876,7 +920,8 @@
                 conditions:
                     - custom 
                 save: null
-        -   name: Rally Cry # Done 
+        -   name: Rally Cry # Done
+            action_type: "Offhand Action"
             cost: 1
             type: buff
             duration: instantaneous
@@ -890,6 +935,7 @@
                     - inspired 
                 save: null
         -   name: Specialized #Done
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self
@@ -903,6 +949,7 @@
                 -   name: "Bookish"
                     description: "You are highly intelligent. Add your expertise to intelligence checks made to understand the world around you, to recall lore, or to perform informal magic if you are a mage."
         -   name: One of Many # Done
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self
@@ -967,6 +1014,7 @@
     base_movement: 25
     abilities:
         -   name: Membraned Eyes
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -979,6 +1027,7 @@
                     - custom
                 save: null
         -   name: Shed Tail
+            action_type: "Free Action"
             type: utility 
             range: self
             duration: instantaneous
@@ -986,6 +1035,7 @@
             description: "Your tail is detatchable and grows back in about a week's time. 
                           Once per week, you may shed your tail to immediately break a grapple."
         -   name: Poison Resistance
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self
@@ -998,6 +1048,7 @@
                     - poison resistance 
                 save: null
         -   name: Armored Scales
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: passive 
@@ -1005,11 +1056,12 @@
             description: "Gleaming scales as hard as steel cover you from snout to foot."
             effect:
                 type: buff 
-                description: "Add +2 to your base evasion."
+                description: "Add +1 to your base armor."
                 conditions:
                     - custom
                 save: null
         -   name: Taste Air
+            action_type: "Passive"
             cost: 0
             type: utility 
             range: 100 
@@ -1066,6 +1118,7 @@
     base_movement: 30
     abilities:
         -   name: Water Breathing
+            action_type: Passive
             cost: 0
             type: utility 
             range: self 
@@ -1073,6 +1126,7 @@
             description: "You are able to breathe water like air, and can hold your breath for far longer than most.
                           So long as you do not speak, you may stay concious without breathing for up to a full day."
         -   name: Dried Out
+            action_type: Passive
             cost: 0
             type: debuff 
             range: self 
@@ -1088,6 +1142,7 @@
                     - custom 
                 save: null
         -   name: Flow Like Water
+            action_type: Passive
             cost: 0
             range: self 
             duration: passive
@@ -1101,18 +1156,20 @@
                     - custom 
                 save: null
         -   name: Natural Charisma
+            action_type: Passive
             cost: 0
             type: buff 
             duration: passive 
             range: self 
-            description: "Like your forebearer's, the sirens, you have a natural affinity for winning people over."
+            description: "Like your forebearers, the sirens, you have a natural affinity for winning people over."
             effect:
                 type: buff 
                 description: "Add your expertise to any charisma check made to convince or beguile someone."
                 conditions:
                     - custom 
                 save: null
-        -   name: Control Water 
+        -   name: Control Water
+            action_type: Passive
             cost: 0
             range: self 
             type: utility 
@@ -1170,6 +1227,7 @@
     base_movement: 30
     abilities:
         -   name: Predator
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
@@ -1182,6 +1240,7 @@
                     - custom 
                 save: null
         -   name: Brutish Strength
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
@@ -1194,6 +1253,7 @@
                     - custom 
                 save: null
         -   name: Bellow
+            action_type: "Offhand Action"
             cost: 1
             type: debuff
             range: self 
@@ -1207,6 +1267,7 @@
                     - frightened 
                 save: "They may re-attempt their save at the end of each of their turns."
         -   name: Still Warm
+            action_type: "Offhand Action"
             type: combat option 
             range: touch 
             duration: instantaneous
@@ -1218,6 +1279,7 @@
                 tier_3: 4d10
             description: "A bit of warm meat does you wonders. Once per day, you may restore health by consuming the raw meat of a fresh kill."
         -   name: Vengeful Death
+            action_type: "Passive"
             cost: 0
             type: combat option 
             range: inherited 
@@ -1279,6 +1341,7 @@
     base_movement: 25
     abilities:
         -   name: Stocky Build
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -1291,6 +1354,7 @@
                     - hard to move 
                 save: null
         -   name: Hearty 
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
@@ -1304,6 +1368,7 @@
                     - custom 
                 save: null 
         -   name: Appraiser's Eye
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -1316,6 +1381,7 @@
                     - custom 
                 save: null
         -   name: Dwarven Momentum
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
@@ -1329,6 +1395,7 @@
                     - custom 
                 save: null
         -   name: Incombustible
+            action_type: "Passive"
             cost: 0
             type: buff
             range: self 
@@ -1397,6 +1464,7 @@
     base_movement: 30
     abilities:
         -   name: Charm
+            action_type: "Offhand Action"
             cost: 1
             type: debuff 
             range: 30 
@@ -1409,6 +1477,7 @@
                     - charmed 
                 save: "They may repeat their save at the end of each of their turns."
         -   name: Incombustible
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
@@ -1421,6 +1490,7 @@
                     - fire resistance 
                 save: null
         -   name: Peer Within
+            action_type: "Free Action"
             type: utility
             cost: 1
             duration: 10
@@ -1430,6 +1500,7 @@
                 by an aura of darkness in your vision, while good creatures with an aura of light. The definition of good and evil corresponds
                 to the way that you have aligned yourself within the world."
         -   name: Firebolt
+            action_type: "Action"
             cost: 1
             type: combat option 
             range: 60
@@ -1441,6 +1512,7 @@
                 tier_3: 5d6 #(17.5 + 10.5f = 28)
             description: "Use your inherent magic to launch a bolt of crackling fire at an enemy."
         -   name: Child of Dread 
+            action_type: "Passive"
             cost: 0
             type: buff
             duration: passive 
@@ -1510,12 +1582,14 @@
     base_movement: 35
     abilities:
         -   name: Woodland Home
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
             duration: passive
             description: "You are deeply at home in the forests and glades of the world. So long as you are surrounded by plants, add your expertise to stealth and tracking checks."
         -   name: Regrowth 
+            action_type: "Offhand Action"
             cost: 1
             type: healing 
             duration: 5
@@ -1527,12 +1601,13 @@
                 tier_3: 1d8
             description: "Green sap oozes from your wounds, slowly sealing them. Restore health every minute or turn for the ability's duration."
         -   name: Riding High 
+            action_type: "Passive"
             cost: 0
             type: buff 
             range: self 
             duration: inherited 
             description: "As an action, clamber atop a teammate to ride them. While you are riding, both you and your ally 
-                          gain advantage on accuracy checks while targeting the same enemy."
+                          gain advantage on damage rolls while targeting the same enemy."
             effect:
                 type: buff 
                 description: "Furthermore, you are considered to be Guarded while riding a party member."
@@ -1540,6 +1615,7 @@
                     - guarded
                 save: null    
         -   name: Forest Aid 
+            action_type: "Offhand Action"
             cost: 1
             type: utility 
             range: self 
@@ -1547,6 +1623,7 @@
             description: "All nearby plants attempt to aid you for a short time. If you are falling, a vine might reach out to grab you, 
                           or if you are attempting to open a mossy door, the plants may strain against it, giving you advantage on your check."
         -   name: Compost
+            action_type: "Passive"
             cost: 0
             type: healing 
             range: self 
@@ -1558,6 +1635,7 @@
                 tier_3: 3d4
             description: "When you take your rest, you may consume nearby plants to aid in your healing. Restore extra health equal to the amount rolled."
         -   name: Little One
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -1621,7 +1699,6 @@
                 options: "Sprout artisans are able to shape living plants into garments and tools. 
                           Sprout clothing is often very foreign to the bigger folk, made all of vines, 
                           leaves, and twigs."
-
 -   name: Pixie 
     health_dice: 1d4
     base_movement: 30
@@ -1675,6 +1752,7 @@
                 options: "Butterfly, Dragonfly"
     abilities:
         -   name: Fairy Flight
+            action_type: "Passive"
             type: utility 
             cost: 0
             range: self 
@@ -1686,6 +1764,7 @@
                               you immediately fall 30ft, and continue to fall 30ft at the start of each until you make the save successfully as an
                               action."
         -   name: Tiny Sprite
+            action_type: "Passive"
             type: buff 
             cost: 0
             range: self 
@@ -1698,6 +1777,7 @@
                     - tiny 
                 save: null
         -   name: Magical Compensation
+            action_type: "Passive"
             type: utility 
             cost: 0
             range: self 
@@ -1711,6 +1791,7 @@
                             Using a similar principle, you are able to wield miniature versions of larger weapons with great force,
                             dealing comparable damage to their larger counterparts."
         -   name: Charm
+            action_type: "Offhand Action"
             cost: 1
             type: debuff 
             range: 30 
@@ -1723,6 +1804,7 @@
                     - charmed 
                 save: "They may repeat their save at the end of each of their turns."
         -   name: Fae Illusion
+            action_type: "Offhand Action"
             type: utility
             cost: 1
             duration: concentration
@@ -1734,3 +1816,5 @@
                             an illusory image of the size of a person or smaller. To all those
                             who see the illusion, it appears to be present, though upon further inspection, it is ethereal.
                             When you release concentration, the illusion persists for one minute unless you choose otherwise."   
+
+

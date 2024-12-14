@@ -136,7 +136,7 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
       all_monster_names.add(monster['name'])
       for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
         for ability in monster['moveset'].get(action_type, []):
-          ability['ability_type'] = 'ability'
+          ability['ability_type'] = 'monster'
           validateAbility(ability, ability_schema, status_effects, monster['name'])
 
     for rnr_class in rnr_classes:

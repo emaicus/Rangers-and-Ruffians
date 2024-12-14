@@ -57,7 +57,7 @@
         ranger_companion: false
     stats:
         health: 20
-        evasion: 10
+        armor: 0
         speed:
             Base Speed: 25 
         stat_bonus: 1
@@ -116,7 +116,7 @@
         ranger_companion: false
     stats:
         health: 43
-        evasion: 12
+        armor: 0
         speed:
             Base Speed: 25 
         stat_bonus: 4
@@ -175,7 +175,7 @@
         ranger_companion: false
     stats:
         health: 60
-        evasion: 13
+        armor: 0
         speed:
             Base Speed: 25 
         stat_bonus: 7
@@ -233,7 +233,7 @@
         ranger_companion: false
     stats:
         health: 250
-        evasion: 12
+        armor: 0
         speed: 
             Flying Speed: 30
         stat_bonus: 5
@@ -291,7 +291,7 @@
         ranger_companion: true
     stats:
         health: 24
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 2
@@ -321,7 +321,7 @@
         ranger_companion: true
     stats:
         health: 44
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 5
@@ -370,7 +370,7 @@
         ranger_companion: true
     stats:
         health: 60
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 5
@@ -386,7 +386,7 @@
                 description: "The woad warrior carries a wall shield of Ironwood."
                 effect:
                     type: buff
-                    description: "It is immune to ranged attacks from the front, and gains +3 evasion while it is holding the shield."
+                    description: "It is immune to ranged attacks from the front, and gains +1 armor while it is holding the shield."
                     conditions: 
                         - custom
                     save: null
@@ -447,7 +447,7 @@
         ranger_companion: false
     stats:
         health: 24
-        evasion: 11
+        armor: 0
         speed: 
             Base Speed: 25  
         stat_bonus: 2
@@ -487,7 +487,7 @@
         ranger_companion: false
     stats:
         health: 45
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 4
@@ -548,7 +548,7 @@
         ranger_companion: false
     stats:
         health: 65
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 5
@@ -609,7 +609,7 @@
         ranger_companion: true
     stats:
         health: 74
-        evasion: 8
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 2
@@ -693,7 +693,7 @@
         ranger_companion: true
     stats:
         health: 140
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 5
@@ -777,7 +777,7 @@
         ranger_companion: true
     stats:
         health: 200
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 7
@@ -861,7 +861,7 @@
         ranger_companion: true
     stats:
         health: 64
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 3
@@ -948,7 +948,7 @@
         ranger_companion: true
     stats:
         health: 120
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 5
@@ -1034,7 +1034,7 @@
         ranger_companion: true
     stats:
         health: 170
-        evasion: 15
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 7
@@ -1121,7 +1121,7 @@
         ranger_companion: false
     stats:
         health: 20
-        evasion: 6
+        armor: 0
         speed: 
             Base Speed: 20
         stat_bonus: 2
@@ -1200,7 +1200,7 @@
         ranger_companion: false
     stats:
         health: 40
-        evasion: 8
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 4
@@ -1279,7 +1279,7 @@
         ranger_companion: false
     stats:
         health: 80
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 7
@@ -1358,7 +1358,7 @@
         ranger_companion: false
     stats:
         health: 24
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 2
@@ -1423,7 +1423,7 @@
         ranger_companion: false
     stats:
         health: 46
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 4
@@ -1499,7 +1499,7 @@
         ranger_companion: false
     stats:
         health: 64
-        evasion: 14
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 7
@@ -1575,7 +1575,7 @@
         ranger_companion: false
     stats:
         health: 20
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 2
@@ -1622,7 +1622,7 @@
         ranger_companion: false
     stats:
         health: 40
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 4
@@ -1688,7 +1688,7 @@
         ranger_companion: false
     stats:
         health: 40
-        evasion: 14
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 7
@@ -1754,7 +1754,7 @@
         ranger_companion: true
     stats:
         health: 25
-        evasion: 11
+        armor: 0
         speed: 
             Base Speed: 35
         stat_bonus: 2
@@ -1834,7 +1834,7 @@
         ranger_companion: true
     stats:
         health: 50
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 35
         stat_bonus: 4
@@ -1914,7 +1914,7 @@
         ranger_companion: true
     stats:
         health: 140
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 45
         stat_bonus: 7
@@ -1995,7 +1995,7 @@
         ranger_companion: false
     stats:
         health: 155
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 35
         stat_bonus: 4
@@ -2087,7 +2087,7 @@
         ranger_companion: true
     stats:
         health: 14
-        evasion: 14
+        armor: 0
         speed: 
             Flying Speed: 50
         stat_bonus: 2
@@ -2136,7 +2136,7 @@
         ranger_companion: true
     stats:
         health: 35
-        evasion: 16
+        armor: 0
         speed: 
             Flying Speed: 60
         stat_bonus: 5
@@ -2202,7 +2202,7 @@
         ranger_companion: true
     stats:
         health: 60
-        evasion: 20
+        armor: 0
         speed: 
             Flying Speed: 120
         stat_bonus: 8
@@ -2268,7 +2268,7 @@
         ranger_companion: true
     stats:
         health: 25
-        evasion: 10
+        armor: 0
         speed: 
             Base Speed: 25
         stat_bonus: 2
@@ -2355,7 +2355,7 @@
         ranger_companion: true
     stats:
         health: 47
-        evasion: 12
+        armor: 0
         speed: 
             Base Speed: 35
         stat_bonus: 5
@@ -2442,7 +2442,7 @@
         ranger_companion: true
     stats:
         health: 65
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 45
         stat_bonus: 5
@@ -2529,7 +2529,7 @@
         ranger_companion: true
     stats:
         health: 21
-        evasion: 14
+        armor: 0
         speed: 
             Base Speed: 50
         stat_bonus: 3
@@ -2584,7 +2584,7 @@
         ranger_companion: true
     stats:
         health: 50
-        evasion: 14
+        armor: 0
         speed: 
             Base Speed: 60
         stat_bonus: 5
@@ -2639,7 +2639,7 @@
         ranger_companion: true
     stats:
         health: 70
-        evasion: 14
+        armor: 0
         speed: 
             Base Speed: 120
         stat_bonus: 7
@@ -2710,7 +2710,7 @@
         ranger_companion: false
     stats:
         health: 60
-        evasion: 13
+        armor: 0
         speed: 
             Base Speed: 30
         stat_bonus: 7
@@ -2774,7 +2774,7 @@
 #         wildshape: false
 #     stats:
 #         health: 60
-#         evasion: 13
+#         armor: 0
 #         speed: 
 #             Base Speed: 30
 #         stat_bonus: 7
