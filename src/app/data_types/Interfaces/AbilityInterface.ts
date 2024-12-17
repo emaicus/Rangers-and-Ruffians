@@ -1,6 +1,7 @@
 export interface AbilityData {
     name: string,
     ability_type: string,
+	action_type: string;
     cost: number,
     duration: string | number,
     range: string | number,
@@ -12,7 +13,7 @@ export interface AbilityData {
     upcast: string,
     options: Array<any>,
     damage_scaling: Damage,
-    summonedCreature: Summons
+    summoned_creature: Summons
 }
 
 export interface Requirements {

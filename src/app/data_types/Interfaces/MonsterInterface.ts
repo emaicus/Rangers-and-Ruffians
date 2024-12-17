@@ -25,7 +25,7 @@ export interface MonsterSpeed {
 // Define interface for stats
 export interface MonsterStats {
 	health: number;
-	evasion: number;
+	armor: number;
 	speed: MonsterSpeed;
 	stat_bonus: number;
 	spell_power: Number;

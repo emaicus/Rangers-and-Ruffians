@@ -2,7 +2,7 @@ import { AbilityData , Requirements, Effect, Damage, Summons} from "../Interface
 
 export class RnRAbility {
 	name: string;
-	abilityType: string;
+	actionType: string;
 	shouldDisplayActionType: boolean;
 	cost: number;
 	shouldDisplayCost: boolean;
@@ -44,8 +44,8 @@ export class RnRAbility {
 	) {
 		this.renderCheckbox = renderCheckbox;
 		this.name = data.name ?? "No Ability Name Entered";
-		this.abilityType = data.ability_type ?? "";
-		this.shouldDisplayActionType = data.ability_type != null;
+		this.actionType = data.action_type ?? "";
+		this.shouldDisplayActionType = data.action_type != null && (!succinct || (succinct && data.action_type != "Passive" && data.action_type != "modifies_ability"));;
 		
 		this.cost = data.cost ?? 0;
 		this.shouldDisplayCost = data.cost != null && (!succinct || (succinct && data.cost != 0));
@@ -117,7 +117,7 @@ export class RnRAbility {
 		this.damageType = this.damageScaling?.damage_type ?? "";
 		this.displayableDamageType = this.damageType == "inherited" ? "" : this.damageType; 
 
-		this.summonedCreature = data.summonedCreature ?? "";
-		this.shouldDisplaySummons = data.summonedCreature != null;		
+		this.summonedCreature = data.summoned_creature ?? "";
+		this.shouldDisplaySummons = data.summoned_creature != null;		
 	}
 }

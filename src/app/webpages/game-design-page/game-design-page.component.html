@@ -108,7 +108,7 @@
                     <span class="rnr-italictext">
                         Rapier of Dread
                     </span>
-                    which will shatter on a natural one accuracy check. Such items force the player to make a choice 
+                    which will shatter on the third natural one damage roll in a given day. Such items force the player to make a choice 
                     every time they are used, and to weigh their odds. This builds drama and fun.
                     Don't overuse this technique, but keep it in mind as you implement your designs.
                 </p>
@@ -127,7 +127,7 @@
                     The recommended values table provides guidance for the expected stat bonuses that should be granted
                     to players by persistent magic items. As you consult it, remember that giving a flat bonus to a base
                     stat affects more than just character checks and saves: a boost to dexterity or strength also increases a character's
-                    accuracy and damage, for example. In general, it is safer to give a bonus to a specific attribute or check (e.g. +2 accuracy, +2 stealth) than a raw stat.
+                    damage, for example. In general, it is safer to give a bonus to a specific attribute or check (e.g.+2 stealth) than a raw stat.
                     Better yet, consider providing a character expertise in a type of check. Recall that if multiple sources grant a character expertise on the same check, 
                     they instead take expertise +1. 
                 </p>
@@ -136,7 +136,7 @@
                     An obvious way to accomplish this is to give them bonus strength, for example +2. 
                     As an alternative, you might instead allow the wielder of the bracers to cast _Enlarge_ on themselves
                     once per day. This conforms with the idea that _Hard Choices are Fun_, provides a host of other bonuses,
-                    and stops the item from affecting attributes such as a character's accuracy. If you want the bracers to have a more impactful effect, 
+                    and stops the item from affecting unintended attributes. If you want the bracers to have a more impactful effect, 
                     you could consier having them also grant either expertise or a flat bonus (perhaps +2) on strength checks. 
                 </p>
                 <p class="rnr-body-paragraph">
@@ -173,7 +173,7 @@
                 <span class="rnr-boldtext">
                     Armor
                 </span>
-                is an equipable set of clothing which raises a character's evasion. 
+                is an equipable set of clothing which raises a character's armor value. 
                 <span class="rnr-boldtext">
                     Limited use Magic Items
                 </span> 
@@ -244,7 +244,7 @@
                     </p>
                     <p>
                         Weapons come in two varieties: one-handed and two-handed. One-handed weapons deal slightly less damage than two-handed weapons, but 
-                        can be dual wielded to increase accuracy or wielded with a shield to increase evasion. All weapons come with one or two
+                        can be dual wielded to increase damage or wielded with a shield to increase armor. All weapons come with one or two
                         small abilities to make them distinct from the other weapons in the game. For example, the 
                         <span class="rnr-boldtext">
                             Spear
@@ -278,7 +278,7 @@
                                 <span class="rnr-boldtext">
                                     Base Stat: 
                                 </span> 
-                                Which player stat is used for the accuracy rolls and damage bonus for the weapon?
+                                Which player stat is used for the damage bonus for the weapon?
                                 In general, this is _strength_ or _dexterity_ for hand to hand weapons, _perception_ for ranged weapons, and "inner fire" for focuses.
                             </li>
                             <li>
@@ -406,7 +406,7 @@
                                 <span class="rnr-italictext">
                                     Harassing Shots: 
                                 </span>
-                                Whenever you land a hit on an enemy that is not a glancing blow, you may choose to deal half damage and render them 
+                                Whenever attack an enemy, you may choose to deal half damage and render them 
                                 <span class="rnr-italictext">
                                     Staggered
                                 </span>
@@ -510,9 +510,9 @@
             </table>
             <div class="rnr-section-body">
                 <p class="rnr-body-paragraph">	
-                    The base function of shields and armor is to increase a character's evasion.
+                    The base function of shields and armor is to increase a character's armor value.
                     More than other aspects of the game, it is recomended that you follow the recomended minimum and maximum values 
-                    for armor, as having an unexpected amount of evasion can impact character survivability. 
+                    for armor, as having an unexpected amount of armor can impact character survivability. 
                     Armor is split into three groups: 
                     <span class="rnr-boldtext">
                         Heavy Armor,
@@ -526,7 +526,7 @@
                         Shields,
                     </span>
                     which can be wielded by anyone with a one-handed weapon.
-                    Rather than granting bonus evasion, consider
+                    Rather than granting bonus armor, consider
                     treating magic armor as a limited use or persistent magic item.
                 </p>
             </div>
@@ -932,7 +932,7 @@
                     In general, artifacts:
                     <ol class="rnr-orderedlist">
                         <li>
-                            Can deal slightly more damage or grant slightly more evasion than an equivalent weapons or armor from their tier.
+                            Can deal slightly more damage or grant slightly more armor than an equivalent weapon or armor from their tier.
                         </li>
                         <li>
                             Can have more powerful abilities than an equivalent item from their tier.
@@ -1024,7 +1024,7 @@
                       <th>Tier</th>
                       <th>Monster Type</th>
                       <th>Health</th>
-                      <th>Evasion</th>
+                      <th>Armor</th>
                       <th>Expected Damage per Round</th>
                       <th>Hit Bonus</th>
                       <th>Easy Spell Power</th>
@@ -1189,21 +1189,15 @@
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
-                                    Evasion: 
+                                    Armor: 
                                 </span>
-                                Monster evasion works the same way as player evasion.
+                                Monster armor works the same way as player armor.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
                                     Movement Speed: 
                                 </span>
                                 Like players, monsters move in increments of five feet. In general, slow monsters should move between 20 - 60 feet per turn, with 30 being the average.
-                            </li>
-                            <li>
-                                <span class="rnr-boldtext">
-                                    Accuracy Bonus: 
-                                </span>
-                                A monster's damage bonus is added to the damage total of each of their attacks. 
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
@@ -1255,14 +1249,14 @@
                 <div class="rnr-section-body">
                     <p class="rnr-body-paragraph">
                         To compute the damage of a combat option, 
-                        recall that the average roll of a standard dice is (number of sides / 2) + .5. There is no need to adjust for glancing blows, so long as
-                        the monster's accuracy bonus is within the prescribed ranges. If an attack has an area of effect, multiply its expected damage by 1.5. 
+                        recall that the average roll of a standard dice is (number of sides / 2) + .5. 
+                        If an attack has an area of effect, multiply its expected damage by 1.5. 
                         If the a wizard's firebolt deals 6d6 + 5 damage, we would compute it's expected damage as ((3.5 * 6) + 5) * 1.5 = (26 * 1.5) = 39 damage.
                     </p>
                     <p>
                         Sometimes, an attack deals Area of Effect (AoE) damage and hits multiple targets. In such cases, multiply the amount of damage the attack 
                         does by 2. This reflects the assumption that an AoE attack will hit at least two targets. When designing AoE attacks, consider using 
-                        Spell Power saves rather than Accuracy Rolls to determine if the attack hits. For example, everyone within a 30ft radius of a fireball 
+                        Spell Power saves that can half the damage for all targets on success. For example, everyone within a 30ft radius of a fireball 
                         might roll a Spell Power save and take half-damage on success.
                     </p>
                 </div>
@@ -1317,7 +1311,7 @@
                     <p class="rnr-body-paragraph">
                         The recommended stats for minions in the table above are designed around the idea that a minion should fall after a player 
                         spends about two turns attacking them. Sometimes, minions will fall in a single attack, and other times they will survive a little longer.
-                        Most minions should have relatively low evasion so that it is easy for players to hit them. However, minion damage is high enough to be 
+                        Most minions should have relatively low armor so that it is easy for players to slay them. However, minion damage is high enough to be 
                         threatening to players of all levels: in combat, a single minion should be able to slay a player in about four turns. That means that if 
                         a group of minions teams up on a player, they're in trouble.
                     </p>
@@ -1350,21 +1344,15 @@
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
-                                    Evasion: 
+                                    Armor: 
                                 </span>
-                                8. Zombies are easy to hit, so we'll give them an evasion that is even lower than the recommended range. This means they'll take a little extra damage on average, but we'll compensate with cool abilities.
+                                0. Zombies are easy to hit, so we'll give them an armor that is even lower than the recommended range. This means they'll take a little extra damage on average, but we'll compensate with cool abilities.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
                                     Movement Speed: 
                                 </span>
                                 25ft. 25ft is on the low end of the expected movement range, which means that zombies are slower than most players to start. This matches the idea that they shamble around. However, we'll add an ability to make them be spurred suddenly to movement.
-                            </li>
-                            <li>
-                                <span class="rnr-boldtext">
-                                    Accuracy Bonus: 
-                                </span>
-                                1. Zombies are uncoordinated, so we'll give them a low accuracy bonus.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
@@ -1508,21 +1496,15 @@
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
-                                    Evasion: 
+                                    Armor: 
                                 </span>
-                                8. Ogres are easy to hit, so we'll give them low evasion.
+                                2. Ogres don't wear much armor, so we'll keep the value low and compensate with health.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
                                     Movement Speed: 
                                 </span>
                                 30ft. The ogre can't go far using it's movement, but we'll compensate with a "Charge" ability.
-                            </li>
-                            <li>
-                                <span class="rnr-boldtext">
-                                    Accuracy Bonus: 
-                                </span>
-                                0. Ogres aren't very coordinated, so we'll give them a low accuracy bonus.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
@@ -1578,7 +1560,7 @@
                             On the Shoulders of Giants
                         </span>
                         A small ally may ride atop an ogre's shoulders. They are considered to be out of reach of hand-to-hand weapons, unless the weapon 
-                        has 10ft range like a spear. Any attack made against them that is a glancing blow instead hits the ogre.
+                        has 10ft range like a spear. Twice per round of combat, the ogre can choose to shield it's rider and take damage in their stead.
                     </p>
                     <p class="rnr-body-paragraph">
                         <span class="rnr-boldtext">
@@ -1596,7 +1578,7 @@
                         <span class="rnr-ability-title">
                             Club
                         </span>
-                        1d10 Damage. The ogre takes a heavy swing at an enemy with its club. If the attack is not glancing, the target is thrown 
+                        1d10 Damage. The ogre takes a heavy swing at an enemy with its club. If the damage roll is a 8, 9, or 10, the target is thrown 
                         back 1d4 spaces unless they are _small_ in which case they are thrown back 1d6. If a thrown creature strikes a solid object, they take 
                         1d6 additional damage.
                     </p>
@@ -1671,9 +1653,9 @@
                         a party of four adventurers for just about 4 rounds of combat, or against a party of five for 3 rounds. 
                     </p>
                     <p>
-                        Because they will be attacked more frequently and take more damage, villains have high evasion and health.
+                        Because they will be attacked more frequently and take more damage, villains have high armor and health.
                         It can also be prudent to give them resistance to certain damage types. Because they will attack less frequently than players, they 
-                        deal more damage and have higher accuracy than minions. Villains should have higher spell power and a better than average spell power save.
+                        deal more damage than minions. Villains should have higher spell power and a better than average spell power save.
                         Your villain will have only a few chances to cast their magic or use their abilities, so they should have a good chance of working.
                     </p>
                 </div>
@@ -1843,21 +1825,15 @@
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
-                                    Evasion: 
+                                    Armor: 
                                 </span>
-                                13. We'll give our fire drake slightly higher than reccomended evasion to enhance the fantasy that its scaled hide protects it from harm.  
+                                4. We'll give our fire drake slightly higher than reccomended armor to enhance the fantasy that its scaled hide protects it from harm.  
                             </li>
                             <li>
                                 <span class="rnr-boldtext">
                                     Movement Speed: 
                                 </span>
                                 30ft walking. 100ft flying. The fire drake is faster when flying than when on foot. When flying, it can easily outpace the adventurers.
-                            </li>
-                            <li>
-                                <span class="rnr-boldtext">
-                                    Accuracy Bonus: 
-                                </span>
-                                4. We'll give our fire drake the maximum accuracy bonus so that its attacks tend to hit.
                             </li>
                             <li>
                                 <span class="rnr-boldtext">

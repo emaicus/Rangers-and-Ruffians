@@ -4,11 +4,10 @@
 		<span>{{ability.name}}</span>
 	</div>
 	
-	<div *ngIf="ability.shouldDisplayActionType" class="ability-action-type"> 
-		{{ ability.abilityType }}
-	</div>
-
-	<div *ngIf="ability.shouldDisplayCost || ability.shouldDisplayDuration || ability.shouldDisplayRange">
+	<div *ngIf="ability.shouldDisplayCost || ability.shouldDisplayDuration || ability.shouldDisplayRange || ability.shouldDisplayActionType">
+		<ng-container *ngIf="ability.shouldDisplayActionType">
+			<span class="rnr-boldtext"> Type: </span> <span>  {{ ability.actionType }}</span>
+		</ng-container>
 		<ng-container *ngIf="ability.shouldDisplayCost">
 			<span class="rnr-boldtext"> Cost: </span> <span>  {{ ability.costString }}</span>
 		</ng-container>
@@ -53,6 +52,15 @@
 			<span *ngIf="ability.effect.description">
 				{{ability.effect.description}}
 			</span>
+			<ng-container *ngIf="ability.effect.options">
+				<ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
+					<li *ngFor="let option of ability.effect.options">
+						<span>
+							{{ option }}
+						</span>
+					</li>
+				</ul>
+			</ng-container>
 			<span *ngIf="ability.effect.save">
 				{{ability.effect.save}}
 			</span>
@@ -61,18 +69,6 @@
 					<app-condition-renderer [conditionName]="condition"></app-condition-renderer>
                 </ng-container>
 			</span>
-			<ng-container *ngIf="ability.effect.options">
-				<ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
-					<li *ngFor="let option of ability.effect.options">
-						<span class="rnr-boldtext">
-							{{ option.name }}.
-						</span>
-						<span>
-							{{ option.description }}
-						</span>
-					</li>
-				</ul>
-			</ng-container>
 		</ng-container>
 		<span *ngIf="ability.shouldDisplayUpcast">
 			{{ ability.upcast }}
@@ -116,17 +112,37 @@
 
     <div *ngIf="ability.shouldDisplaySummons && ability.summonedCreature">
 		<ng-container *ngIf="ability.summonedCreature.all_tiers">
-		  <span class="rnr-boldtext">Summoned Creature:</span><span> {{ ability.summonedCreature.all_tiers }}</span>
+		  	<span class="rnr-boldtext">Summoned Creature: </span>
+			<a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.all_tiers.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+				<span class="summon-name">
+					{{ ability.summonedCreature.all_tiers }}
+				</span>
+			</a>
 		</ng-container>
 		<ul *ngIf="ability.summonedCreature.tier_3">
 		  <li *ngIf="ability.summonedCreature.tier_1">
-			<span class="rnr-boldtext"> Tier 1 Summon:</span> <span>{{ ability.summonedCreature.tier_1 }}</span>
+			<span class="rnr-boldtext"> Tier 1 Summon: </span> 
+			<a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_1.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+				<span class="summon-name">
+					{{ ability.summonedCreature.tier_1 }}
+				</span>
+			</a>
 		  </li>
           <li *ngIf="ability.summonedCreature.tier_2">
-			<span class="rnr-boldtext"> Tier 2 Summon:</span> <span>{{ ability.summonedCreature.tier_2 }}</span>
+			<span class="rnr-boldtext"> Tier 2 Summon: </span> 
+			<a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_2.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+				<span class="summon-name"> 
+					{{ ability.summonedCreature.tier_2 }}
+				</span>
+			</a>
 		  </li>
           <li *ngIf="ability.summonedCreature.tier_3">
-			<span class="rnr-boldtext"> Tier 3 Summon:</span> <span>{{ ability.summonedCreature.tier_3 }}</span>
+			<span class="rnr-boldtext"> Tier 3 Summon: </span> 
+			<a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_3.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+				<span class="summon-name">
+					{{ ability.summonedCreature.tier_3 }}
+				</span>
+			</a>
 		  </li>
 		</ul>
 	</div>

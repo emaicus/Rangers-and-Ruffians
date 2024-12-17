@@ -6487,8 +6487,8 @@
                             a summoned thrall. The thrall is mindless, obeying only you. It can neither speak nor reason, though if you give it simple instructions 
                             it will attempt to carry them out." 
                 summoned_creature: 
-                    tier_1: "Undead Thrall"
-                    tier_2: "Greater Undead Thrall"
+                    tier_1: "Lesser Undead Thrall"
+                    tier_2: "Undead Thrall"
                     tier_3: "Greater Undead Thrall"
             -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
                 action_type: Offhand Action
