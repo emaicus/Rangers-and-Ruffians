@@ -102,7 +102,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="printable-damage-section" *ngIf="ability.damageScaling.all_tiers==''">
+		<div class="printable-damage-section" *ngIf="!ability.damageScaling.all_tiers">
 			<span class="rnr-boldtext">Damage </span>
 			<span class="rnr-boldtext">T1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} </span>
 			<span class="rnr-boldtext">T2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} </span>
