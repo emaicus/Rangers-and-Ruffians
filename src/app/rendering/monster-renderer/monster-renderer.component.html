@@ -1,64 +1,64 @@
 <div class="rnr-monster printable-content" *ngIf="monster"  [class.printable-content]="isReadyToPrint" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-monster'">
-	<div class="rnr-subsection-title" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
+	<div class="rnr-subsection-title" [id]="monster.name.replace(' ', '-').toLowerCase()">
 		{{ monster.name }}
 	</div>
 	<button (click)="printContent()" class="print-button">Print {{monster.name}}</button>
-	<div  [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-type'">
+	<div  [id]="monster.name.replace(' ', '-').toLowerCase() + '-type'">
 		<span class="rnr-boldtext">
 		{{monster.metadata.tier}} {{monster.metadata.type}}
 		</span>
-		<span *ngIf="monster.summons.wildshape" class="rnr-boldtext" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-wildshape'"> Wildshape</span>
+		<span *ngIf="monster.summons.wildshape" class="rnr-boldtext" [id]="monster.name.replace(' ', '-').toLowerCase() + '-wildshape'"> Wildshape</span>
 	</div>
 	<!-- <button (click)="printContent(race.name.toLowerCase() + '-race')">Print {{race.name}}</button>
 	<art-renderer [art]="raceArt"></art-renderer> -->
 	
-	<div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-stats'">
+	<div [id]="monster.name.replace(' ', '-').toLowerCase() + '-stats'">
 		<span class="rnr-boldtext">
 			Health:
 		</span>
-		<span [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-health'">
+		<span [id]="monster.name.replace(' ', '-').toLowerCase() + '-health'">
 			{{ monster.stats.health }}
 		</span>
 		<span class="rnr-boldtext">
-			Evasion:
+			Armor:
 		</span>
-		<span [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-evasion'">
-			{{ monster.stats.evasion }}
+		<span [id]="monster.name.replace(' ', '-').toLowerCase() + '-armor'">
+			{{ monster.stats.armor }}
 		</span>
 		<span class="rnr-boldtext">
 			Spell Power:
 		</span>
-		<span [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-spell-power'">
+		<span [id]="monster.name.replace(' ', '-').toLowerCase() + '-spell-power'">
 			{{ monster.stats.spell_power }}
 		</span>
 		<span class="rnr-boldtext">
 			Stat Bonus:
         </span>
-		<span [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-spell-power'">
+		<span [id]="monster.name.replace(' ', '-').toLowerCase() + '-spell-power'">
 			{{ monster.stats.stat_bonus }}
 		</span>
 	</div>
-	<div *ngIf="monster.stats.speed" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-speed'">
+	<div *ngIf="monster.stats.speed" [id]="monster.name.replace(' ', '-').toLowerCase() + '-speed'">
 		<span class="rnr-boldtext">
 			Movement:
 		</span>
-		<span *ngIf="monster.stats.speed['Base Speed']" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-base-speed'">
+		<span *ngIf="monster.stats.speed['Base Speed']" [id]="monster.name.replace(' ', '-').toLowerCase() + '-base-speed'">
 			{{ monster.stats.speed['Base Speed'] }}ft Ground
 		</span>
-		<span *ngIf="monster.stats.speed['Flying Speed']" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-flying-speed'">
+		<span *ngIf="monster.stats.speed['Flying Speed']" [id]="monster.name.replace(' ', '-').toLowerCase() + '-flying-speed'">
 			{{ monster.stats.speed['Flying Speed'] }}ft Flying
 		</span>
-		<span *ngIf="monster.stats.speed['Flying Speed']" [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-swipping-speed'">
+		<span *ngIf="monster.stats.speed['Flying Speed']" [id]="monster.name.replace(' ', '-').toLowerCase() + '-swipping-speed'">
 			{{ monster.stats.speed['Swimming Speed'] }}ft Swimming
 		</span>
 	</div>
-	<div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-moveset'">
+	<div [id]="monster.name.replace(' ', '-').toLowerCase() + '-moveset'">
         <ng-container *ngIf="monster.instantiatedMoveset.passive_abilities">
             <div *ngIf="monster.instantiatedMoveset.passive_abilities.length > 0">
                 <div class="rnr-sub-subsection-title">
                     Passive Abilities
 				</div>
-                <div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-passive-abilities'">
+                <div [id]="monster.name.replace(' ', '-').toLowerCase() + '-passive-abilities'">
                     <ng-container *ngFor="let ability of monster.instantiatedMoveset.passive_abilities">
                         <app-ability-renderer [ability]="ability"></app-ability-renderer>
                     </ng-container>
@@ -73,7 +73,7 @@
 				<span class="rnr-boldtext">
 					This creature can take {{ monster.instantiatedMoveset.combat_actions_per_turn }} combat actions on its turn.
 				</span>
-                <div [id]="monster.name.replace('/\s+/g', '-').toLowerCase() + '-combat-actions'">
+                <div [id]="monster.name.replace(' ', '-').toLowerCase() + '-combat-actions'">
                     <ng-container *ngFor="let ability of monster.instantiatedMoveset.combat_actions">
                         <app-ability-renderer [ability]="ability"></app-ability-renderer>
                     </ng-container>

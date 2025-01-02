@@ -12,7 +12,7 @@ class RnRMonster:
 		self.summons = monster_def['summons']
 		self.stats = monster_def['stats']
 		self.health = self.stats['health']
-		self.evasion = self.stats['evasion']
+		self.armor = self.stats['armor']
 		self.spell_power = 'TMP_SPELL_POWER' #stats['spell_power']
 		self.speed = self.stats['speed']
 		self.stat_bonus = self.stats['stat_bonus']
@@ -63,7 +63,7 @@ class RnRMonster:
 				summon_str += f' {summon.title()}'
 		ret += f'{summon_str}  \n'
 		
-		ret += f'__Health:__ {self.health} __Evasion:__ {self.evasion} __Spell Power:__ {self.spell_power} __Stat Bonus:__ {self.stat_bonus}  \n'
+		ret += f'__Health:__ {self.health} __Armor:__ {self.armor} __Spell Power:__ {self.spell_power} __Stat Bonus:__ {self.stat_bonus}  \n'
 		
 		speed_str = ''
 		for speed_type, speed_value in self.speed.items():

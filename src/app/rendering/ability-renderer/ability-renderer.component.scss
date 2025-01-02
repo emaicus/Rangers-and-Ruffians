@@ -5,3 +5,10 @@
     display: inline-block; /* make it inline with the ability name */
     margin-right: 0.5rem; /* adjust spacing as needed */
 }
+
+.summon-name  {
+    cursor: pointer !important;  /* Apply cursor pointer to the anchor itself */
+    pointer-events: auto;         /* Ensure the anchor is clickable */
+  }
+  
+ 

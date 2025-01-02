@@ -160,6 +160,7 @@ class RnRAbility():
       serial['effect']['description'] = self.effect['description']
       serial['effect']['save'] = self.effect['save']
       serial['effect']['type'] = self.effect['type']
+      serial['effect']['options'] = self.effect.get('options', [])
       serial['effect']['conditions'] = list()
       for condition in self.effect['conditions']:
         serial['effect']['conditions'].append(condition.serialize())

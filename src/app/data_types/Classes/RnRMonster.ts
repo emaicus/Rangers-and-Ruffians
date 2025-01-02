@@ -27,7 +27,7 @@ export class RnRMonster implements MonsterData {
 		
 		this.stats = {
 			health: data?.stats?.health ?? 0,
-			evasion: data?.stats?.evasion ?? 0,
+			armor: data?.stats?.armor ?? 0,
 			stat_bonus: data?.stats?.stat_bonus ?? 0,
 			spell_power: data?.stats?.spell_power ?? 0,
 			size: data?.stats?.size  ?? 0,

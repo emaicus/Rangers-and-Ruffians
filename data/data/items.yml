@@ -1,8 +1,9 @@
--   name: Salve 
+-   name: Salve
     goldValue: 10
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: healing 
         name: "inherited"
         cost: 0
@@ -17,6 +18,7 @@
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: healing 
         name: "inherited"
         cost: 0
@@ -32,6 +34,7 @@
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: healing 
         name: "inherited"
         cost: 0
@@ -46,6 +49,7 @@
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: healing 
         name: "inherited"
         cost: 0
@@ -61,6 +65,7 @@
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: healing 
         name: "inherited"
         cost: 0
@@ -76,6 +81,7 @@
     type: Potion
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: utility
         name: "inherited"
         cost: 0
@@ -88,6 +94,7 @@
     goldValue: 30
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -106,6 +113,7 @@
     goldValue: 20
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: debuff
         cost: 0
@@ -122,6 +130,7 @@
     goldValue: 25
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: utility
         cost: 0
@@ -133,6 +142,7 @@
     goldValue: 50
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -153,6 +163,7 @@
     goldValue: 50
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -171,6 +182,7 @@
     goldValue: 250
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -188,6 +200,7 @@
     goldValue: 200
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -206,6 +219,7 @@
     goldValue: 100
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: utility
         cost: 0
@@ -218,6 +232,7 @@
     goldValue: 100
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: debuff
         cost: 0
@@ -234,6 +249,7 @@
     goldValue: 75
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: debuff
         cost: 0
@@ -251,6 +267,7 @@
     goldValue: 60
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -267,6 +284,7 @@
     goldValue: 100
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -285,6 +303,7 @@
     type: Potion 
     subtype: Healing Potion
     ability:
+        action_type: Offhand Action
         type: utility
         name: "inherited"
         cost: 0
@@ -297,6 +316,7 @@
     goldValue: 1500
     type: Potion
     ability:
+        action_type: Offhand Action
         name: "inherited"
         type: buff
         cost: 0
@@ -315,6 +335,8 @@
     goldValue: 10
     type: Firearm Upgrade 
     ability:
+        action_type: modifies_ability
+        ability_modified: Standard Attack
         name: "inherited"
         type: utility 
         cost: 0
@@ -325,6 +347,8 @@
     goldValue: 5
     type: Firearm Upgrade 
     ability:
+        action_type: modifies_ability
+        ability_modified: Standard Attack
         type: utility 
         name: "inherited"
         cost: 0
@@ -341,6 +365,8 @@
     goldValue: 5
     type: Firearm Upgrade 
     ability:
+        action_type: modifies_ability
+        ability_modified: Standard Attack
         type: utility 
         name: "inherited"
         cost: 0
@@ -351,40 +377,44 @@
     goldValue: 10
     type: Firearm Upgrade 
     ability:
+        action_type: modifies_ability
+        ability_modified: Standard Attack
         type: utility 
         name: "inherited"
         cost: 0
         range: inherited
         duration: passive 
         description: "Mount a scope on your firearm to increase the range of your pistol or long-rifle by 30ft or your scattergun by 10ft. Not compatible with Sawed Off."
--   name: Recoil Compensator 
-    goldValue: 100
-    type: Firearm Upgrade 
-    ability:
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Attach a recoil compensator to your firearm, making it more accurate and granting you +2 to accuracy checks."
--   name: Quick Clear Barrel 
-    goldValue: 100
-    type: Firearm Upgrade 
-    ability:
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Add an system to your firearm that makes it easier to clear in case of misfire. Reduce the clearing target to D12."
+# -   name: Recoil Compensator 
+#     goldValue: 100
+#     type: Firearm Upgrade 
+#     ability:
+#         type: utility 
+#         name: "inherited"
+#         cost: 0
+#         range: inherited
+#         duration: passive 
+#         description: "Attach a recoil compensator to your firearm, making it more accurate and granting you +2 to accuracy checks."
+# -   name: Quick Clear Barrel 
+#     goldValue: 100
+#     type: Firearm Upgrade 
+#     ability:
+#         type: utility 
+#         name: "inherited"
+#         cost: 0
+#         range: inherited
+#         duration: passive 
+#         description: "Add an system to your firearm that makes it easier to clear in case of misfire. Reduce the clearing target to D12."
 -   name: Impact Blast Modification
     goldValue: 250
     type: Firearm Upgrade 
     ability:
+        action_type: modifies_ability
+        ability_modified: Standard Attack
         type: utility 
         name: "inherited"
         cost: 0
         range: inherited
         duration: passive 
-        description: "Chamber your weapon in a higher caliber. Whenever you score a critical hit, knock back your enemy 15 feet. 
+        description: "Chamber your weapon in a higher caliber. Whenever you use a hero token to score a critical hit, knock your enemy back 15 feet. 
             This stacks with other critical hit enhancements."
