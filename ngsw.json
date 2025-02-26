@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1735856218482,
+  "timestamp": 1740537656400,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-3J7GE5TY.js",
+        "/main-URORWPJ5.js",
         "/manifest.webmanifest",
         "/polyfills-RX4V3J3S.js",
         "/styles-NZKN2KVA.css"
@@ -208,7 +208,7 @@
     "/assets/css/style.scss": "6dc1dfdfe0662d4225483deb2abedc15f301cc03",
     "/assets/data/attributions.json": "4d8cc6bbae39c41749f4cf4657f81a223a95abf7",
     "/assets/data/backgrounds.json": "b7de4c70486b7c8754959c2ba8c07a2be6e6dd4c",
-    "/assets/data/classes.json": "a3b7375fb2075836862dd5f73c2bfa3a1ae8b7b2",
+    "/assets/data/classes.json": "6aaef2a31938a475151622f75c7a219344d67994",
     "/assets/data/conditions.json": "1d11d69e236ed762ee047f6afb63b5f805c8f084",
     "/assets/data/items.json": "5a0ced89e90eb0d1dcb7fcbcffb95f4183f9ed45",
     "/assets/data/monsters.json": "8afc243cf359f7d4b18303c5c7bce1d45f7aa102",
@@ -328,7 +328,7 @@
     "/assets/images/skill_trees/barbarian.jpg": "e971ee8df6400cb6d38759bd8de433f004fd990b",
     "/assets/images/skill_trees/fighter.jpg": "16939094461f76e387695baaf4e7f3e77d548051",
     "/assets/images/skill_trees/gunslinger.jpg": "42623f0dd530fe1d80783e0fc5db6f0c3cbf206e",
-    "/assets/images/skill_trees/knight.jpg": "09deec85cbac5c9b112761325861d2f2a8ac1733",
+    "/assets/images/skill_trees/knight.jpg": "4034c76bbb04f2495da0ddbcc874c0effe116c93",
     "/assets/images/skill_trees/monk.jpg": "05291b000d541ba19cf90f117a93dc3f0ea735b3",
     "/assets/images/skill_trees/ranger.jpg": "0fdbe878078a8520f795be76db7069bfc201bc07",
     "/assets/images/skill_trees/ranger.svg": "b067e1b6841c73d5506917ffb1d5428bcad6f779",
@@ -341,8 +341,8 @@
     "/assets/images/wood_elf.jpg": "ca18f03470a2effb6bcd1ae7da2020fe35c51c9d",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "7c68203fecf470d8dcabd496387735bba8ad53fc",
-    "/main-3J7GE5TY.js": "e050f7a29793ef00fc40a4a7d0057622dccc7156",
+    "/index.html": "b4afd1ce7a951337d97ae5158b461b4b356dbdd7",
+    "/main-URORWPJ5.js": "c2f44e90612a8fcd55f4153710685c85d9fca1e9",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
