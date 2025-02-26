@@ -1024,8 +1024,8 @@
         tree_path: "tmp"
         abilities:
             -   name: Faithful Weapon
-                action_type: "Free Action"
-                cost: 1
+                action_type: "Offhand Action"
+                cost: 0
                 type: combat option 
                 passive_damage_source: true
                 range: self
@@ -1034,11 +1034,12 @@
                 damage_scaling:
                     damage_type: radiant 
                     all_tiers: 1d6
-                description: "You have gained the ability to bind yourself magically to a weapon. 
-                              Whenever you rest, you may pray over a weapon to impart it with the intention of your diety.
-                              From then on, the weapon deals bonus damage. You may also summon it at any time, 
-                              so long as it is within the abilities radius, and it will fly to your hand in as straight 
-                              a line as it can manage. You may bind yourself to at most one weapon in this way at a time." 
+                description: "Pray over a weapon for an hour to impart it with the intention of your diety.
+                              From then on, the weapon deals bonus damage. While you are within the ability's radius, you may 
+                              summon your bound weapon to your hand. It will fly towards you in as straight 
+                              a line as it can manage. If an enemy is struck by the weapon as it returns to you, you may treat it as an attack with your 
+                              inner fire as its modifier. You may summon your weapon as an offhand action or as your reaction.
+                              You may bind yourself to at most one weapon in this way at a time." 
             -   name: Charge
                 action_type: "Action"
                 type: combat option
@@ -1051,8 +1052,8 @@
                     tier_1: 2d4 #(5 + 3.5f + 3inf x2 = 11.5 each x 2 = 22.5 overall)
                     tier_2: 3d4 #(7.5 + 7f + 4inf x2 = 18.5 each x 2 = 37 overall)
                     tier_3: 4d4 #(10 + 10.5f +5inf x2 = 26 each x2 = 52 overall)
-                description: "With a mighty cry, you barrel forward into the fray. 
-                            Rush ahead a distance equal to your dash. For the length, you are immune to exposed attacks and deal damage
+                description: "With a mighty cry, you barrel into the fray. 
+                            Rush ahead a distance equal to your dash of 25ft, whichever is higher. For the length, you are immune to exposed attacks and deal damage
                             to any enemy whose space you move through."
                 effect:
                     type: debuff 
@@ -1081,7 +1082,7 @@
                 cost: 1
                 range: touch 
                 duration: instantaneous
-                description: "Golden light shines from your hand as you reach out to an injured ally, staving off the worst of their injury."
+                description: "Golden light shines in your hand as you reach out to an injured ally, staving off the worst of their injury."
                 damage_scaling: #FLAG HEALING
                     damage_type: healing
                     tier_1: "2d4"
@@ -1138,8 +1139,7 @@
                 ability_modified: Guardian Ward
                 action_type: Free Action 
                 description: As danger closes in about your allies, use your power to convert any Guardian Wards you've deployed into 
-                            Holy Shields. This may be done as a free action at any time, including out of turn in combat, so long as
-                            an attack is not currently being resolved."
+                            Holy Shields."
             -   name: Aura of Hope
                 action_type: "Passive"
                 type: aoe buff
@@ -1167,7 +1167,7 @@
                 effect:
                     type: buff 
                     description: "For the ability's duration, your life force is magically bound to that of one or more allies with a guardian ward. 
-                                Until you use a free action to unlink yourself on your turn, you may take all or a portion."
+                                Until you use a free action to unlink yourself on your turn, you may take all or a portion of their damage."
                     conditions: 
                         - custom 
                     save: null
@@ -1182,8 +1182,7 @@
                     tier_1: 1d6 
                     tier_2: 2d6
                     tier_3: 3d6
-                description: "When you heal an ally who has a guardian ward, a shean of gold blazes around them. 
-                              Your healing restores bonus health to them."
+                description: "When you heal an ally with a guardian ward, they restore additional health."
             -   name: Second Guardian Ward
                 type: combat option
                 cost: 0
@@ -1199,7 +1198,7 @@
                 duration: instantaneous
                 ability_modified: dash
                 action_type: Reaction
-                description: "Burst forward to save somone from harm. As a reaction, jump in front of an ally to become the target of a physical attack aimed at them.
+                description: "Burst forward to save someone from harm. As a reaction, jump in front of an ally to become the target of a physical attack aimed at them.
                             Any damage you recieve as a result of this ability is halved."
             #-   name: Single-minded Bravery
                     #cost: 0
@@ -1210,7 +1209,7 @@
                 range: self 
                 duration: instantaneous
                 action_type: Free Action
-                description: "Prepare for an attack as it hurtless towards you, hardening yourself against its damanage. 
+                description: "Prepare for an attack as it hurtles towards you, hardening yourself against its damanage. 
                             As a Free Action, halve the damage of an attack made against you. You may declare this after seeing its outcome."
             -   name: Stay on Your Feet
                 type: buff
@@ -1233,7 +1232,7 @@
                 description: "You are a bulwark of steel, hindering any enemy advance."
                 effect:
                     type: debuff 
-                    description: "When you make your exposed attack, your enemy must make a spell power save or be Halted. On success, their remaining movement is Hindered."
+                    description: "When you make your exposed attack, your enemy must make a spell power save or be Halted. Even if they succeed, they are Hindered."
                     conditions:
                         - halted 
                         - hindered 
@@ -1263,20 +1262,20 @@
                         - custom 
                     save: null
             -   name: Pivot
-                action_type: Action
-                cost: 0
+                action_type: Offhand Action
+                cost: 1
                 type: combat option 
                 duration: instantaneous
                 range: self  
                 radius: 15
                 description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
             -   name: Phalanx
-                action_type: "Free Action"
-                cost: 0
+                action_type: "Offhand Action"
+                cost: 1
                 type: aoe buff 
                 duration: infinite 
                 range: self 
-                radius: 10 
+                radius: 15 
                 description: "Adopt a defensive stance, granting all allies within five feet your protection."
                 effect:
                     type: buff 
@@ -1284,9 +1283,6 @@
                     conditions:
                         - guarded
                     save: null
-            #-   name: Ready Stance
-                    #cost: 0
-                    #description: As an action, prepare yourself for an attack. The first time you are attacked before your next turn, counterattack as a free action.
             -   name: Overwhelming Strike
                 action_type: "Action"               
                 type: combat option
@@ -1299,7 +1295,7 @@
                     tier_1: "1d8"
                     tier_2: "1d10"
                     tier_3: "1d12"
-                description: "With a blow like the fall of a hammer, you batter your enemy a devestating attack."
+                description: "With a blow like a hammerfall, you batter your enemy a devestating attack."
                 effect:
                     type: debuff 
                     description: "They must make a spell power save, or be Stunned until the end of their next turn."
@@ -1313,10 +1309,10 @@
                 range: inherited
                 duration: instantaneous
                 ability_modified: standard attack
-                description: "You slice at your enemy's legs in an attempt to hinder their movement."
+                description: "Slice at your enemy's legs in an attempt to hinder their movement."
                 effect: 
                     type: debuff 
-                    description: "They must make a spell power saving throw or be Slowed until the end of their next turn."
+                    description: "They must make a spell power save  or be Slowed until the end of their next turn."
                     conditions:
                         - slowed 
                     save: null
@@ -1344,25 +1340,19 @@
                     conditions:
                         - custom 
                     save: null
-            -   name: Goading Attack
-                action_type: "Action"
-                cost: 1
-                type: combat option
-                range: inherited
+            -   name: Goad
+                action_type: "Offhand Action"
+                cost: 0
+                type: debuff
+                range: 50
                 duration: instantaneous
-                ability_modified: standard attack
-                description: "A bloody grin fixed upon your face, you make an attack meant to get your enemy's attention."
+                description: "Call a challenge to an enemy."
                 effect:
                     type: debuff 
                     description: "Your target must make a spell power save or become Fixated on you."
                     conditions:
                         - fixated 
                     save: "They may repeat their saving throw at the end of each of their turns."
-                damage_scaling:
-                    damage_type: inherited 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12
             -   name: Inspiring Critical
                 action_type: "Passive"
                 cost: 0
@@ -1379,6 +1369,19 @@
                     conditions: 
                         - inspired 
                     save: null
+            -   name: Shield Bash
+                action_type: "Offhand Action"
+                cost: 0
+                type: debuff 
+                duration: 1 
+                range: "touch" 
+                description: "Smash into an enemy with your offhand as you attempt to knock them off balance."
+                effect:
+                    type: buff 
+                    description: "They must make a spell power save or become Vulnerable to the next attack made against them."
+                    conditions:
+                        - vulnerable
+                    save: null
             -   name: Lionhearted
                 action_type: "Offhand Action"
                 cost: 1
@@ -1386,7 +1389,7 @@
                 range: self 
                 radius: 30
                 duration: 1 hour
-                description: "Your presence soothes your allies, guarding them against fear."
+                description: "Your presence soothes your allies, inspiring them and guarding them against fear."
                 effect:
                     type: buff 
                     description: "Inspire all allies within the ability's radius. Furthermore, for the ability's duration, any friendly creaturess who are within 30ft of you are immune to the Frightened condition."
@@ -2679,7 +2682,7 @@
                 duration: passive
                 ability_modified: advantaged attack
                 passive_damage_source: true
-                description: "When striking at an enemy, you use every opportunity to your advantage."
+                description: "Use every opportunity to your advantage as you strike at an enemy."
                 effect:
                     type: buff 
                     description: "If you have advantage on an attack, you may instead add 1d6 damage to it."
@@ -2815,7 +2818,7 @@
                 duration: instantaneous
                 range: self 
                 ability_modified: slayed enemy
-                description: "As your foes' bodies fall around you, a fiendish energy courses through your veins."
+                description: "As your enemies' bodies fall around you, a fiendish energy courses through your veins."
                 effect:
                     type: buff 
                     description: "Whenever you slay an enemy, you are Spurred to Action." 
@@ -2875,7 +2878,8 @@
                 effect:
                     type: buff 
                     description: "If an enemy you have flanked tries to look at you, you may spend an action point to 
-                                pivot around them as a reaction. Ride the Blindspot continues until the end of the enemy's
+                                pivot around them as a reaction. If they try to move, you may move with them.
+                                Ride the Blindspot continues until the end of the enemy's
                                 turn."
                     conditions: 
                         - custom 
@@ -2990,7 +2994,7 @@
             #-   name: Tether
                 #cost: 1
                 #description: Using your magic, tether the lifeforce of two enemies within 50ft. The enemies equally split any damage taken and suffer the same status effects.
-            -   name: Thieve's Strike
+            -   name: Thief's Strike
                 action_type: "Action"
                 type: combat option 
                 cost: 1
@@ -3114,9 +3118,10 @@
                 description: "With a howl like the wind, your choice of fire, ice, or lightning swaddles you."
                 effect:
                     type: buff 
-                    description: "For the spell's duration, you are resistant to damage based on the chosen element."
+                    description: "For the spell's duration, you are guarded and are resistant to damage based on the chosen element."
                     conditions:
                         - elemental resistance
+                        - guarded
                     save: null
                 range: 30
             -   name: Control Plant Growth
@@ -3200,9 +3205,9 @@
                     tier_3: 3d6 #(10.5 + 10.5f = 21)
                 description: "A latticework of frost spreads across your focus, then wraps around one of your enemies."
                 effect:
-                    description: If you roll a 6 on any of the dice for this attack, the enemy is Slowed until the end of their next turn.
+                    description: If you roll a 6 on any of the dice for this attack, the enemy is Hindered until the end of their next turn.
                     conditions: 
-                        - slowed
+                        - hindered
                     type: debuff
                     save: null
             -   name: Constricting Vine # 0 cost targeted attack with Hindered
@@ -3219,7 +3224,7 @@
                     tier_1: 1d4 #(7)
                     tier_2: 2d4 #(9.5)
                     tier_3: 3d4 #(14)
-                description: "As you beckon, snare-like vines from the earth writhe from the earth and grasp at your target's feet."
+                description: "At your beck, snare-like vines writhe from the earth and grasp at your target's feet."
                 effect:
                     description: "Average sized creatures must make a spell power save or be Grappled.
                                 Large enemies must make a spell power save or be Hindered on their next turn."
