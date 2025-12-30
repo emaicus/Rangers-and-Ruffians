@@ -4,11 +4,10 @@ import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 
 @Component({
-  selector: 'app-monster-renderer',
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
-  templateUrl: './monster-renderer.component.html',
-  styleUrl: './monster-renderer.component.scss'
+    selector: 'app-monster-renderer',
+    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
+    templateUrl: './monster-renderer.component.html',
+    styleUrl: './monster-renderer.component.scss'
 })
 export class MonsterRendererComponent implements AfterViewInit {
   @Input() monster?: RnRMonster;

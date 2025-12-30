@@ -13,11 +13,10 @@ import { ItemRendererComponent } from '../../rendering/item-renderer/item-render
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-weapon-page',
-  standalone: true,
-  imports: [WeaponRendererComponent, ItemRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
-  templateUrl: './weapon-page.component.html',
-  styleUrl: './weapon-page.component.scss'
+    selector: 'app-weapon-page',
+    imports: [WeaponRendererComponent, ItemRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
+    templateUrl: './weapon-page.component.html',
+    styleUrl: './weapon-page.component.scss'
 })
 export class WeaponPageComponent implements OnInit, AfterViewInit{
   weapons: Weapon[] = [];

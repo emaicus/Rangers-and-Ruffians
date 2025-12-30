@@ -6,11 +6,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @Component({
-  selector: 'app-home-page',
-  standalone: true,
-  imports: [TopmatterComponent, RouterLink, NgIf, MatExpansionModule],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+    selector: 'app-home-page',
+    imports: [TopmatterComponent, RouterLink, NgIf, MatExpansionModule],
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent implements OnInit {
   deferredPrompt: any;

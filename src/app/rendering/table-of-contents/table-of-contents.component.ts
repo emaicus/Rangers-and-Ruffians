@@ -4,11 +4,10 @@ import { NgIf, NgFor, NgStyle } from '@angular/common';
 import { NavigationService } from '../../services/navigation_service/navigation.service';
 
 @Component({
-  selector: 'app-table-of-contents',
-  standalone: true,
-  imports: [RouterLink, NgIf, NgFor, NgStyle],
-  templateUrl: './table-of-contents.component.html',
-  styleUrl: './table-of-contents.component.scss'
+    selector: 'app-table-of-contents',
+    imports: [RouterLink, NgIf, NgFor, NgStyle],
+    templateUrl: './table-of-contents.component.html',
+    styleUrl: './table-of-contents.component.scss'
 })
 export class TableOfContentsComponent {
   @Input() contentSelector: string = ".toc-section"; // CSS selector for the content container

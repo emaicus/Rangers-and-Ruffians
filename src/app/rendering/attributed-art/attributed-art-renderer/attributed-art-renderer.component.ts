@@ -6,11 +6,10 @@ import { Subscription } from 'rxjs';
 import { OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-attributed-art-renderer',
-  standalone: true,
-  imports: [NgIf],
-  templateUrl: './attributed-art-renderer.component.html',
-  styleUrl: './attributed-art-renderer.component.scss'
+    selector: 'app-attributed-art-renderer',
+    imports: [NgIf],
+    templateUrl: './attributed-art-renderer.component.html',
+    styleUrl: './attributed-art-renderer.component.scss'
 })
 export class AttributedArtRendererComponent implements OnInit{
   @Input() artName?: string;

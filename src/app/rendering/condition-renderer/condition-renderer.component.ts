@@ -5,11 +5,10 @@ import { Subscription } from 'rxjs';
 import { ConditionService } from '../../services/condition_service/condition.service';
 
 @Component({
-  selector: 'app-condition-renderer',
-  standalone: true,
-  imports: [NgIf],
-  templateUrl: './condition-renderer.component.html',
-  styleUrl: './condition-renderer.component.scss'
+    selector: 'app-condition-renderer',
+    imports: [NgIf],
+    templateUrl: './condition-renderer.component.html',
+    styleUrl: './condition-renderer.component.scss'
 })
 export class ConditionRendererComponent {
   @Input() conditionName?: string;

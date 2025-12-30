@@ -1,11 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-skill-tree-renderer',
-  standalone: true,
-  imports: [],
-  templateUrl: './skill-tree-renderer.component.html',
-  styleUrl: './skill-tree-renderer.component.scss'
+    selector: 'app-skill-tree-renderer',
+    imports: [],
+    templateUrl: './skill-tree-renderer.component.html',
+    styleUrl: './skill-tree-renderer.component.scss'
 })
 export class SkillTreeRendererComponent implements OnInit{
   skill_tree_path?: string;

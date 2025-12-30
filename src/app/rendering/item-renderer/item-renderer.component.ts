@@ -4,11 +4,10 @@ import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 
 @Component({
-  selector: 'app-item-renderer',
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
-  templateUrl: './item-renderer.component.html',
-  styleUrl: './item-renderer.component.scss'
+    selector: 'app-item-renderer',
+    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
+    templateUrl: './item-renderer.component.html',
+    styleUrl: './item-renderer.component.scss'
 })
 export class ItemRendererComponent implements AfterViewInit {
   @Input() item?: RnRItem;

@@ -7,11 +7,10 @@ import { SkillTreeRendererComponent } from '../skill-tree-renderer/skill-tree-re
 import { RangerCompanionCreatureComponent } from '../../rule_fragments/ranger-companion-creature/ranger-companion-creature.component';
 
 @Component({
-  selector: 'app-class-renderer',
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent, AttributedArtRendererComponent, SkillTreeRendererComponent, RangerCompanionCreatureComponent],
-  templateUrl: './class-renderer.component.html',
-  styleUrl: './class-renderer.component.scss'
+    selector: 'app-class-renderer',
+    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent, AttributedArtRendererComponent, SkillTreeRendererComponent, RangerCompanionCreatureComponent],
+    templateUrl: './class-renderer.component.html',
+    styleUrl: './class-renderer.component.scss'
 })
 export class ClassRendererComponent implements AfterViewInit {
   @Input() rnrclass?: RnRClass; 

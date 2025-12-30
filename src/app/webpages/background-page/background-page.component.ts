@@ -8,11 +8,10 @@ import { Background } from '../../data_types/Classes/RnRBackground';
 import { BackgroundService } from '../../services/background_service/background.service';
 
 @Component({
-  selector: 'app-background-page',
-  standalone: true,
-  imports: [TopmatterComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
-  templateUrl: './background-page.component.html',
-  styleUrl: './background-page.component.scss'
+    selector: 'app-background-page',
+    imports: [TopmatterComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
+    templateUrl: './background-page.component.html',
+    styleUrl: './background-page.component.scss'
 })
 export class BackgroundPageComponent  implements OnInit, AfterViewInit{
   backgrounds: Background[] = [];

@@ -6,11 +6,10 @@ import { ConditionRendererComponent } from '../condition-renderer/condition-rend
 import { NavigationService } from '../../services/navigation_service/navigation.service';
 
 @Component({
-  selector: 'app-ability-renderer',
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, ConditionRendererComponent],
-  templateUrl: './ability-renderer.component.html',
-  styleUrl: './ability-renderer.component.scss'
+    selector: 'app-ability-renderer',
+    imports: [CommonModule, NgIf, NgFor, ConditionRendererComponent],
+    templateUrl: './ability-renderer.component.html',
+    styleUrl: './ability-renderer.component.scss'
 })
 export class AbilityRendererComponent {
   @Input() ability?: RnRAbility;

@@ -4,11 +4,10 @@ import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 
 @Component({
-  selector: 'app-weapon-renderer',
-  standalone: true,
-  imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
-  templateUrl: './weapon-renderer.component.html',
-  styleUrl: './weapon-renderer.component.scss'
+    selector: 'app-weapon-renderer',
+    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent],
+    templateUrl: './weapon-renderer.component.html',
+    styleUrl: './weapon-renderer.component.scss'
 })
 export class WeaponRendererComponent implements AfterViewInit {
   @Input() weapon?: Weapon;
