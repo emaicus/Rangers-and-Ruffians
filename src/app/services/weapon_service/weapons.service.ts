@@ -19,9 +19,4 @@ export class WeaponsService {
       map(data => data.map(wdata => new Weapon(wdata)))
     );
   }
-
-  // getFirestoreData(): Observable<any> {
-  //   // Implement logic to fetch data from Firestore (to be added in the future)
-  //   // Example: return this.http.get('Firestore API endpoint');
-  // }
 }

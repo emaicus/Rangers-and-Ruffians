@@ -8,11 +8,10 @@ import { RnRClass } from '../../data_types/Classes/RnRClass';
 import { RnRClassService } from '../../services/rnr_class_service/rnr-class.service';
 
 @Component({
-  selector: 'app-class-page',
-  standalone: true,
-  imports: [TopmatterComponent, ClassRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
-  templateUrl: './class-page.component.html',
-  styleUrl: './class-page.component.scss'
+    selector: 'app-class-page',
+    imports: [TopmatterComponent, ClassRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
+    templateUrl: './class-page.component.html',
+    styleUrl: './class-page.component.scss'
 })
 export class ClassPageComponent implements OnInit, AfterViewInit{
   rnrClasses: RnRClass[] = [];

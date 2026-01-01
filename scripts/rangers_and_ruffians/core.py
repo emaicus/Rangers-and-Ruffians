@@ -8,6 +8,8 @@ import jsonschema
 from tqdm import tqdm
 import traceback
 from pathlib import Path
+from typing import Optional
+
 
 from .RangersAndRuffians import RangersAndRuffians
 
@@ -425,7 +427,7 @@ def seekCondition(conditionName: str, conditions) -> bool:
       break 
   return found
 
-def validateAbility(ability: dict, ability_schema: dict, status_effects: list, context: str | None) -> None:
+def validateAbility(ability: dict, ability_schema: dict, status_effects: list, context: Optional[str]) -> None:
 
   try:
     jsonschema.validate(ability, schema=ability_schema)

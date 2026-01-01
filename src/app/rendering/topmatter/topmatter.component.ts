@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-topmatter',
-  standalone: true,
-  imports: [],
-  templateUrl: './topmatter.component.html',
-  styleUrl: './topmatter.component.scss'
+    selector: 'app-topmatter',
+    imports: [],
+    templateUrl: './topmatter.component.html',
+    styleUrl: './topmatter.component.scss'
 })
 export class TopmatterComponent {
   portrait_banner_img = "assets/images/backdrops/portrait_banner.jpg";

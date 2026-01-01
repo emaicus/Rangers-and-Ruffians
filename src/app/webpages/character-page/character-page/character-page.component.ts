@@ -18,11 +18,10 @@ import { CommonModule } from '@angular/common';
 import { TableOfContentsComponent } from '../../../rendering/table-of-contents/table-of-contents.component';
 
 @Component({
-  selector: 'app-character-page',
-  standalone: true,
-  imports: [TopmatterComponent, RaceRendererComponent, ClassRendererComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
-  templateUrl: './character-page.component.html',
-  styleUrl: './character-page.component.scss'
+    selector: 'app-character-page',
+    imports: [TopmatterComponent, RaceRendererComponent, ClassRendererComponent, BackgroundRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
+    templateUrl: './character-page.component.html',
+    styleUrl: './character-page.component.scss'
 })
 export class CharacterPageComponent implements OnInit, AfterViewInit{
   backgrounds: Background[] = [];

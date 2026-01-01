@@ -16,11 +16,10 @@ interface GroupedMonsters {
 }
 
 @Component({
-  selector: 'app-monster-page',
-  standalone: true,
-  imports: [MonsterRendererComponent, CommonModule, NgFor, NgIf, MatCheckboxModule, MatInputModule, MatSelectModule, MatFormFieldModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './monster-page.component.html',
-  styleUrl: './monster-page.component.scss'
+    selector: 'app-monster-page',
+    imports: [MonsterRendererComponent, CommonModule, NgFor, NgIf, MatCheckboxModule, MatInputModule, MatSelectModule, MatFormFieldModule, FormsModule, ReactiveFormsModule],
+    templateUrl: './monster-page.component.html',
+    styleUrl: './monster-page.component.scss'
 })
 export class MonsterPageComponent {
   monsters: RnRMonster[] = [];

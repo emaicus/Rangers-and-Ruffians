@@ -8,11 +8,10 @@ import { RnRRace } from '../../data_types/Classes/RnRRace';
 import { RaceService } from '../../services/race_service/race.service';
 
 @Component({
-  selector: 'app-race-page',
-  standalone: true,
-  imports: [TopmatterComponent, RaceRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
-  templateUrl: './race-page.component.html',
-  styleUrl: './race-page.component.scss'
+    selector: 'app-race-page',
+    imports: [TopmatterComponent, RaceRendererComponent, NgFor, NgIf, CommonModule, TableOfContentsComponent],
+    templateUrl: './race-page.component.html',
+    styleUrl: './race-page.component.scss'
 })
 export class RacePageComponent implements OnInit, AfterViewInit {
   rnrRaces: RnRRace[] = [];
