@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740537922552,
+  "timestamp": 1767238883310,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-URORWPJ5.js",
+        "/main-7BHUBLHG.js",
         "/manifest.webmanifest",
-        "/polyfills-RX4V3J3S.js",
-        "/styles-NZKN2KVA.css"
+        "/polyfills-B6TNHZQ6.js",
+        "/styles-7M5JOWZK.css"
       ],
       "patterns": []
     },
@@ -197,7 +197,7 @@
     "/assets/css/cayman/normalize.scss": "4739f3212f85f480f9911e4ea947ece156152127",
     "/assets/css/cayman/rouge-github.scss": "357fc9b5c7055f36cf39045b4a11508ce1659946",
     "/assets/css/cayman/variables.scss": "521c6b83472dc375b3fd6ae89e1417d2fc887cac",
-    "/assets/css/custom-material-theme.scss": "15262bbd663f1a43f73bd596c7c118b87fb44b56",
+    "/assets/css/custom-material-theme.scss": "a6620b1cd7e07ca4b6b1154dd72abcc1b245008c",
     "/assets/css/material-theme/css/colors.module.css": "b8fb9ca4a4cac5c683eda5b92db9e967b6c9d460",
     "/assets/css/material-theme/css/theme.css": "80c57ee5380560a3a33564b0866a2ee41ce84784",
     "/assets/css/material-theme/css/theme.dark.css": "8cd5914e1103ae6da009ce763df762452b55f733",
@@ -341,8 +341,8 @@
     "/assets/images/wood_elf.jpg": "ca18f03470a2effb6bcd1ae7da2020fe35c51c9d",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "b4afd1ce7a951337d97ae5158b461b4b356dbdd7",
-    "/main-URORWPJ5.js": "c2f44e90612a8fcd55f4153710685c85d9fca1e9",
+    "/index.html": "3b373a7abad7b927956eff17dc25669bf252b8f7",
+    "/main-7BHUBLHG.js": "cc3d8c277b3c2ea92e69ca673455b2e1e137ff39",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
@@ -354,8 +354,8 @@
     "/media/material-icons-sharp-U4OLFP3G.woff": "829cb48cb2dd17ae5e425b82dc186eb670694a10",
     "/media/material-icons-two-tone-LCGWGE2N.woff": "02225d888afe4eebc7312b7432878dc8aef1f50f",
     "/media/material-icons-two-tone-M5N5K6F5.woff2": "296ff0bff395a77c2e33e7e31fffe73980bd93cf",
-    "/polyfills-RX4V3J3S.js": "6b4c4ea33aa92bce0b91df442a680ed73e4303db",
-    "/styles-NZKN2KVA.css": "6330ce556a4a11dee927392fe369ff48fc5e0126"
+    "/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
+    "/styles-7M5JOWZK.css": "aafb7b1e3f0cc0a47c7836d95aaeeb343bc6c953"
   },
   "navigationUrls": [
     {
