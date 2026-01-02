@@ -1,5 +1,6 @@
 from pathlib import Path
 from .RnRAbility import RnRAbility
+import typing
 
 class RnRClass():
   ''' Takes in classname and json object, instantiates class.'''
@@ -9,8 +10,7 @@ class RnRClass():
     self.stat_recommendation = rnr_classdata['recommended_stats']
     self.handbook = rnr_classdata['handbook']
     self.rule_sections = rnr_classdata.get('rule_sections', [])
-    self.health_dice = rnr_classdata['health_dice']
-    self.expertise = rnr_classdata['expertise']
+    self.health_schedule = rnr_classdata.get('health_schedule', {})
     self.is_mage = 'skill_tree' not in rnr_classdata
     self.abilities = list()
 
@@ -43,9 +43,8 @@ class RnRClass():
     serial['recommended_stats'] = self.stat_recommendation 
     serial['handbook'] = self.handbook 
     serial['rule_sections'] = self.rule_sections
-    serial['health_dice'] = self.health_dice 
-    serial['expertise'] = self.expertise
     serial['is_mage'] = self.is_mage
+    serial['health_schedule'] = self.health_schedule
 
     if not self.is_mage:
       serial['skill_tree'] = dict()
@@ -61,8 +60,8 @@ class RnRClass():
           serial['spells'][tier].append(spell.serialize())
     return serial
   
-  def get_markdown(self, level=None, art_data=None, printable=False):
-    subsection_level = None if level is None else level + 1
+  def get_markdown(self, level=None, art_data: dict | None=None, printable=False) -> str:
+    subsection_level = 0 if level is None else level + 1
     ability_level = None if level is None else level + 2
     class_text = ''
     
@@ -98,13 +97,15 @@ class RnRClass():
 
     class_text += "  \n"
 
-    class_text += f"{'#' * subsection_level}  Health and Expertise  \n"
-    class_text += f"{self.name}s use {self.health_dice} as their class health dice. "
-    class_text += f"{self.expertise}  \n"
+    class_text += f"{'#' * subsection_level}  Health  \n"
+    class_text += f"{self.name}s start with {self.health_schedule['starting_health']} health and gain {self.health_schedule['standard_level_health_bonus']} health per level.\n"
+    if self.health_schedule['standard_level_health_bonus'] != self.health_schedule['tier_increase_health_bonus']:
+      class_text += f"  \nWhen you reach levels 6 and 11, instead gain {self.health_schedule['tier_increase_health_bonus']} health."
 
     if len(self.abilities) > 0:
       class_text += f"{'#' * subsection_level} Abilities  \n  \n"
-      class_text += f"<img src='{art_data['skill_tree_path']}' class=\"skilltree\" />  \n  \n"
+      if art_data is not None:
+        class_text += f"<img src='{art_data['skill_tree_path']}' class=\"skilltree\" />  \n  \n"
       for ability in sorted(self.abilities, key=lambda a: a.name):
         class_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
         class_text += ability.get_markdown(ability_level)

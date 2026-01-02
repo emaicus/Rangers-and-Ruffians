@@ -44,24 +44,8 @@
 		</ul>
 	</div>
     <span class="rnr-sub-subsection-title">
-        Stats and Abilities
+       Abilities
     </span>
-	<div *ngIf="race.base_movement !== null && race.health_dice !== null" [id]="(race.name | lowercase) + '-movement-and-health'">
-		<p>
-            <span class="rnr-boldtext">
-                Health Dice: 
-            </span>
-            <span [id]="(race.name | lowercase) + '-health-dice'">
-                {{race.health_dice}}
-            </span>
-            <span class="rnr-boldtext">
-                Movement: 
-            </span>
-            <span [id]="(race.name | lowercase) + '-base-movement'">
-                {{race.base_movement}}ft
-            </span>
-        </p>
-    </div>
 	<div *ngIf="race.abilities !== null" [id]="(race.name | lowercase) + '-abilities'">
 		<ng-container *ngFor="let ability of race.instantiated_abilities">
 			<app-ability-renderer [ability]="ability"></app-ability-renderer>

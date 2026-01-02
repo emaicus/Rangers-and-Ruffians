@@ -5,8 +5,6 @@ class RnRRace():
   #Base constructor
   def __init__(self, race_data):
     self.name = race_data['name']
-    self.health_dice = race_data['health_dice']
-    self.base_movement = race_data['base_movement']
     self.handbook = race_data['handbook']
     self.parent_class = race_data.get('parent_class', self.name)
 
@@ -17,8 +15,6 @@ class RnRRace():
   def serialize(self):
     serial = dict()
     serial['name'] = self.name
-    serial['health_dice'] = self.health_dice
-    serial['base_movement'] = self.base_movement
     serial['handbook'] = self.handbook
     serial['parent_class'] = self.parent_class 
     serial['abilities'] = list()
@@ -29,7 +25,7 @@ class RnRRace():
     return serial
 
   def get_markdown(self, level=None, art_data=None, printable=False):
-    subsection_level = None if level is None else level + 1
+    subsection_level = 0 if level is None else level + 1
     ability_level = None if level is None else level + 2
     race_text = ''
 
@@ -63,7 +59,6 @@ class RnRRace():
     race_text += '  \n'
 
     race_text += f"{'#' * subsection_level} Stats and Abilities  \n"
-    race_text += f'__Health Dice:__ {self.health_dice} __Movement:__ {self.base_movement}ft   \n'
     for ability in self.abilities:
       race_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
       race_text += ability.get_markdown(ability_level) + '   \n'

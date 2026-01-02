@@ -1,6 +1,5 @@
 -   name: Automaton 
-    health_dice: 1d6
-    base_movement: 25
+    #base_movement: 25
     handbook:    
         introduction:
             -    "Artificial beings of magical origin, the automata are varied in construction and temperament.
@@ -117,8 +116,7 @@
                     - custom 
                 save: null
 -   name: Catterwol #Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Darkvision
             action_type: "Passive"
@@ -229,8 +227,7 @@
                 options: "Bushy, slender"
 -   name: Wood Elf #Done
     parent_class: "Elf"
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Sleepless
             action_type: "Passive"
@@ -332,8 +329,7 @@
                 options: "Some wood elves have beastlike features."
 -   name: High Elf # Done
     parent_class: "Elf"
-    health_dice: 1d4
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Sleepless
             action_type: "Passive"
@@ -440,8 +436,7 @@
                 options: "High elves have long ears which come to a sharp point. For many these can be upwards of six to ten inches."
 -   name: Deep Elf # Done
     parent_class: "Elf"
-    health_dice: 1d8
-    base_movement: 25
+    #base_movement: 25
     abilities:
         -   name: Sleepless
             action_type: "Passive"
@@ -538,8 +533,7 @@
             -   title: "Ears"
                 options: "Deep elves have pointed ears, though they aren't much longer than those of a human."
 -   name: Gnome # Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Tinker
             action_type: "Passive"
@@ -654,8 +648,7 @@
             -   title: "Accessories"
                 options: "Goggles, a monocle, a prosthetic limb, a handy pouch"
 -   name: Goblin # Done
-    health_dice: 1d4
-    base_movement: 35
+    #base_movement: 35
     abilities:
         -   name: Still Warm
             action_type: "Action"
@@ -787,8 +780,7 @@
                 text: "Though rarely heard by men or elves, a few brave explorers have traveled into the mountains to hear the goblins
                     sing their songs. They are surprisingly witty, colored by dark humor that is underscored by their off-key voices."
 -   name: Halfling # Done
-    health_dice: 1d4
-    base_movement: 35
+    #base_movement: 35
     abilities:
         -   name: Hamstring 
             action_type: "Passive"
@@ -891,8 +883,7 @@
             -   title: "Other Features"
                 options: "Hardfoot halflings are known for their stout stomachs. Most halfings have hair on the tops of their feet and thick skin on the bottom which helps them avoid injury when walking barefoot."
 -   name: Human #Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Human Endurance #Done
             action_type: "Passive"
@@ -1010,8 +1001,7 @@
             -   title: "Hair"
                 options: "Brown, black, blonde, red"
 -   name: Lizkin # Done
-    health_dice: 1d8
-    base_movement: 25
+    #base_movement: 25
     abilities:
         -   name: Membraned Eyes
             action_type: "Passive"
@@ -1114,8 +1104,7 @@
             -   title: "Scales"
                 options: "Emerald green, fire red, saphire blue, violet, dark black, bright white"    
 -   name: Waterborn # Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Water Breathing
             action_type: Passive
@@ -1223,8 +1212,7 @@
             -   title: "Other Features"
                 options: "Many waterborn have webbed fingers or toes."
 -   name: Orc # Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Predator
             action_type: "Passive"
@@ -1337,8 +1325,7 @@
                            stunted and small. It is not abnormal to see an orc with scars, either from battle or 
                            self-inflicted during rituals."    
 -   name: Dwarf # Done
-    health_dice: 1d8
-    base_movement: 25
+    #base_movement: 25
     abilities:
         -   name: Stocky Build
             action_type: "Passive"
@@ -1460,8 +1447,7 @@
                           on each finger, chains about their throat, or even have multiple piercings, each set with 
                           precious gems."
 -   name: Daemonspawn # Done
-    health_dice: 1d6
-    base_movement: 30
+    #base_movement: 30
     abilities:
         -   name: Charm
             action_type: "Offhand Action"
@@ -1578,8 +1564,7 @@
                 text: "Though Daemonspawn often bear the brunt of society's misunderstanding, many work to better their place in the world. 
                         Whether they are freedom fighters or philanthropists, many daemonspawn strive to make the world a better and more accepting place."
 -   name: Sprout # Done
-    health_dice: 1d4
-    base_movement: 35
+    #base_movement: 35
     abilities:
         -   name: Woodland Home
             action_type: "Passive"
@@ -1700,8 +1685,7 @@
                           Sprout clothing is often very foreign to the bigger folk, made all of vines, 
                           leaves, and twigs."
 -   name: Pixie 
-    health_dice: 1d4
-    base_movement: 30
+    #base_movement: 30
     handbook:    
         introduction:
             -   "Fun-loving and mischievous, the intentions of Pixies are often inscrutable to the other races.

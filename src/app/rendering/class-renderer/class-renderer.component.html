@@ -24,7 +24,7 @@
 	</div>
 	<ng-container *ngIf="rnrclass.recommended_stats !== null">
         <span class="rnr-sub-subsection-title">
-            Recommended Stats
+            Recommended Starting Stats
         </span>
 		<div class="display-stat-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-stats'">
 			<ul>
@@ -40,15 +40,60 @@
 		</div>
 	</ng-container>
 	
-	<div *ngIf="rnrclass.expertise !== null && rnrclass.health_dice !== null" class="health-and-expertise" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-health-and-expertise'">
-		<p>
-            <span class="rnr-sub-subsection-title">
-                Health and Expertise
-            </span>
-        </p>
-		<p>
-			{{rnrclass.name | titlecase}}s use {{rnrclass.health_dice}} as their health dice. {{rnrclass.expertise}}
-		</p>
+	<div [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-leveling'">
+		<span class="rnr-sub-subsection-title">
+			Leveling Up
+		</span>
+		<div *ngIf="rnrclass.health_schedule !== null" class="health" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-health'">
+			<span>
+				At level 1, {{rnrclass.name | lowercase}}s begin with:
+			</span>
+			<ul>
+				<li>
+					{{rnrclass.health_schedule.starting_health}} Maximum Health
+				</li>
+				<li>
+					5 Action Points
+				</li>
+				<li>
+					2 Luck
+				</li>
+				<li>
+					30ft of Movement (6 squares)
+				</li>
+				<li *ngIf="rnrclass.is_casting_class">
+					3 Tier 1 Spells
+				</li>
+				<li *ngIf="!rnrclass.is_casting_class">
+					3 Abilities from their skill tree
+				</li> 
+			</ul>
+			<span>
+				Each time they level up, {{rnrclass.name | lowercase}}s:
+			</span>
+			<ul>
+				<li>
+					Gain a +{{rnrclass.health_schedule.standard_level_health_bonus}} bonus to their Maximum Health
+				</li>
+				<li>
+					Learn 1 new {{ rnrclass.is_casting_class ? 'spell' : 'ability' }}
+				</li>
+			</ul> 				
+			<span>
+				When they reach gameplay tiers 2 and 3 (levels 6 and 11), {{rnrclass.name | lowercase}}s:
+			</span>
+			<ul>
+				<li>
+					Increase two stats of their choice by +1
+				</li>
+				<li *ngIf="rnrclass.health_schedule.standard_level_health_bonus !== rnrclass.health_schedule.tier_increase_health_bonus">
+					Increase their maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} instead of the usual {{rnrclass.health_schedule.standard_level_health_bonus}}
+				</li>
+				<li *ngIf="rnrclass.is_casting_class">
+					Gain access to spells from their new gameplay tier
+				</li>
+			</ul> 
+		</div>
 	</div>
 	
 	<ng-container *ngIf="rnrclass.instantiated_skill_tree">

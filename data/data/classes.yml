@@ -1,13 +1,13 @@
 -   name: Bard
     recommended_stats:
-        Charisma: 2
+        Charisma: 3
         Dexterity: 0
-        Inner_Fire: 1
+        Inner_Fire: 2
         Intelligence: 1
         Perception: -1
         Strength: -2
-    expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
-                take expertise in any checks made to perform for others and in all attempts at sleight of hand."
+    # expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
+    #             take expertise in any checks made to perform for others and in all attempts at sleight of hand."
     handbook:
         -   title: Intro
             display_title: false
@@ -39,7 +39,10 @@
                     you can declare that you are a Charisma Caster. From that 
                     point on, Charisma rather than Intelligence affects your maximum action points and 
                     informal magic."
-    health_dice: 1d6
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     spells:
         Tier_1: #27/ 27
             -   name: Trick up Your Sleeve
@@ -975,10 +978,10 @@
     recommended_stats:
         Charisma: 0
         Dexterity: -2
-        Inner_Fire: 1
-        Intelligence: 1
-        Perception: -1
-        Strength: 2
+        Inner_Fire: 2
+        Intelligence: -1
+        Perception: 1
+        Strength: 3
     handbook:
         -   title: Intro
             display_title: false 
@@ -1011,15 +1014,18 @@
                         the ability to bolster their allies' defenses and can become a viable party healer.
                         Regardless of the path that you take, your role as a knight will be to defend
                         your party and to punish any enemy that would try to harm them."
-    expertise: "As a knight, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
-                bursting through a locked door, or rolling a heavy boulder. You also take expertise in charisma when speaking with 
-                men-at-arms and law-abiding common folk."
+    # expertise: "As a knight, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
+    #             bursting through a locked door, or rolling a heavy boulder. You also take expertise in charisma when speaking with 
+    #             men-at-arms and law-abiding common folk."
     starting_items:
         - Your choice of a common war hammer, shortsword, flail, or greatsword
         - A common shield
         - Your choice of chainmail (common moderate armor) or heavy plate (common heavy armor).
         - A tier appropriate minor healing potion
-    health_dice: "1d10"
+    health_schedule: 
+        starting_health: 12
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 6
     skill_tree: # 27 / 25
         tree_path: "tmp"
         abilities:
@@ -1432,14 +1438,17 @@
 -   name: Barbarian
     recommended_stats:
         Charisma: -1
-        Dexterity: 1
+        Dexterity: 2
         Inner_Fire: 1
         Intelligence: -2 
         Perception: 0 
-        Strength: 2
-    expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
-                bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
-    health_dice: "1d10"
+        Strength: 3
+    # expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
+    #             bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
+    health_schedule: 
+        starting_health: 12
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 6
     handbook:
         -   title: "Intro"
             display_title: false
@@ -1819,13 +1828,16 @@
     recommended_stats:
         Charisma: -2
         Dexterity: 2
-        Inner_Fire: -1
-        Intelligence: 0
+        Inner_Fire: 0
+        Intelligence: -1
         Perception: 1
-        Strength: 1
-    expertise: "As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, climbing a rope, and other such checks. 
-                It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing."
-    health_dice: "1d8"
+        Strength: 3
+    # expertise: "As a fighter, you gain expertise in athletics. Athletics includes leaping, swimming, climbing a rope, and other such checks. 
+    #             It does not include feats of raw strength or dexterity such as lifting a heavy box, cartwheeling, or dancing."
+    health_schedule: 
+        starting_health: 8
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 4
     starting_items:
         - Choose any two common weapons 
         - A common roundshield
@@ -2212,14 +2224,17 @@
 -   name: Monk
     recommended_stats:
         Charisma: -2
-        Dexterity: 1
+        Dexterity: 3
         Inner_Fire: 1
         Intelligence: 0
         Perception: 2
         Strength: -1
-    expertise: "As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in
-                insight, which includes gleaning information about someone's motives or thoughts, and in history checks."
-    health_dice: "1d8"
+    # expertise: "As a monk, you gain proficiency in acrobatics. This includes cartwheeling, parkour, and climbing. You also take proficiency in
+    #             insight, which includes gleaning information about someone's motives or thoughts, and in history checks."
+    health_schedule: 
+        starting_health: 8
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 4
     handbook:
         -   title: "Intro"
             display_title: false
@@ -2605,10 +2620,10 @@
 -   name: Rogue
     recommended_stats:
         Charisma: 1
-        Dexterity: 2
+        Dexterity: 3
         Inner_Fire: -1
         Intelligence: 0
-        Perception: 1
+        Perception: 2
         Strength: -2
     handbook:
         -   title: Intro
@@ -2638,14 +2653,17 @@
                     with daggers, hurling them at opponents and slashing multiple times to deal quick,
                     repeated damage. If a rogue invests in magic, they can use their abilities to avoid
                     damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
-    expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
+    #expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
     starting_items:
         - Your choice of two common daggers or a rapier and buckler
         - Your choice of a shortbow or a hand crossbow
         - A leather jerkin (common light armor)
         - A salve
         - A traveling cloak
-    health_dice: "1d6"
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     skill_tree:
         tree_path: "tmp"
         abilities: # 25/25
@@ -3069,13 +3087,16 @@
                     tier_2: "2d10"
                     tier_3: "2d12"
 -   name: Druid
-    health_dice: "1d8"
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     recommended_stats:
         Charisma: -2
-        Dexterity: 0
-        Inner_Fire: 2
-        Intelligence: 1
-        Perception: 1
+        Dexterity: 1
+        Inner_Fire: 3
+        Intelligence: 0
+        Perception: 2
         Strength: -1
     handbook:
         -   title: Intro
@@ -3104,7 +3125,7 @@
         - Your choice of a padded robe (common light armor) or leather jerkin (common light armor)
         - Druid's clothing 
         - A natural trinket
-    expertise: "As a druid you gain expertise in all nature based investigation and survival checks, such as checks made to navigate a forest, cave, or dungeon."
+    #expertise: "As a druid you gain expertise in all nature based investigation and survival checks, such as checks made to navigate a forest, cave, or dungeon."
     spells:
         Tier_1: #27 / 27
             -   name: Elemental Armor
@@ -4106,12 +4127,15 @@
                         - custom
                     save: null
 -   name: Cleric
-    health_dice: 1d6
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     recommended_stats:
         Charisma: 1
         Dexterity: -1
-        Inner_Fire: 2
-        Intelligence: 1
+        Inner_Fire: 3
+        Intelligence: 2
         Perception: 0
         Strength: -2
     handbook:
@@ -4145,7 +4169,7 @@
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
         - A salve 
         - A set of cleric's clothing
-    expertise: "As a cleric, you take expertise in intelligence checks. This includes any checks made to perform informal magic."
+    #expertise: "As a cleric, you take expertise in intelligence checks. This includes any checks made to perform informal magic."
     spells:
         Tier_1: # 27 / 27
             -   name: Beam of Light # Cleric
@@ -5028,10 +5052,13 @@
                         - diminished
                     save: null  
 -   name: Wizard
-    expertise: "As a Wizard, you are marked by your raw intellect. Take expertise in all intelligence checks, including
-                checks made to cast informal magic. Further, take expertise in history checks made to uncover lore 
-                about a location or item."
-    health_dice: 1d6
+    # expertise: "As a Wizard, you are marked by your raw intellect. Take expertise in all intelligence checks, including
+    #             checks made to cast informal magic. Further, take expertise in history checks made to uncover lore 
+    #             about a location or item."
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     handbook:
         -   title: Intro
             display_title: false
@@ -5066,8 +5093,8 @@
     recommended_stats:
         Charisma: 1
         Dexterity: -1
-        Inner_Fire: 1
-        Intelligence: 2
+        Inner_Fire: 2
+        Intelligence: 3
         Perception: 0
         Strength: -2
     spells:
@@ -6089,17 +6116,20 @@
                     damage_type: blunt
                     tier_3: "6d6"
 -   name: Warlock
-    expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
-                trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
-                or the motives of a villain."
-    health_dice: 1d8
+    # expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
+    #             trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
+    #             or the motives of a villain."
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
     recommended_stats:
-        Charisma: -2
-        Dexterity: 0
-        Inner_Fire: 2
+        Charisma: 2
+        Dexterity: -1
+        Inner_Fire: 3
         Intelligence: 1
-        Perception: 1
-        Strength: -1
+        Perception: 0
+        Strength: -2
     handbook:
             -   title: Intro 
                 display_title: false
@@ -7051,16 +7081,19 @@
 -   name: Gunslinger
     recommended_stats:
         Charisma: -1
-        Dexterity: 0
+        Dexterity: 2
         Inner_Fire: 1
-        Intelligence: 1
-        Perception: 2
+        Intelligence: 0
+        Perception: 3
         Strength: -2
-    expertise: "As a gunslinger, you are incredibly perceptive. Add your expertise whenever you make a perception or 
-                passive perception check."
+    # expertise: "As a gunslinger, you are incredibly perceptive. Add your expertise whenever you make a perception or 
+    #             passive perception check."
                 # You are also adept at clearing misfired weapons. Add your expertise to checks 
                 # made to clear a weapon that has misfired."
-    health_dice: "1d8"
+    health_schedule: 
+        starting_health: 8
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 4
     handbook:
         -   title: "Intro"
             display_title: false

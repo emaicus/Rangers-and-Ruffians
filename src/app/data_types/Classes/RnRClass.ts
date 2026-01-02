@@ -1,4 +1,4 @@
-import { ClassData, RecommendedStats, SkillTree, Spells, HandbookEntry } from "../Interfaces/RnRClassInterface";
+import { ClassData, RecommendedStats, SkillTree, Spells, HandbookEntry, HealthSchedule } from "../Interfaces/RnRClassInterface";
 import { RnRAbility } from "./RnRAbility";
 import { AbilityData } from "../Interfaces/AbilityInterface";
 import { AttributedArt } from "./AttributedArt";
@@ -16,9 +16,8 @@ interface InstantiatedSpells {
 
 export class RnRClass implements ClassData {
     name: string;
-    expertise: string;
     recommended_stats: RecommendedStats;
-    health_dice: "1d6" | "1d8" | "1d10";
+    health_schedule: HealthSchedule;
     skill_tree: SkillTree;
     spells: Spells;
     handbook: HandbookEntry[];
@@ -27,11 +26,12 @@ export class RnRClass implements ClassData {
     instantiated_spells: InstantiatedSpells;
     displayReccomendedStats;
     rule_sections: string[];
+    is_casting_class: boolean;
     
 
     constructor(data: ClassData, succinct: boolean) {
         this.name = data.name;
-        this.expertise = data.expertise;
+        this.health_schedule = data.health_schedule; 
         this.recommended_stats = data.recommended_stats;
         this.displayReccomendedStats = {
             "Strength": data.recommended_stats.Strength,
@@ -41,7 +41,6 @@ export class RnRClass implements ClassData {
             "Perception": data.recommended_stats.Perception,
             "Charisma": data.recommended_stats.Charisma
         }
-        this.health_dice = data.health_dice;
 
         this.handbook = data.handbook ?? [];
         this.starting_items = data.starting_items ?? [];
@@ -65,6 +64,8 @@ export class RnRClass implements ClassData {
             .map(abilityData => new RnRAbility(abilityData, succinct, true)))
             .sort((a, b) => a.name.localeCompare(b.name))
         }
+
+        this.is_casting_class = this.instantiated_skill_tree.abilities.length === 0;;
 
         this.rule_sections = data.rule_sections ?? [];
     }
