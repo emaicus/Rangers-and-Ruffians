@@ -1,8 +1,14 @@
 <div class="rnr-class" [class.printable-content]="isReadyToPrint" *ngIf="rnrclass" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-class'" #myPrintableContent>
 	<div class="rnr-subsection-title toc-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-name'">
-		{{ rnrclass.name }}
+		{{ rnrclass.name }} 
+		<p class="pathSubtitle">
+			<span class="hidden hidden-in-print">—</span>
+			<span class="hidden-in-print">
+				{{ rnrclass.class_type }}
+			</span>
+		</p>
 	</div>
-	<button (click)="printContent()" class="print-button">Print {{rnrclass.name}}</button>
+	<button (click)="printContent()" class="print-button hidden-in-print">Print {{rnrclass.name}}</button>
 	<app-attributed-art-renderer [artName]="rnrclass.name"></app-attributed-art-renderer>
 
 	<div *ngIf="rnrclass.handbook" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-handbook'">
@@ -15,13 +21,32 @@
             </p>
         </ng-container>
 	</div>
-	<div *ngIf="rnrclass.rule_sections" class="printable handbook-section">
+	
+	<!-- <div *ngIf="rnrclass.rule_sections" class="printable handbook-section">
 		<ng-container *ngFor="let section of rnrclass.rule_sections">
 			<ng-container *ngIf="section==='ranger_companion_creature'">
 				<app-ranger-companion-creature>></app-ranger-companion-creature>
 			</ng-container>
 		</ng-container>
+	</div> -->
+
+	<div *ngIf="rnrclass.path_count > 0" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-paths'">
+		<div class="rnr-sub-subsection-title">
+			Paths
+		</div>
+		{{rnrclass.name}}s must choose between the following paths at the start of thier adventures: 
+		<ul *ngFor="let path of rnrclass.paths | keyvalue">
+			<li>
+                <span class="rnr-boldtext">
+					{{ path.key }}
+				</span> 
+				<span>
+					{{path.value}}
+				</span>
+			</li>
+		</ul>
 	</div>
+
 	<ng-container *ngIf="rnrclass.recommended_stats !== null">
         <span class="rnr-sub-subsection-title">
             Recommended Starting Stats
@@ -40,7 +65,7 @@
 		</div>
 	</ng-container>
 	
-	<div [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-leveling'">
+	<div [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-leveling'" class="web-leveling">
 		<span class="rnr-sub-subsection-title">
 			Leveling Up
 		</span>
@@ -56,7 +81,7 @@
 					5 Action Points
 				</li>
 				<li>
-					2 Luck
+					1 Luck
 				</li>
 				<li>
 					30ft of Movement (6 squares)
@@ -65,7 +90,10 @@
 					3 Tier 1 Spells
 				</li>
 				<li *ngIf="!rnrclass.is_casting_class">
-					3 Abilities from their skill tree
+					1 base ability
+				</li> 
+				<li *ngIf="!rnrclass.is_casting_class">
+					2 Path abilities
 				</li> 
 			</ul>
 			<span>
@@ -73,7 +101,7 @@
 			</span>
 			<ul>
 				<li>
-					Gain a +{{rnrclass.health_schedule.standard_level_health_bonus}} bonus to their Maximum Health
+					Gain a +{{rnrclass.health_schedule.standard_level_health_bonus}} bonus to their maximum health
 				</li>
 				<li>
 					Learn 1 new {{ rnrclass.is_casting_class ? 'spell' : 'ability' }}
@@ -86,6 +114,12 @@
 				<li>
 					Increase two stats of their choice by +1
 				</li>
+				<li>
+					Gain +1 luck
+				</li>
+				<li>
+					Gain +2 action points
+				</li>
 				<li *ngIf="rnrclass.health_schedule.standard_level_health_bonus !== rnrclass.health_schedule.tier_increase_health_bonus">
 					Increase their maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} instead of the usual {{rnrclass.health_schedule.standard_level_health_bonus}}
 				</li>
@@ -95,21 +129,56 @@
 			</ul> 
 		</div>
 	</div>
+
+	<div class="print-leveling">
+		<p class="print-leveling-paragraph">
+			When you level up, gain +{{rnrclass.health_schedule.standard_level_health_bonus}} max health and learn 1 new {{ rnrclass.is_casting_class ? 'spell' : 'ability' }}.
+		</p>
+		<p *ngIf="rnrclass.is_casting_class == false" class="print-leveling-paragraph">
+			When you reach gameplay tiers 2 and 3 (levels 6 and 11), increase two stats by +1, gain +1 luck, gain +2 action points, and increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} 	
+		</p>
+		<p *ngIf="rnrclass.is_casting_class" class="print-leveling-paragraph">
+			When you reach gameplay tiers 2 and 3 (levels 6 and 11)m increase two stats by +1, gain +1 luck, gain +2 action points, increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}}, and gain access to spells from the new tier.
+		</p>
+	</div>
 	
-	<ng-container *ngIf="rnrclass.instantiated_skill_tree">
-		<app-skill-tree-renderer *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0" [rnr_class_name]="rnrclass.name" ></app-skill-tree-renderer>
+	<ng-container *ngIf="rnrclass.is_casting_class === false">
 		<div class="ability-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-abilities'">
-			<span class="rnr-sub-subsection-title" *ngIf="rnrclass.instantiated_skill_tree.abilities.length != 0">
-				Abilities:
-			</span>
-			<ng-container *ngFor="let ability of rnrclass.instantiated_skill_tree.abilities">
-				<app-ability-renderer [ability]=ability></app-ability-renderer>
-			</ng-container>
+			<div>
+				<hr class="rnr-printable-line">	
+				<div *ngFor="let level of rnrclass.instantiated_levels | keyvalue: keepOrder; trackBy: trackByKey " class="rnr-level-section" [class.rnr-level-section-splittable]="level.key === 'level_1'">
+					<hr class="rnr-line">
+					<span class="rnrLevel">
+						{{level.key.replace("_", " ") | titlecase}}
+					</span>
+					<div *ngIf="level.value.standard?.length">
+						<div *ngIf="hasMultiplePathsAtLevel(level.value) === true" class="pathText">
+							At Level {{level.key.replace("level_", "") | titlecase}}, all {{rnrclass.name | titlecase}}s gain the following ability:
+						</div>
+						<ng-container *ngFor="let ability of level.value.standard">
+							<app-ability-renderer [ability]=ability></app-ability-renderer>
+						</ng-container>
+					</div>
+					<div *ngFor="let path of level.value | keyvalue">
+						<ng-container *ngIf="path.key !== 'standard'">
+							<div class="pathText">
+								At Level {{level.key.replace("level_", "") | titlecase}}, {{rnrclass.name}}s that have chosen <span class="rnr-boldtext">{{path.key}}</span> gain the following {{ (path.value?.length || 0) > 1 ? path.value?.length + " ": '' }}abilit{{ (path.value?.length || 0) === 1 ? 'y' : 'ies' }}:
+							</div>
+							<ng-container *ngFor="let ability of path.value">
+								<app-ability-renderer [ability]=ability></app-ability-renderer>
+							</ng-container>
+						</ng-container>
+					</div>
+					<hr class="rnr-printable-line">	
+				</div>
+			</div>	
 		</div>
 	</ng-container>
-	<ng-container *ngIf="rnrclass.instantiated_spells && rnrclass.instantiated_skill_tree.abilities.length == 0">
+	<ng-container *ngIf="rnrclass.is_casting_class">
 		<div class="spells-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-spells'">
 			<ng-container *ngFor="let chapters of rnrclass.instantiated_spells | keyvalue">
+				<hr class="rnr-line">
+				<hr class="rnr-printable-line">
 				<div class="spell-tier">
 					<span class="spell-tier-title">{{chapters.key}} Spells</span>
 					<ng-container *ngFor="let ability of chapters.value">

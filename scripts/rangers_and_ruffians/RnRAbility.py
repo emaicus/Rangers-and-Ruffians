@@ -35,6 +35,10 @@ class StatusEffect():
 
 def seek_effect(name):
   global EFFECTS
+
+  if EFFECTS == None:
+    raise ValueError(f"Effects dictionary was not populated.")
+
   if name == 'custom':
     return {
       'name': 'custom',
@@ -50,7 +54,6 @@ def seek_effect(name):
 
 class RnRAbility():
   def __init__(self, ability_data):
-
     self.name = ability_data['name']
     self.type = ability_data['type']
     self.cost = ability_data['cost']
@@ -308,38 +311,7 @@ class RnRAbility():
   
   def estimated_damage(self, tier, single_target=False):
     pass
-    # tier = tier.lower()
-
-    # if self.damage is None:
-    #   return 0, 0, 0, 0, 0, 0
-    
-    # if tier not in self.damage:
-    #   return 0, 0, 0, 0, 0, 0
-    # aoe = 2 if self.is_aoe else 1
-    # max_damage = 0
-    # avg_damage = 0
-    # for attack in range(self.damage['multi_attack']):
-    #   single_attack_avg_damage = 0
-    #   single_attack_max_damage = 0
-    #   if 'd' not in self.damage[tier]:
-    #     single_attack_avg_damage += int(self.damage[tier])
-    #     single_attack_max_damage += int(self.damage[tier])
-    #   else:
-    #     die, sides = map(int, self.damage[tier].split('d'))
-    #     single_attack_avg_damage += rnr_balance.die_half(die, sides)
-    #     single_attack_max_damage += die * sides
-           
-    #   focus = rnr_balance.get_balance_weapon_at_tier(tier, False, 'magic')
-      
-    #   inner_fire = rnr_balance.get_balance_value('balance_stat_value')[tier]['max'] if self.damage['scaled_by']['stat'] else 0
-    #   single_attack_avg_damage += focus.avg_dmg() + inner_fire
-    #   single_attack_max_damage += focus.max_dmg() + inner_fire
-
-    #   avg_damage += single_attack_avg_damage * aoe      
-    #   max_damage += single_attack_max_damage * aoe
-
-    # return avg_damage, max_damage, single_attack_avg_damage, self.type, self.cost, self.damage['damage_type']
-  
+   
   def get_max_condition_value(self):
     if self.effect is None:
       return -999

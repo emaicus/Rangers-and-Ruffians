@@ -134,6 +134,14 @@ button{
   background-color: #dddddd;
 }
 
+.web-leveling {
+  display: block;
+}
+
+.print-leveling {
+  display: none;
+}
+
 @media print {
   @page {
     margin: 1in;
@@ -149,6 +157,14 @@ button{
 
   .raceClassImage {
     display: none;
+  }
+
+  .web-leveling {
+    display: none;
+  }
+  
+  .print-leveling {
+    display: block;
   }
 
   .attribution {

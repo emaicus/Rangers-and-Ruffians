@@ -36,7 +36,7 @@
 	<div *ngIf="ability.shouldDisplayDescription" class="ability-description">
 		<ng-container *ngIf="ability.damageScaling && ability.damageScaling.all_tiers">
 			<span class="rnr-boldtext">
-				{{ ability.damageScaling.all_tiers }}
+				{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.all_tiers }}
 				<ng-container *ngIf="ability.displayableDamageType != 'healing'">
 					{{ability.displayableDamageType}} Damage.
 				</ng-container>
@@ -92,21 +92,21 @@
 			<span class="rnr-boldtext" *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">Damage</span>
 			<ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
 				<li *ngIf="ability.damageScaling.tier_1">
-				<span class="rnr-boldtext">Tier 1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}}</span>
+				<span class="rnr-boldtext">Tier 1: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} damage</span>
 				</li>
 				<li *ngIf="ability.damageScaling.tier_2">
-					<span class="rnr-boldtext">Tier 2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}}</span>
+					<span class="rnr-boldtext">Tier 2: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} damage</span>
 				</li>
 				<li *ngIf="ability.damageScaling.tier_3">
-					<span class="rnr-boldtext">Tier 3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}}</span>
+					<span class="rnr-boldtext">Tier 3: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}} damage</span>
 				</li>
 			</ul>
 		</div>
 		<div class="printable-damage-section" *ngIf="!ability.damageScaling.all_tiers">
 			<span class="rnr-boldtext">Damage </span>
-			<span class="rnr-boldtext">T1: </span> <span>{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} </span>
-			<span class="rnr-boldtext">T2: </span> <span>{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} </span>
-			<span class="rnr-boldtext">T3: </span> <span>{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}} </span>
+			<span class="rnr-boldtext">T1: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} damage </span>
+			<span class="rnr-boldtext">T2: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} damage </span>
+			<span class="rnr-boldtext">T3: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}} damage </span>
 		</div>
 	</div>
 

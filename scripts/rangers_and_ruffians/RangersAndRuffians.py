@@ -1,9 +1,9 @@
 from .RnRRace import RnRRace
 from .RnRClass import RnRClass
 from .RnRBackground import RnRBackground
-from .RnRWeapon import RnRWeapon
 from .RnRMonster import RnRMonster
 from .RnRItem import RnRItem
+from collections import defaultdict
 
 class RangersAndRuffians():
   ''' Takes in classname and json object, instantiates class.'''
@@ -17,7 +17,6 @@ class RangersAndRuffians():
         monster_data: dict, 
         pantheon_data: dict, 
         background_data: list, 
-        weapon_data: list,
         item_data: list
   )-> None:
     self.version = version
@@ -28,7 +27,7 @@ class RangersAndRuffians():
     self.monsters = self.load_monsters(monster_data)
     self.pantheon = self.load_pantheon(pantheon_data)
     self.backgrounds = self.load_backgrounds(background_data)
-    self.weapons = self.load_weapons(weapon_data)
+    #self.weapons = self.load_weapons(weapon_data)
     self.items = self.load_items(item_data)
   
   def serialize(self):
@@ -55,16 +54,14 @@ class RangersAndRuffians():
     serial['backgrounds'] = list()
     for background in self.backgrounds:
       serial['backgrounds'].append(background.serialize())
-    
-    serial['weapons'] = self.serialize_weapons()
-    
+        
     return serial
   
   def serialize_monsters(self):
     return self._abstract_serialize(self.monsters)
   
-  def serialize_weapons(self):
-    return self._abstract_serialize(self.weapons)
+  # def serialize_weapons(self):
+  #   return self._abstract_serialize(self.weapons)
 
   def serialize_items(self):
     return self._abstract_serialize(self.items)
@@ -108,11 +105,11 @@ class RangersAndRuffians():
       rnr_backgrounds.append(RnRBackground(background))
     return rnr_backgrounds
 
-  def load_weapons(self, weapon_data: list) -> list:
-    rnr_weapons = list()
-    for weapon in weapon_data:
-      rnr_weapons.append(RnRWeapon(weapon))
-    return rnr_weapons
+  # def load_weapons(self, weapon_data: list) -> list:
+  #   rnr_weapons = list()
+  #   for weapon in weapon_data:
+  #     rnr_weapons.append(RnRWeapon(weapon))
+  #   return rnr_weapons
   
   def load_items(self, item_data: list) -> list:
     rnr_items = list()
@@ -142,6 +139,7 @@ class RangersAndRuffians():
     license_url     = self.attributions[art]['license_url']
     return f'_"[{title}"]({url}) by {artist} is licensed under [{license_acronym}]({license_url})_  \n'
 
+
   def print_statistics(self) -> None:
     print('STATISTICS')
     print(f'Rangers and Ruffians has {len(self.backgrounds)} backgrounds.')
@@ -150,15 +148,19 @@ class RangersAndRuffians():
     for race in self.races:
       print(f'  {race.name} has {len(race.abilities)} abilities.')
     
-    print(f'Rangers and Ruffians has {len(self.races)} races.')
+    print(f'Rangers and Ruffians has {len(self.classes)} classes.')
     for rnr_class in self.classes:
       if rnr_class.is_mage:
         for tier, spells in rnr_class.spells.items():
           print(f"  {rnr_class.name} has {len(spells)} {tier.title().replace('_', ' ')} spells")
       else:
-        print(f'  {rnr_class.name} has {len(rnr_class.abilities)} abilities.')
-    
-    print(f'Rangers and Ruffians has {len(self.weapons)} weapons.')
+        print(f'  {rnr_class.name} has {len(rnr_class.all_abilities)} abilities.')
 
-    print(f'Rangers and Ruffians has {len(self.monsters)} weapons.')
+        ability_type_dict = defaultdict(list)
+        for ability in rnr_class.all_abilities:
+          ability_type_dict[ability.action_type].append(ability)
+        for key, value in ability_type_dict.items():
+          print(f'    {key}: {len(value)}')
+
+    print(f'Rangers and Ruffians has {len(self.monsters)} monsters.')
 

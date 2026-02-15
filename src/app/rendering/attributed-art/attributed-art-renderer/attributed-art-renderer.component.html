@@ -1,5 +1,5 @@
 <ng-container *ngIf="art">
-    <div class="attributed-art" *ngIf="art.imageExists">
+    <div class="attributed-art hidden-in-print" *ngIf="art.imageExists">
         <div>
             <img [src]="art.getImagePath()" class="raceClassImage">
         </div>

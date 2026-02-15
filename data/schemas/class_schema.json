@@ -4,11 +4,22 @@
 	"type": "array",
     "items": {
         "type": "object",
-        "required": ["name", "recommended_stats", "health_schedule"],
+        "required": ["name", "recommended_stats", "health_schedule", "class_type"],
         "additionalProperties": false,
         "properties": {
             "name" : {
                 "type": "string"
+            },
+            "paths": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                    "type": "string"
+                  }
+            },
+            "class_type": {
+                "type": "string",
+                "enum": ["Tank", "Striker", "Battle Mage", "Support"]
             },
             "health_schedule": {
                 "starting_health": {
@@ -61,19 +72,24 @@
                     }
                 }
             },
-            "skill_tree": {
+            "abilities_by_level": {
                 "type": "object",
-                "required": ["tree_path", "abilities"],
                 "additionalProperties": false,
-                "properties": {
-                    "tree_path": {
-                        "type": "string"
+              
+                "patternProperties": {
+                  "^level_[1-9][0-9]*$": {
+                    "type": "object",
+              
+                    "minProperties": 1,
+              
+                    "properties": {
+                      "standard": { "type": "array" }
                     },
-                    "abilities": {
-                        "type": "array"
-                    }
+              
+                    "additionalProperties": { "type": "array" }
+                  }
                 }
-            },
+              },
             "spells": {
                 "type": "object",
                 "required": ["Tier_1", "Tier_2", "Tier_3"],

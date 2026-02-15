@@ -65,74 +65,75 @@ GENERATED_DATA_DIRECTORY = core.BASE_DIRECTORY.joinpath('src', 'assets', 'data')
   # shutil.copy(str(source), str(dest))
 
 def publish_character_creation(rnr_game, force_overwrite):
-  docs_directory = core.BASE_DIRECTORY.joinpath('docs')
-  docs_parts_directory = docs_directory.joinpath('parts')
-  file_path = GENERATED_SITE_DIRECTORY.joinpath('Compendium_of_Character_Creation.md')
+  pass
+  # docs_directory = core.BASE_DIRECTORY.joinpath('docs')
+  # docs_parts_directory = docs_directory.joinpath('parts')
+  # file_path = GENERATED_SITE_DIRECTORY.joinpath('Compendium_of_Character_Creation.md')
 
-  md = markdown_handler.markdown_handler(f'Character Creation', force_overwrite=force_overwrite, heading_level=1, file=file_path)
-  md.paragraph(f'_Version {rnr_game.get_full_version()}_')
+  # md = markdown_handler.markdown_handler(f'Character Creation', force_overwrite=force_overwrite, heading_level=1, file=file_path)
+  # md.paragraph(f'_Version {rnr_game.get_full_version()}_')
 
-  background_lines = []
-  background_lines.append('{::options parse_block_html="true" /}  \n')
-  background_lines.append('<details><summary markdown="span">View the Backgrounds</summary>  \n')
-  for rnr_background in sorted(rnr_game.backgrounds, key=lambda x: x.name):
-    list_of_lines = rnr_background.get_markdown(level=3).split('\n')
-    list_of_lines = [line + '\n' for line in list_of_lines]
-    list_of_lines += '---  \n  \n'
-    background_lines += list_of_lines
-  background_lines.append('</details><br/>')
-  background_lines.append('{::options parse_block_html="false" /}')
+  # background_lines = []
+  # background_lines.append('{::options parse_block_html="true" /}  \n')
+  # background_lines.append('<details><summary markdown="span">View the Backgrounds</summary>  \n')
+  # for rnr_background in sorted(rnr_game.backgrounds, key=lambda x: x.name):
+  #   list_of_lines = rnr_background.get_markdown(level=3).split('\n')
+  #   list_of_lines = [line + '\n' for line in list_of_lines]
+  #   list_of_lines += '---  \n  \n'
+  #   background_lines += list_of_lines
+  # background_lines.append('</details><br/>')
+  # background_lines.append('{::options parse_block_html="false" /}')
   
 
-  race_lines = []
-  race_lines.append('{::options parse_block_html="true" /}  \n')
-  race_lines.append('<details><summary markdown="span">View the Races</summary>  \n')
-  for rnr_race in sorted(rnr_game.races, key=lambda x: (x.parent_class, x.name)):
-    art_data = dict()
-    escaped_name = rnr_race.name.replace(' ', '_').lower()
-    art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
-    art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('race', f'{escaped_name}.jpg')}"
+  # race_lines = []
+  # race_lines.append('{::options parse_block_html="true" /}  \n')
+  # race_lines.append('<details><summary markdown="span">View the Races</summary>  \n')
+  # for rnr_race in sorted(rnr_game.races, key=lambda x: (x.parent_class, x.name)):
+  #   art_data = dict()
+  #   escaped_name = rnr_race.name.replace(' ', '_').lower()
+  #   art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
+  #   art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('race', f'{escaped_name}.jpg')}"
 
-    list_of_lines = rnr_race.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
-    list_of_lines = [line + '\n' for line in list_of_lines]
-    list_of_lines += '---  \n  \n'
-    race_lines += list_of_lines
-  race_lines.append('</details><br/>')
-  race_lines.append('{::options parse_block_html="false" /}')
+  #   list_of_lines = rnr_race.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
+  #   list_of_lines = [line + '\n' for line in list_of_lines]
+  #   list_of_lines += '---  \n  \n'
+  #   race_lines += list_of_lines
+  # race_lines.append('</details><br/>')
+  # race_lines.append('{::options parse_block_html="false" /}')
 
-  class_lines = []
-  class_lines.append('{::options parse_block_html="true" /}  \n')
-  class_lines.append('<details><summary markdown="span">View the Classes</summary>  \n')
-  for rnr_class in sorted(rnr_game.classes, key=lambda x: x.name):
-    art_data = dict()
-    escaped_name = rnr_class.name.replace(' ', '_').lower()
-    art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
-    art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('class', f'{escaped_name}.jpg')}"
-    art_data['skill_tree_path'] = f"/{core.GLOBAL_ART_PATH.joinpath('skill_trees', f'{escaped_name}.jpg')}"
+  # class_lines = []
+  # class_lines.append('{::options parse_block_html="true" /}  \n')
+  # class_lines.append('<details><summary markdown="span">View the Classes</summary>  \n')
+  # for rnr_class in sorted(rnr_game.classes, key=lambda x: x.name):
+  #   art_data = dict()
+  #   escaped_name = rnr_class.name.replace(' ', '_').lower()
+  #   art_data['attribution'] = rnr_game.generate_markdown_art_attribution(escaped_name)
+  #   art_data['path'] = f"/{core.GLOBAL_ART_PATH.joinpath('class', f'{escaped_name}.jpg')}"
+  #   art_data['skill_tree_path'] = f"/{core.GLOBAL_ART_PATH.joinpath('skill_trees', f'{escaped_name}.jpg')}"
 
-    list_of_lines = rnr_class.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
-    list_of_lines = [line + '\n' for line in list_of_lines]
-    list_of_lines += '---  \n  \n'
-    class_lines += list_of_lines
-  class_lines.append('</details><br/>')
-  class_lines.append('{::options parse_block_html="false" /}')
+  #   list_of_lines = rnr_class.get_markdown(level=3, art_data=art_data, printable=True).split('\n')
+  #   list_of_lines = [line + '\n' for line in list_of_lines]
+  #   list_of_lines += '---  \n  \n'
+  #   class_lines += list_of_lines
+  # class_lines.append('</details><br/>')
+  # class_lines.append('{::options parse_block_html="false" /}')
 
 
-  md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
-  #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
-  md.start_heading("Backgrounds", 2)
-  md.slurp_markdown_lines(background_lines)
-  # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
-  md.start_heading("Races", 2)
-  md.slurp_markdown_lines(race_lines)
-  # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
-  md.start_heading("Classes", 2)
-  md.slurp_markdown_lines(class_lines)
+  # md.slurp_topmatter_file(os.path.join(docs_parts_directory, 'topmatter', 'character_creation_topmatter.md'))
+  # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'character_compendium_start.md'))
+  # md.start_heading("Backgrounds", 2)
+  # md.slurp_markdown_lines(background_lines)
+  # # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'race_part.md'))
+  # md.start_heading("Races", 2)
+  # md.slurp_markdown_lines(race_lines)
+  # # #md.slurp_markdown_file(os.path.join(docs_parts_directory, 'class_part.md'))
+  # md.start_heading("Classes", 2)
+  # md.slurp_markdown_lines(class_lines)
 
-  md._write_topmatter()
-  md._write_section(f'Character Creation')
-  md.write_toc(max_to_include=3)
-  md.write_buffer()
+  # md._write_topmatter()
+  # md._write_section(f'Character Creation')
+  # md.write_toc(max_to_include=3)
+  # md.write_buffer()
 
 # def publish_ancients(force_overwrite):
 #   docs_directory = os.path.join(core.BASE_DIRECTORY, 'docs')
@@ -508,11 +509,13 @@ if __name__ == "__main__":
   
   rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
   
+  rnr_game.print_statistics()
+
   with open(GENERATED_DATA_DIRECTORY.joinpath('monsters.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_monsters(), outfile)
   
-  with open(GENERATED_DATA_DIRECTORY.joinpath('weapons.json'), 'w') as outfile:
-    json.dump(rnr_game.serialize_weapons(), outfile)
+  # with open(GENERATED_DATA_DIRECTORY.joinpath('weapons.json'), 'w') as outfile:
+  #   json.dump(rnr_game.serialize_weapons(), outfile)
   
   with open(GENERATED_DATA_DIRECTORY.joinpath('items.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_items(), outfile)

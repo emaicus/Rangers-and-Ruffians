@@ -9,7 +9,7 @@ from tqdm import tqdm
 import traceback
 from pathlib import Path
 from typing import Optional
-
+from jsonschema import ValidationError
 
 from .RangersAndRuffians import RangersAndRuffians
 
@@ -77,7 +77,7 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
     try:
       jsonschema.validate(data_obj, schema=schema_obj)
       print(f'{data_file} passed validation.')
-    except jsonschema.exceptions.ValidationError as e:
+    except ValidationError as e:
       print(f"ERROR IN {data_file}")
       print(e.relative_path)
       print(e.cause)
@@ -100,9 +100,9 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
   with open(DATA_DIRECTORY.joinpath('races.yml'), 'r') as infile:
     rnr_races = yaml.safe_load(infile)
   
-  rnr_weapons = None 
-  with open(DATA_DIRECTORY.joinpath('weapons.yml'), 'r') as infile:
-    rnr_weapons = yaml.safe_load(infile)
+  # rnr_weapons = None 
+  # with open(DATA_DIRECTORY.joinpath('weapons.yml'), 'r') as infile:
+  #   rnr_weapons = yaml.safe_load(infile)
   
   monsters = None 
   with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
@@ -123,10 +123,10 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
         ability['ability_type'] = 'ability'
         validateAbility(ability, ability_schema, status_effects, rnr_race['name'])
     
-    for weapon in rnr_weapons:
-      for ability in weapon['abilities']:
-        ability['ability_type'] = 'ability'
-        validateAbility(ability, ability_schema, status_effects, weapon['name'])
+    # for weapon in rnr_weapons:
+    #   for ability in weapon['abilities']:
+    #     ability['ability_type'] = 'ability'
+    #     validateAbility(ability, ability_schema, status_effects, weapon['name'])
     
     for rnr_item in rnr_items:
       ability = rnr_item['ability']
@@ -142,11 +142,11 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
           validateAbility(ability, ability_schema, status_effects, monster['name'])
 
     for rnr_class in rnr_classes:
-      expected_spells = 52
+      expected_spells = 25
       expected_abilities = 25
       count_of_spells = 0
       count_of_abilities = 0
-      if 'skill_tree' not in rnr_class:
+      if 'abilities_by_level' not in rnr_class:
         print(f"Validating Mage Class: {rnr_class['name']}")
         spellbook = rnr_class.get('spells')
         for tier, tier_spells in spellbook.items():
@@ -155,22 +155,28 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
             # Tell the schema to evaluate this as a spell.
             spell_def['ability_type'] = 'spell'
             validateAbility(spell_def, ability_schema, status_effects, rnr_class['name'])
-        if count_of_spells < expected_spells:
-          print(f"{rnr_class['name']} has {count_of_spells} / {expected_spells} spells")
+        print(f"{rnr_class['name']} has {count_of_spells} / {expected_spells} spells")
       else:
         print(f"Validating Martial Class: {rnr_class['name']}")
-        skill_tree = rnr_class.get('skill_tree')
-        for ability_def in skill_tree['abilities']:
-          count_of_abilities += 1
-          # Tell the schema to evaluate this as an ability.
-          ability_def['ability_type'] = 'ability'
-          validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
+        abilities_by_level = rnr_class.get('abilities_by_level')
+        class_paths = list(rnr_class.get('paths', {}).keys()) + ['standard']
+        for level, paths in abilities_by_level.items():
+          for path, abilities in paths.items():
+            if not path in class_paths:
+                raise Exception(f"ERROR: the path {str(path)} is not in {class_paths}")
+            for ability_def in abilities:
+              count_of_abilities += 1
+              # Tell the schema to evaluate this as an ability.
+              ability_def['ability_type'] = 'ability'
+              validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
         if count_of_abilities < expected_abilities:
           print(f"{rnr_class['name']} has {count_of_abilities} / {expected_abilities} abilities")
+            
+
     # Check for Summonable Creatures
     summoning_errors = list()
     for rnr_class in rnr_classes:
-      if 'skill_tree' not in rnr_class:
+      if 'abilities_by_level' not in rnr_class:
         for _, tier_spells in rnr_class['spells'].items():
           for spell_def in tier_spells:
             if 'summoned_creature' not in spell_def:
@@ -182,17 +188,19 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
               if creature not in all_monster_names:
                 summoning_errors.append(creature)
       else:
-        skill_tree = rnr_class.get('skill_tree')
-        for ability_def in skill_tree['abilities']:
-          if 'summoned_creature' not in spell_def:
-            continue
-          for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
-            if key not in ability_def['summoned_creature']:
-              continue 
-            creature = ability_def['summoned_creature'][key]
-            if creature not in all_monster_names:
-              summoning_errors.append(creature)
-      
+        abilities_by_level = rnr_class.get('abilities_by_level')
+        for level, paths in abilities_by_level.items():
+          for path, abilities in paths.items():
+            for ability_def in abilities:
+              if 'summoned_creature' not in ability_def:
+                continue
+              for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
+                if key not in ability_def['summoned_creature']:
+                  continue 
+                creature = ability_def['summoned_creature'][key]
+                if creature not in all_monster_names:
+                  summoning_errors.append(creature)
+          
     if len(summoning_errors) > 0:
       print("The following summoned creatures don't appear in monsters.yml:")
       for monster in summoning_errors:
@@ -306,7 +314,7 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   race_path = INSTALL_DIRECTORY.joinpath('races.json')
   pantheon_path = INSTALL_DIRECTORY.joinpath('pantheon.json')
   background_path = INSTALL_DIRECTORY.joinpath('backgrounds.json')
-  weapon_path = INSTALL_DIRECTORY.joinpath('weapons.json')
+  #weapon_path = INSTALL_DIRECTORY.joinpath('weapons.json')
   item_path = INSTALL_DIRECTORY.joinpath('items.json')
   monster_path = INSTALL_DIRECTORY.joinpath('monsters.json')
   attribution_path = INSTALL_DIRECTORY.joinpath('art.json')
@@ -332,8 +340,8 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   with open(background_path, 'r') as data_file:
     background_data = json.load(data_file)
   
-  with open(weapon_path, 'r') as data_file:
-    weapon_data = json.load(data_file)
+  # with open(weapon_path, 'r') as data_file:
+  #   weapon_data = json.load(data_file)
   
   with open(item_path, 'r') as data_file:
     item_data = json.load(data_file)    
@@ -344,7 +352,7 @@ def load_Rangers_And_Ruffians(skip_validation : bool) -> RangersAndRuffians:
   finish = time.time()
   print(f'LOAD TIME: {finish - start}(s)')
 
-  return RangersAndRuffians(version, version_suffix, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, weapon_data, item_data)
+  return RangersAndRuffians(version, version_suffix, race_data, class_data, attribution_data, monster_data, pantheon_data, background_data, item_data)
 
 ####################################################################################
 #
@@ -374,29 +382,30 @@ def printLogo() -> None:
   print("        \\/                            \\/     \\/     \\/ ")
   print()
 
-def get_gendered_art(relative_art_folder : Path, absolute_art_folder : Path, art_name : str, male : bool) -> tuple[Path, str]:
-  global BASE_DIRECTORY
-  gender_string = 'male' if male else 'female'
+def get_gendered_art(relative_art_folder : Path, absolute_art_folder : Path, art_name : str, male : bool): #-> tuple[Path | None, str | None]:
+  pass
+  # global BASE_DIRECTORY
+  # gender_string = 'male' if male else 'female'
 
-  gender_image =  os.path.join(gender_string, f'{art_name}.jpg')
-  neutral_image = f'{art_name}.jpg'
+  # gender_image =  os.path.join(gender_string, f'{art_name}.jpg')
+  # neutral_image = f'{art_name}.jpg'
 
-  if os.path.exists(os.path.join(absolute_art_folder, gender_image)):
-    path = Path(relative_art_folder, gender_image)
-    art_request = f'{art_name}_{gender_string}'
-  else:
-    path = Path(relative_art_folder, neutral_image)
-    art_request = art_name
+  # if os.path.exists(os.path.join(absolute_art_folder, gender_image)):
+  #   path = Path(relative_art_folder, gender_image)
+  #   art_request = f'{art_name}_{gender_string}'
+  # else:
+  #   path = Path(relative_art_folder, neutral_image)
+  #   art_request = art_name
 
-  markdown_rights = generate_markdown_art_attribution(art_request)
+  # markdown_rights = generate_markdown_art_attribution(art_request)
 
-  if markdown_rights is None:
-    print(f'could not find rights info for {art_request}.')
-    return None, None
-  else:
-    return path, markdown_rights
+  # if markdown_rights is None:
+  #   print(f'could not find rights info for {art_request}.')
+  #   return None, None
+  # else:
+  #   return path, markdown_rights
 
-def generate_markdown_art_attribution(rnr_game : RangersAndRuffians, art : Path) -> str:
+def generate_markdown_art_attribution(rnr_game : RangersAndRuffians, art : Path) -> str | None:
 
   rights = rnr_game.attributions.get(art,None)
 
@@ -431,7 +440,7 @@ def validateAbility(ability: dict, ability_schema: dict, status_effects: list, c
 
   try:
     jsonschema.validate(ability, schema=ability_schema)
-  except jsonschema.exceptions.ValidationError as e:
+  except ValidationError as e:
     print(f"ERROR: {context} {ability.get('name', '')} {e.schema_path}, {e.message}")
     sys.exit(1)
   except Exception:

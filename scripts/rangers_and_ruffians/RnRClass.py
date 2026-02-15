@@ -7,51 +7,60 @@ class RnRClass():
   def __init__(self, rnr_classdata):
 
     self.name = rnr_classdata['name']
+    self.class_type = rnr_classdata['class_type']
     self.stat_recommendation = rnr_classdata['recommended_stats']
     self.handbook = rnr_classdata['handbook']
     self.rule_sections = rnr_classdata.get('rule_sections', [])
     self.health_schedule = rnr_classdata.get('health_schedule', {})
-    self.is_mage = 'skill_tree' not in rnr_classdata
-    self.abilities = list()
+    self.is_mage = 'abilities_by_level' not in rnr_classdata
+    self.abilities_by_level = dict()
+    self.all_abilities = list()
+    self.paths = rnr_classdata.get("paths", {})
 
-    self.skill_tree_abilities = list()
-    self.skill_tree = None
     self.spells = dict()
     if self.is_mage:
-      for tier, spells in rnr_classdata['spells'].items():
+      for tier, tier_spells in rnr_classdata['spells'].items():
         if not tier in self.spells:
           self.spells[tier] = list()
-        for spell in spells:
-          self.spells[tier].append(RnRAbility(spell))
+        for s in tier_spells:
+          instantiated_spell = RnRAbility(s)
+          self.spells[tier].append(instantiated_spell)
+          self.all_abilities.append(instantiated_spell)
     else:  
-      self.skill_tree = rnr_classdata['skill_tree']['tree_path']
-      for ability in rnr_classdata['skill_tree']['abilities']:
-        self.abilities.append(RnRAbility(ability))
+      self.abilities_by_level = rnr_classdata['abilities_by_level']
+      for level, paths in rnr_classdata['abilities_by_level'].items():
+        self.abilities_by_level[level] = dict() 
+
+        for path, abilities in paths.items():
+          self.abilities_by_level[level][path] = list()
+
+          for a in abilities:
+            instantiated_ability = RnRAbility(a)
+            self.abilities_by_level[level][path].append(instantiated_ability)
+            self.all_abilities.append(instantiated_ability)
   
   def get_all_abilities(self) -> list: 
-    all_abilities = list()
-    if self.is_mage:
-      for _, spells in self.spells.items():
-        all_abilities += spells
-    else:  
-      all_abilities += self.abilities
-    return all_abilities
+    return self.all_abilities
 
   def serialize(self):
     serial = dict()
-    serial['name'] = self.name 
+    serial['name'] = self.name
+    serial['class_type'] = self.class_type
     serial['recommended_stats'] = self.stat_recommendation 
     serial['handbook'] = self.handbook 
     serial['rule_sections'] = self.rule_sections
     serial['is_mage'] = self.is_mage
     serial['health_schedule'] = self.health_schedule
+    serial['paths'] = self.paths
 
     if not self.is_mage:
-      serial['skill_tree'] = dict()
-      serial['skill_tree']['tree_path'] = self.skill_tree
-      serial['skill_tree']['abilities'] = list()
-      for ability in self.abilities:
-       serial['skill_tree']['abilities'].append(ability.serialize())
+      serial['abilities_by_level'] = dict()
+      for level, paths in self.abilities_by_level.items():
+        serial['abilities_by_level'][level] = dict()
+        for path, abilities in paths.items():
+          serial['abilities_by_level'][level][path] = list()
+          for ability in abilities:
+            serial['abilities_by_level'][level][path].append(ability.serialize())
     else: 
       serial['spells'] = dict()
       for tier, spells in self.spells.items():
@@ -102,15 +111,15 @@ class RnRClass():
     if self.health_schedule['standard_level_health_bonus'] != self.health_schedule['tier_increase_health_bonus']:
       class_text += f"  \nWhen you reach levels 6 and 11, instead gain {self.health_schedule['tier_increase_health_bonus']} health."
 
-    if len(self.abilities) > 0:
-      class_text += f"{'#' * subsection_level} Abilities  \n  \n"
-      if art_data is not None:
-        class_text += f"<img src='{art_data['skill_tree_path']}' class=\"skilltree\" />  \n  \n"
-      for ability in sorted(self.abilities, key=lambda a: a.name):
-        class_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
-        class_text += ability.get_markdown(ability_level)
-        class_text += f'</div>  \n' if printable else ''
-      class_text+= '  \n'
+    # if len(self.abilities) > 0:
+    #   class_text += f"{'#' * subsection_level} Abilities  \n  \n"
+    #   if art_data is not None:
+    #     class_text += f"<img src='{art_data['skill_tree_path']}' class=\"skilltree\" />  \n  \n"
+    #   for ability in sorted(self.abilities, key=lambda a: a.name):
+    #     class_text += f'<div class="rnr-ability" id="ability-{ability.name.lower()}">  \n' if printable else ''
+    #     class_text += ability.get_markdown(ability_level)
+    #     class_text += f'</div>  \n' if printable else ''
+    #   class_text+= '  \n'
 
     if len(self.spells) > 0:
       class_text += f"{'#' * subsection_level}  Spells  \n"

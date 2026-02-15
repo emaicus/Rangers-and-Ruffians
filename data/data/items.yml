@@ -173,10 +173,9 @@
                        crawling over every inch of you to form a hard, protective shell."
         effect:
             type: buff
-            description: "For the potion's duration, you are affected by the Guarded and Physical Resistance conditions, but must make dexterity checks at disadvantage."
+            description: "For the potion's duration, you are resistant to physical damage, but must make dexterity checks at disadvantage."
             conditions:
-                - guarded 
-                - physical resistance
+                - resistant
             save: null 
 -   name: Potion of Elemental Resistance
     goldValue: 250
@@ -192,9 +191,9 @@
                         When the bottle is opened, purple smoke billows from the spout."
         effect:
             type: buff
-            description: "If you inhale it, you gain Elemental Resistance for the potion's duration."
+            description: "If you inhale it, you gain resistance to elemental damage for the potion's duration."
             conditions:
-                - elemental resistance
+                - resistant
             save: null 
 -   name: Potion of Luck
     goldValue: 200
@@ -281,7 +280,7 @@
                 - invisible
             save: null
 -   name: Potion of Giant Size
-    goldValue: 100
+    goldValue: 60
     type: Potion
     ability:
         action_type: Offhand Action
@@ -294,9 +293,9 @@
                       spewing forth from the bottle. To gain the affects of the potion, you must quickly drink the it."
         effect:
             type: buff 
-            description: "For the potion's duration, you are considered to be Gigantic."
+            description: "For the potion's duration, you are enlarged."
             conditions:
-                - gigantic
+                - enlarged
             save: null
 -   name: Green Lizard in a Jar 
     goldValue: 2500
@@ -312,7 +311,7 @@
         description: "A four inch lizard floats in a jar of murky water. Its eye moves to watch you as you look down at it. 
                         When eaten, the lizard can be used to either restore you to full health or to bring an ally who has died 
                         within one day back to life."
--   name: Potion of Invulerability
+-   name: Potion of Invincibility
     goldValue: 1500
     type: Potion
     ability:
@@ -327,94 +326,7 @@
                         it slowly drips from the bottle and into your mouth."
         effect:
             type: buff 
-            description: "When finally consumed, you are affected by the Invulnerable condition for the potion's duration."
+            description: "When finally consumed, you are affected by the Invincible condition for the potion's duration."
             conditions:
-                - invisible
-            save: null     
--   name: Suppressor 
-    goldValue: 10
-    type: Firearm Upgrade 
-    ability:
-        action_type: modifies_ability
-        ability_modified: Standard Attack
-        name: "inherited"
-        type: utility 
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Affix a supressor to your weapon which reduces the damage dice of your firearm by one step, but makes it silent to fire."
--   name: Sawed Off 
-    goldValue: 5
-    type: Firearm Upgrade 
-    ability:
-        action_type: modifies_ability
-        ability_modified: Standard Attack
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Saw off the barrel of your two-handed firearm."
-        effect:
-            type: buff 
-            description: "The result decreases the range of your firearm by half, but grants it the Lightweight condition."
-            conditions:
-                - lightweight 
+                - invincible
             save: null
--   name: Bayonette 
-    goldValue: 5
-    type: Firearm Upgrade 
-    ability:
-        action_type: modifies_ability
-        ability_modified: Standard Attack
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Affix a bayonette to your two-handed firearm, allowing it to function as a shortspear."
--   name: Scope 
-    goldValue: 10
-    type: Firearm Upgrade 
-    ability:
-        action_type: modifies_ability
-        ability_modified: Standard Attack
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Mount a scope on your firearm to increase the range of your pistol or long-rifle by 30ft or your scattergun by 10ft. Not compatible with Sawed Off."
-# -   name: Recoil Compensator 
-#     goldValue: 100
-#     type: Firearm Upgrade 
-#     ability:
-#         type: utility 
-#         name: "inherited"
-#         cost: 0
-#         range: inherited
-#         duration: passive 
-#         description: "Attach a recoil compensator to your firearm, making it more accurate and granting you +2 to accuracy checks."
-# -   name: Quick Clear Barrel 
-#     goldValue: 100
-#     type: Firearm Upgrade 
-#     ability:
-#         type: utility 
-#         name: "inherited"
-#         cost: 0
-#         range: inherited
-#         duration: passive 
-#         description: "Add an system to your firearm that makes it easier to clear in case of misfire. Reduce the clearing target to D12."
--   name: Impact Blast Modification
-    goldValue: 250
-    type: Firearm Upgrade 
-    ability:
-        action_type: modifies_ability
-        ability_modified: Standard Attack
-        type: utility 
-        name: "inherited"
-        cost: 0
-        range: inherited
-        duration: passive 
-        description: "Chamber your weapon in a higher caliber. Whenever you use a hero token to score a critical hit, knock your enemy back 15 feet. 
-            This stacks with other critical hit enhancements."
