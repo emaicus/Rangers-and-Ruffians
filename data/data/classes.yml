@@ -1206,7 +1206,8 @@
                     description: "You dodge and weave between your foes, focusing your energy on avoiding combat."
                     effect:
                         type: buff
-                        description: "For the remainder of your turn, you are Elusive."
+                        description: "For the remainder of your turn, you are Elusive. While out of combat, you may use Disengage to gain advantage on stealth checks
+                                    for ten minutes."
                         conditions: 
                             - elusive
                         save: null

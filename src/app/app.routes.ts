@@ -6,6 +6,7 @@ import { RacePageComponent } from './webpages/race-page/race-page.component';
 import { BackgroundPageComponent } from './webpages/background-page/background-page.component';
 import { ClassPageComponent } from './webpages/class-page/class-page.component';
 import { GameDesignPageComponent } from './webpages/game-design-page/game-design-page.component';
+import { RulebookPageComponent } from './webpages/rulebook-page/rulebook-page.component';
 
 export const routes: Routes = [ 
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'races', component: RacePageComponent},
     { path: 'classes', component: ClassPageComponent},
     { path: 'monsters', component: MonsterPageComponent},
-    { path: 'game-design', component: GameDesignPageComponent}
+    { path: 'game-design', component: GameDesignPageComponent},
+    { path: 'rulebook', component: RulebookPageComponent}
 ]
