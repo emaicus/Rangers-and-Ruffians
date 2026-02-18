@@ -23,6 +23,11 @@
   <mat-sidenav #drawer [fixedInViewport]="false" mode="side" position="end" class="example-sidenav">
     <ul class="nav-list">
       <li>
+        <a (click)="navigateToPageAndFragment('/rulebook', '')" routerLinkActive="active">
+          Rules
+        </a>
+      </li>
+      <li>
         <a (click)="navigateToPageAndFragment('/backgrounds', '')" routerLinkActive="active">
           Backgrounds
         </a>

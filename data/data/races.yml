@@ -636,3 +636,90 @@
                 options: "Elves have pointed ears which range from a hand to twelve inches in length."
             -   title: "Other Features"
                 options: "Rarely, elves have been known to develop bestial features, shaped by the magic of the wilds."
+-   name: Daemonspawn # Done
+    #base_movement: 30
+    abilities:
+        -   name: You want to... make a deal?
+            action_type: "Action"
+            cost: 1
+            type: debuff 
+            range: 30 
+            duration: instantaneous
+            description: "When someone knowingly strikes a bargain with you and you seal it with a handshake, 
+                          you may choose to bind the agreement. Both parties are marked with a burning sigil.
+                           If either party knowingly breaks the agreement, they suffer 1d6 damage each dawn 
+                           until the pact is restored or absolved by a suitably skilled cleric or equivalent magic."
+        -   name: Incombustible
+            action_type: "Passive"
+            cost: 0
+            type: buff 
+            range: self 
+            duration: passive 
+            description: "Your infernal heritage has left you acclimated to heat."
+            effect: 
+                type: buff 
+                description: "You are resistant to fire damage."
+                conditions:
+                    - resistant 
+                save: null
+        -   name: Prehensile Tail 
+            action_type: "Passive"
+            cost: 0
+            type: buff
+            duration: passive 
+            range: self 
+            description: "You have a long tail with a single barb at the back. It is capable of grasping and manipulating objects, 
+                           allowing you to use it like a third hand."
+    handbook:
+        introduction:
+            -   "Long ago, during an age before mankind walked the earth, a race of deep elves that inhabited
+                    the bowels of the abyss intermarried with demons. When the demons were overthrown, their 
+                    children remained; the first of the daemonspawn."
+            -   "Daemonspawn are relatively few in number and are largely ostracized. Their largest concentrations
+                    are found in small villages at the fringes of society. These settlements rarely last long before 
+                    fear or malice lead the local populace to put them to the torch. Some daemonspawn choose to dwell 
+                    in cities where they can make a humble living as thieves, assassins for hire, and petty sorcerers. 
+                    Daemonspawn have been forced into such ignoble occupations by society's general mistrust and 
+                    persecution of their race. However, their heavy involvement in such pursuits has only served to 
+                    deepen the prejudice against them."
+            -   "Most daemonspawn have skin that is red in color. However, some are grey skinned and a rare few possess 
+                    skin that is blue or black. Both female and male daemonspawn grow horns and have long, dexterous tails. 
+                    Despite these peculiarities, 
+                    many daemonspawn are alarmingly beautiful with pointed, elflike ears. While most daemonspawn 
+                    are the descendents of the original pact between elves and demons, a small number of new 
+                    daemonspawn are created by dark magic, curses, or rituals each year."
+        you_may:
+            title: "As a Daemonspawn, you may"
+            options:
+                - "Hide or openly flaunt your horns based on your personality."
+                - "Keep your friends close at hand and be distrusting of outsiders."
+                - "Be drawn to a line of work that forces others to respect you."
+        assumptions:
+            title: "People who don't know you might assume"
+            options:
+                - "That you are a monster or are out to get them. It can be hard to convince someone that you are not a devil
+                    when you have red skin, horns, and yellow eyes."
+                - "That you are an easy target. Some ruffians may attempt to prey on you if they think others won't 
+                    lend a helping hand."
+                - "That you don't want them to bring up your race. Good people might overcorrect and try to gloss 
+                    over your heritage entirely."
+        looks:
+            -   title: "Height"
+                options: "Daemonspawn stand between 5' and 6' tall."
+            -   title: "Age"
+                options: "Like their elven forebearers, Daemonspawn can live centuries, though many of their lives are tragically cut short."
+            -   title: "Eyes"
+                options: "Crimson, Pink, Yellow, Glowing"
+            -   title: "Skin"
+                options: "Crimson red, rust red, pitch black, ash grey, saphire, emerald, humanlike"
+            -   title: "Hair"
+                options: "Rust red, slate grey, shock white, cerulean blue, dark black"
+            -   title: "Horns"
+                options: "Curling ram horns, small nubs on your forehead, long, spiked horns"
+            -   title: "Tatoos"
+                options: "Because of its intensity of color, daemonspawn skin holds ink well. 
+                          As such, many daemonspawn sport colorful tattoos across their body."
+        tips: 
+            -   name: Strive for Justice
+                text: "Though Daemonspawn often bear the brunt of society's misunderstanding, many work to better their place in the world. 
+                        Whether they are freedom fighters or philanthropists, many daemonspawn strive to make the world a better and more accepting place."
