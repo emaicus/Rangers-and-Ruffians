@@ -5,3 +5,4 @@ pyspellchecker
 textsearch
 inquirer
 jsonschema
+pyyaml

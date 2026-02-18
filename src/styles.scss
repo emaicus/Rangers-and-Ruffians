@@ -175,7 +175,6 @@ button{
 
 .spell-tier-title {
   font-size: 1.6rem;
-  text-decoration: underline;
   display: block;
   margin-bottom: 1rem;
 }
@@ -191,9 +190,47 @@ button{
   padding-right: 1rem;
 }
 
+.web-leveling {
+  display: block;
+}
 
-@media print {
-  
+.print-leveling {
+  display: none;
+}
+
+.print-leveling-paragraph {
+  margin-bottom: 2pt !important;
+  margin-top: 0pt;
+}
+
+.rnrLevel {
+  font-size: 1.7rem;
+}
+
+.pathText {
+  font-size: 1.2rem;
+  margin-top: .25rem;
+  margin-bottom: 0.25rem;
+}
+
+.hidden-in-print {
+  display: block;
+}
+
+.pathSubtitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rnr-printable-line {
+  display: none;
+}
+
+.rnr-line {
+  display: block;
+}
+
+@media print {  
 
   .main-content {
     padding: 0px;
@@ -208,7 +245,17 @@ button{
     margin-bottom: 0.5in !important;
   }
 
+  .hidden-in-print {
+    display: none !important;
+  }
   
+  .web-leveling {
+    display: none;
+  }
+  
+  .print-leveling {
+    display: block;
+  }
 
   .rnr-class {
     display: none !important;
@@ -230,6 +277,17 @@ button{
     display: none !important;
   }
 
+  .rnr-printable-line {
+    display: block;
+    border: 0;
+    height: 0;
+    margin: 0;                   // keeps your tight spacing
+    border-top: 1px solid #D1D5DB !important;  // cool neutral grey (Tailwind gray-400 vibe)
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  
   .rnr-line {
     display: none;
   }
@@ -267,9 +325,12 @@ button{
 
   .printable-stat-section {
     display: block;
-    margin-bottom: .25in;
+    margin-bottom: 6pt;
   }
 
+  .pathSubtitle {
+    display: none;
+  }
 
   
 
@@ -295,6 +356,7 @@ button{
 
   .rnr-ability {
     page-break-inside: avoid; /* Prevent splitting across pages */
+    margin-bottom: 6pt;
   }
 
   /* Set width for elements with the class "skilltree" */
@@ -317,17 +379,17 @@ button{
 
   .rnr-subsection-title {
     color: black;
-    font-size: 24pt;
-    font-weight: normal;
-    padding-bottom: .75rem;
+    font-size: 16pt;
+    font-weight: bold;
+    padding-bottom: 0px;
+    margin-top: 0px;
   }
   
   .rnr-sub-subsection-title {
     text-decoration: none;
     color: black;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: normal;
-    margin-bottom: .5rem;
   } 
   
   .rnr-ability-title {
@@ -337,19 +399,36 @@ button{
     margin-bottom: .5rem;
   }
 
+  .rnrLevel {
+    font-size: 14pt;
+  }
+
+  .rnr-level-section {
+    page-break-inside: avoid; /* Prevent splitting across pages */
+  }
+
+  .rnr-level-section.rnr-level-section-splittable {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .pathText {
+    font-size: 10pt;
+    margin-top: 4pt;
+  }
+
   body {
     font-size: 10pt;
   }
 
   .spell-tier {
-    margin-top: .25in;
+    margin-top: 6pt;
   }
   
   .spell-tier-title {
     font-size: 16pt;
-    text-decoration: underline;
     display: block;
-    margin-bottom: 0.25in;
+    margin-bottom: 6pt;
   }
 
 }

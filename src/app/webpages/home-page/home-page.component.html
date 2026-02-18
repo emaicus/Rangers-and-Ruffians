@@ -2,39 +2,42 @@
 
 <main id="content" class="main-content" role="main">
     <h1>Rangers and Ruffians</h1>
-    <i>Version 3.0.0 Release Candidate 3</i>
+    <i>Version 3.0.0: Tenth Anniversary Edition RC 1</i>
     <button class="install-pwa-button" (click)="installPWA()" *ngIf="deferredPrompt">Install App</button>
 
-    <h2>Release Candidate 3</h2>
-    This version of Rangers and Ruffians is a release candidate! That means it's almost ready for showtime. 
-    The site will be updated frequently in the coming weeks with new rules and features as the documentation is completed. Check back often for updates!
-
+    <h2>10th Anniversary Edition: Release Candidate 1</h2>
+    Ten years! This new edition of Rangers and Ruffians aims to bring things back to the basics and get us to a place where the game is easy and fun to play.
+    The rule of the day is simplification, and that means removing as many sources of complication as possible while focusing on the things that make the game
+    great.
     <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header >
             <mat-panel-title>
-                Release candidate 3 includes the following changes:
+                Among other things, 10th Anniversary RC1 has the following changes:
             </mat-panel-title>
           </mat-expansion-panel-header>
           <ng-template matExpansionPanelContent>
             <ol>
                 <li>
                     <span class="rnr-boldtext">
-                        Removal of "Roll to Hit"
+                        Simplified Combat
                     </span>
-                    Accuracy checks have been removed from the game to increase the speed and fun of combat!
+                    Roll to hit is removed, offhand actions return, and called shots make their debut. Changes to combat should make the game feel fast, tactical, and epic!
                 </li>
                 <li>
                     <span class="rnr-boldtext">
-                       Addition of Deductive Armor
+                        Simplified Character Options
                     </span>
-                    Armor now reduces damage taken as the result of an enemy attack.
+                    False choice was creating design bloat, making the game harder to play and run. We've stripped the game back to ten races and eight classes, which are honed to their
+                    core features. While removing options like skill trees decreases customization, it means that balance is easy and building a character should take minutes while 
+                    still resulting in years of fun.
                 </li>
                 <li>
                     <span class="rnr-boldtext">
-                        The return of "Offhand Actions"
+                        So much more!
                     </span>
-                    On each turn, characters may now take an "Action" and an "Offhand Action." Actions typically deal damage or perform some other greater feat. Offhand actions are usually tactical, such as buffing an ally, debuffing an enemy, or healing.
+                    Read the full rules document to see what else changed. From Death's Door Changes to Called Shots, less healing to simplified weapons, 
+                    this edition gets back to that original core of Rangers and Ruffians!
                 </li>
             </ol>
         </ng-template>
@@ -44,7 +47,7 @@
     <h2> Links for Players</h2>
     <ol>
         <li>
-            <a href="assets/pdfs/Character_Sheet_V_02_00.pdf" download>Download Your Character Sheet</a>
+            <a href="assets/pdfs/char_sheet_v3.pdf" download>Download Your Character Sheet</a>
         </li>
         <li>
             <a routerLink="/backgrounds">
@@ -66,10 +69,15 @@
     <h2> Links for Everyone</h2>
         <ol>    
             <li>
-                <a routerLink="/monsters">
-                    Study the Monsters
+                <a routerLink="/rulebook">
+                    Read the Rules!
                 </a>
+                <!-- <a routerLink="/monsters">
+                    Study the Monsters
+                </a> -->
             </li>
+        </ol>
+<!--     
             <li>
                 <a routerLink="/weapons">
                     Choose your weapon!
@@ -84,5 +92,5 @@
                     Design your campaign!
                 </a>
             </li>
-        </ol>
+        </ol> -->
 </main>

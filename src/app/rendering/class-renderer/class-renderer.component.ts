@@ -1,14 +1,15 @@
 import { Component, Input, EventEmitter, Output, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { RnRClass } from '../../data_types/Classes/RnRClass';
+import { RnRClass, InstantiatedAbilitiesAtLevel } from '../../data_types/Classes/RnRClass';
 import { NgIf, NgFor, CommonModule} from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 import { AttributedArtRendererComponent } from '../attributed-art/attributed-art-renderer/attributed-art-renderer.component';
-import { SkillTreeRendererComponent } from '../skill-tree-renderer/skill-tree-renderer.component';
 import { RangerCompanionCreatureComponent } from '../../rule_fragments/ranger-companion-creature/ranger-companion-creature.component';
+
+
 
 @Component({
     selector: 'app-class-renderer',
-    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent, AttributedArtRendererComponent, SkillTreeRendererComponent, RangerCompanionCreatureComponent],
+    imports: [CommonModule, NgIf, NgFor, AbilityRendererComponent, AttributedArtRendererComponent, RangerCompanionCreatureComponent],
     templateUrl: './class-renderer.component.html',
     styleUrl: './class-renderer.component.scss'
 })
@@ -17,6 +18,18 @@ export class ClassRendererComponent implements AfterViewInit {
   @Output() rendered = new EventEmitter<boolean>();
   isReadyToPrint = false;
   isRendered: boolean = false;
+
+  trackByKey = (_: number, item: { key: string; value: any }) => item.key;
+  keepOrder = () => 0;
+
+  keyCount(obj: Record<string, unknown> | null | undefined): number {
+    return obj ? Object.keys(obj).length : 0;
+  }
+
+  hasMultiplePathsAtLevel(level: InstantiatedAbilitiesAtLevel): boolean {
+    // ignore the optional "standard" bucket if you want
+    return Object.keys(level).filter(k => k !== 'standard').length >= 1;
+  }
 
   constructor() {}
 

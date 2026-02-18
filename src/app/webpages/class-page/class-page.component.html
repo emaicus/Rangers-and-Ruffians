@@ -2,9 +2,14 @@
     <h1 class="rnr-page-header">Classes</h1>
     <app-table-of-contents></app-table-of-contents>
     <div id="classes">
-        <ng-container *ngFor="let rclass of rnrClasses">
-            <app-class-renderer (rendered)="childRendered($event)" [rnrclass]="rclass"></app-class-renderer>
-            <hr class="rnr-line">
-        </ng-container> 
+        <div *ngFor="let group of classesByType | keyvalue: typeOrderCompare">
+            <div class="rnr-section-title hidden-in-print">
+                {{ group.key }} Classes
+            </div>
+            <ng-container *ngFor="let rclass of group.value">
+                <app-class-renderer (rendered)="childRendered($event)" [rnrclass]="rclass"></app-class-renderer>
+                <hr class="rnr-line">
+            </ng-container> 
+        </div>
     </div>
 </main>

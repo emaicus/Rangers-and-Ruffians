@@ -8,6 +8,20 @@
 		</p>
 	</div>
 	<div *ngIf="background.options !== null" [id]="(background.name | lowercase) + '-options'">
+		<div>
+			<p class="rnr-boldtext">
+				Use the following questions to help you build your {{ background.name }}:
+			</p>
+			
+			<ol>
+				<li *ngFor="let option of background.options">
+					<span *ngIf="option.question !== null"> {{option.question}} </span>
+				</li>
+			</ol>
+				
+
+		</div>
+		
 		<div *ngFor="let option of background.options">
 			<span *ngIf="option.question !== null" class="rnr-boldtext"> {{option.question}} </span>
 			<ol *ngIf="option.answers !== null">
@@ -17,17 +31,14 @@
 			</ol>
 		</div>
 	</div>
-	<div *ngIf="background.startingEquipment !== null" [id]="(background.name | lowercase) + '-equiptment'">
-		<p class="rnr-boldtext">
-			Starting Equipment
-        </p>
-        <p>
-            As {{background.addArticle(background.name)}} {{background.name | titlecase }}, you begin your jounrey with:
+	<!-- <div *ngIf="background.startingEquipment !== null" [id]="(background.name | lowercase) + '-equiptment'">
+        <p class="rnr-boldtext">
+            As {{background.addArticle(background.name)}} {{background.name | titlecase }}, you begin your journey with:
         </p>
 		<ul>
 			<li *ngFor="let rnr_item of background.startingEquipment">
 				{{ rnr_item }}
 			</li>
 		</ul>
-	</div>
+	</div> -->
 </div>

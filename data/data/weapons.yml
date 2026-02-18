@@ -12,19 +12,19 @@
     harried: false
     handedness: One Handed
     abilities: 
-        -   type: buff
-            action_type: "Passive"
-            name: Lightweight
-            cost: 0
-            range: self 
-            duration: passive 
-            description: "It is easy to move while carrying this weapon."
-            effect:
-                type: buff 
-                description: "While you carry it, you benefit from the Lightweight property."
-                conditions:
-                    - lightweight 
-                save: null
+        # -   type: buff
+        #     action_type: "Passive"
+        #     name: Lightweight
+        #     cost: 0
+        #     range: self 
+        #     duration: passive 
+        #     description: "It is easy to move while carrying this weapon."
+        #     effect:
+        #         type: buff 
+        #         description: "While you carry it, you benefit from the Lightweight property."
+        #         conditions:
+        #             - lightweight 
+        #         save: null
         -   type: buff 
             name: Dagger, Dagger, Dagger!
             action_type: "Passive"
@@ -45,19 +45,19 @@
     harried: true 
     handedness: One Handed 
     abilities: 
-        -   type: buff
-            name: Lightweight
-            action_type: "Passive"
-            cost: 0
-            range: self 
-            duration: passive 
-            description: "It is easy to move while carrying this weapon."
-            effect:
-                type: buff 
-                description: "While you carry it, you benefit from the Lightweight property."
-                conditions:
-                    - lightweight 
-                save: null
+        # -   type: buff
+        #     name: Lightweight
+        #     action_type: "Passive"
+        #     cost: 0
+        #     range: self 
+        #     duration: passive 
+        #     description: "It is easy to move while carrying this weapon."
+        #     effect:
+        #         type: buff 
+        #         description: "While you carry it, you benefit from the Lightweight property."
+        #         conditions:
+        #             - lightweight 
+        #         save: null
         -   type: combat option 
             name: Spread Attack 
             action_type: "Passive"
@@ -108,9 +108,9 @@
             description: "You may use this weapon to try to steal something from your enemies grasp."
             effect:
                 type: debuff
-                description: "They must make a spell power save or be Disarmed and the item flies into your grasp."
+                description: "They must make a spell power save or be disarmed and the item flies into your grasp."
                 conditions:
-                    - disarmed 
+                    - custom 
                 save: null
         -   type: utility 
             name: "Swinging Leap"
@@ -252,19 +252,19 @@
     harried: true 
     handedness: One Handed 
     abilities: 
-        -   type: buff
-            action_type: Passive
-            name: Lightweight
-            cost: 0
-            range: self 
-            duration: passive 
-            description: "It is easy to move while carrying this weapon."
-            effect:
-                type: buff 
-                description: "While you carry it, you benefit from the Lightweight property."
-                conditions:
-                    - lightweight 
-                save: null
+        # -   type: buff
+        #     action_type: Passive
+        #     name: Lightweight
+        #     cost: 0
+        #     range: self 
+        #     duration: passive 
+        #     description: "It is easy to move while carrying this weapon."
+        #     effect:
+        #         type: buff 
+        #         description: "While you carry it, you benefit from the Lightweight property."
+        #         conditions:
+        #             - lightweight 
+        #         save: null
         -   type: debuff  
             action_type: Passive
             name: Opening Shot 
@@ -291,19 +291,19 @@
     harried: true 
     handedness: Two Handed
     abilities: 
-        -   type: buff
-            action_type: Passive
-            name: Lightweight
-            cost: 0
-            range: self 
-            duration: passive 
-            description: "It is easy to move while carrying this weapon."
-            effect:
-                type: buff 
-                description: "While you carry it, you benefit from the Lightweight property."
-                conditions:
-                    - lightweight 
-                save: null
+        # -   type: buff
+        #     action_type: Passive
+        #     name: Lightweight
+        #     cost: 0
+        #     range: self 
+        #     duration: passive 
+        #     description: "It is easy to move while carrying this weapon."
+        #     effect:
+        #         type: buff 
+        #         description: "While you carry it, you benefit from the Lightweight property."
+        #         conditions:
+        #             - lightweight 
+        #         save: null
         -   type: utility 
             action_type: Passive
             name: Left Hand Free 

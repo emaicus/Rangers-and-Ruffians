@@ -122,7 +122,7 @@
 				"damage_type" : {
 					"type": "string",
 					"enum":  ["acid", "healing", "psychic", "fire", "cold", "lightning", "elemental", "arcane", "radiant", 
-					          "necrotic", "blunt", "piercing", "acoustic", "poison", "temporary health", "inherited"]
+					          "necrotic", "blunt", "piercing", "acoustic", "poison", "temporary health", "inherited", "leeched"]
 				},
 				"scaled_by": {
 					"type": "object",
@@ -183,6 +183,12 @@
 		"ability_modified": {
 			"type": "string"
 		},
+		"tags" : {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
 		"effect": {
 			"type": "object",
 			"additionalProperties": false,
@@ -205,16 +211,14 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["analyzed", "custom", "blinded", "bleeding", "blocked", "burning", "charmed","cold resistance",
-						"controlled", "darkvision", "diminished", "distracted",
-						"disarmed", "deafened", "dodging", "dumbstruck", "elemental resistance", "elusive", "empowered", "enlarged", "entangled", "ethereal",
-						"estranged", "fearless", "fire resistance", "fixated", "frenzied", "frightened",
-						"frozen", "gigantic", "grappled", "guarded", "halted", "hastened", "hard to move", "harried", "hindered", "hoisted", "infused", "immune", "invisible",
-						"incapacitated", "inconspicuous", "inspired", "invincible",
-						"isolated", "lightweight", "leeched", "lured", "lycanthropy", "muted", "nimble", "poison resistance", "physical resistance", "psychic resistance",
-						"quickened", "rot", "shrunk", "tiny", "total resistance", "transformed", "truesight",
-						"spurred to action", "spurred to movement", "staggered", "poisoned", 
-						"prone", "slowed", "stunned", "tethered", "weakened", "vulnerable"]
+						"enum":["bleeding","burning","rotting","poisoned","frenzied","guarded","exposed","weakened",
+								"staggered","infused","vulnerable","resistant","invincible","evasive","incapacitated",
+								"hardened","halted","spurred to action","hastened","hindered","quickened","spurred to movement",
+								"prone","stunned","slowed","lured","tethered","hard to move","blinded","invisible",
+								"truesight","darkvision","charmed","controlled","estranged","fixated","dumbstruck",
+								"blocked","muted","grappled","shrunk","enlarged","ethereal","transformed","diminished",
+								"inspired","elusive","isolated","fearless","frightened","harried","immune","distracted",
+								"custom"]
 					}
 				},
 				"save" : {

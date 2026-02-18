@@ -4,14 +4,36 @@
 	"type": "array",
     "items": {
         "type": "object",
-        "required": ["name", "recommended_stats", "health_dice", "expertise"],
+        "required": ["name", "recommended_stats", "health_schedule", "class_type"],
         "additionalProperties": false,
         "properties": {
             "name" : {
                 "type": "string"
             },
-            "expertise": {
-                "type": "string"
+            "paths": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                    "type": "string"
+                  }
+            },
+            "class_type": {
+                "type": "string",
+                "enum": ["Tank", "Striker", "Battle Mage", "Support"]
+            },
+            "health_schedule": {
+                "starting_health": {
+                    "type": "integer",
+                    "enum": [6,8,12]
+                },
+                "standard_level_health_bonus": {
+                    "type": "integer",
+                    "enum": [2]
+                },
+                "tier_increase_health_bonus": {
+                    "type": "integer",
+                    "enum": [2,4,6]
+                }
             },
             "recommended_stats": {
                 "type": "object",
@@ -21,52 +43,53 @@
                     "Charisma": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     },
                     "Dexterity": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     },
                     "Inner_Fire": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     },
                     "Intelligence": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     },
                     "Perception": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     },
                     "Strength": {
                         "type": "integer",
                         "minimum": -2,
-                        "maximum": 2
+                        "maximum": 3
                     }
                 }
             },
-            "health_dice": {
-                    "type": "string",
-                    "enum": ["1d6", "1d8", "1d10"]
-            },
-            "skill_tree": {
+            "abilities_by_level": {
                 "type": "object",
-                "required": ["tree_path", "abilities"],
                 "additionalProperties": false,
-                "properties": {
-                    "tree_path": {
-                        "type": "string"
+              
+                "patternProperties": {
+                  "^level_[1-9][0-9]*$": {
+                    "type": "object",
+              
+                    "minProperties": 1,
+              
+                    "properties": {
+                      "standard": { "type": "array" }
                     },
-                    "abilities": {
-                        "type": "array"
-                    }
+              
+                    "additionalProperties": { "type": "array" }
+                  }
                 }
-            },
+              },
             "spells": {
                 "type": "object",
                 "required": ["Tier_1", "Tier_2", "Tier_3"],

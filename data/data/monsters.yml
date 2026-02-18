@@ -531,12 +531,12 @@
                     type: debuff
                     description: "They must make a spell power save or be Burned if it has fire affinity, 
                                   Hindered if it has ice affinity, pushed back 15 feet if it has water affinity
-                                  or Hoisted if it has air affinity."
+                                  or grappled 10 feet in the air if it has air affinity."
                     conditions:
                         - burning
                         - hindered
-                        - hoisted
-                    save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
+                        - grappled
+                    save: null
 -   name: Force of Nature
     metadata:
         monster_class: Arcane Constructs
@@ -592,12 +592,12 @@
                     type: debuff
                     description: "They must make a spell power save or be Burned if it has fire affinity, 
                                   Hindered if it has ice affinity, pushed back 15 feet if it has water affinity
-                                  or Hoisted if it has air affinity."
+                                  or grapped ten feet in the air if it has air affinity."
                     conditions:
                       - burning
                       - hindered
-                      - hoisted
-                    save: "If the creature is hoisted, it may repeat its save at the end of each of its turns."
+                      - grappled
+                    save: null
 -   name: Young Dire Bear
     metadata: 
         monster_class: Beast
@@ -637,9 +637,9 @@
                 description: "Dire bears have thick hides and warm pelts."
                 effect:
                     type: buff 
-                    description: "They are Resistant to Cold."
+                    description: "They are resistant to cold damage."
                     conditions:
-                        - cold resistance
+                        - resistant
                     save: null
             -   name: Lumbering Movement 
                 type: debuff
@@ -721,9 +721,9 @@
                 description: "Dire bears have thick hides and warm pelts."
                 effect:
                     type: buff 
-                    description: "They are Resistant to Cold."
+                    description: "They are resistant to cold damage."
                     conditions:
-                        - cold resistance
+                        - resistant
                     save: null
             -   name: Lumbering Movement 
                 type: debuff
@@ -805,9 +805,9 @@
                 description: "Dire bears have thick hides and warm pelts."
                 effect:
                     type: buff 
-                    description: "They are Resistant to Cold."
+                    description: "They are resistant to cold damage."
                     conditions:
-                        - cold resistance
+                        - resistant
                     save: null
             -   name: Lumbering Movement 
                 type: debuff
@@ -1137,9 +1137,9 @@
                 description: "Slimes are made of a viscous ooze which displaces when struck."
                 effect:
                     type: buff 
-                    description: "Martial attacks are of little use against them, as they have Physical Resistance."
+                    description: "Martial attacks are of little use against them, as they are resistant to physical damage."
                     conditions:
-                        - physical resistance 
+                        - resistant 
                     save: null
             -   name: Distributed Nervous System 
                 type: buff 
@@ -1216,9 +1216,9 @@
                 description: "Slimes are made of a viscous ooze which displaces when struck."
                 effect:
                     type: buff 
-                    description: "Martial attacks are of little use against them, as they have Physical Resistance."
+                    description: "Martial attacks are of little use against them, as they are resistant to physical damage."
                     conditions:
-                        - physical resistance 
+                        - resistant 
                     save: null
             -   name: Distributed Nervous System 
                 type: buff 
@@ -1292,12 +1292,12 @@
                 cost: 0
                 range: self 
                 duration: passive 
-                description: "Black slimes are terrifyingly resilient against all damage."
+                description: "Black slimes are terrifyingly resilient to nearly all damage."
                 effect:
                     type: buff 
-                    description: "They benefit from Total Resistance."
+                    description: "They are resistant to all damage save electrical."
                     conditions:
-                        - total resistance 
+                        - resistant 
                     save: null
             -   name: Distributed Nervous System 
                 type: buff 
@@ -1675,7 +1675,7 @@
                     type: debuff 
                     description: "The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot."
                     conditions:
-                        - rot 
+                        - rotting 
                     save: null
 -   name: Greater Undead Thrall 
     metadata:
@@ -1741,7 +1741,7 @@
                     type: debuff 
                     description: "The creature's veins turn black as poison radiates out from the bite. They must make a spell power save or be affected by Rot."
                     conditions:
-                        - rot 
+                        - rotting 
                     save: null
 -   name: Forest Wolf 
     metadata: 
@@ -2746,7 +2746,7 @@
                     type: debuff 
                     description: "The target must make a spell power save or begin to Rot."
                     conditions:
-                        - rot
+                        - rotting
                     save: null
             -   name: Viel of Disintigration 
                 attacks_made: 1
@@ -2810,7 +2810,7 @@
 #                     type: debuff 
 #                     description: "The target must make a spell power save or begin to Rot."
 #                     conditions:
-#                         - rot
+#                         - rotting
 #                     save: null
 #             -   name: Viel of Disintigration 
 #                 attacks_made: 1
@@ -2867,7 +2867,7 @@
 #                     type: debuff 
 #                     description: "The target must make a spell power save or begin to Rot."
 #                     conditions:
-#                         - rot
+#                         - rotting
 #                     save: null
 #             -   name: Viel of Disintigration 
 #                 attacks_made: 1

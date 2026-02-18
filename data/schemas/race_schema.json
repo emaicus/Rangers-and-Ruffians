@@ -3,20 +3,11 @@
 	"type": "array",
 	"items": {
 		"type": "object",
-		"required": ["name", "health_dice", "base_movement", "abilities", "handbook"],
+		"required": ["name", "abilities", "handbook"],
 		"additionalProperties": false,
 		"properties": {
 			"name": {
 				"type": "string"
-			},
-			"health_dice": {
-					"type": "string",
-					"enum": ["1d4", "1d6", "1d8"]
-			},
-			"base_movement": {
-				"type": "integer",
-				"minimum": 25,
-				"maximum": 35
 			},
 			"handbook": {
 				"type": "object",
