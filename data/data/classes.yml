@@ -2527,7 +2527,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                range: 30
+                range: self
                 duration: 5
                 requirements:
                     verbal: true
@@ -2564,7 +2564,7 @@
                 type: utility
                 cost: 0
                 duration: concentration
-                range: self
+                range: 15
                 requirements:
                     verbal: false
                     movement: true 
