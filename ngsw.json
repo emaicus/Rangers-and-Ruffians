@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771385565655,
+  "timestamp": 1771467324859,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-KN6IBRGU.js",
+        "/main-TRMPYY4K.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-TM4CCBDL.css"
@@ -210,7 +210,7 @@
     "/assets/css/style.scss": "02295179b8bd4021ae7719261aaddb41f0b5186f",
     "/assets/data/attributions.json": "c4e0fa12edbf8b2af3a58556f06a47cc5ff31ef2",
     "/assets/data/backgrounds.json": "c4dfd778dfdbdae63bfc2e8b88fd80cc36c39ccc",
-    "/assets/data/classes.json": "ec40bc73807f95f2f69359e5c4b0c68441ff3628",
+    "/assets/data/classes.json": "9a9567f04c2f7c4ac12799f9879edac6650215d3",
     "/assets/data/conditions.json": "ea23aefbef0929f7b87bf344c6e51fe6e3bc145d",
     "/assets/data/items.json": "4ad50e3d2c65557959b99c22f7527e1e3de8a056",
     "/assets/data/monsters.json": "93eed5a1560324dedabce8bbc96f2f35289c6826",
@@ -345,8 +345,8 @@
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/assets/pdfs/char_sheet_v3.pdf": "6422a99760e73b4a1b96b27f222a731942bdb744",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "a2ab5a8944fddd75dff4d71d63dab92eca14d599",
-    "/main-KN6IBRGU.js": "a6cdcfc855c759cfd1ad8e6ffafecee69ede0461",
+    "/index.html": "93797d0b56d1937d1f7f89b8ef50beb41d092679",
+    "/main-TRMPYY4K.js": "a693a50a6799a8b49b7eadcfbe88d850b1cd22ad",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
