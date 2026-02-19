@@ -36,6 +36,7 @@ export class RnRAbility {
 	damageType: string;
 	displayableDamageType : string;
 	renderCheckbox: boolean;
+	has_damage_shape: boolean;
 	
 	constructor(
 		data: AbilityData,
@@ -58,10 +59,6 @@ export class RnRAbility {
 		} else {
 		  this.durationString = this.duration;
 		}
-		
-		this.range = data.range ?? "Touch";
-		this.shouldDisplayRange = data.range != null  &&  data.range != "Inherited"  && (!succinct || (succinct && !(data.range == "Touch" || data.range == "Self")));
-		this.rangeString = typeof this.range === "number" ? `${this.range} Feet` : data.range.toString();
 		
 		this.castingTime = data.castingTime ?? "";
 		this.shouldDisplayCastingTime = data.castingTime != null;
@@ -109,6 +106,8 @@ export class RnRAbility {
 		this.damageScaling.scaled_by.weapon = this.damageScaling.scaled_by.weapon ?? false;
 		this.damageScaling.scaled_by.stat = this.damageScaling.scaled_by.stat ?? false;
 		this.damageScaling.damage_shape = this.damageScaling.damage_shape ?? "";
+		this.has_damage_shape = this.damageScaling.damage_shape !== "";
+
 		this.isAoe = this.damageScaling.damage_shape != "";
 		this.damageScaling.all_tiers = this.damageScaling.all_tiers;
 		this.damageScaling.tier_1 = this.damageScaling.tier_1;
@@ -118,6 +117,19 @@ export class RnRAbility {
 		this.displayableDamageType = this.damageType == "inherited" ? "" : this.damageType; 
 
 		this.summonedCreature = data.summoned_creature ?? "";
-		this.shouldDisplaySummons = data.summoned_creature != null;		
+		this.shouldDisplaySummons = data.summoned_creature != null;
+
+		this.range = data.range ?? "Touch";
+		this.shouldDisplayRange = data.range != null  &&  data.range != "Inherited"  && (!succinct || (succinct && !(data.range == "Touch" || data.range == "Self")));
+
+		this.rangeString = "";
+		if (typeof this.range === "number" && this.has_damage_shape) {
+			this.rangeString = `${this.range} Foot ${this.damageScaling.damage_shape.charAt(0).toUpperCase() + this.damageScaling.damage_shape.slice(1)}`;
+		} else if (typeof this.range === "number" && !this.has_damage_shape) {
+			this.rangeString = `${this.range} Feet`;
+		} else {
+			this.rangeString = data.range.toString();
+		}
+
 	}
 }
