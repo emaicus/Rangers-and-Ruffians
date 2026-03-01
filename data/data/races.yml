@@ -19,16 +19,17 @@
             range: self
             duration: passive
             cost: 0
-            description: "You have razor sharp, retractable claws. When you make an unarmed attack, add +1 damage to the damage."
+            description: "You have razor sharp, retractable claws. When you make an unarmed attack, add +1 damage."
             tags: 
                 - damage_modifier
-        -   name: Land on your Feet
-            action_type: "Passive"
+        -   name: Nine Lives
+            action_type: "Reaction"
             type: buff
             range: self
-            duration: passive
+            duration: instantaneous
             cost: 0
-            description: "You are able to land more gracefully than others. Reduce any falling damage you take by 1d6."
+            description: "When you are about to take surprise damage from a trap or fall, reduce the damage by 1d6. 
+                          However, you must be able to spring to a safe spot within 10ft. Damage reduction increases to 1d8 then 1d10 in tiers 2 and 3, respectively."
             tags:
                 - fall_reduction
     handbook:
@@ -448,10 +449,10 @@
             description: "Spittle flies from your mouth as you loose a terrible battle cry."
             effect:
                 type: debuff 
-                description: "As the bellow echoes in the air, choose an enemy and make a strength check against their resistance. On success, they become frightened of you."
+                description: "As the bellow echoes in the air, choose an enemy and make a strength check against their resistance. On success, they become frightened of you until the end of their next turn."
                 conditions:
                     - frightened 
-                save: "They may re-attempt their save at the end of each of their turns."
+                save: null
     handbook:
         introduction:
             -   "Orcs are a brutal race that range across the world. They can be found deep in caves where no explorer dares to tread,
@@ -502,13 +503,14 @@
             description: "You know the tongue of bird and beast, and are able to convey your meaning to them.
                           You are able to make charisma checks to convince non-hostile animals to do your bidding."
         -   name: Riding High 
-            action_type: "Passive"
+            action_type: "Action"
             cost: 0
             type: buff 
             range: self 
             duration: inherited 
-            description: "As an action, clamber atop a teammate to ride them. While you are riding, both you and your ally 
-                          gain advantage on damage rolls while targeting the same enemy."
+            description: "As an action, clamber atop a teammate to ride them. While you are riding, if both you and your ally 
+                           attack the same enemy, add +1 to the damage. This persists until either of you attack another enemy as an 
+                           action, not including exposed attacks."
             effect:
                 type: buff 
                 description: "Furthermore, you are considered Guarded while riding a party member."
