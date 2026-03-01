@@ -1980,7 +1980,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: 1 hour
+                duration: 3
                 range: touch
                 requirements:
                     movement: true 

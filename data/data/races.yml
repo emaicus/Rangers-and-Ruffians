@@ -89,7 +89,8 @@
             description: "You are naturally skilled at understanding, reinforcing or underminding structures or mechanism. 
                            When you encounter an object, structure or environmental feature that may be interacted with in a risky way,
                            you may spend ten minutes to render it less dangerous. The next time the feature is interacted with and a failure occurs,
-                           you manage to reduce or soften the consequences of that failure, as determined by the Grand Poohbah. Similarly, 
+                           you manage to reduce or soften the consequences of that failure by half, as determined by the Grand Poohbah. 
+                           This cannot negate an effect entirely or turn a failure into a success. Similarly, 
                            you may spend the time to make something less prone to break or more likely to hold."
             tags:
                 - brace
