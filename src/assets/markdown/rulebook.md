@@ -228,9 +228,9 @@ When an adventurer takes damage, their current hit points decrease. No matter ho
 
 When an adventurer pushes themselves beyond their limits, they begin to grow Exhausted. Exhaustion has three levels:
 
-*   __Exhaustion 1:__ Take -2 on all checks.
+*   __Exhaustion 1:__ Take -1 on all checks.
     
-*   __Exhaustion 2:__ Your movement speed is halved.
+*   __Exhaustion 2:__ Take -2 on all checks. Your movement speed is halved.
     
 *   __Exhaustion 3:__ You fall unconscious and cannot be woken up. If you are not brought to a warm, safe place and allowed to rest, you die in 24 hours.
     
