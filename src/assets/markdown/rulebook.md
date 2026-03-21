@@ -35,53 +35,50 @@ Adventurers are made up of three parts:
 
 ### Dice
 
-*   __Dice:__ To play Rangers and Ruffians, each player needs a standard set of polyhedral dice. The set should include 4, 6, 8,10, 12, and 20 sided dice, referred to as d4, d6, d8, d10, d12, and d20. Rarely, an ability calls for a d2, which is a coin flip with tails as 1 and heads as 2.
+*   __Dice:__ To play Rangers and Ruffians, each player needs a standard set of polyhedral dice and an extra six sided dice. The set should include 4, 6, 8,10, 12, and 20 sided dice, referred to as d4, d6, d8, d10, d12, and d20. Rarely, an ability calls for a d2, which is a coin flip with tails as 1 and heads as 2.
     
 *   __Dice Steps:__ A step is a movement of one position in the d2/4/6/8/10/12 order. One step up from d6 is d8. Three steps down from d12 is d6.
     
 *   __Rolling Multiple Dice:__ Sometimes, multiple dice of the same type must be rolled. In this case, we prefix the dice with the number of rolls. The term 2d6 indicates that two six sided dice must be rolled. The value of the roll is the sum of the two dice.
     
-*   __Modifiers:__ Most rolls are modified by a character’s stats. In this case the modifier would be added or subtracted from the dice roll. If a check calls for 1d20 + 3, the player would roll a d20, then add 3 to the result. 
+*   __Modifiers:__ Most rolls are modified by a character’s stats. In this case the modifier would be added or subtracted from the dice roll. If a check calls for 2d6 + 2, the player would roll a 2d6, then add 2 to the result. 
     
 *   __Round Up:__ In some cases, the result of a roll must be halved, or otherwise divided. When the result is a fraction, round up.
     
 
 ### Checks
 
-When an adventurer wants to perform an action with an uncertain outcome, the Grand Poohbah calls for a check of the appropriate type to see if they succeed or fail. An adventurer rolls a d20 and modifies the result based on the relevant stat. If they meet or exceed a target number set by the Grand Poohbah, they succeed.
-
+When an adventurer wants to perform an action with an uncertain outcome, the Grand Poohbah calls for a check of the appropriate type to see if they succeed or fail. An adventurer rolls a 2d6 and modifies the result based on the relevant stat. 
   
 
 *   __Triggers for a Check:__ A check should occur whenever an adventurer attempts to do something difficult which, if failed, would result in a meaningful outcome.
     
-*   __Types of Check:__ Nearly all checks in the game are modified by one of the characters’ six core stats. When the Grand Poohbah calls for a check, they will select which of the stats most apply, and add its name to the start of the check.
+*   __Types of Check:__ Nearly all checks in the game are modified by one of the characters’ five core stats. When the Grand Poohbah calls for a check, they will select which of the stats most apply, and add its name to the start of the check.
     
-*   __Target Value:__ The target value or difficulty of a roll is set by the Grand Poohbah. A check is considered successful if the result of the adventurer’s roll meets or exceeds the target number. Targets are generally set as follows:
-    *   5\. __Easy__
-    *   10\. __Moderate__
-    *   15\. __Difficult__
-    *   20\. __Very Difficult__
-    *   25\. __Near Impossible without help__ 
+*   __Result Tiers:__ Nearly all checks in Rangers and Ruffians are made against the following result tiers:
+    * Natural 2\. __Bad Things Happen__ If you roll two ones, you recieve a bad outcome and must pay a price.
+    *   6-\. __Failure__ If your result after modifiers is 6 or less, you fail at the task and something bad happens.
+    *   7-9\. __Success at a Cost__ If your result after modifiers is 7, 8, or 9, you succeed with some consequences.
+    *   10+\. __Success__ If the result is higher than 10, you fully succed without a cost.
+    *   Natural 12\. __Critical Success__ If you roll two sixes, you achieve a critical success and may gain a boon at the Poohbah's discretion.
 <br>
 
-*   __The Help Action:__ If an adventurer is attempting something and another adventurer wishes to help them, they may, so long as they are reasonably able. In this case, the helping adventurer’s stat is added as an additional modifier to the check.
+*   __The Help Action:__ If an adventurer is attempting something and another adventurer wishes to help them, they may, so long as they are reasonably able. In this case, the check is rolled at advantage.
     
-*   __Contested Checks:__ When two creatures struggle against one another, the Poohbah may call for a contested check. The individuals roll against each other, and whoever has the highest result is successful. If two adventurers perform a contested check against each other, ties result in a stalemate. If an adventurer makes a contested check against a non-player character, ties break in the adventurer’s favor unless the non-player character is a villain in which case the result is a stalemate.
+*   __Contested Checks:__ When two creatures struggle against one another, the Poohbah may call for a contested check. The creatures roll against each other, and whoever has the highest result is successful. If two adventurers perform a contested check against each other, ties result in a stalemate. If an adventurer makes a contested check against a non-player character, ties break in the adventurer’s favor unless the non-player character is a villain in which case the result is a stalemate.
     
 *   __Gated Checks:__ Not every adventurer can attempt every check. In order to attempt a check, an adventurer must have both proximity and ability, as ruled by the Grand Poohbah.
     
 *   __Advantage and Disadvantage:__ The tides of fate sometimes place adventures in advantageous or disadvantageous circumstances when making a check. When a check happens under optimal circumstances, it is made at advantage, the check is rolled twice, and the better roll is kept. Disadvantage occurs when a check is attempted under sub-optimal circumstances; the roll is made twice and the worse result is kept. Advantage and disadvantage do not stack and cancel out.
+        
+*   __Inspiration Dice:__ Some abilities grant an adventurer an inspiration dice, which may be added to the result of any check. If an adventurer has a d4 inspiration dice they may roll it to add to a check of their choice. Unless otherwise stated by an ability description, an inspiration dice lasts for one in-game day.
     
-*   __Bad Things Happen:__ When performing a regular roll for a check or save, rolling a natural 1 counts failure like any other. However, when an adventurer has disadvantage on a roll and rolls a natural one, a very bad outcome always occurs.
-    
-*   __Inspiration Dice:__ Some abilities grant an adventurer an inspiration dice, which may be added to the result of any check. If an adventurer has a d6 inspiration dice they may roll it to add to a check of their choice. Unless otherwise stated by an ability description, an inspiration dice lasts for one in-game day.
-    
-*   __I Would Like to Try it Anyway:__ Any action which costs exactly 1 action point may be attempted for 0 action points. However, the action must be performed at disadvantage and all failures are counted as a natural one and cause Bad Things to Happen. If the action being attempted is an attack, it is always a called shot.
+*   __I Would Like to Try it Anyway:__ Any action which costs exactly 1 action point may be attempted for 0 action points. However, the action must be performed at disadvantage all rolls below 7 count as a natural 2 and cause Bad Things to Happen. If the action being attempted is an attack, it is always a called shot.
     
 
 ### Stats
 
-There are six core statistics that make up your adventurer. These numeric stats range between -2 and 5 and represent your aptitude at a given set of tasks. They are used to modify the checks that you make as you adventure, thus changing your chances of success. An adventurers starting stats are determined by their class, and increase every five levels.
+There are five core statistics that make up your adventurer. These numeric stats range between -2 and 5 and represent your aptitude at a given set of tasks. They are used to modify the checks that you make as you adventure, thus changing your chances of success. An adventurers starting stats are determined by their class, and increase every five levels.
 
 *   __Strength:__ Strength (STR) is defined as raw power of the body. It is added to strength checks, such as bending the bars of your cell to escape.
     
@@ -92,9 +89,7 @@ There are six core statistics that make up your adventurer. These numeric stats 
 *   __Inner Fire:__ Inner Fire (INF) is defined as fortitude and strength of will. It is added to inner fire checks, such as pushing forward through intense weather or resisting the effects of certain spells.
     
 *   __Charisma:__ Charisma (CHA) is defined as the force of your personality. It is added to charisma checks, such as attempting to charm a hostile guard.
-    
-*   __Perception:__ Perception (PER) is defined as your ability to observe and understand the world around you. It is added to perception checks, such as scanning a hallway for signs of a trap.
-    
+        
 
   
 
@@ -275,7 +270,7 @@ Informal magic falls into one of three categories.
 
 *   __Trivial Magic:__ If a feat of magic is trivial to perform, then you succeed without a roll. Which acts of magic are trivial is determined by the Grand Poohbah, and is heavily dependent on your level and tier.
     
-*   __Difficult Magic:__ Other feats of informal magic require an intelligence check. On success, you perform or mostly succeed in performing the feat of magic. On failure, something goes wrong with the spell. On a natural one, Bad Things Happen regardless of the advantage status of the roll. If you know a spell similar to the feat of magic being performed, you may gain advantage on the roll.
+*   __Difficult Magic:__ Other feats of informal magic require an intelligence check. On success, you perform or mostly succeed in performing the feat of magic. On failure, something goes wrong with the spell. If you know a spell similar to the feat of magic being performed, you may gain advantage on the roll.
     
 
     *   __Action Point Cost:__ It is left to the Grand Poohbah to determine the action point cost of difficult informal magic, but it should generally range between 0 and 1. The action point cost of a spell must be known to an adventurer before casting. Informal magic is not intended to be used for very advanced feats of spellcasting. Teleportation, hurling a fireball, or causing a tree to grow are all too advanced to be feats of informal magic. If a feat of magic feels advanced enough that it merits an action point cost greater than 1, it likely should not be cast informally.
@@ -378,7 +373,7 @@ Some ingestible items, such as potions, confer magical benefits to an adventurer
 
 When adventurers and monsters engage, combat begins. During combat, time slows down and enters a fixed turn sequence.
 
-*   __Initiative:__ At the start of combat, all participants roll a special contested check, called Initiative, which is modified by perception. Turn order proceeds from highest initiative to lowest.
+*   __Initiative:__ At the start of combat, all participants roll a special contested check, called Initiative which is modified by dexterity. Turn order proceeds from highest initiative to lowest.
     
 *   __Surprise:__ In some cases either the adventurers or their enemies get the drop on the other group. When this occurs, the surprised faction takes disadvantage on their initiative roll.
     
@@ -410,9 +405,9 @@ There are a set of standard actions, offhand actions, and reactions that all adv
 
 *   __Make an Attack:__ Standard attacks always hit. Roll damage based on the weapon you are holding, coupled with any abilities you wish to use.
     
-*   __The Shove Action:__ You may use an action to shove an enemy who is adjacent to you. Make a strength check against their resistance. On success, they are pushed back 15ft.
+*   __The Shove Action:__ You may use an action to shove an enemy who is adjacent to you. Make a strength check against their resistance. On success, they are pushed back 10ft.
     
-*   __The Help Action:__ In some cases, you may want to help an ally accomplish a task on your turn. As an action, allow them to make a check out of turn and add your stat modifier to theirs as discussed in Chapter 1. The check may not be a called shot.
+*   __The Help Action:__ In some cases, you may want to help an ally accomplish a task on your turn. As an action, grant them initiative as discussed in Chapter 1.
     
 *   __The Grapple Action:__ As an action, you may attempt to grapple an enemy. Make a strength or dexterity check against their resistance. On success, they are grappled as defined in the Status Effects section of this chapter.
     
@@ -442,10 +437,10 @@ Sometimes, an adventurer may want to use their attack as a way to accomplish som
 
 *   __Declaring a Called Shot:__ In order for a called shot to be made, an adventurer must be trying to create a specific, reasonable effect. Aiming for the cyclops’s eye or trying to hit the wing of a harpy to make it land are good examples of called shots. Trying to aim for an enemy’s head to do extra damage is the result of a normal attack, not a called shot.
     
-*   __Resolution:__ Unlike regular attacks, called shots can result in a miss. The Grand Poohbah sets the target like any other check, and the player rolls. On success, the called shot hits, on failure, it misses. 
+*   __Resolution:__ Unlike regular attacks, called shots can result in a miss.
     *   __On Success:__ On success, the attack applies normal damage, then one outcome from the called shot outcomes table, chosen by the Grand Poohbah.
     *   __On Failure:__ On failure, the attack misses its target and is ineffective.
-    *   __Critical Success and Failure:__ On a natural 20, a called shot is a critical hit, and deals double damage. On a natural 1, something bad happens as a result of the attack.
+    *   __Critical Success and Failure:__ On a natural 12, a called shot is a critical hit, and deals double damage. On a natural 2, something bad happens as a result of the attack.
     
 
 *   __Limitations:__ A called shot cannot be combined with abilities or maneuvers that modify an attack unless otherwise stated.
@@ -515,13 +510,13 @@ As you adventure, blades, bolts of frost, psychic darts, and many other deadly a
 
 Some abilities have a chance of imparting a status effect, such as Blinded or Staggered, on an enemy. Many such abilities require a check to see if they succeed.
 
-*   __Making the Check:__ Abilities which could impart a status effect list a check that the adventurer must make.
+*   __Making the Check:__ Abilities which could impart a status effect list a 2d6 check that the adventurer must make.
     
 *   __The Target:__ The target number for the check is called the monster’s Resistance. All monsters have a resistance number, which is the target for such checks.
     
 *   __Success or Failure:__ The triggering ability describes the consequences of success or failure.
     
-*   __Multiple Targets:__ When a player uses an ability that affects multiple creatures and applies an effect, roll once. Compare the result to each target’s Resistance DC individually to determine which creatures are affected.
+*   __Multiple Targets:__ When a player uses an ability that affects multiple creatures and applies an effect, roll once. Compare the result to each target’s Resistance individually to determine which creatures are affected.
     
 *   __Sustained Effects:__ Unless otherwise stated, effects applied to monsters last until the end of the target’s next turn. Stronger effects may specify a longer duration.
     
@@ -553,7 +548,7 @@ In a like way, some monster abilities require an adventurer to make a check to a
 | --- | --- | --- | --- |
 | Health | 4 - 8 | 8 - 12 | 12 - 16 |
 | Damage per Turn | 1d4 - 1d8 | 1d6 - 1d12 | 2d6 - 2d8 |
-| Resistance/Threat | 10 - 13 | 11 - 14 | 12 - 15 |
+| Resistance/Threat | 8 | 9 | 10 |
 
 2-4 minions should are roughly equivalent to an adventurer.
 
@@ -566,7 +561,7 @@ Additionally, minions should have one small (easy to run) ability which makes th
 | --- | --- | --- | --- |
 | Health | 15 - 25 | 20 - 30 | 30 - 40 |
 | Damage per Turn | 1d6 - 2d6 | 2d6 - 4d6 | 4d6 - 6d6 |
-| Resistance/Threat | 13 - 17 | 14 - 18 | 15 - 19 |
+| Resistance/Threat | 9 | 10 | 11 |
 
 .5-1 heavy is roughly equivalent to one adventurer.
 
@@ -584,7 +579,7 @@ Additionally, Heavies should have:
 | --- | --- | --- | --- |
 | Health | 140 - 160 | 160 - 200 | 200 - 250 |
 | Damage per Turn | 2d6 - 4d6 | 4d6 - 6d6 | 6d6 - 8d6 |
-| Resistance/Threat | 15 - 18 | 16 - 19 | 17 - 20 |
+| Resistance/Threat | 10 | 11 | 12 |
 
   
 

@@ -304,7 +304,7 @@
             duration: instantaneous 
             type: buff
             description: "Humans have a unique ability to sense the unnatural. Some report the hair on the back of their neck standing on end. 
-                          You are able to make perception checks to see if you sense an undead, fiend, or other dark being in your vacinity."
+                          You are able to make intelligence checks to see if you sense an undead, fiend, or other dark being in your vacinity."
             tags: 
                 - detect_undead
         -   name: Human Endurance #Done
@@ -455,7 +455,7 @@
             duration: passive
             cost: 0
             description: "You are able to smell and track the scent of blood. When making checks to pursue or locate
-                           a wounded creature, roll perception with advantage." 
+                           a wounded creature, roll intelligence with advantage." 
             tags:
                 - track_blood
         -   name: Bellow
@@ -601,24 +601,25 @@
                           you may use this ability to attempt to gain understanding of a magical phenomena. On success, 
                           you understand how to mitigate it, and all allies who follow your advice gain advantage on the next relevant check that they make, 
                           so long as the method of mitigation does not involve slaying a creature."
-        -   name: Trance
+        -   name: Strange Priorities
             action_type: "Passive"
             type: buff
             cost: 0
             range: self 
             duration: passive 
-            description: "You enter a trance-like state rather than truly sleeping. While in this state,
-                           you may roll perception checks as though you are awake, but you are only aware of 
-                           occurences within 15ft of you."
+            description: "When you focus on a detail that others may find trivial or mundane, 
+                            you may make an intelligence check to see how that object actually 
+                            reveals useful information about the world around you or your current objective."
             tags:
                 - trance
-        -   name: Elven Speed
+        -   name: Natural Magic
             action_type: "Passive"
             type: utility 
             range: self 
             duration: passive
             cost: 0
-            description: "Elves are naturally dexterous and surefooted. Increase your base movement speed by 10ft."
+            description: "You may produce small, harmless magical effects such as flowers blooming, lights drifting, air stirring, faint sounds or illusions.
+                            These effects are mostly sensory, and do not rise to the level of power of a trained mage's spells."
     handbook:
         introduction: 
             - Stewards of order, Elves are a long-lived and vigilant race who see the world 

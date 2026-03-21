@@ -37,7 +37,7 @@
             },
             "recommended_stats": {
                 "type": "object",
-                "required" : ["Charisma", "Dexterity", "Inner_Fire", "Intelligence", "Perception", "Strength"],
+                "required" : ["Charisma", "Dexterity", "Inner_Fire", "Intelligence", "Strength"],
                 "additionalProperties": false,
                 "properties": {
                     "Charisma": {
