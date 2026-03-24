@@ -30,6 +30,20 @@
 		</ng-container>
 	</div> -->
 
+	<div class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-weapons'">
+		<div class="rnr-sub-subsection-title">
+			Weapon Training
+		</div>
+		{{rnrclass.name}}s are trained to fight with the following weapon types:
+		<ul>
+			<li *ngFor="let weapon_training of rnrclass.weapon_training">
+				<span>
+						{{ weapon_training }}
+				</span> 
+			</li>
+		</ul>
+	</div>
+
 	<div *ngIf="rnrclass.path_count > 0" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-paths'">
 		<div class="rnr-sub-subsection-title">
 			Paths

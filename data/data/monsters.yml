@@ -101,9 +101,9 @@
                 description: "The swarm crawls up an enemy, a hundred mouths gnawing as it flows up and over them."
                 effect:
                     type: "debuff"
-                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    description: "Its target must make a spell power saving throw or be Staggered."
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
 -   name: Greater Swarm
     metadata:
@@ -160,9 +160,9 @@
                     all_tiers: 4d6
                 effect:
                     type: "debuff"
-                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    description: "Its target must make a spell power saving throw or be Staggered."
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
 -   name: Zounds!
     metadata:
@@ -219,9 +219,9 @@
                     all_tiers: 4d6
                 effect:
                     type: "debuff"
-                    description: "Its target must make a spell power saving throw or become Distracted until the end of its next turn."
+                    description: "Its target must make a spell power saving throw or be Staggered."
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
 -   name: Tamberdoodle's Hand
     metadata:
@@ -889,7 +889,7 @@
                 duration: passive
                 range: self 
                 passive_damage_source: true
-                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                description: "Clawbeaks are strategic hunters. If a foe is staggered, they deal bonus damage." 
                 damage_scaling:
                     damage_type: inherited
                     all_tiers: 1d6
@@ -904,10 +904,10 @@
                     movement: false 
                 description: "Using its psychic power, the clawbeak batters a foe with its mind."
                 effect:
-                    description: "At the start of each turn, the target must make a spell power save or be Distracted."
+                    description: "At the start of each turn, the target must make a spell power save or be staggered."
                     type: debuff
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
             -   name: Peck 
                 attacks_made: 1
@@ -976,7 +976,7 @@
                 duration: passive
                 range: self 
                 passive_damage_source: true
-                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                description: "Clawbeaks are strategic hunters. If a foe is staggered, they deal bonus damage." 
                 damage_scaling:
                     damage_type: inherited
                     all_tiers: 1d6
@@ -1062,7 +1062,7 @@
                 duration: passive
                 range: self 
                 passive_damage_source: true
-                description: "Clawbeaks are strategic hunters. If a foe is affected by the Distracted condition, they deal bonus damage." 
+                description: "Clawbeaks are strategic hunters. If a foe is staggered, they deal bonus damage." 
                 damage_scaling:
                     damage_type: inherited
                     all_tiers: 2d6

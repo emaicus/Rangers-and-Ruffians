@@ -37,6 +37,7 @@ export class RnRClass implements ClassData {
     is_casting_class: boolean;
     paths: ClassPaths;
     path_count: number;
+    weapon_training: string[];
 
     constructor(data: ClassData, succinct: boolean) {
         this.name = data.name;
@@ -102,5 +103,6 @@ export class RnRClass implements ClassData {
         this.is_casting_class = (this.spells?.Tier_1.length ?? 0) > 0;
 
         this.rule_sections = data.rule_sections ?? [];
+        this.weapon_training = data.weapon_training ?? [];
     }
 }

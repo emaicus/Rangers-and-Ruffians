@@ -19,16 +19,18 @@
             range: self
             duration: passive
             cost: 0
-            description: "You have razor sharp, retractable claws. When you make an unarmed attack, add +1 damage to the damage."
+            description: "You have razor sharp, retractable claws. When attempting to climb yielding surfaces such as wood, cloth, rope, or packed earth, you do so with advantage.
+                            Additionally, when you make an unarmed attack, add +1 damage."
             tags: 
                 - damage_modifier
-        -   name: Land on your Feet
-            action_type: "Passive"
+        -   name: Nine Lives
+            action_type: "Reaction"
             type: buff
             range: self
-            duration: passive
+            duration: instantaneous
             cost: 0
-            description: "You are able to land more gracefully than others. Reduce any falling damage you take by 1d6."
+            description: "When you are about to take surprise damage from a trap or fall, reduce it by 1d6 so long as you are able to  
+                          spring to a safe spot within 10ft. Damage reduction increases to 1d8 then 1d10 in tiers 2 and 3, respectively."
             tags:
                 - fall_reduction
     handbook:
@@ -78,15 +80,20 @@
                 conditions:
                     - hard to move 
                 save: null
-        -   name: Appraiser's Eye
-            action_type: "Passive"
+        -   name: Give me ten minutes...
+            action_type: Action
             type: buff 
             cost: 0
             range: self 
             duration: passive
-            description: "You have a knack for evaluating an object's make and history. When you attempt to evaluate the craftsmanship or the history of a hand-made object, roll at advantage."
+            description: "You are naturally skilled at understanding, reinforcing or underminding structures or mechanism. 
+                           When you encounter an object that may be interacted with in a risky way,
+                           you may spend ten minutes to render it less dangerous. The next time the feature is interacted with and a failure occurs,
+                           you manage to reduce or soften the consequences of that failure by half. Similarly, 
+                           you may spend the time to make something less prone to break or more likely to hold."
             tags:
-                - stone_history
+                - brace
+            upcast: "In a pinch, you can spend one action point to use this ability as an action, reducing the time needed to six seconds."
         -   name: Delve too Deep
             action_type: "Passive"
             type: buff 
@@ -234,7 +241,7 @@
                 conditions:
                     - inspired
                 save: null
-        -   name: Halfling's Courage
+        -   name: Halfling's Resilience
             action_type: "Passive"
             type: utility 
             range: self
@@ -242,8 +249,15 @@
             cost: 0
             description: "You are more resilient than you look. When a monster or greater evil tries to 
                           lay a curse upon you, make your resistance check at advantage."
+            effect:
+                type: buff 
+                description: "Additionally, you are resistant to poison damage and may make checks against being poisoned at advantage."
+                conditions:
+                    - resistant
+                save: null
             tags:
                 - curse_resistant
+                - poison_resistant
     handbook:
         introduction:
             -   "Small enough to avoid notice, most halflings are content to live in peace and to watch the 
@@ -289,7 +303,7 @@
             duration: instantaneous 
             type: buff
             description: "Humans have a unique ability to sense the unnatural. Some report the hair on the back of their neck standing on end. 
-                          You are able to make perception checks to see if you sense an undead, fiend, or other dark being in your vacinity."
+                          You are able to make intelligence checks to see if you sense an undead, fiend, or other dark being in your vacinity."
             tags: 
                 - detect_undead
         -   name: Human Endurance #Done
@@ -358,7 +372,8 @@
             type: utility 
             range: self 
             duration: passive 
-            description: "You are able to breathe water like air and cannot drown. If you go more than three days without fully 
+            description: "You are able to breathe water like air and cannot drown. Additionally, you have membraned eyes 
+                            which allow you normal vision while underwater. If you go more than three days without fully 
                             submerging yourself in water, you gain one level of exhuastion, which cannot be removed until you do."
         -   name: Abyssal Aspect
             action_type: Passive
@@ -370,16 +385,19 @@
                            Until the interaction ends, gain advantage on intimidation checks, but disadvantage on persuasion checks"
             tags:
                 - fearful_visage
-        -   name: Membraned Eyes
+        -   name: Frigid Depths
             action_type: "Passive"
-            type: buff 
             cost: 0
+            type: buff 
             range: self 
-            duration: passive
-            description: "Your eyes have a thin, transparent second lid. Your vision cannot be limited by 
-                           obscurants such as water, smoke, mist, or suspended particles."
-            tags:
-                - smokescreen_resistant
+            duration: passive 
+            description: "You are used to the oppressive cold of the deep ocean and"
+            effect: 
+                type: buff 
+                description: "are resistant to cold damage."
+                conditions:
+                    - resistant 
+                save: null
     handbook:
         introduction:
             -   "A subaquatic race, most waterborn live in gleaming cities just below the 
@@ -436,7 +454,7 @@
             duration: passive
             cost: 0
             description: "You are able to smell and track the scent of blood. When making checks to pursue or locate
-                           a wounded creature, roll perception with advantage." 
+                           a wounded creature, roll intelligence with advantage." 
             tags:
                 - track_blood
         -   name: Bellow
@@ -448,10 +466,10 @@
             description: "Spittle flies from your mouth as you loose a terrible battle cry."
             effect:
                 type: debuff 
-                description: "As the bellow echoes in the air, choose an enemy and make a strength check against their resistance. On success, they become frightened of you."
+                description: "As the bellow echoes in the air, choose an enemy and make a strength check against their resistance. On success, they become frightened of you until the end of their next turn."
                 conditions:
                     - frightened 
-                save: "They may re-attempt their save at the end of each of their turns."
+                save: null
     handbook:
         introduction:
             -   "Orcs are a brutal race that range across the world. They can be found deep in caves where no explorer dares to tread,
@@ -502,13 +520,14 @@
             description: "You know the tongue of bird and beast, and are able to convey your meaning to them.
                           You are able to make charisma checks to convince non-hostile animals to do your bidding."
         -   name: Riding High 
-            action_type: "Passive"
+            action_type: "Action"
             cost: 0
             type: buff 
             range: self 
             duration: inherited 
-            description: "As an action, clamber atop a teammate to ride them. While you are riding, both you and your ally 
-                          gain advantage on damage rolls while targeting the same enemy."
+            description: "As an action, clamber atop a teammate to ride them. While you are riding, if both you and your ally 
+                           attack the same enemy, add +1 to the damage. This persists until either of you attack another enemy as an 
+                           action, not including exposed attacks."
             effect:
                 type: buff 
                 description: "Furthermore, you are considered Guarded while riding a party member."
@@ -571,33 +590,35 @@
 -   name: Elf # Done
     abilities:
         -   name: Follow the Weave
-            action_type: "Action"
+            action_type: "Offhand Action"
             cost: 0
             type: utility 
             range: self 
-            duration: passive
-            cost: 0
+            duration: instantaneous
             description: "Take a moment to close your eyes and focus on the flow of magic. You are able to make intelligence 
-                          checks to detect the presence of magic and whether it feels benign, hostile, or corrupted."
-        -   name: Trance
+                          checks to detect the presence of magic and whether it feels benign, hostile, or corrupted. When in combat, 
+                          you may use this ability to attempt to gain understanding of a magical phenomena. On success, 
+                          you understand how to mitigate it, and all allies who follow your advice gain advantage on the next relevant check that they make, 
+                          so long as the method of mitigation does not involve slaying a creature."
+        -   name: Strange Priorities
             action_type: "Passive"
             type: buff
             cost: 0
             range: self 
             duration: passive 
-            description: "You enter a trance-like state rather than truly sleeping. While in this state,
-                           you may roll perception checks as though you are awake, but you are only aware of 
-                           occurences within 15ft of you."
+            description: "When you focus on a detail that others may find trivial or mundane, 
+                            you may make an intelligence check to see how that object actually 
+                            reveals useful information about the world around you or your current objective."
             tags:
                 - trance
-        -   name: Long Memory
+        -   name: Natural Magic
             action_type: "Passive"
             type: utility 
             range: self 
             duration: passive
             cost: 0
-            description: "The memory of elves stretches back into time beyond measure, and is shared from 
-                           parent to child. You have heard much, and have advantage on checks made to recall history."
+            description: "You may produce small, harmless magical effects such as flowers blooming, lights drifting, air stirring, faint sounds or illusions.
+                            These effects are mostly sensory, and do not rise to the level of power of a trained mage's spells."
     handbook:
         introduction: 
             - Stewards of order, Elves are a long-lived and vigilant race who see the world 
@@ -643,12 +664,17 @@
             action_type: "Action"
             cost: 1
             type: debuff 
-            range: 30 
+            range: touch 
             duration: instantaneous
             description: "When someone knowingly strikes a bargain with you and you seal it with a handshake, 
-                          you may choose to bind the agreement. Both parties are marked with a burning sigil.
-                           If either party knowingly breaks the agreement, they suffer 1d6 damage each dawn 
-                           until the pact is restored or absolved by a suitably skilled cleric or equivalent magic."
+                          you may choose to bind the agreement as a pact. Both parties are marked with a burning sigil.
+                           If either party knowingly breaks the agreement, they must resist.
+                           If the pact takes effect, the creature in breach of the contract must either immediatley submit
+                           and be compelled to act in a way that honors the pact, or defy and take 1d6 damage which 
+                           cannot be healed until the pact is fulfilled or a Remove Curse spell or other equivalent magic
+                           is used. Damage increases to 2d6 then 3d6 in gameplay tiers 2 and 3, respectively. Pacts cannot be 
+                           compelled, but rather must be willingly and freely entered into by both parties without coercion.
+                           A pact can’t compel self-harm, harm to allies, or actions fundamentally against a creature's nature."
         -   name: Incombustible
             action_type: "Passive"
             cost: 0

@@ -1,12 +1,13 @@
 -   name: Bard
     class_type: Support
     recommended_stats:
-        Charisma: 3
+        Charisma: 2
         Dexterity: 0
-        Inner_Fire: 2
+        Inner_Fire: -1
         Intelligence: 1
-        Perception: -1
         Strength: -2
+    weapon_training:
+        - Focuses
     # expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
     #             take expertise in any checks made to perform for others and in all attempts at sleight of hand."
     handbook:
@@ -48,8 +49,7 @@
                 requirements:
                     movement: false 
                     verbal: true 
-                description: "A pulse of sonic energy streaks from you in all directions. 
-                            The wall of force parts around your allies and strikes your foes."
+                description: "A pulse of sonic energy streaks from you in all directions, sparing allies and harming foes."
                 range: self
                 radius: 25
                 damage_scaling:
@@ -129,10 +129,10 @@
                 description: "Use your magic to project your voice into an enemy's ears."
                 range: 60
                 effect:
-                    description: "Make an Inner Fire check against their Resistance. On success, they are Distracted."
+                    description: "Make an Inner Fire check against their Resistance. On success, they are staggered."
                     type: debuff
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
             -   name: Slow
                 action_type: Action
@@ -253,8 +253,8 @@
                 upcast: "For each additional action point spent on this spell, heal your allies for an additional dice of damage or increase the radius by 30 feet"
                 damage_scaling:
                     damage_type: healing
-                    tier_2: 4d4
-                    tier_3: 6d4 #(44)
+                    tier_2: 2d4
+                    tier_3: 3d4
                 range: self
                 radius: 30
             -   name: Counter Magic
@@ -448,10 +448,10 @@
                                     Meanwhile, the rest of the world begins to 
                                     shimmer as sparkles emanate from objects randomly, and the
                                     ground begins to undulate. They are Frightened of you
-                                    and are Distracted and Hindered."
+                                    and are staggered and Hindered."
                     conditions: 
                         - frightened
-                        - distracted
+                        - staggered
                         - hindered
                     type: debuff
                     save: "At the end of each of your turns, you must repeat your check."
@@ -500,10 +500,9 @@
     recommended_stats:
         Charisma: 0
         Dexterity: -2
-        Inner_Fire: 2
+        Inner_Fire: 1
         Intelligence: -1
-        Perception: 1
-        Strength: 3
+        Strength: 2
     handbook:
         -   title: Intro
             display_title: false 
@@ -534,6 +533,9 @@
                         to focus the attention of enemies and stop them from attacking a party's ranged
                         combatants and mages. Your role as a knight will be to defend
                         your party and to punish any enemy that would try to harm them."
+    weapon_training:
+        - Heavy Martial Weapons
+        - Standard Martial Weapons
     paths:
         The Path of Shining Armor: "You are an inspiration to your allies, and learn abilities which spurr them onward in even the most dire situations."
     starting_items:
@@ -555,7 +557,7 @@
                     duration: instantaneous
                     action_type: Free Action
                     description: "Prepare for an attack, hardening yourself against its damanage. 
-                                As a Free Action, halve the damage of an attack made against you. You may declare this after seeing its outcome."
+                                Make a Strength check against the attacker's Resistance. On success, the attack does no damage. On failure, it deals half damage."
             The Path of Shining Armor:
                 -   name: Charge
                     action_type: "Action"
@@ -590,7 +592,7 @@
                                 with determination."
                     effect:
                         type: buff 
-                        description: "Grant an ally you can see a 1d6 inspiration dice. The dice lasts for 1 hour."
+                        description: "Grant an ally you can see a 1d4 inspiration dice. The dice lasts for 1 hour."
                         conditions: 
                             - inspired 
                         save: null
@@ -832,11 +834,10 @@
     class_type: Tank
     recommended_stats:
         Charisma: -1
-        Dexterity: 2
+        Dexterity: 0
         Inner_Fire: 1
         Intelligence: -2 
-        Perception: 0 
-        Strength: 3
+        Strength: 2
     # expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
     #             bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
     health_schedule: 
@@ -868,6 +869,9 @@
                     They are expert at both offense and defense. As a Barbarian grows in strength, their abilities
                     layer atop one another, until even a normal attack deals massive damage. Barbarians are weak against
                     magical attacks, however, and need a solid back line to support them."
+    weapon_training:
+        - Heavy Martial Weapons
+        - Standard Martial Weapons
     paths:
         The Path of Rage: "You are a force to be reckoned with, using your rage to lay your enemies low."
     abilities_by_level:
@@ -1146,10 +1150,9 @@
     class_type: Striker
     recommended_stats:
         Charisma: 1
-        Dexterity: 3
+        Dexterity: 2
         Inner_Fire: -1
         Intelligence: 0
-        Perception: 2
         Strength: -2
     handbook:
         -   title: Intro
@@ -1180,6 +1183,9 @@
                     repeated damage. If a rogue invests in magic, they can use their abilities to avoid
                     damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
     #expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
+    weapon_training:
+        - Light Martial Weapons
+        - Light Ranged Weapons
     paths:
         The Path of the Arcane Infiltrator: "You use magic to supplement your stealth, allowing you to go where others cannot and to manipulate objects at a distance."
         The Path of the Assassin: "You focus on slaying foes quickly, striking from the shadows when they least expect it."
@@ -1225,8 +1231,15 @@
                     description: "Mutter a spell to will an ethereal hand into existence. While you concentrate on it,
                                 the hand acts as an extension of your will. The hand has a flying speed of 25 feet
                                 and may not leave the spell's radius. Its strength score is equivalent to your
-                                inner fire modifier, but uses -3 as it's dexterity modifier. In gameplay tier 2, 
+                                inner fire modifier, but uses -1 as it's dexterity modifier. In gameplay tier 2, 
                                 this is replaced by your Dexterity as you master using the hand at a distance."
+                    effect:
+                        type: debuff 
+                        description: "As a bonus action on your turn, you may use the hand to make a dexterity check against a foe's 
+                                      Resistance. On success, they become Exposed to the next attack which targets them."
+                        conditions:
+                            - exposed
+                        save: null
                 -   name: Thief's Mark
                     action_type: "Offhand Action"
                     type: combat option
@@ -1237,8 +1250,8 @@
                     description: "As you lay a hand on a creature, a small brand glows on their skin."
                     effect:
                         type: debuff
-                        description: "For the spell's duration, you always know in which direction the creature lies. Attacks 
-                                    that you make against the creature deal 1d6 additional damage."
+                        description: "For the spell's duration, you always know in which direction the creature lies. When you make 
+                          an attack against the creature, increase your weapon's damage dice by one step."
                         save: null 
                         conditions: 
                             - custom
@@ -1295,11 +1308,11 @@
                     description: "Attempt to pivot out of the way of an incoming attack."
                     effect:
                         type: buff 
-                        description: "As Reaction, become Evasive."
+                        description: "Make an Inner Fire check against the attacker's Resistance. On success, the attack misses. On failure, it deals half damage."
                         conditions:
-                            - evasive
+                            - custom
                         save: null
-                    upcast: You may spend an additional action point on this ability to cause the Evasion to persist until the start of your next turn.
+                    upcast: You may spend an additional action point on this ability to continue dodging until the start of your next turn.
         level_3:
             standard:
                 -   name: Thief's Strike
@@ -1564,16 +1577,15 @@
 -   name: Ranger
     class_type: Striker
     recommended_stats:
-        Charisma: 0
+        Charisma: -1
         Dexterity: 2
-        Inner_Fire: 1
-        Intelligence: -1
-        Perception: 3
+        Inner_Fire: 0
+        Intelligence: 1
         Strength: -2
     health_schedule: 
         starting_health: 8
         standard_level_health_bonus: 2
-        tier_increase_health_bonus: 4
+        tier_increase_health_bonus:
     handbook:
         -   title: Intro
             display_title: false 
@@ -1588,7 +1600,7 @@
                    because something has threatened the natural order and they believe that they can help restore it."
         -   title: "When Adventuring"
             display_title: true 
-            text: "Rangers are invaluable when traversing the wilderness, using their high Perception and Dexterity
+            text: "Rangers are invaluable when traversing the wilderness, using their high Intelligence and Dexterity
                     to lead the way through trecherous climbs. Rangers are expert at piecing tracking foes and 
                     piecing together what happened from even the faintest sign."                    
         -   title: "When Socializing"
@@ -1602,6 +1614,10 @@
                     allows them to learn their enemy before striking, dealing extra damage and finding ways to slip through their defenses.
                     Some rangers choose to master the blade, while others keep a distance, choosing the Path of the Hunter and wielding the bow.
                     Regardless, Rangers are fierce combatants who excel at targetting and slaying individual foes."    
+    weapon_training:
+        - Light Ranged Weapons
+        - Heavy Ranged Weapons
+        - Standard Martial Weapons
     paths:
         The Path of the Blade: "You have honed your skill with the blade, learning to counter your foes and exploit their weaknesses."
         The Hunter's Path: "You wield the bow, picking off targets from a distance with deadly precision." 
@@ -1679,7 +1695,7 @@
                     description: "From hiding, you cup your hands and make a perfect monster call."
                     effect:
                         type: debuff 
-                        description: "Make a Charisma Check against your target's Resistance. On success, they are Lured to a point of your choosing."
+                        description: "Make an Intelligence Check against your target's Resistance. On success, they are Lured to a point of your choosing."
                         conditions:
                             - lured 
                         save: null 
@@ -1916,9 +1932,8 @@
     recommended_stats:
         Charisma: 1
         Dexterity: -1
-        Inner_Fire: 3
-        Intelligence: 2
-        Perception: 0
+        Inner_Fire: 2
+        Intelligence: 0
         Strength: -2
     handbook:
         -   title: Intro
@@ -1946,6 +1961,8 @@
                  of skeletons, it is often the cleric that keeps them standing long enough to emerge victorious. Clerics are not without
                  the ability to fight, however. With beams of scouring light, they are able to blind their foes and push them back into the 
                  darkness."
+    weapon_training:
+        - Focuses
     starting_items:
         - A common arcane amulet or conjurer's idol 
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
@@ -1980,13 +1997,12 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: 1 hour
+                duration: 3
                 range: touch
                 requirements:
                     movement: true 
                     verbal: true
-                description: "Pray over one of your allies, beseeching your deity to protect them from harm. 
-                            As you pray, a ward of light shimmers over their heart."
+                description: "Pray over one of your allies, beseeching your deity to protect them from harm."
                 effect: 
                     description: "For the spell's duration, they are considered Guarded against all damage."
                     type: buff
@@ -1998,17 +2014,17 @@
                 type: healing
                 cost: 1
                 duration: instantaneous
-                range: 60
+                range: 30
                 requirements:
                     movement: true 
                     verbal: true
-                description: "As you channel the power of your deity, your voice resonates with profound compassion. Echoing waves of healing knit your target's wounds shut.
+                description: "As you channel the power of your deity, waves of healing knit your target's wounds shut.
                     If you physically touch your target, double the number of dice rolled."
                 damage_scaling: 
                     damage_type: healing
-                    tier_1: 1d6
-                    tier_2: 2d6
-                    tier_3: 4d6
+                    tier_1: 1d4
+                    tier_2: 1d8
+                    tier_3: 2d8
             -   name: Bind # On failure slow
                 action_type: "Action"
                 type: debuff
@@ -2018,13 +2034,13 @@
                 requirements:
                     verbal: false
                     movement: true
-                description: "Focus your intent upon an encroaching enemy and lift your hand to stop them."
+                description: "Lift your hand to stop an encroaching enemy."
                 effect:
                     type: debuff 
-                    description: "Make an Inner Fire check against the creature's Resistance. On success, they are frozen in place and Incapacitated."
+                    description: "Make an Inner Fire check against the creature's Resistance. On success, they are Incapacitated."
                     conditions:
                         - incapacitated
-                    save: "You must repeat your check at the end of each of your turns. If the enemy is injured, they spell's effect ends for them."
+                    save: "They may attempt to break your concentration as an action on each of their turns, causing you to remake the check."
                 upcast: "For each additional action point spent on this spell, you may attempt to bind two more creatures."
             -   name: Enlarge
                 action_type: "Offhand Action"
@@ -2038,10 +2054,10 @@
                 description: "As you grasp your holy symbol, glowing energy suffuses a creature of your choosing."
                 effect: 
                     type: buff
-                    description: "At once, their body Enlarged. You may choose to cast this spell using concentration."
+                    description: "At once, their body Enlarged."
                     conditions:
                         - enlarged
-                    save: "For an unwilling target, you must repeat your check at the end of each of their turns or once every five minutes when out of combat."  
+                    save: null
             -   name: Mend
                 action_type: "Offhand Action"
                 type: utility
@@ -2052,7 +2068,7 @@
                     movement: true 
                     verbal: true
                 description: "Your hands glow as you magically mend small dents, dings, scratches, and tears on an item you are touching. 
-                                You may also use this spell to render poisons innocuous, 
+                                You may also use this spell to render poisons innocuous, to
                                     heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour. Mending can be used on 
                                     a person to remove a status effect or to render a curse innocuous for one day."
                 upcast: "You may spend an action point on this spell to increase it's power, mending larger items such as broken walls, wheels, or armor."
@@ -2066,8 +2082,7 @@
                 requirements:
                     movement: true 
                     verbal: true
-                description: "With a muttered prayer, you raise an object aloft and it illuminates,
-                    casting light within the spell's radius."
+                description: "With a muttered prayer, you raise an object aloft and it illuminates."
                 effect:
                     type: debuff
                     description: "Undead and demonic creatures who begin their turn within the light are Staggered."
@@ -2105,19 +2120,40 @@
                     movement: false 
                 description: "Look skyward and put your faith in your diety. As you step out onto a surface that will not hold you,
                             it is instead solid and safe. In this way you can walk atop water, molten earth, or even across 
-                            thin air. This spell continues until you lose concentration or until you have moved 300 feet."
-            -   name: Speak Tongues
-                action_type: "Offhand Action"
-                type: utility
+                            thin air. This spell continues until you lose concentration or until you have moved 50 feet."
+            -   name: Passify # Cleric
+                action_type: "Reaction"
+                type: debuff
                 cost: 1
-                duration: 1 hour
+                duration: instantaneous
                 range: self
-                requirements: 
-                    movement: false 
-                    verbal: false 
-                description: "Your deity touches your tongue and allows you
-                    to communicate its word to others. You are able to speak and understand any language for the spell's duration."
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "As an enemy attempts to harm you with a targeted attack, call out to your deity for aid."
+                effect:
+                    type: debuff 
+                    description: "Make an Inner Fire check against the attacker's Resistance. On success, the attack misses. On failure, it deals half damage."
+                    conditions:
+                        - custom
+                    save: null
         Tier_2: # 10 / 10
+            -   name: Guardian Blade
+                action_type: "Action"
+                type: damage
+                cost: 1
+                duration: concentration
+                range: 15
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "In a burst of golden sparks, a holy weapon appears to float in the air beside you. On your turn, you may move the blade up to thirty feet
+                    and attack with it as an offhand action.
+                    The blade must remain within one hundred feet of you or be desummoned."
+                damage_scaling:
+                    damage_type: radiant
+                    tier_2: 1d8 
+                    tier_3: 1d10
             -   name: Excoriating Beam # Cleric
                 action_type: "Action"
                 type: aoe damage
@@ -2174,29 +2210,8 @@
                             wraps any allies within the spell's radius as they are healed."
                 damage_scaling: 
                     damage_type: healing
-                    tier_1: 1d4
                     tier_2: 2d4
-                    tier_3: 4d4
-            -   name: Remove Curse
-                action_type: "Ritual"
-                type: utility
-                range: touch
-                cost: 2
-                casting_time: 1 hour
-                duration: instantaneous
-                requirements:
-                    verbal: true 
-                    movement: true 
-                    components: 
-                        - pure salt (10 gold)
-                        - silver (30 gold)
-                        - holy water (10 gold)
-                description: "Sit beside a creature that you believe has a curse. Wash them with holy water and 
-                            purify their wounds with salt. Lay a piece of untarnished silver over their heart 
-                            and call upon your diety. For most curses and status effects, this ritual will remove them
-                            and also restore full health to your target. For some powerful curses, you may be forced 
-                            to make a check by the Grand Poohbah. If a fiend placed the curse, they may appear to try 
-                            to reclaim their prize."
+                    tier_3: 3d4
             -   name: Sphere of Encasement
                 action_type: "Action"
                 type: utility
@@ -2209,7 +2224,7 @@
                     components:
                         - A piece of polished quartz
                 description: "Hold a piece of quarts to your eye and view a creature through it. At once, an orb 
-                            of unbreakable magical energy forms around them. Nothing may pass through the orb, 
+                            of magical energy forms around them with 50 hit points. Nothing may pass through the orb, 
                             though it always has enough oxygen for the creature within. The creature inside
                             can push the orb to cause it to rotate, moving a distance up to half its movement on its turn."
             -   name: Dispel Magic
@@ -2422,17 +2437,18 @@
                    a combination of serious damage and status effects. However, wizards are notorious for their frail
                    forms and low health. As such, wizards must boost their defense with magic, or hide behind
                    their more resilient allies."         
+    weapon_training:
+        - Focuses
     starting_items:
         - A common magic wand or mage's staff 
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
         - A salve 
         - A set of wizard's clothing
     recommended_stats:
-        Charisma: 1
+        Charisma: 0
         Dexterity: -1
-        Inner_Fire: 2
-        Intelligence: 3
-        Perception: 0
+        Inner_Fire: 1
+        Intelligence: 2
         Strength: -2
     spells:
         Tier_1: # 10/10
@@ -2934,11 +2950,10 @@
         standard_level_health_bonus: 2
         tier_increase_health_bonus: 2
     recommended_stats:
-        Charisma: 2
+        Charisma: 1
         Dexterity: -1
-        Inner_Fire: 3
-        Intelligence: 1
-        Perception: 0
+        Inner_Fire: 2
+        Intelligence: 0
         Strength: -2
     handbook:
             -   title: Intro 
@@ -2963,11 +2978,13 @@
                 text: "Warlocks shine in combat with one of the most aggressive spell lists in the realms. Elditch Blast,
                             targets single foes, Tide of Shadow summons a cone of deadly dark, and Cthulian Tentacles
                             causes eldritch protrusions to grasp at multiple foes."
+    weapon_training:
+        - Focuses
     # Damage Strategy 
     # Battle caster. High DPR, good debuff, counters but no buffs.
     spells:
         Tier_1: # 10/10
-            -   name: Eldritch Blast # Warlock
+            -   name: Death Coil # Warlock
                 action_type: Action
                 type: damage
                 cost: 0
@@ -3085,10 +3102,10 @@
                     movement: false 
                 description: "Hideous and discordant voices fill your target's ears."
                 effect:
-                    description: "At the start of their turns, make an inner fire check against their Resistance. On success, they are distracted."
+                    description: "At the start of their turns, make an inner fire check against their Resistance. On success, they are staggered."
                     type: debuff
                     conditions:
-                        - distracted
+                        - staggered
                     save: null
             -   name: Telepathy
                 action_type: Offhand Action

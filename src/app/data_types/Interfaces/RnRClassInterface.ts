@@ -55,6 +55,7 @@ export interface ClassData {
     rule_sections: string[];
     is_casting_class: boolean;
     paths: ClassPaths;
+    weapon_training: string[];
 }
   
   

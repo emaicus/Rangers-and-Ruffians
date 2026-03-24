@@ -11,7 +11,7 @@
            This continues until they have rested or recieved any healing."
 -   name: Poisoned
     balance: strong
-    about: "Poisoned creatures must make a D15 inner fire check at the start of each turn
+    about: "Poisoned creatures must make a inner fire check at the start of each turn
            or take one level of exhaustion and 1d6 damage."
 -   name: Frenzied
     balance: strong
@@ -23,21 +23,18 @@
 # DAMAGE MODIFIERS - DONE!!
 -   name: Guarded
     balance: good 
-    about: "Damage rolls against guarded creatures are at disadvantage. A creature may be guarded against one or more damage types."
+    about: "Damage rolls against guarded creatures are at disadvantage."
 
 
 -   name: Exposed
     balance: strong
-    about: Damage rolls against exposed creatures are at advantage. A creature may be exposed to one or more damage types.
+    about: Damage rolls against exposed creatures are at advantage.
 -   name: Weakened
     balance: very strong
     about: A Weakened creature's attacks deal half damage.
 -   name: Staggered
     balance: neutral
     about: A Staggered creature makes their next action or damage roll at disadvantage.
--   name: Distracted 
-    balance: good 
-    about: A Distracted creature makes perception checks and damage rolls at disadvantage.
 
 -   name: Infused
     balance: good
@@ -46,23 +43,18 @@
 
 -   name: Vulnerable
     balance: strong
-    about: "Damage rolls against vunerable creatures are doubled. A creature may be vulnerable to one or more damage types."
+    about: "Damage rolls against vunerable creatures are doubled."
 -   name: Resistant
     balance: strong
-    about: "Damage rolls against resistant creatures are halved. A creature may be resistant to one or more damage types."
+    about: "Damage rolls against resistant creatures are halved."
 -   name: Invincible
     balance: very strong
-    about: "Invincible creatures are immune to incoming damage. A creature may be invincible to one or more damage types."
--   name: Evasive
-    balance: strong
-    about: "A creature that is evasive is difficult to strike. When a targeted attack is made against them, they may roll
-            a check against the attacker's Threat, using the stat specified by the ability that granted the effect. 
-            On a success, the attack misses and deals no damage. On failure, the attack hits but deals half damage."
+    about: "Invincible creatures are immune to incoming damage."
 
 #HARD CONTROL
 -   name: Incapacitated
     balance: very strong
-    about: "An Incapacitated creature cannot move or act. Damage rolls made against them are at advantage."
+    about: "An Incapacitated creature cannot move or act and damage rolls made against them are at advantage."
 -   name: Hardened
     balance: very strong
     about: A Hardened creature's body has been rendered stonelike. They they are resistant to physical damage, but cannot move or act."
@@ -88,10 +80,8 @@
 -   name: Prone
     balance: strong
     about: "A prone creature has been knocked to the ground and can move only by crawling. 
-           The maximum distance crawled is one quarter of their ordinary speed. Prone creatures 
-           make all dexterity and strength checks at disadvantage. Hand-to-hand attacks made 
-           against a prone creature are at advantage and targeted ranged attacks are
-           at disadvantage. A prone creature may spend an offhand action and half their movement to stand up."
+           Prone creatures make physical checks at disadvantage and hand-to-hand attacks made against them 
+           are at advantage. A prone creature may spend an offhand action and half their movement to stand up."
 
 
 #CONTROL
@@ -181,7 +171,7 @@
 -   name: Enlarged
     balance: strong
     about: "An Enlarged creature increases in size. They have advantage on Strength checks and their reach increases by 5ft.
-            Once per turn, when they hit with a physical attack, they may push their target 5ft away if they are smaller."
+            When they hit with a physical attack, they may push their target 5ft away."
 
 # Corporeality
 -   name: Ethereal
