@@ -56,11 +56,16 @@ When an adventurer wants to perform an action with an uncertain outcome, the Gra
 *   __Types of Check:__ Nearly all checks in the game are modified by one of the characters’ five core stats. When the Grand Poohbah calls for a check, they will select which of the stats most apply, and add its name to the start of the check.
     
 *   __Result Tiers:__ Nearly all checks in Rangers and Ruffians are made against the following result tiers:
-    * Natural 2\. __Bad Things Happen__ If you roll two ones, you recieve a bad outcome and must pay a price.
-    *   6-\. __Failure__ If your result after modifiers is 6 or less, you fail at the task and something bad happens.
-    *   7-9\. __Success at a Cost__ If your result after modifiers is 7, 8, or 9, you succeed with some consequences.
-    *   10+\. __Success__ If the result is higher than 10, you fully succed without a cost.
-    *   Natural 12\. __Critical Success__ If you roll two sixes, you achieve a critical success and may gain a boon at the Poohbah's discretion.
+    
+    
+| Roll       | Description       | Long Description                                                                                       |
+| ---------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| Natural 2  | Bad Things Happen | If you roll two ones, you receive a bad outcome and must pay a price.                                  |
+| 6-         | Failure           | If your result after modifiers is 6 or less, you fail at the task and something bad happens.           |
+| 7–9        | Success at a Cost | If your result after modifiers is 7, 8, or 9, you succeed with some consequences.                      |
+| 10+        | Success           | If the result is higher than 10, you fully succeed without a cost.                                     |
+| Natural 12 | Critical Success  | If you roll two sixes, you achieve a critical success and may gain a boon at the Poohbah's discretion. |
+
 <br>
 
 *   __The Help Action:__ If an adventurer is attempting something and another adventurer wishes to help them, they may, so long as they are reasonably able. In this case, the check is rolled at advantage.
@@ -84,7 +89,7 @@ There are five core statistics that make up your adventurer. These numeric stats
     
 *   __Dexterity:__ Dexterity (DEX) is defined as mobility, nimbleness, and ability with the body. It is added to dexterity checks, such as leaping from one rooftop to another.
     
-*   __Intelligence:__ Intelligence (INT) is defined as raw aptitude with the mind. It is added to intelligence checks, such as searching an ancient tome for useful information. For mages, intelligence is also added to a special type of check, called Informal Magic, which is described later (section XX).
+*   __Intelligence:__ Intelligence (INT) is defined as raw aptitude with the mind. It is added to intelligence checks, such as searching an ancient tome for useful information. For mages, intelligence is also added to a special type of check, called Informal Magic, which is described later.
     
 *   __Inner Fire:__ Inner Fire (INF) is defined as fortitude and strength of will. It is added to inner fire checks, such as pushing forward through intense weather or resisting the effects of certain spells.
     
@@ -122,7 +127,7 @@ Learning Abilities All adventurers begin with six abilities, three from their ra
 
 #### Ability Definition 
 
-*   __Action Type:__ Each ability specifies whether it requires an action, offhand action, reaction, or free action to use. These action types are detailed in the combat chapter (xx)
+*   __Action Type:__ Each ability specifies whether it requires an action, offhand action, reaction, or free action to use. These action types are detailed in the combat chapter.  
     
 *   __Action Point Cost:__ Many abilities cost one or more action points to use.
     

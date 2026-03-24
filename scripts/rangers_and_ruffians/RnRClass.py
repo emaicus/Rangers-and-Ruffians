@@ -16,6 +16,7 @@ class RnRClass():
     self.abilities_by_level = dict()
     self.all_abilities = list()
     self.paths = rnr_classdata.get("paths", {})
+    self.weapon_training = rnr_classdata.get('weapon_training', [])
 
     self.spells = dict()
     if self.is_mage:
@@ -52,6 +53,7 @@ class RnRClass():
     serial['is_mage'] = self.is_mage
     serial['health_schedule'] = self.health_schedule
     serial['paths'] = self.paths
+    serial['weapon_training'] = self.weapon_training
 
     if not self.is_mage:
       serial['abilities_by_level'] = dict()

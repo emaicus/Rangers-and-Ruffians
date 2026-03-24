@@ -35,6 +35,13 @@
                     "enum": [2,4,6]
                 }
             },
+            "weapon_training": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": ["Light Martial Weapons", "Standard Martial Weapons", "Heavy Martial Weapons", "Light Ranged Weapons", "Heavy Ranged Weapons", "Focuses"]
+                }
+            },
             "recommended_stats": {
                 "type": "object",
                 "required" : ["Charisma", "Dexterity", "Inner_Fire", "Intelligence", "Strength"],

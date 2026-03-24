@@ -6,6 +6,8 @@
         Inner_Fire: -1
         Intelligence: 1
         Strength: -2
+    weapon_training:
+        - Focuses
     # expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
     #             take expertise in any checks made to perform for others and in all attempts at sleight of hand."
     handbook:
@@ -531,6 +533,9 @@
                         to focus the attention of enemies and stop them from attacking a party's ranged
                         combatants and mages. Your role as a knight will be to defend
                         your party and to punish any enemy that would try to harm them."
+    weapon_training:
+        - Heavy Martial Weapons
+        - Standard Martial Weapons
     paths:
         The Path of Shining Armor: "You are an inspiration to your allies, and learn abilities which spurr them onward in even the most dire situations."
     starting_items:
@@ -864,6 +869,9 @@
                     They are expert at both offense and defense. As a Barbarian grows in strength, their abilities
                     layer atop one another, until even a normal attack deals massive damage. Barbarians are weak against
                     magical attacks, however, and need a solid back line to support them."
+    weapon_training:
+        - Heavy Martial Weapons
+        - Standard Martial Weapons
     paths:
         The Path of Rage: "You are a force to be reckoned with, using your rage to lay your enemies low."
     abilities_by_level:
@@ -1175,6 +1183,9 @@
                     repeated damage. If a rogue invests in magic, they can use their abilities to avoid
                     damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
     #expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
+    weapon_training:
+        - Light Martial Weapons
+        - Light Ranged Weapons
     paths:
         The Path of the Arcane Infiltrator: "You use magic to supplement your stealth, allowing you to go where others cannot and to manipulate objects at a distance."
         The Path of the Assassin: "You focus on slaying foes quickly, striking from the shadows when they least expect it."
@@ -1220,8 +1231,15 @@
                     description: "Mutter a spell to will an ethereal hand into existence. While you concentrate on it,
                                 the hand acts as an extension of your will. The hand has a flying speed of 25 feet
                                 and may not leave the spell's radius. Its strength score is equivalent to your
-                                inner fire modifier, but uses -3 as it's dexterity modifier. In gameplay tier 2, 
+                                inner fire modifier, but uses -1 as it's dexterity modifier. In gameplay tier 2, 
                                 this is replaced by your Dexterity as you master using the hand at a distance."
+                    effect:
+                        type: debuff 
+                        description: "As a bonus action on your turn, you may use the hand to make a dexterity check against a foe's 
+                                      Resistance. On success, they become Exposed to the next attack which targets them."
+                        conditions:
+                            - exposed
+                        save: null
                 -   name: Thief's Mark
                     action_type: "Offhand Action"
                     type: combat option
@@ -1232,8 +1250,8 @@
                     description: "As you lay a hand on a creature, a small brand glows on their skin."
                     effect:
                         type: debuff
-                        description: "For the spell's duration, you always know in which direction the creature lies. Attacks 
-                                    that you make against the creature deal 1d6 additional damage."
+                        description: "For the spell's duration, you always know in which direction the creature lies. When you make 
+                          an attack against the creature, increase your weapon's damage dice by one step."
                         save: null 
                         conditions: 
                             - custom
@@ -1567,7 +1585,7 @@
     health_schedule: 
         starting_health: 8
         standard_level_health_bonus: 2
-        tier_increase_health_bonus: 4
+        tier_increase_health_bonus:
     handbook:
         -   title: Intro
             display_title: false 
@@ -1596,6 +1614,10 @@
                     allows them to learn their enemy before striking, dealing extra damage and finding ways to slip through their defenses.
                     Some rangers choose to master the blade, while others keep a distance, choosing the Path of the Hunter and wielding the bow.
                     Regardless, Rangers are fierce combatants who excel at targetting and slaying individual foes."    
+    weapon_training:
+        - Light Ranged Weapons
+        - Heavy Ranged Weapons
+        - Standard Martial Weapons
     paths:
         The Path of the Blade: "You have honed your skill with the blade, learning to counter your foes and exploit their weaknesses."
         The Hunter's Path: "You wield the bow, picking off targets from a distance with deadly precision." 
@@ -1939,6 +1961,8 @@
                  of skeletons, it is often the cleric that keeps them standing long enough to emerge victorious. Clerics are not without
                  the ability to fight, however. With beams of scouring light, they are able to blind their foes and push them back into the 
                  darkness."
+    weapon_training:
+        - Focuses
     starting_items:
         - A common arcane amulet or conjurer's idol 
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
@@ -2413,6 +2437,8 @@
                    a combination of serious damage and status effects. However, wizards are notorious for their frail
                    forms and low health. As such, wizards must boost their defense with magic, or hide behind
                    their more resilient allies."         
+    weapon_training:
+        - Focuses
     starting_items:
         - A common magic wand or mage's staff 
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
@@ -2952,11 +2978,13 @@
                 text: "Warlocks shine in combat with one of the most aggressive spell lists in the realms. Elditch Blast,
                             targets single foes, Tide of Shadow summons a cone of deadly dark, and Cthulian Tentacles
                             causes eldritch protrusions to grasp at multiple foes."
+    weapon_training:
+        - Focuses
     # Damage Strategy 
     # Battle caster. High DPR, good debuff, counters but no buffs.
     spells:
         Tier_1: # 10/10
-            -   name: Eldritch Blast # Warlock
+            -   name: Death Coil # Warlock
                 action_type: Action
                 type: damage
                 cost: 0
