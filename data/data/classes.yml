@@ -1836,7 +1836,7 @@
                     duration: passive 
                     range: self 
                     ability_modified: initiative
-                    description: "You spring into action before others can think. Whenever initiative is called, roll with advantage."
+                    description: "You spring into action before others can think. When combat begins, you may act at the same time as the initiator. Resolve your action before or after theirs (your choice)."
         level_11:
             The Path of the Blade:
                 -   name: Counter
