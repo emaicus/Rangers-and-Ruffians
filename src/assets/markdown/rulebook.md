@@ -376,16 +376,14 @@ Some ingestible items, such as potions, confer magical benefits to an adventurer
 
 ### The Structure of Combat
 
-When adventurers and monsters engage, combat begins. During combat, time slows down and enters a fixed turn sequence.
+When adventurers and monsters engage, combat begins. During combat, time slows and play proceeds in a structured sequence of alternating turns.
 
-*   __Initiative:__ At the start of combat, all participants roll a special contested check, called Initiative which is modified by dexterity. Turn order proceeds from highest initiative to lowest.
-    
-*   __Surprise:__ In some cases either the adventurers or their enemies get the drop on the other group. When this occurs, the surprised faction takes disadvantage on their initiative roll.
-    
-*   __The Round:__ A round of combat is completed when everyone in the initiative order has taken their turn. A round of combat takes roughly one minute of in-game time.
-    
-*   __Holding an Action:__ During an adventurer's turn, they may declare that they are holding one of their actions to be used as a reaction. A wizard might declare that they will cast a spell when the goblins enter the room. If this special trigger is satisfied, the adventurer may use their reaction to perform the specified action.
-    
+*   __Order:__ The creature that initiates the conflict acts first. After that, turns alternate between the adventurers and their enemies. On the adventurers’ turn, the players choose which adventurer acts next. After each adventurer acts, the Voice chooses a monster or group of monsters to act.
+
+*   __Surprise:__ If one side catches the other unaware, the surprised creatures cannot act until after the first full cycle of turns has passed.
+
+*   __The Round:__ A round of combat is completed once each adventurer and each monster has acted once. Each creature may take only one turn per round unless a special rule says otherwise. If one side has more creatures than the other, any remaining turns are taken after the other side has finished acting. One round represents roughly one minute of in-game time.
+
 
 ### The Adventurer’s Turn
 
@@ -412,7 +410,7 @@ There are a set of standard actions, offhand actions, and reactions that all adv
     
 *   __The Shove Action:__ You may use an action to shove an enemy who is adjacent to you. Make a strength check against their resistance. On success, they are pushed back 10ft.
     
-*   __The Help Action:__ In some cases, you may want to help an ally accomplish a task on your turn. As an action, grant them initiative as discussed in Chapter 1.
+*   __The Help Action:__ In some cases, you may want to help an ally accomplish a task on your turn. As an action, grant them benefits as discussed in Chapter 1.
     
 *   __The Grapple Action:__ As an action, you may attempt to grapple an enemy. Make a strength or dexterity check against their resistance. On success, they are grappled as defined in the Status Effects section of this chapter.
     
