@@ -1,0 +1,16 @@
+@media print {
+    :host ::ng-deep .main-content markdown h1 {
+        font-size: 20pt;
+    }
+    :host ::ng-deep .main-content markdown h2 {
+        font-size: 14pt;
+    }
+    :host ::ng-deep .main-content markdown h3 {
+        font-size: 12pt;
+    }
+    
+      :host ::ng-deep .main-content markdown p,
+      :host ::ng-deep .main-content markdown li {
+        font-size: 11pt;
+      }
+  }
