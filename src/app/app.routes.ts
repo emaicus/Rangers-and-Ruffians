@@ -7,6 +7,7 @@ import { BackgroundPageComponent } from './webpages/background-page/background-p
 import { ClassPageComponent } from './webpages/class-page/class-page.component';
 import { GameDesignPageComponent } from './webpages/game-design-page/game-design-page.component';
 import { RulebookPageComponent } from './webpages/rulebook-page/rulebook-page.component';
+import { QuickReferencePageComponent } from './webpages/quick-reference-page/quick-reference-page.component';
 
 export const routes: Routes = [ 
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -17,5 +18,7 @@ export const routes: Routes = [
     { path: 'classes', component: ClassPageComponent},
     { path: 'monsters', component: MonsterPageComponent},
     { path: 'game-design', component: GameDesignPageComponent},
-    { path: 'rulebook', component: RulebookPageComponent}
+    { path: 'rulebook', component: RulebookPageComponent},
+    { path: 'player-quick-reference', component: QuickReferencePageComponent}
+
 ]
