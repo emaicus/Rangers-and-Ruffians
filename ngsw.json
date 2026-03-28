@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774643483608,
+  "timestamp": 1774705628175,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -341,7 +341,7 @@
     "/assets/images/warlock.jpg": "a02117dc041fd955e1bd3957f36fd8a1a39666c5",
     "/assets/images/waterborn.jpg": "3b78a5605dfd56b5d724a11e3c6023cb71a15ae9",
     "/assets/images/wizard.jpg": "7069baca177f66ad3bdc681e72f4ba19cf87a5bf",
-    "/assets/markdown/rulebook.md": "3aca2599da6dde24ad10b1d2723a523243707e0d",
+    "/assets/markdown/rulebook.md": "5acfbd70d91dd9e538d898aca27612e5b38d151b",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/assets/pdfs/char_sheet_v3.pdf": "6422a99760e73b4a1b96b27f222a731942bdb744",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",

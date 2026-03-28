@@ -580,7 +580,8 @@ Additionally, Heavies should have:
 
 | Villains | Tier 1 | Tier 2 | Tier 3 |
 | --- | --- | --- | --- |
-| Health | 140 - 160 | 160 - 200 | 200 - 250 |
+| Health (With minions) | 70 - 90 | 80 - 110 | 110 - 130 |
+| Health (Solo) | 120 - 140 | 150 - 170 | 180 - 210 |
 | Damage per Turn | 2d6 - 4d6 | 4d6 - 6d6 | 6d6 - 8d6 |
 | Resistance/Threat | 10 | 11 | 12 |
 
