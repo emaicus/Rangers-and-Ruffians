@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774713274136,
+  "timestamp": 1774816924479,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-56HZOVR5.js",
+        "/main-47JKLRXN.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-TM4CCBDL.css"
@@ -211,11 +211,11 @@
     "/assets/css/style.scss": "02295179b8bd4021ae7719261aaddb41f0b5186f",
     "/assets/data/attributions.json": "c4e0fa12edbf8b2af3a58556f06a47cc5ff31ef2",
     "/assets/data/backgrounds.json": "c4dfd778dfdbdae63bfc2e8b88fd80cc36c39ccc",
-    "/assets/data/classes.json": "dc0baa6f376e9fe6f1ee3f3b55cbb04e5847c88e",
-    "/assets/data/conditions.json": "7b389c1929c18ba5301cc3e7c75731e29af52fa2",
+    "/assets/data/classes.json": "536cede538dacb1004988fcd3af1e0897f253493",
+    "/assets/data/conditions.json": "3d58e15f1bf2bed9a4da05337aa03388e018313d",
     "/assets/data/items.json": "4ad50e3d2c65557959b99c22f7527e1e3de8a056",
     "/assets/data/monsters.json": "ccf88c16ffbd1a1b1bf9b3e9ddaa28eda7e12a52",
-    "/assets/data/races.json": "bd3aadeb1e4542d8669d6988e2e245ec607e7070",
+    "/assets/data/races.json": "0f16756dbe889ade803bf6a9be622ce4229050e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_3_1.md": "7932c9cbb00e0439fbd799f613ab9a06489716e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_4_1.md": "1ac9ad69c8349c58589bea4e0885b41b2f4edf11",
     "/assets/docs/images/gender/female.jpg": "48914ab707d572ee91489900be0cebb9920aec0f",
@@ -343,12 +343,12 @@
     "/assets/images/waterborn.jpg": "3b78a5605dfd56b5d724a11e3c6023cb71a15ae9",
     "/assets/images/wizard.jpg": "7069baca177f66ad3bdc681e72f4ba19cf87a5bf",
     "/assets/markdown/quick_reference.md": "3fc52dbbed8d782db5a87180b1c4850cefbc76bd",
-    "/assets/markdown/rulebook.md": "5acfbd70d91dd9e538d898aca27612e5b38d151b",
+    "/assets/markdown/rulebook.md": "de6904b0efb3a97a6b09ca703486baeb957b5c36",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/assets/pdfs/char_sheet_v3.pdf": "8b939277311d3972c83d57b99c2cabe2371a3a60",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "572d5853f7a7a52d35f7e37a9f81fcdb76e01ec7",
-    "/main-56HZOVR5.js": "14a28b0db65bf205a6ab5a33ec2367883643af2b",
+    "/index.html": "47d82eb0f9bede52a43984261a0f71c132f7ef84",
+    "/main-47JKLRXN.js": "647405083759a1174f2bfdd9bc87e06d40c5369a",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",

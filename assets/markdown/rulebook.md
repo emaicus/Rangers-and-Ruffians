@@ -76,7 +76,7 @@ When an adventurer wants to perform an action with an uncertain outcome, the Gra
     
 *   __Advantage and Disadvantage:__ The tides of fate sometimes place adventures in advantageous or disadvantageous circumstances when making a check. When a check happens under optimal circumstances, it is made at advantage, the check is rolled twice, and the better roll is kept. Disadvantage occurs when a check is attempted under sub-optimal circumstances; the roll is made twice and the worse result is kept. Advantage and disadvantage do not stack and cancel out.
         
-*   __Inspiration Dice:__ Some abilities grant an adventurer an inspiration dice, which may be added to the result of any check. If an adventurer has a d4 inspiration dice they may roll it to add to a check of their choice. Unless otherwise stated by an ability description, an inspiration dice lasts for one in-game day.
+*   __Inspiration:__ Some abilities grant an adventurer inspiration, which may be spent to re-roll a check. Inspiration is lost at the end of each day. An adventurer can have at most one inspiration at a time.
     
 *   __I Would Like to Try it Anyway:__ Any action which costs exactly 1 action point may be attempted for 0 action points. However, the action must be performed at disadvantage all rolls below 7 count as a natural 2 and cause Bad Things to Happen. If the action being attempted is an attack, it is always a called shot.
     
