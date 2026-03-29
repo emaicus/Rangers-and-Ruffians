@@ -49,7 +49,6 @@ export class RnRClass implements ClassData {
             "Dexterity": data.recommended_stats.Dexterity,
             "Intelligence": data.recommended_stats.Intelligence,
             "Inner Fire": data.recommended_stats.Inner_Fire,
-            "Perception": data.recommended_stats.Perception,
             "Charisma": data.recommended_stats.Charisma
         }
 

@@ -190,11 +190,7 @@
 #General Checks
 -   name: Diminished
     balance: good
-    about: A Diminished creature must subtract 1d4 from all checks.
--   name: Inspired
-    balance: good
-    about: "An inspired creature gains a 1d6 inspiration dice, which may be added to any check but cannot be added to a damage roll. 
-            The bonus may be added after the roll, but before the result is resolved. The bonus must be used within one hour."
+    about: A Diminished creature must subtract 2 from all checks.
 
 #MISC
 -   name: Elusive
