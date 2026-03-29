@@ -5,7 +5,7 @@
         Dexterity: 0
         Inner_Fire: -1
         Intelligence: 1
-        Strength: -2
+        Strength: -1
     weapon_training:
         - Focuses
     # expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
@@ -499,7 +499,7 @@
     class_type: Tank
     recommended_stats:
         Charisma: 0
-        Dexterity: -2
+        Dexterity: -1
         Inner_Fire: 1
         Intelligence: -1
         Strength: 2
@@ -592,9 +592,9 @@
                                 with determination."
                     effect:
                         type: buff 
-                        description: "Grant an ally you can see a 1d4 inspiration dice. The dice lasts for 1 hour."
+                        description: "Grant an ally you can see a inspiration."
                         conditions: 
-                            - inspired 
+                            - custom 
                         save: null
                     damage_scaling:
                         damage_type: inherited
@@ -673,10 +673,9 @@
                     description: "Your presence soothes your allies, inspiring them and guarding them against fear."
                     effect:
                         type: buff 
-                        description: "Grant all allies within the ability's radius a 1d4 inspiration dice. Furthermore, for the ability's duration, any friendly creaturess who are within this ability's radius are immune to the Frightened condition."
+                        description: "Grant all allies within the ability's radius inspiration. Furthermore, for the ability's duration, any friendly creaturess who are within this ability's radius are immune to the Frightened condition."
                         conditions:
                             - fearless
-                            - inspired 
                         save: null
         level_7:
             standard:
@@ -836,7 +835,7 @@
         Charisma: -1
         Dexterity: 0
         Inner_Fire: 1
-        Intelligence: -2 
+        Intelligence: -1
         Strength: 2
     # expertise: "As a barbarian, you have expertise in raw feats of strength such as breaking the iron bars of a cell,
     #             bursting through a locked door, or rolling a heavy boulder. Barbarians also take expertise in intimidation."
@@ -1153,7 +1152,7 @@
         Dexterity: 2
         Inner_Fire: -1
         Intelligence: 0
-        Strength: -2
+        Strength: -1
     handbook:
         -   title: Intro
             display_title: false 
@@ -1581,7 +1580,7 @@
         Dexterity: 2
         Inner_Fire: 0
         Intelligence: 1
-        Strength: -2
+        Strength: -1
     health_schedule: 
         starting_health: 8
         standard_level_health_bonus: 2
@@ -1934,7 +1933,7 @@
         Dexterity: -1
         Inner_Fire: 2
         Intelligence: 0
-        Strength: -2
+        Strength: -1
     handbook:
         -   title: Intro
             display_title: false
@@ -2379,9 +2378,9 @@
                 description: "A halo blazes about your head, shedding radiant light in a radius around you."
                 effect:
                     type: buff
-                    description: "For the spell's duration, all allies within the radius are Diminished. At the spells start, all allies in the radius are Inspired."
+                    description: "For the spell's duration, all allies within the radius are Diminished. At the spells start, all allies in the radius gain inspiration."
                     conditions:
-                        - inspired
+                        - custom
                         - diminished
                     save: null  
             -   name: Invulnerability
@@ -2449,7 +2448,7 @@
         Dexterity: -1
         Inner_Fire: 1
         Intelligence: 2
-        Strength: -2
+        Strength: -1
     spells:
         Tier_1: # 10/10
             -   name: Flare # Wizard
@@ -2560,7 +2559,7 @@
             -   name: Eat Slugs
                 action_type: "Offhand Action"
                 type: debuff
-                cost: 1
+                cost: 0
                 duration: instantaneous
                 range: 60
                 requirements:
@@ -2954,7 +2953,7 @@
         Dexterity: -1
         Inner_Fire: 2
         Intelligence: 0
-        Strength: -2
+        Strength: -1
     handbook:
             -   title: Intro 
                 display_title: false

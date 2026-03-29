@@ -239,7 +239,7 @@
                 description: "When you Make Camp or Take a Breather, you can cook something delicious for your party. 
                               Choose one ally, and grant them inspiration."
                 conditions:
-                    - inspired
+                    - custom
                 save: null
         -   name: Halfling's Resilience
             action_type: "Passive"
@@ -297,17 +297,17 @@
     #base_movement: 30
     abilities:
         -   name: "Is... Something Watching Us?"
-            action_type: "Action"
+            action_type: "Passive"
             cost: 0
             range: self
             duration: instantaneous 
             type: buff
             description: "Humans have a unique ability to sense the unnatural. Some report the hair on the back of their neck standing on end. 
-                          You are able to make intelligence checks to see if you sense an undead, fiend, or other dark being in your vacinity."
+                          You are able to make intelligence checks to see if you sense an undead, fiend, or other dark being in your vicinity."
             tags: 
                 - detect_undead
         -   name: Human Endurance #Done
-            action_type: "Free Action"
+            action_type: "Passive"
             cost: 0
             range: self 
             duration: instantaneous 
@@ -518,7 +518,8 @@
             range: self 
             duration: passive
             description: "You know the tongue of bird and beast, and are able to convey your meaning to them.
-                          You are able to make charisma checks to convince non-hostile animals to do your bidding."
+                          You are able to make charisma checks to convince non-hostile animals to do your bidding
+                          and are able to speak to plants, though they may not know much of use."
         -   name: Riding High 
             action_type: "Action"
             cost: 0
