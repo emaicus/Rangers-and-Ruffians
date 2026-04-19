@@ -92,3 +92,21 @@
 .nav-list li a.active {
   font-weight: bold; /* Example: make active link bold */
 }
+
+@media print{
+  @media print {
+
+    .example-container,
+    .example-sidenav,
+    .example-header {
+      position: static !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: auto !important;
+      height: auto !important;
+      max-height: none !important;
+      transform: none !important;
+    }
+  
+  }
+}

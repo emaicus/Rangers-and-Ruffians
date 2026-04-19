@@ -1,0 +1,118 @@
+.card {
+    width: 2.5in;
+    height: 3.5in;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 0.1in;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+  
+    border-bottom: 1px solid black;
+  
+    padding-bottom: 0.04in;
+    margin-bottom: 0.05in;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  
+    gap: 0.05in;
+  }
+
+  .header-name {
+    font-size: 11pt;
+    font-weight: bold;
+  
+    line-height: 1.1;
+  
+    flex: 1; /* <- important */
+  }
+
+  .header-annotation {
+    font-size: 6pt;
+    opacity: 0.75;
+  
+    text-align: right;
+    white-space: normal;   /* allow wrapping */
+    word-break: break-word; /* prevent overflow */
+
+    flex: 0 0 37%;
+    max-width: 37%;
+    flex-shrink: 0;
+  }
+
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+  
+    gap: 0.04in;
+  
+    font-size: 8pt;
+  
+    opacity: 0.9;
+  }
+
+  .meta-bundle {
+    display: inline-flex;
+    align-items: center;
+  
+    gap: 0.02in;
+  
+    white-space: nowrap;
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.03in;
+  }
+  
+  .meta-icon {
+    width: 10pt;
+    height: 10pt;
+  }
+
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  
+    flex: 1;
+    gap: 0.05in;
+  }
+
+  .body-top {
+    font-size: 8pt;
+    opacity: 0.8;
+  }
+  
+  .body-main {
+    flex: 1; /* takes most space */
+    font-size: 9pt;
+  }
+  
+  .body-bottom {
+    font-size: 8pt;
+    opacity: 0.9;
+  }
+
+  

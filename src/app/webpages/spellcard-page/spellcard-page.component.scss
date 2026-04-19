@@ -1,0 +1,56 @@
+.spellcard-sheet {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.25in;
+    box-sizing: border-box;
+    page-break-after: always;
+    break-after: page;
+  }
+
+//   * {
+//     outline: 1px solid red;
+//   }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2.5in);
+    grid-template-rows: repeat(3, 3.5in);
+    justify-content: start;
+    align-content: start;
+    gap: 0;
+  }
+ 
+  /* Print Settings */
+  
+  @media print {
+    mat-sidenav-container > *:not(.spellcard-sheet) {
+        display: none !important;
+      }
+
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .page {
+      page-break-after: always;
+    }
+    .print-root {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    
+      .main-content {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
+      .spell-card-header {
+        display: none !important;
+      }
+  }
+  @page {
+    size: letter;
+    margin: 0;
+  }
+

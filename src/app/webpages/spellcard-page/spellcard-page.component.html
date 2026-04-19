@@ -1,0 +1,37 @@
+<main id="content" class="main-content" role="main">
+    <div class="print-root">
+        <div class="spell-card-header" id="header">
+            <h1 class="rnr-page-header">Spell Cards</h1>
+
+            <select (change)="onClassChange($event)">
+                <option *ngFor="let c of rnrClasses">
+                    {{ c.name }}
+                </option>
+            </select>
+        </div>
+        <ng-container *ngFor="let page of pagedAbilities">
+            <div class="spellcard-sheet">    
+            <div class="card-grid">
+                <ng-container *ngFor="let ability of page">
+                <app-spellcard-renderer
+                    [ability]="ability.ability"
+                    [className]="ability.class"
+                    [level]="ability.level"
+                    [pathString]="ability.path">
+                </app-spellcard-renderer>
+                </ng-container>
+            </div>
+            </div>
+        </ng-container>
+    </div>
+</main>
+
+<!-- 
+
+    <div class="spellcard-sheet" id="card-content">
+        <div class="card-grid" id="card-grid">
+            <ng-container *ngFor="let ability of wizardSpells">
+                <app-spellcard-renderer [ability]="ability"></app-spellcard-renderer>
+            </ng-container>
+        </div>
+    </div> -->

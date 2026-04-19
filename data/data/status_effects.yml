@@ -4,7 +4,7 @@
     about: "Bleeding damage is repeated at the start of the affected creature's next turn."
 -   name: Burning
     balance: good
-    about: "A Burning creature take 2d6 damage at the start of each turn until they spend an Action to extinguish themselves."
+    about: "A Burning creature take 1d6 damage at the start of each turn until they spend an Action to extinguish themselves."
 -   name: Rotting
     balance: strong
     about: "A rotting creature takes 1d6 damage at the start of each turn or once every ten minutes. 
@@ -79,18 +79,13 @@
     about: An entity that is Spurred to Movement immediately gains 15 feet of movement. The movement does not provoke reactions unless otherwise stated.
 -   name: Prone
     balance: strong
-    about: "A prone creature has been knocked to the ground and can move only by crawling. 
-           Prone creatures make physical checks at disadvantage and hand-to-hand attacks made against them 
-           are at advantage. A prone creature may spend an offhand action and half their movement to stand up."
-
+    about: "A prone creature moves at half speed, makes checks and attacks at disadvantage, and attacks against them are at 
+            advantage. They may spend an action to stand up."
 
 #CONTROL
 -   name: Stunned
     balance: strong
     about: A Stunned creature loses either an action or offhand action on it's next turn (their choice).
--   name: Slowed
-    balance: strong
-    about: "A Slowed creature moves at half its normal speed and is pushed back 1d4 slots in initiative."
 
 
 
@@ -118,7 +113,7 @@
     about: A Blinded creature fails all sight based checks, makes damage rolls at disadvantage, and must move at half speed.
 -   name: Invisible
     balance: strong
-    about: "An Invisible creature cannot be seen. They make stealth checks at advantage, and are considered to be Defending for the duration."
+    about: "An Invisible creature cannot be seen, makes stealth checks at advantage, and attacks against them are at disadvantage."
 -   name: Truesight
     balance: weak
     about: A creature with Truesight is able to see invisible objects and entities.
@@ -171,13 +166,13 @@
 -   name: Enlarged
     balance: strong
     about: "An Enlarged creature increases in size. They have advantage on Strength checks and their reach increases by 5ft.
-            When they hit with a physical attack, they may push their target 5ft away."
+            When they hit with a physical attack, they may choose to push their target 5ft away."
 
 # Corporeality
 -   name: Ethereal
     balance: very strong
-    about: "Ethereal creatures exist on a plane between reality and the void. They are visible but translucent, and cannot be 
-            affected by non-magic physical effects. They are able to pass through any substance less than one inch thick.
+    about: "Ethereal creatures are visible but translucent, and cannot be 
+            affected by physical attacks. They are able to pass through any substance up to one inch thick.
             An ethereal creature cannot attack or cast spells that affect targets that are not also bound to the ethereal plane."
 -   name: Transformed
     balance: strong
@@ -204,7 +199,7 @@
     about: Fearless creatures are immune to the Frightened condition.
 -   name: Frightened
     balance: good
-    about: A Frightened creature cannot move closer to the source of its fear and must make damage rolls against the thing its frightened of at disadvantage.
+    about: A Frightened creature cannot move closer to the source of its fear and must make damage rolls against it at disadvantage.
 -   name: Harried
     balance: weak
     about: A Harried creature makes ranged damage rolls at disadvantage.
