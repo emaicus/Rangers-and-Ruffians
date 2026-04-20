@@ -100,9 +100,8 @@
 -   name: Tethered
     balance: good
     about: A Tethered creature has been bound to something by a link. They cannot move further from the 
-           person or object than the maximum length of the tether. If two creatures are tethered by physical means, 
-           either may initiate a contested strength roll to pull the other 15ft closer as an action.
-           A tethered creature may attempt to break free by spending an action to repeat the check that caused the tether or strength if it is physical.
+           person or object than the maximum length of the tether. Either creature may make force a Strength Resistance Check
+           to attempt to pull the other 15ft closer. The tethered creature may call for a repeated Resistance Check to attempt to break free.
 -   name: Hard to Move
     balance: good 
     about: "Creatures that are hard to move have advantage on any checks which could cause them to fall prone. If they are pushed, they move only half the intended distance."
@@ -156,7 +155,7 @@
 -   name: Grappled
     balance: neutral
     about: "A grappled creature cannot move, and has disadvantage on Strength Checks, Dexterity Checks, and attacks. 
-            A grappled creature may attempt to free themself as an action, resulting in the check that caused the grapple to be repeated."
+            They may attempt to free themself as an action, repeating the check that caused the grapple."
 
 # SIZE
 -   name: Shrunk
@@ -171,9 +170,9 @@
 # Corporeality
 -   name: Ethereal
     balance: very strong
-    about: "Ethereal creatures are visible but translucent, and cannot be 
-            affected by physical attacks. They are able to pass through any substance up to one inch thick.
-            An ethereal creature cannot attack or cast spells that affect targets that are not also bound to the ethereal plane."
+    about: "Ethereal creatures are visible but translucent and can pass through 
+            substances up to one inch thick. They cannot be 
+            affected by physical attacks, nor can they make attacks or cast spells."
 -   name: Transformed
     balance: strong
     about: "Transformed creatures magically take on the form and appearance of another creature.

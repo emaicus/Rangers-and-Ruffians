@@ -58,7 +58,7 @@
                     tier_2: 1d10
                     tier_3: 1d12
                 effect:
-                    description: "Make an Inner Fire check against the Resistance of any creature hit by the spell. On success, they are pushed back fifteen feet and Staggered."
+                    description: "Make an Inner Fire Resistance Check of any creature hit by the spell. On success, they are pushed back fifteen feet and Staggered."
                     type: debuff
                     conditions: 
                         - staggered
@@ -97,7 +97,7 @@
                     components: 
                         - An old glove
                 description: "Summon an unseen force of protection to hinder an enemy attack.
-                                Make an Inner Fire check against the attacker's Resistance. On success,
+                                Make an Inner Fire Resistance Check. On success,
                                 their attack misses. On failure, it deals half damage."
                 range: 30
             -   name: Song of Healing
@@ -127,7 +127,7 @@
                 description: "Magically project your voice into an enemy's ears."
                 range: 60
                 effect:
-                    description: "Make an Inner Fire check against their Resistance. On success, they are staggered."
+                    description: "Make an Inner Fire Resistance Check. On success, they are staggered."
                     type: debuff
                     conditions:
                         - staggered
@@ -146,7 +146,7 @@
                 range: 60
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire check against their Resistance. On success, they are Hindered until the end of their next turn."
+                    description: "Make an Inner Fire Resistance Check. On success, they are Hindered until the end of their next turn."
                     conditions: 
                         - hindered
                     save: null 
@@ -162,7 +162,7 @@
                 radius: 60
                 description: "You fire a quip laced with magic at a foe."
                 effect:
-                    description: "Make an Inner Fire check against their Resistance. On success, they fall to the ground in laughter and are Incapacitated."
+                    description: "Make an Inner Fire Resistance Check. On success, they fall to the ground in laughter and are Incapacitated."
                     conditions: 
                         - incapacitated
                     type: debuff
@@ -193,7 +193,7 @@
                     movement: true 
                     verbal: true 
                 description: "Your honeyed words are laced with irresistible magic as you speak earnestly to your target.
-                            Make an Inner Fire check against their Resistance. On success, they believe the next ten words you speak.
+                            Make an Inner Fire Resistance Check. On success, they believe the next ten words you speak.
                             They are able to reassess their feelings if they are presented with facts to the contrary. In such a case, You 
                             must repeat your check at disadvantage."
                 range: 30
@@ -231,7 +231,7 @@
                     type: debuff
                     conditions: 
                         - prone
-                    description: "Make an Inner Fire check against your targets' Resistance. On success, they are thrown back 15ft and knocked prone."
+                    description: "Make an Inner Fire Resistance Check. On success, they are thrown back 15ft and knocked prone."
                     save: null
                 upcast: "For each additional action point spent on this spell, increase damage by 1d6 and push enemies 10ft further."     
             -   name: Song of Mass Healing
@@ -261,7 +261,7 @@
                 range: 60
                 description: "As an enemy attempts to cast a spell, use your power to disrupt them. 
                     If the enemy is a minion, their spell instantly fails. Otherwise, 
-                    make an Inner Fire check against their Resistance. On success, their spell is blocked.
+                    make an Inner Fire Resistance Check. On success, their spell is blocked.
                     Counter Magic does not affect natural abilities such as a dragon's fire breath."
                 upcast: "You may spend an additional action point on this spell to make your check with advantage, or two more to cause it to work without a check."
             -   name: Modify Memory
@@ -275,7 +275,7 @@
                 description: "Tapping into your magic, you tell a compelling lie."
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire check against your target's Resistance. On success, modify a memory
+                    description: "Make an Inner Fire Resistance Check. On success, modify a memory
                                 of your choosing. The target tries to rationalize the modified memory within reason, but will realize what happened if provided with adequate proof."
                     conditions:
                         - custom
@@ -426,7 +426,7 @@
                     damage_type: psychic
                     tier_3: "6d6"
                 effect:
-                    description: "Roll Inner Fire against your targets' Resistance. 
+                    description: "Roll Inner Fire Resistance Check. 
                                     On success, they view you as a jet black unicorn 
                                     and the earth begins to sparkle and writhe. 
                                     They are Frightened of you and are Hindered."
@@ -517,7 +517,7 @@
         - Heavy Martial Weapons
         - Standard Martial Weapons
     paths:
-        Shining Armor: "You are an inspiration to your allies, and learn abilities which spurr them onward in even the most dire situations."
+        The Path of Shining Armor: "You are an inspiration to your allies, and learn abilities which spurr them onward in even the most dire situations."
     starting_items:
         - Your choice of a common war hammer, shortsword, flail, or greatsword
         - A common shield
@@ -536,32 +536,33 @@
                     range: self 
                     duration: instantaneous
                     action_type: Free Action
-                    description: "Prepare for an attack, hardening yourself against its damanage. 
-                                Make a Strength check against the attacker's Resistance. On success, the attack does no damage. On failure, it deals half damage."
-            Shining Armor:
+                    description: "Brace yourself against an attack. 
+                                Make a Strength Resistance Check. On success, the attack does no damage. On failure, it deals half damage."
+            The Path of Shining Armor:
                 -   name: Charge
                     action_type: "Action"
                     type: combat option
                     cost: 1
                     duration: instantaneous
-                    range: dash
+                    range: 25
                     ability_modified: dash
                     damage_scaling:
                         damage_type: blunt
                         tier_1: 1d8
                         tier_2: 1d10 
                         tier_3: 1d12 
-                    description: "With a mighty cry, you barrel forth into the fray. 
-                                Rush ahead 25ft. For the length, you are immune to exposed attacks and deal this ability's damage
+                    description: "With a mighty cry, you charge into the fray. 
+                                Rush ahead 25ft. You are immune to exposed attacks and deal this ability's damage
                                 to any enemy whose space you move through."
                     effect:
                         type: debuff 
-                        description: "Enemies struck by your passing must make a spell power save or be knocked Prone."
+                        description: "Make an Inner Fire Resistance Check of any creature you hit. On success,
+                                      they are knocked Prone."
                         conditions:
                             - prone 
                         save: null
                 -   name: Inspiring Strike
-                    action_type: "Passive"
+                    action_type: "Action"
                     cost: 0
                     type: combat option
                     range: inherited
@@ -586,12 +587,11 @@
                 -   name: Shield Of Men
                     type: combat option
                     cost: 1
-                    range: dash
+                    range: 25
                     duration: instantaneous
-                    ability_modified: dash
                     action_type: Reaction
-                    description: "Burst forward to save someone from harm. As a reaction, jump in front of an ally to become the target of a physical attack aimed at them.
-                                Any damage you recieve as a result of this ability is halved."
+                    description: "Leap in front of someone to become the target of an attack aimed at them. 
+                                    Any damage you recieve as a result of this ability is halved."
         level_3: 
             standard:
                 -   name: Shield Bash
@@ -600,13 +600,13 @@
                     type: debuff 
                     duration: 1 
                     range: "touch" 
-                    description: "Smash into an enemy with your offhand as you attempt to knock them off balance."
+                    description: "Smash into an enemy with your Offhand and attempt to knock them off balance."
                     damage_scaling:
                         damage_type: blunt 
                         all_tiers: "1d2"
                     effect:
                         type: buff 
-                        description: "Make a strength check against their resistance. On success, they are Exposed to the next attack made against them."
+                        description: "Make a Strength Resistance Check. On success, they are Exposed to the next attack made against them."
                         conditions:
                             - exposed
                         save: null
@@ -621,7 +621,7 @@
                     description: "Call a challenge to an enemy."
                     effect:
                         type: debuff
-                        description: "Make a Charisma check against their Resistance. On success, they become fixated on you until the end of their next turn."
+                        description: "Make a Charisma Resistance Check. On success, they become Fixated on you until the end of their next turn."
                         conditions:
                             - fixated 
                         save: null
@@ -642,7 +642,7 @@
                             - guarded
                         save: null
         level_6:
-            Shining Armor:
+            The Path of Shining Armor:
                 -   name: Lionhearted
                     action_type: "Offhand Action"
                     cost: 1
@@ -653,7 +653,7 @@
                     description: "Your presence soothes your allies, inspiring them and guarding them against fear."
                     effect:
                         type: buff 
-                        description: "Grant all allies within the ability's radius inspiration. Furthermore, for the ability's duration, any friendly creaturess who are within this ability's radius are immune to the Frightened condition."
+                        description: "Grant all allies within the ability's radius inspiration. Furthermore, for the ability's duration, any friendly creatures within the ability's radius are immune to the Frightened condition."
                         conditions:
                             - fearless
                         save: null
@@ -684,10 +684,10 @@
                         tier_1: "1d8"
                         tier_2: "1d10"
                         tier_3: "1d12"
-                    description: "With a blow like a hammerfall, you batter your enemy a devestating attack."
+                    description: "With a blow like a hammerfall, you batter your enemy with a devestating attack."
                     effect:
                         type: debuff 
-                        description: "Make a strength check against their resistance. On success, they are Staggered."
+                        description: "Make a Strength Resistance Check. On success, they are Staggered."
                         conditions: 
                             - staggered 
                         save: null     
@@ -703,7 +703,7 @@
                     description: "You are a bulwark of steel, hindering any enemy advance."
                     effect:
                         type: debuff 
-                        description: "When you make an exposed attack, you may make a Strength check against your target's Resistance. On success, they are Halted. On failure, they are Hindered."
+                        description: "When you make an exposed attack, you may make a Strength Resistance Check. On success, they are Halted. On failure, they are Hindered."
                         conditions:
                             - halted 
                             - hindered 
@@ -714,18 +714,18 @@
                     action_type: Action
                     type: combat option 
                     cost: 1
-                    range: self 
+                    range: 10 
                     duration: instantaneous
-                    radius: 10
                     ability_modified: standard_attack
-                    description: "Swing your weapon in a wide arc, targetting all enemies within 5ft. of you."
+                    description: "Swing your weapon in a wide arc, targetting all enemies within the ability's radius."
                     damage_scaling:
-                        damage_type: inherited 
+                        damage_type: inherited
+                        damage_shape: cone
                         tier_1: 1d8
                         tier_2: 1d10
                         tier_3: 1d12
         level_11:
-            Shining Armor:
+            The Path of Shining Armor:
                 -   name: Move!
                     action_type: Offhand Action
                     type: aoe buff
@@ -753,9 +753,10 @@
                     description: "Make an attack meant to hinder your enemy's movement."
                     effect: 
                         type: debuff 
-                        description: "Make a strength check against their resistance. On success, they are Stunned until the end of their next turn."
+                        description: "Make a Strength Resistance Check. On success, they are Halted until the end of their next turn. On failure, they are Hindered."
                         conditions:
-                            - stunned 
+                            - hindered
+                            - halted
                         save: null
                     damage_scaling:
                         damage_type: inherited
@@ -775,13 +776,10 @@
                     description: "Once you've closed with an enemy, you are able to press the advantage."
                     effect:
                         type: buff
-                        description: "If you begin your turn next to a creature, deal an extra 1d6 damage on any attacks that you make against them."
+                        description: "Roll damage at advantage if you begin your turn next to your target."
                         conditions: 
                             - custom 
                         save: null
-                    damage_scaling: 
-                        damage_type: inherited
-                        all_tiers: 1d6
         level_14:
             standard:
                 -   name: Stay on Your Feet
@@ -793,7 +791,7 @@
                     description: "Even battered and bloodied, you fight on.
                                 If you fall to zero health, make a an Inner Fire check with a target of 14. If you succeed, drop to 1 health instead."
         level_15:
-            Shining Armor:
+            The Path of Shining Armor:
                 -   name: Aura of Hope
                     action_type: "Passive"
                     type: aoe buff
@@ -801,12 +799,12 @@
                     range: self 
                     radius: 25
                     duration: infinite
-                    description: "You are a powerful bastion, a protector for your allies."
+                    description: "You have become the ultimate protector for your allies."
                     effect:
                         type: buff 
-                        description: "If an ally stands within the effect's radius, they may add +2 to all checks against 
-                                    enemy Threat, and make death coin flips at advantage."
-                        conditions:                
+                        description: "If an ally stands within the effect's radius, they may add +1 to all checks against 
+                                    enemy Threat and make death coin flips at advantage."
+                        conditions:
                             - custom 
                         save: null
 -   name: Barbarian
@@ -852,7 +850,7 @@
         - Heavy Martial Weapons
         - Standard Martial Weapons
     paths:
-        Rage: "You are a force to be reckoned with, using your rage to lay your enemies low."
+        The Path of Rage: "You are a force to be reckoned with, using your rage to lay your enemies low."
     abilities_by_level:
         # For barbarian, replace blood for blood with Feint
         level_1:
@@ -860,27 +858,26 @@
                 -   name: Berserk
                     action_type: Offhand Action
                     type: buff
-                    passive_damage_source: true
                     cost: 1
                     range: self
                     duration: 3
                     type: buff
-                    description: "Rage fills and threatens to consume you."
+                    description: "Rage threatens to consume you."
                     effect:
                         type: buff
                         description: "For the ability's duration, you are Resistant to physical damage and have advantage on any strength check."
                         conditions:
                             - resistant
                         save: null
-                    upcast: "Optionally, you may choose to make Berserk last twice as long, however, when it ends you suffer one level of Exhaustion."
-            Rage:
+                    upcast: "Optionally, you may choose to make Berserk last for ten minutes, however, when it ends you suffer one level of Exhaustion."
+            The Path of Rage:
                 -   name: Single Out
                     action_type: Offhand Action
                     type: debuff
                     cost: 1
                     range: 60
                     duration: 10
-                    description: "Survey the battlefield and pick out an enemy that you hate in particular."
+                    description: "Survey the battlefield for a foe worthy of your rage."
                     effect: 
                         type: debuff 
                         description: "You gain 15ft of movement on any turn when you move towards them and they are considered Exposed to your attacks."
@@ -897,7 +894,7 @@
                     description: "Spittle flies from your mouth as you strike at a foe."
                     effect:
                         type: debuff 
-                        description: "Make a strength check against your target's Resistance. On success, they are Frightened of you. 
+                        description: "Make a Strength Resistance Check. On success, they are Frightened of you. 
                                         If they die as a result of a strike, choose a different target within 30ft. to become Frightened."
                         conditions: 
                             - frightened
@@ -918,7 +915,7 @@
                     description: "When you see an incoming attack, you may attempt to shield yourself with an adjacent enemy." 
                     effect:
                         type: debuff 
-                        description: "Make a Strength Check against their Resistance. On success, they take the damage instead of you."
+                        description: "Make a Strength Resistance Check. On success, they take the damage instead of you."
                         conditions:
                             - custom 
                         save: null
@@ -942,10 +939,10 @@
                     range: inherited
                     duration: instantaneous
                     ability_modified: standard attack
-                    description: "Your muscles buldge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
+                    description: "Your muscles bulge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
                     effect:
                         type: debuff 
-                        description: "Make a strength check against their Resistance. On success, they are knocked Prone."
+                        description: "Make a Strength Resistance Check. On success, they are knocked Prone."
                         conditions: 
                             - prone
                         save: null
@@ -957,26 +954,26 @@
         level_5:
             standard:
                 -   name: Throw Caution to the Wind
+                    action_type: Free Action
                     type: buff
                     cost: 0
                     range: self 
-                    action_type: Free Action
                     duration: 1
                     ability_modified: standard attack
-                    description: "Swing at your foes with reckless abandon, dealing bonus damage but leaving yourself exposed."
+                    description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
                     effect: 
                         type: self-debuff
                         description: "At any time, you may declare that your attacks deal extra damage. 
-                                    However, when you make such an attack, you become Exposed until the start of your next turn."
+                                    However, when you make such an attack, you become Vulnerable until the start of your next turn."
                         conditions: 
-                            - exposed
+                            - vulnerable
                         save: null
                     passive_damage_source: true
                     damage_scaling:
                         damage_type: inherited 
-                        all_tiers: 1d6
+                        all_tiers: 1d4
         level_6:
-            Rage:
+            The Path of Rage:
                 -   name: Terrify
                     type: debuff
                     cost: 0
@@ -987,7 +984,7 @@
                     description: "As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes."
                     effect:
                         type: debuff 
-                        description: Make a Strength Check against their Resistance. On success, they become frightened of you until the end of their next turn.
+                        description: Make a Strength Resistance Check. On success, they become Frightened of you until the end of their next turn.
                         conditions: 
                             - frightened 
                         save: null
@@ -996,11 +993,11 @@
                 -   name: Every Wall is a Door
                     action_type: Passive
                     type: utility
-                    range: base speed
+                    range: 15
                     duration: 1
                     cost: 1
-                    description: "Use your strength to blast through an obstacle that is two feet thick or less, to climb solid stone,
-                                or to leap a trecherous gap. Move up to your base speed unimpeded. You are still vulnerable to exposed attacks."
+                    description: "Use your strength to blast through an obstacle that is one foot thick or less, to climb solid stone,
+                                or to leap a treacherous gap. Move up to the ability's range unimpeded. You are still vulnerable to exposed attacks."
         level_8:
             standard:
                 -   name: The Closer
@@ -1022,16 +1019,12 @@
                     cost: 0
                     range: inherited 
                     duration: passive
-                    passive_damage_source: true
                     range: 30
                     action_type: modifies_ability
                     ability_modified: thrown attack
-                    description: "Sometimes, you can't get close enough to punch. You are able to treat any object that you throw as a regular weapon
+                    description: "Sometimes, you can't get close enough to punch. You are able to treat any object you throw as a regular weapon
                                 with a thrown range of 30ft. Additionally, if you use
                                 the Meat Shield ability and the target dies, you may immediately make an attack using them as a thrown weapon."
-                    damage_scaling:
-                        damage_type: inherited
-                        all_tiers: 1d6
         level_10:
             standard:
                 -   name: Resistant Rage
@@ -1050,17 +1043,17 @@
                             - custom
                         save: null
         level_11:
-            Rage:
+            The Path of Rage:
                 -   name: A Little Terror
                     action_type: Action
                     type: debuff
                     cost: 1
                     range: 30 
                     duration: 1
-                    description: "Use your intimidating presense to force an enemy to do your will."
+                    description: "Use your intimidating presence to force an enemy to do your will."
                     effect:
                         type: debuff 
-                        description: "Make a strength check against their resistance. On success, they are Controlled for one turn or must answer three of your questions truthfully."
+                        description: "Make a Strength Resistance Check. On success, they are Controlled for one turn or must answer three of your questions truthfully."
                         conditions:
                             - controlled 
                         save: null
@@ -1073,7 +1066,7 @@
                     duration: passive
                     action_type: Passive
                     description: "Even battered and bloodied, you fight on.
-                                If you fall to zero health, make an Inner Fire Check with a target of 14. If you succeed, drop to 1 health instead."
+                                If you fall to zero health, flip a coin. On heads, you fall to 1 health instead."
         level_13:
             standard:
                 -   name: Chain Attack
@@ -1109,7 +1102,7 @@
                             - quickened
                         save: null
         level_15:
-            Rage:
+            The Path of Rage:
                 -   name: You're Next!
                     type: buff
                     cost: 0
@@ -1117,7 +1110,6 @@
                     range: inherited
                     action_type: modifies_ability 
                     ability_modified: Singled Out 
-                    passive_damage_source: true
                     description: "If you slay your Singled Out target, you may immediately move 25ft and make a standard attack."
                     effect:
                         type: buff 
@@ -1166,8 +1158,8 @@
         - Light Martial Weapons
         - Light Ranged Weapons
     paths:
-        Arcane Infiltrator: "You use magic to supplement your stealth, allowing you to go where others cannot and to manipulate objects at a distance."
-        Assassin: "You focus on slaying foes quickly, striking from the shadows when they least expect it."
+        The Path of the Arcane Infiltrator: "You use magic to supplement your stealth, allowing you to go where others cannot and to manipulate objects at a distance."
+        The Path of the Assassin: "You focus on slaying foes quickly, striking from the shadows when they least expect it."
     starting_items:
         - Your choice of two common daggers or a rapier and buckler
         - Your choice of a shortbow or a hand crossbow
@@ -1196,7 +1188,7 @@
                         conditions: 
                             - elusive
                         save: null
-            Arcane Infiltrator:
+            The Path of the Arcane Infiltrator:
                 -   name: Unseen Hand
                     action_type: "Offhand Action"
                     type: utility
@@ -1207,15 +1199,13 @@
                     requirements:
                         verbal: true
                         movement: false
-                    description: "Mutter a spell to will an ethereal hand into existence. While you concentrate on it,
-                                the hand acts as an extension of your will. The hand has a flying speed of 25 feet
-                                and may not leave the spell's radius. Its strength score is equivalent to your
-                                inner fire modifier, but uses -1 as it's dexterity modifier. In gameplay tier 2, 
+                    description: "Mutter a spell to will an ethereal hand into existence which acts as an extension of your will. The hand may not leave the spell's radius. 
+                                Its strength score is equivalent to your
+                                Inner Fire, but it uses -1 as it's Dexterity. In gameplay Tier 2, 
                                 this is replaced by your Dexterity as you master using the hand at a distance."
                     effect:
                         type: debuff 
-                        description: "As a bonus action on your turn, you may use the hand to make a dexterity check against a foe's 
-                                      Resistance. On success, they become Exposed to the next attack which targets them."
+                        description: "As a bonus action, you may use the hand to make a Dexterity Resistance check. On success, they become Exposed to the next attack which targets them."
                         conditions:
                             - exposed
                         save: null
@@ -1226,7 +1216,7 @@
                     duration: 1 day
                     passive_damage_source: true
                     cost: 1
-                    description: "As you lay a hand on a creature, a small brand glows on their skin."
+                    description: A small brand glows on a creature as you lay a hand upon it's skin."
                     effect:
                         type: debuff
                         description: "For the spell's duration, you always know in which direction the creature lies. When you make 
@@ -1237,25 +1227,19 @@
                     damage_scaling: 
                         damage_type: inherited
                         all_tiers: 1d6
-            Assassin:
+            The Path of the Assassin:
                 -   name: Strike From The Shadows
                     action_type: "modifies_ability"
-                    passive_damage_source: true
                     cost: 0
                     type: buff
                     duration: passive 
                     range: inherited 
                     ability_modified: attack from hiding 
-                    description: "Silent as a shadow, you slip behind a foe and take them unawares."
-                    effect:
-                        type: buff 
-                        description: "Add 1d6 damage to attacks made from hiding."
-                        conditions: 
-                            - custom 
-                        save: null
-                    damage_scaling: 
+                    description: "Silent as a shadow, you slip behind a foe and take them unawares. Deal bonus damage on attacks made from hiding."
+                    passive_damage_source: true 
+                    damage_scaling:
                         damage_type: inherited
-                        all_tiers: 1d6
+                        all_tiers: 1d4
                 -   name: Precision Strike 
                     action_type: "Action"
                     type: combat option 
@@ -1266,7 +1250,7 @@
                     description: "With a hiss of air, your blade effortlessly slices through an enemy."
                     effect:
                         type: debuff 
-                        description: "Make a Dexterity Check against your target's Resistance. On success, the damage dealt by this ability is considered Bleeding."
+                        description: "Make a Dexterity Resistance Check. On success, the damage dealt by this ability is considered Bleeding."
                         conditions:
                             - bleeding 
                         save: null
@@ -1284,14 +1268,14 @@
                     duration: instantaneous
                     type: combat option
                     action_type: Free Action
-                    description: "Attempt to pivot out of the way of an incoming attack."
+                    description: "Attempt to avoid an incoming attack."
                     effect:
                         type: buff 
-                        description: "Make an Inner Fire check against the attacker's Resistance. On success, the attack misses. On failure, it deals half damage."
+                        description: "Make a Dexterity Resistance Check. On success, the attack misses. On failure, it deals half damage."
                         conditions:
                             - custom
                         save: null
-                    upcast: You may spend an additional action point on this ability to continue dodging until the start of your next turn.
+                    upcast: You may spend an additional action point to continue dodging until the start of your next turn.
         level_3:
             standard:
                 -   name: Thief's Strike
@@ -1301,13 +1285,11 @@
                     range: inherited
                     duration: 1
                     ability_modified: martial attack 
-                    description: "While you stab an enemy with one hand, you attempt to rob them blind with the other."
+                    description: "As you stab an enemy with one hand you attempt to rob them blind with the other."
                     effect:
                         type: debuff 
-                        description: "Make a Dexterity Check against your target's Resistance. On success, you are able to steal one object from them.
-                                    If your attack is ranged, you may instead declare that an object is knocked free of their grasp. 
-                                    The object must be held by or tethered to them, and you must be able to explain how you manage to steal it
-                                    in a way that is acceptable to the Grand Poohbah."
+                        description: "Make a Dexterity Resistance Check. On success, you are able to steal one object from them.
+                                    If your attack is ranged, you may instead declare that an object is knocked free of their grasp."
                         conditions:
                             - custom 
                         save: null
@@ -1318,7 +1300,7 @@
                         tier_3: 1d12
         level_4:
             standard:
-                -   name: Flank
+                -   name: Fade into the Battle
                     action_type: "Passive"
                     cost: 0
                     type: buff 
@@ -1327,10 +1309,9 @@
                     description: "When your allies are near an enemy, you are able to avoid that foe's sight."
                     effect: 
                         type: buff 
-                        description: "If a creature is Harried, you are considered to be hiding when attacking from behind them.
-                                    If you begin a turn flanking an enemy, you may break from them without provoking exposed attacks."
-                        conditions: 
-                            - custom 
+                        description: "If a creature is Harried, you are considered to be hiding from them."
+                        conditions:
+                            - custom
                         save: null
         level_5:
             standard:
@@ -1343,7 +1324,7 @@
                     ability_modified: dash
                     description: "When you use your Action to dash, you may end the movement with a melee attack."
         level_6:
-            Arcane Infiltrator:
+            The Path of the Arcane Infiltrator:
                 -   name: Spell Of Invisibility
                     action_type: "Offhand Action"
                     cost: 1
@@ -1361,7 +1342,7 @@
                             - invisible 
                         save: null
                     upcast: "You may spend an additional action point on this ability to cause it to last for one hour."
-            Assassin:
+            The Path of the Assassin:
                 -   name: Jab
                     action_type: "Offhand Action"
                     cost: 1
@@ -1374,7 +1355,7 @@
                         all_tiers: "1d2"
                     effect:
                         type: buff 
-                        description: "Make a Dexterity check against their Resistance. On success, they are Staggered."
+                        description: "Make a Dexterity Resistance Check. On success, they are Staggered."
                         conditions:
                             - staggered
                         save: null
@@ -1402,11 +1383,10 @@
                     type: buff 
                     range: self 
                     duration: instantaneous
-                    ability_modified: Flank
-                    description: "You have learned to stay behind a flanked enemy, even if they try to turn on you."
+                    description: "You have learned to stay behind an enemy, even if they try to turn on you."
                     effect:
                         type: buff 
-                        description: "If an enemy you have flanked tries to look at you, you may spend an action point to 
+                        description: "If you are standing behind an enemy and they try to turn on you, you may spend an action point to 
                                     pivot around them as a reaction. If they try to move, you may move with them.
                                     Ride the Blindspot continues until the end of the enemy's
                                     turn."
@@ -1447,7 +1427,7 @@
                             - elusive 
                         save: null
         level_11:
-            Arcane Infiltrator:
+            The Path of the Arcane Infiltrator:
                 -   name: Leap
                     action_type: "Offhand Action"
                     type: utility
@@ -1456,7 +1436,7 @@
                     range: self 
                     description: "As you speak the magic word for 'Ascent' you suddenly launch thirty feet into the air.
                                 By angling your body, you are able to turn this into an arc."
-            Assassin:
+            The Path of the Assassin:
                 -   name: Wasting Blow
                     action_type: "Action"
                     cost: 1
@@ -1467,7 +1447,7 @@
                     description: "As you land a particularly well placed blow, you slice into your opponent's vitals and sap their strength."
                     effect: 
                         type: debuff
-                        description: "Make a Dexterity Check against their Resistance. On success, their next attack is Weakened."
+                        description: "Make a Dexterity Resistance Check. On success, their next attack is Weakened."
                         conditions:
                             - weakened 
                         save: null
@@ -1501,7 +1481,7 @@
                     duration: infinite 
                     action_type: modifies_ability
                     ability_modified: standard attack 
-                    description: When you make a called shot, you score a critical hit on a roll of 19 or 20.
+                    description: When you make a called shot, you score a critical hit on a roll of natural 11 or 12.
         level_14:
             standard:
                 -   name: Throw Caution to the Wind
@@ -1522,9 +1502,9 @@
                     passive_damage_source: true
                     damage_scaling:
                         damage_type: inherited 
-                        all_tiers: 1d6
+                        all_tiers: 1d4
         level_15:
-            Arcane Infiltrator:
+            The Path of the Arcane Infiltrator:
                 -   name: Controlled Descent
                     action_type: "Free Action"
                     cost: 1
@@ -1538,7 +1518,7 @@
                         conditions: 
                             - custom
                         save: null
-            Assassin:
+            The Path of the Assassin:
                 -   name: Chain Attack
                     action_type: "Passive"
                     cost: 0
@@ -1598,8 +1578,8 @@
         - Heavy Ranged Weapons
         - Standard Martial Weapons
     paths:
-        Warden: "You have honed your skill with the blade, learning to counter your foes and exploit their weaknesses."
-        Hunter: "You wield the bow, picking off targets from a distance with deadly precision." 
+        The Path of the Blade: "You have honed your skill with the blade, learning to counter your foes and exploit their weaknesses."
+        The Hunter's Path: "You wield the bow, picking off targets from a distance with deadly precision." 
     abilities_by_level:
         level_1:
             standard:
@@ -1609,7 +1589,7 @@
                     cost: 0
                     duration: 1 hour
                     range: 30
-                    description: "Spend a moment watching an enemy. Learn one fact of your choice about the creature, for example, what its Threat is."
+                    description: "Spend a moment watching an enemy. Learn one fact of your choice about the creature, for example, what its Resistance is."
                     effect:
                         type: debuff 
                         description: "For the ability's duration, increase the damage dice of your attacks by one step when attacking the creature.
@@ -1617,7 +1597,7 @@
                         conditions:
                             - custom 
                         save: null
-            Warden:
+            The Path of the Blade:
                 -   name: Guard-Break
                     action_type: Action
                     type: combat option
@@ -1628,7 +1608,7 @@
                     description: "Swing high and fast in an effort to batter away your opponent's defenses."
                     effect:
                         type: debuff 
-                        description: "Make a dexterity check against their Resistance. On success, they become Exposed until the end of their next turn."
+                        description: "Make a Dexterity Resistance Check. On success, your target is Exposed until the end of their next turn."
                         conditions:
                             - exposed
                         save: null
@@ -1645,17 +1625,17 @@
                     range: self
                     description: "Attempt to deflect a hand-to-hand attack made against you. Roll 1d6 + Dexterity and deduct the total from the damage.
                                 At gameplay tiers 2 and 3, increase the dice rolled to 1d8 and 1d10, respsectively."
-            Hunter:
+            The Hunter's Path:
                 -   name: Grappler's Line
                     action_type: Action
                     cost: 1
                     type: combat option 
                     range: inherited 
                     duration: instantaneous
-                    description: "Affix a chord to your arrow and fire it at a target. As it hits, it holds fast, creating a durable link between you."
+                    description: "Affix a cord to your arrow and fire it at a target. As it hits, it holds fast, creating a durable link between you."
                     effect:
                         type: debuff 
-                        description: "If your target is a living creature, you must make a Dexterity Check against their Resistance. On success, they become Tethered to you."
+                        description: "If your target is a living creature, make a Dexterity Resistance Check. On success, they become Tethered to you."
                         conditions:
                             - tethered 
                         save: null
@@ -1664,17 +1644,17 @@
                         tier_1: 1d8
                         tier_2: 1d10
                         tier_3: 1d12               
-                -   name: Decoy Call
+                -   name: Decoy
                     action_type: Offhand Action
                     type: combat option 
                     cost: 1
-                    range: inherited
+                    range: 60
                     duration: instantaneous
                     ability_modified: standard attack 
-                    description: "From hiding, you cup your hands and make a perfect monster call."
+                    description: "From hiding, cup your hands and make a perfect monster call."
                     effect:
                         type: debuff 
-                        description: "Make an Intelligence Check against your target's Resistance. On success, they are Lured to a point of your choosing."
+                        description: "Make an Intelligence Resistance Check. On success, your target is Lured to a point of your choosing."
                         conditions:
                             - lured 
                         save: null 
@@ -1705,7 +1685,7 @@
                     description: "You aim a carefully placed attack in order to slow your target's advance."
                     effect:
                         type: debuff 
-                        description: "Make a Dexterity Check against their Resistance. On success, they are Hindered."
+                        description: "Make a Dexterity Resistance Check. On success, they are Hindered."
                         conditions:
                             - hindered 
                         save: null 
@@ -1722,7 +1702,7 @@
                     type: buff
                     range: self
                     duration: instantaneous
-                    description: "By surveying the terrain, you piece together what transpired there. Make an intelligence check to 
+                    description: "By surveying the terrain, you piece together what transpired there. Make an intelligence check 
                                 when you encounter monster tracks or signs of a struggle. On success, you understand what happened 
                                 and the creatures involved are considered Analyzed."
         level_5:        
@@ -1739,19 +1719,19 @@
                                 subsequent attacks deal extra damage if you don't choose another target.
                                 Extra damage starts at 1d4 and grows with each hit, capping at 1d8."
         level_6:
-            Warden:
+            The Path of the Blade:
                 -   name: Kick
                     type: combat option 
                     action_type: Offhand Action 
                     cost: 0 
                     duration: instantaneous
                     range: touch
-                    description: "Kick your enemy hard in their center of mass. If they of size large or smaller, roll a Dexterity Check against their Resistance. On success, they are 
+                    description: "Kick your enemy hard in their center of mass. Make a Dexterity Resistance Check. On success, they are 
                                 knocked back ten feet. You may optionally follow without provoking exposed attacks."
                     damage_scaling:
                         all_tiers: 1d2
                         damage_type: blunt
-            Hunter:
+            The Hunter's Path:
                 -   name: Point Blank Stab 
                     type: combat option 
                     action_type: Reaction 
@@ -1775,7 +1755,7 @@
                     description: "You have grown better at understanding your foes."
                     effect:
                         type: debuff 
-                        description: "When you analyze an enemy, add +2 to any checks made against their Threat or Resistance or to make Called Shots against them."
+                        description: "When you analyze an enemy, roll Threat Checks, or Resistance Checks, and Called Shots against them at advantage."
                         conditions:
                             - custom 
                         save: null
@@ -1817,7 +1797,7 @@
                     ability_modified: initiative
                     description: "You spring into action before others can think. When combat begins, you may act at the same time as the initiator. Resolve your action before or after theirs (your choice)."
         level_11:
-            Warden:
+            The Path of the Blade:
                 -   name: Counter
                     type: combat option 
                     action_type: Reaction
@@ -1825,8 +1805,8 @@
                     duration: passive
                     range: self
                     description: "When a creature within 5 feet of you hits you with a melee attack, spend your reaction to counter-attack them. "
-            Hunter:
-                -   name: Focused Follow-Up
+            The Hunter's Path:
+                -   name: Focus
                     action_type: Offhand Action
                     type: combat option
                     cost: 0
@@ -1834,7 +1814,7 @@
                     duration: 1
                     ability_modified: standard attack
                     description: "You take a steadying breath and line up a perfect shot. If you take an attack action on this turn, roll the damage at advantage.
-                                If the attack slays it's target, you may immediately make another standard attack."
+                                If the attack slays its target, you may immediately make another standard attack."
         level_12:
             standard:
                 -   name: Nimble
@@ -1862,7 +1842,7 @@
                     description: "Make an attack meant to shatter your enemy's defenses."
                     effect:
                         type: debuff 
-                        description: "Make a Dexterity Check against their Resistance. On success, they are Vulnerable to the next attack made against them."
+                        description: "Make a Dexterity Resistance Check. On success, they are Vulnerable to the next attack made against them."
                         conditions:
                             - vulnerable
                         save: null
@@ -1880,9 +1860,9 @@
                     cost: 0
                     duration: inherited
                     range: inherited
-                    description: "When you analyze a creature, all equivalent creatures of that type are also analyzed for the abilities duration."
+                    description: "When you analyze a creature, all equivalent creatures of that type are also analyzed for the ability's duration."
         level_15:
-            Warden:
+            The Path of the Blade:
                 -   name: Storm of Swords
                     action_type: Free Action
                     type: combat option 
@@ -1890,7 +1870,7 @@
                     range: inherited
                     duration: 1
                     description: "Spend one action point to allow yourself to make a full action in place of your Offhand Action on this turn."
-            Hunter:
+            The Hunter's Path:
                 -   name: Volley
                     action_type: "Action"
                     type: aoe damage
@@ -2977,7 +2957,7 @@
                 description: "Swirling black smoke billows in a cloud before you, damaging enemies in a cone."
                 effect: 
                     type: debuff
-                    description: "Make an inner fire check against your targets' Resistance. On success, they are Blinded until the end of their next turn."
+                    description: "Make an Inner Fire Resistance Check. On success, they are Blinded until the end of their next turn."
                     conditions:
                         - blinded
                     save: null
@@ -3000,13 +2980,13 @@
                                 powerful necrotic energy into them."
                 effect:
                     type: debuff
-                    description: "Make an inner fire check against their resistance. On success, they begin Rotting."
+                    description: "Make an Inner Fire Resistance Check. On success, they begin Rotting."
                     conditions:
                         - rotting
                     save: null
                 damage_scaling:
                     damage_type: necrotic
-                    #tier_1: 5d8 #(17.5 + 3.5f + 3inf = 24)
+                    tier_1: 2d8 #(17.5 + 3.5f + 3inf = 24)
                     tier_2: 2d10 #(21 + 7f + 4inf = 32)
                     tier_3: 2d12 #(24.5 + 10.5f + 5 inf = 40)
             -   name: Surrogate
@@ -3021,7 +3001,7 @@
                 description: "As an enemy attack hurtles towards you, attempt to compel someone block it."
                 effect:
                     type: debuff
-                    description: "Make an inner fire check against the resistance of the nearest hostile creature. On success, they dive in front of you to save you from an attack."
+                    description: "Make an Inner Fire Resistance Check against a hostile creature within range. On success, they dive in front of you to save you from an attack."
                     conditions: 
                         - custom
                     save: null
@@ -3050,11 +3030,15 @@
                 cost: 1
                 duration: concentration
                 range: 60
+                passive_damage_source: true 
+                damage_scaling: 
+                    damage_type: psychic 
+                    all_tiers: 1d4
                 requirements: 
                     verbal: true
                     movement: false 
                 description: "Muttering an oath, you place a curse upon a creature of your choosing. Whenever you attack that creature,
-                        deal an additional 1d6 psychic damage. If the creature dies, you may immediately move the curse to another creature within
+                        deal bonus damage. If the creature dies, you may immediately move the curse to another creature within
                         range."
             -   name: Mental Assault # Debuff
                 action_type: Offhand Action
@@ -3067,7 +3051,7 @@
                     movement: false 
                 description: "Hideous and discordant voices fill your target's ears."
                 effect:
-                    description: "At the start of their turns, make an inner fire check against their Resistance. On success, they are staggered."
+                    description: "Each turn, make an Inner Fire Resistance Check. On success, they are Staggered."
                     type: debuff
                     conditions:
                         - staggered
@@ -3084,8 +3068,7 @@
                 description: "You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, 
                     allowing for two-way communication. For non-willing participants, 
                     you are able to glean only surface level detail unless you wish 
-                    to probe deeper. To do so, you must make an Inner Fire check against their 
-                    Resistance. On success, you are able to glean something of their 
+                    to probe deeper. To do so, you must make an Inner Fire Resistance Check. On success, you are able to glean something of their 
                     inner thoughts, but they know that their mind has been read."
             -   name: Embed Eye # Utility
                 action_type: Offhand Action
@@ -3125,9 +3108,9 @@
                 description: "A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss."
                 effect: 
                     type: debuff
-                    description: "Make an Inner Fire check against their Resistance. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
+                    description: "Make an Inner Fire Resistance Check. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
                                     On failure, they take half damage and are not sucked into the portal.
-                                    When they return from the abyss, they reappear and slam to the earth, falling Prone and taking the spell's damage."
+                                    When they return, they reappear and slam to the earth, falling prone and taking the spell's damage."
                     conditions: 
                         - prone
                     save: null
@@ -3146,16 +3129,15 @@
                     verbal: true
                     movement: true 
                 radius: 15
-                description: "With a sound like a rush of wind, a murder of crows streaks past you and to a location of your choice,
+                description: "With a rush of wind, a murder of crows streaks past you and to a location of your choice,
                                 dealing damage as it goes. For the spell's duration, any enemy who begins their turn within the swarm
-                                or who passes through it takes damage. As an offhand action on your turn, you may command the murder
+                                or who passes through it takes damage. As an Offhand Action on your turn, you may command the murder
                                 of crows to move up to 30 feet. A creature may be
                                 harmed at most one time by a swarm of crows per round of combat."
                 damage_scaling:
                     damage_type: piercing
                     tier_2: 2d4 #(10.5 + 4inf x 2 = 14.5 each x2 = 29 total)
                     tier_3: 2d6 #(14 + 5inf x 2 = 19 each x2 = 38 total)
-                upcast: "You may spend an additional action point to increase the duration of this spell to 4 turns."
             -   name: Cthulian Tentacles # Warlock
                 action_type: Action
                 type: damage
@@ -3165,20 +3147,19 @@
                 requirements: 
                     verbal: true
                     movement: true
-                description: "At your command, shadows coallesce into hideous tentacles and burst from the ground.
-                            Together, they converge on two of your foes."
+                description: "At your command, shadows coalesce into hideous tentacles which burst from the ground and converge on two of your foes."
                 damage_scaling: 
                     damage_type: blunt
                     multi_attack: 2
                     tier_2: 2d10 #(14 + 7f + 4inf = 25)
                     tier_3: 2d12 #(17.5 + 10.5f + 5 inf = 33)
                 effect:
-                    description: "Make Inner Fire checks against your targets' Resistance. On success, they are Grappled, and take damage at the start of each turn."
+                    description: "Make an Inner Fire Resistance Check. On success, they are Grappled, and take damage at the start of each turn."
                     conditions:
                         - grappled
                     type: debuff
                     save: null
-                upcast: You may spend an action point to create two additional tentacles, attacking two additional creatures in range.
+                upcast: You may spend an additional action point to create a third tentacle.
             -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
                 action_type: Offhand Action
                 type: utility
@@ -3189,6 +3170,7 @@
                     verbal: false
                     movement: true 
                 description: "Fade into the darkness and immediately re-appear within a shadow in the spell's range. Both the start and destination of this spell must be in partial darkness."
+                upcast: "You may spend an additional action point on this spell to increase its range to 100ft."
             -   name: Tethered Minds # Utility
                 action_type: Offhand Action
                 type: utility
@@ -3200,7 +3182,7 @@
                     verbal: true
                     movement: true 
                 description: "Tether the minds of up to eight individuals. For the spell's duration, they are able to speak telepathically regardless of distance. The effects of the spell end if a creature enters another realm."
-                upcast: You may spend an additional action point on this spell to make it last 6 hours, or two more to make it last 24 hours.
+                upcast: You may spend an additional action point on this spell to increase its duration to 24 hours.
             -   name: Eyes of Uriel # Buff - Floating eyes surround you dealing damage and taking hits
                 action_type: Offhand Action
                 type: summoning
@@ -3210,15 +3192,14 @@
                 requirements: 
                     verbal: true
                     movement: true 
-                description: "As you hold both hands aloft, 1d4+1 eyes open in the air behind you. Each 
-                                is the size of a balled fist, and they float in a halo about you. The eyes move slowly, and
-                                travel at about the walking speed of a normal person, fifteen feet per turn.
+                description: "1d4+1 levitating eyes open in the air behind you.
+                                Each is the size of a balled fist, has 1hp and moves 15ft per turn.
                                 If you concentrate, you can see through the eyes. When the eyes close, they
-                                become Ethereal and cannot be seen."
+                                become invisible."
                 effect:
                     type: buff
                     description: "If an eye is within fifteen feet of an attack, you may use your reaction to cause
-                                    the eye to sacrifice itself and become the attack's target instead."
+                                    it to sacrifice itself and become the attack's target instead."
                     conditions:
                         - ethereal
                     save: null
@@ -3252,10 +3233,9 @@
                 description: "Tether two creatures together."
                 effect:
                     type: debuff
-                    description: "If one dies, make an Inner Fire check against the other's Resistance.
-                                On failure, they take an amount of damage equal to the killing blow.
-                                On success, they take half as much damage. The creatures must be within one hundred feet of
-                                each other."
+                    description: "If one dies, make an Inner Fire Resistance Check against the other.
+                                On success, they take an amount of damage equal to the killing blow or half as much on failure.
+                                The creatures must be within one hundred feet of each other, and the damage cannot exceed twice the maximum hit points of the creature that perished."
                     conditions:
                         - custom
                     save: null
@@ -3268,7 +3248,7 @@
                 requirements: 
                     verbal: false
                     movement: true 
-                description: "When an enemy successfully casts a spell, make an Inner Fire check against their Resistance. On success, they also suffer the effects of their spell 
+                description: "When an enemy successfully casts a spell, make an Inner Fire Resistance Check. On success, they also suffer the effects of their spell 
                             if it was negative, or you also gain the benefits if it was positive."
             -   name: Lift 
                 action_type: Offhand Action
@@ -3279,13 +3259,13 @@
                 requirements: 
                     verbal: false
                     movement: false 
-                description: "Concentrate on up to three targets to cause them to lift into the air."
+                description: "As you hold your hands aloft, dark energy begins to surround three of your foes."
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire check against your targets' Resistance or cause them to be hoisted ten feet in the air and Grappled."
+                    description: "Make an Inner Fire Resistance Check. On success, they are hoisted ten feet in the air and Grappled."
                     conditions: 
                         - grappled
-                    save: "The spell's victims may repeat their save at the end of each of their turns."     
+                    save: null
         Tier_3: #5/5
             -   name: Sorris' Decay #Warlock
                 action_type: Action
@@ -3305,7 +3285,7 @@
                             bursts forward, washing over everyone in a cone before you."
                 effect: 
                     type: debuff
-                    description: "Make an Inner Fire check against your targets' Resistance. On success, they take full damage and begin to Rot.
+                    description: "Make an Inner Fire Resistance Check. On success, they take full damage and begin to Rot.
                                 On failure, they take half damage."
                     conditions: 
                         - rotting
@@ -3328,20 +3308,19 @@
                         weapon: false
                     tier_3: "4d6" #(17.5 + 5inf = 22.5 per turn.)
                 description: "A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss.
-                    Each turn, 1d6 pitch-black tongues (max 6) writhe forth from the pit and 
-                    attempt to grapple an individual within the spell's radius. 
-                    For these grapples, make an Inner Fire check against the target's Resistance. 
+                    Each turn, 1d6 tongues (max 6) writhe forth to grapple creatures nearby. 
+                    For grapples, make an Inner Fire Resistance Check. 
                     Torugar does not distinguish friend from foe.
                     If a tongue takes 25 
-                    damage on a single turn, it releases its grapple and returns to the pit.
-                    Each turn an enemy is grappled by a tongue, it takes damage and is pulled 
+                    damage, it lets go and retreats.
+                    On their turn, grappled creatures take damage and are pulled 
                     2d4 spaces towards the pit."
                 effect:
                     type: debuff 
                     description: "Anyone who enters the pit is transported to 
-                                Torugar's Realm, deep within the sixth layer of the Abyss."
+                                Torugar's Realm."
                     conditions:
-                        - grappled
+                        - custom
                     save: null
             -   name: Reclaim Soul # Reach across the divide to resurrect someone. Battle first?
                 action_type: Ritual
@@ -3356,15 +3335,16 @@
                         - A jeweled tuning fork (500 gp)
                         - Greater Soul Gem (1000 gp)
                 casting_time: 1 hour
-                description: "Prepare the body of someone who has died within the past week. Scrawl 
+                description: "Prepare the body of someone who has died  recently. Scrawl 
                             runes on their flesh to mark them as a conduit to the realm beyond.
                             Find the location of their soul using a tuning fork. Once you've found it, 
                             place a soul gem on their chest, and reach beyond the divide. 
-                            Roll 1d20. If the result is 11 or higher, reclaim the target's 
-                            soul and return them to life. On failure, something else returns and takes up residence in 
+                            Make an Inner Fire Check. On a success, reclaim the target's 
+                            soul and return them to life. On failure, some parts are missing, or 
+                            something else returns and takes up residence in 
                             the body."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
-                        to to grant you advantage on your check."
+                        to to grant you +2 on your check."
             -   name: Open Rift # Utility - Every turn something might come out. You can enter.
                 action_type: Offhand Action
                 type: utility
@@ -3374,15 +3354,15 @@
                 requirements: 
                     verbal: true
                     movement: true 
-                description: "Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 100 miles. 
+                description: "Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 1,000 miles. 
                             If you have visited the location, you are able to open the rift with no trouble. If not, roll an intelligence check 
                             with the Grand Poohbah to determine where the rift lets out. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift."     
             -   name: Astral Prison
-                action_type: Ritual
+                action_type: Offhand Action
                 type: utility
                 duration: until dispelled
                 cost: 5
-                casting_time: 1 hour 
+                casting_time: instantaneous 
                 radius: 100
                 range: 100
                 requirements: 
@@ -3390,14 +3370,15 @@
                     verbal: true 
                     components:
                         - void prism (10,000 gold)
-                description: "Subdue a creature and restrain them with magic. Using a void prism,
-                            create a pocket dimension which overlaps the material realm. 
-                            Spend an hour crafting oblivion shackles and bind them to the creature.
-                            As you bind them to the creature, speak an omen which will reasonably occur.
-                            The creature is bound within the spell's radius until it is dispelled 
-                            or the omen occurs. No action taken by the bound creature may free them."
-                upcast: "By spending three more action points and using a void catalyst (10,000 gold) you can reduce
-                        the casting time of this and cast it on an unrestrained creature.
-                        For the duration, you must spend an Offhand Action each turn to make an Inner Fire check
-                        against your target's Resistance. On 3 successes, they are bound."
-
+                description: "Using a void prism,
+                            create a pocket dimension which overlaps the material realm and attempt 
+                            to banish a creature to it. 
+                            You must achieve three successful
+                            Inner Fire Resistance Checks before accumulating three failures. You may make such 
+                            a check as an Offhand Action each 
+                            turn until you have succeeded, failed, or the creature has left the spell's radius.
+                            On success,
+                            speak an omen which will occur in this age.
+                            The creature is bound until it is freed 
+                            or the omen occurs. It cannot free itself."
+                
