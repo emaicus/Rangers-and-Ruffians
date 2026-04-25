@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774816924479,
+  "timestamp": 1777123434893,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-47JKLRXN.js",
+        "/main-D2MFLKI3.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
-        "/styles-TM4CCBDL.css"
+        "/styles-OQHNRA2R.css"
       ],
       "patterns": []
     },
@@ -179,6 +179,14 @@
         "/assets/markdown/rulebook.md",
         "/assets/pdfs/Character_Sheet_V_02_00.pdf",
         "/assets/pdfs/char_sheet_v3.pdf",
+        "/assets/site_icons/archery-target.svg",
+        "/assets/site_icons/circle.svg",
+        "/assets/site_icons/embrassed-energy.svg",
+        "/assets/site_icons/explosion-rays.svg",
+        "/assets/site_icons/glowing-hands.svg",
+        "/assets/site_icons/sands-of-time.svg",
+        "/assets/site_icons/sword-wound.svg",
+        "/assets/site_icons/thunder-blade.svg",
         "/media/material-icons-JLIDJUWE.woff",
         "/media/material-icons-LEZCGFVT.woff2",
         "/media/material-icons-outlined-7BWLPMFK.woff2",
@@ -211,8 +219,8 @@
     "/assets/css/style.scss": "02295179b8bd4021ae7719261aaddb41f0b5186f",
     "/assets/data/attributions.json": "c4e0fa12edbf8b2af3a58556f06a47cc5ff31ef2",
     "/assets/data/backgrounds.json": "c4dfd778dfdbdae63bfc2e8b88fd80cc36c39ccc",
-    "/assets/data/classes.json": "536cede538dacb1004988fcd3af1e0897f253493",
-    "/assets/data/conditions.json": "3d58e15f1bf2bed9a4da05337aa03388e018313d",
+    "/assets/data/classes.json": "d46e59fdccab14473fac86cd65367af9faeea064",
+    "/assets/data/conditions.json": "56ab71ded76882781bfdf29b5108b900b12c6832",
     "/assets/data/items.json": "4ad50e3d2c65557959b99c22f7527e1e3de8a056",
     "/assets/data/monsters.json": "ccf88c16ffbd1a1b1bf9b3e9ddaa28eda7e12a52",
     "/assets/data/races.json": "0f16756dbe889ade803bf6a9be622ce4229050e3",
@@ -346,9 +354,17 @@
     "/assets/markdown/rulebook.md": "de6904b0efb3a97a6b09ca703486baeb957b5c36",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/assets/pdfs/char_sheet_v3.pdf": "8b939277311d3972c83d57b99c2cabe2371a3a60",
+    "/assets/site_icons/archery-target.svg": "774eece358740e4b316ea7519a909c057afd8e4f",
+    "/assets/site_icons/circle.svg": "ce6fe2462faf0e40c50b4dd8cfba92d0a2abc22e",
+    "/assets/site_icons/embrassed-energy.svg": "71da7c01fcecf69b46ff5b2f5968544f1a6bbd1a",
+    "/assets/site_icons/explosion-rays.svg": "f6ecf00882569417446424daf4b0e8a577607393",
+    "/assets/site_icons/glowing-hands.svg": "e69afb24ba57b891f8a87b4e62f10e6e1040ca89",
+    "/assets/site_icons/sands-of-time.svg": "1a43f682bf5b1a117c2bd4da8656b6cedb195567",
+    "/assets/site_icons/sword-wound.svg": "5fbf3891833007c3d21f9d4d1a706262a05b4d45",
+    "/assets/site_icons/thunder-blade.svg": "a1b7fc3c45a8db0c85ccc8ca28ef97f5ee7f64f7",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "47d82eb0f9bede52a43984261a0f71c132f7ef84",
-    "/main-47JKLRXN.js": "647405083759a1174f2bfdd9bc87e06d40c5369a",
+    "/index.html": "c7855346a425cd907bd1acd942b8e65ae87d4d4b",
+    "/main-D2MFLKI3.js": "a9ca2a5f17d627f033b9e8052da9b16678916360",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
@@ -361,7 +377,7 @@
     "/media/material-icons-two-tone-LCGWGE2N.woff": "02225d888afe4eebc7312b7432878dc8aef1f50f",
     "/media/material-icons-two-tone-M5N5K6F5.woff2": "296ff0bff395a77c2e33e7e31fffe73980bd93cf",
     "/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
-    "/styles-TM4CCBDL.css": "0a12fad292bbe1a723d85ddfd67d3cfdf2f33128"
+    "/styles-OQHNRA2R.css": "7232e0e2bb316c0a8863fa82cb6c077ca098c463"
   },
   "navigationUrls": [
     {
