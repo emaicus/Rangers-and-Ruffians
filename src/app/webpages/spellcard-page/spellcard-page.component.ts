@@ -37,7 +37,7 @@ export class SpellcardPageComponent implements OnInit{
       .subscribe(rnr_classes => {
         this.rnrClasses = rnr_classes
           .sort((a, b) => a.name.localeCompare(b.name));
-        this.selectClass("Bard");
+        this.selectClass("Barbarian");
       });
   
   }
