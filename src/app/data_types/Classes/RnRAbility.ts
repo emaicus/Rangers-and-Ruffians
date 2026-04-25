@@ -50,18 +50,20 @@ export class RnRAbility {
 		
 		this.cost = data.cost ?? 0;
 		this.shouldDisplayCost = data.cost != null && (!succinct || (succinct && data.cost != 0));
-		this.costString = `${this.cost} Action ${this.cost === 1 ? 'Point' : 'Points'}`;
+		this.costString = `${this.cost} AP`;
 
 		this.duration = data.duration ?? 0;
 		this.shouldDisplayDuration = data.duration != null &&  data.duration != "Inherited" && (!succinct || (succinct && (data.duration != "Instantaneous" && data.duration!="Passive")));
 		if (typeof this.duration === 'number') {
 		  this.durationString = `${this.duration} ${this.duration === 1 ? 'Turn' : 'Turns'}`;
+		} else if (this.duration === 'Concentration') {
+			this.durationString = "Conc.";
 		} else {
 		  this.durationString = this.duration;
 		}
 		
-		this.castingTime = data.castingTime ?? "";
-		this.shouldDisplayCastingTime = data.castingTime != null;
+		this.castingTime = data.casting_time ?? "";
+		this.shouldDisplayCastingTime = data.casting_time != null;
 		this.castingTimeString = this.castingTime.toString();
 		
 		this.radius = data.radius ?? 0;
@@ -124,9 +126,9 @@ export class RnRAbility {
 
 		this.rangeString = "";
 		if (typeof this.range === "number" && this.has_damage_shape) {
-			this.rangeString = `${this.range} Foot ${this.damageScaling.damage_shape.charAt(0).toUpperCase() + this.damageScaling.damage_shape.slice(1)}`;
+			this.rangeString = `${this.range}ft ${this.damageScaling.damage_shape.charAt(0).toUpperCase() + this.damageScaling.damage_shape.slice(1)}`;
 		} else if (typeof this.range === "number" && !this.has_damage_shape) {
-			this.rangeString = `${this.range} Feet`;
+			this.rangeString = `${this.range}ft`;
 		} else {
 			this.rangeString = data.range.toString();
 		}

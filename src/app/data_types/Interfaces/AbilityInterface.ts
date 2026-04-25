@@ -5,7 +5,7 @@ export interface AbilityData {
     cost: number,
     duration: string | number,
     range: string | number,
-    castingTime: string | number,
+    casting_time: string | number,
     radius: number,
     requirements: Requirements,
     description: string,

@@ -132,7 +132,7 @@
 					Gain +1 luck
 				</li>
 				<li>
-					Gain +2 action points
+					Gain +1 action points
 				</li>
 				<li *ngIf="rnrclass.health_schedule.standard_level_health_bonus !== rnrclass.health_schedule.tier_increase_health_bonus">
 					Increase their maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} instead of the usual {{rnrclass.health_schedule.standard_level_health_bonus}}
@@ -149,10 +149,10 @@
 			When you level up, gain +{{rnrclass.health_schedule.standard_level_health_bonus}} max health and learn 1 new {{ rnrclass.is_casting_class ? 'spell' : 'ability' }}.
 		</p>
 		<p *ngIf="rnrclass.is_casting_class == false" class="print-leveling-paragraph">
-			When you reach gameplay tiers 2 and 3 (levels 6 and 11), increase two stats by +1, gain +1 luck, gain +2 action points, and increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} 	
+			When you reach gameplay tiers 2 and 3 (levels 6 and 11), increase two stats by +1, gain +1 luck, gain +1 action point, and increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}} 	
 		</p>
 		<p *ngIf="rnrclass.is_casting_class" class="print-leveling-paragraph">
-			When you reach gameplay tiers 2 and 3 (levels 6 and 11)m increase two stats by +1, gain +1 luck, gain +2 action points, increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}}, and gain access to spells from the new tier.
+			When you reach gameplay tiers 2 and 3 (levels 6 and 11)m increase two stats by +1, gain +1 luck, gain +1 action point, increase your maximum health by {{rnrclass.health_schedule.tier_increase_health_bonus}}, and gain access to spells from the new tier.
 		</p>
 	</div>
 	

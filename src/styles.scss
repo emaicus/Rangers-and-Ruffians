@@ -130,7 +130,9 @@ button{
   width: 1.5em;
 }
 
-*[id]:before { 
+//*:not(#card-grid)[id]:before {
+.anchor-target::before {
+
   // display: block; 
   content: " "; 
   margin-top: -60px; // Set the Appropriate Height

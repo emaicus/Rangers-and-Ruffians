@@ -8,6 +8,7 @@ import { ClassPageComponent } from './webpages/class-page/class-page.component';
 import { GameDesignPageComponent } from './webpages/game-design-page/game-design-page.component';
 import { RulebookPageComponent } from './webpages/rulebook-page/rulebook-page.component';
 import { QuickReferencePageComponent } from './webpages/quick-reference-page/quick-reference-page.component';
+import { SpellcardPageComponent } from './webpages/spellcard-page/spellcard-page.component';
 
 export const routes: Routes = [ 
     { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -19,6 +20,6 @@ export const routes: Routes = [
     { path: 'monsters', component: MonsterPageComponent},
     { path: 'game-design', component: GameDesignPageComponent},
     { path: 'rulebook', component: RulebookPageComponent},
-    { path: 'player-quick-reference', component: QuickReferencePageComponent}
-
+    { path: 'player-quick-reference', component: QuickReferencePageComponent},
+    { path: 'spell-cards', component: SpellcardPageComponent}
 ]

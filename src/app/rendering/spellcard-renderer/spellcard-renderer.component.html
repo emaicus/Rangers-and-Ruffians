@@ -1,0 +1,236 @@
+<div class="card" *ngIf="ability">
+    <div class="card-header">
+        <div class="header-top">
+            <div class="header-name">
+                {{ ability.name }}
+            </div>
+        </div>
+        <!-- <div class="header-annotation">
+            <div>
+                <span *ngIf="pathString !== null">
+                    {{pathString}}
+                </span>
+                {{ className }} {{level}}
+            </div> 
+            
+        </div>-->
+        <div class="header-meta">
+            <ng-container *ngIf="ability.shouldDisplayActionType">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/sword-wound.svg" class="meta-icon">
+                    <span class="meta-item">{{ stripAction(ability.actionType) }}</span>
+                </span>    
+            </ng-container>
+            <ng-container *ngIf="ability.shouldDisplayCost">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/thunder-blade.svg" class="meta-icon">
+                    <span class="meta-item">{{ ability.costString }}</span>
+                </span>
+            </ng-container>
+            <ng-container *ngIf="ability.shouldDisplayDuration">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/sands-of-time.svg" class="meta-icon">
+                    <span class="meta-item">{{ ability.durationString }}</span>
+                </span>
+            </ng-container>
+            <ng-container *ngIf="ability.shouldDisplayRange">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/archery-target.svg" class="meta-icon">
+                    <span class="meta-item">{{ ability.rangeString }}</span>
+                </span>
+            </ng-container>
+            <ng-container *ngIf="ability.shouldDisplayRadius">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/explosion-rays.svg" class="meta-icon">
+                    <span class="meta-item">{{ ability.radius }}</span>
+                </span>
+            </ng-container>
+            <ng-container *ngIf="ability.shouldDisplayCastingTime">
+                <span class="meta-bundle">
+                    <img src="assets/site_icons/glowing-hands.svg" class="meta-icon">
+                    <span class="meta-item">{{ ability.castingTime }}</span>
+                </span>
+            </ng-container>
+        </div>
+    
+    </div>
+    
+    <div class="card-body">
+        <div class="body-top">
+            <div class="ability-damage" *ngIf="ability.shouldDisplayDamage && ability.damageScaling">
+                <!-- <ng-container *ngIf="ability.damageScaling.scaled_by  && ability.damageScaling.scaled_by.weapon !== true">
+                  <span class="rnr-boldtext">This spell is not affected by Focus or Weapon damage bonuses.</span>
+                </ng-container> -->
+                <!-- <div class="display-damage-section">
+                    <span class="rnr-boldtext" *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">Damage</span>
+                    <ul *ngIf="ability.damageScaling && !ability.damageScaling.all_tiers">
+                        <li *ngIf="ability.damageScaling.tier_1">
+                        <span class="rnr-boldtext">Tier 1: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_1 }} {{ability.displayableDamageType}} damage</span>
+                        </li>
+                        <li *ngIf="ability.damageScaling.tier_2">
+                            <span class="rnr-boldtext">Tier 2: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_2 }} {{ability.displayableDamageType}} damage</span>
+                        </li>
+                        <li *ngIf="ability.damageScaling.tier_3">
+                            <span class="rnr-boldtext">Tier 3: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_3 }} {{ability.displayableDamageType}} damage</span>
+                        </li>
+                    </ul>
+                </div> -->
+                <div *ngIf="!ability.damageScaling.all_tiers">
+                    <span class="rnr-boldtext"> 
+                        {{ability.displayableDamageType | titlecase }}
+                        <ng-container *ngIf="ability.displayableDamageType != 'healing'">
+                            Damage
+                        </ng-container>    
+                    </span>
+                    <span class="rnr-boldtext" *ngIf="ability.damageScaling.tier_1">T1: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_1 }} </span>
+                    <span class="rnr-boldtext" *ngIf="ability.damageScaling.tier_2">T2: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_2 }} </span>
+                    <span class="rnr-boldtext" *ngIf="ability.damageScaling.tier_3">T3: </span> <span>{{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.tier_3 }} </span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="body-main">
+            <div *ngIf="ability.shouldDisplayDescription" class="ability-description">
+                <ng-container *ngIf="ability.damageScaling && ability.damageScaling.all_tiers">
+                    <span class="rnr-boldtext">
+                        {{ability.damageType === "inherited" ? "+": ""}}{{ ability.damageScaling.all_tiers }}
+                        <ng-container *ngIf="ability.displayableDamageType != 'healing'">
+                            {{ability.displayableDamageType}} Damage.
+                        </ng-container>
+                        <ng-container *ngIf="ability.displayableDamageType === 'healing'">
+                            Healing.
+                        </ng-container>
+                    </span>
+                </ng-container>
+                <span>
+                    {{ ability.description }}
+                </span>
+
+                <ng-container *ngIf="ability.shouldDisplayEffect && ability.effect">
+                    <span *ngIf="ability.effect.description">
+                        {{ability.effect.description}}
+                    </span>
+                    
+                    <span *ngIf="ability.effect.save">
+                        {{ability.effect.save}}
+                    </span>
+                    <!-- <span *ngIf="ability.effect.conditions">
+                        <ng-container *ngFor="let condition of ability.effect.conditions">
+                            <app-condition-renderer [conditionName]="condition"></app-condition-renderer>
+                        </ng-container>
+                    </span> -->
+                </ng-container>
+
+                <!-- <ng-container *ngIf="ability.shouldDisplayEffect && ability.effect">
+                    <span *ngIf="ability.effect.description">
+                        {{ability.effect.description}}
+                    </span>
+                    <ng-container *ngIf="ability.effect.options">
+                        <ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
+                            <li *ngFor="let option of ability.effect.options">
+                                <span>
+                                    {{ option }}
+                                </span>
+                            </li>
+                        </ul>
+                    </ng-container>
+                    <span *ngIf="ability.effect.save">
+                        {{ability.effect.save}}
+                    </span>
+                    <span *ngIf="ability.effect.conditions">
+                        <ng-container *ngFor="let condition of ability.effect.conditions">
+                            <app-condition-renderer [conditionName]="condition"></app-condition-renderer>
+                        </ng-container>
+                    </span>
+                </ng-container> -->
+                <span *ngIf="ability.shouldDisplayUpcast">
+                    {{ ability.upcast }}
+                </span>
+                <ul *ngIf="ability.shouldDisplayOptions && ability.options && ability.options.length > 0" class="ability-options-list">
+                    <li *ngFor="let option of ability.options">
+                        <span class="rnr-boldtext">
+                            {{ option.name }}.
+                        </span>
+                        <span>
+                            {{ option.description }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+    
+        <div class="body-bottom">
+            <div *ngIf="ability.shouldDisplayEffect && ability.effect">
+                <span *ngIf="ability.effect.conditions">
+                    <ng-container *ngFor="let condition of ability.effect.conditions">
+                        <app-condition-renderer [conditionName]="condition"></app-condition-renderer>
+                    </ng-container>
+                </span>
+            </div>
+            <ng-container *ngIf="ability.effect.options">
+                <ul class="ability-options-list" *ngIf="ability.effect.options.length > 0">
+                    <li *ngFor="let option of ability.effect.options">
+                        <span>
+                            {{ option }}
+                        </span>
+                    </li>
+                </ul>
+            </ng-container>
+            
+            <div *ngIf="ability.shouldDisplaySummons && ability.summonedCreature">
+                <ng-container *ngIf="ability.summonedCreature.all_tiers">
+                    
+                    <span class="rnr-boldtext">
+                        Summon: 
+                    </span>
+                    <span class="summon-name">
+                        {{ ability.summonedCreature.all_tiers }}
+                    </span>
+                    <br>
+                    See rulebook for statblock.
+                    
+                </ng-container>
+               
+                <!-- <ul *ngIf="ability.summonedCreature.tier_3">
+                  <li *ngIf="ability.summonedCreature.tier_1">
+                    <span class="rnr-boldtext"> Tier 1 Summon: </span> 
+                    <a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_1.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+                        <span class="summon-name">
+                            {{ ability.summonedCreature.tier_1 }}
+                        </span>
+                    </a>
+                  </li>
+                  <li *ngIf="ability.summonedCreature.tier_2">
+                    <span class="rnr-boldtext"> Tier 2 Summon: </span> 
+                    <a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_2.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+                        <span class="summon-name"> 
+                            {{ ability.summonedCreature.tier_2 }}
+                        </span>
+                    </a>
+                  </li>
+                  <li *ngIf="ability.summonedCreature.tier_3">
+                    <span class="rnr-boldtext"> Tier 3 Summon: </span> 
+                    <a class="summon-name" (click)="navigateToPageAndFragment('monsters', ability.summonedCreature.tier_3.replace(' ', '-').toLowerCase()) + '-monster'" routerLinkActive="active">
+                        <span class="summon-name">
+                            {{ ability.summonedCreature.tier_3 }}
+                        </span>
+                    </a>
+                  </li>
+                </ul> -->
+            </div>
+        
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- 
+    
+<div *ngIf="ability.shouldDisplayCost || ability.shouldDisplayDuration || ability.shouldDisplayRange || ability.shouldDisplayActionType">
+    
+    
+</div>     -->
