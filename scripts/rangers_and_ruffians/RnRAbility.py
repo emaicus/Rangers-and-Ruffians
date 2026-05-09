@@ -53,10 +53,11 @@ def seek_effect(name):
   raise ValueError(f"Effect with name '{name}' not found.")
 
 class RnRAbility():
-  def __init__(self, ability_data):
+  def __init__(self, ability_data, source_info):
     self.name = ability_data['name']
     self.type = ability_data['type']
     self.cost = ability_data['cost']
+    self.source_info = source_info
 
     # Duration is either an integer or a string
     duration = ability_data['duration']
@@ -114,30 +115,30 @@ class RnRAbility():
     self.options = ability_data.get('options', None)
     self.spellbook = 'unknown'
 
-  #simple constructor
-  @classmethod
-  def dict_constructor(cls, spell_name, spellbook, dict_data):
-    dict_data = dict_data
+  # #simple constructor
+  # @classmethod
+  # def dict_constructor(cls, spell_name, spellbook, dict_data, sourcestring):
+  #   dict_data = dict_data
     
-    name = spell_name
-    spellbook = spellbook
-    spell_type = dict_data['type']
-    cost = dict_data['cost']
-    duration = dict_data['duration']
-    casting_time = dict_data.get('casting_time', None) 
-    spell_range = dict_data['range']
-    radius = dict_data.get('radius', None)
-    description = dict_data['description']
-    requirements = dict_data.get('requirements', dict())
-    damage = dict_data.get('damage_scaling', None)
-    upcast = dict_data.get('upcast', None)
-    summoned_creature = dict_data.get('summoned_creature', None)
-    action_type = dict_data.get('action_type', "Action")
-    effect = dict_data.get('effect', None)
-    options = dict_data.get('options', None)
+  #   name = spell_name
+  #   spellbook = spellbook
+  #   spell_type = dict_data['type']
+  #   cost = dict_data['cost']
+  #   duration = dict_data['duration']
+  #   casting_time = dict_data.get('casting_time', None) 
+  #   spell_range = dict_data['range']
+  #   radius = dict_data.get('radius', None)
+  #   description = dict_data['description']
+  #   requirements = dict_data.get('requirements', dict())
+  #   damage = dict_data.get('damage_scaling', None)
+  #   upcast = dict_data.get('upcast', None)
+  #   summoned_creature = dict_data.get('summoned_creature', None)
+  #   action_type = dict_data.get('action_type', "Action")
+  #   effect = dict_data.get('effect', None)
+  #   options = dict_data.get('options', None)
 
-    return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
-               summoned_creature, action_type, effect, options, dict_data=dict_data)
+  #   return cls(name, spellbook, spell_type, cost, duration, casting_time, spell_range, radius, description, requirements, damage, upcast,
+  #              summoned_creature, action_type, effect, options, dict_data=dict_data, sourcestring=sourcestring)
 
   def serialize(self):
     serial = dict()
@@ -168,7 +169,7 @@ class RnRAbility():
       for condition in self.effect['conditions']:
         serial['effect']['conditions'].append(condition.serialize())
     serial['options'] = self.options
-
+    serial['source_info'] = self.source_info
     return serial
 
   def get_markdown(self, level=None, succinct=False):

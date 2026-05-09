@@ -13,11 +13,7 @@
             <div class="spellcard-sheet">    
             <div class="card-grid">
                 <ng-container *ngFor="let ability of page">
-                <app-spellcard-renderer
-                    [ability]="ability.ability"
-                    [className]="ability.class"
-                    [level]="ability.level"
-                    [pathString]="ability.path">
+                <app-spellcard-renderer [ability]="ability">
                 </app-spellcard-renderer>
                 </ng-container>
             </div>

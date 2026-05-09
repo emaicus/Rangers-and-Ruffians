@@ -15,8 +15,8 @@ class RnRClass():
     self.is_mage = 'abilities_by_level' not in rnr_classdata
     self.abilities_by_level = dict()
     self.all_abilities = list()
-    self.paths = rnr_classdata.get("paths", {})
     self.weapon_training = rnr_classdata.get('weapon_training', [])
+
 
     self.spells = dict()
     if self.is_mage:
@@ -24,21 +24,44 @@ class RnRClass():
         if not tier in self.spells:
           self.spells[tier] = list()
         for s in tier_spells:
-          instantiated_spell = RnRAbility(s)
+          source_info = {
+            'source' : 'class',
+            'source_name': self.name,
+            'type': 'standard',
+            'when': tier
+          }
+          instantiated_spell = RnRAbility(s, source_info)
           self.spells[tier].append(instantiated_spell)
           self.all_abilities.append(instantiated_spell)
     else:  
       self.abilities_by_level = rnr_classdata['abilities_by_level']
-      for level, paths in rnr_classdata['abilities_by_level'].items():
-        self.abilities_by_level[level] = dict() 
-
-        for path, abilities in paths.items():
-          self.abilities_by_level[level][path] = list()
-
-          for a in abilities:
-            instantiated_ability = RnRAbility(a)
-            self.abilities_by_level[level][path].append(instantiated_ability)
-            self.all_abilities.append(instantiated_ability)
+      for level, abilities in rnr_classdata['abilities_by_level'].items():
+        self.abilities_by_level[level] = list() 
+        for a in abilities:
+          source_info = {
+            'source' : 'class',
+            'source_name': self.name,
+            'type': 'standard',
+            'when': level
+          }
+          instantiated_ability = RnRAbility(a,source_info)
+          self.abilities_by_level[level].append(instantiated_ability)
+          self.all_abilities.append(instantiated_ability)
+    self.discoverable_abilities = dict()
+    if 'discoverable_abilities' in rnr_classdata:
+      for tier, tier_discoverables in rnr_classdata['discoverable_abilities'].items():
+        if not tier in self.discoverable_abilities:
+          self.discoverable_abilities[tier] = list()
+        for d in tier_discoverables:
+          source_info = {
+            'source' : 'class',
+            'source_name': self.name,
+            'type': 'discoverable',
+            'when': tier
+          }
+          instantiated_ability = RnRAbility(d,source_info)
+          self.discoverable_abilities[tier].append(instantiated_ability)
+          self.all_abilities.append(instantiated_ability)
   
   def get_all_abilities(self) -> list: 
     return self.all_abilities
@@ -52,23 +75,27 @@ class RnRClass():
     serial['rule_sections'] = self.rule_sections
     serial['is_mage'] = self.is_mage
     serial['health_schedule'] = self.health_schedule
-    serial['paths'] = self.paths
     serial['weapon_training'] = self.weapon_training
 
     if not self.is_mage:
       serial['abilities_by_level'] = dict()
-      for level, paths in self.abilities_by_level.items():
-        serial['abilities_by_level'][level] = dict()
-        for path, abilities in paths.items():
-          serial['abilities_by_level'][level][path] = list()
-          for ability in abilities:
-            serial['abilities_by_level'][level][path].append(ability.serialize())
+      for level, abilities in self.abilities_by_level.items():
+        serial['abilities_by_level'][level] = list()
+        for ability in abilities:
+          serial['abilities_by_level'][level].append(ability.serialize())
     else: 
       serial['spells'] = dict()
       for tier, spells in self.spells.items():
         serial['spells'][tier] = list()
         for spell in spells:
           serial['spells'][tier].append(spell.serialize())
+
+    if self.discoverable_abilities is not None:
+      serial['discoverable_abilities'] = dict()
+      for tier, abilities in self.discoverable_abilities.items():
+        serial['discoverable_abilities'][tier] = list()
+        for ability in abilities:
+          serial['discoverable_abilities'][tier].append(ability.serialize())
     return serial
   
   def get_markdown(self, level=None, art_data: dict | None=None, printable=False) -> str:

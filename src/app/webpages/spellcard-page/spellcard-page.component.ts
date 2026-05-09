@@ -5,13 +5,6 @@ import { RnRClassService } from '../../services/rnr_class_service/rnr-class.serv
 import { RnRAbility } from '../../data_types/Classes/RnRAbility';
 import { NgFor } from '@angular/common';
 
-export interface AnnotatedAbility {
-  ability: RnRAbility;
-  class: string;
-  level: string;
-  path: string;
-}
-
 @Component({
   selector: 'app-spellcard-page',
   imports: [SpellcardRendererComponent, NgFor],
@@ -20,8 +13,8 @@ export interface AnnotatedAbility {
 })
 export class SpellcardPageComponent implements OnInit{
   rnrClasses: RnRClass[] = [];
-  activeCards: AnnotatedAbility[] = [];
-  pagedAbilities: AnnotatedAbility[][] = [];
+  activeCards: RnRAbility[] = [];
+  pagedAbilities: RnRAbility[][] = [];
   readonly CARDS_PER_PAGE = 9;
 
   constructor(private rnrClassService: RnRClassService) {
@@ -57,68 +50,32 @@ export class SpellcardPageComponent implements OnInit{
       );
   
   }
-  
-  
-  // extractAbilities(rnrClass: RnRClass): RnRAbility[] {
-  //   // Casting classes use spell tiers
-  //   if (rnrClass.is_casting_class) {
-  //     return Object
-  //       .values(rnrClass.instantiated_spells)
-  //       .flat();
-  //   }
-  
-  //   // Martial classes
-  //   return Object
-  //     .values(rnrClass.instantiated_levels)
-  //     .flatMap(level =>
-  //       Object.values(level)
-  //         .flatMap(bucket => bucket ?? [])
-  //     )
-  //     .filter((a): a is RnRAbility => a !== undefined);
-  // }
 
-  extractAbilities(rnrClass: RnRClass): AnnotatedAbility[] {
+  extractAbilities(rnrClass: RnRClass): RnRAbility[] {
 
-    const className = rnrClass.name;
-  
-    // =========================
     // Casting classes
-    // =========================
-    if (rnrClass.is_casting_class) {
-    
-      return Object.entries(rnrClass.instantiated_spells)
-        .flatMap(([tier, abilities]) =>
-          abilities.map((a: RnRAbility) => ({
-            ability: a,
-            class: className,
-            level: tier,
-            path: null
-          }))
-        );
-    }
+    const spellAbilities = rnrClass.is_casting_class
+      ? Object.values(rnrClass.instantiated_spells ?? {}).flat()
+      : [];
   
-    // =========================
     // Martial classes
-    // =========================
-    const levels = rnrClass.instantiated_levels as Record<
-      string,
-      Record<string, RnRAbility[]>
-    >;
+    const levelAbilities = Object.values(
+      (rnrClass.instantiated_levels ?? {}) as Record<string, RnRAbility[]>
+    ).flat();
   
-    return Object.entries(levels)
-      .flatMap(([level, buckets]) =>
-        Object.entries(buckets ?? {}).flatMap(([bucket, abilityList]) =>
-          (abilityList ?? [])
-            .filter((a): a is RnRAbility => a !== undefined)
-            .map((a: RnRAbility) => ({
-              ability: a,
-              class: className,
-              level: this.formatLevel(level),
-              path: (bucket !== "standard" ? bucket : "")
-           }))
-        )
-      );
+    // Discoverable abilities
+    const discoverableAbilities = Object.values(
+      rnrClass.instantiated_discoverable_abilities ?? {}
+    ).flat();
+  
+    // Combine all sources
+    return [
+      ...spellAbilities,
+      ...levelAbilities,
+      ...discoverableAbilities
+    ];
   }
+
 
   private formatLevel(level: string): string {
     return level

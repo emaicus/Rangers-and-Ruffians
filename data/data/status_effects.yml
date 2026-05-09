@@ -43,7 +43,7 @@
 
 -   name: Vulnerable
     balance: strong
-    about: "Damage rolls against vunerable creatures are doubled."
+    about: "Damage rolls against vulnerable creatures are doubled."
 -   name: Resistant
     balance: strong
     about: "Damage rolls against resistant creatures are halved."

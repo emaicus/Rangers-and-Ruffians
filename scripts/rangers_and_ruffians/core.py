@@ -79,9 +79,18 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
       print(f'{data_file} passed validation.')
     except ValidationError as e:
       print(f"ERROR IN {data_file}")
-      print(e.relative_path)
-      print(e.cause)
-      print(f"{e.schema_path}, {e.message}")
+      print("Instance path:", list(e.path))
+      print("Schema path:", list(e.schema_path))
+      print("Offending value:", e.instance)
+      print("Validator:", e.validator)
+      print("Validator value:", e.validator_value)
+      print("Message:", e.message)
+
+      if e.context:
+          print("Sub-errors:")
+          for suberror in e.context:
+              print(f" - {list(suberror.path)}: {suberror.message}")
+
       sys.exit(1)
     except Exception:
       traceback.print_exc()
@@ -160,17 +169,25 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
         print(f"Validating Martial Class: {rnr_class['name']}")
         abilities_by_level = rnr_class.get('abilities_by_level')
         class_paths = list(rnr_class.get('paths', {}).keys()) + ['standard']
-        for level, paths in abilities_by_level.items():
-          for path, abilities in paths.items():
-            if not path in class_paths:
-                raise Exception(f"ERROR: the path {str(path)} is not in {class_paths}")
-            for ability_def in abilities:
-              count_of_abilities += 1
-              # Tell the schema to evaluate this as an ability.
-              ability_def['ability_type'] = 'ability'
-              validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
+        for level, abilities in abilities_by_level.items():
+          for ability_def in abilities:
+            count_of_abilities += 1
+            # Tell the schema to evaluate this as an ability.
+            ability_def['ability_type'] = 'ability'
+            validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
         if count_of_abilities < expected_abilities:
           print(f"{rnr_class['name']} has {count_of_abilities} / {expected_abilities} abilities")
+      # Validating discovered abilities
+      if 'discoverable_abilities' in rnr_class:
+        discoverable = rnr_class.get('discoverable_abilities')
+        for tier, tier_discoverables in discoverable.items():
+          for ability_def in tier_discoverables:
+            count_of_spells += 1
+            # Tell the schema to evaluate this using the proper type.
+            ability_def['ability_type'] = 'spell' if 'abilities_by_level' not in rnr_class else 'ability'
+            validateAbility(ability_def, ability_schema, status_effects, rnr_class['name'])
+        # print(f"{rnr_class['name']} has {count_of_spells} / {expected_spells} spells")
+
             
 
     # Check for Summonable Creatures
@@ -189,17 +206,16 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
                 summoning_errors.append(creature)
       else:
         abilities_by_level = rnr_class.get('abilities_by_level')
-        for level, paths in abilities_by_level.items():
-          for path, abilities in paths.items():
-            for ability_def in abilities:
-              if 'summoned_creature' not in ability_def:
-                continue
-              for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
-                if key not in ability_def['summoned_creature']:
-                  continue 
-                creature = ability_def['summoned_creature'][key]
-                if creature not in all_monster_names:
-                  summoning_errors.append(creature)
+        for level, abilities in abilities_by_level.items():
+          for ability_def in abilities:
+            if 'summoned_creature' not in ability_def:
+              continue
+            for key in ['tier_1', 'tier_2', 'tier_3', 'all_tiers']:
+              if key not in ability_def['summoned_creature']:
+                continue 
+              creature = ability_def['summoned_creature'][key]
+              if creature not in all_monster_names:
+                summoning_errors.append(creature)
           
     if len(summoning_errors) > 0:
       print("The following summoned creatures don't appear in monsters.yml:")
@@ -441,7 +457,13 @@ def validateAbility(ability: dict, ability_schema: dict, status_effects: list, c
   try:
     jsonschema.validate(ability, schema=ability_schema)
   except ValidationError as e:
-    print(f"ERROR: {context} {ability.get('name', '')} {e.schema_path}, {e.message}")
+    print(f"ERROR IN {ability.get('name', '')}")
+    print("Instance path:", list(e.path))
+    print("Schema path:", list(e.schema_path))
+    print("Offending value:", e.instance)
+    print("Validator:", e.validator)
+    print("Validator value:", e.validator_value)
+    print("Message:", e.message)
     sys.exit(1)
   except Exception:
     traceback.print_exc()

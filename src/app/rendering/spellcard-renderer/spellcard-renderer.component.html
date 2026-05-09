@@ -5,15 +5,14 @@
                 {{ ability.name }}
             </div>
         </div>
-        <!-- <div class="header-annotation">
+        <div class="header-annotation">
             <div>
-                <span *ngIf="pathString !== null">
-                    {{pathString}}
+                <span *ngIf="ability.source_info !== null">
+                    {{ability.formatSource()}}
                 </span>
-                {{ className }} {{level}}
             </div> 
             
-        </div>-->
+        </div>
         <div class="header-meta">
             <ng-container *ngIf="ability.shouldDisplayActionType">
                 <span class="meta-bundle">

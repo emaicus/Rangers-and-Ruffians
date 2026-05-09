@@ -10,7 +10,12 @@ class RnRRace():
 
     self.abilities = list()
     for ability in race_data['abilities']:
-      self.abilities.append(RnRAbility(ability))
+      self.abilities.append(RnRAbility(ability, source_info={
+            'source' : 'race',
+            'source_name': self.name,
+            'type': 'racial',
+            'when': 'level_1'
+          }))
 
   def serialize(self):
     serial = dict()

@@ -10,25 +10,25 @@ export interface RecommendedStats {
 }
 
 export interface AbilitiesByLevel {
-    [levelKey: string]: AbilitiesAtLevel;
+    [levelKey: string]: AbilityData[];
 }
 
-export interface ClassPaths {
-    [pathKey: string]: string;
-}
+// export interface ClassPaths {
+//     [pathKey: string]: string;
+// }
   
-export interface AbilitiesAtLevel {
-    // "standard" is optional
-    standard?: AbilityData[];
+// export interface AbilitiesAtLevel {
+//     // "standard" is optional
+//     standard?: AbilityData[];
   
-    // any number of path names
-    [pathName: string]: AbilityData[] | undefined;
-  }
+//     // any number of path names
+//     [pathName: string]: AbilityData[] | undefined;
+//   }
 
 export interface Spells {
-    Tier_1: AbilityData[];
-    Tier_2: AbilityData[];
-    Tier_3: AbilityData[];
+    tier_1: AbilityData[];
+    tier_2: AbilityData[];
+    tier_3: AbilityData[];
 }
 
 export interface HandbookEntry {
@@ -49,12 +49,12 @@ export interface ClassData {
     recommended_stats: RecommendedStats;
     abilities_by_level: AbilitiesByLevel;
     spells: Spells;
+    discoverable_abilities: Spells;
     health_schedule: HealthSchedule;
     handbook: HandbookEntry[];
     starting_items: string[];
     rule_sections: string[];
     is_casting_class: boolean;
-    paths: ClassPaths;
     weapon_training: string[];
 }
   

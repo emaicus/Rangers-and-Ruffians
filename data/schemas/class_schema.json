@@ -85,30 +85,41 @@
               
                 "patternProperties": {
                   "^level_[1-9][0-9]*$": {
-                    "type": "object",
-              
-                    "minProperties": 1,
-              
-                    "properties": {
-                      "standard": { "type": "array" }
-                    },
-              
-                    "additionalProperties": { "type": "array" }
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    }
                   }
                 }
               },
             "spells": {
                 "type": "object",
-                "required": ["Tier_1", "Tier_2", "Tier_3"],
+                "required": ["tier_1", "tier_2", "tier_3"],
                 "additionalProperties": false,
                 "properties": {
-                    "Tier_1": {
+                    "tier_1": {
                         "type": "array"
                     },
-                    "Tier_2": {
+                    "tier_2": {
                         "type": "array"
                     },
-                    "Tier_3": {
+                    "tier_3": {
+                        "type": "array"
+                    }
+                }
+            },
+            "discoverable_abilities": {
+                "type": "object",
+                "required": ["tier_1", "tier_2", "tier_3"],
+                "additionalProperties": false,
+                "properties": {
+                    "tier_1": {
+                        "type": "array"
+                    },
+                    "tier_2": {
+                        "type": "array"
+                    },
+                    "tier_3": {
                         "type": "array"
                     }
                 }

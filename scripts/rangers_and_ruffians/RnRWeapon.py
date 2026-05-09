@@ -13,7 +13,12 @@ class RnRWeapon:
 		
 		self.abilities = list()
 		for ability in weapon_def.get('abilities', []):
-			self.abilities.append(RnRAbility(ability))
+			self.abilities.append(RnRAbility(ability, source_info={
+				'source' : 'weapon',
+				'source_name': self.name,
+				'type': 'weapon',
+				'when': 'weapon'
+				}))
 	
 	def serialize(self):
 		serial = dict()
