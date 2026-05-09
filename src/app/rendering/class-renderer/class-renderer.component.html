@@ -44,23 +44,6 @@
 		</ul>
 	</div>
 
-	<div *ngIf="rnrclass.path_count > 0" class="handbook-section" [id]="rnrclass.name.replace('/\s+/g', '-').toLowerCase() + '-paths'">
-		<div class="rnr-sub-subsection-title">
-			Paths
-		</div>
-		{{rnrclass.name}}s must choose between the following paths at the start of thier adventures: 
-		<ul *ngFor="let path of rnrclass.paths | keyvalue">
-			<li>
-                <span class="rnr-boldtext">
-					{{ path.key }}
-				</span> 
-				<span>
-					{{path.value}}
-				</span>
-			</li>
-		</ul>
-	</div>
-
 	<ng-container *ngIf="rnrclass.recommended_stats !== null">
         <span class="rnr-sub-subsection-title">
             Recommended Starting Stats
@@ -165,22 +148,10 @@
 					<span class="rnrLevel">
 						{{level.key.replace("_", " ") | titlecase}}
 					</span>
-					<div *ngIf="level.value.standard?.length">
-						<div *ngIf="hasMultiplePathsAtLevel(level.value) === true" class="pathText">
-							At Level {{level.key.replace("level_", "") | titlecase}}, all {{rnrclass.name | titlecase}}s gain the following ability:
-						</div>
-						<ng-container *ngFor="let ability of level.value.standard">
+					<div *ngIf="level.value.length">
+						
+						<ng-container *ngFor="let ability of level.value">
 							<app-ability-renderer [ability]=ability></app-ability-renderer>
-						</ng-container>
-					</div>
-					<div *ngFor="let path of level.value | keyvalue">
-						<ng-container *ngIf="path.key !== 'standard'">
-							<div class="pathText">
-								At Level {{level.key.replace("level_", "") | titlecase}}, {{rnrclass.name}}s that have chosen <span class="rnr-boldtext">{{path.key}}</span> gain the following {{ (path.value?.length || 0) > 1 ? path.value?.length + " ": '' }}abilit{{ (path.value?.length || 0) === 1 ? 'y' : 'ies' }}:
-							</div>
-							<ng-container *ngFor="let ability of path.value">
-								<app-ability-renderer [ability]=ability></app-ability-renderer>
-							</ng-container>
 						</ng-container>
 					</div>
 					<hr class="rnr-printable-line">	

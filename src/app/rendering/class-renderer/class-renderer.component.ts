@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { RnRClass, InstantiatedAbilitiesAtLevel } from '../../data_types/Classes/RnRClass';
+import { RnRClass } from '../../data_types/Classes/RnRClass';
 import { NgIf, NgFor, CommonModule} from '@angular/common';
 import { AbilityRendererComponent } from '../ability-renderer/ability-renderer.component';
 import { AttributedArtRendererComponent } from '../attributed-art/attributed-art-renderer/attributed-art-renderer.component';
@@ -26,10 +26,7 @@ export class ClassRendererComponent implements AfterViewInit {
     return obj ? Object.keys(obj).length : 0;
   }
 
-  hasMultiplePathsAtLevel(level: InstantiatedAbilitiesAtLevel): boolean {
-    // ignore the optional "standard" bucket if you want
-    return Object.keys(level).filter(k => k !== 'standard').length >= 1;
-  }
+
 
   constructor() {}
 

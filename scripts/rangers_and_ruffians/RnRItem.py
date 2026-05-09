@@ -6,7 +6,12 @@ class RnRItem:
 		self.gold_value = item_def['goldValue'] 
 		self.type = item_def['type']
 		self.subtype = item_def.get('subtype', '')
-		self.ability = RnRAbility(item_def['ability'])
+		self.ability = RnRAbility(item_def['ability'], source_info = {
+				'source' : 'item',
+				'source_name': self.name,
+				'type': 'item',
+				'when': 'item'
+			})
 	
 
     

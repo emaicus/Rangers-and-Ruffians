@@ -13,7 +13,16 @@ export interface AbilityData {
     upcast: string,
     options: Array<any>,
     damage_scaling: Damage,
-    summoned_creature: Summons
+    summoned_creature: Summons,
+	source_info: Source
+}
+
+
+export interface Source {
+	source?: string;
+	source_name?: string;
+	type?: string;
+	when?: string;
 }
 
 export interface Requirements {

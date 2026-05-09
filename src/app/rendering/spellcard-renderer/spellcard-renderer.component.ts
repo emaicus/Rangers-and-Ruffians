@@ -11,9 +11,6 @@ import { ConditionRendererComponent } from '../condition-renderer/condition-rend
 })
 export class SpellcardRendererComponent {
   @Input() ability?: RnRAbility; 
-  @Input() className?: string;
-  @Input() level?: string;
-  @Input() pathString?: string;
 
   stripAction(value?: string): string {
     if (!value) return '';

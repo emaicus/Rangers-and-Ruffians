@@ -1,4 +1,4 @@
-import { AbilityData , Requirements, Effect, Damage, Summons} from "../Interfaces/AbilityInterface";
+import { AbilityData , Requirements, Effect, Damage, Summons, Source} from "../Interfaces/AbilityInterface";
 
 export class RnRAbility {
 	name: string;
@@ -37,6 +37,7 @@ export class RnRAbility {
 	displayableDamageType : string;
 	renderCheckbox: boolean;
 	has_damage_shape: boolean;
+	source_info: Source;
 	
 	constructor(
 		data: AbilityData,
@@ -133,5 +134,27 @@ export class RnRAbility {
 			this.rangeString = data.range.toString();
 		}
 
+		this.source_info = data.source_info;
+
 	}
+
+	public formatSource(): string {
+		
+		if(this.source_info.type === "standard") {
+			return `${this.titleCase(this.source_info.source_name)} ${this.titleCase(this.source_info.when)}`;
+		} else if (this.source_info.type === "discoverable") {
+			return `${this.titleCase(this.source_info.source_name)} ${this.titleCase(this.source_info.when)} Loot`;
+		} else {
+			return `${this.titleCase(this.source_info.source_name)} ${this.titleCase(this.source_info.when)} ${this.titleCase(this.source_info.type)}`;
+		}
+	}
+	
+	titleCase(value?: string): string {
+		if (!value) return "";
+	  
+		return value
+		  .replace(/_/g, " ")
+		  .toLowerCase()
+		  .replace(/\b\w/g, char => char.toUpperCase());
+	  }
 }
