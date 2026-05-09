@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777123434893,
+  "timestamp": 1778332484666,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-D2MFLKI3.js",
+        "/main-HT4HGN5O.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-OQHNRA2R.css"
@@ -219,11 +219,11 @@
     "/assets/css/style.scss": "02295179b8bd4021ae7719261aaddb41f0b5186f",
     "/assets/data/attributions.json": "c4e0fa12edbf8b2af3a58556f06a47cc5ff31ef2",
     "/assets/data/backgrounds.json": "c4dfd778dfdbdae63bfc2e8b88fd80cc36c39ccc",
-    "/assets/data/classes.json": "d46e59fdccab14473fac86cd65367af9faeea064",
-    "/assets/data/conditions.json": "56ab71ded76882781bfdf29b5108b900b12c6832",
-    "/assets/data/items.json": "4ad50e3d2c65557959b99c22f7527e1e3de8a056",
-    "/assets/data/monsters.json": "ccf88c16ffbd1a1b1bf9b3e9ddaa28eda7e12a52",
-    "/assets/data/races.json": "0f16756dbe889ade803bf6a9be622ce4229050e3",
+    "/assets/data/classes.json": "5d54dab7757c72851d267570d61a2b487aa7cd35",
+    "/assets/data/conditions.json": "ec5bc19394129a1aa2020cb7732edcb74534e636",
+    "/assets/data/items.json": "655dd9af73afd700a71205a5146cf773cea5c4eb",
+    "/assets/data/monsters.json": "2d34738897b47c7defd4eddc9fc2123c60b8d136",
+    "/assets/data/races.json": "a1112895404e88ad462533074603ab6b373a3486",
     "/assets/docs/archive/helpful_poohbah_stats_2_3_1.md": "7932c9cbb00e0439fbd799f613ab9a06489716e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_4_1.md": "1ac9ad69c8349c58589bea4e0885b41b2f4edf11",
     "/assets/docs/images/gender/female.jpg": "48914ab707d572ee91489900be0cebb9920aec0f",
@@ -363,8 +363,8 @@
     "/assets/site_icons/sword-wound.svg": "5fbf3891833007c3d21f9d4d1a706262a05b4d45",
     "/assets/site_icons/thunder-blade.svg": "a1b7fc3c45a8db0c85ccc8ca28ef97f5ee7f64f7",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "c7855346a425cd907bd1acd942b8e65ae87d4d4b",
-    "/main-D2MFLKI3.js": "a9ca2a5f17d627f033b9e8052da9b16678916360",
+    "/index.html": "9c7ceceedfbba2666e6be4ca88e65eb2d8beb9b6",
+    "/main-HT4HGN5O.js": "4941fc265442b3db0d3730fbcccbca74e927e86c",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
