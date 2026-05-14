@@ -13,8 +13,6 @@
 
 At its core, the gameplay of Rangers and Ruffians can be broken down into three steps. 
 
-  
-
 *   __The adventurers enter a scene.__ The first part of the sequence, "The Adventurers Enter a Scene,'' sets the stage for the drama to come. It is the job of the Grand Poohbah to set this stage with interesting, useful description.
     
 *   __The adventurers choose how to interact with the scene.__ When engaging with a scene, adventurers are limited by the options given to them by their race, class, and background. A knight Malgorath can try to lift something heavy by hand, but cannot attempt to lift it by magic. 
@@ -50,7 +48,6 @@ Adventurers are made up of three parts:
 
 When an adventurer wants to perform an action with an uncertain outcome, the Grand Poohbah calls for a check of the appropriate type to see if they succeed or fail. An adventurer rolls a 2d6 and modifies the result based on the relevant stat. 
   
-
 *   __Triggers for a Check:__ A check should occur whenever an adventurer attempts to do something difficult which, if failed, would result in a meaningful outcome.
     
 *   __Types of Check:__ Nearly all checks in the game are modified by one of the characters’ five core stats. When the Grand Poohbah calls for a check, they will select which of the stats most apply, and add its name to the start of the check.
@@ -96,8 +93,6 @@ There are five core statistics that make up your adventurer. These numeric stats
 *   __Charisma:__ Charisma (CHA) is defined as the force of your personality. It is added to charisma checks, such as attempting to charm a hostile guard.
         
 
-  
-
 Stats are added to checks, not damage rolls.
 
 ### Attributes
@@ -112,18 +107,14 @@ Attributes are non-stat numbers that make up your character.
     
 *   __Action Points:__ Action points are a refillable resource which an adventurer can spend to use their abilities and spells. All adventurers begin with 5 action points. Maximum action points increase every 5 levels.
     
-*   __Carry Capacity:__ All adventurers are able to carry ten objects in their pack. This does not include their Kit, which consists of their equipped weapons and armor. Lightweight items such as torches are able to be stacked in a single inventory slot. 
+*   __Carry Capacity:__ All adventurers are able to carry ten objects in their pack. This does not include their Kit, which consists of their equipped weapons and armor, or Crowns (currency). Lightweight items such as torches and rations are able to be stacked to a maximum of 3 in a single inventory slot as specified by the Grand Poohbah. 
     
 
 ### Abilities and Magic
 
 While an adventurer's stats affect the checks that they make, abilities are the special feats that make them heroes.
 
-  
-
 Learning Abilities All adventurers begin with six abilities, three from their race and three granted by their class. For non-mages, class abilities are gained through a standard level-up path. Mages do not follow a set path, but instead have a set of spells that they can choose from in each new tier of play. 
-
-  
 
 #### Ability Definition 
 
@@ -157,37 +148,23 @@ As an adventurer gains experience, they grow stronger. This process is called Le
 *   __Tier 3.__ Levels 11-15, You are a hero sung about in songs. Your enemies include ancient evils. The fate of the world may be in your hands.
     
 
-  
-
 The amount of healing done by spells, the amount of damage done by abilities, and the ferocity of the enemies that you face increases with each new tier. Mages also get access to new spells, and powerful magical items may become easier to find as your tier increases.
 
-  
+#### Leveling UpEach time you level up:
 
-#### Leveling Up.
+By default, an adventurer levels up when they gain enough experience points. This number is 30 by default, though the Grand Poohbah may choose to set a higher target at the start of the campaign or tier of play. Optionally, some Grand Poohbahs may choose to follow the "Milestone Leveling" rule, in which they tie leveling to key story milestones and forgo experience points entirely.
 
-Leveling up is tied to key story milestones, which should occur every 2-4 sessions. When you level up, you grow stronger and gain access to powerful new abilities.  Each time you level up:
+Each time you level up:
+* __Increase your Health:__ Within a gameplay tier, gain +2 maximum health per level. 
 
-*   __Increase your Health:__ Within a gameplay tier, gain +2 maximum health per level. 
-    
-*   __Gain a new spell or Ability:__ If your adventurer is a martial fighter or a half-caster, you gain a new ability as defined by your level-up path. If you are a full-caster, choose a new spell from the available chapters of your spellbook.
-    
+At levels 3, 6, 8, 11, 13, and 15:
+* Gain one new ability or spell
 
-  
-
-#### When You Grow in Tier
-
-Tier change is tied to the resolution of one or more story arcs, such as the defeat of a major 
-
-Each time you grow in tier:
-
-*   __Martial Characters gain Bonus Health:__ Non-casters gain an extra boost in health when they grow in tier.
-    
-*   __Gain Access to New Spells:__ Spellcasters gain access to new spells in each successive tier.
-    
-*   __Increase your Stats:__ Increase two stats of your choice by +1.
-    
-*   __Increase your Action Points:__ Gain +2 action points.
-    
+When you grow in tier (levels 6 and 11):
+*   __Martial Characters gain Bonus Health:__ Non-casters gain an extra boost in health when they grow in tier. 
+*   __Become Able to Learn Higher Level Spells and Abilities:__ Spellcasters gain access to new spells in each successive tier.
+*   __Increase your Stats:__ Increase two different stats of your choice by +1.
+*   __Increase your Action Points:__ Gain +1 action points.
 *   __Increase your Luck:__ Gain +1 maximum Luck.
     
 
@@ -227,19 +204,13 @@ When an adventurer takes damage, their current hit points decrease. No matter ho
 ### Exhaustion
 
 When an adventurer pushes themselves beyond their limits, they begin to grow Exhausted. Exhaustion has three levels:
-
-*   __Exhaustion 1:__ Take -1 on all checks.
-    
+*   __Exhaustion 1:__ Take -1 on all checks.   
 *   __Exhaustion 2:__ Take -2 on all checks. Your movement speed is halved.
-    
 *   __Exhaustion 3:__ You fall unconscious and cannot be woken up. If you are not brought to a warm, safe place and allowed to rest, you die in 24 hours.
     
 
 ### Rest
-
 Health and action points lost in combat can be regained by resting, using items, or being the target of healing magic. An adventurer’s luck also resets with each new day. There are three different types of rest: Taking a Breather, Making Camp, and Desperate Recovery.
-
-  
 
 |  | Take a Breather | Make Camp | Desperate Recovery |
 | --- | --- | --- | --- |
@@ -253,7 +224,6 @@ Health and action points lost in combat can be regained by resting, using items,
   
 
 ### Healing
-
 Healing is broken into three different categories: minor, greater, and major healing. As an adventurer grows in level and their maximum health increases, so too does the benefit that they receive from healing. The chart below displays how much health is restored by the three types of healing in each of the three tiers of play.
 
   
@@ -266,7 +236,6 @@ Healing is broken into three different categories: minor, greater, and major hea
 | Tier 3 | 2d6 | 4d6 | 6d6 |
 
 ### Informal Magic
-
 Mages are not limited to the magic recorded in their spellbook. Instead, adventurers may attempt to perform informal, unmemorized magic, or even to invent their own spells. Inventing magic can be dangerous and have undesired consequences. The old idiom “less is more” is never so true as when performing informal magic.
 
   
@@ -274,105 +243,174 @@ Mages are not limited to the magic recorded in their spellbook. Instead, adventu
 Informal magic falls into one of three categories.
 
 *   __Trivial Magic:__ If a feat of magic is trivial to perform, then you succeed without a roll. Which acts of magic are trivial is determined by the Grand Poohbah, and is heavily dependent on your level and tier.
-    
 *   __Difficult Magic:__ Other feats of informal magic require an intelligence check. On success, you perform or mostly succeed in performing the feat of magic. On failure, something goes wrong with the spell. If you know a spell similar to the feat of magic being performed, you may gain advantage on the roll.
-    
-
-    *   __Action Point Cost:__ It is left to the Grand Poohbah to determine the action point cost of difficult informal magic, but it should generally range between 0 and 1. The action point cost of a spell must be known to an adventurer before casting. Informal magic is not intended to be used for very advanced feats of spellcasting. Teleportation, hurling a fireball, or causing a tree to grow are all too advanced to be feats of informal magic. If a feat of magic feels advanced enough that it merits an action point cost greater than 1, it likely should not be cast informally.
-        
-
+*   __Action Point Cost:__ It is left to the Grand Poohbah to determine the action point cost of difficult informal magic, but it should generally range between 0 and 1. The action point cost of a spell must be known to an adventurer before casting. Informal magic is not intended to be used for very advanced feats of spellcasting. Teleportation, hurling a fireball, or causing a tree to grow are all too advanced to be feats of informal magic. If a feat of magic feels advanced enough that it merits an action point cost greater than 1, it likely should not be cast informally.
 *   __Impossible Magic:__ Many feats of magic are beyond your ability without the knowledge of a memorized spell or spell scroll. In such cases, a roll is not performed. If an adventurer persists despite a spell’s impossibility, a d2 is rolled. On success, the spell fails. On failure Bad Things Happen.
-    
 
-  
-
-Spell Invention If a character uses the same informal spell often enough, the Grand Poobah might allow them to consider it as a formal spell instead. This process can take months or even years of practice for complex spells.
+#### Spell Invention 
+If a character uses the same informal spell often enough, the Grand Poobah might allow them to consider it as a formal spell instead. This process can take months or even years of practice for complex spells.
 
 ## Chapter 3. Equipment
 
-  
+Adventurers have 10 inventory slots, which are separate from their Kit (the weapons and armor they are currently using) and their Crowns (currency). Most items take up one inventory slot, but some small items such as torches and rations are stackable to a maximum of three. 
 
 ### Mundane Tools
-
 Rope, nets, pitons, and other such tools are useful in a pinch. Such items are used to help qualify an adventurer for a check, or may even circumvent a check altogether.
 
 ### Currency
+Across the civilized realms, Crowns are used as the default form of currency. In Appendix A, common items and their prices are reproduced.    
 
-Across the civilized realms, there are five common denominations of currency.
-
-*   __Slag:__ 1/10 copper, $0.10
-*   __Copper:__ 10 slag, $1
-*   __Silver:__ 10 copper, $10
-*   __Gold:__ 10 silver, $100
-*   __Platinum:__ 10 Gold, $1,000
-    
+### Rations
+Rations are stackable, so that three take up one slot in an adventurer's inventory. Each day, an adventurer must consume one unit of rations. This is generally formally done at night when making camp, but in general assume that the adventurer was slowly consuming the ration throughout the day.
 
 ### Weapons
 
 All adventurers wield weapons, the type of which is determined by their class. There are six types of weapon:
-
 *  __Light Martial Weapons:__ Light hand-to-hand weapons such as daggers and dirks.
-    
 *  __Standard Martial Weapons:__ Ordinary hand-to-hand weapons such as shortswords, handaxes, and shortspears.
-    
 *  __Heavy Martial Weapons:__ Heavy hand-to-hand weapons such as greataxes and claymores.
-    
 *  __Light Ranged Weapons:__ Light long-ranged weapons such as shortbows, hand crossbows, and slings. Light martial weapons generally have a range of 30ft.
-    
 *  __Heavy Ranged Weapons:__ Heavy long-ranged weapons such as longbows and crossbows. Heavy ranged weapons generally have a range of 60ft.
-    
 *  __Focuses:__ From orbs to amulets and wands, mages require a focus in order to use their magic. All magic cast without a focus is considered informal, and must be rolled at disadvantage.
     
-
-### Weapon Training
-
-  
-
+#### Weapon Training
  Each class is trained in one or more types of weapon. 
-
-*   __Trained:__ If an adventurer is trained with a weapon type, they deal 1d6 damage when attacking with such weapons.
-    
+*   __Trained:__ If an adventurer is trained with a weapon type, they deal 1d6 damage when attacking with such weapons.  
 *   __Improvised Strikes:__ If an adventurer is not trained in a weapon type, or if they attempt to attack without a weapon, they deal 1d2 damage.
-    
 
-### Magic Weapons
+#### Magic Weapons
 
 Magic weapons can be found throughout the realms, and come in four types:
-
 *  Tier 1 magic weapons grant +1 damage and a small special ability
 *  Tier 2 magic weapons grant +2 damage and a moderate special ability
 *  Tier 3 magic weapons grant +3 damage and a major special ability
     
-
 ### Armor 
-
 An adventurer’s armor is assumed by their class and is reflected in their health. Changes in armor do not affect an adventurer. However, magic sets of armor may grant special abilities.
-
-  
-
+ 
 ### Equipable Magic Items
-
 Some magic items change the nature of their wearer or grant them an ability. 
-
-*   __Limit of 3:__ At most 3 such items may affect an adventurer at once. 
+*   __Limit of 3:__ At most 3 such items may affect an adventurer at once.
 *   __Binding:__ This relationship is known as being magically bound to an item. It takes ten minutes to bind yourself to a magic item. During that time, you must give the item your undivided attention as you become familiar with it and the abilities that it grants you. 
-    
-
-  
 
 ### Magical Items which Do Not Directly Affect the Wearer
-
 Some magic items do not directly affect the adventurer wearing them or only affect them for an instant. An adventurer does not need to magically bind themselves to such items, and they do not count against the three piece limit. A few examples of such items include: a belt which magically fastens itself, a stone which heats up when a command word is spoken, and a mirror which allows anyone who looks into it to change the color of their hair.
 
-  
-
 ### Consumables
-
 Some ingestible items, such as potions, confer magical benefits to an adventurer. In combat, an adventurer must use one action to consume a magic item. Magic potions which grant an adventurer a new ability have a duration for which that ability remains. Potions are not affected by the three piece magic item limit.
 
-## Chapter 4. Combat
+## Chapter 4. Adventure
 
-  
+### Time
+
+When adventuring, time is divided into three units:
+
+| Unit | Period | Use |
+|---|---|---|
+| Round | 1 minute | Combat and fast-paced action |
+| Dungeon Turn | Roughly 10 minutes | Exploration and dungeon procedures |
+| Watch | Roughly four hours |Wilderness travel, camp, and rest |
+
+A full day contains:
+- 3 Travel Watches
+- 1 Camp Watch
+- 2 Night Watches
+
+### Travel
+
+The world is divided into hexes, each of which is six miles across.
+
+How far the party travels depends on the terrain in a hex:
+| Terrain | Travel Speed |
+|---|---|
+| Easy (roads, plains, tundra) | 1 hex per Watch |
+| Difficult (forests, dunes, marsh) | 1 hex per 2 Watches |
+| Severe (mountains, swamps) | 1 hex per 3 Watches |
+
+If multiple terrain types are crossed in a day, the most difficult terrain sets the party’s pace.
+
+
+#### Pushing Forward
+The party may continue traveling through Camp and Night Watches, but each party member gains +1 Exhaustion. 
+
+#### Entering a Hex
+Some hexes have important landmarks within, such as a town or dungeon. When the party enters such a hex, they encounter the key location.
+
+#### Weather and Random Encounters
+
+At the start of each travel day, the Grand Poohbah rolls for weather and random encounters.
+
+If an encounter occurs, place it in a suitable hex traveled through that day.
+
+### Camp Watch
+
+After travel, the party enters Camp Watch.
+
+During Camp Watch, each Adventurer may perform one Camp Activity:
+- Hunt
+- Scout
+- Explore
+- Make Camp
+
+If multiple Adventurers choose the same activity, one makes the roll and another may Assist, granting Advantage. The rewards of an activity may only be gained once per Watch.
+
+After Camp Watch, the party rests through the Night Watches. An Adventurer may stand guard for one Night Watch and still gain the benefits of sleep.
+
+#### Hunt
+
+Search for food by hunting, fishing, or foraging.
+
+| Roll | Result |
+|---|---|
+| 2 | Complication |
+| 3–6 | Nothing edible found |
+| 7–9 | Gain 1 Ration +1 per helper |
+| 10–11 | Gain 2 Rations +1 per helper |
+| 12 | Gain 2 Rations and a valuable find |
+
+#### Scout
+
+Range ahead and study the surrounding land.
+
+| Roll | Result |
+|---|---|
+| 2 | Complication |
+| 3–6 | Nothing noteworthy |
+| 7–9 | Learn the surface features of 1 neighboring hex |
+| 10–11 | Learn the surface features of 2 neighboring hexes |
+| 12 | As above, plus a sign of danger or opportunity ahead |
+
+#### Explore
+
+Search the local area for hidden places, ruins, or signs of opportunity.
+
+| Roll | Result |
+|---|---|
+| 2 | Complication |
+| 3–6 | A minor detail |
+| 7–9 | A clue or sign of opportunity |
+| 10–11 | A meaningful discovery |
+| 12 | Treasure or something extraordinary |
+
+#### Make Camp
+
+Prepare the campsite against the dangers of the wild.
+
+| Roll | Result |
+|---|---|
+| 2 | Complication |
+| 3–6 | A safe camp suitable for rest |
+| 7–9 | Gain 1 Camp Benefit |
+| 10–11 | Gain 2 Camp Benefits |
+| 12 | Gain 3 Camp Benefits |
+
+##### Camp Benefits
+- **Fortify:** Prepare defenses against attack.
+- **Cook:** The party consumes 1 fewer Ration tonight (minimum 1).
+- **Hide:** Conceal the camp and reduce the chance of being discovered.
+
+
+## Chapter 4. Combat
 
 ### The Structure of Combat
 
@@ -539,13 +577,146 @@ In a like way, some monster abilities require an adventurer to make a check to a
 *   __Success or Failure:__ The triggering ability describes the consequences of success or failure.
     
 
-  
+## Chapter 5. For Poohbahs - Awarding Experience
+
+### Experience
+
+Adventurers gain Experience (XP) by exploring dangerous places, overcoming great threats, and completing important deeds.
+
+The Grand Poohbah should award roughly 10 XP per session.
+
+By default, Adventurers level up every 30 XP. For longer campaigns, the Grand Poohbah may increase XP requirements at the start of a new Tier of play.
+
+There are three primary sources of XP:
+* Dungeons. The players clear an area of danger and return safely. This could be completing a 5 room dungeon, clearing a dungeon floor in a megadungeon, or clearing a bandit hideout. Dungeons are usually capstoned by a villain.
+* Dragons. The players compete a significant combat encounter not tied to a dungeon.
+* Princesses. The adventurers turn in a quest reward. 
+
+---
+
+### Dungeons (2–15 XP)
+
+Dungeons are dangerous locations filled with enemies, treasure, secrets, or obstacles. Examples include goblin caves, ruined keeps, cursed forests, and ancient tombs. Experience is awarded upon completion of the dungeon/dungeon area (e.g. a floor of a megadungeon, a 5-room dungeon in the wilderness, clearing a bandit keep). 
+
+For each dungeon, prepare a rubric with the following sections:
+* __Exploration.__ Dungeons often have multiple wings and rooms. Affix experience to the discovery of specific locations. Spread them out to ensure adventurers explore the dungeon well.
+* __Did they?...__ Identify 0-4 optional objectives the adventurer's might complete in the dungeon and tie 1XP to each.
+* __Slay the Villain.__ Tie 1-3XP to the villain of the dungeon based on how powerful it is.
+
+Additional experience may be awarded for:
+* __Player Heroism.__
+* __Catch-up.__
+
+Not every Dungeon should award maximum XP.
+
+
+#### Exploration (1–3 XP)
+Award XP for discovering important locations within the Dungeon.
+Examples:
+- Descending into the crypt
+- Reaching the tower
+- Discovering the hidden shrine
+
+Spread these rewards throughout the Dungeon to encourage exploration.
+
+#### Did They?... (0–4 XP)
+Identify optional objectives the Adventurers may complete. Each objective is usually worth 1 XP.
+Examples:
+- Solve the library riddle
+- Rescue the prisoner
+- Defeat the Black Slime
+- Recover the stolen map
+
+These objectives should encourage engagement beyond simply reaching the end.
+
+#### Slay the Villain (1–3 XP)
+Award XP for defeating or overcoming the Dungeon’s primary threat.
+Examples:
+- Slaying the Goblin King
+- Defeating the Necromancer
+- Driving away the Troll Chief
+
+The Villain does not always need to be killed.
+
+#### Grand Deeds (0–2 XP)
+Award bonus XP for exceptional bravery, cleverness, sacrifice, leadership, or memorable play.
+
+Grand Deeds may be awarded to individual Adventurers and should be granted sparingly.
+
+#### Overlevel (0–3 XP)
+If Adventurers complete a Dungeon intended for a higher Tier of play, award bonus XP.
+
+This bonus primarily rewards bold risk-taking and helps lower-level Adventurers catch up.
+
+---
+
+#### Example Dungeon Rubric: The Bandit Keep
+
+__Exploration__
+- 1 XP for descending into the basement
+- 1 XP for climbing the high tower
+
+__Did They?...__
+- 1 XP for solving the library riddle
+- 1 XP for rescuing Tamberdoodle the Bard
+- 1 XP for defeating the Black Slime in the kitchen
+
+__Slay the Villain__
+- 2 XP for defeating Gavin the Scar
+
+__Awarded after play:__
+* +2 Experience awarded to Hava the Bard for climbing up the chimney and onto the roof to signal to the watching townsguard that the gate was unlocked and they could launch their attack.
+
+---
+
+### Dragons (0–5 XP)
+
+Sometimes Adventurers overcome dangerous foes outside of a Dungeon.
+
+Examples include goblin ambushes, bridge trolls, krakens, and dragons.
+
+#### Trivial (0 XP)
+The encounter poses little real danger.
+Examples:
+- A drunken brawl
+- A lone common bandit
+
+#### Challenging (1–2 XP)
+The encounter presents meaningful danger or resource drain.
+Examples:
+- A goblin ambush
+- A bridge troll
+- A hunting owlbear
+
+#### Villain Tier (3 XP)
+The encounter is a major threat or centerpiece battle.
+Examples:
+- A dragon
+- A kraken
+- A warlord and their retinue
+
+If the Villain is defeated in its lair, award +1 XP.
+
+#### Grand Deeds
+Award +1 XP for exceptional heroism, ingenuity, or sacrifice during the encounter.
+
+---
+
+### Princesses (0–3 XP)
+
+Some quests deserve XP beyond the dangers overcome along the way. Princess XP should be awarded rarely. In most cases, the quest is its own reward.
+
+Examples:
+- Returning the innkeeper’s daughter safely home
+- Delivering the sacred scroll to the holy city
+- Ending a long-running feud
+- Restoring a ruined kingdom
   
 
-### For Poohbahs: Monster Design Guidance
+## For Poohbahs: Monster Design Guidance
 
   
-#### Minions
+### Minions
 
 | Minions | Tier 1 | Tier 2 | Tier 3 |
 | --- | --- | --- | --- |
@@ -558,24 +729,23 @@ In a like way, some monster abilities require an adventurer to make a check to a
 Additionally, minions should have one small (easy to run) ability which makes them unique.
 
   
-#### Heavies  
+### Elites  
 
-| Heavy | Tier 1 | Tier 2 | Tier 3 |
+| Elite | Tier 1 | Tier 2 | Tier 3 |
 | --- | --- | --- | --- |
 | Health | 15 - 25 | 20 - 30 | 30 - 40 |
 | Damage per Turn | 1d6 - 2d6 | 2d6 - 4d6 | 4d6 - 6d6 |
 | Resistance/Threat | 9 | 10 | 11 |
 
-.5-1 heavy is roughly equivalent to one adventurer.
+.5-1 elite is roughly equivalent to one adventurer.
 
-Additionally, Heavies should have:
+Additionally, Elites should have:
 
 1.  At least one ability which can apply a status effect (Threat).
-    
 2.  At least one small but impactful (easy to run) ability that makes them unique.
     
 
-#### Villains  
+### Villains  
   
 
 | Villains | Tier 1 | Tier 2 | Tier 3 |
@@ -625,3 +795,280 @@ The Goblin Shaman can move 25 feet and make one action per turn.
 *   __Staff Smack:__ Close range. 1d2 damage
 *   __Green Goo:__ 30ft range. Summon green goo at an adventurer’s feet. They must make a Dexterity Check against the shaman’s Threat or be Hindered on their next turn. Hindered creatures move at half speed.
 *   __Lightning Shock:__ 25ft range. Fire a bolt of lightning at an adventurer. 1d6 + 1 damage.
+
+
+## Appendix A: Common Items and Their Value
+
+### Core Principles
+
+- The standard currency of the realms is the Crown.
+- Treasure found in dungeons is usually recovered in the form of:
+  - idols
+  - jewelry
+  - art objects
+  - gemstones
+  - relics
+  - trade goods
+- Treasure occupies inventory slots while inside a dungeon.
+- Once returned to civilization, treasure is assumed to be sold and converted into Crowns.
+- Magic items are primarily found through adventuring rather than purchased openly.
+- The economy is designed to:
+  - minimize arithmetic
+  - keep treasure meaningful
+  - support OSR-style extraction gameplay
+  - maintain long-term progression without inflation
+
+---
+
+### Everyday Costs
+
+| Item or Service | Cost |
+|---|---:|
+| Ale | 1 Crown |
+| Cheap meal | 3 Crowns |
+| Good meal | 10 Crowns |
+| Fine dinner | 25 Crowns |
+| Shared inn room | 10 Crowns |
+| Private room | 25 Crowns |
+| Luxury lodging | 75 Crowns |
+| Bath or laundry | 5 Crowns |
+
+---
+
+### Adventuring Gear
+
+| Item | Cost |
+|---|---:|
+| Torch bundle (3) | 5 Crowns |
+| Oil flask | 5 Crowns |
+| Arrows or bolts (10) | 5 Crowns |
+| Rope (50ft) | 15 Crowns |
+| Bedroll | 10 Crowns |
+| Backpack | 15 Crowns |
+| Grappling hook | 20 Crowns |
+| Crowbar | 15 Crowns |
+| Rations (3 days) | 10 Crowns |
+| Healer’s kit | 50 Crowns |
+| Lantern | 40 Crowns |
+| Lockpicks | 75 Crowns |
+
+---
+
+### Weapons and Armor
+
+| Item | Cost |
+|---|---:|
+| Knife or club | 20 Crowns |
+| Spear | 40 Crowns |
+| Bow or crossbow | 100 Crowns |
+| Sword, axe, or warhammer | 200 Crowns |
+| Fine weapon | 500 Crowns |
+| Shield | 75 Crowns |
+| Leather armor | 150 Crowns |
+| Chain armor | 500 Crowns |
+| Plate armor | 1500 Crowns |
+
+---
+
+### Hirelings and Services
+
+| Service | Cost |
+|---|---:|
+| Torchbearer (per day) | 10 Crowns |
+| Guide (per day) | 15 Crowns |
+| Mercenary (per day) | 25 Crowns |
+| Veteran mercenary (per day) | 75 Crowns |
+| Identify strange item | 100 Crowns |
+| Remove curse or disease | 250 Crowns |
+| Resurrection ritual | 5000+ Crowns |
+
+---
+
+### Property and Wealth
+
+| Asset | Cost |
+|---|---:|
+| Wagon | 250 Crowns |
+| Riding horse | 300 Crowns |
+| Warhorse | 1200 Crowns |
+| Riverboat | 2500 Crowns |
+| Cottage | 5000 Crowns |
+| Tavern or shop | 15,000+ Crowns |
+| Keep repairs | 5000–20,000 Crowns |
+
+---
+
+### Magic Item Pricing
+
+#### Tier 1 Items
+
+| Type | Cost |
+|---|---:|
+| Minor utility | 150–300 Crowns |
+| Strong utility or combat item | 300–700 Crowns |
+| Exceptional item | 700–1200 Crowns |
+
+#### Tier 2 Items
+
+| Type | Cost |
+|---|---:|
+| Lesser relic | 1200–3000 Crowns |
+| Major relic | 3000–7000 Crowns |
+| Elite relic | 7000–15,000 Crowns |
+
+#### Tier 3 Items
+
+Artifacts are generally not purchasable.
+
+They are instead obtained through:
+- quests
+- dragon hoards
+- ancient vaults
+- planar bargains
+- divine favor
+- legendary deeds
+
+---
+
+# Dungeon Treasure Guidance
+
+## Design Assumptions
+
+The following guidance assumes:
+- a party size of four adventurers
+- players recover roughly 70% of treasure present
+- players complete approximately three dungeons per level
+- adventurers spend moderate amounts on supplies and services
+
+---
+
+# Tier 1 Dungeons (Levels 1–5)
+
+## Standard Dungeon
+
+### Total Recoverable Treasure
+450–850 Crowns
+
+### Expected Recovered Wealth
+300–600 Crowns
+
+### Magic Rewards
+- 0–1 permanent magic items
+- 1–3 consumables
+
+### Intended Feel
+
+Players should:
+- comfortably maintain supplies
+- slowly upgrade mundane equipment
+- save toward meaningful purchases
+- occasionally afford temporary help
+
+Magic items should remain:
+- uncommon
+- exciting
+- identity-defining
+
+---
+
+## Major Tier 1 Dungeon
+
+### Expected Recovered Wealth
+800–1500 Crowns
+
+Use these rewards for:
+- dragon lairs
+- ancient tombs
+- faction strongholds
+- campaign milestones
+
+These treasure hauls should feel exceptional.
+
+---
+
+# Tier 2 Dungeons (Levels 6–10)
+
+## Standard Dungeon
+
+### Expected Recovered Wealth
+1200–3000 Crowns
+
+### Magic Rewards
+- 1 permanent magic item
+- several consumables
+
+### Intended Feel
+
+Players should be able to:
+- sustain hirelings
+- buy strong equipment
+- fund expeditions
+- maintain property
+- occasionally acquire relic-tier items
+
+---
+
+## Major Tier 2 Dungeon
+
+### Expected Recovered Wealth
+4000–8000 Crowns
+
+Use these rewards for:
+- lich vaults
+- giant strongholds
+- demon temples
+- royal treasure caches
+
+---
+
+# Tier 3 Dungeons (Levels 11–15)
+
+At this level of play, treasure becomes:
+- artifacts
+- kingdoms
+- armies
+- planar relics
+- impossible materials
+- political leverage
+
+Raw Crown values become less important than the narrative and strategic impact of the reward.
+
+---
+
+# Treasure Object Benchmarks
+
+| Treasure | Value | Slots |
+|---|---:|---:|
+| Jewelry box | 75 Crowns | 1 |
+| Silver idol | 250 Crowns | 1 |
+| Jeweled sword | 500 Crowns | 2 |
+| Gold candelabra | 800 Crowns | 2 |
+| Marble bust | 1200 Crowns | 3 |
+| Ancient throne | 5000 Crowns | Problem |
+
+Problem treasures are intentionally difficult to transport and should create additional gameplay challenges.
+
+Examples include:
+- oversized relics
+- politically dangerous treasures
+- cursed valuables
+- treasures requiring carts, labor, or special handling
+
+---
+
+# Scaling Treasure for Larger Parties
+
+## Five Players
+
+Increase:
+- total treasure by approximately 25%
+- consumables slightly
+
+## Six Players
+
+Increase:
+- total treasure by approximately 50%
+- permanent item frequency slightly
+- opportunities for logistical treasure extraction
+
+Avoid dramatically increasing permanent magic item counts.

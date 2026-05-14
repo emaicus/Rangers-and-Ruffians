@@ -19,7 +19,7 @@
             range: self
             duration: passive
             cost: 0
-            description: "You have razor sharp, retractable claws. When attempting to climb yielding surfaces such as wood, cloth, rope, or packed earth, you do so with advantage.
+            description: "You have razor sharp, retractable claws. When attempting to climb yielding surfaces such as wood, cloth, or packed earth, you do so with advantage.
                             Additionally, when you make an unarmed attack, add +1 damage."
             tags: 
                 - damage_modifier
@@ -86,11 +86,11 @@
             cost: 0
             range: self 
             duration: passive
-            description: "You are naturally skilled at understanding, reinforcing or underminding structures or mechanism. 
+            description: "You are naturally skilled at reinforcing and undermining structures. 
                            When you encounter an object that may be interacted with in a risky way,
-                           you may spend ten minutes to render it less dangerous. The next time the feature is interacted with and a failure occurs,
-                           you manage to reduce or soften the consequences of that failure by half. Similarly, 
-                           you may spend the time to make something less prone to break or more likely to hold."
+                           you may spend one dungeon turn to render it less dangerous. The next time the feature is interacted with,
+                           the consequences of failure are halved. Similarly, 
+                           you may reinforce something it more likely to hold."
             tags:
                 - brace
             upcast: "In a pinch, you can spend one action point to use this ability as an action, reducing the time needed to six seconds."
@@ -105,11 +105,11 @@
                 - delve_too_deep
     handbook:
         introduction:
-            -   "A stocky, brooding people, dwarves are known to be incredible craftsmen and shrewd businessmen. \"Stubborn as a Dwarf\"
+            -   "A stocky, brooding people, dwarves are incredible craftsmen and shrewd businessmen. \"Stubborn as a Dwarf\"
                     is a common saying and for good reason; by and large, dwarves know what they want, and won't stop working
                     until they get it. Family and clan is of paramount importance to a dwarf, and it is not uncommon for generations
                     to work on the same, massive project. The result is that the scope and artistry of dwarven projects
-                    vastly overcomes the ability of an individual. Dwarven strongholds are things of legend, wrought of stone and iron
+                    vastly overcomes the ability of any individual. Dwarven strongholds are things of legend, wrought of stone and iron
                     and carved into the face of mountains. Great dwarven bridges span straits and seas, and dwarven statues tower, 
                     higher than the tallest tree."
         you_may:
@@ -117,7 +117,6 @@
             options:
                 - "Have a strong loyalty to king and kin."
                 - "Have an eye for architecture, stonework, and craftsmanship."
-                - "Be a problem solver, and move quickly to right wrongs that you encounter."
                 - "Think in terms of generations and do things for your children's children's sake."
         assumptions:
             title: "People who don't know you might assume"
@@ -130,7 +129,7 @@
             -   title: "Height"
                 options: "Dwarves stand between 4' and 5' tall."
             -   title: "Age"
-                options: "Dwarves live between three and five centuries. The oldest have lived to see their six or seven-hundredth year."
+                options: "300-500 years"
             -   title: "Eyes"
                 options: "Stony gray, lakewater blue, hazel flecked with red"
             -   title: "Skin"
@@ -140,10 +139,7 @@
             -   title: "Other Features"
                 options: "Dwarven men are known for their beards, and women for their braids. These are groomed
                           to perfection as a show of status, and are often carefully braided and adorned with fine beads 
-                          or woven gold. Dwarven men are known to tuck their beards into their belts before a meal. Most
-                          dwarves wear some jewelry in their clan's color. Powerful merchants might wear multiple rings
-                          on each finger, chains about their throat, or even have multiple piercings, each set with 
-                          precious gems."
+                          or woven gold."
 -   name: Gnome # Done
     abilities:
         -   name: Hyperfixate
@@ -237,7 +233,7 @@
             effect: 
                 type: buff 
                 description: "When you Make Camp or Take a Breather, you can cook something delicious for your party. 
-                              Choose one ally, and grant them inspiration."
+                              Choose one ally, and grant them inspiration which lasts until you next make camp."
                 conditions:
                     - custom
                 save: null
@@ -247,7 +243,7 @@
             range: self
             duration: instantaneous
             cost: 0
-            description: "You are more resilient than you look. When a monster or greater evil tries to 
+            description: "You are more resilient than your size implies. When a monster or greater evil tries to 
                           lay a curse upon you, make your resistance check at advantage."
             effect:
                 type: buff 
@@ -262,7 +258,7 @@
         introduction:
             -   "Small enough to avoid notice, most halflings are content to live in peace and to watch the 
                 world slip slowly by. Short of stature—and often wide of stomach—halflings live in 
-                warm holes in the earth, or in the stumps of great trees, and in comfortable, straw-roofed 
+                warm holes in the earth, in the stumps of great trees, or in comfortable, straw-roofed 
                 shacks among their crops. Their hair is usually brown, and curly, covering their heads and
                 the tops of their feet. Some halflings grow facial hair, though it is rare to see more than
                 a mustache. Halfling adventurers are rare, as it takes a solid push to get them out of the
@@ -271,7 +267,7 @@
         you_may:
             title: "As a Halfling, you may"
             options:
-                - "Enjoy creature comforts, and look forward to a night at the inn."
+                - "Enjoy creature comforts and look forward to a night at the inn."
                 - "Be naturally inquisitive, especially if you are an adventure."
                 - "Be bemused by the frantic pace of the big-folk."
         assumptions:
@@ -282,7 +278,7 @@
                 - "That you aren't there; it unfortunately common that others speak over halflings, cut them in lines, or otherwise miss their presence."
         looks:
             -   title: "Height"
-                options: "Halflings stand between 2' and 4' tall. Fleetfoot halflings are shorter with an average height of 3'3\" while hardfoots tend to stand about 3'6\"."
+                options: "Halflings stand between 2' and 4' tall."
             -   title: "Age"
                 options: "Many halflings survive well into their eighties, and some have been known to survive a century or more."
             -   title: "Eyes"
@@ -336,9 +332,9 @@
                 save: null
     handbook:
         introduction:
-            -   "Humans are a prodigious people, found across the realms in every climate and corner. 
+            -   "Humans are found across the realms in every climate and corner. 
                   Where others endure, humans expand, forming settlements, building roads, and conquering the unknown.
-                  This restless drive leads many humans to become adventurers in the pursuit of gold, glory, and discovery. 
+                  This restless drive leads many humans to become adventurers in the pursuit of gold and glory. 
                   While humans are not an inherently magical race, they have developed an uncanny
                   ability to sense the unnatural, and can detect the presence of certain monsters."
         you_may:
@@ -357,7 +353,7 @@
             -   title: "Height"
                 options: "Humans usually stand between 5' and 6' tall, though some grow smaller or larger."
             -   title: "Age"
-                options: "Humans life is fleeting; they reach adulthood at 20 years and old age at 60. Most humans don't live to see a century."
+                options: "Human life is fleeting; they reach adulthood at 20 years and old age at 60. Most humans don't live to see a century."
             -   title: "Eyes"
                 options: "Squinted, round, almond, brown, blue, green, hazel, grey, amber"
             -   title: "Skin"
@@ -373,16 +369,15 @@
             range: self 
             duration: passive 
             description: "You are able to breathe water like air and cannot drown. Additionally, you have membraned eyes 
-                            which allow you normal vision while underwater. If you go more than three days without fully 
-                            submerging yourself in water, you gain one level of exhuastion, which cannot be removed until you do."
+                            which allow you normal vision while underwater."
         -   name: Abyssal Aspect
             action_type: Passive
             cost: 0
             type: buff 
             duration: instantaneous 
             range: self 
-            description: "You suddenly reveal your inhuman nature, baring sharp teeth and white eyes.
-                           Until the interaction ends, gain advantage on intimidation checks, but disadvantage on persuasion checks"
+            description: "Suddenly reveal your inhuman nature, baring sharp teeth and white eyes.
+                           Until the interaction ends, gain advantage on intimidation checks but disadvantage on persuasion checks"
             tags:
                 - fearful_visage
         -   name: Frigid Depths
@@ -400,10 +395,10 @@
                 save: null
     handbook:
         introduction:
-            -   "A subaquatic race, most waterborn live in gleaming cities just below the 
+            -   "An aquatic race, most waterborn live in gleaming cities just below the 
                     surface. Because their underwater homes hinder the forging of metal, waterborn have developed a complex
                     method of weaving together magic and coral to craft their homes and tools. 
-                    Other waterborn live deep 
+                    Some waterborn live deep 
                     below the waves, making their homes in the darkest reaches of the oceans. 
                     With large eyes and pale skin, deep-waterborn are truly alien, and are rarely if ever spotted,
                     though each year a few wash up on beaches across the realms. Sailors take heed of such 
@@ -412,13 +407,13 @@
         you_may:
             title: "As a Waterborn, you may"
             options:
-                - "Live near to an ocean or lake and enjoy standing in the rain."
+                - "Live near an ocean or lake and enjoy standing in the rain."
                 - "Think deeply and move in a quiet, calculated way."
                 - "Wear clothing to either shield you from the sun or allow you to feel the air, depending on the climate."
         assumptions:
             title: "People who don't know you might assume"
             options:
-                - "That your staring eyes and careful speach are offputting."
+                - "That your staring eyes and careful speech are offputting."
                 - "That you will take offense if they eat fish, build dams, or do anything that could be seen as harmful to the water."
                 - "That you would eat other humanoids, given the chance, like the deep-waterborn of legends."
         looks:
@@ -431,7 +426,7 @@
             -   title: "Skin"
                 options: "Cerulean blue, olive green, mist grey"
             -   title: "Hair"
-                options: "Abyssal black, silt grey, algea green, deep blue"
+                options: "Abyssal black, silt grey, algae green, deep blue"
             -   title: "Other Features"
                 options: "Many waterborn have webbed fingers or toes."
 -   name: Orc # Done 
@@ -462,22 +457,22 @@
             cost: 1
             type: debuff
             range: 30
-            duration: save
+            duration: instantaneous
             description: "Spittle flies from your mouth as you loose a terrible battle cry."
             effect:
                 type: debuff 
-                description: "As the bellow echoes in the air, choose an enemy and make a strength check against their resistance. On success, they become frightened of you until the end of their next turn."
+                description: "As the bellow echoes in the air, choose an enemy and make an Inner Fire check against their resistance. On success, they become frightened of you until the end of their next turn."
                 conditions:
                     - frightened 
                 save: null
     handbook:
         introduction:
-            -   "Orcs are a brutal race that range across the world. They can be found deep in caves where no explorer dares to tread,
-                    on the tops of snowy mountains where the winds howl and the snows never melt, and ranging across the great plains 
-                    in massive warpacks with banners that flutter in the wind. Orc society greatly values honor and trial by combat
-                    and conquest. Individual orc often speak bluntly and take what they want.  Orc adventurers often have a complicated past.
-                    Some are half-orc, while others have a friendlier dispostion, and were ostracized
-                    from a warpack. These quickly form deep bonds with their party members, forging a bond in the blood
+            -   "Orcs are a brutal race that range across the world. They can be found deep in caves where no explorer dares tread,
+                    on the tops of snowy mountains, and ranging across the great plains 
+                    in massive warpacks with banners that flutter in the wind. Orc society greatly values honor and trial by combat. 
+                    Individual orc often speak bluntly and take what they want.  Orc adventurers often have a complicated past.
+                    Some are half-orc, while others have a friendlier disposition and were ostracized
+                    from a warpack. These quickly form deep ties with their party members, forging a bond in the blood
                     of battle."
         you_may:
             title: "As an Orc, you may"
@@ -493,20 +488,17 @@
                 - "That you are violent. Because many orc value honor won in battle, they have a reputation for picking fights."
         looks:
             -   title: "Height"
-                options: "Orc height ranges greatly. The orc warriors of the mountains may stand up to 6' tall
-                          while the deep orcs of the abyss are shruken and starved, and stand at only 4'."
+                options: "Healthy orc can stand up to 6' tall, while the orcs of the abyss are shrunken and starved, and stand at only 4'."
             -   title: "Age"
-                options: "It is generally believed that orc are capable of living as long as the elves, 
-                           but such cases are rarely documented. Instead, most orcs die early in a blaze of glory."
+                options: "Few orc live to see their natural lifespan, which has not been documented."
             -   title: "Eyes"
-                options: "Blood red, pitch black, gleaming yellow. Deep orcs from the abyss may wear a helmet or shroud to stave off the daylight."
+                options: "Blood red, pitch black, gleaming yellow."
             -   title: "Skin"
                 options: "Brown, forest green, charcoal grey"
             -   title: "Hair"
                 options: "Reddish-brown, dark black, grey, bald"
             -   title: "Other Features"
-                options: "Depending on the wealth of their pack, some orcs are large and muscular while others are 
-                           stunted and small. It is not abnormal to see an orc with scars, either from battle or 
+                options: "Most orc have scars, either from battle or 
                            self-inflicted during rituals."
 -   name: Sprout # Done 
     #base_movement: 35
@@ -518,7 +510,7 @@
             range: self 
             duration: passive
             description: "You know the tongue of bird and beast, and are able to convey your meaning to them.
-                          You are able to make charisma checks to convince non-hostile animals to do your bidding
+                          You may make charisma checks to convince non-hostile animals to do your bidding
                           and are able to speak to plants, though they may not know much of use."
         -   name: Riding High 
             action_type: "Action"
@@ -549,7 +541,7 @@
             description: "When you Take a Breather, you may consume nearby plants to aid in your healing. Restore health equal to the amount rolled."
     handbook:    
         introduction:
-            -   "Shy, bipedal beings with soft faces and childlike voices, it is easy to mistake a Sprout for
+            -   "Shy beings with soft faces and childlike voices, it is easy to mistake a Sprout for
                     child lost in the woods. Standing just two-and-a-half feet tall, they have 
                     skin of olive green, or tree-bark brown, or sunkist yellow. Thin, greenish sap flows through a sprout's body
                     in place of blood, and they reject meat by nature,
@@ -558,7 +550,7 @@
                     with wary eyes. If a sprout decides you are dangerous, you will likely never see it.
                     If you seem harmless, the sprout's natural curiosity will quickly get the better of it, 
                     and it will begin testing you to see if you are hiding secret aggression by 
-                    playing harmless tricks."              
+                    playing harmless tricks."
         you_may:
             title: "As a Sprout, you may"
             options:
@@ -647,13 +639,13 @@
             -   title: Height
                 options: "5'-5'6\""
             -   title: "Age"
-                options: "Elves live many thousands of years. An elf passing of old age is a vanishingly rare and emotional thing."
+                options: "Elves live many thousands of years. An elf passing of old age is a vanishingly rare and emotional occurrence."
             -   title: "Eyes"
-                options: "Elven eyes tend to match their environment. Elves sired in the forest might have brown or green eyes, while elves born in the darkness of the abyss may have eyes of white or black."
+                options: "Elven eyes tend to match their environment. Brown, green, white, black."
             -   title: "Skin"
-                options: "Elven skin is often fair or olive, though some have adapted other colors."
+                options: "Fair, olive."
             -   title: "Hair"
-                options: "Elves wear their hair long, and it is often golden, raven, or pure white."
+                options: "Long, golden, raven, white."
             -   title: "Ears"
                 options: "Elves have pointed ears which range from a hand to twelve inches in length."
             -   title: "Other Features"
@@ -675,7 +667,7 @@
                            cannot be healed until the pact is fulfilled or a Remove Curse spell or other equivalent magic
                            is used. Damage increases to 2d6 then 3d6 in gameplay tiers 2 and 3, respectively. Pacts cannot be 
                            compelled, but rather must be willingly and freely entered into by both parties without coercion.
-                           A pact can’t compel self-harm, harm to allies, or actions fundamentally against a creature's nature."
+                           A pact can't compel self-harm, harm to allies, or actions fundamentally against a creature's nature."
         -   name: Incombustible
             action_type: "Passive"
             cost: 0
