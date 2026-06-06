@@ -87,10 +87,7 @@
 					3 Tier 1 Spells
 				</li>
 				<li *ngIf="!rnrclass.is_casting_class">
-					1 base ability
-				</li> 
-				<li *ngIf="!rnrclass.is_casting_class">
-					2 Path abilities
+					3 abilities
 				</li> 
 			</ul>
 			<span>
@@ -100,16 +97,16 @@
 				<li>
 					Gain a +{{rnrclass.health_schedule.standard_level_health_bonus}} bonus to their maximum health
 				</li>
-				<li>
+				<!-- <li>
 					Learn 1 new {{ rnrclass.is_casting_class ? 'spell' : 'ability' }}
-				</li>
+				</li> -->
 			</ul> 				
 			<span>
 				When they reach gameplay tiers 2 and 3 (levels 6 and 11), {{rnrclass.name | lowercase}}s:
 			</span>
 			<ul>
 				<li>
-					Increase two stats of their choice by +1
+					Increase two stats of their choice by +1 to a maximum of +3.
 				</li>
 				<li>
 					Gain +1 luck

@@ -1,9 +1,42 @@
+-   name: Apprentice
+    description: "You have spent your life studying under a mentor, likely a master of your chosen class.
+                    Your time as an apprentice has left an impact that will last a lifetime."
+    options:
+        -   question: "How did you meet your mentor?"
+            answers:
+                - "I was forced into my mentor's service."          
+                - "My mentor saw potential in me."
+                - "My mentor rescued me and took me in."
+                - "My mentor raised me since I was very little."
+                - "My mentor is a respected peer."
+                - "I have no memory of meeting my mentor."
+        -   question: "How is your relationship with your mentor?"
+            answers:
+                - I have a deep respect for my mentor and follow their orders to the letter.
+                - My mentor moves too slowly. I feel like they are holding back.
+                - I am one of many of my mentor's students, but I am their favorite.
+                - I am one of many of my mentor's students, and feel the need to prove myself.
+                - Some people would call my devotion to them unhealthy.
+                - I am a disappointment to my mentor.
+        -   question: Where is your mentor now?
+            answers:
+                - My mentor was killed in front of me.
+                - My mentor disappeared mysteriously, leaving only a few clues as to their whereabouts.
+                - My mentor didn't go anywhere! They are still traveling with me.
+                - I ran away from my mentor or was kicked out.
+                - My mentor decided that it was time for me to experience the world for by myself.
+                - My mentor sent me on a mission while they attended to other matters. 
+    starting_equipment: 
+        - "Three gold per character level"
+          #quantity: 3
+          #level_multiplier: true
+        - "An Adventurer's Kit"
+          #kit: true
+        - "Apprentice's Tools"
+        - "Commoner's Clothing"
 -   name: Wisdom 
-    description: "You will be their guide. As a wisdom, you may have been a medicine person in a village or an advisor to
-        a lord or lady. People are drawn to you for advice, as if by some unseen force. Wisdoms are idiosyncratic by nature.
-        Some speak in cryptic riddles while others seem to peer into your soul. All wisdoms draw their advice from somewhere,
-        be it from booksmarts, rituals, or the ancient teachings of elders past. A wisdom is a welcome member of any party,
-        helping to steer adventurers in the right direction."
+    description: "You are wise. Perhaps you have served as a medicine person or lords advisor. Many wisdoms are idiosyncratic; some speak in cryptic riddles while
+                   others seem to peer into your soul. A wisdom is a welcome member of any party, helping to steer adventurers in the right direction."
     options:
         -   question: For how long have you been a wisdom?
             answers:
@@ -13,20 +46,20 @@
                 - I am ancient. I've been a wisdom since time immemorable.
         -   question: What is your Wisdom Quirk?
             answers:
-                - I am mysterious. I speak in riddles.
-                - I am incomprehensible. I make jokes that only I understand as I steer people in the right direction.
-                - I am a straight shooter. I tell it exactly like it is.
-                - I act older than I am, and expect others to help me with tasks. I might even have a walking stick.
+                - I am mysterious and speak in riddles.
+                - I am incomprehensible and make jokes only I understand.
+                - I tell it exactly like it is.
+                - I act older than I am, and expect others to help me with tasks.
                 - I am cool and collected. When I speak, I expect others to listen.
                 - I am deeply unsure of myself. I am not worthy of the respect people give me.
         -   question: From what source do you draw your wisdom?
             answers:
                 - I am learned. My wisdom comes from booksmarts.
-                - I am knowledgeableI have my fingers in everything, and gather information from everywhere.
+                - I am knowledgeable. I have my fingers in everything.
                 - I am worldwise. My wisdom comes from experience. 
                 - I am a conduit. I receive my wisdom from visions, signs, and rituals.
                 - I am a member of a tradition. I was trained in the old ways.
-                - I am a charlatan. I am just faking it.
+                - I am just faking it.
     starting_equipment:
         -   Two gold per character level
             #quantity: 2
@@ -37,13 +70,8 @@
         -   "A Potion of Greater Healing"
         -   "A set of Robes"
 -   name: Highborn
-    description: "Wealth and glory. You are a member of the upper crust of society. Perhaps you were born with a silver spoon
-        in your mouth, or maybe you clawed your way to the top. Your affluence brings with it privelege, and your money has
-        colored your personality. It takes a real push for a highborn to leave their home and take up the life of an adventurer.
-        Some must prove themselves, while others are fleeing coups or wicked family members. Highborn rarely travel alone
-        -- usually, they have a servant in their retinue. A highborn in the adventuring party can be both a blessing and a curse.
-        Their funds and connections often help a party get their foot in the door, but highborn personalitites often leave
-        something to be desired."
+    description: "You were a member of the upper crust of society. Your affluence brings with it privelege, and your money has
+        colored your personality. It takes a real push for a highborn to leave their home and take up the life of an adventurer."
     options:
         -   question: Why did you leave the comfort of your home?
             answers:
@@ -55,16 +83,16 @@
                 - Life as a noble was never for me. I burned my bridges and left.
         -   question: What is your highborn's quirk?
             answers:
-                - I believe that I deserve respect and veneration from everyone.
+                - I believe I deserve respect from everyone.
                 - I do not understand the value of money.
-                - I'm so used to having things done for me that I sometimes forget to do them for myself.
+                - I'm used to having things done for me.
                 - I am very easily overwhelmed by minor inconveniences.
-                - I am fascinated by the way that ordinary people do things, and never learned many life skills.
+                - I am fascinated by the way that ordinary people do things and never learned many life skills.
                 - I refuse to take help from anyone.
         -   question: What is your servant like?
             answers:
-                - They are an old curmudgeon who only wants what's best for me. They're always trying to keep me out of trouble.
-                - They are young and naive and excited to experience the world. They're always getting into trouble.
+                - They are an old curmudgeon who only wants what's best for me.
+                - They are young and naive and excited to experience the world.
                 - They are shy, rarely talking and usually hiding behind me.
                 - They are prim and proper and constantly complain about conditions while adventuring.
                 - They are my personal chef. They have a sweet disposition and are always trying to fatten me up.
@@ -82,53 +110,47 @@
             #quantity: 3
         -   "A set of armor"
         -   "A signant of your family's house"
--   name: Disciple
-    description: "I put my faith in you. As a disciple, you are a member of a religious order. Some diciples are born
-        into their faith, while others find it when they are older or are pressed into service. No matter what, you
-        are devout, and your faith has shaped your personality and how you present to the world. As you set out as an adventurer,
-        you may trust that your faith will not lead you astray."
-    options:
-        -   question: How did you find you faith?
-            answers:
-                - When I was at my lowest point, my faith found me.
-                - When someone was dying, I struck a deal.
-                - I was inducted into my religion when I was very young, and have never known anything else.
-                - I was forced into a life of faith.
-                - A wise mentor helped guide me on my path to faith.
-                - My faith started as a way to help me keep a low profile.
-        -   question: What is your disciple's quirk?
-            answers:
-                - I let faith be my guide. I pray whenever I am in a difficult situation, and trust that everything will turn out alright.
-                - I always put others before myself.
-                - I have a deep love for my fellow people. I am a servant to all.
-                - I believe that it is my duty to convert as many people as possible to my faith.
-                - I am deeply angered by wickedness. I will stand up against any injustice.
-                - I follow the letter of my teachings, but never questioned what they actually mean.
-        -   question: What is your relationship with your faith?
-            answers:
-                - I try to run, but my faith follows me.
-                - I try my best to follow my faith's teachings, but I don't always get it right.
-                - My faith is unshakable. I am a paragon of my faith and an example to other followers.
-                - I feel deeply unworthy of the blessings I am given.
-                - The fire of my faith is strong. I try to convert anyone I can.
-                - I have fallen out of favor with my faith. 
-    starting_equipment:
-        -   Three gold per character level
-            #quantity: 3
-            #level_multiplier: true
-        -   "A holy symbol"
-        -   "A Ritual Kit"
-            #kit: true
-        -   "A Common Dagger which deals 1d4 bonus radiant damage"
-            #enchantment: "Radiant"
-        -   "A set of robes"
+# -   name: Disciple
+    #     description: "You are a member of a religious order. Some diciples are born into their faith, while others find it when they are older or are pressed into service. 
+    #                     As you set out as an adventurer, you may trust that your faith will not lead you astray."
+    #     options:
+    #         -   question: How did you find you faith?
+    #             answers:
+    #                 - When I was at my lowest point, my faith found me.
+    #                 - When someone was dying, I struck a deal.
+    #                 - I've never known anything else.
+    #                 - I was forced into a life of faith.
+    #                 - A wise mentor helped guide me on my path.
+    #                 - My faith started as a way to help me keep a low profile.
+    #         -   question: What is your disciple's quirk?
+    #             answers:
+    #                 - I trust that everything will turn out alright.
+    #                 - I always put others before myself.
+    #                 - I have a deep love for my fellow people.
+    #                 - I believe that it is my duty to convert as many people as possible.
+    #                 - I am deeply angered by wickedness. I will stand up against any injustice.
+    #                 - I follow the letter of my teachings, but never questioned what they actually mean.
+    #         -   question: What is your relationship with your faith?
+    #             answers:
+    #                 - I try to run, but my faith follows me.
+    #                 - I try my best to follow my faith's teachings, but I don't always get it right.
+    #                 - My faith is unshakable. I am a paragon of my faith and an example to other followers.
+    #                 - I feel deeply unworthy of the blessings I am given.
+    #                 - The fire of my faith is strong. I try to convert anyone I can.
+    #                 - I have fallen out of favor with my faith. 
+    #     starting_equipment:
+    #         -   Three gold per character level
+    #             #quantity: 3
+    #             #level_multiplier: true
+    #         -   "A holy symbol"
+    #         -   "A Ritual Kit"
+    #             #kit: true
+    #         -   "A Common Dagger which deals 1d4 bonus radiant damage"
+    #             #enchantment: "Radiant"
+    #         -   "A set of robes"
 -   name: Ruffian
-    description: "Laws are made to be broken. As a ruffian, you were a criminal, living on the wrong
-        side of the law. Maybe you were a thief or smuggler. Maybe you took the law into your own hands.
-        No matter what, what you have done has weighed on you, and you are trying to turn over a new
-        leaf. It can be hard to stay on the straight and narrow, but as an adventurer, you must walk the
-        path of a hero. With your party at your side, you will take your experiences and use them to
-        fight the villains that stalk the realms so that you can atone for the crimes of your past."
+    description: "You were a criminal, perhaps a thief, smuggler, or taking the law into your own hands.
+                    Your experience will help your party fight the villains that stalk the realms so that you can atone for the crimes of your past."
     tips:
         -   name: You are a Hero
             text: "Remember that this is a story of adventurers, not villains. Even though you are were
@@ -142,24 +164,24 @@
                 - I was a highwayman. I stopped travellers on the road and robbed them.
                 - I was a con-artist. I duped people out of their money.
                 - I was a smuggler. I sold illegal goods on the blackmarket.
-                - I was a high-class criminal. I was in a position of power, and used it to line my own pockets.
+                - I was a high-class criminal. I used power to line my own pockets.
                 - I took the law into my own hands.
         -   question: Why did you leave your life of crime?
             answers:
                 - I was caught and served a punishment.
                 - I had one too many close calls.
                 - I had a falling out with my associates.
-                - I was only a criminal because I had to be. I got out as soon as I could.
+                - I was only a criminal because I had to be.
                 - No matter how hard I try to give up being a criminal, I keep getting pulled right back in.
                 - I found something that made my future brighter. I wouldn't risk it for anything.
         -   question: What is your ruffian's quirk?
             answers:
-                - I always believe that I am in the right. The ends justify the means.
-                - I am deeply aware of my demons and will try my hardest to avoid breaking the law again.
-                - I have a mark that brands me as a criminal. Other people distrust me because of it, no matter how hard I try to atone.
-                - I am deeply tempted by my vices, and often slip back into my old ways. However, I would never harm my friends or my adventuring party.
+                - I always believe that I am in the right.
+                - I am deeply aware of my demons and don't want to break the law again.
+                - I have a mark that brands me as a criminal.
+                - I am deeply tempted by my vices, and often slip back into my old ways.
                 - I have delusions of granduer. I am the greatest criminal the world has ever seen!
-                - I have deep code of honor which dictates how I act. I will only harm someone if my code calls for it.
+                - I have deep code of honor which dictates how I act.
     starting_equipment:
         -   Five gold per character level
             #quantity: 5
@@ -169,14 +191,8 @@
         -   "Commoner's Clothes"
         -   "A dark cloak"
 -   name: Scholar
-    description: "The pen is mightier than the sword! Though I do carry a dagger, just in case...
-        As a scholar, you are among the learned people in the realms. Usually found at academies
-        of higher learning, scholars almost always specialize in a specific field of inquiry.
-        Some study the wonders of magic, while others are rooted in more practical matters,
-        such as the politics of the land. Many scholars are shut-in by nature, and going into
-        the field is a feat of necessity and bravery. Whatever your reason for setting out on
-        an adventure, your knowledge is sure to be of help! Even if you did spend your youth
-        studying the intricacies of the fairy court..."
+    description: "You are among the learned people in the realm, specializing in a specific field of inquiry.
+        Many scholars are shut-in by nature, and going into the field is a feat of necessity and bravery."
     options:
         -   question: "What is your area of research?"
             answers:
@@ -188,20 +204,20 @@
                 - Geography! I want to map out places unknown!
         -   question: What is your scholar's quirk?
             answers:
-                - I am scatterbrained. My thoughts flit from thing to thing and I sometimes trail off while speak...
-                - I am pompous about the area of my research. I'm an expert, you know!
-                - I am constantly baffled when my booksmarts don't apply to real life.
-                - I cart around far more than I need. I am basically a walking library.
+                - I am scatterbrained. My thoughts flit from topic to topic.
+                - I am pompous. I'm an expert, you know!
+                - I am baffled when my booksmarts don't apply to real life.
+                - I cart around far more than I need.
                 - I have imposter syndrome. I don't think I'm as intelligent as I actually am.
-                - I am always taking notes, studying, and asking questions, even if it is socially unacceptable.
+                - I am always taking notes, even if it is socially unacceptable.
         -   question: What forced you into the field?
             answers:
-                - I discovered something of great import, and I must investigate it!
-                - I want to achieve tenure at my institution, and to do that, I need field experience.
+                - I discovered something of great import and must investigate it!
+                - I want to achieve tenure at my institution and to do that I need field experience.
                 - Going on adventures has been my life's dream!
                 - My presence was requested by a collegue to whom I owe a favor.
                 - I was thrown out of academia in disgrace.
-                - I suspect that my rival is close to a major discovery, and I must beat them to the chase!
+                - I suspect my rival is close to a major discovery, and I must beat them to the chase!
     starting_equipment:
         - Three gold per character level
             #quantity: 3
@@ -210,63 +226,33 @@
         - "Fine Clothes"
         - "Commoner's Clothes"
         - "A map of a distant location"
-# -   name: Hunted
-#     description: "It follows. Something from your past is chasing you, and it's getting closer.
-#         Maybe you are being hunted by monsters after stumbling into a dark ritual, or perhaps
-#         an ex-lover has sent assassins to kill you in the night. No matter what, you must keep
-#         your eyes open, lest your past catch up with you when you least expect it."
-#     options:
-#         -   question: What did you do before you were a hunted?
-#             answers: 
-#                 - Roll 1d20, select a second background, and answer any relevant questions. To merge the two backgrounds successfully, you may need to skip some questions. You begin with any starting equipment from your second background.
-#         -   question: Who is hunting you?
-#             answers:
-#                 - I am being hunted by Monsters.
-#                 - I am being hunted by bounty hunters.
-#                 - I am being hunted by my old associates.
-#                 - I am being hunted by members of an order.
-#                 - I am being hunted by a crime-lord's hired assassins.
-#                 - I don't know who is hunting me.
-#         -   question: Why are you being hunted?
-#             answers:
-#                 - I don't know. I've always lived an ordinary life and kept out of trouble.
-#                 - I saw something that I shouldn't have. That's what I get for sticking my nose into things.
-#                 - I stole something valuable to them.
-#                 - I ruined their plans, and now they're after me.
-#                 - I am valuable to them.
-#                 - I was in a romantic relationship and it ended very badly.
-#     starting_equipment:
-#         - "An item related to the person, group, or creature that is hunting you"
 -   name: Wanderer
-    description: "Wandering, but not lost. Wanderers roam the realms, coming and going as they please.
-        Some wanderers are travelling salesman, others sail on great ships, or work as migrant laborers.
-        No matter where you came from, something has lead you to join an adventuring party, and to seek
-        to help other people. As a wanderer, you are used to the harsh conditions of the wilds, and have
+    description: "Wanderers roam the realms, coming and going as they please. As a wanderer, you are used to the harsh conditions of the wilds, and have
         far-flung connections that may help your adventuring party."
     options:
         -   question: What lead to your wandering?
             answers:
-                - I have the itch. Discovering new things and exploring new places is what keeps me going.
-                - I am searching for something, but I've never found it. I have nowhere I belong.
-                - There are those who would do me harm if they found me, so I never stay in one place for long.
-                - I like to keep my finger on the pulse of the world. I travel, observe, and spread information.
+                - I have the itch. Discovering new things is what keeps me going.
+                - I am searching for something, but I've never found it.
+                - I am being hunted, so I never stay in one place for long.
+                - I travel, observe and spread information.
                 - I am no longer welcome back home.
                 - I am a member of an order of wanderers.
         -   question: What lead you to become an adventurer?
             answers:
-                - It was an accident, I assure you. I was sucked into this whole mess when it affected me directly.
-                - I bore witness to a great misfortune. Ever since, I do everything I can to help people.
+                - It was an accident, I assure you.
+                - I bore witness to a great misfortune and now do everything I can to help people.
                 - I am in need of gold. Money is hard to come by, and adventuring pays well.
                 - It started as a favor. Someone was in need and I helped.
                 - I have a strict code of honor. I cannot turn a blind eye.
                 - I have done terrible things. I am trying to atone for them by adventuring.
         -   question: What is your wanderers quirk?
             answers:
-                - I am very frugal, and have very few possessions.
+                - I am very frugal and have very few possessions.
                 - At this point, I actually prefer sleeping in stables or outside of town.
-                - I try to bring a smile to every face I can. Usually, it earns me supper.
-                - I know someone in every town. I am always dropping in on old friends and bringing news of the land.
-                - I sometimes talk aloud to myself or my animals. Because of all of the time I've spent alone, I am always saying too much or too little.
+                - I try to bring a smile to every face I can.
+                - I know someone in every town. I am always dropping in on old friends.
+                - I sometimes talk aloud to myself or my animals.
                 - People tend to distrust me. I have to work to get them to let me in.
     starting_equipment:
         -   Three gold per character level
@@ -278,12 +264,8 @@
         -   "An Adventuring Kit"
         -   "Commoner's Clothing"
 -   name: Urchin
-    description: "Born on the streets. As an urchin, you have fought to scrape by on the fringes of society.
-        Many urchins beg for their food, or are thrown into orphanages. Others turn to crime and become pickpockets
-        or thugs. All of this is in service of surival, of finding food for just one more day. No matter what,
-        something has changed for you, and you are pulling yourself up, and out of the streets. You have been
-        called to become an adventurer, and just maybe you can save those you care about and put your past
-        behind you."
+    description: "You were raised by the streets. Many urchins had to beg for their food or were thrown into orphanages.
+                    As an adventurer, maybe you can save those you care about and put your past behind you."
     options:
         -   question: What is your Urchin's Quirk?
             answers:
@@ -317,13 +299,8 @@
         -   "Commoner's Clothes"
         -   "A Memento"
 -   name: Commoner
-    description: "You are the salt of the earth. As a commoner, you have lived a largely uneventful life.
-        There many varieties of commoner; you may have been a successful businessperson, or maybe you
-        aimlessly drank away your meager earnings. Regardless, something has happened, and now you
-        find yourself thrust into a world of adventure that you never planned for. The average commoner
-        hasn't experienced much of the world. Some are distrustful of new experiences, while others want
-        to see and do everything. No matter your inclination, you will rise above your humble origins and
-        grow to become a mighty adventurer."
+    description: "You are the salt of the earth. As a commoner, you have lived a largely uneventful life. Now, something has happened
+                    and you find yourself thrust into a world of adventure that you never planned for."
     options:
         -   question: What was your life like before you were an adventurer?
             answers:
@@ -335,19 +312,19 @@
                 - I was bored. I went through the motions and excelled, but my heart wasn't in my work.
         -   question: What is your Commoner's Quirk?
             answers:
-                - I want to try everything! I am constantly blown away by new experiences.
-                - When I am nervous or in an awkward situation, I make smalltalk and undoubtably bring up the weather.
-                - I am deeply superstitious. I carry a number of deeprooted traditions with me.
+                - I want to try everything!
+                - When I am nervous, I make smalltalk and inevitably bring up the weather.
+                - I am deeply superstitious.
                 - I think the rich live worry free and are the cause of all of my woes.
-                - I am frightened of monsters. It takes bravery for me to stand up and fight.
-                - I only trust things that are familiar to me. I won't eat foreign foods, and fear the worst when meeting new people.
+                - I am frightened of monsters.
+                - I only trust things that are familiar to me.
         -   question: Why did you take up a life of adventure?
             answers:
-                - Everything that I cared about was threatened.
-                - Everything that I cared about was destroyed.
-                - I was given an offer that I couldn't refuse.
-                - I was selected by another adventurer to go on a journey.
-                - I was in the wrong place at the wrong time, and experienced something that I shouldn't have.
+                - Everything I cared about was threatened.
+                - Everything I cared about was destroyed.
+                - I was given an offer I couldn't refuse.
+                - I was selected by someone to go on a journey.
+                - I was in the wrong place at the wrong time.
                 - A magic item appeared out of nowhere and thrust me into a world of adventure.
     starting_equipment:
         -   Three gold per character level

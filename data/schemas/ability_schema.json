@@ -39,17 +39,11 @@
 			"maximum": 5
 		},
 		"duration": {
-				"anyOf": [
-				{
-					"type": "integer",
-					"minimum": 1
-				}, 
-				{
 					"type": "string",
-					"enum": ["concentration", "save", "instantaneous", "1 hour", "12 hours", "1 day", "infinite", "1 week", "5 minutes", 
-					          "until dispelled", "passive", "inherited"]
-				}
-			]
+					"enum": ["concentration", "save", "instantaneous", "infinite", 
+					          "until dispelled", "passive", "inherited", "1 Watch", "2 Watches", "3 Watches", "4 Watches", "5 Watches",
+							"6 Watches", "1 Dungeon Turn", "2 Dungeon Turns", "3 Dungeon Turns", "4 Dungeon Turns", "5 Dungeon Turns", "6 Dungeon Turns",
+							"1 Round", "2 Rounds", "3 Rounds"]
 		},
 		"attacks_made": {
 			"type": ["integer", "null"]
