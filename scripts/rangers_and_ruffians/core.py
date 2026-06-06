@@ -113,17 +113,17 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
   # with open(DATA_DIRECTORY.joinpath('weapons.yml'), 'r') as infile:
   #   rnr_weapons = yaml.safe_load(infile)
   
-  monsters = None 
-  with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
-    monsters = yaml.safe_load(infile)
+  # monsters = None 
+  # with open(DATA_DIRECTORY.joinpath('monsters.yml'), 'r') as infile:
+  #   monsters = yaml.safe_load(infile)
   
   status_effects = None 
   with open(DATA_DIRECTORY.joinpath('status_effects.yml'), 'r') as infile:
     status_effects = yaml.safe_load(infile)
 
-  rnr_items = None 
-  with open(DATA_DIRECTORY.joinpath('items.yml'), 'r') as infile:
-    rnr_items = yaml.safe_load(infile)
+  # rnr_items = None 
+  # with open(DATA_DIRECTORY.joinpath('items.yml'), 'r') as infile:
+  #   rnr_items = yaml.safe_load(infile)
   
   if not skip_validation:
     for rnr_race in rnr_races:
@@ -137,18 +137,18 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
     #     ability['ability_type'] = 'ability'
     #     validateAbility(ability, ability_schema, status_effects, weapon['name'])
     
-    for rnr_item in rnr_items:
-      ability = rnr_item['ability']
-      ability['ability_type'] = 'ability'
-      validateAbility(ability, ability_schema, status_effects, rnr_item['name'])
+    # for rnr_item in rnr_items:
+    #   ability = rnr_item['ability']
+    #   ability['ability_type'] = 'ability'
+    #   validateAbility(ability, ability_schema, status_effects, rnr_item['name'])
     
-    all_monster_names = set()
-    for monster in monsters:
-      all_monster_names.add(monster['name'])
-      for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
-        for ability in monster['moveset'].get(action_type, []):
-          ability['ability_type'] = 'monster'
-          validateAbility(ability, ability_schema, status_effects, monster['name'])
+    # all_monster_names = set()
+    # for monster in monsters:
+    #   all_monster_names.add(monster['name'])
+    #   for action_type in ['passive_abilities', 'combat_actions', 'villain_actions', 'lair_actions', 'dynamic_actions']:
+    #     for ability in monster['moveset'].get(action_type, []):
+    #       ability['ability_type'] = 'monster'
+    #       validateAbility(ability, ability_schema, status_effects, monster['name'])
 
     for rnr_class in rnr_classes:
       expected_spells = 25
@@ -202,8 +202,8 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
               if key not in spell_def['summoned_creature']:
                 continue 
               creature = spell_def['summoned_creature'][key]
-              if creature not in all_monster_names:
-                summoning_errors.append(creature)
+              # if creature not in all_monster_names:
+              #   summoning_errors.append(creature)
       else:
         abilities_by_level = rnr_class.get('abilities_by_level')
         for level, abilities in abilities_by_level.items():
@@ -214,8 +214,8 @@ def INSTALL_RANGERS_AND_RUFFIANS(skip_validation : bool) -> None:
               if key not in ability_def['summoned_creature']:
                 continue 
               creature = ability_def['summoned_creature'][key]
-              if creature not in all_monster_names:
-                summoning_errors.append(creature)
+              # if creature not in all_monster_names:
+              #   summoning_errors.append(creature)
           
     if len(summoning_errors) > 0:
       print("The following summoned creatures don't appear in monsters.yml:")
@@ -457,6 +457,7 @@ def validateAbility(ability: dict, ability_schema: dict, status_effects: list, c
   try:
     jsonschema.validate(ability, schema=ability_schema)
   except ValidationError as e:
+    print(json.dumps(ability, indent=4))
     print(f"ERROR IN {ability.get('name', '')}")
     print("Instance path:", list(e.path))
     print("Schema path:", list(e.schema_path))

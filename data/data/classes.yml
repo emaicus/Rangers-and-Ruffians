@@ -97,7 +97,7 @@
                 action_type: Offhand Action
                 type: utility
                 cost: 1
-                duration: 1 hour
+                duration: 1 Dungeon Turn
                 requirements:
                     movement: true 
                     verbal: true 
@@ -136,7 +136,7 @@
                 action_type: Offhand Action
                 type: debuff
                 cost: 2
-                duration: 1 day
+                duration: 6 Watches
                 requirements:
                     movement: false 
                     verbal: false 
@@ -184,7 +184,7 @@
                 action_type: Offhand Action
                 type: buff
                 cost: 2
-                duration: 5 minutes
+                duration: 1 Dungeon Turn
                 range: self 
                 requirements:
                     movement: false 
@@ -203,7 +203,8 @@
                 action_type: Offhand Action
                 type: summoning
                 cost: 1
-                duration: 1 hour
+                casting_time: 1 Dungeon Turn
+                duration: 6 Dungeon Turns
                 requirements:
                     movement: true 
                     verbal: true 
@@ -219,26 +220,26 @@
                 action_type: Offhand Action
                 type: utility
                 cost: 1
-                duration: 1 day
-                casting_time: 10 Minutes
+                duration: 6 Watches
+                casting_time: 1 Dungeon Turn
                 requirements:
                     movement: true 
                     verbal: true
                 description: "When you learn this spell, a key appears in your hand.
-                        Any time that you wish, you may cast it to cause a matching door to appear. Within, 
+                        When you cast this spell, a matching door to appears. Within
                         is a lavish mansion, stocked with food and drink and manned by 100 servants.
                         You may design the mansion to have rooms that suit the needs
-                        of your party
-                        Nothing that originates in the mansion may leave, but what is brought in may stay.
-                        Once a door to the mansion is used, it lingers
-                        for ten minutes. During that time, anyone that finds it may attempt to break in."
+                        of your party.
+                        Nothing that originates in the mansion may leave, nor can anything brought in stay past the end of its casting.
+                        Doors linger
+                        for 1 Dungeon Turn. During that time, anyone that finds them may attempt to break in."
                 range: 300
             -   name: Summon Bleck # A tier
                 action_type: Action
                 type: utility
                 cost: 3
-                duration: 1 hour
-                casting_time: 10 Minutes
+                duration: 3 Dungeon Turns
+                casting_time: 1 Dungeon Turn
                 range: touch
                 requirements:
                     movement: true 
@@ -260,7 +261,7 @@
                 duration: infinite
                 range: self
                 radius: infinite
-                casting_time: 1 day
+                casting_time: 6 Watches
                 requirements:
                     verbal: true 
                     movement: true 
@@ -363,7 +364,7 @@
                 action_type: Offhand Action
                 type: healing
                 cost: 1
-                duration: 1
+                duration: instantaneous
                 description: "Your voice fills the air in a soothing melody, and a gentle wave of magic washes over your target. 
                             Their wounds begin to heal over and their vitality is restored."
                 requirements:
@@ -464,7 +465,7 @@
                 action_type: Offhand Action
                 type: buff
                 cost: 1
-                duration: 3
+                duration: 3 Rounds
                 range: 60
                 requirements:
                     movement: false 
@@ -573,7 +574,7 @@
                 action_type: "Offhand Action"
                 cost: 0
                 type: debuff 
-                duration: 1 
+                duration: instantaneous
                 range: "touch" 
                 description: "Smash into an enemy with your Offhand and attempt to knock them off balance."
                 damage_scaling:
@@ -724,9 +725,9 @@
                 action_type: Offhand Action
                 cost: 0
                 type: combat option 
-                duration: 1
+                duration: instantaneous
                 range: inherited
-                description: "Take up a defensive position as enemies circle. The next enemy who attacks you does so at disadvantage.
+                description: "Take up a defensive position as enemies circle. The next enemy who attacks you before your next turn does so at disadvantage.
                             You may immediately make a standard attack as a free action."
     abilities_by_level:
         level_1:
@@ -797,7 +798,7 @@
                 type: aoe buff 
                 range: self 
                 radius: 30
-                duration: 5
+                duration: 1 Dungeon Turn
                 description: "Your presence soothes your allies, inspiring them and guarding them against fear."
                 effect:
                     type: buff 
@@ -930,7 +931,7 @@
                 type: buff
                 cost: 0
                 range: self 
-                duration: 1
+                duration: instantaneous
                 ability_modified: standard attack
                 description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
                 effect: 
@@ -980,7 +981,7 @@
                 action_type: Passive
                 type: utility
                 range: 15
-                duration: 1
+                duration: instantaneous
                 cost: 1
                 description: "Use your strength to blast through an obstacle that is one foot thick or less, to climb solid stone,
                             or to leap a treacherous gap. Move up to the ability's range unimpeded. You are still vulnerable to exposed attacks."
@@ -1045,11 +1046,11 @@
                 type: debuff
                 cost: 1
                 range: 30 
-                duration: 1
+                duration: instantaneous
                 description: "Use your intimidating presence to force an enemy to do your will."
                 effect:
                     type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they are Controlled for one turn or must answer three of your questions truthfully."
+                    description: "Make a Strength Resistance Check. On success, they are Controlled until the end of their next turn or must answer three of your questions truthfully."
                     conditions:
                         - controlled 
                     save: null
@@ -1073,7 +1074,7 @@
                 cost: 1
                 type: utility 
                 range: self
-                duration: 1
+                duration: instantaneous
                 description: "Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent
                             of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur.
                             Follow the rules for informal magic, but always spend an action point."
@@ -1085,7 +1086,7 @@
                 type: buff
                 cost: 1
                 range: self
-                duration: 3
+                duration: 3 Rounds
                 type: buff
                 description: "Rage threatens to consume you."
                 effect:
@@ -1094,13 +1095,13 @@
                     conditions:
                         - resistant
                     save: null
-                upcast: "Optionally, you may choose to make Berserk last for ten minutes, however, when it ends you suffer one level of Exhaustion."
+                upcast: "Optionally, you may choose to make Berserk last for one Dungeon Turn, however, when it ends you suffer one level of Exhaustion."
             -   name: Single Out
                 action_type: Offhand Action
                 type: debuff
                 cost: 1
                 range: 60
-                duration: 10
+                duration: 1 Dungeon Turn
                 description: "Survey the battlefield for a foe worthy of your rage."
                 effect: 
                     type: debuff 
@@ -1281,7 +1282,7 @@
                 action_type: "Free Action"
                 type: aoe buff 
                 cost: 1
-                duration: 1 hour 
+                duration: 6 Dungeon Turns 
                 range: self 
                 radius: 30 
                 description: "Your stealth is so great that you are able to make up for your parties' shortcomings." 
@@ -1299,7 +1300,7 @@
                 type: buff
                 cost: 0
                 range: self 
-                duration: 1
+                duration: 1 Round
                 ability_modified: standard attack
                 description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
                 effect: 
@@ -1336,7 +1337,7 @@
                 type: combat option 
                 cost: 1
                 range: inherited
-                duration: 1
+                duration: instantaneous
                 ability_modified: martial attack 
                 description: "As you stab an enemy with one hand you rob them blind with the other."
                 effect:
@@ -1371,8 +1372,8 @@
                 cost: 1
                 type: buff 
                 range: self 
-                duration: 1
-                description: "Focus your attention to vanish into the shadows. You gain advantage on checks made to hide or sneak for the next 3 rooms or until you make an attack."
+                duration: 3 Dungeon Turns
+                description: "Focus your attention to vanish into the shadows. You gain advantage on checks made to hide or sneak for the next 3 Dungeon Turns or until you make an attack."
         level_3:
             -   name: Strike From The Shadows
                 action_type: "modifies_ability"
@@ -1462,7 +1463,7 @@
                 cost: 0
                 type: buff 
                 range: self 
-                duration: 1
+                duration: instantaneous
                 description: "As combat is joined, you burst into action. On the first round of combat, you are able to take two turns."
 -   name: Ranger
     class_type: Striker
@@ -1532,7 +1533,7 @@
                 cost: 0
                 type: buff
                 passive_damage_source: true
-                duration: 1
+                duration: instantaneous
                 range: self 
                 ability_modified: next attack 
                 description: "Carefully line up your next shot."
@@ -1576,7 +1577,7 @@
                 action_type: Offhand Action
                 type: combat option
                 cost: 0
-                duration: 1 hour
+                duration: 6 Dungeon Turns
                 range: 30
                 description: "Spend a moment watching an enemy or make an Intelligence Check when you find tracks or sign of a creature's passing. 
                                 Learn one fact of your choice about the creature, for example, what type of creature it was or its Resistance is."
@@ -1656,7 +1657,7 @@
                 action_type: Offhand Action
                 type: combat option
                 range: 60
-                duration: 1
+                duration: 1 Round
                 cost: 1 
                 description: "As the final action on your turn, lay down covering fire across a 15x60ft line before you."
                 effect:
@@ -1770,7 +1771,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: 3
+                duration: 1 Dungeon Turn
                 range: 30
                 requirements:
                     movement: true 
@@ -1787,7 +1788,7 @@
                 type: utility
                 cost: 1
                 range: touch
-                duration: 5 
+                duration: 1 Dungeon Turn
                 requirements:
                     verbal: true 
                     movement: true 
@@ -1834,7 +1835,7 @@
                 action_type: "Offhand Action"
                 type: aoe debuff
                 cost: 1
-                duration: concentration
+                duration: 6 Dungeon Turns
                 range: touch
                 radius: 50
                 requirements:
@@ -1869,6 +1870,7 @@
                 cost: 1
                 range: infinite
                 duration: concentration
+                casting_time: 1 Dungeon Turn
                 requirements:
                     verbal: true
                     movement: true 
@@ -1878,16 +1880,15 @@
                 description: "You press a focusing gem against a reflective surface and speak the 
                     primordial word for 'reveal,' allowing you to view and hear
                     a person or place you've seen as if through a one way window. The spell cannot
-                    penetrate lead or protective spells. Upon casting, you may alert your target. They may spend an action point to
-                    tether the spell to a nearby reflective surface if they are a mage."
-                upcast: "If you target an unwilling creature, you must make an Inner Fire Resistance Check. On failure, they know that someone tried to view them." 
+                    penetrate lead or protective spells. If your target is a mage, you may alter them, allowing them to
+                    tether the spell to a nearby reflective surface. If you target an unwilling creature, you must make an Inner Fire Resistance Check. On failure, they know that someone tried to view them." 
             -   name: Town Portal
                 action_type: "Ritual"
                 type: utility
                 cost: 2
                 duration: instantaneous
                 range: touch
-                casting_time: 10 minutes
+                casting_time: 1 Dungeon Turn
                 requirements:
                     movement: true
                     verbal: true
@@ -1901,7 +1902,7 @@
                 type: buff
                 cost: 1
                 range: touch
-                duration: 1 hour
+                duration: 6 Dungeon Turns
                 requirements:
                     verbal: true
                     movement: true
@@ -1921,7 +1922,7 @@
                     verbal: true 
                     components:
                         - A stick
-                duration: 1 day
+                duration: 6 Watches
                 range: touch
                 description: "Lay your hands on a willing creature and imbue them with magic of recall.
                             One time over the spell's duration, you are able to instantly teleport them to a space 
@@ -1934,7 +1935,7 @@
                 cost: 3
                 range: touch 
                 duration: instantaneous
-                casting_time: 6 hours
+                casting_time: 2 Watches
                 requirements:
                     movement: true
                     verbal: true
@@ -1955,7 +1956,7 @@
                 cost: 3
                 range: infinite 
                 duration: concentration 
-                casting_time: 10 minutes
+                casting_time: 1 Dungeon Turn
                 requirements: 
                     movement: false 
                     verbal: false 
@@ -2011,7 +2012,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: 3
+                duration: 1 Dungeon Turn
                 range: touch
                 requirements:
                     movement: true 
@@ -2068,8 +2069,8 @@
                 description: "Your hands glow as you magically mend small dents, dings, scratches, and tears on an item you are touching. 
                                 You may also use this spell to render poisons innocuous, to
                                     heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour."
-                upcast: "You may spend an action point on this spell to increase it's power, mending larger items such as broken walls, wheels, or armor. In a similar manner, 
-                            you may spend an action point to remove a status effect from an ally or to render a curse innocuous for one day."
+                upcast: "You may spend an action point on this spell to increase its power, mending larger items such as broken walls, wheels, or armor, or to
+                            remove a status effect from an ally or to render a curse innocuous for one day. When you do so, the spell takes 1 Dungeon Turn to cast."
         tier_2: # 10 / 10
             -   name: Guardian Blade
                 action_type: "Action"
@@ -2148,7 +2149,8 @@
                 action_type: "Offhand Action"
                 type: utility
                 cost: 1
-                duration: 1
+                duration: instantaneous
+                casting_time: 1 Dungeon Turn
                 range: touch
                 requirements:
                     verbal: true 
@@ -2183,7 +2185,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 2
-                duration: 1
+                duration: 1 Round
                 range: touch
                 requirements:
                     movement: true 
@@ -2304,7 +2306,7 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: 1 hour
+                duration: 3 Dungeon Turns
                 range: 30
                 requirements:
                     movement: true 
@@ -2324,7 +2326,7 @@
                 action_type: Action
                 type: summoning
                 cost: 2
-                casting_time: 10 minutes
+                casting_time: 1 Dungeon Turn
                 duration: infinite
                 range: 30
                 requirements: 
@@ -2426,6 +2428,7 @@
                 cost: 2
                 duration: concentration
                 range: 30
+                casting_time: 1 Dungeon Turn
                 requirements:
                     movement: true
                     verbal: true
@@ -2444,7 +2447,7 @@
                     verbal: true 
                     components:
                         - A gram of Osmium (100 gold)
-                duration: 3
+                duration: 3 Rounds
                 range: 90
                 radius: 100
                 description: "There is a scream of air as a black hole appears at a point of your choosing, 
@@ -2465,7 +2468,7 @@
                 action_type: "Action"
                 type: aoe debuff
                 cost: 3
-                duration: 3
+                duration: 3 Rounds
                 range: self
                 radius: 100
                 requirements:
@@ -2533,11 +2536,12 @@
                         - hindered
                     save: null
             -   name: Arcane Armor
-                action_type: "Offhand Action"
+                action_type: "Action"
                 type: buff
                 cost: 1
                 range: self
-                duration: 5
+                casting_time: 1 Dungeon Turn
+                duration: 3 Dungeon Turns
                 requirements:
                     verbal: true
                     movement: true
@@ -2550,6 +2554,7 @@
                     conditions:
                         - guarded
                     save: null
+                upcast: You may spend an additional action point on this spell to cast it instantaneously.
             -   name: Eat Slugs
                 action_type: "Offhand Action"
                 type: debuff
@@ -2571,7 +2576,7 @@
             -   name: Candlelight # A tier
                 action_type: "Offhand Action"
                 type: utility
-                cost: 0
+                cost: 1
                 duration: concentration
                 range: 15
                 requirements:
@@ -2588,7 +2593,7 @@
                 #     type: utility
                 #     cost: 1
                 #     range: touch
-                #     duration: 1 day
+                #     duration: 6 Watches
                 #     requirements:
                 #         movement: true
                 #         verbal: true 
@@ -2673,7 +2678,8 @@
                 action_type: "Offhand Action"
                 type: utility
                 cost: 1
-                duration: 1
+                duration: instantaneous
+                casting_time: 1 Dungeon Turn
                 range: touch
                 requirements:
                     verbal: true 
@@ -2729,507 +2735,510 @@
                     damage_type: arcane
                     multi_attack: 3
                     tier_3: "4d6"    
--   name: Warlock
-    class_type: Battle Mage
-    # expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
-    #             trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
-    #             or the motives of a villain."
-    health_schedule: 
-        starting_health: 6
-        standard_level_health_bonus: 2
-        tier_increase_health_bonus: 2
-    recommended_stats:
-        Charisma: 1
-        Dexterity: -1
-        Inner_Fire: 2
-        Intelligence: 0
-        Strength: -1
-    handbook:
-            -   title: Intro 
-                display_title: false
-                text: "Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force.
-                      This being grants them incredible magics, but at a cost; every pact has it's price. This price be anything
-                      from gathering information for your patron to performing tasks for them. Regardless, your pact and your 
-                      patron will greatly color your adventuring career."
-            -   title: When Adventuring
-                display_title: true 
-                text: "Warlocks have access to a vast array of useful magics which can aid any adventuring party.
-                            In particular, Warlocks are masters of gathering information; spells like Eyes of Uriel and
-                            Echoes of the Past allow you to view the world around you in a way no one else can. Like other casters, Warlocks
-                            have low health, and often stand back and watch as other party members throw themselves into harm's way."
-            -   title: When Socializing
-                display_title: true 
-                text: "Known for their Charisma, a warlock can easily become the face of an adventuring party. And when 
-                            force of personality fails, magic can intervene. The powerful Convince and Mask of Shadows spells
-                            can be used to impersonate enemies or magically manipulate particularly troublesome individuals."
-            -   title: When in Combat
-                display_title: true 
-                text: "Warlocks shine in combat with one of the most aggressive spell lists in the realms. Elditch Blast,
-                            targets single foes, Tide of Shadow summons a cone of deadly dark, and Cthulian Tentacles
-                            causes eldritch protrusions to grasp at multiple foes."
-    weapon_training:
-        - Focuses
-    # Damage Strategy 
-    # Battle caster. High DPR, good debuff, counters but no buffs.
-    discoverable_abilities:
-        tier_1:
-            -   name: Wilting Touch # Warlock 
-                action_type: Action
-                type: damage
-                cost: 1
-                range: touch
-                requirements: 
-                    verbal: true
-                    movement: true 
-                duration: 1
-                description: "Black veins creep down your arms as you grip an enemy and channel
-                                powerful necrotic energy into them."
-                effect:
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they begin Rotting."
-                    conditions:
-                        - rotting
-                    save: null
-                damage_scaling:
-                    damage_type: necrotic
-                    tier_1: 2d8 #(17.5 + 3.5f + 3inf = 24)
-                    tier_2: 2d10 #(21 + 7f + 4inf = 32)
-                    tier_3: 2d12 #(24.5 + 10.5f + 5 inf = 40)
-            -   name: Shadow Ward # Debuff - Enemies that come within 10ft
-                action_type: Offhand Action
-                type: aoe debuff
-                cost: 1
-                duration: 3
-                range: self
-                requirements: 
-                    verbal: true
-                    movement: true 
-                radius: 10
-                description: "Create a shroud of inky darkness around yourself." 
-                effect:
-                    type: debuff
-                    description: "Allies can see through, but enemies are considered to be in magical darkness and are Blinded.
-                                Additionally, you are resistant to targeted ranged attacks while within the darkness."
-                    conditions: 
-                        - blinded
-                        - resistant
-                    save: null   
-            -   name: Echoes of the Past # Utility - See what happened in a location a number of minutes ago equal to 10 * INF or 1 hour * INF if upcast
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: 1
-                range: self
-                requirements: 
-                    verbal: true
-                    movement: true 
-                radius: 30
-                description: "Echoes and specters dance in your vision as you reach into the past. For the duration, you are able to see what happened within the spell's
-                            radius over the past day. However, you cannot see everyone who was present. Roll 1d6 to determine the 
-                            number of people you are able to see."
-                upcast: "You may spend an additional action point to look back within the past week."
-            -   name: Telepathy
-                action_type: Offhand Action
-                type: utility
-                cost: 0
-                range: 60
-                duration: passive
-                requirements: 
-                    verbal: false
-                    movement: false 
-                description: "You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, 
-                    allowing for two-way communication. For non-willing participants, 
-                    you are able to glean only surface level detail unless you wish 
-                    to probe deeper. To do so, you must make an Inner Fire Resistance Check. On success, you are able to glean something of their 
-                    inner thoughts, but they know that their mind has been read."
-            -   name: Embed Eye # Utility
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: "1 day"
-                range: touch
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Embed a magical eye in a non-living material. The eye has 1 hit point, but is ethereal. While the eye is closed, it is invisible. For the spell's duration, you can concentrate to cause the eye to open and to see through it."
-                upcast: "You can spend one additional action point to cause the eye to last for 1 week, or two to make it last for one month." 
-        tier_2:
-            -   name: Tethered Minds # Utility
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: 1 hour
-                range: 15
-                radius: infinite
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Tether the minds of up to eight individuals. For the spell's duration, they are able to speak telepathically regardless of distance. The effects of the spell end if a creature enters another realm."
-                upcast: You may spend an additional action point on this spell to increase its duration to 24 hours.
-            -   name: Shared Fate # Debuff
-                action_type: Offhand Action
-                type: debuff
-                cost: 1
-                range: 30
-                requirements: 
-                    verbal: true
-                    movement: true 
-                duration: 5
-                description: "Tether two creatures together."
-                effect:
-                    type: debuff
-                    description: "If one dies, make an Inner Fire Resistance Check against the other.
-                                On success, they take an amount of damage equal to the killing blow or half as much on failure.
-                                The creatures must be within one hundred feet of each other, and the damage cannot exceed twice the maximum hit points of the creature that perished."
-                    conditions:
-                        - custom
-                    save: null
-            -   name: Rebuke Spell # Counterspell - Punish enemy for successful spell casting
-                action_type: Reaction
-                type: utility
-                cost: 2
-                duration: instantaneous
-                range: 60
-                requirements: 
-                    verbal: false
-                    movement: true 
-                description: "When an enemy successfully casts a spell, make an Inner Fire Resistance Check. On success, they also suffer the effects of their spell 
-                            if it was negative, or you also gain the benefits if it was positive."
-            -   name: Lift 
-                action_type: Offhand Action
-                type: debuff 
-                cost: 2 
-                range: 30
-                duration: concentration
-                requirements: 
-                    verbal: false
-                    movement: false 
-                description: "As you hold your hands aloft, dark energy begins to surround three of your foes."
-                effect:
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they are hoisted ten feet in the air and Grappled."
-                    conditions: 
-                        - grappled
-                    save: null
-            -   name: Hurl Through Hell # Warlock
-                action_type: Action
-                type: damage
-                cost: 2
-                duration: "instantaneous"
-                range: 30
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss."
-                effect: 
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
-                                    On failure, they take half damage and are not sucked into the portal.
-                                    When they return, they reappear and slam to the earth, falling prone and taking the spell's damage."
-                    conditions: 
-                        - prone
-                    save: null
-                damage_scaling:
-                    damage_type: fire
-                    #tier_1: 4d6 #(14 + 3.5f + 3inf = 20.5)
-                    tier_2: 3d10 #(17.5 + 7f + 4inf = 28.5)
-                    tier_3: 3d12 #(21 + 10.5f + 5 inf = 36.5)
-        tier_3:
-            -   name: Torugar the Many Tongued Demon # Warlock
-                action_type: Action
-                type: aoe damage
-                cost: 3
-                duration: 3
-                range: 90
-                requirements:
-                    verbal: true 
-                    movement: true
-                    components: 
-                        - Demonic Eye (200gp)
-                radius: 1000
-                damage_scaling:
-                    damage_type: blunt
-                    scaled_by:
-                        weapon: false
-                    tier_3: "4d6" #(17.5 + 5inf = 22.5 per turn.)
-                description: "A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss.
-                    Each turn, 1d6 tongues (max 6) writhe forth to grapple creatures nearby. 
-                    For grapples, make an Inner Fire Resistance Check. 
-                    Torugar does not distinguish friend from foe.
-                    If a tongue takes 25 
-                    damage, it lets go and retreats.
-                    On their turn, grappled creatures take damage and are pulled 
-                    2d4 spaces towards the pit."
-                effect:
-                    type: debuff 
-                    description: "Anyone who enters the pit is transported to 
-                                Torugar's Realm."
-                    conditions:
-                        - custom
-                    save: null
-            -   name: Reclaim Soul # Reach across the divide to resurrect someone. Battle first?
-                action_type: Ritual
-                type: utility
-                cost: 3
-                duration: infinite
-                range: touch
-                requirements:
-                    verbal: true 
-                    movement: true 
-                    components:
-                        - A jeweled tuning fork (500 gp)
-                        - Greater Soul Gem (1000 gp)
-                casting_time: 1 hour
-                description: "Prepare the body of someone who has died  recently. Scrawl 
-                            runes on their flesh to mark them as a conduit to the realm beyond.
-                            Find the location of their soul using a tuning fork. Once you've found it, 
-                            place a soul gem on their chest, and reach beyond the divide. 
-                            Make an Inner Fire Check. On a success, reclaim the target's 
-                            soul and return them to life. On failure, some parts are missing, or 
-                            something else returns and takes up residence in 
-                            the body."
-                upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
-                        to to grant you +2 on your check."
-            -   name: Astral Prison
-                action_type: Offhand Action
-                type: utility
-                duration: until dispelled
-                cost: 5
-                casting_time: instantaneous 
-                radius: 100
-                range: 100
-                requirements: 
-                    movement: true 
-                    verbal: true 
-                    components:
-                        - void prism (10,000 gold)
-                description: "Using a void prism,
-                            create a pocket dimension which overlaps the material realm and attempt 
-                            to banish a creature to it. 
-                            You must achieve three successful
-                            Inner Fire Resistance Checks before accumulating three failures. You may make such 
-                            a check as an Offhand Action each 
-                            turn until you have succeeded, failed, or the creature has left the spell's radius.
-                            On success,
-                            speak an omen which will occur in this age.
-                            The creature is bound until it is freed 
-                            or the omen occurs. It cannot free itself."
-    spells:
-        tier_1: # 10/10
-            -   name: Death Coil # Warlock
-                action_type: Action
-                type: damage
-                cost: 0
-                duration: "instantaneous"
-                range: 60
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "With a howl like the damned, a screaming bolt of green energy tears forth, decaying your enemies where it strikes.
-                            If you roll maximum damage on this spell, knock your opponent back 15 feet."
-                damage_scaling: 
-                    damage_type: "necrotic"
-                    tier_1: 1d8 #(4.5 + 3.5f = 8)
-                    tier_2: 1d10 #(9 + 7f = 16)
-                    tier_3: 1d12 #(13.5 + 10.5f = 24)
-            -   name: Tide of Shadow #Warlock
-                action_type: Action
-                type: aoe damage
-                cost: 1
-                duration: "instantaneous"
-                range: 15 
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Swirling black smoke billows in a cloud before you, damaging enemies in a cone."
-                effect: 
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they are Blinded until the end of their next turn."
-                    conditions:
-                        - blinded
-                    save: null
-                damage_scaling: 
-                    damage_type: necrotic
-                    damage_shape: cone
-                    tier_1: 1d8 #
-                    tier_2: 1d10 # 
-                    tier_3: 1d12 # 
-            -   name: Surrogate
-                action_type: Reaction
-                type: debuff
-                cost: 1
-                duration: instantaneous
-                requirements:
-                    verbal: false
-                    movement: true
-                range: 15
-                description: "As an enemy attack hurtles towards you, attempt to compel someone block it."
-                effect:
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check against a hostile creature within range. On success, they dive in front of you to save you from an attack."
-                    conditions: 
-                        - custom
-                    save: null
-            -   name: Mental Assault # Debuff
-                action_type: Offhand Action
-                type: debuff
-                cost: 0
-                duration: concentration
-                range: 60
-                requirements: 
-                    verbal: false
-                    movement: false 
-                description: "Hideous and discordant voices fill your target's ears."
-                effect:
-                    description: "Each turn, make an Inner Fire Resistance Check. On success, they are Staggered."
-                    type: debuff
-                    conditions:
-                        - staggered
-                    save: null
-            -   name: Curse 
-                action_type: Offhand Action
-                type: debuff
-                cost: 1
-                duration: concentration
-                range: 60
-                passive_damage_source: true 
-                damage_scaling: 
-                    damage_type: psychic 
-                    all_tiers: 1d4
-                requirements: 
-                    verbal: true
-                    movement: false 
-                description: "Muttering an oath, you place a curse upon a creature of your choosing. Whenever you attack that creature,
-                        deal bonus damage. If the creature dies, you may immediately move the curse to another creature within
-                        range."
-        tier_2: # 10/10
-            -   name: Murder of Crows # Warlock 
-                action_type: Action
-                type: aoe damage
-                cost: 2
-                duration: 3
-                range: 90
-                requirements: 
-                    verbal: true
-                    movement: true 
-                radius: 15
-                description: "With a rush of wind, a murder of crows streaks past you and to a location of your choice,
-                                dealing damage as it goes. For the spell's duration, any enemy who begins their turn within the swarm
-                                or who passes through it takes damage. As an Offhand Action on your turn, you may command the murder
-                                of crows to move up to 30 feet. A creature may be
-                                harmed at most one time by a swarm of crows per round of combat."
-                damage_scaling:
-                    damage_type: piercing
-                    tier_2: 2d4 #(10.5 + 4inf x 2 = 14.5 each x2 = 29 total)
-                    tier_3: 2d6 #(14 + 5inf x 2 = 19 each x2 = 38 total)
-            -   name: Cthulian Tentacles # Warlock
-                action_type: Action
-                type: damage
-                cost: 2
-                duration: 3
-                range: 60
-                requirements: 
-                    verbal: true
-                    movement: true
-                description: "At your command, shadows coalesce into hideous tentacles which burst from the ground and converge on two of your foes."
-                damage_scaling: 
-                    damage_type: blunt
-                    multi_attack: 2
-                    tier_2: 2d10 #(14 + 7f + 4inf = 25)
-                    tier_3: 2d12 #(17.5 + 10.5f + 5 inf = 33)
-                effect:
-                    description: "Make an Inner Fire Resistance Check. On success, they are Grappled, and take damage at the start of each turn."
-                    conditions:
-                        - grappled
-                    type: debuff
-                    save: null
-                upcast: You may spend an additional action point to create a third tentacle.
-            -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: 1
-                range: 30
-                requirements: 
-                    verbal: false
-                    movement: true 
-                description: "Fade into the darkness and immediately re-appear within a shadow in the spell's range. Both the start and destination of this spell must be in partial darkness."
-                upcast: "You may spend an additional action point on this spell to increase its range to 100ft."
-            -   name: Eyes of Uriel # Buff - Floating eyes surround you dealing damage and taking hits
-                action_type: Offhand Action
-                type: summoning
-                cost: 2
-                duration: "1 hour"
-                range: touch
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "1d4+1 levitating eyes open in the air behind you.
-                                Each is the size of a balled fist, has 1hp and moves 15ft per turn.
-                                If you concentrate, you can see through the eyes. When the eyes close, they
-                                become invisible."
-                effect:
-                    type: buff
-                    description: "If an eye is within fifteen feet of an attack, you may use your reaction to cause
-                                    it to sacrifice itself and become the attack's target instead."
-                    conditions:
-                        - ethereal
-                    save: null
-            -   name: Armor of Lucien
-                action_type: Offhand Action
-                type: damage
-                cost: 2
-                duration: "1 hour"
-                range: self
-                requirements: 
-                    verbal: true
-                    movement: true 
-                damage_scaling:
-                    damage_type: radiant
-                    tier_2: "3d6"
-                    tier_3: "4d6"
-                description: "For a moment, radiant armor appears about you before fading from vision. 
-                            For the spell's duration, your gain an amount of temporary health equal to
-                            your inner fire times five. When the temporary health is gone
-                            or the spell's duration elapses, the spell ends. While the spell is active,
-                            anyone who strikes you takes damage."
-        tier_3: #5/5
-            -   name: Sorris' Decay #Warlock
-                action_type: Action
-                type: aoe damage
-                cost: 3
-                range: 60
-                duration: instantaneous
-                requirements:
-                    verbal: false 
-                    movement: true
-                damage_scaling:
-                    damage_type: necrotic
-                    damage_shape: cone
-                    tier_3: "6d6"
-                description: "Your outstretched hand beckons forth the essence of the abyss,
-                            a roiling tide of inky darkness. Like a dragon's breath, decay 
-                            bursts forward, washing over everyone in a cone before you."
-                effect: 
-                    type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they take full damage and begin to Rot.
-                                On failure, they take half damage."
-                    conditions: 
-                        - rotting
-                    save: null
-            -   name: Open Rift # Utility - Every turn something might come out. You can enter.
-                action_type: Offhand Action
-                type: utility
-                cost: 2
-                duration: 10
-                range: 90
-                requirements: 
-                    verbal: true
-                    movement: true 
-                description: "Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 1,000 miles. 
-                            If you have visited the location, you are able to open the rift with no trouble. If not, roll an intelligence check 
-                            with the Grand Poohbah to determine where the rift lets out. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift."     
-            
+# -   name: Warlock
+#     class_type: Battle Mage
+#     # expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
+#     #             trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
+#     #             or the motives of a villain."
+#     health_schedule: 
+#         starting_health: 6
+#         standard_level_health_bonus: 2
+#         tier_increase_health_bonus: 2
+#     recommended_stats:
+#         Charisma: 1
+#         Dexterity: -1
+#         Inner_Fire: 2
+#         Intelligence: 0
+#         Strength: -1
+#     handbook:
+#             -   title: Intro 
+#                 display_title: false
+#                 text: "Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force.
+#                       This being grants them incredible magics, but at a cost; every pact has it's price. This price be anything
+#                       from gathering information for your patron to performing tasks for them. Regardless, your pact and your 
+#                       patron will greatly color your adventuring career."
+#             -   title: When Adventuring
+#                 display_title: true 
+#                 text: "Warlocks have access to a vast array of useful magics which can aid any adventuring party.
+#                             In particular, Warlocks are masters of gathering information; spells like Eyes of Uriel and
+#                             Echoes of the Past allow you to view the world around you in a way no one else can. Like other casters, Warlocks
+#                             have low health, and often stand back and watch as other party members throw themselves into harm's way."
+#             -   title: When Socializing
+#                 display_title: true 
+#                 text: "Known for their Charisma, a warlock can easily become the face of an adventuring party. And when 
+#                             force of personality fails, magic can intervene. The powerful Convince and Mask of Shadows spells
+#                             can be used to impersonate enemies or magically manipulate particularly troublesome individuals."
+#             -   title: When in Combat
+#                 display_title: true 
+#                 text: "Warlocks shine in combat with one of the most aggressive spell lists in the realms. Elditch Blast,
+#                             targets single foes, Tide of Shadow summons a cone of deadly dark, and Cthulian Tentacles
+#                             causes eldritch protrusions to grasp at multiple foes."
+#     weapon_training:
+#         - Focuses
+#     # Damage Strategy 
+#     # Battle caster. High DPR, good debuff, counters but no buffs.
+#     discoverable_abilities:
+#         tier_1:
+#             -   name: Wilting Touch # Warlock 
+#                 action_type: Action
+#                 type: damage
+#                 cost: 1
+#                 range: touch
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 duration: instantaneous
+#                 description: "Black veins creep down your arms as you grip an enemy and channel
+#                                 powerful necrotic energy into them."
+#                 effect:
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check. On success, they begin Rotting."
+#                     conditions:
+#                         - rotting
+#                     save: null
+#                 damage_scaling:
+#                     damage_type: necrotic
+#                     tier_1: 2d8 #(17.5 + 3.5f + 3inf = 24)
+#                     tier_2: 2d10 #(21 + 7f + 4inf = 32)
+#                     tier_3: 2d12 #(24.5 + 10.5f + 5 inf = 40)
+#             -   name: Shadow Ward # Debuff - Enemies that come within 10ft
+#                 action_type: Offhand Action
+#                 type: aoe debuff
+#                 cost: 1
+#                 duration: 3 Rounds
+#                 range: self
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 radius: 10
+#                 description: "Create a shroud of inky darkness around yourself." 
+#                 effect:
+#                     type: debuff
+#                     description: "Allies can see through, but enemies are considered to be in magical darkness and are Blinded.
+#                                 Additionally, you are resistant to targeted ranged attacks while within the darkness."
+#                     conditions: 
+#                         - blinded
+#                         - resistant
+#                     save: null   
+#             -   name: Echoes of the Past # Utility - See what happened in a location a number of minutes ago equal to 10 * INF or 1 hour * INF if upcast
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 1
+#                 duration: 1 Dungeon Turn
+#                 range: self
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 radius: 30
+#                 description: "Echoes and specters dance in your vision as you reach into the past. For the duration, you are able to see what happened within the spell's
+#                             radius over the past day. However, you cannot see everyone who was present. Roll 1d6 to determine the 
+#                             number of people you are able to see."
+#                 upcast: "You may spend an additional action point to look back within the past week."
+#             -   name: Telepathy
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 0
+#                 range: 60
+#                 duration: passive
+#                 requirements: 
+#                     verbal: false
+#                     movement: false 
+#                 description: "You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, 
+#                     allowing for two-way communication. For non-willing participants, 
+#                     you are able to glean only surface level detail unless you wish 
+#                     to probe deeper. To do so, you must make an Inner Fire Resistance Check. On success, you are able to glean something of their 
+#                     inner thoughts, but they know that their mind has been read."
+#             -   name: Embed Eye # Utility
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 1
+#                 casting_time: 1 Dungeon Turn
+#                 duration: 6 Watches
+#                 range: touch
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "Embed a magical eye in a non-living material. The eye has 1 hit point, but is ethereal. While the eye is closed, it is invisible. For the spell's duration, you can concentrate to cause the eye to open and to see through it."
+#                 upcast: "You can spend one additional action point to cause the eye to last for 1 week, or two to make it last for one month." 
+#         tier_2:
+#             -   name: Tethered Minds # Utility
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 1
+#                 casting_time: 1 Dungeon Turn
+#                 duration: 1 Watch
+#                 range: 15
+#                 radius: infinite
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "Tether the minds of up to eight individuals. For the spell's duration, they are able to speak telepathically regardless of distance. The effects of the spell end if a creature enters another realm."
+#                 upcast: You may spend an additional action point on this spell to increase its duration to 24 hours.
+#             -   name: Shared Fate # Debuff
+#                 action_type: Offhand Action
+#                 type: debuff
+#                 cost: 1
+#                 range: 30
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 duration: 3 Rounds
+#                 description: "Tether two creatures together."
+#                 effect:
+#                     type: debuff
+#                     description: "If one dies, make an Inner Fire Resistance Check against the other.
+#                                 On success, they take an amount of damage equal to the killing blow or half as much on failure.
+#                                 The creatures must be within one hundred feet of each other, and the damage cannot exceed twice the maximum hit points of the creature that perished."
+#                     conditions:
+#                         - custom
+#                     save: null
+#             -   name: Rebuke Spell # Counterspell - Punish enemy for successful spell casting
+#                 action_type: Reaction
+#                 type: utility
+#                 cost: 2
+#                 duration: instantaneous
+#                 range: 60
+#                 requirements: 
+#                     verbal: false
+#                     movement: true 
+#                 description: "When an enemy successfully casts a spell, make an Inner Fire Resistance Check. On success, they also suffer the effects of their spell 
+#                             if it was negative, or you also gain the benefits if it was positive."
+#             -   name: Lift 
+#                 action_type: Offhand Action
+#                 type: debuff 
+#                 cost: 2 
+#                 range: 30
+#                 duration: concentration
+#                 requirements: 
+#                     verbal: false
+#                     movement: false 
+#                 description: "As you hold your hands aloft, dark energy begins to surround three of your foes."
+#                 effect:
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check. On success, they are hoisted ten feet in the air and Grappled."
+#                     conditions: 
+#                         - grappled
+#                     save: null
+#             -   name: Hurl Through Hell # Warlock
+#                 action_type: Action
+#                 type: damage
+#                 cost: 2
+#                 duration: "instantaneous"
+#                 range: 30
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss."
+#                 effect: 
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
+#                                     On failure, they take half damage and are not sucked into the portal.
+#                                     When they return, they reappear and slam to the earth, falling prone and taking the spell's damage."
+#                     conditions: 
+#                         - prone
+#                     save: null
+#                 damage_scaling:
+#                     damage_type: fire
+#                     #tier_1: 4d6 #(14 + 3.5f + 3inf = 20.5)
+#                     tier_2: 3d10 #(17.5 + 7f + 4inf = 28.5)
+#                     tier_3: 3d12 #(21 + 10.5f + 5 inf = 36.5)
+#         tier_3:
+#             -   name: Torugar the Many Tongued Demon # Warlock
+#                 action_type: Action
+#                 type: aoe damage
+#                 cost: 3
+#                 duration: 3 Rounds
+#                 range: 90
+#                 requirements:
+#                     verbal: true 
+#                     movement: true
+#                     components: 
+#                         - Demonic Eye (200gp)
+#                 radius: 1000
+#                 damage_scaling:
+#                     damage_type: blunt
+#                     scaled_by:
+#                         weapon: false
+#                     tier_3: "4d6" #(17.5 + 5inf = 22.5 per turn.)
+#                 description: "A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss.
+#                     Each turn, 1d6 tongues (max 6) writhe forth to grapple creatures nearby. 
+#                     For grapples, make an Inner Fire Resistance Check. 
+#                     Torugar does not distinguish friend from foe.
+#                     If a tongue takes 25 
+#                     damage, it lets go and retreats.
+#                     On their turn, grappled creatures take damage and are pulled 
+#                     2d4 spaces towards the pit."
+#                 effect:
+#                     type: debuff 
+#                     description: "Anyone who enters the pit is transported to 
+#                                 Torugar's Realm."
+#                     conditions:
+#                         - custom
+#                     save: null
+#             -   name: Reclaim Soul # Reach across the divide to resurrect someone. Battle first?
+#                 action_type: Ritual
+#                 type: utility
+#                 cost: 3
+#                 duration: infinite
+#                 range: touch
+#                 requirements:
+#                     verbal: true 
+#                     movement: true 
+#                     components:
+#                         - A jeweled tuning fork (500 gp)
+#                         - Greater Soul Gem (1000 gp)
+#                 casting_time: 2 Watches
+#                 description: "Prepare the body of someone who has died  recently. Scrawl 
+#                             runes on their flesh to mark them as a conduit to the realm beyond.
+#                             Find the location of their soul using a tuning fork. Once you've found it, 
+#                             place a soul gem on their chest, and reach beyond the divide. 
+#                             Make an Inner Fire Check. On a success, reclaim the target's 
+#                             soul and return them to life. On failure, some parts are missing, or 
+#                             something else returns and takes up residence in 
+#                             the body."
+#                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
+#                         to to grant you +2 on your check."
+#             -   name: Astral Prison
+#                 action_type: Offhand Action
+#                 type: utility
+#                 duration: infinite
+#                 cost: 5
+#                 casting_time: instantaneous 
+#                 radius: 100
+#                 range: 100
+#                 requirements: 
+#                     movement: true 
+#                     verbal: true 
+#                     components:
+#                         - void prism (10,000 gold)
+#                 description: "Using a void prism,
+#                             create a pocket dimension which overlaps the material realm and attempt 
+#                             to banish a creature to it. 
+#                             You must achieve three successful
+#                             Inner Fire Resistance Checks before accumulating three failures. You may make such 
+#                             a check as an Offhand Action each 
+#                             turn until you have succeeded, failed, or the creature has left the spell's radius.
+#                             On success,
+#                             speak an omen which will occur in this age.
+#                             The creature is bound until it is freed 
+#                             or the omen occurs. It cannot free itself."
+#     spells:
+#         tier_1: # 10/10
+#             -   name: Death Coil # Warlock
+#                 action_type: Action
+#                 type: damage
+#                 cost: 0
+#                 duration: "instantaneous"
+#                 range: 60
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "With a howl like the damned, a screaming bolt of green energy tears forth, decaying your enemies where it strikes.
+#                             If you roll maximum damage on this spell, knock your opponent back 15 feet."
+#                 damage_scaling: 
+#                     damage_type: "necrotic"
+#                     tier_1: 1d8 #(4.5 + 3.5f = 8)
+#                     tier_2: 1d10 #(9 + 7f = 16)
+#                     tier_3: 1d12 #(13.5 + 10.5f = 24)
+#             -   name: Tide of Shadow #Warlock
+#                 action_type: Action
+#                 type: aoe damage
+#                 cost: 1
+#                 duration: "instantaneous"
+#                 range: 15 
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "Swirling black smoke billows in a cloud before you, damaging enemies in a cone."
+#                 effect: 
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check. On success, they are Blinded until the end of their next turn."
+#                     conditions:
+#                         - blinded
+#                     save: null
+#                 damage_scaling: 
+#                     damage_type: necrotic
+#                     damage_shape: cone
+#                     tier_1: 1d8 #
+#                     tier_2: 1d10 # 
+#                     tier_3: 1d12 # 
+#             -   name: Surrogate
+#                 action_type: Reaction
+#                 type: debuff
+#                 cost: 1
+#                 duration: instantaneous
+#                 requirements:
+#                     verbal: false
+#                     movement: true
+#                 range: 15
+#                 description: "As an enemy attack hurtles towards you, attempt to compel someone block it."
+#                 effect:
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check against a hostile creature within range. On success, they dive in front of you to save you from an attack."
+#                     conditions: 
+#                         - custom
+#                     save: null
+#             -   name: Mental Assault # Debuff
+#                 action_type: Offhand Action
+#                 type: debuff
+#                 cost: 0
+#                 duration: concentration
+#                 range: 60
+#                 requirements: 
+#                     verbal: false
+#                     movement: false 
+#                 description: "Hideous and discordant voices fill your target's ears."
+#                 effect:
+#                     description: "Each turn, make an Inner Fire Resistance Check. On success, they are Staggered."
+#                     type: debuff
+#                     conditions:
+#                         - staggered
+#                     save: null
+#             -   name: Curse 
+#                 action_type: Offhand Action
+#                 type: debuff
+#                 cost: 1
+#                 duration: concentration
+#                 range: 60
+#                 passive_damage_source: true 
+#                 damage_scaling: 
+#                     damage_type: psychic 
+#                     all_tiers: 1d4
+#                 requirements: 
+#                     verbal: true
+#                     movement: false 
+#                 description: "Muttering an oath, you place a curse upon a creature of your choosing. Whenever you attack that creature,
+#                         deal bonus damage. If the creature dies, you may immediately move the curse to another creature within
+#                         range."
+#         tier_2: # 10/10
+#             -   name: Murder of Crows # Warlock 
+#                 action_type: Action
+#                 type: aoe damage
+#                 cost: 2
+#                 duration: 3 Rounds
+#                 range: 90
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 radius: 15
+#                 description: "With a rush of wind, a murder of crows streaks past you and to a location of your choice,
+#                                 dealing damage as it goes. For the spell's duration, any enemy who begins their turn within the swarm
+#                                 or who passes through it takes damage. As an Offhand Action on your turn, you may command the murder
+#                                 of crows to move up to 30 feet. A creature may be
+#                                 harmed at most one time by a swarm of crows per round of combat."
+#                 damage_scaling:
+#                     damage_type: piercing
+#                     tier_2: 2d4 #(10.5 + 4inf x 2 = 14.5 each x2 = 29 total)
+#                     tier_3: 2d6 #(14 + 5inf x 2 = 19 each x2 = 38 total)
+#             -   name: Cthulian Tentacles # Warlock
+#                 action_type: Action
+#                 type: damage
+#                 cost: 2
+#                 duration: 3 Rounds
+#                 range: 60
+#                 requirements: 
+#                     verbal: true
+#                     movement: true
+#                 description: "At your command, shadows coalesce into hideous tentacles which burst from the ground and converge on two of your foes."
+#                 damage_scaling: 
+#                     damage_type: blunt
+#                     multi_attack: 2
+#                     tier_2: 2d10 #(14 + 7f + 4inf = 25)
+#                     tier_3: 2d12 #(17.5 + 10.5f + 5 inf = 33)
+#                 effect:
+#                     description: "Make an Inner Fire Resistance Check. On success, they are Grappled, and take damage at the start of each turn."
+#                     conditions:
+#                         - grappled
+#                     type: debuff
+#                     save: null
+#                 upcast: You may spend an additional action point to create a third tentacle.
+#             -   name: Shadowstep # Mobility - Move through connected shadows up to 30ft
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 1
+#                 duration: instantaneous
+#                 range: 30
+#                 requirements: 
+#                     verbal: false
+#                     movement: true 
+#                 description: "Fade into the darkness and immediately re-appear within a shadow in the spell's range. Both the start and destination of this spell must be in partial darkness."
+#                 upcast: "You may spend an additional action point on this spell to increase its range to 100ft."
+#             -   name: Eyes of Uriel # Buff - Floating eyes surround you dealing damage and taking hits
+#                 action_type: Offhand Action
+#                 type: summoning
+#                 cost: 2
+#                 duration: 6 Dungeon Turns
+#                 range: touch
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "1d4+1 levitating eyes open in the air behind you.
+#                                 Each is the size of a balled fist, has 1hp and moves 15ft per turn.
+#                                 If you concentrate, you can see through the eyes. When the eyes close, they
+#                                 become invisible."
+#                 effect:
+#                     type: buff
+#                     description: "If an eye is within fifteen feet of an attack, you may use your reaction to cause
+#                                     it to sacrifice itself and become the attack's target instead."
+#                     conditions:
+#                         - ethereal
+#                     save: null
+#             -   name: Armor of Lucien
+#                 action_type: Offhand Action
+#                 type: damage
+#                 cost: 2
+#                 casting_time: 1 Dungeon Turn
+#                 duration: 6 Dungeon Turns
+#                 range: self
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 damage_scaling:
+#                     damage_type: radiant
+#                     tier_2: "3d6"
+#                     tier_3: "4d6"
+#                 description: "For a moment, radiant armor appears about you before fading from vision. 
+#                             For the spell's duration, your gain an amount of temporary health equal to
+#                             your inner fire times five. When the temporary health is gone
+#                             or the spell's duration elapses, the spell ends. While the spell is active,
+#                             anyone who strikes you takes damage."
+#         tier_3: #5/5
+#             -   name: Sorris' Decay #Warlock
+#                 action_type: Action
+#                 type: aoe damage
+#                 cost: 3
+#                 range: 60
+#                 duration: instantaneous
+#                 requirements:
+#                     verbal: false 
+#                     movement: true
+#                 damage_scaling:
+#                     damage_type: necrotic
+#                     damage_shape: cone
+#                     tier_3: "6d6"
+#                 description: "Your outstretched hand beckons forth the essence of the abyss,
+#                             a roiling tide of inky darkness. Like a dragon's breath, decay 
+#                             bursts forward, washing over everyone in a cone before you."
+#                 effect: 
+#                     type: debuff
+#                     description: "Make an Inner Fire Resistance Check. On success, they take full damage and begin to Rot.
+#                                 On failure, they take half damage."
+#                     conditions: 
+#                         - rotting
+#                     save: null
+#             -   name: Open Rift # Utility - Every turn something might come out. You can enter.
+#                 action_type: Offhand Action
+#                 type: utility
+#                 cost: 2
+#                 duration: 1 Dungeon Turn
+#                 range: 90
+#                 requirements: 
+#                     verbal: true
+#                     movement: true 
+#                 description: "Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 1,000 miles. 
+#                             If you have visited the location, you are able to open the rift with no trouble. If not, roll an intelligence check 
+#                             with the Grand Poohbah to determine where the rift lets out. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift."     
+
 # Needed:
 #     Bard: 
 #         Tier 1: 2

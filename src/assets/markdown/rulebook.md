@@ -150,7 +150,7 @@ As an adventurer gains experience, they grow stronger. This process is called Le
 
 The amount of healing done by spells, the amount of damage done by abilities, and the ferocity of the enemies that you face increases with each new tier. Mages also get access to new spells, and powerful magical items may become easier to find as your tier increases.
 
-#### Leveling UpEach time you level up:
+#### Leveling Up:
 
 By default, an adventurer levels up when they gain enough experience points. This number is 30 by default, though the Grand Poohbah may choose to set a higher target at the start of the campaign or tier of play. Optionally, some Grand Poohbahs may choose to follow the "Milestone Leveling" rule, in which they tie leveling to key story milestones and forgo experience points entirely.
 
@@ -333,10 +333,25 @@ If multiple terrain types are crossed in a day, the most difficult terrain sets 
 #### Pushing Forward
 The party may continue traveling through Camp and Night Watches, but each party member gains +1 Exhaustion. 
 
+#### Mounts 
+Riding a mount grants an adventurer the ability to travel one hex further per day, regardless of terrain type. 
+Mounts graze to eat while travelling, but must be kept at a stable when in civilization. An adventurer may have at most one mount, and may not use a mount as a pack animal.
+If a mount is injured, use the relevant stat block from Appendix XX.
+
+#### Pack Animals
+Pack animals can be used to carry gear through the wilds. A pack animal has five inventory slots. 
+Like mounts, pack animals must be kept in a stable when in civilization, and use stat blocks from Appendix XX.
+An adventurer may have at most one pack animal, and may not use it as a mount.
+
+#### Carts and Wagons
+Optionally, a pack animal may be used to pull a cart, increasing it's carrying capacity to 20 inventory slots. 
+Carts cannot easily pass through difficult terrain. If a party chooses to take their cart through such terrain, they must make a check 
+each day to determine if complications occur.
+
 #### Entering a Hex
 Some hexes have important landmarks within, such as a town or dungeon. When the party enters such a hex, they encounter the key location.
 
-#### Weather and Random Encounters
+### Weather and Random Encounters
 
 At the start of each travel day, the Grand Poohbah rolls for weather and random encounters.
 
@@ -577,7 +592,66 @@ In a like way, some monster abilities require an adventurer to make a check to a
 *   __Success or Failure:__ The triggering ability describes the consequences of success or failure.
     
 
-## Chapter 5. For Poohbahs - Awarding Experience
+# Chapter 5: The Dungeon
+A Dungeon is a place where monsters lurk and conduct evil affairs. Brave adventurers delve into dungeons to thwart them and return with treasure.
+Usually, a dungeon sits outside civilization and adventurers must travel across hexes to reach it. The keen adventurer will carefully choose what they carry, as it can make the difference between life and death in the dungeon. But for those who survive, gold and glory can be 
+found in the depths.
+
+## Dungeon Turns
+Within the dungeon, time is measured in Dungeon Turns, which last roughly ten minutes each. Most activities are assumed to take about one turn, 
+including the adventurers stopping to speak among themselves, to thoroughly investigate a room, or to Take a Breather. The useful life of 
+many items is measured in turns, most notably the Torch and Lantern which are expended after a fixed duration. To help the Grand Poohbah, players are encouraged to help track 
+the turns that have elapsed in the dungeon.
+
+## Light and Darkness
+Subterranean dungeons are often devoid of light. In such dungeons, most races require light to see. Torches, Lanterns, and Light Spells are
+measured in Dungeon Turns. If adventurers are plunged into total darkness they are considered to be Blinded (XX Conditions).
+
+## Mapping and Movement
+Many dungeons were designed in ages past to repel intruders. Adventurers will find a tangle of corridors and branching paths. 
+Though not required, it is often useful to assign a cartographer to map the dungeon as you explore.
+
+## Searching
+Searching a room takes one or more dungeon turns. The adventurers should call out where they are looking and what they hope to discover. "I check the room" will yield only 
+surface-level information. "I want to thumb through the books on the shelf" will reveal what the books are hiding.
+
+## Doors and Obstacles
+In some cases, the way ahead may be blocked. When the obstacle is natural, such as fallen stones, a check may be made to attempt to clear it if reasonable. 
+In other cases, a door may be locked. Lockpicking is a Test of Dexterity which may be attempted only by a Rogue.
+
+## Traps
+Many dungeons are protected by deadly traps. To avoid them, adventurers must keep on their toes and declare what they are looking for.
+If an adventurer states that they are searching the floor for pressure plates, they will likely detect them. If they do not, 
+a trap may trigger, dealing damage or some other unfortunate effect. An adventurer may not merely declare that they are looking for traps,
+they must declare where and what they are looking for. For example, "do I notice anything out of place on the floor?"
+
+## Treasure and Loot
+Treasure and useful items may be found throughout the dungeon. Usually, this treasure comes in the form of jewlery, large gemstones, and ornate, valuable objects rather than Crowns.
+Such items take up one or more slots in an adventurer's inventory and must be brought back to civilization and sold. Upon returning to 
+civilization, adventurers may automatically convert treasure into its value in Crows and remove it from their inventory, unless otherwise specified by the Grand Poohbah.
+
+## Resting in the Dungeon
+Resting in the dungeon can be dangerous, and should only be considered in dire circumstances. When it is necessary, adventurers must hide and fortify their resting place,
+lest they be discovered by a roaming creature of the deep. Such a combat will cause their rest to be Interrupted (see Chapter xx).
+
+### Interrupted Rest
+
+If an Adventurer’s rest is interrupted by combat, danger, or other significant disturbance, the Grand Poohbah may rule that the rest was interrupted.
+
+An interrupted rest:
+- Restores no Luck
+- Restores only half Action Points (rounded down)
+- Does not remove Exhaustion
+
+Health is restored normally unless the interruption was severe.
+
+## Leaving the Dungeon
+Once a dungeon has been plundered and the villain defeated, the adventurers must safely escape. Upon leaving the dungeon, the Grand Poohbah may grant 
+the adventurers experience, bringing them closer to their next level.
+
+
+
+## Chapter 6. For Poohbahs - Awarding Experience
 
 ### Experience
 

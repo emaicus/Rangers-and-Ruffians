@@ -115,7 +115,7 @@
     about: "An Invisible creature cannot be seen, makes stealth checks at advantage, and attacks against them are at disadvantage."
 -   name: Truesight
     balance: weak
-    about: A creature with Truesight is able to see invisible objects and entities.
+    about: A creature with Truesight is able to see 60 feet in pitch darkness and can see invisible objects and entities.
 -   name: Darkvision
     balance: good 
     about: "A creature with Darkvision is able to see up to 90ft even in pitch darkness. In low light, they are able to see as though it is day."

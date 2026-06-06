@@ -9,18 +9,18 @@
             description: "You have incredible night vision"
             effect:
                 type: buff 
-                description: "and can see even in the darkest of places."
+                description: "and can see 60ft in perfect darkness."
                 conditions:
                     - darkvision 
                 save: null
-        -   name: They're Retractable
+        -   name: Balancing Act
             action_type: "Passive"
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "You have razor sharp, retractable claws. When attempting to climb yielding surfaces such as wood, cloth, or packed earth, you do so with advantage.
-                            Additionally, when you make an unarmed attack, add +1 damage."
+            description: "You are naturally adept at keeping your balance. When a check must be made to avoid 
+                           falling, you may make it with advantage."
             tags: 
                 - damage_modifier
         -   name: Nine Lives
@@ -29,13 +29,13 @@
             range: self
             duration: instantaneous
             cost: 0
-            description: "When you are about to take surprise damage from a trap or fall, reduce it by 1d6 so long as you are able to  
+            description: "When you are about to take surprise damage from a trap, reduce it by 1d6 so long as you are able to  
                           spring to a safe spot within 10ft. Damage reduction increases to 1d8 then 1d10 in tiers 2 and 3, respectively."
             tags:
                 - fall_reduction
     handbook:
         introduction:
-            - "Catterwol, sometimes called catfolk, are a bipedal race that has retained the grace of their feline ancestors. 
+            - "Catterwol are a bipedal race that has retained the grace of their feline ancestors. 
                 With sharp claws and tails to help them keep their balance, catterwol easily leap from tree to tree or rooftop
                 to rooftop. While some \"wild\" catterwol live in small tribal units, others have made their home in the great
                 cities of the realms. Wild catterwol tend to have short, bristly fur in dark colors while city-catterwol often
@@ -86,14 +86,14 @@
             cost: 0
             range: self 
             duration: passive
-            description: "You are naturally skilled at reinforcing and undermining structures. 
-                           When you encounter an object that may be interacted with in a risky way,
-                           you may spend one dungeon turn to render it less dangerous. The next time the feature is interacted with,
-                           the consequences of failure are halved. Similarly, 
-                           you may reinforce something it more likely to hold."
+            casting_time: 1 Dungeon Turn
+            description: "You instinctively understand stone, wood, and structure. By spending 
+                            one Dungeon Turn working on a structure, trap, mechanism, or barrier,
+                            you may reinforce it or weaken it. The next time it is tested,
+                            the consequences of failure are halved."
             tags:
                 - brace
-            upcast: "In a pinch, you can spend one action point to use this ability as an action, reducing the time needed to six seconds."
+            upcast: "You can spend one action point to use this ability in one Combat Turn."
         -   name: Delve too Deep
             action_type: "Passive"
             type: buff 
@@ -340,15 +340,15 @@
         you_may:
             title: "As a Human, you may"
             options:
-                - "Show exemplary persistence"
-                - "Quickly develop new skills"
-                - "Feel inclined to protect others in times of trouble"
+                - "Show exemplary persistence."
+                - "Quickly develop new skills."
+                - "Feel inclined to protect others in times of trouble."
         assumptions:
             title: "People who don't know you might assume"
             options:
-                - "That you consider humans to be a superior race"
-                - "That you lack respect for the natural order"
-                - "That you are hasty"
+                - "That you consider humans to be a superior race."
+                - "That you lack respect for the natural order."
+                - "That you are hasty."
         looks:
             -   title: "Height"
                 options: "Humans usually stand between 5' and 6' tall, though some grow smaller or larger."
@@ -588,11 +588,9 @@
             type: utility 
             range: self 
             duration: instantaneous
-            description: "Take a moment to close your eyes and focus on the flow of magic. You are able to make intelligence 
-                          checks to detect the presence of magic and whether it feels benign, hostile, or corrupted. When in combat, 
-                          you may use this ability to attempt to gain understanding of a magical phenomena. On success, 
-                          you understand how to mitigate it, and all allies who follow your advice gain advantage on the next relevant check that they make, 
-                          so long as the method of mitigation does not involve slaying a creature."
+            description: "By studying the flow of magic, you may make intelligence checks to detect magical influence, 
+                            it's source, and it's nature. If the magic can be mitigated, you or your allies have advantage
+                            on the next check made to do so."
         -   name: Strange Priorities
             action_type: "Passive"
             type: buff
@@ -624,7 +622,7 @@
                 Such elves are rare, but when they act, they do so with purpose shaped by a memory longer than 
                 most lifetimes."
         you_may:
-            title: "As an elf, you may"
+            title: "As an Elf, you may"
             options: 
                 - Have a deep and abiding sense of duty to protect order and the natural world.
                 - Have been shaped by the magic that suffuses the world, resulting in your appearance matching your environment.
@@ -659,15 +657,10 @@
             type: debuff 
             range: touch 
             duration: instantaneous
-            description: "When someone knowingly strikes a bargain with you and you seal it with a handshake, 
-                          you may choose to bind the agreement as a pact. Both parties are marked with a burning sigil.
-                           If either party knowingly breaks the agreement, they must resist.
-                           If the pact takes effect, the creature in breach of the contract must either immediatley submit
-                           and be compelled to act in a way that honors the pact, or defy and take 1d6 damage which 
-                           cannot be healed until the pact is fulfilled or a Remove Curse spell or other equivalent magic
-                           is used. Damage increases to 2d6 then 3d6 in gameplay tiers 2 and 3, respectively. Pacts cannot be 
-                           compelled, but rather must be willingly and freely entered into by both parties without coercion.
-                           A pact can't compel self-harm, harm to allies, or actions fundamentally against a creature's nature."
+            description: "When someone willingly seals a bargain with you through a handshake, you may bind it as a supernatural pact marked by a burning sigil.
+                            If either party knowingly breaks the agreement
+                            suffers 1d6 unhealable damage each day until the pact is fulfilled or the curse is broken.
+                            Pacts cannot compel self-destruction or actions fundamentally against a creature's nature."
         -   name: Incombustible
             action_type: "Passive"
             cost: 0
@@ -691,22 +684,14 @@
                            allowing you to use it like a third hand."
     handbook:
         introduction:
-            -   "Long ago, during an age before mankind walked the earth, a race of deep elves that inhabited
-                    the bowels of the abyss intermarried with demons. When the demons were overthrown, their 
-                    children remained; the first of the daemonspawn."
-            -   "Daemonspawn are relatively few in number and are largely ostracized. Their largest concentrations
-                    are found in small villages at the fringes of society. These settlements rarely last long before 
+            -   "Sired by an ancient union of Dark Elves and Demons, Daemonspawn are relatively few and are largely ostracized.
+                    Their largest concentrations are found in small villages at the fringes of society. 
+                    These settlements rarely last long before 
                     fear or malice lead the local populace to put them to the torch. Some daemonspawn choose to dwell 
                     in cities where they can make a humble living as thieves, assassins for hire, and petty sorcerers. 
                     Daemonspawn have been forced into such ignoble occupations by society's general mistrust and 
                     persecution of their race. However, their heavy involvement in such pursuits has only served to 
                     deepen the prejudice against them."
-            -   "Most daemonspawn have skin that is red in color. However, some are grey skinned and a rare few possess 
-                    skin that is blue or black. Both female and male daemonspawn grow horns and have long, dexterous tails. 
-                    Despite these peculiarities, 
-                    many daemonspawn are alarmingly beautiful with pointed, elflike ears. While most daemonspawn 
-                    are the descendents of the original pact between elves and demons, a small number of new 
-                    daemonspawn are created by dark magic, curses, or rituals each year."
         you_may:
             title: "As a Daemonspawn, you may"
             options:
@@ -716,12 +701,9 @@
         assumptions:
             title: "People who don't know you might assume"
             options:
-                - "That you are a monster or are out to get them. It can be hard to convince someone that you are not a devil
-                    when you have red skin, horns, and yellow eyes."
-                - "That you are an easy target. Some ruffians may attempt to prey on you if they think others won't 
-                    lend a helping hand."
-                - "That you don't want them to bring up your race. Good people might overcorrect and try to gloss 
-                    over your heritage entirely."
+                - "That you are a monster or are out to get them."
+                - "That you are an easy target."
+                - "That you don't want them to bring up your race."
         looks:
             -   title: "Height"
                 options: "Daemonspawn stand between 5' and 6' tall."
@@ -730,7 +712,7 @@
             -   title: "Eyes"
                 options: "Crimson, Pink, Yellow, Glowing"
             -   title: "Skin"
-                options: "Crimson red, rust red, pitch black, ash grey, saphire, emerald, humanlike"
+                options: "Crimson red, rust red, pitch black, ash grey, sapphire, emerald, humanl-ike"
             -   title: "Hair"
                 options: "Rust red, slate grey, shock white, cerulean blue, dark black"
             -   title: "Horns"
