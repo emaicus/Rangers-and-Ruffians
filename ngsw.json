@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1778332484666,
+  "timestamp": 1780759854963,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-HT4HGN5O.js",
+        "/main-VIVJSVBS.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-OQHNRA2R.css"
@@ -218,12 +218,12 @@
     "/assets/css/print.css": "bc506a5bc0901a05f4c90064a6f9babda1336c50",
     "/assets/css/style.scss": "02295179b8bd4021ae7719261aaddb41f0b5186f",
     "/assets/data/attributions.json": "c4e0fa12edbf8b2af3a58556f06a47cc5ff31ef2",
-    "/assets/data/backgrounds.json": "c4dfd778dfdbdae63bfc2e8b88fd80cc36c39ccc",
-    "/assets/data/classes.json": "5d54dab7757c72851d267570d61a2b487aa7cd35",
-    "/assets/data/conditions.json": "ec5bc19394129a1aa2020cb7732edcb74534e636",
+    "/assets/data/backgrounds.json": "39c7e7ff8b85096a29f390e04236a82e1050f2bc",
+    "/assets/data/classes.json": "f4d5021471fe7fd66cc853d7470265ef8e9d7a86",
+    "/assets/data/conditions.json": "99f895e8b5faa87d222e00311378d1ed61a7ded5",
     "/assets/data/items.json": "655dd9af73afd700a71205a5146cf773cea5c4eb",
     "/assets/data/monsters.json": "2d34738897b47c7defd4eddc9fc2123c60b8d136",
-    "/assets/data/races.json": "a1112895404e88ad462533074603ab6b373a3486",
+    "/assets/data/races.json": "99fbf86fdc2ab9997388b19615b5c6e9f3c44b1e",
     "/assets/docs/archive/helpful_poohbah_stats_2_3_1.md": "7932c9cbb00e0439fbd799f613ab9a06489716e3",
     "/assets/docs/archive/helpful_poohbah_stats_2_4_1.md": "1ac9ad69c8349c58589bea4e0885b41b2f4edf11",
     "/assets/docs/images/gender/female.jpg": "48914ab707d572ee91489900be0cebb9920aec0f",
@@ -351,7 +351,7 @@
     "/assets/images/waterborn.jpg": "3b78a5605dfd56b5d724a11e3c6023cb71a15ae9",
     "/assets/images/wizard.jpg": "7069baca177f66ad3bdc681e72f4ba19cf87a5bf",
     "/assets/markdown/quick_reference.md": "3fc52dbbed8d782db5a87180b1c4850cefbc76bd",
-    "/assets/markdown/rulebook.md": "de6904b0efb3a97a6b09ca703486baeb957b5c36",
+    "/assets/markdown/rulebook.md": "57ef433249ee447c12dc19a231095add51dadfe1",
     "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
     "/assets/pdfs/char_sheet_v3.pdf": "8b939277311d3972c83d57b99c2cabe2371a3a60",
     "/assets/site_icons/archery-target.svg": "774eece358740e4b316ea7519a909c057afd8e4f",
@@ -363,8 +363,8 @@
     "/assets/site_icons/sword-wound.svg": "5fbf3891833007c3d21f9d4d1a706262a05b4d45",
     "/assets/site_icons/thunder-blade.svg": "a1b7fc3c45a8db0c85ccc8ca28ef97f5ee7f64f7",
     "/favicon.ico": "4d6a71a29f29de9a3d30e58e8bc3cd03ea4ee4f8",
-    "/index.html": "9c7ceceedfbba2666e6be4ca88e65eb2d8beb9b6",
-    "/main-HT4HGN5O.js": "4941fc265442b3db0d3730fbcccbca74e927e86c",
+    "/index.html": "f49384c262f3b9e9c96999dd159e75895edfe5b9",
+    "/main-VIVJSVBS.js": "9d588d715b54e7f1360dc1906fc9fa099fbe3a7a",
     "/manifest.webmanifest": "5b1a436e60e0d85b9d10b4adab030e561b36898b",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
