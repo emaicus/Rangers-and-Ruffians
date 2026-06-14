@@ -568,167 +568,170 @@
         starting_health: 12
         standard_level_health_bonus: 2
         tier_increase_health_bonus: 6
-    discoverable_abilities:
-        tier_1:
-            -   name: Shield Bash
-                action_type: "Offhand Action"
-                cost: 0
-                type: debuff 
-                duration: instantaneous
-                range: "touch" 
-                description: "Smash into an enemy with your Offhand and attempt to knock them off balance."
-                damage_scaling:
-                    damage_type: blunt 
-                    all_tiers: "1d2"
-                effect:
-                    type: buff 
-                    description: "Make a Strength Resistance Check. On success, they are Exposed to the next attack made against them."
-                    conditions:
-                        - exposed
-                    save: null
-            -   name: Phalanx
-                action_type: "Offhand Action"
-                cost: 0
-                type: aoe buff 
-                duration: infinite 
-                range: self 
-                radius: 15 
-                description: "Adopt a defensive stance, granting all allies within five feet your protection."
-                effect:
-                    type: buff 
-                    description: "While they stand at your side, your allies are considered to be Guarded."
-                    conditions:
-                        - guarded
-                    save: null
-            -   name: Goad
-                action_type: "Offhand Action"
-                cost: 0
-                type: debuff
-                range: 50
-                duration: instantaneous
-                description: "Call a challenge to an enemy."
-                effect:
-                    type: debuff
-                    description: "Make a Charisma Resistance Check. On success, they become Fixated on you until the end of their next turn."
-                    conditions:
-                        - fixated 
-                    save: null
-            -   name: Pivot
-                action_type: Offhand Action
-                cost: 0
-                type: combat option 
-                duration: instantaneous
-                range: self  
-                radius: 10
-                description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
-            -   name: Allied Strike
-                action_type: Action
-                type: combat option 
-                cost: 1
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack 
-                description: "As you strike your opponent, you batter away their defenses and deal bonus damage."
-                effect:
-                    type: debuff 
-                    description: "If an ally attacks that opponent before the start of your next turn, they also deal bonus damage per this ability."
-                    conditions:
-                        - custom 
-                    save: null 
-                damage_scaling:
-                    damage_type: inherited 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12          
-        tier_2:
-            -   name: Cleave
-                action_type: Action
-                type: combat option 
-                cost: 1
-                range: 10 
-                duration: instantaneous
-                ability_modified: standard_attack
-                description: "Swing your weapon in a wide arc, targetting all enemies within the ability's radius."
-                damage_scaling:
-                    damage_type: inherited
-                    damage_shape: cone
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12
-            -   name: Controlled Advance
-                cost: 0
-                type: buff
-                duration: instantaneous
-                range: self 
-                action_type: Free Action
-                ability_modified: slayed enemy
-                description: "As a foe falls to your blade, use the oportunity to push into their ranks. 
-                            Whenever you slay an enemy with a melee attack, you may step forward
-                            into the space that they occupied. You are immune to exposed attacks 
-                            during this movement. Once you've moved, you may make a standard attack."
-            -   name: Overwhelming Strike
-                action_type: "Action"               
-                type: combat option
-                cost: 1
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack
-                damage_scaling:
-                    damage_type: inherited
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-                description: "With a blow like a hammerfall, you batter your enemy with a devestating attack."
-                effect:
-                    type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they are Staggered."
-                    conditions: 
-                        - staggered 
-                    save: null    
-            -   name: Make Space
-                action_type: Action
-                cost: 0
-                type: combat option
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack
-                description: "Slam into your enemy with oppressive force."
-                effect:
-                    type: debuff
-                    description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
-                                If they strike something as a result, they are Staggered until the end of their next turn."
-                    conditions: 
-                        - staggered 
-                    save: null
-                damage_scaling:
-                    damage_type: inherited 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12
-        tier_3:
-            -   name: Very Dangerous over Short Distances 
-                action_type: "Passive"
-                type: buff
-                cost: 0
-                range: touch
-                duration: passive
-                ability_modified: advantaged attack
-                passive_damage_source: true
-                description: "Once you've closed with an enemy, you are able to press the advantage."
-                effect:
-                    type: buff
-                    description: "Roll damage at advantage if you begin your turn next to your target."
-                    conditions: 
-                        - custom 
-                    save: null              
-            -   name: Feint
-                action_type: Offhand Action
-                cost: 0
-                type: combat option 
-                duration: instantaneous
-                range: inherited
-                description: "Take up a defensive position as enemies circle. The next enemy who attacks you before your next turn does so at disadvantage.
-                            You may immediately make a standard attack as a free action."
+    discoverable_abilities: 
+        tier_1: []
+        tier_2: []
+        tier_3: []
+        # tier_1:
+        #     -   name: Shield Bash
+        #         action_type: "Offhand Action"
+        #         cost: 0
+        #         type: debuff 
+        #         duration: instantaneous
+        #         range: "touch" 
+        #         description: "Smash into an enemy with your Offhand and attempt to knock them off balance."
+        #         damage_scaling:
+        #             damage_type: blunt 
+        #             all_tiers: "1d2"
+        #         effect:
+        #             type: buff 
+        #             description: "Make a Strength Resistance Check. On success, they are Exposed to the next attack made against them."
+        #             conditions:
+        #                 - exposed
+        #             save: null
+        #     -   name: Phalanx
+        #         action_type: "Offhand Action"
+        #         cost: 0
+        #         type: aoe buff 
+        #         duration: infinite 
+        #         range: self 
+        #         radius: 15 
+        #         description: "Adopt a defensive stance, granting all allies within five feet your protection."
+        #         effect:
+        #             type: buff 
+        #             description: "While they stand at your side, your allies are considered to be Guarded."
+        #             conditions:
+        #                 - guarded
+        #             save: null
+        #     -   name: Goad
+        #         action_type: "Offhand Action"
+        #         cost: 0
+        #         type: debuff
+        #         range: 50
+        #         duration: instantaneous
+        #         description: "Call a challenge to an enemy."
+        #         effect:
+        #             type: debuff
+        #             description: "Make a Charisma Resistance Check. On success, they become Fixated on you until the end of their next turn."
+        #             conditions:
+        #                 - fixated 
+        #             save: null
+        #     -   name: Pivot
+        #         action_type: Offhand Action
+        #         cost: 0
+        #         type: combat option 
+        #         duration: instantaneous
+        #         range: self  
+        #         radius: 10
+        #         description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
+        #     -   name: Allied Strike
+        #         action_type: Action
+        #         type: combat option 
+        #         cost: 1
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack 
+        #         description: "As you strike your opponent, you batter away their defenses and deal bonus damage."
+        #         effect:
+        #             type: debuff 
+        #             description: "If an ally attacks that opponent before the start of your next turn, they also deal bonus damage per this ability."
+        #             conditions:
+        #                 - custom 
+        #             save: null 
+        #         damage_scaling:
+        #             damage_type: inherited 
+        #             tier_1: 1d8
+        #             tier_2: 1d10
+        #             tier_3: 1d12          
+        # tier_2:
+        #     -   name: Cleave
+        #         action_type: Action
+        #         type: combat option 
+        #         cost: 1
+        #         range: 10 
+        #         duration: instantaneous
+        #         ability_modified: standard_attack
+        #         description: "Swing your weapon in a wide arc, targetting all enemies within the ability's radius."
+        #         damage_scaling:
+        #             damage_type: inherited
+        #             damage_shape: cone
+        #             tier_1: 1d8
+        #             tier_2: 1d10
+        #             tier_3: 1d12
+        #     -   name: Controlled Advance
+        #         cost: 0
+        #         type: buff
+        #         duration: instantaneous
+        #         range: self 
+        #         action_type: Free Action
+        #         ability_modified: slayed enemy
+        #         description: "As a foe falls to your blade, use the oportunity to push into their ranks. 
+        #                     Whenever you slay an enemy with a melee attack, you may step forward
+        #                     into the space that they occupied. You are immune to exposed attacks 
+        #                     during this movement. Once you've moved, you may make a standard attack."
+        #     -   name: Overwhelming Strike
+        #         action_type: "Action"               
+        #         type: combat option
+        #         cost: 1
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         damage_scaling:
+        #             damage_type: inherited
+        #             tier_1: "1d8"
+        #             tier_2: "1d10"
+        #             tier_3: "1d12"
+        #         description: "With a blow like a hammerfall, you batter your enemy with a devestating attack."
+        #         effect:
+        #             type: debuff 
+        #             description: "Make a Strength Resistance Check. On success, they are Staggered."
+        #             conditions: 
+        #                 - staggered 
+        #             save: null    
+        #     -   name: Make Space
+        #         action_type: Action
+        #         cost: 0
+        #         type: combat option
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         description: "Slam into your enemy with oppressive force."
+        #         effect:
+        #             type: debuff
+        #             description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
+        #                         If they strike something as a result, they are Staggered until the end of their next turn."
+        #             conditions: 
+        #                 - staggered 
+        #             save: null
+        #         damage_scaling:
+        #             damage_type: inherited 
+        #             tier_1: 1d8
+        #             tier_2: 1d10
+        #             tier_3: 1d12
+        # tier_3:
+        #     -   name: Very Dangerous over Short Distances 
+        #         action_type: "Passive"
+        #         type: buff
+        #         cost: 0
+        #         range: touch
+        #         duration: passive
+        #         ability_modified: advantaged attack
+        #         passive_damage_source: true
+        #         description: "Once you've closed with an enemy, you are able to press the advantage."
+        #         effect:
+        #             type: buff
+        #             description: "Roll damage at advantage if you begin your turn next to your target."
+        #             conditions: 
+        #                 - custom 
+        #             save: null              
+        #     -   name: Feint
+        #         action_type: Offhand Action
+        #         cost: 0
+        #         type: combat option 
+        #         duration: instantaneous
+        #         range: inherited
+        #         description: "Take up a defensive position as enemies circle. The next enemy who attacks you before your next turn does so at disadvantage.
+        #                     You may immediately make a standard attack as a free action."
     abilities_by_level:
         level_1:
             -   name: Steel Yourself
@@ -906,178 +909,181 @@
         - Heavy Martial Weapons
         - Standard Martial Weapons
     discoverable_abilities:
-        tier_1:
-            -   name: Brutal Attack
-                action_type: Action
-                type: combat option
-                cost: 1
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack
-                description: "Your muscles bulge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
-                effect:
-                    type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they are knocked Prone."
-                    conditions: 
-                        - prone
-                    save: null
-                damage_scaling:
-                    damage_type: inherited
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-            -   name: Throw Caution to the Wind
-                action_type: Free Action
-                type: buff
-                cost: 0
-                range: self 
-                duration: instantaneous
-                ability_modified: standard attack
-                description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
-                effect: 
-                    type: self-debuff
-                    description: "At any time, you may declare that your attacks deal extra damage. 
-                                However, when you make such an attack, you become Vulnerable until the start of your next turn."
-                    conditions: 
-                        - vulnerable
-                    save: null
-                passive_damage_source: true
-                damage_scaling:
-                    damage_type: inherited 
-                    all_tiers: 1d4
-            -   name: Guard-Break #Rework, redundant against knight's overwhelming strike
-                action_type: Action
-                type: combat option
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack
-                cost: 1
-                description: "Swing high and fast in an effort to knock your opponent off-balance."
-                effect:
-                    type: debuff 
-                    description: "Make a strength check against their resistance. On sucess they are staggered."
-                    conditions:
-                        - staggered
-                    save: null
-                damage_scaling:
-                    damage_type: inherited
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-            -   name: Terrifying Damage
-                type: buff
-                cost: 0
-                duration: passive 
-                range: inherited
-                action_type: modifies_ability 
-                ability_modified: standard attack 
-                passive_damage_source: true
-                damage_scaling: 
-                    damage_type: inherited
-                    all_tiers: 1d6
-                description: "You've learned to use your enemies' terror to your advantage. When you attack an enemy that is Frightened of you, deal bonus damage."
-        tier_2:
-            -   name: Every Wall is a Door
-                action_type: Passive
-                type: utility
-                range: 15
-                duration: instantaneous
-                cost: 1
-                description: "Use your strength to blast through an obstacle that is one foot thick or less, to climb solid stone,
-                            or to leap a treacherous gap. Move up to the ability's range unimpeded. You are still vulnerable to exposed attacks."
-            -   name: The Closer
-                type: buff
-                cost: 0
-                duration: passive 
-                range: inherited 
-                action_type: modifies_ability
-                ability_modified: standard attack
-                passive_damage_source: true
-                damage_scaling: 
-                    damage_type: inherited
-                    all_tiers: 1d6
-                description: "If you attack an enemy that is prone, deal bonus damage."
-            -   name: Adrenaline
-                type: buff
-                cost: 0
-                range: self
-                duration: passive
-                action_type: modifies_ability
-                ability_modified: Berserk
-                description: "A bloody grin spreads across your face as you hurtle towards your foes."
-                effect:
-                    type: buff 
-                    description: "When you go berserk, you are Quickened."
-                    conditions:
-                        - quickened 
-                    save: null
-            -   name: Corner
-                type: combat option
-                cost: 1
-                range: 15
-                duration: instantaneous
-                action_type: Reaction 
-                description: "They won't get away that easy! If an enemy moves to pass you within 15 feet to either side,
-                            you may spend a reaction to block them."
-                effect:
-                    type: debuff 
-                    description: "If they are one size larger than you or smaller, they are immediately Halted. This ability does not work on flying targets."
-                    conditions: 
-                        - halted
-                    save: null
-            -   name: Relentless Rage
-                action_type: Passive
-                type: buff
-                cost: 0
-                range: self
-                duration: passive
-                action_type: modifies_ability
-                ability_modified: Berserk
-                description: "Blood thunders in your ears as you rage, blocking out attacks against your mind."
-                effect:
-                    type: buff 
-                    description: "When you are going berserk, you are resistant to psychic damage and immune conditions which affect your state of mind."
-                    conditions:
-                        - resistant
-                    save: null
-        tier_3:
-            -   name: A Little Terror
-                action_type: Action
-                type: debuff
-                cost: 1
-                range: 30 
-                duration: instantaneous
-                description: "Use your intimidating presence to force an enemy to do your will."
-                effect:
-                    type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they are Controlled until the end of their next turn or must answer three of your questions truthfully."
-                    conditions:
-                        - controlled 
-                    save: null
-            -   name: Stay on Your Feet
-                type: buff
-                cost: 0
-                range: self
-                duration: passive
-                action_type: Passive
-                description: "Even battered and bloodied, you fight on.
-                            If you fall to zero health, flip a coin. On heads, you fall to 1 health instead."  
-            -   name: Blood for Blood
-                action_type: Reaction
-                type: combat option
-                cost: 0
-                range: self 
-                duration: passive
-                description: When you are going berserk and an enemy harms you, you may use your reaction to make a simple counterattack. The counter attack cannot use any of your other abilities.
-            -   name: I cast 'Fist'
-                action_type: Action
-                cost: 1
-                type: utility 
-                range: self
-                duration: instantaneous
-                description: "Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent
-                            of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur.
-                            Follow the rules for informal magic, but always spend an action point."
+        tier_1: []
+        tier_2: []
+        tier_3: []
+        # tier_1:
+        #     -   name: Brutal Attack
+        #         action_type: Action
+        #         type: combat option
+        #         cost: 1
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         description: "Your muscles bulge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
+        #         effect:
+        #             type: debuff 
+        #             description: "Make a Strength Resistance Check. On success, they are knocked Prone."
+        #             conditions: 
+        #                 - prone
+        #             save: null
+        #         damage_scaling:
+        #             damage_type: inherited
+        #             tier_1: "1d8"
+        #             tier_2: "1d10"
+        #             tier_3: "1d12"
+        #     -   name: Throw Caution to the Wind
+        #         action_type: Free Action
+        #         type: buff
+        #         cost: 0
+        #         range: self 
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
+        #         effect: 
+        #             type: self-debuff
+        #             description: "At any time, you may declare that your attacks deal extra damage. 
+        #                         However, when you make such an attack, you become Vulnerable until the start of your next turn."
+        #             conditions: 
+        #                 - vulnerable
+        #             save: null
+        #         passive_damage_source: true
+        #         damage_scaling:
+        #             damage_type: inherited 
+        #             all_tiers: 1d4
+        #     -   name: Guard-Break #Rework, redundant against knight's overwhelming strike
+        #         action_type: Action
+        #         type: combat option
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         cost: 1
+        #         description: "Swing high and fast in an effort to knock your opponent off-balance."
+        #         effect:
+        #             type: debuff 
+        #             description: "Make a strength check against their resistance. On sucess they are staggered."
+        #             conditions:
+        #                 - staggered
+        #             save: null
+        #         damage_scaling:
+        #             damage_type: inherited
+        #             tier_1: "1d8"
+        #             tier_2: "1d10"
+        #             tier_3: "1d12"
+        #     -   name: Terrifying Damage
+        #         type: buff
+        #         cost: 0
+        #         duration: passive 
+        #         range: inherited
+        #         action_type: modifies_ability 
+        #         ability_modified: standard attack 
+        #         passive_damage_source: true
+        #         damage_scaling: 
+        #             damage_type: inherited
+        #             all_tiers: 1d6
+        #         description: "You've learned to use your enemies' terror to your advantage. When you attack an enemy that is Frightened of you, deal bonus damage."
+        # tier_2:
+        #     -   name: Every Wall is a Door
+        #         action_type: Passive
+        #         type: utility
+        #         range: 15
+        #         duration: instantaneous
+        #         cost: 1
+        #         description: "Use your strength to blast through an obstacle that is one foot thick or less, to climb solid stone,
+        #                     or to leap a treacherous gap. Move up to the ability's range unimpeded. You are still vulnerable to exposed attacks."
+        #     -   name: The Closer
+        #         type: buff
+        #         cost: 0
+        #         duration: passive 
+        #         range: inherited 
+        #         action_type: modifies_ability
+        #         ability_modified: standard attack
+        #         passive_damage_source: true
+        #         damage_scaling: 
+        #             damage_type: inherited
+        #             all_tiers: 1d6
+        #         description: "If you attack an enemy that is prone, deal bonus damage."
+        #     -   name: Adrenaline
+        #         type: buff
+        #         cost: 0
+        #         range: self
+        #         duration: passive
+        #         action_type: modifies_ability
+        #         ability_modified: Berserk
+        #         description: "A bloody grin spreads across your face as you hurtle towards your foes."
+        #         effect:
+        #             type: buff 
+        #             description: "When you go berserk, you are Quickened."
+        #             conditions:
+        #                 - quickened 
+        #             save: null
+        #     -   name: Corner
+        #         type: combat option
+        #         cost: 1
+        #         range: 15
+        #         duration: instantaneous
+        #         action_type: Reaction 
+        #         description: "They won't get away that easy! If an enemy moves to pass you within 15 feet to either side,
+        #                     you may spend a reaction to block them."
+        #         effect:
+        #             type: debuff 
+        #             description: "If they are one size larger than you or smaller, they are immediately Halted. This ability does not work on flying targets."
+        #             conditions: 
+        #                 - halted
+        #             save: null
+        #     -   name: Relentless Rage
+        #         action_type: Passive
+        #         type: buff
+        #         cost: 0
+        #         range: self
+        #         duration: passive
+        #         action_type: modifies_ability
+        #         ability_modified: Berserk
+        #         description: "Blood thunders in your ears as you rage, blocking out attacks against your mind."
+        #         effect:
+        #             type: buff 
+        #             description: "When you are going berserk, you are resistant to psychic damage and immune conditions which affect your state of mind."
+        #             conditions:
+        #                 - resistant
+        #             save: null
+        # tier_3:
+        #     -   name: A Little Terror
+        #         action_type: Action
+        #         type: debuff
+        #         cost: 1
+        #         range: 30 
+        #         duration: instantaneous
+        #         description: "Use your intimidating presence to force an enemy to do your will."
+        #         effect:
+        #             type: debuff 
+        #             description: "Make a Strength Resistance Check. On success, they are Controlled until the end of their next turn or must answer three of your questions truthfully."
+        #             conditions:
+        #                 - controlled 
+        #             save: null
+        #     -   name: Stay on Your Feet
+        #         type: buff
+        #         cost: 0
+        #         range: self
+        #         duration: passive
+        #         action_type: Passive
+        #         description: "Even battered and bloodied, you fight on.
+        #                     If you fall to zero health, flip a coin. On heads, you fall to 1 health instead."  
+        #     -   name: Blood for Blood
+        #         action_type: Reaction
+        #         type: combat option
+        #         cost: 0
+        #         range: self 
+        #         duration: passive
+        #         description: When you are going berserk and an enemy harms you, you may use your reaction to make a simple counterattack. The counter attack cannot use any of your other abilities.
+        #     -   name: I cast 'Fist'
+        #         action_type: Action
+        #         cost: 1
+        #         type: utility 
+        #         range: self
+        #         duration: instantaneous
+        #         description: "Your physical movements are so powerful that they warp the world around you. You are able to cast the equivalent
+        #                     of simple magic as long as you can explain how the shear power of your movements are causing the effects to occur.
+        #                     Follow the rules for informal magic, but always spend an action point."
     abilities_by_level:
         # For barbarian, replace blood for blood with Feint
         level_1:
@@ -1269,67 +1275,70 @@
         standard_level_health_bonus: 2
         tier_increase_health_bonus: 4
     discoverable_abilities:
-        tier_1:
-            -   name: Dart In
-                action_type: Passive
-                type: buff
-                cost: 0
-                duration: instantaneous
-                range: dash
-                ability_modified: dash
-                description: "When you use your Action to dash, you may end the movement with a melee attack."
-            -   name: Shared Stealth
-                action_type: "Free Action"
-                type: aoe buff 
-                cost: 1
-                duration: 6 Dungeon Turns 
-                range: self 
-                radius: 30 
-                description: "Your stealth is so great that you are able to make up for your parties' shortcomings." 
-                effect:
-                    type: debuff
-                    description: "For the next hour, add your proficiency to any friendly stealth rolls made within the ability's radius.
-                                If a party member already benefits from proficiency on stealth rolls, they may instead add an additional +1."
-                    conditions: 
-                        - custom 
-                    save: null
+        tier_1: []
+        tier_2: []
+        tier_3: []
+        # tier_1:
+        #     -   name: Dart In
+        #         action_type: Passive
+        #         type: buff
+        #         cost: 0
+        #         duration: instantaneous
+        #         range: dash
+        #         ability_modified: dash
+        #         description: "When you use your Action to dash, you may end the movement with a melee attack."
+        #     -   name: Shared Stealth
+        #         action_type: "Free Action"
+        #         type: aoe buff 
+        #         cost: 1
+        #         duration: 6 Dungeon Turns 
+        #         range: self 
+        #         radius: 30 
+        #         description: "Your stealth is so great that you are able to make up for your parties' shortcomings." 
+        #         effect:
+        #             type: debuff
+        #             description: "For the next hour, add your proficiency to any friendly stealth rolls made within the ability's radius.
+        #                         If a party member already benefits from proficiency on stealth rolls, they may instead add an additional +1."
+        #             conditions: 
+        #                 - custom 
+        #             save: null
         
-        tier_2:
-            -   name: Throw Caution to the Wind
-                action_type: Free Action
-                type: buff
-                cost: 0
-                range: self 
-                duration: 1 Round
-                ability_modified: standard attack
-                description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
-                effect: 
-                    type: self-debuff
-                    description: "At any time, you may declare that your attacks deal extra damage. 
-                                However, when you make such an attack, you become Vulnerable until the start of your next turn."
-                    conditions: 
-                        - vulnerable
-                    save: null
-                passive_damage_source: true
-                damage_scaling:
-                    damage_type: inherited 
-                    all_tiers: 1d4
-        tier_3:
-            -   name: Slip Away
-                action_type: "modifies_ability"
-                ability_modified: "Standard Attack"
-                cost: 0
-                type: buff
-                ability_modified: standard attack 
-                range: self 
-                duration: passive
-                description: "You are able to streak in, harm a foe, and then retreat again."
-                effect:
-                    type: debuff
-                    description: "Whenever you strike an enemy, you are considered Elusive to them until the end of your turn."
-                    conditions:
-                        - elusive 
-                    save: null
+        # tier_2:
+        #     -   name: Throw Caution to the Wind
+        #         action_type: Free Action
+        #         type: buff
+        #         cost: 0
+        #         range: self 
+        #         duration: 1 Round
+        #         ability_modified: standard attack
+        #         description: "Surge forward with reckless abandon, dealing bonus damage but leaving yourself exposed."
+        #         effect: 
+        #             type: self-debuff
+        #             description: "At any time, you may declare that your attacks deal extra damage. 
+        #                         However, when you make such an attack, you become Vulnerable until the start of your next turn."
+        #             conditions: 
+        #                 - vulnerable
+        #             save: null
+        #         passive_damage_source: true
+        #         damage_scaling:
+        #             damage_type: inherited 
+        #             all_tiers: 1d4
+        # tier_3:
+        #     -   name: Slip Away
+        #         action_type: "modifies_ability"
+        #         ability_modified: "Standard Attack"
+        #         cost: 0
+        #         type: buff
+        #         ability_modified: standard attack 
+        #         range: self 
+        #         duration: passive
+        #         description: "You are able to streak in, harm a foe, and then retreat again."
+        #         effect:
+        #             type: debuff
+        #             description: "Whenever you strike an enemy, you are considered Elusive to them until the end of your turn."
+        #             conditions:
+        #                 - elusive 
+        #             save: null
     abilities_by_level: 
         level_1:
             -   name: Thief's Strike
@@ -1509,68 +1518,71 @@
         - Light Ranged Weapons
         - Heavy Ranged Weapons
     discoverable_abilities:
-        tier_1:
-            -   name: Grappler's Line
-                action_type: Action
-                cost: 1
-                type: combat option 
-                range: inherited 
-                duration: instantaneous
-                description: "Affix a cord to your arrow and fire it at a target. As it hits, it holds fast, creating a durable link between you."
-                effect:
-                    type: debuff 
-                    description: "If your target is a living creature, make a Dexterity Resistance Check. On success, they become Tethered to you."
-                    conditions:
-                        - tethered 
-                    save: null
-                damage_scaling:
-                    damage_type: inherited 
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12   
-            -   name: Focus
-                action_type: Offhand Action
-                cost: 0
-                type: buff
-                passive_damage_source: true
-                duration: instantaneous
-                range: self 
-                ability_modified: next attack 
-                description: "Carefully line up your next shot."
-                effect:
-                    type: buff 
-                    description: "When you attack on this turn you may double your weapon's effective range, ignore partial cover, and roll damage at advantage."
-                    conditions:
-                        - custom 
-                    save: null            
-            -   name: Follow Up
-                action_type: Passive
-                cost: 0
-                type: buff
-                passive_damage_source: true
-                range: inherited 
-                duration: passive 
-                ability_modified: standard attack
-                description: "Blow after blow, you wear your target down. If you attack an enemy,
-                            subsequent attacks deal extra damage if you don't choose another target.
-                            Extra damage starts at 1d4 and grows with each hit, capping at 1d8."
-        tier_2:
-            -   name: Strider
-                action_type: Passive
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                description: "Your base movement is increased by 10ft."
-                effect:
-                    type: buff
-                    description: "Additionally, difficult terrain no longer hinders you. When out of combat, 
-                                take advantage on dexterity checks made to navigate natural obstacles."
-                    conditions:
-                        - custom 
-                    save: null
-        tier_3:
-            []
+        tier_1: []
+        tier_2: []
+        tier_3: []
+        # tier_1:
+        #     -   name: Grappler's Line
+        #         action_type: Action
+        #         cost: 1
+        #         type: combat option 
+        #         range: inherited 
+        #         duration: instantaneous
+        #         description: "Affix a cord to your arrow and fire it at a target. As it hits, it holds fast, creating a durable link between you."
+        #         effect:
+        #             type: debuff 
+        #             description: "If your target is a living creature, make a Dexterity Resistance Check. On success, they become Tethered to you."
+        #             conditions:
+        #                 - tethered 
+        #             save: null
+        #         damage_scaling:
+        #             damage_type: inherited 
+        #             tier_1: 1d8
+        #             tier_2: 1d10
+        #             tier_3: 1d12   
+        #     -   name: Focus
+        #         action_type: Offhand Action
+        #         cost: 0
+        #         type: buff
+        #         passive_damage_source: true
+        #         duration: instantaneous
+        #         range: self 
+        #         ability_modified: next attack 
+        #         description: "Carefully line up your next shot."
+        #         effect:
+        #             type: buff 
+        #             description: "When you attack on this turn you may double your weapon's effective range, ignore partial cover, and roll damage at advantage."
+        #             conditions:
+        #                 - custom 
+        #             save: null            
+        #     -   name: Follow Up
+        #         action_type: Passive
+        #         cost: 0
+        #         type: buff
+        #         passive_damage_source: true
+        #         range: inherited 
+        #         duration: passive 
+        #         ability_modified: standard attack
+        #         description: "Blow after blow, you wear your target down. If you attack an enemy,
+        #                     subsequent attacks deal extra damage if you don't choose another target.
+        #                     Extra damage starts at 1d4 and grows with each hit, capping at 1d8."
+        # tier_2:
+        #     -   name: Strider
+        #         action_type: Passive
+        #         type: buff
+        #         cost: 0
+        #         duration: passive
+        #         range: self
+        #         description: "Your base movement is increased by 10ft."
+        #         effect:
+        #             type: buff
+        #             description: "Additionally, difficult terrain no longer hinders you. When out of combat, 
+        #                         take advantage on dexterity checks made to navigate natural obstacles."
+        #             conditions:
+        #                 - custom 
+        #             save: null
+        # tier_3:
+        #     []
     abilities_by_level:
         level_1:
             -   name: Analyze

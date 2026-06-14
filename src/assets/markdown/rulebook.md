@@ -323,9 +323,10 @@ The world is divided into hexes, each of which is six miles across.
 How far the party travels depends on the terrain in a hex:
 | Terrain | Travel Speed |
 |---|---|
-| Easy (roads, plains, tundra) | 1 hex per Watch |
-| Difficult (forests, dunes, marsh) | 1 hex per 2 Watches |
-| Severe (mountains, swamps) | 1 hex per 3 Watches |
+| Easy (roads, plains, tundra) | 3 hexes per day |
+| Difficult (forests, dunes, marsh) | 2 per day |
+| Severe (mountains, swamps) | 1 hex per day |
+| Impassible | 0 hexes per day |
 
 If multiple terrain types are crossed in a day, the most difficult terrain sets the party’s pace.
 
