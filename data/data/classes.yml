@@ -786,7 +786,7 @@
                 type: debuff 
                 duration: instantaneous
                 range: "touch" 
-                description: "Smash into an enemy with your offhand and attempt to knock them off balance."
+                description: "Smash into an enemy with your off hand and attempt to knock them off balance."
                 damage_scaling:
                     damage_type: blunt 
                     tier_1: "1d4"
@@ -865,8 +865,7 @@
                 description: "You have become the ultimate protector for your allies."
                 effect:
                     type: buff 
-                    description: "If an ally stands within the effect's radius, they may add +1 to all Tests against 
-                                enemy Threat make death coin flips at advantage."
+                    description: "If an ally stands within the effect's radius, they may add +1 to all Resistance Tests against enemy abilities and make death coin flips at advantage."
                     conditions:
                         - custom 
                     save: null
@@ -1181,20 +1180,6 @@
                     conditions:
                         - quickened 
                     save: null
-            # -   name: Terrify
-            #     type: debuff
-            #     cost: 0
-            #     range: inherited
-            #     duration: save
-            #     action_type: modifies_ability
-            #     ability_modified: Single Out
-            #     description: "As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes."
-            #     effect:
-            #         type: debuff 
-            #         description: Whenever you use Single Out, make a Strength Resistance Test against the target. On success, your target becomes Frightened of you until the end of their next turn.
-            #         conditions: 
-            #             - frightened 
-            #         save: null
         level_8:
             -   name: Resistant Rage
                 action_type: modifies_ability
@@ -3293,7 +3278,7 @@
                 type: buff
                 cost: 1
                 range: 60
-                duration: 1 Dungeon Turn
+                duration: 3 Dungeon Turns
                 requirements:
                     movement: true 
                     verbal: true

@@ -79,7 +79,7 @@
     about: An entity that is Spurred to Movement immediately gains 15 feet of movement. The movement does not provoke reactions unless otherwise stated.
 -   name: Prone
     balance: strong
-    about: "Asdf prone creature moves at half speed, makes tests and attacks at disadvantage, and attacks against them are at 
+    about: "A prone creature moves at half speed, makes tests and attacks at disadvantage, and attacks against them are at 
             advantage. They may spend an action or offhand action to stand up."
 
 #CONTROL

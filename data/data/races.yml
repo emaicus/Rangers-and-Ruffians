@@ -172,7 +172,7 @@
             duration: passive 
             type: buff 
             description: "You are exceptionally good at shutting out everything but the task at hand.
-                          You are immune to the charmed condition, and have advantage on tests against 
+                          You are immune to the charmed condition and have advantage on tests against 
                           being compelled or controlled."
     handbook:
         introduction: 
