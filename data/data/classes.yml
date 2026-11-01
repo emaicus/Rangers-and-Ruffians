@@ -8,8 +8,8 @@
         Strength: -1
     weapon_training:
         - Focuses
-    # expertise: "As a bard, your raw charisma is second to none. Take expertise in all charisma checks. Further,
-    #             take expertise in any checks made to perform for others and in all attempts at sleight of hand."
+    # expertise: "As a bard, your raw charisma is second to none. Take expertise in all Tests of Charisma. Further,
+    #             take expertise in any tests made to perform for others and in all attempts at sleight of hand."
     handbook:
         -   title: Intro
             display_title: false
@@ -31,10 +31,10 @@
                     Some bards travel town to town and leave a string of heartbroken lovers in their wake, while others climb to the highest echelons of society."
         -   title: "When in Combat"
             display_title: true 
-            text: "Bards are capable support casters. Spells like Slow and Racous Laughter allow them to weaken their enemies,
+            text: "Bards are capable support casters. Spells like Slow and Raucous Laughter allow them to weaken their enemies,
                     while Haste empowers their allies. They also make adept healers, casting spells like
                     Song of Healing and Song of Mass Healing. While their damage output may not match wizards or warlocks, spells like Biting Words 
-                    and Power Chord are still formidable, and the Bard's versitility is second to none."
+                    and Power Chord are still formidable, and the Bard's versatility is second to none."
     health_schedule: 
         starting_health: 6
         standard_level_health_bonus: 2
@@ -55,7 +55,7 @@
                 range: 60
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they are Hindered until the end of their next turn."
+                    description: "Make an Inner Fire Resistance Test. On success, they are Hindered until the end of their next turn."
                     conditions: 
                         - hindered
                     save: null 
@@ -71,11 +71,12 @@
                 radius: 60
                 description: "You fire a quip laced with magic at a foe."
                 effect:
-                    description: "Make an Inner Fire Resistance Check. On success, they fall to the ground in laughter and are Incapacitated."
+                    description: "Make an Inner Fire Resistance Test. On success, they fall to the ground in laughter and are Incapacitated until the end of your next turn. On failure they begin laughing and are staggered."
                     conditions: 
                         - incapacitated
+                        - staggered
                     type: debuff
-                    save: "Repeat your check at the end of each of your turns or or every minute when out of combat. The effect ends instantly if they are injured."
+                    save: null
             -   name: Trick up Your Sleeve
                 action_type: Offhand Action
                 type: utility
@@ -102,9 +103,9 @@
                     movement: true 
                     verbal: true 
                 description: "Your honeyed words are laced with irresistible magic as you speak earnestly to your target.
-                            Make an Inner Fire Resistance Check. On success, they believe the next ten words you speak.
+                            Make an Inner Fire Resistance Test. On success, they believe the next ten words you speak.
                             They are able to reassess their feelings if they are presented with facts to the contrary. In such a case, You 
-                            must repeat your check at disadvantage."
+                            must repeat your Test at disadvantage."
                 range: 30
             -   name: Conjure Illusion
                 action_type: Offhand Action
@@ -143,25 +144,12 @@
                 description: "Tapping into your magic, you tell a compelling lie."
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, modify a memory
+                    description: "Make an Inner Fire Resistance Test. On success, modify a memory
                                 of your choosing. The target tries to rationalize the modified memory within reason, but will realize what happened if provided with adequate proof."
                     conditions:
                         - custom
                     save: null
                 range: 60
-            -   name: Disguise # Merge Disguise and Imitate
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: concentration
-                requirements:
-                    movement: false 
-                    verbal: true 
-                description: "With a whispered incantation, you cloak your true form in a shimmering veil of illusion so that you appear to be
-                                someone else. You must appear humanoid and be within one foot
-                                of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do
-                                not hold up to physical inspection."
-                range: self
             -   name: Tamberdoodle's Grasp
                 action_type: Action
                 type: summoning
@@ -215,6 +203,31 @@
                             will, and follows your orders to the letter. Invisible servants use your Inner Fire
                             as their Dexterity and Strength modifier and have 1 hit point."
                 range: 30
+            -   name: Breathe Fire # Bard
+                action_type: Action
+                type: aoe damage
+                cost: 1
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                    components: 
+                        - A mouthful of oil
+                description: "Magical warmth floods into your stomach before bubbling up and out. 
+                            You belch a cone of fire, igniting anything before you."
+                range: 15
+                damage_scaling:
+                    damage_shape: cone
+                    damage_type: fire
+                    tier_2: 1d10 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 1d12 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                effect:
+                    description: "Make an Inner Fire Resistance Test against your targets. On success, they begin Burning."
+                    type: debuff
+                    conditions: 
+                        - burning
+                    save: null
+                upcast: "You may spend an additional action point on this spell to double the dice rolled."
         tier_3: # 3/3
             -   name: Edmire's Grand Manor # B tier
                 action_type: Offhand Action
@@ -274,212 +287,6 @@
                         person present named Malkizar. In fourteen words or fewer, describe what Malkizar
                         did. Everyone who witnessed the event now earnestly believes that Malkizar
                         was present and performed the action you described."
-    spells:
-        tier_1: #6/6
-            -   name: Power Chord
-                action_type: Action
-                type: damage
-                cost: 1
-                duration: instantaneous
-                requirements:
-                    movement: false 
-                    verbal: true 
-                description: "A pulse of sonic energy streaks from you in all directions, sparing allies and harming foes."
-                range: self
-                radius: 25
-                damage_scaling:
-                    damage_type: "psychic"
-                    tier_1: 1d8
-                    tier_2: 1d10
-                    tier_3: 1d12
-                effect:
-                    description: "Make an Inner Fire Resistance Check of any creature hit by the spell. On success, they are pushed back fifteen feet and Staggered."
-                    type: debuff
-                    conditions: 
-                        - staggered
-                    save: null
-            -   name: Biting Words #Bard
-                action_type: Action
-                type: "damage"
-                cost: 0
-                range: 60
-                duration: instantaneous
-                requirements:
-                    movement: true 
-                    verbal: true 
-                damage_scaling: 
-                    damage_type: "psychic"
-                    tier_1: 1d6 #(3.5 + 3.5f = 7)
-                    tier_2: 1d8 #(7 + 7f = 14)
-                    tier_3: 1d10 #(10.5 + 10.5f = 21)
-                description: "As you utter an magical insult, a set of ethereal
-                                teeth appear and bite your target."
-                effect:
-                    description: "If you roll max damage, they are hindered until your next turn."
-                    type: debuff
-                    save: null
-                    conditions: 
-                        - hindered
-                upcast: "For every action point spent on this spell, increase its range by 60ft."
-            -   name: Breathe Fire # Bard
-                action_type: Action
-                type: aoe damage
-                cost: 1
-                duration: instantaneous
-                requirements:
-                    movement: true 
-                    verbal: true 
-                    components: 
-                        - A mouthful of oil
-                description: "Magical warmth floods into your stomach before bubbling up and out. 
-                            You belch a cone of fire, igniting anything before you."
-                range: 15
-                damage_scaling:
-                    damage_shape: cone
-                    damage_type: fire
-                    tier_1: 1d6 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
-                    tier_2: 1d8 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
-                    tier_3: 1d10 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
-                effect:
-                    description: "Make an Inner Fire Resistance Check against your targets. On success, they begin Burning."
-                    type: debuff
-                    conditions: 
-                        - burning
-                    save: null
-            -   name: Blocking Hand
-                action_type: Reaction
-                type: utility
-                cost: 1
-                duration: instantaneous
-                requirements:
-                    movement: true 
-                    verbal: true 
-                    components: 
-                        - An old glove
-                description: "Summon an unseen force of protection to hinder an enemy attack.
-                                Make an Inner Fire Resistance Check. On success,
-                                their attack misses. On failure, it deals half damage."
-                range: 30
-            -   name: Song of Healing
-                action_type: Offhand Action
-                type: healing
-                cost: 1
-                duration: instantaneous
-                description: "Your voice fills the air in a soothing melody, and a gentle wave of magic washes over your target. 
-                            Their wounds begin to heal over and their vitality is restored."
-                requirements:
-                    movement: true 
-                    verbal: true 
-                damage_scaling: 
-                    damage_type: "healing"
-                    tier_1: "1d6"
-                    tier_2: "2d6"
-                    tier_3: "4d6"
-                range: 30
-            -   name: Distract
-                action_type: Offhand Action
-                type: debuff
-                cost: 0
-                duration: concentration
-                requirements:
-                    movement: true 
-                    verbal: true 
-                description: "Magically project your voice into an enemy's ears."
-                range: 60
-                effect:
-                    description: "Make an Inner Fire Resistance Check. On success, they are staggered."
-                    type: debuff
-                    conditions:
-                        - staggered
-                    save: null
-        tier_2: # 5/5
-            -   name: Kilgore's Thunderous Shout # Bard
-                action_type: Action
-                type: aoe damage
-                cost: 2
-                duration: instantaneous
-                requirements:
-                    movement: true 
-                    verbal: true 
-                description: "You release a mighty shout inspired by the fearsome energy of Kilgore, barbarian minstrel of the realm of cheese and mead."
-                range: 20
-                damage_scaling:
-                    damage_type: acoustic
-                    damage_shape: cone
-                    scaled_by:
-                        weapon: false
-                    tier_2: 3d6 #(10.5 vs 2d10 11)
-                    tier_3: 4d6 #(14 vs 2d12 13)
-                effect:
-                    type: debuff
-                    conditions: 
-                        - prone
-                    description: "Make an Inner Fire Resistance Check. On success, they are thrown back 15ft and knocked prone."
-                    save: null
-                upcast: "For each additional action point spent on this spell, increase damage by 1d6 and push enemies 10ft further."     
-            -   name: Song of Mass Healing
-                action_type: Offhand Action
-                type: aoe healing
-                cost: 2
-                duration: instantaneous
-                requirements:
-                    movement: false 
-                    verbal: true 
-                description: "Your voice swells with divine resonance. At the sound, your allies' wounds begin to knit themselves shut."
-                upcast: "For each additional action point spent on this spell, increase its radius by 15ft and add an additional dice."
-                damage_scaling:
-                    damage_type: healing
-                    tier_2: 2d4
-                    tier_3: 3d4
-                range: self
-                radius: 15
-            -   name: Counter Magic
-                type: utility
-                cost: 1
-                duration: instantaneous
-                action_type: Reaction
-                requirements:
-                    movement: false 
-                    verbal: true 
-                range: 60
-                description: "As an enemy attempts to cast a spell, use your power to disrupt them. 
-                    If the enemy is a minion, their spell instantly fails. Otherwise, 
-                    make an Inner Fire Resistance Check. On success, their spell is blocked.
-                    Counter Magic does not affect natural abilities such as a dragon's fire breath."
-                upcast: "You may spend an additional action point on this spell to make your check with advantage, or two more to cause it to work without a check."
-            -   name: Minor Gate
-                action_type: Offhand Action
-                type: utility
-                cost: 1
-                duration: instantaneous
-                requirements:
-                    movement: true 
-                    verbal: true 
-                description: "With a howl of wind, you tear open a portal large enough to fit yourself and one other
-                    individual of your size. It lasts for only a split second, but you may use it to transport yourself and
-                    an adjacent ally to a location anywhere within range. 
-                    If you try to move to a spot you cannot see, you must make an Intelligence Check to determine 
-                    how close you get to your target."
-                range: 100
-            -   name: Haste
-                action_type: Offhand Action
-                type: buff
-                cost: 1
-                duration: 3 Rounds
-                range: 60
-                requirements:
-                    movement: false 
-                    verbal: true 
-                    components: 
-                        - A coffee bean
-                description:  "Your voice rises in a quickening tempo as you urge your target forward."
-                effect:
-                    type: buff
-                    description: "Blood pounds in their ears as they are filled with incredible energy. For the spell's duration, they are affected by the Hastened condition."
-                    conditions:
-                        - hastened
-                    save: null 
-        tier_3: # 2/2
             -   name: Winged Magic Steed # A tier
                 action_type: Offhand Action
                 type: summoning
@@ -509,7 +316,7 @@
                     damage_type: psychic
                     tier_3: "6d6"
                 effect:
-                    description: "Roll Inner Fire Resistance Check. 
+                    description: "Roll Inner Fire Resistance Test. 
                                     On success, they view you as a jet black unicorn 
                                     and the earth begins to sparkle and writhe. 
                                     They are Frightened of you and are Hindered."
@@ -517,7 +324,202 @@
                         - frightened
                         - hindered
                     type: debuff
-                    save: "At the end of each of your turns, you must repeat your check."
+                    save: "At the end of each of your turns, you must repeat your test."
+    spells:
+        tier_1: #6/6
+            -   name: Power Chord
+                action_type: Action
+                type: damage
+                cost: 1
+                duration: instantaneous
+                requirements:
+                    movement: false 
+                    verbal: true 
+                description: "A pulse of sonic energy streaks from you in all directions, sparing allies and harming foes."
+                range: self
+                radius: 25
+                damage_scaling:
+                    damage_type: "psychic"
+                    tier_1: 1d8
+                    tier_2: 1d10
+                    tier_3: 1d12
+                effect:
+                    description: "Make an Inner Fire Resistance Test against any creature hit by the spell. On success, they are pushed back 10ft and Staggered."
+                    type: debuff
+                    conditions: 
+                        - staggered
+                    save: null
+            -   name: Biting Words #Bard
+                action_type: Action
+                type: "damage"
+                cost: 0
+                range: 60
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                damage_scaling: 
+                    damage_type: "psychic"
+                    tier_1: 1d6 #(3.5 + 3.5f = 7)
+                    tier_2: 1d8 #(7 + 7f = 14)
+                    tier_3: 1d10 #(10.5 + 10.5f = 21)
+                description: "As you utter a magical insult, a set of ethereal
+                                teeth appear and bite your target."
+                effect:
+                    description: "If you roll max damage, they are hindered until your next turn."
+                    type: debuff
+                    save: null
+                    conditions: 
+                        - hindered
+                upcast: "For every action point spent on this spell, increase its range by 60ft."
+            -   name: Blocking Hand
+                action_type: Reaction
+                type: utility
+                cost: 1
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                    components: 
+                        - An old glove
+                description: "Summon an unseen force of protection to hinder an enemy attack.
+                                Make an Inner Fire Resistance Test. On success,
+                                the attack misses. On failure, it deals half damage."
+                range: 30
+            -   name: Song of Healing
+                action_type: Offhand Action
+                type: healing
+                cost: 1
+                duration: instantaneous
+                description: "Your voice fills the air in a soothing melody, and a gentle wave of magic washes over your target. 
+                            Their wounds begin to heal and their vitality is restored."
+                requirements:
+                    movement: true 
+                    verbal: true 
+                damage_scaling: 
+                    damage_type: "healing"
+                    tier_1: "1d6"
+                    tier_2: "2d6"
+                    tier_3: "4d6"
+                range: 30
+            -   name: Distract
+                action_type: Offhand Action
+                type: debuff
+                cost: 0
+                duration: concentration
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: "Magically project your voice into an enemy's ears."
+                range: 60
+                effect:
+                    description: "Make an Inner Fire Resistance Test. On success, your target is staggered."
+                    type: debuff
+                    conditions:
+                        - staggered
+                    save: null
+            -   name: Disguise # Merge Disguise and Imitate
+                action_type: Offhand Action
+                type: utility
+                cost: 1
+                duration: concentration
+                requirements:
+                    movement: false 
+                    verbal: true 
+                description: "With a whispered incantation, you cloak your true form in a shimmering veil of illusion so that you appear to be
+                                someone else. Your new form must be humanoid and within one foot
+                                of your current height. Your disguise can include a new wardrobe. Magical alterations are ethereal and do
+                                not hold up to physical inspection."
+                range: self
+        tier_2: # 5/5
+            -   name: Kilgore's Thunderous Shout # Bard
+                action_type: Action
+                type: aoe damage
+                cost: 2
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: "You release a mighty shout inspired by the fearsome energy of Kilgore, barbarian minstrel of the realm of cheese and mead."
+                range: 20
+                damage_scaling:
+                    damage_type: acoustic
+                    damage_shape: cone
+                    scaled_by:
+                        weapon: false
+                    tier_2: 3d6 #(10.5 vs 2d10 11)
+                    tier_3: 4d6 #(14 vs 2d12 13)
+                effect:
+                    type: debuff
+                    conditions: 
+                        - prone
+                    description: "Make an Inner Fire Resistance Test. On success, your targets are thrown back 15ft and knocked prone."
+                    save: null
+                upcast: "For each additional action point spent on this spell, increase damage by 1d6 and push enemies 10ft further."     
+            -   name: Song of Mass Healing
+                action_type: Offhand Action
+                type: aoe healing
+                cost: 2
+                duration: instantaneous
+                requirements:
+                    movement: false 
+                    verbal: true 
+                description: "Your voice swells with divine resonance. At the sound, your allies' wounds begin to knit themselves shut."
+                upcast: "For each additional action point spent on this spell, increase its radius by 15ft and add an additional dice."
+                damage_scaling:
+                    damage_type: healing
+                    tier_2: 2d4
+                    tier_3: 3d4
+                range: self
+                radius: 15
+            -   name: Counter Magic
+                type: utility
+                cost: 1
+                duration: instantaneous
+                action_type: Reaction
+                requirements:
+                    movement: false 
+                    verbal: true 
+                range: 60
+                description: "As an enemy attempts to cast a spell, use your power to disrupt them. 
+                    If the enemy is a minion, their spell instantly fails. Otherwise, 
+                    make an Inner Fire Resistance Test. On success, their spell is blocked.
+                    Counter Magic does not affect natural abilities such as a dragon's fire breath."
+                upcast: "You may spend an additional action point on this spell to make your test with advantage, or two more to cause it to work without a test."
+            -   name: Minor Gate
+                action_type: Offhand Action
+                type: utility
+                cost: 1
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: "With a howl of wind, you tear open a portal large enough to fit yourself and one other
+                    individual of your size. It lasts for only a split second, but you may use it to transport yourself and
+                    an adjacent ally to a location anywhere within range. 
+                    If you try to move to a spot you cannot see, you must make an Intelligence Test to determine 
+                    how close you get to your target."
+                range: 100
+            -   name: Haste
+                action_type: Offhand Action
+                type: buff
+                cost: 1
+                duration: 3 Rounds
+                range: 60
+                requirements:
+                    movement: false 
+                    verbal: true 
+                    components: 
+                        - A coffee bean
+                description:  "Your voice rises in a quickening tempo as you urge an ally forward."
+                effect:
+                    type: buff
+                    description: "Blood pounds in their ears as they are filled with incredible energy. For the spell's duration, they are affected by the Hastened condition."
+                    conditions:
+                        - hastened
+                    save: null 
+        tier_3: # 2/2
+            []
 -   name: Knight
     class_type: Tank
     recommended_stats:
@@ -573,165 +575,201 @@
         tier_2: []
         tier_3: []
         # tier_1:
-        #     -   name: Shield Bash
-        #         action_type: "Offhand Action"
-        #         cost: 0
-        #         type: debuff 
-        #         duration: instantaneous
-        #         range: "touch" 
-        #         description: "Smash into an enemy with your Offhand and attempt to knock them off balance."
-        #         damage_scaling:
-        #             damage_type: blunt 
-        #             all_tiers: "1d2"
-        #         effect:
-        #             type: buff 
-        #             description: "Make a Strength Resistance Check. On success, they are Exposed to the next attack made against them."
-        #             conditions:
-        #                 - exposed
-        #             save: null
-        #     -   name: Phalanx
-        #         action_type: "Offhand Action"
-        #         cost: 0
-        #         type: aoe buff 
-        #         duration: infinite 
-        #         range: self 
-        #         radius: 15 
-        #         description: "Adopt a defensive stance, granting all allies within five feet your protection."
-        #         effect:
-        #             type: buff 
-        #             description: "While they stand at your side, your allies are considered to be Guarded."
-        #             conditions:
-        #                 - guarded
-        #             save: null
-        #     -   name: Goad
-        #         action_type: "Offhand Action"
-        #         cost: 0
-        #         type: debuff
-        #         range: 50
-        #         duration: instantaneous
-        #         description: "Call a challenge to an enemy."
-        #         effect:
-        #             type: debuff
-        #             description: "Make a Charisma Resistance Check. On success, they become Fixated on you until the end of their next turn."
-        #             conditions:
-        #                 - fixated 
-        #             save: null
-        #     -   name: Pivot
-        #         action_type: Offhand Action
-        #         cost: 0
-        #         type: combat option 
-        #         duration: instantaneous
-        #         range: self  
-        #         radius: 10
-        #         description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
-        #     -   name: Allied Strike
-        #         action_type: Action
-        #         type: combat option 
-        #         cost: 1
-        #         range: inherited
-        #         duration: instantaneous
-        #         ability_modified: standard attack 
-        #         description: "As you strike your opponent, you batter away their defenses and deal bonus damage."
-        #         effect:
-        #             type: debuff 
-        #             description: "If an ally attacks that opponent before the start of your next turn, they also deal bonus damage per this ability."
-        #             conditions:
-        #                 - custom 
-        #             save: null 
-        #         damage_scaling:
-        #             damage_type: inherited 
-        #             tier_1: 1d8
-        #             tier_2: 1d10
-        #             tier_3: 1d12          
-        # tier_2:
-        #     -   name: Cleave
-        #         action_type: Action
-        #         type: combat option 
-        #         cost: 1
-        #         range: 10 
-        #         duration: instantaneous
-        #         ability_modified: standard_attack
-        #         description: "Swing your weapon in a wide arc, targetting all enemies within the ability's radius."
-        #         damage_scaling:
-        #             damage_type: inherited
-        #             damage_shape: cone
-        #             tier_1: 1d8
-        #             tier_2: 1d10
-        #             tier_3: 1d12
-        #     -   name: Controlled Advance
-        #         cost: 0
-        #         type: buff
-        #         duration: instantaneous
-        #         range: self 
-        #         action_type: Free Action
-        #         ability_modified: slayed enemy
-        #         description: "As a foe falls to your blade, use the oportunity to push into their ranks. 
-        #                     Whenever you slay an enemy with a melee attack, you may step forward
-        #                     into the space that they occupied. You are immune to exposed attacks 
-        #                     during this movement. Once you've moved, you may make a standard attack."
-        #     -   name: Overwhelming Strike
-        #         action_type: "Action"               
-        #         type: combat option
-        #         cost: 1
-        #         range: inherited
-        #         duration: instantaneous
-        #         ability_modified: standard attack
-        #         damage_scaling:
-        #             damage_type: inherited
-        #             tier_1: "1d8"
-        #             tier_2: "1d10"
-        #             tier_3: "1d12"
-        #         description: "With a blow like a hammerfall, you batter your enemy with a devestating attack."
-        #         effect:
-        #             type: debuff 
-        #             description: "Make a Strength Resistance Check. On success, they are Staggered."
-        #             conditions: 
-        #                 - staggered 
-        #             save: null    
-        #     -   name: Make Space
-        #         action_type: Action
-        #         cost: 0
-        #         type: combat option
-        #         range: inherited
-        #         duration: instantaneous
-        #         ability_modified: standard attack
-        #         description: "Slam into your enemy with oppressive force."
-        #         effect:
-        #             type: debuff
-        #             description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
-        #                         If they strike something as a result, they are Staggered until the end of their next turn."
-        #             conditions: 
-        #                 - staggered 
-        #             save: null
-        #         damage_scaling:
-        #             damage_type: inherited 
-        #             tier_1: 1d8
-        #             tier_2: 1d10
-        #             tier_3: 1d12
-        # tier_3:
-        #     -   name: Very Dangerous over Short Distances 
-        #         action_type: "Passive"
-        #         type: buff
-        #         cost: 0
-        #         range: touch
-        #         duration: passive
-        #         ability_modified: advantaged attack
-        #         passive_damage_source: true
-        #         description: "Once you've closed with an enemy, you are able to press the advantage."
-        #         effect:
-        #             type: buff
-        #             description: "Roll damage at advantage if you begin your turn next to your target."
-        #             conditions: 
-        #                 - custom 
-        #             save: null              
-        #     -   name: Feint
-        #         action_type: Offhand Action
-        #         cost: 0
-        #         type: combat option 
-        #         duration: instantaneous
-        #         range: inherited
-        #         description: "Take up a defensive position as enemies circle. The next enemy who attacks you before your next turn does so at disadvantage.
-        #                     You may immediately make a standard attack as a free action."
+            # -   name: Charge
+            #         action_type: "Action"
+            #         type: combat option
+            #         cost: 1
+            #         duration: instantaneous
+            #         range: 25
+            #         ability_modified: dash
+            #         damage_scaling:
+            #             damage_type: blunt
+            #             tier_1: 1d8
+            #             tier_2: 1d10 
+            #             tier_3: 1d12 
+            #         description: "With a mighty cry, you charge into the fray. 
+            #                     Rush ahead 25ft. You are immune to exposed attacks and deal this ability's damage
+            #                     to any enemy whose space you move through."
+            #         effect:
+            #             type: debuff 
+            #             description: "Make an Inner Fire Resistance Test of any creature you hit. On success,
+            #                             they are knocked Prone."
+            #             conditions:
+            #                 - prone 
+            #             save: null
+            #     -   name: Phalanx
+            #         action_type: "Offhand Action"
+            #         cost: 0
+            #         type: aoe buff 
+            #         duration: infinite 
+            #         range: self 
+            #         radius: 15 
+            #         description: "Adopt a defensive stance, granting all allies within five feet your protection."
+            #         effect:
+            #             type: buff 
+            #             description: "While they stand at your side, your allies are considered to be Guarded."
+            #             conditions:
+            #                 - guarded
+            #             save: null
+            #     -   name: Goad
+            #         action_type: "Offhand Action"
+            #         cost: 0
+            #         type: debuff
+            #         range: 50
+            #         duration: instantaneous
+            #         description: "Call a challenge to an enemy."
+            #         effect:
+            #             type: debuff
+            #             description: "Make a Charisma Resistance Test. On success, they become Fixated on you until the end of their next turn."
+            #             conditions:
+            #                 - fixated 
+            #             save: null
+            #     -   name: Pivot
+            #         action_type: Offhand Action
+            #         cost: 0
+            #         type: combat option 
+            #         duration: instantaneous
+            #         range: self  
+            #         radius: 10
+            #         description: "As foes circle, place yourself between them and a nearby ally. Trade spaces with a willing creature within the ability's radius."
+            #     -   name: Allied Strike
+            #         action_type: Action
+            #         type: combat option 
+            #         cost: 1
+            #         range: inherited
+            #         duration: instantaneous
+            #         ability_modified: standard attack 
+            #         description: "As you strike your opponent, you batter away their defenses and deal bonus damage."
+            #         effect:
+            #             type: debuff 
+            #             description: "If an ally attacks that opponent before the start of your next turn, they also deal bonus damage per this ability."
+            #             conditions:
+            #                 - custom 
+            #             save: null 
+            #         damage_scaling:
+            #             damage_type: inherited 
+            #             tier_1: 1d8
+            #             tier_2: 1d10
+            #             tier_3: 1d12          
+                # -   name: Lionhearted
+                #     action_type: "Offhand Action"
+                #     cost: 1
+                #     type: aoe buff 
+                #     range: self 
+                #     radius: 30
+                #     duration: 1 Dungeon Turn
+                #     description: "Your presence soothes your allies, inspiring them and guarding them against fear."
+                #     effect:
+                #         type: buff 
+                #         description: "Grant all allies within the ability's radius inspiration. Furthermore, for the ability's duration, any friendly creatures within the ability's radius are immune to the Frightened condition."
+                #         conditions:
+                #             - fearless
+                #         save: null
+            # tier_2:
+            #     -   name: Cleave
+            #         action_type: Action
+            #         type: combat option 
+            #         cost: 1
+            #         range: 10 
+            #         duration: instantaneous
+            #         ability_modified: standard_attack
+            #         description: "Swing your weapon in a wide arc, targetting all enemies within the ability's radius."
+            #         damage_scaling:
+            #             damage_type: inherited
+            #             damage_shape: cone
+            #             tier_1: 1d8
+            #             tier_2: 1d10
+            #             tier_3: 1d12
+            #     -   name: Controlled Advance
+            #         cost: 0
+            #         type: buff
+            #         duration: instantaneous
+            #         range: self 
+            #         action_type: Free Action
+            #         ability_modified: slayed enemy
+            #         description: "As a foe falls to your blade, use the oportunity to push into their ranks. 
+            #                     Whenever you slay an enemy with a melee attack, you may step forward
+            #                     into the space that they occupied. You are immune to exposed attacks 
+            #                     during this movement. Once you've moved, you may make a standard attack."
+            #     -   name: Overwhelming Strike
+            #         action_type: "Action"               
+            #         type: combat option
+            #         cost: 1
+            #         range: inherited
+            #         duration: instantaneous
+            #         ability_modified: standard attack
+            #         damage_scaling:
+            #             damage_type: inherited
+            #             tier_1: "1d8"
+            #             tier_2: "1d10"
+            #             tier_3: "1d12"
+            #         description: "With a blow like a hammerfall, you batter your enemy with a devestating attack."
+            #         effect:
+            #             type: debuff 
+            #             description: "Make a Strength Resistance Test. On success, they are Staggered."
+            #             conditions: 
+            #                 - staggered 
+            #             save: null    
+            #     -   name: Make Space
+            #         action_type: Action
+            #         cost: 0
+            #         type: combat option
+            #         range: inherited
+            #         duration: instantaneous
+            #         ability_modified: standard attack
+            #         description: "Slam into your enemy with oppressive force."
+            #         effect:
+            #             type: debuff
+            #             description: "They must make a spell power saving throw. On failure, they are thrown back 15 feet.
+            #                         If they strike something as a result, they are Staggered until the end of their next turn."
+            #             conditions: 
+            #                 - staggered 
+            #             save: null
+            #         damage_scaling:
+            #             damage_type: inherited 
+            #             tier_1: 1d8
+            #             tier_2: 1d10
+            #             tier_3: 1d12
+                # level_11:
+                #     -   name: Move!
+                #         action_type: Offhand Action
+                #         type: aoe buff
+                #         cost: 1
+                #         duration: instantaneous
+                #         range: self
+                #         radius: 50
+                #         description: "As you read the tide of the battle, call out a quick order to one of your allies."
+                #         effect:
+                #             type: buff
+                #             description: "They are Spurred to Movement."
+                #             conditions:
+                #                 - spurred to movement 
+                #             save: null
+                #         upcast: "You may spend an additional action point on this spell to spur them to action, both take movement and and make one action or offhand action."
+            # tier_3:
+            #     -   name: Very Dangerous over Short Distances 
+            #         action_type: "Passive"
+            #         type: buff
+            #         cost: 0
+            #         range: touch
+            #         duration: passive
+            #         ability_modified: advantaged attack
+            #         passive_damage_source: true
+            #         description: "Once you've closed with an enemy, you are able to press the advantage."
+            #         effect:
+            #             type: buff
+            #             description: "Roll damage at advantage if you begin your turn next to your target."
+            #             conditions: 
+            #                 - custom 
+            #             save: null              
+            #     -   name: Feint
+            #         action_type: Offhand Action
+            #         cost: 0
+            #         type: combat option 
+            #         duration: instantaneous
+            #         range: inherited
+            #         description: "Take up a defensive position as enemies circle. The next enemy who attacks you before your next turn does so at disadvantage.
+            #                     You may immediately make a standard attack as a free action."
     abilities_by_level:
         level_1:
             -   name: Steel Yourself
@@ -741,29 +779,26 @@
                 duration: instantaneous
                 action_type: Free Action
                 description: "Brace yourself against an attack. 
-                            Make a Strength Resistance Check. On success, the attack does no damage. On failure, it deals half damage."
-            -   name: Charge
-                action_type: "Action"
-                type: combat option
+                            Make a Strength Resistance Test. On success, the attack does no damage. On failure, it deals half damage."
+            -   name: Shield Bash
+                action_type: "Offhand Action"
                 cost: 1
+                type: debuff 
                 duration: instantaneous
-                range: 25
-                ability_modified: dash
+                range: "touch" 
+                description: "Smash into an enemy with your offhand and attempt to knock them off balance."
                 damage_scaling:
-                    damage_type: blunt
-                    tier_1: 1d8
-                    tier_2: 1d10 
-                    tier_3: 1d12 
-                description: "With a mighty cry, you charge into the fray. 
-                            Rush ahead 25ft. You are immune to exposed attacks and deal this ability's damage
-                            to any enemy whose space you move through."
+                    damage_type: blunt 
+                    tier_1: "1d4"
+                    tier_2: "1d6"
+                    tier_3: "1d8"
                 effect:
-                    type: debuff 
-                    description: "Make an Inner Fire Resistance Check of any creature you hit. On success,
-                                    they are knocked Prone."
+                    type: buff 
+                    description: "Make a Strength Resistance Test. On success, they are knocked back 10ft. If they bump into something, they fall Prone. If 
+                                  they bump into a creature, the creature also takes the attack's damage."
                     conditions:
-                        - prone 
-                    save: null
+                        - prone
+                    save: null   
             -   name: Inspiring Strike
                 action_type: "Action"
                 cost: 1
@@ -795,21 +830,6 @@
                 description: "Leap in front of someone to become the target of an attack aimed at them. 
                                 Any damage you receive as a result of this ability is halved."
         level_6:
-            -   name: Lionhearted
-                action_type: "Offhand Action"
-                cost: 1
-                type: aoe buff 
-                range: self 
-                radius: 30
-                duration: 1 Dungeon Turn
-                description: "Your presence soothes your allies, inspiring them and guarding them against fear."
-                effect:
-                    type: buff 
-                    description: "Grant all allies within the ability's radius inspiration. Furthermore, for the ability's duration, any friendly creatures within the ability's radius are immune to the Frightened condition."
-                    conditions:
-                        - fearless
-                    save: null
-        level_8:
             -   name: None Shall Pass
                 type: debuff
                 cost: 0
@@ -820,28 +840,12 @@
                 description: "You are a bulwark of steel, hindering any enemy advance."
                 effect:
                     type: debuff 
-                    description: "When you make an exposed attack, you may make a Strength Resistance Check. On success, they are Halted. On failure, they are Hindered."
+                    description: "When you make an exposed attack, you may make a Strength Resistance Test. On success, they are Halted. On failure, they are Hindered."
                     conditions:
                         - halted 
                         - hindered 
                     save: null
-        level_11:
-            -   name: Move!
-                action_type: Offhand Action
-                type: aoe buff
-                cost: 1
-                duration: instantaneous
-                range: self
-                radius: 50
-                description: "As you read the tide of the battle, call out a quick order to one of your allies."
-                effect:
-                    type: buff
-                    description: "They are Spurred to Movement."
-                    conditions:
-                        - spurred to movement 
-                    save: null
-                upcast: "You may spend an additional action point on this spell to spur them to action, both take movement and and make one action or offhand action."
-        level_13:
+        level_8:
             -   name: Stay on Your Feet
                 type: buff
                 cost: 0
@@ -849,8 +853,8 @@
                 duration: passive
                 action_type: Passive
                 description: "Even battered and bloodied, you fight on.
-                            If you fall to zero health, make a an Inner Fire Check with a target of 10. If you succeed, drop to 1 health instead."
-        level_15:
+                            If you fall to zero health, make a an Inner Fire Test with a target of 9. If you succeed, drop to 1 health instead."
+        level_10:
             -   name: Aura of Hope
                 action_type: "Passive"
                 type: aoe buff
@@ -861,8 +865,8 @@
                 description: "You have become the ultimate protector for your allies."
                 effect:
                     type: buff 
-                    description: "If an ally stands within the effect's radius, they may add +1 to all checks against 
-                                enemy Threat and make death coin flips at advantage."
+                    description: "If an ally stands within the effect's radius, they may add +1 to all Tests against 
+                                enemy Threat make death coin flips at advantage."
                     conditions:
                         - custom 
                     save: null
@@ -923,7 +927,7 @@
         #         description: "Your muscles bulge and the earth shakes as you lash out at your enemy with a particularly vicious attack."
         #         effect:
         #             type: debuff 
-        #             description: "Make a Strength Resistance Check. On success, they are knocked Prone."
+        #             description: "Make a Strength Resistance Test. On success, they are knocked Prone."
         #             conditions: 
         #                 - prone
         #             save: null
@@ -961,7 +965,7 @@
         #         description: "Swing high and fast in an effort to knock your opponent off-balance."
         #         effect:
         #             type: debuff 
-        #             description: "Make a strength check against their resistance. On sucess they are staggered."
+        #             description: "Make a strength test against their resistance. On success they are staggered."
         #             conditions:
         #                 - staggered
         #             save: null
@@ -982,6 +986,18 @@
         #             damage_type: inherited
         #             all_tiers: 1d6
         #         description: "You've learned to use your enemies' terror to your advantage. When you attack an enemy that is Frightened of you, deal bonus damage."
+        
+            # -   name: Throw Anything
+            #     type: buff
+            #     cost: 0
+            #     range: inherited 
+            #     duration: passive
+            #     range: 30
+            #     action_type: modifies_ability
+            #     ability_modified: thrown attack
+            #     description: "Sometimes, you can't get close enough to punch. You are able to treat any object you throw as a regular weapon
+            #                 with a thrown range of 30ft. Additionally, if you use
+            #                 the Meat Shield ability and the target dies, you may immediately make an attack using them as a thrown weapon."     
         # tier_2:
         #     -   name: Every Wall is a Door
         #         action_type: Passive
@@ -1056,7 +1072,7 @@
         #         description: "Use your intimidating presence to force an enemy to do your will."
         #         effect:
         #             type: debuff 
-        #             description: "Make a Strength Resistance Check. On success, they are Controlled until the end of their next turn or must answer three of your questions truthfully."
+        #             description: "Make a Strength Resistance Test. On success, they are Controlled until the end of their next turn or must answer three of your questions truthfully."
         #             conditions:
         #                 - controlled 
         #             save: null
@@ -1097,7 +1113,7 @@
                 description: "Rage threatens to consume you."
                 effect:
                     type: buff
-                    description: "For the ability's duration, you are Resistant to physical damage and have advantage on any strength check."
+                    description: "For the ability's duration, you are Resistant to physical damage and have advantage on any Test of Strength."
                     conditions:
                         - resistant
                     save: null
@@ -1125,7 +1141,7 @@
                 description: "Spittle flies from your mouth as you strike at a foe."
                 effect:
                     type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they are Frightened of you. 
+                    description: "Make a Strength Resistance Test. On success, your target is Frightened of you. 
                                     If they die as a result of a strike, choose a different target within 30ft. to become Frightened."
                     conditions: 
                         - frightened
@@ -1145,38 +1161,41 @@
                 description: "When you see an incoming attack, you may attempt to shield yourself with an adjacent enemy." 
                 effect:
                     type: debuff 
-                    description: "Make a Strength Resistance Check. On success, they take the damage instead of you."
+                    description: "Make a Strength Resistance Test. On success, they take the damage instead of you. If the creature
+                                  perishes as a result of the strike, you may immediately make an attack using them as a thrown weapon with 30ft range."
                     conditions:
                         - custom 
                     save: null
         level_6:
-            -   name: Terrify
-                type: debuff
-                cost: 0
-                range: inherited
-                duration: save
-                action_type: modifies_ability
-                ability_modified: Single Out
-                description: "As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes."
-                effect:
-                    type: debuff 
-                    description: Make a Strength Resistance Check. On success, they become Frightened of you until the end of their next turn.
-                    conditions: 
-                        - frightened 
-                    save: null
-        level_8:
-            -   name: Throw Anything
+            -   name: Adrenaline
                 type: buff
                 cost: 0
-                range: inherited 
+                range: self
                 duration: passive
-                range: 30
                 action_type: modifies_ability
-                ability_modified: thrown attack
-                description: "Sometimes, you can't get close enough to punch. You are able to treat any object you throw as a regular weapon
-                            with a thrown range of 30ft. Additionally, if you use
-                            the Meat Shield ability and the target dies, you may immediately make an attack using them as a thrown weapon."                                  
-        level_11:
+                ability_modified: Berserk
+                description: "A bloody grin spreads across your face as you hurtle towards your foes."
+                effect:
+                    type: buff 
+                    description: "When you go berserk, you are Quickened."
+                    conditions:
+                        - quickened 
+                    save: null
+            # -   name: Terrify
+            #     type: debuff
+            #     cost: 0
+            #     range: inherited
+            #     duration: save
+            #     action_type: modifies_ability
+            #     ability_modified: Single Out
+            #     description: "As the enemy you've singled out looks up at your dark, rage-filled eyes, their constitution shakes."
+            #     effect:
+            #         type: debuff 
+            #         description: Whenever you use Single Out, make a Strength Resistance Test against the target. On success, your target becomes Frightened of you until the end of their next turn.
+            #         conditions: 
+            #             - frightened 
+            #         save: null
+        level_8:
             -   name: Resistant Rage
                 action_type: modifies_ability
                 ability_modified: Berserk
@@ -1185,45 +1204,39 @@
                 range: inherited
                 duration: inherited
                 type: buff
-                description: "Your rage is so complete that you can shield yourself against enemy abilities."
+                description: "Your rage is so complete that it can shield your against your foes' techniques."
                 effect:
                     type: buff
-                    description: "While going Berserk, roll any checks against an enemy's Threat with advantage."
+                    description: "While going Berserk, roll any Resistance Tests to avoid an enemy ability at advantage."
                     conditions:
                         - custom
                     save: null
-        level_13:
-            -   name: The Opener
-                action_type: Passive
-                type: buff
-                cost: 0
-                range: self
-                duration: passive
-                action_type: modifies_ability
-                ability_modified: Brutal Attack
-                description: "The chance of violence spurs you forward."
-                effect:
-                    type: buff 
-                    description:  "On the first turn of combat, you are 
-                            Quickened. Additionally, if you attack an enemy that has not yet taken a turn, use a 1AP attack at no cost."
-                    conditions:
-                        - quickened
-                    save: null   
-        level_15:
+        # level_13:
+        #     -   name: The Opener
+        #         action_type: Passive
+        #         type: buff
+        #         cost: 0
+        #         range: self
+        #         duration: passive
+        #         action_type: modifies_ability
+        #         ability_modified: Brutal Attack
+        #         description: "The chance of violence spurs you forward."
+        #         effect:
+        #             type: buff 
+        #             description:  "On the first turn of combat, you are 
+        #                     Quickened. Additionally, if you attack an enemy that has not yet taken a turn, use a 1AP attack at no cost."
+        #             conditions:
+        #                 - quickened
+        #             save: null   
+        level_10:
             -   name: You're Next!
                 type: buff
                 cost: 0
                 duration: passive 
-                range: inherited
+                range: 60
                 action_type: modifies_ability 
                 ability_modified: Singled Out 
-                description: "If you slay your Singled Out target, you may immediately move 25ft and make a standard attack."
-                effect:
-                    type: buff 
-                    description:  "If your target survives, they are Frightened of you until the end of their next turn."
-                    conditions:
-                        - frightened
-                    save: null
+                description: "If you slay a Singled Out target, choose another foe within range to become Singled Out. You may immediately move 25ft towards them and make a standard attack."
 -   name: Rogue
     class_type: Striker
     recommended_stats:
@@ -1260,7 +1273,7 @@
                     with daggers, hurling them at opponents and slashing multiple times to deal quick,
                     repeated damage. If a rogue invests in magic, they can use their abilities to avoid
                     damage by becoming invisible, fill an area with shadows, or even launch themselves high into the air."
-    #expertise: "As a rogue, you have expertise in all dexterity checks and saves. This includes checks made to climb, sneak, hide, pickpocket, pick locks."
+    #expertise: "As a rogue, you have expertise in all dexterity Tests. This includes tests made to climb, sneak, hide, pickpocket, pick locks."
     weapon_training:
         - Light Martial Weapons
         - Light Ranged Weapons
@@ -1351,7 +1364,7 @@
                 description: "As you stab an enemy with one hand you rob them blind with the other."
                 effect:
                     type: debuff 
-                    description: "Make a Dexterity Resistance Check. On success, you are able to steal one object from them.
+                    description: "Make a Dexterity Resistance Test. On success, you are able to steal one object from them.
                                 If your attack is ranged, you may instead declare that an object is knocked free of their grasp."
                     conditions:
                         - custom 
@@ -1371,7 +1384,7 @@
                 description: "Attempt to pivot out of the way and avoid an incoming attack."
                 effect:
                     type: buff 
-                    description: "Make a Dexterity Resistance Check. On success, the attack misses. On failure, it deals half damage."
+                    description: "Make a Dexterity Resistance Test. On success, the attack misses. On failure, it deals half damage."
                     conditions:
                         - custom
                     save: null
@@ -1382,20 +1395,34 @@
                 type: buff 
                 range: self 
                 duration: 3 Dungeon Turns
-                description: "Focus your attention to vanish into the shadows. You gain advantage on checks made to hide or sneak for the next 3 Dungeon Turns or until you make an attack."
+                description: "Focus your attention to vanish into the shadows. You gain advantage on tests made to hide or sneak for the next 3 Dungeon Turns or until you make an attack.
+                              When you make an attack against an unwitting enemy while creeping, deal an extra 1d6 damage."
         level_3:
-            -   name: Strike From The Shadows
-                action_type: "modifies_ability"
+            # -   name: Strike From The Shadows
+            #     action_type: "modifies_ability"
+            #     cost: 0
+            #     type: buff
+            #     duration: passive 
+            #     range: inherited 
+            #     ability_modified: attack from hiding 
+            #     description: "Strike when an enemy is distracted. You deal bonus damage when you attack from hiding or when an enemy is Harried."
+            #     passive_damage_source: true 
+            #     damage_scaling:
+            #         damage_type: inherited
+            #         all_tiers: 1d4
+            -   name: Fade Step
+                action_type: Offhand Action
                 cost: 0
                 type: buff
-                duration: passive 
-                range: inherited 
-                ability_modified: attack from hiding 
-                description: "Streak in and strike when an enemy is distracted. You deal bonus damage when you attack from hiding or when an enemy is Harried."
-                passive_damage_source: true 
-                damage_scaling:
-                    damage_type: inherited
-                    all_tiers: 1d4
+                range: self
+                duration: instantaneous
+                description: "You reposition with practiced footwork."
+                effect:
+                    type: buff
+                    description: "When you dash, you do not provoke exposed attacks. Further, your dash ignores difficult terrain and may carry you through enemy spaces."
+                    conditions: 
+                        - custom
+                    save: null 
         level_6:     
             -   name: Opening Strike
                 action_type: "Offhand Action"
@@ -1409,47 +1436,31 @@
                     all_tiers: "1d2"
                 effect:
                     type: buff
-                    description: "Make a Dexterity Resistance Check. On success, they are Exposed to your next attack on this turn.
+                    description: "Make a Dexterity Resistance Test. On success, they are Exposed to your next attack on this turn.
                                 This ability cannot be used if you begin adjacent to your target."
                     conditions:
                         - exposed
                     save: null
         level_8:
-            -   name: Weakening Blow
-                action_type: "Action"
-                cost: 1
-                type: combat option
-                range: inherited 
-                duration: instantaneous
-                ability_modified: standard attack
-                description: "As you land a particularly well placed blow, you slice into your opponent's vitals and sap their strength."
-                effect: 
-                    type: debuff
-                    description: "Make a Dexterity Resistance Check. On success, their next attack is Weakened."
-                    conditions:
-                        - weakened 
-                    save: null
-                damage_scaling:
-                    damage_type: inherited
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-        level_11:
-            -   name: Evasion
-                action_type: "Passive"
-                cost: 0
-                range: self 
-                duration: passive 
-                type: buff
-                description: "Use your uncanny knack for survival to avoid an explosion or other area of effect attack."
-                effect: 
-                    type: buff
-                    description: "When an area of effect attack calls for you to make a check against an enemy's Threat, 
-                                you take half damage on a failure or no damage on a success."
-                    conditions: 
-                        - custom 
-                    save: null    
-        level_13:
+            # -   name: Weakening Blow
+            #     action_type: "Action"
+            #     cost: 1
+            #     type: combat option
+            #     range: inherited 
+            #     duration: instantaneous
+            #     ability_modified: standard attack
+            #     description: "As you land a particularly well placed blow, you slice into your opponent's vitals and sap their strength."
+            #     effect: 
+            #         type: debuff
+            #         description: "Make a Dexterity Resistance Test. On success, their next attack is Weakened."
+            #         conditions:
+            #             - weakened 
+            #         save: null
+            #     damage_scaling:
+            #         damage_type: inherited
+            #         tier_1: "1d8"
+            #         tier_2: "1d10"
+            #         tier_3: "1d12"
             -   name: Ride The Blindspot
                 action_type: "Reaction"
                 cost: 1
@@ -1466,14 +1477,31 @@
                     conditions: 
                         - custom 
                     save: null
-        level_15:
-            -   name: Incredible Reflexes
+        level_10:
+            -   name: Evasion
                 action_type: "Passive"
                 cost: 0
-                type: buff 
                 range: self 
-                duration: instantaneous
-                description: "As combat is joined, you burst into action. On the first round of combat, you are able to take two turns."
+                duration: passive 
+                type: buff
+                description: "Use your uncanny knack for survival to avoid an explosion or other area of effect attack."
+                effect: 
+                    type: buff
+                    description: "When an area of effect attack calls for you to make a test against an enemy's Threat, 
+                                you take half damage on a failure or no damage on a success."
+                    conditions: 
+                        - custom 
+                    save: null    
+        # level_13:
+            
+        # # level_15:
+        #     -   name: Incredible Reflexes
+        #         action_type: "Passive"
+        #         cost: 0
+        #         type: buff 
+        #         range: self 
+        #         duration: instantaneous
+        #         description: "As combat is joined, you burst into action. On the first round of combat, you are able to take two turns."
 -   name: Ranger
     class_type: Striker
     recommended_stats:
@@ -1501,7 +1529,7 @@
         -   title: "When Adventuring"
             display_title: true 
             text: "Rangers are invaluable when traversing the wilderness, using their high Intelligence and Dexterity
-                    to lead the way through trecherous climbs. Rangers are expert at piecing tracking foes and 
+                    to lead the way through treacherous climbs. Rangers are expert at piecing tracking foes and 
                     piecing together what happened from even the faintest sign."                    
         -   title: "When Socializing"
             display_title: true 
@@ -1531,7 +1559,7 @@
         #         description: "Affix a cord to your arrow and fire it at a target. As it hits, it holds fast, creating a durable link between you."
         #         effect:
         #             type: debuff 
-        #             description: "If your target is a living creature, make a Dexterity Resistance Check. On success, they become Tethered to you."
+        #             description: "If your target is a living creature, make a Dexterity Resistance Test. On success, they become Tethered to you."
         #             conditions:
         #                 - tethered 
         #             save: null
@@ -1577,7 +1605,7 @@
         #         effect:
         #             type: buff
         #             description: "Additionally, difficult terrain no longer hinders you. When out of combat, 
-        #                         take advantage on dexterity checks made to navigate natural obstacles."
+        #                         take advantage on dexterity tests made to navigate natural obstacles."
         #             conditions:
         #                 - custom 
         #             save: null
@@ -1591,26 +1619,28 @@
                 cost: 0
                 duration: 6 Dungeon Turns
                 range: 30
-                description: "Spend a moment watching an enemy or make an Intelligence Check when you find tracks or sign of a creature's passing. 
-                                Learn one fact of your choice about the creature, for example, what type of creature it was or its Resistance is."
+                description: "Spend a moment watching an enemy or make a Test of Intelligence when you find tracks or sign of a creature's passing. 
+                                Learn one fact of your choice about the creature, for example what type of creature you are tracking, what a creature's resistance score is,
+                                or what its maximum health is."
                 effect:
                     type: debuff 
-                    description: "For the ability's duration roll Threat Checks, Resistance Checks, and Called Shots against the creature at advantage.
-                                When out of combat, take advantage on tracking checks made to follow or detect the analyzed creatures."
+                    description: "For the ability's duration roll Tests of Resistance and Called Shots against the creature at advantage.
+                                When out of combat, take advantage on tests made to follow or detect the analyzed creature. You may analyze at most one creature at a time.
+                                If the target of Analyze is a boss monster, you must make an Intelligence Resistance Test to gain its benefits."
                     conditions:
                         - custom 
                     save: null
-            -   name: Pin Down
+            -   name: Pin
                 action_type: Action
                 type: combat option 
                 cost: 1
                 range: inherited
                 duration: instantaneous
                 ability_modified: standard attack 
-                description: "You aim a carefully placed attack in order to slow your target's advance."
+                description: "Aim a carefully placed attack to slow your target's advance."
                 effect:
                     type: debuff 
-                    description: "Make a Dexterity Resistance Check. On success, they are Hindered."
+                    description: "Make a Dexterity Resistance Test. On success, they are Hindered."
                     conditions:
                         - hindered 
                     save: null 
@@ -1619,51 +1649,54 @@
                     tier_1: 1d8
                     tier_2: 1d10
                     tier_3: 1d12
-            -   name: Fade Step
-                action_type: Offhand Action
-                cost: 1
-                type: buff
-                range: self
-                duration: instantaneous
-                description: "You reposition with practiced footwork."
-                effect:
-                    type: buff
-                    description: "Move up to 15ft without provoking exposed attacks. This movement ignores difficult terrain and may carry you through enemy spaces without provoking an exposed attack."
-                    conditions: 
-                        - custom
-                    save: null 
-        level_3:
             -   name: Decoy
                 action_type: Offhand Action
                 type: combat option 
                 cost: 1
                 range: 60
                 duration: instantaneous
-                ability_modified: standard attack 
                 description: "From hiding, cup your hands and make a perfect monster call."
                 effect:
                     type: debuff 
-                    description: "Make an Intelligence Resistance Check. On success, your target is Lured to a point of your choosing. Intelligent creatures may 
+                    description: "Make an Intelligence Resistance Test. On success, your target is Lured to a point of your choosing. Intelligent creatures may 
                                   ignore the luring, but are instead Stunned on their next turn."
                     conditions:
                         - lured 
                         - stunned
                     save: null 
+        level_3:
+            -   name: Reposition
+                action_type: Free Action
+                cost: 0
+                type: buff
+                duration: instantaneous 
+                range: self
+                description: "Your practiced footwork allows you to slip away even when foes close with you. 
+                              When you are attacked hand-to hand, you may move 5ft without provoking an exposed attack."
         level_6:
-            -   name: Piercing Attack
-                action_type: Action
-                cost: 1 
-                type: buff 
-                range: self 
-                duration: instantaneous
-                ability_modified: standard attack 
-                description: "You find exactly the right angle to fire a shot which pierces your enemies."
-                effect:
-                    type: buff
-                    description: "The attack passes through all enemies in a line before you, dealing damage to each."
-                    conditions:
-                        - custom 
-                    save: null
+            -   name: Hunter's Instinct
+                type: debuff
+                cost: 0
+                range: inherited
+                duration: inherited
+                action_type: modifies_ability
+                ability_modified: Analyze
+                description: "When you analyze a creature, all other creatures of that type are also considered analyzed. Additionally, when you 
+                              attack an analyzed creature, your damage dice increases by one step. You may analyze at most one type of creature at a time."
+            # -   name: Piercing Attack
+            #     action_type: Action
+            #     cost: 1 
+            #     type: buff 
+            #     range: self 
+            #     duration: instantaneous
+            #     ability_modified: standard attack 
+            #     description: "You find exactly the right angle to fire a shot to pierce your enemies."
+            #     effect:
+            #         type: buff
+            #         description: "The attack passes through all enemies in a line before you, dealing damage to each."
+            #         conditions:
+            #             - custom 
+            #         save: null
         level_8:
             -   name: Covering Fire
                 action_type: Offhand Action
@@ -1678,59 +1711,66 @@
                                   it take damage."
                     save: null 
                     conditions: 
-                        - hindered
+                        - custom
                 damage_scaling: 
                     damage_type: inherited
                     damage_shape: line
                     scaled_by:
                         weapon: false
-                    all_tiers: "1d4"
-        level_11:
-            -   name: Guard-Break
-                action_type: Action
+                    all_tiers: "1d6"
+        # level_11:
+        #     -   name: Guard-Break
+        #         action_type: Action
+        #         type: combat option
+        #         range: inherited
+        #         duration: instantaneous
+        #         ability_modified: standard attack
+        #         cost: 1
+        #         description: "Make a carefully aimed attack meant to batter away an enemy's defenses."
+        #         effect:
+        #             type: debuff 
+        #             description: "Make a Dexterity Resistance Test. On success, your target is Exposed until the end of your next turn."
+        #             conditions:
+        #                 - exposed
+        #             save: null
+        #         damage_scaling:
+        #             damage_type: inherited
+        #             tier_1: "1d8"
+        #             tier_2: "1d10"
+        #             tier_3: "1d12"
+        # level_13:
+        #     -   name: Nimble
+        #         action_type: Passive
+        #         type: buff
+        #         cost: 0
+        #         duration: passive
+        #         range: self
+        #         description: "Your perception is so advanced that you are able to avoid arrows and other ranged attacks."
+        #         effect:
+        #             type: buff
+        #             description: "You are permanently considered to be Guarded against targeted ranged attacks."
+        #             conditions:
+        #                 - guarded 
+        #             save: null
+        level_10:
+            -   name: Counter
                 type: combat option
-                range: inherited
-                duration: instantaneous
-                ability_modified: standard attack
                 cost: 1
-                description: "Make a carefully aimed attack meant to batter away an enemy's defenses."
-                effect:
-                    type: debuff 
-                    description: "Make a Dexterity Resistance Check. On success, your target is Exposed until the end of your next turn."
-                    conditions:
-                        - exposed
-                    save: null
-                damage_scaling:
-                    damage_type: inherited
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-        level_13:
-            -   name: Nimble
-                action_type: Passive
-                type: buff
-                cost: 0
-                duration: passive
-                range: self
-                description: "Your perception is so advanced that you are able to avoid arrows and other ranged attacks."
-                effect:
-                    type: buff
-                    description: "You are permanently considered to be Guarded against targeted ranged attacks."
-                    conditions:
-                        - guarded 
-                    save: null
-        level_15:
-            -   name: Volley
-                action_type: "Action"
-                type: aoe damage
-                cost: 2
+                range: inherited 
                 duration: instantaneous
-                range: 100
-                radius: 15
-                description: "Fire arrow after arrow in a volley of arching shots. They rain down on enemies in an area of your choosing."
-                damage_scaling:
-                    damage_type: piercing
-                    all_tiers: 6d4 #(2d12 (13) vs 15)       
+                action_type: Reaction 
+                description: "When you are struck by a hostile ranged attack, you may immediately use your reaction to respond with a standard attack of your own."
+            # -   name: Volley
+            #     action_type: "Action"
+            #     type: aoe damage
+            #     cost: 2
+            #     duration: instantaneous
+            #     range: 100
+            #     radius: 15
+            #     description: "Fire arrow after arrow in a volley of arching shots. They rain down on enemies in an area of your choosing."
+            #     damage_scaling:
+            #         damage_type: piercing
+            #         all_tiers: 6d4 #(2d12 (13) vs 15)       
 -   name: Cleric
     class_type: Support
     health_schedule: 
@@ -1776,7 +1816,7 @@
         - Your choice of a heavy padded robe (common light armor) or leather jerkin (common light armor)
         - A salve 
         - A set of cleric's clothing
-    #expertise: "As a cleric, you take expertise in intelligence checks. This includes any checks made to perform informal magic."
+    #expertise: "As a cleric, you take expertise in intelligence Tests. This includes any tests made to perform informal magic."
     discoverable_abilities:
         tier_1:
             -   name: Enlarge
@@ -1839,7 +1879,7 @@
                 description: "As an enemy attempts to harm you with a targeted attack, call out to your deity for aid."
                 effect:
                     type: debuff 
-                    description: "Make an Inner Fire Resistance Check. On success, the attack misses. On failure, it deals half damage."
+                    description: "Make an Inner Fire Resistance Test. On success, the attack misses. On failure, it deals half damage."
                     conditions:
                         - custom
                     save: null
@@ -1860,6 +1900,23 @@
                     conditions: 
                         - staggered
                     save: null
+            -   name: Fiery Rebuke # Cleric
+                action_type: "Action"
+                type: aoe damage
+                cost: 1
+                duration: instantaneous
+                range: self
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "White hot flames fill the space around you as you call on your deity for protection. They deal damage to everyone in the spell's radius."
+                damage_scaling: 
+                    damage_type: radiant
+                    tier_1: "1d8"
+                    tier_2: "1d10"
+                    tier_3: "1d12"
+                radius: 15
+                upcast: "For each additional action point spent on this spell, increase its radius by 10 feet."
         tier_2:
             -   name: Sphere of Encasement
                 action_type: "Action"
@@ -1893,7 +1950,7 @@
                     primordial word for 'reveal,' allowing you to view and hear
                     a person or place you've seen as if through a one way window. The spell cannot
                     penetrate lead or protective spells. If your target is a mage, you may alter them, allowing them to
-                    tether the spell to a nearby reflective surface. If you target an unwilling creature, you must make an Inner Fire Resistance Check. On failure, they know that someone tried to view them." 
+                    tether the spell to a nearby reflective surface. If you target an unwilling creature, you must make an Inner Fire Resistance Test. On failure, they know that someone tried to view them." 
             -   name: Town Portal
                 action_type: "Ritual"
                 type: utility
@@ -1906,9 +1963,11 @@
                     verbal: true
                     components:
                         - Blessed chalk
-                description: "When you enter a town, you may pray over a dwelling and draw a holy glyph on the doorframe. From that point forward, 
-                    you may perform a ritual to open a door to that location, regardless of distance. You may mark at most one building per town
-                    in this way."
+                description: "When you enter a town, you may pray over a dwelling and draw a 
+                                holy glyph on the doorframe. From that point forward, you may 
+                                perform a ritual to open a door between two such locations. 
+                                Marked locations must be within a settlement. You may mark at
+                                 most one building per town in this way."
             -   name: Truesight
                 action_type: "Offhand Action"
                 type: buff
@@ -1957,18 +2016,18 @@
                 description: "Lay out the body of someone who has died within the past week. Spend time 
                             anointing them with oil, burning incense, and using your magic to mend
                             their body. Lay a soul gem on their chest and ask your deity for their strength. 
-                            Make an Inner Fire Check. On full or partial success, reclaim the target's soul 
+                            Make a Test of Inner Fire. On full or partial success, reclaim the target's soul 
                             and return them to life. On full or partial failure, they may not be resurrected 
                             as determined by the Grand Poohbah."
                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
-                        to to grant you advantage on your check."
+                        to to grant you advantage on your test."
             -   name: Avatar
                 action_type: "Ritual"
                 type: utility
                 cost: 3
                 range: infinite 
                 duration: concentration 
-                casting_time: 1 Dungeon Turn
+                casting_time: 1 Watch
                 requirements: 
                     movement: false 
                     verbal: false 
@@ -1996,6 +2055,46 @@
                         - custom
                         - diminished
                     save: null  
+            -   name: Pillar of Dawn # Cleric
+                action_type: "Action"
+                type: aoe damage
+                cost: 3
+                range: 1 mile
+                duration: instantaneous
+                radius: 25
+                requirements: 
+                    verbal: true 
+                    movement: true 
+                description: "Spread your hands wide as you summon forth the glory of your deity. A pillar of fire falls
+                            from the heavens and envelops a radius of your choosing. The fire crackles and spreads,
+                            reducing your target to cinders."
+                damage_scaling: 
+                    damage_type: radiant
+                    tier_3: "6d6"
+                effect:
+                    type: debuff 
+                    description: "Anyone struck by the beam is instantly set ablaze and begins Burning."
+                    conditions:
+                        - burning
+                    save: null
+            -   name: Invulnerability
+                action_type: "Offhand Action"
+                type: buff
+                cost: 2
+                duration: 1 Round
+                range: touch
+                requirements:
+                    movement: true 
+                    verbal: true 
+                    components: 
+                        - A dragonscale (100gp)
+                description: "Magic suffuses your target, and their skin becomes hard as diamond even as all magics are repelled from them."
+                effect: 
+                    type: buff
+                    description: "For the spell's duration, they are considered Invincible."
+                    conditions:
+                        - invincible
+                    save: null
     spells:
         tier_1: # 10 / 10
             -   name: Beam of Light # Cleric
@@ -2041,7 +2140,7 @@
                 type: healing
                 cost: 1
                 duration: instantaneous
-                range: 30
+                range: 60
                 requirements:
                     movement: true 
                     verbal: true
@@ -2053,7 +2152,7 @@
                     tier_2: 1d8
                     tier_3: 2d8
             -   name: Bind # On failure slow
-                action_type: "Action"
+                action_type: "Offhand Action"
                 type: debuff
                 cost: 1
                 range: 30
@@ -2064,10 +2163,10 @@
                 description: "Lift your hand to stop an encroaching enemy."
                 effect:
                     type: debuff 
-                    description: "Make an Inner Fire Resistance Check. On success, they are Incapacitated."
+                    description: "Make an Inner Fire Resistance Test. On success, they are grappled."
                     conditions:
-                        - incapacitated
-                    save: "As an action, your target may force you to remake your check."
+                        - grappled
+                    save: null
                 upcast: "For each additional action point spent on this spell, you may attempt to bind two more creatures."
             -   name: Mend
                 action_type: "Offhand Action"
@@ -2083,6 +2182,22 @@
                                     heal minor status effects such as drunkenness, or to convert water to holy water at a rate of one gallon per hour."
                 upcast: "You may spend an action point on this spell to increase its power, mending larger items such as broken walls, wheels, or armor, or to
                             remove a status effect from an ally or to render a curse innocuous for one day. When you do so, the spell takes 1 Dungeon Turn to cast."
+            -   name: Compelled Truth
+                action_type: "Offhand Action"
+                type: debuff
+                cost: 1
+                duration: 1 Dungeon Turn
+                range: 30
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "Your eyes flash as you apply divine pressure to your target."
+                effect:
+                    description: "Make an Inner Fire Resistance Test. On success, your target becomes incapable of lying for the spell's duration."
+                    type: "debuff"
+                    conditions: 
+                        - "custom"
+                    save: null
         tier_2: # 10 / 10
             -   name: Guardian Blade
                 action_type: "Action"
@@ -2114,7 +2229,7 @@
                                 width greater than one foot."
                 effect:
                     type: debuff
-                    description: "For any target hit by the beam, make an Inner Fire Resistance Check. On success, they are Blinded until the end of their next turn."
+                    description: "For any target hit by the beam, make an Inner Fire Resistance Test. On success, they are Blinded until the end of their next turn."
                     save: null
                     conditions: 
                         - blinded
@@ -2123,23 +2238,26 @@
                     damage_type: radiant
                     tier_2: 1d8 #(10.5 + 7f + 4inf x 2 = 21.5 each x2 = 43 total)
                     tier_3: 1d10 #(14 + 10.5f + 5inf x 2 = 29.5 each x2 = 59 total)
-            -   name: Fiery Rebuke # Cleric
+            -   name: Sleep
                 action_type: "Action"
-                type: aoe damage
+                type: debuff
                 cost: 1
-                duration: instantaneous
-                range: self
+                duration: 1 Dungeon Turn
+                range: 60
                 requirements:
-                    movement: true 
                     verbal: true
-                description: "White hot flames fill the space around you as you call on your deity for protection. They deal damage to everyone in the spell's radius."
-                damage_scaling: 
-                    damage_type: radiant
-                    tier_1: "1d8"
-                    tier_2: "1d10"
-                    tier_3: "1d12"
-                radius: 15
-                upcast: "For each additional action point spent on this spell, increase its radius by 10 feet."
+                    movement: true
+                description: "Clasp your hands and call upon your deity to still your enemies' anger."
+                effect:
+                    type: debuff
+                    description: "Roll 1d4 and spend as many points selecting creatures. Minions require 1 point, elites require 2 points, and bosses require 6. 
+                                  Make an Inner Fire Resistance Test against each creature. On success, targets fall asleep, and are Incapacitated.
+                                  On failure, they become drowsy and are Stunned."
+                    conditions: 
+                        - incapacitated
+                        - stunned
+                    save: "If a sleeping creature is damaged or shaken, it awakens."  
+                upcast: "You may spend an additional action point on this spell to raise the dice rolled to 1d6."
             -   name: Mass Heal
                 action_type: "Offhand Action"
                 type: aoe healing
@@ -2156,9 +2274,9 @@
                     damage_type: healing
                     tier_2: 2d4
                     tier_3: 3d4
-                upcast: For each additional action point spent on this spell, increase its radius by 15ft and add an additional dice.
+                upcast: For each additional action point spent on this spell, increase its radius by 15ft and add an additional dice of healing.
             -   name: Dispel Magic
-                action_type: "Offhand Action"
+                action_type: "Action"
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -2168,53 +2286,14 @@
                     verbal: true 
                     movement: false
                 description: "Carefully undo the weave of a first tier spell or curse. If the magic that you seek to 
-                            reverse is of a higher tier, the Grand Poohbah will ask you to make an Intelligence Check.
+                            reverse is of Tier 2 or 3, the Grand Poohbah will ask you to make a Test of Intelligence.
                             Dispel magic does not heal damage or repair magically damaged objects."
         tier_3: # 5/5
-            -   name: Pillar of Dawn # Cleric
-                action_type: "Action"
-                type: aoe damage
-                cost: 3
-                range: 1 mile
-                duration: instantaneous
-                radius: 25
-                requirements: 
-                    verbal: true 
-                    movement: true 
-                description: "Spread your hands wide as you summon forth the glory of your deity. A pillar of fire falls
-                            from the heavens and envelops a radius of your choosing. The fire crackles and spreads,
-                            reducing your target to cinders."
-                damage_scaling: 
-                    damage_type: radiant
-                    tier_3: "6d6"
-                effect:
-                    type: debuff 
-                    description: "Anyone struck by the beam is instantly set ablaze and begins Burning."
-                    conditions:
-                        - burning
-                    save: null
-            -   name: Invulnerability
-                action_type: "Offhand Action"
-                type: buff
-                cost: 2
-                duration: 1 Round
-                range: touch
-                requirements:
-                    movement: true 
-                    verbal: true 
-                    components: 
-                        - A dragonscale (100gp)
-                description: "Magic suffuses your target, and their skin becomes hard as diamond even as all magics are repelled from them."
-                effect: 
-                    type: buff
-                    description: "For the spell's duration, they are considered Invincible."
-                    conditions:
-                        - invincible
-                    save: null
+            []
 -   name: Wizard
     class_type: Battle Mage
-    # expertise: "As a Wizard, you are marked by your raw intellect. Take expertise in all intelligence checks, including
-    #             checks made to cast informal magic. Further, take expertise in history checks made to uncover lore 
+    # expertise: "As a Wizard, you are marked by your raw intellect. Take expertise in all intelligence tests, including
+    #             tests made to cast informal magic. Further, take expertise in history tests made to uncover lore 
     #             about a location or item."
     health_schedule: 
         starting_health: 6
@@ -2273,7 +2352,7 @@
                 description: "With a sound like a thunderclap, you punch your foe with a fist instilled with arcane power."
                 effect:
                     type: debuff
-                    description: "If they are large or smaller, roll an Inner Fire Resistance Check. On success, they are knocked back 15 feet.
+                    description: "If they are large or smaller, roll an Inner Fire Resistance Test. On success, they are knocked back 15 feet.
                                 On a natural 20, they are knocked Prone."
                     save: null
                     conditions:
@@ -2329,13 +2408,13 @@
                 effect:
                     type: buff
                     description: "A shimmering bubble of breathable air
-                            appears around your target's head, sustaining them for up to one hour."
+                            appears around your target's head, sustaining them for the spell's duration."
                     conditions:
                         - custom
                     save: null
                 upcast: "You may spend an additional action point to create five additional bubbles of air."
             -   name: Summon Familiar # Utility
-                action_type: Action
+                action_type: Ritual
                 type: summoning
                 cost: 2
                 casting_time: 1 Dungeon Turn
@@ -2345,13 +2424,45 @@
                     verbal: true
                     movement: false 
                     components:
-                        - "Charcoal, Insense, and Herbs (10gp)"
+                        - "Charcoal, Insense, and Herbs (500gp)"
                 description: "Summon a small animal to be your familiar. It follows your instructions with
-                    intelligence, and you are able to meditate to see through it's eyes. 
+                    intelligence, and you are able to meditate to see through its eyes. 
                     If your familiar is killed or separated from you, you may cast this spell again to bring it back, but it drops anything it is holding.
                     If your familiar is within 100ft of you, you may cast a spell from its position. It acts on your turn and has a movement 
                     speed of 30ft. When you re-summon your familiar, you may change its form. Your familiar 
                     hit points equal to your Inner Fire."      
+            -   name: Candlelight # A tier
+                action_type: "Offhand Action"
+                type: utility
+                cost: 1
+                duration: concentration
+                range: 15
+                requirements:
+                    verbal: false
+                    movement: true 
+                    components:
+                        - A piece of string or wick
+                radius: 60
+                description: "Roll a piece of string between your fingers and channel your magic into it. It magically ignites, but is not burned.
+                            The flickering light hovers at your side. The light is difficult to snuff and obeys your subconcious
+                            commands, moving as you instruct it within a radius centered on you. If it leaves the radius, it continues to hover, but 
+                            cannot obey you. The candle gives off light within a thirty foot radius."
+                        # Ward of Hearing and sight:
+                #     type: utility
+                #     cost: 1
+                #     range: touch
+                #     duration: 6 Watches
+                #     requirements:
+                #         movement: true
+                #         verbal: true 
+                #         components: 
+                #             - An eye or ear
+                #     description: "A green stalk bursts out of the ground, a knuckled, hairy appendage ending in a bulbous eye and two overlarge ears. 
+                #                   It blinks twice, then vanishes. The eyestalk is tethered to you for one day. Whenever you want, you may focus to see
+                #                   through its eye and hear through its ears. The ward cannot move and has only 1 hit point, but can only be harmed by
+                #                   magic or beings also in the ethereal plane."
+                #     upcast: If you spend an additional action point, you may increase the length of the spell to 1 week.
+
         tier_2:
             -   name: Chain Lightning # Wizard 
                 action_type: "Action"
@@ -2421,12 +2532,12 @@
                 action_type: "Offhand Action"
                 type: buff
                 cost: 1
-                duration: concentration
+                duration: 3 Dungeon Turns
                 range: 30
                 requirements:
                     movement: true 
                     verbal: false
-                description: "Over the span of a second, you target's skin, then organs, then bones disappear." 
+                description: "Over the span of a heartbeat, you target's skin, then muscle, then bones disappear." 
                 effect: 
                     type: buff
                     description: "For the spell's duration, they are Invisible."
@@ -2434,6 +2545,53 @@
                         - invisible
                     save: null
         tier_3:
+            -   name: Fly
+                action_type: "Offhand Action"
+                type: utility
+                cost: 2
+                duration: concentration
+                range: 30
+                requirements:
+                    verbal: false
+                    movement: false
+                description: "The weave of magic supports and guides your target and gravity fades away. 
+                                For the spell's duration, your target can fly. Their flying speed is
+                                equal to twice their normal walking speed."
+                upcast: "For each additional action point spent, grant five more creatures the power of flight."
+            -   name: Tri-beam # Wizard
+                action_type: "Action"
+                type: multi-attack damage
+                cost: 3
+                range: 100 
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "A pulse of energy fills the air as you touch the realm of chaos and loose three beams of raw magic."
+                effect:
+                    type: debuff
+                    description: "Roll 1d6 to determine the type of each beam, followed by an Inner Fire Resistance Test to see if the 
+                                  target suffers a status effect. Status effects can be found in the Rulebook."
+                    options:  
+                        - "1, Ray of Weakness. Weakened."
+                        - "2, Ray of Fire, Burning."
+                        - "3, Ray of Frost, Hindered"
+                        - "4, Ray of Disruption, Dumbstruck."
+                        - "5, Ray of Electricity, Stunned."
+                        - "6, Ray of Death, Rotting."
+                    conditions:
+                        - custom
+                        # - weakened
+                        # - burning
+                        # - hindered
+                        # - dumbstruck 
+                        # - stunned
+                        # - rotting
+                    save: null
+                damage_scaling: 
+                    damage_type: arcane
+                    multi_attack: 3
+                    tier_3: "4d6"    
             -   name: Gate
                 action_type: "Offhand Action"
                 type: utility
@@ -2448,7 +2606,7 @@
                     rift in reality and create a gate to another place. The gate
                     stands ten feet tall and twenty feet wide. You may target
                     a specific location that you have visited as the other side of the
-                    gate, or else make an Intelligence Check to target somewhere
+                    gate, or else make a Test of Intelligence to target somewhere
                     you have not been. The target may be another of the Realms."
             -   name: Black Hole # Wizard
                 action_type: "Action"
@@ -2466,7 +2624,7 @@
                     pulling all objects within the spell's radius 15ft towards it."
                 effect:
                     type: debuff
-                    description: "Each turn, make an Inner Fire Resistance Check. On success, 
+                    description: "Each turn, make an Inner Fire Resistance Test. On success, 
                         everyone within the spell's radius is pulled 25ft towards the black hole.
                         Anyone within 50ft of the black hole is Hindered, and
                         anyone who touches the it takes the spell's damage."
@@ -2491,7 +2649,7 @@
                 description: "You speak the forgotten tongue of the Timekeepers and time slows to a crawl in a radius around you."
                 effect:
                     type: debuff
-                    description: "All Minions are affected by the spell. For others, make an Inner Fire Resistance Check. 
+                    description: "All Minions are affected by the spell. For others, make an Inner Fire Resistance Test. 
                                 On success, they are stopped in time and are Incapacitated for the spell's duration. 
                                 Anyone or anything that is touched or attacked is returned to the normal flow of time."
                     conditions: 
@@ -2543,7 +2701,7 @@
                     tier_3: 1d12 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they are Hindered."
+                    description: "Make an Inner Fire Resistance Test. On success, they are Hindered."
                     conditions:
                         - hindered
                     save: null
@@ -2581,41 +2739,44 @@
                 description: "Fixing your eyes on your target, you crush a writhing bug between your fingers."
                 effect:
                     type: debuff
-                    description: "Make an Inner Fire Resistance Check. On success, they are Staggered."
+                    description: "Make an Inner Fire Resistance Test. On success, they begin vomiting slugs and are Staggered."
                     conditions:
                         - staggered
                     save: null
-            -   name: Candlelight # A tier
+            -   name: Summoning Spell # C Tier
                 action_type: "Offhand Action"
                 type: utility
-                cost: 1
+                cost: 0
                 duration: concentration
-                range: 15
+                range: 1 mile
+                requirements: 
+                    verbal: true
+                    movement: false
+                description: "Fix a familiar object in your mind and call to it. 
+                            The object lifts into the air and flies towards you,
+                            born by the invisible streams of magic that flow throughout the realms.
+                            The object knows enough to avoid any barriers, but mindlessly takes the quickest path to you.
+                            The object must be something that you have seen before, and cannot be more than 10 pounds in weight.
+                            If the object is restrained or protected by magical means, this spell may fail, or the Poohbah
+                            may ask you to make a Test."
+            -   name: Become Slime # Maybe re-write so less of a combat spell? 
+                action_type: "Action"
+                type: transformation
+                cost: 1
                 requirements:
                     verbal: false
-                    movement: true 
-                    components:
-                        - A piece of string or wick
-                radius: 60
-                description: "Roll a piece of string between your fingers and channel your magic into it. It magically ignites, but is not burned.
-                            The flickering light hovers at your side. The light is difficult to snuff and obeys your subconcious
-                            commands, moving as you instruct it within a radius centered on you. If it leaves the radius, it continues to hover, but 
-                            cannot obey you. The candle gives off light within a thirty foot radius."
-                        # Ward of Hearing and sight:
-                #     type: utility
-                #     cost: 1
-                #     range: touch
-                #     duration: 6 Watches
-                #     requirements:
-                #         movement: true
-                #         verbal: true 
-                #         components: 
-                #             - An eye or ear
-                #     description: "A green stalk bursts out of the ground, a knuckled, hairy appendage ending in a bulbous eye and two overlarge ears. 
-                #                   It blinks twice, then vanishes. The eyestalk is tethered to you for one day. Whenever you want, you may focus to see
-                #                   through its eye and hear through its ears. The ward cannot move and has only 1 hit point, but can only be harmed by
-                #                   magic or beings also in the ethereal plane."
-                #     upcast: If you spend an additional action point, you may increase the length of the spell to 1 week.
+                    movement: false 
+                duration: 2 Watches
+                range: self
+                description: "Channel your magic into a bit of tallow or other fat and eat it." 
+                effect:
+                    type: buff
+                    description: "As you chew, your body melts and oozes and you transform into a Blue Oozling. You may transform back as an Action."
+                    conditions:
+                        - transformed
+                    save: null
+                summoned_creature:
+                    tier_1: Lesser Green Slime
         tier_2: # 10/10
             -   name: Ice Spear # Wizard
                 action_type: "Action"
@@ -2650,7 +2811,7 @@
                                 It streaks towards your target before erupting into a massive fireball."
                 effect:
                     type: debuff 
-                    description: "Make an Inner Fire Resistance Check. On success, your targets begin Burning."
+                    description: "Make an Inner Fire Resistance Test. On success, your targets begin Burning."
                     conditions:
                         - burning 
                     save: null
@@ -2687,7 +2848,7 @@
                 description: "As you place your hand on a door-handle or walk through an archway, magic flows through you,
                             opening a portal to another door within range. Instantaneously transport to that doorway."
             -   name: Dispel Magic # B tier
-                action_type: "Offhand Action"
+                action_type: "Action"
                 type: utility
                 cost: 1
                 duration: instantaneous
@@ -2697,60 +2858,553 @@
                     verbal: true 
                     movement: false
                 description: "Carefully undo the weave of a first tier spell or curse. If the magic that you seek to 
-                            reverse is of a higher tier, the Grand Poohbah will ask you to make an Intelligence Check.
+                            reverse is Tier 2 or 3, the Grand Poohbah will ask you to make a Test of Intelligence.
                             Dispel magic does not heal damage or repair magically damaged objects."
         tier_3: # 5/5 
-            -   name: Fly
+            []
+-   name: Druid
+    class_type: Battle Mage
+    health_schedule: 
+        starting_health: 6
+        standard_level_health_bonus: 2
+        tier_increase_health_bonus: 2
+    handbook:
+        -   title: Intro
+            display_title: false 
+            text: "Guardians of nature, druids are forged in lightning, shaped by root and spore, and raised by the creatures of the wilds. 
+                    Druids can be found in even the most unforgiving climbs. They thrive atop craggy, frozen peaks and deserts of driving sand.
+                    They employ powerful natural magics, allowing them to shape both the world and themselves. Fledgling druids can transform
+                    themselves into the form of a chosen animal, conjure swarms of bees to distract and harm their foes, and speak to plants
+                    and growing things. Unlike wizards, druids learn from each other and from the world around them rather than from dusty
+                    tomes. As such, a druid quickly forms a deep communion with nature, and will preserve the natural order, no matter the cost."
+        -   title: "When Adventuring"
+            display_title: true 
+            text: "Druidic magic presents nature-based solutions to many problems encountered while adventuring.
+                     The ability to transform into birds, beasts, and fish allows druids to go and survive most anywhere."
+        -   title: "When Socializing"
+            display_title: true 
+            text: "Many druids have a spirit animal that they hold dear to their heart, and it is not abnormal for them to take on the
+                    characteristics of that animal. Lone wolves, patient spiders, cunning foxes, and others can be found among the druids,
+                    coloring their social interactions."
+        -   title: "When in Combat"
+            display_title: true 
+            text: "In combat, druids are masters of controlling the battlefield with spells that shape the landscape and move their enemies.
+                    Druids are also capable of dealing heavy damage and of healing their allies in a pinch, making them well rounded combatants."    
+    weapon_training:
+        - Focuses
+    starting_items:
+        - "An arcane amulet or conjurer's idol"
+        - Your choice of a padded robe (common light armor) or leather jerkin (common light armor)
+        - Druid's clothing 
+        - A natural trinket
+    recommended_stats:
+        Charisma: -1
+        Dexterity: 1
+        Inner_Fire: 2
+        Intelligence: 0
+        Strength: -1
+    discoverable_abilities:
+        tier_1:
+            -   name: Voice of Nature
+                action_type: "Offhand Action"
+                type: utility
+                cost: 1
+                range: self
+                duration: concentration
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "Like a drop of sunlight, magic touches your mind and opens your ears so that you can understand
+                            the tongues of the birds, beasts, and plants. For the spell's duration, you may speak with natural
+                            things and understand them, and you have advantage when attempting to pacify hostile animals."
+            -   name: Bees! # Druid
+                action_type: "Action"
+                type: aoe damage
+                range: 60
+                radius: 15
+                cost: 1
+                duration: 3 Rounds
+                requirements:
+                    movement: true 
+                    verbal: true
+                    components: 
+                        - A piece of honeycomb
+                description: "A hum fills the air as bees pour from your focus and into an area of your choosing.
+                            Whenever a creature begins their turn within the radius or moves into it, they take damage. A creature may be
+                            harmed at most once by a swarm of bees per round of combat"
+                damage_scaling: 
+                    scaled_by:
+                        weapon: false
+                    damage_type: "poison"
+                    tier_1: 1d8 # (2.5 + 3inf x 2 = 5.5 each x 2 = 11 overall)
+                    tier_2: 1d10 # (5 + 4inf x 2 = 9 each x2 = 18 overall)
+                    tier_3: 1d12 # (7.5 + 5inf x 2 = 12.5 each x 2 = 25 overall)
+                effect:
+                    description: "Whenever a creature takes damage from the bees, make an Inner Fire Test. On success, the target is Staggered until the end of their next turn."
+                    conditions: 
+                        - staggered
+                    type: debuff
+                    save: null
+            -   name: Spores # Druid 
+                action_type: "Action"
+                type: aoe damage
+                cost: 1
+                duration: concentration
+                radius: 15
+                range: self
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling:
+                    damage_type: "poison"
+                    tier_1: 1d4 # (2.5 + 3.5f + 3inf x 2 = 9 each x 2 = 18 overall)
+                    tier_2: 1d6 # (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 1d8 # (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                description: "Spores of greenish-black billow from you, filling a radius of your choice.
+                    These living parasites heed your whim, entering the lungs of your foes while avoiding your friends."
+                effect:
+                    description: Enemies who enter the spell's radius take damage. Make an Inner Fire Resistance Test. On success, restore an amount of health equal to the damage dealt."
+                    conditions: 
+                        - custom
+                    type: debuff
+                    save: null
+                upcast: For each additional action point spent on this spell, increase the radius by 15 feet.
+            -   name: Elemental Armor
+                action_type: "Offhand Action"
+                type: buff
+                cost: 1
+                duration: 6 Dungeon Turns
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "With a howl like the wind, your choice of fire, ice, or lightning swaddles your target."
+                effect:
+                    type: buff 
+                    description: "For the spell's duration, they are resistant to damage based on the chosen element."
+                    conditions:
+                        - resistant
+                    save: null
+                range: 30
+            -   name: Forest Guardian
+                action_type: "Action"
+                type: summoning
+                cost: 1
+                range: 15
+                duration: 3 Dungeon Turns
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "With a groan and a creaking of wood, a treeling sprouts from the ground to fight for you."
+                upcast: "You may spend an additional action point to summon a 1d4 treelings instead of 1. If the spell is cast in this way,
+                            the fewest treelings that can be summoned is 2."
+                summoned_creature:
+                    all_tiers: Treeling
+            -   name: Fool the Senses
+                action_type: "Offhand Action"
+                type:  debuff
+                cost: 1
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - A mushroom
+                description: "Conjure a bittersweet psychotoxin which wafts towards one of your foes."
+                effect:
+                    type: debuff
+                    description: "Make an Inner Fire Resistance Test. On success, choose for your target to either
+                                    become Estranged or Frightened of a vision only they can see."
+                    conditions:
+                        - estranged
+                        - frightened
+                    save: "The spell's victim may repeat their save at the end of each of their turns or once per day when out of combat."
+                range: 60
+                duration: save
+                upcast: You may spend an additional action point on this spell to give it a 30ft radius.
+        tier_2:
+            -   name: Orb of Fire
+                action_type: "Action"
+                type: aoe damage
+                cost: 2
+                range: touch
+                duration: concentration
+                radius: 10
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - Tinder
+                description: "Cup your hands about a piece of tinder and speak the words of fire to it. As it ignites, you toss it to the ground before 
+                                you and it rapidly grows to a white-hot sphere up to five feet in diameter. Each turn,
+                                you may use an action to cause the sphere to roll up to thirty feet. The sphere is capable of
+                                rolling over obstacles up to three feet tall."
+                damage_scaling:
+                    damage_type: fire
+                    tier_2: 2d8 # SUSTAINED (5 + 7f + 4inf x 2 = 16 each x2 = 32 overall)
+                    tier_3: 2d10 # SUSTAINED (7.5 + 10.5f + 5inf x 2 = 23 each x 2 = 46 overall)
+                effect:
+                    type: debuff
+                    description: "When you strike a creature with the Sphere, make an Inner Fire Resistance Test. On success, the creature begins Burning."
+                    conditions:
+                        - burning
+                    save: null
+            -   name: Thunderstep # Movement - Explosive Teleport
+                action_type: "Offhand Action"
+                type: aoe damage
+                cost: 1
+                duration: instantaneous
+                range: 100
+                radius: 10
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "Stomp your foot against the ground and focus on a location within range.
+                            You disappear with a peel of thunder and a crackling of energy and reappear 
+                            in an explosion at the point you chose. Anyone within the spell's radius 
+                            at either the source or destination of your teleportation takes damage."
+                damage_scaling:
+                    damage_type: lightning
+                    tier_2: 1d6
+                    tier_3: 2d6
+            -   name: Maelstrom # Druid 
+                action_type: "Action"
+                type: aoe damage
+                cost: 2
+                duration: concentration
+                range: 100
+                radius: 25
+                requirements:
+                    movement: true 
+                    verbal: false
+                damage_scaling:
+                    damage_type: blunt 
+                    tier_2: 2d10
+                    tier_3: 2d12
+                description: "Muttering under your breath, you stir the air with your hand. 
+                            In moments, a swirling riptide or whirlwind appears at a point within range."
+                effect:
+                    type: debuff
+                    description: "Make an Inner Fire Resistance Test against creatures within the spell's radius. On success, they are pulled 15ft towards the spell's center
+                                and take damage. Everyone within the spell's radius is Hindered, regardless of the test's result."
+                    conditions:
+                        - hindered
+                    save: null
+            -   name: Snowblind
+                action_type: "Ritual"
+                casting_time: "1 Watch"
+                type: utility
+                cost: 2
+                range: self
+                radius: 1 mile
+                duration: 1 Watch
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "A snowstorm swirls around you as you lift your focus aloft. The snows
+                    are incredibly heavy, and quickly cause the terrain to become difficult for everyone but
+                    your party and light to become low."
+            -   name: Keeper Kerrick's Stars
                 action_type: "Offhand Action"
                 type: utility
                 cost: 2
                 duration: concentration
-                range: 30
+                range: self
+                radius: 30
                 requirements:
+                    movement: true 
                     verbal: false
-                    movement: false
-                description: "The weave of magic supports and guides your target and gravity fades away. 
-                                For the spell's duration, your target can fly. Their flying speed is
-                                equal to twice their normal walking speed."
-                upcast: "For each additional action point spent, grant five more creatures the power of flight."
-            -   name: Tri-beam # Wizard
+                description: "The air around you shimmers as it fills with specks of glowing dust. 
+                            These motes of light are attracted to enemies, adhering to them. 
+                            All attacks made against enemies within the spell's radius are at advantage,
+                            invisibility is negated, and incorporeal creatures may be attacked."
+        tier_3:
+            -   name: Prison of Ice #Druid
                 action_type: "Action"
-                type: multi-attack damage
+                type: aoe damage
                 cost: 3
-                range: 100 
+                range: self
+                radius: 60
+                duration: save
+                requirements:
+                    movement: true 
+                    verbal: false
+                damage_scaling: 
+                    damage_type: cold
+                    tier_3: "6d6" #
+                description: "A black wind howls as the air  
+                            plummets below zero. Your
+                            allies watch on, unharmed as all enemies within the spell's
+                            radius are bitten by merciless frost."
+                effect:
+                    type: debuff
+                    description: "Make an Inner Fire Resistance Test against all affected enemies. On success, they are take full damage and are Frozen.
+                                On failure, they take half damage."
+                    save: "The spell's victims remain frozen until the end of their next turn."
+                    conditions:
+                        - frozen
+            -   name: Awaken
+                action_type: "Ritual"
+                type: utility
+                cost: 3
+                duration: infinite
+                range: touch
+                casting_time: 2 Watches
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - Four soul gems (1000gp)
+                        - Dreamcatchers
+                        - Rare Incense (100gp)
+                description: "Carefully craft a druid's circle with soul gems set at each corner.
+                            Bring a chosen animal into the circle and place your hand on its brow.
+                            Its eyes glaze over as you reach into its mind and coax forth a spark 
+                            of the divine. At the end of the ritual, the animal is sentient
+                            and gains the ability of human speech."
+            -   name: Stormlord
+                action_type: "Ritual"
+                type: utility
+                cost: 3
+                range: self
+                casting_time: 1 Watch
+                duration: until dispelled
+                radius: 10 Miles
+                requirements:
+                    movement: true 
+                    verbal: true 
+                description: "You create a cairne at a high point in a region and call out to Hesh, Goddess of storm. As you channel your magic, you begin a chant, ancient and powerful. When you have finished, you may fix the weather in a region. Summon forth snow or rain, hail or heat. The weather persists until the cairn is destroyed."
+            -   name: Starfall # Druid
+                action_type: "Action"
+                type: aoe damage
+                cost: 3
+                range: 300
+                radius: 25
+                casting_time: 1 minute
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: false
+                damage_scaling:
+                    damage_type: fire
+                    tier_3: "6d6"
+                description: "Raise your hand aloft and reach beyond the sky. Spend one full round of combat focusing to bring down four massive
+                                meteors. If you are attacked in this time, make an Inner Fire Resistance Test. On failure, you lose
+                                control of the spell and only 1d4 meteors fall.
+                                The fallen stars deal damage to all enemies in their radius. Enemies can be damaged by at most one meteor."                
+            -   name: Realm Walker
+                action_type: "Offhand Action"
+                type: utility
+                cost: 2
+                range: 30
+                duration: concentration
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "Focus on a tree or body of water.
+                            With a sound like a roaring wind, it tears open, revealing
+                            a portal to another place. You may target
+                                a specific location that you have visited as the other side of the
+                                rift, or else make a Test of Intelligence to target somewhere
+                                you have not been. The target may be another of the Realms."
+    spells:
+        tier_1:
+            -   name: Frost Bite # Druid
+                action_type: "Action"
+                type: damage
+                cost: 0
+                range: 60
                 duration: instantaneous
                 requirements:
                     movement: true 
                     verbal: true
-                description: "A pulse of energy fills the air as you touch the realm of chaos and loose three beams of raw magic."
+                damage_scaling: 
+                    damage_type: cold
+                    tier_1: 1d8 #(3.5 + 3.5f = 7)
+                    tier_2: 1d10 #(7 + 7f = 14)
+                    tier_3: 1d12 #(10.5 + 10.5f = 21)
+                description: "A latticework of frost spreads across your focus, then wraps around one of your enemies."
+                effect:
+                    description: If you roll max damage on this attack, your target is Hindered until the end of their next turn.
+                    conditions: 
+                        - hindered
+                    type: debuff
+                    save: null
+            -   name: Constricting Vine # 0 cost targeted attack with Hindered
+                action_type: "Action"
+                type: damage
+                range: 30
+                cost: 0
+                duration: save
+                requirements:
+                    movement: true 
+                    verbal: true
+                damage_scaling: 
+                    damage_type: "blunt"
+                    tier_1: 1d8 #(7)
+                    tier_2: 1d10 #(9.5)
+                    tier_3: 1d12 #(14)
+                description: "At your beck, snare-like vines writhe from the earth and grasp at your target's feet."
+                effect:
+                    description: "Make an Inner Fire Test. On success, your target is Hindered by the vines."
+                    conditions:
+                        - hindered
+                        - grappled
+                    type: debuff
+                    save: null
+            -   name: Tailwind
+                action_type: "Offhand Action"
+                type: utility
+                cost: 1
+                range: 30
+                duration: concentration
+                requirements:
+                    movement: false 
+                    verbal: false
+                description: "Closing your eyes, call upon the air or water to raise a mighty tailwind or current behind you.
+                            The gust has the ability to shift your trajectory while falling, guide a ship through otherwise windless seas,
+                            or to rocket you through deep water towards the surface. In combat, you may use this wind to force average sized
+                            or smaller enemies to move at half speed when approaching you from the front or to give yourself fifteen feet
+                            of additional movement."
+            -   name: Echolocate
+                action_type: "Offhand Action"
+                type: utility
+                cost: 1
+                duration: 3 Dungeon Turns
+                range: self
+                radius: 100
+                requirements:
+                    movement: false 
+                    verbal: true
+                description: "Your ears itch as they stretch and open themselves to the subtlest of sounds. You are able
+                    to emit a barely-audible sonic pulse, which gives you a detailed picture of the world within the spell's radius.
+                    For the spell's duration, you are Vulnerable to any auditory damage."
+            -   name: Animal Form
+                action_type: "Offhand Action"
+                type: transformation
+                cost: 1
+                duration: 3 Dungeon Turns
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "Smoothly as though you were donning a garment, your body transforms into that of a small, non-magical animal that you have encountered before such as 
+                                a mouse, bat, hedgehog or bumblebee. While in this form, use your ordinary health. If you attack while in this form, you deal 1 point of damage."
+                range: self
+            -   name: Bark Armor
+                action_type: "Offhand Action"
+                type: buff
+                cost: 1
+                range: 60
+                duration: 1 Dungeon Turn
+                requirements:
+                    movement: true 
+                    verbal: true
+                    components: 
+                        - A seed
+                description: "Take a seed in your hand and whisper to it, instructing it to protect you or an ally from harm."
+                effect:
+                    type: buff 
+                    description: "As it adheres to your target, gnarled bark sprouts from and around their armor, hardening them against
+                            attacks and granting them resistance to physical damage for the spell's duration."
+                    conditions: 
+                        - resistant
+                    save: null
+        tier_2:
+            -   name: Lightning Strike # Druid
+                action_type: "Action"
+                type: damage
+                cost: 2
+                duration: instantaneous
+                requirements:
+                    movement: true 
+                    verbal: false
+                    components:
+                        - A piece of metal
+                description: "White-hot energy fills you until you feel that you might be reduced to cinder.
+                                Just before you immolate, you direct it outward, through your focus, and towards an unlucky enemy.
+                                With a peal of thunder, lightning arcs between you and your target."
+                range: 60
                 effect:
                     type: debuff
-                    description: "Roll 1d6 to determine the type of each beam, followed by an Inner Fire Resistance Check to see if the 
-                                  target suffers a status effect. Status effects can be found in the Rulebook."
-                    options:  
-                        - "1, Ray of Weakness. Weakened."
-                        - "2, Ray of Fire, Burning."
-                        - "3, Ray of Frost, Hindered"
-                        - "4, Ray of Disruption, Dumbstruck."
-                        - "5, Ray of Electricity, Stunned."
-                        - "6, Ray of Death, Rotting."
+                    description: "Make an Inner Fire Resistance Test. On success, your target falls Prone."
                     conditions:
-                        - custom
-                        # - weakened
-                        # - burning
-                        # - hindered
-                        # - dumbstruck 
-                        # - stunned
-                        # - rotting
+                        - prone
                     save: null
                 damage_scaling: 
-                    damage_type: arcane
-                    multi_attack: 3
-                    tier_3: "4d6"    
+                    damage_type: lightning
+                    #tier_1: 5d6 #(17.5 + 3.5f + 3inf = 24)
+                    tier_2: 3d10 #(21 + 7f + 4inf = 32)
+                    tier_3: 3d12 #(24.5 + 10.5f + 5 inf = 40)
+            -   name: Sticky
+                action_type: "Offhand Action"
+                type: utility
+                cost: 2
+                duration: 6 Watches
+                range: touch
+                requirements:
+                    movement: true 
+                    verbal: true 
+                    components:
+                        - Flour
+                        - Honey
+                        - A hair from your head
+                        - Dragonscale or Dwarven Resin (10 gp)
+                description: "Knead together a ball of mud. As you coax its form with your magic,
+                            you create an adhesive which cannot be broken, but which does not adhere to you.
+                            The adhesive lasts for the spell's duration and has a cure time of 1 Dungeon turn. 
+                            Through another casting of this spell, you are able to make a solvent to remove the adhesive."
+            -   name: Pillars of Stone
+                action_type: "Offhand Action"
+                type: utility
+                cost: 2
+                range: 60
+                duration: infinite
+                requirements:
+                    movement: true 
+                    verbal: false
+                description: "As you raise your arms aloft, four pillars of stone burst forth on the ground within range.
+                            They instantly grow into 20ft high, 5ftx5ft foot columns."
+                upcast: "You may spend an additional action point on this spell to create an additional 4 columns"
+            -   name: Beast Form
+                action_type: "Offhand Action"
+                type: transformation
+                cost: 2
+                duration: 2 Watches
+                requirements:
+                    movement: true 
+                    verbal: true
+                description: "Your body shifts as you transforms into a creature you have encountered before. You may transform into any of the 
+                                creatures with the 'Transformation' feature in the rulebook, or may work with your Poohbah to create new ones."
+                effect:
+                    type: buff 
+                    description: "For the spell's duration, you are affected by the Transformed condition. You may change back at any time as an action."
+                    conditions:
+                        - transformed
+                    save: null
+                range: self
+            -   name: Ward of Hearing and Sight
+                action_type: "Offhand Action"
+                type: utility
+                cost: 1
+                range: touch
+                duration: 6 Watches
+                requirements:
+                    movement: true
+                    verbal: true 
+                    components: 
+                        - An eye or ear
+                description: "A green stalk bursts out of the ground, a knuckled, hairy appendage ending in a bulbous eye and two overlarge ears. 
+                            It blinks twice, then vanishes. The eyestalk is tethered to you for one day. Whenever you want, you may focus to see
+                            through its eye and hear through its ears. The ward cannot move and has only 1 hit point, but can only be harmed by
+                            magic or beings also in the ethereal plane."
+                upcast: If you spend an additional action point, you may increase the length of the spell to 1 week.
+        tier_3: [] 
+
+
+
+
 # -   name: Warlock
 #     class_type: Battle Mage
-#     # expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in charisma checks made to persuade, 
-#     #             trick, or obfuscate. Further, take expertise in any check made to discern the nature of dark magics
+#     # expertise: "As a Warlock, you are marked by a fiendish charisma. Take expertise in tests of charisma made to persuade, 
+#     #             trick, or obfuscate. Further, take expertise in any Test made to discern the nature of dark magics
 #     #             or the motives of a villain."
 #     health_schedule: 
 #         starting_health: 6
@@ -2766,7 +3420,7 @@
 #             -   title: Intro 
 #                 display_title: false
 #                 text: "Bound to darkness. By ambition or necessity, a Warlock enters into a pact with an otherworldly force.
-#                       This being grants them incredible magics, but at a cost; every pact has it's price. This price be anything
+#                       This being grants them incredible magics, but at a cost; every pact has its price. This price be anything
 #                       from gathering information for your patron to performing tasks for them. Regardless, your pact and your 
 #                       patron will greatly color your adventuring career."
 #             -   title: When Adventuring
@@ -2804,7 +3458,7 @@
 #                                 powerful necrotic energy into them."
 #                 effect:
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check. On success, they begin Rotting."
+#                     description: "Make an Inner Fire Resistance Test. On success, they begin Rotting."
 #                     conditions:
 #                         - rotting
 #                     save: null
@@ -2858,7 +3512,7 @@
 #                 description: "You are able to project your thoughts into someone's mind. Willing participants can let you to read their thoughts, 
 #                     allowing for two-way communication. For non-willing participants, 
 #                     you are able to glean only surface level detail unless you wish 
-#                     to probe deeper. To do so, you must make an Inner Fire Resistance Check. On success, you are able to glean something of their 
+#                     to probe deeper. To do so, you must make an Inner Fire Resistance Test. On success, you are able to glean something of their 
 #                     inner thoughts, but they know that their mind has been read."
 #             -   name: Embed Eye # Utility
 #                 action_type: Offhand Action
@@ -2898,7 +3552,7 @@
 #                 description: "Tether two creatures together."
 #                 effect:
 #                     type: debuff
-#                     description: "If one dies, make an Inner Fire Resistance Check against the other.
+#                     description: "If one dies, make an Inner Fire Resistance Test against the other.
 #                                 On success, they take an amount of damage equal to the killing blow or half as much on failure.
 #                                 The creatures must be within one hundred feet of each other, and the damage cannot exceed twice the maximum hit points of the creature that perished."
 #                     conditions:
@@ -2913,7 +3567,7 @@
 #                 requirements: 
 #                     verbal: false
 #                     movement: true 
-#                 description: "When an enemy successfully casts a spell, make an Inner Fire Resistance Check. On success, they also suffer the effects of their spell 
+#                 description: "When an enemy successfully casts a spell, make an Inner Fire Resistance Test. On success, they also suffer the effects of their spell 
 #                             if it was negative, or you also gain the benefits if it was positive."
 #             -   name: Lift 
 #                 action_type: Offhand Action
@@ -2927,7 +3581,7 @@
 #                 description: "As you hold your hands aloft, dark energy begins to surround three of your foes."
 #                 effect:
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check. On success, they are hoisted ten feet in the air and Grappled."
+#                     description: "Make an Inner Fire Resistance Test. On success, they are hoisted ten feet in the air and Grappled."
 #                     conditions: 
 #                         - grappled
 #                     save: null
@@ -2943,7 +3597,7 @@
 #                 description: "A gaping pit envelops your enemy and sends them careening through the nine layers of the abyss."
 #                 effect: 
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
+#                     description: "Make an Inner Fire Resistance Test. On success, they spend 1d4-1 (minimum 1) turns falling through the hells.
 #                                     On failure, they take half damage and are not sucked into the portal.
 #                                     When they return, they reappear and slam to the earth, falling prone and taking the spell's damage."
 #                     conditions: 
@@ -2974,7 +3628,7 @@
 #                     tier_3: "4d6" #(17.5 + 5inf = 22.5 per turn.)
 #                 description: "A black wind howls as you summon a pit housing Torugar, an ancient demon from the Abyss.
 #                     Each turn, 1d6 tongues (max 6) writhe forth to grapple creatures nearby. 
-#                     For grapples, make an Inner Fire Resistance Check. 
+#                     For grapples, make an Inner Fire Resistance Test. 
 #                     Torugar does not distinguish friend from foe.
 #                     If a tongue takes 25 
 #                     damage, it lets go and retreats.
@@ -3004,12 +3658,12 @@
 #                             runes on their flesh to mark them as a conduit to the realm beyond.
 #                             Find the location of their soul using a tuning fork. Once you've found it, 
 #                             place a soul gem on their chest, and reach beyond the divide. 
-#                             Make an Inner Fire Check. On a success, reclaim the target's 
+#                             Make a Test of Inner Fire. On a success, reclaim the target's 
 #                             soul and return them to life. On failure, some parts are missing, or 
 #                             something else returns and takes up residence in 
 #                             the body."
 #                 upcast: "If someone who loved the deceased dearly helps you, they may spend one action point 
-#                         to to grant you +2 on your check."
+#                         to to grant you +2 on your test."
 #             -   name: Astral Prison
 #                 action_type: Offhand Action
 #                 type: utility
@@ -3027,8 +3681,8 @@
 #                             create a pocket dimension which overlaps the material realm and attempt 
 #                             to banish a creature to it. 
 #                             You must achieve three successful
-#                             Inner Fire Resistance Checks before accumulating three failures. You may make such 
-#                             a check as an Offhand Action each 
+#                             Inner Fire Resistance Tests before accumulating three failures. You may make such 
+#                             a tests as an Offhand Action each 
 #                             turn until you have succeeded, failed, or the creature has left the spell's radius.
 #                             On success,
 #                             speak an omen which will occur in this age.
@@ -3064,7 +3718,7 @@
 #                 description: "Swirling black smoke billows in a cloud before you, damaging enemies in a cone."
 #                 effect: 
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check. On success, they are Blinded until the end of their next turn."
+#                     description: "Make an Inner Fire Resistance Test. On success, they are Blinded until the end of their next turn."
 #                     conditions:
 #                         - blinded
 #                     save: null
@@ -3086,7 +3740,7 @@
 #                 description: "As an enemy attack hurtles towards you, attempt to compel someone block it."
 #                 effect:
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check against a hostile creature within range. On success, they dive in front of you to save you from an attack."
+#                     description: "Make an Inner Fire Resistance Test against a hostile creature within range. On success, they dive in front of you to save you from an attack."
 #                     conditions: 
 #                         - custom
 #                     save: null
@@ -3101,7 +3755,7 @@
 #                     movement: false 
 #                 description: "Hideous and discordant voices fill your target's ears."
 #                 effect:
-#                     description: "Each turn, make an Inner Fire Resistance Check. On success, they are Staggered."
+#                     description: "Each turn, make an Inner Fire Resistance Test. On success, they are Staggered."
 #                     type: debuff
 #                     conditions:
 #                         - staggered
@@ -3158,7 +3812,7 @@
 #                     tier_2: 2d10 #(14 + 7f + 4inf = 25)
 #                     tier_3: 2d12 #(17.5 + 10.5f + 5 inf = 33)
 #                 effect:
-#                     description: "Make an Inner Fire Resistance Check. On success, they are Grappled, and take damage at the start of each turn."
+#                     description: "Make an Inner Fire Resistance Test. On success, they are Grappled, and take damage at the start of each turn."
 #                     conditions:
 #                         - grappled
 #                     type: debuff
@@ -3233,7 +3887,7 @@
 #                             bursts forward, washing over everyone in a cone before you."
 #                 effect: 
 #                     type: debuff
-#                     description: "Make an Inner Fire Resistance Check. On success, they take full damage and begin to Rot.
+#                     description: "Make an Inner Fire Resistance Test. On success, they take full damage and begin to Rot.
 #                                 On failure, they take half damage."
 #                     conditions: 
 #                         - rotting
@@ -3248,7 +3902,7 @@
 #                     verbal: true
 #                     movement: true 
 #                 description: "Tear a rift in the fabric of reality. Anyone who jumps through is transported to a location of your choosing within 1,000 miles. 
-#                             If you have visited the location, you are able to open the rift with no trouble. If not, roll an intelligence check 
+#                             If you have visited the location, you are able to open the rift with no trouble. If not, roll a Test of Intelligence 
 #                             with the Grand Poohbah to determine where the rift lets out. Whenever this spell is cast, roll 1d10. On a 1, something comes out of the rift."     
 
 # Needed:

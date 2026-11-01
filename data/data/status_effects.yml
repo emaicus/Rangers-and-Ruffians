@@ -4,14 +4,14 @@
     about: "Bleeding damage is repeated at the start of the affected creature's next turn."
 -   name: Burning
     balance: good
-    about: "A Burning creature take 1d6 damage at the start of each turn until they spend an Action to extinguish themselves."
+    about: "A Burning creature takes 1d6 damage at the start of each turn until they spend an action to extinguish themselves."
 -   name: Rotting
     balance: strong
     about: "A rotting creature takes 1d6 damage at the start of each turn or once every ten minutes. 
-           This continues until they have rested or recieved any healing."
+           This continues until they have rested or received any healing."
 -   name: Poisoned
     balance: strong
-    about: "Poisoned creatures must make a inner fire check at the start of each turn
+    about: "Poisoned creatures must make a inner fire tests at the start of each turn
            or take one level of exhaustion and 1d6 damage."
 -   name: Frenzied
     balance: strong
@@ -55,9 +55,9 @@
 -   name: Incapacitated
     balance: very strong
     about: "An Incapacitated creature cannot move or act and damage rolls made against them are at advantage."
--   name: Hardened
+-   name: Frozen
     balance: very strong
-    about: A Hardened creature's body has been rendered stonelike. They they are resistant to physical damage, but cannot move or act."
+    about: A Frozen creature's body has been rendered stonelike. They they are resistant to physical damage, but cannot move or act."
 -   name: Halted
     balance: strong
     about: A halted creature immediately loses the remainder of their movement until the start of their next turn.
@@ -79,13 +79,13 @@
     about: An entity that is Spurred to Movement immediately gains 15 feet of movement. The movement does not provoke reactions unless otherwise stated.
 -   name: Prone
     balance: strong
-    about: "A prone creature moves at half speed, makes checks and attacks at disadvantage, and attacks against them are at 
-            advantage. They may spend an action to stand up."
+    about: "Asdf prone creature moves at half speed, makes tests and attacks at disadvantage, and attacks against them are at 
+            advantage. They may spend an action or offhand action to stand up."
 
 #CONTROL
 -   name: Stunned
     balance: strong
-    about: A Stunned creature loses either an action or offhand action on it's next turn (their choice).
+    about: A Stunned creature loses either an action or offhand action on its next turn (their choice).
 
 
 
@@ -100,19 +100,19 @@
 -   name: Tethered
     balance: good
     about: A Tethered creature has been bound to something by a link. They cannot move further from the 
-           person or object than the maximum length of the tether. Either creature may make force a Strength Resistance Check
-           to attempt to pull the other 15ft closer. The tethered creature may call for a repeated Resistance Check to attempt to break free.
+           person or object than the maximum length of the tether. Either creature may make force a Strength Resistance Test
+           to attempt to pull the other 15ft closer. The tethered creature may call for a repeated Resistance Test to attempt to break free.
 -   name: Hard to Move
     balance: good 
-    about: "Creatures that are hard to move have advantage on any checks which could cause them to fall prone. If they are pushed, they move only half the intended distance."
+    about: "Creatures that are hard to move have advantage on any tests which could cause them to fall prone. If they are pushed, they move only half the intended distance."
 
 #Visibility/Stealth
 -   name: Blinded
     balance: strong
-    about: A Blinded creature fails all sight based checks, makes damage rolls at disadvantage, and must move at half speed.
+    about: A Blinded creature fails all sight based tests, makes damage rolls at disadvantage, and must move at half speed.
 -   name: Invisible
     balance: strong
-    about: "An Invisible creature cannot be seen, makes stealth checks at advantage, and attacks against them are at disadvantage."
+    about: "An Invisible creature cannot be seen, makes stealth tests at advantage, and attacks against them are at disadvantage."
 -   name: Truesight
     balance: weak
     about: A creature with Truesight is able to see 60 feet in pitch darkness and can see invisible objects and entities.
@@ -124,7 +124,7 @@
 # SOCIAL
 -   name: Charmed
     balance: strong
-    about: "A Charmed creature must act in a way that benefits its charmer and has disadvantage on checks made against
+    about: "A Charmed creature must act in a way that benefits its charmer and has disadvantage on tests made against
             them. If a charmed creature is harmed by its charmer or their allies, the effect immediately ends."
 -   name: Controlled
     balance: very strong
@@ -144,9 +144,7 @@
             The creature retains its allegiances and instincts."
 -   name: Blocked
     balance: strong
-    about: "A Blocked creature's magic has been weakened. If an adventurer is blocked, they 
-            must make an Inner Fire check against the Threat of the creature that is blocking them, and on failure the spell fails and is wasted. 
-            If a mosnter is blocked, they adventurer must make an Inner Fire against the creature's Resistance, and on success the monsters's spell fails and is wasted."
+    about: "A Blocked creature's magic has been weakened. When they attempt to cast a spell, an Inner Fire Resistance Test must be made to determine whether the spell fizzles out, and is wasted."
 -   name: Muted 
     balance: neutral 
     about: Muted creatures cannot make sound and cannot cast spells with verbal components.
@@ -154,8 +152,9 @@
 #GRAPPLE: 
 -   name: Grappled
     balance: neutral
-    about: "A grappled creature cannot move, and has disadvantage on Strength Checks, Dexterity Checks, and attacks. 
-            They may attempt to free themself as an action, repeating the check that caused the grapple."
+    about: "A Grappled creature cannot move and makes Tests and attacks at disadvantage. 
+            As an Action, they may force you to repeat
+             the Resistance Test that caused the Grapple."
 
 # SIZE
 -   name: Shrunk
@@ -164,7 +163,7 @@
             They can move through enemy spaces and fit through small openings."
 -   name: Enlarged
     balance: strong
-    about: "An Enlarged creature increases in size. They have advantage on Strength checks and their reach increases by 5ft.
+    about: "An Enlarged creature increases in size. They have advantage on Strength Tests and their reach increases by 5ft.
             When they hit with a physical attack, they may choose to push their target 5ft away."
 
 # Corporeality
@@ -175,16 +174,15 @@
             affected by physical attacks, nor can they make attacks or cast spells."
 -   name: Transformed
     balance: strong
-    about: "Transformed creatures magically take on the form and appearance of another creature.
-            For the duration, they use the stats of that creature, including health, abilities, and stats.
-            While transformed, a creature cannot use the abilities from it's original state, unless otherwise specified by the ability that granted the Transformed property.
-            The transform ability instantly ends if the creature's health hits zero. Any carryover damage is taken by the creature's original form."
+    about: "A Transformed creature takes the form of another creature, using its stats, health, and abilities. 
+                 It cannot use abilities from its original form unless the transformation allows it. 
+                 The transformation ends when its health reaches 0; any excess damage carries over to its original form."
 
 
-#General Checks
+#General Tests
 -   name: Diminished
     balance: good
-    about: A Diminished creature must subtract 2 from all checks.
+    about: A Diminished creature must subtract 2 from all tests.
 
 #MISC
 -   name: Elusive

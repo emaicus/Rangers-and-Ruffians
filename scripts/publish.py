@@ -72,24 +72,25 @@ if __name__ == "__main__":
       _,_,_ = int(major), int(greater), int(minor)
       update_version = True
       new_suffix = input('What is the version suffix? ')
+
+      if update_version:
+        print('Archiving past versions...')
+        archive_past_versions()
+        update = core.update_version(new_version, new_suffix)
     except Exception as e:
       print("Not naming a new version.")
 
-    if update_version:
-      print('Archiving past versions...')
-      archive_past_versions()
-      update = core.update_version(new_version, new_suffix)
-  
   rnr_game = core.load_Rangers_And_Ruffians(skip_validation=skip_validation)
   
   rnr_game.print_statistics()
+  print('returned.')
 
   with open(GENERATED_DATA_DIRECTORY.joinpath('monsters.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_monsters(), outfile)
   
   with open(GENERATED_DATA_DIRECTORY.joinpath('items.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_items(), outfile)
-  
+  print('intermed.')
   with open(GENERATED_DATA_DIRECTORY.joinpath('backgrounds.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_backgrounds(), outfile)
   
@@ -101,5 +102,8 @@ if __name__ == "__main__":
   
   with open(GENERATED_DATA_DIRECTORY.joinpath('attributions.json'), 'w') as outfile:
     json.dump(rnr_game.serialize_attributions(), outfile)
-  
+
+  print('serializing conditions...')
   serialize_conditions()
+  print('serialized conditions.')
+

@@ -257,8 +257,9 @@ def convert_yml_file_to_json_file(input_file : Path, output_file : Path) -> None
     with open(input_file, 'r') as data_file:
       d = yaml.safe_load(data_file)
     with open(output_file, 'w') as outfile:
-      json.dump(d, outfile)
+      json.dump(d, outfile, indent=4)
   except Exception as e:
+    print('ERROR!')
     raise Exception(f"ERROR: could not save {str(input_file)} to {str(output_file)} as a yml file\n{traceback.format_exc()}")
 
 def update_version(version_string : str, new_suffix : str) -> str:

@@ -1,4 +1,4 @@
--   name: Catterwol # Replace claws with RP
+-   name: Catterwol 
     abilities:
         -   name: Darkvision
             action_type: "Passive"
@@ -6,20 +6,20 @@
             range: self
             duration: passive
             cost: 0
-            description: "You have incredible night vision"
-            effect:
-                type: buff 
-                description: "and can see 60ft in perfect darkness."
-                conditions:
-                    - darkvision 
-                save: null
+            description: "You have incredible night vision. You are able to see 60ft in perfect darkness."
+            # effect:
+            #     type: buff 
+            #     description: ""
+            #     conditions:
+            #         - darkvision 
+            #     save: null
         -   name: Balancing Act
             action_type: "Passive"
             type: buff
             range: self
             duration: passive
             cost: 0
-            description: "You are naturally adept at keeping your balance. When a check must be made to avoid 
+            description: "You are naturally adept at keeping your balance. When a Test must be made to avoid 
                            falling, you may make it with advantage."
             tags: 
                 - damage_modifier
@@ -29,8 +29,8 @@
             range: self
             duration: instantaneous
             cost: 0
-            description: "When you are about to take surprise damage from a trap, reduce it by 1d6 so long as you are able to  
-                          spring to a safe spot within 10ft. Damage reduction increases to 1d8 then 1d10 in tiers 2 and 3, respectively."
+            description: "Once per day, when you are about to take surprise damage from a trap, you may choose to take half damage instead 
+                           so long as there is a safe spot to leap to within 10ft."
             tags:
                 - fall_reduction
     handbook:
@@ -73,7 +73,7 @@
             cost: 0
             range: self 
             duration: passive
-            description: "You're built hearty, with a low center of gravity."
+            description: "You're built sturdy, with a low center of gravity."
             effect:
                 type: buff 
                 description: "As such, you are quite Hard to Move."
@@ -83,14 +83,14 @@
         -   name: Give me ten minutes...
             action_type: Action
             type: buff 
-            cost: 0
+            cost: 1
             range: self 
             duration: passive
             casting_time: 1 Dungeon Turn
             description: "You instinctively understand stone, wood, and structure. By spending 
                             one Dungeon Turn working on a structure, trap, mechanism, or barrier,
-                            you may reinforce it or weaken it. The next time it is tested,
-                            the consequences of failure are halved."
+                            you may reinforce or weaken it. If the target is a trap, reduce the 
+                            potential damage by half."
             tags:
                 - brace
             upcast: "You can spend one action point to use this ability in one Combat Turn."
@@ -110,7 +110,7 @@
                     until they get it. Family and clan is of paramount importance to a dwarf, and it is not uncommon for generations
                     to work on the same, massive project. The result is that the scope and artistry of dwarven projects
                     vastly overcomes the ability of any individual. Dwarven strongholds are things of legend, wrought of stone and iron
-                    and carved into the face of mountains. Great dwarven bridges span straits and seas, and dwarven statues tower, 
+                    and carved into the face of mountains. Great dwarven bridges span straits and seas, and dwarven statues tower 
                     higher than the tallest tree."
         you_may:
             title: "As a Dwarf, you may"
@@ -149,7 +149,7 @@
             duration: passive 
             type: buff 
             description: "As you approach a non-combat obstacle, you can intensify your focus to roll with advantage.
-                          If the check fails, the fixation lingers, and you take disadvantage on the next meaningful check 
+                          If the test fails, the fixation lingers, and you take disadvantage on the next meaningful test 
                           you attempt, as decided by the Grand Poohbah. After a failure, you cannot Hyperfixate again until you've completed
                           a long rest."
             tags: 
@@ -162,7 +162,7 @@
             type: buff 
             description: "Whether because of your size or your tendency to speak exclusively about your niche interests,
                           you are often overlooked in social settings. When you are in a well peopled place, roll 
-                          any stealth check at advantage."
+                          any Stealth Test at advantage."
             tags: 
                 - fade_stealth
         -   name: Single Minded
@@ -172,13 +172,13 @@
             duration: passive 
             type: buff 
             description: "You are exceptionally good at shutting out everything but the task at hand.
-                          You are immune to the charmed condition, and have advantage on checks against 
-                          being controlled."
+                          You are immune to the charmed condition, and have advantage on tests against 
+                          being compelled or controlled."
     handbook:
         introduction: 
             - "Gnomes are small, passionate folk with minds that burn bright and narrow.
                 While others divide their attention across many concerns, gnomes tend 
-                to focus deeply on just one: an idea, a question, or a craft that captures thier 
+                to focus deeply on just one: an idea, a question, or a craft that captures their 
                 imagination. This focus can be brief or lifelong, but while it lasts, it defines them utterly.
                 This fixation coupled with their short stature means that gnomes are often overlooked, but they 
                 make fast friends with those who take the time.
@@ -202,11 +202,11 @@
             -   title: Age 
                 options: "Gnomes reach old age at about 100 years, and most live to 150."
             -   title: "Eyes"
-                options: "Intelligent, mischevious, bright blue, fiery red, deep prown"
+                options: "Intelligent, mischievous, bright blue, fiery red, deep brown"
             -   title: "Skin"
                 options: "Pale white, honey brown, charcoal"
             -   title: "Hair"
-                options: "Flourescent pink, verdant green, sky blue, snow white, crimson red"
+                options: "Florescent pink, verdant green, sky blue, snow white, crimson red"
 -   name: Halfling # Replace Halfling's courage with RP 
     #base_movement: 35
     abilities:
@@ -244,16 +244,9 @@
             duration: instantaneous
             cost: 0
             description: "You are more resilient than your size implies. When a monster or greater evil tries to 
-                          lay a curse upon you, make your resistance check at advantage."
-            effect:
-                type: buff 
-                description: "Additionally, you are resistant to poison damage and may make checks against being poisoned at advantage."
-                conditions:
-                    - resistant
-                save: null
+                          lay a curse upon you, make your Test of Resistance at advantage."
             tags:
                 - curse_resistant
-                - poison_resistant
     handbook:
         introduction:
             -   "Small enough to avoid notice, most halflings are content to live in peace and to watch the 
@@ -268,14 +261,14 @@
             title: "As a Halfling, you may"
             options:
                 - "Enjoy creature comforts and look forward to a night at the inn."
-                - "Be naturally inquisitive, especially if you are an adventure."
+                - "Be naturally inquisitive, especially if you are an adventurer."
                 - "Be bemused by the frantic pace of the big-folk."
         assumptions:
             title: "People who don't know you might assume"
             options:
                 - "That you aren't capable of helping, due to your size and the stereotype that halflings like to stay out of trouble."
-                - "That you are younger than you are, due to your naturally youthful featers."
-                - "That you aren't there; it unfortunately common that others speak over halflings, cut them in lines, or otherwise miss their presence."
+                - "That you are younger than you are, due to your naturally youthful features."
+                - "That you aren't there; it is unfortunately common that others speak over halflings, cut them in lines, or otherwise miss their presence."
         looks:
             -   title: "Height"
                 options: "Halflings stand between 2' and 4' tall."
@@ -284,11 +277,11 @@
             -   title: "Eyes"
                 options: "Earthy brown, riverwater blue, hazel, forest green"
             -   title: "Skin"
-                options: "Browned from sunshine, fair from time spent stay indoors, rich brown"
+                options: "Browned from sunshine, fair from time spent staying indoors, rich brown"
             -   title: "Hair"
-                options: "Black, brown, blonde which gets paler in the sumertime"
+                options: "Black, brown, blonde which gets paler in the summertime"
             -   title: "Other Features"
-                options: "Many halflings are known for their stout stomachs. Most halfings have hair on the tops of their feet and thick skin on the bottom which helps them avoid injury when walking barefoot."
+                options: "Many halflings are known for their hearty appetites. Most halfings have hair on the tops of their feet and thick skin on the bottom which helps them avoid injury when walking barefoot."
 -   name: Human # Done
     #base_movement: 30
     abilities:
@@ -299,7 +292,7 @@
             duration: instantaneous 
             type: buff
             description: "Humans have a unique ability to sense the unnatural. Some report the hair on the back of their neck standing on end. 
-                          You are able to make intelligence checks to see if you sense an undead, fiend, or other dark being in your vicinity."
+                          You are able to make a Test of Intelligence to see if you sense an undead, fiend, or other dark being in your vicinity."
             tags: 
                 - detect_undead
         -   name: Human Endurance #Done
@@ -326,7 +319,7 @@
             description: "Regardless of your personality, you are naturally adept when you choose to step in to help."
             effect:
                 type: buff 
-                description: "Whenever you take the 'Help' action, grant your ally an additional +1 to their check."
+                description: "Whenever you take the 'Help' action, grant your ally an additional +1 to their Test."
                 conditions:
                     - custom 
                 save: null
@@ -377,7 +370,7 @@
             duration: instantaneous 
             range: self 
             description: "Suddenly reveal your inhuman nature, baring sharp teeth and white eyes.
-                           Until the interaction ends, gain advantage on intimidation checks but disadvantage on persuasion checks"
+                           Until the interaction ends, gain advantage on intimidation tests but disadvantage on persuasion tests"
             tags:
                 - fearful_visage
         -   name: Frigid Depths
@@ -439,7 +432,7 @@
             range: self 
             duration: passive
             description: "Orcs naturally speak their mind. When you try to convince someone using direct 
-                           arguments, take advantage on the charisma check."
+                           arguments, take advantage on the Test of Charisma."
             tags:
                 - direct_charisma
         -   name: Fresh Meat!
@@ -448,8 +441,9 @@
             range: 30 
             duration: passive
             cost: 0
-            description: "You are able to smell and track the scent of blood. When making checks to pursue or locate
-                           a wounded creature, roll intelligence with advantage." 
+            description: "You are able to smell and track the scent of blood. When you 
+                            make a Test of Intelligence to pursue or locate a 
+                            wounded creature, you have advantage." 
             tags:
                 - track_blood
         -   name: Bellow
@@ -461,7 +455,7 @@
             description: "Spittle flies from your mouth as you loose a terrible battle cry."
             effect:
                 type: debuff 
-                description: "As the bellow echoes in the air, choose an enemy and make an Inner Fire check against their resistance. On success, they become frightened of you until the end of their next turn."
+                description: "As the bellow echoes in the air, choose an enemy and make an Inner Fire Resistance Test. On success, they become frightened of you until the end of their next turn."
                 conditions:
                     - frightened 
                 save: null
@@ -470,7 +464,7 @@
             -   "Orcs are a brutal race that range across the world. They can be found deep in caves where no explorer dares tread,
                     on the tops of snowy mountains, and ranging across the great plains 
                     in massive warpacks with banners that flutter in the wind. Orc society greatly values honor and trial by combat. 
-                    Individual orc often speak bluntly and take what they want.  Orc adventurers often have a complicated past.
+                    Individual orcs often speak bluntly and take what they want.  Orc adventurers often have a complicated past.
                     Some are half-orc, while others have a friendlier disposition and were ostracized
                     from a warpack. These quickly form deep ties with their party members, forging a bond in the blood
                     of battle."
@@ -484,13 +478,13 @@
             title: "People who don't know you might assume"
             options:
                 - "That you are a brute. Elves in particular are distrustful of orcs, as their lifestyles run in opposite directions."
-                - "That you are a fool. Many orc lack formal education, but have deep practical knowledge"
-                - "That you are violent. Because many orc value honor won in battle, they have a reputation for picking fights."
+                - "That you are a fool. Many orcs lack formal education, but have deep practical knowledge"
+                - "That you are violent. Because many orcs value honor won in battle, they have a reputation for picking fights."
         looks:
             -   title: "Height"
-                options: "Healthy orc can stand up to 6' tall, while the orcs of the abyss are shrunken and starved, and stand at only 4'."
+                options: "Healthy orcs can stand up to 6' tall, while the orcs of the abyss are shrunken and starved, and stand at only 4'."
             -   title: "Age"
-                options: "Few orc live to see their natural lifespan, which has not been documented."
+                options: "Few orcs live to see their natural lifespan, which has not been documented."
             -   title: "Eyes"
                 options: "Blood red, pitch black, gleaming yellow."
             -   title: "Skin"
@@ -498,7 +492,7 @@
             -   title: "Hair"
                 options: "Reddish-brown, dark black, grey, bald"
             -   title: "Other Features"
-                options: "Most orc have scars, either from battle or 
+                options: "Most orcs have scars, either from battle or 
                            self-inflicted during rituals."
 -   name: Sprout # Done 
     #base_movement: 35
@@ -509,9 +503,9 @@
             cost: 0
             range: self 
             duration: passive
-            description: "You know the tongue of bird and beast, and are able to convey your meaning to them.
-                          You may make charisma checks to convince non-hostile animals to do your bidding
-                          and are able to speak to plants, though they may not know much of use."
+            description: "You know the tongue of bird and beast, and are able to speak to them.
+                          You may make Tests of Charisma to convince non-hostile animals to do your bidding
+                          and are able to speak to plants and animals, though they may not know much of use."
         -   name: Riding High 
             action_type: "Action"
             cost: 0
@@ -538,10 +532,10 @@
                 tier_1: 1d4
                 tier_2: 1d6
                 tier_3: 1d8
-            description: "When you Take a Breather, you may consume nearby plants to aid in your healing. Restore health equal to the amount rolled."
+            description: "Whenever you rest, you may consume nearby plants to aid in your healing. Restore health equal to the amount rolled."
     handbook:    
         introduction:
-            -   "Shy beings with soft faces and childlike voices, it is easy to mistake a Sprout for
+            -   "Shy beings with soft faces and childlike voices, it is easy to mistake a Sprout for a
                     child lost in the woods. Standing just two-and-a-half feet tall, they have 
                     skin of olive green, or tree-bark brown, or sunkist yellow. Thin, greenish sap flows through a sprout's body
                     in place of blood, and they reject meat by nature,
@@ -565,10 +559,10 @@
                 - "That you are a dangerous fey creature."
         looks:
             -   title: "Height"
-                options: "Sprouts are among the smallest races, standing 2'6\" on average tall."
+                options: "Sprouts are among the smallest races, standing 2'6\" tall on average."
             -   title: "Age"
-                options: "Sprouts are especially longlived, and there are few catalogued occurances of one 
-                           suffering a natural death. Their ceremonies regarding death are a closey guarded secret shared with
+                options: "Sprouts are especially long-lived, and there are few catalogued occurrences of one 
+                           suffering a natural death. Their ceremonies regarding death are a closely guarded secret shared with
                            no-one. Even after passing centuries, sprouts retain their childlike wonder."
             -   title: "Eyes"
                 options: "Forest green, sky blue, fire orange"
@@ -588,18 +582,16 @@
             type: utility 
             range: self 
             duration: instantaneous
-            description: "By studying the flow of magic, you may make intelligence checks to detect magical influence, 
-                            it's source, and it's nature. If the magic can be mitigated, you or your allies have advantage
-                            on the next check made to do so."
-        -   name: Strange Priorities
+            description: "When you focus, you can sometimes see the weave of magic around you.
+                            You are able to make Tests of Intelligence to 
+                            detect magic, its source, and its nature."
+        -   name: Unnatural Grace
             action_type: "Passive"
             type: buff
             cost: 0
             range: self 
             duration: passive 
-            description: "When you focus on a detail that others may find trivial or mundane, 
-                            you may make an intelligence check to see how that object actually 
-                            reveals useful information about the world around you or your current objective."
+            description: "Elves are unnaturally quick-footed. Your base movement speed is 40ft."
             tags:
                 - trance
         -   name: Natural Magic
@@ -609,11 +601,11 @@
             duration: passive
             cost: 0
             description: "You may produce small, harmless magical effects such as flowers blooming, lights drifting, air stirring, faint sounds or illusions.
-                            These effects are mostly sensory, and do not rise to the level of power of a trained mage's spells."
+                            These effects are mostly sensory, and do not rise to the power of a trained mage's spells."
     handbook:
         introduction: 
-            - Stewards of order, Elves are a long-lived and vigilant race who see the world 
-                in arcs that span millenia, not fleeting decades. They are inherently tied to 
+            - "Stewards of order, Elves are a long-lived and vigilant race who see the world 
+                in arcs that span millennia, not fleeting decades. They are inherently tied to 
                 the flow of magic, which shapes and guides them, and they are able to sense 
                 the places where magic has pooled or been corrupted by dark powers. Most elves prefer
                 to watch and guide the world around them, believing that reckless action rarely 
@@ -631,13 +623,13 @@
             title: "People who don't know you might assume"
             options: 
                 - "That you are aloof due to your vast perspective."
-                - "That you you are rude when you take a few hours to formulate your response."
+                - "That you are rude when you take a few hours to formulate your response."
                 - "That you worry too much about \"tomorrow's problems.\""
         looks: 
             -   title: Height
                 options: "5'-5'6\""
             -   title: "Age"
-                options: "Elves live many thousands of years. An elf passing of old age is a vanishingly rare and emotional occurrence."
+                options: "Elves live many thousands of years. An elf dying of old age is a vanishingly rare and emotional occurrence."
             -   title: "Eyes"
                 options: "Elven eyes tend to match their environment. Brown, green, white, black."
             -   title: "Skin"
@@ -657,9 +649,9 @@
             type: debuff 
             range: touch 
             duration: instantaneous
-            description: "When someone willingly seals a bargain with you through a handshake, you may bind it as a supernatural pact marked by a burning sigil.
-                            If either party knowingly breaks the agreement
-                            suffers 1d6 unhealable damage each day until the pact is fulfilled or the curse is broken.
+            description: "When someone willingly seals a bargain with you through a handshake, you may bind it as a supernatural pact marked by a burning sigil on both participants' skin.
+                            If either party knowingly breaks the agreement, they suffer
+                            1d6 unhealable damage each day until they return to compliance or the curse is broken.
                             Pacts cannot compel self-destruction or actions fundamentally against a creature's nature."
         -   name: Incombustible
             action_type: "Passive"
@@ -717,7 +709,7 @@
                 options: "Rust red, slate grey, shock white, cerulean blue, dark black"
             -   title: "Horns"
                 options: "Curling ram horns, small nubs on your forehead, long, spiked horns"
-            -   title: "Tatoos"
+            -   title: "Tattoos"
                 options: "Because of its intensity of color, daemonspawn skin holds ink well. 
                           As such, many daemonspawn sport colorful tattoos across their body."
         tips: 

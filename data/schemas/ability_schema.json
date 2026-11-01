@@ -75,7 +75,7 @@
 						},
 						{
 								"type": "string",
-								"enum": ["1 mile", "infinite"]
+								"enum": ["1 mile", "10 Miles", "infinite"]
 						}
 				]
 		},
@@ -207,11 +207,11 @@
 						"type": "string",
 						"enum":["bleeding","burning","rotting","poisoned","frenzied","guarded","exposed","weakened",
 								"staggered","infused","vulnerable","resistant","invincible","evasive","incapacitated",
-								"hardened","halted","spurred to action","hastened","hindered","quickened","spurred to movement",
+								"frozen","halted","spurred to action","hastened","hindered","quickened","spurred to movement",
 								"prone","stunned","slowed","lured","tethered","hard to move","blinded","invisible",
 								"truesight","darkvision","charmed","controlled","estranged","fixated","dumbstruck",
 								"blocked","muted","grappled","shrunk","enlarged","ethereal","transformed","diminished",
-								"inspired","elusive","isolated","fearless","frightened","harried","immune","distracted",
+								"inspired","elusive","isolated","fearless","frightened","harried","immune",
 								"custom"]
 					}
 				},
