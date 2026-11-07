@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1793547010578,
+  "timestamp": 1794075200021,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-CTKQC3IY.js",
+        "/main-PYFN66Q2.js",
         "/manifest.webmanifest",
         "/polyfills-B6TNHZQ6.js",
         "/styles-GMDAYV2K.css"
@@ -174,9 +174,8 @@
         "/assets/markdown/quick_reference.md",
         "/assets/markdown/rulebook.md",
         "/assets/pdfs/Adventurer_Reference.pdf",
-        "/assets/pdfs/Character_Sheet_V_02_00.pdf",
-        "/assets/pdfs/char_sheet_v3.pdf",
-        "/assets/pdfs/char_sheet_v4.pdf",
+        "/assets/pdfs/Character_Sheet_v5.pdf",
+        "/assets/pdfs/Grand_Poohbah_Reference.pdf",
         "/assets/site_icons/archery-target.svg",
         "/assets/site_icons/circle.svg",
         "/assets/site_icons/embrassed-energy.svg",
@@ -346,10 +345,9 @@
     "/assets/images/wizard.jpg": "7069baca177f66ad3bdc681e72f4ba19cf87a5bf",
     "/assets/markdown/quick_reference.md": "3fc52dbbed8d782db5a87180b1c4850cefbc76bd",
     "/assets/markdown/rulebook.md": "591b824ec2eb6ef8cb53ff9545a506a8b2cb883e",
-    "/assets/pdfs/Adventurer_Reference.pdf": "ff63b443f7c9f109ce35c069b873dbbcca4fcc18",
-    "/assets/pdfs/Character_Sheet_V_02_00.pdf": "cd39a31e947bbfad83dc8af9a3aa176b1de78cd3",
-    "/assets/pdfs/char_sheet_v3.pdf": "8b939277311d3972c83d57b99c2cabe2371a3a60",
-    "/assets/pdfs/char_sheet_v4.pdf": "71c922bd1336590ac2879e0920275390615f6bd8",
+    "/assets/pdfs/Adventurer_Reference.pdf": "af3226c3fa265ed6cf57a3003172c041395ebc23",
+    "/assets/pdfs/Character_Sheet_v5.pdf": "1ebbac0fa395b0b41e981bfc0dc6127788f74380",
+    "/assets/pdfs/Grand_Poohbah_Reference.pdf": "c3f97b7d574ea675404148fbfd55ff954143bde0",
     "/assets/site_icons/archery-target.svg": "774eece358740e4b316ea7519a909c057afd8e4f",
     "/assets/site_icons/circle.svg": "ce6fe2462faf0e40c50b4dd8cfba92d0a2abc22e",
     "/assets/site_icons/embrassed-energy.svg": "71da7c01fcecf69b46ff5b2f5968544f1a6bbd1a",
@@ -359,8 +357,8 @@
     "/assets/site_icons/sword-wound.svg": "5fbf3891833007c3d21f9d4d1a706262a05b4d45",
     "/assets/site_icons/thunder-blade.svg": "a1b7fc3c45a8db0c85ccc8ca28ef97f5ee7f64f7",
     "/favicon.ico": "4de589bd5ffe416c5b08341e8bd2dba6268d872f",
-    "/index.html": "42efba2c61b6b6f5302aca31b25cfe09324cc5df",
-    "/main-CTKQC3IY.js": "cb86d4247078acfa6e767f3e26e70566db64420d",
+    "/index.html": "8666a0e4e192dc1ca65299901b5ec0ad7c2069ce",
+    "/main-PYFN66Q2.js": "f684c37236bfc674cd94cc0df9437c70e0016678",
     "/manifest.webmanifest": "666c2ddd781153f7093848d44c946b55f60604bb",
     "/media/material-icons-JLIDJUWE.woff": "e4bb7c1e40d3febee58df963db276b2bf68c117b",
     "/media/material-icons-LEZCGFVT.woff2": "0bc0c675480d94ec7e8609dda6227f88c5d08d2c",
